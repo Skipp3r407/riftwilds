@@ -1,0 +1,14 @@
+{
+  "id": "chancellor-aurex",
+  "slug": "chancellor-aurex",
+  "regionId": "radiant-citadel",
+  "artStatus": "placeholder",
+  "note": "Labeled development placeholder — not final Grok art",
+  "prompts": {
+    "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Chancellor Aurex. Regal chancellor with gold-thread temples and tired eyes. Wearing: Citadel mantle with radiant seals. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
+    "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Chancellor Aurex. Regal chancellor with gold-thread temples and tired eyes. Wearing: Citadel mantle with radiant seals. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
+    "thumbnail": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Chancellor Aurex. Regal chancellor with gold-thread temples and tired eyes. Wearing: Citadel mantle with radiant seals. Region vibe: radiant citadel. Tight head-and-shoulders icon crop, high contrast, centered face.",
+    "sprite": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Chancellor Aurex. Regal chancellor with gold-thread temples and tired eyes. Wearing: Citadel mantle with radiant seals. Region vibe: radiant citadel. Simple browser-game character sprite concept, front-facing idle stance, clean edges, solid readable colors, small scale friendly."
+  },
+  "updatedAt": "2026-07-17T22:19:46.257Z"
+}

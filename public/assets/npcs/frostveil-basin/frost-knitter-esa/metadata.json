@@ -1,0 +1,14 @@
+{
+  "id": "frost-knitter-esa",
+  "slug": "frost-knitter-esa",
+  "regionId": "frostveil-basin",
+  "artStatus": "placeholder",
+  "note": "Labeled development placeholder — not final Grok art",
+  "prompts": {
+    "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Esa Wool. Esa Wool, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
+    "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Esa Wool. Esa Wool, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
+    "thumbnail": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Esa Wool. Esa Wool, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Tight head-and-shoulders icon crop, high contrast, centered face.",
+    "sprite": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Esa Wool. Esa Wool, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Simple browser-game character sprite concept, front-facing idle stance, clean edges, solid readable colors, small scale friendly."
+  },
+  "updatedAt": "2026-07-17T22:19:46.717Z"
+}

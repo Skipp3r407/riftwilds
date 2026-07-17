@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="96" viewBox="0 0 512 96">
+
+  <defs>
+    <linearGradient id="primaryFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3de7ff"/>
+      <stop offset="55%" stop-color="#7b6dff"/>
+      <stop offset="100%" stop-color="#9b7bff"/>
+    </linearGradient>
+    <linearGradient id="primaryHoverFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ef0ff"/>
+      <stop offset="50%" stop-color="#9a8aff"/>
+      <stop offset="100%" stop-color="#b49bff"/>
+    </linearGradient>
+    <linearGradient id="primaryPressedFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2bc4db"/>
+      <stop offset="55%" stop-color="#6558d4"/>
+      <stop offset="100%" stop-color="#7d63d4"/>
+    </linearGradient>
+    <linearGradient id="secondaryFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(28,30,52,0.92)"/>
+      <stop offset="100%" stop-color="rgba(12,14,28,0.95)"/>
+    </linearGradient>
+    <linearGradient id="secondaryHoverFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(36,40,68,0.95)"/>
+      <stop offset="100%" stop-color="rgba(16,20,40,0.97)"/>
+    </linearGradient>
+    <linearGradient id="dangerFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a92"/>
+      <stop offset="100%" stop-color="#e63d6a"/>
+    </linearGradient>
+    <linearGradient id="dangerHoverFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9aad"/>
+      <stop offset="100%" stop-color="#ff5c7a"/>
+    </linearGradient>
+    <linearGradient id="successFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5dffc0"/>
+      <stop offset="100%" stop-color="#2ad89a"/>
+    </linearGradient>
+    <linearGradient id="successHoverFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7affe0"/>
+      <stop offset="100%" stop-color="#3dffb0"/>
+    </linearGradient>
+    <linearGradient id="ghostFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(22,22,37,0.35)"/>
+      <stop offset="100%" stop-color="rgba(10,10,18,0.45)"/>
+    </linearGradient>
+    <linearGradient id="ghostHoverFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30,34,55,0.55)"/>
+      <stop offset="100%" stop-color="rgba(14,16,28,0.65)"/>
+    </linearGradient>
+    <linearGradient id="amberFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd078"/>
+      <stop offset="100%" stop-color="#ff9a2e"/>
+    </linearGradient>
+    <linearGradient id="amberHoverFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe0a0"/>
+      <stop offset="100%" stop-color="#ffb84d"/>
+    </linearGradient>
+    <linearGradient id="iconFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(26,30,52,0.95)"/>
+      <stop offset="100%" stop-color="rgba(12,14,28,0.98)"/>
+    </linearGradient>
+    <linearGradient id="iconHoverFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(34,40,70,0.97)"/>
+      <stop offset="100%" stop-color="rgba(16,20,40,0.99)"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-80%" width="180%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="topSheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+      <stop offset="45%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <!-- Soft edge bloom (kept inside pad for transparent corners) -->
+  <rect x="4" y="4" width="504" height="88" rx="44" ry="44"
+    fill="rgba(255,184,77,0.5)" opacity="0.28"/>
+  <!-- Body -->
+  <rect x="4" y="4" width="504" height="88" rx="44" ry="44"
+    fill="url(#amberFill)" stroke="rgba(255,230,180,0.45)" stroke-width="2"/>
+  <!-- Top sheen -->
+  <rect x="9" y="8" width="494" height="35.2" rx="37.4" ry="37.4"
+    fill="url(#topSheen)" opacity="0.5"/>
+  <!-- Bottom shade -->
+  <rect x="12" y="55.04" width="488" height="28.16" rx="28.6" ry="28.6"
+    fill="rgba(50,25,0,0.28)"/>
+  
+</svg>

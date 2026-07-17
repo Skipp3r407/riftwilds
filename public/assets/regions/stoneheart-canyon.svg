@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1428"/>
+      <stop offset="100%" stop-color="#121c34"/>
+    </linearGradient>
+    <radialGradient id="r" cx="70%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#c4a882" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#070b16" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+  <rect width="640" height="360" fill="url(#r)"/>
+  <path d="M0 260 Q160 220 320 270 T640 250 L640 360 L0 360 Z" fill="#c4a882" opacity="0.15"/>
+  <circle cx="480" cy="120" r="40" fill="#c4a882" opacity="0.2"/>
+  <text x="32" y="48" fill="#e8f0ff" font-family="Orbitron, sans-serif" font-size="22" opacity="0.9">stoneheart canyon</text>
+</svg>

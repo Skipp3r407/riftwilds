@@ -1,0 +1,15 @@
+export { AboutExperience } from "@/components/about/about-experience";
+export { CinematicHero } from "@/components/about/cinematic-hero";
+export { StoryChapter } from "@/components/about/story-chapter";
+export { ParallaxScene } from "@/components/about/parallax-scene";
+export { CinematicTextReveal } from "@/components/about/cinematic-text-reveal";
+export { NarrationControls } from "@/components/about/narration-controls";
+export { StoryProgress } from "@/components/about/story-progress";
+export { ChapterNavigation } from "@/components/about/chapter-navigation";
+export { LoreTimeline } from "@/components/about/lore-timeline";
+export { CharacterProfile } from "@/components/about/character-profile";
+export { RiftlingOriginDiagram } from "@/components/about/riftling-origin-diagram";
+export { HowRiftlingsCameToBe } from "@/components/about/how-riftlings-came-to-be";
+export { ComicPanel } from "@/components/about/comic-panel";
+export { FinalStoryCTA } from "@/components/about/final-story-cta";
+export { ReducedMotionScene } from "@/components/about/reduced-motion-scene";

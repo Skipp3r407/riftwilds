@@ -1,0 +1,53 @@
+{
+  "name": "validate-pet-lore",
+  "generatedAt": "2026-07-17T21:22:15.862Z",
+  "assumptions": [
+    "Short bio target 40–70 words (soft max 75)",
+    "Standard bio target 150–250 words (soft max 260)",
+    "Full lore minimum ~450 words (ideal 500–900)"
+  ],
+  "sections": [
+    {
+      "title": "Species lore coverage",
+      "status": "PASS",
+      "summary": "50/50 species have lore files",
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "title": "Word counts & consistency",
+      "status": "PASS",
+      "summary": "All word bands acceptable",
+      "details": {
+        "issues": []
+      }
+    },
+    {
+      "title": "Schema parse",
+      "status": "PASS",
+      "summary": "All lore objects parse"
+    },
+    {
+      "title": "Biography determinism",
+      "status": "PASS",
+      "summary": "Same seed produces identical biography"
+    },
+    {
+      "title": "Bred origin safety",
+      "status": "PASS",
+      "summary": "Bred pets use breeding-compatible origins + family history",
+      "details": {
+        "originStory": "Created through careful breeding in the Hatchery. Its parents’ affinities braided into a single shell before incubation began.",
+        "familyHistory": "A gentle mutation appeared early: an unexpected shimmer, rare in both parent lines yet stable."
+      }
+    },
+    {
+      "title": "Catalog size",
+      "status": "PASS",
+      "summary": "catalog=50 lore=50"
+    }
+  ],
+  "criticalFailures": [],
+  "ok": true
+}

@@ -1,0 +1,400 @@
+{
+  "schemaVersion": 1,
+  "regionId": "stoneheart-canyon",
+  "slug": "stoneheart-canyon",
+  "name": "Stoneheart Canyon",
+  "tileSize": 32,
+  "cols": 48,
+  "rows": 40,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "settlement",
+      "name": "Canyon Settlement",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "fossil",
+      "name": "Fossil Basin",
+      "x": 512,
+      "y": 128,
+      "width": 512,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "quarry",
+      "name": "Quarry Paths",
+      "x": 1088,
+      "y": 128,
+      "width": 384,
+      "height": 448,
+      "kind": "danger"
+    },
+    {
+      "id": "ruins",
+      "name": "Carved Ruins",
+      "x": 256,
+      "y": 640,
+      "width": 512,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "mine",
+      "name": "Underground Mine",
+      "x": 896,
+      "y": 640,
+      "width": 512,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "boss",
+      "name": "Canyon Colosseum",
+      "x": 576,
+      "y": 960,
+      "width": 448,
+      "height": 256,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-settlement-fossil",
+      "from": "settlement",
+      "to": "fossil",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 224
+        },
+        {
+          "x": 768,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-fossil-quarry",
+      "from": "fossil",
+      "to": "quarry",
+      "waypoints": [
+        {
+          "x": 768,
+          "y": 320
+        },
+        {
+          "x": 1280,
+          "y": 352
+        }
+      ]
+    },
+    {
+      "id": "path-quarry-ruins",
+      "from": "quarry",
+      "to": "ruins",
+      "waypoints": [
+        {
+          "x": 1280,
+          "y": 352
+        },
+        {
+          "x": 512,
+          "y": 832
+        }
+      ]
+    },
+    {
+      "id": "path-ruins-mine",
+      "from": "ruins",
+      "to": "mine",
+      "waypoints": [
+        {
+          "x": 512,
+          "y": 832
+        },
+        {
+          "x": 1152,
+          "y": 832
+        }
+      ]
+    },
+    {
+      "id": "path-mine-boss",
+      "from": "mine",
+      "to": "boss",
+      "waypoints": [
+        {
+          "x": 1152,
+          "y": 832
+        },
+        {
+          "x": 800,
+          "y": 1088
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": true,
+      "id": "mine-camp",
+      "type": "building",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Mining Camp",
+      "color": 12611648,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "stoneheart-canyon-spawn",
+      "type": "spawn",
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "x": 320,
+      "y": 400,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-stoneheart-canyon-stoneheart-ore",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "stoneheart-ore",
+      "metadata": {
+        "resourceId": "stoneheart-ore"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-stoneheart-canyon-fossil-shard",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "fossil-shard",
+      "metadata": {
+        "resourceId": "fossil-shard"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-stoneheart-canyon-rock-crawler",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "rock-crawler",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-fossil",
+      "type": "hidden_area",
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "x": 704,
+      "y": 256,
+      "label": "Fossil Chamber",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-pressure",
+      "type": "puzzle",
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "x": 384,
+      "y": 768,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Pressure Plates"
+    },
+    {
+      "id": "wp-stone",
+      "type": "waypoint",
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "x": 192,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Camp Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "stoneheart-canyon-return-portal",
+      "type": "portal",
+      "x": 320,
+      "y": 336,
+      "interactionRadius": 48,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false
+      }
+    },
+    {
+      "id": "stoneheart-canyon-boss-arena",
+      "type": "boss_arena",
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "x": 640,
+      "y": 1024,
+      "width": 320,
+      "height": 160,
+      "label": "Stoneheart Behemoth",
+      "metadata": {
+        "bossId": "stoneheart-behemoth",
+        "arenaRef": "stoneheart-canyon-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "stoneheart-canyon-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "stoneheart-canyon-wall-s",
+      "x": 0,
+      "y": 1248,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "stoneheart-canyon-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "stoneheart-canyon-wall-e",
+      "x": 1504,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "mine-camp-col",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 1280
+  },
+  "minimap": {
+    "width": 48,
+    "height": 40,
+    "landmarkPins": [
+      {
+        "id": "mine-camp",
+        "label": "Mining Camp",
+        "x": 3,
+        "y": 3,
+        "icon": "building"
+      },
+      {
+        "id": "wp-stone",
+        "label": "Camp Waypoint",
+        "x": 6,
+        "y": 6,
+        "icon": "waypoint"
+      },
+      {
+        "id": "stoneheart-canyon-return-portal",
+        "label": "Riftwild Commons",
+        "x": 10,
+        "y": 11,
+        "icon": "portal"
+      },
+      {
+        "id": "stoneheart-canyon-boss-arena",
+        "label": "Stoneheart Behemoth",
+        "x": 20,
+        "y": 32,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "mist"
+  ],
+  "musicKey": "music-stone",
+  "safeZones": [
+    {
+      "id": "settlement-safe",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 320,
+    "y": 400
+  },
+  "notes": [
+    "Blueprint + unlock gate; placeholder scene."
+  ],
+  "completeness": "PARTIAL"
+}

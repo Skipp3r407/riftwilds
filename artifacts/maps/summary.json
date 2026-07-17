@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-07-17T21:08:39.240Z",
+  "regionCount": 12,
+  "fails": 0,
+  "missing": [],
+  "unlockOk": true,
+  "portalOk": true,
+  "regions": [
+    {
+      "slug": "riftwild-commons",
+      "completeness": "FULL",
+      "objects": 51,
+      "zones": 14
+    },
+    {
+      "slug": "ember-crater",
+      "completeness": "PARTIAL",
+      "objects": 21,
+      "zones": 8
+    },
+    {
+      "slug": "moonwater-coast",
+      "completeness": "PARTIAL",
+      "objects": 19,
+      "zones": 7
+    },
+    {
+      "slug": "elderwood-forest",
+      "completeness": "PARTIAL",
+      "objects": 20,
+      "zones": 7
+    },
+    {
+      "slug": "stormspire-peaks",
+      "completeness": "PARTIAL",
+      "objects": 10,
+      "zones": 5
+    },
+    {
+      "slug": "stoneheart-canyon",
+      "completeness": "PARTIAL",
+      "objects": 10,
+      "zones": 6
+    },
+    {
+      "slug": "frostveil-basin",
+      "completeness": "PARTIAL",
+      "objects": 10,
+      "zones": 6
+    },
+    {
+      "slug": "radiant-citadel",
+      "completeness": "PARTIAL",
+      "objects": 10,
+      "zones": 7
+    },
+    {
+      "slug": "void-hollow",
+      "completeness": "PARTIAL",
+      "objects": 10,
+      "zones": 7
+    },
+    {
+      "slug": "alloy-ruins",
+      "completeness": "PARTIAL",
+      "objects": 10,
+      "zones": 7
+    },
+    {
+      "slug": "spirit-marsh",
+      "completeness": "PARTIAL",
+      "objects": 11,
+      "zones": 7
+    },
+    {
+      "slug": "celestial-rift",
+      "completeness": "PARTIAL",
+      "objects": 13,
+      "zones": 7
+    }
+  ]
+}

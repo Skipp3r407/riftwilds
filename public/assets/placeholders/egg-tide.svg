@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <ellipse cx="256" cy="280" rx="110" ry="150" fill="#3d9bff" stroke="#1a2744" stroke-width="8"/>
+  <ellipse cx="220" cy="220" rx="28" ry="18" fill="#ffffff" opacity="0.35"/>
+  <text x="256" y="480" text-anchor="middle" fill="#9bb0d0" font-family="ui-monospace,monospace" font-size="18">DEV egg-tide</text>
+  <text x="256" y="36" text-anchor="middle" fill="#ffb84d" font-family="ui-monospace,monospace" font-size="16">DEV PLACEHOLDER</text>
+</svg>

@@ -1,0 +1,13 @@
+export { ORIGIN_TEMPLATES } from "./origins";
+export { FIRST_MEMORY_TEMPLATES } from "./first-memories";
+export { HABIT_TEMPLATES } from "./habits";
+export { FEAR_TEMPLATES } from "./fears";
+export { TALENT_TEMPLATES } from "./talents";
+export { DREAM_TEMPLATES } from "./dreams";
+export { MYSTERY_TEMPLATES } from "./mysteries";
+export { OWNER_BOND_TEMPLATES, BOND_STAGE_PARAGRAPHS } from "./owner-bonds";
+export { EVOLUTION_STORY_TEMPLATES } from "./evolution-stories";
+export { FAMILY_STORY_TEMPLATES } from "./family-stories";
+export { AFFINITY_THEME_TEMPLATES } from "./affinity-themes";
+export { REGION_THEME_TEMPLATES } from "./region-themes";
+export { RARITY_THEME_TEMPLATES, RARITY_ORDER } from "./rarity-themes";

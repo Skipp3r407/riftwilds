@@ -1,0 +1,94 @@
+# Asset scan report
+
+- Scanned: 2026-07-17T22:41:21.850Z
+- Category: all
+- Generated: 295
+- Pending: 136
+- Legacy: 12
+- Failed: 0
+- Missing (actionable): 136
+
+## Missing (priority order)
+
+- P4 `npc-rowan-vale` → /assets/npcs/rowan-vale/portrait.png
+- P4 `npc-mira-shellbright` → /assets/npcs/mira-shellbright/portrait.png
+- P4 `npc-bram-ironroot` → /assets/npcs/bram-ironroot/portrait.png
+- P4 `npc-tessa-windmere` → /assets/npcs/tessa-windmere/portrait.png
+- P4 `npc-captain-orren` → /assets/npcs/captain-orren/portrait.png
+- P4 `npc-nyla-brook` → /assets/npcs/nyla-brook/portrait.png
+- P4 `npc-pip-gearwhistle` → /assets/npcs/pip-gearwhistle/portrait.png
+- P4 `npc-rook-emberfall` → /assets/npcs/rook-emberfall/portrait.png
+- P4 `npc-kael-ashwalker` → /assets/npcs/kael-ashwalker/portrait.png
+- P4 `npc-forgekeeper-vessa` → /assets/npcs/forgekeeper-vessa/portrait.png
+- P4 `npc-cinder-sage-malrec` → /assets/npcs/cinder-sage-malrec/portrait.png
+- P4 `npc-warden-pyra` → /assets/npcs/warden-pyra/portrait.png
+- P4 `npc-luma-tidecrest` → /assets/npcs/luma-tidecrest/portrait.png
+- P4 `npc-finn-coralhand` → /assets/npcs/finn-coralhand/portrait.png
+- P4 `npc-oracle-selene` → /assets/npcs/oracle-selene/portrait.png
+- P4 `npc-marina-drift` → /assets/npcs/marina-drift/portrait.png
+- P4 `npc-warden-sylvi` → /assets/npcs/warden-sylvi/portrait.png
+- P4 `npc-mosskeeper-elden` → /assets/npcs/mosskeeper-elden/portrait.png
+- P4 `npc-fenn-quickbranch` → /assets/npcs/fenn-quickbranch/portrait.png
+- P4 `npc-grandmother-willowmere` → /assets/npcs/grandmother-willowmere/portrait.png
+- P4 `npc-aeron-cloudstep` → /assets/npcs/aeron-cloudstep/portrait.png
+- P4 `npc-engineer-volt` → /assets/npcs/engineer-volt/portrait.png
+- P4 `npc-skywarden-ilya` → /assets/npcs/skywarden-ilya/portrait.png
+- P4 `npc-hermit-thane` → /assets/npcs/hermit-thane/portrait.png
+- P4 `npc-doran-flint` → /assets/npcs/doran-flint/portrait.png
+- P4 `npc-petra-stoneveil` → /assets/npcs/petra-stoneveil/portrait.png
+- P4 `npc-marshal-korr` → /assets/npcs/marshal-korr/portrait.png
+- P4 `npc-gemwright-opal` → /assets/npcs/gemwright-opal/portrait.png
+- P4 `npc-freya-snowmark` → /assets/npcs/freya-snowmark/portrait.png
+- P4 `npc-jori-icebloom` → /assets/npcs/jori-icebloom/portrait.png
+- P4 `npc-hunter-varek` → /assets/npcs/hunter-varek/portrait.png
+- P4 `npc-aurora-linn` → /assets/npcs/aurora-linn/portrait.png
+- P4 `npc-chancellor-aurex` → /assets/npcs/chancellor-aurex/portrait.png
+- P4 `npc-scholar-lyra` → /assets/npcs/scholar-lyra/portrait.png
+- P4 `npc-sentinel-cassian` → /assets/npcs/sentinel-cassian/portrait.png
+- P4 `npc-curator-verin` → /assets/npcs/curator-verin/portrait.png
+- P4 `npc-shadecaller-neris` → /assets/npcs/shadecaller-neris/portrait.png
+- P4 `npc-watcher-omen` → /assets/npcs/watcher-omen/portrait.png
+- P4 `npc-veya-dusk` → /assets/npcs/veya-dusk/portrait.png
+- P4 `npc-keeper-null` → /assets/npcs/keeper-null/portrait.png
+- P4 `npc-tinker-pax` → /assets/npcs/tinker-pax/portrait.png
+- P4 `npc-unit-ari-7` → /assets/npcs/unit-ari-7/portrait.png
+- P4 `npc-salvager-knox` → /assets/npcs/salvager-knox/portrait.png
+- P4 `npc-professor-ferrum` → /assets/npcs/professor-ferrum/portrait.png
+- P4 `npc-medium-amara` → /assets/npcs/medium-amara/portrait.png
+- P4 `npc-ferryman-grey` → /assets/npcs/ferryman-grey/portrait.png
+- P4 `npc-lantern-keeper-sio` → /assets/npcs/lantern-keeper-sio/portrait.png
+- P4 `npc-echo-child-nimi` → /assets/npcs/echo-child-nimi/portrait.png
+- P4 `npc-astronomer-caelis` → /assets/npcs/astronomer-caelis/portrait.png
+- P4 `npc-guardian-seraphine` → /assets/npcs/guardian-seraphine/portrait.png
+- P4 `npc-starforger-orion` → /assets/npcs/starforger-orion/portrait.png
+- P4 `npc-nameless-witness` → /assets/npcs/nameless-witness/portrait.png
+- P4 `npc-plaza-musician-reo` → /assets/npcs/plaza-musician-reo/portrait.png
+- P4 `npc-plaza-child-mim` → /assets/npcs/plaza-child-mim/portrait.png
+- P4 `npc-farm-hand-jot` → /assets/npcs/farm-hand-jot/portrait.png
+- P4 `npc-dock-sweeper-ana` → /assets/npcs/dock-sweeper-ana/portrait.png
+- P4 `npc-scribe-runner-kel` → /assets/npcs/scribe-runner-kel/portrait.png
+- P4 `npc-cook-pot-uma` → /assets/npcs/cook-pot-uma/portrait.png
+- P4 `npc-gardener-sip` → /assets/npcs/gardener-sip/portrait.png
+- P4 `npc-guard-east-ryn` → /assets/npcs/guard-east-ryn/portrait.png
+- P4 `npc-guard-west-dao` → /assets/npcs/guard-west-dao/portrait.png
+- P4 `npc-guard-portal-hex` → /assets/npcs/guard-portal-hex/portrait.png
+- P4 `npc-riftling-plaza-emberkit` → /assets/npcs/riftling-plaza-emberkit/portrait.png
+- P4 `npc-riftling-hatchery-glowpup` → /assets/npcs/riftling-hatchery-glowpup/portrait.png
+- P4 `npc-riftling-market-pouchling` → /assets/npcs/riftling-market-pouchling/portrait.png
+- P4 `npc-ember-porter-ash` → /assets/npcs/ember-porter-ash/portrait.png
+- P4 `npc-ember-cook-cind` → /assets/npcs/ember-cook-cind/portrait.png
+- P4 `npc-ember-miner-bas` → /assets/npcs/ember-miner-bas/portrait.png
+- P4 `npc-ember-guard-lox` → /assets/npcs/ember-guard-lox/portrait.png
+- P4 `npc-coast-netmender-pli` → /assets/npcs/coast-netmender-pli/portrait.png
+- P4 `npc-coast-child-shell` → /assets/npcs/coast-child-shell/portrait.png
+- P4 `npc-coast-innkeep-dor` → /assets/npcs/coast-innkeep-dor/portrait.png
+- P4 `npc-coast-guard-brine` → /assets/npcs/coast-guard-brine/portrait.png
+- P4 `npc-elder-forager-nim` → /assets/npcs/elder-forager-nim/portrait.png
+- P4 `npc-elder-carver-tor` → /assets/npcs/elder-carver-tor/portrait.png
+- P4 `npc-elder-singer-luma` → /assets/npcs/elder-singer-luma/portrait.png
+- P4 `npc-elder-guard-briar` → /assets/npcs/elder-guard-briar/portrait.png
+- P4 `npc-storm-porter-zee` → /assets/npcs/storm-porter-zee/portrait.png
+- P4 `npc-storm-cook-pip2` → /assets/npcs/storm-cook-pip2/portrait.png
+- P4 `npc-storm-climber-aro` → /assets/npcs/storm-climber-aro/portrait.png
+
+…and 56 more

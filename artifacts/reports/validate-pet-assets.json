@@ -1,0 +1,26 @@
+{
+  "name": "validate-pet-assets",
+  "generatedAt": "2026-07-17T20:56:16.144Z",
+  "assumptions": [
+    "Portrait path = /assets/pets/{slug}.png under public/"
+  ],
+  "sections": [
+    {
+      "title": "Launch species portraits",
+      "status": "PASS",
+      "summary": "50/50 portraits OK; missing=0; empty=0",
+      "details": {
+        "present": 50,
+        "missing": [],
+        "empty": []
+      }
+    },
+    {
+      "title": "Catalog size",
+      "status": "PASS",
+      "summary": "50 launch species"
+    }
+  ],
+  "criticalFailures": [],
+  "ok": true
+}

@@ -1,0 +1,138 @@
+{
+  "name": "battle-balance",
+  "generatedAt": "2026-07-17T20:56:22.316Z",
+  "assumptions": [
+    "Matches simulated: 10000 (architecture supports --matches=1000000; default is practical scale)",
+    "Player always BASIC_ATTACK; AI uses chooseAiAction",
+    "Equipment normalization ON; ranked mode OFF",
+    "Not a full meta analysis — training engine only"
+  ],
+  "sections": [
+    {
+      "title": "Scale",
+      "status": "PASS",
+      "summary": "10000 matches in 221ms (45249 matches/s)",
+      "details": {
+        "matches": 10000,
+        "elapsedMs": 221,
+        "completed": 10000,
+        "drawsOrTimeout": 0,
+        "avgRounds": 2.03,
+        "projected1MSeconds": 22.1
+      }
+    },
+    {
+      "title": "Affinity balance",
+      "status": "PASS",
+      "summary": "Win-rate spread 0.342 (min 0.658, max 1.000)",
+      "details": {
+        "affinityWinRates": [
+          {
+            "affinity": "FROST",
+            "fights": 800,
+            "winRate": 1
+          },
+          {
+            "affinity": "VOID",
+            "fights": 1000,
+            "winRate": 1
+          },
+          {
+            "affinity": "ALLOY",
+            "fights": 800,
+            "winRate": 1
+          },
+          {
+            "affinity": "RADIANT",
+            "fights": 1200,
+            "winRate": 0.995
+          },
+          {
+            "affinity": "STONE",
+            "fights": 1200,
+            "winRate": 0.9775
+          },
+          {
+            "affinity": "SPIRIT",
+            "fights": 800,
+            "winRate": 0.975
+          },
+          {
+            "affinity": "STORM",
+            "fights": 1200,
+            "winRate": 0.9183333333333333
+          },
+          {
+            "affinity": "TIDE",
+            "fights": 1000,
+            "winRate": 0.887
+          },
+          {
+            "affinity": "EMBER",
+            "fights": 1000,
+            "winRate": 0.853
+          },
+          {
+            "affinity": "GROVE",
+            "fights": 1000,
+            "winRate": 0.658
+          }
+        ],
+        "topSpecies": [
+          {
+            "slug": "voltkit",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "pebblit",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "frostnip",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "luminara",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "hollowshade",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "gearling",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "ashwing",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "staticat",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "glimmerp",
+            "fights": 200,
+            "winRate": 1
+          },
+          {
+            "slug": "mistwraith",
+            "fights": 200,
+            "winRate": 1
+          }
+        ]
+      }
+    }
+  ],
+  "criticalFailures": [],
+  "ok": true
+}

@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "regionId": "frostveil-basin",
+  "slug": "frostveil-basin",
+  "name": "Frostveil Basin",
+  "tileSize": 32,
+  "cols": 48,
+  "rows": 40,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "village",
+      "name": "Frostveil Village",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "lake",
+      "name": "Frozen Lake",
+      "x": 512,
+      "y": 256,
+      "width": 512,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "forest",
+      "name": "Snow Forest",
+      "x": 1088,
+      "y": 128,
+      "width": 384,
+      "height": 448,
+      "kind": "exploration"
+    },
+    {
+      "id": "caves",
+      "name": "Ice Cave Network",
+      "x": 128,
+      "y": 576,
+      "width": 512,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora Shrine",
+      "x": 768,
+      "y": 640,
+      "width": 448,
+      "height": 320,
+      "kind": "dungeon"
+    },
+    {
+      "id": "boss",
+      "name": "Frostveil Citadel",
+      "x": 960,
+      "y": 960,
+      "width": 448,
+      "height": 256,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-village-lake",
+      "from": "village",
+      "to": "lake",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 224
+        },
+        {
+          "x": 768,
+          "y": 448
+        }
+      ]
+    },
+    {
+      "id": "path-lake-forest",
+      "from": "lake",
+      "to": "forest",
+      "waypoints": [
+        {
+          "x": 768,
+          "y": 448
+        },
+        {
+          "x": 1280,
+          "y": 352
+        }
+      ]
+    },
+    {
+      "id": "path-forest-caves",
+      "from": "forest",
+      "to": "caves",
+      "waypoints": [
+        {
+          "x": 1280,
+          "y": 352
+        },
+        {
+          "x": 384,
+          "y": 768
+        }
+      ]
+    },
+    {
+      "id": "path-caves-aurora",
+      "from": "caves",
+      "to": "aurora",
+      "waypoints": [
+        {
+          "x": 384,
+          "y": 768
+        },
+        {
+          "x": 992,
+          "y": 800
+        }
+      ]
+    },
+    {
+      "id": "path-aurora-boss",
+      "from": "aurora",
+      "to": "boss",
+      "waypoints": [
+        {
+          "x": 992,
+          "y": 800
+        },
+        {
+          "x": 1184,
+          "y": 1088
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": true,
+      "id": "frost-lodge",
+      "type": "building",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Warm Lodge",
+      "color": 10537192,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "frostveil-basin-spawn",
+      "type": "spawn",
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "x": 340,
+      "y": 420,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-frostveil-basin-frost-crystal",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "frost-crystal",
+      "metadata": {
+        "resourceId": "frost-crystal"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-frostveil-basin-ice-bloom",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "ice-bloom",
+      "metadata": {
+        "resourceId": "ice-bloom"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-frostveil-basin-frost-wolf",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "frost-wolf",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-spring",
+      "type": "hidden_area",
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "x": 256,
+      "y": 704,
+      "label": "Warm Spring",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-aurora",
+      "type": "puzzle",
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "x": 896,
+      "y": 704,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Aurora Lights"
+    },
+    {
+      "id": "wp-frost",
+      "type": "waypoint",
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "x": 192,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Lodge Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "frostveil-basin-return-portal",
+      "type": "portal",
+      "x": 340,
+      "y": 356,
+      "interactionRadius": 48,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false
+      }
+    },
+    {
+      "id": "frostveil-basin-boss-arena",
+      "type": "boss_arena",
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "x": 1024,
+      "y": 1024,
+      "width": 320,
+      "height": 160,
+      "label": "Frostveil Warden",
+      "metadata": {
+        "bossId": "frostveil-warden",
+        "arenaRef": "frostveil-basin-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "frostveil-basin-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "frostveil-basin-wall-s",
+      "x": 0,
+      "y": 1248,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "frostveil-basin-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "frostveil-basin-wall-e",
+      "x": 1504,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "frost-lodge-col",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 1280
+  },
+  "minimap": {
+    "width": 48,
+    "height": 40,
+    "landmarkPins": [
+      {
+        "id": "frost-lodge",
+        "label": "Warm Lodge",
+        "x": 3,
+        "y": 3,
+        "icon": "building"
+      },
+      {
+        "id": "wp-frost",
+        "label": "Lodge Waypoint",
+        "x": 6,
+        "y": 6,
+        "icon": "waypoint"
+      },
+      {
+        "id": "frostveil-basin-return-portal",
+        "label": "Riftwild Commons",
+        "x": 11,
+        "y": 11,
+        "icon": "portal"
+      },
+      {
+        "id": "frostveil-basin-boss-arena",
+        "label": "Frostveil Warden",
+        "x": 32,
+        "y": 32,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "blizzard",
+    "aurora"
+  ],
+  "musicKey": "music-frost",
+  "safeZones": [
+    {
+      "id": "village-safe",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 340,
+    "y": 420
+  },
+  "notes": [
+    "Blueprint + unlock gate; placeholder scene."
+  ],
+  "completeness": "PARTIAL"
+}

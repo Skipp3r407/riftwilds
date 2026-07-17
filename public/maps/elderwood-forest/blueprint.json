@@ -1,0 +1,629 @@
+{
+  "schemaVersion": 1,
+  "regionId": "elderwood-forest",
+  "slug": "elderwood-forest",
+  "name": "Elderwood Forest",
+  "tileSize": 32,
+  "cols": 56,
+  "rows": 48,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "grove-camp",
+      "name": "Grove Camp",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "herb-trails",
+      "name": "Herb Trails",
+      "x": 512,
+      "y": 128,
+      "width": 576,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "farm-clearing",
+      "name": "Farm Clearing",
+      "x": 1152,
+      "y": 128,
+      "width": 448,
+      "height": 320,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "ancient-grove",
+      "name": "Ancient Grove",
+      "x": 256,
+      "y": 576,
+      "width": 640,
+      "height": 448,
+      "kind": "exploration"
+    },
+    {
+      "id": "tree-dungeon",
+      "name": "Heartwood Dungeon",
+      "x": 1024,
+      "y": 576,
+      "width": 576,
+      "height": 448,
+      "kind": "dungeon"
+    },
+    {
+      "id": "spirit-glade",
+      "name": "Spirit Glade",
+      "x": 128,
+      "y": 1088,
+      "width": 384,
+      "height": 320,
+      "kind": "hidden"
+    },
+    {
+      "id": "heartwood-arena",
+      "name": "Heartwood Arena",
+      "x": 1152,
+      "y": 1088,
+      "width": 448,
+      "height": 320,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-grove-camp-herb-trails",
+      "from": "grove-camp",
+      "to": "herb-trails",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 224
+        },
+        {
+          "x": 800,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-herb-trails-farm-clearing",
+      "from": "herb-trails",
+      "to": "farm-clearing",
+      "waypoints": [
+        {
+          "x": 800,
+          "y": 320
+        },
+        {
+          "x": 1376,
+          "y": 288
+        }
+      ]
+    },
+    {
+      "id": "path-farm-clearing-ancient-grove",
+      "from": "farm-clearing",
+      "to": "ancient-grove",
+      "waypoints": [
+        {
+          "x": 1376,
+          "y": 288
+        },
+        {
+          "x": 576,
+          "y": 800
+        }
+      ]
+    },
+    {
+      "id": "path-ancient-grove-tree-dungeon",
+      "from": "ancient-grove",
+      "to": "tree-dungeon",
+      "waypoints": [
+        {
+          "x": 576,
+          "y": 800
+        },
+        {
+          "x": 1312,
+          "y": 800
+        }
+      ]
+    },
+    {
+      "id": "path-tree-dungeon-spirit-glade",
+      "from": "tree-dungeon",
+      "to": "spirit-glade",
+      "waypoints": [
+        {
+          "x": 1312,
+          "y": 800
+        },
+        {
+          "x": 320,
+          "y": 1248
+        }
+      ]
+    },
+    {
+      "id": "path-spirit-glade-heartwood-arena",
+      "from": "spirit-glade",
+      "to": "heartwood-arena",
+      "waypoints": [
+        {
+          "x": 320,
+          "y": 1248
+        },
+        {
+          "x": 1376,
+          "y": 1248
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": true,
+      "id": "ranger-lodge",
+      "type": "building",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Ranger Lodge",
+      "color": 4906874,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": true,
+      "id": "herb-shed",
+      "type": "building",
+      "x": 1216,
+      "y": 160,
+      "width": 192,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Herb Shed",
+      "color": 6983744,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": true,
+      "id": "heartwood-gate",
+      "type": "building",
+      "x": 1088,
+      "y": 640,
+      "width": 256,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Heartwood Gate",
+      "color": 3825728,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "elderwood-forest-spawn",
+      "type": "spawn",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 340,
+      "y": 380,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-elder-ranger",
+      "type": "npc",
+      "x": 256,
+      "y": 256,
+      "interactionRadius": 56,
+      "label": "Ranger Thorn",
+      "metadata": {
+        "npcId": "elder-ranger",
+        "lines": [
+          "Elderwood paths twist. Follow the glowing moss if you get lost."
+        ]
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-elderwood-forest-grove-herb",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "grove-herb",
+      "metadata": {
+        "resourceId": "grove-herb"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-elderwood-forest-ancient-bark",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "ancient-bark",
+      "metadata": {
+        "resourceId": "ancient-bark"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-elderwood-forest-mossmeal",
+      "type": "resource",
+      "x": 576,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "mossmeal",
+      "metadata": {
+        "resourceId": "mossmeal"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-elderwood-forest-glowcap",
+      "type": "resource",
+      "x": 704,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "glowcap",
+      "metadata": {
+        "resourceId": "glowcap"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-elderwood-forest-berry-bush",
+      "type": "resource",
+      "x": 832,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "berry-bush",
+      "metadata": {
+        "resourceId": "berry-bush"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-elderwood-forest-grove-sprite",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "grove-sprite",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-elderwood-forest-bark-guardian",
+      "type": "enemy_spawn",
+      "x": 800,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "bark-guardian",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-elderwood-forest-vine-sprout",
+      "type": "enemy_spawn",
+      "x": 960,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "vine-sprout",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-spirit-glade",
+      "type": "hidden_area",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 192,
+      "y": 1152,
+      "label": "Spirit Glade",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "hidden-root-tunnel",
+      "type": "hidden_area",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 768,
+      "y": 768,
+      "label": "Root Tunnel",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-moss-path",
+      "type": "puzzle",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 576,
+      "y": 704,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Moss Path Sequence"
+    },
+    {
+      "id": "puzzle-grove-rings",
+      "type": "puzzle",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 1280,
+      "y": 768,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Grove Ring Puzzle"
+    },
+    {
+      "id": "wp-grove-camp",
+      "type": "waypoint",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 256,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Grove Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "elderwood-to-commons",
+      "type": "portal",
+      "x": 340,
+      "y": 252,
+      "interactionRadius": 44,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false,
+        "portalDefId": "elderwood-to-commons"
+      }
+    },
+    {
+      "id": "elderwood-forest-boss-arena",
+      "type": "boss_arena",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 1216,
+      "y": 1152,
+      "width": 320,
+      "height": 192,
+      "label": "Elderwood Heartwood",
+      "metadata": {
+        "bossId": "elderwood-heartwood",
+        "arenaRef": "elderwood-forest-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "elderwood-forest-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1792,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "elderwood-forest-wall-s",
+      "x": 0,
+      "y": 1504,
+      "width": 1792,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "elderwood-forest-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1536,
+      "kind": "wall"
+    },
+    {
+      "id": "elderwood-forest-wall-e",
+      "x": 1760,
+      "y": 0,
+      "width": 32,
+      "height": 1536,
+      "kind": "wall"
+    },
+    {
+      "id": "ranger-lodge-col",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 192,
+      "kind": "building"
+    },
+    {
+      "id": "herb-shed-col",
+      "x": 1216,
+      "y": 160,
+      "width": 192,
+      "height": 160,
+      "kind": "building"
+    },
+    {
+      "id": "heartwood-gate-col",
+      "x": 1088,
+      "y": 640,
+      "width": 256,
+      "height": 192,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1792,
+    "height": 1536
+  },
+  "minimap": {
+    "width": 56,
+    "height": 48,
+    "landmarkPins": [
+      {
+        "id": "ranger-lodge",
+        "label": "Ranger Lodge",
+        "x": 3,
+        "y": 3,
+        "icon": "building"
+      },
+      {
+        "id": "herb-shed",
+        "label": "Herb Shed",
+        "x": 38,
+        "y": 5,
+        "icon": "building"
+      },
+      {
+        "id": "heartwood-gate",
+        "label": "Heartwood Gate",
+        "x": 34,
+        "y": 20,
+        "icon": "building"
+      },
+      {
+        "id": "npc-elder-ranger",
+        "label": "Ranger Thorn",
+        "x": 8,
+        "y": 8,
+        "icon": "npc"
+      },
+      {
+        "id": "wp-grove-camp",
+        "label": "Grove Waypoint",
+        "x": 8,
+        "y": 6,
+        "icon": "waypoint"
+      },
+      {
+        "id": "elderwood-to-commons",
+        "label": "Riftwild Commons",
+        "x": 11,
+        "y": 8,
+        "icon": "portal"
+      },
+      {
+        "id": "elderwood-forest-boss-arena",
+        "label": "Elderwood Heartwood",
+        "x": 38,
+        "y": 36,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "mist",
+    "fireflies"
+  ],
+  "musicKey": "music-grove",
+  "safeZones": [
+    {
+      "id": "grove-camp-safe",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320
+    },
+    {
+      "id": "farm-clearing-safe",
+      "x": 1152,
+      "y": 128,
+      "width": 448,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 340,
+    "y": 380
+  },
+  "notes": [
+    "Enterable stub from Commons.",
+    "Canopy overhead layer markers in zones."
+  ],
+  "completeness": "PARTIAL"
+}

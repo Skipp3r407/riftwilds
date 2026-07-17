@@ -1,0 +1,14 @@
+{
+  "id": "echo-child-nimi",
+  "slug": "echo-child-nimi",
+  "regionId": "spirit-marsh",
+  "artStatus": "placeholder",
+  "note": "Labeled development placeholder — not final Grok art",
+  "prompts": {
+    "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Echo Child Nimi. Small figure with translucent edges and a bright honest smile — original spirit-child design, not a franchise ghost. Wearing: Tattered festival clothes that shift like fog. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
+    "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Echo Child Nimi. Small figure with translucent edges and a bright honest smile — original spirit-child design, not a franchise ghost. Wearing: Tattered festival clothes that shift like fog. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
+    "thumbnail": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Echo Child Nimi. Small figure with translucent edges and a bright honest smile — original spirit-child design, not a franchise ghost. Wearing: Tattered festival clothes that shift like fog. Region vibe: spirit marsh. Tight head-and-shoulders icon crop, high contrast, centered face.",
+    "sprite": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Echo Child Nimi. Small figure with translucent edges and a bright honest smile — original spirit-child design, not a franchise ghost. Wearing: Tattered festival clothes that shift like fog. Region vibe: spirit marsh. Simple browser-game character sprite concept, front-facing idle stance, clean edges, solid readable colors, small scale friendly."
+  },
+  "updatedAt": "2026-07-17T22:19:46.389Z"
+}

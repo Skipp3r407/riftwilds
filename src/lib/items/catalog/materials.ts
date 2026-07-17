@@ -1,0 +1,60 @@
+import type { MaterialCatalogItem, ItemRarity } from "@/lib/items/types";
+
+const rows: Array<[string, string, ItemRarity, string]> = [
+  ["wood-fiber", "Wood Fiber", "COMMON", "Basic crafting fiber."],
+  ["smooth-stone", "Smooth Stone", "COMMON", "River-smoothed crafting stone."],
+  ["basic-cloth", "Basic Cloth", "COMMON", "Simple weave cloth."],
+  ["clear-water", "Clear Water", "COMMON", "Clean water for brewing."],
+  ["wild-herbs", "Wild Herbs", "COMMON", "Common herb bundle."],
+  ["ember-dust", "Ember Dust", "UNCOMMON", "Warm ember particles."],
+  ["tideglass", "Tideglass", "UNCOMMON", "Sea-glass crystal."],
+  ["grove-fiber", "Grove Fiber", "UNCOMMON", "Living vine fiber."],
+  ["storm-wire", "Storm Wire", "UNCOMMON", "Conductive storm thread."],
+  ["frost-powder", "Frost Powder", "UNCOMMON", "Chilled crystal dust."],
+  ["obsidian-shard", "Obsidian Shard", "RARE", "Sharp volcanic shard."],
+  ["moonwater-pearl-mat", "Moonwater Pearl", "RARE", "Crafting pearl of moonwater."],
+  ["spirit-thread", "Spirit Thread", "RARE", "Soft spirit weave."],
+  ["alloy-plate", "Alloy Plate", "RARE", "Hex alloy plate."],
+  ["radiant-dust", "Radiant Dust", "RARE", "Dawnlight dust."],
+  ["void-fragment", "Void Fragment", "EPIC", "Dimensional scrap."],
+  ["ancient-root", "Ancient Root", "EPIC", "Elder grove root."],
+  ["storm-core", "Storm Core", "EPIC", "Compressed storm energy."],
+  ["glacial-heart", "Glacial Heart", "EPIC", "Frozen heart crystal."],
+  ["spirit-flame-mat", "Spirit Flame", "EPIC", "Bottled spiritflame."],
+  ["volcano-heart", "Volcano Heart", "LEGENDARY", "Legendary forge core."],
+  ["ocean-crown-pearl", "Ocean Crown Pearl", "LEGENDARY", "Deep tide pearl."],
+  ["worldroot-core", "Worldroot Core", "LEGENDARY", "Worldroot essence."],
+  ["sky-rift-crystal", "Sky Rift Crystal", "LEGENDARY", "Sky-rift shard."],
+  ["dawnstar-fragment", "Dawnstar Fragment", "LEGENDARY", "Radiant star chip."],
+  ["riftmaker-shard", "Riftmaker Shard", "MYTHIC", "Mythic rift fragment."],
+  ["astral-thread", "Astral Thread", "MYTHIC", "Astral weave strand."],
+  ["eternal-alloy-core", "Eternal Alloy Core", "MYTHIC", "Eternal alloy nucleus."],
+  ["celestial-star-fragment", "Celestial Star Fragment", "CELESTIAL", "Star fragment for prestige crafts."],
+  ["harmony-crystal", "Harmony Crystal", "CELESTIAL", "Balanced harmony crystal."],
+  ["constellation-core", "Constellation Core", "CELESTIAL", "Constellation crafting core."],
+];
+
+export const MATERIAL_CATALOG: MaterialCatalogItem[] = rows.map(([id, name, rarity, description]) => ({
+  id,
+  name,
+  description,
+  family: "MATERIAL",
+  shopCategory: "MATERIALS",
+  rarity,
+  affinity: null,
+  levelRequirement: 1,
+  tradeability: "TRADEABLE",
+  ownership: "OFF_CHAIN",
+  stackable: true,
+  maxStack: 999,
+  priceKey: id,
+  supply: "UNLIMITED",
+  affixes: [],
+  iconPath: `/assets/items/materials/icons/${id}.png`,
+  inventoryPath: `/assets/items/materials/icons/${id}.png`,
+  compatibleAnatomy: [],
+}));
+
+export function getMaterialById(id: string) {
+  return MATERIAL_CATALOG.find((m) => m.id === id);
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="none"/>
+  <circle cx="128" cy="128" r="96.76800000000001" fill="#121c34" stroke="#3de7ff" stroke-width="2.56" opacity="0.85"/>
+  <path d="M 128 56.31999999999999 Q 199.68 128 128 199.68 Q 56.31999999999999 128 128 56.31999999999999 Z" fill="#3d9bff" opacity="0.95"/>
+  <text x="128" y="235.52" text-anchor="middle" fill="#9bb0d0" font-family="ui-monospace,monospace" font-size="11.52">tiderune/icon</text>
+       <text x="128" y="25.6" text-anchor="middle" fill="#ffb84d" font-family="ui-monospace,monospace" font-size="10.24">DEV PLACEHOLDER</text>
+</svg>

@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 1,
+  "regionId": "alloy-ruins",
+  "slug": "alloy-ruins",
+  "name": "Alloy Ruins",
+  "tileSize": 32,
+  "cols": 48,
+  "rows": 40,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "salvager",
+      "name": "Salvager Settlement",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "courtyard",
+      "name": "Machine Courtyard",
+      "x": 512,
+      "y": 128,
+      "width": 512,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "factory",
+      "name": "Rusted Factory",
+      "x": 1088,
+      "y": 128,
+      "width": 384,
+      "height": 448,
+      "kind": "danger"
+    },
+    {
+      "id": "conduits",
+      "name": "Energy Conduits",
+      "x": 128,
+      "y": 576,
+      "width": 512,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "garden",
+      "name": "Mechanical Garden",
+      "x": 768,
+      "y": 576,
+      "width": 448,
+      "height": 320,
+      "kind": "exploration"
+    },
+    {
+      "id": "archive",
+      "name": "Data Archive",
+      "x": 256,
+      "y": 960,
+      "width": 448,
+      "height": 256,
+      "kind": "dungeon"
+    },
+    {
+      "id": "foundry",
+      "name": "Warframe Foundry",
+      "x": 960,
+      "y": 960,
+      "width": 448,
+      "height": 256,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-salvager-courtyard",
+      "from": "salvager",
+      "to": "courtyard",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 224
+        },
+        {
+          "x": 768,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-courtyard-factory",
+      "from": "courtyard",
+      "to": "factory",
+      "waypoints": [
+        {
+          "x": 768,
+          "y": 320
+        },
+        {
+          "x": 1280,
+          "y": 352
+        }
+      ]
+    },
+    {
+      "id": "path-factory-conduits",
+      "from": "factory",
+      "to": "conduits",
+      "waypoints": [
+        {
+          "x": 1280,
+          "y": 352
+        },
+        {
+          "x": 384,
+          "y": 768
+        }
+      ]
+    },
+    {
+      "id": "path-conduits-garden",
+      "from": "conduits",
+      "to": "garden",
+      "waypoints": [
+        {
+          "x": 384,
+          "y": 768
+        },
+        {
+          "x": 992,
+          "y": 736
+        }
+      ]
+    },
+    {
+      "id": "path-garden-archive",
+      "from": "garden",
+      "to": "archive",
+      "waypoints": [
+        {
+          "x": 992,
+          "y": 736
+        },
+        {
+          "x": 480,
+          "y": 1088
+        }
+      ]
+    },
+    {
+      "id": "path-archive-foundry",
+      "from": "archive",
+      "to": "foundry",
+      "waypoints": [
+        {
+          "x": 480,
+          "y": 1088
+        },
+        {
+          "x": 1184,
+          "y": 1088
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "repair-shop",
+      "type": "building",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Repair Shop",
+      "color": 4057087,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "alloy-ruins-spawn",
+      "type": "spawn",
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "x": 340,
+      "y": 400,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-alloy-ruins-alloy-fragment",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "alloy-fragment",
+      "metadata": {
+        "resourceId": "alloy-fragment"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-alloy-ruins-circuit-crystal",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "circuit-crystal",
+      "metadata": {
+        "resourceId": "circuit-crystal"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-alloy-ruins-security-drone",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "security-drone",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-proto",
+      "type": "hidden_area",
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "x": 1216,
+      "y": 320,
+      "label": "Prototype Lab",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-power",
+      "type": "puzzle",
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "x": 256,
+      "y": 704,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Power Routing"
+    },
+    {
+      "id": "wp-alloy",
+      "type": "waypoint",
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "x": 192,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Settlement Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "alloy-ruins-return-portal",
+      "type": "portal",
+      "x": 340,
+      "y": 336,
+      "interactionRadius": 48,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false
+      }
+    },
+    {
+      "id": "alloy-ruins-boss-arena",
+      "type": "boss_arena",
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "x": 1024,
+      "y": 1024,
+      "width": 320,
+      "height": 160,
+      "label": "Alloy Warframe",
+      "metadata": {
+        "bossId": "alloy-warframe",
+        "arenaRef": "alloy-ruins-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "alloy-ruins-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "alloy-ruins-wall-s",
+      "x": 0,
+      "y": 1248,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "alloy-ruins-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "alloy-ruins-wall-e",
+      "x": 1504,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "repair-shop-col",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 1280
+  },
+  "minimap": {
+    "width": 48,
+    "height": 40,
+    "landmarkPins": [
+      {
+        "id": "repair-shop",
+        "label": "Repair Shop",
+        "x": 3,
+        "y": 3,
+        "icon": "building"
+      },
+      {
+        "id": "wp-alloy",
+        "label": "Settlement Waypoint",
+        "x": 6,
+        "y": 6,
+        "icon": "waypoint"
+      },
+      {
+        "id": "alloy-ruins-return-portal",
+        "label": "Riftwild Commons",
+        "x": 11,
+        "y": 11,
+        "icon": "portal"
+      },
+      {
+        "id": "alloy-ruins-boss-arena",
+        "label": "Alloy Warframe",
+        "x": 32,
+        "y": 32,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "sparks_rain",
+    "light_rain"
+  ],
+  "musicKey": "music-alloy",
+  "safeZones": [
+    {
+      "id": "salvager-safe",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 340,
+    "y": 400
+  },
+  "notes": [
+    "Midgame blueprint; placeholder scene."
+  ],
+  "completeness": "PARTIAL"
+}

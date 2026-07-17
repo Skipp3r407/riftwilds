@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-17T00:00:00.000Z",
+  "workflow": [
+    "planned",
+    "prompt_written",
+    "generated",
+    "needs_revision",
+    "approved",
+    "animated",
+    "integrated",
+    "production_ready",
+    "retired"
+  ],
+  "assets": [
+    {
+      "id": "creature-cindercub-profile",
+      "type": "creature_profile",
+      "association": "cindercub",
+      "status": "prompt_written",
+      "path": "/assets/creatures/profile/creature-cindercub-profile.png",
+      "notes": "Prompt ready in asset-prompts/creatures/cindercub.md"
+    },
+    {
+      "id": "egg-wild-full",
+      "type": "egg",
+      "association": "wild",
+      "status": "prompt_written",
+      "path": "/assets/eggs/full/egg-wild-full.png",
+      "notes": "Prompt ready in asset-prompts/eggs/wild.md"
+    },
+    {
+      "id": "affinity-ember-icon",
+      "type": "affinity_icon",
+      "association": "ember",
+      "status": "planned",
+      "path": "/assets/affinities/affinity-ember-icon.svg"
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "regionId": "void-hollow",
+  "slug": "void-hollow",
+  "name": "Void Hollow",
+  "tileSize": 32,
+  "cols": 48,
+  "rows": 40,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "camp",
+      "name": "Hollow Entrance Camp",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "shards",
+      "name": "Shattered Pathways",
+      "x": 512,
+      "y": 128,
+      "width": 512,
+      "height": 384,
+      "kind": "danger"
+    },
+    {
+      "id": "echo",
+      "name": "Echo Forest",
+      "x": 1088,
+      "y": 128,
+      "width": 384,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "labyrinth",
+      "name": "Portal Labyrinth",
+      "x": 256,
+      "y": 576,
+      "width": 512,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "inverted",
+      "name": "Inverted Ruins",
+      "x": 896,
+      "y": 576,
+      "width": 512,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "core",
+      "name": "Void Core",
+      "x": 512,
+      "y": 960,
+      "width": 448,
+      "height": 256,
+      "kind": "danger"
+    },
+    {
+      "id": "boss",
+      "name": "Riftborn Arena",
+      "x": 1088,
+      "y": 960,
+      "width": 384,
+      "height": 256,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-camp-shards",
+      "from": "camp",
+      "to": "shards",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 224
+        },
+        {
+          "x": 768,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-shards-echo",
+      "from": "shards",
+      "to": "echo",
+      "waypoints": [
+        {
+          "x": 768,
+          "y": 320
+        },
+        {
+          "x": 1280,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-echo-labyrinth",
+      "from": "echo",
+      "to": "labyrinth",
+      "waypoints": [
+        {
+          "x": 1280,
+          "y": 320
+        },
+        {
+          "x": 512,
+          "y": 768
+        }
+      ]
+    },
+    {
+      "id": "path-labyrinth-inverted",
+      "from": "labyrinth",
+      "to": "inverted",
+      "waypoints": [
+        {
+          "x": 512,
+          "y": 768
+        },
+        {
+          "x": 1152,
+          "y": 768
+        }
+      ]
+    },
+    {
+      "id": "path-inverted-core",
+      "from": "inverted",
+      "to": "core",
+      "waypoints": [
+        {
+          "x": 1152,
+          "y": 768
+        },
+        {
+          "x": 736,
+          "y": 1088
+        }
+      ]
+    },
+    {
+      "id": "path-core-boss",
+      "from": "core",
+      "to": "boss",
+      "waypoints": [
+        {
+          "x": 736,
+          "y": 1088
+        },
+        {
+          "x": 1280,
+          "y": 1088
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": true,
+      "id": "void-lab",
+      "type": "building",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Rift Lab",
+      "color": 12599551,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "void-hollow-spawn",
+      "type": "spawn",
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "x": 320,
+      "y": 400,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-void-hollow-void-crystal",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "void-crystal",
+      "metadata": {
+        "resourceId": "void-crystal"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-void-hollow-rift-dust",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "rift-dust",
+      "metadata": {
+        "resourceId": "rift-dust"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-void-hollow-rift-stalker",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "rift-stalker",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-pocket",
+      "type": "hidden_area",
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "x": 640,
+      "y": 704,
+      "label": "Pocket Dimension",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-portals",
+      "type": "puzzle",
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "x": 384,
+      "y": 704,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Color Portal Chain"
+    },
+    {
+      "id": "wp-void",
+      "type": "waypoint",
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "x": 192,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Camp Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "void-hollow-return-portal",
+      "type": "portal",
+      "x": 320,
+      "y": 336,
+      "interactionRadius": 48,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false
+      }
+    },
+    {
+      "id": "void-hollow-boss-arena",
+      "type": "boss_arena",
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "x": 1152,
+      "y": 1024,
+      "width": 256,
+      "height": 160,
+      "label": "Void Riftborn",
+      "metadata": {
+        "bossId": "void-riftborn",
+        "arenaRef": "void-hollow-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "void-hollow-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "void-hollow-wall-s",
+      "x": 0,
+      "y": 1248,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "void-hollow-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "void-hollow-wall-e",
+      "x": 1504,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "void-lab-col",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 1280
+  },
+  "minimap": {
+    "width": 48,
+    "height": 40,
+    "landmarkPins": [
+      {
+        "id": "void-lab",
+        "label": "Rift Lab",
+        "x": 3,
+        "y": 3,
+        "icon": "building"
+      },
+      {
+        "id": "wp-void",
+        "label": "Camp Waypoint",
+        "x": 6,
+        "y": 6,
+        "icon": "waypoint"
+      },
+      {
+        "id": "void-hollow-return-portal",
+        "label": "Riftwild Commons",
+        "x": 10,
+        "y": 11,
+        "icon": "portal"
+      },
+      {
+        "id": "void-hollow-boss-arena",
+        "label": "Void Riftborn",
+        "x": 36,
+        "y": 32,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "void_distortion",
+    "mist"
+  ],
+  "musicKey": "music-void",
+  "safeZones": [
+    {
+      "id": "camp-safe",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 320,
+    "y": 400
+  },
+  "notes": [
+    "Late-game blueprint; never paid unlock."
+  ],
+  "completeness": "PARTIAL"
+}

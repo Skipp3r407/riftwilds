@@ -1,0 +1,679 @@
+{
+  "schemaVersion": 1,
+  "regionId": "ember-crater",
+  "slug": "ember-crater",
+  "name": "Ember Crater",
+  "tileSize": 32,
+  "cols": 56,
+  "rows": 48,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "entrance-camp",
+      "name": "Crater Entrance Camp",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "lava-bridges",
+      "name": "Lava Bridge Network",
+      "x": 512,
+      "y": 256,
+      "width": 640,
+      "height": 384,
+      "kind": "danger"
+    },
+    {
+      "id": "crystal-fields",
+      "name": "Ember Crystal Fields",
+      "x": 1216,
+      "y": 192,
+      "width": 448,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "ashen-caverns",
+      "name": "Ashen Caverns",
+      "x": 128,
+      "y": 640,
+      "width": 448,
+      "height": 448,
+      "kind": "dungeon"
+    },
+    {
+      "id": "molten-forge",
+      "name": "Molten Forge",
+      "x": 704,
+      "y": 768,
+      "width": 384,
+      "height": 320,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "burned-grove",
+      "name": "Burned Grove",
+      "x": 1216,
+      "y": 768,
+      "width": 448,
+      "height": 320,
+      "kind": "exploration"
+    },
+    {
+      "id": "caldera-temple",
+      "name": "Caldera Temple",
+      "x": 576,
+      "y": 1152,
+      "width": 512,
+      "height": 320,
+      "kind": "dungeon"
+    },
+    {
+      "id": "boss-arena",
+      "name": "Ashmaw Arena",
+      "x": 1280,
+      "y": 1152,
+      "width": 384,
+      "height": 320,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-entrance-camp-lava-bridges",
+      "from": "entrance-camp",
+      "to": "lava-bridges",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 224
+        },
+        {
+          "x": 832,
+          "y": 448
+        }
+      ]
+    },
+    {
+      "id": "path-lava-bridges-crystal-fields",
+      "from": "lava-bridges",
+      "to": "crystal-fields",
+      "waypoints": [
+        {
+          "x": 832,
+          "y": 448
+        },
+        {
+          "x": 1440,
+          "y": 384
+        }
+      ]
+    },
+    {
+      "id": "path-crystal-fields-ashen-caverns",
+      "from": "crystal-fields",
+      "to": "ashen-caverns",
+      "waypoints": [
+        {
+          "x": 1440,
+          "y": 384
+        },
+        {
+          "x": 352,
+          "y": 864
+        }
+      ]
+    },
+    {
+      "id": "path-ashen-caverns-molten-forge",
+      "from": "ashen-caverns",
+      "to": "molten-forge",
+      "waypoints": [
+        {
+          "x": 352,
+          "y": 864
+        },
+        {
+          "x": 896,
+          "y": 928
+        }
+      ]
+    },
+    {
+      "id": "path-molten-forge-burned-grove",
+      "from": "molten-forge",
+      "to": "burned-grove",
+      "waypoints": [
+        {
+          "x": 896,
+          "y": 928
+        },
+        {
+          "x": 1440,
+          "y": 928
+        }
+      ]
+    },
+    {
+      "id": "path-burned-grove-caldera-temple",
+      "from": "burned-grove",
+      "to": "caldera-temple",
+      "waypoints": [
+        {
+          "x": 1440,
+          "y": 928
+        },
+        {
+          "x": 832,
+          "y": 1312
+        }
+      ]
+    },
+    {
+      "id": "path-caldera-temple-boss-arena",
+      "from": "caldera-temple",
+      "to": "boss-arena",
+      "waypoints": [
+        {
+          "x": 832,
+          "y": 1312
+        },
+        {
+          "x": 1472,
+          "y": 1312
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": true,
+      "id": "ember-camp",
+      "type": "building",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Expedition Camp",
+      "color": 13929018,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": true,
+      "id": "molten-forge-bldg",
+      "type": "building",
+      "x": 768,
+      "y": 832,
+      "width": 256,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Molten Forge",
+      "color": 16734751,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": true,
+      "id": "caldera-temple-bldg",
+      "type": "building",
+      "x": 640,
+      "y": 1216,
+      "width": 320,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Caldera Temple",
+      "color": 10498080,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "ember-crater-spawn",
+      "type": "spawn",
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "x": 320,
+      "y": 400,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-ember-expedition",
+      "type": "npc",
+      "x": 192,
+      "y": 256,
+      "interactionRadius": 56,
+      "label": "Scout Emberlyn",
+      "metadata": {
+        "npcId": "ember-expedition",
+        "lines": [
+          "Stay on cooled stone. Lava bridges punish haste.",
+          "Crystal fields glow — mine carefully near guardians."
+        ]
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-ember-crater-ember-crystal",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "ember-crystal",
+      "metadata": {
+        "resourceId": "ember-crystal"
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-ember-crater-charstone",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "charstone",
+      "metadata": {
+        "resourceId": "charstone"
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-ember-crater-ashroot",
+      "type": "resource",
+      "x": 576,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "ashroot",
+      "metadata": {
+        "resourceId": "ashroot"
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-ember-crater-flamecap",
+      "type": "resource",
+      "x": 704,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "flamecap",
+      "metadata": {
+        "resourceId": "flamecap"
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-ember-crater-cinder-bloom",
+      "type": "resource",
+      "x": 832,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "cinder-bloom",
+      "metadata": {
+        "resourceId": "cinder-bloom"
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-ember-crater-cinder-crawler",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "cinder-crawler",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-ember-crater-magma-beetle",
+      "type": "enemy_spawn",
+      "x": 800,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "magma-beetle",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-ember-crater-ash-hound",
+      "type": "enemy_spawn",
+      "x": 960,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "ash-hound",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-ember-crater-ember-wisp",
+      "type": "enemy_spawn",
+      "x": 1120,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "ember-wisp",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-lava-cavern",
+      "type": "hidden_area",
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "x": 576,
+      "y": 448,
+      "label": "Lava Waterfall Cavern",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "hidden-forge-vault",
+      "type": "hidden_area",
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "x": 896,
+      "y": 896,
+      "label": "Ancient Forge Vault",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-cooling",
+      "type": "puzzle",
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "x": 832,
+      "y": 960,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Cooling Valve Puzzle"
+    },
+    {
+      "id": "puzzle-braziers",
+      "type": "puzzle",
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "x": 768,
+      "y": 1280,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Brazier Trial"
+    },
+    {
+      "id": "wp-ember-camp",
+      "type": "waypoint",
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "x": 256,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Camp Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "interactive": true,
+      "collision": false,
+      "id": "ember-to-commons",
+      "type": "portal",
+      "x": 320,
+      "y": 272,
+      "interactionRadius": 44,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false,
+        "portalDefId": "ember-to-commons"
+      }
+    },
+    {
+      "id": "ember-crater-boss-arena",
+      "type": "boss_arena",
+      "regionId": "ember-crater",
+      "sceneId": "EmberCraterScene",
+      "x": 1344,
+      "y": 1216,
+      "width": 256,
+      "height": 192,
+      "label": "Ashmaw Colossus",
+      "metadata": {
+        "bossId": "ashmaw-colossus",
+        "arenaRef": "ember-crater-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "ember-crater-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1792,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "ember-crater-wall-s",
+      "x": 0,
+      "y": 1504,
+      "width": 1792,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "ember-crater-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1536,
+      "kind": "wall"
+    },
+    {
+      "id": "ember-crater-wall-e",
+      "x": 1760,
+      "y": 0,
+      "width": 32,
+      "height": 1536,
+      "kind": "wall"
+    },
+    {
+      "id": "ember-camp-col",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 192,
+      "kind": "building"
+    },
+    {
+      "id": "molten-forge-bldg-col",
+      "x": 768,
+      "y": 832,
+      "width": 256,
+      "height": 192,
+      "kind": "building"
+    },
+    {
+      "id": "caldera-temple-bldg-col",
+      "x": 640,
+      "y": 1216,
+      "width": 320,
+      "height": 192,
+      "kind": "building"
+    },
+    {
+      "id": "lava-strip-1",
+      "x": 576,
+      "y": 448,
+      "width": 512,
+      "height": 64,
+      "kind": "lava"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1792,
+    "height": 1536
+  },
+  "minimap": {
+    "width": 56,
+    "height": 48,
+    "landmarkPins": [
+      {
+        "id": "ember-camp",
+        "label": "Expedition Camp",
+        "x": 3,
+        "y": 3,
+        "icon": "building"
+      },
+      {
+        "id": "molten-forge-bldg",
+        "label": "Molten Forge",
+        "x": 24,
+        "y": 26,
+        "icon": "building"
+      },
+      {
+        "id": "caldera-temple-bldg",
+        "label": "Caldera Temple",
+        "x": 20,
+        "y": 38,
+        "icon": "building"
+      },
+      {
+        "id": "npc-ember-expedition",
+        "label": "Scout Emberlyn",
+        "x": 6,
+        "y": 8,
+        "icon": "npc"
+      },
+      {
+        "id": "wp-ember-camp",
+        "label": "Camp Waypoint",
+        "x": 8,
+        "y": 6,
+        "icon": "waypoint"
+      },
+      {
+        "id": "ember-to-commons",
+        "label": "Riftwild Commons",
+        "x": 10,
+        "y": 9,
+        "icon": "portal"
+      },
+      {
+        "id": "ember-crater-boss-arena",
+        "label": "Ashmaw Colossus",
+        "x": 42,
+        "y": 38,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "ash_storm",
+    "heat_shimmer"
+  ],
+  "musicKey": "music-ember",
+  "safeZones": [
+    {
+      "id": "entrance-camp-safe",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320
+    },
+    {
+      "id": "molten-forge-safe",
+      "x": 704,
+      "y": 768,
+      "width": 384,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 320,
+    "y": 400
+  },
+  "notes": [
+    "Enterable stub scene from Commons portals.",
+    "Lava hazard colliders mark bridge gaps.",
+    "Boss arena referenced; full combat later."
+  ],
+  "completeness": "PARTIAL"
+}

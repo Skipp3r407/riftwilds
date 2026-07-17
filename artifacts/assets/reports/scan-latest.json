@@ -1,0 +1,981 @@
+{
+  "scannedAt": "2026-07-17T22:41:21.850Z",
+  "category": "all",
+  "totals": {
+    "pending": 136,
+    "planned": 0,
+    "generated": 295,
+    "failed": 0,
+    "legacy": 12,
+    "not_applicable": 0
+  },
+  "countsByCategory": {
+    "worlds": 24,
+    "regions": 12,
+    "pets": 61,
+    "eggs": 14,
+    "affinities": 10,
+    "items": 159,
+    "npcs": 112,
+    "enemies": 19,
+    "bosses": 11,
+    "buildings": 5,
+    "ui": 8,
+    "animations": 8
+  },
+  "missingCount": 136,
+  "missing": [
+    {
+      "id": "npc-rowan-vale",
+      "category": "npcs",
+      "path": "/assets/npcs/rowan-vale/portrait.png",
+      "priority": 4,
+      "label": "Keeper Rowan Vale portrait"
+    },
+    {
+      "id": "npc-mira-shellbright",
+      "category": "npcs",
+      "path": "/assets/npcs/mira-shellbright/portrait.png",
+      "priority": 4,
+      "label": "Mira Shellbright portrait"
+    },
+    {
+      "id": "npc-bram-ironroot",
+      "category": "npcs",
+      "path": "/assets/npcs/bram-ironroot/portrait.png",
+      "priority": 4,
+      "label": "Bram Ironroot portrait"
+    },
+    {
+      "id": "npc-tessa-windmere",
+      "category": "npcs",
+      "path": "/assets/npcs/tessa-windmere/portrait.png",
+      "priority": 4,
+      "label": "Tessa Windmere portrait"
+    },
+    {
+      "id": "npc-captain-orren",
+      "category": "npcs",
+      "path": "/assets/npcs/captain-orren/portrait.png",
+      "priority": 4,
+      "label": "Captain Orren portrait"
+    },
+    {
+      "id": "npc-nyla-brook",
+      "category": "npcs",
+      "path": "/assets/npcs/nyla-brook/portrait.png",
+      "priority": 4,
+      "label": "Nyla Brook portrait"
+    },
+    {
+      "id": "npc-pip-gearwhistle",
+      "category": "npcs",
+      "path": "/assets/npcs/pip-gearwhistle/portrait.png",
+      "priority": 4,
+      "label": "Pip Gearwhistle portrait"
+    },
+    {
+      "id": "npc-rook-emberfall",
+      "category": "npcs",
+      "path": "/assets/npcs/rook-emberfall/portrait.png",
+      "priority": 4,
+      "label": "Rook Emberfall portrait"
+    },
+    {
+      "id": "npc-kael-ashwalker",
+      "category": "npcs",
+      "path": "/assets/npcs/kael-ashwalker/portrait.png",
+      "priority": 4,
+      "label": "Kael Ashwalker portrait"
+    },
+    {
+      "id": "npc-forgekeeper-vessa",
+      "category": "npcs",
+      "path": "/assets/npcs/forgekeeper-vessa/portrait.png",
+      "priority": 4,
+      "label": "Forgekeeper Vessa portrait"
+    },
+    {
+      "id": "npc-cinder-sage-malrec",
+      "category": "npcs",
+      "path": "/assets/npcs/cinder-sage-malrec/portrait.png",
+      "priority": 4,
+      "label": "Cinder Sage Malrec portrait"
+    },
+    {
+      "id": "npc-warden-pyra",
+      "category": "npcs",
+      "path": "/assets/npcs/warden-pyra/portrait.png",
+      "priority": 4,
+      "label": "Warden Pyra portrait"
+    },
+    {
+      "id": "npc-luma-tidecrest",
+      "category": "npcs",
+      "path": "/assets/npcs/luma-tidecrest/portrait.png",
+      "priority": 4,
+      "label": "Captain Luma Tidecrest portrait"
+    },
+    {
+      "id": "npc-finn-coralhand",
+      "category": "npcs",
+      "path": "/assets/npcs/finn-coralhand/portrait.png",
+      "priority": 4,
+      "label": "Finn Coralhand portrait"
+    },
+    {
+      "id": "npc-oracle-selene",
+      "category": "npcs",
+      "path": "/assets/npcs/oracle-selene/portrait.png",
+      "priority": 4,
+      "label": "Oracle Selene portrait"
+    },
+    {
+      "id": "npc-marina-drift",
+      "category": "npcs",
+      "path": "/assets/npcs/marina-drift/portrait.png",
+      "priority": 4,
+      "label": "Marina Drift portrait"
+    },
+    {
+      "id": "npc-warden-sylvi",
+      "category": "npcs",
+      "path": "/assets/npcs/warden-sylvi/portrait.png",
+      "priority": 4,
+      "label": "Warden Sylvi portrait"
+    },
+    {
+      "id": "npc-mosskeeper-elden",
+      "category": "npcs",
+      "path": "/assets/npcs/mosskeeper-elden/portrait.png",
+      "priority": 4,
+      "label": "Mosskeeper Elden portrait"
+    },
+    {
+      "id": "npc-fenn-quickbranch",
+      "category": "npcs",
+      "path": "/assets/npcs/fenn-quickbranch/portrait.png",
+      "priority": 4,
+      "label": "Fenn Quickbranch portrait"
+    },
+    {
+      "id": "npc-grandmother-willowmere",
+      "category": "npcs",
+      "path": "/assets/npcs/grandmother-willowmere/portrait.png",
+      "priority": 4,
+      "label": "Grandmother Willowmere portrait"
+    },
+    {
+      "id": "npc-aeron-cloudstep",
+      "category": "npcs",
+      "path": "/assets/npcs/aeron-cloudstep/portrait.png",
+      "priority": 4,
+      "label": "Aeron Cloudstep portrait"
+    },
+    {
+      "id": "npc-engineer-volt",
+      "category": "npcs",
+      "path": "/assets/npcs/engineer-volt/portrait.png",
+      "priority": 4,
+      "label": "Engineer Volt portrait"
+    },
+    {
+      "id": "npc-skywarden-ilya",
+      "category": "npcs",
+      "path": "/assets/npcs/skywarden-ilya/portrait.png",
+      "priority": 4,
+      "label": "Skywarden Ilya portrait"
+    },
+    {
+      "id": "npc-hermit-thane",
+      "category": "npcs",
+      "path": "/assets/npcs/hermit-thane/portrait.png",
+      "priority": 4,
+      "label": "Hermit Thane portrait"
+    },
+    {
+      "id": "npc-doran-flint",
+      "category": "npcs",
+      "path": "/assets/npcs/doran-flint/portrait.png",
+      "priority": 4,
+      "label": "Doran Flint portrait"
+    },
+    {
+      "id": "npc-petra-stoneveil",
+      "category": "npcs",
+      "path": "/assets/npcs/petra-stoneveil/portrait.png",
+      "priority": 4,
+      "label": "Petra Stoneveil portrait"
+    },
+    {
+      "id": "npc-marshal-korr",
+      "category": "npcs",
+      "path": "/assets/npcs/marshal-korr/portrait.png",
+      "priority": 4,
+      "label": "Marshal Korr portrait"
+    },
+    {
+      "id": "npc-gemwright-opal",
+      "category": "npcs",
+      "path": "/assets/npcs/gemwright-opal/portrait.png",
+      "priority": 4,
+      "label": "Gemwright Opal portrait"
+    },
+    {
+      "id": "npc-freya-snowmark",
+      "category": "npcs",
+      "path": "/assets/npcs/freya-snowmark/portrait.png",
+      "priority": 4,
+      "label": "Freya Snowmark portrait"
+    },
+    {
+      "id": "npc-jori-icebloom",
+      "category": "npcs",
+      "path": "/assets/npcs/jori-icebloom/portrait.png",
+      "priority": 4,
+      "label": "Jori Icebloom portrait"
+    },
+    {
+      "id": "npc-hunter-varek",
+      "category": "npcs",
+      "path": "/assets/npcs/hunter-varek/portrait.png",
+      "priority": 4,
+      "label": "Hunter Varek portrait"
+    },
+    {
+      "id": "npc-aurora-linn",
+      "category": "npcs",
+      "path": "/assets/npcs/aurora-linn/portrait.png",
+      "priority": 4,
+      "label": "Aurora Linn portrait"
+    },
+    {
+      "id": "npc-chancellor-aurex",
+      "category": "npcs",
+      "path": "/assets/npcs/chancellor-aurex/portrait.png",
+      "priority": 4,
+      "label": "Chancellor Aurex portrait"
+    },
+    {
+      "id": "npc-scholar-lyra",
+      "category": "npcs",
+      "path": "/assets/npcs/scholar-lyra/portrait.png",
+      "priority": 4,
+      "label": "Scholar Lyra portrait"
+    },
+    {
+      "id": "npc-sentinel-cassian",
+      "category": "npcs",
+      "path": "/assets/npcs/sentinel-cassian/portrait.png",
+      "priority": 4,
+      "label": "Sentinel Cassian portrait"
+    },
+    {
+      "id": "npc-curator-verin",
+      "category": "npcs",
+      "path": "/assets/npcs/curator-verin/portrait.png",
+      "priority": 4,
+      "label": "Curator Verin portrait"
+    },
+    {
+      "id": "npc-shadecaller-neris",
+      "category": "npcs",
+      "path": "/assets/npcs/shadecaller-neris/portrait.png",
+      "priority": 4,
+      "label": "Shadecaller Neris portrait"
+    },
+    {
+      "id": "npc-watcher-omen",
+      "category": "npcs",
+      "path": "/assets/npcs/watcher-omen/portrait.png",
+      "priority": 4,
+      "label": "Watcher Omen portrait"
+    },
+    {
+      "id": "npc-veya-dusk",
+      "category": "npcs",
+      "path": "/assets/npcs/veya-dusk/portrait.png",
+      "priority": 4,
+      "label": "Veya Dusk portrait"
+    },
+    {
+      "id": "npc-keeper-null",
+      "category": "npcs",
+      "path": "/assets/npcs/keeper-null/portrait.png",
+      "priority": 4,
+      "label": "Keeper Null portrait"
+    },
+    {
+      "id": "npc-tinker-pax",
+      "category": "npcs",
+      "path": "/assets/npcs/tinker-pax/portrait.png",
+      "priority": 4,
+      "label": "Tinker Pax portrait"
+    },
+    {
+      "id": "npc-unit-ari-7",
+      "category": "npcs",
+      "path": "/assets/npcs/unit-ari-7/portrait.png",
+      "priority": 4,
+      "label": "Unit ARI-7 portrait"
+    },
+    {
+      "id": "npc-salvager-knox",
+      "category": "npcs",
+      "path": "/assets/npcs/salvager-knox/portrait.png",
+      "priority": 4,
+      "label": "Salvager Knox portrait"
+    },
+    {
+      "id": "npc-professor-ferrum",
+      "category": "npcs",
+      "path": "/assets/npcs/professor-ferrum/portrait.png",
+      "priority": 4,
+      "label": "Professor Ferrum portrait"
+    },
+    {
+      "id": "npc-medium-amara",
+      "category": "npcs",
+      "path": "/assets/npcs/medium-amara/portrait.png",
+      "priority": 4,
+      "label": "Medium Amara portrait"
+    },
+    {
+      "id": "npc-ferryman-grey",
+      "category": "npcs",
+      "path": "/assets/npcs/ferryman-grey/portrait.png",
+      "priority": 4,
+      "label": "Ferryman Grey portrait"
+    },
+    {
+      "id": "npc-lantern-keeper-sio",
+      "category": "npcs",
+      "path": "/assets/npcs/lantern-keeper-sio/portrait.png",
+      "priority": 4,
+      "label": "Lantern Keeper Sio portrait"
+    },
+    {
+      "id": "npc-echo-child-nimi",
+      "category": "npcs",
+      "path": "/assets/npcs/echo-child-nimi/portrait.png",
+      "priority": 4,
+      "label": "Echo Child Nimi portrait"
+    },
+    {
+      "id": "npc-astronomer-caelis",
+      "category": "npcs",
+      "path": "/assets/npcs/astronomer-caelis/portrait.png",
+      "priority": 4,
+      "label": "Astronomer Caelis portrait"
+    },
+    {
+      "id": "npc-guardian-seraphine",
+      "category": "npcs",
+      "path": "/assets/npcs/guardian-seraphine/portrait.png",
+      "priority": 4,
+      "label": "Guardian Seraphine portrait"
+    },
+    {
+      "id": "npc-starforger-orion",
+      "category": "npcs",
+      "path": "/assets/npcs/starforger-orion/portrait.png",
+      "priority": 4,
+      "label": "Starforger Orion portrait"
+    },
+    {
+      "id": "npc-nameless-witness",
+      "category": "npcs",
+      "path": "/assets/npcs/nameless-witness/portrait.png",
+      "priority": 4,
+      "label": "The Nameless Witness portrait"
+    },
+    {
+      "id": "npc-plaza-musician-reo",
+      "category": "npcs",
+      "path": "/assets/npcs/plaza-musician-reo/portrait.png",
+      "priority": 4,
+      "label": "Reo Lark portrait"
+    },
+    {
+      "id": "npc-plaza-child-mim",
+      "category": "npcs",
+      "path": "/assets/npcs/plaza-child-mim/portrait.png",
+      "priority": 4,
+      "label": "Mim Vale portrait"
+    },
+    {
+      "id": "npc-farm-hand-jot",
+      "category": "npcs",
+      "path": "/assets/npcs/farm-hand-jot/portrait.png",
+      "priority": 4,
+      "label": "Jot Pell portrait"
+    },
+    {
+      "id": "npc-dock-sweeper-ana",
+      "category": "npcs",
+      "path": "/assets/npcs/dock-sweeper-ana/portrait.png",
+      "priority": 4,
+      "label": "Ana Quill portrait"
+    },
+    {
+      "id": "npc-scribe-runner-kel",
+      "category": "npcs",
+      "path": "/assets/npcs/scribe-runner-kel/portrait.png",
+      "priority": 4,
+      "label": "Kel Ink portrait"
+    },
+    {
+      "id": "npc-cook-pot-uma",
+      "category": "npcs",
+      "path": "/assets/npcs/cook-pot-uma/portrait.png",
+      "priority": 4,
+      "label": "Uma Broth portrait"
+    },
+    {
+      "id": "npc-gardener-sip",
+      "category": "npcs",
+      "path": "/assets/npcs/gardener-sip/portrait.png",
+      "priority": 4,
+      "label": "Sip Moss portrait"
+    },
+    {
+      "id": "npc-guard-east-ryn",
+      "category": "npcs",
+      "path": "/assets/npcs/guard-east-ryn/portrait.png",
+      "priority": 4,
+      "label": "Guard Ryn portrait"
+    },
+    {
+      "id": "npc-guard-west-dao",
+      "category": "npcs",
+      "path": "/assets/npcs/guard-west-dao/portrait.png",
+      "priority": 4,
+      "label": "Guard Dao portrait"
+    },
+    {
+      "id": "npc-guard-portal-hex",
+      "category": "npcs",
+      "path": "/assets/npcs/guard-portal-hex/portrait.png",
+      "priority": 4,
+      "label": "Guard Hex portrait"
+    },
+    {
+      "id": "npc-riftling-plaza-emberkit",
+      "category": "npcs",
+      "path": "/assets/npcs/riftling-plaza-emberkit/portrait.png",
+      "priority": 4,
+      "label": "Emberkit (ambient) portrait"
+    },
+    {
+      "id": "npc-riftling-hatchery-glowpup",
+      "category": "npcs",
+      "path": "/assets/npcs/riftling-hatchery-glowpup/portrait.png",
+      "priority": 4,
+      "label": "Glowpup (ambient) portrait"
+    },
+    {
+      "id": "npc-riftling-market-pouchling",
+      "category": "npcs",
+      "path": "/assets/npcs/riftling-market-pouchling/portrait.png",
+      "priority": 4,
+      "label": "Pouchling (ambient) portrait"
+    },
+    {
+      "id": "npc-ember-porter-ash",
+      "category": "npcs",
+      "path": "/assets/npcs/ember-porter-ash/portrait.png",
+      "priority": 4,
+      "label": "Ash Porter portrait"
+    },
+    {
+      "id": "npc-ember-cook-cind",
+      "category": "npcs",
+      "path": "/assets/npcs/ember-cook-cind/portrait.png",
+      "priority": 4,
+      "label": "Cind Cook portrait"
+    },
+    {
+      "id": "npc-ember-miner-bas",
+      "category": "npcs",
+      "path": "/assets/npcs/ember-miner-bas/portrait.png",
+      "priority": 4,
+      "label": "Bas Coal portrait"
+    },
+    {
+      "id": "npc-ember-guard-lox",
+      "category": "npcs",
+      "path": "/assets/npcs/ember-guard-lox/portrait.png",
+      "priority": 4,
+      "label": "Guard Lox portrait"
+    },
+    {
+      "id": "npc-coast-netmender-pli",
+      "category": "npcs",
+      "path": "/assets/npcs/coast-netmender-pli/portrait.png",
+      "priority": 4,
+      "label": "Pli Net portrait"
+    },
+    {
+      "id": "npc-coast-child-shell",
+      "category": "npcs",
+      "path": "/assets/npcs/coast-child-shell/portrait.png",
+      "priority": 4,
+      "label": "Shell portrait"
+    },
+    {
+      "id": "npc-coast-innkeep-dor",
+      "category": "npcs",
+      "path": "/assets/npcs/coast-innkeep-dor/portrait.png",
+      "priority": 4,
+      "label": "Dor Tide portrait"
+    },
+    {
+      "id": "npc-coast-guard-brine",
+      "category": "npcs",
+      "path": "/assets/npcs/coast-guard-brine/portrait.png",
+      "priority": 4,
+      "label": "Guard Brine portrait"
+    },
+    {
+      "id": "npc-elder-forager-nim",
+      "category": "npcs",
+      "path": "/assets/npcs/elder-forager-nim/portrait.png",
+      "priority": 4,
+      "label": "Nim Leaf portrait"
+    },
+    {
+      "id": "npc-elder-carver-tor",
+      "category": "npcs",
+      "path": "/assets/npcs/elder-carver-tor/portrait.png",
+      "priority": 4,
+      "label": "Tor Bark portrait"
+    },
+    {
+      "id": "npc-elder-singer-luma",
+      "category": "npcs",
+      "path": "/assets/npcs/elder-singer-luma/portrait.png",
+      "priority": 4,
+      "label": "Luma Soft portrait"
+    },
+    {
+      "id": "npc-elder-guard-briar",
+      "category": "npcs",
+      "path": "/assets/npcs/elder-guard-briar/portrait.png",
+      "priority": 4,
+      "label": "Guard Briar portrait"
+    },
+    {
+      "id": "npc-storm-porter-zee",
+      "category": "npcs",
+      "path": "/assets/npcs/storm-porter-zee/portrait.png",
+      "priority": 4,
+      "label": "Zee Pack portrait"
+    },
+    {
+      "id": "npc-storm-cook-pip2",
+      "category": "npcs",
+      "path": "/assets/npcs/storm-cook-pip2/portrait.png",
+      "priority": 4,
+      "label": "Pip Steam portrait"
+    },
+    {
+      "id": "npc-storm-climber-aro",
+      "category": "npcs",
+      "path": "/assets/npcs/storm-climber-aro/portrait.png",
+      "priority": 4,
+      "label": "Aro Grip portrait"
+    },
+    {
+      "id": "npc-storm-guard-nimbus",
+      "category": "npcs",
+      "path": "/assets/npcs/storm-guard-nimbus/portrait.png",
+      "priority": 4,
+      "label": "Guard Nimbus portrait"
+    },
+    {
+      "id": "npc-stone-hauler-mog",
+      "category": "npcs",
+      "path": "/assets/npcs/stone-hauler-mog/portrait.png",
+      "priority": 4,
+      "label": "Mog Dust portrait"
+    },
+    {
+      "id": "npc-stone-cook-peb",
+      "category": "npcs",
+      "path": "/assets/npcs/stone-cook-peb/portrait.png",
+      "priority": 4,
+      "label": "Peb Stew portrait"
+    },
+    {
+      "id": "npc-stone-survey-lin",
+      "category": "npcs",
+      "path": "/assets/npcs/stone-survey-lin/portrait.png",
+      "priority": 4,
+      "label": "Lin Measure portrait"
+    },
+    {
+      "id": "npc-stone-guard-slab",
+      "category": "npcs",
+      "path": "/assets/npcs/stone-guard-slab/portrait.png",
+      "priority": 4,
+      "label": "Guard Slab portrait"
+    },
+    {
+      "id": "npc-frost-porter-yul",
+      "category": "npcs",
+      "path": "/assets/npcs/frost-porter-yul/portrait.png",
+      "priority": 4,
+      "label": "Yul Pack portrait"
+    },
+    {
+      "id": "npc-frost-knitter-esa",
+      "category": "npcs",
+      "path": "/assets/npcs/frost-knitter-esa/portrait.png",
+      "priority": 4,
+      "label": "Esa Wool portrait"
+    },
+    {
+      "id": "npc-frost-scout-rin",
+      "category": "npcs",
+      "path": "/assets/npcs/frost-scout-rin/portrait.png",
+      "priority": 4,
+      "label": "Rin Trail portrait"
+    },
+    {
+      "id": "npc-frost-guard-ice",
+      "category": "npcs",
+      "path": "/assets/npcs/frost-guard-ice/portrait.png",
+      "priority": 4,
+      "label": "Guard Ice portrait"
+    },
+    {
+      "id": "npc-citadel-scribe-omi",
+      "category": "npcs",
+      "path": "/assets/npcs/citadel-scribe-omi/portrait.png",
+      "priority": 4,
+      "label": "Omi Page portrait"
+    },
+    {
+      "id": "npc-citadel-vendor-lux",
+      "category": "npcs",
+      "path": "/assets/npcs/citadel-vendor-lux/portrait.png",
+      "priority": 4,
+      "label": "Lux Ware portrait"
+    },
+    {
+      "id": "npc-citadel-acolyte-ven",
+      "category": "npcs",
+      "path": "/assets/npcs/citadel-acolyte-ven/portrait.png",
+      "priority": 4,
+      "label": "Ven Light portrait"
+    },
+    {
+      "id": "npc-citadel-guard-halo",
+      "category": "npcs",
+      "path": "/assets/npcs/citadel-guard-halo/portrait.png",
+      "priority": 4,
+      "label": "Guard Halo portrait"
+    },
+    {
+      "id": "npc-void-porter-dim",
+      "category": "npcs",
+      "path": "/assets/npcs/void-porter-dim/portrait.png",
+      "priority": 4,
+      "label": "Dim Carry portrait"
+    },
+    {
+      "id": "npc-void-scribe-umbra",
+      "category": "npcs",
+      "path": "/assets/npcs/void-scribe-umbra/portrait.png",
+      "priority": 4,
+      "label": "Umbra Note portrait"
+    },
+    {
+      "id": "npc-void-scout-gloom",
+      "category": "npcs",
+      "path": "/assets/npcs/void-scout-gloom/portrait.png",
+      "priority": 4,
+      "label": "Gloom Step portrait"
+    },
+    {
+      "id": "npc-void-guard-veil",
+      "category": "npcs",
+      "path": "/assets/npcs/void-guard-veil/portrait.png",
+      "priority": 4,
+      "label": "Guard Veil portrait"
+    },
+    {
+      "id": "npc-alloy-porter-cog",
+      "category": "npcs",
+      "path": "/assets/npcs/alloy-porter-cog/portrait.png",
+      "priority": 4,
+      "label": "Cog Haul portrait"
+    },
+    {
+      "id": "npc-alloy-welder-spark",
+      "category": "npcs",
+      "path": "/assets/npcs/alloy-welder-spark/portrait.png",
+      "priority": 4,
+      "label": "Spark Weld portrait"
+    },
+    {
+      "id": "npc-alloy-runner-bit",
+      "category": "npcs",
+      "path": "/assets/npcs/alloy-runner-bit/portrait.png",
+      "priority": 4,
+      "label": "Bit Run portrait"
+    },
+    {
+      "id": "npc-alloy-guard-bolt",
+      "category": "npcs",
+      "path": "/assets/npcs/alloy-guard-bolt/portrait.png",
+      "priority": 4,
+      "label": "Guard Bolt portrait"
+    },
+    {
+      "id": "npc-marsh-porter-reed",
+      "category": "npcs",
+      "path": "/assets/npcs/marsh-porter-reed/portrait.png",
+      "priority": 4,
+      "label": "Reed Pack portrait"
+    },
+    {
+      "id": "npc-marsh-singer-fog",
+      "category": "npcs",
+      "path": "/assets/npcs/marsh-singer-fog/portrait.png",
+      "priority": 4,
+      "label": "Fog Song portrait"
+    },
+    {
+      "id": "npc-marsh-herbal-mist",
+      "category": "npcs",
+      "path": "/assets/npcs/marsh-herbal-mist/portrait.png",
+      "priority": 4,
+      "label": "Mist Leaf portrait"
+    },
+    {
+      "id": "npc-marsh-guard-wick",
+      "category": "npcs",
+      "path": "/assets/npcs/marsh-guard-wick/portrait.png",
+      "priority": 4,
+      "label": "Guard Wick portrait"
+    },
+    {
+      "id": "npc-celestial-acolyte-nova",
+      "category": "npcs",
+      "path": "/assets/npcs/celestial-acolyte-nova/portrait.png",
+      "priority": 4,
+      "label": "Nova Soft portrait"
+    },
+    {
+      "id": "npc-celestial-scribe-astro",
+      "category": "npcs",
+      "path": "/assets/npcs/celestial-scribe-astro/portrait.png",
+      "priority": 4,
+      "label": "Astro Quill portrait"
+    },
+    {
+      "id": "npc-celestial-porter-orbit",
+      "category": "npcs",
+      "path": "/assets/npcs/celestial-porter-orbit/portrait.png",
+      "priority": 4,
+      "label": "Orbit Pack portrait"
+    },
+    {
+      "id": "npc-celestial-guard-lumen",
+      "category": "npcs",
+      "path": "/assets/npcs/celestial-guard-lumen/portrait.png",
+      "priority": 4,
+      "label": "Guard Lumen portrait"
+    },
+    {
+      "id": "enemy-rift-slime",
+      "category": "enemies",
+      "path": "/assets/enemies/rift-slime/portrait.png",
+      "priority": 5,
+      "label": "Rift Slime"
+    },
+    {
+      "id": "enemy-spirit-spark",
+      "category": "enemies",
+      "path": "/assets/enemies/spirit-spark/portrait.png",
+      "priority": 5,
+      "label": "Lost Spirit Spark"
+    },
+    {
+      "id": "enemy-vine-sprout",
+      "category": "enemies",
+      "path": "/assets/enemies/vine-sprout/portrait.png",
+      "priority": 5,
+      "label": "Wild Vine Sprout"
+    },
+    {
+      "id": "enemy-cinder-crawler",
+      "category": "enemies",
+      "path": "/assets/enemies/cinder-crawler/portrait.png",
+      "priority": 5,
+      "label": "Cinder Crawler"
+    },
+    {
+      "id": "enemy-magma-beetle",
+      "category": "enemies",
+      "path": "/assets/enemies/magma-beetle/portrait.png",
+      "priority": 5,
+      "label": "Magma Beetle"
+    },
+    {
+      "id": "enemy-ash-hound",
+      "category": "enemies",
+      "path": "/assets/enemies/ash-hound/portrait.png",
+      "priority": 5,
+      "label": "Ash Hound"
+    },
+    {
+      "id": "enemy-ember-wisp",
+      "category": "enemies",
+      "path": "/assets/enemies/ember-wisp/portrait.png",
+      "priority": 5,
+      "label": "Ember Wisp"
+    },
+    {
+      "id": "enemy-tide-crab",
+      "category": "enemies",
+      "path": "/assets/enemies/tide-crab/portrait.png",
+      "priority": 5,
+      "label": "Tide Crab"
+    },
+    {
+      "id": "enemy-reef-stalker",
+      "category": "enemies",
+      "path": "/assets/enemies/reef-stalker/portrait.png",
+      "priority": 5,
+      "label": "Reef Stalker"
+    },
+    {
+      "id": "enemy-grove-sprite",
+      "category": "enemies",
+      "path": "/assets/enemies/grove-sprite/portrait.png",
+      "priority": 5,
+      "label": "Grove Sprite"
+    },
+    {
+      "id": "enemy-bark-guardian",
+      "category": "enemies",
+      "path": "/assets/enemies/bark-guardian/portrait.png",
+      "priority": 5,
+      "label": "Bark Guardian"
+    },
+    {
+      "id": "enemy-storm-raptor",
+      "category": "enemies",
+      "path": "/assets/enemies/storm-raptor/portrait.png",
+      "priority": 5,
+      "label": "Storm Raptor"
+    },
+    {
+      "id": "enemy-rock-crawler",
+      "category": "enemies",
+      "path": "/assets/enemies/rock-crawler/portrait.png",
+      "priority": 5,
+      "label": "Rock Crawler"
+    },
+    {
+      "id": "enemy-frost-wolf",
+      "category": "enemies",
+      "path": "/assets/enemies/frost-wolf/portrait.png",
+      "priority": 5,
+      "label": "Frost Wolf"
+    },
+    {
+      "id": "enemy-radiant-construct",
+      "category": "enemies",
+      "path": "/assets/enemies/radiant-construct/portrait.png",
+      "priority": 5,
+      "label": "Radiant Construct"
+    },
+    {
+      "id": "enemy-rift-stalker",
+      "category": "enemies",
+      "path": "/assets/enemies/rift-stalker/portrait.png",
+      "priority": 5,
+      "label": "Rift Stalker"
+    },
+    {
+      "id": "enemy-security-drone",
+      "category": "enemies",
+      "path": "/assets/enemies/security-drone/portrait.png",
+      "priority": 5,
+      "label": "Security Drone"
+    },
+    {
+      "id": "enemy-marsh-spirit",
+      "category": "enemies",
+      "path": "/assets/enemies/marsh-spirit/portrait.png",
+      "priority": 5,
+      "label": "Marsh Spirit"
+    },
+    {
+      "id": "enemy-starborn-guardian",
+      "category": "enemies",
+      "path": "/assets/enemies/starborn-guardian/portrait.png",
+      "priority": 5,
+      "label": "Starborn Guardian"
+    },
+    {
+      "id": "anim-battle-cindercub",
+      "category": "animations",
+      "path": "/assets/creatures/sheets/creature-cindercub-battle-sheet.png",
+      "priority": 9,
+      "label": "cindercub battle sheet"
+    },
+    {
+      "id": "anim-battle-mossprig",
+      "category": "animations",
+      "path": "/assets/creatures/sheets/creature-mossprig-battle-sheet.png",
+      "priority": 9,
+      "label": "mossprig battle sheet"
+    },
+    {
+      "id": "anim-battle-bubbloon",
+      "category": "animations",
+      "path": "/assets/creatures/sheets/creature-bubbloon-battle-sheet.png",
+      "priority": 9,
+      "label": "bubbloon battle sheet"
+    },
+    {
+      "id": "anim-battle-voltkit",
+      "category": "animations",
+      "path": "/assets/creatures/sheets/creature-voltkit-battle-sheet.png",
+      "priority": 9,
+      "label": "voltkit battle sheet"
+    },
+    {
+      "id": "anim-battle-pebblit",
+      "category": "animations",
+      "path": "/assets/creatures/sheets/creature-pebblit-battle-sheet.png",
+      "priority": 9,
+      "label": "pebblit battle sheet"
+    },
+    {
+      "id": "anim-battle-wisplet",
+      "category": "animations",
+      "path": "/assets/creatures/sheets/creature-wisplet-battle-sheet.png",
+      "priority": 9,
+      "label": "wisplet battle sheet"
+    },
+    {
+      "id": "anim-battle-frostuft",
+      "category": "animations",
+      "path": "/assets/creatures/sheets/creature-frostuft-battle-sheet.png",
+      "priority": 9,
+      "label": "frostuft battle sheet"
+    },
+    {
+      "id": "anim-battle-alloyfin",
+      "category": "animations",
+      "path": "/assets/creatures/sheets/creature-alloyfin-battle-sheet.png",
+      "priority": 9,
+      "label": "alloyfin battle sheet"
+    }
+  ]
+}

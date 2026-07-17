@@ -1,0 +1,32 @@
+{
+  "name": "pet-lifecycle-simulator",
+  "generatedAt": "2026-07-17T20:56:20.164Z",
+  "assumptions": [
+    "Synthetic factory pets for all LAUNCH_SPECIES",
+    "72h neglect then multi-action recovery",
+    "Breeding eligibility uses pure rules (mint path NOT_IMPLEMENTED)"
+  ],
+  "sections": [
+    {
+      "title": "Species coverage",
+      "status": "PASS",
+      "summary": "50 species simulated"
+    },
+    {
+      "title": "Care recovery",
+      "status": "WARN",
+      "summary": "0/50 recovered to HEALTHY/TIRED; mean careScore sample 81",
+      "details": {
+        "dormantAfterNeglect": 50,
+        "breedingEligible": 50
+      }
+    },
+    {
+      "title": "Breeding mint",
+      "status": "NOT_IMPLEMENTED",
+      "summary": "Egg mint + fee ledger not wired; eligibility rules only"
+    }
+  ],
+  "criticalFailures": [],
+  "ok": true
+}

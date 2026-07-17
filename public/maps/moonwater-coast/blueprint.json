@@ -1,0 +1,613 @@
+{
+  "schemaVersion": 1,
+  "regionId": "moonwater-coast",
+  "slug": "moonwater-coast",
+  "name": "Moonwater Coast",
+  "tileSize": 32,
+  "cols": 56,
+  "rows": 48,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "coastal-village",
+      "name": "Coastal Village",
+      "x": 64,
+      "y": 128,
+      "width": 448,
+      "height": 384,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "moonlit-beach",
+      "name": "Moonlit Beach",
+      "x": 576,
+      "y": 896,
+      "width": 704,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "tide-pools",
+      "name": "Tide Pool Gardens",
+      "x": 576,
+      "y": 512,
+      "width": 512,
+      "height": 320,
+      "kind": "exploration"
+    },
+    {
+      "id": "sea-caves",
+      "name": "Sea Caves",
+      "x": 1216,
+      "y": 576,
+      "width": 448,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "underwater-ruins",
+      "name": "Underwater Ruins",
+      "x": 1152,
+      "y": 128,
+      "width": 512,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "lighthouse",
+      "name": "Lighthouse Cliffs",
+      "x": 64,
+      "y": 896,
+      "width": 384,
+      "height": 448,
+      "kind": "exploration"
+    },
+    {
+      "id": "leviathan-bay",
+      "name": "Leviathan Bay",
+      "x": 1280,
+      "y": 1088,
+      "width": 384,
+      "height": 320,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-coastal-village-moonlit-beach",
+      "from": "coastal-village",
+      "to": "moonlit-beach",
+      "waypoints": [
+        {
+          "x": 288,
+          "y": 320
+        },
+        {
+          "x": 928,
+          "y": 1088
+        }
+      ]
+    },
+    {
+      "id": "path-moonlit-beach-tide-pools",
+      "from": "moonlit-beach",
+      "to": "tide-pools",
+      "waypoints": [
+        {
+          "x": 928,
+          "y": 1088
+        },
+        {
+          "x": 832,
+          "y": 672
+        }
+      ]
+    },
+    {
+      "id": "path-tide-pools-sea-caves",
+      "from": "tide-pools",
+      "to": "sea-caves",
+      "waypoints": [
+        {
+          "x": 832,
+          "y": 672
+        },
+        {
+          "x": 1440,
+          "y": 768
+        }
+      ]
+    },
+    {
+      "id": "path-sea-caves-underwater-ruins",
+      "from": "sea-caves",
+      "to": "underwater-ruins",
+      "waypoints": [
+        {
+          "x": 1440,
+          "y": 768
+        },
+        {
+          "x": 1408,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-underwater-ruins-lighthouse",
+      "from": "underwater-ruins",
+      "to": "lighthouse",
+      "waypoints": [
+        {
+          "x": 1408,
+          "y": 320
+        },
+        {
+          "x": 256,
+          "y": 1120
+        }
+      ]
+    },
+    {
+      "id": "path-lighthouse-leviathan-bay",
+      "from": "lighthouse",
+      "to": "leviathan-bay",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 1120
+        },
+        {
+          "x": 1472,
+          "y": 1248
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": true,
+      "id": "coast-inn",
+      "type": "building",
+      "x": 128,
+      "y": 192,
+      "width": 256,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Tide Inn",
+      "color": 3837908,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": true,
+      "id": "fish-market",
+      "type": "building",
+      "x": 128,
+      "y": 384,
+      "width": 256,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Fish Market",
+      "color": 4906874,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": true,
+      "id": "lighthouse-bldg",
+      "type": "building",
+      "x": 128,
+      "y": 960,
+      "width": 160,
+      "height": 256,
+      "interactionRadius": 48,
+      "label": "Lighthouse",
+      "color": 15257728,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "moonwater-coast-spawn",
+      "type": "spawn",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 360,
+      "y": 420,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-coast-fisher",
+      "type": "npc",
+      "x": 256,
+      "y": 320,
+      "interactionRadius": 56,
+      "label": "Captain Mirelle",
+      "metadata": {
+        "npcId": "coast-fisher",
+        "lines": [
+          "Tide gates open on the cycle. Watch the pools before you dive."
+        ]
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-moonwater-coast-moon-pearl",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "moon-pearl",
+      "metadata": {
+        "resourceId": "moon-pearl"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-moonwater-coast-tide-shell",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "tide-shell",
+      "metadata": {
+        "resourceId": "tide-shell"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-moonwater-coast-seaweed-bundle",
+      "type": "resource",
+      "x": 576,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "seaweed-bundle",
+      "metadata": {
+        "resourceId": "seaweed-bundle"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-moonwater-coast-coral-shard",
+      "type": "resource",
+      "x": 704,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "coral-shard",
+      "metadata": {
+        "resourceId": "coral-shard"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-moonwater-coast-driftwood",
+      "type": "resource",
+      "x": 832,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "driftwood",
+      "metadata": {
+        "resourceId": "driftwood"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-moonwater-coast-tide-crab",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "tide-crab",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-moonwater-coast-reef-stalker",
+      "type": "enemy_spawn",
+      "x": 800,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "reef-stalker",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-sea-chamber",
+      "type": "hidden_area",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 1344,
+      "y": 704,
+      "label": "Hidden Sea Chamber",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "hidden-cliff-cave",
+      "type": "hidden_area",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 192,
+      "y": 1216,
+      "label": "Cliff Cave",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-tide-gate",
+      "type": "puzzle",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 704,
+      "y": 640,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Tide Gate"
+    },
+    {
+      "id": "puzzle-signal",
+      "type": "puzzle",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 192,
+      "y": 1024,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Lighthouse Signal"
+    },
+    {
+      "id": "wp-coast-dock",
+      "type": "waypoint",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 320,
+      "y": 256,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Dock Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "coast-to-commons",
+      "type": "portal",
+      "x": 360,
+      "y": 292,
+      "interactionRadius": 44,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false,
+        "portalDefId": "coast-to-commons"
+      }
+    },
+    {
+      "id": "moonwater-coast-boss-arena",
+      "type": "boss_arena",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 1344,
+      "y": 1152,
+      "width": 256,
+      "height": 192,
+      "label": "Moonwater Leviathan",
+      "metadata": {
+        "bossId": "moonwater-leviathan",
+        "arenaRef": "moonwater-coast-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "moonwater-coast-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1792,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "moonwater-coast-wall-s",
+      "x": 0,
+      "y": 1504,
+      "width": 1792,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "moonwater-coast-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1536,
+      "kind": "wall"
+    },
+    {
+      "id": "moonwater-coast-wall-e",
+      "x": 1760,
+      "y": 0,
+      "width": 32,
+      "height": 1536,
+      "kind": "wall"
+    },
+    {
+      "id": "coast-inn-col",
+      "x": 128,
+      "y": 192,
+      "width": 256,
+      "height": 160,
+      "kind": "building"
+    },
+    {
+      "id": "fish-market-col",
+      "x": 128,
+      "y": 384,
+      "width": 256,
+      "height": 160,
+      "kind": "building"
+    },
+    {
+      "id": "lighthouse-bldg-col",
+      "x": 128,
+      "y": 960,
+      "width": 160,
+      "height": 256,
+      "kind": "building"
+    },
+    {
+      "id": "deep-water-1",
+      "x": 576,
+      "y": 1152,
+      "width": 640,
+      "height": 96,
+      "kind": "water"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1792,
+    "height": 1536
+  },
+  "minimap": {
+    "width": 56,
+    "height": 48,
+    "landmarkPins": [
+      {
+        "id": "coast-inn",
+        "label": "Tide Inn",
+        "x": 4,
+        "y": 6,
+        "icon": "building"
+      },
+      {
+        "id": "fish-market",
+        "label": "Fish Market",
+        "x": 4,
+        "y": 12,
+        "icon": "building"
+      },
+      {
+        "id": "lighthouse-bldg",
+        "label": "Lighthouse",
+        "x": 4,
+        "y": 30,
+        "icon": "building"
+      },
+      {
+        "id": "npc-coast-fisher",
+        "label": "Captain Mirelle",
+        "x": 8,
+        "y": 10,
+        "icon": "npc"
+      },
+      {
+        "id": "wp-coast-dock",
+        "label": "Dock Waypoint",
+        "x": 10,
+        "y": 8,
+        "icon": "waypoint"
+      },
+      {
+        "id": "coast-to-commons",
+        "label": "Riftwild Commons",
+        "x": 11,
+        "y": 9,
+        "icon": "portal"
+      },
+      {
+        "id": "moonwater-coast-boss-arena",
+        "label": "Moonwater Leviathan",
+        "x": 42,
+        "y": 36,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "coastal_fog",
+    "light_rain"
+  ],
+  "musicKey": "music-tide",
+  "safeZones": [
+    {
+      "id": "coastal-village-safe",
+      "x": 64,
+      "y": 128,
+      "width": 448,
+      "height": 384
+    }
+  ],
+  "spawn": {
+    "x": 360,
+    "y": 420
+  },
+  "notes": [
+    "Enterable stub from Commons.",
+    "Deep water colliders along beach south edge."
+  ],
+  "completeness": "PARTIAL"
+}

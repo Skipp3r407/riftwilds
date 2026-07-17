@@ -1,0 +1,120 @@
+{
+  "name": "economy-simulator",
+  "generatedAt": "2026-07-17T20:56:18.093Z",
+  "assumptions": [
+    "SOL/USD = 100 (input assumption)",
+    "Active players = 2000 (synthetic cohort)",
+    "Monthly ops burn = $15000 USD (illustration only)",
+    "Segments: casual 55% / core 35% / whales 10%",
+    "Uses published BPS policies; SOL settlement feature flags remain OFF in product",
+    "Breeding eggs clamped to EGG_SUPPLY_GLOBAL.maxBreedingEggsPerWeekGlobal"
+  ],
+  "sections": [
+    {
+      "title": "Horizon 30d",
+      "status": "PASS",
+      "summary": "Growth 2216.17285713 SOL ($221617.29); holders 546.53142855 SOL; runway 14.77 mo",
+      "details": {
+        "horizon": "30d",
+        "days": 30,
+        "totals": {
+          "shopGrossSol": "2880",
+          "marketplaceGrossSol": "3105",
+          "breedingFeeSol": "82.28571426",
+          "listingFeeSol": "5.4",
+          "growthReserveSol": "2216.17285713",
+          "holderVaultSol": "546.53142855",
+          "growthReserveUsd": 221617.29,
+          "holderVaultUsd": 54653.14,
+          "eggsBred": 514,
+          "eggsOfficialReleased": 214
+        },
+        "health": {
+          "flags": [],
+          "reserveRunwayMonths": 14.77,
+          "status": "HEALTHY"
+        }
+      }
+    },
+    {
+      "title": "Horizon 90d",
+      "status": "PASS",
+      "summary": "Growth 6648.51857139 SOL ($664851.86); holders 1639.59428565 SOL; runway 44.32 mo",
+      "details": {
+        "horizon": "90d",
+        "days": 90,
+        "totals": {
+          "shopGrossSol": "8640",
+          "marketplaceGrossSol": "9315",
+          "breedingFeeSol": "246.85714278",
+          "listingFeeSol": "16.2",
+          "growthReserveSol": "6648.51857139",
+          "holderVaultSol": "1639.59428565",
+          "growthReserveUsd": 664851.86,
+          "holderVaultUsd": 163959.43,
+          "eggsBred": 1543,
+          "eggsOfficialReleased": 643
+        },
+        "health": {
+          "flags": [],
+          "reserveRunwayMonths": 44.32,
+          "status": "HEALTHY"
+        }
+      }
+    },
+    {
+      "title": "Horizon 365d",
+      "status": "PASS",
+      "summary": "Growth 26963.436428415 SOL ($2696343.64); holders 6649.465714025 SOL; runway 179.76 mo",
+      "details": {
+        "horizon": "365d",
+        "days": 365,
+        "totals": {
+          "shopGrossSol": "35040",
+          "marketplaceGrossSol": "37777.5",
+          "breedingFeeSol": "1001.14285683",
+          "listingFeeSol": "65.7",
+          "growthReserveSol": "26963.436428415",
+          "holderVaultSol": "6649.465714025",
+          "growthReserveUsd": 2696343.64,
+          "holderVaultUsd": 664946.57,
+          "eggsBred": 6257,
+          "eggsOfficialReleased": 2607
+        },
+        "health": {
+          "flags": [],
+          "reserveRunwayMonths": 179.76,
+          "status": "HEALTHY"
+        }
+      }
+    },
+    {
+      "title": "Horizon 5y",
+      "status": "PASS",
+      "summary": "Growth 134817.182142075 SOL ($13481718.21); holders 33247.328570125 SOL; runway 898.78 mo",
+      "details": {
+        "horizon": "5y",
+        "days": 1825,
+        "totals": {
+          "shopGrossSol": "175200",
+          "marketplaceGrossSol": "188887.5",
+          "breedingFeeSol": "5005.71428415",
+          "listingFeeSol": "328.5",
+          "growthReserveSol": "134817.182142075",
+          "holderVaultSol": "33247.328570125",
+          "growthReserveUsd": 13481718.21,
+          "holderVaultUsd": 3324732.86,
+          "eggsBred": 31286,
+          "eggsOfficialReleased": 13036
+        },
+        "health": {
+          "flags": [],
+          "reserveRunwayMonths": 898.78,
+          "status": "HEALTHY"
+        }
+      }
+    }
+  ],
+  "criticalFailures": [],
+  "ok": true
+}

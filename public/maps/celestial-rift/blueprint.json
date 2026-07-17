@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "regionId": "celestial-rift",
+  "slug": "celestial-rift",
+  "name": "Celestial Rift",
+  "tileSize": 32,
+  "cols": 52,
+  "rows": 44,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "landing",
+      "name": "Celestial Landing",
+      "x": 64,
+      "y": 64,
+      "width": 448,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "starfall",
+      "name": "Starfall Fields",
+      "x": 576,
+      "y": 128,
+      "width": 512,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "islands",
+      "name": "Floating Island Chain",
+      "x": 1152,
+      "y": 128,
+      "width": 448,
+      "height": 448,
+      "kind": "danger"
+    },
+    {
+      "id": "observatory",
+      "name": "Astral Observatory",
+      "x": 128,
+      "y": 576,
+      "width": 448,
+      "height": 320,
+      "kind": "settlement"
+    },
+    {
+      "id": "broken-city",
+      "name": "Broken Celestial City",
+      "x": 704,
+      "y": 576,
+      "width": 512,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "heart",
+      "name": "Heart of the Rift",
+      "x": 256,
+      "y": 1024,
+      "width": 512,
+      "height": 320,
+      "kind": "danger"
+    },
+    {
+      "id": "world-rift",
+      "name": "World Rift Arena",
+      "x": 1024,
+      "y": 1024,
+      "width": 512,
+      "height": 320,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-landing-starfall",
+      "from": "landing",
+      "to": "starfall",
+      "waypoints": [
+        {
+          "x": 288,
+          "y": 224
+        },
+        {
+          "x": 832,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-starfall-islands",
+      "from": "starfall",
+      "to": "islands",
+      "waypoints": [
+        {
+          "x": 832,
+          "y": 320
+        },
+        {
+          "x": 1376,
+          "y": 352
+        }
+      ]
+    },
+    {
+      "id": "path-islands-observatory",
+      "from": "islands",
+      "to": "observatory",
+      "waypoints": [
+        {
+          "x": 1376,
+          "y": 352
+        },
+        {
+          "x": 352,
+          "y": 736
+        }
+      ]
+    },
+    {
+      "id": "path-observatory-broken-city",
+      "from": "observatory",
+      "to": "broken-city",
+      "waypoints": [
+        {
+          "x": 352,
+          "y": 736
+        },
+        {
+          "x": 960,
+          "y": 768
+        }
+      ]
+    },
+    {
+      "id": "path-broken-city-heart",
+      "from": "broken-city",
+      "to": "heart",
+      "waypoints": [
+        {
+          "x": 960,
+          "y": 768
+        },
+        {
+          "x": 512,
+          "y": 1184
+        }
+      ]
+    },
+    {
+      "id": "path-heart-world-rift",
+      "from": "heart",
+      "to": "world-rift",
+      "waypoints": [
+        {
+          "x": 512,
+          "y": 1184
+        },
+        {
+          "x": 1280,
+          "y": 1184
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": true,
+      "id": "expedition-base",
+      "type": "building",
+      "x": 96,
+      "y": 96,
+      "width": 320,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Expedition Base",
+      "color": 10189823,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": true,
+      "id": "observatory-bldg",
+      "type": "building",
+      "x": 192,
+      "y": 640,
+      "width": 320,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Astral Observatory",
+      "color": 16765024,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "celestial-rift-spawn",
+      "type": "spawn",
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "x": 400,
+      "y": 420,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-celestial-rift-celestial-shard",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "celestial-shard",
+      "metadata": {
+        "resourceId": "celestial-shard"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-celestial-rift-star-dust",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "star-dust",
+      "metadata": {
+        "resourceId": "star-dust"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-celestial-rift-starborn-guardian",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "starborn-guardian",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-constellation",
+      "type": "hidden_area",
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "x": 1280,
+      "y": 320,
+      "label": "Constellation Island",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "hidden-time-vault",
+      "type": "hidden_area",
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "x": 896,
+      "y": 704,
+      "label": "Time-Frozen Vault",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-constellation",
+      "type": "puzzle",
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "x": 320,
+      "y": 704,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Constellation Device"
+    },
+    {
+      "id": "puzzle-affinity",
+      "type": "puzzle",
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "x": 384,
+      "y": 1088,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Affinity Platforms"
+    },
+    {
+      "id": "wp-celestial",
+      "type": "waypoint",
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "x": 256,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Landing Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "celestial-rift-return-portal",
+      "type": "portal",
+      "x": 400,
+      "y": 356,
+      "interactionRadius": 48,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false
+      }
+    },
+    {
+      "id": "celestial-rift-boss-arena",
+      "type": "boss_arena",
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "x": 1152,
+      "y": 1088,
+      "width": 320,
+      "height": 192,
+      "label": "Celestial Rift Entity",
+      "metadata": {
+        "bossId": "celestial-rift-entity",
+        "arenaRef": "celestial-rift-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "celestial-rift-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1664,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "celestial-rift-wall-s",
+      "x": 0,
+      "y": 1376,
+      "width": 1664,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "celestial-rift-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1408,
+      "kind": "wall"
+    },
+    {
+      "id": "celestial-rift-wall-e",
+      "x": 1632,
+      "y": 0,
+      "width": 32,
+      "height": 1408,
+      "kind": "wall"
+    },
+    {
+      "id": "expedition-base-col",
+      "x": 96,
+      "y": 96,
+      "width": 320,
+      "height": 192,
+      "kind": "building"
+    },
+    {
+      "id": "observatory-bldg-col",
+      "x": 192,
+      "y": 640,
+      "width": 320,
+      "height": 192,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1664,
+    "height": 1408
+  },
+  "minimap": {
+    "width": 52,
+    "height": 44,
+    "landmarkPins": [
+      {
+        "id": "expedition-base",
+        "label": "Expedition Base",
+        "x": 3,
+        "y": 3,
+        "icon": "building"
+      },
+      {
+        "id": "observatory-bldg",
+        "label": "Astral Observatory",
+        "x": 6,
+        "y": 20,
+        "icon": "building"
+      },
+      {
+        "id": "wp-celestial",
+        "label": "Landing Waypoint",
+        "x": 8,
+        "y": 6,
+        "icon": "waypoint"
+      },
+      {
+        "id": "celestial-rift-return-portal",
+        "label": "Riftwild Commons",
+        "x": 13,
+        "y": 11,
+        "icon": "portal"
+      },
+      {
+        "id": "celestial-rift-boss-arena",
+        "label": "Celestial Rift Entity",
+        "x": 36,
+        "y": 34,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "starfall",
+    "rift_aurora",
+    "void_distortion"
+  ],
+  "musicKey": "music-celestial",
+  "safeZones": [
+    {
+      "id": "landing-safe",
+      "x": 64,
+      "y": 64,
+      "width": 448,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 400,
+    "y": 420
+  },
+  "notes": [
+    "Endgame blueprint only until gateway restored.",
+    "Never requires paid pets or paid region unlocks."
+  ],
+  "completeness": "PARTIAL"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="a" cx="20%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#3d9bff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#070b16" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#d0d6e0" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#070b16" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="c" cx="50%" cy="95%" r="45%">
+      <stop offset="0%" stop-color="#3de7ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#070b16" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M30 26 V34 M26 30 H34" stroke="#e8f0ff" stroke-opacity="0.06" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#070b16"/>
+  <rect width="1920" height="1080" fill="url(#a)"/>
+  <rect width="1920" height="1080" fill="url(#b)"/>
+  <rect width="1920" height="1080" fill="url(#c)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <path d="M0 820 Q480 760 960 840 T1920 780 L1920 1080 L0 1080 Z" fill="#0c1428" opacity="0.55"/>
+  <path d="M200 200 L320 260 L280 300 Z" fill="#3d9bff" opacity="0.08"/>
+  <path d="M1500 140 L1680 200 L1600 260 Z" fill="#d0d6e0" opacity="0.08"/>
+  <!-- inventory -->
+</svg>

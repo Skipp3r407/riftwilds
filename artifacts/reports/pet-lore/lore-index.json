@@ -1,0 +1,602 @@
+[
+  {
+    "slug": "ashwing",
+    "name": "Ashwing",
+    "affinity": "EMBER",
+    "region": "Ember Crater",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 161,
+      "full": 530
+    }
+  },
+  {
+    "slug": "auralynx",
+    "name": "Auralynx",
+    "affinity": "RADIANT",
+    "region": "Radiant Citadel",
+    "status": "COMPLETE",
+    "words": {
+      "short": 46,
+      "standard": 165,
+      "full": 539
+    }
+  },
+  {
+    "slug": "bramblefox",
+    "name": "Bramblefox",
+    "affinity": "GROVE",
+    "region": "Elderwood Forest",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 162,
+      "full": 541
+    }
+  },
+  {
+    "slug": "bubbloon",
+    "name": "Bubbloon",
+    "affinity": "TIDE",
+    "region": "Moonwater Coast",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 158,
+      "full": 535
+    }
+  },
+  {
+    "slug": "canyonbeetle",
+    "name": "Canyonbeetle",
+    "affinity": "STONE",
+    "region": "Stoneheart Canyon",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 162,
+      "full": 535
+    }
+  },
+  {
+    "slug": "celestora",
+    "name": "Celestora",
+    "affinity": "RADIANT",
+    "region": "Celestial Rift",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 163,
+      "full": 544
+    }
+  },
+  {
+    "slug": "cindercub",
+    "name": "Cindercub",
+    "affinity": "EMBER",
+    "region": "Ember Crater",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 160,
+      "full": 541
+    }
+  },
+  {
+    "slug": "citadelmoth",
+    "name": "Citadelmoth",
+    "affinity": "RADIANT",
+    "region": "Radiant Citadel",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 162,
+      "full": 535
+    }
+  },
+  {
+    "slug": "cogpup",
+    "name": "Cogpup",
+    "affinity": "ALLOY",
+    "region": "Alloy Ruins",
+    "status": "COMPLETE",
+    "words": {
+      "short": 46,
+      "standard": 165,
+      "full": 540
+    }
+  },
+  {
+    "slug": "commonspark",
+    "name": "Commonspark",
+    "affinity": "STORM",
+    "region": "Riftwild Commons",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 159,
+      "full": 533
+    }
+  },
+  {
+    "slug": "coralurge",
+    "name": "Coralurge",
+    "affinity": "TIDE",
+    "region": "Moonwater Coast",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 159,
+      "full": 527
+    }
+  },
+  {
+    "slug": "craterhorn",
+    "name": "Craterhorn",
+    "affinity": "EMBER",
+    "region": "Ember Crater",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 161,
+      "full": 534
+    }
+  },
+  {
+    "slug": "elderfern",
+    "name": "Elderfern",
+    "affinity": "GROVE",
+    "region": "Elderwood Forest",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 160,
+      "full": 535
+    }
+  },
+  {
+    "slug": "emberfox",
+    "name": "Emberfox",
+    "affinity": "EMBER",
+    "region": "Ember Crater",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 162,
+      "full": 538
+    }
+  },
+  {
+    "slug": "embernewt",
+    "name": "Embernewt",
+    "affinity": "EMBER",
+    "region": "Ember Crater",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 162,
+      "full": 539
+    }
+  },
+  {
+    "slug": "fossilhound",
+    "name": "Fossilhound",
+    "affinity": "STONE",
+    "region": "Stoneheart Canyon",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 163,
+      "full": 538
+    }
+  },
+  {
+    "slug": "frostfin",
+    "name": "Frostfin",
+    "affinity": "FROST",
+    "region": "Frostveil Basin",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 163,
+      "full": 538
+    }
+  },
+  {
+    "slug": "frostnip",
+    "name": "Frostnip",
+    "affinity": "FROST",
+    "region": "Frostveil Basin",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 160,
+      "full": 538
+    }
+  },
+  {
+    "slug": "gearling",
+    "name": "Gearling",
+    "affinity": "ALLOY",
+    "region": "Alloy Ruins",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 162,
+      "full": 538
+    }
+  },
+  {
+    "slug": "glimmerp",
+    "name": "Glimmerp",
+    "affinity": "RADIANT",
+    "region": "Riftwild Commons",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 162,
+      "full": 531
+    }
+  },
+  {
+    "slug": "groveowl",
+    "name": "Groveowl",
+    "affinity": "GROVE",
+    "region": "Elderwood Forest",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 158,
+      "full": 529
+    }
+  },
+  {
+    "slug": "hearthstone",
+    "name": "Hearthstone",
+    "affinity": "STONE",
+    "region": "Riftwild Commons",
+    "status": "COMPLETE",
+    "words": {
+      "short": 41,
+      "standard": 159,
+      "full": 529
+    }
+  },
+  {
+    "slug": "hollowmoth",
+    "name": "Hollowmoth",
+    "affinity": "VOID",
+    "region": "Void Hollow",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 161,
+      "full": 533
+    }
+  },
+  {
+    "slug": "hollowshade",
+    "name": "Hollowshade",
+    "affinity": "VOID",
+    "region": "Void Hollow",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 159,
+      "full": 536
+    }
+  },
+  {
+    "slug": "ironbloom",
+    "name": "Ironbloom",
+    "affinity": "ALLOY",
+    "region": "Alloy Ruins",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 164,
+      "full": 539
+    }
+  },
+  {
+    "slug": "lanternjay",
+    "name": "Lanternjay",
+    "affinity": "SPIRIT",
+    "region": "Spirit Marsh",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 162,
+      "full": 535
+    }
+  },
+  {
+    "slug": "luminara",
+    "name": "Luminara",
+    "affinity": "RADIANT",
+    "region": "Radiant Citadel",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 157,
+      "full": 530
+    }
+  },
+  {
+    "slug": "marshloom",
+    "name": "Marshloom",
+    "affinity": "SPIRIT",
+    "region": "Spirit Marsh",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 162,
+      "full": 536
+    }
+  },
+  {
+    "slug": "mistwraith",
+    "name": "Mistwraith",
+    "affinity": "VOID",
+    "region": "Void Hollow",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 164,
+      "full": 534
+    }
+  },
+  {
+    "slug": "moonray",
+    "name": "Moonray",
+    "affinity": "TIDE",
+    "region": "Moonwater Coast",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 160,
+      "full": 532
+    }
+  },
+  {
+    "slug": "mossprig",
+    "name": "Mossprig",
+    "affinity": "GROVE",
+    "region": "Elderwood Forest",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 160,
+      "full": 534
+    }
+  },
+  {
+    "slug": "peakibex",
+    "name": "Peakibex",
+    "affinity": "STORM",
+    "region": "Stormspire Peaks",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 160,
+      "full": 539
+    }
+  },
+  {
+    "slug": "pebblit",
+    "name": "Pebblit",
+    "affinity": "STONE",
+    "region": "Stoneheart Canyon",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 161,
+      "full": 533
+    }
+  },
+  {
+    "slug": "quartzhorn",
+    "name": "Quartzhorn",
+    "affinity": "STONE",
+    "region": "Stoneheart Canyon",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 164,
+      "full": 538
+    }
+  },
+  {
+    "slug": "radiantkit",
+    "name": "Radiantkit",
+    "affinity": "RADIANT",
+    "region": "Radiant Citadel",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 162,
+      "full": 536
+    }
+  },
+  {
+    "slug": "riftpup",
+    "name": "Riftpup",
+    "affinity": "SPIRIT",
+    "region": "Riftwild Commons",
+    "status": "COMPLETE",
+    "words": {
+      "short": 46,
+      "standard": 163,
+      "full": 540
+    }
+  },
+  {
+    "slug": "riftslug",
+    "name": "Riftslug",
+    "affinity": "VOID",
+    "region": "Void Hollow",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 162,
+      "full": 537
+    }
+  },
+  {
+    "slug": "rootling",
+    "name": "Rootling",
+    "affinity": "GROVE",
+    "region": "Elderwood Forest",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 162,
+      "full": 530
+    }
+  },
+  {
+    "slug": "scrapfinch",
+    "name": "Scrapfinch",
+    "affinity": "ALLOY",
+    "region": "Alloy Ruins",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 163,
+      "full": 536
+    }
+  },
+  {
+    "slug": "snowpuff",
+    "name": "Snowpuff",
+    "affinity": "FROST",
+    "region": "Frostveil Basin",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 164,
+      "full": 542
+    }
+  },
+  {
+    "slug": "spirekite",
+    "name": "Spirekite",
+    "affinity": "STORM",
+    "region": "Stormspire Peaks",
+    "status": "COMPLETE",
+    "words": {
+      "short": 42,
+      "standard": 162,
+      "full": 533
+    }
+  },
+  {
+    "slug": "staticat",
+    "name": "Staticat",
+    "affinity": "STORM",
+    "region": "Stormspire Peaks",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 161,
+      "full": 532
+    }
+  },
+  {
+    "slug": "stonegrub",
+    "name": "Stonegrub",
+    "affinity": "STONE",
+    "region": "Stoneheart Canyon",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 158,
+      "full": 531
+    }
+  },
+  {
+    "slug": "stormmoth",
+    "name": "Stormmoth",
+    "affinity": "STORM",
+    "region": "Stormspire Peaks",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 160,
+      "full": 532
+    }
+  },
+  {
+    "slug": "tideotter",
+    "name": "Tideotter",
+    "affinity": "TIDE",
+    "region": "Moonwater Coast",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 159,
+      "full": 533
+    }
+  },
+  {
+    "slug": "tidewisp",
+    "name": "Tidewisp",
+    "affinity": "TIDE",
+    "region": "Moonwater Coast",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 161,
+      "full": 537
+    }
+  },
+  {
+    "slug": "veilhare",
+    "name": "Veilhare",
+    "affinity": "FROST",
+    "region": "Frostveil Basin",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 162,
+      "full": 540
+    }
+  },
+  {
+    "slug": "voidling",
+    "name": "Voidling",
+    "affinity": "VOID",
+    "region": "Void Hollow",
+    "status": "COMPLETE",
+    "words": {
+      "short": 44,
+      "standard": 161,
+      "full": 534
+    }
+  },
+  {
+    "slug": "voltkit",
+    "name": "Voltkit",
+    "affinity": "STORM",
+    "region": "Stormspire Peaks",
+    "status": "COMPLETE",
+    "words": {
+      "short": 45,
+      "standard": 156,
+      "full": 534
+    }
+  },
+  {
+    "slug": "wisplet",
+    "name": "Wisplet",
+    "affinity": "SPIRIT",
+    "region": "Spirit Marsh",
+    "status": "COMPLETE",
+    "words": {
+      "short": 43,
+      "standard": 159,
+      "full": 528
+    }
+  }
+]

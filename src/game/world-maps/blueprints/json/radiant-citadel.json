@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 1,
+  "regionId": "radiant-citadel",
+  "slug": "radiant-citadel",
+  "name": "Radiant Citadel",
+  "tileSize": 32,
+  "cols": 48,
+  "rows": 40,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "gate",
+      "name": "Golden Gate District",
+      "x": 64,
+      "y": 896,
+      "width": 448,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "gardens",
+      "name": "Healing Gardens",
+      "x": 576,
+      "y": 768,
+      "width": 448,
+      "height": 320,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "records",
+      "name": "Hall of Records",
+      "x": 128,
+      "y": 384,
+      "width": 384,
+      "height": 320,
+      "kind": "settlement"
+    },
+    {
+      "id": "temple",
+      "name": "Sun Temple",
+      "x": 640,
+      "y": 128,
+      "width": 448,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "walkways",
+      "name": "Floating Walkways",
+      "x": 1088,
+      "y": 256,
+      "width": 384,
+      "height": 448,
+      "kind": "danger"
+    },
+    {
+      "id": "lower",
+      "name": "Lower Citadel",
+      "x": 1088,
+      "y": 768,
+      "width": 384,
+      "height": 320,
+      "kind": "exploration"
+    },
+    {
+      "id": "court",
+      "name": "Celestial Court",
+      "x": 576,
+      "y": 448,
+      "width": 384,
+      "height": 256,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-gate-gardens",
+      "from": "gate",
+      "to": "gardens",
+      "waypoints": [
+        {
+          "x": 288,
+          "y": 1056
+        },
+        {
+          "x": 800,
+          "y": 928
+        }
+      ]
+    },
+    {
+      "id": "path-gardens-records",
+      "from": "gardens",
+      "to": "records",
+      "waypoints": [
+        {
+          "x": 800,
+          "y": 928
+        },
+        {
+          "x": 320,
+          "y": 544
+        }
+      ]
+    },
+    {
+      "id": "path-records-temple",
+      "from": "records",
+      "to": "temple",
+      "waypoints": [
+        {
+          "x": 320,
+          "y": 544
+        },
+        {
+          "x": 864,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-temple-walkways",
+      "from": "temple",
+      "to": "walkways",
+      "waypoints": [
+        {
+          "x": 864,
+          "y": 320
+        },
+        {
+          "x": 1280,
+          "y": 480
+        }
+      ]
+    },
+    {
+      "id": "path-walkways-lower",
+      "from": "walkways",
+      "to": "lower",
+      "waypoints": [
+        {
+          "x": 1280,
+          "y": 480
+        },
+        {
+          "x": 1280,
+          "y": 928
+        }
+      ]
+    },
+    {
+      "id": "path-lower-court",
+      "from": "lower",
+      "to": "court",
+      "waypoints": [
+        {
+          "x": 1280,
+          "y": 928
+        },
+        {
+          "x": 768,
+          "y": 576
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": true,
+      "id": "sun-temple",
+      "type": "building",
+      "x": 704,
+      "y": 160,
+      "width": 320,
+      "height": 224,
+      "interactionRadius": 48,
+      "label": "Sun Temple",
+      "color": 16765024,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "radiant-citadel-spawn",
+      "type": "spawn",
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "x": 360,
+      "y": 400,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-radiant-citadel-radiant-crystal",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "radiant-crystal",
+      "metadata": {
+        "resourceId": "radiant-crystal"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-radiant-citadel-sunpetal",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "sunpetal",
+      "metadata": {
+        "resourceId": "sunpetal"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-radiant-citadel-radiant-construct",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "radiant-construct",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-archive",
+      "type": "hidden_area",
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "x": 256,
+      "y": 448,
+      "label": "Restricted Archive",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-mirrors",
+      "type": "puzzle",
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "x": 832,
+      "y": 256,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Mirror Beams"
+    },
+    {
+      "id": "wp-radiant",
+      "type": "waypoint",
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "x": 192,
+      "y": 1024,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Gate Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "radiant-citadel-return-portal",
+      "type": "portal",
+      "x": 360,
+      "y": 336,
+      "interactionRadius": 48,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false
+      }
+    },
+    {
+      "id": "radiant-citadel-boss-arena",
+      "type": "boss_arena",
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "x": 640,
+      "y": 512,
+      "width": 256,
+      "height": 160,
+      "label": "Radiant Sentinel",
+      "metadata": {
+        "bossId": "radiant-sentinel",
+        "arenaRef": "radiant-citadel-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "radiant-citadel-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "radiant-citadel-wall-s",
+      "x": 0,
+      "y": 1248,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "radiant-citadel-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "radiant-citadel-wall-e",
+      "x": 1504,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "sun-temple-col",
+      "x": 704,
+      "y": 160,
+      "width": 320,
+      "height": 224,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 1280
+  },
+  "minimap": {
+    "width": 48,
+    "height": 40,
+    "landmarkPins": [
+      {
+        "id": "sun-temple",
+        "label": "Sun Temple",
+        "x": 22,
+        "y": 5,
+        "icon": "building"
+      },
+      {
+        "id": "wp-radiant",
+        "label": "Gate Waypoint",
+        "x": 6,
+        "y": 32,
+        "icon": "waypoint"
+      },
+      {
+        "id": "radiant-citadel-return-portal",
+        "label": "Riftwild Commons",
+        "x": 11,
+        "y": 11,
+        "icon": "portal"
+      },
+      {
+        "id": "radiant-citadel-boss-arena",
+        "label": "Radiant Sentinel",
+        "x": 20,
+        "y": 16,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "rift_aurora"
+  ],
+  "musicKey": "music-radiant",
+  "safeZones": [
+    {
+      "id": "gate-safe",
+      "x": 64,
+      "y": 896,
+      "width": 448,
+      "height": 320
+    },
+    {
+      "id": "gardens-safe",
+      "x": 576,
+      "y": 768,
+      "width": 448,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 360,
+    "y": 400
+  },
+  "notes": [
+    "Midgame blueprint; unlock via story chapter 4."
+  ],
+  "completeness": "PARTIAL"
+}

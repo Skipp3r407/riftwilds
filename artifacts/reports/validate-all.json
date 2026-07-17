@@ -1,0 +1,96 @@
+{
+  "name": "validate-all",
+  "generatedAt": "2026-07-17T20:56:22.448Z",
+  "assumptions": [
+    "SOL settlement flags must remain OFF in featureFlagDefaults",
+    "Simulator USD figures are model assumptions",
+    "NOT_IMPLEMENTED systems are tracked, not marked PASS"
+  ],
+  "sections": [
+    {
+      "title": "System registry gaps",
+      "status": "PENDING",
+      "summary": "19 systems marked NOT_IMPLEMENTED/PENDING/STUB (not counted as pass)",
+      "details": {
+        "pending": [
+          "BreedingMint:NOT_IMPLEMENTED",
+          "SolMarketplaceEscrow:NOT_IMPLEMENTED",
+          "HolderRewardClaims:STUB",
+          "RankedMatchmaking:STUB",
+          "CasualDuels:STUB",
+          "Tournaments:STUB",
+          "SpectatorRealtime:STUB",
+          "PlaywrightE2E:STUB",
+          "Guilds:STUB",
+          "Homestead:STUB",
+          "LiveWorld:STUB",
+          "Quests:STUB",
+          "Evolution:NOT_IMPLEMENTED",
+          "NftMinting:NOT_IMPLEMENTED",
+          "OnchainAtomicSplit:NOT_IMPLEMENTED",
+          "TreasuryAddresses:STUB",
+          "VrfRandomness:NOT_IMPLEMENTED",
+          "PaidGacha:NOT_IMPLEMENTED",
+          "AdminMutations:NOT_IMPLEMENTED"
+        ]
+      }
+    },
+    {
+      "title": "typecheck",
+      "status": "PASS",
+      "summary": "ok in 17154ms"
+    },
+    {
+      "title": "test:unit",
+      "status": "PASS",
+      "summary": "ok in 3853ms"
+    },
+    {
+      "title": "test:pets",
+      "status": "PASS",
+      "summary": "ok in 2707ms"
+    },
+    {
+      "title": "test:economy",
+      "status": "PASS",
+      "summary": "ok in 2858ms"
+    },
+    {
+      "title": "test:marketplace",
+      "status": "PASS",
+      "summary": "ok in 2770ms"
+    },
+    {
+      "title": "test:battles",
+      "status": "PASS",
+      "summary": "ok in 3518ms"
+    },
+    {
+      "title": "test:security",
+      "status": "PASS",
+      "summary": "ok in 2640ms"
+    },
+    {
+      "title": "validate:assets",
+      "status": "PASS",
+      "summary": "ok in 1954ms"
+    },
+    {
+      "title": "simulate:economy",
+      "status": "PASS",
+      "summary": "ok in 1986ms"
+    },
+    {
+      "title": "simulate:pets",
+      "status": "PASS",
+      "summary": "ok in 2038ms"
+    },
+    {
+      "title": "simulate:battles",
+      "status": "PASS",
+      "summary": "ok in 2156ms"
+    }
+  ],
+  "criticalFailures": [],
+  "ok": true
+}

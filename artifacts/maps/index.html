@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Riftwilds World Maps — Validation Index</title>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, sans-serif; background:#0f172a; color:#e2e8f0; margin:2rem; }
+    table { border-collapse: collapse; width:100%; }
+    td, th { border:1px solid #334155; padding:0.5rem; }
+    .FULL { color:#4ade80; } .PARTIAL { color:#fbbf24; } .FAIL { color:#f87171; }
+    a { color:#38bdf8; }
+  </style>
+</head>
+<body>
+  <h1>World Map Validation</h1>
+  <p>2026-07-17T21:08:39.239Z · Resources: 35 · Enemies: 30 · Portals: 14</p>
+  <p>Unlock gates aligned: yes · Portal targets aligned: yes · Missing builders: none</p>
+  <h2>Playable vs blueprint-only</h2>
+  <ul>
+    <li><strong>Playable:</strong> Riftwild Commons (FULL scene)</li>
+    <li><strong>Enterable stubs:</strong> Ember Crater, Moonwater Coast, Elderwood Forest (portal transitions)</li>
+    <li><strong>Blueprint-only:</strong> remaining 8 regions (unlock gates encoded; scenes not registered)</li>
+  </ul>
+  <table>
+    <tr><th>Region</th><th>Declared</th><th>Validated</th><th>Playability</th><th>Report</th></tr>
+    <tr><td>Riftwild Commons</td><td>FULL</td><td class="FULL">FULL</td><td>playable</td><td><a href="./riftwild-commons-report.html">report</a></td></tr>
+<tr><td>Ember Crater</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>enterable_stub</td><td><a href="./ember-crater-report.html">report</a></td></tr>
+<tr><td>Moonwater Coast</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>enterable_stub</td><td><a href="./moonwater-coast-report.html">report</a></td></tr>
+<tr><td>Elderwood Forest</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>enterable_stub</td><td><a href="./elderwood-forest-report.html">report</a></td></tr>
+<tr><td>Stormspire Peaks</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>blueprint_only</td><td><a href="./stormspire-peaks-report.html">report</a></td></tr>
+<tr><td>Stoneheart Canyon</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>blueprint_only</td><td><a href="./stoneheart-canyon-report.html">report</a></td></tr>
+<tr><td>Frostveil Basin</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>blueprint_only</td><td><a href="./frostveil-basin-report.html">report</a></td></tr>
+<tr><td>Radiant Citadel</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>blueprint_only</td><td><a href="./radiant-citadel-report.html">report</a></td></tr>
+<tr><td>Void Hollow</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>blueprint_only</td><td><a href="./void-hollow-report.html">report</a></td></tr>
+<tr><td>Alloy Ruins</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>blueprint_only</td><td><a href="./alloy-ruins-report.html">report</a></td></tr>
+<tr><td>Spirit Marsh</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>blueprint_only</td><td><a href="./spirit-marsh-report.html">report</a></td></tr>
+<tr><td>Celestial Rift</td><td>PARTIAL</td><td class="PARTIAL">PARTIAL</td><td>blueprint_only</td><td><a href="./celestial-rift-report.html">report</a></td></tr>
+  </table>
+</body>
+</html>

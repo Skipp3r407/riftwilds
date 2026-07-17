@@ -1,0 +1,376 @@
+{
+  "schemaVersion": 1,
+  "regionId": "stormspire-peaks",
+  "slug": "stormspire-peaks",
+  "name": "Stormspire Peaks",
+  "tileSize": 32,
+  "cols": 48,
+  "rows": 40,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "base-camp",
+      "name": "Wind Camp",
+      "x": 64,
+      "y": 896,
+      "width": 384,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "cliff-paths",
+      "name": "Cliff Paths",
+      "x": 448,
+      "y": 512,
+      "width": 576,
+      "height": 448,
+      "kind": "danger"
+    },
+    {
+      "id": "crystal-spires",
+      "name": "Lightning Spires",
+      "x": 1088,
+      "y": 256,
+      "width": 384,
+      "height": 448,
+      "kind": "exploration"
+    },
+    {
+      "id": "wind-trials",
+      "name": "Wind Trials",
+      "x": 512,
+      "y": 128,
+      "width": 448,
+      "height": 320,
+      "kind": "dungeon"
+    },
+    {
+      "id": "boss",
+      "name": "Stormspire Summit",
+      "x": 1088,
+      "y": 832,
+      "width": 384,
+      "height": 320,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-base-camp-cliff-paths",
+      "from": "base-camp",
+      "to": "cliff-paths",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 1056
+        },
+        {
+          "x": 736,
+          "y": 736
+        }
+      ]
+    },
+    {
+      "id": "path-cliff-paths-crystal-spires",
+      "from": "cliff-paths",
+      "to": "crystal-spires",
+      "waypoints": [
+        {
+          "x": 736,
+          "y": 736
+        },
+        {
+          "x": 1280,
+          "y": 480
+        }
+      ]
+    },
+    {
+      "id": "path-crystal-spires-wind-trials",
+      "from": "crystal-spires",
+      "to": "wind-trials",
+      "waypoints": [
+        {
+          "x": 1280,
+          "y": 480
+        },
+        {
+          "x": 736,
+          "y": 288
+        }
+      ]
+    },
+    {
+      "id": "path-wind-trials-boss",
+      "from": "wind-trials",
+      "to": "boss",
+      "waypoints": [
+        {
+          "x": 736,
+          "y": 288
+        },
+        {
+          "x": 1280,
+          "y": 992
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": true,
+      "id": "storm-camp",
+      "type": "building",
+      "x": 96,
+      "y": 960,
+      "width": 256,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Wind Camp",
+      "color": 8308991,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "stormspire-peaks-spawn",
+      "type": "spawn",
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "x": 300,
+      "y": 480,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-stormspire-peaks-lightning-crystal",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "lightning-crystal",
+      "metadata": {
+        "resourceId": "lightning-crystal"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-stormspire-peaks-wind-silk",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "wind-silk",
+      "metadata": {
+        "resourceId": "wind-silk"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-stormspire-peaks-storm-raptor",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "storm-raptor",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-cloud-cave",
+      "type": "hidden_area",
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "x": 640,
+      "y": 256,
+      "label": "Cloud Cave",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-wind",
+      "type": "puzzle",
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "x": 640,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Wind Trial Gates"
+    },
+    {
+      "id": "wp-storm",
+      "type": "waypoint",
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "x": 192,
+      "y": 1024,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Camp Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "stormspire-peaks-return-portal",
+      "type": "portal",
+      "x": 300,
+      "y": 416,
+      "interactionRadius": 48,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false
+      }
+    },
+    {
+      "id": "stormspire-peaks-boss-arena",
+      "type": "boss_arena",
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "x": 1152,
+      "y": 896,
+      "width": 256,
+      "height": 192,
+      "label": "Stormspire Titan",
+      "metadata": {
+        "bossId": "stormspire-titan",
+        "arenaRef": "stormspire-peaks-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "stormspire-peaks-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "stormspire-peaks-wall-s",
+      "x": 0,
+      "y": 1248,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "stormspire-peaks-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "stormspire-peaks-wall-e",
+      "x": 1504,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "storm-camp-col",
+      "x": 96,
+      "y": 960,
+      "width": 256,
+      "height": 160,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 1280
+  },
+  "minimap": {
+    "width": 48,
+    "height": 40,
+    "landmarkPins": [
+      {
+        "id": "storm-camp",
+        "label": "Wind Camp",
+        "x": 3,
+        "y": 30,
+        "icon": "building"
+      },
+      {
+        "id": "wp-storm",
+        "label": "Camp Waypoint",
+        "x": 6,
+        "y": 32,
+        "icon": "waypoint"
+      },
+      {
+        "id": "stormspire-peaks-return-portal",
+        "label": "Riftwild Commons",
+        "x": 9,
+        "y": 13,
+        "icon": "portal"
+      },
+      {
+        "id": "stormspire-peaks-boss-arena",
+        "label": "Stormspire Titan",
+        "x": 36,
+        "y": 28,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "sparks_rain"
+  ],
+  "musicKey": "music-storm",
+  "safeZones": [
+    {
+      "id": "base-camp-safe",
+      "x": 64,
+      "y": 896,
+      "width": 384,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 300,
+    "y": 480
+  },
+  "notes": [
+    "Blueprint + unlock gate only until early progression scene ships."
+  ],
+  "completeness": "PARTIAL"
+}

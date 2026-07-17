@@ -1,0 +1,323 @@
+﻿{
+    "generatedAt":  "2026-07-17T22:42:17.4385543Z",
+    "source":  "artifacts/assets/reports/scan-latest.json",
+    "totals":  {
+                   "pending":  136,
+                   "planned":  0,
+                   "generated":  295,
+                   "failed":  0,
+                   "legacy":  12,
+                   "not_applicable":  0
+               },
+    "countsByCategory":  {
+                             "worlds":  24,
+                             "regions":  12,
+                             "pets":  61,
+                             "eggs":  14,
+                             "affinities":  10,
+                             "items":  159,
+                             "npcs":  112,
+                             "enemies":  19,
+                             "bosses":  11,
+                             "buildings":  5,
+                             "ui":  8,
+                             "animations":  8
+                         },
+    "missingCount":  136,
+    "sessionGenerated":  [
+                             "bosses/alloy-warframe/key-art.png",
+                             "bosses/spirit-lantern-king/key-art.png",
+                             "bosses/celestial-rift-entity/key-art.png",
+                             "worlds/*/overview.png (8 regions)",
+                             "pets: frostuft,alloyfin,sunmote,noxling,brambleback,zephyroo,glimmermoth,magmole,tiderune,bloomble,astralynx",
+                             "affinities: ember,tide,grove,storm,stone,frost,radiant,void,alloy,spirit,celestial",
+                             "npcs: elara-venn,archivist-solen,plaza-vendor-cal,portal-keeper"
+                         ],
+    "verifiedHttp200":  [
+                            "/assets/worlds/stormspire-peaks/overview.png",
+                            "/assets/pets/frostuft.png",
+                            "/assets/bosses/alloy-warframe/key-art.png"
+                        ],
+    "missingTop":  [
+                       {
+                           "id":  "npc-rowan-vale",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/rowan-vale/portrait.png",
+                           "priority":  4,
+                           "label":  "Keeper Rowan Vale portrait"
+                       },
+                       {
+                           "id":  "npc-mira-shellbright",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/mira-shellbright/portrait.png",
+                           "priority":  4,
+                           "label":  "Mira Shellbright portrait"
+                       },
+                       {
+                           "id":  "npc-bram-ironroot",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/bram-ironroot/portrait.png",
+                           "priority":  4,
+                           "label":  "Bram Ironroot portrait"
+                       },
+                       {
+                           "id":  "npc-tessa-windmere",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/tessa-windmere/portrait.png",
+                           "priority":  4,
+                           "label":  "Tessa Windmere portrait"
+                       },
+                       {
+                           "id":  "npc-captain-orren",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/captain-orren/portrait.png",
+                           "priority":  4,
+                           "label":  "Captain Orren portrait"
+                       },
+                       {
+                           "id":  "npc-nyla-brook",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/nyla-brook/portrait.png",
+                           "priority":  4,
+                           "label":  "Nyla Brook portrait"
+                       },
+                       {
+                           "id":  "npc-pip-gearwhistle",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/pip-gearwhistle/portrait.png",
+                           "priority":  4,
+                           "label":  "Pip Gearwhistle portrait"
+                       },
+                       {
+                           "id":  "npc-rook-emberfall",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/rook-emberfall/portrait.png",
+                           "priority":  4,
+                           "label":  "Rook Emberfall portrait"
+                       },
+                       {
+                           "id":  "npc-kael-ashwalker",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/kael-ashwalker/portrait.png",
+                           "priority":  4,
+                           "label":  "Kael Ashwalker portrait"
+                       },
+                       {
+                           "id":  "npc-forgekeeper-vessa",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/forgekeeper-vessa/portrait.png",
+                           "priority":  4,
+                           "label":  "Forgekeeper Vessa portrait"
+                       },
+                       {
+                           "id":  "npc-cinder-sage-malrec",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/cinder-sage-malrec/portrait.png",
+                           "priority":  4,
+                           "label":  "Cinder Sage Malrec portrait"
+                       },
+                       {
+                           "id":  "npc-warden-pyra",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/warden-pyra/portrait.png",
+                           "priority":  4,
+                           "label":  "Warden Pyra portrait"
+                       },
+                       {
+                           "id":  "npc-luma-tidecrest",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/luma-tidecrest/portrait.png",
+                           "priority":  4,
+                           "label":  "Captain Luma Tidecrest portrait"
+                       },
+                       {
+                           "id":  "npc-finn-coralhand",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/finn-coralhand/portrait.png",
+                           "priority":  4,
+                           "label":  "Finn Coralhand portrait"
+                       },
+                       {
+                           "id":  "npc-oracle-selene",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/oracle-selene/portrait.png",
+                           "priority":  4,
+                           "label":  "Oracle Selene portrait"
+                       },
+                       {
+                           "id":  "npc-marina-drift",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/marina-drift/portrait.png",
+                           "priority":  4,
+                           "label":  "Marina Drift portrait"
+                       },
+                       {
+                           "id":  "npc-warden-sylvi",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/warden-sylvi/portrait.png",
+                           "priority":  4,
+                           "label":  "Warden Sylvi portrait"
+                       },
+                       {
+                           "id":  "npc-mosskeeper-elden",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/mosskeeper-elden/portrait.png",
+                           "priority":  4,
+                           "label":  "Mosskeeper Elden portrait"
+                       },
+                       {
+                           "id":  "npc-fenn-quickbranch",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/fenn-quickbranch/portrait.png",
+                           "priority":  4,
+                           "label":  "Fenn Quickbranch portrait"
+                       },
+                       {
+                           "id":  "npc-grandmother-willowmere",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/grandmother-willowmere/portrait.png",
+                           "priority":  4,
+                           "label":  "Grandmother Willowmere portrait"
+                       },
+                       {
+                           "id":  "npc-aeron-cloudstep",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/aeron-cloudstep/portrait.png",
+                           "priority":  4,
+                           "label":  "Aeron Cloudstep portrait"
+                       },
+                       {
+                           "id":  "npc-engineer-volt",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/engineer-volt/portrait.png",
+                           "priority":  4,
+                           "label":  "Engineer Volt portrait"
+                       },
+                       {
+                           "id":  "npc-skywarden-ilya",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/skywarden-ilya/portrait.png",
+                           "priority":  4,
+                           "label":  "Skywarden Ilya portrait"
+                       },
+                       {
+                           "id":  "npc-hermit-thane",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/hermit-thane/portrait.png",
+                           "priority":  4,
+                           "label":  "Hermit Thane portrait"
+                       },
+                       {
+                           "id":  "npc-doran-flint",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/doran-flint/portrait.png",
+                           "priority":  4,
+                           "label":  "Doran Flint portrait"
+                       },
+                       {
+                           "id":  "npc-petra-stoneveil",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/petra-stoneveil/portrait.png",
+                           "priority":  4,
+                           "label":  "Petra Stoneveil portrait"
+                       },
+                       {
+                           "id":  "npc-marshal-korr",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/marshal-korr/portrait.png",
+                           "priority":  4,
+                           "label":  "Marshal Korr portrait"
+                       },
+                       {
+                           "id":  "npc-gemwright-opal",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/gemwright-opal/portrait.png",
+                           "priority":  4,
+                           "label":  "Gemwright Opal portrait"
+                       },
+                       {
+                           "id":  "npc-freya-snowmark",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/freya-snowmark/portrait.png",
+                           "priority":  4,
+                           "label":  "Freya Snowmark portrait"
+                       },
+                       {
+                           "id":  "npc-jori-icebloom",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/jori-icebloom/portrait.png",
+                           "priority":  4,
+                           "label":  "Jori Icebloom portrait"
+                       },
+                       {
+                           "id":  "npc-hunter-varek",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/hunter-varek/portrait.png",
+                           "priority":  4,
+                           "label":  "Hunter Varek portrait"
+                       },
+                       {
+                           "id":  "npc-aurora-linn",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/aurora-linn/portrait.png",
+                           "priority":  4,
+                           "label":  "Aurora Linn portrait"
+                       },
+                       {
+                           "id":  "npc-chancellor-aurex",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/chancellor-aurex/portrait.png",
+                           "priority":  4,
+                           "label":  "Chancellor Aurex portrait"
+                       },
+                       {
+                           "id":  "npc-scholar-lyra",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/scholar-lyra/portrait.png",
+                           "priority":  4,
+                           "label":  "Scholar Lyra portrait"
+                       },
+                       {
+                           "id":  "npc-sentinel-cassian",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/sentinel-cassian/portrait.png",
+                           "priority":  4,
+                           "label":  "Sentinel Cassian portrait"
+                       },
+                       {
+                           "id":  "npc-curator-verin",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/curator-verin/portrait.png",
+                           "priority":  4,
+                           "label":  "Curator Verin portrait"
+                       },
+                       {
+                           "id":  "npc-shadecaller-neris",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/shadecaller-neris/portrait.png",
+                           "priority":  4,
+                           "label":  "Shadecaller Neris portrait"
+                       },
+                       {
+                           "id":  "npc-watcher-omen",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/watcher-omen/portrait.png",
+                           "priority":  4,
+                           "label":  "Watcher Omen portrait"
+                       },
+                       {
+                           "id":  "npc-veya-dusk",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/veya-dusk/portrait.png",
+                           "priority":  4,
+                           "label":  "Veya Dusk portrait"
+                       },
+                       {
+                           "id":  "npc-keeper-null",
+                           "category":  "npcs",
+                           "path":  "/assets/npcs/keeper-null/portrait.png",
+                           "priority":  4,
+                           "label":  "Keeper Null portrait"
+                       }
+                   ]
+}

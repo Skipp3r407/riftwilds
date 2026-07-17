@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "regionId": "spirit-marsh",
+  "slug": "spirit-marsh",
+  "name": "Spirit Marsh",
+  "tileSize": 32,
+  "cols": 48,
+  "rows": 40,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "lantern-village",
+      "name": "Lantern Village",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "walkways",
+      "name": "Mist Walkways",
+      "x": 512,
+      "y": 192,
+      "width": 512,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "sunken",
+      "name": "Sunken Settlement",
+      "x": 1088,
+      "y": 128,
+      "width": 384,
+      "height": 384,
+      "kind": "dungeon"
+    },
+    {
+      "id": "shrines",
+      "name": "Memory Shrine Field",
+      "x": 128,
+      "y": 576,
+      "width": 512,
+      "height": 384,
+      "kind": "exploration"
+    },
+    {
+      "id": "bog",
+      "name": "Whispering Bog",
+      "x": 768,
+      "y": 576,
+      "width": 512,
+      "height": 384,
+      "kind": "danger"
+    },
+    {
+      "id": "temple",
+      "name": "Lantern Temple",
+      "x": 256,
+      "y": 960,
+      "width": 448,
+      "height": 256,
+      "kind": "dungeon"
+    },
+    {
+      "id": "court",
+      "name": "Drowned Court",
+      "x": 960,
+      "y": 960,
+      "width": 448,
+      "height": 256,
+      "kind": "boss"
+    }
+  ],
+  "pathways": [
+    {
+      "id": "path-lantern-village-walkways",
+      "from": "lantern-village",
+      "to": "walkways",
+      "waypoints": [
+        {
+          "x": 256,
+          "y": 224
+        },
+        {
+          "x": 768,
+          "y": 384
+        }
+      ]
+    },
+    {
+      "id": "path-walkways-sunken",
+      "from": "walkways",
+      "to": "sunken",
+      "waypoints": [
+        {
+          "x": 768,
+          "y": 384
+        },
+        {
+          "x": 1280,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "path-sunken-shrines",
+      "from": "sunken",
+      "to": "shrines",
+      "waypoints": [
+        {
+          "x": 1280,
+          "y": 320
+        },
+        {
+          "x": 384,
+          "y": 768
+        }
+      ]
+    },
+    {
+      "id": "path-shrines-bog",
+      "from": "shrines",
+      "to": "bog",
+      "waypoints": [
+        {
+          "x": 384,
+          "y": 768
+        },
+        {
+          "x": 1024,
+          "y": 768
+        }
+      ]
+    },
+    {
+      "id": "path-bog-temple",
+      "from": "bog",
+      "to": "temple",
+      "waypoints": [
+        {
+          "x": 1024,
+          "y": 768
+        },
+        {
+          "x": 480,
+          "y": 1088
+        }
+      ]
+    },
+    {
+      "id": "path-temple-court",
+      "from": "temple",
+      "to": "court",
+      "waypoints": [
+        {
+          "x": 480,
+          "y": 1088
+        },
+        {
+          "x": 1184,
+          "y": 1088
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": true,
+      "id": "lantern-hall",
+      "type": "building",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Lantern Hall",
+      "color": 6344896,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "spirit-marsh-spawn",
+      "type": "spawn",
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "x": 320,
+      "y": 400,
+      "label": "Spawn"
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-spirit-marsh-spirit-bloom",
+      "type": "resource",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "spirit-bloom",
+      "metadata": {
+        "resourceId": "spirit-bloom"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-spirit-marsh-memory-shard",
+      "type": "resource",
+      "x": 448,
+      "y": 384,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "memory-shard",
+      "metadata": {
+        "resourceId": "memory-shard"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-spirit-marsh-marsh-spirit",
+      "type": "enemy_spawn",
+      "x": 640,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "marsh-spirit",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-spirit-marsh-spirit-spark",
+      "type": "enemy_spawn",
+      "x": 800,
+      "y": 640,
+      "width": 128,
+      "height": 128,
+      "metadata": {
+        "enemyId": "spirit-spark",
+        "maxCount": 3
+      }
+    },
+    {
+      "id": "hidden-crypt",
+      "type": "hidden_area",
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "x": 1216,
+      "y": 256,
+      "label": "Sunken Crypt",
+      "metadata": {
+        "discoverable": true
+      }
+    },
+    {
+      "id": "puzzle-lanterns",
+      "type": "puzzle",
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "x": 384,
+      "y": 1024,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Lantern Order"
+    },
+    {
+      "id": "wp-spirit",
+      "type": "waypoint",
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "x": 192,
+      "y": 192,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Village Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "spirit-marsh-return-portal",
+      "type": "portal",
+      "x": 320,
+      "y": 336,
+      "interactionRadius": 48,
+      "label": "Riftwild Commons",
+      "metadata": {
+        "toRegionId": "riftwild-commons",
+        "locked": false
+      }
+    },
+    {
+      "id": "spirit-marsh-boss-arena",
+      "type": "boss_arena",
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "x": 1024,
+      "y": 1024,
+      "width": 320,
+      "height": 160,
+      "label": "Spirit Lantern King",
+      "metadata": {
+        "bossId": "spirit-lantern-king",
+        "arenaRef": "spirit-marsh-boss"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "spirit-marsh-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "spirit-marsh-wall-s",
+      "x": 0,
+      "y": 1248,
+      "width": 1536,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "spirit-marsh-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "spirit-marsh-wall-e",
+      "x": 1504,
+      "y": 0,
+      "width": 32,
+      "height": 1280,
+      "kind": "wall"
+    },
+    {
+      "id": "lantern-hall-col",
+      "x": 96,
+      "y": 96,
+      "width": 256,
+      "height": 160,
+      "kind": "building"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 1536,
+    "height": 1280
+  },
+  "minimap": {
+    "width": 48,
+    "height": 40,
+    "landmarkPins": [
+      {
+        "id": "lantern-hall",
+        "label": "Lantern Hall",
+        "x": 3,
+        "y": 3,
+        "icon": "building"
+      },
+      {
+        "id": "wp-spirit",
+        "label": "Village Waypoint",
+        "x": 6,
+        "y": 6,
+        "icon": "waypoint"
+      },
+      {
+        "id": "spirit-marsh-return-portal",
+        "label": "Riftwild Commons",
+        "x": 10,
+        "y": 11,
+        "icon": "portal"
+      },
+      {
+        "id": "spirit-marsh-boss-arena",
+        "label": "Spirit Lantern King",
+        "x": 32,
+        "y": 32,
+        "icon": "boss_arena"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "spirit_mist",
+    "fireflies"
+  ],
+  "musicKey": "music-spirit",
+  "safeZones": [
+    {
+      "id": "lantern-village-safe",
+      "x": 64,
+      "y": 64,
+      "width": 384,
+      "height": 320
+    }
+  ],
+  "spawn": {
+    "x": 320,
+    "y": 400
+  },
+  "notes": [
+    "Midgame blueprint; placeholder scene."
+  ],
+  "completeness": "PARTIAL"
+}

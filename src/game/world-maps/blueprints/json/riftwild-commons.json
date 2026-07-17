@@ -1,0 +1,1434 @@
+{
+  "schemaVersion": 1,
+  "regionId": "riftwild-commons",
+  "slug": "riftwild-commons",
+  "name": "Riftwild Commons",
+  "tileSize": 32,
+  "cols": 64,
+  "rows": 48,
+  "layers": [
+    "ground",
+    "decorative",
+    "collision",
+    "interactive",
+    "overhead",
+    "effects"
+  ],
+  "zones": [
+    {
+      "id": "central-plaza",
+      "name": "Central Rift Plaza",
+      "x": 576,
+      "y": 448,
+      "width": 896,
+      "height": 512,
+      "kind": "safe",
+      "safe": true
+    },
+    {
+      "id": "hatchery-zone",
+      "name": "Hatchery",
+      "x": 96,
+      "y": 96,
+      "width": 384,
+      "height": 288,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "arena-zone",
+      "name": "Arena Entrance",
+      "x": 1536,
+      "y": 96,
+      "width": 384,
+      "height": 288,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "market-zone",
+      "name": "Rift Exchange",
+      "x": 96,
+      "y": 1088,
+      "width": 448,
+      "height": 320,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "guild-zone",
+      "name": "Guild Hall",
+      "x": 1472,
+      "y": 1088,
+      "width": 448,
+      "height": 320,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "craft-zone",
+      "name": "Crafting Workshop",
+      "x": 96,
+      "y": 576,
+      "width": 320,
+      "height": 256,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "feeding-grove",
+      "name": "Feeding Grove",
+      "x": 1600,
+      "y": 512,
+      "width": 320,
+      "height": 256,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "training-yard",
+      "name": "Training Yard",
+      "x": 1216,
+      "y": 384,
+      "width": 320,
+      "height": 256,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "fishing-pond",
+      "name": "Fishing Pond",
+      "x": 704,
+      "y": 1152,
+      "width": 384,
+      "height": 256,
+      "kind": "exploration",
+      "safe": true
+    },
+    {
+      "id": "public-farm",
+      "name": "Public Farm",
+      "x": 448,
+      "y": 1216,
+      "width": 256,
+      "height": 192,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "recovery",
+      "name": "Recovery Center",
+      "x": 1280,
+      "y": 1216,
+      "width": 256,
+      "height": 192,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "portal-circle",
+      "name": "Portal Circle",
+      "x": 768,
+      "y": 128,
+      "width": 512,
+      "height": 256,
+      "kind": "pathway",
+      "safe": true
+    },
+    {
+      "id": "outer-woods",
+      "name": "Outer Woods",
+      "x": 64,
+      "y": 64,
+      "width": 256,
+      "height": 256,
+      "kind": "danger",
+      "safe": false
+    },
+    {
+      "id": "secret-garden",
+      "name": "Secret Garden",
+      "x": 1792,
+      "y": 832,
+      "width": 192,
+      "height": 160,
+      "kind": "hidden",
+      "safe": true
+    }
+  ],
+  "pathways": [
+    {
+      "id": "plaza-to-hatchery",
+      "from": "central-plaza",
+      "to": "hatchery-zone",
+      "waypoints": [
+        {
+          "x": 640,
+          "y": 512
+        },
+        {
+          "x": 320,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "plaza-to-arena",
+      "from": "central-plaza",
+      "to": "arena-zone",
+      "waypoints": [
+        {
+          "x": 1344,
+          "y": 512
+        },
+        {
+          "x": 1664,
+          "y": 320
+        }
+      ]
+    },
+    {
+      "id": "plaza-to-market",
+      "from": "central-plaza",
+      "to": "market-zone",
+      "waypoints": [
+        {
+          "x": 640,
+          "y": 896
+        },
+        {
+          "x": 320,
+          "y": 1152
+        }
+      ]
+    },
+    {
+      "id": "plaza-to-guild",
+      "from": "central-plaza",
+      "to": "guild-zone",
+      "waypoints": [
+        {
+          "x": 1344,
+          "y": 896
+        },
+        {
+          "x": 1664,
+          "y": 1152
+        }
+      ]
+    },
+    {
+      "id": "plaza-to-portals",
+      "from": "central-plaza",
+      "to": "portal-circle",
+      "waypoints": [
+        {
+          "x": 1024,
+          "y": 512
+        },
+        {
+          "x": 1024,
+          "y": 256
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "hatchery",
+      "type": "building",
+      "x": 128,
+      "y": 128,
+      "width": 320,
+      "height": 224,
+      "interactionRadius": 48,
+      "label": "Hatchery",
+      "color": 3837908,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "arena",
+      "type": "building",
+      "x": 1568,
+      "y": 128,
+      "width": 320,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Arena Gate",
+      "color": 13929018,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "market",
+      "type": "building",
+      "x": 128,
+      "y": 1120,
+      "width": 384,
+      "height": 256,
+      "interactionRadius": 48,
+      "label": "Rift Exchange",
+      "color": 4906874,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "guild",
+      "type": "building",
+      "x": 1504,
+      "y": 1120,
+      "width": 384,
+      "height": 256,
+      "interactionRadius": 48,
+      "label": "Guild Hall",
+      "color": 10189823,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "workshop",
+      "type": "building",
+      "x": 128,
+      "y": 608,
+      "width": 256,
+      "height": 192,
+      "interactionRadius": 48,
+      "label": "Crafting Workshop",
+      "color": 12611648,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "recovery-center",
+      "type": "building",
+      "x": 1312,
+      "y": 1248,
+      "width": 224,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Recovery Center",
+      "color": 6344896,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "homestead-path",
+      "type": "building",
+      "x": 64,
+      "y": 448,
+      "width": 160,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Homestead Path",
+      "color": 16751317,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "id": "riftstone",
+      "type": "decoration",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 1024,
+      "y": 704,
+      "width": 96,
+      "height": 96,
+      "collision": true,
+      "label": "Riftstone Monument",
+      "color": 4057087,
+      "metadata": {
+        "pulse": true
+      }
+    },
+    {
+      "id": "fountain",
+      "type": "decoration",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 896,
+      "y": 640,
+      "width": 96,
+      "height": 96,
+      "collision": true,
+      "label": "Plaza Fountain",
+      "color": 4890879
+    },
+    {
+      "id": "event-stage",
+      "type": "decoration",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 1088,
+      "y": 576,
+      "width": 160,
+      "height": 96,
+      "collision": true,
+      "label": "Community Stage",
+      "color": 6970061
+    },
+    {
+      "id": "notice-board",
+      "type": "quest",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 960,
+      "y": 832,
+      "interactive": true,
+      "interactionRadius": 48,
+      "label": "Notice Board",
+      "metadata": {
+        "questBoard": true
+      }
+    },
+    {
+      "id": "pet-play",
+      "type": "decoration",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 1152,
+      "y": 768,
+      "width": 128,
+      "height": 96,
+      "label": "Pet Play Area",
+      "color": 16758861
+    },
+    {
+      "id": "spawn-keeper",
+      "type": "spawn",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 1024,
+      "y": 768,
+      "label": "Keeper Spawn"
+    },
+    {
+      "id": "waypoint-plaza",
+      "type": "waypoint",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 1024,
+      "y": 896,
+      "interactive": true,
+      "interactionRadius": 40,
+      "label": "Plaza Waypoint",
+      "metadata": {
+        "fastTravel": true
+      }
+    },
+    {
+      "id": "training-dummy-a",
+      "type": "decoration",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 1280,
+      "y": 448,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Training Dummy",
+      "color": 8939076
+    },
+    {
+      "id": "training-dummy-b",
+      "type": "decoration",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 1408,
+      "y": 512,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Training Dummy",
+      "color": 8939076
+    },
+    {
+      "id": "farm-plot-1",
+      "type": "farm_plot",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 480,
+      "y": 1280,
+      "width": 64,
+      "height": 64,
+      "interactive": true,
+      "interactionRadius": 36,
+      "label": "Starter Plot"
+    },
+    {
+      "id": "farm-plot-2",
+      "type": "farm_plot",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 576,
+      "y": 1280,
+      "width": 64,
+      "height": 64,
+      "interactive": true,
+      "interactionRadius": 36,
+      "label": "Starter Plot"
+    },
+    {
+      "id": "fishing-dock",
+      "type": "fishing_spot",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 832,
+      "y": 1280,
+      "interactive": true,
+      "interactionRadius": 44,
+      "label": "Fishing Dock",
+      "metadata": {
+        "resourceId": "pond-fish"
+      }
+    },
+    {
+      "id": "hidden-secret-garden",
+      "type": "hidden_area",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 1824,
+      "y": 896,
+      "width": 128,
+      "height": 96,
+      "label": "Secret Garden",
+      "metadata": {
+        "discoverable": true,
+        "clue": "Behind the feeding grove hedge"
+      }
+    },
+    {
+      "id": "hidden-fountain-cave",
+      "type": "hidden_area",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 896,
+      "y": 672,
+      "label": "Fountain Cave",
+      "metadata": {
+        "discoverable": true,
+        "requiredAbility": "dive_shallow"
+      }
+    },
+    {
+      "id": "chest-waterfall",
+      "type": "chest",
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "x": 256,
+      "y": 256,
+      "interactive": true,
+      "interactionRadius": 36,
+      "label": "Mossy Chest",
+      "metadata": {
+        "lootTable": "commons-hidden-1"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-mira",
+      "type": "npc",
+      "x": 832,
+      "y": 768,
+      "interactionRadius": 56,
+      "label": "Keeper Mira",
+      "metadata": {
+        "npcId": "mira",
+        "lines": [
+          "Welcome to Riftwild Commons — the heart of the Live World.",
+          "Move with WASD or arrows. Hold Shift to run. Press E or Space to talk.",
+          "Portal Circle opens the four starter regions. Locked portals wake with your story."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-hatchery-keeper",
+      "type": "npc",
+      "x": 320,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Incubator Lune",
+      "metadata": {
+        "npcId": "hatchery-keeper",
+        "lines": [
+          "The Hatchery cradles every Riftling egg.",
+          "Bring warmth, patience, and a little Rift spark."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-market-registrar",
+      "type": "npc",
+      "x": 384,
+      "y": 1216,
+      "interactionRadius": 56,
+      "label": "Broker Kesh",
+      "metadata": {
+        "npcId": "market-registrar",
+        "lines": [
+          "Rift Exchange is for keepers trading eggs, gear, and materials.",
+          "Listings stay soft-currency until marketplace flags go live."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-arena-master",
+      "type": "npc",
+      "x": 1664,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Arena Master Vex",
+      "metadata": {
+        "npcId": "arena-master",
+        "lines": [
+          "Training dummies never complain. Ranked duels wait for a later phase.",
+          "Warm up in the Training Yard before you chase glory."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-guild-registrar",
+      "type": "npc",
+      "x": 1664,
+      "y": 1216,
+      "interactionRadius": 56,
+      "label": "Guild Scribe Orin",
+      "metadata": {
+        "npcId": "guild-registrar",
+        "lines": [
+          "Guild banners hang here when organizations unlock.",
+          "For now, the hall is a gathering place for keepers."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-blacksmith",
+      "type": "npc",
+      "x": 320,
+      "y": 832,
+      "interactionRadius": 56,
+      "label": "Smith Brann",
+      "metadata": {
+        "npcId": "blacksmith",
+        "lines": [
+          "Forge heat and Rift tempering — bring materials when crafting is live."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-potion-brewer",
+      "type": "npc",
+      "x": 384,
+      "y": 768,
+      "interactionRadius": 56,
+      "label": "Brewer Nima",
+      "metadata": {
+        "npcId": "potion-brewer",
+        "lines": [
+          "Potions need clean water and steady hands. The workshop awaits."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-farmer",
+      "type": "npc",
+      "x": 512,
+      "y": 1344,
+      "interactionRadius": 56,
+      "label": "Farmer Pell",
+      "metadata": {
+        "npcId": "farmer",
+        "lines": [
+          "Starter plots grow when you water them. Farming ships with Homesteads."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-fisher",
+      "type": "npc",
+      "x": 896,
+      "y": 1280,
+      "interactionRadius": 56,
+      "label": "Fisher Talia",
+      "metadata": {
+        "npcId": "fisher",
+        "lines": [
+          "Cast near the lily pads. Pond fish prefer quiet companions."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-recovery-healer",
+      "type": "npc",
+      "x": 1408,
+      "y": 1344,
+      "interactionRadius": 56,
+      "label": "Healer Solace",
+      "metadata": {
+        "npcId": "recovery-healer",
+        "lines": [
+          "Tired Riftlings rest here. No permanent harm in Commons."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-portal-keeper",
+      "type": "npc",
+      "x": 1024,
+      "y": 320,
+      "interactionRadius": 56,
+      "label": "Portal Keeper Ryn",
+      "metadata": {
+        "npcId": "portal-keeper",
+        "lines": [
+          "Step into an active portal to travel. Dim portals need story progress — never coin.",
+          "Starter routes: Ember Crater, Moonwater Coast, Elderwood Forest."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-quest-board",
+      "type": "npc",
+      "x": 960,
+      "y": 864,
+      "interactionRadius": 56,
+      "label": "Quest Attendant Ivy",
+      "metadata": {
+        "npcId": "quest-board",
+        "lines": [
+          "Pin a notice, pick a trail. Quest hooks expand with the story system."
+        ]
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-berry-1",
+      "type": "resource",
+      "x": 1664,
+      "y": 640,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "berry-bush",
+      "metadata": {
+        "resourceId": "berry-bush"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-berry-2",
+      "type": "resource",
+      "x": 1728,
+      "y": 704,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "berry-bush",
+      "metadata": {
+        "resourceId": "berry-bush"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-herb-1",
+      "type": "resource",
+      "x": 640,
+      "y": 960,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "starter-herb",
+      "metadata": {
+        "resourceId": "starter-herb"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "res-fish-1",
+      "type": "resource",
+      "x": 768,
+      "y": 1344,
+      "interactionRadius": 40,
+      "respawnSeconds": 120,
+      "label": "pond-fish",
+      "metadata": {
+        "resourceId": "pond-fish"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-slimes",
+      "type": "enemy_spawn",
+      "x": 128,
+      "y": 128,
+      "width": 192,
+      "height": 160,
+      "metadata": {
+        "enemyId": "rift-slime",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": false,
+      "collision": false,
+      "id": "spawn-vines",
+      "type": "enemy_spawn",
+      "x": 1792,
+      "y": 128,
+      "width": 160,
+      "height": 160,
+      "metadata": {
+        "enemyId": "vine-sprout",
+        "maxCount": 3
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-ember",
+      "type": "portal",
+      "x": 1024,
+      "y": 48,
+      "interactionRadius": 44,
+      "label": "Ember Crater",
+      "metadata": {
+        "toRegionId": "ember-crater",
+        "locked": false,
+        "portalDefId": "commons-to-ember"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-coast",
+      "type": "portal",
+      "x": 1119,
+      "y": 76,
+      "interactionRadius": 44,
+      "label": "Moonwater Coast",
+      "metadata": {
+        "toRegionId": "moonwater-coast",
+        "locked": false,
+        "portalDefId": "commons-to-coast"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-elderwood",
+      "type": "portal",
+      "x": 1184,
+      "y": 151,
+      "interactionRadius": 44,
+      "label": "Elderwood Forest",
+      "metadata": {
+        "toRegionId": "elderwood-forest",
+        "locked": false,
+        "portalDefId": "commons-to-elderwood"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-stormspire",
+      "type": "portal",
+      "x": 1198,
+      "y": 249,
+      "interactionRadius": 44,
+      "unlockFlag": "unlock-stormspire",
+      "label": "Stormspire Peaks",
+      "metadata": {
+        "toRegionId": "stormspire-peaks",
+        "locked": true,
+        "portalDefId": "commons-to-stormspire"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-stoneheart",
+      "type": "portal",
+      "x": 1157,
+      "y": 339,
+      "interactionRadius": 44,
+      "unlockFlag": "unlock-stoneheart",
+      "label": "Stoneheart Canyon",
+      "metadata": {
+        "toRegionId": "stoneheart-canyon",
+        "locked": true,
+        "portalDefId": "commons-to-stoneheart"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-frostveil",
+      "type": "portal",
+      "x": 1074,
+      "y": 393,
+      "interactionRadius": 44,
+      "unlockFlag": "unlock-frostveil",
+      "label": "Frostveil Basin",
+      "metadata": {
+        "toRegionId": "frostveil-basin",
+        "locked": true,
+        "portalDefId": "commons-to-frostveil"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-radiant",
+      "type": "portal",
+      "x": 974,
+      "y": 393,
+      "interactionRadius": 44,
+      "unlockFlag": "unlock-radiant",
+      "label": "Radiant Citadel",
+      "metadata": {
+        "toRegionId": "radiant-citadel",
+        "locked": true,
+        "portalDefId": "commons-to-radiant"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-void",
+      "type": "portal",
+      "x": 891,
+      "y": 339,
+      "interactionRadius": 44,
+      "unlockFlag": "unlock-void",
+      "label": "Void Hollow",
+      "metadata": {
+        "toRegionId": "void-hollow",
+        "locked": true,
+        "portalDefId": "commons-to-void"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-alloy",
+      "type": "portal",
+      "x": 850,
+      "y": 249,
+      "interactionRadius": 44,
+      "unlockFlag": "unlock-alloy",
+      "label": "Alloy Ruins",
+      "metadata": {
+        "toRegionId": "alloy-ruins",
+        "locked": true,
+        "portalDefId": "commons-to-alloy"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-spirit",
+      "type": "portal",
+      "x": 864,
+      "y": 151,
+      "interactionRadius": 44,
+      "unlockFlag": "unlock-spirit",
+      "label": "Spirit Marsh",
+      "metadata": {
+        "toRegionId": "spirit-marsh",
+        "locked": true,
+        "portalDefId": "commons-to-spirit"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "commons-to-celestial",
+      "type": "portal",
+      "x": 929,
+      "y": 76,
+      "interactionRadius": 44,
+      "unlockFlag": "unlock-celestial",
+      "label": "Celestial Rift",
+      "metadata": {
+        "toRegionId": "celestial-rift",
+        "locked": true,
+        "portalDefId": "commons-to-celestial"
+      }
+    }
+  ],
+  "colliders": [
+    {
+      "id": "riftwild-commons-wall-n",
+      "x": 0,
+      "y": 0,
+      "width": 2048,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "riftwild-commons-wall-s",
+      "x": 0,
+      "y": 1504,
+      "width": 2048,
+      "height": 32,
+      "kind": "wall"
+    },
+    {
+      "id": "riftwild-commons-wall-w",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 1536,
+      "kind": "wall"
+    },
+    {
+      "id": "riftwild-commons-wall-e",
+      "x": 2016,
+      "y": 0,
+      "width": 32,
+      "height": 1536,
+      "kind": "wall"
+    },
+    {
+      "id": "hatchery-col",
+      "x": 128,
+      "y": 128,
+      "width": 320,
+      "height": 224,
+      "kind": "building"
+    },
+    {
+      "id": "arena-col",
+      "x": 1568,
+      "y": 128,
+      "width": 320,
+      "height": 192,
+      "kind": "building"
+    },
+    {
+      "id": "market-col",
+      "x": 128,
+      "y": 1120,
+      "width": 384,
+      "height": 256,
+      "kind": "building"
+    },
+    {
+      "id": "guild-col",
+      "x": 1504,
+      "y": 1120,
+      "width": 384,
+      "height": 256,
+      "kind": "building"
+    },
+    {
+      "id": "workshop-col",
+      "x": 128,
+      "y": 608,
+      "width": 256,
+      "height": 192,
+      "kind": "building"
+    },
+    {
+      "id": "recovery-center-col",
+      "x": 1312,
+      "y": 1248,
+      "width": 224,
+      "height": 160,
+      "kind": "building"
+    },
+    {
+      "id": "homestead-path-col",
+      "x": 64,
+      "y": 448,
+      "width": 160,
+      "height": 160,
+      "kind": "building"
+    },
+    {
+      "id": "riftstone-col",
+      "x": 1024,
+      "y": 704,
+      "width": 96,
+      "height": 96,
+      "kind": "building"
+    },
+    {
+      "id": "fountain-col",
+      "x": 896,
+      "y": 640,
+      "width": 96,
+      "height": 96,
+      "kind": "building"
+    },
+    {
+      "id": "stage-col",
+      "x": 1088,
+      "y": 576,
+      "width": 160,
+      "height": 96,
+      "kind": "building"
+    },
+    {
+      "id": "dummy-a-col",
+      "x": 1280,
+      "y": 448,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
+    },
+    {
+      "id": "dummy-b-col",
+      "x": 1408,
+      "y": 512,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
+    },
+    {
+      "id": "pond-water",
+      "x": 736,
+      "y": 1216,
+      "width": 320,
+      "height": 160,
+      "kind": "water"
+    }
+  ],
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "width": 2048,
+    "height": 1536
+  },
+  "minimap": {
+    "width": 64,
+    "height": 48,
+    "landmarkPins": [
+      {
+        "id": "hatchery",
+        "label": "Hatchery",
+        "x": 4,
+        "y": 4,
+        "icon": "building"
+      },
+      {
+        "id": "arena",
+        "label": "Arena Gate",
+        "x": 49,
+        "y": 4,
+        "icon": "building"
+      },
+      {
+        "id": "market",
+        "label": "Rift Exchange",
+        "x": 4,
+        "y": 35,
+        "icon": "building"
+      },
+      {
+        "id": "guild",
+        "label": "Guild Hall",
+        "x": 47,
+        "y": 35,
+        "icon": "building"
+      },
+      {
+        "id": "workshop",
+        "label": "Crafting Workshop",
+        "x": 4,
+        "y": 19,
+        "icon": "building"
+      },
+      {
+        "id": "recovery-center",
+        "label": "Recovery Center",
+        "x": 41,
+        "y": 39,
+        "icon": "building"
+      },
+      {
+        "id": "homestead-path",
+        "label": "Homestead Path",
+        "x": 2,
+        "y": 14,
+        "icon": "building"
+      },
+      {
+        "id": "waypoint-plaza",
+        "label": "Plaza Waypoint",
+        "x": 32,
+        "y": 28,
+        "icon": "waypoint"
+      },
+      {
+        "id": "npc-mira",
+        "label": "Keeper Mira",
+        "x": 26,
+        "y": 24,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-hatchery-keeper",
+        "label": "Incubator Lune",
+        "x": 10,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-market-registrar",
+        "label": "Broker Kesh",
+        "x": 12,
+        "y": 38,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-arena-master",
+        "label": "Arena Master Vex",
+        "x": 52,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-guild-registrar",
+        "label": "Guild Scribe Orin",
+        "x": 52,
+        "y": 38,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-blacksmith",
+        "label": "Smith Brann",
+        "x": 10,
+        "y": 26,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-potion-brewer",
+        "label": "Brewer Nima",
+        "x": 12,
+        "y": 24,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-farmer",
+        "label": "Farmer Pell",
+        "x": 16,
+        "y": 42,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-fisher",
+        "label": "Fisher Talia",
+        "x": 28,
+        "y": 40,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-recovery-healer",
+        "label": "Healer Solace",
+        "x": 44,
+        "y": 42,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-portal-keeper",
+        "label": "Portal Keeper Ryn",
+        "x": 32,
+        "y": 10,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-quest-board",
+        "label": "Quest Attendant Ivy",
+        "x": 30,
+        "y": 27,
+        "icon": "npc"
+      },
+      {
+        "id": "commons-to-ember",
+        "label": "Ember Crater",
+        "x": 32,
+        "y": 2,
+        "icon": "portal"
+      },
+      {
+        "id": "commons-to-coast",
+        "label": "Moonwater Coast",
+        "x": 35,
+        "y": 2,
+        "icon": "portal"
+      },
+      {
+        "id": "commons-to-elderwood",
+        "label": "Elderwood Forest",
+        "x": 37,
+        "y": 5,
+        "icon": "portal"
+      },
+      {
+        "id": "commons-to-stormspire",
+        "label": "Stormspire Peaks",
+        "x": 37,
+        "y": 8,
+        "icon": "portal"
+      }
+    ]
+  },
+  "weatherKeys": [
+    "clear",
+    "light_rain",
+    "mist",
+    "fireflies",
+    "rift_aurora"
+  ],
+  "musicKey": "music-commons",
+  "safeZones": [
+    {
+      "id": "plaza-safe",
+      "x": 576,
+      "y": 448,
+      "width": 896,
+      "height": 512
+    },
+    {
+      "id": "portal-safe",
+      "x": 768,
+      "y": 128,
+      "width": 512,
+      "height": 256
+    }
+  ],
+  "spawn": {
+    "x": 1024,
+    "y": 768
+  },
+  "portalHub": {
+    "x": 1024,
+    "y": 224,
+    "radius": 176
+  },
+  "notes": [
+    "Primary Live World entry map.",
+    "Portal Circle encodes all 11 destination unlocks.",
+    "Outer woods host optional beginner enemies only."
+  ],
+  "completeness": "FULL"
+}
