@@ -337,42 +337,40 @@ function QuestCard({
       </div>
 
       <div className="p-4">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--cyan)]/40 to-transparent" />
-
-      <div className="flex flex-wrap items-start justify-between gap-2">
-        <div className="min-w-0">
-          <div className="flex flex-wrap items-center gap-2">
-            <span
-              className="rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
-              style={{
-                color: accent,
-                borderColor: `color-mix(in srgb, ${accent} 45%, transparent)`,
-                background: `color-mix(in srgb, ${accent} 12%, transparent)`,
-              }}
-            >
-              {QUEST_CATEGORY_LABELS[quest.category]}
-            </span>
-            <span
-              className={cn(
-                "rounded border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
-                DIFF_COLOR[quest.difficulty],
-              )}
-            >
-              {QUEST_DIFFICULTY_LABELS[quest.difficulty]}
-            </span>
-            {quest.repeatable ? (
-              <span className="text-[10px] text-[var(--text-dim)]">Repeatable</span>
+        <div className="flex flex-wrap items-start justify-between gap-2">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-2">
+              <span
+                className="rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
+                style={{
+                  color: accent,
+                  borderColor: `color-mix(in srgb, ${accent} 45%, transparent)`,
+                  background: `color-mix(in srgb, ${accent} 12%, transparent)`,
+                }}
+              >
+                {QUEST_CATEGORY_LABELS[quest.category]}
+              </span>
+              <span
+                className={cn(
+                  "rounded border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
+                  DIFF_COLOR[quest.difficulty],
+                )}
+              >
+                {QUEST_DIFFICULTY_LABELS[quest.difficulty]}
+              </span>
+              {quest.repeatable ? (
+                <span className="text-[10px] text-[var(--text-dim)]">Repeatable</span>
+              ) : null}
+            </div>
+            <h3 className="mt-2 font-display text-base text-white md:text-lg">{quest.name}</h3>
+            <p className="mt-1 text-sm text-[var(--text-muted)]">{quest.description}</p>
+            {quest.regionName ? (
+              <p className="mt-1.5 text-[11px] text-[var(--text-dim)]">
+                Region · {quest.regionName}
+              </p>
             ) : null}
           </div>
-          <h3 className="mt-2 font-display text-base text-white md:text-lg">{quest.name}</h3>
-          <p className="mt-1 text-sm text-[var(--text-muted)]">{quest.description}</p>
-          {quest.regionName ? (
-            <p className="mt-1.5 text-[11px] text-[var(--text-dim)]">
-              Region · {quest.regionName}
-            </p>
-          ) : null}
         </div>
-      </div>
 
       <div className="mt-4 space-y-2">
         <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
