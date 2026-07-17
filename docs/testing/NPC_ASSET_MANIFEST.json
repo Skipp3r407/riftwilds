@@ -2,10 +2,1152 @@
   "namedTotal": 54,
   "stats": {
     "portrait": 54,
-    "full": 54,
-    "sprite": 54,
+    "fullDistinct": 54,
+    "fullPortraitCopy": 0,
+    "spriteDistinct": 20,
+    "spritePortraitCopy": 34,
     "thumb": 54
   },
-  "missingFullBody": [],
-  "generatedAt": "2026-07-17T23:09:22.267Z"
+  "npcs": [
+    {
+      "id": "elara-venn",
+      "slug": "elara-venn",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/elara-venn/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/elara-venn/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/elara-venn/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/elara-venn/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.870Z"
+    },
+    {
+      "id": "rowan-vale",
+      "slug": "rowan-vale",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/rowan-vale/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/rowan-vale/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/rowan-vale/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/rowan-vale/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.888Z"
+    },
+    {
+      "id": "mira-shellbright",
+      "slug": "mira-shellbright",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/mira-shellbright/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/mira-shellbright/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/mira-shellbright/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.903Z"
+    },
+    {
+      "id": "bram-ironroot",
+      "slug": "bram-ironroot",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/bram-ironroot/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/bram-ironroot/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/bram-ironroot/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/bram-ironroot/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.918Z"
+    },
+    {
+      "id": "tessa-windmere",
+      "slug": "tessa-windmere",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/tessa-windmere/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/tessa-windmere/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/tessa-windmere/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/tessa-windmere/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.933Z"
+    },
+    {
+      "id": "archivist-solen",
+      "slug": "archivist-solen",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/archivist-solen/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/archivist-solen/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/archivist-solen/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/archivist-solen/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.948Z"
+    },
+    {
+      "id": "captain-orren",
+      "slug": "captain-orren",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/captain-orren/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/captain-orren/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/captain-orren/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/captain-orren/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.964Z"
+    },
+    {
+      "id": "nyla-brook",
+      "slug": "nyla-brook",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/nyla-brook/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/nyla-brook/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/nyla-brook/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/nyla-brook/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.980Z"
+    },
+    {
+      "id": "pip-gearwhistle",
+      "slug": "pip-gearwhistle",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/pip-gearwhistle/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/pip-gearwhistle/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/pip-gearwhistle/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/pip-gearwhistle/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:12.997Z"
+    },
+    {
+      "id": "rook-emberfall",
+      "slug": "rook-emberfall",
+      "regionId": "riftwild-commons",
+      "paths": {
+        "portrait": "/assets/npcs/riftwild-commons/rook-emberfall/portrait.png",
+        "fullBody": "/assets/npcs/riftwild-commons/rook-emberfall/full-body.png",
+        "sprite": "/assets/npcs/riftwild-commons/rook-emberfall/sprite.png",
+        "thumbnail": "/assets/npcs/riftwild-commons/rook-emberfall/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.021Z"
+    },
+    {
+      "id": "kael-ashwalker",
+      "slug": "kael-ashwalker",
+      "regionId": "ember-crater",
+      "paths": {
+        "portrait": "/assets/npcs/ember-crater/kael-ashwalker/portrait.png",
+        "fullBody": "/assets/npcs/ember-crater/kael-ashwalker/full-body.png",
+        "sprite": "/assets/npcs/ember-crater/kael-ashwalker/sprite.png",
+        "thumbnail": "/assets/npcs/ember-crater/kael-ashwalker/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.042Z"
+    },
+    {
+      "id": "forgekeeper-vessa",
+      "slug": "forgekeeper-vessa",
+      "regionId": "ember-crater",
+      "paths": {
+        "portrait": "/assets/npcs/ember-crater/forgekeeper-vessa/portrait.png",
+        "fullBody": "/assets/npcs/ember-crater/forgekeeper-vessa/full-body.png",
+        "sprite": "/assets/npcs/ember-crater/forgekeeper-vessa/sprite.png",
+        "thumbnail": "/assets/npcs/ember-crater/forgekeeper-vessa/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.063Z"
+    },
+    {
+      "id": "cinder-sage-malrec",
+      "slug": "cinder-sage-malrec",
+      "regionId": "ember-crater",
+      "paths": {
+        "portrait": "/assets/npcs/ember-crater/cinder-sage-malrec/portrait.png",
+        "fullBody": "/assets/npcs/ember-crater/cinder-sage-malrec/full-body.png",
+        "sprite": "/assets/npcs/ember-crater/cinder-sage-malrec/sprite.png",
+        "thumbnail": "/assets/npcs/ember-crater/cinder-sage-malrec/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.086Z"
+    },
+    {
+      "id": "warden-pyra",
+      "slug": "warden-pyra",
+      "regionId": "ember-crater",
+      "paths": {
+        "portrait": "/assets/npcs/ember-crater/warden-pyra/portrait.png",
+        "fullBody": "/assets/npcs/ember-crater/warden-pyra/full-body.png",
+        "sprite": "/assets/npcs/ember-crater/warden-pyra/sprite.png",
+        "thumbnail": "/assets/npcs/ember-crater/warden-pyra/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.102Z"
+    },
+    {
+      "id": "luma-tidecrest",
+      "slug": "luma-tidecrest",
+      "regionId": "moonwater-coast",
+      "paths": {
+        "portrait": "/assets/npcs/moonwater-coast/luma-tidecrest/portrait.png",
+        "fullBody": "/assets/npcs/moonwater-coast/luma-tidecrest/full-body.png",
+        "sprite": "/assets/npcs/moonwater-coast/luma-tidecrest/sprite.png",
+        "thumbnail": "/assets/npcs/moonwater-coast/luma-tidecrest/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.117Z"
+    },
+    {
+      "id": "finn-coralhand",
+      "slug": "finn-coralhand",
+      "regionId": "moonwater-coast",
+      "paths": {
+        "portrait": "/assets/npcs/moonwater-coast/finn-coralhand/portrait.png",
+        "fullBody": "/assets/npcs/moonwater-coast/finn-coralhand/full-body.png",
+        "sprite": "/assets/npcs/moonwater-coast/finn-coralhand/sprite.png",
+        "thumbnail": "/assets/npcs/moonwater-coast/finn-coralhand/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.132Z"
+    },
+    {
+      "id": "oracle-selene",
+      "slug": "oracle-selene",
+      "regionId": "moonwater-coast",
+      "paths": {
+        "portrait": "/assets/npcs/moonwater-coast/oracle-selene/portrait.png",
+        "fullBody": "/assets/npcs/moonwater-coast/oracle-selene/full-body.png",
+        "sprite": "/assets/npcs/moonwater-coast/oracle-selene/sprite.png",
+        "thumbnail": "/assets/npcs/moonwater-coast/oracle-selene/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.146Z"
+    },
+    {
+      "id": "marina-drift",
+      "slug": "marina-drift",
+      "regionId": "moonwater-coast",
+      "paths": {
+        "portrait": "/assets/npcs/moonwater-coast/marina-drift/portrait.png",
+        "fullBody": "/assets/npcs/moonwater-coast/marina-drift/full-body.png",
+        "sprite": "/assets/npcs/moonwater-coast/marina-drift/sprite.png",
+        "thumbnail": "/assets/npcs/moonwater-coast/marina-drift/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.162Z"
+    },
+    {
+      "id": "warden-sylvi",
+      "slug": "warden-sylvi",
+      "regionId": "elderwood-forest",
+      "paths": {
+        "portrait": "/assets/npcs/elderwood-forest/warden-sylvi/portrait.png",
+        "fullBody": "/assets/npcs/elderwood-forest/warden-sylvi/full-body.png",
+        "sprite": "/assets/npcs/elderwood-forest/warden-sylvi/sprite.png",
+        "thumbnail": "/assets/npcs/elderwood-forest/warden-sylvi/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.178Z"
+    },
+    {
+      "id": "mosskeeper-elden",
+      "slug": "mosskeeper-elden",
+      "regionId": "elderwood-forest",
+      "paths": {
+        "portrait": "/assets/npcs/elderwood-forest/mosskeeper-elden/portrait.png",
+        "fullBody": "/assets/npcs/elderwood-forest/mosskeeper-elden/full-body.png",
+        "sprite": "/assets/npcs/elderwood-forest/mosskeeper-elden/sprite.png",
+        "thumbnail": "/assets/npcs/elderwood-forest/mosskeeper-elden/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.193Z"
+    },
+    {
+      "id": "fenn-quickbranch",
+      "slug": "fenn-quickbranch",
+      "regionId": "elderwood-forest",
+      "paths": {
+        "portrait": "/assets/npcs/elderwood-forest/fenn-quickbranch/portrait.png",
+        "fullBody": "/assets/npcs/elderwood-forest/fenn-quickbranch/full-body.png",
+        "sprite": "/assets/npcs/elderwood-forest/fenn-quickbranch/sprite.png",
+        "thumbnail": "/assets/npcs/elderwood-forest/fenn-quickbranch/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.207Z"
+    },
+    {
+      "id": "grandmother-willowmere",
+      "slug": "grandmother-willowmere",
+      "regionId": "elderwood-forest",
+      "paths": {
+        "portrait": "/assets/npcs/elderwood-forest/grandmother-willowmere/portrait.png",
+        "fullBody": "/assets/npcs/elderwood-forest/grandmother-willowmere/full-body.png",
+        "sprite": "/assets/npcs/elderwood-forest/grandmother-willowmere/sprite.png",
+        "thumbnail": "/assets/npcs/elderwood-forest/grandmother-willowmere/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.223Z"
+    },
+    {
+      "id": "aeron-cloudstep",
+      "slug": "aeron-cloudstep",
+      "regionId": "stormspire-peaks",
+      "paths": {
+        "portrait": "/assets/npcs/stormspire-peaks/aeron-cloudstep/portrait.png",
+        "fullBody": "/assets/npcs/stormspire-peaks/aeron-cloudstep/full-body.png",
+        "sprite": "/assets/npcs/stormspire-peaks/aeron-cloudstep/sprite.png",
+        "thumbnail": "/assets/npcs/stormspire-peaks/aeron-cloudstep/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.238Z"
+    },
+    {
+      "id": "engineer-volt",
+      "slug": "engineer-volt",
+      "regionId": "stormspire-peaks",
+      "paths": {
+        "portrait": "/assets/npcs/stormspire-peaks/engineer-volt/portrait.png",
+        "fullBody": "/assets/npcs/stormspire-peaks/engineer-volt/full-body.png",
+        "sprite": "/assets/npcs/stormspire-peaks/engineer-volt/sprite.png",
+        "thumbnail": "/assets/npcs/stormspire-peaks/engineer-volt/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.255Z"
+    },
+    {
+      "id": "skywarden-ilya",
+      "slug": "skywarden-ilya",
+      "regionId": "stormspire-peaks",
+      "paths": {
+        "portrait": "/assets/npcs/stormspire-peaks/skywarden-ilya/portrait.png",
+        "fullBody": "/assets/npcs/stormspire-peaks/skywarden-ilya/full-body.png",
+        "sprite": "/assets/npcs/stormspire-peaks/skywarden-ilya/sprite.png",
+        "thumbnail": "/assets/npcs/stormspire-peaks/skywarden-ilya/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.270Z"
+    },
+    {
+      "id": "hermit-thane",
+      "slug": "hermit-thane",
+      "regionId": "stormspire-peaks",
+      "paths": {
+        "portrait": "/assets/npcs/stormspire-peaks/hermit-thane/portrait.png",
+        "fullBody": "/assets/npcs/stormspire-peaks/hermit-thane/full-body.png",
+        "sprite": "/assets/npcs/stormspire-peaks/hermit-thane/sprite.png",
+        "thumbnail": "/assets/npcs/stormspire-peaks/hermit-thane/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.284Z"
+    },
+    {
+      "id": "doran-flint",
+      "slug": "doran-flint",
+      "regionId": "stoneheart-canyon",
+      "paths": {
+        "portrait": "/assets/npcs/stoneheart-canyon/doran-flint/portrait.png",
+        "fullBody": "/assets/npcs/stoneheart-canyon/doran-flint/full-body.png",
+        "sprite": "/assets/npcs/stoneheart-canyon/doran-flint/sprite.png",
+        "thumbnail": "/assets/npcs/stoneheart-canyon/doran-flint/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.298Z"
+    },
+    {
+      "id": "petra-stoneveil",
+      "slug": "petra-stoneveil",
+      "regionId": "stoneheart-canyon",
+      "paths": {
+        "portrait": "/assets/npcs/stoneheart-canyon/petra-stoneveil/portrait.png",
+        "fullBody": "/assets/npcs/stoneheart-canyon/petra-stoneveil/full-body.png",
+        "sprite": "/assets/npcs/stoneheart-canyon/petra-stoneveil/sprite.png",
+        "thumbnail": "/assets/npcs/stoneheart-canyon/petra-stoneveil/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.313Z"
+    },
+    {
+      "id": "marshal-korr",
+      "slug": "marshal-korr",
+      "regionId": "stoneheart-canyon",
+      "paths": {
+        "portrait": "/assets/npcs/stoneheart-canyon/marshal-korr/portrait.png",
+        "fullBody": "/assets/npcs/stoneheart-canyon/marshal-korr/full-body.png",
+        "sprite": "/assets/npcs/stoneheart-canyon/marshal-korr/sprite.png",
+        "thumbnail": "/assets/npcs/stoneheart-canyon/marshal-korr/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.327Z"
+    },
+    {
+      "id": "gemwright-opal",
+      "slug": "gemwright-opal",
+      "regionId": "stoneheart-canyon",
+      "paths": {
+        "portrait": "/assets/npcs/stoneheart-canyon/gemwright-opal/portrait.png",
+        "fullBody": "/assets/npcs/stoneheart-canyon/gemwright-opal/full-body.png",
+        "sprite": "/assets/npcs/stoneheart-canyon/gemwright-opal/sprite.png",
+        "thumbnail": "/assets/npcs/stoneheart-canyon/gemwright-opal/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.340Z"
+    },
+    {
+      "id": "freya-snowmark",
+      "slug": "freya-snowmark",
+      "regionId": "frostveil-basin",
+      "paths": {
+        "portrait": "/assets/npcs/frostveil-basin/freya-snowmark/portrait.png",
+        "fullBody": "/assets/npcs/frostveil-basin/freya-snowmark/full-body.png",
+        "sprite": "/assets/npcs/frostveil-basin/freya-snowmark/sprite.png",
+        "thumbnail": "/assets/npcs/frostveil-basin/freya-snowmark/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.353Z"
+    },
+    {
+      "id": "jori-icebloom",
+      "slug": "jori-icebloom",
+      "regionId": "frostveil-basin",
+      "paths": {
+        "portrait": "/assets/npcs/frostveil-basin/jori-icebloom/portrait.png",
+        "fullBody": "/assets/npcs/frostveil-basin/jori-icebloom/full-body.png",
+        "sprite": "/assets/npcs/frostveil-basin/jori-icebloom/sprite.png",
+        "thumbnail": "/assets/npcs/frostveil-basin/jori-icebloom/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.368Z"
+    },
+    {
+      "id": "hunter-varek",
+      "slug": "hunter-varek",
+      "regionId": "frostveil-basin",
+      "paths": {
+        "portrait": "/assets/npcs/frostveil-basin/hunter-varek/portrait.png",
+        "fullBody": "/assets/npcs/frostveil-basin/hunter-varek/full-body.png",
+        "sprite": "/assets/npcs/frostveil-basin/hunter-varek/sprite.png",
+        "thumbnail": "/assets/npcs/frostveil-basin/hunter-varek/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.381Z"
+    },
+    {
+      "id": "aurora-linn",
+      "slug": "aurora-linn",
+      "regionId": "frostveil-basin",
+      "paths": {
+        "portrait": "/assets/npcs/frostveil-basin/aurora-linn/portrait.png",
+        "fullBody": "/assets/npcs/frostveil-basin/aurora-linn/full-body.png",
+        "sprite": "/assets/npcs/frostveil-basin/aurora-linn/sprite.png",
+        "thumbnail": "/assets/npcs/frostveil-basin/aurora-linn/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": true,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.394Z"
+    },
+    {
+      "id": "chancellor-aurex",
+      "slug": "chancellor-aurex",
+      "regionId": "radiant-citadel",
+      "paths": {
+        "portrait": "/assets/npcs/radiant-citadel/chancellor-aurex/portrait.png",
+        "fullBody": "/assets/npcs/radiant-citadel/chancellor-aurex/full-body.png",
+        "sprite": "/assets/npcs/radiant-citadel/chancellor-aurex/sprite.png",
+        "thumbnail": "/assets/npcs/radiant-citadel/chancellor-aurex/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.408Z"
+    },
+    {
+      "id": "scholar-lyra",
+      "slug": "scholar-lyra",
+      "regionId": "radiant-citadel",
+      "paths": {
+        "portrait": "/assets/npcs/radiant-citadel/scholar-lyra/portrait.png",
+        "fullBody": "/assets/npcs/radiant-citadel/scholar-lyra/full-body.png",
+        "sprite": "/assets/npcs/radiant-citadel/scholar-lyra/sprite.png",
+        "thumbnail": "/assets/npcs/radiant-citadel/scholar-lyra/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.422Z"
+    },
+    {
+      "id": "sentinel-cassian",
+      "slug": "sentinel-cassian",
+      "regionId": "radiant-citadel",
+      "paths": {
+        "portrait": "/assets/npcs/radiant-citadel/sentinel-cassian/portrait.png",
+        "fullBody": "/assets/npcs/radiant-citadel/sentinel-cassian/full-body.png",
+        "sprite": "/assets/npcs/radiant-citadel/sentinel-cassian/sprite.png",
+        "thumbnail": "/assets/npcs/radiant-citadel/sentinel-cassian/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.441Z"
+    },
+    {
+      "id": "curator-verin",
+      "slug": "curator-verin",
+      "regionId": "radiant-citadel",
+      "paths": {
+        "portrait": "/assets/npcs/radiant-citadel/curator-verin/portrait.png",
+        "fullBody": "/assets/npcs/radiant-citadel/curator-verin/full-body.png",
+        "sprite": "/assets/npcs/radiant-citadel/curator-verin/sprite.png",
+        "thumbnail": "/assets/npcs/radiant-citadel/curator-verin/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.457Z"
+    },
+    {
+      "id": "shadecaller-neris",
+      "slug": "shadecaller-neris",
+      "regionId": "void-hollow",
+      "paths": {
+        "portrait": "/assets/npcs/void-hollow/shadecaller-neris/portrait.png",
+        "fullBody": "/assets/npcs/void-hollow/shadecaller-neris/full-body.png",
+        "sprite": "/assets/npcs/void-hollow/shadecaller-neris/sprite.png",
+        "thumbnail": "/assets/npcs/void-hollow/shadecaller-neris/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.472Z"
+    },
+    {
+      "id": "watcher-omen",
+      "slug": "watcher-omen",
+      "regionId": "void-hollow",
+      "paths": {
+        "portrait": "/assets/npcs/void-hollow/watcher-omen/portrait.png",
+        "fullBody": "/assets/npcs/void-hollow/watcher-omen/full-body.png",
+        "sprite": "/assets/npcs/void-hollow/watcher-omen/sprite.png",
+        "thumbnail": "/assets/npcs/void-hollow/watcher-omen/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.487Z"
+    },
+    {
+      "id": "veya-dusk",
+      "slug": "veya-dusk",
+      "regionId": "void-hollow",
+      "paths": {
+        "portrait": "/assets/npcs/void-hollow/veya-dusk/portrait.png",
+        "fullBody": "/assets/npcs/void-hollow/veya-dusk/full-body.png",
+        "sprite": "/assets/npcs/void-hollow/veya-dusk/sprite.png",
+        "thumbnail": "/assets/npcs/void-hollow/veya-dusk/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.500Z"
+    },
+    {
+      "id": "keeper-null",
+      "slug": "keeper-null",
+      "regionId": "void-hollow",
+      "paths": {
+        "portrait": "/assets/npcs/void-hollow/keeper-null/portrait.png",
+        "fullBody": "/assets/npcs/void-hollow/keeper-null/full-body.png",
+        "sprite": "/assets/npcs/void-hollow/keeper-null/sprite.png",
+        "thumbnail": "/assets/npcs/void-hollow/keeper-null/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.513Z"
+    },
+    {
+      "id": "tinker-pax",
+      "slug": "tinker-pax",
+      "regionId": "alloy-ruins",
+      "paths": {
+        "portrait": "/assets/npcs/alloy-ruins/tinker-pax/portrait.png",
+        "fullBody": "/assets/npcs/alloy-ruins/tinker-pax/full-body.png",
+        "sprite": "/assets/npcs/alloy-ruins/tinker-pax/sprite.png",
+        "thumbnail": "/assets/npcs/alloy-ruins/tinker-pax/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.528Z"
+    },
+    {
+      "id": "unit-ari-7",
+      "slug": "unit-ari-7",
+      "regionId": "alloy-ruins",
+      "paths": {
+        "portrait": "/assets/npcs/alloy-ruins/unit-ari-7/portrait.png",
+        "fullBody": "/assets/npcs/alloy-ruins/unit-ari-7/full-body.png",
+        "sprite": "/assets/npcs/alloy-ruins/unit-ari-7/sprite.png",
+        "thumbnail": "/assets/npcs/alloy-ruins/unit-ari-7/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.543Z"
+    },
+    {
+      "id": "salvager-knox",
+      "slug": "salvager-knox",
+      "regionId": "alloy-ruins",
+      "paths": {
+        "portrait": "/assets/npcs/alloy-ruins/salvager-knox/portrait.png",
+        "fullBody": "/assets/npcs/alloy-ruins/salvager-knox/full-body.png",
+        "sprite": "/assets/npcs/alloy-ruins/salvager-knox/sprite.png",
+        "thumbnail": "/assets/npcs/alloy-ruins/salvager-knox/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.556Z"
+    },
+    {
+      "id": "professor-ferrum",
+      "slug": "professor-ferrum",
+      "regionId": "alloy-ruins",
+      "paths": {
+        "portrait": "/assets/npcs/alloy-ruins/professor-ferrum/portrait.png",
+        "fullBody": "/assets/npcs/alloy-ruins/professor-ferrum/full-body.png",
+        "sprite": "/assets/npcs/alloy-ruins/professor-ferrum/sprite.png",
+        "thumbnail": "/assets/npcs/alloy-ruins/professor-ferrum/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.570Z"
+    },
+    {
+      "id": "medium-amara",
+      "slug": "medium-amara",
+      "regionId": "spirit-marsh",
+      "paths": {
+        "portrait": "/assets/npcs/spirit-marsh/medium-amara/portrait.png",
+        "fullBody": "/assets/npcs/spirit-marsh/medium-amara/full-body.png",
+        "sprite": "/assets/npcs/spirit-marsh/medium-amara/sprite.png",
+        "thumbnail": "/assets/npcs/spirit-marsh/medium-amara/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.584Z"
+    },
+    {
+      "id": "ferryman-grey",
+      "slug": "ferryman-grey",
+      "regionId": "spirit-marsh",
+      "paths": {
+        "portrait": "/assets/npcs/spirit-marsh/ferryman-grey/portrait.png",
+        "fullBody": "/assets/npcs/spirit-marsh/ferryman-grey/full-body.png",
+        "sprite": "/assets/npcs/spirit-marsh/ferryman-grey/sprite.png",
+        "thumbnail": "/assets/npcs/spirit-marsh/ferryman-grey/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.606Z"
+    },
+    {
+      "id": "lantern-keeper-sio",
+      "slug": "lantern-keeper-sio",
+      "regionId": "spirit-marsh",
+      "paths": {
+        "portrait": "/assets/npcs/spirit-marsh/lantern-keeper-sio/portrait.png",
+        "fullBody": "/assets/npcs/spirit-marsh/lantern-keeper-sio/full-body.png",
+        "sprite": "/assets/npcs/spirit-marsh/lantern-keeper-sio/sprite.png",
+        "thumbnail": "/assets/npcs/spirit-marsh/lantern-keeper-sio/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.621Z"
+    },
+    {
+      "id": "echo-child-nimi",
+      "slug": "echo-child-nimi",
+      "regionId": "spirit-marsh",
+      "paths": {
+        "portrait": "/assets/npcs/spirit-marsh/echo-child-nimi/portrait.png",
+        "fullBody": "/assets/npcs/spirit-marsh/echo-child-nimi/full-body.png",
+        "sprite": "/assets/npcs/spirit-marsh/echo-child-nimi/sprite.png",
+        "thumbnail": "/assets/npcs/spirit-marsh/echo-child-nimi/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.635Z"
+    },
+    {
+      "id": "astronomer-caelis",
+      "slug": "astronomer-caelis",
+      "regionId": "celestial-rift",
+      "paths": {
+        "portrait": "/assets/npcs/celestial-rift/astronomer-caelis/portrait.png",
+        "fullBody": "/assets/npcs/celestial-rift/astronomer-caelis/full-body.png",
+        "sprite": "/assets/npcs/celestial-rift/astronomer-caelis/sprite.png",
+        "thumbnail": "/assets/npcs/celestial-rift/astronomer-caelis/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.648Z"
+    },
+    {
+      "id": "guardian-seraphine",
+      "slug": "guardian-seraphine",
+      "regionId": "celestial-rift",
+      "paths": {
+        "portrait": "/assets/npcs/celestial-rift/guardian-seraphine/portrait.png",
+        "fullBody": "/assets/npcs/celestial-rift/guardian-seraphine/full-body.png",
+        "sprite": "/assets/npcs/celestial-rift/guardian-seraphine/sprite.png",
+        "thumbnail": "/assets/npcs/celestial-rift/guardian-seraphine/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.663Z"
+    },
+    {
+      "id": "starforger-orion",
+      "slug": "starforger-orion",
+      "regionId": "celestial-rift",
+      "paths": {
+        "portrait": "/assets/npcs/celestial-rift/starforger-orion/portrait.png",
+        "fullBody": "/assets/npcs/celestial-rift/starforger-orion/full-body.png",
+        "sprite": "/assets/npcs/celestial-rift/starforger-orion/sprite.png",
+        "thumbnail": "/assets/npcs/celestial-rift/starforger-orion/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.687Z"
+    },
+    {
+      "id": "nameless-witness",
+      "slug": "nameless-witness",
+      "regionId": "celestial-rift",
+      "paths": {
+        "portrait": "/assets/npcs/celestial-rift/nameless-witness/portrait.png",
+        "fullBody": "/assets/npcs/celestial-rift/nameless-witness/full-body.png",
+        "sprite": "/assets/npcs/celestial-rift/nameless-witness/sprite.png",
+        "thumbnail": "/assets/npcs/celestial-rift/nameless-witness/thumbnail.png"
+      },
+      "assets": {
+        "portrait": true,
+        "fullBodyDistinct": true,
+        "fullBodyPresent": true,
+        "spriteDistinct": false,
+        "spritePresent": true,
+        "thumbnail": true
+      },
+      "artStatus": "generated",
+      "updatedAt": "2026-07-17T23:20:13.709Z"
+    }
+  ],
+  "generatedAt": "2026-07-17T23:20:13.710Z",
+  "notes": [
+    "Portraits generated via Cursor GenerateImage for all 54 named NPCs.",
+    "fullBodyDistinct counts full-body files that differ in size from portrait.",
+    "Sprites may reuse portraits where dedicated sprite sheets are not yet authored."
+  ]
 }

@@ -2,12 +2,20 @@
   "id": "engineer-volt",
   "slug": "engineer-volt",
   "regionId": "stormspire-peaks",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/stormspire-peaks/engineer-volt/portrait.png",
+    "fullBody": "/assets/npcs/stormspire-peaks/engineer-volt/full-body.png",
+    "sprite": "/assets/npcs/stormspire-peaks/engineer-volt/sprite.png",
+    "thumbnail": "/assets/npcs/stormspire-peaks/engineer-volt/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.812Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.255Z"
 }

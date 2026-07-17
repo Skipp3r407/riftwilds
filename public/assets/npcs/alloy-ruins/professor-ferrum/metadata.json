@@ -2,12 +2,20 @@
   "id": "professor-ferrum",
   "slug": "professor-ferrum",
   "regionId": "alloy-ruins",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/alloy-ruins/professor-ferrum/portrait.png",
+    "fullBody": "/assets/npcs/alloy-ruins/professor-ferrum/full-body.png",
+    "sprite": "/assets/npcs/alloy-ruins/professor-ferrum/sprite.png",
+    "thumbnail": "/assets/npcs/alloy-ruins/professor-ferrum/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:22.117Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.570Z"
 }

@@ -46,10 +46,13 @@ describe("NPC catalog playability", () => {
     ];
     for (const region of regions) {
       const list = npcsForRegion(region);
-      expect(list.filter((n) => n.kind === "named").length, region).toBeGreaterThanOrEqual(4);
+      expect(
+        list.filter((n) => n.kind === "named").length,
+        `${region} named`,
+      ).toBeGreaterThanOrEqual(4);
       expect(
         list.filter((n) => n.kind !== "named").length,
-        region,
+        `${region} ambient+`,
       ).toBeGreaterThanOrEqual(4);
     }
   });

@@ -2,12 +2,20 @@
   "id": "hermit-thane",
   "slug": "hermit-thane",
   "regionId": "stormspire-peaks",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/stormspire-peaks/hermit-thane/portrait.png",
+    "fullBody": "/assets/npcs/stormspire-peaks/hermit-thane/full-body.png",
+    "sprite": "/assets/npcs/stormspire-peaks/hermit-thane/sprite.png",
+    "thumbnail": "/assets/npcs/stormspire-peaks/hermit-thane/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.839Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.284Z"
 }

@@ -2,12 +2,20 @@
   "id": "veya-dusk",
   "slug": "veya-dusk",
   "regionId": "void-hollow",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/void-hollow/veya-dusk/portrait.png",
+    "fullBody": "/assets/npcs/void-hollow/veya-dusk/full-body.png",
+    "sprite": "/assets/npcs/void-hollow/veya-dusk/sprite.png",
+    "thumbnail": "/assets/npcs/void-hollow/veya-dusk/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:22.039Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.500Z"
 }

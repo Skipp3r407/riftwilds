@@ -2,12 +2,20 @@
   "id": "nameless-witness",
   "slug": "nameless-witness",
   "regionId": "celestial-rift",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/celestial-rift/nameless-witness/portrait.png",
+    "fullBody": "/assets/npcs/celestial-rift/nameless-witness/full-body.png",
+    "sprite": "/assets/npcs/celestial-rift/nameless-witness/sprite.png",
+    "thumbnail": "/assets/npcs/celestial-rift/nameless-witness/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:22.266Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.709Z"
 }

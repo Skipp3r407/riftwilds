@@ -2,12 +2,20 @@
   "id": "freya-snowmark",
   "slug": "freya-snowmark",
   "regionId": "frostveil-basin",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/frostveil-basin/freya-snowmark/portrait.png",
+    "fullBody": "/assets/npcs/frostveil-basin/freya-snowmark/full-body.png",
+    "sprite": "/assets/npcs/frostveil-basin/freya-snowmark/sprite.png",
+    "thumbnail": "/assets/npcs/frostveil-basin/freya-snowmark/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.903Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.353Z"
 }

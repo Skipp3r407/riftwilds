@@ -2,12 +2,20 @@
   "id": "doran-flint",
   "slug": "doran-flint",
   "regionId": "stoneheart-canyon",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/stoneheart-canyon/doran-flint/portrait.png",
+    "fullBody": "/assets/npcs/stoneheart-canyon/doran-flint/full-body.png",
+    "sprite": "/assets/npcs/stoneheart-canyon/doran-flint/sprite.png",
+    "thumbnail": "/assets/npcs/stoneheart-canyon/doran-flint/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.853Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.298Z"
 }

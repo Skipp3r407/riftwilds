@@ -366,9 +366,11 @@ export class BlueprintRegionScene extends Phaser.Scene {
         const textureKey =
           this.textures.exists(`npc-${npcSlug}`) ? `npc-${npcSlug}` : "npc-keeper";
         const sprite = this.physics.add.sprite(o.x, o.y, textureKey);
+        sprite.setDisplaySize(36, 36);
         sprite.setImmovable(true);
         sprite.setDepth(8);
         (sprite.body as Phaser.Physics.Arcade.Body).allowGravity = false;
+        sprite.setCircle(14);
         const name = o.label ?? "Keeper";
         this.add
           .text(o.x, o.y - 28, name, {

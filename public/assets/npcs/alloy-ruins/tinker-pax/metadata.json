@@ -2,12 +2,20 @@
   "id": "tinker-pax",
   "slug": "tinker-pax",
   "regionId": "alloy-ruins",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/alloy-ruins/tinker-pax/portrait.png",
+    "fullBody": "/assets/npcs/alloy-ruins/tinker-pax/full-body.png",
+    "sprite": "/assets/npcs/alloy-ruins/tinker-pax/sprite.png",
+    "thumbnail": "/assets/npcs/alloy-ruins/tinker-pax/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:22.061Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.528Z"
 }

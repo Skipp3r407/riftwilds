@@ -2,12 +2,20 @@
   "id": "warden-sylvi",
   "slug": "warden-sylvi",
   "regionId": "elderwood-forest",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/elderwood-forest/warden-sylvi/portrait.png",
+    "fullBody": "/assets/npcs/elderwood-forest/warden-sylvi/full-body.png",
+    "sprite": "/assets/npcs/elderwood-forest/warden-sylvi/sprite.png",
+    "thumbnail": "/assets/npcs/elderwood-forest/warden-sylvi/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.721Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.178Z"
 }

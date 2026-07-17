@@ -2,12 +2,20 @@
   "id": "fenn-quickbranch",
   "slug": "fenn-quickbranch",
   "regionId": "elderwood-forest",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/elderwood-forest/fenn-quickbranch/portrait.png",
+    "fullBody": "/assets/npcs/elderwood-forest/fenn-quickbranch/full-body.png",
+    "sprite": "/assets/npcs/elderwood-forest/fenn-quickbranch/sprite.png",
+    "thumbnail": "/assets/npcs/elderwood-forest/fenn-quickbranch/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.758Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.207Z"
 }

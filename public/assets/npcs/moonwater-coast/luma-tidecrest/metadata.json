@@ -2,12 +2,20 @@
   "id": "luma-tidecrest",
   "slug": "luma-tidecrest",
   "regionId": "moonwater-coast",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/moonwater-coast/luma-tidecrest/portrait.png",
+    "fullBody": "/assets/npcs/moonwater-coast/luma-tidecrest/full-body.png",
+    "sprite": "/assets/npcs/moonwater-coast/luma-tidecrest/sprite.png",
+    "thumbnail": "/assets/npcs/moonwater-coast/luma-tidecrest/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.655Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.117Z"
 }

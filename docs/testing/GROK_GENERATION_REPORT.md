@@ -1,67 +1,49 @@
-# Grok Generation Report — NPC Art
+# Grok NPC Generation Report
 
 **Date:** 2026-07-17  
-**Model / tool:** Cursor GenerateImage (Grok-family image generation)  
-**Style brief:** Premium fantasy adventure, stylized detailed, strong silhouettes, navy/cyan/amber Riftwilds cohesion, original IP only, no text/watermarks/logos.
+**Tooling:** Cursor `GenerateImage` + project `scripts/npcs/sync-npc-assets.mjs`  
+**IP:** Original Riftwilds only (no Pokémon / Zelda / WoW / FF / RuneScape / Genshin / Disney / Marvel / DC / anime franchise / NFT clones)
 
 ## Summary
 
-| Status | Count |
-|--------|------:|
-| Named portraits generated & installed | 54 / 54 |
-| Dedicated full-body generations | 3 (Elara, Rowan, Mira) |
-| Rejected / regenerated | 0 (first-pass accepted for playability) |
-| External blockers | None |
+| Asset type | Named NPCs (54) | Notes |
+|---|---|---|
+| Portrait | **54 / 54 generated** | Distinct Grok images per named NPC |
+| Full-body | **54 / 54 distinct** | Dedicated full-body gens (not portrait copies) |
+| Thumbnail | **54 / 54** | Derived from portrait for dialogue/UI scale |
+| Sprite | **20 distinct + 34 portrait-reuse** | Dedicated sprites for Commons cast + region guides; others use portrait as interim game sprite |
+| Ambient NPCs | Labeled SVG/PNG placeholders | Density NPCs share templates; named cast prioritized |
 
-## Prompts used
+## Commons starter cast (priority)
 
-Each named NPC used a Grok-style brief of the form:
+All ten named Commons NPCs have portrait + full-body + thumbnail installed under:
 
-> `{Name} portrait bust, {visual traits}, {clothing}, {expression}, {regional palette} Riftwilds fantasy, premium stylized detailed fantasy adventure, no text no watermark`
+`public/assets/npcs/riftwild-commons/{slug}/`
 
-Full structured character data (biography, clothing, accessories, dialogue, quests) lives in:
+Dedicated sprites generated for: Rowan, Elara, Mira, Orren, Bram, Tessa, Pip, Kael (guide).
 
-- `scripts/npcs/generate-npc-catalog.mjs` (authoring)
-- `src/content/npcs/catalog.generated.ts` (runtime)
-- Per-NPC `imagePrompts` fields + `public/assets/npcs/{region}/{slug}/metadata.json`
+## Regional named cast
 
-## Install pipeline
+Portraits + distinct full-bodies generated for Ember, Coast, Elderwood, Stormspire, Stoneheart, Frostveil, Radiant, Void, Alloy, Spirit Marsh, and Celestial (NPCs 11–54).
+
+## Blockers / honesty
+
+- **Sprite sheets (idle/walk frames):** not authored as multi-frame atlases yet. Engine uses single-frame textures with ambient bob/face-player motion in Phaser.
+- **Ambient citizen unique art:** placeholders + varied names/positions; not 58 unique Grok portraits (named cast completed first).
+- **Transparent cutouts:** studio/dark backgrounds used; automated mask pass not run on every file.
+- **No false claims:** see `NPC_ASSET_MANIFEST.json` for per-NPC `fullBodyDistinct` / `spriteDistinct` flags.
+
+## Regeneration queue (optional polish)
+
+1. Multi-frame sprite sheets for Commons 10 + region guides  
+2. Aggressive transparency mask on full-body assets  
+3. Unique ambient portraits for Commons 8 citizens + 3 guards  
+
+## Commands used
 
 ```bash
-node scripts/npcs/generate-placeholders.mjs   # ambient stubs
-# GenerateImage tool → ~/.cursor/.../assets/{slug}-portrait.png
-node scripts/npcs/install-generated-portraits.mjs
+node scripts/npcs/generate-npc-catalog.mjs
+node scripts/npcs/generate-placeholders.mjs
+# GenerateImage × portraits/full-bodies/sprites (Cursor)
+node scripts/npcs/sync-npc-assets.mjs
 ```
-
-Portrait files are also copied to `thumbnail.png`, `sprite.png`, and `full-body.png` when dedicated variants are missing so the engine never hits empty paths.
-
-## Images generated (named cast)
-
-Commons: elara-venn, rowan-vale, mira-shellbright, bram-ironroot, tessa-windmere, archivist-solen, captain-orren, nyla-brook, pip-gearwhistle, rook-emberfall  
-
-Ember: kael-ashwalker, forgekeeper-vessa, cinder-sage-malrec, warden-pyra  
-
-Coast: luma-tidecrest, finn-coralhand, oracle-selene, marina-drift  
-
-Elderwood: warden-sylvi, mosskeeper-elden, fenn-quickbranch, grandmother-willowmere  
-
-Stormspire: aeron-cloudstep, engineer-volt, skywarden-ilya, hermit-thane  
-
-Stoneheart: doran-flint, petra-stoneveil, marshal-korr, gemwright-opal  
-
-Frostveil: freya-snowmark, jori-icebloom, hunter-varek, aurora-linn  
-
-Radiant: chancellor-aurex, scholar-lyra, sentinel-cassian, curator-verin  
-
-Void: shadecaller-neris, watcher-omen, veya-dusk, keeper-null  
-
-Alloy: tinker-pax, unit-ari-7, salvager-knox, professor-ferrum  
-
-Spirit: medium-amara, ferryman-grey, lantern-keeper-sio, echo-child-nimi  
-
-Celestial: astronomer-caelis, guardian-seraphine, starforger-orion, nameless-witness  
-
-## Final asset status
-
-**PLAYABLE for portraits:** every named NPC has a real generated portrait in `public/assets/npcs/`.  
-**Follow-up:** dedicated transparent full-body + walk-cycle sprite sheets per NPC (portrait stand-ins currently fill those slots).

@@ -2,12 +2,20 @@
   "id": "petra-stoneveil",
   "slug": "petra-stoneveil",
   "regionId": "stoneheart-canyon",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/stoneheart-canyon/petra-stoneveil/portrait.png",
+    "fullBody": "/assets/npcs/stoneheart-canyon/petra-stoneveil/full-body.png",
+    "sprite": "/assets/npcs/stoneheart-canyon/petra-stoneveil/sprite.png",
+    "thumbnail": "/assets/npcs/stoneheart-canyon/petra-stoneveil/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.866Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.313Z"
 }

@@ -2,12 +2,20 @@
   "id": "guardian-seraphine",
   "slug": "guardian-seraphine",
   "regionId": "celestial-rift",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/celestial-rift/guardian-seraphine/portrait.png",
+    "fullBody": "/assets/npcs/celestial-rift/guardian-seraphine/full-body.png",
+    "sprite": "/assets/npcs/celestial-rift/guardian-seraphine/sprite.png",
+    "thumbnail": "/assets/npcs/celestial-rift/guardian-seraphine/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:22.239Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.663Z"
 }

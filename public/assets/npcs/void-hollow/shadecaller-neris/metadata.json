@@ -2,12 +2,20 @@
   "id": "shadecaller-neris",
   "slug": "shadecaller-neris",
   "regionId": "void-hollow",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/void-hollow/shadecaller-neris/portrait.png",
+    "fullBody": "/assets/npcs/void-hollow/shadecaller-neris/full-body.png",
+    "sprite": "/assets/npcs/void-hollow/shadecaller-neris/sprite.png",
+    "thumbnail": "/assets/npcs/void-hollow/shadecaller-neris/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:22.015Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.472Z"
 }

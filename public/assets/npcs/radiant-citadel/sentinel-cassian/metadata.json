@@ -2,12 +2,20 @@
   "id": "sentinel-cassian",
   "slug": "sentinel-cassian",
   "regionId": "radiant-citadel",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/radiant-citadel/sentinel-cassian/portrait.png",
+    "fullBody": "/assets/npcs/radiant-citadel/sentinel-cassian/full-body.png",
+    "sprite": "/assets/npcs/radiant-citadel/sentinel-cassian/sprite.png",
+    "thumbnail": "/assets/npcs/radiant-citadel/sentinel-cassian/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": false,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.987Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.441Z"
 }

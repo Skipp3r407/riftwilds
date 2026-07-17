@@ -35,8 +35,15 @@ function real(file) {
   return fs.existsSync(file) && fs.statSync(file).size > 2000;
 }
 
-const stats = { portrait: 0, full: 0, sprite: 0, thumb: 0 };
-const missingFull = [];
+const stats = {
+  portrait: 0,
+  fullDistinct: 0,
+  fullPortraitCopy: 0,
+  spriteDistinct: 0,
+  spritePortraitCopy: 0,
+  thumb: 0,
+};
+const entries = [];
 
 for (const n of named) {
   const dir = path.join(BASE, n.regionId, n.slug);
@@ -49,7 +56,6 @@ for (const n of named) {
     ["sprite.png", "-sprite.png"],
   ];
   for (const [dest, suf] of pairs) {
-    // prefer v2 fullbody if present
     let from = path.join(SRC, n.slug + suf);
     if (dest === "full-body.png") {
       const v2 = path.join(SRC, `${n.slug}-fullbody-v2.png`);
@@ -62,39 +68,58 @@ for (const n of named) {
   if (!real(spr) && real(por)) fs.copyFileSync(por, spr);
 
   const check = (f) => real(path.join(dir, f));
-  if (check("portrait.png")) stats.portrait++;
-  if (check("full-body.png")) stats.full++;
-  else missingFull.push(n.slug);
-  if (check("sprite.png")) stats.sprite++;
-  if (check("thumbnail.png")) stats.thumb++;
+  const sameAsPortrait = (f) =>
+    check("portrait.png") &&
+    check(f) &&
+    fs.statSync(path.join(dir, "portrait.png")).size ===
+      fs.statSync(path.join(dir, f)).size;
 
-  fs.writeFileSync(
-    path.join(dir, "metadata.json"),
-    JSON.stringify(
-      {
-        id: n.id,
-        slug: n.slug,
-        regionId: n.regionId,
-        artStatus: check("portrait.png") ? "generated" : "placeholder",
-        assets: {
-          portrait: check("portrait.png"),
-          fullBody: check("full-body.png"),
-          sprite: check("sprite.png"),
-          thumbnail: check("thumbnail.png"),
-        },
-        updatedAt: new Date().toISOString(),
-      },
-      null,
-      2,
-    ),
-  );
+  if (check("portrait.png")) stats.portrait++;
+  if (check("thumbnail.png")) stats.thumb++;
+  if (check("full-body.png")) {
+    if (sameAsPortrait("full-body.png")) stats.fullPortraitCopy++;
+    else stats.fullDistinct++;
+  }
+  if (check("sprite.png")) {
+    if (sameAsPortrait("sprite.png")) stats.spritePortraitCopy++;
+    else stats.spriteDistinct++;
+  }
+
+  const entry = {
+    id: n.id,
+    slug: n.slug,
+    regionId: n.regionId,
+    paths: {
+      portrait: `/assets/npcs/${n.regionId}/${n.slug}/portrait.png`,
+      fullBody: `/assets/npcs/${n.regionId}/${n.slug}/full-body.png`,
+      sprite: `/assets/npcs/${n.regionId}/${n.slug}/sprite.png`,
+      thumbnail: `/assets/npcs/${n.regionId}/${n.slug}/thumbnail.png`,
+    },
+    assets: {
+      portrait: check("portrait.png"),
+      fullBodyDistinct: check("full-body.png") && !sameAsPortrait("full-body.png"),
+      fullBodyPresent: check("full-body.png"),
+      spriteDistinct: check("sprite.png") && !sameAsPortrait("sprite.png"),
+      spritePresent: check("sprite.png"),
+      thumbnail: check("thumbnail.png"),
+    },
+    artStatus: check("portrait.png") ? "generated" : "placeholder",
+    updatedAt: new Date().toISOString(),
+  };
+  entries.push(entry);
+  fs.writeFileSync(path.join(dir, "metadata.json"), JSON.stringify(entry, null, 2));
 }
 
 const report = {
   namedTotal: named.length,
   stats,
-  missingFullBody: missingFull,
+  npcs: entries,
   generatedAt: new Date().toISOString(),
+  notes: [
+    "Portraits generated via Cursor GenerateImage for all 54 named NPCs.",
+    "fullBodyDistinct counts full-body files that differ in size from portrait.",
+    "Sprites may reuse portraits where dedicated sprite sheets are not yet authored.",
+  ],
 };
 fs.mkdirSync(path.join(ROOT, "docs/testing"), { recursive: true });
 fs.writeFileSync(

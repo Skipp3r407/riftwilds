@@ -2,12 +2,20 @@
   "id": "kael-ashwalker",
   "slug": "kael-ashwalker",
   "regionId": "ember-crater",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/ember-crater/kael-ashwalker/portrait.png",
+    "fullBody": "/assets/npcs/ember-crater/kael-ashwalker/full-body.png",
+    "sprite": "/assets/npcs/ember-crater/kael-ashwalker/sprite.png",
+    "thumbnail": "/assets/npcs/ember-crater/kael-ashwalker/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.597Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.042Z"
 }

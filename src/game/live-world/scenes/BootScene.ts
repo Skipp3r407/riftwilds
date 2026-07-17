@@ -75,7 +75,7 @@ export class BootScene extends Phaser.Scene {
     for (const slug of commons) {
       this.load.image(
         `npc-${slug}`,
-        `/assets/npcs/riftwild-commons/${slug}/portrait.png`,
+        `/assets/npcs/riftwild-commons/${slug}/sprite.png`,
       );
     }
   }

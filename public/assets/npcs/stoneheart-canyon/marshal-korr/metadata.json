@@ -2,12 +2,20 @@
   "id": "marshal-korr",
   "slug": "marshal-korr",
   "regionId": "stoneheart-canyon",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/stoneheart-canyon/marshal-korr/portrait.png",
+    "fullBody": "/assets/npcs/stoneheart-canyon/marshal-korr/full-body.png",
+    "sprite": "/assets/npcs/stoneheart-canyon/marshal-korr/sprite.png",
+    "thumbnail": "/assets/npcs/stoneheart-canyon/marshal-korr/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.878Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.327Z"
 }

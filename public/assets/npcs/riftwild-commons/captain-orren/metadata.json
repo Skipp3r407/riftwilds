@@ -2,12 +2,20 @@
   "id": "captain-orren",
   "slug": "captain-orren",
   "regionId": "riftwild-commons",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/riftwild-commons/captain-orren/portrait.png",
+    "fullBody": "/assets/npcs/riftwild-commons/captain-orren/full-body.png",
+    "sprite": "/assets/npcs/riftwild-commons/captain-orren/sprite.png",
+    "thumbnail": "/assets/npcs/riftwild-commons/captain-orren/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.510Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:12.964Z"
 }

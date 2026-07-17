@@ -2,12 +2,20 @@
   "id": "aurora-linn",
   "slug": "aurora-linn",
   "regionId": "frostveil-basin",
-  "artStatus": "generated",
+  "paths": {
+    "portrait": "/assets/npcs/frostveil-basin/aurora-linn/portrait.png",
+    "fullBody": "/assets/npcs/frostveil-basin/aurora-linn/full-body.png",
+    "sprite": "/assets/npcs/frostveil-basin/aurora-linn/sprite.png",
+    "thumbnail": "/assets/npcs/frostveil-basin/aurora-linn/thumbnail.png"
+  },
   "assets": {
     "portrait": true,
-    "fullBody": true,
-    "sprite": true,
+    "fullBodyDistinct": true,
+    "fullBodyPresent": true,
+    "spriteDistinct": true,
+    "spritePresent": true,
     "thumbnail": true
   },
-  "updatedAt": "2026-07-17T23:09:21.943Z"
+  "artStatus": "generated",
+  "updatedAt": "2026-07-17T23:20:13.394Z"
 }
