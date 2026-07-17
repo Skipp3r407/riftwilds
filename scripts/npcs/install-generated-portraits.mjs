@@ -35,7 +35,7 @@ for (const file of files) {
   const slug = file.replace(/-portrait\.png$/, "").replace(/-fullbody\.png$/, "");
   const npc = bySlug[slug];
   if (!npc) {
-    console.warn("No NPC for", file);
+    // Ignore non-catalog assets (comic-, drafts, etc.)
     continue;
   }
   const dir = path.join(ROOT, "public/assets/npcs", npc.regionId, slug);

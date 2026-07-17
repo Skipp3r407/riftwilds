@@ -55,6 +55,29 @@ export class BootScene extends Phaser.Scene {
     this.load.image("ui-map-marker", "/assets/ui/map/marker.png");
     this.load.image("ui-map-quest-available", "/assets/ui/map/quest-available.png");
     this.load.image("ui-map-danger", "/assets/ui/map/danger.png");
+
+    // Commons named NPCs — portraits used as overworld textures when present.
+    const commons = [
+      "elara-venn",
+      "rowan-vale",
+      "mira-shellbright",
+      "bram-ironroot",
+      "tessa-windmere",
+      "archivist-solen",
+      "captain-orren",
+      "nyla-brook",
+      "pip-gearwhistle",
+      "rook-emberfall",
+    ];
+    this.load.on("loaderror", () => {
+      /* Optional NPC portraits — scenes fall back to npc-keeper texture. */
+    });
+    for (const slug of commons) {
+      this.load.image(
+        `npc-${slug}`,
+        `/assets/npcs/riftwild-commons/${slug}/portrait.png`,
+      );
+    }
   }
 
   create(): void {

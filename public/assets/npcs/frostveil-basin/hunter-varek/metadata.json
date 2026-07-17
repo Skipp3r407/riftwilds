@@ -2,13 +2,12 @@
   "id": "hunter-varek",
   "slug": "hunter-varek",
   "regionId": "frostveil-basin",
-  "artStatus": "placeholder",
-  "note": "Labeled development placeholder — not final Grok art",
-  "prompts": {
-    "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Hunter Varek. Hooded hunter with frost-scarred bow hand. Wearing: White-gray stalker leathers. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
-    "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Hunter Varek. Hooded hunter with frost-scarred bow hand. Wearing: White-gray stalker leathers. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
-    "thumbnail": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Hunter Varek. Hooded hunter with frost-scarred bow hand. Wearing: White-gray stalker leathers. Region vibe: frostveil basin. Tight head-and-shoulders icon crop, high contrast, centered face.",
-    "sprite": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Hunter Varek. Hooded hunter with frost-scarred bow hand. Wearing: White-gray stalker leathers. Region vibe: frostveil basin. Simple browser-game character sprite concept, front-facing idle stance, clean edges, solid readable colors, small scale friendly."
+  "artStatus": "generated",
+  "assets": {
+    "portrait": true,
+    "fullBody": true,
+    "sprite": true,
+    "thumbnail": true
   },
-  "updatedAt": "2026-07-17T22:19:46.240Z"
+  "updatedAt": "2026-07-17T23:09:21.931Z"
 }

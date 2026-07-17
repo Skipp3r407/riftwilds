@@ -243,10 +243,29 @@ export function applyService(
       return { state, message: "Codex opened — Fracture fragments catalogued." };
     case "hatch_eggs":
     case "view_eggs":
+    case "care_supplies": {
+      bumpObjective(state, "starter-q3-waiting-heart", "visit-hatchery");
+      bumpObjective(state, "starter-q3-waiting-heart", "inspect-egg");
+      bumpObjective(state, "starter-q3-waiting-heart", "gather-mossmeal");
+      bumpObjective(state, "starter-q3-waiting-heart", "hatch");
+      if (state.quests["starter-q3-waiting-heart"]?.status === "ready") {
+        completeQuest(state, "starter-q3-waiting-heart");
+      }
+      state.hasHatched = true;
+      if (!state.activeCompanionName) state.activeCompanionName = "Spark";
+      bumpObjective(state, "starter-q4-new-bond", "name");
+      bumpObjective(state, "starter-q4-new-bond", "profile");
+      bumpObjective(state, "starter-q4-new-bond", "care");
+      bumpObjective(state, "starter-q4-new-bond", "equip");
+      if (state.quests["starter-q4-new-bond"]?.status === "ready") {
+        completeQuest(state, "starter-q4-new-bond");
+      }
       return {
         state,
-        message: "Use the Hatchery page or Mira's guidance to hatch (demo, no SOL).",
+        message:
+          "Demo hatch complete — Spark is bonded as your companion. Visit /hatchery for the full incubator UI.",
       };
+    }
     case "craft_basic": {
       if (!state.toolsCrafted.includes("starter-pick")) {
         state.toolsCrafted.push("starter-pick");
