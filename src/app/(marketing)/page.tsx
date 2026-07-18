@@ -6,6 +6,7 @@ import { CommercialShowcase } from "@/components/marketing/commercial-showcase";
 import { HatchOddsPanel } from "@/components/marketing/hatch-odds-panel";
 import { EconomySummary } from "@/components/economy";
 import { EveryPurchaseSection } from "@/components/revenue";
+import { mysteryRiftEggPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import { getActivePolicy, bpsToPercentLabel } from "@/lib/revenue/policies";
 
@@ -105,7 +106,7 @@ export default function HomePage() {
           <div className="relative mx-auto aspect-square w-full max-w-sm">
             <div className="pointer-events-none absolute inset-0 rounded-full bg-[rgba(61,231,255,0.12)] blur-3xl" />
             <Image
-              src="/assets/eggs/mystery-rift-egg.png?v=mask3"
+              src={mysteryRiftEggPath()}
               alt="Rift egg"
               fill
               className="object-contain drop-shadow-[0_0_40px_rgba(61,231,255,0.35)]"

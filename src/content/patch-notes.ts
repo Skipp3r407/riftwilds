@@ -36,6 +36,17 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-homepage-hero-cta",
+    date: "2026-07-18",
+    title: "Homepage hero egg and CTA contrast",
+    summary:
+      "Restores a clear Mystery Rift Egg on the home hero and makes Claim egg / Connect Wallet readable again.",
+    fixed: [
+      "Home hero Mystery Rift Egg now uses the premium portrait hatchery egg so it fills the showcase instead of looking like an empty glow ring",
+      "Claim egg and Connect Wallet primary buttons keep a solid underlay and light label text so they no longer look disabled or invisible on dark chrome",
+    ],
+  },
+  {
     id: "2026-07-18-community-audio-assets",
     date: "2026-07-18",
     title: "Community tools, narration, and asset library",
@@ -66,7 +77,6 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     knownIssues: [
       "Fuller 2.5D terrain/HUD overhaul remains unapproved and is not in this release",
       "Friends/PM Prisma persistence stays prepare-only until migration is enabled",
-      "Homepage hero egg/CTA contrast fix may still be landing if not visible after deploy",
     ],
   },
   {

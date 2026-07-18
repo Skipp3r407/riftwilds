@@ -3,8 +3,11 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ImageButton } from "@/components/ui/image-button";
+import { mysteryRiftEggPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import { cn } from "@/lib/utils/cn";
+
+const HERO_EGG_SRC = mysteryRiftEggPath();
 
 const COMPANIONS = [
   {
@@ -54,7 +57,7 @@ function HeroShowcase({
     >
       <div
         className={cn(
-          "relative aspect-square w-full",
+          "home-hero__egg-art relative aspect-square w-full",
           compact ? "max-w-[12rem]" : "max-w-[26rem]",
         )}
       >
@@ -62,10 +65,13 @@ function HeroShowcase({
         {!reduceMotion ? <div className="home-hero__egg-ring" aria-hidden /> : null}
 
         <div
-          className={cn("absolute inset-[4%]", !reduceMotion && "home-hero__egg-float")}
+          className={cn(
+            "absolute inset-[2%] home-hero__egg-float",
+            reduceMotion && "![animation:none]",
+          )}
         >
           <Image
-            src="/assets/eggs/mystery-rift-egg.png?v=mask3"
+            src={HERO_EGG_SRC}
             alt="Mystery Rift egg"
             fill
             className="object-contain drop-shadow-[0_0_48px_rgba(61,231,255,0.4)]"
@@ -108,11 +114,11 @@ function HeroShowcase({
                   alt=""
                   width={80}
                   height={80}
-                  className="relative z-[1] h-full w-full object-contain"
+                  className="relative z-[1] h-full w-full object-contain opacity-100"
                   unoptimized
                 />
               </motion.div>
-              <p className="mt-1 font-display text-[9px] uppercase tracking-[0.2em] text-[var(--text-muted)]">
+              <p className="mt-1 font-display text-[9px] uppercase tracking-[0.2em] text-[var(--text)]/80">
                 {c.label}
               </p>
             </li>
