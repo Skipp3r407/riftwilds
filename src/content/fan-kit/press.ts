@@ -37,7 +37,7 @@ export const KIDS_CORNER = {
     },
     {
       title: "Coloring, printables & comics",
-      body: "Free line-art coloring pages, 300 DPI full-color printables (stickers, posters, cards), and Legends of the Rift comics for shared couch time.",
+      body: "28 free game-sketch coloring pages, 300 DPI full-color printables (stickers, posters, cards), and Legends of the Rift comics for shared couch time.",
     },
     {
       title: "No pay-to-win care",

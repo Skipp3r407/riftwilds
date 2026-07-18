@@ -21,7 +21,7 @@ export const ROADMAP_MILESTONES: RoadmapMilestone[] = [
   {
     id: "coloring",
     title: "Kids coloring pack",
-    blurb: "Printable sheets for Spark, Commons, Circus, and more — free downloads.",
+    blurb: "28 printable game-sketch sheets — Spark, Commons, Circus, Keepers, and more.",
     status: "live",
     href: "/coloring",
   },

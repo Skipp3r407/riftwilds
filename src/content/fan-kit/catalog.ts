@@ -317,7 +317,7 @@ export const SHARE_MOMENTS: ShareMoment[] = [
   {
     id: "moment-coloring",
     title: "Kids coloring pack",
-    caption: "Printable Riftling coloring pages — free for families.",
+    caption: "28 printable Riftling coloring pages — free for families.",
     sharePath: "/coloring",
     imageSrc: "/assets/fan-kit/share/moment-coloring.svg",
     hook: "Color & print",

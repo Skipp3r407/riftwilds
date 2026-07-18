@@ -36,6 +36,19 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-coloring-pages-batch-2",
+    date: "2026-07-18",
+    title: "20 more kids coloring pages",
+    summary:
+      "Kids Corner grows to 28 printable game-sketch coloring sheets — Keepers, harbor, academy, hatchery, species, and kid-safe boss silhouettes.",
+    added: [
+      "20 new Riftwilds coloring pages (PNG + PDF) on /coloring — Keeper & Companion, Commons Arena, Player Academy, Moonwater Harbor, Hatchery Care, Ember Forge, Riftling Species, Glowpup Den, Emberkit Scout, Pouchling Market, Stone Guardian, Rift Serpent, Circus Acrobat, Gateway Awakening, Elderwood Camp, Market Day, Homestead Garden, Riftstone Plaza, First Bond, and Lantern Night",
+    ],
+    changed: [
+      "Coloring, comics kids section, Fan Kit, and press copy now list 28 printable game-sketch pages",
+    ],
+  },
+  {
     id: "2026-07-18-quest-card-gaps",
     date: "2026-07-18",
     title: "Quest cards pack tight again",

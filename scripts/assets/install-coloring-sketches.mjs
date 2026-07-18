@@ -43,6 +43,27 @@ const SHEETS = [
   { slug: "elara-venn", title: "Elara Venn", file: "coloring-elara-sketch.png" },
   { slug: "gateway-stones", title: "Gateway Stones", file: "coloring-gateway-sketch.png" },
   { slug: "elderwood-path", title: "Elderwood Path", file: "coloring-elderwood-sketch.png" },
+  // Batch 2 — 20 new game-sketch sheets
+  { slug: "keeper-guide", title: "Keeper & Companion", file: "coloring-keeper-guide-sketch.png" },
+  { slug: "commons-arena", title: "Commons Arena", file: "coloring-commons-arena-sketch.png" },
+  { slug: "player-academy", title: "Player Academy", file: "coloring-player-academy-sketch.png" },
+  { slug: "moonwater-harbor", title: "Moonwater Harbor", file: "coloring-moonwater-harbor-sketch.png" },
+  { slug: "hatchery-care", title: "Hatchery Care", file: "coloring-hatchery-care-sketch.png" },
+  { slug: "ember-forge", title: "Ember Forge", file: "coloring-ember-forge-sketch.png" },
+  { slug: "riftling-species", title: "Riftling Species", file: "coloring-riftling-species-sketch.png" },
+  { slug: "glowpup-den", title: "Glowpup Den", file: "coloring-glowpup-den-sketch.png" },
+  { slug: "emberkit-scout", title: "Emberkit Scout", file: "coloring-emberkit-scout-sketch.png" },
+  { slug: "pouchling-market", title: "Pouchling Market", file: "coloring-pouchling-market-sketch.png" },
+  { slug: "stone-guardian", title: "Stone Guardian", file: "coloring-stone-guardian-sketch.png" },
+  { slug: "rift-serpent", title: "Rift Serpent", file: "coloring-rift-serpent-sketch.png" },
+  { slug: "circus-acrobat", title: "Circus Acrobat", file: "coloring-circus-acrobat-sketch.png" },
+  { slug: "gateway-awaken", title: "Gateway Awakening", file: "coloring-gateway-awaken-sketch.png" },
+  { slug: "elderwood-camp", title: "Elderwood Camp", file: "coloring-elderwood-camp-sketch.png" },
+  { slug: "market-day", title: "Market Day", file: "coloring-market-day-sketch.png" },
+  { slug: "homestead-garden", title: "Homestead Garden", file: "coloring-homestead-garden-sketch.png" },
+  { slug: "riftstone-plaza", title: "Riftstone Plaza", file: "coloring-riftstone-plaza-sketch.png" },
+  { slug: "first-bond", title: "First Bond", file: "coloring-first-bond-sketch.png" },
+  { slug: "lantern-night", title: "Lantern Night", file: "coloring-lantern-night-sketch.png" },
 ];
 
 function ensureDir(dir) {

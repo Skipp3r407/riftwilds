@@ -90,8 +90,8 @@ export function ColoringDownloads({
             Coloring pages
           </h2>
           <p className="mt-2 max-w-xl text-sm text-[var(--text-muted)]">
-            Printable black-line sheets of Spark, the Commons, the circus, and more — made for crayons
-            and markers.
+            28 printable black-line game-sketch sheets — Spark, Commons, circus, Keepers, harbor,
+            hatchery, and more — made for crayons and markers.
           </p>
         </div>
         {showIndexLink ? (

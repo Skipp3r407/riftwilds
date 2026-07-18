@@ -8,10 +8,10 @@ import { projectConfig } from "@/lib/config/project";
 export const metadata: Metadata = {
   title: "Coloring Pages | Kids Corner",
   description:
-    "Free printable Riftwilds coloring pages — detailed game-sketch line art of Spark, Commons, Circus, and more.",
+    "Free printable Riftwilds coloring pages — 28 detailed game-sketch line art sheets of Spark, Commons, Circus, Keepers, and more.",
   openGraph: {
     title: "Riftwilds Coloring Pages",
-    description: "Printable game-sketch Riftling sheets — free for personal and kids’ use.",
+    description: "28 printable game-sketch Riftling sheets — free for personal and kids’ use.",
     images: [{ url: "/assets/coloring/spark.png" }],
   },
 };
@@ -25,8 +25,8 @@ export default function ColoringPage() {
         <p className="page-kicker">Parents &amp; kids</p>
         <h1 className="font-display mt-3 text-4xl text-white md:text-5xl">Coloring Pages</h1>
         <p className="mt-4 max-w-2xl text-sm text-[var(--text-muted)] md:text-base">
-          Printable game-sketch line art from {projectConfig.UNIVERSE_NAME} — concept-style outlines
-          kids can color. Free for personal use; crayons welcome.
+          28 printable game-sketch line art pages from {projectConfig.UNIVERSE_NAME} — concept-style
+          outlines kids can color. Free for personal use; crayons welcome.
         </p>
         <p className="mt-2 text-xs text-[var(--text-dim)]">{COLORING_CREDIT}</p>
         <div className="mt-6 flex flex-wrap gap-2">
