@@ -165,9 +165,20 @@ export function rewardSourceArtPath(slug: string): string {
 /** Bump when Hatchery premium art is regenerated. */
 export const HATCHERY_ART_V = "hatch3";
 
+/** Bump when home / marketing hero egg art changes. */
+export const HERO_EGG_V = "heroegg2";
+
 /** Claim-card hero egg under public/assets/hatchery/claim-starter-egg.png */
 export function hatcheryClaimEggPath(): string {
   return `/assets/hatchery/claim-starter-egg.png?v=${HATCHERY_ART_V}`;
+}
+
+/**
+ * Premium Mystery Rift Egg for marketing hero + claim blocks.
+ * Prefers the portrait hatchery master (fills square frames); mystery PNG is landscape-padded.
+ */
+export function mysteryRiftEggPath(): string {
+  return `/assets/hatchery/claim-starter-egg.png?v=${HERO_EGG_V}`;
 }
 
 /** Empty eggs panel art under public/assets/hatchery/empty-eggs.png */

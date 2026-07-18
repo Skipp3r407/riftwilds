@@ -24,7 +24,13 @@ function shortAddress(address: string) {
 
 function ConnectPlaceholder() {
   return (
-    <ImageButton variant="primary" size="sm" className="px-3 py-2 text-xs opacity-90 md:text-sm" disabled>
+    <ImageButton
+      variant="primary"
+      size="sm"
+      className="px-3 py-2 text-xs md:text-sm"
+      disabled
+      aria-busy="true"
+    >
       Connect Wallet
     </ImageButton>
   );
