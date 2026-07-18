@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "generatedAt": "2026-07-18T20:53:10.952Z",
+  "version": 3,
+  "generatedAt": "2026-07-18T21:00:11.536Z",
   "count": 645,
   "outputDir": "public/assets/tcg/cards",
   "cards": {
@@ -650,5 +650,5 @@
     "rotr-w-fx-weather-ember-ash-01": "/assets/tcg/cards/rotr-w-fx-weather-ember-ash-01.webp",
     "rotr-w-fx-weather-ember-ash-02": "/assets/tcg/cards/rotr-w-fx-weather-ember-ash-02.webp"
   },
-  "layout": "full-art"
+  "layout": "full-art-scenic"
 }
