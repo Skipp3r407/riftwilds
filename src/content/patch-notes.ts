@@ -39,6 +39,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     id: "2026-07-18-live-world-hatched-companion",
     date: "2026-07-18",
     title: "Live World companion matches your hatch",
+    version: "2ec87bb",
     summary:
       "Your following Riftling in Live World now uses the same species look as the pet you hatched — Glowpup-line sparklets stay distinct from Alloybits and other affinities.",
     fixed: [
