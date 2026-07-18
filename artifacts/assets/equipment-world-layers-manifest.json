@@ -20,5 +20,5 @@
     "/assets/items/armor/world/soft-tail-sleeve.png",
     "/assets/items/armor/world/breeze-wing-bands.png"
   ],
-  "note": "Phase-1 world equipment overlays. Full Grok batch can replace these placeholders."
+  "note": "Phase-1 world equipment overlays from local procedural generation. Optional Grok hero pass can replace these later — not required."
 }

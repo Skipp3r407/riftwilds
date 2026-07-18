@@ -116,4 +116,60 @@ describe("LiveWorldInputManager", () => {
     mgr.setActivePanel("chat");
     expect(n).toBe(afterFirst);
   });
+
+  it("keeps chat active on repeat Enter / openChat (does not toggle closed)", () => {
+    const mgr = new LiveWorldInputManager(defaultKeybinds());
+    mgr.setActivePanel("chat");
+    const down = (
+      mgr as unknown as { handleKeyDown: (e: KeyboardEvent) => void }
+    ).handleKeyDown.bind(mgr);
+    down({
+      code: "Enter",
+      ctrlKey: false,
+      metaKey: false,
+      shiftKey: false,
+      altKey: false,
+      repeat: false,
+      preventDefault() {},
+    } as KeyboardEvent);
+    expect(mgr.getActivePanel()).toBe("chat");
+    expect(mgr.wasJustPressed("openChat")).toBe(true);
+  });
+
+  it("does not clear chat panel on Escape (chat UI owns peek collapse)", () => {
+    const mgr = new LiveWorldInputManager(defaultKeybinds());
+    mgr.setActivePanel("chat");
+    const down = (
+      mgr as unknown as { handleKeyDown: (e: KeyboardEvent) => void }
+    ).handleKeyDown.bind(mgr);
+    down({
+      code: "Escape",
+      ctrlKey: false,
+      metaKey: false,
+      shiftKey: false,
+      altKey: false,
+      repeat: false,
+      preventDefault() {},
+    } as KeyboardEvent);
+    expect(mgr.getActivePanel()).toBe("chat");
+    expect(mgr.peekJustPressed("escape")).toBe(true);
+  });
+
+  it("still clears non-chat panels on Escape", () => {
+    const mgr = new LiveWorldInputManager(defaultKeybinds());
+    mgr.setActivePanel("map");
+    const down = (
+      mgr as unknown as { handleKeyDown: (e: KeyboardEvent) => void }
+    ).handleKeyDown.bind(mgr);
+    down({
+      code: "Escape",
+      ctrlKey: false,
+      metaKey: false,
+      shiftKey: false,
+      altKey: false,
+      repeat: false,
+      preventDefault() {},
+    } as KeyboardEvent);
+    expect(mgr.getActivePanel()).toBeNull();
+  });
 });

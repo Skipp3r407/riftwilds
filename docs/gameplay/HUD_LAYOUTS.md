@@ -37,12 +37,12 @@ World clock, interact prompt, and Happening Now use `floating-chip-fade.ts` + `F
 
 | Mode | Behavior |
 |------|----------|
-| pinned | Open by default |
-| auto-hide | Opens on new messages / Enter |
-| transparent | Lower panel opacity |
+| pinned | Open by default; stays open (header pin toggle) |
+| auto-hide | Peek tab by default; Enter / peek / `/` opens compose; idle (~6s), Esc, or click-outside returns to peek; new messages flash an unread badge on the peek (do not force the panel open) |
+| transparent | Same auto-hide behavior with lower panel opacity |
 | collapsed | Starts closed |
 
-Expand/Shrink is a float/resize stub on the chat header.
+Expand/Shrink is a float/resize stub on the chat header. `typingFocused` is set only while the compose `<input>` is focused so WASD keeps working when the log is visible.
 
 ## Collapsible chrome
 

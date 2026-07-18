@@ -2,11 +2,11 @@
 
 Every launch Riftling (100 species) has a unique signature vocalization.
 
-## Limitation (Grok audio)
+## Default: local procedural (no key)
 
-Cursor/Grok tooling in this repo generates **images**, not SFX. xAI offers a separate TTS API (`POST https://api.x.ai/v1/tts`), but this environment had **no `XAI_API_KEY`**, so cries were generated with the project’s established procedural WAV pipeline (`scripts/assets/generate-riftling-cries.mjs`) — the same approach as UI/pet SFX.
+Cries ship from the procedural WAV pipeline (`scripts/assets/generate-riftling-cries.mjs` / `npm run assets:riftling-cries`) — the same approach as UI/pet SFX. **No `XAI_API_KEY` required.**
 
-To regenerate via Grok TTS when a key is available:
+Optional paid upgrade via xAI TTS (`POST https://api.x.ai/v1/tts`) if you want it:
 
 ```bash
 set XAI_API_KEY=...

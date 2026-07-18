@@ -1,4 +1,6 @@
-# Grok Asset Generation Queue
+# Optional art polish queue (Grok / hand-authored)
+
+**Grok / `XAI_API_KEY` is not required.** Base Live World + game library assets ship from local procedural generators (`npm run assets:generate:library` + `npm run assets:install:library`). This queue tracks optional hero-quality remasters only.
 
 Blocked / next when Commons showcase is already green.
 

@@ -1,0 +1,5141 @@
+{
+  "done": {
+    "tree-oak-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-oak-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-oak-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-oak-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-oak-spring-mature": {
+      "path": "/assets/game/library/trees/tree-oak-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-oak-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-oak-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-oak-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-oak-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-oak-summer-mature": {
+      "path": "/assets/game/library/trees/tree-oak-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-oak-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-oak-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-oak-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-oak-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-oak-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-oak-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-oak-winter-mature": {
+      "path": "/assets/game/library/trees/tree-oak-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-oak-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-oak-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-pine-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-pine-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-pine-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-pine-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-pine-spring-mature": {
+      "path": "/assets/game/library/trees/tree-pine-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-oak-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-oak-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-pine-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-pine-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-pine-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-pine-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-pine-summer-mature": {
+      "path": "/assets/game/library/trees/tree-pine-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-pine-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-pine-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-pine-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-pine-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-pine-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-pine-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-pine-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-pine-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-birch-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-birch-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-pine-winter-mature": {
+      "path": "/assets/game/library/trees/tree-pine-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-birch-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-birch-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-pine-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-pine-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-birch-spring-mature": {
+      "path": "/assets/game/library/trees/tree-birch-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-birch-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-birch-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-birch-summer-mature": {
+      "path": "/assets/game/library/trees/tree-birch-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-birch-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-birch-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-birch-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-birch-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-birch-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-birch-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-birch-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-birch-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-willow-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-willow-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-birch-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-birch-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-birch-winter-mature": {
+      "path": "/assets/game/library/trees/tree-birch-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-birch-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-birch-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-willow-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-willow-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-willow-spring-mature": {
+      "path": "/assets/game/library/trees/tree-willow-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-willow-summer-mature": {
+      "path": "/assets/game/library/trees/tree-willow-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-willow-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-willow-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-willow-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-willow-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-willow-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-willow-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-willow-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-willow-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-willow-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-willow-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-willow-winter-mature": {
+      "path": "/assets/game/library/trees/tree-willow-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-willow-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-willow-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-maple-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-maple-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-maple-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-maple-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-maple-spring-mature": {
+      "path": "/assets/game/library/trees/tree-maple-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-willow-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-willow-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-maple-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-maple-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-maple-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-maple-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-maple-summer-mature": {
+      "path": "/assets/game/library/trees/tree-maple-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-maple-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-maple-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-maple-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-maple-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-maple-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-maple-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-maple-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-maple-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-ash-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-ash-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-maple-winter-mature": {
+      "path": "/assets/game/library/trees/tree-maple-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-ash-spring-mature": {
+      "path": "/assets/game/library/trees/tree-ash-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-ash-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-ash-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-maple-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-maple-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-ash-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-ash-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-ash-summer-mature": {
+      "path": "/assets/game/library/trees/tree-ash-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-ash-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-ash-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-ash-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-ash-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-ash-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-ash-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-ash-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-ash-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-ash-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-ash-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-elder-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-elder-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-ash-winter-mature": {
+      "path": "/assets/game/library/trees/tree-ash-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-elder-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-elder-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-elder-spring-mature": {
+      "path": "/assets/game/library/trees/tree-elder-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-ash-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-ash-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-elder-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-elder-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-elder-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-elder-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-elder-summer-mature": {
+      "path": "/assets/game/library/trees/tree-elder-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-elder-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-elder-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-elder-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-elder-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-elder-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-elder-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-elder-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-elder-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-elder-winter-mature": {
+      "path": "/assets/game/library/trees/tree-elder-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-elder-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-elder-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-spring-mature": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-summer-mature": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-orchard-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-orchard-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-winter-mature": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-rift-crystal-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-rift-crystal-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-orchard-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-orchard-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-orchard-spring-mature": {
+      "path": "/assets/game/library/trees/tree-orchard-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-orchard-summer-mature": {
+      "path": "/assets/game/library/trees/tree-orchard-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-orchard-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-orchard-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-orchard-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-orchard-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-orchard-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-orchard-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-orchard-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-orchard-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-orchard-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-orchard-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-orchard-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-orchard-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-orchard-winter-mature": {
+      "path": "/assets/game/library/trees/tree-orchard-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-flowering-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-flowering-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-orchard-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-orchard-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-flowering-spring-mature": {
+      "path": "/assets/game/library/trees/tree-flowering-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-flowering-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-flowering-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-flowering-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-flowering-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-flowering-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-flowering-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-flowering-summer-mature": {
+      "path": "/assets/game/library/trees/tree-flowering-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-flowering-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-flowering-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-flowering-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-flowering-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-flowering-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-flowering-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-cypress-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-cypress-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-flowering-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-flowering-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-flowering-winter-mature": {
+      "path": "/assets/game/library/trees/tree-flowering-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-flowering-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-flowering-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-cypress-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-cypress-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-cypress-spring-mature": {
+      "path": "/assets/game/library/trees/tree-cypress-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-cypress-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-cypress-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-cypress-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-cypress-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-cypress-summer-mature": {
+      "path": "/assets/game/library/trees/tree-cypress-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-cypress-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-cypress-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-cypress-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-cypress-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-cypress-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-cypress-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-mangrove-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-mangrove-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-cypress-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-cypress-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-cypress-winter-mature": {
+      "path": "/assets/game/library/trees/tree-cypress-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-mangrove-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-mangrove-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-cypress-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-cypress-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-mangrove-spring-mature": {
+      "path": "/assets/game/library/trees/tree-mangrove-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-mangrove-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-mangrove-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-mangrove-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-mangrove-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-mangrove-summer-mature": {
+      "path": "/assets/game/library/trees/tree-mangrove-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-mangrove-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-mangrove-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-mangrove-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-mangrove-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-mangrove-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-mangrove-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-aspen-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-aspen-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-mangrove-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-mangrove-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-mangrove-winter-mature": {
+      "path": "/assets/game/library/trees/tree-mangrove-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-aspen-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-aspen-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-mangrove-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-mangrove-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-aspen-spring-mature": {
+      "path": "/assets/game/library/trees/tree-aspen-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-aspen-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-aspen-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-aspen-summer-mature": {
+      "path": "/assets/game/library/trees/tree-aspen-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-aspen-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-aspen-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-aspen-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-aspen-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-aspen-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-aspen-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-aspen-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-aspen-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-hollow-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-hollow-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-aspen-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-aspen-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-aspen-winter-mature": {
+      "path": "/assets/game/library/trees/tree-aspen-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-aspen-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-aspen-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-hollow-spring-mature": {
+      "path": "/assets/game/library/trees/tree-hollow-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-hollow-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-hollow-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-hollow-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-hollow-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-hollow-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-hollow-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-hollow-summer-mature": {
+      "path": "/assets/game/library/trees/tree-hollow-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-hollow-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-hollow-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-hollow-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-hollow-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-hollow-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-hollow-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-hollow-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-hollow-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-hollow-winter-mature": {
+      "path": "/assets/game/library/trees/tree-hollow-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-spring-mature": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-hollow-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-hollow-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-summer-mature": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-winter-mature": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-spring-mature": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-twin-trunk-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-twin-trunk-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-summer-mature": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-moss-tower-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-winter-mature": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-spring-mature": {
+      "path": "/assets/game/library/trees/tree-moss-tower-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-canopy-umbrella-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-canopy-umbrella-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-moss-tower-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-moss-tower-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-moss-tower-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-summer-mature": {
+      "path": "/assets/game/library/trees/tree-moss-tower-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-moss-tower-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-moss-tower-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-moss-tower-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-moss-tower-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-ember-bark-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-winter-mature": {
+      "path": "/assets/game/library/trees/tree-moss-tower-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-spring-mature": {
+      "path": "/assets/game/library/trees/tree-ember-bark-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-moss-tower-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-moss-tower-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-ember-bark-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-ember-bark-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-ember-bark-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-summer-mature": {
+      "path": "/assets/game/library/trees/tree-ember-bark-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-ember-bark-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-ember-bark-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-ember-bark-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-ember-bark-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-frost-needle-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-winter-mature": {
+      "path": "/assets/game/library/trees/tree-ember-bark-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-spring-mature": {
+      "path": "/assets/game/library/trees/tree-frost-needle-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-ember-bark-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-ember-bark-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-frost-needle-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-frost-needle-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-frost-needle-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-summer-mature": {
+      "path": "/assets/game/library/trees/tree-frost-needle-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-frost-needle-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-frost-needle-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-frost-needle-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-frost-needle-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-tide-palm-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-winter-mature": {
+      "path": "/assets/game/library/trees/tree-frost-needle-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-spring-mature": {
+      "path": "/assets/game/library/trees/tree-tide-palm-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-tide-palm-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-frost-needle-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-frost-needle-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-tide-palm-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-summer-mature": {
+      "path": "/assets/game/library/trees/tree-tide-palm-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-tide-palm-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-tide-palm-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-tide-palm-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-tide-palm-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-winter-mature": {
+      "path": "/assets/game/library/trees/tree-tide-palm-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-tide-palm-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-tide-palm-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-tide-palm-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-spring-mature": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-summer-mature": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-winter-mature": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-spirit-wisp-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-spirit-wisp-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-spring-mature": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-summer-mature": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-winter-mature": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-storm-spire-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-storm-spire-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-stone-heartwood-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-stone-heartwood-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-spring-mature": {
+      "path": "/assets/game/library/trees/tree-storm-spire-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-storm-spire-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-storm-spire-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-summer-mature": {
+      "path": "/assets/game/library/trees/tree-storm-spire-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-storm-spire-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-storm-spire-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-storm-spire-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-storm-spire-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-winter-mature": {
+      "path": "/assets/game/library/trees/tree-storm-spire-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-storm-spire-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-storm-spire-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-spring-mature": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-summer-mature": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-autumn-mature.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-winter-mature": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-spring-sapling": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-spring-sapling.webp",
+      "skipped": true
+    },
+    "tree-alloy-wire-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-alloy-wire-winter-ancient.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-spring-mature": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-spring-mature.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-summer-sapling": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-summer-sapling.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-spring-ancient": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-spring-ancient.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-autumn-sapling": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-autumn-sapling.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-summer-mature": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-summer-mature.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-summer-ancient": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-summer-ancient.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-winter-sapling": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-winter-sapling.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-autumn-mature": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-autumn-mature.webp",
+      "skipped": true
+    },
+    "bush-berry-spring-small": {
+      "path": "/assets/game/library/bushes/bush-berry-spring-small.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-winter-mature": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-winter-mature.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-autumn-ancient": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-autumn-ancient.webp",
+      "skipped": true
+    },
+    "tree-grove-sentinel-winter-ancient": {
+      "path": "/assets/game/library/trees/tree-grove-sentinel-winter-ancient.webp",
+      "skipped": true
+    },
+    "bush-berry-summer-small": {
+      "path": "/assets/game/library/bushes/bush-berry-summer-small.webp",
+      "skipped": true
+    },
+    "bush-berry-spring-large": {
+      "path": "/assets/game/library/bushes/bush-berry-spring-large.webp",
+      "skipped": true
+    },
+    "bush-berry-summer-large": {
+      "path": "/assets/game/library/bushes/bush-berry-summer-large.webp",
+      "skipped": true
+    },
+    "bush-berry-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-berry-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-berry-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-berry-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-berry-winter-small": {
+      "path": "/assets/game/library/bushes/bush-berry-winter-small.webp",
+      "skipped": true
+    },
+    "bush-thorn-spring-small": {
+      "path": "/assets/game/library/bushes/bush-thorn-spring-small.webp",
+      "skipped": true
+    },
+    "bush-berry-winter-large": {
+      "path": "/assets/game/library/bushes/bush-berry-winter-large.webp",
+      "skipped": true
+    },
+    "bush-thorn-summer-small": {
+      "path": "/assets/game/library/bushes/bush-thorn-summer-small.webp",
+      "skipped": true
+    },
+    "bush-thorn-spring-large": {
+      "path": "/assets/game/library/bushes/bush-thorn-spring-large.webp",
+      "skipped": true
+    },
+    "bush-thorn-summer-large": {
+      "path": "/assets/game/library/bushes/bush-thorn-summer-large.webp",
+      "skipped": true
+    },
+    "bush-thorn-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-thorn-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-thorn-winter-small": {
+      "path": "/assets/game/library/bushes/bush-thorn-winter-small.webp",
+      "skipped": true
+    },
+    "bush-thorn-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-thorn-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-moss-spring-small": {
+      "path": "/assets/game/library/bushes/bush-moss-spring-small.webp",
+      "skipped": true
+    },
+    "bush-thorn-winter-large": {
+      "path": "/assets/game/library/bushes/bush-thorn-winter-large.webp",
+      "skipped": true
+    },
+    "bush-moss-summer-small": {
+      "path": "/assets/game/library/bushes/bush-moss-summer-small.webp",
+      "skipped": true
+    },
+    "bush-moss-spring-large": {
+      "path": "/assets/game/library/bushes/bush-moss-spring-large.webp",
+      "skipped": true
+    },
+    "bush-moss-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-moss-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-moss-summer-large": {
+      "path": "/assets/game/library/bushes/bush-moss-summer-large.webp",
+      "skipped": true
+    },
+    "bush-moss-winter-small": {
+      "path": "/assets/game/library/bushes/bush-moss-winter-small.webp",
+      "skipped": true
+    },
+    "bush-moss-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-moss-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-moss-winter-large": {
+      "path": "/assets/game/library/bushes/bush-moss-winter-large.webp",
+      "skipped": true
+    },
+    "bush-fern-spring-small": {
+      "path": "/assets/game/library/bushes/bush-fern-spring-small.webp",
+      "skipped": true
+    },
+    "bush-fern-summer-small": {
+      "path": "/assets/game/library/bushes/bush-fern-summer-small.webp",
+      "skipped": true
+    },
+    "bush-fern-spring-large": {
+      "path": "/assets/game/library/bushes/bush-fern-spring-large.webp",
+      "skipped": true
+    },
+    "bush-fern-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-fern-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-fern-summer-large": {
+      "path": "/assets/game/library/bushes/bush-fern-summer-large.webp",
+      "skipped": true
+    },
+    "bush-fern-winter-small": {
+      "path": "/assets/game/library/bushes/bush-fern-winter-small.webp",
+      "skipped": true
+    },
+    "bush-fern-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-fern-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-fern-winter-large": {
+      "path": "/assets/game/library/bushes/bush-fern-winter-large.webp",
+      "skipped": true
+    },
+    "bush-heather-spring-small": {
+      "path": "/assets/game/library/bushes/bush-heather-spring-small.webp",
+      "skipped": true
+    },
+    "bush-heather-summer-small": {
+      "path": "/assets/game/library/bushes/bush-heather-summer-small.webp",
+      "skipped": true
+    },
+    "bush-heather-spring-large": {
+      "path": "/assets/game/library/bushes/bush-heather-spring-large.webp",
+      "skipped": true
+    },
+    "bush-heather-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-heather-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-heather-summer-large": {
+      "path": "/assets/game/library/bushes/bush-heather-summer-large.webp",
+      "skipped": true
+    },
+    "bush-heather-winter-small": {
+      "path": "/assets/game/library/bushes/bush-heather-winter-small.webp",
+      "skipped": true
+    },
+    "bush-heather-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-heather-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-lavender-rift-spring-small": {
+      "path": "/assets/game/library/bushes/bush-lavender-rift-spring-small.webp",
+      "skipped": true
+    },
+    "bush-heather-winter-large": {
+      "path": "/assets/game/library/bushes/bush-heather-winter-large.webp",
+      "skipped": true
+    },
+    "bush-lavender-rift-summer-small": {
+      "path": "/assets/game/library/bushes/bush-lavender-rift-summer-small.webp",
+      "skipped": true
+    },
+    "bush-lavender-rift-spring-large": {
+      "path": "/assets/game/library/bushes/bush-lavender-rift-spring-large.webp",
+      "skipped": true
+    },
+    "bush-lavender-rift-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-lavender-rift-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-lavender-rift-summer-large": {
+      "path": "/assets/game/library/bushes/bush-lavender-rift-summer-large.webp",
+      "skipped": true
+    },
+    "bush-lavender-rift-winter-small": {
+      "path": "/assets/game/library/bushes/bush-lavender-rift-winter-small.webp",
+      "skipped": true
+    },
+    "bush-lavender-rift-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-lavender-rift-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-holly-spring-small": {
+      "path": "/assets/game/library/bushes/bush-holly-spring-small.webp",
+      "skipped": true
+    },
+    "bush-lavender-rift-winter-large": {
+      "path": "/assets/game/library/bushes/bush-lavender-rift-winter-large.webp",
+      "skipped": true
+    },
+    "bush-holly-summer-small": {
+      "path": "/assets/game/library/bushes/bush-holly-summer-small.webp",
+      "skipped": true
+    },
+    "bush-holly-spring-large": {
+      "path": "/assets/game/library/bushes/bush-holly-spring-large.webp",
+      "skipped": true
+    },
+    "bush-holly-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-holly-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-holly-summer-large": {
+      "path": "/assets/game/library/bushes/bush-holly-summer-large.webp",
+      "skipped": true
+    },
+    "bush-holly-winter-small": {
+      "path": "/assets/game/library/bushes/bush-holly-winter-small.webp",
+      "skipped": true
+    },
+    "bush-holly-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-holly-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-holly-winter-large": {
+      "path": "/assets/game/library/bushes/bush-holly-winter-large.webp",
+      "skipped": true
+    },
+    "bush-bramble-spring-small": {
+      "path": "/assets/game/library/bushes/bush-bramble-spring-small.webp",
+      "skipped": true
+    },
+    "bush-bramble-summer-small": {
+      "path": "/assets/game/library/bushes/bush-bramble-summer-small.webp",
+      "skipped": true
+    },
+    "bush-bramble-spring-large": {
+      "path": "/assets/game/library/bushes/bush-bramble-spring-large.webp",
+      "skipped": true
+    },
+    "bush-bramble-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-bramble-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-bramble-summer-large": {
+      "path": "/assets/game/library/bushes/bush-bramble-summer-large.webp",
+      "skipped": true
+    },
+    "bush-bramble-winter-small": {
+      "path": "/assets/game/library/bushes/bush-bramble-winter-small.webp",
+      "skipped": true
+    },
+    "bush-bramble-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-bramble-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-sage-spring-small": {
+      "path": "/assets/game/library/bushes/bush-sage-spring-small.webp",
+      "skipped": true
+    },
+    "bush-bramble-winter-large": {
+      "path": "/assets/game/library/bushes/bush-bramble-winter-large.webp",
+      "skipped": true
+    },
+    "bush-sage-summer-small": {
+      "path": "/assets/game/library/bushes/bush-sage-summer-small.webp",
+      "skipped": true
+    },
+    "bush-sage-spring-large": {
+      "path": "/assets/game/library/bushes/bush-sage-spring-large.webp",
+      "skipped": true
+    },
+    "bush-sage-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-sage-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-sage-summer-large": {
+      "path": "/assets/game/library/bushes/bush-sage-summer-large.webp",
+      "skipped": true
+    },
+    "bush-sage-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-sage-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-sage-winter-small": {
+      "path": "/assets/game/library/bushes/bush-sage-winter-small.webp",
+      "skipped": true
+    },
+    "bush-juniper-spring-small": {
+      "path": "/assets/game/library/bushes/bush-juniper-spring-small.webp",
+      "skipped": true
+    },
+    "bush-juniper-summer-small": {
+      "path": "/assets/game/library/bushes/bush-juniper-summer-small.webp",
+      "skipped": true
+    },
+    "bush-sage-winter-large": {
+      "path": "/assets/game/library/bushes/bush-sage-winter-large.webp",
+      "skipped": true
+    },
+    "bush-juniper-spring-large": {
+      "path": "/assets/game/library/bushes/bush-juniper-spring-large.webp",
+      "skipped": true
+    },
+    "bush-juniper-summer-large": {
+      "path": "/assets/game/library/bushes/bush-juniper-summer-large.webp",
+      "skipped": true
+    },
+    "bush-juniper-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-juniper-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-juniper-winter-small": {
+      "path": "/assets/game/library/bushes/bush-juniper-winter-small.webp",
+      "skipped": true
+    },
+    "bush-juniper-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-juniper-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-rosehip-spring-small": {
+      "path": "/assets/game/library/bushes/bush-rosehip-spring-small.webp",
+      "skipped": true
+    },
+    "bush-juniper-winter-large": {
+      "path": "/assets/game/library/bushes/bush-juniper-winter-large.webp",
+      "skipped": true
+    },
+    "bush-rosehip-summer-small": {
+      "path": "/assets/game/library/bushes/bush-rosehip-summer-small.webp",
+      "skipped": true
+    },
+    "bush-rosehip-spring-large": {
+      "path": "/assets/game/library/bushes/bush-rosehip-spring-large.webp",
+      "skipped": true
+    },
+    "bush-rosehip-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-rosehip-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-rosehip-summer-large": {
+      "path": "/assets/game/library/bushes/bush-rosehip-summer-large.webp",
+      "skipped": true
+    },
+    "bush-rosehip-winter-small": {
+      "path": "/assets/game/library/bushes/bush-rosehip-winter-small.webp",
+      "skipped": true
+    },
+    "bush-rosehip-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-rosehip-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-cloudberry-spring-small": {
+      "path": "/assets/game/library/bushes/bush-cloudberry-spring-small.webp",
+      "skipped": true
+    },
+    "bush-rosehip-winter-large": {
+      "path": "/assets/game/library/bushes/bush-rosehip-winter-large.webp",
+      "skipped": true
+    },
+    "bush-cloudberry-summer-small": {
+      "path": "/assets/game/library/bushes/bush-cloudberry-summer-small.webp",
+      "skipped": true
+    },
+    "bush-cloudberry-spring-large": {
+      "path": "/assets/game/library/bushes/bush-cloudberry-spring-large.webp",
+      "skipped": true
+    },
+    "bush-cloudberry-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-cloudberry-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-cloudberry-summer-large": {
+      "path": "/assets/game/library/bushes/bush-cloudberry-summer-large.webp",
+      "skipped": true
+    },
+    "bush-cloudberry-winter-small": {
+      "path": "/assets/game/library/bushes/bush-cloudberry-winter-small.webp",
+      "skipped": true
+    },
+    "bush-cloudberry-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-cloudberry-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-rift-bloom-spring-small": {
+      "path": "/assets/game/library/bushes/bush-rift-bloom-spring-small.webp",
+      "skipped": true
+    },
+    "bush-rift-bloom-summer-small": {
+      "path": "/assets/game/library/bushes/bush-rift-bloom-summer-small.webp",
+      "skipped": true
+    },
+    "bush-cloudberry-winter-large": {
+      "path": "/assets/game/library/bushes/bush-cloudberry-winter-large.webp",
+      "skipped": true
+    },
+    "bush-rift-bloom-spring-large": {
+      "path": "/assets/game/library/bushes/bush-rift-bloom-spring-large.webp",
+      "skipped": true
+    },
+    "bush-rift-bloom-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-rift-bloom-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-rift-bloom-summer-large": {
+      "path": "/assets/game/library/bushes/bush-rift-bloom-summer-large.webp",
+      "skipped": true
+    },
+    "bush-rift-bloom-winter-small": {
+      "path": "/assets/game/library/bushes/bush-rift-bloom-winter-small.webp",
+      "skipped": true
+    },
+    "bush-rift-bloom-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-rift-bloom-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-ember-scrub-spring-small": {
+      "path": "/assets/game/library/bushes/bush-ember-scrub-spring-small.webp",
+      "skipped": true
+    },
+    "bush-rift-bloom-winter-large": {
+      "path": "/assets/game/library/bushes/bush-rift-bloom-winter-large.webp",
+      "skipped": true
+    },
+    "bush-ember-scrub-summer-small": {
+      "path": "/assets/game/library/bushes/bush-ember-scrub-summer-small.webp",
+      "skipped": true
+    },
+    "bush-ember-scrub-spring-large": {
+      "path": "/assets/game/library/bushes/bush-ember-scrub-spring-large.webp",
+      "skipped": true
+    },
+    "bush-ember-scrub-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-ember-scrub-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-ember-scrub-summer-large": {
+      "path": "/assets/game/library/bushes/bush-ember-scrub-summer-large.webp",
+      "skipped": true
+    },
+    "bush-ember-scrub-winter-small": {
+      "path": "/assets/game/library/bushes/bush-ember-scrub-winter-small.webp",
+      "skipped": true
+    },
+    "bush-ember-scrub-winter-large": {
+      "path": "/assets/game/library/bushes/bush-ember-scrub-winter-large.webp",
+      "skipped": true
+    },
+    "bush-frost-tuft-spring-small": {
+      "path": "/assets/game/library/bushes/bush-frost-tuft-spring-small.webp",
+      "skipped": true
+    },
+    "bush-ember-scrub-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-ember-scrub-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-frost-tuft-spring-large": {
+      "path": "/assets/game/library/bushes/bush-frost-tuft-spring-large.webp",
+      "skipped": true
+    },
+    "bush-frost-tuft-summer-small": {
+      "path": "/assets/game/library/bushes/bush-frost-tuft-summer-small.webp",
+      "skipped": true
+    },
+    "bush-frost-tuft-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-frost-tuft-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-frost-tuft-summer-large": {
+      "path": "/assets/game/library/bushes/bush-frost-tuft-summer-large.webp",
+      "skipped": true
+    },
+    "bush-frost-tuft-winter-small": {
+      "path": "/assets/game/library/bushes/bush-frost-tuft-winter-small.webp",
+      "skipped": true
+    },
+    "bush-frost-tuft-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-frost-tuft-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-tide-kelp-spring-small": {
+      "path": "/assets/game/library/bushes/bush-tide-kelp-spring-small.webp",
+      "skipped": true
+    },
+    "bush-frost-tuft-winter-large": {
+      "path": "/assets/game/library/bushes/bush-frost-tuft-winter-large.webp",
+      "skipped": true
+    },
+    "bush-tide-kelp-summer-small": {
+      "path": "/assets/game/library/bushes/bush-tide-kelp-summer-small.webp",
+      "skipped": true
+    },
+    "bush-tide-kelp-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-tide-kelp-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-tide-kelp-spring-large": {
+      "path": "/assets/game/library/bushes/bush-tide-kelp-spring-large.webp",
+      "skipped": true
+    },
+    "bush-tide-kelp-summer-large": {
+      "path": "/assets/game/library/bushes/bush-tide-kelp-summer-large.webp",
+      "skipped": true
+    },
+    "bush-tide-kelp-winter-small": {
+      "path": "/assets/game/library/bushes/bush-tide-kelp-winter-small.webp",
+      "skipped": true
+    },
+    "bush-tide-kelp-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-tide-kelp-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-spirit-mist-spring-small": {
+      "path": "/assets/game/library/bushes/bush-spirit-mist-spring-small.webp",
+      "skipped": true
+    },
+    "bush-spirit-mist-summer-small": {
+      "path": "/assets/game/library/bushes/bush-spirit-mist-summer-small.webp",
+      "skipped": true
+    },
+    "bush-tide-kelp-winter-large": {
+      "path": "/assets/game/library/bushes/bush-tide-kelp-winter-large.webp",
+      "skipped": true
+    },
+    "bush-spirit-mist-spring-large": {
+      "path": "/assets/game/library/bushes/bush-spirit-mist-spring-large.webp",
+      "skipped": true
+    },
+    "bush-spirit-mist-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-spirit-mist-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-spirit-mist-summer-large": {
+      "path": "/assets/game/library/bushes/bush-spirit-mist-summer-large.webp",
+      "skipped": true
+    },
+    "bush-spirit-mist-winter-small": {
+      "path": "/assets/game/library/bushes/bush-spirit-mist-winter-small.webp",
+      "skipped": true
+    },
+    "bush-spirit-mist-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-spirit-mist-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-stone-lichen-spring-small": {
+      "path": "/assets/game/library/bushes/bush-stone-lichen-spring-small.webp",
+      "skipped": true
+    },
+    "bush-spirit-mist-winter-large": {
+      "path": "/assets/game/library/bushes/bush-spirit-mist-winter-large.webp",
+      "skipped": true
+    },
+    "bush-stone-lichen-spring-large": {
+      "path": "/assets/game/library/bushes/bush-stone-lichen-spring-large.webp",
+      "skipped": true
+    },
+    "bush-stone-lichen-summer-small": {
+      "path": "/assets/game/library/bushes/bush-stone-lichen-summer-small.webp",
+      "skipped": true
+    },
+    "bush-stone-lichen-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-stone-lichen-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-stone-lichen-summer-large": {
+      "path": "/assets/game/library/bushes/bush-stone-lichen-summer-large.webp",
+      "skipped": true
+    },
+    "bush-stone-lichen-winter-small": {
+      "path": "/assets/game/library/bushes/bush-stone-lichen-winter-small.webp",
+      "skipped": true
+    },
+    "bush-stone-lichen-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-stone-lichen-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-storm-reed-spring-small": {
+      "path": "/assets/game/library/bushes/bush-storm-reed-spring-small.webp",
+      "skipped": true
+    },
+    "bush-stone-lichen-winter-large": {
+      "path": "/assets/game/library/bushes/bush-stone-lichen-winter-large.webp",
+      "skipped": true
+    },
+    "bush-storm-reed-spring-large": {
+      "path": "/assets/game/library/bushes/bush-storm-reed-spring-large.webp",
+      "skipped": true
+    },
+    "bush-storm-reed-summer-small": {
+      "path": "/assets/game/library/bushes/bush-storm-reed-summer-small.webp",
+      "skipped": true
+    },
+    "bush-storm-reed-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-storm-reed-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-storm-reed-summer-large": {
+      "path": "/assets/game/library/bushes/bush-storm-reed-summer-large.webp",
+      "skipped": true
+    },
+    "bush-storm-reed-winter-small": {
+      "path": "/assets/game/library/bushes/bush-storm-reed-winter-small.webp",
+      "skipped": true
+    },
+    "bush-storm-reed-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-storm-reed-autumn-large.webp",
+      "skipped": true
+    },
+    "bush-alloy-coil-spring-small": {
+      "path": "/assets/game/library/bushes/bush-alloy-coil-spring-small.webp",
+      "skipped": true
+    },
+    "bush-storm-reed-winter-large": {
+      "path": "/assets/game/library/bushes/bush-storm-reed-winter-large.webp",
+      "skipped": true
+    },
+    "bush-alloy-coil-summer-small": {
+      "path": "/assets/game/library/bushes/bush-alloy-coil-summer-small.webp",
+      "skipped": true
+    },
+    "bush-alloy-coil-spring-large": {
+      "path": "/assets/game/library/bushes/bush-alloy-coil-spring-large.webp",
+      "skipped": true
+    },
+    "bush-alloy-coil-autumn-small": {
+      "path": "/assets/game/library/bushes/bush-alloy-coil-autumn-small.webp",
+      "skipped": true
+    },
+    "bush-alloy-coil-summer-large": {
+      "path": "/assets/game/library/bushes/bush-alloy-coil-summer-large.webp",
+      "skipped": true
+    },
+    "bush-alloy-coil-winter-small": {
+      "path": "/assets/game/library/bushes/bush-alloy-coil-winter-small.webp",
+      "skipped": true
+    },
+    "bush-alloy-coil-autumn-large": {
+      "path": "/assets/game/library/bushes/bush-alloy-coil-autumn-large.webp",
+      "skipped": true
+    },
+    "flower-dawnpetal-moss-small": {
+      "path": "/assets/game/library/flowers/flower-dawnpetal-moss-small.webp",
+      "skipped": true
+    },
+    "bush-alloy-coil-winter-large": {
+      "path": "/assets/game/library/bushes/bush-alloy-coil-winter-large.webp",
+      "skipped": true
+    },
+    "flower-dawnpetal-moss-large": {
+      "path": "/assets/game/library/flowers/flower-dawnpetal-moss-large.webp",
+      "skipped": true
+    },
+    "flower-dawnpetal-amber-small": {
+      "path": "/assets/game/library/flowers/flower-dawnpetal-amber-small.webp",
+      "skipped": true
+    },
+    "flower-dawnpetal-amber-large": {
+      "path": "/assets/game/library/flowers/flower-dawnpetal-amber-large.webp",
+      "skipped": true
+    },
+    "flower-dawnpetal-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-dawnpetal-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-dawnpetal-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-dawnpetal-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-riftlily-moss-small": {
+      "path": "/assets/game/library/flowers/flower-riftlily-moss-small.webp",
+      "skipped": true
+    },
+    "flower-riftlily-moss-large": {
+      "path": "/assets/game/library/flowers/flower-riftlily-moss-large.webp",
+      "skipped": true
+    },
+    "flower-riftlily-amber-small": {
+      "path": "/assets/game/library/flowers/flower-riftlily-amber-small.webp",
+      "skipped": true
+    },
+    "flower-riftlily-amber-large": {
+      "path": "/assets/game/library/flowers/flower-riftlily-amber-large.webp",
+      "skipped": true
+    },
+    "flower-riftlily-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-riftlily-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-riftlily-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-riftlily-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-ambercup-moss-small": {
+      "path": "/assets/game/library/flowers/flower-ambercup-moss-small.webp",
+      "skipped": true
+    },
+    "flower-ambercup-moss-large": {
+      "path": "/assets/game/library/flowers/flower-ambercup-moss-large.webp",
+      "skipped": true
+    },
+    "flower-ambercup-amber-small": {
+      "path": "/assets/game/library/flowers/flower-ambercup-amber-small.webp",
+      "skipped": true
+    },
+    "flower-ambercup-amber-large": {
+      "path": "/assets/game/library/flowers/flower-ambercup-amber-large.webp",
+      "skipped": true
+    },
+    "flower-ambercup-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-ambercup-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-ambercup-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-ambercup-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-mossbell-moss-small": {
+      "path": "/assets/game/library/flowers/flower-mossbell-moss-small.webp",
+      "skipped": true
+    },
+    "flower-mossbell-moss-large": {
+      "path": "/assets/game/library/flowers/flower-mossbell-moss-large.webp",
+      "skipped": true
+    },
+    "flower-mossbell-amber-small": {
+      "path": "/assets/game/library/flowers/flower-mossbell-amber-small.webp",
+      "skipped": true
+    },
+    "flower-mossbell-amber-large": {
+      "path": "/assets/game/library/flowers/flower-mossbell-amber-large.webp",
+      "skipped": true
+    },
+    "flower-mossbell-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-mossbell-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-mossbell-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-mossbell-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-skythistle-moss-small": {
+      "path": "/assets/game/library/flowers/flower-skythistle-moss-small.webp",
+      "skipped": true
+    },
+    "flower-skythistle-moss-large": {
+      "path": "/assets/game/library/flowers/flower-skythistle-moss-large.webp",
+      "skipped": true
+    },
+    "flower-skythistle-amber-small": {
+      "path": "/assets/game/library/flowers/flower-skythistle-amber-small.webp",
+      "skipped": true
+    },
+    "flower-skythistle-amber-large": {
+      "path": "/assets/game/library/flowers/flower-skythistle-amber-large.webp",
+      "skipped": true
+    },
+    "flower-skythistle-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-skythistle-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-skythistle-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-skythistle-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-hearthbloom-moss-small": {
+      "path": "/assets/game/library/flowers/flower-hearthbloom-moss-small.webp",
+      "skipped": true
+    },
+    "flower-hearthbloom-moss-large": {
+      "path": "/assets/game/library/flowers/flower-hearthbloom-moss-large.webp",
+      "skipped": true
+    },
+    "flower-hearthbloom-amber-small": {
+      "path": "/assets/game/library/flowers/flower-hearthbloom-amber-small.webp",
+      "skipped": true
+    },
+    "flower-hearthbloom-amber-large": {
+      "path": "/assets/game/library/flowers/flower-hearthbloom-amber-large.webp",
+      "skipped": true
+    },
+    "flower-hearthbloom-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-hearthbloom-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-hearthbloom-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-hearthbloom-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-voidnettle-moss-small": {
+      "path": "/assets/game/library/flowers/flower-voidnettle-moss-small.webp",
+      "skipped": true
+    },
+    "flower-voidnettle-moss-large": {
+      "path": "/assets/game/library/flowers/flower-voidnettle-moss-large.webp",
+      "skipped": true
+    },
+    "flower-voidnettle-amber-small": {
+      "path": "/assets/game/library/flowers/flower-voidnettle-amber-small.webp",
+      "skipped": true
+    },
+    "flower-voidnettle-amber-large": {
+      "path": "/assets/game/library/flowers/flower-voidnettle-amber-large.webp",
+      "skipped": true
+    },
+    "flower-voidnettle-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-voidnettle-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-voidnettle-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-voidnettle-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-tidecrown-moss-small": {
+      "path": "/assets/game/library/flowers/flower-tidecrown-moss-small.webp",
+      "skipped": true
+    },
+    "flower-tidecrown-moss-large": {
+      "path": "/assets/game/library/flowers/flower-tidecrown-moss-large.webp",
+      "skipped": true
+    },
+    "flower-tidecrown-amber-small": {
+      "path": "/assets/game/library/flowers/flower-tidecrown-amber-small.webp",
+      "skipped": true
+    },
+    "flower-tidecrown-amber-large": {
+      "path": "/assets/game/library/flowers/flower-tidecrown-amber-large.webp",
+      "skipped": true
+    },
+    "flower-tidecrown-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-tidecrown-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-tidecrown-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-tidecrown-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-frostbell-moss-small": {
+      "path": "/assets/game/library/flowers/flower-frostbell-moss-small.webp",
+      "skipped": true
+    },
+    "flower-frostbell-moss-large": {
+      "path": "/assets/game/library/flowers/flower-frostbell-moss-large.webp",
+      "skipped": true
+    },
+    "flower-frostbell-amber-small": {
+      "path": "/assets/game/library/flowers/flower-frostbell-amber-small.webp",
+      "skipped": true
+    },
+    "flower-frostbell-amber-large": {
+      "path": "/assets/game/library/flowers/flower-frostbell-amber-large.webp",
+      "skipped": true
+    },
+    "flower-frostbell-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-frostbell-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-frostbell-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-frostbell-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-emberpop-moss-small": {
+      "path": "/assets/game/library/flowers/flower-emberpop-moss-small.webp",
+      "skipped": true
+    },
+    "flower-emberpop-moss-large": {
+      "path": "/assets/game/library/flowers/flower-emberpop-moss-large.webp",
+      "skipped": true
+    },
+    "flower-emberpop-amber-small": {
+      "path": "/assets/game/library/flowers/flower-emberpop-amber-small.webp",
+      "skipped": true
+    },
+    "flower-emberpop-amber-large": {
+      "path": "/assets/game/library/flowers/flower-emberpop-amber-large.webp",
+      "skipped": true
+    },
+    "flower-emberpop-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-emberpop-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-emberpop-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-emberpop-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-spiritlace-moss-small": {
+      "path": "/assets/game/library/flowers/flower-spiritlace-moss-small.webp",
+      "skipped": true
+    },
+    "flower-spiritlace-moss-large": {
+      "path": "/assets/game/library/flowers/flower-spiritlace-moss-large.webp",
+      "skipped": true
+    },
+    "flower-spiritlace-amber-small": {
+      "path": "/assets/game/library/flowers/flower-spiritlace-amber-small.webp",
+      "skipped": true
+    },
+    "flower-spiritlace-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-spiritlace-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-spiritlace-amber-large": {
+      "path": "/assets/game/library/flowers/flower-spiritlace-amber-large.webp",
+      "skipped": true
+    },
+    "flower-spiritlace-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-spiritlace-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-stonewort-moss-small": {
+      "path": "/assets/game/library/flowers/flower-stonewort-moss-small.webp",
+      "skipped": true
+    },
+    "flower-stonewort-moss-large": {
+      "path": "/assets/game/library/flowers/flower-stonewort-moss-large.webp",
+      "skipped": true
+    },
+    "flower-stonewort-amber-small": {
+      "path": "/assets/game/library/flowers/flower-stonewort-amber-small.webp",
+      "skipped": true
+    },
+    "flower-stonewort-amber-large": {
+      "path": "/assets/game/library/flowers/flower-stonewort-amber-large.webp",
+      "skipped": true
+    },
+    "flower-stonewort-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-stonewort-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-stonewort-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-stonewort-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-stormiris-moss-small": {
+      "path": "/assets/game/library/flowers/flower-stormiris-moss-small.webp",
+      "skipped": true
+    },
+    "flower-stormiris-moss-large": {
+      "path": "/assets/game/library/flowers/flower-stormiris-moss-large.webp",
+      "skipped": true
+    },
+    "flower-stormiris-amber-small": {
+      "path": "/assets/game/library/flowers/flower-stormiris-amber-small.webp",
+      "skipped": true
+    },
+    "flower-stormiris-amber-large": {
+      "path": "/assets/game/library/flowers/flower-stormiris-amber-large.webp",
+      "skipped": true
+    },
+    "flower-stormiris-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-stormiris-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-stormiris-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-stormiris-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-alloydaisy-moss-small": {
+      "path": "/assets/game/library/flowers/flower-alloydaisy-moss-small.webp",
+      "skipped": true
+    },
+    "flower-alloydaisy-moss-large": {
+      "path": "/assets/game/library/flowers/flower-alloydaisy-moss-large.webp",
+      "skipped": true
+    },
+    "flower-alloydaisy-amber-small": {
+      "path": "/assets/game/library/flowers/flower-alloydaisy-amber-small.webp",
+      "skipped": true
+    },
+    "flower-alloydaisy-amber-large": {
+      "path": "/assets/game/library/flowers/flower-alloydaisy-amber-large.webp",
+      "skipped": true
+    },
+    "flower-alloydaisy-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-alloydaisy-cyan-small.webp",
+      "skipped": true
+    },
+    "flower-alloydaisy-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-alloydaisy-cyan-large.webp",
+      "skipped": true
+    },
+    "flower-groveorchid-moss-small": {
+      "path": "/assets/game/library/flowers/flower-groveorchid-moss-small.webp",
+      "skipped": true
+    },
+    "flower-groveorchid-moss-large": {
+      "path": "/assets/game/library/flowers/flower-groveorchid-moss-large.webp",
+      "skipped": true
+    },
+    "flower-groveorchid-amber-small": {
+      "path": "/assets/game/library/flowers/flower-groveorchid-amber-small.webp",
+      "skipped": true
+    },
+    "flower-groveorchid-amber-large": {
+      "path": "/assets/game/library/flowers/flower-groveorchid-amber-large.webp",
+      "skipped": true
+    },
+    "flower-groveorchid-cyan-small": {
+      "path": "/assets/game/library/flowers/flower-groveorchid-cyan-small.webp",
+      "skipped": true
+    },
+    "grass-tuft-commons": {
+      "path": "/assets/game/library/grass/grass-tuft-commons.webp",
+      "skipped": true
+    },
+    "flower-groveorchid-cyan-large": {
+      "path": "/assets/game/library/flowers/flower-groveorchid-cyan-large.webp",
+      "skipped": true
+    },
+    "grass-tuft-elderwood": {
+      "path": "/assets/game/library/grass/grass-tuft-elderwood.webp",
+      "skipped": true
+    },
+    "grass-tuft-ember": {
+      "path": "/assets/game/library/grass/grass-tuft-ember.webp",
+      "skipped": true
+    },
+    "grass-clump-commons": {
+      "path": "/assets/game/library/grass/grass-clump-commons.webp",
+      "skipped": true
+    },
+    "grass-clump-ember": {
+      "path": "/assets/game/library/grass/grass-clump-ember.webp",
+      "skipped": true
+    },
+    "grass-clump-elderwood": {
+      "path": "/assets/game/library/grass/grass-clump-elderwood.webp",
+      "skipped": true
+    },
+    "grass-blade-tall-commons": {
+      "path": "/assets/game/library/grass/grass-blade-tall-commons.webp",
+      "skipped": true
+    },
+    "grass-blade-tall-elderwood": {
+      "path": "/assets/game/library/grass/grass-blade-tall-elderwood.webp",
+      "skipped": true
+    },
+    "grass-blade-tall-ember": {
+      "path": "/assets/game/library/grass/grass-blade-tall-ember.webp",
+      "skipped": true
+    },
+    "grass-meadow-commons": {
+      "path": "/assets/game/library/grass/grass-meadow-commons.webp",
+      "skipped": true
+    },
+    "grass-meadow-elderwood": {
+      "path": "/assets/game/library/grass/grass-meadow-elderwood.webp",
+      "skipped": true
+    },
+    "grass-meadow-ember": {
+      "path": "/assets/game/library/grass/grass-meadow-ember.webp",
+      "skipped": true
+    },
+    "grass-dry-patch-commons": {
+      "path": "/assets/game/library/grass/grass-dry-patch-commons.webp",
+      "skipped": true
+    },
+    "grass-dry-patch-elderwood": {
+      "path": "/assets/game/library/grass/grass-dry-patch-elderwood.webp",
+      "skipped": true
+    },
+    "grass-dry-patch-ember": {
+      "path": "/assets/game/library/grass/grass-dry-patch-ember.webp",
+      "skipped": true
+    },
+    "grass-reed-commons": {
+      "path": "/assets/game/library/grass/grass-reed-commons.webp",
+      "skipped": true
+    },
+    "grass-reed-elderwood": {
+      "path": "/assets/game/library/grass/grass-reed-elderwood.webp",
+      "skipped": true
+    },
+    "grass-fern-floor-commons": {
+      "path": "/assets/game/library/grass/grass-fern-floor-commons.webp",
+      "skipped": true
+    },
+    "grass-reed-ember": {
+      "path": "/assets/game/library/grass/grass-reed-ember.webp",
+      "skipped": true
+    },
+    "grass-fern-floor-elderwood": {
+      "path": "/assets/game/library/grass/grass-fern-floor-elderwood.webp",
+      "skipped": true
+    },
+    "grass-fern-floor-ember": {
+      "path": "/assets/game/library/grass/grass-fern-floor-ember.webp",
+      "skipped": true
+    },
+    "grass-moss-carpet-commons": {
+      "path": "/assets/game/library/grass/grass-moss-carpet-commons.webp",
+      "skipped": true
+    },
+    "grass-moss-carpet-elderwood": {
+      "path": "/assets/game/library/grass/grass-moss-carpet-elderwood.webp",
+      "skipped": true
+    },
+    "grass-moss-carpet-ember": {
+      "path": "/assets/game/library/grass/grass-moss-carpet-ember.webp",
+      "skipped": true
+    },
+    "grass-wildflower-mix-commons": {
+      "path": "/assets/game/library/grass/grass-wildflower-mix-commons.webp",
+      "skipped": true
+    },
+    "grass-wildflower-mix-elderwood": {
+      "path": "/assets/game/library/grass/grass-wildflower-mix-elderwood.webp",
+      "skipped": true
+    },
+    "grass-wildflower-mix-ember": {
+      "path": "/assets/game/library/grass/grass-wildflower-mix-ember.webp",
+      "skipped": true
+    },
+    "grass-path-edge-commons": {
+      "path": "/assets/game/library/grass/grass-path-edge-commons.webp",
+      "skipped": true
+    },
+    "grass-path-edge-elderwood": {
+      "path": "/assets/game/library/grass/grass-path-edge-elderwood.webp",
+      "skipped": true
+    },
+    "grass-path-edge-ember": {
+      "path": "/assets/game/library/grass/grass-path-edge-ember.webp",
+      "skipped": true
+    },
+    "grass-plaza-crack-commons": {
+      "path": "/assets/game/library/grass/grass-plaza-crack-commons.webp",
+      "skipped": true
+    },
+    "grass-plaza-crack-elderwood": {
+      "path": "/assets/game/library/grass/grass-plaza-crack-elderwood.webp",
+      "skipped": true
+    },
+    "grass-plaza-crack-ember": {
+      "path": "/assets/game/library/grass/grass-plaza-crack-ember.webp",
+      "skipped": true
+    },
+    "grass-rift-glow-grass-commons": {
+      "path": "/assets/game/library/grass/grass-rift-glow-grass-commons.webp",
+      "skipped": true
+    },
+    "grass-rift-glow-grass-elderwood": {
+      "path": "/assets/game/library/grass/grass-rift-glow-grass-elderwood.webp",
+      "skipped": true
+    },
+    "mushroom-cap-amber-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-cap-amber-small.webp",
+      "skipped": true
+    },
+    "grass-rift-glow-grass-ember": {
+      "path": "/assets/game/library/grass/grass-rift-glow-grass-ember.webp",
+      "skipped": true
+    },
+    "mushroom-cap-cyan-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-cap-cyan-small.webp",
+      "skipped": true
+    },
+    "mushroom-cap-amber-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-cap-amber-large.webp",
+      "skipped": true
+    },
+    "mushroom-shelf-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-shelf-small.webp",
+      "skipped": true
+    },
+    "mushroom-cap-cyan-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-cap-cyan-large.webp",
+      "skipped": true
+    },
+    "mushroom-cluster-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-cluster-small.webp",
+      "skipped": true
+    },
+    "mushroom-shelf-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-shelf-large.webp",
+      "skipped": true
+    },
+    "mushroom-glow-spore-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-glow-spore-small.webp",
+      "skipped": true
+    },
+    "mushroom-cluster-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-cluster-large.webp",
+      "skipped": true
+    },
+    "mushroom-hollow-stem-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-hollow-stem-small.webp",
+      "skipped": true
+    },
+    "mushroom-glow-spore-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-glow-spore-large.webp",
+      "skipped": true
+    },
+    "mushroom-rift-morel-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-rift-morel-small.webp",
+      "skipped": true
+    },
+    "mushroom-hollow-stem-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-hollow-stem-large.webp",
+      "skipped": true
+    },
+    "mushroom-ember-puff-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-ember-puff-small.webp",
+      "skipped": true
+    },
+    "mushroom-rift-morel-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-rift-morel-large.webp",
+      "skipped": true
+    },
+    "mushroom-frost-cap-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-frost-cap-small.webp",
+      "skipped": true
+    },
+    "mushroom-ember-puff-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-ember-puff-large.webp",
+      "skipped": true
+    },
+    "mushroom-tide-gill-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-tide-gill-small.webp",
+      "skipped": true
+    },
+    "mushroom-frost-cap-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-frost-cap-large.webp",
+      "skipped": true
+    },
+    "mushroom-spirit-bell-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-spirit-bell-small.webp",
+      "skipped": true
+    },
+    "mushroom-tide-gill-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-tide-gill-large.webp",
+      "skipped": true
+    },
+    "mushroom-stone-bracket-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-stone-bracket-small.webp",
+      "skipped": true
+    },
+    "mushroom-spirit-bell-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-spirit-bell-large.webp",
+      "skipped": true
+    },
+    "mushroom-stone-bracket-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-stone-bracket-large.webp",
+      "skipped": true
+    },
+    "mushroom-storm-umbrella-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-storm-umbrella-small.webp",
+      "skipped": true
+    },
+    "mushroom-alloy-disk-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-alloy-disk-small.webp",
+      "skipped": true
+    },
+    "mushroom-storm-umbrella-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-storm-umbrella-large.webp",
+      "skipped": true
+    },
+    "mushroom-grove-ring-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-grove-ring-small.webp",
+      "skipped": true
+    },
+    "mushroom-alloy-disk-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-alloy-disk-large.webp",
+      "skipped": true
+    },
+    "mushroom-grove-ring-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-grove-ring-large.webp",
+      "skipped": true
+    },
+    "mushroom-void-ink-small": {
+      "path": "/assets/game/library/mushrooms/mushroom-void-ink-small.webp",
+      "skipped": true
+    },
+    "mushroom-void-ink-large": {
+      "path": "/assets/game/library/mushrooms/mushroom-void-ink-large.webp",
+      "skipped": true
+    },
+    "vine-wall-ivy-small": {
+      "path": "/assets/game/library/vines/vine-wall-ivy-small.webp",
+      "skipped": true
+    },
+    "vine-wall-ivy-large": {
+      "path": "/assets/game/library/vines/vine-wall-ivy-large.webp",
+      "skipped": true
+    },
+    "vine-arch-hang-small": {
+      "path": "/assets/game/library/vines/vine-arch-hang-small.webp",
+      "skipped": true
+    },
+    "vine-arch-hang-large": {
+      "path": "/assets/game/library/vines/vine-arch-hang-large.webp",
+      "skipped": true
+    },
+    "vine-ground-creep-small": {
+      "path": "/assets/game/library/vines/vine-ground-creep-small.webp",
+      "skipped": true
+    },
+    "vine-ground-creep-large": {
+      "path": "/assets/game/library/vines/vine-ground-creep-large.webp",
+      "skipped": true
+    },
+    "vine-rift-tendril-small": {
+      "path": "/assets/game/library/vines/vine-rift-tendril-small.webp",
+      "skipped": true
+    },
+    "vine-rift-tendril-large": {
+      "path": "/assets/game/library/vines/vine-rift-tendril-large.webp",
+      "skipped": true
+    },
+    "vine-ember-vine-small": {
+      "path": "/assets/game/library/vines/vine-ember-vine-small.webp",
+      "skipped": true
+    },
+    "vine-ember-vine-large": {
+      "path": "/assets/game/library/vines/vine-ember-vine-large.webp",
+      "skipped": true
+    },
+    "vine-frost-lace-small": {
+      "path": "/assets/game/library/vines/vine-frost-lace-small.webp",
+      "skipped": true
+    },
+    "vine-frost-lace-large": {
+      "path": "/assets/game/library/vines/vine-frost-lace-large.webp",
+      "skipped": true
+    },
+    "vine-tide-kelp-rope-small": {
+      "path": "/assets/game/library/vines/vine-tide-kelp-rope-small.webp",
+      "skipped": true
+    },
+    "vine-tide-kelp-rope-large": {
+      "path": "/assets/game/library/vines/vine-tide-kelp-rope-large.webp",
+      "skipped": true
+    },
+    "vine-spirit-thread-small": {
+      "path": "/assets/game/library/vines/vine-spirit-thread-small.webp",
+      "skipped": true
+    },
+    "vine-spirit-thread-large": {
+      "path": "/assets/game/library/vines/vine-spirit-thread-large.webp",
+      "skipped": true
+    },
+    "vine-stone-root-small": {
+      "path": "/assets/game/library/vines/vine-stone-root-small.webp",
+      "skipped": true
+    },
+    "vine-stone-root-large": {
+      "path": "/assets/game/library/vines/vine-stone-root-large.webp",
+      "skipped": true
+    },
+    "vine-storm-wire-small": {
+      "path": "/assets/game/library/vines/vine-storm-wire-small.webp",
+      "skipped": true
+    },
+    "vine-storm-wire-large": {
+      "path": "/assets/game/library/vines/vine-storm-wire-large.webp",
+      "skipped": true
+    },
+    "rock-boulder-moss": {
+      "path": "/assets/game/library/rocks/rock-boulder-moss.webp",
+      "skipped": true
+    },
+    "rock-boulder-amber": {
+      "path": "/assets/game/library/rocks/rock-boulder-amber.webp",
+      "skipped": true
+    },
+    "rock-boulder-cyan": {
+      "path": "/assets/game/library/rocks/rock-boulder-cyan.webp",
+      "skipped": true
+    },
+    "rock-pile-moss": {
+      "path": "/assets/game/library/rocks/rock-pile-moss.webp",
+      "skipped": true
+    },
+    "rock-pile-amber": {
+      "path": "/assets/game/library/rocks/rock-pile-amber.webp",
+      "skipped": true
+    },
+    "rock-pile-cyan": {
+      "path": "/assets/game/library/rocks/rock-pile-cyan.webp",
+      "skipped": true
+    },
+    "rock-flat-slab-moss": {
+      "path": "/assets/game/library/rocks/rock-flat-slab-moss.webp",
+      "skipped": true
+    },
+    "rock-flat-slab-amber": {
+      "path": "/assets/game/library/rocks/rock-flat-slab-amber.webp",
+      "skipped": true
+    },
+    "rock-flat-slab-cyan": {
+      "path": "/assets/game/library/rocks/rock-flat-slab-cyan.webp",
+      "skipped": true
+    },
+    "rock-spire-moss": {
+      "path": "/assets/game/library/rocks/rock-spire-moss.webp",
+      "skipped": true
+    },
+    "rock-spire-amber": {
+      "path": "/assets/game/library/rocks/rock-spire-amber.webp",
+      "skipped": true
+    },
+    "rock-spire-cyan": {
+      "path": "/assets/game/library/rocks/rock-spire-cyan.webp",
+      "skipped": true
+    },
+    "rock-moss-rock-moss": {
+      "path": "/assets/game/library/rocks/rock-moss-rock-moss.webp",
+      "skipped": true
+    },
+    "rock-moss-rock-amber": {
+      "path": "/assets/game/library/rocks/rock-moss-rock-amber.webp",
+      "skipped": true
+    },
+    "rock-moss-rock-cyan": {
+      "path": "/assets/game/library/rocks/rock-moss-rock-cyan.webp",
+      "skipped": true
+    },
+    "rock-rift-shard-amber": {
+      "path": "/assets/game/library/rocks/rock-rift-shard-amber.webp",
+      "skipped": true
+    },
+    "rock-rift-shard-moss": {
+      "path": "/assets/game/library/rocks/rock-rift-shard-moss.webp",
+      "skipped": true
+    },
+    "rock-rift-shard-cyan": {
+      "path": "/assets/game/library/rocks/rock-rift-shard-cyan.webp",
+      "skipped": true
+    },
+    "rock-ember-scoria-moss": {
+      "path": "/assets/game/library/rocks/rock-ember-scoria-moss.webp",
+      "skipped": true
+    },
+    "rock-ember-scoria-amber": {
+      "path": "/assets/game/library/rocks/rock-ember-scoria-amber.webp",
+      "skipped": true
+    },
+    "rock-ember-scoria-cyan": {
+      "path": "/assets/game/library/rocks/rock-ember-scoria-cyan.webp",
+      "skipped": true
+    },
+    "rock-frost-chunk-moss": {
+      "path": "/assets/game/library/rocks/rock-frost-chunk-moss.webp",
+      "skipped": true
+    },
+    "rock-frost-chunk-amber": {
+      "path": "/assets/game/library/rocks/rock-frost-chunk-amber.webp",
+      "skipped": true
+    },
+    "rock-frost-chunk-cyan": {
+      "path": "/assets/game/library/rocks/rock-frost-chunk-cyan.webp",
+      "skipped": true
+    },
+    "rock-tide-smooth-moss": {
+      "path": "/assets/game/library/rocks/rock-tide-smooth-moss.webp",
+      "skipped": true
+    },
+    "rock-tide-smooth-cyan": {
+      "path": "/assets/game/library/rocks/rock-tide-smooth-cyan.webp",
+      "skipped": true
+    },
+    "rock-tide-smooth-amber": {
+      "path": "/assets/game/library/rocks/rock-tide-smooth-amber.webp",
+      "skipped": true
+    },
+    "road-straight-fresh": {
+      "path": "/assets/game/library/roads/road-straight-fresh.webp",
+      "skipped": true
+    },
+    "rock-spirit-orb-stone-amber": {
+      "path": "/assets/game/library/rocks/rock-spirit-orb-stone-amber.webp",
+      "skipped": true
+    },
+    "rock-spirit-orb-stone-cyan": {
+      "path": "/assets/game/library/rocks/rock-spirit-orb-stone-cyan.webp",
+      "skipped": true
+    },
+    "rock-spirit-orb-stone-moss": {
+      "path": "/assets/game/library/rocks/rock-spirit-orb-stone-moss.webp",
+      "skipped": true
+    },
+    "road-curve-worn": {
+      "path": "/assets/game/library/roads/road-curve-worn.webp",
+      "skipped": true
+    },
+    "road-tee-fresh": {
+      "path": "/assets/game/library/roads/road-tee-fresh.webp",
+      "skipped": true
+    },
+    "road-straight-worn": {
+      "path": "/assets/game/library/roads/road-straight-worn.webp",
+      "skipped": true
+    },
+    "road-curve-fresh": {
+      "path": "/assets/game/library/roads/road-curve-fresh.webp",
+      "skipped": true
+    },
+    "road-worn-fresh": {
+      "path": "/assets/game/library/roads/road-worn-fresh.webp",
+      "skipped": true
+    },
+    "road-cross-worn": {
+      "path": "/assets/game/library/roads/road-cross-worn.webp",
+      "skipped": true
+    },
+    "road-cross-fresh": {
+      "path": "/assets/game/library/roads/road-cross-fresh.webp",
+      "skipped": true
+    },
+    "road-tee-worn": {
+      "path": "/assets/game/library/roads/road-tee-worn.webp",
+      "skipped": true
+    },
+    "road-cobble-fresh": {
+      "path": "/assets/game/library/roads/road-cobble-fresh.webp",
+      "skipped": true
+    },
+    "road-worn-worn": {
+      "path": "/assets/game/library/roads/road-worn-worn.webp",
+      "skipped": true
+    },
+    "road-cobble-worn": {
+      "path": "/assets/game/library/roads/road-cobble-worn.webp",
+      "skipped": true
+    },
+    "road-dirt-fresh": {
+      "path": "/assets/game/library/roads/road-dirt-fresh.webp",
+      "skipped": true
+    },
+    "road-dirt-worn": {
+      "path": "/assets/game/library/roads/road-dirt-worn.webp",
+      "skipped": true
+    },
+    "road-mossy-fresh": {
+      "path": "/assets/game/library/roads/road-mossy-fresh.webp",
+      "skipped": true
+    },
+    "road-mossy-worn": {
+      "path": "/assets/game/library/roads/road-mossy-worn.webp",
+      "skipped": true
+    },
+    "road-plaza-edge-fresh": {
+      "path": "/assets/game/library/roads/road-plaza-edge-fresh.webp",
+      "skipped": true
+    },
+    "road-plaza-edge-worn": {
+      "path": "/assets/game/library/roads/road-plaza-edge-worn.webp",
+      "skipped": true
+    },
+    "road-bridge-approach-fresh": {
+      "path": "/assets/game/library/roads/road-bridge-approach-fresh.webp",
+      "skipped": true
+    },
+    "road-gate-threshold-fresh": {
+      "path": "/assets/game/library/roads/road-gate-threshold-fresh.webp",
+      "skipped": true
+    },
+    "road-bridge-approach-worn": {
+      "path": "/assets/game/library/roads/road-bridge-approach-worn.webp",
+      "skipped": true
+    },
+    "road-gate-threshold-worn": {
+      "path": "/assets/game/library/roads/road-gate-threshold-worn.webp",
+      "skipped": true
+    },
+    "road-alley-fresh": {
+      "path": "/assets/game/library/roads/road-alley-fresh.webp",
+      "skipped": true
+    },
+    "road-alley-worn": {
+      "path": "/assets/game/library/roads/road-alley-worn.webp",
+      "skipped": true
+    },
+    "water-pool-clear": {
+      "path": "/assets/game/library/water/water-pool-clear.webp",
+      "skipped": true
+    },
+    "water-stream-clear": {
+      "path": "/assets/game/library/water/water-stream-clear.webp",
+      "skipped": true
+    },
+    "water-pool-deep": {
+      "path": "/assets/game/library/water/water-pool-deep.webp",
+      "skipped": true
+    },
+    "water-stream-deep": {
+      "path": "/assets/game/library/water/water-stream-deep.webp",
+      "skipped": true
+    },
+    "water-ripple-clear": {
+      "path": "/assets/game/library/water/water-ripple-clear.webp",
+      "skipped": true
+    },
+    "water-ripple-deep": {
+      "path": "/assets/game/library/water/water-ripple-deep.webp",
+      "skipped": true
+    },
+    "water-foam-clear": {
+      "path": "/assets/game/library/water/water-foam-clear.webp",
+      "skipped": true
+    },
+    "water-foam-deep": {
+      "path": "/assets/game/library/water/water-foam-deep.webp",
+      "skipped": true
+    },
+    "water-shore-clear": {
+      "path": "/assets/game/library/water/water-shore-clear.webp",
+      "skipped": true
+    },
+    "water-shore-deep": {
+      "path": "/assets/game/library/water/water-shore-deep.webp",
+      "skipped": true
+    },
+    "water-deep-clear": {
+      "path": "/assets/game/library/water/water-deep-clear.webp",
+      "skipped": true
+    },
+    "water-deep-deep": {
+      "path": "/assets/game/library/water/water-deep-deep.webp",
+      "skipped": true
+    },
+    "water-shallow-clear": {
+      "path": "/assets/game/library/water/water-shallow-clear.webp",
+      "skipped": true
+    },
+    "water-shallow-deep": {
+      "path": "/assets/game/library/water/water-shallow-deep.webp",
+      "skipped": true
+    },
+    "water-waterfall-base-clear": {
+      "path": "/assets/game/library/water/water-waterfall-base-clear.webp",
+      "skipped": true
+    },
+    "water-waterfall-base-deep": {
+      "path": "/assets/game/library/water/water-waterfall-base-deep.webp",
+      "skipped": true
+    },
+    "decal-path-wear": {
+      "path": "/assets/game/library/terrain/decal-path-wear.webp",
+      "skipped": true
+    },
+    "decal-mud-splash": {
+      "path": "/assets/game/library/terrain/decal-mud-splash.webp",
+      "skipped": true
+    },
+    "decal-leaf-litter": {
+      "path": "/assets/game/library/terrain/decal-leaf-litter.webp",
+      "skipped": true
+    },
+    "decal-petal-scatter": {
+      "path": "/assets/game/library/terrain/decal-petal-scatter.webp",
+      "skipped": true
+    },
+    "decal-ash-dust": {
+      "path": "/assets/game/library/terrain/decal-ash-dust.webp",
+      "skipped": true
+    },
+    "decal-frost-rime": {
+      "path": "/assets/game/library/terrain/decal-frost-rime.webp",
+      "skipped": true
+    },
+    "decal-sand-drift": {
+      "path": "/assets/game/library/terrain/decal-sand-drift.webp",
+      "skipped": true
+    },
+    "decal-moss-patch": {
+      "path": "/assets/game/library/terrain/decal-moss-patch.webp",
+      "skipped": true
+    },
+    "decal-crack-line": {
+      "path": "/assets/game/library/terrain/decal-crack-line.webp",
+      "skipped": true
+    },
+    "decal-rift-glow-mark": {
+      "path": "/assets/game/library/terrain/decal-rift-glow-mark.webp",
+      "skipped": true
+    },
+    "decal-wagon-rut": {
+      "path": "/assets/game/library/terrain/decal-wagon-rut.webp",
+      "skipped": true
+    },
+    "decal-footprint-trail": {
+      "path": "/assets/game/library/terrain/decal-footprint-trail.webp",
+      "skipped": true
+    },
+    "decal-oil-spot": {
+      "path": "/assets/game/library/terrain/decal-oil-spot.webp",
+      "skipped": true
+    },
+    "decal-grain-spill": {
+      "path": "/assets/game/library/terrain/decal-grain-spill.webp",
+      "skipped": true
+    },
+    "decal-herb-scatter": {
+      "path": "/assets/game/library/terrain/decal-herb-scatter.webp",
+      "skipped": true
+    },
+    "decal-sparkle-dust": {
+      "path": "/assets/game/library/terrain/decal-sparkle-dust.webp",
+      "skipped": true
+    },
+    "decal-shadow-soft": {
+      "path": "/assets/game/library/terrain/decal-shadow-soft.webp",
+      "skipped": true
+    },
+    "decal-shadow-hard": {
+      "path": "/assets/game/library/terrain/decal-shadow-hard.webp",
+      "skipped": true
+    },
+    "decal-puddle": {
+      "path": "/assets/game/library/terrain/decal-puddle.webp",
+      "skipped": true
+    },
+    "decal-snow-drift": {
+      "path": "/assets/game/library/terrain/decal-snow-drift.webp",
+      "skipped": true
+    },
+    "wall-timber-front": {
+      "path": "/assets/game/library/buildings/wall-timber-front.webp",
+      "skipped": true
+    },
+    "wall-timber-side": {
+      "path": "/assets/game/library/buildings/wall-timber-side.webp",
+      "skipped": true
+    },
+    "wall-timber-corner": {
+      "path": "/assets/game/library/buildings/wall-timber-corner.webp",
+      "skipped": true
+    },
+    "wall-timber-damaged": {
+      "path": "/assets/game/library/buildings/wall-timber-damaged.webp",
+      "skipped": true
+    },
+    "wall-stone-front": {
+      "path": "/assets/game/library/buildings/wall-stone-front.webp",
+      "skipped": true
+    },
+    "wall-stone-side": {
+      "path": "/assets/game/library/buildings/wall-stone-side.webp",
+      "skipped": true
+    },
+    "wall-stone-corner": {
+      "path": "/assets/game/library/buildings/wall-stone-corner.webp",
+      "skipped": true
+    },
+    "wall-stone-damaged": {
+      "path": "/assets/game/library/buildings/wall-stone-damaged.webp",
+      "skipped": true
+    },
+    "wall-mixed-front": {
+      "path": "/assets/game/library/buildings/wall-mixed-front.webp",
+      "skipped": true
+    },
+    "wall-mixed-side": {
+      "path": "/assets/game/library/buildings/wall-mixed-side.webp",
+      "skipped": true
+    },
+    "wall-mixed-corner": {
+      "path": "/assets/game/library/buildings/wall-mixed-corner.webp",
+      "skipped": true
+    },
+    "wall-mixed-damaged": {
+      "path": "/assets/game/library/buildings/wall-mixed-damaged.webp",
+      "skipped": true
+    },
+    "wall-adobe-side": {
+      "path": "/assets/game/library/buildings/wall-adobe-side.webp",
+      "skipped": true
+    },
+    "wall-adobe-front": {
+      "path": "/assets/game/library/buildings/wall-adobe-front.webp",
+      "skipped": true
+    },
+    "wall-adobe-damaged": {
+      "path": "/assets/game/library/buildings/wall-adobe-damaged.webp",
+      "skipped": true
+    },
+    "wall-adobe-corner": {
+      "path": "/assets/game/library/buildings/wall-adobe-corner.webp",
+      "skipped": true
+    },
+    "wall-rift-inlaid-front": {
+      "path": "/assets/game/library/buildings/wall-rift-inlaid-front.webp",
+      "skipped": true
+    },
+    "wall-rift-inlaid-side": {
+      "path": "/assets/game/library/buildings/wall-rift-inlaid-side.webp",
+      "skipped": true
+    },
+    "wall-rift-inlaid-damaged": {
+      "path": "/assets/game/library/buildings/wall-rift-inlaid-damaged.webp",
+      "skipped": true
+    },
+    "wall-rift-inlaid-corner": {
+      "path": "/assets/game/library/buildings/wall-rift-inlaid-corner.webp",
+      "skipped": true
+    },
+    "roof-thatch-low": {
+      "path": "/assets/game/library/buildings/roof-thatch-low.webp",
+      "skipped": true
+    },
+    "roof-thatch-steep": {
+      "path": "/assets/game/library/buildings/roof-thatch-steep.webp",
+      "skipped": true
+    },
+    "roof-thatch-hip": {
+      "path": "/assets/game/library/buildings/roof-thatch-hip.webp",
+      "skipped": true
+    },
+    "roof-tile-low": {
+      "path": "/assets/game/library/buildings/roof-tile-low.webp",
+      "skipped": true
+    },
+    "roof-tile-steep": {
+      "path": "/assets/game/library/buildings/roof-tile-steep.webp",
+      "skipped": true
+    },
+    "roof-tile-hip": {
+      "path": "/assets/game/library/buildings/roof-tile-hip.webp",
+      "skipped": true
+    },
+    "roof-slate-low": {
+      "path": "/assets/game/library/buildings/roof-slate-low.webp",
+      "skipped": true
+    },
+    "roof-slate-steep": {
+      "path": "/assets/game/library/buildings/roof-slate-steep.webp",
+      "skipped": true
+    },
+    "roof-shingle-low": {
+      "path": "/assets/game/library/buildings/roof-shingle-low.webp",
+      "skipped": true
+    },
+    "roof-slate-hip": {
+      "path": "/assets/game/library/buildings/roof-slate-hip.webp",
+      "skipped": true
+    },
+    "roof-shingle-hip": {
+      "path": "/assets/game/library/buildings/roof-shingle-hip.webp",
+      "skipped": true
+    },
+    "roof-shingle-steep": {
+      "path": "/assets/game/library/buildings/roof-shingle-steep.webp",
+      "skipped": true
+    },
+    "door-plank-closed": {
+      "path": "/assets/game/library/buildings/door-plank-closed.webp",
+      "skipped": true
+    },
+    "roof-copper-rift-steep": {
+      "path": "/assets/game/library/buildings/roof-copper-rift-steep.webp",
+      "skipped": true
+    },
+    "roof-copper-rift-low": {
+      "path": "/assets/game/library/buildings/roof-copper-rift-low.webp",
+      "skipped": true
+    },
+    "roof-copper-rift-hip": {
+      "path": "/assets/game/library/buildings/roof-copper-rift-hip.webp",
+      "skipped": true
+    },
+    "door-plank-ajar": {
+      "path": "/assets/game/library/buildings/door-plank-ajar.webp",
+      "skipped": true
+    },
+    "door-plank-open": {
+      "path": "/assets/game/library/buildings/door-plank-open.webp",
+      "skipped": true
+    },
+    "door-arched-closed": {
+      "path": "/assets/game/library/buildings/door-arched-closed.webp",
+      "skipped": true
+    },
+    "door-arched-open": {
+      "path": "/assets/game/library/buildings/door-arched-open.webp",
+      "skipped": true
+    },
+    "door-arched-ajar": {
+      "path": "/assets/game/library/buildings/door-arched-ajar.webp",
+      "skipped": true
+    },
+    "door-iron-band-closed": {
+      "path": "/assets/game/library/buildings/door-iron-band-closed.webp",
+      "skipped": true
+    },
+    "door-iron-band-ajar": {
+      "path": "/assets/game/library/buildings/door-iron-band-ajar.webp",
+      "skipped": true
+    },
+    "door-stable-closed": {
+      "path": "/assets/game/library/buildings/door-stable-closed.webp",
+      "skipped": true
+    },
+    "door-iron-band-open": {
+      "path": "/assets/game/library/buildings/door-iron-band-open.webp",
+      "skipped": true
+    },
+    "door-stable-ajar": {
+      "path": "/assets/game/library/buildings/door-stable-ajar.webp",
+      "skipped": true
+    },
+    "door-stable-open": {
+      "path": "/assets/game/library/buildings/door-stable-open.webp",
+      "skipped": true
+    },
+    "door-shuttered-closed": {
+      "path": "/assets/game/library/buildings/door-shuttered-closed.webp",
+      "skipped": true
+    },
+    "door-shuttered-ajar": {
+      "path": "/assets/game/library/buildings/door-shuttered-ajar.webp",
+      "skipped": true
+    },
+    "door-rift-glyph-closed": {
+      "path": "/assets/game/library/buildings/door-rift-glyph-closed.webp",
+      "skipped": true
+    },
+    "door-shuttered-open": {
+      "path": "/assets/game/library/buildings/door-shuttered-open.webp",
+      "skipped": true
+    },
+    "door-rift-glyph-open": {
+      "path": "/assets/game/library/buildings/door-rift-glyph-open.webp",
+      "skipped": true
+    },
+    "window-square-day": {
+      "path": "/assets/game/library/buildings/window-square-day.webp",
+      "skipped": true
+    },
+    "window-square-shuttered": {
+      "path": "/assets/game/library/buildings/window-square-shuttered.webp",
+      "skipped": true
+    },
+    "window-square-night": {
+      "path": "/assets/game/library/buildings/window-square-night.webp",
+      "skipped": true
+    },
+    "window-arched-night": {
+      "path": "/assets/game/library/buildings/window-arched-night.webp",
+      "skipped": true
+    },
+    "window-arched-day": {
+      "path": "/assets/game/library/buildings/window-arched-day.webp",
+      "skipped": true
+    },
+    "window-arched-shuttered": {
+      "path": "/assets/game/library/buildings/window-arched-shuttered.webp",
+      "skipped": true
+    },
+    "window-lattice-day": {
+      "path": "/assets/game/library/buildings/window-lattice-day.webp",
+      "skipped": true
+    },
+    "window-lattice-shuttered": {
+      "path": "/assets/game/library/buildings/window-lattice-shuttered.webp",
+      "skipped": true
+    },
+    "window-lattice-night": {
+      "path": "/assets/game/library/buildings/window-lattice-night.webp",
+      "skipped": true
+    },
+    "window-stained-amber-day": {
+      "path": "/assets/game/library/buildings/window-stained-amber-day.webp",
+      "skipped": true
+    },
+    "window-stained-amber-night": {
+      "path": "/assets/game/library/buildings/window-stained-amber-night.webp",
+      "skipped": true
+    },
+    "window-stained-amber-shuttered": {
+      "path": "/assets/game/library/buildings/window-stained-amber-shuttered.webp",
+      "skipped": true
+    },
+    "window-shutter-day": {
+      "path": "/assets/game/library/buildings/window-shutter-day.webp",
+      "skipped": true
+    },
+    "window-shutter-night": {
+      "path": "/assets/game/library/buildings/window-shutter-night.webp",
+      "skipped": true
+    },
+    "window-shutter-shuttered": {
+      "path": "/assets/game/library/buildings/window-shutter-shuttered.webp",
+      "skipped": true
+    },
+    "window-rift-pane-day": {
+      "path": "/assets/game/library/buildings/window-rift-pane-day.webp",
+      "skipped": true
+    },
+    "window-rift-pane-night": {
+      "path": "/assets/game/library/buildings/window-rift-pane-night.webp",
+      "skipped": true
+    },
+    "window-rift-pane-shuttered": {
+      "path": "/assets/game/library/buildings/window-rift-pane-shuttered.webp",
+      "skipped": true
+    },
+    "stall-produce": {
+      "path": "/assets/game/library/buildings/stall-produce.webp",
+      "skipped": true
+    },
+    "stall-fish": {
+      "path": "/assets/game/library/buildings/stall-fish.webp",
+      "skipped": true
+    },
+    "stall-cloth": {
+      "path": "/assets/game/library/buildings/stall-cloth.webp",
+      "skipped": true
+    },
+    "stall-tools": {
+      "path": "/assets/game/library/buildings/stall-tools.webp",
+      "skipped": true
+    },
+    "stall-potions": {
+      "path": "/assets/game/library/buildings/stall-potions.webp",
+      "skipped": true
+    },
+    "stall-pets": {
+      "path": "/assets/game/library/buildings/stall-pets.webp",
+      "skipped": true
+    },
+    "stall-books": {
+      "path": "/assets/game/library/buildings/stall-books.webp",
+      "skipped": true
+    },
+    "stall-bakery": {
+      "path": "/assets/game/library/buildings/stall-bakery.webp",
+      "skipped": true
+    },
+    "stall-smithy-stand": {
+      "path": "/assets/game/library/buildings/stall-smithy-stand.webp",
+      "skipped": true
+    },
+    "stall-flower": {
+      "path": "/assets/game/library/buildings/stall-flower.webp",
+      "skipped": true
+    },
+    "stall-maps": {
+      "path": "/assets/game/library/buildings/stall-maps.webp",
+      "skipped": true
+    },
+    "stall-general": {
+      "path": "/assets/game/library/buildings/stall-general.webp",
+      "skipped": true
+    },
+    "fence-wood-post": {
+      "path": "/assets/game/library/buildings/fence-wood-post.webp",
+      "skipped": true
+    },
+    "fence-wood-rail": {
+      "path": "/assets/game/library/buildings/fence-wood-rail.webp",
+      "skipped": true
+    },
+    "fence-stone-low": {
+      "path": "/assets/game/library/buildings/fence-stone-low.webp",
+      "skipped": true
+    },
+    "fence-iron-spike": {
+      "path": "/assets/game/library/buildings/fence-iron-spike.webp",
+      "skipped": true
+    },
+    "fence-hedge": {
+      "path": "/assets/game/library/buildings/fence-hedge.webp",
+      "skipped": true
+    },
+    "fence-rope": {
+      "path": "/assets/game/library/buildings/fence-rope.webp",
+      "skipped": true
+    },
+    "fence-rift-rail": {
+      "path": "/assets/game/library/buildings/fence-rift-rail.webp",
+      "skipped": true
+    },
+    "fence-gate-post": {
+      "path": "/assets/game/library/buildings/fence-gate-post.webp",
+      "skipped": true
+    },
+    "fence-corner": {
+      "path": "/assets/game/library/buildings/fence-corner.webp",
+      "skipped": true
+    },
+    "fence-broken": {
+      "path": "/assets/game/library/buildings/fence-broken.webp",
+      "skipped": true
+    },
+    "fence-orchard": {
+      "path": "/assets/game/library/buildings/fence-orchard.webp",
+      "skipped": true
+    },
+    "fence-dock-rail": {
+      "path": "/assets/game/library/buildings/fence-dock-rail.webp",
+      "skipped": true
+    },
+    "gate-timber": {
+      "path": "/assets/game/library/buildings/gate-timber.webp",
+      "skipped": true
+    },
+    "gate-stone-arch": {
+      "path": "/assets/game/library/buildings/gate-stone-arch.webp",
+      "skipped": true
+    },
+    "gate-iron": {
+      "path": "/assets/game/library/buildings/gate-iron.webp",
+      "skipped": true
+    },
+    "gate-portcullis-stub": {
+      "path": "/assets/game/library/buildings/gate-portcullis-stub.webp",
+      "skipped": true
+    },
+    "gate-garden": {
+      "path": "/assets/game/library/buildings/gate-garden.webp",
+      "skipped": true
+    },
+    "gate-market": {
+      "path": "/assets/game/library/buildings/gate-market.webp",
+      "skipped": true
+    },
+    "gate-plaza": {
+      "path": "/assets/game/library/buildings/gate-plaza.webp",
+      "skipped": true
+    },
+    "gate-rift-seal": {
+      "path": "/assets/game/library/buildings/gate-rift-seal.webp",
+      "skipped": true
+    },
+    "bridge-wood-short": {
+      "path": "/assets/game/library/buildings/bridge-wood-short.webp",
+      "skipped": true
+    },
+    "bridge-wood-long": {
+      "path": "/assets/game/library/buildings/bridge-wood-long.webp",
+      "skipped": true
+    },
+    "bridge-rope": {
+      "path": "/assets/game/library/buildings/bridge-rope.webp",
+      "skipped": true
+    },
+    "bridge-dock-plank": {
+      "path": "/assets/game/library/buildings/bridge-dock-plank.webp",
+      "skipped": true
+    },
+    "bridge-stone-arch": {
+      "path": "/assets/game/library/buildings/bridge-stone-arch.webp",
+      "skipped": true
+    },
+    "bridge-ruin": {
+      "path": "/assets/game/library/buildings/bridge-ruin.webp",
+      "skipped": true
+    },
+    "dock-plank": {
+      "path": "/assets/game/library/buildings/dock-plank.webp",
+      "skipped": true
+    },
+    "dock-pile": {
+      "path": "/assets/game/library/buildings/dock-pile.webp",
+      "skipped": true
+    },
+    "bridge-rift-span": {
+      "path": "/assets/game/library/buildings/bridge-rift-span.webp",
+      "skipped": true
+    },
+    "bridge-covered": {
+      "path": "/assets/game/library/buildings/bridge-covered.webp",
+      "skipped": true
+    },
+    "dock-crate-edge": {
+      "path": "/assets/game/library/buildings/dock-crate-edge.webp",
+      "skipped": true
+    },
+    "dock-ladder": {
+      "path": "/assets/game/library/buildings/dock-ladder.webp",
+      "skipped": true
+    },
+    "dock-bollard": {
+      "path": "/assets/game/library/buildings/dock-bollard.webp",
+      "skipped": true
+    },
+    "dock-net-rack": {
+      "path": "/assets/game/library/buildings/dock-net-rack.webp",
+      "skipped": true
+    },
+    "crate-plain-moss": {
+      "path": "/assets/game/library/props/crate-plain-moss.webp",
+      "skipped": true
+    },
+    "crate-plain-amber": {
+      "path": "/assets/game/library/props/crate-plain-amber.webp",
+      "skipped": true
+    },
+    "crate-plain-cyan": {
+      "path": "/assets/game/library/props/crate-plain-cyan.webp",
+      "skipped": true
+    },
+    "crate-banded-moss": {
+      "path": "/assets/game/library/props/crate-banded-moss.webp",
+      "skipped": true
+    },
+    "crate-banded-amber": {
+      "path": "/assets/game/library/props/crate-banded-amber.webp",
+      "skipped": true
+    },
+    "crate-banded-cyan": {
+      "path": "/assets/game/library/props/crate-banded-cyan.webp",
+      "skipped": true
+    },
+    "crate-open-moss": {
+      "path": "/assets/game/library/props/crate-open-moss.webp",
+      "skipped": true
+    },
+    "crate-open-amber": {
+      "path": "/assets/game/library/props/crate-open-amber.webp",
+      "skipped": true
+    },
+    "crate-open-cyan": {
+      "path": "/assets/game/library/props/crate-open-cyan.webp",
+      "skipped": true
+    },
+    "crate-marked-moss": {
+      "path": "/assets/game/library/props/crate-marked-moss.webp",
+      "skipped": true
+    },
+    "crate-marked-cyan": {
+      "path": "/assets/game/library/props/crate-marked-cyan.webp",
+      "skipped": true
+    },
+    "crate-marked-amber": {
+      "path": "/assets/game/library/props/crate-marked-amber.webp",
+      "skipped": true
+    },
+    "crate-stacked-moss": {
+      "path": "/assets/game/library/props/crate-stacked-moss.webp",
+      "skipped": true
+    },
+    "crate-stacked-amber": {
+      "path": "/assets/game/library/props/crate-stacked-amber.webp",
+      "skipped": true
+    },
+    "crate-stacked-cyan": {
+      "path": "/assets/game/library/props/crate-stacked-cyan.webp",
+      "skipped": true
+    },
+    "crate-rift-sealed-moss": {
+      "path": "/assets/game/library/props/crate-rift-sealed-moss.webp",
+      "skipped": true
+    },
+    "crate-rift-sealed-amber": {
+      "path": "/assets/game/library/props/crate-rift-sealed-amber.webp",
+      "skipped": true
+    },
+    "crate-rift-sealed-cyan": {
+      "path": "/assets/game/library/props/crate-rift-sealed-cyan.webp",
+      "skipped": true
+    },
+    "crate-market-moss": {
+      "path": "/assets/game/library/props/crate-market-moss.webp",
+      "skipped": true
+    },
+    "crate-market-amber": {
+      "path": "/assets/game/library/props/crate-market-amber.webp",
+      "skipped": true
+    },
+    "crate-market-cyan": {
+      "path": "/assets/game/library/props/crate-market-cyan.webp",
+      "skipped": true
+    },
+    "crate-workshop-moss": {
+      "path": "/assets/game/library/props/crate-workshop-moss.webp",
+      "skipped": true
+    },
+    "crate-workshop-amber": {
+      "path": "/assets/game/library/props/crate-workshop-amber.webp",
+      "skipped": true
+    },
+    "crate-workshop-cyan": {
+      "path": "/assets/game/library/props/crate-workshop-cyan.webp",
+      "skipped": true
+    },
+    "barrel-oak-moss": {
+      "path": "/assets/game/library/props/barrel-oak-moss.webp",
+      "skipped": true
+    },
+    "barrel-oak-amber": {
+      "path": "/assets/game/library/props/barrel-oak-amber.webp",
+      "skipped": true
+    },
+    "barrel-oak-cyan": {
+      "path": "/assets/game/library/props/barrel-oak-cyan.webp",
+      "skipped": true
+    },
+    "barrel-iron-ring-moss": {
+      "path": "/assets/game/library/props/barrel-iron-ring-moss.webp",
+      "skipped": true
+    },
+    "barrel-iron-ring-amber": {
+      "path": "/assets/game/library/props/barrel-iron-ring-amber.webp",
+      "skipped": true
+    },
+    "barrel-iron-ring-cyan": {
+      "path": "/assets/game/library/props/barrel-iron-ring-cyan.webp",
+      "skipped": true
+    },
+    "barrel-leaky-moss": {
+      "path": "/assets/game/library/props/barrel-leaky-moss.webp",
+      "skipped": true
+    },
+    "barrel-leaky-amber": {
+      "path": "/assets/game/library/props/barrel-leaky-amber.webp",
+      "skipped": true
+    },
+    "barrel-ember-seal-moss": {
+      "path": "/assets/game/library/props/barrel-ember-seal-moss.webp",
+      "skipped": true
+    },
+    "barrel-leaky-cyan": {
+      "path": "/assets/game/library/props/barrel-leaky-cyan.webp",
+      "skipped": true
+    },
+    "barrel-ember-seal-amber": {
+      "path": "/assets/game/library/props/barrel-ember-seal-amber.webp",
+      "skipped": true
+    },
+    "barrel-ember-seal-cyan": {
+      "path": "/assets/game/library/props/barrel-ember-seal-cyan.webp",
+      "skipped": true
+    },
+    "barrel-tide-seal-amber": {
+      "path": "/assets/game/library/props/barrel-tide-seal-amber.webp",
+      "skipped": true
+    },
+    "barrel-tide-seal-moss": {
+      "path": "/assets/game/library/props/barrel-tide-seal-moss.webp",
+      "skipped": true
+    },
+    "barrel-tide-seal-cyan": {
+      "path": "/assets/game/library/props/barrel-tide-seal-cyan.webp",
+      "skipped": true
+    },
+    "barrel-stacked-moss": {
+      "path": "/assets/game/library/props/barrel-stacked-moss.webp",
+      "skipped": true
+    },
+    "barrel-stacked-amber": {
+      "path": "/assets/game/library/props/barrel-stacked-amber.webp",
+      "skipped": true
+    },
+    "barrel-stacked-cyan": {
+      "path": "/assets/game/library/props/barrel-stacked-cyan.webp",
+      "skipped": true
+    },
+    "barrel-tap-moss": {
+      "path": "/assets/game/library/props/barrel-tap-moss.webp",
+      "skipped": true
+    },
+    "barrel-tap-amber": {
+      "path": "/assets/game/library/props/barrel-tap-amber.webp",
+      "skipped": true
+    },
+    "barrel-tap-cyan": {
+      "path": "/assets/game/library/props/barrel-tap-cyan.webp",
+      "skipped": true
+    },
+    "barrel-painted-moss": {
+      "path": "/assets/game/library/props/barrel-painted-moss.webp",
+      "skipped": true
+    },
+    "barrel-painted-amber": {
+      "path": "/assets/game/library/props/barrel-painted-amber.webp",
+      "skipped": true
+    },
+    "barrel-painted-cyan": {
+      "path": "/assets/game/library/props/barrel-painted-cyan.webp",
+      "skipped": true
+    },
+    "lantern-post": {
+      "path": "/assets/game/library/props/lantern-post.webp",
+      "skipped": true
+    },
+    "lantern-table": {
+      "path": "/assets/game/library/props/lantern-table.webp",
+      "skipped": true
+    },
+    "lantern-hanging": {
+      "path": "/assets/game/library/props/lantern-hanging.webp",
+      "skipped": true
+    },
+    "lantern-rift-glow": {
+      "path": "/assets/game/library/props/lantern-rift-glow.webp",
+      "skipped": true
+    },
+    "lantern-ember": {
+      "path": "/assets/game/library/props/lantern-ember.webp",
+      "skipped": true
+    },
+    "lantern-frost": {
+      "path": "/assets/game/library/props/lantern-frost.webp",
+      "skipped": true
+    },
+    "lantern-paper": {
+      "path": "/assets/game/library/props/lantern-paper.webp",
+      "skipped": true
+    },
+    "lantern-cage": {
+      "path": "/assets/game/library/props/lantern-cage.webp",
+      "skipped": true
+    },
+    "lantern-well": {
+      "path": "/assets/game/library/props/lantern-well.webp",
+      "skipped": true
+    },
+    "lantern-plaza": {
+      "path": "/assets/game/library/props/lantern-plaza.webp",
+      "skipped": true
+    },
+    "lantern-alley": {
+      "path": "/assets/game/library/props/lantern-alley.webp",
+      "skipped": true
+    },
+    "lantern-dock": {
+      "path": "/assets/game/library/props/lantern-dock.webp",
+      "skipped": true
+    },
+    "sign-wood-blank": {
+      "path": "/assets/game/library/props/sign-wood-blank.webp",
+      "skipped": true
+    },
+    "sign-arrow-left": {
+      "path": "/assets/game/library/props/sign-arrow-left.webp",
+      "skipped": true
+    },
+    "sign-arrow-right": {
+      "path": "/assets/game/library/props/sign-arrow-right.webp",
+      "skipped": true
+    },
+    "sign-market": {
+      "path": "/assets/game/library/props/sign-market.webp",
+      "skipped": true
+    },
+    "sign-inn": {
+      "path": "/assets/game/library/props/sign-inn.webp",
+      "skipped": true
+    },
+    "sign-danger": {
+      "path": "/assets/game/library/props/sign-danger.webp",
+      "skipped": true
+    },
+    "sign-portal": {
+      "path": "/assets/game/library/props/sign-portal.webp",
+      "skipped": true
+    },
+    "sign-guild": {
+      "path": "/assets/game/library/props/sign-guild.webp",
+      "skipped": true
+    },
+    "sign-farm": {
+      "path": "/assets/game/library/props/sign-farm.webp",
+      "skipped": true
+    },
+    "sign-training": {
+      "path": "/assets/game/library/props/sign-training.webp",
+      "skipped": true
+    },
+    "sign-keep-out": {
+      "path": "/assets/game/library/props/sign-keep-out.webp",
+      "skipped": true
+    },
+    "sign-welcome": {
+      "path": "/assets/game/library/props/sign-welcome.webp",
+      "skipped": true
+    },
+    "sign-rift-warning": {
+      "path": "/assets/game/library/props/sign-rift-warning.webp",
+      "skipped": true
+    },
+    "sign-fish": {
+      "path": "/assets/game/library/props/sign-fish.webp",
+      "skipped": true
+    },
+    "sign-herbs": {
+      "path": "/assets/game/library/props/sign-herbs.webp",
+      "skipped": true
+    },
+    "sign-forge": {
+      "path": "/assets/game/library/props/sign-forge.webp",
+      "skipped": true
+    },
+    "furniture-bench": {
+      "path": "/assets/game/library/props/furniture-bench.webp",
+      "skipped": true
+    },
+    "furniture-table": {
+      "path": "/assets/game/library/props/furniture-table.webp",
+      "skipped": true
+    },
+    "furniture-stool": {
+      "path": "/assets/game/library/props/furniture-stool.webp",
+      "skipped": true
+    },
+    "furniture-shelf": {
+      "path": "/assets/game/library/props/furniture-shelf.webp",
+      "skipped": true
+    },
+    "furniture-chest": {
+      "path": "/assets/game/library/props/furniture-chest.webp",
+      "skipped": true
+    },
+    "furniture-bed-frame": {
+      "path": "/assets/game/library/props/furniture-bed-frame.webp",
+      "skipped": true
+    },
+    "furniture-loom": {
+      "path": "/assets/game/library/props/furniture-loom.webp",
+      "skipped": true
+    },
+    "furniture-anvil-stand": {
+      "path": "/assets/game/library/props/furniture-anvil-stand.webp",
+      "skipped": true
+    },
+    "furniture-desk": {
+      "path": "/assets/game/library/props/furniture-desk.webp",
+      "skipped": true
+    },
+    "furniture-bookcase": {
+      "path": "/assets/game/library/props/furniture-bookcase.webp",
+      "skipped": true
+    },
+    "furniture-crate-seat": {
+      "path": "/assets/game/library/props/furniture-crate-seat.webp",
+      "skipped": true
+    },
+    "furniture-picnic": {
+      "path": "/assets/game/library/props/furniture-picnic.webp",
+      "skipped": true
+    },
+    "furniture-altar-slab": {
+      "path": "/assets/game/library/props/furniture-altar-slab.webp",
+      "skipped": true
+    },
+    "furniture-counter": {
+      "path": "/assets/game/library/props/furniture-counter.webp",
+      "skipped": true
+    },
+    "furniture-rack": {
+      "path": "/assets/game/library/props/furniture-rack.webp",
+      "skipped": true
+    },
+    "furniture-trough": {
+      "path": "/assets/game/library/props/furniture-trough.webp",
+      "skipped": true
+    },
+    "furniture-well-crank": {
+      "path": "/assets/game/library/props/furniture-well-crank.webp",
+      "skipped": true
+    },
+    "furniture-wheelbarrow": {
+      "path": "/assets/game/library/props/furniture-wheelbarrow.webp",
+      "skipped": true
+    },
+    "furniture-cart": {
+      "path": "/assets/game/library/props/furniture-cart.webp",
+      "skipped": true
+    },
+    "furniture-ladder": {
+      "path": "/assets/game/library/props/furniture-ladder.webp",
+      "skipped": true
+    },
+    "tool-hammer": {
+      "path": "/assets/game/library/props/tool-hammer.webp",
+      "skipped": true
+    },
+    "tool-axe": {
+      "path": "/assets/game/library/props/tool-axe.webp",
+      "skipped": true
+    },
+    "tool-pick": {
+      "path": "/assets/game/library/props/tool-pick.webp",
+      "skipped": true
+    },
+    "tool-hoe": {
+      "path": "/assets/game/library/props/tool-hoe.webp",
+      "skipped": true
+    },
+    "tool-saw": {
+      "path": "/assets/game/library/props/tool-saw.webp",
+      "skipped": true
+    },
+    "tool-fishing-rod": {
+      "path": "/assets/game/library/props/tool-fishing-rod.webp",
+      "skipped": true
+    },
+    "tool-tongs": {
+      "path": "/assets/game/library/props/tool-tongs.webp",
+      "skipped": true
+    },
+    "tool-ladle": {
+      "path": "/assets/game/library/props/tool-ladle.webp",
+      "skipped": true
+    },
+    "tool-broom": {
+      "path": "/assets/game/library/props/tool-broom.webp",
+      "skipped": true
+    },
+    "tool-shovel": {
+      "path": "/assets/game/library/props/tool-shovel.webp",
+      "skipped": true
+    },
+    "tool-sickle": {
+      "path": "/assets/game/library/props/tool-sickle.webp",
+      "skipped": true
+    },
+    "tool-net": {
+      "path": "/assets/game/library/props/tool-net.webp",
+      "skipped": true
+    },
+    "tool-chisel": {
+      "path": "/assets/game/library/props/tool-chisel.webp",
+      "skipped": true
+    },
+    "tool-quill": {
+      "path": "/assets/game/library/props/tool-quill.webp",
+      "skipped": true
+    },
+    "tool-lantern-hand": {
+      "path": "/assets/game/library/props/tool-lantern-hand.webp",
+      "skipped": true
+    },
+    "tool-rope-coil": {
+      "path": "/assets/game/library/props/tool-rope-coil.webp",
+      "skipped": true
+    },
+    "goods-apple-crate": {
+      "path": "/assets/game/library/props/goods-apple-crate.webp",
+      "skipped": true
+    },
+    "goods-herb-bundle": {
+      "path": "/assets/game/library/props/goods-herb-bundle.webp",
+      "skipped": true
+    },
+    "goods-fish-basket": {
+      "path": "/assets/game/library/props/goods-fish-basket.webp",
+      "skipped": true
+    },
+    "goods-cloth-roll": {
+      "path": "/assets/game/library/props/goods-cloth-roll.webp",
+      "skipped": true
+    },
+    "goods-pottery": {
+      "path": "/assets/game/library/props/goods-pottery.webp",
+      "skipped": true
+    },
+    "goods-spice-sack": {
+      "path": "/assets/game/library/props/goods-spice-sack.webp",
+      "skipped": true
+    },
+    "goods-cheese-wheel": {
+      "path": "/assets/game/library/props/goods-cheese-wheel.webp",
+      "skipped": true
+    },
+    "goods-bread-board": {
+      "path": "/assets/game/library/props/goods-bread-board.webp",
+      "skipped": true
+    },
+    "goods-egg-basket": {
+      "path": "/assets/game/library/props/goods-egg-basket.webp",
+      "skipped": true
+    },
+    "goods-crystal-tray": {
+      "path": "/assets/game/library/props/goods-crystal-tray.webp",
+      "skipped": true
+    },
+    "goods-flower-pot": {
+      "path": "/assets/game/library/props/goods-flower-pot.webp",
+      "skipped": true
+    },
+    "goods-honey-jar": {
+      "path": "/assets/game/library/props/goods-honey-jar.webp",
+      "skipped": true
+    },
+    "goods-map-scroll": {
+      "path": "/assets/game/library/props/goods-map-scroll.webp",
+      "skipped": true
+    },
+    "goods-ink-pot": {
+      "path": "/assets/game/library/props/goods-ink-pot.webp",
+      "skipped": true
+    },
+    "goods-seed-bag": {
+      "path": "/assets/game/library/props/goods-seed-bag.webp",
+      "skipped": true
+    },
+    "goods-mushroom-box": {
+      "path": "/assets/game/library/props/goods-mushroom-box.webp",
+      "skipped": true
+    },
+    "goods-berry-bowl": {
+      "path": "/assets/game/library/props/goods-berry-bowl.webp",
+      "skipped": true
+    },
+    "goods-oil-flask": {
+      "path": "/assets/game/library/props/goods-oil-flask.webp",
+      "skipped": true
+    },
+    "goods-candle-stack": {
+      "path": "/assets/game/library/props/goods-candle-stack.webp",
+      "skipped": true
+    },
+    "goods-ribbon-spool": {
+      "path": "/assets/game/library/props/goods-ribbon-spool.webp",
+      "skipped": true
+    },
+    "goods-tool-rack": {
+      "path": "/assets/game/library/props/goods-tool-rack.webp",
+      "skipped": true
+    },
+    "goods-shield-display": {
+      "path": "/assets/game/library/props/goods-shield-display.webp",
+      "skipped": true
+    },
+    "goods-boot-pair": {
+      "path": "/assets/game/library/props/goods-boot-pair.webp",
+      "skipped": true
+    },
+    "animal-grove-hare": {
+      "path": "/assets/game/library/animals/animal-grove-hare.webp",
+      "skipped": true
+    },
+    "goods-hat-peg": {
+      "path": "/assets/game/library/props/goods-hat-peg.webp",
+      "skipped": true
+    },
+    "animal-plaza-pigeon": {
+      "path": "/assets/game/library/animals/animal-plaza-pigeon.webp",
+      "skipped": true
+    },
+    "animal-dock-gull": {
+      "path": "/assets/game/library/animals/animal-dock-gull.webp",
+      "skipped": true
+    },
+    "animal-meadow-fox": {
+      "path": "/assets/game/library/animals/animal-meadow-fox.webp",
+      "skipped": true
+    },
+    "animal-barn-cat": {
+      "path": "/assets/game/library/animals/animal-barn-cat.webp",
+      "skipped": true
+    },
+    "animal-yard-hen": {
+      "path": "/assets/game/library/animals/animal-yard-hen.webp",
+      "skipped": true
+    },
+    "animal-pond-turtle": {
+      "path": "/assets/game/library/animals/animal-pond-turtle.webp",
+      "skipped": true
+    },
+    "animal-forest-deer": {
+      "path": "/assets/game/library/animals/animal-forest-deer.webp",
+      "skipped": true
+    },
+    "animal-ember-salamander": {
+      "path": "/assets/game/library/animals/animal-ember-salamander.webp",
+      "skipped": true
+    },
+    "animal-frost-hare": {
+      "path": "/assets/game/library/animals/animal-frost-hare.webp",
+      "skipped": true
+    },
+    "animal-tide-crab": {
+      "path": "/assets/game/library/animals/animal-tide-crab.webp",
+      "skipped": true
+    },
+    "animal-spirit-moth": {
+      "path": "/assets/game/library/animals/animal-spirit-moth.webp",
+      "skipped": true
+    },
+    "animal-stone-badger": {
+      "path": "/assets/game/library/animals/animal-stone-badger.webp",
+      "skipped": true
+    },
+    "animal-storm-swift": {
+      "path": "/assets/game/library/animals/animal-storm-swift.webp",
+      "skipped": true
+    },
+    "animal-alloy-beetle": {
+      "path": "/assets/game/library/animals/animal-alloy-beetle.webp",
+      "skipped": true
+    },
+    "animal-void-bat": {
+      "path": "/assets/game/library/animals/animal-void-bat.webp",
+      "skipped": true
+    },
+    "animal-radiant-dove": {
+      "path": "/assets/game/library/animals/animal-radiant-dove.webp",
+      "skipped": true
+    },
+    "animal-orchard-bee": {
+      "path": "/assets/game/library/animals/animal-orchard-bee.webp",
+      "skipped": true
+    },
+    "animal-market-rat": {
+      "path": "/assets/game/library/animals/animal-market-rat.webp",
+      "skipped": true
+    },
+    "animal-well-frog": {
+      "path": "/assets/game/library/animals/animal-well-frog.webp",
+      "skipped": true
+    },
+    "animal-cart-mule": {
+      "path": "/assets/game/library/animals/animal-cart-mule.webp",
+      "skipped": true
+    },
+    "animal-fence-goat": {
+      "path": "/assets/game/library/animals/animal-fence-goat.webp",
+      "skipped": true
+    },
+    "animal-watch-hound": {
+      "path": "/assets/game/library/animals/animal-watch-hound.webp",
+      "skipped": true
+    },
+    "animal-grove-squirrel": {
+      "path": "/assets/game/library/animals/animal-grove-squirrel.webp",
+      "skipped": true
+    },
+    "animal-rift-newt": {
+      "path": "/assets/game/library/animals/animal-rift-newt.webp",
+      "skipped": true
+    },
+    "animal-ash-crow": {
+      "path": "/assets/game/library/animals/animal-ash-crow.webp",
+      "skipped": true
+    },
+    "animal-moss-snail": {
+      "path": "/assets/game/library/animals/animal-moss-snail.webp",
+      "skipped": true
+    },
+    "animal-ember-lizard": {
+      "path": "/assets/game/library/animals/animal-ember-lizard.webp",
+      "skipped": true
+    },
+    "animal-frost-owl": {
+      "path": "/assets/game/library/animals/animal-frost-owl.webp",
+      "skipped": true
+    },
+    "animal-tide-otter": {
+      "path": "/assets/game/library/animals/animal-tide-otter.webp",
+      "skipped": true
+    },
+    "ambient-firefly-cluster": {
+      "path": "/assets/game/library/effects/ambient-firefly-cluster.webp",
+      "skipped": true
+    },
+    "ambient-spore-puff": {
+      "path": "/assets/game/library/effects/ambient-spore-puff.webp",
+      "skipped": true
+    },
+    "ambient-dust-mote": {
+      "path": "/assets/game/library/effects/ambient-dust-mote.webp",
+      "skipped": true
+    },
+    "ambient-leaf-drift": {
+      "path": "/assets/game/library/effects/ambient-leaf-drift.webp",
+      "skipped": true
+    },
+    "ambient-ripple-ring": {
+      "path": "/assets/game/library/effects/ambient-ripple-ring.webp",
+      "skipped": true
+    },
+    "ambient-ember-spark": {
+      "path": "/assets/game/library/effects/ambient-ember-spark.webp",
+      "skipped": true
+    },
+    "ambient-frost-flake": {
+      "path": "/assets/game/library/effects/ambient-frost-flake.webp",
+      "skipped": true
+    },
+    "ambient-tide-bubble": {
+      "path": "/assets/game/library/effects/ambient-tide-bubble.webp",
+      "skipped": true
+    },
+    "ambient-spirit-wisp": {
+      "path": "/assets/game/library/effects/ambient-spirit-wisp.webp",
+      "skipped": true
+    },
+    "ambient-stone-dust": {
+      "path": "/assets/game/library/effects/ambient-stone-dust.webp",
+      "skipped": true
+    },
+    "ambient-storm-static": {
+      "path": "/assets/game/library/effects/ambient-storm-static.webp",
+      "skipped": true
+    },
+    "ambient-alloy-glint": {
+      "path": "/assets/game/library/effects/ambient-alloy-glint.webp",
+      "skipped": true
+    },
+    "ambient-void-mote": {
+      "path": "/assets/game/library/effects/ambient-void-mote.webp",
+      "skipped": true
+    },
+    "ambient-radiant-mote": {
+      "path": "/assets/game/library/effects/ambient-radiant-mote.webp",
+      "skipped": true
+    },
+    "ambient-pollen-cloud": {
+      "path": "/assets/game/library/effects/ambient-pollen-cloud.webp",
+      "skipped": true
+    },
+    "ambient-smoke-curl": {
+      "path": "/assets/game/library/effects/ambient-smoke-curl.webp",
+      "skipped": true
+    },
+    "ambient-steam-puff": {
+      "path": "/assets/game/library/effects/ambient-steam-puff.webp",
+      "skipped": true
+    },
+    "ambient-shadow-flicker": {
+      "path": "/assets/game/library/effects/ambient-shadow-flicker.webp",
+      "skipped": true
+    },
+    "ambient-rift-pulse": {
+      "path": "/assets/game/library/effects/ambient-rift-pulse.webp",
+      "skipped": true
+    },
+    "riftling-sparklet-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-sparklet-hatchling.webp",
+      "skipped": true
+    },
+    "ambient-hearth-glow": {
+      "path": "/assets/game/library/effects/ambient-hearth-glow.webp",
+      "skipped": true
+    },
+    "riftling-mossbun-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-mossbun-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-sparklet-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-sparklet-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-emberpup-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-emberpup-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-mossbun-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-mossbun-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-tideling-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-tideling-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-emberpup-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-emberpup-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-tideling-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-tideling-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-frostnip-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-frostnip-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-frostnip-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-frostnip-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-stormkit-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-stormkit-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-stoneling-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-stoneling-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-stormkit-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-stormkit-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-stoneling-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-stoneling-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-spiritwisp-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-spiritwisp-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-spiritwisp-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-spiritwisp-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-voidling-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-voidling-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-alloybit-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-alloybit-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-voidling-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-voidling-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-radiantpup-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-radiantpup-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-alloybit-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-alloybit-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-grovetuft-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-grovetuft-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-radiantpup-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-radiantpup-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-ashcinder-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-ashcinder-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-grovetuft-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-grovetuft-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-dewdrop-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-dewdrop-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-ashcinder-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-ashcinder-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-dewdrop-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-dewdrop-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-thornlet-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-thornlet-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-crystalpup-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-crystalpup-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-thornlet-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-thornlet-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-crystalpup-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-crystalpup-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-sandgrain-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-sandgrain-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-mirewisp-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-mirewisp-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-sandgrain-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-sandgrain-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-peaklet-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-peaklet-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-mirewisp-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-mirewisp-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-peaklet-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-peaklet-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-bloomkin-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-bloomkin-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-shardling-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-shardling-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-bloomkin-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-bloomkin-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-nimbuskit-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-nimbuskit-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-shardling-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-shardling-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-nimbuskit-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-nimbuskit-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-cobblepup-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-cobblepup-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-cobblepup-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-cobblepup-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-glimmer-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-glimmer-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-rootlet-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-rootlet-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-glimmer-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-glimmer-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-flarekit-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-flarekit-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-rootlet-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-rootlet-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-flarekit-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-flarekit-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-brinepup-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-brinepup-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-iciclebit-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-iciclebit-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-brinepup-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-brinepup-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-gustlet-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-gustlet-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-iciclebit-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-iciclebit-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-oreling-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-oreling-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-gustlet-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-gustlet-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-oreling-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-oreling-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-hauntwisp-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-hauntwisp-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-gearkit-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-gearkit-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-hauntwisp-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-hauntwisp-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-gearkit-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-gearkit-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-halopup-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-halopup-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-fernlet-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-fernlet-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-halopup-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-halopup-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-cinderbun-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-cinderbun-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-fernlet-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-fernlet-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-pearlkit-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-pearlkit-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-cinderbun-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-cinderbun-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-pearlkit-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-pearlkit-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-bramblepup-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-bramblepup-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-prismlet-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-prismlet-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-bramblepup-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-bramblepup-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-dunegrain-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-dunegrain-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-prismlet-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-prismlet-juvenile.webp",
+      "skipped": true
+    },
+    "riftling-bogwisp-hatchling": {
+      "path": "/assets/game/library/riftlings/riftling-bogwisp-hatchling.webp",
+      "skipped": true
+    },
+    "riftling-dunegrain-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-dunegrain-juvenile.webp",
+      "skipped": true
+    },
+    "npc-merchant": {
+      "path": "/assets/game/library/npcs/npc-merchant.webp",
+      "skipped": true
+    },
+    "riftling-bogwisp-juvenile": {
+      "path": "/assets/game/library/riftlings/riftling-bogwisp-juvenile.webp",
+      "skipped": true
+    },
+    "npc-guard": {
+      "path": "/assets/game/library/npcs/npc-guard.webp",
+      "skipped": true
+    },
+    "npc-gardener": {
+      "path": "/assets/game/library/npcs/npc-gardener.webp",
+      "skipped": true
+    },
+    "npc-courier": {
+      "path": "/assets/game/library/npcs/npc-courier.webp",
+      "skipped": true
+    },
+    "npc-fisher": {
+      "path": "/assets/game/library/npcs/npc-fisher.webp",
+      "skipped": true
+    },
+    "npc-smith": {
+      "path": "/assets/game/library/npcs/npc-smith.webp",
+      "skipped": true
+    },
+    "npc-scholar": {
+      "path": "/assets/game/library/npcs/npc-scholar.webp",
+      "skipped": true
+    },
+    "npc-cook": {
+      "path": "/assets/game/library/npcs/npc-cook.webp",
+      "skipped": true
+    },
+    "npc-child": {
+      "path": "/assets/game/library/npcs/npc-child.webp",
+      "skipped": true
+    },
+    "npc-elder": {
+      "path": "/assets/game/library/npcs/npc-elder.webp",
+      "skipped": true
+    },
+    "npc-bard": {
+      "path": "/assets/game/library/npcs/npc-bard.webp",
+      "skipped": true
+    },
+    "npc-healer": {
+      "path": "/assets/game/library/npcs/npc-healer.webp",
+      "skipped": true
+    },
+    "npc-farmer": {
+      "path": "/assets/game/library/npcs/npc-farmer.webp",
+      "skipped": true
+    },
+    "npc-builder": {
+      "path": "/assets/game/library/npcs/npc-builder.webp",
+      "skipped": true
+    },
+    "npc-stablehand": {
+      "path": "/assets/game/library/npcs/npc-stablehand.webp",
+      "skipped": true
+    },
+    "npc-hunter": {
+      "path": "/assets/game/library/npcs/npc-hunter.webp",
+      "skipped": true
+    },
+    "npc-scribe": {
+      "path": "/assets/game/library/npcs/npc-scribe.webp",
+      "skipped": true
+    },
+    "npc-tailor": {
+      "path": "/assets/game/library/npcs/npc-tailor.webp",
+      "skipped": true
+    },
+    "npc-potter": {
+      "path": "/assets/game/library/npcs/npc-potter.webp",
+      "skipped": true
+    },
+    "npc-innkeeper": {
+      "path": "/assets/game/library/npcs/npc-innkeeper.webp",
+      "skipped": true
+    },
+    "npc-miller": {
+      "path": "/assets/game/library/npcs/npc-miller.webp",
+      "skipped": true
+    },
+    "npc-dockhand": {
+      "path": "/assets/game/library/npcs/npc-dockhand.webp",
+      "skipped": true
+    },
+    "npc-acolyte": {
+      "path": "/assets/game/library/npcs/npc-acolyte.webp",
+      "skipped": true
+    },
+    "npc-ranger": {
+      "path": "/assets/game/library/npcs/npc-ranger.webp",
+      "skipped": true
+    },
+    "keeper-travel-cloak": {
+      "path": "/assets/game/library/npcs/keeper-travel-cloak.webp",
+      "skipped": true
+    },
+    "keeper-grove-vest": {
+      "path": "/assets/game/library/npcs/keeper-grove-vest.webp",
+      "skipped": true
+    },
+    "keeper-plaza-coat": {
+      "path": "/assets/game/library/npcs/keeper-plaza-coat.webp",
+      "skipped": true
+    },
+    "keeper-ember-apron": {
+      "path": "/assets/game/library/npcs/keeper-ember-apron.webp",
+      "skipped": true
+    },
+    "keeper-tide-slicker": {
+      "path": "/assets/game/library/npcs/keeper-tide-slicker.webp",
+      "skipped": true
+    },
+    "keeper-storm-cape": {
+      "path": "/assets/game/library/npcs/keeper-storm-cape.webp",
+      "skipped": true
+    },
+    "keeper-frost-parka": {
+      "path": "/assets/game/library/npcs/keeper-frost-parka.webp",
+      "skipped": true
+    },
+    "keeper-stone-tabard": {
+      "path": "/assets/game/library/npcs/keeper-stone-tabard.webp",
+      "skipped": true
+    },
+    "keeper-spirit-shawl": {
+      "path": "/assets/game/library/npcs/keeper-spirit-shawl.webp",
+      "skipped": true
+    },
+    "keeper-void-hood": {
+      "path": "/assets/game/library/npcs/keeper-void-hood.webp",
+      "skipped": true
+    },
+    "keeper-alloy-harness": {
+      "path": "/assets/game/library/npcs/keeper-alloy-harness.webp",
+      "skipped": true
+    },
+    "keeper-radiant-robe": {
+      "path": "/assets/game/library/npcs/keeper-radiant-robe.webp",
+      "skipped": true
+    },
+    "item-potion-amber": {
+      "path": "/assets/game/library/items/item-potion-amber.webp",
+      "skipped": true
+    },
+    "item-potion-cyan": {
+      "path": "/assets/game/library/items/item-potion-cyan.webp",
+      "skipped": true
+    },
+    "item-scroll": {
+      "path": "/assets/game/library/items/item-scroll.webp",
+      "skipped": true
+    },
+    "item-key": {
+      "path": "/assets/game/library/items/item-key.webp",
+      "skipped": true
+    },
+    "item-coin-pouch": {
+      "path": "/assets/game/library/items/item-coin-pouch.webp",
+      "skipped": true
+    },
+    "item-gem": {
+      "path": "/assets/game/library/items/item-gem.webp",
+      "skipped": true
+    },
+    "item-herb": {
+      "path": "/assets/game/library/items/item-herb.webp",
+      "skipped": true
+    },
+    "item-ration": {
+      "path": "/assets/game/library/items/item-ration.webp",
+      "skipped": true
+    },
+    "item-map": {
+      "path": "/assets/game/library/items/item-map.webp",
+      "skipped": true
+    },
+    "item-charm": {
+      "path": "/assets/game/library/items/item-charm.webp",
+      "skipped": true
+    },
+    "item-compass": {
+      "path": "/assets/game/library/items/item-compass.webp",
+      "skipped": true
+    },
+    "item-ring": {
+      "path": "/assets/game/library/items/item-ring.webp",
+      "skipped": true
+    },
+    "item-amulet": {
+      "path": "/assets/game/library/items/item-amulet.webp",
+      "skipped": true
+    },
+    "item-glove": {
+      "path": "/assets/game/library/items/item-glove.webp",
+      "skipped": true
+    },
+    "item-boot": {
+      "path": "/assets/game/library/items/item-boot.webp",
+      "skipped": true
+    },
+    "item-hat": {
+      "path": "/assets/game/library/items/item-hat.webp",
+      "skipped": true
+    },
+    "item-cloak-icon": {
+      "path": "/assets/game/library/items/item-cloak-icon.webp",
+      "skipped": true
+    },
+    "item-sword-icon": {
+      "path": "/assets/game/library/items/item-sword-icon.webp",
+      "skipped": true
+    },
+    "item-shield-icon": {
+      "path": "/assets/game/library/items/item-shield-icon.webp",
+      "skipped": true
+    },
+    "item-bow-icon": {
+      "path": "/assets/game/library/items/item-bow-icon.webp",
+      "skipped": true
+    },
+    "item-staff-icon": {
+      "path": "/assets/game/library/items/item-staff-icon.webp",
+      "skipped": true
+    },
+    "item-pickaxe-icon": {
+      "path": "/assets/game/library/items/item-pickaxe-icon.webp",
+      "skipped": true
+    },
+    "item-fishing-icon": {
+      "path": "/assets/game/library/items/item-fishing-icon.webp",
+      "skipped": true
+    },
+    "item-bait": {
+      "path": "/assets/game/library/items/item-bait.webp",
+      "skipped": true
+    },
+    "item-seed": {
+      "path": "/assets/game/library/items/item-seed.webp",
+      "skipped": true
+    },
+    "item-bandage": {
+      "path": "/assets/game/library/items/item-bandage.webp",
+      "skipped": true
+    },
+    "item-torch-item": {
+      "path": "/assets/game/library/items/item-torch-item.webp",
+      "skipped": true
+    },
+    "item-rope-item": {
+      "path": "/assets/game/library/items/item-rope-item.webp",
+      "skipped": true
+    },
+    "item-bucket": {
+      "path": "/assets/game/library/items/item-bucket.webp",
+      "skipped": true
+    },
+    "item-lantern-item": {
+      "path": "/assets/game/library/items/item-lantern-item.webp",
+      "skipped": true
+    },
+    "item-bell": {
+      "path": "/assets/game/library/items/item-bell.webp",
+      "skipped": true
+    },
+    "item-whistle": {
+      "path": "/assets/game/library/items/item-whistle.webp",
+      "skipped": true
+    },
+    "item-flute": {
+      "path": "/assets/game/library/items/item-flute.webp",
+      "skipped": true
+    },
+    "item-drum": {
+      "path": "/assets/game/library/items/item-drum.webp",
+      "skipped": true
+    },
+    "item-book": {
+      "path": "/assets/game/library/items/item-book.webp",
+      "skipped": true
+    },
+    "item-quill-item": {
+      "path": "/assets/game/library/items/item-quill-item.webp",
+      "skipped": true
+    },
+    "item-crystal-shard": {
+      "path": "/assets/game/library/items/item-crystal-shard.webp",
+      "skipped": true
+    },
+    "item-ink": {
+      "path": "/assets/game/library/items/item-ink.webp",
+      "skipped": true
+    },
+    "item-rift-dust": {
+      "path": "/assets/game/library/items/item-rift-dust.webp",
+      "skipped": true
+    },
+    "egg-ember": {
+      "path": "/assets/game/library/eggs/egg-ember.webp",
+      "skipped": true
+    },
+    "item-egg-fragment": {
+      "path": "/assets/game/library/items/item-egg-fragment.webp",
+      "skipped": true
+    },
+    "egg-grove": {
+      "path": "/assets/game/library/eggs/egg-grove.webp",
+      "skipped": true
+    },
+    "egg-tide": {
+      "path": "/assets/game/library/eggs/egg-tide.webp",
+      "skipped": true
+    },
+    "egg-storm": {
+      "path": "/assets/game/library/eggs/egg-storm.webp",
+      "skipped": true
+    },
+    "egg-stone": {
+      "path": "/assets/game/library/eggs/egg-stone.webp",
+      "skipped": true
+    },
+    "egg-frost": {
+      "path": "/assets/game/library/eggs/egg-frost.webp",
+      "skipped": true
+    },
+    "egg-spirit": {
+      "path": "/assets/game/library/eggs/egg-spirit.webp",
+      "skipped": true
+    },
+    "egg-void": {
+      "path": "/assets/game/library/eggs/egg-void.webp",
+      "skipped": true
+    },
+    "egg-alloy": {
+      "path": "/assets/game/library/eggs/egg-alloy.webp",
+      "skipped": true
+    },
+    "egg-radiant": {
+      "path": "/assets/game/library/eggs/egg-radiant.webp",
+      "skipped": true
+    },
+    "egg-commons": {
+      "path": "/assets/game/library/eggs/egg-commons.webp",
+      "skipped": true
+    },
+    "egg-ancient": {
+      "path": "/assets/game/library/eggs/egg-ancient.webp",
+      "skipped": true
+    },
+    "egg-speckled": {
+      "path": "/assets/game/library/eggs/egg-speckled.webp",
+      "skipped": true
+    },
+    "egg-rift-veined": {
+      "path": "/assets/game/library/eggs/egg-rift-veined.webp",
+      "skipped": true
+    },
+    "egg-mossy": {
+      "path": "/assets/game/library/eggs/egg-mossy.webp",
+      "skipped": true
+    },
+    "egg-ashen": {
+      "path": "/assets/game/library/eggs/egg-ashen.webp",
+      "skipped": true
+    },
+    "egg-obsidian": {
+      "path": "/assets/game/library/eggs/egg-obsidian.webp",
+      "skipped": true
+    },
+    "egg-pearl": {
+      "path": "/assets/game/library/eggs/egg-pearl.webp",
+      "skipped": true
+    },
+    "egg-golden-hearth": {
+      "path": "/assets/game/library/eggs/egg-golden-hearth.webp",
+      "skipped": true
+    },
+    "egg-cyan-pulse": {
+      "path": "/assets/game/library/eggs/egg-cyan-pulse.webp",
+      "skipped": true
+    },
+    "equip-helm-leather": {
+      "path": "/assets/game/library/equipment/equip-helm-leather.webp",
+      "skipped": true
+    },
+    "equip-chest-cloth": {
+      "path": "/assets/game/library/equipment/equip-chest-cloth.webp",
+      "skipped": true
+    },
+    "equip-helm-iron": {
+      "path": "/assets/game/library/equipment/equip-helm-iron.webp",
+      "skipped": true
+    },
+    "equip-chest-mail": {
+      "path": "/assets/game/library/equipment/equip-chest-mail.webp",
+      "skipped": true
+    },
+    "equip-legs-cloth": {
+      "path": "/assets/game/library/equipment/equip-legs-cloth.webp",
+      "skipped": true
+    },
+    "equip-legs-mail": {
+      "path": "/assets/game/library/equipment/equip-legs-mail.webp",
+      "skipped": true
+    },
+    "equip-boots-iron": {
+      "path": "/assets/game/library/equipment/equip-boots-iron.webp",
+      "skipped": true
+    },
+    "equip-boots-travel": {
+      "path": "/assets/game/library/equipment/equip-boots-travel.webp",
+      "skipped": true
+    },
+    "equip-gloves-work": {
+      "path": "/assets/game/library/equipment/equip-gloves-work.webp",
+      "skipped": true
+    },
+    "equip-gloves-battle": {
+      "path": "/assets/game/library/equipment/equip-gloves-battle.webp",
+      "skipped": true
+    },
+    "equip-cape-guild": {
+      "path": "/assets/game/library/equipment/equip-cape-guild.webp",
+      "skipped": true
+    },
+    "equip-cape-travel": {
+      "path": "/assets/game/library/equipment/equip-cape-travel.webp",
+      "skipped": true
+    },
+    "equip-sword-short": {
+      "path": "/assets/game/library/equipment/equip-sword-short.webp",
+      "skipped": true
+    },
+    "equip-sword-long": {
+      "path": "/assets/game/library/equipment/equip-sword-long.webp",
+      "skipped": true
+    },
+    "equip-axe-hand": {
+      "path": "/assets/game/library/equipment/equip-axe-hand.webp",
+      "skipped": true
+    },
+    "equip-mace": {
+      "path": "/assets/game/library/equipment/equip-mace.webp",
+      "skipped": true
+    },
+    "equip-dagger": {
+      "path": "/assets/game/library/equipment/equip-dagger.webp",
+      "skipped": true
+    },
+    "equip-spear": {
+      "path": "/assets/game/library/equipment/equip-spear.webp",
+      "skipped": true
+    },
+    "equip-bow": {
+      "path": "/assets/game/library/equipment/equip-bow.webp",
+      "skipped": true
+    },
+    "equip-crossbow": {
+      "path": "/assets/game/library/equipment/equip-crossbow.webp",
+      "skipped": true
+    },
+    "equip-staff-wood": {
+      "path": "/assets/game/library/equipment/equip-staff-wood.webp",
+      "skipped": true
+    },
+    "equip-staff-rift": {
+      "path": "/assets/game/library/equipment/equip-staff-rift.webp",
+      "skipped": true
+    },
+    "equip-wand": {
+      "path": "/assets/game/library/equipment/equip-wand.webp",
+      "skipped": true
+    },
+    "equip-shield-round": {
+      "path": "/assets/game/library/equipment/equip-shield-round.webp",
+      "skipped": true
+    },
+    "equip-shield-kite": {
+      "path": "/assets/game/library/equipment/equip-shield-kite.webp",
+      "skipped": true
+    },
+    "equip-buckler": {
+      "path": "/assets/game/library/equipment/equip-buckler.webp",
+      "skipped": true
+    },
+    "equip-ring-plain": {
+      "path": "/assets/game/library/equipment/equip-ring-plain.webp",
+      "skipped": true
+    },
+    "equip-ring-rift": {
+      "path": "/assets/game/library/equipment/equip-ring-rift.webp",
+      "skipped": true
+    },
+    "equip-amulet-amber": {
+      "path": "/assets/game/library/equipment/equip-amulet-amber.webp",
+      "skipped": true
+    },
+    "equip-amulet-cyan": {
+      "path": "/assets/game/library/equipment/equip-amulet-cyan.webp",
+      "skipped": true
+    },
+    "equip-belt": {
+      "path": "/assets/game/library/equipment/equip-belt.webp",
+      "skipped": true
+    },
+    "equip-quiver": {
+      "path": "/assets/game/library/equipment/equip-quiver.webp",
+      "skipped": true
+    },
+    "equip-pouch": {
+      "path": "/assets/game/library/equipment/equip-pouch.webp",
+      "skipped": true
+    },
+    "equip-backpack": {
+      "path": "/assets/game/library/equipment/equip-backpack.webp",
+      "skipped": true
+    },
+    "equip-torch-equip": {
+      "path": "/assets/game/library/equipment/equip-torch-equip.webp",
+      "skipped": true
+    },
+    "equip-lantern-equip": {
+      "path": "/assets/game/library/equipment/equip-lantern-equip.webp",
+      "skipped": true
+    },
+    "equip-pick": {
+      "path": "/assets/game/library/equipment/equip-pick.webp",
+      "skipped": true
+    },
+    "equip-hammer-smith": {
+      "path": "/assets/game/library/equipment/equip-hammer-smith.webp",
+      "skipped": true
+    },
+    "equip-fishing-rod-eq": {
+      "path": "/assets/game/library/equipment/equip-fishing-rod-eq.webp",
+      "skipped": true
+    },
+    "equip-sickle-eq": {
+      "path": "/assets/game/library/equipment/equip-sickle-eq.webp",
+      "skipped": true
+    },
+    "fx-smoke-puff-01": {
+      "path": "/assets/game/library/effects/fx-smoke-puff-01.webp",
+      "skipped": true
+    },
+    "fx-smoke-puff-02": {
+      "path": "/assets/game/library/effects/fx-smoke-puff-02.webp",
+      "skipped": true
+    },
+    "fx-smoke-puff-03": {
+      "path": "/assets/game/library/effects/fx-smoke-puff-03.webp",
+      "skipped": true
+    },
+    "fx-smoke-puff-04": {
+      "path": "/assets/game/library/effects/fx-smoke-puff-04.webp",
+      "skipped": true
+    },
+    "fx-smoke-column-01": {
+      "path": "/assets/game/library/effects/fx-smoke-column-01.webp",
+      "skipped": true
+    },
+    "fx-smoke-column-02": {
+      "path": "/assets/game/library/effects/fx-smoke-column-02.webp",
+      "skipped": true
+    },
+    "fx-smoke-drift-01": {
+      "path": "/assets/game/library/effects/fx-smoke-drift-01.webp",
+      "skipped": true
+    },
+    "fx-smoke-drift-02": {
+      "path": "/assets/game/library/effects/fx-smoke-drift-02.webp",
+      "skipped": true
+    },
+    "fx-sparkle-glint-01": {
+      "path": "/assets/game/library/effects/fx-sparkle-glint-01.webp",
+      "skipped": true
+    },
+    "fx-sparkle-glint-02": {
+      "path": "/assets/game/library/effects/fx-sparkle-glint-02.webp",
+      "skipped": true
+    },
+    "fx-sparkle-burst-01": {
+      "path": "/assets/game/library/effects/fx-sparkle-burst-01.webp",
+      "skipped": true
+    },
+    "fx-sparkle-burst-02": {
+      "path": "/assets/game/library/effects/fx-sparkle-burst-02.webp",
+      "skipped": true
+    },
+    "fx-sparkle-rift-01": {
+      "path": "/assets/game/library/effects/fx-sparkle-rift-01.webp",
+      "skipped": true
+    },
+    "fx-sparkle-rift-02": {
+      "path": "/assets/game/library/effects/fx-sparkle-rift-02.webp",
+      "skipped": true
+    },
+    "fx-sparkle-hearth-01": {
+      "path": "/assets/game/library/effects/fx-sparkle-hearth-01.webp",
+      "skipped": true
+    },
+    "fx-sparkle-hearth-02": {
+      "path": "/assets/game/library/effects/fx-sparkle-hearth-02.webp",
+      "skipped": true
+    },
+    "fx-shadow-ellipse-hard": {
+      "path": "/assets/game/library/effects/fx-shadow-ellipse-hard.webp",
+      "skipped": true
+    },
+    "fx-shadow-ellipse-soft": {
+      "path": "/assets/game/library/effects/fx-shadow-ellipse-soft.webp",
+      "skipped": true
+    },
+    "fx-shadow-blob": {
+      "path": "/assets/game/library/effects/fx-shadow-blob.webp",
+      "skipped": true
+    },
+    "fx-shadow-long": {
+      "path": "/assets/game/library/effects/fx-shadow-long.webp",
+      "skipped": true
+    },
+    "fx-shadow-canopy": {
+      "path": "/assets/game/library/effects/fx-shadow-canopy.webp",
+      "skipped": true
+    },
+    "fx-shadow-contact": {
+      "path": "/assets/game/library/effects/fx-shadow-contact.webp",
+      "skipped": true
+    },
+    "fx-weather-rain-01": {
+      "path": "/assets/game/library/effects/fx-weather-rain-01.webp",
+      "skipped": true
+    },
+    "fx-weather-rain-02": {
+      "path": "/assets/game/library/effects/fx-weather-rain-02.webp",
+      "skipped": true
+    },
+    "fx-weather-rain-03": {
+      "path": "/assets/game/library/effects/fx-weather-rain-03.webp",
+      "skipped": true
+    },
+    "fx-weather-rain-04": {
+      "path": "/assets/game/library/effects/fx-weather-rain-04.webp",
+      "skipped": true
+    },
+    "fx-weather-snow-01": {
+      "path": "/assets/game/library/effects/fx-weather-snow-01.webp",
+      "skipped": true
+    },
+    "fx-weather-snow-02": {
+      "path": "/assets/game/library/effects/fx-weather-snow-02.webp",
+      "skipped": true
+    },
+    "fx-weather-snow-03": {
+      "path": "/assets/game/library/effects/fx-weather-snow-03.webp",
+      "skipped": true
+    },
+    "fx-weather-snow-04": {
+      "path": "/assets/game/library/effects/fx-weather-snow-04.webp",
+      "skipped": true
+    },
+    "fx-weather-leaf-01": {
+      "path": "/assets/game/library/effects/fx-weather-leaf-01.webp",
+      "skipped": true
+    },
+    "fx-weather-leaf-02": {
+      "path": "/assets/game/library/effects/fx-weather-leaf-02.webp",
+      "skipped": true
+    },
+    "fx-weather-ember-ash-01": {
+      "path": "/assets/game/library/effects/fx-weather-ember-ash-01.webp",
+      "skipped": true
+    },
+    "fx-weather-ember-ash-02": {
+      "path": "/assets/game/library/effects/fx-weather-ember-ash-02.webp",
+      "skipped": true
+    },
+    "fx-weather-pollen-01": {
+      "path": "/assets/game/library/effects/fx-weather-pollen-01.webp",
+      "skipped": true
+    },
+    "fx-weather-pollen-02": {
+      "path": "/assets/game/library/effects/fx-weather-pollen-02.webp",
+      "skipped": true
+    },
+    "fx-weather-mist-01": {
+      "path": "/assets/game/library/effects/fx-weather-mist-01.webp",
+      "skipped": true
+    },
+    "fx-weather-mist-02": {
+      "path": "/assets/game/library/effects/fx-weather-mist-02.webp",
+      "skipped": true
+    }
+  },
+  "failed": {}
+}

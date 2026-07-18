@@ -101,9 +101,10 @@ export function npcWanderAmplitude(behavior: string): number {
 }
 
 export function npcDisplayHeight(slug: string): number {
-  if (slug.startsWith("riftling-")) return 42;
-  if (slug.startsWith("plaza-child-") || slug.includes("child")) return 44;
-  if (slug.startsWith("guard-")) return 54;
+  // +20% vs prior art pass — readable 2.5D presence next to layered facades.
+  if (slug.startsWith("riftling-")) return 50;
+  if (slug.startsWith("plaza-child-") || slug.includes("child")) return 53;
+  if (slug.startsWith("guard-")) return 65;
   // Named Commons cast — slightly taller for readability next to cutout facades
-  return 52;
+  return 62;
 }

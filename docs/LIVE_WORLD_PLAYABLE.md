@@ -1,14 +1,17 @@
 # Playable Live World — Browser Multiplayer Habitat
 
-The Live World is a **playable browser game**, not a passive livestream. Keepers enter Riftwild Commons, control an avatar, walk with a pet companion, and interact with the habitat. Spectator/stream views are secondary and disabled by default.
+The Live World is a **playable browser habitat** (Phaser), not a passive livestream. Product focus stays TCG / Rift Battles, but the habitat remains **enterable during development** so you can work on it. Systems stay in-repo for MMO compatibility. Optional pre-release Coming Soon soft-gate: set `LIVE_WORLD_PUBLIC_ACCESS_ENABLED=false`. Spectator/stream views remain secondary and disabled by default.
+
+**Launch product:** TCG / Rift Battles (`/tcg/battle`, `/tcg/collection`).
 
 ## Primary UX
 
 | Item | Value |
 |------|--------|
-| Route | `/live-world` |
+| Route | `/live-world` (open by default; soft-gated when public access off) |
 | Legacy redirect | `/live` → `/live-world` |
-| Primary CTA | **ENTER THE LIVE WORLD** |
+| Primary CTA (when open) | **ENTER THE LIVE WORLD** |
+| Soft-gate (optional) | Set `LIVE_WORLD_PUBLIC_ACCESS_ENABLED=false` → Coming Soon → CTAs to Rift Battle / Binder |
 | Spectator | `/live-world/spectate` (`LIVE_WORLD_SPECTATOR_MODE_ENABLED=false`) |
 | Legacy stream | `/live/stream` → spectate |
 
@@ -24,7 +27,9 @@ Defaults in `src/lib/config/feature-flags.ts`:
 
 | Flag | Default | Notes |
 |------|---------|--------|
-| `PLAYABLE_LIVE_WORLD_ENABLED` | `true` | Gates enter / Phaser shell |
+| `PLAYABLE_LIVE_WORLD_ENABLED` | `true` | Phaser systems intact; used with entry helpers |
+| `LIVE_WORLD_PUBLIC_ACCESS_ENABLED` | `true` | Default open for development; set `false` before public release for Coming Soon |
+| `LIVE_WORLD_DEV_PREVIEW_ENABLED` | `true` | Non-prod preview when public access is off |
 | `LIVE_WORLD_ENABLED` | `true` | Legacy alias for older UI checks |
 | `LIVE_WORLD_MULTIPLAYER_ENABLED` | `true` | Hooks scaffolded; Phase 1 still local |
 | `LIVE_WORLD_CHAT_ENABLED` | `true` | Stub only until Phase 2 |

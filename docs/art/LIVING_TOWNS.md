@@ -58,7 +58,9 @@ The biggest failure mode is **empty urban design**, not missing graphics.
 | Contact shadows | Soft ellipses under buildings/props |
 | Elevation | Terrace/portal height grid + cliff faces |
 
-Depth bands live in `src/game/live-world/systems/premium/depth-layers.ts`.
+Depth bands live in `src/game/live-world/systems/premium/depth-layers.ts`.  
+Full band table: [DEPTH_SYSTEM.md](../rendering/DEPTH_SYSTEM.md).  
+Commons HUD + 2.5D overhaul audit: [RIFTWILDS_2_5D_OVERHAUL_AUDIT.md](./RIFTWILDS_2_5D_OVERHAUL_AUDIT.md).
 
 ## Performance
 

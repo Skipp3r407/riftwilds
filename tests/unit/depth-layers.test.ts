@@ -40,4 +40,9 @@ describe("depth layers", () => {
     expect(isBehindOccluder(100, 210, o)).toBe(false);
     expect(isBehindOccluder(180, 150, o)).toBe(false);
   });
+
+  it("places roof band above building facade for layered 2.5D", () => {
+    expect(DEPTH.buildingRoof).toBeGreaterThan(DEPTH.building);
+    expect(DEPTH.buildingFoundation).toBeLessThan(DEPTH.building);
+  });
 });

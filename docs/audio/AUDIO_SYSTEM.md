@@ -75,11 +75,11 @@ Regenerate:
 
 ```bash
 npm run assets:riftling-cries
-# Optional Grok/xAI TTS (requires key):
+# Optional Grok/xAI TTS (paid upgrade only — not required):
 # RIFTLING_CRIES_ENGINE=grok XAI_API_KEY=... npm run assets:riftling-cries
 ```
 
-Default engine is **procedural** original synthesis (affinity-flavored, unique per slug). Grok image tooling in this repo does not generate audio; xAI TTS is optional when `XAI_API_KEY` is set.
+Default engine is **procedural** original synthesis (affinity-flavored, unique per slug). No API key required. xAI TTS is an optional paid upgrade when `XAI_API_KEY` is set.
 
 ## Comic storybook + commercial VO (ElevenLabs)
 

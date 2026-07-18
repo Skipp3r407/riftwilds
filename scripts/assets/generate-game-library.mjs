@@ -2,14 +2,16 @@
  * Generate Riftwilds game asset library (≥1000 catalogued sprites).
  *
  * Engines:
- *   procedural (default) — SVG → WebP via sharp (no API key)
- *   grok — xAI Images API when XAI_API_KEY is set (rate-limited, resumable)
+ *   procedural (default) — SVG → WebP via sharp. No API key. Offline/CI safe.
+ *   grok — optional paid upgrade via xAI Images when XAI_API_KEY is set
+ *           (rate-limited, resumable). Never required for base assets.
  *
  * Usage:
  *   node scripts/assets/generate-game-library.mjs
- *   node scripts/assets/generate-game-library.mjs --engine=grok --limit=20
  *   node scripts/assets/generate-game-library.mjs --force --concurrency=12
  *   node scripts/assets/generate-game-library.mjs --catalog-only
+ *   # optional upgrade only:
+ *   node scripts/assets/generate-game-library.mjs --engine=grok --limit=20
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -231,7 +233,8 @@ function writeReport(meta) {
     `- **Failed:** ${meta.failed}`,
     `- **Primary engine requested:** \`${meta.engine}\``,
     `- **Engines used:** ${JSON.stringify(meta.enginesUsed)}`,
-    `- **Grok / XAI_API_KEY:** ${meta.grokAvailable ? "present" : "**missing** — procedural SVG→WebP used"}`,
+    `- **Default engine:** procedural SVG→WebP (no API key)`,
+    `- **Optional Grok upgrade:** ${meta.grokAvailable ? "XAI_API_KEY present (not used unless GAME_LIBRARY_ENGINE=grok)" : "not configured — ignore; not required"}`,
     `- **Blender CLI:** ${meta.blenderAvailable ? "on PATH (optional renders unused by default)" : "not on PATH"}`,
     ``,
     `## Category breakdown`,
@@ -240,13 +243,13 @@ function writeReport(meta) {
       .sort((a, b) => b[1] - a[1])
       .map(([k, v]) => `- ${k}: ${v}`),
     ``,
-    `## Regenerate`,
+    `## Regenerate (local, no key)`,
     ``,
     `\`\`\`bash`,
     `npm run assets:generate:library`,
-    `# With Grok (costs credits, rate-limited):`,
-    `GAME_LIBRARY_ENGINE=grok XAI_API_KEY=... npm run assets:generate:library -- --limit=50`,
     `npm run assets:install:library`,
+    `# Optional paid Grok hero pass (not required):`,
+    `# GAME_LIBRARY_ENGINE=grok XAI_API_KEY=... npm run assets:generate:library -- --limit=50`,
     `\`\`\``,
     ``,
     `See docs/art/GAME_ASSET_LIBRARY.md`,

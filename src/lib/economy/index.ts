@@ -12,3 +12,5 @@ export * from "@/lib/economy/collectibles";
 export * from "@/lib/economy/sol-adapter";
 export * from "@/lib/economy/admin-ops";
 export * from "@/lib/economy/premium-store";
+/** Optional SOL economy foundation (Gold / Rift Shards / flagged SOL). */
+export * as solEconomy from "@/lib/economy/sol";

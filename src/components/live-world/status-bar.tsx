@@ -30,8 +30,7 @@ type Props = {
 };
 
 /**
- * Top-left location + weather/time (reference HUD).
- * Player/pet hint moved off the top-right to keep the right column free.
+ * Compact top-left region / weather / time / channel line.
  */
 export function LiveWorldStatusBar({
   status,
@@ -47,7 +46,7 @@ export function LiveWorldStatusBar({
         : "text-[var(--amber,#ffb84d)]";
 
   const canCollapse = typeof onCollapsedChange === "function";
-  const topPad = reserveTopRight ? "md:pr-[16.5rem]" : "";
+  const topPad = reserveTopRight ? "md:pr-[14rem]" : "";
 
   const [clock, setClock] = useState<LivingWorldClock | null>(null);
   useEffect(() => {
@@ -58,14 +57,21 @@ export function LiveWorldStatusBar({
     return () => window.clearInterval(id);
   }, []);
 
-  const weatherLine = clock
-    ? `${clock.labels.weather} · ${clock.labels.dayPhase} · ${clock.labels.season}`
+  const channel =
+    status.connection === "local"
+      ? "Solo"
+      : status.connection === "connected"
+        ? "Live"
+        : STATUS_LABEL[status.connection];
+
+  const weatherBit = clock
+    ? `${clock.labels.weather} · ${clock.labels.dayPhase}`
     : status.hint;
 
   if (canCollapse && collapsed) {
     return (
       <div
-        className={`pointer-events-none absolute inset-x-0 top-0 z-20 flex items-start gap-2 p-3 md:p-4 ${topPad}`}
+        className={`pointer-events-none absolute inset-x-0 top-0 z-20 flex items-start gap-2 p-2 md:p-3 ${topPad}`}
       >
         <CollapsibleHudPanel
           collapsed
@@ -73,9 +79,7 @@ export function LiveWorldStatusBar({
           title={status.mapName}
           peekLabel={status.mapName}
           peekExtra={
-            <span className={`text-[9px] uppercase tracking-wider ${tone}`}>
-              {STATUS_LABEL[status.connection]}
-            </span>
+            <span className={`text-[9px] uppercase tracking-wider ${tone}`}>{channel}</span>
           }
           testId="live-world-status-bar"
           className="pointer-events-auto"
@@ -88,29 +92,30 @@ export function LiveWorldStatusBar({
 
   return (
     <div
-      className={`pointer-events-none absolute left-0 top-0 z-20 flex items-start gap-2 p-3 md:p-4 ${topPad}`}
+      className={`pointer-events-none absolute left-0 top-0 z-20 flex items-start gap-2 p-2 md:p-3 ${topPad}`}
       data-testid="live-world-status-bar"
       data-collapsed={collapsed ? "1" : "0"}
     >
-      <div className={`${LW_HUD_GLASS} min-w-[12rem] max-w-[18rem] px-3 py-2.5`}>
-        <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
-            <p className="truncate font-display text-sm tracking-wide text-[var(--text)]">
+      <div className={`${LW_HUD_GLASS} max-w-[min(20rem,calc(100vw-10rem))] px-2.5 py-1.5`}>
+        <div className="flex items-center gap-2">
+          <div className="min-w-0 flex-1">
+            <p className="truncate font-display text-[12px] tracking-wide text-[var(--text)]">
               {status.mapName}
+              <span className={`ml-1.5 text-[9px] font-sans uppercase tracking-wider ${tone}`}>
+                {channel}
+              </span>
             </p>
-            <p className="mt-0.5 text-[11px] text-[var(--text-muted)]">
-              {status.instanceLabel} ·{" "}
-              <span className={tone}>{STATUS_LABEL[status.connection]}</span>
-            </p>
-            <p className="mt-1 truncate text-[10px] text-[var(--amber)]/90">{weatherLine}</p>
-            <p className="mt-0.5 truncate text-[9px] text-[var(--text-muted)]">
-              {status.playerLabel} · {status.petLabel}
+            <p className="truncate text-[9px] text-[var(--text-muted)]">
+              <span className="text-[var(--amber)]/90">{weatherBit}</span>
+              {clock?.labels.season ? (
+                <span className="text-[var(--text-dim)]"> · {clock.labels.season}</span>
+              ) : null}
             </p>
           </div>
           {canCollapse ? (
             <button
               type="button"
-              className={`pointer-events-auto ${LW_HUD_BTN} -mr-1 -mt-0.5 px-1.5 py-1`}
+              className={`pointer-events-auto ${LW_HUD_BTN} shrink-0 px-1.5 py-1`}
               aria-label="Hide status"
               title="Hide status"
               onClick={() => {

@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-18T16:49:00.611Z",
+  "generatedAt": "2026-07-18T17:18:52.143Z",
   "count": 1284,
   "engine": "procedural",
   "enginesUsed": {
-    "procedural": 1284,
+    "procedural": 0,
     "grok": 0
   },
   "categoryBreakdown": {

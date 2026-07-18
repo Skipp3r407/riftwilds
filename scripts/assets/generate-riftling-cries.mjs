@@ -2,7 +2,8 @@
  * Generate unique original Riftling signature cries (one WAV per launch species).
  *
  * Primary path: procedural synthesis (same family as generate-audio-sfx.mjs).
- * Optional Grok/xAI TTS: set XAI_API_KEY and RIFTLING_CRIES_ENGINE=grok
+ * Default: procedural WAV synthesis (no API key).
+ * Optional Grok/xAI TTS upgrade: set XAI_API_KEY and RIFTLING_CRIES_ENGINE=grok
  *   → uses xAI /v1/tts with non-speech creature onomatopoeia + speech tags.
  *   Falls back to procedural if TTS fails.
  *
@@ -413,7 +414,7 @@ async function main() {
     count: entries.length,
     engines: { procedural: proceduralOk, grokTts: grokOk },
     note:
-      "Original Riftling SFX. Procedural synthesis is the default in CI/local without XAI_API_KEY. Optional Grok TTS via RIFTLING_CRIES_ENGINE=grok. Creature SFX only — do not mix into commercial music beds.",
+      "Original Riftling SFX. Procedural synthesis is the default (no API key). Optional Grok TTS via RIFTLING_CRIES_ENGINE=grok is a paid upgrade only. Creature SFX only — do not mix into commercial music beds.",
     species: entries,
   };
   fs.writeFileSync(path.join(assetsDir, "MANIFEST.json"), JSON.stringify(manifest, null, 2));

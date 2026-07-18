@@ -22,9 +22,14 @@ export default function LiveWorldSpectatePage() {
         status={enabled ? "Available" : "Disabled"}
         statusTone={enabled ? "live" : "warn"}
         actions={
-          <Link href="/live-world" className="btn-primary focus-ring">
-            ENTER THE LIVE WORLD
-          </Link>
+          <>
+            <Link href="/tcg/battle" className="btn-primary focus-ring">
+              Rift Battle
+            </Link>
+            <Link href="/live-world" className="btn-secondary focus-ring">
+              Live World
+            </Link>
+          </>
         }
       />
 

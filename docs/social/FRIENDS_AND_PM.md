@@ -11,6 +11,7 @@ Server-authoritative social graph for Riftwilds keepers. **Credits ≠ SOL** —
 | Deep link — whisper | `/social?tab=messages&with=<handle>` |
 | Friends API | `/api/social/friends` |
 | Messages API | `/api/social/messages` |
+| Avatars API | `/api/social/avatars` |
 | Nav badge summary | `/api/social/summary` |
 
 ## Flags
@@ -69,10 +70,29 @@ Real peer `ownerKey` resolution waits on multiplayer Phase 2.
 
 Until WS lands, clients refresh via hub fetches and the summary poller.
 
+## Avatars
+
+Social profiles pick an avatar from:
+
+1. **Owned Riftlings** — `/assets/pets/{speciesSlug}.png` (must own the pet)
+2. **Named NPCs / keepers** — catalog portraits (unlocked by default)
+3. **Lore heroes** — About comic portraits (Elara, First Riftling)
+4. **Brand mark** — fallback emblem
+
+Selection persists as `SocialProfile.avatarSrc` + `avatarKey` (`pet:…` / `npc:…` / `lore:…` / `brand:…`). Picker lives on `/social?tab=safety`. Friends / PM lists already render `avatarSrc`.
+
+```bash
+# List
+GET /api/social/avatars
+
+# Set (also: POST /api/social/friends { action: "set_avatar", avatarKey })
+POST /api/social/avatars  { "kind": "key", "key": "npc:elara-venn" }
+```
+
 ## Tests
 
 ```bash
-npx vitest run tests/unit/friends-and-pm.test.ts
+npx vitest run tests/unit/friends-and-pm.test.ts tests/unit/social-avatars.test.ts
 ```
 
 ## Related

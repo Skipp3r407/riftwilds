@@ -65,9 +65,14 @@ Blockout (city plan) → Greybox districts in Blender/Godot
 - Cull distant props when immersive `performanceCull` is on (existing helper).
 - Do not add real-time 3D meshes to the Live World canvas for v1.
 
+## Game library (bulk catalog)
+
+Bulk original-IP sprites (≥1000) live under `public/assets/game/library/` with catalog at `src/content/assets/game-library.*`. See [GAME_ASSET_LIBRARY.md](./GAME_ASSET_LIBRARY.md). BootScene only loads a small `lib-*` subset after `npm run assets:install:library`.
+
 ## Backlog
 
 - Export balcony / eave plates as separate canopy sprites for Market + Tavern.
 - Bake AO under major plazas into terrain variants.
 - Tooling: blueprint → Blender blockout JSON exporter.
 - Night window emissive plates tied to day phase.
+- Optional xAI/Grok hero-pass over high-visibility library families (paid upgrade only; procedural library is the default and ships without any key).

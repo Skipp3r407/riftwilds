@@ -1,0 +1,73 @@
+// PROPOSAL ONLY — do NOT run migrate deploy against production.
+// Extend existing CurrencyLedger / Marketplace* / PaymentIntent when ready.
+// Apply via a reviewed `prisma migrate dev` on a local/dev database after approval.
+
+// --- Soft secondary currency (Rift Shards) ---
+// Prefer extending CurrencyLedger with currency="RIFT_SHARDS" when User exists.
+// Optional dedicated balance mirror:
+
+/*
+model RiftShardBalance {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId    String   @unique
+  balance   Int      @default(0)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model EconomyLedgerEvent {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  prevHash   String
+  hash       String
+  userId     String?
+  eventType  String
+  currency   String?
+  amount     String?
+  requestId  String   @unique
+  metadata   Json?
+
+  @@index([userId, createdAt])
+  @@index([eventType, createdAt])
+}
+
+model CollectibleEditionOwnership {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  userId          String
+  editionId       String
+  gameplayCardId  String
+  requestId       String   @unique
+  mintStatus      String   @default("NONE")
+  mintRequestId   String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, editionId])
+  @@index([gameplayCardId])
+}
+
+model SolSettlementOrder {
+  id                   String   @id @default(cuid())
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  orderId              String   @unique
+  userId               String
+  state                String
+  requestId            String   @unique
+  lamports             String
+  purpose              String
+  verifiedTxSignature  String?
+  note                 String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, state])
+}
+*/
+
+// SQL sketch (prepare-only):
+// -- ALTER nothing in production until approved.
+// -- CREATE TABLE "EconomyLedgerEvent" ( ... );

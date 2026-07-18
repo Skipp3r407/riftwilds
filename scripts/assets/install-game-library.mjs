@@ -185,9 +185,8 @@ async function main() {
     installedAt: new Date().toISOString(),
     catalogCount: catalog.count,
     worldPackCount: installed.length,
-    engineNote: process.env.XAI_API_KEY
-      ? "XAI_API_KEY present — prefer GAME_LIBRARY_ENGINE=grok for hero regen"
-      : "No XAI_API_KEY — procedural SVG quality pass installed into Live World",
+    engineNote:
+      "Procedural SVG quality pass installed into Live World (default; no API key). Optional GAME_LIBRARY_ENGINE=grok is a paid upgrade only.",
     byFamily,
     props: installed,
   };

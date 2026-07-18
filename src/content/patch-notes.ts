@@ -36,6 +36,30 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-tcg-25d-ship",
+    date: "2026-07-18",
+    title: "Rift Battles set, Help, and Live World depth",
+    summary:
+      "Foundational TCG content and battle surfaces ship alongside Help/music polish, social avatars, optional SOL economy scaffolding (flags off), and a Live World 2.5D HUD depth pass. Live World stays enterable for development.",
+    added: [
+      "Foundational Rift Battles card set with collection, match engine, and /tcg battle surfaces",
+      "TCG shop paths for packs, binders, and card cosmetics plus battle wallpaper art",
+      "/help center reworked around Rift Battles and card play",
+      "Social avatar picker for profiles and friends",
+      "SOL economy foundation and admin/status APIs with every SOL_* flag defaulting off",
+    ],
+    changed: [
+      "Play hub, home hero, quests, marketplace, shop, and leaderboards lead with Rift Battles",
+      "Live World immersive HUD and depth layering for a clearer 2.5D overworld read",
+      "Ambience music player chrome and mute/play sync polish",
+      "Live World public access stays on so the habitat remains enterable during development",
+    ],
+    knownIssues: [
+      "Optional SOL purchases, marketplace settlement, minting, and withdrawals remain fully gated off",
+      "Live World multiplayer habitat continues iterative polish while Rift Battles is the primary launch focus",
+    ],
+  },
+  {
     id: "2026-07-18-build-comics-music",
     date: "2026-07-18",
     title: "Deploy fix, comics reader, and music player",

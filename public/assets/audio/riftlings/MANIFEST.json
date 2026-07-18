@@ -5,7 +5,7 @@
     "procedural": 100,
     "grokTts": 0
   },
-  "note": "Original Riftling SFX. Procedural synthesis is the default in CI/local without XAI_API_KEY. Optional Grok TTS via RIFTLING_CRIES_ENGINE=grok. Creature SFX only — do not mix into commercial music beds.",
+  "note": "Original Riftling SFX. Procedural synthesis is the default (no API key). Optional Grok TTS via RIFTLING_CRIES_ENGINE=grok is a paid upgrade only. Creature SFX only — do not mix into commercial music beds.",
   "species": [
     {
       "slug": "cindercub",

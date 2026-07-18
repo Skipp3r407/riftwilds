@@ -56,8 +56,23 @@ export const featureFlagDefaults = {
   LIVE_WORLD_ENABLED: true,
 
   // ─── Playable Live World (browser multiplayer habitat) ─────────────────────
-  /** Phase 1 playable Phaser world (local-authoritative movement). */
+  /**
+   * Phaser systems / shell remain intact. TCG / Rift Battles stay the product
+   * focus in nav/docs, but Live World entry stays open during development.
+   * See `isLiveWorldEntryOpen` / `canEnterLiveWorld`.
+   */
   PLAYABLE_LIVE_WORLD_ENABLED: true,
+  /**
+   * Soft-gate for `/live-world`. Default ON so Keepers (and local/dev work)
+   * can enter the habitat. Set to `false` before a public release if you want
+   * the Coming Soon gate — systems and routes stay; no deletions.
+   */
+  LIVE_WORLD_PUBLIC_ACCESS_ENABLED: true,
+  /**
+   * When PUBLIC_ACCESS is off, still allow Phaser enter outside production
+   * (local/dev/internal preview). Ignored when NODE_ENV === "production".
+   */
+  LIVE_WORLD_DEV_PREVIEW_ENABLED: true,
   /** Phase 2+ WebSocket instances — hooks scaffolded; still local in Phase 1. */
   LIVE_WORLD_MULTIPLAYER_ENABLED: true,
   LIVE_WORLD_CHAT_ENABLED: true,
@@ -95,7 +110,18 @@ export const featureFlagDefaults = {
   PLAYER_BUSINESSES_ENABLED: false,
   COMMUNITY_VOTING_ENABLED: false,
 
-  // ─── Riftwilds Arena ───────────────────────────────────────────────────────
+  // ─── Riftwilds TCG (Reborn — primary battle resolution) ────────────────────
+  /** Card framework, match engine, collection stubs. */
+  TCG_FRAMEWORK_ENABLED: true,
+  /** Live World enemy zones open TCG battles instead of instant demo resolve. */
+  TCG_WORLD_ENCOUNTERS_ENABLED: true,
+  /**
+   * Soft-deprecated: AABB zone → instant “Training clash resolved” dialogue.
+   * Kept for rollback demos; prefer TCG_WORLD_ENCOUNTERS_ENABLED.
+   */
+  LIVE_WORLD_LEGACY_INSTANT_COMBAT_ENABLED: false,
+
+  // ─── Riftwilds Arena (legacy pet battler — soft-secondary) ─────────────────
   ARENA_ENABLED: true,
   CASUAL_DUELS_ENABLED: false,
   RANKED_DUELS_ENABLED: false,
@@ -120,6 +146,22 @@ export const featureFlagDefaults = {
   ONCHAIN_COLLECTIBLES_ENABLED: false,
   /** Hard-off: no paid mystery boxes / gacha. */
   PAID_RANDOM_REWARDS_ENABLED: false,
+
+  // ─── SOL Economy mandate flags (ALL DEFAULT FALSE — never enable casually) ─
+  /** Wallet UX for optional SOL spends (identity SIWS remains separate). */
+  SOL_WALLET_ENABLED: false,
+  /** SOL marketplace listings/settlement (also requires REAL_SOL_MARKETPLACE_ENABLED). */
+  SOL_MARKETPLACE_ENABLED: false,
+  /** SOL tournament entry fees — free/Gold tournaments stay available. */
+  SOL_TOURNAMENTS_ENABLED: false,
+  /** On-chain mint pipeline for collectible editions (also requires NFT_MINTING_ENABLED). */
+  SOL_MINTING_ENABLED: false,
+  /** Player SOL withdrawals / cash-out rails. */
+  SOL_WITHDRAWALS_ENABLED: false,
+  /** Creator marketplace SOL payouts (Credits creator path stays). */
+  SOL_CREATOR_MARKETPLACE_ENABLED: false,
+  /** Community funding campaigns accepting SOL. */
+  SOL_COMMUNITY_FUNDING_ENABLED: false,
   RANKED_EQUIPMENT_NORMALIZATION_ENABLED: true,
   ITEM_SHOP_BROWSE_ENABLED: true,
 
@@ -319,4 +361,36 @@ export function isFeatureEnabled(
     return overrides[key]!;
   }
   return featureFlagDefaults[key];
+}
+
+/**
+ * Whether `/live-world` may open for this runtime (public launch or non-prod preview).
+ * Does not delete or disable Phaser systems — only the product entry gate.
+ */
+export function isLiveWorldEntryOpen(
+  overrides?: FeatureFlagOverrides,
+  env: { nodeEnv?: string | undefined } = {},
+): boolean {
+  if (isFeatureEnabled("LIVE_WORLD_PUBLIC_ACCESS_ENABLED", overrides)) {
+    return true;
+  }
+  const nodeEnv = env.nodeEnv ?? process.env.NODE_ENV;
+  if (
+    isFeatureEnabled("LIVE_WORLD_DEV_PREVIEW_ENABLED", overrides) &&
+    nodeEnv !== "production"
+  ) {
+    return true;
+  }
+  return false;
+}
+
+/** Phaser enter: playable flag AND entry open (public or dev preview). */
+export function canEnterLiveWorld(
+  overrides?: FeatureFlagOverrides,
+  env: { nodeEnv?: string | undefined } = {},
+): boolean {
+  return (
+    isFeatureEnabled("PLAYABLE_LIVE_WORLD_ENABLED", overrides) &&
+    isLiveWorldEntryOpen(overrides, env)
+  );
 }

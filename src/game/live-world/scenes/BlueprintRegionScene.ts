@@ -2613,15 +2613,26 @@ export class BlueprintRegionScene extends Phaser.Scene {
         bumpObjective(state, "starter-q5-first-steps", "defeat");
         bumpObjective(state, "starter-q5-first-steps", "loot");
         saveLivePlayState(state);
-        this.bridge.dialogue.set({
-          speaker: "Encounter",
-          lines: [
-            `A ${z.enemyId.replace(/-/g, " ")} challenges your companion!`,
-            "Training clash resolved — loot scrap granted (demo combat).",
-            "Return to Captain Orren when ready.",
-          ],
-          lineIndex: 0,
-        });
+        this.persistPosition();
+
+        // Reborn: world encounters → TCG board (legacy instant demo behind flag).
+        void import("@/game/live-world/systems/pve-stub").then(
+          ({ startEncounter }) => {
+            const result = startEncounter(z.enemyId, {
+              regionSlug: this.regionSlug,
+              returnTo: "/live-world",
+            });
+            if (!result.ok) return;
+            this.bridge.dialogue.set({
+              speaker: "Encounter",
+              lines: result.lines,
+              lineIndex: 0,
+            });
+            if (result.mode === "tcg") {
+              this.bridge.requestNavigate(result.battlePath);
+            }
+          },
+        );
         break;
       }
     }

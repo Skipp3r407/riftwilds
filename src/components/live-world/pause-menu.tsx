@@ -38,9 +38,9 @@ export function LiveWorldPauseMenu({
         className="w-full max-w-sm rounded-lg border border-[var(--stroke)] bg-[#0c1420] p-5 shadow-xl"
       >
         <p className="font-display text-[10px] uppercase tracking-[0.2em] text-[var(--cyan)]">
-          Paused
+          System
         </p>
-        <h3 className="mt-1 font-display text-xl text-white">Live World</h3>
+        <h3 className="mt-1 font-display text-xl text-white">World Menu</h3>
         <ul className="mt-4 space-y-2">
           <li>
             <button
@@ -57,11 +57,20 @@ export function LiveWorldPauseMenu({
           </li>
           <li>
             <Link
-              href="/academy"
+              href="/help"
               className="focus-ring block w-full rounded border border-[var(--cyan)]/35 bg-[rgba(61,231,255,0.08)] px-3 py-2.5 text-left text-sm text-[var(--cyan)]"
               onClick={() => playSfx("ui.nav")}
             >
-              Academy / Help
+              Help
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/feedback"
+              className="focus-ring block w-full rounded border border-[var(--stroke)] px-3 py-2.5 text-left text-sm text-[var(--text-muted)] hover:text-white"
+              onClick={() => playSfx("ui.nav")}
+            >
+              Feedback / Bug Report
             </Link>
           </li>
           {onToggleFullscreen ? (

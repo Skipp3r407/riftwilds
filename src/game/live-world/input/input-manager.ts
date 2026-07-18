@@ -184,6 +184,13 @@ export class LiveWorldInputManager {
     return false;
   }
 
+  /** UI chrome can synthesize a one-frame action edge (e.g. hotbar → chat). */
+  pulseAction(action: ActionId): void {
+    this.edges.add(action);
+    if (action === "openChat") this.setActivePanel("chat");
+    this.emit();
+  }
+
   /** Edge-triggered; cleared after read in consumeEdges / wasJustPressed. */
   wasJustPressed(action: ActionId): boolean {
     if (!this.edges.has(action)) return false;
@@ -251,7 +258,8 @@ export class LiveWorldInputManager {
 
       if (action === "escape") {
         e.preventDefault();
-        if (this.activePanel) this.closePanel();
+        // Chat owns its Escape → peek collapse; clearing here would open pause.
+        if (this.activePanel && this.activePanel !== "chat") this.closePanel();
       } else if (action === "debugCollision") {
         e.preventDefault();
         // Production: only allow for non-normal players (dev / flag)
@@ -260,6 +268,10 @@ export class LiveWorldInputManager {
           (typeof window !== "undefined" &&
             localStorage.getItem("riftwilds-debug-allowed") === "1");
         if (allow) this.collisionDebug = !this.collisionDebug;
+      } else if (action === "openChat") {
+        // Always open/focus chat — do not toggle closed on repeat Enter.
+        e.preventDefault();
+        this.setActivePanel("chat");
       } else if (ACTION_TO_PANEL[action]) {
         e.preventDefault();
         const panel = ACTION_TO_PANEL[action]!;

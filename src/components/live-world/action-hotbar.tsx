@@ -51,16 +51,16 @@ type Props = {
 };
 
 /**
- * Bottom-center hotbar — life/social actions only (no fake combat cooldowns).
- * Wired to existing Live World systems / routes.
+ * Bottom-center action bar — life/social skills only (no fake combat cooldowns).
+ * Sits beside VitalOrbs so orbs + skills read as one organized dock.
  */
 export function ActionHotbar({ onAction, className = "", activeId = null }: Props) {
   return (
     <div
-      className={`pointer-events-auto ${LW_HUD_GLASS} flex items-center gap-1 px-2 py-1.5 md:gap-1.5 md:px-2.5 ${className}`}
+      className={`pointer-events-auto ${LW_HUD_GLASS} flex items-center gap-0.5 px-1.5 py-1 md:gap-1 md:px-2 ${className}`}
       data-testid="live-world-action-hotbar"
       role="toolbar"
-      aria-label="Keeper actions"
+      aria-label="Keeper skills"
     >
       {SLOTS.map((slot) => {
         const Icon = slot.icon;

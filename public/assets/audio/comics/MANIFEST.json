@@ -3,7 +3,7 @@
   "provider": "none",
   "voiceId": "21m00Tcm4TlvDq8ikWAM",
   "modelId": "eleven_multilingual_v2",
-  "generatedAt": "2026-07-18T16:39:05.803Z",
+  "generatedAt": "2026-07-18T20:31:16.059Z",
   "tip": "Set ELEVENLABS_API_KEY then re-run npm run assets:narrate (see docs/audio/ELEVENLABS_NARRATION.md).",
   "issues": [
     {

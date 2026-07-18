@@ -44,6 +44,15 @@ yarn-error.log*
 /.cursor/
 /.cache/
 
+# Third-party discovery packs (raw zips / unrestricted mirrors) — never ship in public/
+/private-assets/discovered/*
+!/private-assets/discovered/.gitkeep
+/private-assets/rejected/*
+!/private-assets/rejected/.gitkeep
+/private-assets/restricted/*
+!/private-assets/restricted/.gitkeep
+# approved/ may track small cleared sources later; still prefer git-lfs / local for large zips
+
 # vercel
 .vercel
 

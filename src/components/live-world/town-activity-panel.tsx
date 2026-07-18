@@ -81,7 +81,13 @@ export function TownActivityPanel({
                 className="flex items-baseline justify-between gap-2 text-[10px]"
               >
                 <span className="truncate text-[var(--text-muted)]">{loc.label}</span>
-                <span className="shrink-0 text-[var(--cyan)]">{loc.activityScore}</span>
+                <span className="shrink-0 text-[var(--cyan)]">
+                  {loc.activityScore >= 40
+                    ? "Busy"
+                    : loc.activityScore >= 15
+                      ? "Lively"
+                      : "Quiet"}
+                </span>
               </li>
             ))}
           </ul>

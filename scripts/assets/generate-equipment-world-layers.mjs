@@ -1,7 +1,7 @@
 /**
  * Generate world-layer PNGs for equippable catalog items (weapons + armor).
  * Original Riftwilds stylized silhouettes — full-body attachment overlays, not head-only.
- * Uses sharp (no external Grok call required when API key unavailable).
+ * Uses sharp / procedural canvas — no API key. Grok is an optional upgrade only.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -104,7 +104,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     weapons: WEAPONS.map(([id]) => `/assets/items/weapons/world/${id}.png`),
     armor: ARMOR.map(([id]) => `/assets/items/armor/world/${id}.png`),
-    note: "Phase-1 world equipment overlays. Full Grok batch can replace these placeholders.",
+    note: "Phase-1 world equipment overlays from local procedural generation. Optional Grok hero pass can replace these later — not required.",
   };
   const manifestPath = path.join(ROOT, "artifacts/assets/equipment-world-layers-manifest.json");
   fs.mkdirSync(path.dirname(manifestPath), { recursive: true });

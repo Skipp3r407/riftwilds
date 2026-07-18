@@ -31,7 +31,10 @@ export default function AdminAssetsPage() {
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Link href="/admin/assets/sprite-inspector" className="btn-primary focus-ring text-sm">
+          <Link href="/admin/assets/library" className="btn-primary focus-ring text-sm">
+            Third-party library
+          </Link>
+          <Link href="/admin/assets/sprite-inspector" className="btn-secondary focus-ring text-sm">
             Sprite inspector
           </Link>
           <Link href="/admin/assets/equipment-aligner" className="btn-secondary focus-ring text-sm">

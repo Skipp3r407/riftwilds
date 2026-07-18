@@ -52,9 +52,9 @@ Master art bible is established. Commons atmosphere, terrain tint, vegetation de
 - `dialogue-overlay.tsx` — warm fantasy glass  
 - `loading-screen.tsx` — grove→cyan→amber bar  
 
-### 5. Generated assets (Grok)
+### 5. Generated assets
 
-- Commons moodboard  
+- Commons moodboard (concept art; procedural/local pipeline is the default for library props)  
 - Tree prop v2 (installed)  
 - Bronze icon frame (installed under `public/assets/ui/frames/`)  
 

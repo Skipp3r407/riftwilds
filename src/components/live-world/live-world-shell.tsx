@@ -282,7 +282,7 @@ export function LiveWorldShell({ playable }: Props) {
       const a = actionsRef.current;
       if (input.wasJustPressed("help")) {
         playSfx("ui.nav");
-        router.push("/academy");
+        router.push("/help");
         return;
       }
       if (input.wasJustPressed("toggleFullscreen")) {
@@ -531,8 +531,8 @@ export function LiveWorldShell({ playable }: Props) {
             <Link href="/settings/keybinds" className="btn-secondary focus-ring text-xs">
               Keybinds
             </Link>
-            <Link href="/academy" className="btn-secondary focus-ring text-xs">
-              Academy / Help
+            <Link href="/help" className="btn-secondary focus-ring text-xs">
+              Help
             </Link>
           </div>
           <p className="mt-6 text-[11px] text-[var(--text-dim)]">

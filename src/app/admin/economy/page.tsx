@@ -58,6 +58,9 @@ export default function AdminEconomyPage() {
           <Link href="/admin/economy/health" className="btn-secondary focus-ring text-sm">
             Health
           </Link>
+          <Link href="/admin/economy/sol" className="btn-secondary focus-ring text-sm">
+            SOL economy
+          </Link>
           <Link href="/economy" className="btn-secondary focus-ring text-sm">
             Public economy
           </Link>

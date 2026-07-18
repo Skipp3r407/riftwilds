@@ -1,0 +1,256 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-07-18T18:00:00.000Z",
+  "policyDoc": "docs/assets/THIRD_PARTY_ASSET_POLICY.md",
+  "records": [
+    {
+      "id": "in-use-oga-dark-sci-fi-audio",
+      "title": "Dark Sci-Fi Audio Pack (site ambience beds)",
+      "kind": "audio_music",
+      "sourceUrl": "https://opengameart.org/content/dark-sci-fi-audio-pack",
+      "previewUrl": "https://opengameart.org/content/dark-sci-fi-audio-pack",
+      "creator": "SRG774",
+      "licenseName": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseCategory": "CC0",
+      "status": "IN_USE",
+      "styleScore": 72,
+      "riskNotes": [
+        "Already shipped under public/sounds/music/ with credits in MUSIC_CREDITS.md"
+      ],
+      "attributionRequired": false,
+      "fingerprint": "music-credits:dark-sci-fi-audio-pack",
+      "sourcePackId": "oga-dark-sci-fi-audio-pack",
+      "discoveredAt": "2026-07-17T00:00:00.000Z",
+      "reviewedAt": "2026-07-17T00:00:00.000Z",
+      "runtimePath": "/sounds/music/sector.mp3",
+      "notes": "Grandfathered in-use music; see public/sounds/MUSIC_CREDITS.md"
+    },
+    {
+      "id": "disc-kenney-ui-pack",
+      "title": "Kenney UI Pack (2D)",
+      "kind": "ui_icon",
+      "sourceUrl": "https://kenney.nl/assets/ui-pack",
+      "previewUrl": "https://kenney.nl/assets/ui-pack",
+      "creator": "Kenney (www.kenney.nl)",
+      "licenseName": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseCategory": "CC0",
+      "status": "DISCOVERED",
+      "styleScore": 58,
+      "riskNotes": [
+        "Clean readable UI but generic Kenney look — risk of 'asset flip' recognition",
+        "Better as temporary prototype chrome than final brand UI"
+      ],
+      "attributionRequired": false,
+      "sourcePackId": "kenney-ui-pack",
+      "discoveredAt": "2026-07-18T18:00:00.000Z",
+      "notes": "Discovery only — do not download until human approval"
+    },
+    {
+      "id": "disc-kenney-input-prompts",
+      "title": "Kenney Input Prompts",
+      "kind": "ui_icon",
+      "sourceUrl": "https://kenney.nl/assets/input-prompts",
+      "previewUrl": "https://kenney.nl/assets/input-prompts",
+      "creator": "Kenney (www.kenney.nl)",
+      "licenseName": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseCategory": "CC0",
+      "status": "DISCOVERED",
+      "styleScore": 70,
+      "riskNotes": [
+        "Useful for settings/keybinds; style is neutral enough to tint"
+      ],
+      "attributionRequired": false,
+      "sourcePackId": "kenney-input-prompts",
+      "discoveredAt": "2026-07-18T18:00:00.000Z"
+    },
+    {
+      "id": "disc-kenney-rpg-audio",
+      "title": "Kenney RPG Audio",
+      "kind": "audio_sfx",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "previewUrl": "https://kenney.nl/assets/rpg-audio",
+      "creator": "Kenney (www.kenney.nl)",
+      "licenseName": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseCategory": "CC0",
+      "status": "DISCOVERED",
+      "styleScore": 55,
+      "riskNotes": [
+        "Generic RPG SFX — OK for prototype; prefer original procedural cries for Riftlings"
+      ],
+      "attributionRequired": false,
+      "sourcePackId": "kenney-rpg-audio",
+      "discoveredAt": "2026-07-18T18:00:00.000Z"
+    },
+    {
+      "id": "disc-game-icons-net",
+      "title": "Game-icons.net icon set (selective)",
+      "kind": "ui_icon",
+      "sourceUrl": "https://game-icons.net/",
+      "previewUrl": "https://game-icons.net/about.html",
+      "creator": "Lorc, Delapouite, and contributors",
+      "licenseName": "CC BY 3.0 (majority) / CC0 (select contributors)",
+      "licenseUrl": "https://game-icons.net/faq.html",
+      "licenseCategory": "CREATOR_COMMERCIAL_WITH_ATTRIBUTION",
+      "status": "LICENSE_REVIEW",
+      "styleScore": 64,
+      "riskNotes": [
+        "Per-icon license varies — must verify author folder before import",
+        "Attribution required for CC BY icons on credits page",
+        "Silhouette style may clash with painted Riftwilds UI — use sparingly"
+      ],
+      "attributionRequired": true,
+      "attributionText": "Icons by {author} from game-icons.net (CC BY 3.0)",
+      "sourcePackId": "game-icons-net",
+      "discoveredAt": "2026-07-18T18:00:00.000Z"
+    },
+    {
+      "id": "disc-polyhaven-forest-floor",
+      "title": "Poly Haven — forest / ground textures (reference)",
+      "kind": "texture",
+      "sourceUrl": "https://polyhaven.com/textures",
+      "previewUrl": "https://polyhaven.com/license",
+      "creator": "Poly Haven artists",
+      "licenseName": "CC0 1.0 Universal",
+      "licenseUrl": "https://polyhaven.com/license",
+      "licenseCategory": "CC0",
+      "status": "DISCOVERED",
+      "styleScore": 42,
+      "riskNotes": [
+        "Photogrammetry PBR — photoreal, not native to Riftwilds 2D hybrid look",
+        "Best as lighting/material reference or heavily stylized bake, not direct tiles"
+      ],
+      "attributionRequired": false,
+      "sourcePackId": "polyhaven-textures",
+      "discoveredAt": "2026-07-18T18:00:00.000Z"
+    },
+    {
+      "id": "disc-ambientcg-nature",
+      "title": "ambientCG — nature PBR materials",
+      "kind": "texture",
+      "sourceUrl": "https://ambientcg.com/",
+      "previewUrl": "https://ambientcg.com/list?type=Material",
+      "creator": "Lennart Demes / ambientCG",
+      "licenseName": "CC0 1.0 Universal",
+      "licenseUrl": "https://ambientcg.com/license",
+      "licenseCategory": "CC0",
+      "status": "DISCOVERED",
+      "styleScore": 40,
+      "riskNotes": [
+        "Same photoreal risk as Poly Haven for 2D game tiles",
+        "Confirm license page at import time (historically CC0)"
+      ],
+      "attributionRequired": false,
+      "sourcePackId": "ambientcg-materials",
+      "discoveredAt": "2026-07-18T18:00:00.000Z"
+    },
+    {
+      "id": "disc-freesound-cc0-nature",
+      "title": "Freesound — CC0 nature / portal ambience (selective)",
+      "kind": "audio_sfx",
+      "sourceUrl": "https://freesound.org/browse/tags/cc0/",
+      "previewUrl": "https://freesound.org/help/faq/#licenses",
+      "creator": "Various (per sound)",
+      "licenseName": "CC0 1.0 (filter required)",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "licenseCategory": "CC0",
+      "status": "LICENSE_REVIEW",
+      "styleScore": 60,
+      "riskNotes": [
+        "Must filter CC0 only — many Freesound clips are CC BY / NC / Sampling+",
+        "Per-file page review mandatory before any download",
+        "Do not bulk-scrape; respect rate limits and ToS"
+      ],
+      "attributionRequired": false,
+      "sourcePackId": "freesound-cc0-selective",
+      "discoveredAt": "2026-07-18T18:00:00.000Z"
+    },
+    {
+      "id": "disc-oga-lpc-base",
+      "title": "OpenGameArt — Liberated Pixel Cup base assets",
+      "kind": "sprite",
+      "sourceUrl": "https://opengameart.org/content/lpc-base-assets",
+      "previewUrl": "https://opengameart.org/content/lpc-base-assets",
+      "creator": "LPC contributors",
+      "licenseName": "CC-BY-SA 3.0 / GPL 3.0 (dual) — VERIFY ON PAGE",
+      "licenseUrl": "https://opengameart.org/content/lpc-base-assets",
+      "licenseCategory": "UNKNOWN",
+      "status": "LICENSE_REVIEW",
+      "styleScore": 48,
+      "riskNotes": [
+        "Classic OGA pack often dual-licensed CC-BY-SA / GPL — SA copyleft may be unacceptable for closed commercial game assets",
+        "Style is classic RPG maker pixel — clashes with Riftwilds painted hybrid",
+        "Do not import until counsel/product accepts license category"
+      ],
+      "attributionRequired": true,
+      "sourcePackId": "oga-lpc-base",
+      "discoveredAt": "2026-07-18T18:00:00.000Z",
+      "rejectReason": "OTHER",
+      "notes": "Held in LICENSE_REVIEW due to likely ShareAlike — not approved for runtime"
+    },
+    {
+      "id": "reject-kenmi-cute-fantasy-unverified",
+      "title": "Kenmi Cute Fantasy tileset (style reference only)",
+      "kind": "tileset",
+      "sourceUrl": "https://kenmi.itch.io/",
+      "previewUrl": "https://kenmi.itch.io/",
+      "creator": "Kenmi (unverified pack page for this import)",
+      "licenseName": "UNVERIFIED — do not use",
+      "licenseCategory": "RESTRICTED",
+      "status": "RESTRICTED",
+      "styleScore": 88,
+      "riskNotes": [
+        "Art direction cites Kenmi-quality as a bar, not as a licensed pack import",
+        "Commercial itch listings often require purchase + specific license text",
+        "No blind import — verify exact pack license page before any download"
+      ],
+      "attributionRequired": true,
+      "sourcePackId": "kenmi-cute-fantasy-unverified",
+      "discoveredAt": "2026-07-18T18:00:00.000Z",
+      "rejectReason": "UNCLEAR_OWNERSHIP",
+      "notes": "Explicitly blocked from pipeline until verified commercial-use license exists"
+    },
+    {
+      "id": "disc-wikimedia-public-domain-nature",
+      "title": "Wikimedia Commons — public domain nature photos (mood refs)",
+      "kind": "other",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/Category:PD_nature",
+      "previewUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+      "creator": "Various",
+      "licenseName": "Public domain / CC0 (per-file)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+      "licenseCategory": "PUBLIC_DOMAIN",
+      "status": "DISCOVERED",
+      "styleScore": 25,
+      "riskNotes": [
+        "Reference only — not game sprites",
+        "Each file needs its own license check; some categories mix licenses"
+      ],
+      "attributionRequired": false,
+      "sourcePackId": "wikimedia-pd-nature-refs",
+      "discoveredAt": "2026-07-18T18:00:00.000Z"
+    },
+    {
+      "id": "disc-github-kenney-nl-mirror-caution",
+      "title": "GitHub mirrors of Kenney / OGA packs",
+      "kind": "other",
+      "sourceUrl": "https://github.com/KenneyNL",
+      "previewUrl": "https://github.com/KenneyNL",
+      "creator": "Kenney / various mirrors",
+      "licenseName": "Verify per-repo LICENSE file",
+      "licenseCategory": "UNKNOWN",
+      "status": "LICENSE_REVIEW",
+      "styleScore": 50,
+      "riskNotes": [
+        "Prefer original kenney.nl / OpenGameArt pages over third-party mirrors",
+        "Mirrors may omit attribution files or re-license incorrectly"
+      ],
+      "attributionRequired": false,
+      "sourcePackId": "github-kenney-mirrors",
+      "discoveredAt": "2026-07-18T18:00:00.000Z"
+    }
+  ]
+}
