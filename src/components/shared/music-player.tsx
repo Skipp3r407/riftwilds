@@ -26,6 +26,9 @@ const AUTO_HIDE_MS = 30_000;
 const PLAYER_SHELL =
   "lw-hud-glass rounded-xl border border-[var(--stroke-bronze)] shadow-[0_10px_28px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(232,213,176,0.12)]";
 
+const RANGE_CLASS =
+  "h-1.5 w-14 cursor-pointer accent-[var(--amber)] sm:w-[4.25rem]";
+
 type UiPrefs = {
   hidden: boolean;
   trackIndex: number;
@@ -35,6 +38,56 @@ const DEFAULT_UI: UiPrefs = {
   hidden: false,
   trackIndex: 0,
 };
+
+/** Marketing shell has no MobileGameNav — keep the dock low. */
+const MARKETING_PREFIXES = [
+  "/about",
+  "/analytics",
+  "/bugs",
+  "/codex",
+  "/coloring",
+  "/comics",
+  "/community",
+  "/creators",
+  "/creatures",
+  "/docs",
+  "/downloads",
+  "/economy",
+  "/fairness",
+  "/fan-kit",
+  "/feedback",
+  "/legal",
+  "/login",
+  "/patch-notes",
+  "/press",
+  "/printables",
+  "/token",
+  "/transparency",
+  "/treasury",
+  "/updates",
+] as const;
+
+function isMarketingPath(pathname: string | null): boolean {
+  if (!pathname) return false;
+  if (pathname === "/") return true;
+  // Game credits lives under /economy/credits while marketing owns /economy*.
+  if (pathname === "/economy/credits" || pathname.startsWith("/economy/credits/")) {
+    return false;
+  }
+  return MARKETING_PREFIXES.some(
+    (p) => pathname === p || pathname.startsWith(`${p}/`),
+  );
+}
+
+function isBattlePath(pathname: string | null): boolean {
+  if (!pathname) return false;
+  return (
+    pathname === "/tcg/battle" ||
+    pathname.startsWith("/tcg/battle/") ||
+    pathname === "/battle" ||
+    pathname.startsWith("/battle/")
+  );
+}
 
 function readUi(): UiPrefs {
   if (typeof window === "undefined") return DEFAULT_UI;
@@ -80,9 +133,69 @@ function writeUi(prefs: UiPrefs) {
   }
 }
 
+function BusSlider({
+  label,
+  muted,
+  volume,
+  onMuteToggle,
+  onVolume,
+  muteLabel,
+  unmuteLabel,
+  volumeLabel,
+}: {
+  label: string;
+  muted: boolean;
+  volume: number;
+  onMuteToggle: () => void;
+  onVolume: (v: number) => void;
+  muteLabel: string;
+  unmuteLabel: string;
+  volumeLabel: string;
+}) {
+  return (
+    <div className="flex min-w-0 items-center gap-0.5">
+      <button
+        type="button"
+        onClick={onMuteToggle}
+        className={cn(
+          "focus-ring flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors",
+          muted
+            ? "text-[var(--stone)] hover:text-[var(--amber)]"
+            : "text-[var(--amber)] hover:text-[var(--radiant)]",
+        )}
+        aria-label={muted ? unmuteLabel : muteLabel}
+        aria-pressed={muted}
+      >
+        {muted || volume === 0 ? (
+          <VolumeX size={14} aria-hidden />
+        ) : (
+          <Volume2 size={14} aria-hidden />
+        )}
+      </button>
+      <label className="flex min-w-0 flex-col gap-0.5">
+        <span className="font-display text-[8px] uppercase tracking-[0.16em] text-[var(--stone)]">
+          {label}
+        </span>
+        <input
+          type="range"
+          min={0}
+          max={1}
+          step={0.01}
+          value={muted ? 0 : volume}
+          onChange={(e) => onVolume(Number(e.target.value))}
+          className={RANGE_CLASS}
+          aria-label={volumeLabel}
+        />
+      </label>
+    </div>
+  );
+}
+
 export function MusicPlayer() {
   const pathname = usePathname();
   const inLiveWorld = Boolean(pathname?.startsWith("/live-world"));
+  const onMarketing = isMarketingPath(pathname);
+  const onBattle = isBattlePath(pathname);
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [hidden, setHidden] = useState(DEFAULT_UI.hidden);
@@ -133,16 +246,18 @@ export function MusicPlayer() {
   useEffect(() => {
     const prefs = readUi();
     setHidden(prefs.hidden);
-    setTrackIndex(prefs.trackIndex);
     musicEngine.init();
-    setPlaying(musicEngine.isPlaying());
+    const enginePlaying = musicEngine.isPlaying();
+    setPlaying(enginePlaying);
+    // Prefer live engine track while audio is active; otherwise restore UI browse index.
+    setTrackIndex(enginePlaying ? musicEngine.getTrackIndex() : prefs.trackIndex);
     setReady(true);
     return musicEngine.subscribe(() => {
-      const enginePlaying = musicEngine.isPlaying();
-      setPlaying(enginePlaying);
+      const enginePlayingNow = musicEngine.isPlaying();
+      setPlaying(enginePlayingNow);
       // Mirror engine track while audio is active (region themes / crossfades).
       // When paused, leave local browsing (prev/next) alone.
-      if (enginePlaying) {
+      if (enginePlayingNow) {
         setTrackIndex(musicEngine.getTrackIndex());
       }
     });
@@ -221,8 +336,34 @@ export function MusicPlayer() {
   }
 
   const track = MUSIC_PLAYLIST[trackIndex] ?? MUSIC_PLAYLIST[0];
+  const trackCount = MUSIC_PLAYLIST.length;
+  const trackOrdinal = String(trackIndex + 1).padStart(2, "0");
 
   const shellMotion = "motion-safe:transition-[opacity,transform] motion-safe:duration-200";
+
+  // Clear mobile game nav on game routes; sit lower on marketing; clear battle CTAs.
+  const dockPosition = cn(
+    "fixed right-3 z-[55]",
+    onBattle
+      ? "bottom-[calc(7rem+var(--safe-bottom))] md:bottom-8 md:right-5"
+      : onMarketing
+        ? "bottom-[calc(1.25rem+var(--safe-bottom))] md:bottom-5 md:right-5"
+        : "bottom-[calc(5.25rem+var(--safe-bottom))] md:bottom-5 md:right-5",
+  );
+
+  const collapsedPosition = cn(
+    "focus-ring fixed right-0 z-[55] flex h-11 w-8 items-center justify-center",
+    onBattle
+      ? "bottom-[calc(7rem+var(--safe-bottom))] md:bottom-8"
+      : onMarketing
+        ? "bottom-[calc(1.25rem+var(--safe-bottom))] md:bottom-5"
+        : "bottom-[calc(5.25rem+var(--safe-bottom))] md:bottom-5",
+    "rounded-l-xl border border-r-0 border-[var(--stroke-bronze)]",
+    "bg-[rgba(22,18,14,0.92)] text-[var(--amber)] backdrop-blur-md",
+    "shadow-[0_8px_24px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(232,213,176,0.1)]",
+    shellMotion,
+    "hover:bg-[rgba(28,24,18,0.98)] hover:border-[var(--stroke-amber)] hover:text-[var(--radiant)]",
+  );
 
   return (
     <>
@@ -230,15 +371,7 @@ export function MusicPlayer() {
         <button
           type="button"
           onClick={() => setHidden(false)}
-          className={cn(
-            "focus-ring fixed right-0 z-[60] flex h-11 w-8 items-center justify-center",
-            "bottom-[calc(5.25rem+var(--safe-bottom))] md:bottom-5",
-            "rounded-l-xl border border-r-0 border-[var(--stroke-bronze)]",
-            "bg-[rgba(22,18,14,0.92)] text-[var(--amber)] backdrop-blur-md",
-            "shadow-[0_8px_24px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(232,213,176,0.1)]",
-            shellMotion,
-            "hover:bg-[rgba(28,24,18,0.98)] hover:border-[var(--stroke-amber)] hover:text-[var(--radiant)]",
-          )}
+          className={collapsedPosition}
           aria-label="Show ambience player"
           title="Show ambience"
         >
@@ -247,8 +380,8 @@ export function MusicPlayer() {
       ) : (
         <div
           className={cn(
-            "fixed right-3 z-[60] flex max-w-[min(100vw-1.5rem,22rem)] flex-col items-stretch gap-2",
-            "bottom-[calc(5.25rem+var(--safe-bottom))] md:bottom-5 md:right-5",
+            dockPosition,
+            "flex max-w-[min(100vw-1.5rem,26rem)] flex-col items-stretch gap-2",
             shellMotion,
           )}
           onPointerEnter={() => setInteracting(true)}
@@ -268,9 +401,14 @@ export function MusicPlayer() {
               role="listbox"
               aria-label="Ambient playlist"
             >
-              <p className="px-2.5 pb-1.5 pt-1 font-display text-[9px] uppercase tracking-[0.16em] text-[var(--stone)]">
-                Playlist · {MUSIC_PLAYLIST.length} tracks
-              </p>
+              <div className="flex items-baseline justify-between gap-2 px-2.5 pb-1.5 pt-1">
+                <p className="font-display text-[9px] uppercase tracking-[0.16em] text-[var(--stone)]">
+                  Ambience playlist
+                </p>
+                <p className="font-mono text-[9px] tabular-nums text-[var(--text-dim)]">
+                  {trackCount} tracks
+                </p>
+              </div>
               {MUSIC_PLAYLIST.map((t, i) => {
                 const active = i === trackIndex;
                 return (
@@ -281,7 +419,7 @@ export function MusicPlayer() {
                     aria-selected={active}
                     onClick={() => void selectTrack(i)}
                     className={cn(
-                      "focus-ring flex w-full items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-left text-[11px]",
+                      "focus-ring flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left",
                       "transition-[color,background,box-shadow] duration-150",
                       active
                         ? "bg-[rgba(255,184,77,0.12)] text-[var(--text)] shadow-[inset_2px_0_0_var(--amber)]"
@@ -296,9 +434,19 @@ export function MusicPlayer() {
                     >
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="truncate">{t.label}</span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-[12px] leading-tight">{t.label}</span>
+                      <span
+                        className={cn(
+                          "mt-0.5 block font-display text-[8px] uppercase tracking-[0.14em]",
+                          active ? "text-[var(--amber)]" : "text-[var(--stone)]",
+                        )}
+                      >
+                        {t.mood}
+                      </span>
+                    </span>
                     {active && playing ? (
-                      <span className="ml-auto shrink-0 font-display text-[8px] uppercase tracking-[0.12em] text-[var(--cyan)]">
+                      <span className="ml-auto shrink-0 font-display text-[8px] uppercase tracking-[0.12em] text-[var(--amber)]">
                         Now
                       </span>
                     ) : null}
@@ -309,171 +457,143 @@ export function MusicPlayer() {
           ) : null}
 
           <div
-            className={cn(PLAYER_SHELL, "flex items-center gap-1 p-1.5 pl-2")}
+            className={cn(PLAYER_SHELL, "flex flex-col gap-1.5 p-2")}
             role="region"
             aria-label="Music and sound effects"
           >
-            <button
-              type="button"
-              onClick={() => void togglePlay()}
-              className={cn(
-                "focus-ring flex h-10 w-10 shrink-0 items-center justify-center rounded-lg",
-                "border border-[var(--stroke-bronze)] bg-[rgba(20,16,12,0.55)]",
-                "text-[var(--amber)] transition-[color,background,border-color,box-shadow] duration-150",
-                "hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.12)] hover:text-[var(--radiant)]",
-                playing &&
-                  "border-[var(--stroke-amber)] bg-[rgba(255,184,77,0.14)] shadow-[inset_0_1px_0_rgba(232,213,176,0.14)]",
-              )}
-              aria-label={playing ? "Pause ambient music" : "Play ambient music"}
-            >
-              {playing ? (
-                <Pause size={18} aria-hidden />
-              ) : (
-                <Play size={18} className="ml-0.5" aria-hidden />
-              )}
-            </button>
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => void togglePlay()}
+                className={cn(
+                  "focus-ring flex h-10 w-10 shrink-0 items-center justify-center rounded-lg",
+                  "border border-[var(--stroke-bronze)] bg-[rgba(20,16,12,0.55)]",
+                  "text-[var(--amber)] transition-[color,background,border-color,box-shadow] duration-150",
+                  "hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.12)] hover:text-[var(--radiant)]",
+                  playing &&
+                    "border-[var(--stroke-amber)] bg-[rgba(255,184,77,0.14)] shadow-[inset_0_1px_0_rgba(232,213,176,0.14)]",
+                )}
+                aria-label={playing ? "Pause ambient music" : "Play ambient music"}
+              >
+                {playing ? (
+                  <Pause size={18} aria-hidden />
+                ) : (
+                  <Play size={18} className="ml-0.5" aria-hidden />
+                )}
+              </button>
 
-            <button
-              type="button"
-              onClick={() => void stepTrack(-1)}
-              className="focus-ring flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--amber)]"
-              aria-label="Previous track"
-              title="Previous"
-            >
-              <ChevronLeft size={16} aria-hidden />
-            </button>
+              <button
+                type="button"
+                onClick={() => void stepTrack(-1)}
+                className="focus-ring flex h-8 w-7 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--amber)]"
+                aria-label="Previous track"
+                title="Previous"
+              >
+                <ChevronLeft size={16} aria-hidden />
+              </button>
 
-            <div className="hidden min-w-0 max-w-[10rem] flex-1 flex-col sm:flex">
-              <span className="font-display text-[9px] uppercase tracking-[0.16em] text-[var(--stone)]">
-                Ambience
-              </span>
               <button
                 type="button"
                 onClick={() => setPlaylistOpen((o) => !o)}
-                className="focus-ring truncate text-left text-[11px] text-[var(--text)] hover:text-[var(--amber)]"
+                className="focus-ring min-w-0 flex-1 rounded-lg px-1 py-0.5 text-left hover:bg-[rgba(255,184,77,0.06)]"
                 aria-label={`Current track: ${track.label}. Open playlist`}
                 aria-expanded={playlistOpen}
                 title="Browse playlist"
               >
-                {track.label}
+                <span className="flex items-baseline justify-between gap-2">
+                  <span className="font-display text-[9px] uppercase tracking-[0.16em] text-[var(--stone)]">
+                    Ambience
+                  </span>
+                  <span className="font-mono text-[8px] tabular-nums text-[var(--text-dim)]">
+                    {trackOrdinal}/{String(trackCount).padStart(2, "0")}
+                  </span>
+                </span>
+                <span className="mt-0.5 block truncate text-[12px] leading-tight text-[var(--text)]">
+                  {track.label}
+                </span>
               </button>
-            </div>
 
-            <button
-              type="button"
-              onClick={() => void stepTrack(1)}
-              className="focus-ring flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--amber)]"
-              aria-label="Next track"
-              title="Next"
-            >
-              <ChevronRight size={16} aria-hidden />
-            </button>
+              <button
+                type="button"
+                onClick={() => void stepTrack(1)}
+                className="focus-ring flex h-8 w-7 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--amber)]"
+                aria-label="Next track"
+                title="Next"
+              >
+                <ChevronRight size={16} aria-hidden />
+              </button>
 
-            <button
-              type="button"
-              onClick={() => setPlaylistOpen((o) => !o)}
-              className={cn(
-                "focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition-colors",
-                playlistOpen
-                  ? "text-[var(--amber)]"
-                  : "text-[var(--text-muted)] hover:text-[var(--amber)]",
-              )}
-              aria-label={playlistOpen ? "Hide playlist" : "Show playlist"}
-              aria-pressed={playlistOpen}
-              title="Playlist"
-            >
-              <ListMusic size={16} aria-hidden />
-            </button>
+              <button
+                type="button"
+                onClick={() => setPlaylistOpen((o) => !o)}
+                className={cn(
+                  "focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition-colors",
+                  playlistOpen
+                    ? "bg-[rgba(255,184,77,0.12)] text-[var(--amber)]"
+                    : "text-[var(--text-muted)] hover:text-[var(--amber)]",
+                )}
+                aria-label={playlistOpen ? "Hide playlist" : "Show playlist"}
+                aria-pressed={playlistOpen}
+                title="Playlist"
+              >
+                <ListMusic size={16} aria-hidden />
+              </button>
 
-            <div className="mx-0.5 hidden h-6 w-px bg-[var(--stroke-bronze)] sm:block" aria-hidden />
-
-            <div className="flex items-center gap-0.5" title="Sound effects">
               <button
                 type="button"
                 onClick={() => {
-                  unlockSfx();
-                  setSfxMuted(!sfxMuted);
+                  setPlaylistOpen(false);
+                  setHidden(true);
                 }}
-                className="focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--amber)]"
-                aria-label={sfxMuted ? "Unmute sound effects" : "Mute sound effects"}
-                aria-pressed={sfxMuted}
+                className="focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--text-dim)] transition-colors hover:text-[var(--amber)]"
+                aria-label="Hide music player"
+                title="Hide"
               >
-                {sfxMuted || sfxVolume === 0 ? (
-                  <VolumeX size={15} aria-hidden />
-                ) : (
-                  <Volume2 size={15} aria-hidden />
-                )}
+                <X size={15} aria-hidden className="sm:hidden" />
+                <ChevronRight size={16} aria-hidden className="hidden sm:block" />
               </button>
-              <label className="flex items-center gap-1">
-                <span className="hidden font-display text-[8px] uppercase tracking-[0.14em] text-[var(--text-dim)] sm:inline">
-                  SFX
-                </span>
-                <input
-                  type="range"
-                  min={0}
-                  max={1}
-                  step={0.01}
-                  value={sfxMuted ? 0 : sfxVolume}
-                  onChange={(e) => {
-                    unlockSfx();
-                    setSfxVolume(Number(e.target.value));
-                    bumpActivity();
-                  }}
-                  className="h-1 w-10 cursor-pointer accent-[var(--amber)] sm:w-12"
-                  aria-label="Sound effects volume"
-                />
-              </label>
             </div>
 
-            <button
-              type="button"
-              onClick={() => {
-                if (musicMuted) unmuteMusic();
-                else setVolume("music", 0);
-              }}
-              className="focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--cyan)]"
-              aria-label={musicMuted ? "Unmute music" : "Mute music"}
-              aria-pressed={musicMuted}
-              title="Music mute"
-            >
-              {musicMuted ? (
-                <VolumeX size={16} aria-hidden />
-              ) : (
-                <Volume2 size={16} aria-hidden />
-              )}
-            </button>
-
-            <label className="flex items-center">
-              <span className="sr-only">Music volume</span>
-              <input
-                type="range"
-                min={0}
-                max={1}
-                step={0.01}
-                value={musicMuted ? 0 : musicVolume}
-                onChange={(e) => {
+            <div className="flex items-end justify-between gap-2 border-t border-[rgba(196,168,130,0.22)] pt-1.5">
+              <BusSlider
+                label="Music"
+                muted={musicMuted}
+                volume={musicVolume}
+                muteLabel="Mute music"
+                unmuteLabel="Unmute music"
+                volumeLabel="Music volume"
+                onMuteToggle={() => {
                   unlock();
-                  setVolume("music", Number(e.target.value));
+                  if (musicMuted) unmuteMusic();
+                  else setVolume("music", 0);
                   bumpActivity();
                 }}
-                className="h-1 w-12 cursor-pointer accent-[var(--cyan)] sm:w-16"
-                aria-label="Music volume"
+                onVolume={(v) => {
+                  unlock();
+                  setVolume("music", v);
+                  bumpActivity();
+                }}
               />
-            </label>
-
-            <button
-              type="button"
-              onClick={() => {
-                setPlaylistOpen(false);
-                setHidden(true);
-              }}
-              className="focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--text-dim)] transition-colors hover:text-[var(--amber)]"
-              aria-label="Hide music player"
-              title="Hide"
-            >
-              <X size={15} aria-hidden className="sm:hidden" />
-              <ChevronRight size={16} aria-hidden className="hidden sm:block" />
-            </button>
+              <div className="h-6 w-px shrink-0 bg-[rgba(196,168,130,0.28)]" aria-hidden />
+              <BusSlider
+                label="SFX"
+                muted={sfxMuted}
+                volume={sfxVolume}
+                muteLabel="Mute sound effects"
+                unmuteLabel="Unmute sound effects"
+                volumeLabel="Sound effects volume"
+                onMuteToggle={() => {
+                  unlockSfx();
+                  setSfxMuted(!sfxMuted);
+                  bumpActivity();
+                }}
+                onVolume={(v) => {
+                  unlockSfx();
+                  setSfxVolume(v);
+                  bumpActivity();
+                }}
+              />
+            </div>
           </div>
         </div>
       )}

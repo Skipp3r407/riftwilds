@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { projectConfig } from "@/lib/config/project";
-import { featureFlagDefaults } from "@/lib/config/feature-flags";
+import {
+  canEnterLiveWorld,
+  featureFlagDefaults,
+  isLiveWorldEntryOpen,
+} from "@/lib/config/feature-flags";
 import { dashboardActionIconPath, sectionUiThumbPath } from "@/lib/assets/paths";
 import { DashboardEconomyWidget } from "@/components/economy";
 import { EconomySummary } from "@/components/economy";
@@ -17,18 +21,56 @@ const quickActions: {
   slug: string;
   variant: ImageButtonVariant;
 }[] = [
-  { href: "/hatchery", label: "Open Hatchery", slug: "hatchery", variant: "primary" },
-  { href: "/academy", label: "Academy / Help", slug: "academy", variant: "secondary" },
+  { href: "/tcg/battle", label: "Rift Battle", slug: "arena", variant: "primary" },
+  { href: "/tcg/collection", label: "Card Binder", slug: "collection", variant: "primary" },
+  { href: "/hatchery", label: "Open Hatchery", slug: "hatchery", variant: "secondary" },
+  { href: "/help", label: "Help", slug: "academy", variant: "secondary" },
   { href: "/profile", label: "Profile", slug: "profile", variant: "secondary" },
   { href: "/inventory", label: "Inventory", slug: "inventory", variant: "secondary" },
-  { href: "/housing", label: "Housing", slug: "homestead", variant: "secondary" },
-  { href: "/neighborhoods", label: "Neighborhoods", slug: "homestead", variant: "secondary" },
-  { href: "/homestead", label: "Homestead", slug: "homestead", variant: "secondary" },
-  { href: "/guilds", label: "Guilds", slug: "guilds", variant: "secondary" },
-  { href: "/economy", label: "Economy", slug: "economy", variant: "secondary" },
 ];
 
+function liveWorldCard() {
+  const entryOpen = isLiveWorldEntryOpen();
+  const playable = canEnterLiveWorld();
+  if (!entryOpen) {
+    return {
+      title: "Live World",
+      body: "Coming in a future update — social habitat & exploration. Launch focus is Rift Battles.",
+      href: "/live-world",
+      thumb: sectionUiThumbPath("features", "live-world"),
+      glow: "rgba(61,231,255,0.12)",
+    };
+  }
+  return {
+    title: "Live World",
+    body: playable
+      ? "Habitat preview stays open for development — launch combat is Rift Battles."
+      : "Playable Live World paused by feature flag.",
+    href: "/live-world",
+    thumb: sectionUiThumbPath("features", "live-world"),
+    glow: "rgba(61,231,255,0.14)",
+  };
+}
+
 const featureCards = [
+  {
+    title: "Rift Battle",
+    body: featureFlagDefaults.TCG_FRAMEWORK_ENABLED
+      ? "Primary combat — Rift Energy TCG board."
+      : "TCG framework paused.",
+    href: "/tcg/battle",
+    thumb: sectionUiThumbPath("features", "arena"),
+    glow: "rgba(61,231,255,0.22)",
+  },
+  {
+    title: "Card Binder",
+    body: featureFlagDefaults.TCG_FRAMEWORK_ENABLED
+      ? "Browse your collection and shape decks."
+      : "Binder paused.",
+    href: "/tcg/collection",
+    thumb: sectionUiThumbPath("features", "starter-claim"),
+    glow: "rgba(255,184,77,0.18)",
+  },
   {
     title: "Starter claim",
     body: featureFlagDefaults.STARTER_EGG_CLAIMS_ENABLED
@@ -38,32 +80,15 @@ const featureCards = [
     thumb: sectionUiThumbPath("features", "starter-claim"),
     glow: "rgba(61,231,255,0.18)",
   },
-  {
-    title: "World",
-    body: featureFlagDefaults.EXPLORATION_ENABLED
-      ? "Regions online"
-      : "Hub map preview — twelve launch regions listed.",
-    href: "/world",
-    thumb: sectionUiThumbPath("features", "world"),
-    glow: "rgba(61,231,255,0.16)",
-  },
+  liveWorldCard(),
   {
     title: "Arena",
     body: featureFlagDefaults.ARENA_ENABLED
-      ? "Riftwilds Arena training is open — no wagering."
+      ? "Legacy pet battler — soft-secondary practice."
       : "Arena paused.",
     href: "/arena",
     thumb: sectionUiThumbPath("features", "arena"),
-    glow: "rgba(255,184,77,0.16)",
-  },
-  {
-    title: "Live World",
-    body: featureFlagDefaults.PLAYABLE_LIVE_WORLD_ENABLED
-      ? "Enter Riftwild Commons — playable browser world."
-      : "Playable Live World paused by feature flag.",
-    href: "/live-world",
-    thumb: sectionUiThumbPath("features", "live-world"),
-    glow: "rgba(61,231,255,0.2)",
+    glow: "rgba(255,184,77,0.12)",
   },
   {
     title: "Care & pets",
@@ -74,16 +99,7 @@ const featureCards = [
     thumb: sectionUiThumbPath("features", "care-pets"),
     glow: "rgba(255,184,77,0.14)",
   },
-  {
-    title: "Ecosystem",
-    body: featureFlagDefaults.ECOSYSTEM_DASHBOARD_ENABLED
-      ? "Living world, civilization, story, and expansion packs."
-      : "Ecosystem dashboard paused.",
-    href: "/ecosystem",
-    thumb: sectionUiThumbPath("features", "world"),
-    glow: "rgba(61,231,255,0.14)",
-  },
-] as const;
+];
 
 export default function PlayDashboardPage() {
   return (
@@ -94,11 +110,12 @@ export default function PlayDashboardPage() {
         title={`Welcome to ${projectConfig.UNIVERSE_NAME}`}
         description={
           <>
-            Connect your wallet, verify {projectConfig.TOKEN_SYMBOL} holdings, claim a starter egg,
-            and begin caring for your first {projectConfig.CREATURE_NAME}.
+            Launch loop: collect cards, build a deck, duel in Rift Battles, then trade packs on the
+            marketplace. Hatch and care for your {projectConfig.CREATURE_NAME}. Live World habitat
+            stays enterable for development.
           </>
         }
-        status="Ops live"
+        status="TCG live"
         statusTone="live"
         actions={
           <>

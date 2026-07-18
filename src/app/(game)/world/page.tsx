@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { featureFlagDefaults } from "@/lib/config/feature-flags";
+import {
+  featureFlagDefaults,
+  isLiveWorldEntryOpen,
+} from "@/lib/config/feature-flags";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
 import { RegionBanner } from "@/components/assets/region-banner";
 import { MapDirectoryPanel } from "@/components/world-expansion/map-directory";
@@ -22,6 +25,8 @@ const REGIONS = [
 ] as const;
 
 export default function WorldPage() {
+  const liveWorldOpen = isLiveWorldEntryOpen();
+
   return (
     <div className="space-y-6">
       <PageHeader
@@ -30,19 +35,22 @@ export default function WorldPage() {
         title="The Riftwilds"
         description={
           <>
-            Twelve Riftwilds regions with machine-readable map blueprints. Enter the Live World to
-            walk Riftwild Commons and portal into starter hubs. Exploration flag:{" "}
-            {featureFlagDefaults.EXPLORATION_ENABLED ? "online" : "hub preview + Live World"}.
-            Playable maps require{" "}
-            {featureFlagDefaults.PLAYABLE_LIVE_WORLD_ENABLED ? "PLAYABLE_LIVE_WORLD on" : "flag off"}.
+            Twelve Riftwilds regions with machine-readable map blueprints. Launch combat is Rift
+            Battles; Live World habitat stays enterable for development. Exploration flag:{" "}
+            {featureFlagDefaults.EXPLORATION_ENABLED ? "online" : "hub preview"}.
           </>
         }
         status={featureFlagDefaults.EXPLORATION_ENABLED ? "Online" : "Preview"}
         statusTone={featureFlagDefaults.EXPLORATION_ENABLED ? "live" : "warn"}
         actions={
-          <Link href="/live-world" className="btn-secondary focus-ring">
-            ENTER THE LIVE WORLD
-          </Link>
+          <>
+            <Link href="/tcg/battle" className="btn-primary focus-ring">
+              Rift Battle
+            </Link>
+            <Link href="/live-world" className="btn-secondary focus-ring">
+              {liveWorldOpen ? "ENTER THE LIVE WORLD" : "Live World — Coming Soon"}
+            </Link>
+          </>
         }
       />
       {featureFlagDefaults.WORLD_EXPANSION_ENABLED ? (

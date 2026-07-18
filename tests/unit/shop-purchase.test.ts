@@ -120,13 +120,16 @@ describe("shop sections + inventory grant", () => {
   it("exposes a purchasable section per category", () => {
     expect(SHOP_SECTIONS.map((s) => s.id)).toEqual([
       "featured",
+      "packs",
+      "binders",
+      "card-cosmetics",
+      "cosmetics",
+      "recovery",
       "weapons",
       "armor",
       "potions",
       "magic",
       "materials",
-      "cosmetics",
-      "recovery",
     ]);
     for (const section of SHOP_SECTIONS) {
       const items = getShopSectionItems(section.id);

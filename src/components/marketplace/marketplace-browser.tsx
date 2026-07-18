@@ -10,13 +10,23 @@ import type { MarketplaceListingView } from "@/lib/marketplace/types";
 import { playSfx } from "@/hooks/use-sfx";
 import { cn } from "@/lib/utils/cn";
 
-type CategoryId = "ALL" | "EGGS" | "PETS" | "EQUIPMENT" | "CONSUMABLES" | "PROPERTY";
+type CategoryId =
+  | "ALL"
+  | "CARDS"
+  | "PACKS"
+  | "EGGS"
+  | "PETS"
+  | "EQUIPMENT"
+  | "CONSUMABLES"
+  | "PROPERTY";
 
 const TABS: { id: CategoryId; label: string }[] = [
   { id: "ALL", label: "All" },
+  { id: "CARDS", label: "Cards" },
+  { id: "PACKS", label: "Packs" },
   { id: "EGGS", label: "Eggs" },
   { id: "PETS", label: "Pets" },
-  { id: "EQUIPMENT", label: "Equipment" },
+  { id: "EQUIPMENT", label: "Cosmetics / gear" },
   { id: "CONSUMABLES", label: "Consumables" },
   { id: "PROPERTY", label: "Property" },
 ];
@@ -31,7 +41,7 @@ type Flags = {
 };
 
 export function MarketplaceBrowser() {
-  const [category, setCategory] = useState<CategoryId>("ALL");
+  const [category, setCategory] = useState<CategoryId>("CARDS");
   const [listings, setListings] = useState<MarketplaceListingView[]>([]);
   const [flags, setFlags] = useState<Flags | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -131,7 +141,12 @@ export function MarketplaceBrowser() {
             className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(8,10,18,0.55)] to-[rgba(8,10,18,0.92)]"
             aria-hidden
           />
-          <h2 className="relative z-[1] font-display text-xl text-white">Live desk (demo catalog)</h2>
+          <h2 className="relative z-[1] font-display text-xl text-white">
+            Rift Battle desk (demo catalog)
+          </h2>
+          <p className="relative z-[1] text-xs text-[var(--text-muted)]">
+            Cards & packs lead the desk. Credits settlement is the play path — SOL stays optional.
+          </p>
           {listings.length === 0 ? (
             <p className="relative z-[1] panel p-6 text-sm text-[var(--text-muted)]">
               No listings in this category.

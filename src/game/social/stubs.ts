@@ -40,7 +40,7 @@ export const DEMO_MAIL: MailMessage[] = [
     body: "I filed your latest discovery. Visit the Ecosystem dashboard when you can.",
     at: new Date().toISOString(),
     read: false,
-    avatarSrc: "/assets/social/avatars/archivist-echo.png",
+    avatarSrc: "/assets/npcs/riftwild-commons/archivist-solen/thumbnail.png",
   },
 ];
 
@@ -107,11 +107,14 @@ export function demoChatChannels(): ChatChannelStub[] {
 
 // ─── Friends / party / DM / community posts / calendar ───────────────────────
 
-/** Future-ready generic keeper avatars under /assets/social/avatars/. */
+/**
+ * Default social avatars when the player has not picked one yet.
+ * Uses real brand / NPC art (legacy /assets/social/avatars/ stubs were never shipped).
+ */
 export const GENERIC_SOCIAL_AVATARS = [
-  "/assets/social/avatars/generic-01.png",
-  "/assets/social/avatars/generic-02.png",
-  "/assets/social/avatars/generic-03.png",
+  "/assets/brand/riftwilds-mark.png",
+  "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
+  "/assets/npcs/riftwild-commons/elara-venn/thumbnail.png",
 ] as const;
 
 export type FriendStub = {
@@ -171,7 +174,7 @@ export const DEMO_FRIENDS: FriendStub[] = [
     rankTitle: "Ranger",
     status: "unknown",
     regionLabel: "Groveheart",
-    avatarSrc: "/assets/social/avatars/keeper-mira.png",
+    avatarSrc: "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
   },
   {
     id: "friend_reed",
@@ -179,7 +182,7 @@ export const DEMO_FRIENDS: FriendStub[] = [
     rankTitle: "Warden",
     status: "unknown",
     regionLabel: "Training Yard",
-    avatarSrc: "/assets/social/avatars/yard-captain-reed.png",
+    avatarSrc: "/assets/npcs/riftwild-commons/captain-orren/thumbnail.png",
   },
 ];
 
@@ -189,8 +192,8 @@ export const DEMO_PARTY: PartyStub = {
   memberLabels: [],
   maxSize: 4,
   objective: "Explore Ember Crater (stub)",
-  leaderAvatarSrc: "/assets/social/avatars/party-leader.png",
-  objectiveThumbSrc: "/assets/social/thumbs/ember-crater-explore.png",
+  leaderAvatarSrc: "/assets/brand/riftwilds-mark.png",
+  objectiveThumbSrc: "/assets/regions/ember-crater.png",
 };
 
 export const DEMO_DMS: DirectMessageStub[] = [
@@ -200,7 +203,7 @@ export const DEMO_DMS: DirectMessageStub[] = [
     preview: "Your living timeline has a new chapter ready.",
     at: new Date().toISOString(),
     read: false,
-    avatarSrc: "/assets/social/avatars/archivist-echo.png",
+    avatarSrc: "/assets/npcs/riftwild-commons/archivist-solen/thumbnail.png",
   },
 ];
 
@@ -212,7 +215,7 @@ export const DEMO_COMMUNITY_POSTS: CommunityPostStub[] = [
     body: "Pump.fun was the launch chapter. Play, restore the world, and trade here.",
     at: new Date().toISOString(),
     channel: "announcements",
-    thumbSrc: "/assets/social/thumbs/post-welcome-ecosystem.png",
+    thumbSrc: "/assets/brand/riftwilds-mark.png",
   },
   {
     id: "post_help",
@@ -221,8 +224,8 @@ export const DEMO_COMMUNITY_POSTS: CommunityPostStub[] = [
     body: "Feed and rest on a rhythm — soft rewards only, no token buy promises.",
     at: new Date(Date.now() - 86_400_000).toISOString(),
     channel: "help",
-    thumbSrc: "/assets/social/thumbs/post-care-streak.png",
-    authorAvatarSrc: "/assets/social/avatars/keeper-mira.png",
+    thumbSrc: "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
+    authorAvatarSrc: "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
   },
 ];
 

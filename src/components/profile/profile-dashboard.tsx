@@ -115,6 +115,7 @@ export function ProfileDashboard() {
   const { address: wallet, connected, viewOnly } = useActiveWallet();
   const [tab, setTab] = useState<ProfileTab>("overview");
   const [pets, setPets] = useState<PetRow[]>([]);
+  const [socialAvatarSrc, setSocialAvatarSrc] = useState<string | null>(null);
   const [eggsClaimed, setEggsClaimed] = useState(0);
   const [loading, setLoading] = useState(true);
   const [displayName, setDisplayName] = useState("Keeper");
@@ -153,16 +154,24 @@ export function ProfileDashboard() {
     let cancelled = false;
     void (async () => {
       try {
-        const [petsRes, eggsRes] = await Promise.all([
+        const [petsRes, eggsRes, avatarRes] = await Promise.all([
           fetch("/api/pets"),
           fetch("/api/hatchery/eggs"),
+          fetch("/api/social/avatars"),
         ]);
         const petsJson = (await petsRes.json()) as { pets?: PetRow[] };
         const eggsJson = (await eggsRes.json()) as { eggs?: unknown[]; pets?: PetRow[] };
+        const avatarJson = (await avatarRes.json()) as {
+          ok?: boolean;
+          selectedSrc?: string;
+        };
         if (cancelled) return;
         const nextPets = petsJson.pets ?? eggsJson.pets ?? [];
         setPets(nextPets);
         setEggsClaimed(eggsJson.eggs?.length ?? 0);
+        if (avatarJson.ok && avatarJson.selectedSrc) {
+          setSocialAvatarSrc(avatarJson.selectedSrc);
+        }
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -192,9 +201,9 @@ export function ProfileDashboard() {
   }, [connected, wallet, refreshBalance]);
 
   const avatarPet = pets[0] ?? null;
-  const avatarSrc = avatarPet?.speciesSlug
-    ? creaturePortraitPath(avatarPet.speciesSlug)
-    : brandMarkPath;
+  const avatarSrc =
+    socialAvatarSrc ??
+    (avatarPet?.speciesSlug ? creaturePortraitPath(avatarPet.speciesSlug) : brandMarkPath);
 
   const memories = useMemo(
     () =>
@@ -249,16 +258,24 @@ export function ProfileDashboard() {
 
         <div className="relative flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div className="flex min-w-0 items-start gap-4">
-            <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-[var(--radius-lg)] border border-[var(--stroke-strong)] bg-[rgba(8,8,14,0.55)] shadow-[0_0_28px_rgba(61,231,255,0.18)] md:h-24 md:w-24">
-              <Image
-                src={avatarSrc}
-                alt=""
-                fill
-                sizes="96px"
-                className="object-contain p-1.5"
-                unoptimized
-                priority
-              />
+            <div className="shrink-0">
+              <div className="relative h-20 w-20 overflow-hidden rounded-[var(--radius-lg)] border border-[var(--stroke-strong)] bg-[rgba(8,8,14,0.55)] shadow-[0_0_28px_rgba(61,231,255,0.18)] md:h-24 md:w-24">
+                <Image
+                  src={avatarSrc}
+                  alt=""
+                  fill
+                  sizes="96px"
+                  className="object-contain p-1.5"
+                  unoptimized
+                  priority
+                />
+              </div>
+              <Link
+                href="/social?tab=safety"
+                className="mt-1.5 block text-center text-[11px] text-[var(--cyan)] underline focus-ring"
+              >
+                Change avatar
+              </Link>
             </div>
             <div className="min-w-0">
               <p className="font-display text-[10px] uppercase tracking-[0.28em] text-[var(--cyan)]">

@@ -127,7 +127,8 @@ function buildEntries(seed: number): LeaderboardEntry[] {
     const { trend, trendDelta } = trendFor(i + 1);
     const wins = 48 - i * 2 + (seed % 5);
     const losses = 8 + i + (seed % 3);
-    const arenaPoints = 3200 - i * 95 - (seed % 40) + (i === 11 ? 40 : 0);
+    const riftPoints = 4200 - i * 110 - (seed % 40) + (i === 11 ? 55 : 0);
+    const arenaPoints = Math.round(riftPoints * 0.55);
 
     entries.push({
       rank: i + 1,
@@ -137,9 +138,11 @@ function buildEntries(seed: number): LeaderboardEntry[] {
       speciesSlug: species.slug,
       speciesName: species.name,
       affinity: species.affinity,
-      arenaPoints: Math.max(120, arenaPoints),
+      riftPoints: Math.max(140, riftPoints),
+      arenaPoints: Math.max(80, arenaPoints),
       wins: Math.max(2, wins),
       losses: Math.max(1, losses),
+      binderCards: Math.max(8, 96 - i * 3 + (seed % 7)),
       careScore: Math.max(40, 980 - i * 28 - (seed % 20)),
       collectionScore: Math.max(10, 420 - i * 12 + (seed % 15)),
       trend,
@@ -156,7 +159,9 @@ const SEASON_ENTRIES: Record<string, Record<LeaderboardTimeRange, LeaderboardEnt
     season: buildEntries(1),
     week: buildEntries(7).map((e, i) => ({
       ...e,
+      riftPoints: Math.max(50, Math.round(e.riftPoints * 0.22)),
       arenaPoints: Math.max(40, Math.round(e.arenaPoints * 0.22)),
+      binderCards: Math.max(2, Math.round(e.binderCards * 0.2)),
       wins: Math.max(1, Math.round(e.wins * 0.18)),
       losses: Math.max(0, Math.round(e.losses * 0.2)),
       rank: i + 1,
@@ -165,10 +170,12 @@ const SEASON_ENTRIES: Record<string, Record<LeaderboardTimeRange, LeaderboardEnt
   "s0-training": {
     season: buildEntries(3).map((e) => ({
       ...e,
+      riftPoints: Math.max(100, Math.round(e.riftPoints * 0.7)),
       arenaPoints: Math.max(80, Math.round(e.arenaPoints * 0.7)),
     })),
     week: buildEntries(9).map((e, i) => ({
       ...e,
+      riftPoints: Math.max(25, Math.round(e.riftPoints * 0.15)),
       arenaPoints: Math.max(20, Math.round(e.arenaPoints * 0.15)),
       rank: i + 1,
     })),
@@ -176,10 +183,12 @@ const SEASON_ENTRIES: Record<string, Record<LeaderboardTimeRange, LeaderboardEnt
   preseason: {
     season: buildEntries(5).map((e) => ({
       ...e,
+      riftPoints: Math.max(60, Math.round(e.riftPoints * 0.45)),
       arenaPoints: Math.max(50, Math.round(e.arenaPoints * 0.45)),
     })),
     week: buildEntries(2).map((e, i) => ({
       ...e,
+      riftPoints: Math.max(12, Math.round(e.riftPoints * 0.1)),
       arenaPoints: Math.max(10, Math.round(e.arenaPoints * 0.1)),
       rank: i + 1,
     })),
@@ -195,9 +204,17 @@ export function getDemoLeaderboard(params: {
 }
 
 export function scoreForTab(entry: LeaderboardEntry, tab: LeaderboardTab): number {
+  if (tab === "rift") return entry.riftPoints;
   if (tab === "care") return entry.careScore;
-  if (tab === "collection") return entry.collectionScore;
-  return entry.arenaPoints;
+  if (tab === "collection") return entry.binderCards || entry.collectionScore;
+  if (tab === "arena") return entry.arenaPoints;
+  return entry.riftPoints;
+}
+
+export function winRatePercent(entry: LeaderboardEntry): number {
+  const total = entry.wins + entry.losses;
+  if (total <= 0) return 0;
+  return Math.round((entry.wins / total) * 100);
 }
 
 export function filterLeaderboardEntries(

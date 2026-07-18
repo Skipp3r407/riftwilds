@@ -9,16 +9,16 @@ import { audioManager } from "@/lib/audio/manager";
 import { clamp01 } from "@/lib/audio/prefs";
 
 const PLAYLIST = [
-  { src: "/sounds/music/sector.mp3", label: "Sector" },
-  { src: "/sounds/music/airy.mp3", label: "Airy" },
-  { src: "/sounds/music/magic-space.mp3", label: "Magic Space" },
-  { src: "/sounds/music/pulse.mp3", label: "Pulse" },
-  { src: "/sounds/music/urgent.mp3", label: "Urgent" },
-  { src: "/sounds/music/transmission.mp3", label: "Transmission" },
-  { src: "/sounds/music/space-graveyard.mp3", label: "Space Graveyard" },
-  { src: "/sounds/music/menacing-otherworld.mp3", label: "Menacing Otherworld" },
-  { src: "/sounds/music/dark-things.mp3", label: "Dark Things" },
-  { src: "/sounds/music/sirens-in-darkness.mp3", label: "Sirens in Darkness" },
+  { src: "/sounds/music/sector.mp3", label: "Sector", mood: "Wander" },
+  { src: "/sounds/music/airy.mp3", label: "Airy", mood: "Coast" },
+  { src: "/sounds/music/magic-space.mp3", label: "Magic Space", mood: "Wonder" },
+  { src: "/sounds/music/pulse.mp3", label: "Pulse", mood: "Storm" },
+  { src: "/sounds/music/urgent.mp3", label: "Urgent", mood: "Ember" },
+  { src: "/sounds/music/transmission.mp3", label: "Transmission", mood: "Stone" },
+  { src: "/sounds/music/space-graveyard.mp3", label: "Space Graveyard", mood: "Frost" },
+  { src: "/sounds/music/menacing-otherworld.mp3", label: "Menacing Otherworld", mood: "Ruin" },
+  { src: "/sounds/music/dark-things.mp3", label: "Dark Things", mood: "Void" },
+  { src: "/sounds/music/sirens-in-darkness.mp3", label: "Sirens in Darkness", mood: "Radiant" },
 ] as const;
 
 type MusicMode = "idle" | "menu" | "region" | "manual";

@@ -20,6 +20,8 @@ import {
   reportPlayer,
   resolveOwnerByHandle,
   sendFriendRequest,
+  parseAvatarKey,
+  setAvatar,
   setDisplayName,
   setHandle,
   setMessagePrivacy,
@@ -40,6 +42,7 @@ const bodySchema = z.object({
     "set_handle",
     "set_display_name",
     "set_privacy",
+    "set_avatar",
   ]),
   handle: z.string().min(1).max(40).optional(),
   peerOwnerKey: z.string().min(1).max(80).optional(),
@@ -49,6 +52,13 @@ const bodySchema = z.object({
   details: z.string().max(400).optional(),
   displayName: z.string().min(2).max(32).optional(),
   messagePrivacy: z.enum(["friends_only", "anyone"]).optional(),
+  /** Avatar selection — prefer `avatarKey` (`pet:…` / `npc:…` / …). */
+  avatarKey: z.string().min(3).max(120).optional(),
+  avatarKind: z.enum(["pet", "npc", "lore", "brand"]).optional(),
+  petPublicId: z.string().min(1).max(80).optional(),
+  npcSlug: z.string().min(1).max(80).optional(),
+  characterId: z.string().min(1).max(80).optional(),
+  brandId: z.string().min(1).max(40).optional(),
 });
 
 export async function GET(request: Request) {
@@ -242,6 +252,30 @@ export async function POST(request: Request) {
         profile: setMessagePrivacy(owner.ownerKey, body.messagePrivacy),
       };
       break;
+    case "set_avatar": {
+      const fromKey = body.avatarKey ? parseAvatarKey(body.avatarKey) : null;
+      const input =
+        fromKey ??
+        (body.avatarKind === "pet" && body.petPublicId
+          ? { kind: "pet" as const, petPublicId: body.petPublicId }
+          : body.avatarKind === "npc" && body.npcSlug
+            ? { kind: "npc" as const, npcSlug: body.npcSlug }
+            : body.avatarKind === "lore" && body.characterId
+              ? { kind: "lore" as const, characterId: body.characterId }
+              : body.avatarKind === "brand"
+                ? { kind: "brand" as const, brandId: body.brandId }
+                : null);
+      if (!input) {
+        return jsonError(
+          "avatarKey or avatarKind + id required.",
+          400,
+          "validation_error",
+          guard.requestId,
+        );
+      }
+      result = setAvatar(owner.ownerKey, input);
+      break;
+    }
     default:
       return jsonError("Unknown action.", 400, "validation_error", guard.requestId);
   }

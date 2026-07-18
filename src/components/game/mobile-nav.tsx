@@ -2,15 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Egg, Compass, Swords, Backpack, Home } from "lucide-react";
+import { Egg, Layers, Swords, Backpack, Home } from "lucide-react";
 import { playSfx } from "@/hooks/use-sfx";
 import { cn } from "@/lib/utils/cn";
 
 const items = [
   { href: "/play", label: "Play", icon: Home },
+  { href: "/tcg/battle", label: "Battle", icon: Swords },
+  { href: "/tcg/collection", label: "Cards", icon: Layers },
   { href: "/hatchery", label: "Hatch", icon: Egg },
-  { href: "/live-world", label: "Live", icon: Compass },
-  { href: "/arena", label: "Arena", icon: Swords },
   { href: "/inventory", label: "Pack", icon: Backpack },
 ];
 

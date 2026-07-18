@@ -1,4 +1,5 @@
-export type LeaderboardTab = "arena" | "care" | "collection";
+/** Primary ladder is Rift Battles; legacy Arena Points stay as a secondary tab. */
+export type LeaderboardTab = "rift" | "arena" | "care" | "collection";
 
 export type LeaderboardTimeRange = "season" | "week";
 
@@ -34,9 +35,14 @@ export type LeaderboardEntry = {
   speciesSlug: string;
   speciesName: string;
   affinity: Exclude<AffinityFilter, "ALL">;
+  /** Seasonal Rift Energy / ladder score (primary TCG metric). */
+  riftPoints: number;
+  /** Legacy Arena Points — soft-secondary. */
   arenaPoints: number;
   wins: number;
   losses: number;
+  /** Unique binder cards collected (demo). */
+  binderCards: number;
   careScore: number;
   collectionScore: number;
   trend: TrendDirection;

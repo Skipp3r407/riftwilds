@@ -19,21 +19,21 @@ const howItWorks = [
   },
   {
     step: "2",
-    title: "Hatch it",
-    body: "Server-fair hatch reveals affinity, species, and rarity. Odds are public before you roll.",
-    href: "/fairness",
+    title: "Hatch & collect",
+    body: "Server-fair hatch reveals affinity and species. Grow a card binder tied to your Riftlings.",
+    href: "/tcg/collection",
   },
   {
     step: "3",
-    title: "Care for it",
-    body: "Feed, clean, play, rest. Keep care scores healthy — dormant pets pause rewards and Arena.",
-    href: "/play",
+    title: "Build a deck",
+    body: "Shape a Rift Energy deck from your binder — short sessions, readable choices, real strategy.",
+    href: "/tcg/collection",
   },
   {
     step: "4",
-    title: "Play the loop",
-    body: "Train in Arena, equip original gear, browse the shop, and share in transparent holder epochs.",
-    href: "/arena",
+    title: "Rift Battle",
+    body: "Duel on the TCG board — primary combat for launch. Living World habitat ships later.",
+    href: "/tcg/battle",
   },
 ];
 
@@ -67,7 +67,7 @@ const featured = [
 const faq = [
   {
     q: "How is this different from other Solana pet games?",
-    a: `${projectConfig.PROJECT_NAME} adds turn-based Arena battles, a full equipment economy, versioned revenue splits, and public allocation policies — not just hatch-and-hold.`,
+    a: `${projectConfig.PROJECT_NAME} centers on a strategic Rift Battles card game with Riftling companions, Credits-first economy, and transparent revenue policies — not just hatch-and-hold. Living World is a future release.`,
   },
   {
     q: "Do I need the token?",
@@ -146,7 +146,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <h2 className="font-display text-3xl text-white">How it works</h2>
           <p className="mt-2 max-w-2xl text-sm text-[var(--text-muted)]">
-            The same simple loop players love — then Arena, gear, and a transparent economy on top.
+            Hatch a companion, grow a card collection, and duel in Rift Battles — the launch gameplay
+            loop.
           </p>
           <ol className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {howItWorks.map((item) => (
@@ -212,20 +213,20 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-6">
         <h2 className="font-display text-3xl text-white">Built to go further</h2>
         <p className="mt-2 max-w-2xl text-sm text-[var(--text-muted)]">
-          Other games stop at hatch-and-care. {projectConfig.UNIVERSE_NAME} adds skill battles and a
+          Other games stop at hatch-and-care. {projectConfig.UNIVERSE_NAME} adds Rift Battles and a
           public revenue split you can audit.
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <Link
-            href="/arena"
+            href="/tcg/battle"
             className="panel panel-interactive block p-6 focus-ring"
           >
             <p className="font-display text-xs uppercase tracking-[0.2em] text-[var(--cyan)]">
-              Arena
+              Rift Battles
             </p>
-            <h3 className="font-display mt-2 text-xl text-white">Turn-based duels</h3>
+            <h3 className="font-display mt-2 text-xl text-white">Strategic card duels</h3>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
-              Affinity matchups, weapons, training AI, and ranked normalization — no wagering.
+              Spend Rift Energy, play affinities, win short decisive matches — no wagering.
             </p>
           </Link>
           <Link

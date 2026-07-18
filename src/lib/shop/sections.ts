@@ -6,9 +6,18 @@ import { lamportsToCreditsPrice } from "@/lib/economy/core/credits-pricing";
 import { quoteDirectPurchase } from "@/lib/items/pricing";
 import { toShopCards, type ShopCardData } from "@/lib/items/shop-serialize";
 import type { AnyCatalogItem } from "@/lib/items/types";
+import {
+  getTcgBinderOffers,
+  getTcgCosmeticOffers,
+  getTcgFeaturedOffers,
+  getTcgPackOffers,
+} from "@/lib/shop/tcg-catalog";
 
 export type ShopSectionId =
   | "featured"
+  | "packs"
+  | "binders"
+  | "card-cosmetics"
   | "weapons"
   | "armor"
   | "potions"
@@ -25,27 +34,63 @@ export type ShopSectionDef = {
   description: string;
 };
 
+/** TCG-first shop IA — packs/binders/cosmetics lead; legacy gear stays available. */
 export const SHOP_SECTIONS: ShopSectionDef[] = [
   {
     id: "featured",
     slug: "featured",
     label: "Featured",
     href: "/shop/featured",
-    description: "Highlighted gear and care picks at disclosed SOL prices.",
+    description: "Rift Battle packs, binder pages, and deck slots — Credits-first.",
+  },
+  {
+    id: "packs",
+    slug: "packs",
+    label: "Card packs",
+    href: "/shop/packs",
+    description: "Disclosed affinity packs for your Card Binder. No paid mystery gear.",
+  },
+  {
+    id: "binders",
+    slug: "binders",
+    label: "Binders & decks",
+    href: "/shop/binders",
+    description: "Binder pages and extra deck slots for practice boards.",
+  },
+  {
+    id: "card-cosmetics",
+    slug: "card-cosmetics",
+    label: "Card cosmetics",
+    href: "/shop/card-cosmetics",
+    description: "Sleeves and board skins — optional prestige, SOL never required to play.",
+  },
+  {
+    id: "cosmetics",
+    slug: "cosmetics",
+    label: "Prestige looks",
+    href: "/shop/cosmetics",
+    description: "Legacy celestial looks — still entertainment items only.",
+  },
+  {
+    id: "recovery",
+    slug: "recovery",
+    label: "Care & recovery",
+    href: "/shop/recovery",
+    description: "Care meals and revival supplies for Riftling health loops.",
   },
   {
     id: "weapons",
     slug: "weapons",
     label: "Weapons",
     href: "/shop/weapons",
-    description: "Named weapons for Riftling loadouts. Exact stats disclosed.",
+    description: "Legacy Arena loadout weapons — soft-secondary to Rift Battles.",
   },
   {
     id: "armor",
     slug: "armor",
     label: "Armor",
     href: "/shop/armor",
-    description: "Harnesses, vests, and guards — no mystery rarity rolls.",
+    description: "Legacy harnesses and guards — soft-secondary.",
   },
   {
     id: "potions",
@@ -67,20 +112,6 @@ export const SHOP_SECTIONS: ShopSectionDef[] = [
     label: "Materials",
     href: "/shop/materials",
     description: "Crafting inputs and affinity dusts.",
-  },
-  {
-    id: "cosmetics",
-    slug: "cosmetics",
-    label: "Cosmetics",
-    href: "/shop/cosmetics",
-    description: "Prestige and celestial looks — still entertainment items only.",
-  },
-  {
-    id: "recovery",
-    slug: "recovery",
-    label: "Recovery",
-    href: "/shop/recovery",
-    description: "Care meals and revival supplies for pet health loops.",
   },
 ];
 
@@ -125,7 +156,16 @@ export function getShopSectionItems(
 ): ShopCardData[] {
   switch (sectionId) {
     case "featured":
-      return toShopCards(getShopItemsByCategory("FEATURED"), solUsdRate);
+      return [
+        ...getTcgFeaturedOffers(),
+        ...toShopCards(getShopItemsByCategory("FEATURED"), solUsdRate).slice(0, 4),
+      ];
+    case "packs":
+      return getTcgPackOffers();
+    case "binders":
+      return getTcgBinderOffers();
+    case "card-cosmetics":
+      return getTcgCosmeticOffers();
     case "weapons":
       return toShopCards(getShopItemsByCategory("WEAPONS"), solUsdRate);
     case "armor":

@@ -10,8 +10,8 @@ export default function LeaderboardsPage() {
         kicker="Rankings"
         titleSlug="leaderboards"
         title="Leaderboards"
-        description="Seasonal Riftwilds ladders for Arena Points, care, and collection. Live ranking APIs are still wiring up — this HUD runs on demo data that mirrors the final board."
-        status="Demo live"
+        description="Seasonal Rift Battles ladder — wins, win rate, and Card Binder progress. Legacy Arena Points stay secondary. Live ranking APIs are still wiring up; this HUD runs on demo data."
+        status="Rift ladder"
         statusTone="live"
       />
       <LeaderboardsHud />

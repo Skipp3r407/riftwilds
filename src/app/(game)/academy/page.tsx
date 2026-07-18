@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import { AcademyShell } from "@/components/academy";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
 import { ALL_LESSONS } from "@/game/academy";
@@ -22,8 +23,12 @@ export default function AcademyPage() {
         title="Player Academy"
         description={
           <>
-            Interactive tutorials, Combat Academy drills, and a searchable FAQ. Credits are earned
-            by playing — SOL is never required for basic gameplay.{" "}
+            Interactive drills and searchable FAQ. For the TCG-first Keeper Guide (battles, energy,
+            binder, packs), start at{" "}
+            <Link href="/help" className="text-[var(--cyan)] underline-offset-2 hover:underline">
+              Help
+            </Link>
+            . Credits are earned by playing — SOL is never required.{" "}
             <span className="text-[var(--text-dim)]">
               {ALL_LESSONS.length} lessons loaded · progress saves locally
             </span>

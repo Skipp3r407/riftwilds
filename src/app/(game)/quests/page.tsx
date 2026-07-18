@@ -11,22 +11,23 @@ export default function QuestsPage() {
   return (
     <div className="space-y-4">
       <PageHeader
-        kicker="Missions"
+        kicker="Duel contracts"
         titleSlug="quests"
         title="Quests"
         description={
           <>
-            Story arcs, rotating dailies, and exploration contracts across The Riftwilds. Rewards
-            are keeper XP, care items, and Arena Points — not real-money payouts.{" "}
+            Rift Battle, binder, hatchery, and care contracts — Living World habitat steps are
+            soft-deferred for launch. Rewards are keeper XP, Credits, care items, and Rift Points —
+            not real-money payouts.{" "}
             <span className="text-[var(--text-dim)]">
               {QUEST_CATALOG.length} definitions loaded
-              {live ? "" : " · progress is demo-tracked locally until backend sync ships"}.
+              {live ? "" : " · progress tracks from practice battles & binder locally"}.
             </span>
           </>
         }
-        status={live ? "Live" : "Phase 3"}
+        status={live ? "Live" : "TCG demo"}
         statusTone={live ? "live" : "warn"}
-        actions={!live ? <StatusChip tone="warn">DEMO TRACKING</StatusChip> : null}
+        actions={!live ? <StatusChip tone="warn">BATTLE TRACKING</StatusChip> : null}
       />
       <QuestBoard />
     </div>

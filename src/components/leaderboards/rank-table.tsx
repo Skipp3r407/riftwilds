@@ -6,14 +6,16 @@ import { AffinityChip } from "@/components/leaderboards/affinity-chip";
 import { TrendCell } from "@/components/leaderboards/trend-cell";
 import { EmptyState } from "@/components/shared/page-header";
 import { creaturePortraitPath } from "@/lib/assets/paths";
-import { scoreForTab } from "@/lib/leaderboards/demo-data";
+import { scoreForTab, winRatePercent } from "@/lib/leaderboards/demo-data";
 import type { LeaderboardEntry, LeaderboardTab } from "@/lib/leaderboards/types";
 import { cn } from "@/lib/utils/cn";
 
 function metricHeader(tab: LeaderboardTab): string {
+  if (tab === "rift") return "Rift Points";
   if (tab === "care") return "Care";
-  if (tab === "collection") return "Collection";
-  return "Arena Points";
+  if (tab === "collection") return "Binder cards";
+  if (tab === "arena") return "Arena Points";
+  return "Rift Points";
 }
 
 export function RankTable({
@@ -44,6 +46,7 @@ export function RankTable({
               <th className="px-3 py-3 font-medium md:px-4">Affinity</th>
               <th className="px-3 py-3 font-medium md:px-4">{metricHeader(tab)}</th>
               <th className="px-3 py-3 font-medium md:px-4">W / L</th>
+              <th className="px-3 py-3 font-medium md:px-4">Win%</th>
               <th className="px-3 py-3 font-medium md:px-4">Trend</th>
             </tr>
           </thead>
@@ -132,6 +135,9 @@ function RankRow({
         <span className="text-[var(--emerald)]">{entry.wins}</span>
         <span className="mx-1 text-[var(--text-dim)]">/</span>
         <span className="text-[var(--danger)]">{entry.losses}</span>
+      </td>
+      <td className="px-3 py-3 align-middle font-mono text-xs text-[var(--cyan)] md:px-4">
+        {winRatePercent(entry)}%
       </td>
       <td className="px-3 py-3 align-middle md:px-4">
         <TrendCell trend={entry.trend} delta={entry.trendDelta} />

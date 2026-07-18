@@ -65,27 +65,31 @@ const SYSTEM_KEEPERS: Array<{
   displayName: string;
   rankTitle: string;
   avatarSrc: string;
+  avatarKey: string;
 }> = [
   {
     ownerKey: "system_keeper_mira",
     handle: "keeper_mira",
     displayName: "Keeper Mira",
     rankTitle: "Ranger",
-    avatarSrc: "/assets/social/avatars/keeper-mira.png",
+    avatarSrc: "/assets/npcs/riftwild-commons/mira-shellbright/portrait.png",
+    avatarKey: "npc:mira-shellbright",
   },
   {
     ownerKey: "system_keeper_reed",
     handle: "captain_reed",
     displayName: "Yard Captain Reed",
     rankTitle: "Warden",
-    avatarSrc: "/assets/social/avatars/yard-captain-reed.png",
+    avatarSrc: "/assets/npcs/riftwild-commons/captain-orren/portrait.png",
+    avatarKey: "npc:captain-orren",
   },
   {
     ownerKey: "system_archivist_echo",
     handle: "archivist_echo",
     displayName: "Archivist Echo",
     rankTitle: "Archivist",
-    avatarSrc: "/assets/social/avatars/archivist-echo.png",
+    avatarSrc: "/assets/npcs/riftwild-commons/archivist-solen/portrait.png",
+    avatarKey: "npc:archivist-solen",
   },
 ];
 
@@ -100,6 +104,7 @@ export function ensureSystemKeepersSeeded(now = new Date()): void {
       displayName: k.displayName,
       rankTitle: k.rankTitle,
       avatarSrc: k.avatarSrc,
+      avatarKey: k.avatarKey,
       createdAt: iso,
       lastSeenAt: iso,
       messagePrivacy: "friends_only",

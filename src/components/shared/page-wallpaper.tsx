@@ -34,6 +34,7 @@ export const WALLPAPERS = {
   pets: "/assets/ui/wallpapers/pets.png",
   docs: "/assets/ui/wallpapers/docs.png",
   battle: "/assets/ui/wallpapers/battle.png",
+  "tcg-battle": "/assets/ui/wallpapers/tcg-battle.png",
   memorials: "/assets/ui/wallpapers/memorials.png",
   about: "/assets/about/about-hero-rift.png",
 } as const;
@@ -76,6 +77,9 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/patch-notes", name: "docs", opacity: 0.38 },
   { prefix: "/updates", name: "docs", opacity: 0.38 },
   { prefix: "/battle", name: "battle", opacity: 0.4 },
+  { prefix: "/tcg/battle", name: "tcg-battle", opacity: 0.52 },
+  { prefix: "/tcg/collection", name: "collection", opacity: 0.48 },
+  { prefix: "/tcg", name: "tcg-battle", opacity: 0.45 },
   { prefix: "/memorials", name: "memorials", opacity: 0.4 },
   { prefix: "/legal", name: "docs", opacity: 0.35 },
   { prefix: "/about", name: "about", opacity: 0.28 },
@@ -114,7 +118,12 @@ type Props = {
 export function PageWallpaper({ name, className, opacity = 0.55, priority }: Props) {
   const src = WALLPAPERS[name];
   const eager =
-    priority ?? (name === "hero" || name === "hatchery" || name === "arena" || name === "play");
+    priority ??
+    (name === "hero" ||
+      name === "hatchery" ||
+      name === "arena" ||
+      name === "play" ||
+      name === "tcg-battle");
 
   return (
     <div className={cn("pointer-events-none absolute inset-0 overflow-hidden", className)} aria-hidden>

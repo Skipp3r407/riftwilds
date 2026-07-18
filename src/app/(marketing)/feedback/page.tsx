@@ -32,8 +32,8 @@ export default function FeedbackPage() {
           required.
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
-          <Link href="/academy" className="btn-secondary focus-ring text-sm">
-            Academy / Help
+          <Link href="/help" className="btn-secondary focus-ring text-sm">
+            Help
           </Link>
           <Link href="/patch-notes" className="btn-secondary focus-ring text-sm">
             Patch Notes

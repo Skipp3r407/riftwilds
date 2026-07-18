@@ -14,6 +14,7 @@ import {
   getDemoLeaderboard,
   LEADERBOARD_SEASONS,
   scoreForTab,
+  winRatePercent,
 } from "@/lib/leaderboards/demo-data";
 import type {
   AffinityFilter,
@@ -21,11 +22,13 @@ import type {
   LeaderboardTimeRange,
 } from "@/lib/leaderboards/types";
 import { cn } from "@/lib/utils/cn";
+import Link from "next/link";
 
 const TABS: { id: LeaderboardTab; label: string; stub?: boolean }[] = [
-  { id: "arena", label: "Arena Points" },
+  { id: "rift", label: "Rift Battles" },
+  { id: "collection", label: "Card Binder" },
   { id: "care", label: "Care", stub: true },
-  { id: "collection", label: "Collection", stub: true },
+  { id: "arena", label: "Legacy Arena", stub: true },
 ];
 
 const TIME_RANGES: { id: LeaderboardTimeRange; label: string }[] = [
@@ -34,7 +37,7 @@ const TIME_RANGES: { id: LeaderboardTimeRange; label: string }[] = [
 ];
 
 export function LeaderboardsHud({
-  defaultTab = "arena",
+  defaultTab = "rift",
   showNoWagering = true,
 }: {
   defaultTab?: LeaderboardTab;
@@ -67,7 +70,9 @@ export function LeaderboardsHud({
 
   return (
     <div className="space-y-5">
-      {showNoWagering && tab === "arena" ? <ArenaNoWageringBanner /> : null}
+      {showNoWagering && (tab === "rift" || tab === "arena") ? (
+        <ArenaNoWageringBanner />
+      ) : null}
 
       <section className="panel surface-grid relative overflow-hidden p-4 md:p-5">
         <div className="relative flex flex-col gap-4">
@@ -105,9 +110,25 @@ export function LeaderboardsHud({
               </div>
               <p className="mt-2 text-xs text-[var(--text-muted)]">
                 {season.startsAt} → {season.endsAt}
-                {tab === "arena"
-                  ? " · Arena Points are earn-only, non-transferable, and have no cash value."
-                  : " · Secondary boards use demo scores until live feeds ship."}
+                {tab === "rift"
+                  ? " · Rift Points from practice wins & energy play — earn-only, no cash value."
+                  : tab === "collection"
+                    ? " · Binder progress ranks unique cards collected."
+                    : tab === "arena"
+                      ? " · Legacy Arena Points — soft-secondary to Rift Battles."
+                      : " · Secondary boards use demo scores until live feeds ship."}
+              </p>
+              <p className="mt-2 text-xs">
+                <Link href="/tcg/battle" className="text-[var(--cyan)] underline-offset-2 hover:underline">
+                  Play Rift Battle
+                </Link>
+                <span className="mx-2 text-[var(--text-dim)]">·</span>
+                <Link
+                  href="/tcg/collection"
+                  className="text-[var(--amber)] underline-offset-2 hover:underline"
+                >
+                  Open Card Binder
+                </Link>
               </p>
             </div>
 
@@ -226,6 +247,7 @@ export function LeaderboardsHud({
               <span className="text-[var(--emerald)]">{youEntry.wins}W</span>
               {" / "}
               <span className="text-[var(--danger)]">{youEntry.losses}L</span>
+              <span className="ml-2 text-[var(--cyan)]">{winRatePercent(youEntry)}%</span>
             </p>
             <StatusChip tone="info">Demo wallet</StatusChip>
           </div>

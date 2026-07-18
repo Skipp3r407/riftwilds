@@ -455,7 +455,7 @@ export const COMMONS_NAMED: NpcDef[] = [
         "academy",
         [
           "East of the plaza — cyan eaves beside the training yard. Interact with the Player Academy building and choose Enter Academy.",
-          "Or open /academy from Help anytime. Lessons never require SOL for the basics.",
+          "Or open /help for the Keeper Guide, and /academy for interactive lessons. SOL is never required for the basics.",
         ],
         [choice("back", "Back", "greeting")],
       ),

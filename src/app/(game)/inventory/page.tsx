@@ -12,11 +12,24 @@ export default function InventoryPage() {
         kicker="Keeper pack"
         titleSlug="inventory"
         title="Inventory"
-        description={itemDisclosures.combat}
+        description={
+          <>
+            Packs, cosmetics, and care goods land here. Open your{" "}
+            <Link href="/tcg/collection" className="text-[var(--cyan)] underline-offset-2 hover:underline">
+              Card Binder
+            </Link>{" "}
+            for duel cards — {itemDisclosures.combat}
+          </>
+        }
         actions={
-          <Link href="/shop" className="btn-primary focus-ring text-sm">
-            Open shop
-          </Link>
+          <>
+            <Link href="/shop/packs" className="btn-primary focus-ring text-sm">
+              Card packs
+            </Link>
+            <Link href="/tcg/collection" className="btn-secondary focus-ring text-sm">
+              Card Binder
+            </Link>
+          </>
         }
       />
       <InventoryBrowser />

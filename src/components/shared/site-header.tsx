@@ -163,7 +163,14 @@ function NavDropdown({ group, pathname, openId, setOpenId }: NavDropdownProps) {
                   close();
                 }}
               >
-                {item.label}
+                <span className="flex w-full items-center justify-between gap-2">
+                  <span>{item.label}</span>
+                  {item.badge ? (
+                    <span className="shrink-0 font-display text-[9px] uppercase tracking-[0.14em] text-[var(--amber)]">
+                      {item.badge}
+                    </span>
+                  ) : null}
+                </span>
               </Link>
             );
           })}
@@ -358,11 +365,12 @@ export function SiteHeader(_props: Props = {}) {
             ))}
             {/* HELP stays in the primary link cluster — after Community, before tickers/wallet */}
             <Link
-              href="/academy"
+              href="/help"
               onClick={() => playSfx("ui.nav")}
               className={cn(
                 "hud-nav__link hud-nav__help focus-ring",
-                linkActive(pathname, "/academy") && "hud-nav__link--active",
+                (linkActive(pathname, "/help") || linkActive(pathname, "/academy")) &&
+                  "hud-nav__link--active",
               )}
             >
               Help
@@ -445,7 +453,14 @@ export function SiteHeader(_props: Props = {}) {
                           closeMobile();
                         }}
                       >
-                        {item.label}
+                        <span className="flex w-full items-center justify-between gap-2">
+                          <span>{item.label}</span>
+                          {item.badge ? (
+                            <span className="shrink-0 font-display text-[9px] uppercase tracking-[0.14em] text-[var(--amber)]">
+                              {item.badge}
+                            </span>
+                          ) : null}
+                        </span>
                       </Link>
                     );
                   })}
@@ -457,6 +472,19 @@ export function SiteHeader(_props: Props = {}) {
           <div className="hud-nav__drawer-section">
             <p className="hud-nav__drawer-label">Help</p>
             <Link
+              href="/help"
+              className={cn(
+                "hud-nav__drawer-link focus-ring",
+                linkActive(pathname, "/help") && "hud-nav__drawer-link--active",
+              )}
+              onClick={() => {
+                playSfx("ui.nav");
+                closeMobile();
+              }}
+            >
+              Keeper Help
+            </Link>
+            <Link
               href="/academy"
               className={cn(
                 "hud-nav__drawer-link focus-ring",
@@ -467,7 +495,7 @@ export function SiteHeader(_props: Props = {}) {
                 closeMobile();
               }}
             >
-              Academy / Help
+              Player Academy
             </Link>
             <Link
               href="/feedback"

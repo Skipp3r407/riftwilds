@@ -8,7 +8,7 @@ import {
   type QuestStatus,
 } from "@/game/quests/quest-catalog";
 
-export const QUEST_DEMO_STORAGE_KEY = "riftwilds-quest-demo-v1";
+export const QUEST_DEMO_STORAGE_KEY = "riftwilds-quest-demo-v2-tcg";
 
 export type QuestDemoEntry = {
   status: QuestStatus;
@@ -50,7 +50,7 @@ export function createDefaultDemoState(): QuestDemoState {
   // Active story branch
   state["story-ember-call"] = {
     status: "active",
-    progress: { "visit-basin": 1, "scout-ember": 0 },
+    progress: { "ember-battle": 0, "ember-card": 0 },
     tracked: true,
   };
 
@@ -92,6 +92,12 @@ export function createDefaultDemoState(): QuestDemoState {
     tracked: false,
   };
 
+  state["starter-q1-awakening"] = {
+    status: "active",
+    progress: { "open-binder": 0, "start-practice": 0 },
+    tracked: true,
+  };
+
   state["weekly-bond"] = {
     status: "active",
     progress: { "bond-five": 2 },
@@ -99,8 +105,8 @@ export function createDefaultDemoState(): QuestDemoState {
   };
 
   state["daily-play-session"] = {
-    status: "completed",
-    progress: { "demo-session": 1 },
+    status: "available",
+    progress: { "demo-session": 0 },
     tracked: false,
   };
 
@@ -254,4 +260,52 @@ export function resetQuestDemoState(): QuestDemoState {
   const fresh = createDefaultDemoState();
   saveQuestDemoState(fresh);
   return fresh;
+}
+
+/**
+ * Advance all active quests that track a metric (TCG match / binder / hatchery hooks).
+ */
+export function bumpQuestMetric(
+  state: QuestDemoState,
+  metric: string,
+  amount = 1,
+): QuestDemoState {
+  if (amount <= 0) return state;
+  let next = state;
+  for (const quest of QUEST_CATALOG) {
+    const entry = next[quest.key];
+    if (!entry || entry.status !== "active") continue;
+    const progress = { ...entry.progress };
+    let changed = false;
+    for (const obj of quest.objectives) {
+      if (obj.metric !== metric) continue;
+      const cur = progress[obj.key] ?? 0;
+      if (cur >= obj.target) continue;
+      progress[obj.key] = Math.min(obj.target, cur + amount);
+      changed = true;
+    }
+    if (!changed) continue;
+    const done = quest.objectives.every((o) => (progress[o.key] ?? 0) >= o.target);
+    next = {
+      ...next,
+      [quest.key]: {
+        ...entry,
+        progress,
+        status: done ? "completed" : "active",
+        tracked: done ? false : entry.tracked,
+      },
+    };
+    if (done) {
+      next = unlockDependents(next, quest.key);
+    }
+  }
+  return next;
+}
+
+/** Client helper: load → bump → save. */
+export function recordQuestMetric(metric: string, amount = 1): QuestDemoState {
+  const state = loadQuestDemoState();
+  const next = bumpQuestMetric(state, metric, amount);
+  saveQuestDemoState(next);
+  return next;
 }

@@ -12,26 +12,30 @@ export const metadata = { title: "Shop" };
 export default function ShopHomePage() {
   const stats = catalogStats();
   const sections = getAllShopSectionsWithItems(150);
-  const catalogSummary = `Catalog: ${stats.weapons} weapons · ${stats.armor} armor · ${stats.potions} potions · ${stats.materials} materials · ${stats.abilities} abilities.`;
+  const catalogSummary = `TCG packs & binders lead · legacy gear still listed (${stats.weapons} weapons · ${stats.armor} armor · ${stats.abilities} scrolls).`;
 
   return (
     <div className="space-y-6">
       <PageHeader
-        kicker="Direct purchases"
+        kicker="Rift Battle shop"
         titleSlug="shop"
         title="Shop"
         description={
           <>
-            Named weapons, armor, potions, scrolls, and materials at disclosed SOL prices. No paid
-            loot boxes. Pay with Wallet SOL or In-game SOL. {catalogSummary}
+            Buy card packs, binder pages, deck slots, and duel cosmetics with Credits. SOL stays
+            optional for prestige skins — never required to play Rift Battles. No paid loot boxes.{" "}
+            {catalogSummary}
           </>
         }
-        status="Catalog live"
-        statusTone="info"
+        status="TCG catalog"
+        statusTone="live"
         actions={
           <>
-            <Link href="/shop#shop-featured" className="btn-primary focus-ring">
-              Featured
+            <Link href="/shop/packs" className="btn-primary focus-ring">
+              Card packs
+            </Link>
+            <Link href="/tcg/collection" className="btn-secondary focus-ring">
+              Card Binder
             </Link>
             <Link href="/inventory" className="btn-secondary focus-ring">
               Inventory

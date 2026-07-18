@@ -116,9 +116,14 @@ export const PROFILE_QUICK_LINKS = [
     body: "Claim, incubate, and hatch Rift Eggs.",
   },
   {
+    href: "/help",
+    label: "Help",
+    body: "Rift Battles, binder, packs, quests, and Credits — TCG-first guide.",
+  },
+  {
     href: "/academy",
     label: "Player Academy",
-    body: "Interactive tutorials, FAQ, and Combat Academy.",
+    body: "Interactive drills and searchable FAQ.",
   },
   {
     href: "/inventory",

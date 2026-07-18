@@ -10,6 +10,44 @@ export type MarketplaceCategoryTab = {
 
 export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
   {
+    id: "CARDS",
+    label: "Cards",
+    description: "Single Rift Battle cards for binders and decks — Credits-first trades.",
+    enabled: true,
+    subfilters: [
+      { id: "unit", label: "Units" },
+      { id: "spell", label: "Spells" },
+      { id: "ember", label: "Ember" },
+      { id: "tide", label: "Tide" },
+      { id: "grove", label: "Grove" },
+      { id: "rare-plus", label: "Rare+" },
+    ],
+  },
+  {
+    id: "PACKS",
+    label: "Packs",
+    description: "Disclosed card packs — no paid mystery gear.",
+    enabled: true,
+    subfilters: [
+      { id: "starter", label: "Starter" },
+      { id: "affinity", label: "Affinity" },
+      { id: "seasonal", label: "Seasonal" },
+    ],
+  },
+  {
+    id: "COLLECTIBLES",
+    label: "Collectibles",
+    description:
+      "Cosmetic collectible editions (alt art, foil) — not gameplay power. SOL listings stay flag-gated.",
+    enabled: true,
+    subfilters: [
+      { id: "alt-art", label: "Alternate art" },
+      { id: "foil", label: "Foil" },
+      { id: "animated", label: "Animated" },
+      { id: "founder", label: "Founder" },
+    ],
+  },
+  {
     id: "EGGS",
     label: "Eggs",
     description: "Unopened eggs — disclosed ranges only until hatch.",
@@ -40,12 +78,13 @@ export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
   {
     id: "EQUIPMENT",
     label: "Equipment",
-    description: "Weapons, armor, and loadout gear.",
+    description: "Legacy loadout gear — secondary to cards & packs.",
     enabled: true,
     subfilters: [
       { id: "weapon", label: "Weapons" },
       { id: "armor", label: "Armor" },
       { id: "scroll", label: "Scrolls" },
+      { id: "sleeve", label: "Card sleeves" },
     ],
   },
   {
@@ -62,7 +101,7 @@ export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
   {
     id: "PROPERTY",
     label: "Property",
-    description: "Homesteads and land — coming later.",
+    description: "Homesteads and land — Living World future.",
     enabled: false,
     subfilters: [{ id: "homestead", label: "Homestead (stub)" }],
   },

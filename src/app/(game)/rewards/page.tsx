@@ -30,12 +30,15 @@ export default function RewardsPage() {
         kicker="Community treasury"
         titleSlug="rewards"
         title="Reward Center"
-        description="Pending, claimable, and lifetime rewards from verified game revenue and marketplace fees — not from buying the launch coin."
+        description="Pending, claimable, and lifetime rewards from verified game revenue and marketplace fees — including card/pack trades. Not from buying the launch coin. Play path stays Credits + Rift Battles."
         status={center?.claimsEnabled ? "Claims armed" : "Claims off"}
         statusTone={center?.claimsEnabled ? "warn" : "info"}
         actions={
           <>
-            <Link href="/loyalty" className="btn-primary focus-ring text-sm">
+            <Link href="/tcg/battle" className="btn-primary focus-ring text-sm">
+              Earn via battles
+            </Link>
+            <Link href="/loyalty" className="btn-secondary focus-ring text-sm">
               Loyalty / Rift Storm
             </Link>
             <Link href="/treasury" className="btn-secondary focus-ring text-sm">

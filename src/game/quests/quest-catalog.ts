@@ -5,7 +5,8 @@
  */
 
 import { QUEST_CATALOG_EXPANSION } from "./quest-catalog-expansion";
-import { STARTER_QUEST_CHAIN } from "@/game/npcs/starter-quests";
+import { STARTER_QUEST_CHAIN_TCG } from "@/game/npcs/starter-quests-tcg";
+import { retargetQuestCatalog } from "./quest-tcg-retarget";
 import type {
   QuestBoardTab,
   QuestCategory,
@@ -46,8 +47,8 @@ const REGION_NAMES: Record<string, string> = {
 const QUEST_CATALOG_SEED: QuestDef[] = [
   {
     key: "story-first-steps",
-    name: "First Steps in the Grove",
-    description: "Learn the basics of keeper life in Sproutfall Grove.",
+    name: "First Steps on the Board",
+    description: "Learn the Rift Battle loop — binder, deck, and a practice duel.",
     category: "STORY",
     boardTab: "story",
     difficulty: "easy",
@@ -56,8 +57,8 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
     chainKey: "main",
     repeatable: false,
     objectives: [
-      { key: "visit-grove", description: "Visit Sproutfall Grove", metric: "region_visit", target: 1 },
-      { key: "meet-keeper", description: "Speak with the Grove Keeper", metric: "npc_talk", target: 1 },
+      { key: "open-binder", description: "Open the Card Binder", metric: "binder_open", target: 1 },
+      { key: "academy-tip", description: "Read a Grove Academy tip", metric: "academy_visit", target: 1 },
       { key: "claim-starter-care", description: "Claim a starter care pack", metric: "item_claim", target: 1 },
     ],
     rewards: [
@@ -69,7 +70,7 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   {
     key: "story-ember-call",
     name: "Ember's Call",
-    description: "Venture into Cindercrag Basin.",
+    description: "Challenge Ember-themed practice boards and grow your binder.",
     category: "STORY",
     boardTab: "story",
     difficulty: "medium",
@@ -79,8 +80,8 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
     repeatable: false,
     requires: ["story-first-steps"],
     objectives: [
-      { key: "visit-basin", description: "Reach Cindercrag Basin", metric: "region_visit", target: 1 },
-      { key: "scout-ember", description: "Scout an Ember landmark", metric: "landmark_discover", target: 1 },
+      { key: "ember-battle", description: "Win an Ember-themed Rift Battle", metric: "tcg_match_win", target: 1 },
+      { key: "ember-card", description: "Collect an Ember-affinity card", metric: "tcg_card_collect", target: 1 },
     ],
     rewards: [
       { kind: "care_item", itemKey: "emberberry", label: "Emberberry", quantity: 5 },
@@ -90,8 +91,8 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   },
   {
     key: "story-rift-compass",
-    name: "Calibrated Path",
-    description: "Obtain a Rift Compass.",
+    name: "Calibrated Deck",
+    description: "Lock a reliable practice deck before climbing the ladder.",
     category: "STORY",
     boardTab: "story",
     difficulty: "medium",
@@ -99,8 +100,8 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
     repeatable: false,
     requires: ["story-ember-call"],
     objectives: [
-      { key: "get-compass", description: "Own a Rift Compass", metric: "item_owned", target: 1 },
-      { key: "calibrate", description: "Calibrate the compass once", metric: "compass_calibrate", target: 1 },
+      { key: "set-deck", description: "Set an active deck", metric: "tcg_deck_set", target: 1 },
+      { key: "calibrate", description: "Win with that deck once", metric: "tcg_match_win", target: 1 },
     ],
     rewards: [
       { kind: "xp", amount: 175 },
@@ -144,16 +145,19 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   },
   {
     key: "daily-play-session",
-    name: "Daily Check-In (Demo)",
-    description: "Complete a demo play session.",
+    name: "Daily Practice Duel",
+    description: "Complete one practice Rift Battle today.",
     category: "DAILY",
     boardTab: "daily",
     difficulty: "easy",
     repeatable: true,
     objectives: [
-      { key: "demo-session", description: "Play a demo session", metric: "demo_session", target: 1 },
+      { key: "demo-session", description: "Complete a Rift Battle", metric: "tcg_match_play", target: 1 },
     ],
-    rewards: [{ kind: "xp", amount: 25 }],
+    rewards: [
+      { kind: "xp", amount: 25 },
+      { kind: "arena_points", amount: 10 },
+    ],
     sortOrder: 60,
   },
   {
@@ -192,8 +196,8 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   },
   {
     key: "explore-grove-trail",
-    name: "Grove Trail Scout",
-    description: "Discover grove landmarks.",
+    name: "Grove Binder Scout",
+    description: "Fill Grove pages in your Card Binder.",
     category: "EXPLORATION",
     boardTab: "exploration",
     difficulty: "medium",
@@ -201,8 +205,8 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
     regionName: REGION_NAMES["sproutfall-grove"],
     repeatable: false,
     objectives: [
-      { key: "discover-grove", description: "Discover 3 landmarks", metric: "landmark_discover", target: 3 },
-      { key: "trail-mark", description: "Mark the trail on your map", metric: "map_mark", target: 1 },
+      { key: "discover-grove", description: "Collect 3 unique cards", metric: "tcg_card_collect", target: 3 },
+      { key: "trail-mark", description: "Set an active deck", metric: "tcg_deck_set", target: 1 },
     ],
     rewards: [
       { kind: "care_item", itemKey: "rift-compass", label: "Rift Compass", quantity: 1 },
@@ -212,8 +216,8 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   },
   {
     key: "explore-basin-ridge",
-    name: "Basin Ridge Walk",
-    description: "Traverse the cindercrag ridge path.",
+    name: "Basin Ember Run",
+    description: "Clear an Ember practice board and spend Rift Energy cleanly.",
     category: "EXPLORATION",
     boardTab: "exploration",
     difficulty: "medium",
@@ -222,8 +226,8 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
     repeatable: false,
     requires: ["story-ember-call"],
     objectives: [
-      { key: "walk-ridge", description: "Complete the ridge path", metric: "path_complete", target: 1 },
-      { key: "ember-sample", description: "Collect a heat sample", metric: "gather_heat", target: 1 },
+      { key: "walk-ridge", description: "Complete an Ember-themed battle", metric: "tcg_match_play", target: 1 },
+      { key: "ember-sample", description: "Spend 8 Rift Energy", metric: "tcg_energy_spend", target: 8 },
     ],
     rewards: [
       { kind: "xp", amount: 150 },
@@ -267,14 +271,14 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   },
   {
     key: "battle-training",
-    name: "Training Grounds",
-    description: "Complete a training session.",
+    name: "Practice Board",
+    description: "Complete a practice Rift Battle session.",
     category: "BATTLE",
     boardTab: "exploration",
     difficulty: "easy",
     repeatable: false,
     objectives: [
-      { key: "train-once", description: "Finish training", metric: "training_complete", target: 1 },
+      { key: "train-once", description: "Finish a practice Rift Battle", metric: "tcg_match_play", target: 1 },
     ],
     rewards: [
       { kind: "arena_points", amount: 50 },
@@ -285,32 +289,33 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   },
   {
     key: "battle-spar",
-    name: "Friendly Spar",
-    description: "Win a practice spar.",
+    name: "Practice Duel",
+    description: "Win a practice Rift Battle.",
     category: "BATTLE",
     boardTab: "exploration",
     difficulty: "medium",
     repeatable: false,
     requires: ["battle-training"],
     objectives: [
-      { key: "spar-win", description: "Win 1 spar", metric: "spar_win", target: 1 },
+      { key: "spar-win", description: "Win 1 Rift Battle", metric: "tcg_match_win", target: 1 },
     ],
     rewards: [
       { kind: "arena_points", amount: 80 },
       { kind: "xp", amount: 120 },
+      { kind: "soft_currency", amount: 40, label: "Credits" },
     ],
     sortOrder: 140,
   },
   {
     key: "collect-ember-species",
-    name: "Ember Collector",
-    description: "Own an Ember affinity Riftling.",
+    name: "Ember Binder",
+    description: "Collect an Ember-affinity card (or hatch an Ember Riftling).",
     category: "COLLECTION",
     boardTab: "exploration",
     difficulty: "medium",
     repeatable: false,
     objectives: [
-      { key: "own-ember", description: "Own an Ember Riftling", metric: "species_affinity", target: 1 },
+      { key: "own-ember", description: "Collect an Ember card", metric: "tcg_card_collect", target: 1 },
     ],
     rewards: [
       { kind: "care_item", itemKey: "emberberry", label: "Emberberry", quantity: 10 },
@@ -320,14 +325,14 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   },
   {
     key: "collect-grove-species",
-    name: "Grove Collector",
-    description: "Own a Grove affinity Riftling.",
+    name: "Grove Binder",
+    description: "Collect a Grove-affinity card (or hatch a Grove Riftling).",
     category: "COLLECTION",
     boardTab: "exploration",
     difficulty: "medium",
     repeatable: false,
     objectives: [
-      { key: "own-grove", description: "Own a Grove Riftling", metric: "species_affinity", target: 1 },
+      { key: "own-grove", description: "Collect a Grove card", metric: "tcg_card_collect", target: 1 },
     ],
     rewards: [
       { kind: "care_item", itemKey: "mossmeal", label: "Mossmeal", quantity: 10 },
@@ -407,12 +412,12 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
   },
 ];
 
-/** Full board catalog (starter Live World chain + seed + expansion). */
-export const QUEST_CATALOG: QuestDef[] = [
-  ...STARTER_QUEST_CHAIN,
+/** Full board catalog — TCG starter + seed + expansion (LW habitat metrics retargeted). */
+export const QUEST_CATALOG: QuestDef[] = retargetQuestCatalog([
+  ...STARTER_QUEST_CHAIN_TCG,
   ...QUEST_CATALOG_SEED,
   ...QUEST_CATALOG_EXPANSION,
-];
+]);
 
 export const QUEST_TAB_LABELS: Record<QuestBoardTab, string> = {
   all: "All",
@@ -461,7 +466,7 @@ export function getQuestByKey(key: string): QuestDef | undefined {
 
 export function formatQuestReward(reward: QuestReward): string {
   if (reward.kind === "xp") return `${reward.amount} XP`;
-  if (reward.kind === "arena_points") return `${reward.amount} Arena Points`;
+  if (reward.kind === "arena_points") return `${reward.amount} Rift Points`;
   if (reward.kind === "soft_currency") {
     return `${reward.amount} ${reward.label ?? "Credits"}`;
   }

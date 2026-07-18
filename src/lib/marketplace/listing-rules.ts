@@ -12,6 +12,9 @@ import type { RiftlingLifeState, SpiritRecord } from "@/game/spirit/types";
 export type MarketplaceAssetCategory =
   | "EGGS"
   | "PETS"
+  | "CARDS"
+  | "PACKS"
+  | "COLLECTIBLES"
   | "EQUIPMENT"
   | "CONSUMABLES"
   | "PROPERTY";
@@ -90,7 +93,12 @@ export function validateListingCreate(input: ListingCreateInput): ListingValidat
   if (input.durationDays < 1 || input.durationDays > LISTING_RULES.maxListingDurationDays) {
     return { ok: false, reason: "invalid_listing_duration" };
   }
-  const isItem = input.category === "EQUIPMENT" || input.category === "CONSUMABLES";
+  const isItem =
+    input.category === "EQUIPMENT" ||
+    input.category === "CONSUMABLES" ||
+    input.category === "CARDS" ||
+    input.category === "PACKS" ||
+    input.category === "COLLECTIBLES";
   if (isItem) {
     if (input.activeItemListings >= LISTING_RULES.maxActiveListingsPerWallet.items) {
       return { ok: false, reason: "max_item_listings" };

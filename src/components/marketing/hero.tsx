@@ -193,16 +193,16 @@ export function Hero() {
                 <span className="font-display mt-3 block text-[clamp(1.45rem,3.6vw,2.45rem)] font-bold leading-[1.08] tracking-tight text-white md:mt-4">
                   HATCH IT.
                   <br />
-                  RAISE IT.
+                  BUILD A DECK.
                   <br />
-                  <span className="text-[var(--cyan)]">KEEP IT ALIVE.</span>
+                  <span className="text-[var(--cyan)]">WIN THE RIFT.</span>
                 </span>
               </h1>
             </div>
 
             <p className="mt-4 max-w-md text-base leading-relaxed text-[var(--text-muted)] md:mt-5 md:text-lg">
-              Claim a Rift egg. Hatch a {projectConfig.CREATURE_NAME}. Care for it, duel in the Arena,
-              trade gear, and earn ecosystem rewards as you play.
+              Claim a Rift egg. Hatch a {projectConfig.CREATURE_NAME}. Collect cards, spend Rift
+              Energy, and duel on the board — Living World habitat ships in a future update.
             </p>
 
             {/* Mobile: egg showcase sits between copy and CTAs so pets stay on-screen */}
@@ -212,18 +212,18 @@ export function Hero() {
 
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
               <ImageButton
-                href="/hatchery"
+                href="/tcg/battle"
                 variant="primary"
                 className="home-hero__cta w-full justify-center text-base sm:w-auto sm:min-w-[10.5rem]"
               >
-                Claim egg
+                Play Rift Battle
               </ImageButton>
               <ImageButton
-                href="/dashboard"
+                href="/tcg/collection"
                 variant="secondary"
                 className="home-hero__cta w-full justify-center text-base sm:w-auto sm:min-w-[10.5rem]"
               >
-                Open dashboard
+                Card Binder
               </ImageButton>
             </div>
 

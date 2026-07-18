@@ -1,5 +1,6 @@
 /**
- * Daily / weekly goals — small capped Credits; achievements stay one-time.
+ * Daily / weekly goals — TCG / hatchery / care first for launch.
+ * Small capped Credits; achievements stay one-time.
  */
 
 export type TimedGoalDef = {
@@ -15,23 +16,23 @@ export type TimedGoalDef = {
 
 export const DAILY_GOALS: TimedGoalDef[] = [
   {
-    id: "daily-talk-npc",
+    id: "daily-rift-battle",
     cadence: "daily",
-    title: "Keeper Conversations",
-    description: "Speak with 3 named NPCs.",
-    metric: "npc_talk",
-    target: 3,
-    creditReward: 25,
+    title: "Practice Duel",
+    description: "Complete 1 practice Rift Battle.",
+    metric: "tcg_match_play",
+    target: 1,
+    creditReward: 30,
     pairedSink: "SERVICE_FEE",
   },
   {
-    id: "daily-gather",
+    id: "daily-play-cards",
     cadence: "daily",
-    title: "Light Harvest",
-    description: "Complete 5 gather actions.",
-    metric: "gather_count",
+    title: "Energy Spend",
+    description: "Play 5 cards across Rift Battles.",
+    metric: "tcg_card_play",
     target: 5,
-    creditReward: 30,
+    creditReward: 25,
     pairedSink: "CRAFT_FEE",
   },
   {
@@ -45,13 +46,13 @@ export const DAILY_GOALS: TimedGoalDef[] = [
     pairedSink: "NPC_SHOP_BUY",
   },
   {
-    id: "daily-job",
+    id: "daily-binder",
     cadence: "daily",
-    title: "Honest Work",
-    description: "Complete 1 job-board task.",
-    metric: "job_complete",
+    title: "Binder Check",
+    description: "Open the Card Binder once.",
+    metric: "binder_open",
     target: 1,
-    creditReward: 35,
+    creditReward: 15,
     pairedSink: "TRAVEL_FEE",
   },
   {
@@ -68,23 +69,23 @@ export const DAILY_GOALS: TimedGoalDef[] = [
 
 export const WEEKLY_GOALS: TimedGoalDef[] = [
   {
-    id: "weekly-regions",
+    id: "weekly-rift-wins",
     cadence: "weekly",
-    title: "Region Hopper",
-    description: "Visit 3 different regions.",
-    metric: "region_visit_unique",
-    target: 3,
-    creditReward: 120,
-    pairedSink: "TRAVEL_FEE",
+    title: "Board Climber",
+    description: "Win 5 practice Rift Battles.",
+    metric: "tcg_match_win",
+    target: 5,
+    creditReward: 140,
+    pairedSink: "SERVICE_FEE",
   },
   {
-    id: "weekly-craft",
+    id: "weekly-binder",
     cadence: "weekly",
-    title: "Workshop Week",
-    description: "Complete 10 crafts.",
-    metric: "craft_count",
-    target: 10,
-    creditReward: 150,
+    title: "Binder Growth",
+    description: "Collect 8 unique binder cards.",
+    metric: "tcg_card_collect",
+    target: 8,
+    creditReward: 120,
     pairedSink: "CRAFT_FEE",
   },
   {
@@ -106,4 +107,6 @@ export const ACHIEVEMENT_CREDIT_REWARDS: Record<string, number> = {
   hatch_ten: 80,
   first_quest_complete: 30,
   first_restoration_donate: 50,
+  first_rift_win: 35,
+  first_binder_page: 20,
 };

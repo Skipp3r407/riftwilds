@@ -42,9 +42,11 @@ const TIER = {
 } as const;
 
 function metricLabel(tab: LeaderboardTab): string {
+  if (tab === "rift") return "RP";
   if (tab === "care") return "Care";
-  if (tab === "collection") return "Collection";
-  return "AP";
+  if (tab === "collection") return "Cards";
+  if (tab === "arena") return "AP";
+  return "RP";
 }
 
 export function LeaderboardPodium({

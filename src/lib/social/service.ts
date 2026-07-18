@@ -14,6 +14,11 @@ import {
 } from "@/lib/social/rules";
 import { sanitizeFriendNote, sanitizePmBody } from "@/lib/social/sanitize";
 import {
+  listAvailableAvatars,
+  setSocialAvatar,
+  type SetAvatarInput,
+} from "@/lib/social/avatars";
+import {
   defaultAvatarFor,
   ensureSystemKeepersSeeded,
   getSocialStore,
@@ -143,6 +148,16 @@ export function setMessagePrivacy(
   profile.messagePrivacy = mode;
   profile.lastSeenAt = nowIso();
   return profile;
+}
+
+export function getAvatarCatalog(ownerKey: string) {
+  ensureSocialProfile(ownerKey);
+  return listAvailableAvatars(ownerKey);
+}
+
+export function setAvatar(ownerKey: string, input: SetAvatarInput) {
+  ensureSocialProfile(ownerKey);
+  return setSocialAvatar(ownerKey, input);
 }
 
 export function resolveOwnerByHandle(handleOrKey: string): SocialProfile | null {

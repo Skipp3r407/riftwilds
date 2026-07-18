@@ -202,8 +202,8 @@ export function buildPlayerDashboardSnapshot(input?: {
       id: "region",
       title: "Home region",
       status: "placeholder",
-      summary: "Preferred Live World region.",
-      href: "/live-world",
+      summary: "Preferred region — Living World habitat is a future release.",
+      href: "/world",
       metrics: [{ label: "Region", value: "Hatchery Plaza" }],
     },
   ];
@@ -221,7 +221,8 @@ export function buildPlayerDashboardSnapshot(input?: {
     panels,
     quickLinks: [
       { href: "/play", label: "Play" },
-      { href: "/live-world", label: "Live World" },
+      { href: "/tcg/battle", label: "Rift Battle" },
+      { href: "/tcg/collection", label: "Card Binder" },
       { href: "/rewards", label: "Rewards" },
       { href: "/treasury", label: "Treasury" },
       { href: "/login", label: "Account" },

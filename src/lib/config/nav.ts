@@ -1,5 +1,7 @@
 /**
- * Primary Riftwilds navigation — post-grad ecosystem IA.
+ * Primary Riftwilds navigation — TCG-first launch IA.
+ * Living World stays linked and enterable during development; optional Coming Soon
+ * soft-gate via `LIVE_WORLD_PUBLIC_ACCESS_ENABLED=false` before a public release.
  * Pump.fun chart/milestones live under Community / Token Launch — not homepage identity.
  */
 
@@ -10,6 +12,8 @@ export type NavLink = {
   header?: boolean;
   /** Shown in game sidebar */
   sidebar?: boolean;
+  /** Optional status chip (e.g. Coming Soon) */
+  badge?: string;
 };
 
 /** Desktop mega-groups + mobile drawer sections */
@@ -18,18 +22,20 @@ export type NavGroup = {
   label: string;
   /** Primary destination when the group label is activated as a link */
   href: string;
-  items: { href: string; label: string }[];
+  items: { href: string; label: string; badge?: string }[];
 };
 
 export const primaryNav: NavLink[] = [
   { href: "/", label: "Home", header: true, sidebar: false },
   { href: "/play", label: "Play", header: true, sidebar: true },
+  { href: "/tcg/battle", label: "Rift Battle", header: true, sidebar: true },
+  { href: "/tcg/collection", label: "Card Binder", header: true, sidebar: true },
   { href: "/dashboard", label: "Dashboard", header: true, sidebar: true },
   { href: "/hatchery", label: "Hatchery", header: true, sidebar: true },
   { href: "/world", label: "World", header: true, sidebar: true },
-  { href: "/live-world", label: "Live World", header: true, sidebar: true },
+  { href: "/live-world", label: "Live World", header: false, sidebar: true, badge: "Preview" },
   { href: "/restoration", label: "Restoration", header: false, sidebar: true },
-  { href: "/arena", label: "Arena", header: true, sidebar: true },
+  { href: "/arena", label: "Arena", header: false, sidebar: true },
   { href: "/marketplace", label: "Marketplace", header: true, sidebar: true },
   { href: "/shop", label: "Shop", header: true, sidebar: true },
   { href: "/inventory", label: "Inventory", header: false, sidebar: true },
@@ -53,7 +59,8 @@ export const extraSidebarNav: NavLink[] = [
   { href: "/profile", label: "Profile" },
   { href: "/collection", label: "Collection" },
   { href: "/quests", label: "Quests" },
-  { href: "/academy", label: "Academy / Help" },
+  { href: "/help", label: "Help" },
+  { href: "/academy", label: "Academy" },
   { href: "/leaderboards", label: "Leaderboards" },
   { href: "/login", label: "Account" },
 ];
@@ -65,14 +72,29 @@ export const headerNavGroups: NavGroup[] = [
     label: "Play",
     href: "/play",
     items: [
-      { href: "/play", label: "Play" },
-      { href: "/dashboard", label: "Dashboard" },
+      { href: "/play", label: "Play hub" },
+      { href: "/tcg/battle", label: "Rift Battle" },
+      { href: "/tcg/collection", label: "Card Binder" },
       { href: "/hatchery", label: "Hatchery" },
-      { href: "/collection", label: "Collection" },
+      { href: "/collection", label: "Pet Collection" },
+      { href: "/dashboard", label: "Dashboard" },
       { href: "/quests", label: "Quests" },
-      { href: "/academy", label: "Academy / Help" },
+      { href: "/help", label: "Help" },
+      { href: "/academy", label: "Player Academy" },
       { href: "/profile", label: "Profile" },
       { href: "/login", label: "Account / Login" },
+    ],
+  },
+  {
+    id: "combat",
+    label: "Rift Battles",
+    href: "/tcg/battle",
+    items: [
+      { href: "/tcg/battle", label: "Rift Battle" },
+      { href: "/tcg/collection", label: "Card Binder" },
+      { href: "/arena", label: "Arena (legacy)" },
+      { href: "/leaderboards", label: "Leaderboards" },
+      { href: "/battle", label: "Battle" },
     ],
   },
   {
@@ -81,13 +103,14 @@ export const headerNavGroups: NavGroup[] = [
     href: "/world",
     items: [
       { href: "/world", label: "World" },
-      { href: "/live-world", label: "Live World" },
+      { href: "/live-world", label: "Live World", badge: "Preview" },
       { href: "/restoration", label: "World Restoration" },
       { href: "/about", label: "About / Story" },
       { href: "/comics", label: "Comics" },
       { href: "/fan-kit", label: "Fan Kit" },
       { href: "/coloring", label: "Coloring" },
       { href: "/printables", label: "Printables" },
+      { href: "/help", label: "Help" },
       { href: "/academy", label: "Player Academy" },
       { href: "/codex/riftlings", label: "Riftling Codex" },
       { href: "/codex/world", label: "World Codex" },
@@ -97,16 +120,6 @@ export const headerNavGroups: NavGroup[] = [
       { href: "/ecosystem", label: "Ecosystem" },
       { href: "/spirit-realm", label: "Spirit Realm" },
       { href: "/memorials", label: "Memorial Garden" },
-    ],
-  },
-  {
-    id: "combat",
-    label: "Combat",
-    href: "/arena",
-    items: [
-      { href: "/arena", label: "Arena" },
-      { href: "/leaderboards", label: "Leaderboards" },
-      { href: "/battle", label: "Battle" },
     ],
   },
   {

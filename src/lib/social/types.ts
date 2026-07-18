@@ -15,6 +15,8 @@ export type SocialProfile = {
   displayName: string;
   rankTitle: string;
   avatarSrc: string;
+  /** Stable selection id: `pet:…` | `npc:…` | `lore:…` | `brand:…`. */
+  avatarKey?: string | null;
   /** ISO */
   createdAt: string;
   lastSeenAt: string;

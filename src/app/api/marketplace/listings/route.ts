@@ -16,7 +16,15 @@ import { eggListingDisclosure } from "@/lib/economy/egg-supply";
 
 const createSchema = z.object({
   kind: z.enum(["EGG", "PET", "ITEM"]),
-  category: z.enum(["EGGS", "PETS", "EQUIPMENT", "CONSUMABLES", "PROPERTY"]),
+  category: z.enum([
+    "EGGS",
+    "PETS",
+    "CARDS",
+    "PACKS",
+    "EQUIPMENT",
+    "CONSUMABLES",
+    "PROPERTY",
+  ]),
   subfilter: z.string().optional(),
   title: z.string().min(2).max(80),
   priceSol: z.string().regex(/^\d+(\.\d{1,9})?$/),

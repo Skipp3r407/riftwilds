@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
 import { StatusChip } from "@/components/shared/page-header";
+import { AvatarPicker } from "@/components/social/avatar-picker";
+import { brandMarkPath } from "@/lib/assets/paths";
 import type {
   DmMessageView,
   DmThreadView,
@@ -126,7 +128,7 @@ export function SocialHub() {
           ownerKey: "",
           handle: whisperTarget.toLowerCase(),
           displayName: whisperTarget,
-          avatarSrc: "/assets/social/avatars/generic-01.png",
+          avatarSrc: brandMarkPath,
         },
         preview: null,
         lastMessageAt: null,
@@ -196,12 +198,27 @@ export function SocialHub() {
       {hub ? (
         <section className="panel-soft flex flex-wrap items-center justify-between gap-3 p-4">
           <div className="flex min-w-0 items-center gap-3">
-            <Avatar src={hub.me.avatarSrc} size={48} />
+            <button
+              type="button"
+              className="focus-ring shrink-0 rounded-full"
+              onClick={() => setTab("safety")}
+              title="Change avatar"
+              aria-label="Change avatar"
+            >
+              <Avatar src={hub.me.avatarSrc} size={48} />
+            </button>
             <div className="min-w-0">
               <p className="truncate font-display text-lg text-white">{hub.me.displayName}</p>
               <p className="text-xs text-[var(--text-dim)]">
                 @{hub.me.handle} · {hub.me.rankTitle}
               </p>
+              <button
+                type="button"
+                className="mt-1 text-[11px] text-[var(--cyan)] underline focus-ring"
+                onClick={() => setTab("safety")}
+              >
+                Change avatar
+              </button>
             </div>
           </div>
           <div className="flex flex-wrap gap-2 text-xs">
@@ -568,65 +585,77 @@ export function SocialHub() {
 
       {tab === "safety" ? (
         <section className="grid gap-4 lg:grid-cols-2">
-          <article className="panel p-5">
-            <h2 className="font-display text-xl text-white">Your identity</h2>
-            <p className="mt-1 text-xs text-[var(--text-dim)]">
-              Handle is how keepers find you. Wallet optional — Credits ≠ SOL.
-            </p>
-            <div className="mt-3 space-y-3">
-              <label className="block text-xs text-[var(--text-muted)]">
-                Display name
-                <input
-                  className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
-                  value={displayName}
-                  onChange={(e) => setDisplayName(e.target.value)}
-                  maxLength={32}
-                />
-              </label>
-              <button
-                type="button"
-                className="btn-secondary focus-ring text-sm"
-                disabled={pending}
-                onClick={() =>
-                  void postFriends({ action: "set_display_name", displayName })
-                }
-              >
-                Save name
-              </button>
-              <label className="block text-xs text-[var(--text-muted)]">
-                Handle
-                <input
-                  className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
-                  value={handleDraft}
-                  onChange={(e) => setHandleDraft(e.target.value)}
-                  maxLength={24}
-                />
-              </label>
-              <button
-                type="button"
-                className="btn-secondary focus-ring text-sm"
-                disabled={pending}
-                onClick={() => void postFriends({ action: "set_handle", handle: handleDraft })}
-              >
-                Save handle
-              </button>
-              <label className="block text-xs text-[var(--text-muted)]">
-                Who can message you
-                <select
-                  className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
-                  value={hub?.messagePrivacy ?? "friends_only"}
-                  onChange={(e) =>
-                    void postFriends({
-                      action: "set_privacy",
-                      messagePrivacy: e.target.value as MessagePrivacyMode,
-                    })
+          <article className="panel space-y-6 p-5">
+            <div>
+              <h2 className="font-display text-xl text-white">Your identity</h2>
+              <p className="mt-1 text-xs text-[var(--text-dim)]">
+                Handle is how keepers find you. Wallet optional — Credits ≠ SOL.
+              </p>
+              <div className="mt-3 space-y-3">
+                <label className="block text-xs text-[var(--text-muted)]">
+                  Display name
+                  <input
+                    className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
+                    value={displayName}
+                    onChange={(e) => setDisplayName(e.target.value)}
+                    maxLength={32}
+                  />
+                </label>
+                <button
+                  type="button"
+                  className="btn-secondary focus-ring text-sm"
+                  disabled={pending}
+                  onClick={() =>
+                    void postFriends({ action: "set_display_name", displayName })
                   }
                 >
-                  <option value="friends_only">Friends only</option>
-                  <option value="anyone">Anyone (not blocked)</option>
-                </select>
-              </label>
+                  Save name
+                </button>
+                <label className="block text-xs text-[var(--text-muted)]">
+                  Handle
+                  <input
+                    className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
+                    value={handleDraft}
+                    onChange={(e) => setHandleDraft(e.target.value)}
+                    maxLength={24}
+                  />
+                </label>
+                <button
+                  type="button"
+                  className="btn-secondary focus-ring text-sm"
+                  disabled={pending}
+                  onClick={() => void postFriends({ action: "set_handle", handle: handleDraft })}
+                >
+                  Save handle
+                </button>
+                <label className="block text-xs text-[var(--text-muted)]">
+                  Who can message you
+                  <select
+                    className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
+                    value={hub?.messagePrivacy ?? "friends_only"}
+                    onChange={(e) =>
+                      void postFriends({
+                        action: "set_privacy",
+                        messagePrivacy: e.target.value as MessagePrivacyMode,
+                      })
+                    }
+                  >
+                    <option value="friends_only">Friends only</option>
+                    <option value="anyone">Anyone (not blocked)</option>
+                  </select>
+                </label>
+              </div>
             </div>
+
+            <AvatarPicker
+              onSelected={(src, key) => {
+                if (!hub) return;
+                setHub({
+                  ...hub,
+                  me: { ...hub.me, avatarSrc: src, avatarKey: key },
+                });
+              }}
+            />
           </article>
 
           <article className="panel p-5">

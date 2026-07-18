@@ -71,19 +71,19 @@ export default function ArenaHomePage() {
   return (
     <div className="space-y-6">
       <PageHeader
-        kicker="Riftwilds Arena"
+        kicker="Legacy combat"
         titleSlug="arena"
         title="Arena"
-        description="Skill-based turn battles for Riftlings. Earn non-transferable Arena Points through gameplay only — never purchase, sell, redeem, or wager real value."
-        status={featureFlagDefaults.ARENA_ENABLED ? "Training open" : "Paused"}
-        statusTone={featureFlagDefaults.ARENA_ENABLED ? "live" : "warn"}
+        description="Soft-secondary pet battler. Primary launch combat is Rift Battles (card duels). Arena Points stay earn-only — never purchase, sell, redeem, or wager real value."
+        status={featureFlagDefaults.ARENA_ENABLED ? "Secondary" : "Paused"}
+        statusTone="warn"
         actions={
           <>
-            <Link href="/arena/training" className="btn-primary focus-ring">
-              Enter training
+            <Link href="/tcg/battle" className="btn-primary focus-ring">
+              Play Rift Battle
             </Link>
-            <Link href="/arena/loadout" className="btn-secondary focus-ring">
-              Build loadout
+            <Link href="/arena/training" className="btn-secondary focus-ring">
+              Legacy training
             </Link>
           </>
         }
