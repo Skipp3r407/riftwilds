@@ -205,6 +205,170 @@
       "sceneId": "SpiritMarshScene",
       "interactive": true,
       "collision": false,
+      "id": "npc-medium-amara",
+      "type": "npc",
+      "x": 384,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Medium Amara",
+      "metadata": {
+        "npcId": "medium-amara",
+        "lines": [
+          "Medium Amara. Speak gently — memories bruise.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-ferryman-grey",
+      "type": "npc",
+      "x": 256,
+      "y": 640,
+      "interactionRadius": 56,
+      "label": "Ferryman Grey",
+      "metadata": {
+        "npcId": "ferryman-grey",
+        "lines": [
+          "Ferryman Grey. Coin is optional. Caution is not.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "pace"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-lantern-keeper-sio",
+      "type": "npc",
+      "x": 512,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Lantern Keeper Sio",
+      "metadata": {
+        "npcId": "lantern-keeper-sio",
+        "lines": [
+          "Lantern Keeper Sio. Stay in the glow and you'll keep your name.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-echo-child-nimi",
+      "type": "npc",
+      "x": 640,
+      "y": 704,
+      "interactionRadius": 56,
+      "label": "Echo Child Nimi",
+      "metadata": {
+        "npcId": "echo-child-nimi",
+        "lines": [
+          "I'm Nimi… or I was. Will you remember a piece for me?",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "look_around"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-marsh-porter-reed",
+      "type": "npc",
+      "x": 320,
+      "y": 544,
+      "interactionRadius": 56,
+      "label": "Reed Pack",
+      "metadata": {
+        "npcId": "marsh-porter-reed",
+        "lines": [
+          "Hey there — I'm Reed Pack. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-marsh-singer-fog",
+      "type": "npc",
+      "x": 448,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Fog Song",
+      "metadata": {
+        "npcId": "marsh-singer-fog",
+        "lines": [
+          "Hey there — I'm Fog Song. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-marsh-herbal-mist",
+      "type": "npc",
+      "x": 480,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Mist Leaf",
+      "metadata": {
+        "npcId": "marsh-herbal-mist",
+        "lines": [
+          "Hey there — I'm Mist Leaf. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-marsh-guard-wick",
+      "type": "npc",
+      "x": 288,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Guard Wick",
+      "metadata": {
+        "npcId": "marsh-guard-wick",
+        "lines": [
+          "Hey there — I'm Guard Wick. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "interactive": true,
+      "collision": false,
       "id": "res-spirit-marsh-spirit-bloom",
       "type": "resource",
       "x": 320,
@@ -331,6 +495,19 @@
         "bossId": "spirit-lantern-king",
         "arenaRef": "spirit-marsh-boss"
       }
+    },
+    {
+      "id": "lm-lantern",
+      "type": "decoration",
+      "regionId": "spirit-marsh",
+      "sceneId": "SpiritMarshScene",
+      "x": 640,
+      "y": 768,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Memory Lantern",
+      "color": 6340752
     }
   ],
   "colliders": [
@@ -373,6 +550,30 @@
       "width": 256,
       "height": 160,
       "kind": "building"
+    },
+    {
+      "id": "marsh-water-1",
+      "x": 512,
+      "y": 704,
+      "width": 448,
+      "height": 128,
+      "kind": "water"
+    },
+    {
+      "id": "reed-bog",
+      "x": 960,
+      "y": 960,
+      "width": 256,
+      "height": 128,
+      "kind": "water"
+    },
+    {
+      "id": "lm-lantern-col",
+      "x": 640,
+      "y": 768,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -391,6 +592,62 @@
         "x": 3,
         "y": 3,
         "icon": "building"
+      },
+      {
+        "id": "npc-medium-amara",
+        "label": "Medium Amara",
+        "x": 12,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-ferryman-grey",
+        "label": "Ferryman Grey",
+        "x": 8,
+        "y": 20,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-lantern-keeper-sio",
+        "label": "Lantern Keeper Sio",
+        "x": 16,
+        "y": 14,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-echo-child-nimi",
+        "label": "Echo Child Nimi",
+        "x": 20,
+        "y": 22,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-marsh-porter-reed",
+        "label": "Reed Pack",
+        "x": 10,
+        "y": 17,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-marsh-singer-fog",
+        "label": "Fog Song",
+        "x": 14,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-marsh-herbal-mist",
+        "label": "Mist Leaf",
+        "x": 15,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-marsh-guard-wick",
+        "label": "Guard Wick",
+        "x": 9,
+        "y": 16,
+        "icon": "npc"
       },
       {
         "id": "wp-spirit",

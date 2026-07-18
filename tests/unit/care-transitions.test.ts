@@ -10,8 +10,9 @@ import {
 
 describe("care transitions", () => {
   it("decays into hungry/thirsty and recovers with actions", () => {
-    let care = applyCareDecay(DEFAULT_CARE_STATS, 36);
-    expect(["HUNGRY", "THIRSTY", "UNHAPPY", "DIRTY", "TIRED", "SICK"]).toContain(
+    // Offline hours after 8h decay at 35% — use a long gap to leave HEALTHY.
+    let care = applyCareDecay(DEFAULT_CARE_STATS, 120);
+    expect(["HUNGRY", "THIRSTY", "UNHAPPY", "DIRTY", "TIRED", "SICK", "DORMANT", "CRITICAL"]).toContain(
       derivePetCondition(care, false),
     );
     care = applyCareAction(care, "FEED");

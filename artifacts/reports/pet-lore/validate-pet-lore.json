@@ -1,6 +1,6 @@
 {
   "name": "validate-pet-lore",
-  "generatedAt": "2026-07-17T21:22:15.862Z",
+  "generatedAt": "2026-07-18T05:20:09.371Z",
   "assumptions": [
     "Short bio target 40–70 words (soft max 75)",
     "Standard bio target 150–250 words (soft max 260)",
@@ -10,7 +10,7 @@
     {
       "title": "Species lore coverage",
       "status": "PASS",
-      "summary": "50/50 species have lore files",
+      "summary": "100/100 species have lore files",
       "details": {
         "missing": []
       }
@@ -45,7 +45,7 @@
     {
       "title": "Catalog size",
       "status": "PASS",
-      "summary": "catalog=50 lore=50"
+      "summary": "catalog=100 lore=100"
     }
   ],
   "criticalFailures": [],

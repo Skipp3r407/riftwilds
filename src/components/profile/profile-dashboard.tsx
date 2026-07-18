@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
-import { useWallet } from "@solana/wallet-adapter-react";
 import {
   Award,
   Egg,
@@ -19,6 +18,7 @@ import {
 import { AffinityChip } from "@/components/leaderboards/affinity-chip";
 import { EmptyState, StatusChip } from "@/components/shared/page-header";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
+import { useActiveWallet } from "@/hooks/use-active-wallet";
 import { brandMarkPath, creaturePortraitPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import {
@@ -112,7 +112,7 @@ function achievementTone(rarity: ProfileAchievement["rarity"]): "default" | "inf
 
 export function ProfileDashboard() {
   const mounted = useMounted();
-  const { publicKey, connected } = useWallet();
+  const { address: wallet, connected, viewOnly } = useActiveWallet();
   const [tab, setTab] = useState<ProfileTab>("overview");
   const [pets, setPets] = useState<PetRow[]>([]);
   const [eggsClaimed, setEggsClaimed] = useState(0);
@@ -125,7 +125,6 @@ export function ProfileDashboard() {
   const [balance, setBalance] = useState<BalancePayload | null>(null);
   const [balanceLoading, setBalanceLoading] = useState(false);
 
-  const wallet = publicKey?.toBase58() ?? null;
   const walletShort = wallet ? shortWallet(wallet) : null;
 
   useEffect(() => {
@@ -274,6 +273,7 @@ export function ProfileDashboard() {
                 ) : (
                   <StatusChip tone="warn">Wallet offline</StatusChip>
                 )}
+                {viewOnly ? <StatusChip tone="warn">View-only</StatusChip> : null}
                 <StatusChip tone={tierTone(keeperTier)}>
                   {keeperTier ? `${keeperTier} tier` : "No tier"}
                 </StatusChip>
@@ -291,7 +291,7 @@ export function ProfileDashboard() {
             {!connected ? (
               <>
                 <p className="text-right text-xs text-[var(--text-muted)]">
-                  Connect to link wallet identity and $RIFT status.
+                  Connect a wallet or paste an address to check $RIFT status.
                 </p>
                 <WalletConnectButton />
               </>
@@ -303,6 +303,12 @@ export function ProfileDashboard() {
                 </Link>
               </div>
             )}
+            {viewOnly ? (
+              <p className="max-w-xs text-right text-[10px] leading-relaxed text-[var(--amber)]">
+                View-only mode — balances and profile lookups only. Connect a wallet to sign or
+                send SOL.
+              </p>
+            ) : null}
           </div>
         </div>
       </section>
@@ -323,7 +329,7 @@ export function ProfileDashboard() {
           {!connected ? (
             <div className="mt-4 rounded-[var(--radius-md)] border border-dashed border-[var(--stroke)] bg-[rgba(8,8,14,0.35)] px-4 py-5 text-center">
               <p className="text-sm text-[var(--text-muted)]">
-                Connect a Solana wallet to refresh your balance and Keeper tier.
+                Connect a Solana wallet or paste an address to refresh balance and Keeper tier.
               </p>
               <div className="mt-3 flex justify-center">
                 <WalletConnectButton />
@@ -443,6 +449,7 @@ export function ProfileDashboard() {
               pets={pets}
               loading={loading}
               connected={connected}
+              viewOnly={viewOnly}
               memories={memories}
               unlockedCount={unlockedCount}
               achievementTotal={achievements.length}
@@ -461,6 +468,7 @@ export function ProfileDashboard() {
               nameSaved={nameSaved}
               musicMuted={musicMuted}
               connected={connected}
+              viewOnly={viewOnly}
               walletShort={walletShort}
             />
           ) : null}
@@ -563,6 +571,7 @@ function OverviewPanel({
   pets,
   loading,
   connected,
+  viewOnly,
   memories,
   unlockedCount,
   achievementTotal,
@@ -570,11 +579,17 @@ function OverviewPanel({
   pets: PetRow[];
   loading: boolean;
   connected: boolean;
+  viewOnly: boolean;
   memories: { kind: string; label: string; at: string; petName: string }[];
   unlockedCount: number;
   achievementTotal: number;
 }) {
   const lead = pets[0];
+  const sessionLabel = !connected
+    ? "Guest / local"
+    : viewOnly
+      ? "View-only address"
+      : "Wallet linked";
   return (
     <div className="grid gap-4 lg:grid-cols-2">
       <div className="space-y-3">
@@ -584,7 +599,7 @@ function OverviewPanel({
         <div className="grid gap-2 text-sm">
           <div className="panel-inset flex justify-between gap-2 px-3 py-2">
             <span className="text-[var(--text-muted)]">Session</span>
-            <span className="text-white">{connected ? "Wallet linked" : "Guest / local"}</span>
+            <span className="text-white">{sessionLabel}</span>
           </div>
           <div className="panel-inset flex justify-between gap-2 px-3 py-2">
             <span className="text-[var(--text-muted)]">Achievements</span>
@@ -665,6 +680,8 @@ function PetsPanel({ pets, loading }: { pets: PetRow[]; loading: boolean }) {
         className="min-h-[10rem]"
         title="No pets yet"
         description="Claim and hatch a starter egg to populate your Keeper roster."
+        imageSrc="/assets/ui/empty-states/pets.png"
+        imageAlt="Empty nest waiting for a Riftling egg"
         action={
           <Link href="/hatchery" className="btn-primary focus-ring text-sm">
             Open Hatchery
@@ -863,6 +880,7 @@ function SettingsPanel({
   nameSaved,
   musicMuted,
   connected,
+  viewOnly,
   walletShort,
 }: {
   nameDraft: string;
@@ -871,6 +889,7 @@ function SettingsPanel({
   nameSaved: boolean;
   musicMuted: boolean;
   connected: boolean;
+  viewOnly: boolean;
   walletShort: string | null;
 }) {
   return (
@@ -900,6 +919,24 @@ function SettingsPanel({
 
       <div className="panel-inset space-y-2 px-4 py-3 text-sm">
         <div className="flex flex-wrap items-center justify-between gap-2">
+          <span className="text-[var(--text-muted)]">Audio &amp; keybinds</span>
+          <div className="flex flex-wrap gap-2">
+            <Link href="/settings/audio" className="btn-secondary focus-ring text-xs">
+              Audio
+            </Link>
+            <Link href="/settings/keybinds" className="btn-secondary focus-ring text-xs">
+              Remap keys
+            </Link>
+          </div>
+        </div>
+        <p className="text-xs text-[var(--text-muted)]">
+          WASD, map (M), chat (Enter), and HUD hotkeys — conflicts are highlighted on the keybinds
+          page.
+        </p>
+      </div>
+
+      <div className="panel-inset space-y-2 px-4 py-3 text-sm">
+        <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="text-[var(--text-muted)]">Music mute</span>
           <StatusChip tone={musicMuted ? "warn" : "live"}>
             {musicMuted ? "Muted" : "Audible"}
@@ -914,11 +951,17 @@ function SettingsPanel({
       <div className="panel-inset space-y-2 px-4 py-3 text-sm">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <span className="text-[var(--text-muted)]">Wallet privacy</span>
-          <StatusChip tone="info">{connected ? walletShort : "Hidden"}</StatusChip>
+          <div className="flex flex-wrap items-center gap-2">
+            {viewOnly ? <StatusChip tone="warn">View-only</StatusChip> : null}
+            <StatusChip tone="info">{connected ? walletShort : "Hidden"}</StatusChip>
+          </div>
         </div>
         <p className="text-xs text-[var(--text-muted)]">
           Addresses show abbreviated by default (ABCD…WXYZ). Full address never appears in the
           public header.
+          {viewOnly
+            ? " Pasted addresses are view-only and cannot sign or send transactions."
+            : ""}
         </p>
       </div>
 

@@ -26,6 +26,20 @@ function assetPaths(region, slug) {
   };
 }
 
+/** Real Grok art if portrait + full-body are non-tiny PNGs on disk. */
+function detectArtStatus(region, slug) {
+  const dir = path.join(ROOT, "public/assets/npcs", region, slug);
+  const real = (name) => {
+    const f = path.join(dir, name);
+    return fs.existsSync(f) && fs.statSync(f).size > 2000;
+  };
+  if (real("portrait.png") && real("full-body.png") && real("sprite.png")) {
+    return "generated";
+  }
+  if (real("portrait.png")) return "partial";
+  return "placeholder";
+}
+
 function prompts(name, visual, clothing, regionLabel) {
   const base = `${STYLE}. Character: ${name}. ${visual}. Wearing: ${clothing}. Region vibe: ${regionLabel}.`;
   return {
@@ -89,7 +103,6 @@ function baseNpc(partial) {
     interactionRadius: partial.interactionRadius ?? 56,
     facingBehavior: partial.facingBehavior ?? "face_player",
     active: true,
-    artStatus: "placeholder",
     imagePrompts: prompts(
       partial.displayName,
       partial.visualDescription,
@@ -100,6 +113,8 @@ function baseNpc(partial) {
     updatedAt: NOW,
     ...partial,
     ...assets,
+    // After partial so disk detection wins over hardcoded placeholder defaults
+    artStatus: detectArtStatus(region, slug),
   };
 }
 

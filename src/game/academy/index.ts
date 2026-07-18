@@ -1,0 +1,10 @@
+export * from "@/game/academy/types";
+export * from "@/game/academy/progress";
+export * from "@/game/academy/catalog";
+export * from "@/game/academy/search";
+export * from "@/game/academy/faq";
+export * from "@/game/academy/achievements";
+export { BEGINNER_LESSONS } from "@/game/academy/lessons/beginner";
+export { ADVANCED_LESSONS } from "@/game/academy/lessons/advanced";
+export { CURRICULUM_LESSONS } from "@/game/academy/lessons/curricula";
+export { LORE_PATH_LESSONS } from "@/game/academy/lessons/lore-path";

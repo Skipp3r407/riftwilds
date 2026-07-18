@@ -22,6 +22,7 @@ import { HowRiftlingsCameToBe } from "@/components/about/how-riftlings-came-to-b
 import { FinalStoryCTA } from "@/components/about/final-story-cta";
 import { CinematicTextReveal } from "@/components/about/cinematic-text-reveal";
 import { ComicPanel } from "@/components/about/comic-panel";
+import { CommercialShowcase } from "@/components/marketing/commercial-showcase";
 import { markOriginStorySeen } from "@/lib/origin-story";
 
 function useActiveChapter() {
@@ -194,26 +195,39 @@ export function AboutExperience() {
 
           <div className="mt-5 grid gap-5 lg:grid-cols-3">
             {[whyRiftlingsWereMade, whyEggsExist, whyPetsEvolve].map((block) => (
-              <article key={block.id} className="panel p-5">
-                <h3 className="font-display text-base text-white">{block.title}</h3>
-                {block.body.map((p, i) => (
-                  <p key={i} className="mt-3 text-sm text-[var(--text-muted)]">
-                    {p}
-                  </p>
-                ))}
-                {block.bullets ? (
-                  <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-[var(--text-muted)]">
-                    {block.bullets.map((b) => (
-                      <li key={b}>{b}</li>
-                    ))}
-                  </ul>
+              <article key={block.id} className="panel overflow-hidden p-0">
+                {block.comic ? (
+                  <ComicPanel
+                    src={block.comic.src}
+                    alt={block.comic.alt}
+                    aspectClassName="aspect-[16/10]"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    className="rounded-none border-0 shadow-none"
+                    dense
+                  />
                 ) : null}
+                <div className="p-5">
+                  <h3 className="font-display text-base text-white">{block.title}</h3>
+                  {block.body.map((p, i) => (
+                    <p key={i} className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                      {p}
+                    </p>
+                  ))}
+                  {block.bullets ? (
+                    <ul className="mt-3 list-disc space-y-1 pl-4 text-sm text-[var(--text-muted)]">
+                      {block.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
+      <CommercialShowcase />
       <FinalStoryCTA />
     </div>
   );

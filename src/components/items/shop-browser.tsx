@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { ShopItemCard, type ShopCardData } from "@/components/items/shop-item-card";
 import { ShopPurchasePanel } from "@/components/items/shop-purchase-panel";
 import { PriceBreakdown } from "@/components/items/price-breakdown";
@@ -12,6 +13,7 @@ import { solToLamports, lamportsToSolString } from "@/lib/items/lamports";
 import { useEarnedSol } from "@/hooks/use-earned-sol";
 import { useDemoInventory } from "@/hooks/use-demo-inventory";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
+import { playSfx } from "@/hooks/use-sfx";
 import Link from "next/link";
 
 type Props = {
@@ -20,6 +22,7 @@ type Props = {
 };
 
 export function ShopBrowser({ title, items }: Props) {
+  const router = useRouter();
   const [selectedId, setSelectedId] = useState<string | null>(items[0]?.id ?? null);
   const [purchaseItem, setPurchaseItem] = useState<ShopCardData | null>(null);
   const purchasesEnabled = featureFlagDefaults.SOL_ITEM_PURCHASES_ENABLED;
@@ -138,6 +141,18 @@ export function ShopBrowser({ title, items }: Props) {
               rarity: item.rarity,
               iconPath: item.iconPath,
             });
+          }}
+          onEquipNow={(item) => {
+            void (async () => {
+              await fetch("/api/pets/live-companion/equipment/equip", {
+                method: "POST",
+                credentials: "include",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ action: "equip", itemId: item.id }),
+              });
+              playSfx("pets.equip");
+              router.push("/live-world");
+            })();
           }}
           onClose={() => setPurchaseItem(null)}
         />

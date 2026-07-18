@@ -1,0 +1,6 @@
+file 'C:/Users/Skipp3r407/Desktop/Websites/egg meme project/artifacts/commercials/tmp/riftwilds-commercial-30s-9x16-00.mp4'
+file 'C:/Users/Skipp3r407/Desktop/Websites/egg meme project/artifacts/commercials/tmp/riftwilds-commercial-30s-9x16-01.mp4'
+file 'C:/Users/Skipp3r407/Desktop/Websites/egg meme project/artifacts/commercials/tmp/riftwilds-commercial-30s-9x16-02.mp4'
+file 'C:/Users/Skipp3r407/Desktop/Websites/egg meme project/artifacts/commercials/tmp/riftwilds-commercial-30s-9x16-03.mp4'
+file 'C:/Users/Skipp3r407/Desktop/Websites/egg meme project/artifacts/commercials/tmp/riftwilds-commercial-30s-9x16-04.mp4'
+file 'C:/Users/Skipp3r407/Desktop/Websites/egg meme project/artifacts/commercials/tmp/riftwilds-commercial-30s-9x16-05.mp4'

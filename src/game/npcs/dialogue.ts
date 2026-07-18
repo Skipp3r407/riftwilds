@@ -7,8 +7,33 @@ import {
   loadLivePlayState,
   recordNpcTalk,
   saveLivePlayState,
+  syncKillerReputation,
   type LivePlayState,
 } from "@/game/npcs/play-state";
+import {
+  buildKillerReputation,
+  resolveKillerReaction,
+} from "@/game/npc-ai/killer-reputation";
+import {
+  loadReputationStore,
+  reputationFromPlayState,
+  saveReputationStore,
+  syncReputationFromKiller,
+} from "@/game/npc-ai/reputation";
+import {
+  knownReputationInRegion,
+  loadGossipStore,
+  tickGossipSpread,
+} from "@/game/npc-ai/gossip";
+import { resolveSocialReaction } from "@/game/npc-ai/social-reactions";
+import { reputationDialoguePrefix } from "@/game/npc-ai/reputation-dialogue";
+import {
+  adjustRelationship,
+  loadRelationships,
+  recordTalk,
+  saveRelationships,
+} from "@/game/npc-ai/relationships";
+import { ambientRumorLine } from "@/game/npc-ai/living-runtime";
 
 export type ActiveDialogue = {
   npcSlug: string;
@@ -39,11 +64,100 @@ export function startNpcDialogue(npcSlug: string): ActiveDialogue | null {
     lines: npcDefaultLines(npc),
     choices: [{ id: "bye", label: "Goodbye", action: "close" as const }],
   };
-  const lines = (node.lines?.length ? node.lines : npcDefaultLines(npc)).map((l) =>
+  let lines = (node.lines?.length ? node.lines : npcDefaultLines(npc)).map((l) =>
     sanitizeLine(l, "The keeper greets you warmly."),
   );
   let state = loadLivePlayState();
+  state = syncKillerReputation(state);
   state = recordNpcTalk(state, npcSlug);
+
+  // Relationship + multi-axis reputation dialogue (gossip-lagged knowledge)
+  const rel = loadRelationships();
+  recordTalk(rel, npcSlug, "dialogue");
+  const killer = buildKillerReputation(state);
+  let repStore = loadReputationStore();
+  repStore.axes = syncReputationFromKiller(
+    reputationFromPlayState(state),
+    killer,
+  );
+  saveReputationStore(repStore);
+
+  let gossip = loadGossipStore();
+  gossip = tickGossipSpread(gossip, Date.now());
+  const regionId = state.regionsVisited?.[0] ?? "riftwild-commons";
+  const knownAxes = knownReputationInRegion(repStore.axes, gossip, regionId);
+
+  const alreadySocial = rel.byNpc[npcSlug]?.socialNoticed ?? false;
+  const social = resolveSocialReaction({
+    npcSlug,
+    displayName: npc.displayName,
+    occupation: npc.occupation,
+    kind: npc.kind,
+    personalityTraits: npc.personalityTraits,
+    knownAxes,
+    trueAxes: repStore.axes,
+    alreadyReacted: alreadySocial,
+  });
+
+  let merchantWary = false;
+  let shopLocked = false;
+
+  if (social) {
+    lines = [...social.lines, ...lines].slice(0, 5);
+    merchantWary = social.merchantWary || social.shopLocked;
+    shopLocked = social.shopLocked;
+    adjustRelationship(rel, npcSlug, social.relationshipDelta, `social:${social.kind}`);
+    if (rel.byNpc[npcSlug]) {
+      rel.byNpc[npcSlug]!.socialNoticed = true;
+      if (
+        social.kind === "fear" ||
+        social.kind === "hide" ||
+        social.kind === "arrest" ||
+        social.kind === "challenge"
+      ) {
+        rel.byNpc[npcSlug]!.killerNoticed = true;
+      }
+    }
+  } else {
+    const killerReact = resolveKillerReaction({
+      npcSlug,
+      displayName: npc.displayName,
+      occupation: npc.occupation,
+      kind: npc.kind,
+      personalityTraits: npc.personalityTraits,
+      reputation: killer,
+      alreadyNoticed: rel.byNpc[npcSlug]?.killerNoticed,
+    });
+    if (killerReact) {
+      lines = [...killerReact.lines, ...lines].slice(0, 5);
+      merchantWary = killerReact.merchantWary;
+      adjustRelationship(
+        rel,
+        npcSlug,
+        killerReact.relationshipDelta,
+        `killer:${killerReact.kind}`,
+      );
+      if (rel.byNpc[npcSlug]) rel.byNpc[npcSlug]!.killerNoticed = true;
+    } else {
+      const prefix = reputationDialoguePrefix({
+        npcSlug,
+        displayName: npc.displayName,
+        occupation: npc.occupation,
+        kind: npc.kind,
+        personalityTraits: npc.personalityTraits,
+        knownAxes,
+        relationshipStore: rel,
+        alreadyReacted: alreadySocial,
+      });
+      if (prefix.length) {
+        lines = [...prefix, ...lines].slice(0, 5);
+      } else if (Math.random() < 0.12 && !npc.questIds.length) {
+        lines = [...lines, ambientRumorLine(npcSlug, Date.now())].slice(0, 4);
+      }
+    }
+  }
+  saveRelationships(rel);
+
   // Auto-accept available starter quests tied to this NPC when talking
   for (const qid of npc.questIds) {
     if (state.quests[qid]?.status === "available") {
@@ -54,14 +168,29 @@ export function startNpcDialogue(npcSlug: string): ActiveDialogue | null {
     }
   }
   saveLivePlayState(state);
+  const dialoguePortrait = npc.portraitAsset.replace(
+    /\/portrait\.(png|webp)$/i,
+    "/dialogue-portrait.png",
+  );
+  let choices = filterChoices(
+    npc,
+    node.choices ?? [{ id: "bye", label: "Goodbye", action: "close" }],
+    state,
+  );
+  if (merchantWary || shopLocked) {
+    choices = choices.filter((c) => c.action !== "open_shop");
+    if (!choices.some((c) => c.id === "bye")) {
+      choices.push({ id: "bye", label: "I'll go", action: "close" });
+    }
+  }
   return {
     npcSlug,
     speaker: npc.displayName,
-    portraitAsset: npc.portraitAsset,
+    portraitAsset: dialoguePortrait !== npc.portraitAsset ? dialoguePortrait : npc.portraitAsset,
     nodeId: node.id,
     lines,
     lineIndex: 0,
-    choices: filterChoices(npc, node.choices ?? [{ id: "bye", label: "Goodbye", action: "close" }], state),
+    choices,
   };
 }
 

@@ -1,34 +1,26 @@
 # Missing Assets
 
-**Scan:** 2026-07-17T22:41:21Z  
-**Totals:** generated=295, pending=136, legacy=12, failed=0
+**Scan:** 2026-07-18T05:26:51Z  
+**Totals:** generated=546, pending=0, legacy=12, failed=0
 
-## Closed this session (critical)
+See also: [`docs/assets/IMAGE_GENERATION_REPORT.md`](../assets/IMAGE_GENERATION_REPORT.md) and [`docs/assets/IMAGE_ASSET_MANIFEST.json`](../assets/IMAGE_ASSET_MANIFEST.json).
+
+## Closed (2026-07-18 full image authorization)
 
 | Priority | Category | Items |
 |----------|----------|-------|
-| P2 | Bosses | alloy-warframe, spirit-lantern-king, celestial-rift-entity key-art |
-| P3 | Worlds | 8 region overviews (stormspire → celestial-rift) |
-| P4 | Pets | 11 starter pipeline portraits (frostuft…astralynx) |
-| P4 | Affinities | 11 affinity icons (ember…celestial) |
-| P4 | NPCs | elara-venn, archivist-solen, plaza-vendor-cal, portal-keeper |
+| P4 | Ambient NPCs | 58 stub portraits → painted masters + derived thumbs/sprites |
+| P2 | Items | 65 catalog icon paths (weapons/armor/potions/materials) |
+| P2 | Site | OG default, empty states (wallpapers already present) |
+| P2 | Live World | BootScene terrain masters + commons tileset |
+| — | Maps | `maps/world-overview.png` (+ region overviews from parallel work) |
 
-Verified via HTTP 200 on local servers for sample world/pet/boss paths.
+## Remaining quality backlog (not scan-pending)
 
-## Still missing (non-P0)
-
-Dominant backlog after scan:
-
-1. **NPC portraits** (~100+) — story/plaza/region cast (parallel agents may still be filling)
-2. **Enemy portraits** (~19) — Live World PvE art
-3. **Battle animation sheets** (P9) — creature sheet packing
-4. Occasional world/pet gaps if manifest grows
-
-## Acceptance for closed alpha
-
-- Critical navigation surfaces (home/about/hatchery/world/shop) must not 404 core brand/hero art.
-- Missing NPC/enemy art may use placeholders; document as content backlog.
-- Do **not** mark full art production-ready until `asset-status.json` approvals catch up.
+1. Dedicated ambient full-body / overworld sprite sheets (currently portrait-derived)
+2. Painted upgrades for procedural item icons (4 weapons already painted)
+3. Wallpaper / affinity WebP delivery pass for remaining multi‑MB PNGs
+4. Battle animation sheet packing (outside current registry pending list)
 
 ## Pipeline
 
@@ -36,6 +28,9 @@ Dominant backlog after scan:
 npm run assets:scan
 npm run assets:generate:all
 npm run assets:report
+node scripts/assets/derive-ambient-npc-art.mjs
+node scripts/assets/optimize-site-surfaces.mjs
+node scripts/assets/build-image-asset-manifest.mjs
 ```
 
-Generated masters land under `public/assets/…`. Cursor `GenerateImage` outputs may stage in the project assets cache then copy into `public/assets`.
+Generated masters land under `public/assets/…`. Cursor `GenerateImage` outputs stage under the Cursor assets cache then copy into `public/assets`.

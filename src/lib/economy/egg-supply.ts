@@ -280,3 +280,15 @@ export const LIMITED_DROP_REFERENCE_PRICES = {
   communityEventClaimFeeLamports: solToLamports("0"),
   collectorReservePriceLamports: solToLamports("0.15"),
 } as const;
+
+/**
+ * Premium hatchery egg — Credits sink when the free starter pool is exhausted
+ * (or the keeper already claimed their free egg).
+ *
+ * Price choice: **5_000 Credits** (~25× starter grant of 200, ~25× top care action).
+ * Early keepers claim free; late joiners burn a punishing late-game sink. Never SOL.
+ */
+export const PREMIUM_EGG_CREDITS_PRICE = 5_000;
+
+/** Free starter pool size enforced by the live hatchery claim path. */
+export const FREE_STARTER_POOL_CAP = EGG_SUPPLY_GLOBAL.starterGenerationCap.active;

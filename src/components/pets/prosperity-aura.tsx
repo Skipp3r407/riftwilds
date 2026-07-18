@@ -36,7 +36,7 @@ export function ProsperityAura({
   return (
     <div
       className={cn(
-        "prosperity-aura relative mx-auto flex h-40 w-40 shrink-0 items-center justify-center sm:mx-0",
+        "prosperity-aura relative mx-auto flex size-40 shrink-0 items-center justify-center sm:mx-0",
         status === "inactive" && "opacity-70 grayscale",
         accumulating && status === "active" && !reduceMotion && "prosperity-accumulating",
         largeDepositPulse && !reduceMotion && "prosperity-deposit-pulse",

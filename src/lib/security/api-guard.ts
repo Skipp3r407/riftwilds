@@ -84,3 +84,21 @@ export function jsonOk<T extends Record<string, unknown>>(
     },
   );
 }
+
+export function jsonError(
+  message: string,
+  status: number,
+  error: string,
+  requestId = "n/a",
+) {
+  return NextResponse.json(
+    { ok: false, error, message, requestId },
+    {
+      status,
+      headers: {
+        "Cache-Control": "no-store",
+        "X-Request-Id": requestId,
+      },
+    },
+  );
+}

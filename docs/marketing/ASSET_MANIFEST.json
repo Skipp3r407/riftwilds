@@ -1,0 +1,114 @@
+{
+  "project": "Riftwilds",
+  "bundle": "commercials-v2-comic",
+  "generatedAt": "2026-07-18",
+  "style": "comic-cinematic-colorful",
+  "framing": "browser-fantasy-multiplayer",
+  "cta": ["Play the alpha", "Enter the Live World"],
+  "banned": ["guaranteed returns", "SOL profit", "Play Now as public launch"],
+  "root": "public/assets/commercials",
+  "rebuildVo": "node scripts/commercials/generate-vo.mjs",
+  "rebuild": "node scripts/commercials/build-commercials.mjs",
+  "videos": [
+    {
+      "id": "cinematic-60s",
+      "path": "video/riftwilds-commercial-60s-16x9.mp4",
+      "durationSec": 60,
+      "resolution": "1920x1080",
+      "aspect": "16:9",
+      "audio": "music-bed+vo-ducked",
+      "musicSource": "public/sounds/music/magic-space.mp3",
+      "vo": "audio/riftwilds-commercial-60s-16x9-vo.m4a",
+      "captions": "captions/riftwilds-commercial-60s.vtt",
+      "poster": "posters/poster-cinematic-16x9.png"
+    },
+    {
+      "id": "social-30s",
+      "path": "video/riftwilds-commercial-30s-9x16.mp4",
+      "durationSec": 30,
+      "resolution": "1080x1920",
+      "aspect": "9:16",
+      "audio": "music-bed+vo-ducked",
+      "musicSource": "public/sounds/music/airy.mp3",
+      "vo": "audio/riftwilds-commercial-30s-9x16-vo.m4a",
+      "captions": "captions/riftwilds-commercial-30s.vtt",
+      "poster": "posters/poster-vertical-rift.png"
+    },
+    {
+      "id": "teaser-15s",
+      "path": "video/riftwilds-commercial-15s-9x16-teaser.mp4",
+      "durationSec": 15,
+      "resolution": "1080x1920",
+      "aspect": "9:16",
+      "audio": "music-bed+vo-ducked",
+      "musicSource": "public/sounds/music/sector.mp3",
+      "vo": "audio/riftwilds-commercial-15s-9x16-teaser-vo.m4a",
+      "captions": "captions/riftwilds-commercial-15s.vtt",
+      "poster": "posters/poster-vertical-rift.png"
+    },
+    {
+      "id": "square-25s",
+      "path": "video/riftwilds-commercial-25s-1x1.mp4",
+      "durationSec": 25,
+      "resolution": "1080x1080",
+      "aspect": "1:1",
+      "audio": "music-bed+vo-ducked",
+      "musicSource": "public/sounds/music/airy.mp3",
+      "vo": "audio/riftwilds-commercial-25s-1x1-vo.m4a",
+      "captions": "captions/riftwilds-commercial-25s-square.vtt",
+      "poster": "posters/poster-square-hero.png"
+    },
+    {
+      "id": "header-loop-12s",
+      "path": "video/riftwilds-header-loop-12s-16x9-muted.mp4",
+      "durationSec": 12,
+      "resolution": "1920x1080",
+      "aspect": "16:9",
+      "audio": "muted",
+      "captions": null,
+      "poster": "storyboards/comic/comic-01-rift-splash.png"
+    }
+  ],
+  "comicFrames": [
+    "storyboards/comic/comic-01-rift-splash.png",
+    "storyboards/comic/comic-02-hatch-panels.png",
+    "storyboards/comic/comic-03-battle-action.png",
+    "storyboards/comic/comic-04-liveworld-page.png",
+    "storyboards/comic/comic-05-endcard-egg.png",
+    "storyboards/comic/comic-v01-vertical-poster.png",
+    "storyboards/comic/comic-v02-hatch-vertical.png",
+    "storyboards/comic/comic-v03-explore-vertical.png",
+    "storyboards/comic/comic-s01-square-hero.png"
+  ],
+  "audio": [
+    "audio/magic-space.mp3",
+    "audio/airy.mp3",
+    "audio/sector.mp3",
+    "audio/pulse.mp3",
+    "audio/riftwilds-commercial-60s-16x9-vo.m4a",
+    "audio/riftwilds-commercial-30s-9x16-vo.m4a",
+    "audio/riftwilds-commercial-15s-9x16-teaser-vo.m4a",
+    "audio/riftwilds-commercial-25s-1x1-vo.m4a",
+    "audio/VO_SCRIPT_60s.txt",
+    "audio/VO_SCRIPT_30s.txt",
+    "audio/VO_SCRIPT_15s.txt",
+    "audio/VO_SCRIPT_25s_square.txt"
+  ],
+  "site": {
+    "component": "src/components/marketing/commercial-showcase.tsx",
+    "autoplayPolicy": "click-to-play for commercials; muted loop only for section atmosphere"
+  },
+  "docs": [
+    "docs/marketing/COMIC_COMMERCIAL_AUDIO.md",
+    "docs/marketing/RIFTWILDS_COMMERCIAL_SCRIPT.md",
+    "docs/marketing/SHOT_LIST.md"
+  ],
+  "status": {
+    "mp4Rendered": true,
+    "comicFrames": true,
+    "ttsVoiceover": true,
+    "ttsProvider": "windows-sapi",
+    "musicDucking": true,
+    "gameplayCapture": false
+  }
+}

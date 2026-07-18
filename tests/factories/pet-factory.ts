@@ -10,6 +10,7 @@ import {
   type CareStats,
   type PetCareCondition,
 } from "@/game/creatures/care";
+import { DEFAULT_CARE_PROGRESS } from "@/game/creatures/care-catalog";
 import { LAUNCH_SPECIES, getSpeciesBySlug, type SpeciesDef } from "@/game/creatures/species-catalog";
 import type { HatcheryPet } from "@/game/eggs/hatchery-store";
 import { generatePetBiography } from "@/lib/pets/backstory-generator";
@@ -128,6 +129,15 @@ export function createPet(opts: FactoryPetOptions = {}): FactoryPet {
     ],
     biography,
     biographyVersion: biography.version,
+    careProgress: {
+      ...DEFAULT_CARE_PROGRESS,
+      inventory: DEFAULT_CARE_PROGRESS.inventory.map((s) => ({ ...s })),
+      journal: [],
+      titles: [],
+      badges: [],
+      cosmetics: [],
+      cooldowns: {},
+    },
   };
 
   return {

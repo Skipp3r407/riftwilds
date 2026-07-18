@@ -14,6 +14,24 @@ import {
   ElderwoodForestScene,
   ELDERWOOD_KEY,
 } from "@/game/live-world/scenes/ElderwoodForestScene";
+import {
+  StormspirePeaksScene,
+  STORM_KEY,
+  StoneheartCanyonScene,
+  STONE_KEY,
+  FrostveilBasinScene,
+  FROST_KEY,
+  RadiantCitadelScene,
+  RADIANT_KEY,
+  AlloyRuinsScene,
+  ALLOY_KEY,
+  SpiritMarshScene,
+  SPIRIT_KEY,
+  VoidHollowScene,
+  VOID_KEY,
+  CelestialRiftScene,
+  CELESTIAL_KEY,
+} from "@/game/live-world/scenes/region-scenes";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 
 export type CreateLiveWorldGameOptions = {
@@ -47,8 +65,9 @@ export function createLiveWorldGame(
       },
     },
     scale: {
+      // RESIZE fills the parent — no FIT letterboxing on the game canvas.
       mode: Phaser.Scale.RESIZE,
-      autoCenter: Phaser.Scale.CENTER_BOTH,
+      autoCenter: Phaser.Scale.NO_CENTER,
     },
     scene: [],
     banner: false,
@@ -60,6 +79,14 @@ export function createLiveWorldGame(
   game.scene.add(EMBER_KEY, EmberCraterScene, false);
   game.scene.add(COAST_KEY, MoonwaterCoastScene, false);
   game.scene.add(ELDERWOOD_KEY, ElderwoodForestScene, false);
+  game.scene.add(STORM_KEY, StormspirePeaksScene, false);
+  game.scene.add(STONE_KEY, StoneheartCanyonScene, false);
+  game.scene.add(FROST_KEY, FrostveilBasinScene, false);
+  game.scene.add(RADIANT_KEY, RadiantCitadelScene, false);
+  game.scene.add(ALLOY_KEY, AlloyRuinsScene, false);
+  game.scene.add(SPIRIT_KEY, SpiritMarshScene, false);
+  game.scene.add(VOID_KEY, VoidHollowScene, false);
+  game.scene.add(CELESTIAL_KEY, CelestialRiftScene, false);
   return game;
 }
 

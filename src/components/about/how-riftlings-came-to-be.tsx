@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   ABOUT_SLOGAN,
   affinityBirthVignettes,
@@ -10,6 +11,38 @@ import {
 import { ComicPanel } from "@/components/about/comic-panel";
 import { CinematicTextReveal } from "@/components/about/cinematic-text-reveal";
 import { cn } from "@/lib/utils/cn";
+
+/** Full-bleed atmospheric art behind card copy — dark scrims keep text readable. */
+function CardArtBackground({
+  src,
+  alt,
+  sizes,
+}: {
+  src: string;
+  alt: string;
+  sizes: string;
+}) {
+  return (
+    <>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        unoptimized
+        sizes={sizes}
+        className="z-0 object-cover object-center"
+      />
+      <div
+        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-[rgba(4,6,14,0.94)] via-[rgba(4,6,14,0.72)] to-[rgba(4,6,14,0.42)]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-[rgba(4,6,14,0.55)] via-transparent to-transparent"
+        aria-hidden
+      />
+    </>
+  );
+}
 
 type Props = {
   className?: string;
@@ -89,15 +122,29 @@ export function HowRiftlingsCameToBe({ className }: Props) {
           </ul>
         </div>
 
-        {/* Step-by-step */}
+        {/* Step-by-step lifecycle */}
         <ol className="mt-14 grid gap-4 lg:grid-cols-5">
           {lore.steps.map((step, index) => (
-            <li key={step.id} className="panel flex flex-col gap-2 p-4">
-              <span className="font-display text-xs text-[var(--cyan)]">
-                {String(index + 1).padStart(2, "0")} · {step.title}
-              </span>
-              <p className="text-sm font-medium leading-snug text-white">{step.comicCaption}</p>
-              <p className="text-sm leading-relaxed text-[var(--text-muted)]">{step.body}</p>
+            <li
+              key={step.id}
+              className="panel relative flex min-h-[18rem] flex-col gap-2 overflow-hidden p-4"
+            >
+              <CardArtBackground
+                src={step.image.src}
+                alt={step.image.alt}
+                sizes="(max-width: 1024px) 100vw, 20vw"
+              />
+              <div className="relative z-10 flex flex-col gap-2">
+                <span className="font-display text-xs text-[var(--cyan)] drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
+                  {String(index + 1).padStart(2, "0")} · {step.title}
+                </span>
+                <p className="text-sm font-medium leading-snug text-white drop-shadow-[0_1px_10px_rgba(0,0,0,0.9)]">
+                  {step.comicCaption}
+                </p>
+                <p className="text-sm leading-relaxed text-[rgba(220,228,240,0.92)] drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
+                  {step.body}
+                </p>
+              </div>
             </li>
           ))}
         </ol>
@@ -107,15 +154,29 @@ export function HowRiftlingsCameToBe({ className }: Props) {
           <h3 className="font-display text-xl text-white">{lore.bridge.heading}</h3>
           <ol className="mt-6 grid gap-4 md:grid-cols-3">
             {lore.bridge.steps.map((step, index) => (
-              <li key={step.title} className="panel relative p-5">
-                <span className="font-display text-xs text-[var(--amber)]">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h4 className="font-display mt-2 text-lg text-white">{step.title}</h4>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">{step.body}</p>
+              <li
+                key={step.title}
+                className="panel relative min-h-[14rem] overflow-hidden p-5"
+              >
+                <CardArtBackground
+                  src={step.image.src}
+                  alt={step.image.alt}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+                <div className="relative z-10">
+                  <span className="font-display text-xs text-[var(--amber)] drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h4 className="font-display mt-2 text-lg text-white drop-shadow-[0_1px_10px_rgba(0,0,0,0.9)]">
+                    {step.title}
+                  </h4>
+                  <p className="mt-2 text-sm leading-relaxed text-[rgba(220,228,240,0.92)] drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
+                    {step.body}
+                  </p>
+                </div>
                 {index < lore.bridge.steps.length - 1 ? (
                   <span
-                    className="pointer-events-none absolute -right-2 top-1/2 hidden text-[var(--text-dim)] md:block"
+                    className="pointer-events-none absolute -right-2 top-1/2 z-20 hidden text-[var(--text-dim)] md:block"
                     aria-hidden
                   >
                     →
@@ -150,22 +211,38 @@ export function HowRiftlingsCameToBe({ className }: Props) {
             {affinityBirthVignettes.map((v) => (
               <li
                 key={v.id}
-                className="panel flex flex-col gap-2 border-t-2 p-4"
+                className="panel flex flex-col overflow-hidden border-t-2"
                 style={{ borderTopColor: v.accent }}
               >
-                <div className="flex items-baseline justify-between gap-2">
-                  <h4 className="font-display text-lg text-white" style={{ color: v.accent }}>
-                    {v.affinity}
-                  </h4>
-                  <span className="text-[0.65rem] uppercase tracking-wider text-[var(--text-dim)]">
-                    {v.bondMatter.split("·")[0]?.trim()}
-                  </span>
+                <div className="relative aspect-[16/9] w-full bg-[rgba(0,0,0,0.35)]">
+                  <Image
+                    src={v.thumbSrc}
+                    alt={v.thumbAlt}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="object-cover object-center"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[rgba(6,8,14,0.75)] to-transparent"
+                    aria-hidden
+                  />
                 </div>
-                <p className="text-sm font-medium leading-snug text-[var(--text)]">
-                  “{v.comicCaption}”
-                </p>
-                <p className="text-xs text-[var(--text-dim)]">{v.bondMatter}</p>
-                <p className="text-sm leading-relaxed text-[var(--text-muted)]">{v.prose}</p>
+                <div className="flex flex-col gap-2 p-4">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <h4 className="font-display text-lg text-white" style={{ color: v.accent }}>
+                      {v.affinity}
+                    </h4>
+                    <span className="shrink-0 text-[0.65rem] uppercase tracking-wider text-[var(--text-dim)]">
+                      {v.bondMatter.split("·")[0]?.trim()}
+                    </span>
+                  </div>
+                  <p className="text-sm font-medium leading-snug text-[var(--text)]">
+                    “{v.comicCaption}”
+                  </p>
+                  <p className="text-xs text-[var(--text-dim)]">{v.bondMatter}</p>
+                  <p className="text-sm leading-relaxed text-[var(--text-muted)]">{v.prose}</p>
+                </div>
               </li>
             ))}
           </ul>

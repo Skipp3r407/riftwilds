@@ -1,14 +1,17 @@
 # Sound effects credits
 
-Short UI / game SFX under `public/sounds/sfx/` for Riftwilds.
+Short UI / game SFX under `public/sounds/sfx/` and ambient loops under `public/sounds/ambient/` for Riftwilds.
 
 ## Original procedural blips (this project)
 
-All `.wav` files in this folder were **generated for Riftwilds** as original short tones (sine / triangle / square / saw blips). They are not sampled from third-party libraries.
+All `.wav` files in these folders were **generated for Riftwilds** as original short tones (sine / triangle / square / saw / noise). They are not sampled from third-party libraries.
 
 - **Author:** Riftwilds project
-- **License:** CC0 1.0 Universal (public domain dedication) — free to reuse with or without attribution
-- **Runtime fallback:** `src/lib/audio/sfx.ts` synthesizes the same recipes via Web Audio if a file fails to load
+- **License:** CC0 1.0 Universal (public domain dedication)
+- **Generator:** `node scripts/assets/generate-audio-sfx.mjs`
+- **Runtime fallback:** `src/lib/audio/sfx.ts` synthesizes recipes via Web Audio if a file fails to load
+
+### Core UI / game
 
 | File | Used for |
 |------|----------|
@@ -16,20 +19,21 @@ All `.wav` files in this folder were **generated for Riftwilds** as original sho
 | `ui-modal-open.wav` / `ui-modal-close.wav` | Modal open / close |
 | `ui-nav.wav` | Subtle navigation |
 | `ui-error.wav` | Soft fail / error |
-| `hatchery-claim.wav` | Claim starter egg |
-| `hatchery-reveal.wav` | Hatch reveal |
-| `pets-care.wav` | Feed / care actions |
-| `pets-equip.wav` | Equip / save loadout |
-| `quests-accept.wav` | Accept quest |
-| `quests-objective.wav` | Objective progress |
-| `quests-complete.wav` | Quest complete |
-| `combat-hit.wav` / `combat-ability.wav` | Arena hit / ability |
-| `combat-win.wav` / `combat-lose.wav` | Arena outcome |
-| `shop-ok.wav` / `shop-fail.wav` | Shop / marketplace purchase |
-| `world-npc.wav` | NPC dialogue open |
-| `world-portal.wav` | Portal travel |
-| `world-gather.wav` / `world-loot.wav` | Gather / loot |
-| `rewards-claim.wav` | Reward claim |
-| `rewards-chime.wav` | Verified estimate tick (subtle) |
+| `ui-map-open.wav` / `ui-map-close.wav` | World map |
+| `ui-waypoint.wav` | Waypoint discovery |
+| `ui-chat-open.wav` / `ui-chat-close.wav` / `ui-chat-send.wav` | Chat panel |
+| `hatchery-claim.wav` / `hatchery-reveal.wav` | Hatchery |
+| `pets-care.wav` / `pets-feed.wav` / `pets-water.wav` / `pets-play.wav` / `pets-clean.wav` / `pets-rest.wav` / `pets-heal.wav` / `pets-need-low.wav` / `pets-equip.wav` | Pet care bus |
+| `quests-*.wav` | Quest board |
+| `combat-*.wav` / `arena-start.wav` / `event-stinger.wav` | Arena / events |
+| `shop-ok.wav` / `shop-fail.wav` | Shop / marketplace |
+| `world-npc.wav` / `world-npc-greet.wav` / `world-npc-work.wav` | NPC stubs |
+| `world-portal.wav` / `world-gather.wav` / `world-loot.wav` | World actions |
+| `rewards-claim.wav` / `rewards-chime.wav` | Rewards |
+| `weather-rain.wav` / `weather-thunder.wav` / `weather-wind.wav` | Weather cues |
 
-Ambient / spam-prone events (`hatchery.incubate_tick`, `world.footstep`, `rewards.estimate_tick`) prefer procedural playback with longer cooldowns and respect reduced-motion preferences.
+### Ambient loops
+
+`public/sounds/ambient/<region-slug>.wav` — short loopable beds for all 12 regions + `menu.wav`. Prefer Web Audio procedural layers; files are optional enhancement.
+
+Ambient / spam-prone events (`hatchery.incubate_tick`, `world.footstep`, `rewards.estimate_tick`, weather) use longer cooldowns and respect reduced-motion preferences.

@@ -1,10 +1,10 @@
 "use client";
 
-import { useWallet } from "@solana/wallet-adapter-react";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { EconomySummary } from "@/components/economy";
 import { SectionTitleBand, StatusChip } from "@/components/shared/page-header";
+import { useActiveWallet } from "@/hooks/use-active-wallet";
 import { projectConfig, tokenTierThresholds } from "@/lib/config/project";
 import type { TokenAnalyticsDashboard } from "@/lib/ecosystem/token-analytics";
 
@@ -21,7 +21,7 @@ function fmtUsd(n: number | null) {
 }
 
 export default function TokenPage() {
-  const { publicKey } = useWallet();
+  const { address, viewOnly } = useActiveWallet();
   const [data, setData] = useState<BalancePayload | null>(null);
   const [loading, setLoading] = useState(false);
   const [analytics, setAnalytics] = useState<TokenAnalyticsDashboard | null>(null);
@@ -36,16 +36,16 @@ export default function TokenPage() {
   }, []);
 
   const refresh = useCallback(async () => {
-    if (!publicKey) return;
+    if (!address) return;
     setLoading(true);
     try {
-      const res = await fetch(`/api/token/balance?wallet=${publicKey.toBase58()}`);
+      const res = await fetch(`/api/token/balance?wallet=${address}`);
       const json = (await res.json()) as BalancePayload;
       setData(json);
     } finally {
       setLoading(false);
     }
-  }, [publicKey]);
+  }, [address]);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 md:px-6">
@@ -103,14 +103,15 @@ export default function TokenPage() {
             type="button"
             className="btn-secondary focus-ring px-3 py-2 text-sm"
             onClick={() => void refresh()}
-            disabled={!publicKey || loading}
+            disabled={!address || loading}
           >
             {loading ? "Refreshing…" : "Refresh balance"}
           </button>
         </div>
-        {!publicKey ? (
+        {!address ? (
           <p className="mt-3 text-sm text-[var(--text-muted)]">
-            Connect a wallet to view on-chain balance. Soft play works without a wallet — see{" "}
+            Connect a wallet or paste an address to view on-chain balance. Soft play works without a
+            wallet — see{" "}
             <Link href="/login" className="text-[var(--cyan)]">
               Account
             </Link>
@@ -118,6 +119,11 @@ export default function TokenPage() {
           </p>
         ) : data?.balance ? (
           <div className="mt-3 text-sm text-[var(--text-muted)]">
+            {viewOnly ? (
+              <p className="mb-2 text-xs text-[var(--amber)]">
+                View-only — balance lookup only; cannot sign or send SOL.
+              </p>
+            ) : null}
             <p>
               Balance: <span className="text-white">{data.balance.uiAmount}</span>
             </p>

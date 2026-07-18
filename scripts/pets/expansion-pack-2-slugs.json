@@ -1,0 +1,452 @@
+[
+  {
+    "slug": "slagpup",
+    "name": "Slagpup",
+    "affinity": "EMBER",
+    "bodyType": "QUADRUPED",
+    "habitat": "Ember Crater",
+    "rarityBias": "COMMON",
+    "description": "Molten-pawed pup that cools into tough slag."
+  },
+  {
+    "slug": "pyrespore",
+    "name": "Pyrespore",
+    "affinity": "EMBER",
+    "bodyType": "PLANT_BODIED",
+    "habitat": "Ember Crater",
+    "rarityBias": "UNCOMMON",
+    "description": "Spore bloom that sheds warm ember pollen."
+  },
+  {
+    "slug": "cinderquill",
+    "name": "Cinderquill",
+    "affinity": "EMBER",
+    "bodyType": "AVIAN",
+    "habitat": "Ember Crater",
+    "rarityBias": "RARE",
+    "description": "Ash-plumed quillbird of crater rim thermals."
+  },
+  {
+    "slug": "lavaling",
+    "name": "Lavaling",
+    "affinity": "EMBER",
+    "bodyType": "AMORPHOUS",
+    "habitat": "Ember Crater",
+    "rarityBias": "COMMON",
+    "description": "Soft lava blob that hardens when startled."
+  },
+  {
+    "slug": "furnacebeetle",
+    "name": "Furnacebeetle",
+    "affinity": "EMBER",
+    "bodyType": "INSECTOID",
+    "habitat": "Ember Crater",
+    "rarityBias": "UNCOMMON",
+    "description": "Heat-chambered beetle that vents forge-warm air."
+  },
+  {
+    "slug": "brinepaw",
+    "name": "Brinepaw",
+    "affinity": "TIDE",
+    "bodyType": "QUADRUPED",
+    "habitat": "Moonwater Coast",
+    "rarityBias": "COMMON",
+    "description": "Salt-whiskered coastal prowler with wet prints."
+  },
+  {
+    "slug": "kelpwisp",
+    "name": "Kelpwisp",
+    "affinity": "TIDE",
+    "bodyType": "FLOATING",
+    "habitat": "Moonwater Coast",
+    "rarityBias": "COMMON",
+    "description": "Hovering kelp ribbon that tastes of moonfoam."
+  },
+  {
+    "slug": "sprayfin",
+    "name": "Sprayfin",
+    "affinity": "TIDE",
+    "bodyType": "AQUATIC",
+    "habitat": "Moonwater Coast",
+    "rarityBias": "UNCOMMON",
+    "description": "Surf-skimming finner that leaps through spray."
+  },
+  {
+    "slug": "pearlurk",
+    "name": "Pearlurk",
+    "affinity": "TIDE",
+    "bodyType": "AQUATIC",
+    "habitat": "Moonwater Coast",
+    "rarityBias": "RARE",
+    "description": "Shell-lurking pearl guardian of tide caves."
+  },
+  {
+    "slug": "tidequill",
+    "name": "Tidequill",
+    "affinity": "TIDE",
+    "bodyType": "AVIAN",
+    "habitat": "Moonwater Coast",
+    "rarityBias": "COMMON",
+    "description": "Shorebird with ink-dark tide-patterned plumage."
+  },
+  {
+    "slug": "fernfox",
+    "name": "Fernfox",
+    "affinity": "GROVE",
+    "bodyType": "QUADRUPED",
+    "habitat": "Elderwood Forest",
+    "rarityBias": "COMMON",
+    "description": "Fern-tailed fox that vanishes into understory."
+  },
+  {
+    "slug": "saplingo",
+    "name": "Saplingo",
+    "affinity": "GROVE",
+    "bodyType": "BIPED",
+    "habitat": "Elderwood Forest",
+    "rarityBias": "COMMON",
+    "description": "Upright sapling companion with sticky leaf hands."
+  },
+  {
+    "slug": "vinepup",
+    "name": "Vinepup",
+    "affinity": "GROVE",
+    "bodyType": "QUADRUPED",
+    "habitat": "Elderwood Forest",
+    "rarityBias": "UNCOMMON",
+    "description": "Vine-wrapped pup that braids trails as it runs."
+  },
+  {
+    "slug": "thornling",
+    "name": "Thornling",
+    "affinity": "GROVE",
+    "bodyType": "PLANT_BODIED",
+    "habitat": "Elderwood Forest",
+    "rarityBias": "RARE",
+    "description": "Spined seedling that softens for trusted keepers."
+  },
+  {
+    "slug": "mossdrake",
+    "name": "Mossdrake",
+    "affinity": "GROVE",
+    "bodyType": "SERPENTINE",
+    "habitat": "Elderwood Forest",
+    "rarityBias": "EPIC",
+    "description": "Low serpentine draped in living moss armor."
+  },
+  {
+    "slug": "galekit",
+    "name": "Galekit",
+    "affinity": "STORM",
+    "bodyType": "QUADRUPED",
+    "habitat": "Stormspire Peaks",
+    "rarityBias": "COMMON",
+    "description": "Wind-ruffed kit that chases cloud shadows."
+  },
+  {
+    "slug": "cloudleaper",
+    "name": "Cloudleaper",
+    "affinity": "STORM",
+    "bodyType": "BIPED",
+    "habitat": "Stormspire Peaks",
+    "rarityBias": "UNCOMMON",
+    "description": "Spring-legged peak hopper that rides updrafts."
+  },
+  {
+    "slug": "sparkmoth",
+    "name": "Sparkmoth",
+    "affinity": "STORM",
+    "bodyType": "INSECTOID",
+    "habitat": "Stormspire Peaks",
+    "rarityBias": "COMMON",
+    "description": "Tiny moth whose dust crackles like dry lightning."
+  },
+  {
+    "slug": "windrift",
+    "name": "Windrift",
+    "affinity": "STORM",
+    "bodyType": "FLOATING",
+    "habitat": "Stormspire Peaks",
+    "rarityBias": "RARE",
+    "description": "Ribbon-bodied floater that steers on gusts alone."
+  },
+  {
+    "slug": "thunderpaw",
+    "name": "Thunderpaw",
+    "affinity": "STORM",
+    "bodyType": "QUADRUPED",
+    "habitat": "Stormspire Peaks",
+    "rarityBias": "UNCOMMON",
+    "description": "Heavy-pawed ridge runner with booming steps."
+  },
+  {
+    "slug": "shalehorn",
+    "name": "Shalehorn",
+    "affinity": "STONE",
+    "bodyType": "QUADRUPED",
+    "habitat": "Stoneheart Canyon",
+    "rarityBias": "COMMON",
+    "description": "Layered shale horns scrape sparks from canyon walls."
+  },
+  {
+    "slug": "gritling",
+    "name": "Gritling",
+    "affinity": "STONE",
+    "bodyType": "STONE_BODIED",
+    "habitat": "Stoneheart Canyon",
+    "rarityBias": "COMMON",
+    "description": "Grit-bodied pebblekin that naps in dust bowls."
+  },
+  {
+    "slug": "basaltpup",
+    "name": "Basaltpup",
+    "affinity": "STONE",
+    "bodyType": "QUADRUPED",
+    "habitat": "Stoneheart Canyon",
+    "rarityBias": "UNCOMMON",
+    "description": "Columnar basalt pup with cool volcanic plates."
+  },
+  {
+    "slug": "crystowl",
+    "name": "Crystowl",
+    "affinity": "STONE",
+    "bodyType": "AVIAN",
+    "habitat": "Stoneheart Canyon",
+    "rarityBias": "RARE",
+    "description": "Crystal-eyed canyon owl that roosts on geodes."
+  },
+  {
+    "slug": "rubblefin",
+    "name": "Rubblefin",
+    "affinity": "STONE",
+    "bodyType": "AQUATIC",
+    "habitat": "Stoneheart Canyon",
+    "rarityBias": "COMMON",
+    "description": "Stone-stream swimmer with gravel-scaled fins."
+  },
+  {
+    "slug": "glazehare",
+    "name": "Glazehare",
+    "affinity": "FROST",
+    "bodyType": "QUADRUPED",
+    "habitat": "Frostveil Basin",
+    "rarityBias": "COMMON",
+    "description": "Ice-glazed hare that leaves glass-thin trails."
+  },
+  {
+    "slug": "rimewing",
+    "name": "Rimewing",
+    "affinity": "FROST",
+    "bodyType": "AVIAN",
+    "habitat": "Frostveil Basin",
+    "rarityBias": "UNCOMMON",
+    "description": "Frost-rimmed wing that sings in thin cold air."
+  },
+  {
+    "slug": "iciclepup",
+    "name": "Iciclepup",
+    "affinity": "FROST",
+    "bodyType": "QUADRUPED",
+    "habitat": "Frostveil Basin",
+    "rarityBias": "COMMON",
+    "description": "Icicle-whiskered pup that chews soft snow."
+  },
+  {
+    "slug": "snowglyph",
+    "name": "Snowglyph",
+    "affinity": "FROST",
+    "bodyType": "SPIRIT_BODIED",
+    "habitat": "Frostveil Basin",
+    "rarityBias": "RARE",
+    "description": "Snow-script spirit that writes fading runes."
+  },
+  {
+    "slug": "frostbloom",
+    "name": "Frostbloom",
+    "affinity": "FROST",
+    "bodyType": "PLANT_BODIED",
+    "habitat": "Frostveil Basin",
+    "rarityBias": "UNCOMMON",
+    "description": "Ice-petaled bloom that opens only at blue dusk."
+  },
+  {
+    "slug": "dawnkit",
+    "name": "Dawnkit",
+    "affinity": "RADIANT",
+    "bodyType": "QUADRUPED",
+    "habitat": "Radiant Citadel",
+    "rarityBias": "COMMON",
+    "description": "Sunrise-furred kit that warms cold stone floors."
+  },
+  {
+    "slug": "prismoth",
+    "name": "Prismoth",
+    "affinity": "RADIANT",
+    "bodyType": "INSECTOID",
+    "habitat": "Radiant Citadel",
+    "rarityBias": "COMMON",
+    "description": "Facet-wing moth that scatters soft prism dust."
+  },
+  {
+    "slug": "solfinch",
+    "name": "Solfinch",
+    "affinity": "RADIANT",
+    "bodyType": "AVIAN",
+    "habitat": "Radiant Citadel",
+    "rarityBias": "UNCOMMON",
+    "description": "Sunbeam finch nesting in citadel lattice light."
+  },
+  {
+    "slug": "gleamhare",
+    "name": "Gleamhare",
+    "affinity": "RADIANT",
+    "bodyType": "QUADRUPED",
+    "habitat": "Radiant Citadel",
+    "rarityBias": "RARE",
+    "description": "Gleaming hare that blinks bright when startled."
+  },
+  {
+    "slug": "lightspire",
+    "name": "Lightspire",
+    "affinity": "RADIANT",
+    "bodyType": "FLOATING",
+    "habitat": "Radiant Citadel",
+    "rarityBias": "EPIC",
+    "description": "Spire of condensed dawnlight with a gentle pulse."
+  },
+  {
+    "slug": "umbralisk",
+    "name": "Umbralisk",
+    "affinity": "VOID",
+    "bodyType": "SERPENTINE",
+    "habitat": "Void Hollow",
+    "rarityBias": "UNCOMMON",
+    "description": "Shadow-coil serpent that drinks dim corridor light."
+  },
+  {
+    "slug": "duskling",
+    "name": "Duskling",
+    "affinity": "VOID",
+    "bodyType": "FLOATING",
+    "habitat": "Void Hollow",
+    "rarityBias": "COMMON",
+    "description": "Dusk orb that dims lanterns when nervous."
+  },
+  {
+    "slug": "nullpaw",
+    "name": "Nullpaw",
+    "affinity": "VOID",
+    "bodyType": "QUADRUPED",
+    "habitat": "Void Hollow",
+    "rarityBias": "COMMON",
+    "description": "Soft-pawed voidling that erases its own footprints."
+  },
+  {
+    "slug": "echofig",
+    "name": "Echofig",
+    "affinity": "VOID",
+    "bodyType": "PLANT_BODIED",
+    "habitat": "Void Hollow",
+    "rarityBias": "RARE",
+    "description": "Fig-shaped hollow plant that whispers back sounds."
+  },
+  {
+    "slug": "shadowmire",
+    "name": "Shadowmire",
+    "affinity": "VOID",
+    "bodyType": "AMORPHOUS",
+    "habitat": "Void Hollow",
+    "rarityBias": "LEGENDARY",
+    "description": "Living mire of night that shelters lost pets."
+  },
+  {
+    "slug": "boltgear",
+    "name": "Boltgear",
+    "affinity": "ALLOY",
+    "bodyType": "MECHANICAL_ORGANIC",
+    "habitat": "Alloy Ruins",
+    "rarityBias": "COMMON",
+    "description": "Bolt-hearted gearling that spins when excited."
+  },
+  {
+    "slug": "scrapowl",
+    "name": "Scrapowl",
+    "affinity": "ALLOY",
+    "bodyType": "AVIAN",
+    "habitat": "Alloy Ruins",
+    "rarityBias": "UNCOMMON",
+    "description": "Copper-feather owl nesting in scrap rafters."
+  },
+  {
+    "slug": "copperfin",
+    "name": "Copperfin",
+    "affinity": "ALLOY",
+    "bodyType": "AQUATIC",
+    "habitat": "Alloy Ruins",
+    "rarityBias": "COMMON",
+    "description": "Cooling-channel swimmer with copper scale plates."
+  },
+  {
+    "slug": "wirefox",
+    "name": "Wirefox",
+    "affinity": "ALLOY",
+    "bodyType": "QUADRUPED",
+    "habitat": "Alloy Ruins",
+    "rarityBias": "RARE",
+    "description": "Wire-tailed fox that rewires shiny refuse into toys."
+  },
+  {
+    "slug": "chronobeetle",
+    "name": "Chronobeetle",
+    "affinity": "ALLOY",
+    "bodyType": "INSECTOID",
+    "habitat": "Alloy Ruins",
+    "rarityBias": "EPIC",
+    "description": "Clock-shelled beetle that ticks in sync with ruins."
+  },
+  {
+    "slug": "ghostbloom",
+    "name": "Ghostbloom",
+    "affinity": "SPIRIT",
+    "bodyType": "PLANT_BODIED",
+    "habitat": "Spirit Marsh",
+    "rarityBias": "COMMON",
+    "description": "Pale marsh bloom that glows when keepers sing."
+  },
+  {
+    "slug": "dreamhare",
+    "name": "Dreamhare",
+    "affinity": "SPIRIT",
+    "bodyType": "QUADRUPED",
+    "habitat": "Spirit Marsh",
+    "rarityBias": "UNCOMMON",
+    "description": "Soft hare that naps across thin dream borders."
+  },
+  {
+    "slug": "wispdeer",
+    "name": "Wispdeer",
+    "affinity": "SPIRIT",
+    "bodyType": "QUADRUPED",
+    "habitat": "Spirit Marsh",
+    "rarityBias": "RARE",
+    "description": "Antlered wisp-deer leaving lantern-light prints."
+  },
+  {
+    "slug": "soulmoth",
+    "name": "Soulmoth",
+    "affinity": "SPIRIT",
+    "bodyType": "INSECTOID",
+    "habitat": "Spirit Marsh",
+    "rarityBias": "COMMON",
+    "description": "Soul-dust moth that follows honest promises."
+  },
+  {
+    "slug": "starveil",
+    "name": "Starveil",
+    "affinity": "SPIRIT",
+    "bodyType": "FLOATING",
+    "habitat": "Celestial Rift",
+    "rarityBias": "CELESTIAL",
+    "description": "Veil of starlit silk from the Celestial Rift edge."
+  }
+]

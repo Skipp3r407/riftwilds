@@ -16,6 +16,8 @@ export default function CollectionPage() {
       <EmptyState
         title="No Riftlings yet"
         description="Hatch your first egg in the Hatchery to start your collection. Open your profile to see pets from this session."
+        imageSrc="/assets/ui/empty-states/pets.png"
+        imageAlt="Empty nest waiting for a Riftling egg"
         action={
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/hatchery" className="btn-primary focus-ring text-sm">

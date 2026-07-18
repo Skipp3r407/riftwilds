@@ -42,6 +42,20 @@ const ITEM_PRICE_SOL: Record<string, string> = {
   "basic-pet-meal": "0.002",
   "premium-pet-meal": "0.01",
   "dormancy-revival-bloom": "0.08",
+  "spirit-crystal": "0.04",
+  "phoenix-feather": "0.09",
+  "ancient-heart": "0.18",
+  "revival-herb": "0.015",
+  "healing-stone": "0.008",
+  "soul-bloom": "0.04",
+  "moon-tear": "0.09",
+  "heart-flame": "0.045",
+  "sacred-feather": "0.09",
+  "ancestor-stone": "0.20",
+  "ancient-bell": "0.05",
+  "revival-water": "0.012",
+  "healing-rune": "0.04",
+  "spirit-lantern-charm": "0.08",
 };
 
 export type PriceQuote = {

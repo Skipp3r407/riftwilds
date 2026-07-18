@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import { attachGuestCookie, resolveOwnerKey } from "@/lib/auth/owner-key";
+import { displayCareStats } from "@/game/creatures/care";
 import { getPet, petCareSummary } from "@/game/eggs/hatchery-store";
 import { getSpeciesBySlug } from "@/game/creatures/species-catalog";
 import { getSpeciesLore } from "@/content/pets/lore";
 import { isFeatureEnabled } from "@/lib/config/feature-flags";
 import { assertOwnership } from "@/lib/security/authorization";
+import { ensureStarterCredits, getCreditBalance } from "@/lib/credits";
 
 type Params = { params: Promise<{ publicId: string }> };
 
@@ -21,9 +23,11 @@ export async function GET(_req: Request, { params }: Params) {
   const species = getSpeciesBySlug(pet.speciesSlug);
   const loreEnabled = isFeatureEnabled("PET_LORE_ENABLED");
   const speciesLore = loreEnabled ? getSpeciesLore(pet.speciesSlug) : undefined;
+  ensureStarterCredits(ownerKey);
   const res = NextResponse.json({
     pet: {
       ...pet,
+      care: displayCareStats(pet.care),
       summary: petCareSummary(pet),
       rpg: species
         ? {
@@ -67,6 +71,8 @@ export async function GET(_req: Request, { params }: Params) {
           }
         : null,
     },
+    creditsBalance: getCreditBalance(ownerKey),
+    neverRequiresSol: true,
     demo: true,
   });
   if (isGuest) attachGuestCookie(res, guestToken);

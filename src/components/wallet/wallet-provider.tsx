@@ -6,6 +6,7 @@ import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import type { Adapter } from "@solana/wallet-adapter-base";
 import { clusterApiUrl } from "@solana/web3.js";
 import { projectConfig } from "@/lib/config/project";
+import { ViewOnlyWalletProvider } from "@/components/wallet/view-only-wallet-context";
 
 /**
  * Always wraps children so useWallet() is safe during SSR/prerender.
@@ -40,7 +41,9 @@ export function AppWalletProvider({ children }: { children: ReactNode }) {
   return (
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>{children}</WalletModalProvider>
+        <WalletModalProvider>
+          <ViewOnlyWalletProvider>{children}</ViewOnlyWalletProvider>
+        </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
   );

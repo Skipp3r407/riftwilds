@@ -1,6 +1,6 @@
 import { LiveCarePanel } from "@/components/pets/live-care-panel";
 
-export const metadata = { title: "Pet" };
+export const metadata = { title: "Riftling Profile" };
 
 type Props = { params: Promise<{ publicPetId: string }> };
 

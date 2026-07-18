@@ -1,0 +1,911 @@
+{
+  "generatedAt": "2026-07-18T05:59:23.515Z",
+  "count": 100,
+  "engines": {
+    "procedural": 100,
+    "grokTts": 0
+  },
+  "note": "Original Riftling SFX. Procedural synthesis is the default in CI/local without XAI_API_KEY. Optional Grok TTS via RIFTLING_CRIES_ENGINE=grok. Creature SFX only — do not mix into commercial music beds.",
+  "species": [
+    {
+      "slug": "cindercub",
+      "affinity": "EMBER",
+      "bodyType": "QUADRUPED",
+      "temperament": "Brave",
+      "path": "/assets/audio/riftlings/cindercub.wav",
+      "runtimePath": "/sounds/sfx/riftlings/cindercub.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "mossprig",
+      "affinity": "GROVE",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Gentle",
+      "path": "/assets/audio/riftlings/mossprig.wav",
+      "runtimePath": "/sounds/sfx/riftlings/mossprig.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "bubbloon",
+      "affinity": "TIDE",
+      "bodyType": "AQUATIC",
+      "temperament": "Playful",
+      "path": "/assets/audio/riftlings/bubbloon.wav",
+      "runtimePath": "/sounds/sfx/riftlings/bubbloon.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "voltkit",
+      "affinity": "STORM",
+      "bodyType": "QUADRUPED",
+      "temperament": "Energetic",
+      "path": "/assets/audio/riftlings/voltkit.wav",
+      "runtimePath": "/sounds/sfx/riftlings/voltkit.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "pebblit",
+      "affinity": "STONE",
+      "bodyType": "STONE_BODIED",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/pebblit.wav",
+      "runtimePath": "/sounds/sfx/riftlings/pebblit.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "wisplet",
+      "affinity": "SPIRIT",
+      "bodyType": "SPIRIT_BODIED",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/wisplet.wav",
+      "runtimePath": "/sounds/sfx/riftlings/wisplet.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "frostnip",
+      "affinity": "FROST",
+      "bodyType": "QUADRUPED",
+      "temperament": "Shy",
+      "path": "/assets/audio/riftlings/frostnip.wav",
+      "runtimePath": "/sounds/sfx/riftlings/frostnip.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "luminara",
+      "affinity": "RADIANT",
+      "bodyType": "FLOATING",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/luminara.wav",
+      "runtimePath": "/sounds/sfx/riftlings/luminara.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "hollowshade",
+      "affinity": "VOID",
+      "bodyType": "AMORPHOUS",
+      "temperament": "Independent",
+      "path": "/assets/audio/riftlings/hollowshade.wav",
+      "runtimePath": "/sounds/sfx/riftlings/hollowshade.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "gearling",
+      "affinity": "ALLOY",
+      "bodyType": "MECHANICAL_ORGANIC",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/gearling.wav",
+      "runtimePath": "/sounds/sfx/riftlings/gearling.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "bramblefox",
+      "affinity": "GROVE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Mischievous",
+      "path": "/assets/audio/riftlings/bramblefox.wav",
+      "runtimePath": "/sounds/sfx/riftlings/bramblefox.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "coralurge",
+      "affinity": "TIDE",
+      "bodyType": "AQUATIC",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/coralurge.wav",
+      "runtimePath": "/sounds/sfx/riftlings/coralurge.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "ashwing",
+      "affinity": "EMBER",
+      "bodyType": "AVIAN",
+      "temperament": "Brave",
+      "path": "/assets/audio/riftlings/ashwing.wav",
+      "runtimePath": "/sounds/sfx/riftlings/ashwing.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "quartzhorn",
+      "affinity": "STONE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/quartzhorn.wav",
+      "runtimePath": "/sounds/sfx/riftlings/quartzhorn.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "staticat",
+      "affinity": "STORM",
+      "bodyType": "QUADRUPED",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/staticat.wav",
+      "runtimePath": "/sounds/sfx/riftlings/staticat.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "glimmerp",
+      "affinity": "RADIANT",
+      "bodyType": "INSECTOID",
+      "temperament": "Playful",
+      "path": "/assets/audio/riftlings/glimmerp.wav",
+      "runtimePath": "/sounds/sfx/riftlings/glimmerp.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "mistwraith",
+      "affinity": "VOID",
+      "bodyType": "SPIRIT_BODIED",
+      "temperament": "Shy",
+      "path": "/assets/audio/riftlings/mistwraith.wav",
+      "runtimePath": "/sounds/sfx/riftlings/mistwraith.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "ironbloom",
+      "affinity": "ALLOY",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Gentle",
+      "path": "/assets/audio/riftlings/ironbloom.wav",
+      "runtimePath": "/sounds/sfx/riftlings/ironbloom.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "riftpup",
+      "affinity": "SPIRIT",
+      "bodyType": "QUADRUPED",
+      "temperament": "Social",
+      "path": "/assets/audio/riftlings/riftpup.wav",
+      "runtimePath": "/sounds/sfx/riftlings/riftpup.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "tidewisp",
+      "affinity": "TIDE",
+      "bodyType": "FLOATING",
+      "temperament": "Sleepy",
+      "path": "/assets/audio/riftlings/tidewisp.wav",
+      "runtimePath": "/sounds/sfx/riftlings/tidewisp.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "embernewt",
+      "affinity": "EMBER",
+      "bodyType": "SERPENTINE",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/embernewt.wav",
+      "runtimePath": "/sounds/sfx/riftlings/embernewt.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "groveowl",
+      "affinity": "GROVE",
+      "bodyType": "AVIAN",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/groveowl.wav",
+      "runtimePath": "/sounds/sfx/riftlings/groveowl.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "stormmoth",
+      "affinity": "STORM",
+      "bodyType": "INSECTOID",
+      "temperament": "Energetic",
+      "path": "/assets/audio/riftlings/stormmoth.wav",
+      "runtimePath": "/sounds/sfx/riftlings/stormmoth.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "stonegrub",
+      "affinity": "STONE",
+      "bodyType": "INSECTOID",
+      "temperament": "Sleepy",
+      "path": "/assets/audio/riftlings/stonegrub.wav",
+      "runtimePath": "/sounds/sfx/riftlings/stonegrub.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "frostfin",
+      "affinity": "FROST",
+      "bodyType": "AQUATIC",
+      "temperament": "Independent",
+      "path": "/assets/audio/riftlings/frostfin.wav",
+      "runtimePath": "/sounds/sfx/riftlings/frostfin.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "radiantkit",
+      "affinity": "RADIANT",
+      "bodyType": "BIPED",
+      "temperament": "Social",
+      "path": "/assets/audio/riftlings/radiantkit.wav",
+      "runtimePath": "/sounds/sfx/riftlings/radiantkit.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "voidling",
+      "affinity": "VOID",
+      "bodyType": "FLOATING",
+      "temperament": "Mischievous",
+      "path": "/assets/audio/riftlings/voidling.wav",
+      "runtimePath": "/sounds/sfx/riftlings/voidling.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "cogpup",
+      "affinity": "ALLOY",
+      "bodyType": "QUADRUPED",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/cogpup.wav",
+      "runtimePath": "/sounds/sfx/riftlings/cogpup.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "lanternjay",
+      "affinity": "SPIRIT",
+      "bodyType": "AVIAN",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/lanternjay.wav",
+      "runtimePath": "/sounds/sfx/riftlings/lanternjay.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "craterhorn",
+      "affinity": "EMBER",
+      "bodyType": "QUADRUPED",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/craterhorn.wav",
+      "runtimePath": "/sounds/sfx/riftlings/craterhorn.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "moonray",
+      "affinity": "TIDE",
+      "bodyType": "AQUATIC",
+      "temperament": "Gentle",
+      "path": "/assets/audio/riftlings/moonray.wav",
+      "runtimePath": "/sounds/sfx/riftlings/moonray.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "rootling",
+      "affinity": "GROVE",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Shy",
+      "path": "/assets/audio/riftlings/rootling.wav",
+      "runtimePath": "/sounds/sfx/riftlings/rootling.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "spirekite",
+      "affinity": "STORM",
+      "bodyType": "AVIAN",
+      "temperament": "Brave",
+      "path": "/assets/audio/riftlings/spirekite.wav",
+      "runtimePath": "/sounds/sfx/riftlings/spirekite.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "canyonbeetle",
+      "affinity": "STONE",
+      "bodyType": "INSECTOID",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/canyonbeetle.wav",
+      "runtimePath": "/sounds/sfx/riftlings/canyonbeetle.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "snowpuff",
+      "affinity": "FROST",
+      "bodyType": "AMORPHOUS",
+      "temperament": "Playful",
+      "path": "/assets/audio/riftlings/snowpuff.wav",
+      "runtimePath": "/sounds/sfx/riftlings/snowpuff.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "citadelmoth",
+      "affinity": "RADIANT",
+      "bodyType": "INSECTOID",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/citadelmoth.wav",
+      "runtimePath": "/sounds/sfx/riftlings/citadelmoth.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "riftslug",
+      "affinity": "VOID",
+      "bodyType": "SERPENTINE",
+      "temperament": "Sleepy",
+      "path": "/assets/audio/riftlings/riftslug.wav",
+      "runtimePath": "/sounds/sfx/riftlings/riftslug.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "scrapfinch",
+      "affinity": "ALLOY",
+      "bodyType": "AVIAN",
+      "temperament": "Mischievous",
+      "path": "/assets/audio/riftlings/scrapfinch.wav",
+      "runtimePath": "/sounds/sfx/riftlings/scrapfinch.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "marshloom",
+      "affinity": "SPIRIT",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Gentle",
+      "path": "/assets/audio/riftlings/marshloom.wav",
+      "runtimePath": "/sounds/sfx/riftlings/marshloom.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "commonspark",
+      "affinity": "STORM",
+      "bodyType": "FLOATING",
+      "temperament": "Energetic",
+      "path": "/assets/audio/riftlings/commonspark.wav",
+      "runtimePath": "/sounds/sfx/riftlings/commonspark.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "hearthstone",
+      "affinity": "STONE",
+      "bodyType": "STONE_BODIED",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/hearthstone.wav",
+      "runtimePath": "/sounds/sfx/riftlings/hearthstone.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "tideotter",
+      "affinity": "TIDE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Social",
+      "path": "/assets/audio/riftlings/tideotter.wav",
+      "runtimePath": "/sounds/sfx/riftlings/tideotter.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "emberfox",
+      "affinity": "EMBER",
+      "bodyType": "QUADRUPED",
+      "temperament": "Mischievous",
+      "path": "/assets/audio/riftlings/emberfox.wav",
+      "runtimePath": "/sounds/sfx/riftlings/emberfox.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "elderfern",
+      "affinity": "GROVE",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/elderfern.wav",
+      "runtimePath": "/sounds/sfx/riftlings/elderfern.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "peakibex",
+      "affinity": "STORM",
+      "bodyType": "QUADRUPED",
+      "temperament": "Brave",
+      "path": "/assets/audio/riftlings/peakibex.wav",
+      "runtimePath": "/sounds/sfx/riftlings/peakibex.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "fossilhound",
+      "affinity": "STONE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/fossilhound.wav",
+      "runtimePath": "/sounds/sfx/riftlings/fossilhound.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "veilhare",
+      "affinity": "FROST",
+      "bodyType": "QUADRUPED",
+      "temperament": "Shy",
+      "path": "/assets/audio/riftlings/veilhare.wav",
+      "runtimePath": "/sounds/sfx/riftlings/veilhare.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "auralynx",
+      "affinity": "RADIANT",
+      "bodyType": "QUADRUPED",
+      "temperament": "Independent",
+      "path": "/assets/audio/riftlings/auralynx.wav",
+      "runtimePath": "/sounds/sfx/riftlings/auralynx.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "hollowmoth",
+      "affinity": "VOID",
+      "bodyType": "INSECTOID",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/hollowmoth.wav",
+      "runtimePath": "/sounds/sfx/riftlings/hollowmoth.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "celestora",
+      "affinity": "RADIANT",
+      "bodyType": "FLOATING",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/celestora.wav",
+      "runtimePath": "/sounds/sfx/riftlings/celestora.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "slagpup",
+      "affinity": "EMBER",
+      "bodyType": "QUADRUPED",
+      "temperament": "Brave",
+      "path": "/assets/audio/riftlings/slagpup.wav",
+      "runtimePath": "/sounds/sfx/riftlings/slagpup.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "pyrespore",
+      "affinity": "EMBER",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/pyrespore.wav",
+      "runtimePath": "/sounds/sfx/riftlings/pyrespore.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "cinderquill",
+      "affinity": "EMBER",
+      "bodyType": "AVIAN",
+      "temperament": "Independent",
+      "path": "/assets/audio/riftlings/cinderquill.wav",
+      "runtimePath": "/sounds/sfx/riftlings/cinderquill.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "lavaling",
+      "affinity": "EMBER",
+      "bodyType": "AMORPHOUS",
+      "temperament": "Playful",
+      "path": "/assets/audio/riftlings/lavaling.wav",
+      "runtimePath": "/sounds/sfx/riftlings/lavaling.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "furnacebeetle",
+      "affinity": "EMBER",
+      "bodyType": "INSECTOID",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/furnacebeetle.wav",
+      "runtimePath": "/sounds/sfx/riftlings/furnacebeetle.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "brinepaw",
+      "affinity": "TIDE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Social",
+      "path": "/assets/audio/riftlings/brinepaw.wav",
+      "runtimePath": "/sounds/sfx/riftlings/brinepaw.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "kelpwisp",
+      "affinity": "TIDE",
+      "bodyType": "FLOATING",
+      "temperament": "Gentle",
+      "path": "/assets/audio/riftlings/kelpwisp.wav",
+      "runtimePath": "/sounds/sfx/riftlings/kelpwisp.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "sprayfin",
+      "affinity": "TIDE",
+      "bodyType": "AQUATIC",
+      "temperament": "Energetic",
+      "path": "/assets/audio/riftlings/sprayfin.wav",
+      "runtimePath": "/sounds/sfx/riftlings/sprayfin.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "pearlurk",
+      "affinity": "TIDE",
+      "bodyType": "AQUATIC",
+      "temperament": "Shy",
+      "path": "/assets/audio/riftlings/pearlurk.wav",
+      "runtimePath": "/sounds/sfx/riftlings/pearlurk.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "tidequill",
+      "affinity": "TIDE",
+      "bodyType": "AVIAN",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/tidequill.wav",
+      "runtimePath": "/sounds/sfx/riftlings/tidequill.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "fernfox",
+      "affinity": "GROVE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Mischievous",
+      "path": "/assets/audio/riftlings/fernfox.wav",
+      "runtimePath": "/sounds/sfx/riftlings/fernfox.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "saplingo",
+      "affinity": "GROVE",
+      "bodyType": "BIPED",
+      "temperament": "Gentle",
+      "path": "/assets/audio/riftlings/saplingo.wav",
+      "runtimePath": "/sounds/sfx/riftlings/saplingo.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "vinepup",
+      "affinity": "GROVE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Playful",
+      "path": "/assets/audio/riftlings/vinepup.wav",
+      "runtimePath": "/sounds/sfx/riftlings/vinepup.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "thornling",
+      "affinity": "GROVE",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/thornling.wav",
+      "runtimePath": "/sounds/sfx/riftlings/thornling.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "mossdrake",
+      "affinity": "GROVE",
+      "bodyType": "SERPENTINE",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/mossdrake.wav",
+      "runtimePath": "/sounds/sfx/riftlings/mossdrake.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "galekit",
+      "affinity": "STORM",
+      "bodyType": "QUADRUPED",
+      "temperament": "Energetic",
+      "path": "/assets/audio/riftlings/galekit.wav",
+      "runtimePath": "/sounds/sfx/riftlings/galekit.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "cloudleaper",
+      "affinity": "STORM",
+      "bodyType": "BIPED",
+      "temperament": "Brave",
+      "path": "/assets/audio/riftlings/cloudleaper.wav",
+      "runtimePath": "/sounds/sfx/riftlings/cloudleaper.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "sparkmoth",
+      "affinity": "STORM",
+      "bodyType": "INSECTOID",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/sparkmoth.wav",
+      "runtimePath": "/sounds/sfx/riftlings/sparkmoth.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "windrift",
+      "affinity": "STORM",
+      "bodyType": "FLOATING",
+      "temperament": "Independent",
+      "path": "/assets/audio/riftlings/windrift.wav",
+      "runtimePath": "/sounds/sfx/riftlings/windrift.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "thunderpaw",
+      "affinity": "STORM",
+      "bodyType": "QUADRUPED",
+      "temperament": "Brave",
+      "path": "/assets/audio/riftlings/thunderpaw.wav",
+      "runtimePath": "/sounds/sfx/riftlings/thunderpaw.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "shalehorn",
+      "affinity": "STONE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/shalehorn.wav",
+      "runtimePath": "/sounds/sfx/riftlings/shalehorn.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "gritling",
+      "affinity": "STONE",
+      "bodyType": "STONE_BODIED",
+      "temperament": "Sleepy",
+      "path": "/assets/audio/riftlings/gritling.wav",
+      "runtimePath": "/sounds/sfx/riftlings/gritling.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "basaltpup",
+      "affinity": "STONE",
+      "bodyType": "QUADRUPED",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/basaltpup.wav",
+      "runtimePath": "/sounds/sfx/riftlings/basaltpup.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "crystowl",
+      "affinity": "STONE",
+      "bodyType": "AVIAN",
+      "temperament": "Independent",
+      "path": "/assets/audio/riftlings/crystowl.wav",
+      "runtimePath": "/sounds/sfx/riftlings/crystowl.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "rubblefin",
+      "affinity": "STONE",
+      "bodyType": "AQUATIC",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/rubblefin.wav",
+      "runtimePath": "/sounds/sfx/riftlings/rubblefin.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "glazehare",
+      "affinity": "FROST",
+      "bodyType": "QUADRUPED",
+      "temperament": "Shy",
+      "path": "/assets/audio/riftlings/glazehare.wav",
+      "runtimePath": "/sounds/sfx/riftlings/glazehare.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "rimewing",
+      "affinity": "FROST",
+      "bodyType": "AVIAN",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/rimewing.wav",
+      "runtimePath": "/sounds/sfx/riftlings/rimewing.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "iciclepup",
+      "affinity": "FROST",
+      "bodyType": "QUADRUPED",
+      "temperament": "Playful",
+      "path": "/assets/audio/riftlings/iciclepup.wav",
+      "runtimePath": "/sounds/sfx/riftlings/iciclepup.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "snowglyph",
+      "affinity": "FROST",
+      "bodyType": "SPIRIT_BODIED",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/snowglyph.wav",
+      "runtimePath": "/sounds/sfx/riftlings/snowglyph.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "frostbloom",
+      "affinity": "FROST",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Gentle",
+      "path": "/assets/audio/riftlings/frostbloom.wav",
+      "runtimePath": "/sounds/sfx/riftlings/frostbloom.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "dawnkit",
+      "affinity": "RADIANT",
+      "bodyType": "QUADRUPED",
+      "temperament": "Social",
+      "path": "/assets/audio/riftlings/dawnkit.wav",
+      "runtimePath": "/sounds/sfx/riftlings/dawnkit.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "prismoth",
+      "affinity": "RADIANT",
+      "bodyType": "INSECTOID",
+      "temperament": "Playful",
+      "path": "/assets/audio/riftlings/prismoth.wav",
+      "runtimePath": "/sounds/sfx/riftlings/prismoth.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "solfinch",
+      "affinity": "RADIANT",
+      "bodyType": "AVIAN",
+      "temperament": "Energetic",
+      "path": "/assets/audio/riftlings/solfinch.wav",
+      "runtimePath": "/sounds/sfx/riftlings/solfinch.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "gleamhare",
+      "affinity": "RADIANT",
+      "bodyType": "QUADRUPED",
+      "temperament": "Mischievous",
+      "path": "/assets/audio/riftlings/gleamhare.wav",
+      "runtimePath": "/sounds/sfx/riftlings/gleamhare.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "lightspire",
+      "affinity": "RADIANT",
+      "bodyType": "FLOATING",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/lightspire.wav",
+      "runtimePath": "/sounds/sfx/riftlings/lightspire.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "umbralisk",
+      "affinity": "VOID",
+      "bodyType": "SERPENTINE",
+      "temperament": "Independent",
+      "path": "/assets/audio/riftlings/umbralisk.wav",
+      "runtimePath": "/sounds/sfx/riftlings/umbralisk.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "duskling",
+      "affinity": "VOID",
+      "bodyType": "FLOATING",
+      "temperament": "Shy",
+      "path": "/assets/audio/riftlings/duskling.wav",
+      "runtimePath": "/sounds/sfx/riftlings/duskling.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "nullpaw",
+      "affinity": "VOID",
+      "bodyType": "QUADRUPED",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/nullpaw.wav",
+      "runtimePath": "/sounds/sfx/riftlings/nullpaw.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "echofig",
+      "affinity": "VOID",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Sleepy",
+      "path": "/assets/audio/riftlings/echofig.wav",
+      "runtimePath": "/sounds/sfx/riftlings/echofig.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "shadowmire",
+      "affinity": "VOID",
+      "bodyType": "AMORPHOUS",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/shadowmire.wav",
+      "runtimePath": "/sounds/sfx/riftlings/shadowmire.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "boltgear",
+      "affinity": "ALLOY",
+      "bodyType": "MECHANICAL_ORGANIC",
+      "temperament": "Energetic",
+      "path": "/assets/audio/riftlings/boltgear.wav",
+      "runtimePath": "/sounds/sfx/riftlings/boltgear.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "scrapowl",
+      "affinity": "ALLOY",
+      "bodyType": "AVIAN",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/scrapowl.wav",
+      "runtimePath": "/sounds/sfx/riftlings/scrapowl.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "copperfin",
+      "affinity": "ALLOY",
+      "bodyType": "AQUATIC",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/copperfin.wav",
+      "runtimePath": "/sounds/sfx/riftlings/copperfin.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "wirefox",
+      "affinity": "ALLOY",
+      "bodyType": "QUADRUPED",
+      "temperament": "Mischievous",
+      "path": "/assets/audio/riftlings/wirefox.wav",
+      "runtimePath": "/sounds/sfx/riftlings/wirefox.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "chronobeetle",
+      "affinity": "ALLOY",
+      "bodyType": "INSECTOID",
+      "temperament": "Protective",
+      "path": "/assets/audio/riftlings/chronobeetle.wav",
+      "runtimePath": "/sounds/sfx/riftlings/chronobeetle.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "ghostbloom",
+      "affinity": "SPIRIT",
+      "bodyType": "PLANT_BODIED",
+      "temperament": "Gentle",
+      "path": "/assets/audio/riftlings/ghostbloom.wav",
+      "runtimePath": "/sounds/sfx/riftlings/ghostbloom.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "dreamhare",
+      "affinity": "SPIRIT",
+      "bodyType": "QUADRUPED",
+      "temperament": "Sleepy",
+      "path": "/assets/audio/riftlings/dreamhare.wav",
+      "runtimePath": "/sounds/sfx/riftlings/dreamhare.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "wispdeer",
+      "affinity": "SPIRIT",
+      "bodyType": "QUADRUPED",
+      "temperament": "Shy",
+      "path": "/assets/audio/riftlings/wispdeer.wav",
+      "runtimePath": "/sounds/sfx/riftlings/wispdeer.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "soulmoth",
+      "affinity": "SPIRIT",
+      "bodyType": "INSECTOID",
+      "temperament": "Curious",
+      "path": "/assets/audio/riftlings/soulmoth.wav",
+      "runtimePath": "/sounds/sfx/riftlings/soulmoth.wav",
+      "engine": "procedural"
+    },
+    {
+      "slug": "starveil",
+      "affinity": "SPIRIT",
+      "bodyType": "FLOATING",
+      "temperament": "Calm",
+      "path": "/assets/audio/riftlings/starveil.wav",
+      "runtimePath": "/sounds/sfx/riftlings/starveil.wav",
+      "engine": "procedural"
+    }
+  ]
+}

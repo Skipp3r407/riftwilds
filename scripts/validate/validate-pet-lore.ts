@@ -156,7 +156,7 @@ function main() {
       },
       {
         title: "Catalog size",
-        status: LAUNCH_SPECIES.length === 50 && listSpeciesLore().length === 50 ? "PASS" : "WARN",
+        status: LAUNCH_SPECIES.length === 100 && listSpeciesLore().length === 100 ? "PASS" : "WARN",
         summary: `catalog=${LAUNCH_SPECIES.length} lore=${listSpeciesLore().length}`,
       },
     ],

@@ -4,6 +4,7 @@ import {
   building,
   enemyZone,
   finalizeBlueprint,
+  gatewayStoneAt,
   npcAt,
   portalRing,
   resourceAt,
@@ -24,23 +25,137 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
     { id: "arena-zone", name: "Arena Entrance", x: 48 * T, y: 3 * T, width: 12 * T, height: 9 * T, kind: "settlement", safe: true },
     { id: "market-zone", name: "Rift Exchange", x: 3 * T, y: 34 * T, width: 14 * T, height: 10 * T, kind: "settlement", safe: true },
     { id: "guild-zone", name: "Guild Hall", x: 46 * T, y: 34 * T, width: 14 * T, height: 10 * T, kind: "settlement", safe: true },
-    { id: "craft-zone", name: "Crafting Workshop", x: 3 * T, y: 18 * T, width: 10 * T, height: 8 * T, kind: "settlement", safe: true },
+    { id: "craft-zone", name: "Ember Forge", x: 3 * T, y: 18 * T, width: 10 * T, height: 8 * T, kind: "settlement", safe: true },
     { id: "feeding-grove", name: "Feeding Grove", x: 50 * T, y: 16 * T, width: 10 * T, height: 8 * T, kind: "settlement", safe: true },
     { id: "training-yard", name: "Training Yard", x: 38 * T, y: 12 * T, width: 10 * T, height: 8 * T, kind: "settlement", safe: true },
     { id: "fishing-pond", name: "Fishing Pond", x: 22 * T, y: 36 * T, width: 12 * T, height: 8 * T, kind: "exploration", safe: true },
     { id: "public-farm", name: "Public Farm", x: 14 * T, y: 38 * T, width: 8 * T, height: 6 * T, kind: "settlement", safe: true },
     { id: "recovery", name: "Recovery Center", x: 40 * T, y: 38 * T, width: 8 * T, height: 6 * T, kind: "settlement", safe: true },
-    { id: "portal-circle", name: "Portal Circle", x: 24 * T, y: 4 * T, width: 16 * T, height: 8 * T, kind: "pathway", safe: true },
+    { id: "portal-circle", name: "Portal Plaza", x: 24 * T, y: 4 * T, width: 16 * T, height: 8 * T, kind: "pathway", safe: true },
+    { id: "library-zone", name: "Rift Archive", x: 36 * T, y: 18 * T, width: 8 * T, height: 6 * T, kind: "settlement", safe: true },
+    { id: "academy-zone", name: "Player Academy", x: 44 * T, y: 22 * T, width: 8 * T, height: 6 * T, kind: "settlement", safe: true },
+    { id: "residential", name: "Keeper Row", x: 2 * T, y: 12 * T, width: 8 * T, height: 6 * T, kind: "settlement", safe: true },
+    { id: "forest-entrance", name: "Forest Gate", x: 54 * T, y: 10 * T, width: 8 * T, height: 8 * T, kind: "exploration", safe: true },
     { id: "outer-woods", name: "Outer Woods", x: 2 * T, y: 2 * T, width: 8 * T, height: 8 * T, kind: "danger", safe: false },
     { id: "secret-garden", name: "Secret Garden", x: 56 * T, y: 26 * T, width: 6 * T, height: 5 * T, kind: "hidden", safe: true },
   ];
 
+  // Curved multi-waypoint roads — lived-in footpaths between districts
   const pathways: PathwayDef[] = [
-    { id: "plaza-to-hatchery", from: "central-plaza", to: "hatchery-zone", waypoints: [{ x: 20 * T, y: 16 * T }, { x: 10 * T, y: 10 * T }] },
-    { id: "plaza-to-arena", from: "central-plaza", to: "arena-zone", waypoints: [{ x: 42 * T, y: 16 * T }, { x: 52 * T, y: 10 * T }] },
-    { id: "plaza-to-market", from: "central-plaza", to: "market-zone", waypoints: [{ x: 20 * T, y: 28 * T }, { x: 10 * T, y: 36 * T }] },
-    { id: "plaza-to-guild", from: "central-plaza", to: "guild-zone", waypoints: [{ x: 42 * T, y: 28 * T }, { x: 52 * T, y: 36 * T }] },
-    { id: "plaza-to-portals", from: "central-plaza", to: "portal-circle", waypoints: [{ x: 32 * T, y: 16 * T }, { x: 32 * T, y: 8 * T }] },
+    {
+      id: "plaza-to-hatchery",
+      from: "central-plaza",
+      to: "hatchery-zone",
+      waypoints: [
+        { x: 22 * T, y: 18 * T },
+        { x: 16 * T, y: 14 * T },
+        { x: 12 * T, y: 11 * T },
+        { x: 9 * T, y: 9 * T },
+      ],
+    },
+    {
+      id: "plaza-to-arena",
+      from: "central-plaza",
+      to: "arena-zone",
+      waypoints: [
+        { x: 40 * T, y: 18 * T },
+        { x: 46 * T, y: 14 * T },
+        { x: 50 * T, y: 10 * T },
+        { x: 53 * T, y: 8 * T },
+      ],
+    },
+    {
+      id: "plaza-to-market",
+      from: "central-plaza",
+      to: "market-zone",
+      waypoints: [
+        { x: 22 * T, y: 26 * T },
+        { x: 16 * T, y: 30 * T },
+        { x: 12 * T, y: 34 * T },
+        { x: 9 * T, y: 37 * T },
+      ],
+    },
+    {
+      id: "plaza-to-guild",
+      from: "central-plaza",
+      to: "guild-zone",
+      waypoints: [
+        { x: 40 * T, y: 26 * T },
+        { x: 46 * T, y: 30 * T },
+        { x: 50 * T, y: 34 * T },
+        { x: 52 * T, y: 37 * T },
+      ],
+    },
+    {
+      id: "plaza-to-portals",
+      from: "central-plaza",
+      to: "portal-circle",
+      waypoints: [
+        { x: 32 * T, y: 18 * T },
+        { x: 33 * T, y: 14 * T },
+        { x: 32 * T, y: 10 * T },
+        { x: 32 * T, y: 8 * T },
+      ],
+    },
+    {
+      id: "plaza-to-forge",
+      from: "central-plaza",
+      to: "craft-zone",
+      waypoints: [
+        { x: 20 * T, y: 22 * T },
+        { x: 14 * T, y: 22 * T },
+        { x: 10 * T, y: 22 * T },
+      ],
+    },
+    {
+      id: "plaza-to-library",
+      from: "central-plaza",
+      to: "library-zone",
+      waypoints: [
+        { x: 34 * T, y: 22 * T },
+        { x: 38 * T, y: 21 * T },
+      ],
+    },
+    {
+      id: "plaza-to-academy",
+      from: "central-plaza",
+      to: "academy-zone",
+      waypoints: [
+        { x: 38 * T, y: 24 * T },
+        { x: 42 * T, y: 24 * T },
+        { x: 46 * T, y: 24 * T },
+      ],
+    },
+    {
+      id: "plaza-to-training",
+      from: "central-plaza",
+      to: "training-yard",
+      waypoints: [
+        { x: 36 * T, y: 18 * T },
+        { x: 40 * T, y: 16 * T },
+        { x: 42 * T, y: 14 * T },
+      ],
+    },
+    {
+      id: "market-to-pond",
+      from: "market-zone",
+      to: "fishing-pond",
+      waypoints: [
+        { x: 14 * T, y: 38 * T },
+        { x: 18 * T, y: 39 * T },
+        { x: 22 * T, y: 40 * T },
+      ],
+    },
+    {
+      id: "grove-to-forest",
+      from: "feeding-grove",
+      to: "forest-entrance",
+      waypoints: [
+        { x: 54 * T, y: 18 * T },
+        { x: 56 * T, y: 14 * T },
+        { x: 57 * T, y: 12 * T },
+      ],
+    },
   ];
 
   const buildings = [
@@ -48,9 +163,11 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
     building(region, "arena", "Arena Gate", 49 * T, 4 * T, 10 * T, 6 * T, 0xd48a3a),
     building(region, "market", "Rift Exchange", 4 * T, 35 * T, 12 * T, 8 * T, 0x4adf7a),
     building(region, "guild", "Guild Hall", 47 * T, 35 * T, 12 * T, 8 * T, 0x9b7bff),
-    building(region, "workshop", "Crafting Workshop", 4 * T, 19 * T, 8 * T, 6 * T, 0xc07040),
+    building(region, "workshop", "Ember Forge", 4 * T, 19 * T, 8 * T, 6 * T, 0xc07040),
+    building(region, "library", "Rift Archive", 37 * T, 19 * T, 6 * T, 5 * T, 0x5a90c8),
+    building(region, "academy", "Player Academy", 45 * T, 23 * T, 6 * T, 5 * T, 0x3de7ff),
     building(region, "recovery-center", "Recovery Center", 41 * T, 39 * T, 7 * T, 5 * T, 0x60d0c0),
-    building(region, "homestead-path", "Homestead Path", 2 * T, 14 * T, 5 * T, 5 * T, 0xff9ad5),
+    building(region, "homestead-path", "Keeper Row", 2 * T, 14 * T, 5 * T, 5 * T, 0xff9ad5),
   ];
 
   const objects: WorldMapObject[] = [
@@ -255,7 +372,7 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
     // Ambient citizens
     npcAt(region, "plaza-vendor-cal", 24 * T, 28 * T),
     npcAt(region, "plaza-musician-reo", 38 * T, 26 * T),
-    npcAt(region, "plaza-child-mim", 33 * T, 27 * T),
+    npcAt(region, "plaza-child-mim", 36 * T, 28 * T),
     npcAt(region, "farm-hand-jot", 17 * T, 41 * T),
     npcAt(region, "dock-sweeper-ana", 27 * T, 39 * T),
     npcAt(region, "scribe-runner-kel", 31 * T, 18 * T),
@@ -266,9 +383,9 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
     npcAt(region, "guard-west-dao", 20 * T, 24 * T),
     npcAt(region, "guard-portal-hex", 32 * T, 12 * T),
     // Ambient-owned Riftlings
-    npcAt(region, "riftling-plaza-emberkit", 35 * T, 25 * T),
-    npcAt(region, "riftling-hatchery-glowpup", 12 * T, 14 * T),
-    npcAt(region, "riftling-market-pouchling", 14 * T, 37 * T),
+    npcAt(region, "riftling-plaza-emberkit", 37 * T, 23 * T),
+    npcAt(region, "riftling-hatchery-glowpup", 13 * T, 15 * T),
+    npcAt(region, "riftling-market-pouchling", 16 * T, 36 * T),
     resourceAt(region, "berry-bush", "res-berry-1", 52 * T, 20 * T),
     resourceAt(region, "berry-bush", "res-berry-2", 54 * T, 22 * T),
     resourceAt(region, "starter-herb", "res-herb-1", 20 * T, 30 * T),
@@ -276,6 +393,7 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
     enemyZone(region, "spawn-slimes", "rift-slime", 4 * T, 4 * T, 6 * T, 5 * T),
     enemyZone(region, "spawn-vines", "vine-sprout", 56 * T, 4 * T, 5 * T, 5 * T),
     ...portalRing(region, 32 * T, 7 * T, 5.5 * T),
+    gatewayStoneAt(region, 32 * T, 11 * T),
   ];
 
   const colliders = [
@@ -285,8 +403,28 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
     { id: "stage-col", x: 34 * T, y: 18 * T, width: 5 * T, height: 3 * T, kind: "building" as const },
     { id: "dummy-a-col", x: 40 * T, y: 14 * T, width: 2 * T, height: 2 * T, kind: "building" as const },
     { id: "dummy-b-col", x: 44 * T, y: 16 * T, width: 2 * T, height: 2 * T, kind: "building" as const },
-    // Pond water (non-walkable deep)
-    { id: "pond-water", x: 23 * T, y: 38 * T, width: 10 * T, height: 5 * T, kind: "water" as const },
+    // Pond deep water — solid without swim/boat (shallow shore left walkable)
+    {
+      id: "pond-water",
+      x: 23 * T,
+      y: 38 * T,
+      width: 10 * T,
+      height: 5 * T,
+      kind: "deep_water" as const,
+    },
+    // Forest gate natural barrier (east unfinished woods — edge wall still primary)
+    {
+      id: "forest-gate-thicket",
+      x: 60 * T,
+      y: 12 * T,
+      width: 2 * T,
+      height: 6 * T,
+      kind: "blocker" as const,
+      metadata: {
+        barrierStyle: "forest" as const,
+        message: "Outer woods thicken here — keep to the marked trails.",
+      },
+    },
   ];
 
   return finalizeBlueprint(region, {
@@ -303,7 +441,8 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
     spawn: { x: 32 * T, y: 24 * T },
     portalHub: { x: 32 * T, y: 7 * T, radius: 5.5 * T },
     notes: [
-      "Primary Live World entry map.",
+      "Primary Live World entry map — premium art showcase.",
+      "Districts: plaza, market, forge, guild, training, residential, hatchery, library, academy, recovery, portal plaza, forest entrance.",
       "Portal Circle encodes all 11 destination unlocks.",
       "Outer woods host optional beginner enemies only.",
     ],

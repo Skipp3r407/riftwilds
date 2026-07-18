@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { attachGuestCookie, resolveOwnerKey } from "@/lib/auth/owner-key";
+import { attachGuestCookie, guestIdentityFields, resolveOwnerKey } from "@/lib/auth/owner-key";
 import { isFeatureEnabled } from "@/lib/config/feature-flags";
 import { hatchEgg } from "@/game/eggs/hatchery-store";
 import { onPetHatched } from "@/game/achievements/hooks";
@@ -38,6 +38,7 @@ export async function POST(req: Request) {
       ...result,
       demo: true,
       achievementUnlocks: unlocked.map((a) => a.key),
+      ...guestIdentityFields(isGuest, guestToken),
     });
     if (isGuest) attachGuestCookie(res, guestToken);
     return res;
@@ -45,6 +46,11 @@ export async function POST(req: Request) {
     const msg = e instanceof Error ? e.message : "HATCH_FAILED";
     const status =
       msg === "FORBIDDEN" ? 403 : msg === "EGG_NOT_FOUND" ? 404 : msg === "NOT_READY" ? 409 : 400;
-    return NextResponse.json({ error: msg }, { status });
+    const res = NextResponse.json(
+      { error: msg, ...guestIdentityFields(isGuest, guestToken) },
+      { status },
+    );
+    if (isGuest) attachGuestCookie(res, guestToken);
+    return res;
   }
 }

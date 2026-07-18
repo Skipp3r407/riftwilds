@@ -12,6 +12,7 @@ const demoMetrics: MetricBag = {
   care_streak_days: 3,
   feed_count: 12,
   region_discovery: 2,
+  gateway_activations: 1,
   live_world_enters: 1,
   arena_training_wins: 4,
   marketplace_views: 1,

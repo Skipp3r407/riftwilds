@@ -2,7 +2,9 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import { useRouter } from "next/navigation";
+import { useConnection } from "@solana/wallet-adapter-react";
+import { PublicKey } from "@solana/web3.js";
 import { ShopItemCard, type ShopCardData } from "@/components/items/shop-item-card";
 import { ShopPurchasePanel } from "@/components/items/shop-purchase-panel";
 import { InventoryBrowser } from "@/components/items/inventory-browser";
@@ -18,6 +20,7 @@ import {
 } from "@/lib/shop/sections";
 import { useEarnedSol } from "@/hooks/use-earned-sol";
 import { useDemoInventory } from "@/hooks/use-demo-inventory";
+import { useActiveWallet } from "@/hooks/use-active-wallet";
 import { playSfx } from "@/hooks/use-sfx";
 import { cn } from "@/lib/utils/cn";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
@@ -35,13 +38,14 @@ type Props = {
 type MainTab = "shop" | "featured" | "inventory";
 
 export function ShopShell({ sections, catalogSummary }: Props) {
+  const router = useRouter();
   const [tab, setTab] = useState<MainTab>("shop");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [purchaseItem, setPurchaseItem] = useState<ShopCardData | null>(null);
   const [activeSection, setActiveSection] = useState<ShopSectionId>("featured");
   const earned = useEarnedSol();
   const inventory = useDemoInventory();
-  const { publicKey, connected } = useWallet();
+  const { address, connected, viewOnly, canSign } = useActiveWallet();
   const { connection } = useConnection();
   const [walletLamports, setWalletLamports] = useState<bigint | null>(null);
 
@@ -70,12 +74,12 @@ export function ShopShell({ sections, catalogSummary }: Props) {
   useEffect(() => {
     let cancelled = false;
     async function load() {
-      if (!publicKey) {
+      if (!address) {
         setWalletLamports(null);
         return;
       }
       try {
-        const bal = await connection.getBalance(publicKey, "confirmed");
+        const bal = await connection.getBalance(new PublicKey(address), "confirmed");
         if (!cancelled) setWalletLamports(BigInt(bal));
       } catch {
         if (!cancelled) setWalletLamports(null);
@@ -85,7 +89,7 @@ export function ShopShell({ sections, catalogSummary }: Props) {
     return () => {
       cancelled = true;
     };
-  }, [connection, publicKey]);
+  }, [connection, address]);
 
   function openPurchase(id: string) {
     const item = allItems.find((i) => i.id === id);
@@ -114,11 +118,16 @@ export function ShopShell({ sections, catalogSummary }: Props) {
             !connected
               ? "Not connected"
               : walletLamports != null
-                ? `${lamportsToSolString(walletLamports)} SOL`
+                ? `${lamportsToSolString(walletLamports)} SOL${viewOnly ? " · view-only" : ""}`
                 : "…"
           }
           tone="amber"
         />
+        {viewOnly && !canSign ? (
+          <span className="text-[10px] text-[var(--amber)]">
+            View-only — connect a wallet to pay with SOL
+          </span>
+        ) : null}
         <button
           type="button"
           className="btn-secondary focus-ring text-xs"
@@ -280,6 +289,18 @@ export function ShopShell({ sections, catalogSummary }: Props) {
               rarity: item.rarity,
               iconPath: item.iconPath,
             });
+          }}
+          onEquipNow={(item) => {
+            void (async () => {
+              await fetch("/api/pets/live-companion/equipment/equip", {
+                method: "POST",
+                credentials: "include",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ action: "equip", itemId: item.id }),
+              });
+              playSfx("pets.equip");
+              router.push("/live-world");
+            })();
           }}
           onClose={() => setPurchaseItem(null)}
         />

@@ -6,4 +6,5 @@ export * from "@/lib/marketplace/price-history";
 export * from "@/lib/marketplace/integrity";
 export * from "@/lib/marketplace/types";
 export * from "@/lib/marketplace/demo-listings";
+export * from "@/lib/marketplace/credits-settle";
 export { buildPetHistoryCard, type PetHistoryCard } from "@/lib/marketplace/pet-history-card";

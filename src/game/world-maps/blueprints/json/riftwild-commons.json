@@ -67,7 +67,7 @@
     },
     {
       "id": "craft-zone",
-      "name": "Crafting Workshop",
+      "name": "Ember Forge",
       "x": 96,
       "y": 576,
       "width": 320,
@@ -127,12 +127,42 @@
     },
     {
       "id": "portal-circle",
-      "name": "Portal Circle",
+      "name": "Portal Plaza",
       "x": 768,
       "y": 128,
       "width": 512,
       "height": 256,
       "kind": "pathway",
+      "safe": true
+    },
+    {
+      "id": "library-zone",
+      "name": "Rift Archive",
+      "x": 1152,
+      "y": 576,
+      "width": 256,
+      "height": 192,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "residential",
+      "name": "Keeper Row",
+      "x": 64,
+      "y": 384,
+      "width": 256,
+      "height": 192,
+      "kind": "settlement",
+      "safe": true
+    },
+    {
+      "id": "forest-entrance",
+      "name": "Forest Gate",
+      "x": 1728,
+      "y": 320,
+      "width": 256,
+      "height": 256,
+      "kind": "exploration",
       "safe": true
     },
     {
@@ -163,12 +193,20 @@
       "to": "hatchery-zone",
       "waypoints": [
         {
-          "x": 640,
-          "y": 512
+          "x": 704,
+          "y": 576
         },
         {
-          "x": 320,
-          "y": 320
+          "x": 512,
+          "y": 448
+        },
+        {
+          "x": 384,
+          "y": 352
+        },
+        {
+          "x": 288,
+          "y": 288
         }
       ]
     },
@@ -178,12 +216,20 @@
       "to": "arena-zone",
       "waypoints": [
         {
-          "x": 1344,
-          "y": 512
+          "x": 1280,
+          "y": 576
         },
         {
-          "x": 1664,
+          "x": 1472,
+          "y": 448
+        },
+        {
+          "x": 1600,
           "y": 320
+        },
+        {
+          "x": 1696,
+          "y": 256
         }
       ]
     },
@@ -193,12 +239,20 @@
       "to": "market-zone",
       "waypoints": [
         {
-          "x": 640,
-          "y": 896
+          "x": 704,
+          "y": 832
         },
         {
-          "x": 320,
-          "y": 1152
+          "x": 512,
+          "y": 960
+        },
+        {
+          "x": 384,
+          "y": 1088
+        },
+        {
+          "x": 288,
+          "y": 1184
         }
       ]
     },
@@ -208,12 +262,20 @@
       "to": "guild-zone",
       "waypoints": [
         {
-          "x": 1344,
-          "y": 896
+          "x": 1280,
+          "y": 832
+        },
+        {
+          "x": 1472,
+          "y": 960
+        },
+        {
+          "x": 1600,
+          "y": 1088
         },
         {
           "x": 1664,
-          "y": 1152
+          "y": 1184
         }
       ]
     },
@@ -224,11 +286,110 @@
       "waypoints": [
         {
           "x": 1024,
-          "y": 512
+          "y": 576
+        },
+        {
+          "x": 1056,
+          "y": 448
+        },
+        {
+          "x": 1024,
+          "y": 320
         },
         {
           "x": 1024,
           "y": 256
+        }
+      ]
+    },
+    {
+      "id": "plaza-to-forge",
+      "from": "central-plaza",
+      "to": "craft-zone",
+      "waypoints": [
+        {
+          "x": 640,
+          "y": 704
+        },
+        {
+          "x": 448,
+          "y": 704
+        },
+        {
+          "x": 320,
+          "y": 704
+        }
+      ]
+    },
+    {
+      "id": "plaza-to-library",
+      "from": "central-plaza",
+      "to": "library-zone",
+      "waypoints": [
+        {
+          "x": 1088,
+          "y": 704
+        },
+        {
+          "x": 1216,
+          "y": 672
+        }
+      ]
+    },
+    {
+      "id": "plaza-to-training",
+      "from": "central-plaza",
+      "to": "training-yard",
+      "waypoints": [
+        {
+          "x": 1152,
+          "y": 576
+        },
+        {
+          "x": 1280,
+          "y": 512
+        },
+        {
+          "x": 1344,
+          "y": 448
+        }
+      ]
+    },
+    {
+      "id": "market-to-pond",
+      "from": "market-zone",
+      "to": "fishing-pond",
+      "waypoints": [
+        {
+          "x": 448,
+          "y": 1216
+        },
+        {
+          "x": 576,
+          "y": 1248
+        },
+        {
+          "x": 704,
+          "y": 1280
+        }
+      ]
+    },
+    {
+      "id": "grove-to-forest",
+      "from": "feeding-grove",
+      "to": "forest-entrance",
+      "waypoints": [
+        {
+          "x": 1728,
+          "y": 576
+        },
+        {
+          "x": 1792,
+          "y": 448
+        },
+        {
+          "x": 1824,
+          "y": 384
         }
       ]
     }
@@ -318,8 +479,26 @@
       "width": 256,
       "height": 192,
       "interactionRadius": 48,
-      "label": "Crafting Workshop",
+      "label": "Ember Forge",
       "color": 12611648,
+      "metadata": {
+        "entrance": "south"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": true,
+      "id": "library",
+      "type": "building",
+      "x": 1184,
+      "y": 608,
+      "width": 192,
+      "height": 160,
+      "interactionRadius": 48,
+      "label": "Rift Archive",
+      "color": 5935304,
       "metadata": {
         "entrance": "south"
       }
@@ -354,7 +533,7 @@
       "width": 160,
       "height": 160,
       "interactionRadius": 48,
-      "label": "Homestead Path",
+      "label": "Keeper Row",
       "color": 16751317,
       "metadata": {
         "entrance": "south"
@@ -564,19 +743,20 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-mira",
+      "id": "npc-elara-venn",
       "type": "npc",
-      "x": 832,
-      "y": 768,
+      "x": 960,
+      "y": 704,
       "interactionRadius": 56,
-      "label": "Keeper Mira",
+      "label": "Elara Venn",
       "metadata": {
-        "npcId": "mira",
+        "npcId": "elara-venn",
         "lines": [
-          "Welcome to Riftwild Commons — the heart of the Live World.",
-          "Move with WASD or arrows. Hold Shift to run. Press E or Space to talk.",
-          "Portal Circle opens the four starter regions. Locked portals wake with your story."
-        ]
+          "Keeper. The Commons remembers every first step.",
+          "I am Elara Venn. I keep records — and I keep watch.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
       }
     },
     {
@@ -584,18 +764,41 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-hatchery-keeper",
+      "id": "npc-rowan-vale",
+      "type": "npc",
+      "x": 1088,
+      "y": 800,
+      "interactionRadius": 56,
+      "label": "Keeper Rowan Vale",
+      "metadata": {
+        "npcId": "rowan-vale",
+        "lines": [
+          "Hey! Welcome to Riftwild Commons — I'm Rowan Vale.",
+          "Move with WASD or arrows. Hold Shift to run. Press E near people to talk.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "look_around"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-mira-shellbright",
       "type": "npc",
       "x": 320,
       "y": 384,
       "interactionRadius": 56,
-      "label": "Incubator Lune",
+      "label": "Mira Shellbright",
       "metadata": {
-        "npcId": "hatchery-keeper",
+        "npcId": "mira-shellbright",
         "lines": [
-          "The Hatchery cradles every Riftling egg.",
-          "Bring warmth, patience, and a little Rift spark."
-        ]
+          "Quiet steps near the cradles — eggs listen more than people think.",
+          "I'm Mira Shellbright. Ready to meet a waiting heart?",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "tend_eggs"
       }
     },
     {
@@ -603,74 +806,20 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-market-registrar",
-      "type": "npc",
-      "x": 384,
-      "y": 1216,
-      "interactionRadius": 56,
-      "label": "Broker Kesh",
-      "metadata": {
-        "npcId": "market-registrar",
-        "lines": [
-          "Rift Exchange is for keepers trading eggs, gear, and materials.",
-          "Listings stay soft-currency until marketplace flags go live."
-        ]
-      }
-    },
-    {
-      "regionId": "riftwild-commons",
-      "sceneId": "CommonsScene",
-      "interactive": true,
-      "collision": false,
-      "id": "npc-arena-master",
-      "type": "npc",
-      "x": 1664,
-      "y": 384,
-      "interactionRadius": 56,
-      "label": "Arena Master Vex",
-      "metadata": {
-        "npcId": "arena-master",
-        "lines": [
-          "Training dummies never complain. Ranked duels wait for a later phase.",
-          "Warm up in the Training Yard before you chase glory."
-        ]
-      }
-    },
-    {
-      "regionId": "riftwild-commons",
-      "sceneId": "CommonsScene",
-      "interactive": true,
-      "collision": false,
-      "id": "npc-guild-registrar",
-      "type": "npc",
-      "x": 1664,
-      "y": 1216,
-      "interactionRadius": 56,
-      "label": "Guild Scribe Orin",
-      "metadata": {
-        "npcId": "guild-registrar",
-        "lines": [
-          "Guild banners hang here when organizations unlock.",
-          "For now, the hall is a gathering place for keepers."
-        ]
-      }
-    },
-    {
-      "regionId": "riftwild-commons",
-      "sceneId": "CommonsScene",
-      "interactive": true,
-      "collision": false,
-      "id": "npc-blacksmith",
+      "id": "npc-bram-ironroot",
       "type": "npc",
       "x": 320,
       "y": 832,
       "interactionRadius": 56,
-      "label": "Smith Brann",
+      "label": "Bram Ironroot",
       "metadata": {
-        "npcId": "blacksmith",
+        "npcId": "bram-ironroot",
         "lines": [
-          "Forge heat and Rift tempering — bring materials when crafting is live."
-        ]
+          "Forge is hot, prices are fair, and I don't sell miracles.",
+          "Name's Bram Ironroot. Need a tool that won't snap on day one?",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "forge"
       }
     },
     {
@@ -678,17 +827,20 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-potion-brewer",
+      "id": "npc-tessa-windmere",
       "type": "npc",
       "x": 384,
-      "y": 768,
+      "y": 1216,
       "interactionRadius": 56,
-      "label": "Brewer Nima",
+      "label": "Tessa Windmere",
       "metadata": {
-        "npcId": "potion-brewer",
+        "npcId": "tessa-windmere",
         "lines": [
-          "Potions need clean water and steady hands. The workshop awaits."
-        ]
+          "Welcome to the Exchange. Soft currency today — no real SOL spent here.",
+          "I'm Tessa Windmere. Need supplies or a lesson in trading?",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "organize_goods"
       }
     },
     {
@@ -696,17 +848,20 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-farmer",
+      "id": "npc-archivist-solen",
       "type": "npc",
-      "x": 512,
-      "y": 1344,
+      "x": 1152,
+      "y": 640,
       "interactionRadius": 56,
-      "label": "Farmer Pell",
+      "label": "Archivist Solen",
       "metadata": {
-        "npcId": "farmer",
+        "npcId": "archivist-solen",
         "lines": [
-          "Starter plots grow when you water them. Farming ships with Homesteads."
-        ]
+          "The Codex is open. Discoveries are better written than whispered.",
+          "I am Archivist Solen. Show me what the regions taught you.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
       }
     },
     {
@@ -714,17 +869,20 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-fisher",
+      "id": "npc-captain-orren",
       "type": "npc",
-      "x": 896,
-      "y": 1280,
+      "x": 1344,
+      "y": 448,
       "interactionRadius": 56,
-      "label": "Fisher Talia",
+      "label": "Captain Orren",
       "metadata": {
-        "npcId": "fisher",
+        "npcId": "captain-orren",
         "lines": [
-          "Cast near the lily pads. Pond fish prefer quiet companions."
-        ]
+          "Keep your companion close outside the plaza safe zones.",
+          "Captain Orren. Ready for a controlled first fight?",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
       }
     },
     {
@@ -732,17 +890,20 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-recovery-healer",
+      "id": "npc-nyla-brook",
       "type": "npc",
       "x": 1408,
       "y": 1344,
       "interactionRadius": 56,
-      "label": "Healer Solace",
+      "label": "Nyla Brook",
       "metadata": {
-        "npcId": "recovery-healer",
+        "npcId": "nyla-brook",
         "lines": [
-          "Tired Riftlings rest here. No permanent harm in Commons."
-        ]
+          "If your Riftling is tired, bring them here — we mend, we don't punish.",
+          "Nyla Brook, Recovery Center.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "mix_remedies"
       }
     },
     {
@@ -750,18 +911,20 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-portal-keeper",
+      "id": "npc-pip-gearwhistle",
       "type": "npc",
-      "x": 1024,
+      "x": 896,
       "y": 320,
       "interactionRadius": 56,
-      "label": "Portal Keeper Ryn",
+      "label": "Pip Gearwhistle",
       "metadata": {
-        "npcId": "portal-keeper",
+        "npcId": "pip-gearwhistle",
         "lines": [
-          "Step into an active portal to travel. Dim portals need story progress — never coin.",
-          "Starter routes: Ember Crater, Moonwater Coast, Elderwood Forest."
-        ]
+          "If it hums, clicks, or sulks — I can probably fix it.",
+          "Pip Gearwhistle. Got a damaged Gateway marker that needs a nudge?",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "repair"
       }
     },
     {
@@ -769,17 +932,314 @@
       "sceneId": "CommonsScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-quest-board",
+      "id": "npc-rook-emberfall",
       "type": "npc",
-      "x": 960,
-      "y": 864,
+      "x": 1664,
+      "y": 384,
       "interactionRadius": 56,
-      "label": "Quest Attendant Ivy",
+      "label": "Rook Emberfall",
       "metadata": {
-        "npcId": "quest-board",
+        "npcId": "rook-emberfall",
         "lines": [
-          "Pin a notice, pick a trail. Quest hooks expand with the story system."
-        ]
+          "Training Yard's open. Ranked fame can wait — skill can't.",
+          "Rook Emberfall. Want a clean spar?",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "train"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-plaza-vendor-cal",
+      "type": "npc",
+      "x": 768,
+      "y": 896,
+      "interactionRadius": 56,
+      "label": "Cal Reed",
+      "metadata": {
+        "npcId": "plaza-vendor-cal",
+        "lines": [
+          "Hey there — I'm Cal Reed. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "organize_goods"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-plaza-musician-reo",
+      "type": "npc",
+      "x": 1216,
+      "y": 832,
+      "interactionRadius": 56,
+      "label": "Reo Lark",
+      "metadata": {
+        "npcId": "plaza-musician-reo",
+        "lines": [
+          "Hey there — I'm Reo Lark. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-plaza-child-mim",
+      "type": "npc",
+      "x": 1152,
+      "y": 896,
+      "interactionRadius": 56,
+      "label": "Mim Vale",
+      "metadata": {
+        "npcId": "plaza-child-mim",
+        "lines": [
+          "Hey there — I'm Mim Vale. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "look_around"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-farm-hand-jot",
+      "type": "npc",
+      "x": 544,
+      "y": 1312,
+      "interactionRadius": 56,
+      "label": "Jot Pell",
+      "metadata": {
+        "npcId": "farm-hand-jot",
+        "lines": [
+          "Hey there — I'm Jot Pell. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "pace"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-dock-sweeper-ana",
+      "type": "npc",
+      "x": 864,
+      "y": 1248,
+      "interactionRadius": 56,
+      "label": "Ana Quill",
+      "metadata": {
+        "npcId": "dock-sweeper-ana",
+        "lines": [
+          "Hey there — I'm Ana Quill. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "pace"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-scribe-runner-kel",
+      "type": "npc",
+      "x": 992,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Kel Ink",
+      "metadata": {
+        "npcId": "scribe-runner-kel",
+        "lines": [
+          "Hey there — I'm Kel Ink. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "scout"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-cook-pot-uma",
+      "type": "npc",
+      "x": 928,
+      "y": 928,
+      "interactionRadius": 56,
+      "label": "Uma Broth",
+      "metadata": {
+        "npcId": "cook-pot-uma",
+        "lines": [
+          "Hey there — I'm Uma Broth. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "organize_goods"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-gardener-sip",
+      "type": "npc",
+      "x": 1600,
+      "y": 704,
+      "interactionRadius": 56,
+      "label": "Sip Moss",
+      "metadata": {
+        "npcId": "gardener-sip",
+        "lines": [
+          "Hey there — I'm Sip Moss. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "tend_eggs"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-guard-east-ryn",
+      "type": "npc",
+      "x": 1472,
+      "y": 768,
+      "interactionRadius": 56,
+      "label": "Guard Ryn",
+      "metadata": {
+        "npcId": "guard-east-ryn",
+        "lines": [
+          "Hey there — I'm Guard Ryn. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-guard-west-dao",
+      "type": "npc",
+      "x": 640,
+      "y": 768,
+      "interactionRadius": 56,
+      "label": "Guard Dao",
+      "metadata": {
+        "npcId": "guard-west-dao",
+        "lines": [
+          "Hey there — I'm Guard Dao. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-guard-portal-hex",
+      "type": "npc",
+      "x": 1024,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Guard Hex",
+      "metadata": {
+        "npcId": "guard-portal-hex",
+        "lines": [
+          "Hey there — I'm Guard Hex. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-riftling-plaza-emberkit",
+      "type": "npc",
+      "x": 1184,
+      "y": 736,
+      "interactionRadius": 56,
+      "label": "Emberkit (ambient)",
+      "metadata": {
+        "npcId": "riftling-plaza-emberkit",
+        "lines": [
+          "*curious chirp*",
+          "The Riftling watches you kindly.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-riftling-hatchery-glowpup",
+      "type": "npc",
+      "x": 416,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Glowpup (ambient)",
+      "metadata": {
+        "npcId": "riftling-hatchery-glowpup",
+        "lines": [
+          "*curious chirp*",
+          "The Riftling watches you kindly.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "riftwild-commons",
+      "sceneId": "CommonsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-riftling-market-pouchling",
+      "type": "npc",
+      "x": 512,
+      "y": 1152,
+      "interactionRadius": 56,
+      "label": "Pouchling (ambient)",
+      "metadata": {
+        "npcId": "riftling-market-pouchling",
+        "lines": [
+          "*curious chirp*",
+          "The Riftling watches you kindly.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
       }
     },
     {
@@ -1148,6 +1608,14 @@
       "kind": "building"
     },
     {
+      "id": "library-col",
+      "x": 1184,
+      "y": 608,
+      "width": 192,
+      "height": 160,
+      "kind": "building"
+    },
+    {
       "id": "recovery-center-col",
       "x": 1312,
       "y": 1248,
@@ -1252,8 +1720,15 @@
       },
       {
         "id": "workshop",
-        "label": "Crafting Workshop",
+        "label": "Ember Forge",
         "x": 4,
+        "y": 19,
+        "icon": "building"
+      },
+      {
+        "id": "library",
+        "label": "Rift Archive",
+        "x": 37,
         "y": 19,
         "icon": "building"
       },
@@ -1266,7 +1741,7 @@
       },
       {
         "id": "homestead-path",
-        "label": "Homestead Path",
+        "label": "Keeper Row",
         "x": 2,
         "y": 14,
         "icon": "building"
@@ -1279,116 +1754,109 @@
         "icon": "waypoint"
       },
       {
-        "id": "npc-mira",
-        "label": "Keeper Mira",
-        "x": 26,
-        "y": 24,
+        "id": "npc-elara-venn",
+        "label": "Elara Venn",
+        "x": 30,
+        "y": 22,
         "icon": "npc"
       },
       {
-        "id": "npc-hatchery-keeper",
-        "label": "Incubator Lune",
+        "id": "npc-rowan-vale",
+        "label": "Keeper Rowan Vale",
+        "x": 34,
+        "y": 25,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-mira-shellbright",
+        "label": "Mira Shellbright",
         "x": 10,
         "y": 12,
         "icon": "npc"
       },
       {
-        "id": "npc-market-registrar",
-        "label": "Broker Kesh",
-        "x": 12,
-        "y": 38,
-        "icon": "npc"
-      },
-      {
-        "id": "npc-arena-master",
-        "label": "Arena Master Vex",
-        "x": 52,
-        "y": 12,
-        "icon": "npc"
-      },
-      {
-        "id": "npc-guild-registrar",
-        "label": "Guild Scribe Orin",
-        "x": 52,
-        "y": 38,
-        "icon": "npc"
-      },
-      {
-        "id": "npc-blacksmith",
-        "label": "Smith Brann",
+        "id": "npc-bram-ironroot",
+        "label": "Bram Ironroot",
         "x": 10,
         "y": 26,
         "icon": "npc"
       },
       {
-        "id": "npc-potion-brewer",
-        "label": "Brewer Nima",
+        "id": "npc-tessa-windmere",
+        "label": "Tessa Windmere",
         "x": 12,
-        "y": 24,
+        "y": 38,
         "icon": "npc"
       },
       {
-        "id": "npc-farmer",
-        "label": "Farmer Pell",
-        "x": 16,
-        "y": 42,
+        "id": "npc-archivist-solen",
+        "label": "Archivist Solen",
+        "x": 36,
+        "y": 20,
         "icon": "npc"
       },
       {
-        "id": "npc-fisher",
-        "label": "Fisher Talia",
-        "x": 28,
-        "y": 40,
+        "id": "npc-captain-orren",
+        "label": "Captain Orren",
+        "x": 42,
+        "y": 14,
         "icon": "npc"
       },
       {
-        "id": "npc-recovery-healer",
-        "label": "Healer Solace",
+        "id": "npc-nyla-brook",
+        "label": "Nyla Brook",
         "x": 44,
         "y": 42,
         "icon": "npc"
       },
       {
-        "id": "npc-portal-keeper",
-        "label": "Portal Keeper Ryn",
-        "x": 32,
+        "id": "npc-pip-gearwhistle",
+        "label": "Pip Gearwhistle",
+        "x": 28,
         "y": 10,
         "icon": "npc"
       },
       {
-        "id": "npc-quest-board",
-        "label": "Quest Attendant Ivy",
-        "x": 30,
+        "id": "npc-rook-emberfall",
+        "label": "Rook Emberfall",
+        "x": 52,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-plaza-vendor-cal",
+        "label": "Cal Reed",
+        "x": 24,
+        "y": 28,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-plaza-musician-reo",
+        "label": "Reo Lark",
+        "x": 38,
+        "y": 26,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-plaza-child-mim",
+        "label": "Mim Vale",
+        "x": 33,
         "y": 27,
         "icon": "npc"
       },
       {
-        "id": "commons-to-ember",
-        "label": "Ember Crater",
-        "x": 32,
-        "y": 2,
-        "icon": "portal"
+        "id": "npc-farm-hand-jot",
+        "label": "Jot Pell",
+        "x": 17,
+        "y": 41,
+        "icon": "npc"
       },
       {
-        "id": "commons-to-coast",
-        "label": "Moonwater Coast",
-        "x": 35,
-        "y": 2,
-        "icon": "portal"
-      },
-      {
-        "id": "commons-to-elderwood",
-        "label": "Elderwood Forest",
-        "x": 37,
-        "y": 5,
-        "icon": "portal"
-      },
-      {
-        "id": "commons-to-stormspire",
-        "label": "Stormspire Peaks",
-        "x": 37,
-        "y": 8,
-        "icon": "portal"
+        "id": "npc-dock-sweeper-ana",
+        "label": "Ana Quill",
+        "x": 27,
+        "y": 39,
+        "icon": "npc"
       }
     ]
   },
@@ -1426,7 +1894,8 @@
     "radius": 176
   },
   "notes": [
-    "Primary Live World entry map.",
+    "Primary Live World entry map — premium art showcase.",
+    "Districts: plaza, market, forge, guild, training, residential, hatchery, library, recovery, portal plaza, forest entrance.",
     "Portal Circle encodes all 11 destination unlocks.",
     "Outer woods host optional beginner enemies only."
   ],

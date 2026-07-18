@@ -44,7 +44,7 @@ Eligible pets share Community Reward Treasury
 | Stage | Game system | Status |
 |-------|-------------|--------|
 | Buy coin | Pump.fun / SPL mint + wallet verify | Token gate live; mint placeholder |
-| Get egg | Starter claim / quest / shop / event eggs | Phase 2 |
+| Get egg | Free starter claim (limited pool) + premium Credits buy when free is gone | Live (demo store); durable Prisma later |
 | Hatch | Server CSPRNG hatch | Phase 2 |
 | Feed / care | Care actions + food items | Phase 3 |
 | Buy food/items | Inventory shop (soft currency / demo credits first) | Phase 3–6 |

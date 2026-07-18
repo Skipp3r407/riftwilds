@@ -7,6 +7,7 @@ import {
   type LivingWorldClock,
 } from "@/game/living-world/clock";
 import { resolveActiveDisaster } from "@/game/living-world/disasters";
+import { syncWorldClockAudio } from "@/lib/audio/weather";
 
 /**
  * Lightweight Live World HUD hook — shows season / day phase / weather.
@@ -22,6 +23,10 @@ export function WorldClockChip({ regionSlug }: { regionSlug?: string }) {
     const tick = () => {
       const next = resolveLivingWorldClock();
       setClock(next);
+      syncWorldClockAudio({
+        dayPhase: next.dayPhase,
+        weather: next.weather,
+      });
       const d = resolveActiveDisaster(next);
       setDisasterName(d?.disaster.name ?? null);
     };

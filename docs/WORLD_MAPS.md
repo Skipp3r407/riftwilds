@@ -56,13 +56,12 @@ Portal travel is handled inside `BlueprintRegionScene` when the player interacts
 | Late | Void Hollow |
 | Endgame | Celestial Rift |
 
-## Playable vs blueprint-only
+## Playable vs enterable
 
 | Status | Regions |
 |--------|---------|
-| **Playable (FULL)** | Riftwild Commons — plaza, buildings, NPCs, portal circle, collision, safe zones |
-| **Enterable stub (PARTIAL)** | Ember Crater, Moonwater Coast, Elderwood Forest — portal from Commons, walkable stub terrain |
-| **Blueprint-only (PARTIAL)** | Remaining 8 — full JSON + unlock gates; Phaser scenes not registered yet |
+| **Playable (FULL)** | Riftwild Commons — plaza, buildings, NPCs, portal circle, collision, safe zones, terrain paint |
+| **Enterable stub (PARTIAL)** | All other 11 regions — registered Phaser scenes, hazard colliders, pathways, landmarks; portal gates still apply |
 
 ## Validation
 
@@ -87,3 +86,7 @@ Object types follow `WorldMapObject` in `types.ts` (resource, npc, portal, waypo
 ## Asset prompts
 
 Missing tiles/props prompts: `asset-prompts/world-maps/`.
+
+## Premium Commons presentation
+
+Riftwild Commons uses the premium Live World pass (layered terrain, props, atmosphere, soft camera). See `docs/gameplay/LIVE_WORLD_PREMIUM_REDESIGN.md`. Art lives under `public/assets/game/`; regenerate with `node scripts/assets/install-premium-world-art.mjs`.

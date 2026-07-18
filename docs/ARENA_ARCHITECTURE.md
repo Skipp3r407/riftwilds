@@ -115,10 +115,13 @@ Arena BGs, battle sprites, weapon/armor overlays, VFX, bars, ability icons, time
 - [x] Phase 1 combat engine + AI training (`src/game/arena/*`, `/arena/training`)
 - [x] Loadout + 10 starter weapons + 30+ art prompts (`asset-prompts/weapons/`)
 - [x] Ability selection UI + results + history
-- [x] Unit tests (`tests/unit/arena-engine.test.ts`)
+- [x] Unit tests (`tests/unit/arena-engine.test.ts`, `tests/battles/turn-pipeline.test.ts`)
 - [x] Feature flags + Prisma Arena models + `/admin/arena` shell
 - [x] Compliance: `REAL_VALUE_WAGERING_ENABLED=false` (no admin toggle)
+- [x] Full turn pipeline + weather/terrain/status + Rift Burst + 30s auto-defend
+- [x] Practice UI enhancements + biome arena art (`docs/combat/*`, `BATTLE_TEST_REPORT.md`)
+- [x] Ranked/matchmaking/replay stubs + anti-cheat validation
 - [ ] Phase 2 friend duels + websocket battle server
-- [ ] Phase 3 ranked + anti-cheat analytics
+- [ ] Phase 3 ranked live queues + anti-cheat analytics
 - [ ] Phase 4 free tournaments + Live World Arena
 

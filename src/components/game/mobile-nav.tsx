@@ -19,7 +19,7 @@ export function MobileGameNav() {
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-[var(--stroke)] bg-[rgba(10,10,15,0.62)] px-2 pt-2 backdrop-blur-xl md:hidden"
+      className="mobile-game-nav fixed inset-x-0 bottom-0 z-40 border-t border-[var(--stroke)] bg-[rgba(10,10,15,0.62)] px-2 pt-2 backdrop-blur-xl md:hidden"
       style={{ paddingBottom: "calc(0.5rem + var(--safe-bottom))" }}
       aria-label="Game"
     >
@@ -33,10 +33,8 @@ export function MobileGameNav() {
                 href={item.href}
                 onClick={() => playSfx("ui.nav")}
                 className={cn(
-                  "focus-ring flex flex-col items-center rounded-xl px-1 py-2 text-[10px] transition-colors",
-                  active
-                    ? "bg-[rgba(61,231,255,0.1)] text-[var(--cyan)] shadow-[0_0_16px_rgba(61,231,255,0.15)]"
-                    : "text-[var(--text-muted)]",
+                  "mobile-game-nav__item focus-ring flex flex-col items-center rounded-xl px-1 py-2 text-[10px]",
+                  active ? "mobile-game-nav__item--active" : "text-[var(--text-muted)]",
                 )}
               >
                 <Icon size={18} />

@@ -68,7 +68,10 @@ export type MarketplaceListingView = {
   sellerLabel: string;
   priceLamports: string;
   priceSol: string;
-  currency: "DEMO_CREDITS" | "SOL";
+  /** Play-currency ask — Credits path is authoritative for demo settlement. */
+  priceCredits?: number;
+  /** DEMO_CREDITS is a legacy alias for CREDITS. */
+  currency: "CREDITS" | "DEMO_CREDITS" | "SOL";
   status: "ACTIVE" | "SOLD" | "CANCELLED" | "EXPIRED";
   createdAt: string;
   expiresAt: string;

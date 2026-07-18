@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 import { ThumbnailCard } from "@/components/ecosystem/thumbnail-card";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
+import { sectionUiThumbPath } from "@/lib/assets/paths";
 import { buildEcosystemSnapshot } from "@/game/expansion/ecosystem";
 import { CIVILIZATION_MILESTONES } from "@/game/civilization/milestones";
 import { getCivilizationProgress } from "@/game/civilization/progress-store";
@@ -216,28 +218,39 @@ export default function EcosystemPage() {
             <h2 className="font-display text-lg text-white">Systems & entry points</h2>
             <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3 text-sm">
               {[
-                { href: "/api/world/clock", label: "World clock API" },
-                { href: "/api/archivist?topic=ember", label: "AI Archivist" },
-                { href: "/api/achievements", label: "Achievement catalog" },
-                { href: "/api/timeline", label: "Living timeline" },
-                { href: "/api/housing/catalog", label: "Housing catalog" },
-                { href: "/api/expansion/packs", label: "Expansion packs" },
-                { href: "/quests", label: "Quest board" },
-                { href: "/dashboard", label: "Player dashboard" },
-                { href: "/restoration", label: "World restoration" },
-                { href: "/treasury", label: "Community treasury" },
-                { href: "/rewards", label: "Reward center" },
-                { href: "/social", label: "Social hub" },
-                { href: "/creators", label: "Creator hub" },
-                { href: "/codex/riftlings", label: "Riftling Codex" },
-                { href: "/admin/analytics", label: "Analytics admin" },
+                { href: "/api/world/clock", label: "World clock API", slug: "world-clock" },
+                { href: "/api/archivist?topic=ember", label: "AI Archivist", slug: "ai-archivist" },
+                { href: "/api/achievements", label: "Achievement catalog", slug: "achievement-catalog" },
+                { href: "/api/timeline", label: "Living timeline", slug: "living-timeline" },
+                { href: "/api/housing/catalog", label: "Housing catalog", slug: "housing-catalog" },
+                { href: "/api/expansion/packs", label: "Expansion packs", slug: "expansion-packs" },
+                { href: "/quests", label: "Quest board", slug: "quest-board" },
+                { href: "/dashboard", label: "Player dashboard", slug: "player-dashboard" },
+                { href: "/restoration", label: "World restoration", slug: "world-restoration" },
+                { href: "/treasury", label: "Community treasury", slug: "community-treasury" },
+                { href: "/rewards", label: "Reward center", slug: "reward-center" },
+                { href: "/social", label: "Social hub", slug: "social-hub" },
+                { href: "/creators", label: "Creator hub", slug: "creator-hub" },
+                { href: "/codex/riftlings", label: "Riftling Codex", slug: "riftling-codex" },
+                { href: "/admin/analytics", label: "Analytics admin", slug: "analytics-admin" },
               ].map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-md border border-[var(--stroke)] px-3 py-2 text-[var(--cyan)] hover:border-[rgba(61,231,255,0.35)]"
+                  className="flex items-center gap-2.5 rounded-md border border-[var(--stroke)] px-3 py-2 text-[var(--cyan)] transition-colors hover:border-[rgba(61,231,255,0.35)] hover:bg-[rgba(61,231,255,0.04)]"
                 >
-                  {link.label}
+                  <span className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-md bg-[radial-gradient(ellipse_at_center,rgba(61,231,255,0.12),transparent_70%)]">
+                    <Image
+                      src={sectionUiThumbPath("ecosystem", link.slug)}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="h-10 w-10 object-contain"
+                      unoptimized
+                      aria-hidden
+                    />
+                  </span>
+                  <span className="leading-snug">{link.label}</span>
                 </Link>
               ))}
             </div>

@@ -3,6 +3,11 @@
  */
 
 import { solToLamports } from "@/lib/items/lamports";
+import {
+  canListPetOnMarketplace,
+  type PetListingEligibility,
+} from "@/game/spirit/marketplace-guard";
+import type { RiftlingLifeState, SpiritRecord } from "@/game/spirit/types";
 
 export type MarketplaceAssetCategory =
   | "EGGS"
@@ -57,6 +62,9 @@ export type ListingCreateInput = {
   eggAccountBound?: boolean;
   activePetEggListings: number;
   activeItemListings: number;
+  /** Spirit / recovery life state — pets only. */
+  petLifeState?: RiftlingLifeState;
+  spiritRecord?: SpiritRecord | null;
 };
 
 export type ListingValidationResult =
@@ -66,6 +74,15 @@ export type ListingValidationResult =
 export function validateListingCreate(input: ListingCreateInput): ListingValidationResult {
   if (input.eggAccountBound) {
     return { ok: false, reason: "starter_eggs_account_bound" };
+  }
+  if (input.category === "PETS" && input.petLifeState) {
+    const life: PetListingEligibility = canListPetOnMarketplace({
+      lifeState: input.petLifeState,
+      spirit: input.spiritRecord,
+    });
+    if (!life.ok) {
+      return { ok: false, reason: life.reason };
+    }
   }
   if (input.priceLamports < LISTING_RULES.minListingPriceLamports) {
     return { ok: false, reason: "below_min_listing_price" };

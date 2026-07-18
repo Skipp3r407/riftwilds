@@ -17,5 +17,10 @@
     "thumbnail": true
   },
   "artStatus": "generated",
-  "updatedAt": "2026-07-17T23:20:12.870Z"
+  "updatedAt": "2026-07-18T05:46:25.777Z",
+  "derivedAt": "2026-07-18T05:19:13.463Z",
+  "fullBodyDistinct": true,
+  "spriteDistinct": true,
+  "note": "Dedicated full-body overworld kit installed; dialogue portrait left unchanged",
+  "worldArtSource": "dedicated-fullbody"
 }

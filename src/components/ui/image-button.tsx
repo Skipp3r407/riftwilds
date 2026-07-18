@@ -60,6 +60,7 @@ function skinStyle(skin: ButtonSkinVariant | undefined): CSSProperties | undefin
  * Accessible page CTA with image button skins.
  * Renders a real `<button>` or Next.js `<Link>` — never a bare clickable `<img>`.
  * Label stays HTML (dynamic / i18n); skin PNGs have no baked text.
+ * Site-wide click SFX is handled by HudInteraction.
  */
 export function ImageButton(props: ImageButtonProps) {
   const { variant = "primary", size = "md", className, children, skin, ...rest } = props;

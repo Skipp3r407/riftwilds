@@ -10,6 +10,7 @@ import {
   scaleSpeciesStats,
 } from "@/game/creatures/rpg-types";
 import { isFeatureEnabled } from "@/lib/config/feature-flags";
+import { createStarterUltimate, flattenLoadout, partitionLoadout } from "@/game/arena/loadout";
 
 export type TrainingPetInput = {
   id: string;
@@ -18,6 +19,9 @@ export type TrainingPetInput = {
   affinity: AffinityName;
   level?: number;
   weaponId?: string;
+  bond?: number;
+  morale?: number;
+  xp?: number;
   /** When true, equip bonuses are capped (training / casual Option A). */
   normalizeEquipment?: boolean;
   /** Full ranked path: level, base stats, equipment, paid ability upgrades. */
@@ -95,7 +99,7 @@ export function buildCombatant(input: TrainingPetInput): ArenaCombatant {
   const rawAbilities =
     abilitiesForSpecies(input.speciesSlug, input.affinity) ??
     abilitiesForAffinity(input.affinity);
-  const abilities = rawAbilities.map((ab) => {
+  let abilities = rawAbilities.map((ab) => {
     if (!affBps || ab.id === "basic-strike" || ab.power <= 0) return ab;
     if (ab.category !== "AFFINITY" && ab.category !== "ULTIMATE" && ab.category !== "PHYSICAL") {
       return ab;
@@ -124,33 +128,57 @@ export function buildCombatant(input: TrainingPetInput): ArenaCombatant {
     return { ...ab, power };
   });
 
+  if (!abilities.some((a) => a.category === "ULTIMATE")) {
+    abilities = [...abilities, createStarterUltimate(input.affinity)];
+  }
+
+  const loadout = partitionLoadout(abilities);
+  abilities = flattenLoadout(loadout);
+
+  const magic = Math.round(attack * 0.95 + baseScaled.focus * 0.35);
+  const resistance = Math.round(defense * 0.95 + baseScaled.focus * 0.25);
+  const luck = 10 + Math.floor(level / 2) + Math.floor(baseScaled.focus / 10);
+
   return {
     id: input.id,
     name: input.name,
     speciesSlug: input.speciesSlug,
     affinity: input.affinity,
     level,
+    xp: input.xp ?? level * 100,
     maxHp,
     hp: maxHp,
     attack,
     defense,
+    magic,
+    resistance,
     speed,
     accuracy: baseScaled.accuracy,
     evasion: baseScaled.evasion,
     focus: baseScaled.focus,
+    luck,
+    bond: input.bond ?? 50,
+    morale: input.morale ?? 90,
     critChanceBps: baseScaled.critChanceBps,
     energy: baseScaled.maxEnergy,
     maxEnergy: baseScaled.maxEnergy,
+    riftBurst: 0,
     abilities,
     statuses: [],
     defending: false,
     focusing: false,
+    guarding: false,
     weaponId: weapon?.id,
     equipMod: 1,
+    teamSlot: 0,
+    isActive: true,
   };
 }
 
-export function buildTrainingAi(affinity: AffinityName = "STONE"): ArenaCombatant {
+export function buildTrainingAi(
+  affinity: AffinityName = "STONE",
+  opts?: { level?: number; name?: string },
+): ArenaCombatant {
   const byAffinity: Partial<Record<AffinityName, string>> = {
     EMBER: "cindercub",
     TIDE: "bubbloon",
@@ -165,12 +193,14 @@ export function buildTrainingAi(affinity: AffinityName = "STONE"): ArenaCombatan
   };
   return buildCombatant({
     id: "ai-trainer",
-    name: "Training Dummy",
+    name: opts?.name ?? "Training Dummy",
     speciesSlug: byAffinity[affinity] ?? "pebblit",
     affinity,
-    level: 5,
+    level: opts?.level ?? 5,
     weaponId: "barkguard-shield",
     normalizeEquipment: true,
+    bond: 40,
+    morale: 85,
   });
 }
 
@@ -182,4 +212,6 @@ export const DEMO_PLAYER_DEFAULTS: TrainingPetInput = {
   level: 5,
   weaponId: "ember-talons",
   normalizeEquipment: true,
+  bond: 55,
+  morale: 92,
 };

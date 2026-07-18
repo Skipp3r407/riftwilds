@@ -12,16 +12,24 @@ import {
 } from "@/lib/marketplace/integrity";
 import { saleAllocationForPetsAndEggs, saleAllocationForItems } from "@/lib/marketplace/fee-policy";
 import { serializeAllocation } from "@/lib/revenue/allocate";
+import { settleMarketplaceCreditsPurchase } from "@/lib/marketplace/credits-settle";
+import { getSessionContext } from "@/lib/auth/session";
+import { hydrateMemoryFromPrisma, persistRecentCreditMutation } from "@/lib/credits/persist-bridge";
+import { isMarketplaceFrozen } from "@/lib/economy/admin-ops";
 
 const bodySchema = z.object({
   requestId: z.string().min(8).max(128),
   buyerWallet: z.string().optional(),
   sellerWallet: z.string().optional(),
+  demoUser: z.string().min(2).max(80).optional(),
 });
 
 type Params = { params: Promise<{ publicId: string }> };
 
 export async function POST(req: Request, { params }: Params) {
+  if (isMarketplaceFrozen()) {
+    return NextResponse.json({ error: "MARKETPLACE_FROZEN" }, { status: 403 });
+  }
   if (
     !isFeatureEnabled("MARKETPLACE_WRITES_ENABLED") &&
     !isFeatureEnabled("MARKETPLACE_ENABLED")
@@ -31,7 +39,7 @@ export async function POST(req: Request, { params }: Params) {
 
   const gate = resolveSettlementGate({
     marketplaceEnabled:
-      featureFlagDefaults.MARKETPLACE_ENABLED || featureFlagDefaults.MARKETPLACE_WRITES_ENABLED,
+      isFeatureEnabled("MARKETPLACE_ENABLED") || isFeatureEnabled("MARKETPLACE_WRITES_ENABLED"),
     realSolMarketplaceEnabled: featureFlagDefaults.REAL_SOL_MARKETPLACE_ENABLED,
     solPurchasesEnabled: featureFlagDefaults.SOL_PURCHASES_ENABLED,
   });
@@ -67,6 +75,28 @@ export async function POST(req: Request, { params }: Params) {
     return NextResponse.json({ error: "NOT_AVAILABLE" }, { status: 404 });
   }
 
+  const session = await getSessionContext();
+  const buyerUserId = session?.userId ?? parsed.data.demoUser ?? "demo-keeper";
+  await hydrateMemoryFromPrisma(buyerUserId);
+
+  const credits = settleMarketplaceCreditsPurchase({
+    listing,
+    buyerUserId,
+    requestId: parsed.data.requestId,
+  });
+  if (!credits.ok) {
+    return NextResponse.json(
+      {
+        error: credits.error,
+        message: credits.message,
+        balance: credits.balance,
+      },
+      { status: 400 },
+    );
+  }
+
+  await persistRecentCreditMutation(buyerUserId, `${parsed.data.requestId}:buyer`);
+
   const wash = detectWashTradingRisk({
     buyerWallet: parsed.data.buyerWallet,
     sellerWallet: parsed.data.sellerWallet ?? listing.sellerLabel,
@@ -87,8 +117,10 @@ export async function POST(req: Request, { params }: Params) {
 
   return NextResponse.json({
     ok: true,
-    mode: result.mode,
+    mode: "credits",
+    currency: "CREDITS",
     publicId,
+    settlement: credits,
     washTrading: wash,
     allocation,
     itemSplit: itemSplit
@@ -100,6 +132,6 @@ export async function POST(req: Request, { params }: Params) {
           communityEvents: itemSplit.communityEvents.toString(),
         }
       : null,
-    note: "Demo-credit purchase stub. No SOL transferred.",
+    note: "Credits settlement applied. No SOL transferred. SOL never required for marketplace play.",
   });
 }

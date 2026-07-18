@@ -1,0 +1,70 @@
+{
+  "updatedAt": "2026-07-18T05:30:00.000Z",
+  "regionFocus": "riftwild-commons",
+  "installScripts": [
+    "scripts/assets/install-premium-world-art.mjs",
+    "scripts/assets/install-live-world-showcase-art.mjs",
+    "scripts/assets/mask-npc-black.mjs",
+    "scripts/npcs/build-npc-overworld-sheets.mjs"
+  ],
+  "actors": [
+    {
+      "id": "player-keeper",
+      "path": "/assets/game/actors/player-keeper.png",
+      "status": "generated",
+      "notes": "Grok overworld Keeper; BootScene loads as pw-actor-player-keeper"
+    },
+    {
+      "id": "pet-riftling",
+      "path": "/assets/game/actors/pet-riftling.png",
+      "status": "generated",
+      "notes": "Follower companion; replaces circle pet-companion when present"
+    }
+  ],
+  "props": [
+    { "id": "riftstone-monument", "path": "/assets/game/props/riftstone-monument.png", "status": "generated" },
+    { "id": "training-dummy", "path": "/assets/game/props/training-dummy.png", "status": "generated" },
+    { "id": "resource-berry", "path": "/assets/game/props/resource-berry.png", "status": "generated" },
+    { "id": "resource-herb", "path": "/assets/game/props/resource-herb.png", "status": "generated" },
+    { "id": "resource-fish", "path": "/assets/game/props/resource-fish.png", "status": "generated" }
+  ],
+  "buildings": [
+    "hatchery",
+    "arena",
+    "market",
+    "guild",
+    "workshop",
+    "library",
+    "recovery-center",
+    "homestead-path",
+    "portal-circle"
+  ],
+  "terrain": {
+    "status": "installed",
+    "keys": 28,
+    "source": "commons-tileset + masters + terrain-variants-strip"
+  },
+  "commonsNpcs": {
+    "count": 24,
+    "overworldSheets": 24,
+    "namedCast": 10,
+    "ambientGuardsRiftlings": 14,
+    "calReed": {
+      "slug": "plaza-vendor-cal",
+      "fullBodyDistinct": true,
+      "dialoguePortrait": true,
+      "artStatus": "generated"
+    }
+  },
+  "uiMap": [
+    "/assets/ui/map/portal.png",
+    "/assets/ui/map/waypoint.png",
+    "/assets/ui/map/marker.png",
+    "/assets/ui/map/quest-available.png",
+    "/assets/ui/map/danger.png",
+    "/assets/ui/map/minimap-portal.png",
+    "/assets/ui/map/minimap-waypoint.png",
+    "/assets/ui/map/minimap-player.png",
+    "/assets/ui/map/minimap-quest.png"
+  ]
+}

@@ -7,8 +7,10 @@ import type {
   WorldMapObject,
 } from "@/game/world-maps/types";
 import { PORTALS_FROM_REGION } from "@/game/world-maps/defs/portals";
+import { NPC_BY_ID as CONTENT_NPC_BY_ID } from "@/content/npcs";
 import { NPC_BY_ID } from "@/game/world-maps/defs/npcs";
 import type { RegionIdentity } from "@/game/world-maps/types";
+import { transitionZonesFromPortals } from "@/game/world-maps/boundaries/transition-zones";
 
 export const TILE = 32;
 
@@ -107,6 +109,7 @@ export function npcAt(
   y: number,
 ): WorldMapObject {
   const cat = NPC_BY_ID[npcId];
+  const content = CONTENT_NPC_BY_ID[npcId];
   return obj(
     {
       id: `npc-${npcId}`,
@@ -115,10 +118,11 @@ export function npcAt(
       y,
       interactive: true,
       interactionRadius: 56,
-      label: cat?.name ?? npcId,
+      label: cat?.name ?? content?.displayName ?? npcId,
       metadata: {
         npcId,
         lines: cat?.defaultLines ?? ["…"],
+        behavior: content?.ambientBehavior ?? "idle",
       },
     },
     region,
@@ -166,6 +170,31 @@ export function enemyZone(
       width: w,
       height: h,
       metadata: { enemyId, maxCount: 3 },
+    },
+    region,
+  );
+}
+
+/** Major Gateway Stone — first visit activates permanent fast-travel node. */
+export function gatewayStoneAt(
+  region: RegionIdentity,
+  x: number,
+  y: number,
+): WorldMapObject {
+  return obj(
+    {
+      id: `gateway-${region.id}`,
+      type: "gateway",
+      x,
+      y,
+      interactive: true,
+      interactionRadius: 52,
+      label: `${region.name} Gateway Stone`,
+      metadata: {
+        gatewayStone: true,
+        fastTravel: true,
+        regionId: region.id,
+      },
     },
     region,
   );
@@ -251,7 +280,9 @@ export function finalizeBlueprint(
   const { width, height } = mapSize(opts.cols, opts.rows);
   const pins = opts.objects
     .filter((o) =>
-      ["building", "portal", "waypoint", "npc", "boss_arena"].includes(o.type),
+      ["building", "portal", "waypoint", "gateway", "npc", "boss_arena"].includes(
+        o.type,
+      ),
     )
     .slice(0, 24)
     .map((o) => ({
@@ -261,6 +292,12 @@ export function finalizeBlueprint(
       y: Math.round(o.y / TILE),
       icon: o.type,
     }));
+
+  const hasAuthoredTransitions = opts.colliders.some((c) => c.kind === "transition");
+  const portals = opts.objects.filter((o) => o.type === "portal");
+  const autoTransitions = hasAuthoredTransitions
+    ? []
+    : transitionZonesFromPortals(portals);
 
   return {
     schemaVersion: 1,
@@ -281,7 +318,11 @@ export function finalizeBlueprint(
     zones: opts.zones,
     pathways: opts.pathways,
     objects: opts.objects,
-    colliders: [...borderColliders(region.id, opts.cols, opts.rows), ...opts.colliders],
+    colliders: [
+      ...borderColliders(region.id, opts.cols, opts.rows),
+      ...opts.colliders,
+      ...autoTransitions,
+    ],
     camera: { x: 0, y: 0, width, height },
     minimap: baseMinimap(opts.cols, opts.rows, pins),
     weatherKeys: region.weatherKeys,

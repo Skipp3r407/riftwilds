@@ -1,0 +1,3069 @@
+{
+  "generatedAt": "2026-07-18T05:27:07.727Z",
+  "sourceScan": "2026-07-18T05:26:51.057Z",
+  "scanTotals": {
+    "pending": 0,
+    "planned": 0,
+    "generated": 546,
+    "failed": 0,
+    "legacy": 12,
+    "not_applicable": 0
+  },
+  "scanMissing": [],
+  "totals": {
+    "files": 3219,
+    "bytes": 2191097127,
+    "byAction": {
+      "Optimize": 240,
+      "Keep": 2815,
+      "Replace": 158,
+      "Regenerate": 6
+    },
+    "byCategory": {
+      "about": 39,
+      "affinities": 11,
+      "battle": 24,
+      "bosses": 11,
+      "brand": 6,
+      "buildings": 5,
+      "commercials": 23,
+      "creatures": 8,
+      "dashboard": 22,
+      "eggs": 30,
+      "enemies": 19,
+      "festivals": 5,
+      "furniture": 8,
+      "game": 76,
+      "hatchery": 10,
+      "items": 837,
+      "maps": 34,
+      "marketing": 2,
+      "npcs": 1156,
+      "pets": 264,
+      "placeholders": 158,
+      "quests": 128,
+      "regions": 24,
+      "restoration": 13,
+      "rewards": 9,
+      "social": 13,
+      "story": 2,
+      "terrain": 14,
+      "tilesets": 1,
+      "treasury": 12,
+      "ui": 231,
+      "worlds": 24
+    }
+  },
+  "sessionHighlights": {
+    "ambientNpcPortraitsGenerated": 58,
+    "npcKitsDerivedAndCompressed": 112,
+    "terrainTilesAdded": 7,
+    "tilesetBuilt": true,
+    "ogImageWired": true,
+    "emptyStatesAdded": 3,
+    "missingItemIconsFilled": 65,
+    "paintedHeroItemIcons": 4
+  },
+  "assets": [
+    {
+      "path": "/assets/about/about-aeryndra-whole.png",
+      "category": "about",
+      "bytes": 2682188,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/about-celestial-call.png",
+      "category": "about",
+      "bytes": 2232131,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/about/about-commons-founding.png",
+      "category": "about",
+      "bytes": 2719659,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/about-discovery-core.png",
+      "category": "about",
+      "bytes": 2554159,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/about-elara-egg.png",
+      "category": "about",
+      "bytes": 2638665,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/about-first-riftlings.png",
+      "category": "about",
+      "bytes": 2455857,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/about/about-fracture.png",
+      "category": "about",
+      "bytes": 3085458,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/about-hero-rift.png",
+      "category": "about",
+      "bytes": 2534830,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/birth-01-fragment-release.png",
+      "category": "about",
+      "bytes": 2623279,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/birth-02-bonding.png",
+      "category": "about",
+      "bytes": 2644030,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/birth-03-egg-formation.png",
+      "category": "about",
+      "bytes": 2947145,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/birth-04-first-hatch.png",
+      "category": "about",
+      "bytes": 2505323,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-chapter-before-inset.png",
+      "category": "about",
+      "bytes": 2899589,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-chapter-discovery-inset.png",
+      "category": "about",
+      "bytes": 2917037,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-chapter-riftlings-inset.png",
+      "category": "about",
+      "bytes": 3055551,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-elara-discovery.png",
+      "category": "about",
+      "bytes": 2631888,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-elara-journey.png",
+      "category": "about",
+      "bytes": 2536952,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-elara-portrait.png",
+      "category": "about",
+      "bytes": 2477734,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-age-exploration.png",
+      "category": "about",
+      "bytes": 3006225,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-age-gateways.png",
+      "category": "about",
+      "bytes": 2950825,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-first-eggs.png",
+      "category": "about",
+      "bytes": 2700535,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-first-keeper.png",
+      "category": "about",
+      "bytes": 2501098,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-founding-commons.png",
+      "category": "about",
+      "bytes": 3095502,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-fracture.png",
+      "category": "about",
+      "bytes": 3430312,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-great-activation.png",
+      "category": "about",
+      "bytes": 2858171,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-living-core.png",
+      "category": "about",
+      "bytes": 3003941,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-era-present-awakening.png",
+      "category": "about",
+      "bytes": 2851496,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-first-riftling-hatch.png",
+      "category": "about",
+      "bytes": 2570960,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-first-riftling-mystery.png",
+      "category": "about",
+      "bytes": 2601614,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-info-live-world.png",
+      "category": "about",
+      "bytes": 2900671,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-info-riftkeeper.png",
+      "category": "about",
+      "bytes": 2311452,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/about/comic/comic-info-what-are-riftlings.png",
+      "category": "about",
+      "bytes": 2742498,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-info-what-you-can-do.png",
+      "category": "about",
+      "bytes": 2904454,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-origin-01-gateway-hearts.png",
+      "category": "about",
+      "bytes": 2932260,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-origin-02-fracture.png",
+      "category": "about",
+      "bytes": 3165756,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-origin-03-fragments.png",
+      "category": "about",
+      "bytes": 3268025,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-origin-04-bond.png",
+      "category": "about",
+      "bytes": 3041791,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-origin-05-eggs.png",
+      "category": "about",
+      "bytes": 2942666,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/about/comic/comic-origin-06-keepers.png",
+      "category": "about",
+      "bytes": 2645745,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/affinities/affinity-alloy-icon.png",
+      "category": "affinities",
+      "bytes": 1507517,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/bosses/alloy-warframe/key-art.png",
+      "category": "bosses",
+      "bytes": 1853072,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/bosses/ashmaw-colossus/key-art.png",
+      "category": "bosses",
+      "bytes": 2741159,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/bosses/celestial-rift-entity/key-art.png",
+      "category": "bosses",
+      "bytes": 1732000,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/bosses/elderwood-heartwood/key-art.png",
+      "category": "bosses",
+      "bytes": 3110774,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/bosses/frostveil-warden/key-art.png",
+      "category": "bosses",
+      "bytes": 3142318,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/bosses/moonwater-leviathan/key-art.png",
+      "category": "bosses",
+      "bytes": 3000258,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/bosses/radiant-sentinel/key-art.png",
+      "category": "bosses",
+      "bytes": 2628695,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/bosses/spirit-lantern-king/key-art.png",
+      "category": "bosses",
+      "bytes": 1632289,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/bosses/stoneheart-behemoth/key-art.png",
+      "category": "bosses",
+      "bytes": 2995589,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/bosses/stormspire-titan/key-art.png",
+      "category": "bosses",
+      "bytes": 2628133,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/bosses/void-riftborn/key-art.png",
+      "category": "bosses",
+      "bytes": 2479731,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/buildings/commons/arena.png",
+      "category": "buildings",
+      "bytes": 3050166,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/buildings/commons/guild-hall.png",
+      "category": "buildings",
+      "bytes": 3389615,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/buildings/commons/hatchery.png",
+      "category": "buildings",
+      "bytes": 2694161,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/buildings/commons/marketplace.png",
+      "category": "buildings",
+      "bytes": 3155365,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/buildings/commons/portal-circle.png",
+      "category": "buildings",
+      "bytes": 3293121,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/commercials/posters/endcard-egg.png",
+      "category": "commercials",
+      "bytes": 2203039,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/posters/poster-cinematic-16x9.png",
+      "category": "commercials",
+      "bytes": 2154644,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/posters/poster-square-hero.png",
+      "category": "commercials",
+      "bytes": 1820854,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/posters/poster-vertical-rift.png",
+      "category": "commercials",
+      "bytes": 2414170,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-01-rift-vista.png",
+      "category": "commercials",
+      "bytes": 2703203,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-02-hatchery-egg.png",
+      "category": "commercials",
+      "bytes": 2313166,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-03-first-hatch.png",
+      "category": "commercials",
+      "bytes": 2323856,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-04-live-world-commons.png",
+      "category": "commercials",
+      "bytes": 2834395,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-05-npc-quest.png",
+      "category": "commercials",
+      "bytes": 2504434,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-06-battle-arena.png",
+      "category": "commercials",
+      "bytes": 2265599,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-07-crafting.png",
+      "category": "commercials",
+      "bytes": 2363890,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-08-housing.png",
+      "category": "commercials",
+      "bytes": 2700961,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-09-guild-event.png",
+      "category": "commercials",
+      "bytes": 2599619,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-10-player-market.png",
+      "category": "commercials",
+      "bytes": 2716101,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-11-endcard-egg.png",
+      "category": "commercials",
+      "bytes": 2203039,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-12-endcard-space.png",
+      "category": "commercials",
+      "bytes": 2297334,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-header-loop-sky.png",
+      "category": "commercials",
+      "bytes": 2447802,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-s01-square-hero.png",
+      "category": "commercials",
+      "bytes": 1820854,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-v01-rift-poster.png",
+      "category": "commercials",
+      "bytes": 2414170,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-v02-hatch-vertical.png",
+      "category": "commercials",
+      "bytes": 2133690,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/commercials/storyboards/sb-v03-explore-vertical.png",
+      "category": "commercials",
+      "bytes": 2723149,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/commercials/thumbnails/thumb-cinematic-60.png",
+      "category": "commercials",
+      "bytes": 2154644,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/eggs/egg-alloy.png",
+      "category": "eggs",
+      "bytes": 1527637,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/eggs/egg-incubator.png",
+      "category": "eggs",
+      "bytes": 1926758,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/eggs/_raw/mystery-rift-egg.png",
+      "category": "eggs",
+      "bytes": 1810850,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/ash-hound/portrait.png",
+      "category": "enemies",
+      "bytes": 1557028,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/bark-guardian/portrait.png",
+      "category": "enemies",
+      "bytes": 1903225,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/cinder-crawler/portrait.png",
+      "category": "enemies",
+      "bytes": 1895254,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/frost-wolf/portrait.png",
+      "category": "enemies",
+      "bytes": 1973827,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/magma-beetle/portrait.png",
+      "category": "enemies",
+      "bytes": 1820586,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/radiant-construct/portrait.png",
+      "category": "enemies",
+      "bytes": 1698835,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/reef-stalker/portrait.png",
+      "category": "enemies",
+      "bytes": 1724268,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/rift-slime/portrait.png",
+      "category": "enemies",
+      "bytes": 1568630,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/rift-stalker/portrait.png",
+      "category": "enemies",
+      "bytes": 1565756,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/rock-crawler/portrait.png",
+      "category": "enemies",
+      "bytes": 1903771,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/starborn-guardian/portrait.png",
+      "category": "enemies",
+      "bytes": 1781615,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/storm-raptor/portrait.png",
+      "category": "enemies",
+      "bytes": 1641912,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/tide-crab/portrait.png",
+      "category": "enemies",
+      "bytes": 1918626,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/enemies/vine-sprout/portrait.png",
+      "category": "enemies",
+      "bytes": 1603988,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/festivals/bloomtide-festival.png",
+      "category": "festivals",
+      "bytes": 3016620,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/festivals/commons-moon-market.png",
+      "category": "festivals",
+      "bytes": 2317829,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/festivals/emberfall-vigil.png",
+      "category": "festivals",
+      "bytes": 2355205,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/festivals/frostveil-aurora.png",
+      "category": "festivals",
+      "bytes": 2822317,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/festivals/harvest-veil-market.png",
+      "category": "festivals",
+      "bytes": 2361611,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/game/_sources/building-forge.png",
+      "category": "game",
+      "bytes": 1899279,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/game/_sources/building-library.png",
+      "category": "game",
+      "bytes": 1702660,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/game/_sources/npc-cal-reed-fullbody.png",
+      "category": "game",
+      "bytes": 1587208,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/game/_sources/props-sheet-ambient.png",
+      "category": "game",
+      "bytes": 1562938,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/game/_sources/props-sheet-foliage.png",
+      "category": "game",
+      "bytes": 1623398,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/game/_sources/terrain-variants-strip.png",
+      "category": "game",
+      "bytes": 3327359,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/hatchery/claim-starter-egg.png",
+      "category": "hatchery",
+      "bytes": 2310627,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/hatchery/empty-riftlings.png",
+      "category": "hatchery",
+      "bytes": 1935970,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ancestral-echo.png",
+      "category": "items",
+      "bytes": 1782792,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ancient-mountain-guard.png",
+      "category": "items",
+      "bytes": 1683231,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ashen-hide.png",
+      "category": "items",
+      "bytes": 1744403,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ashwing-cinder-bite.png",
+      "category": "items",
+      "bytes": 1626410,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ashwing-essence.png",
+      "category": "items",
+      "bytes": 1626549,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ashwing-heartburst-rush.png",
+      "category": "items",
+      "bytes": 1679928,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/auralynx-celestial-parade.png",
+      "category": "items",
+      "bytes": 1730811,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/auralynx-essence.png",
+      "category": "items",
+      "bytes": 1599667,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/bramblefox-essence.png",
+      "category": "items",
+      "bytes": 1582560,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/bramblefox-fern-ward.png",
+      "category": "items",
+      "bytes": 1714478,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/canyon-thump.png",
+      "category": "items",
+      "bytes": 1818891,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/canyonbeetle-beetle-ram.png",
+      "category": "items",
+      "bytes": 1732912,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/canyonbeetle-essence.png",
+      "category": "items",
+      "bytes": 1510954,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/canyonbeetle-mountain-guard.png",
+      "category": "items",
+      "bytes": 1720997,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/canyonbeetle-rift-focus.png",
+      "category": "items",
+      "bytes": 1639922,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/canyonbeetle-stone-guard.png",
+      "category": "items",
+      "bytes": 1610010,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/citadelmoth-citadel-guard.png",
+      "category": "items",
+      "bytes": 1747326,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/citadelmoth-essence.png",
+      "category": "items",
+      "bytes": 1613995,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/clockwork-heart.png",
+      "category": "items",
+      "bytes": 1797973,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/clockwork-pulse.png",
+      "category": "items",
+      "bytes": 1838787,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/cog-strike.png",
+      "category": "items",
+      "bytes": 1786159,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/cogpup-essence.png",
+      "category": "items",
+      "bytes": 1726809,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/cogpup-gear-bite.png",
+      "category": "items",
+      "bytes": 1583319,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/cogpup-rift-focus.png",
+      "category": "items",
+      "bytes": 1792544,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/cold-focus.png",
+      "category": "items",
+      "bytes": 1551694,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/commonspark-sky-rift-bolt.png",
+      "category": "items",
+      "bytes": 1725697,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/coralurge-reef-bash.png",
+      "category": "items",
+      "bytes": 1633493,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/coralurge-reef-guard.png",
+      "category": "items",
+      "bytes": 1854407,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/coralurge-rift-focus.png",
+      "category": "items",
+      "bytes": 1525070,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/craterhorn-cinder-plate.png",
+      "category": "items",
+      "bytes": 1705356,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/dawn-joy.png",
+      "category": "items",
+      "bytes": 1543460,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/deep-roots.png",
+      "category": "items",
+      "bytes": 1972755,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/eclipse-singularity.png",
+      "category": "items",
+      "bytes": 1650796,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/elderfern-essence.png",
+      "category": "items",
+      "bytes": 1697190,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/elderfern-worldroot-pulse.png",
+      "category": "items",
+      "bytes": 1820715,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ember-pounce.png",
+      "category": "items",
+      "bytes": 1687812,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ember-shield.png",
+      "category": "items",
+      "bytes": 1500749,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/emberfox-ember-shell.png",
+      "category": "items",
+      "bytes": 1509491,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/embernewt-ash-mantle.png",
+      "category": "items",
+      "bytes": 1858888,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/embernewt-craterflare.png",
+      "category": "items",
+      "bytes": 1587009,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/embernewt-rift-focus.png",
+      "category": "items",
+      "bytes": 1679928,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/fossilhound-essence.png",
+      "category": "items",
+      "bytes": 1622131,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/fossilhound-fossil-plate.png",
+      "category": "items",
+      "bytes": 1827653,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/fossilhound-mineral-mend.png",
+      "category": "items",
+      "bytes": 1536407,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/fossilhound-rock-bite.png",
+      "category": "items",
+      "bytes": 1890739,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/frostfin-flurry-jab.png",
+      "category": "items",
+      "bytes": 1653539,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/frostfin-rift-focus.png",
+      "category": "items",
+      "bytes": 1516743,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/frostfin-winter-ring.png",
+      "category": "items",
+      "bytes": 1667865,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/frostveil-kin.png",
+      "category": "items",
+      "bytes": 1618407,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/gentle-roots.png",
+      "category": "items",
+      "bytes": 1552962,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/glimmerp-citadel-guard.png",
+      "category": "items",
+      "bytes": 1551154,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/grove-resilience.png",
+      "category": "items",
+      "bytes": 2008839,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/groveowl-essence.png",
+      "category": "items",
+      "bytes": 1595921,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/groveowl-worldroot-pulse.png",
+      "category": "items",
+      "bytes": 1812641,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/guardian-gears.png",
+      "category": "items",
+      "bytes": 1781263,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/hearthstone-beetle-ram.png",
+      "category": "items",
+      "bytes": 1574306,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/hearthstone-mountain-guard.png",
+      "category": "items",
+      "bytes": 1860667,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/hearthstone-rift-focus.png",
+      "category": "items",
+      "bytes": 1560548,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/hearthstone-stone-guard.png",
+      "category": "items",
+      "bytes": 1604149,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/heavy-frame.png",
+      "category": "items",
+      "bytes": 1744642,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/heavy-ore.png",
+      "category": "items",
+      "bytes": 1797796,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/hollow-bite.png",
+      "category": "items",
+      "bytes": 1616697,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ironbloom-cog-rush.png",
+      "category": "items",
+      "bytes": 1575241,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ironbloom-essence.png",
+      "category": "items",
+      "bytes": 1693657,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ironbloom-hex-plate.png",
+      "category": "items",
+      "bytes": 1757052,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ironbloom-oil-mend.png",
+      "category": "items",
+      "bytes": 1798229,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/ironbloom-scrapstorm.png",
+      "category": "items",
+      "bytes": 1973573,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/lanternjay-loom-lash.png",
+      "category": "items",
+      "bytes": 1593089,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/lanternjay-rift-focus.png",
+      "category": "items",
+      "bytes": 1502468,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/lightwoven.png",
+      "category": "items",
+      "bytes": 1750332,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/living-moss.png",
+      "category": "items",
+      "bytes": 1729278,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/loyal-gears.png",
+      "category": "items",
+      "bytes": 1589021,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/marshloom-essence.png",
+      "category": "items",
+      "bytes": 1693542,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/marshloom-loom-lash.png",
+      "category": "items",
+      "bytes": 1754930,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/marshloom-rift-focus.png",
+      "category": "items",
+      "bytes": 1572336,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/marshloom-spirit-ward.png",
+      "category": "items",
+      "bytes": 1622365,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/mineral-brace.png",
+      "category": "items",
+      "bytes": 1716256,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/moon-tide-collapse.png",
+      "category": "items",
+      "bytes": 1667687,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/moonray-mooncollapse.png",
+      "category": "items",
+      "bytes": 1776701,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/peakibex-rift-focus.png",
+      "category": "items",
+      "bytes": 1792132,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/peakibex-spire-dive.png",
+      "category": "items",
+      "bytes": 1547127,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/peakibex-static-guard.png",
+      "category": "items",
+      "bytes": 1572245,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/peakibex-tempest-dive.png",
+      "category": "items",
+      "bytes": 1824095,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/quartzhorn-canyon-edge.png",
+      "category": "items",
+      "bytes": 1812462,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/quartzhorn-canyon-quake.png",
+      "category": "items",
+      "bytes": 1818792,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/quartzhorn-quartz-shell.png",
+      "category": "items",
+      "bytes": 1726017,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/radiantkit-moth-dust.png",
+      "category": "items",
+      "bytes": 1712323,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/rift-ascension.png",
+      "category": "items",
+      "bytes": 1526553,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/riftpup-marsh-awakening.png",
+      "category": "items",
+      "bytes": 1741083,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/riftslug-essence.png",
+      "category": "items",
+      "bytes": 1509121,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/riftslug-hollow-mend.png",
+      "category": "items",
+      "bytes": 1536481,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/rime-coat.png",
+      "category": "items",
+      "bytes": 1875763,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/rootling-essence.png",
+      "category": "items",
+      "bytes": 1596231,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/rootling-rift-focus.png",
+      "category": "items",
+      "bytes": 1629506,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/rootling-thicket-plate.png",
+      "category": "items",
+      "bytes": 1969869,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/scrap-plate.png",
+      "category": "items",
+      "bytes": 1652994,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/scrapfinch-cog-guard.png",
+      "category": "items",
+      "bytes": 1708175,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/scrapfinch-hex-overdrive.png",
+      "category": "items",
+      "bytes": 1724108,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/scrapfinch-magnet-field.png",
+      "category": "items",
+      "bytes": 1710925,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/scrapfinch-plate-cut.png",
+      "category": "items",
+      "bytes": 1614762,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/silent-bond.png",
+      "category": "items",
+      "bytes": 1520809,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/sky-rift-tempest.png",
+      "category": "items",
+      "bytes": 1566473,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/slick-scales.png",
+      "category": "items",
+      "bytes": 1623864,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/snowpuff-frost-bite.png",
+      "category": "items",
+      "bytes": 1734898,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/soft-bark.png",
+      "category": "items",
+      "bytes": 1568765,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/spirekite-peak-thunder.png",
+      "category": "items",
+      "bytes": 1751597,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/spirekite-storm-veil.png",
+      "category": "items",
+      "bytes": 1554297,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/star-silk.png",
+      "category": "items",
+      "bytes": 1673032,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/starlight-silk.png",
+      "category": "items",
+      "bytes": 1849091,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/staticat-tempest-dive.png",
+      "category": "items",
+      "bytes": 1571200,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/steady-core.png",
+      "category": "items",
+      "bytes": 1702149,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/steady-keeper.png",
+      "category": "items",
+      "bytes": 1542700,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/stone-crash.png",
+      "category": "items",
+      "bytes": 1572975,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/stone-shell.png",
+      "category": "items",
+      "bytes": 1548254,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/stonegrub-beetle-ram.png",
+      "category": "items",
+      "bytes": 1686944,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/stonegrub-canyon-quake.png",
+      "category": "items",
+      "bytes": 1879654,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/storm-sprint.png",
+      "category": "items",
+      "bytes": 1557153,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/stormmoth-essence.png",
+      "category": "items",
+      "bytes": 1587902,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/stormmoth-tempest-dive.png",
+      "category": "items",
+      "bytes": 1778262,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/stormmoth-wind-horn.png",
+      "category": "items",
+      "bytes": 1699062,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/tempered-frame.png",
+      "category": "items",
+      "bytes": 1698983,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/tideotter-essence.png",
+      "category": "items",
+      "bytes": 1530070,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/tideotter-mooncollapse.png",
+      "category": "items",
+      "bytes": 1806283,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/tideotter-tide-shell.png",
+      "category": "items",
+      "bytes": 1561808,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/tidewisp-mooncollapse.png",
+      "category": "items",
+      "bytes": 1908245,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/tidewisp-otter-whirl.png",
+      "category": "items",
+      "bytes": 1639298,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/tidewisp-reef-bash.png",
+      "category": "items",
+      "bytes": 1653204,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/titan-core-overdrive.png",
+      "category": "items",
+      "bytes": 1661205,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/veilhare-crystal-flood.png",
+      "category": "items",
+      "bytes": 1623014,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/veilhare-rime-plate.png",
+      "category": "items",
+      "bytes": 1839749,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/void-shroud.png",
+      "category": "items",
+      "bytes": 1552818,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/volcanic-heartburst.png",
+      "category": "items",
+      "bytes": 1634887,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/abilities/icons/worldroot-awakening.png",
+      "category": "items",
+      "bytes": 1782450,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/items/armor/icons/volcanic-guardian-plate.png",
+      "category": "items",
+      "bytes": 1525101,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/maps/alloy-ruins-overview.png",
+      "category": "maps",
+      "bytes": 3442554,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/celestial-rift-overview.png",
+      "category": "maps",
+      "bytes": 3354496,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/elderwood-forest-overview.png",
+      "category": "maps",
+      "bytes": 3574941,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/ember-crater-overview.png",
+      "category": "maps",
+      "bytes": 3420301,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/frostveil-basin-overview.png",
+      "category": "maps",
+      "bytes": 3128554,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/moonwater-coast-overview.png",
+      "category": "maps",
+      "bytes": 3124651,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/radiant-citadel-overview.png",
+      "category": "maps",
+      "bytes": 3708874,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/regions/alloy-ruins.png",
+      "category": "maps",
+      "bytes": 2756690,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/regions/celestial-rift.png",
+      "category": "maps",
+      "bytes": 2507968,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/regions/frostveil-basin.png",
+      "category": "maps",
+      "bytes": 2670635,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/regions/radiant-citadel.png",
+      "category": "maps",
+      "bytes": 2585922,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/regions/spirit-marsh.png",
+      "category": "maps",
+      "bytes": 2333366,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/maps/regions/stoneheart-canyon.png",
+      "category": "maps",
+      "bytes": 2829551,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/regions/stormspire-peaks.png",
+      "category": "maps",
+      "bytes": 2537593,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/regions/void-hollow.png",
+      "category": "maps",
+      "bytes": 2595637,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/riftwild-commons-overview.png",
+      "category": "maps",
+      "bytes": 3371436,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/spirit-marsh-overview.png",
+      "category": "maps",
+      "bytes": 3063075,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/stoneheart-canyon-overview.png",
+      "category": "maps",
+      "bytes": 3549186,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/stormspire-peaks-overview.png",
+      "category": "maps",
+      "bytes": 2894358,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/void-hollow-overview.png",
+      "category": "maps",
+      "bytes": 3243205,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/world-alloy-ruins-overview.png",
+      "category": "maps",
+      "bytes": 2756690,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/world-celestial-rift-overview.png",
+      "category": "maps",
+      "bytes": 2507968,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/world-frostveil-basin-overview.png",
+      "category": "maps",
+      "bytes": 2670635,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/world-radiant-citadel-overview.png",
+      "category": "maps",
+      "bytes": 2585922,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/world-spirit-marsh-overview.png",
+      "category": "maps",
+      "bytes": 2333366,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/maps/world-stoneheart-canyon-overview.png",
+      "category": "maps",
+      "bytes": 2829551,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/world-stormspire-peaks-overview.png",
+      "category": "maps",
+      "bytes": 2537593,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/maps/world-void-hollow-overview.png",
+      "category": "maps",
+      "bytes": 2595637,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/aeron-cloudstep/portrait.png",
+      "category": "npcs",
+      "bytes": 1652902,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/alloy-guard-bolt/portrait.png",
+      "category": "npcs",
+      "bytes": 1661716,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/alloy-ruins/professor-ferrum/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1615591,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/alloy-ruins/salvager-knox/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1577276,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/alloy-ruins/tinker-pax/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1679908,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/alloy-ruins/unit-ari-7/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1626005,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/alloy-runner-bit/portrait.png",
+      "category": "npcs",
+      "bytes": 1541414,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/archivist-solen/portrait.png",
+      "category": "npcs",
+      "bytes": 1599481,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/arena-master/portrait.png",
+      "category": "npcs",
+      "bytes": 1524617,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/astronomer-caelis/portrait.png",
+      "category": "npcs",
+      "bytes": 1624575,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/captain-orren/portrait.png",
+      "category": "npcs",
+      "bytes": 1671424,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/celestial-acolyte-nova/portrait.png",
+      "category": "npcs",
+      "bytes": 1560066,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/celestial-guard-lumen/portrait.png",
+      "category": "npcs",
+      "bytes": 1539096,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/celestial-porter-orbit/portrait.png",
+      "category": "npcs",
+      "bytes": 1581465,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/celestial-rift/astronomer-caelis/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1575205,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/celestial-rift/guardian-seraphine/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1627341,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/celestial-rift/nameless-witness/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2828014,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/celestial-rift/starforger-orion/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2811842,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/celestial-scribe-astro/portrait.png",
+      "category": "npcs",
+      "bytes": 1790774,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/chancellor-aurex/portrait.png",
+      "category": "npcs",
+      "bytes": 1817376,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/cinder-sage-malrec/portrait.png",
+      "category": "npcs",
+      "bytes": 1578150,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/curator-verin/portrait.png",
+      "category": "npcs",
+      "bytes": 1541891,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/doran-flint/portrait.png",
+      "category": "npcs",
+      "bytes": 1522122,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/elara-venn/portrait.png",
+      "category": "npcs",
+      "bytes": 1529315,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/elderwood-forest/fenn-quickbranch/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2065699,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/elderwood-forest/grandmother-willowmere/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2514064,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/elderwood-forest/mosskeeper-elden/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2564449,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/elderwood-forest/warden-sylvi/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1704376,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/ember-crater/cinder-sage-malrec/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2660790,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/ember-crater/forgekeeper-vessa/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2113421,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/ember-crater/kael-ashwalker/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1728727,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/ember-crater/warden-pyra/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2509642,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/engineer-volt/portrait.png",
+      "category": "npcs",
+      "bytes": 1688333,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/fenn-quickbranch/portrait.png",
+      "category": "npcs",
+      "bytes": 1578644,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/finn-coralhand/portrait.png",
+      "category": "npcs",
+      "bytes": 1866963,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/forgekeeper-vessa/portrait.png",
+      "category": "npcs",
+      "bytes": 1549719,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/freya-snowmark/portrait.png",
+      "category": "npcs",
+      "bytes": 1797887,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/frostveil-basin/aurora-linn/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1565616,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/frostveil-basin/freya-snowmark/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1807616,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/frostveil-basin/hunter-varek/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1632474,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/frostveil-basin/jori-icebloom/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2512792,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/gemwright-opal/portrait.png",
+      "category": "npcs",
+      "bytes": 1510826,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/grandmother-willowmere/portrait.png",
+      "category": "npcs",
+      "bytes": 1745548,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/hatchery-keeper/portrait.png",
+      "category": "npcs",
+      "bytes": 1625953,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/hermit-thane/portrait.png",
+      "category": "npcs",
+      "bytes": 1723890,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/hunter-varek/portrait.png",
+      "category": "npcs",
+      "bytes": 1580730,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/jori-icebloom/portrait.png",
+      "category": "npcs",
+      "bytes": 1697113,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/kael-ashwalker/portrait.png",
+      "category": "npcs",
+      "bytes": 1655166,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/luma-tidecrest/portrait.png",
+      "category": "npcs",
+      "bytes": 1623115,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/marina-drift/portrait.png",
+      "category": "npcs",
+      "bytes": 1520857,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/market-registrar/portrait.png",
+      "category": "npcs",
+      "bytes": 1533898,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/mira/portrait.png",
+      "category": "npcs",
+      "bytes": 1570039,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/mira-shellbright/portrait.png",
+      "category": "npcs",
+      "bytes": 1660177,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/moonwater-coast/finn-coralhand/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2235160,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/moonwater-coast/luma-tidecrest/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1587652,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/moonwater-coast/marina-drift/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2353786,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/moonwater-coast/oracle-selene/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2512952,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/mosskeeper-elden/portrait.png",
+      "category": "npcs",
+      "bytes": 1929911,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/nyla-brook/portrait.png",
+      "category": "npcs",
+      "bytes": 1609475,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/oracle-selene/portrait.png",
+      "category": "npcs",
+      "bytes": 1597476,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/petra-stoneveil/portrait.png",
+      "category": "npcs",
+      "bytes": 1808352,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/pip-gearwhistle/portrait.png",
+      "category": "npcs",
+      "bytes": 1600538,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/plaza-vendor-cal/portrait.png",
+      "category": "npcs",
+      "bytes": 1577045,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/portal-keeper/portrait.png",
+      "category": "npcs",
+      "bytes": 1572097,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/radiant-citadel/chancellor-aurex/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1694529,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/radiant-citadel/scholar-lyra/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1680495,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/radiant-citadel/sentinel-cassian/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1637500,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/archivist-solen/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2519087,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/bram-ironroot/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2482032,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/captain-orren/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2762182,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/elara-venn/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2818331,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/mira-shellbright/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2636777,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/nyla-brook/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2828095,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/pip-gearwhistle/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2648991,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/rook-emberfall/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2692373,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/rowan-vale/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2711133,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/riftwild-commons/tessa-windmere/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2985172,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/rook-emberfall/portrait.png",
+      "category": "npcs",
+      "bytes": 1771765,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/rowan-vale/portrait.png",
+      "category": "npcs",
+      "bytes": 1504166,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/scholar-lyra/portrait.png",
+      "category": "npcs",
+      "bytes": 1557178,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/sentinel-cassian/portrait.png",
+      "category": "npcs",
+      "bytes": 1887931,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/skywarden-ilya/portrait.png",
+      "category": "npcs",
+      "bytes": 1922143,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/spirit-marsh/echo-child-nimi/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2082255,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/spirit-marsh/ferryman-grey/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2097284,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/spirit-marsh/lantern-keeper-sio/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2313844,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/spirit-marsh/medium-amara/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1782309,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/stoneheart-canyon/doran-flint/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1760107,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/stoneheart-canyon/gemwright-opal/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1510067,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/stoneheart-canyon/marshal-korr/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1531438,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/stoneheart-canyon/petra-stoneveil/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1542735,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/stormspire-peaks/aeron-cloudstep/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2663629,
+      "action": "Optimize"
+    },
+    {
+      "path": "/assets/npcs/stormspire-peaks/engineer-volt/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2454910,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/stormspire-peaks/hermit-thane/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2410817,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/stormspire-peaks/skywarden-ilya/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 2356970,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/tessa-windmere/portrait.png",
+      "category": "npcs",
+      "bytes": 1590082,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/void-hollow/keeper-null/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1610642,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/void-hollow/veya-dusk/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1547554,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/void-hollow/watcher-omen/dialogue-portrait.png",
+      "category": "npcs",
+      "bytes": 1600224,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/warden-sylvi/portrait.png",
+      "category": "npcs",
+      "bytes": 1557684,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/npcs/watcher-omen/portrait.png",
+      "category": "npcs",
+      "bytes": 1558461,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/pets/brambleback.png",
+      "category": "pets",
+      "bytes": 1817647,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/pets/magmole.png",
+      "category": "pets",
+      "bytes": 1574255,
+      "action": "Keep"
+    },
+    {
+      "path": "/assets/placeholders/affinity-alloy.svg",
+      "category": "placeholders",
+      "bytes": 857,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-ember.svg",
+      "category": "placeholders",
+      "bytes": 752,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-frost.svg",
+      "category": "placeholders",
+      "bytes": 688,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-grove.svg",
+      "category": "placeholders",
+      "bytes": 707,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-radiant.svg",
+      "category": "placeholders",
+      "bytes": 697,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-spirit.svg",
+      "category": "placeholders",
+      "bytes": 720,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-stone.svg",
+      "category": "placeholders",
+      "bytes": 795,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-storm.svg",
+      "category": "placeholders",
+      "bytes": 736,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-tide.svg",
+      "category": "placeholders",
+      "bytes": 718,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/affinity-void.svg",
+      "category": "placeholders",
+      "bytes": 694,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-alloyfin-battle.svg",
+      "category": "placeholders",
+      "bytes": 867,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-alloyfin-card.svg",
+      "category": "placeholders",
+      "bytes": 865,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-alloyfin-icon.svg",
+      "category": "placeholders",
+      "bytes": 859,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-alloyfin-profile.svg",
+      "category": "placeholders",
+      "bytes": 868,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-alloyfin-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 585,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-ashwing-icon.svg",
+      "category": "placeholders",
+      "bytes": 1312,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-astralynx-battle.svg",
+      "category": "placeholders",
+      "bytes": 706,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-astralynx-card.svg",
+      "category": "placeholders",
+      "bytes": 704,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-astralynx-icon.svg",
+      "category": "placeholders",
+      "bytes": 699,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-astralynx-profile.svg",
+      "category": "placeholders",
+      "bytes": 707,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-astralynx-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 423,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-auralynx-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bloomble-battle.svg",
+      "category": "placeholders",
+      "bytes": 717,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bloomble-card.svg",
+      "category": "placeholders",
+      "bytes": 715,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bloomble-icon.svg",
+      "category": "placeholders",
+      "bytes": 712,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bloomble-profile.svg",
+      "category": "placeholders",
+      "bytes": 718,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bloomble-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 435,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-brambleback-battle.svg",
+      "category": "placeholders",
+      "bytes": 720,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-brambleback-card.svg",
+      "category": "placeholders",
+      "bytes": 718,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-brambleback-icon.svg",
+      "category": "placeholders",
+      "bytes": 715,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-brambleback-profile.svg",
+      "category": "placeholders",
+      "bytes": 721,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-brambleback-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 435,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bramblefox-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bubbloon-battle.svg",
+      "category": "placeholders",
+      "bytes": 729,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bubbloon-card.svg",
+      "category": "placeholders",
+      "bytes": 727,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bubbloon-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bubbloon-profile.svg",
+      "category": "placeholders",
+      "bytes": 730,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-bubbloon-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 447,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-canyonbeetle-icon.svg",
+      "category": "placeholders",
+      "bytes": 1326,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-celestora-icon.svg",
+      "category": "placeholders",
+      "bytes": 1212,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-cindercub-battle.svg",
+      "category": "placeholders",
+      "bytes": 763,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-cindercub-card.svg",
+      "category": "placeholders",
+      "bytes": 761,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-cindercub-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-cindercub-profile.svg",
+      "category": "placeholders",
+      "bytes": 764,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-cindercub-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 480,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-citadelmoth-icon.svg",
+      "category": "placeholders",
+      "bytes": 1326,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-cogpup-icon.svg",
+      "category": "placeholders",
+      "bytes": 1223,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-commonspark-icon.svg",
+      "category": "placeholders",
+      "bytes": 1212,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-coralurge-icon.svg",
+      "category": "placeholders",
+      "bytes": 1225,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-craterhorn-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-elderfern-icon.svg",
+      "category": "placeholders",
+      "bytes": 1232,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-emberfox-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-embernewt-icon.svg",
+      "category": "placeholders",
+      "bytes": 1159,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-fossilhound-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-frostfin-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-frostnip-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-frostuft-battle.svg",
+      "category": "placeholders",
+      "bytes": 698,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-frostuft-card.svg",
+      "category": "placeholders",
+      "bytes": 696,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-frostuft-icon.svg",
+      "category": "placeholders",
+      "bytes": 693,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-frostuft-profile.svg",
+      "category": "placeholders",
+      "bytes": 699,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-frostuft-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 416,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-gearling-battle.svg",
+      "category": "placeholders",
+      "bytes": 867,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-gearling-card.svg",
+      "category": "placeholders",
+      "bytes": 865,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-gearling-icon.svg",
+      "category": "placeholders",
+      "bytes": 1214,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-gearling-profile.svg",
+      "category": "placeholders",
+      "bytes": 868,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-gearling-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 585,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-glimmermoth-battle.svg",
+      "category": "placeholders",
+      "bytes": 732,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-glimmermoth-card.svg",
+      "category": "placeholders",
+      "bytes": 730,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-glimmermoth-icon.svg",
+      "category": "placeholders",
+      "bytes": 726,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-glimmermoth-profile.svg",
+      "category": "placeholders",
+      "bytes": 733,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-glimmermoth-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 447,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-glimmerp-icon.svg",
+      "category": "placeholders",
+      "bytes": 1326,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-groveowl-icon.svg",
+      "category": "placeholders",
+      "bytes": 1312,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-hearthstone-icon.svg",
+      "category": "placeholders",
+      "bytes": 1215,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-hollowmoth-icon.svg",
+      "category": "placeholders",
+      "bytes": 1326,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-hollowshade-icon.svg",
+      "category": "placeholders",
+      "bytes": 1212,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-ironbloom-icon.svg",
+      "category": "placeholders",
+      "bytes": 1232,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-lanternjay-icon.svg",
+      "category": "placeholders",
+      "bytes": 1312,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-luminara-icon.svg",
+      "category": "placeholders",
+      "bytes": 1211,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-magmole-battle.svg",
+      "category": "placeholders",
+      "bytes": 761,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-magmole-card.svg",
+      "category": "placeholders",
+      "bytes": 759,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-magmole-icon.svg",
+      "category": "placeholders",
+      "bytes": 755,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-magmole-profile.svg",
+      "category": "placeholders",
+      "bytes": 762,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-magmole-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 480,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-marshloom-icon.svg",
+      "category": "placeholders",
+      "bytes": 1231,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-mistwraith-icon.svg",
+      "category": "placeholders",
+      "bytes": 1212,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-moonray-icon.svg",
+      "category": "placeholders",
+      "bytes": 1225,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-mossprig-battle.svg",
+      "category": "placeholders",
+      "bytes": 717,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-mossprig-card.svg",
+      "category": "placeholders",
+      "bytes": 715,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-mossprig-icon.svg",
+      "category": "placeholders",
+      "bytes": 1232,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-mossprig-profile.svg",
+      "category": "placeholders",
+      "bytes": 718,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-mossprig-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 435,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-noxling-battle.svg",
+      "category": "placeholders",
+      "bytes": 704,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-noxling-card.svg",
+      "category": "placeholders",
+      "bytes": 702,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-noxling-icon.svg",
+      "category": "placeholders",
+      "bytes": 697,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-noxling-profile.svg",
+      "category": "placeholders",
+      "bytes": 705,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-noxling-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 423,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-peakibex-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-pebblit-battle.svg",
+      "category": "placeholders",
+      "bytes": 804,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-pebblit-card.svg",
+      "category": "placeholders",
+      "bytes": 802,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-pebblit-icon.svg",
+      "category": "placeholders",
+      "bytes": 1215,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-pebblit-profile.svg",
+      "category": "placeholders",
+      "bytes": 805,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-pebblit-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 523,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-quartzhorn-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-radiantkit-icon.svg",
+      "category": "placeholders",
+      "bytes": 1275,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-riftpup-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-riftslug-icon.svg",
+      "category": "placeholders",
+      "bytes": 1160,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-rootling-icon.svg",
+      "category": "placeholders",
+      "bytes": 1231,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-scrapfinch-icon.svg",
+      "category": "placeholders",
+      "bytes": 1312,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-snowpuff-icon.svg",
+      "category": "placeholders",
+      "bytes": 1212,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-spirekite-icon.svg",
+      "category": "placeholders",
+      "bytes": 1312,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-staticat-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-stonegrub-icon.svg",
+      "category": "placeholders",
+      "bytes": 1325,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-stormmoth-icon.svg",
+      "category": "placeholders",
+      "bytes": 1326,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-sunmote-battle.svg",
+      "category": "placeholders",
+      "bytes": 704,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-sunmote-card.svg",
+      "category": "placeholders",
+      "bytes": 702,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-sunmote-icon.svg",
+      "category": "placeholders",
+      "bytes": 697,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-sunmote-profile.svg",
+      "category": "placeholders",
+      "bytes": 705,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-sunmote-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 423,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-tideotter-icon.svg",
+      "category": "placeholders",
+      "bytes": 1224,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-tiderune-battle.svg",
+      "category": "placeholders",
+      "bytes": 729,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-tiderune-card.svg",
+      "category": "placeholders",
+      "bytes": 727,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-tiderune-icon.svg",
+      "category": "placeholders",
+      "bytes": 723,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-tiderune-profile.svg",
+      "category": "placeholders",
+      "bytes": 730,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-tiderune-silhouette.svg",
+      "category": "placeholders",
+      "bytes": 447,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-tidewisp-icon.svg",
+      "category": "placeholders",
+      "bytes": 1212,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-veilhare-icon.svg",
+      "category": "placeholders",
+      "bytes": 1223,
+      "action": "Replace"
+    },
+    {
+      "path": "/assets/placeholders/creature-voidling-icon.svg",
+      "category": "placeholders",
+      "bytes": 1212,
+      "action": "Replace"
+    }
+  ]
+}

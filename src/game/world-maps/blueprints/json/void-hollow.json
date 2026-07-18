@@ -205,6 +205,169 @@
       "sceneId": "VoidHollowScene",
       "interactive": true,
       "collision": false,
+      "id": "npc-shadecaller-neris",
+      "type": "npc",
+      "x": 320,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Shadecaller Neris",
+      "metadata": {
+        "npcId": "shadecaller-neris",
+        "lines": [
+          "Shadecaller Neris. Hold my voice if the Hollow tries to rename you.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "pace"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-watcher-omen",
+      "type": "npc",
+      "x": 576,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Watcher Omen",
+      "metadata": {
+        "npcId": "watcher-omen",
+        "lines": [
+          "Watcher Omen. If colors invert, leave.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "look_around"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-veya-dusk",
+      "type": "npc",
+      "x": 448,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Veya Dusk",
+      "metadata": {
+        "npcId": "veya-dusk",
+        "lines": [
+          "Veya Dusk. Curiosity is allowed. Recklessness is not.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-keeper-null",
+      "type": "npc",
+      "x": 704,
+      "y": 640,
+      "interactionRadius": 56,
+      "label": "Keeper Null",
+      "metadata": {
+        "npcId": "keeper-null",
+        "lines": [
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-void-porter-dim",
+      "type": "npc",
+      "x": 288,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Dim Carry",
+      "metadata": {
+        "npcId": "void-porter-dim",
+        "lines": [
+          "Hey there — I'm Dim Carry. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-void-scribe-umbra",
+      "type": "npc",
+      "x": 384,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Umbra Note",
+      "metadata": {
+        "npcId": "void-scribe-umbra",
+        "lines": [
+          "Hey there — I'm Umbra Note. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-void-scout-gloom",
+      "type": "npc",
+      "x": 480,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Gloom Step",
+      "metadata": {
+        "npcId": "void-scout-gloom",
+        "lines": [
+          "Hey there — I'm Gloom Step. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-void-guard-veil",
+      "type": "npc",
+      "x": 352,
+      "y": 416,
+      "interactionRadius": 56,
+      "label": "Guard Veil",
+      "metadata": {
+        "npcId": "void-guard-veil",
+        "lines": [
+          "Hey there — I'm Guard Veil. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "interactive": true,
+      "collision": false,
       "id": "res-void-hollow-void-crystal",
       "type": "resource",
       "x": 320,
@@ -315,6 +478,19 @@
         "bossId": "void-riftborn",
         "arenaRef": "void-hollow-boss"
       }
+    },
+    {
+      "id": "lm-obelisk",
+      "type": "decoration",
+      "regionId": "void-hollow",
+      "sceneId": "VoidHollowScene",
+      "x": 832,
+      "y": 704,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Null Obelisk",
+      "color": 6963360
     }
   ],
   "colliders": [
@@ -357,6 +533,30 @@
       "width": 256,
       "height": 160,
       "kind": "building"
+    },
+    {
+      "id": "void-rift",
+      "x": 640,
+      "y": 576,
+      "width": 256,
+      "height": 96,
+      "kind": "hazard"
+    },
+    {
+      "id": "null-cliff",
+      "x": 1088,
+      "y": 832,
+      "width": 128,
+      "height": 256,
+      "kind": "cliff"
+    },
+    {
+      "id": "lm-obelisk-col",
+      "x": 832,
+      "y": 704,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -375,6 +575,62 @@
         "x": 3,
         "y": 3,
         "icon": "building"
+      },
+      {
+        "id": "npc-shadecaller-neris",
+        "label": "Shadecaller Neris",
+        "x": 10,
+        "y": 14,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-watcher-omen",
+        "label": "Watcher Omen",
+        "x": 18,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-veya-dusk",
+        "label": "Veya Dusk",
+        "x": 14,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-keeper-null",
+        "label": "Keeper Null",
+        "x": 22,
+        "y": 20,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-void-porter-dim",
+        "label": "Dim Carry",
+        "x": 9,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-void-scribe-umbra",
+        "label": "Umbra Note",
+        "x": 12,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-void-scout-gloom",
+        "label": "Gloom Step",
+        "x": 15,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-void-guard-veil",
+        "label": "Guard Veil",
+        "x": 11,
+        "y": 13,
+        "icon": "npc"
       },
       {
         "id": "wp-void",

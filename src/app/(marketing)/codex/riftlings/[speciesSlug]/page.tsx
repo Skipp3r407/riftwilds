@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { HearRiftlingCryButton } from "@/components/audio/hear-riftling-cry-button";
 import { GameImage } from "@/components/assets/game-image";
 import { SpeciesKitPanel } from "@/components/creatures/species-kit-panel";
 import { getSpeciesLore, SPECIES_LORE_SLUGS } from "@/content/pets/lore";
@@ -34,13 +35,14 @@ export default async function RiftlingCodexSpeciesPage({ params }: Props) {
       </Link>
 
       <header className="panel mt-4 overflow-hidden p-6">
-        <div className="grid gap-6 md:grid-cols-[220px_1fr]">
-          <div className="relative flex aspect-square items-center justify-center rounded-xl bg-[rgba(7,11,22,0.55)]">
+        <div className="relative z-[1] grid gap-6 md:grid-cols-[220px_1fr]">
+          <div className="relative aspect-square overflow-hidden rounded-xl bg-[radial-gradient(circle_at_50%_42%,rgba(90,110,150,0.38),rgba(14,18,32,0.92)_72%)] ring-1 ring-[rgba(148,197,255,0.14)]">
             <GameImage
               src={creatureProfilePath(lore.slug)}
               alt={`${lore.name} profile`}
-              width={240}
-              height={240}
+              width={384}
+              height={384}
+              fill
               fallbackSrc={creatureIconPath(lore.slug, true)}
               showDevBadge={false}
             />
@@ -58,6 +60,9 @@ export default async function RiftlingCodexSpeciesPage({ params }: Props) {
                 : ""}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-white/90">{lore.shortBio}</p>
+            <div className="mt-4">
+              <HearRiftlingCryButton speciesSlug={lore.slug} label="Hear signature cry" />
+            </div>
           </div>
         </div>
       </header>

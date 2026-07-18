@@ -116,6 +116,11 @@ export const PROFILE_QUICK_LINKS = [
     body: "Claim, incubate, and hatch Rift Eggs.",
   },
   {
+    href: "/academy",
+    label: "Player Academy",
+    body: "Interactive tutorials, FAQ, and Combat Academy.",
+  },
+  {
     href: "/inventory",
     label: "Inventory",
     body: "Browse items, materials, and cosmetics.",

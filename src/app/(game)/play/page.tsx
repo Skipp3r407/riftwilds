@@ -2,13 +2,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { projectConfig } from "@/lib/config/project";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
-import { sectionUiThumbPath } from "@/lib/assets/paths";
+import { dashboardActionIconPath, sectionUiThumbPath } from "@/lib/assets/paths";
 import { DashboardEconomyWidget } from "@/components/economy";
 import { EconomySummary } from "@/components/economy";
+import { AcademyOnboardingBanner } from "@/components/academy";
 import { PageHeader } from "@/components/shared/page-header";
-import { ImageButton } from "@/components/ui/image-button";
+import { ImageButton, type ImageButtonVariant } from "@/components/ui/image-button";
 
 export const metadata = { title: "Play" };
+
+const quickActions: {
+  href: string;
+  label: string;
+  slug: string;
+  variant: ImageButtonVariant;
+}[] = [
+  { href: "/hatchery", label: "Open Hatchery", slug: "hatchery", variant: "primary" },
+  { href: "/academy", label: "Academy / Help", slug: "academy", variant: "secondary" },
+  { href: "/profile", label: "Profile", slug: "profile", variant: "secondary" },
+  { href: "/inventory", label: "Inventory", slug: "inventory", variant: "secondary" },
+  { href: "/homestead", label: "Homestead", slug: "homestead", variant: "secondary" },
+  { href: "/guilds", label: "Guilds", slug: "guilds", variant: "secondary" },
+  { href: "/economy", label: "Economy", slug: "economy", variant: "secondary" },
+];
 
 const featureCards = [
   {
@@ -84,27 +100,30 @@ export default function PlayDashboardPage() {
         statusTone="live"
         actions={
           <>
-            <ImageButton href="/hatchery" variant="primary">
-              Open Hatchery
-            </ImageButton>
-            <ImageButton href="/profile" variant="secondary">
-              Profile
-            </ImageButton>
-            <ImageButton href="/inventory" variant="secondary">
-              Inventory
-            </ImageButton>
-            <ImageButton href="/homestead" variant="secondary">
-              Homestead
-            </ImageButton>
-            <ImageButton href="/guilds" variant="secondary">
-              Guilds
-            </ImageButton>
-            <ImageButton href="/economy" variant="secondary">
-              Economy
-            </ImageButton>
+            {quickActions.map((action) => (
+              <ImageButton
+                key={action.href}
+                href={action.href}
+                variant={action.variant}
+                className="gap-2.5 px-4 py-2.5 sm:gap-3 sm:px-5 sm:py-3.5"
+              >
+                <Image
+                  src={dashboardActionIconPath(action.slug)}
+                  alt=""
+                  width={56}
+                  height={56}
+                  className="h-12 w-12 shrink-0 bg-transparent object-contain sm:h-14 sm:w-14"
+                  unoptimized
+                  aria-hidden
+                />
+                <span>{action.label}</span>
+              </ImageButton>
+            ))}
           </>
         }
       />
+
+      <AcademyOnboardingBanner />
 
       <DashboardEconomyWidget />
 
@@ -115,7 +134,7 @@ export default function PlayDashboardPage() {
           <Link
             key={card.title}
             href={card.href}
-            className="panel group relative block overflow-hidden p-5 transition hover:border-[rgba(61,231,255,0.35)] hover:shadow-[0_0_24px_rgba(61,231,255,0.1)]"
+            className="panel panel-interactive group relative block overflow-hidden p-5 focus-ring"
           >
             <span
               aria-hidden

@@ -5,6 +5,7 @@ import { DEFAULT_ODDS } from "@/game/economy/hatch-odds";
 import { HatcheryDashboard } from "@/components/hatchery/hatchery-dashboard";
 import { LAUNCH_SPECIES } from "@/game/creatures/species-catalog";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
+import { hatcheryRarityIconPath } from "@/lib/assets/paths";
 
 export const metadata = { title: "Hatchery" };
 
@@ -37,8 +38,10 @@ export default function HatcheryPage() {
       <section className="panel p-5 text-sm text-[var(--text-muted)]">
         <h2 className="font-display text-lg text-white">Supply & breeding</h2>
         <p className="mt-2">
-          Starter eggs are account-bound and never sellable. Breeding uses rising fees, cooldowns,
-          and weekly global caps — rarity is never guaranteed. See marketplace breeding rules and{" "}
+          Free starter eggs are limited (first-come global pool) and account-bound — never sellable.
+          When free stock is gone, keepers can still buy eggs with Credits at a premium late-game
+          price (soft currency sink, never SOL). Breeding uses rising fees, cooldowns, and weekly
+          global caps — rarity is never guaranteed. See marketplace breeding rules and{" "}
           <code className="text-[var(--cyan)]">docs/MARKETPLACE_ECONOMY.md</code>.
         </p>
         <Link href="/marketplace" className="btn-secondary focus-ring mt-4 inline-flex text-sm">
@@ -62,10 +65,20 @@ export default function HatcheryPage() {
           {Object.entries(DEFAULT_ODDS).map(([rarity, pct]) => (
             <li
               key={rarity}
-              className="panel-inset flex items-center justify-between px-3 py-2.5 text-sm"
+              className="panel-inset flex items-center justify-between gap-3 px-3 py-2.5 text-sm"
             >
-              <span className="text-[var(--text-muted)]">{rarity}</span>
-              <span className="font-display text-white">{pct}%</span>
+              <span className="flex min-w-0 items-center gap-2.5 text-[var(--text-muted)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={hatcheryRarityIconPath(rarity)}
+                  alt=""
+                  width={28}
+                  height={28}
+                  className="h-7 w-7 shrink-0 object-contain drop-shadow-[0_0_8px_rgba(61,231,255,0.2)]"
+                />
+                <span className="truncate">{rarity}</span>
+              </span>
+              <span className="font-display shrink-0 text-white">{pct}%</span>
             </li>
           ))}
         </ul>

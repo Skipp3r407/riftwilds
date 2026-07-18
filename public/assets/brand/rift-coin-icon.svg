@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <circle cx="16" cy="16" r="15" fill="#0c1220" stroke="#3de7ff" stroke-width="1.5"/>
+  <circle cx="16" cy="16" r="11.5" fill="url(#riftCoinGrad)" stroke="rgba(61,231,255,0.45)" stroke-width="0.75"/>
+  <path
+    d="M16 7.2c-2.1 2.4-3.4 5.1-3.4 8 0 2.9 1.3 5.6 3.4 8 2.1-2.4 3.4-5.1 3.4-8 0-2.9-1.3-5.6-3.4-8z"
+    fill="#ffb84d"
+    opacity="0.95"
+  />
+  <path
+    d="M10.2 14.2c3.4-1.2 7.2-1.2 10.6 0M10.2 17.8c3.4 1.2 7.2 1.2 10.6 0"
+    stroke="#3de7ff"
+    stroke-width="1.1"
+    stroke-linecap="round"
+    opacity="0.85"
+  />
+  <defs>
+    <linearGradient id="riftCoinGrad" x1="8" y1="6" x2="24" y2="26" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162038"/>
+      <stop offset="1" stop-color="#0a0e18"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -15,6 +15,8 @@ import { RESOURCE_DEFS } from "../../src/game/world-maps/defs/resources";
 import { ENEMY_DEFS } from "../../src/game/world-maps/defs/enemies";
 import { PORTAL_DEFS } from "../../src/game/world-maps/defs/portals";
 import type { MapBlueprint } from "../../src/game/world-maps/types";
+import { auditBlueprintBoundaries } from "../../src/game/world-maps/boundaries/audit";
+import { spawnOverlapsSolid } from "../../src/game/world-maps/boundaries/spawn-clamp";
 
 const ROOT = path.resolve(__dirname, "../..");
 const MAPS_OUT = path.join(ROOT, "public", "maps");
@@ -102,6 +104,47 @@ function validateBlueprint(bp: MapBlueprint): {
       bad.length === 0,
       bad.length ? `${bad.length} inside safe` : "ok",
     );
+  }
+
+  const boundary = auditBlueprintBoundaries(bp);
+  add(
+    "edge-walls",
+    boundary.stats.edgeWalls >= 4,
+    `${boundary.stats.edgeWalls} edge walls`,
+    true,
+  );
+  add(
+    "spawn-clear-of-solids",
+    !spawnOverlapsSolid(bp.spawn, bp.colliders),
+    spawnOverlapsSolid(bp.spawn, bp.colliders)
+      ? "spawn overlaps solid"
+      : "spawn clear",
+    true,
+  );
+  add(
+    "transitions",
+    boundary.stats.transitions >= 1 || portals.length === 0,
+    `${boundary.stats.transitions} transition zones`,
+  );
+  const openEdges = boundary.issues.filter((i) => i.code === "open-edge");
+  add(
+    "no-open-edges",
+    openEdges.length === 0,
+    openEdges.length ? openEdges.map((i) => i.detail).join("; ") : "sealed",
+    true,
+  );
+  for (const issue of boundary.issues.filter((i) => i.severity === "critical")) {
+    if (
+      issue.code === "open-edge" ||
+      issue.code === "missing-edge-wall" ||
+      issue.code === "spawn-in-solid" ||
+      issue.code === "transition-under-wall"
+    ) {
+      // already covered above / ensure FAIL
+      if (!checks.some((c) => c.name === issue.code && !c.ok)) {
+        add(issue.code, false, issue.detail, true);
+      }
+    }
   }
 
   const failed = checks.filter((c) => !c.ok);

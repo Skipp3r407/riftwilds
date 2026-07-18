@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import os from "os";
 import path from "path";
 
 const r2Public = process.env.R2_PUBLIC_URL;
@@ -19,9 +20,41 @@ if (r2Public) {
 
 const isProd = process.env.NODE_ENV === "production";
 
+/** LAN/hostnames used when testing `next dev` from phones or 127.0.0.1. */
+function localDevOrigins(): string[] {
+  const hosts = new Set<string>(["127.0.0.1", "localhost"]);
+  for (const nets of Object.values(os.networkInterfaces())) {
+    for (const net of nets ?? []) {
+      if (net.family === "IPv4" && !net.internal) hosts.add(net.address);
+    }
+  }
+  const extra = process.env.ALLOWED_DEV_ORIGINS?.split(",").map((s) => s.trim()).filter(Boolean);
+  for (const h of extra ?? []) hosts.add(h);
+  return [...hosts];
+}
+
+const cspDirectives = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  // Dev needs ws:/http: for HMR + phone-on-LAN; prod stays tight.
+  isProd ? "connect-src 'self' https: wss:" : "connect-src 'self' http: https: ws: wss:",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "object-src 'none'",
+  // NEVER enable upgrade-insecure-requests on plain HTTP (phone LAN / local IP).
+  // Browsers treat localhost specially; mobile via http://192.168.x.x breaks otherwise.
+  ...(isProd ? ["upgrade-insecure-requests"] : []),
+];
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Phone / 127.0.0.1 access to `next dev` (blocked by default in Next 16).
+  allowedDevOrigins: localDevOrigins(),
   turbopack: {
     root: process.cwd(),
   },
@@ -56,19 +89,7 @@ const nextConfig: NextConfig = {
           : []),
         {
           key: "Content-Security-Policy",
-          value: [
-            "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
-            "style-src 'self' 'unsafe-inline'",
-            "img-src 'self' data: blob: https:",
-            "font-src 'self' data:",
-            "connect-src 'self' https: wss:",
-            "frame-ancestors 'none'",
-            "base-uri 'self'",
-            "form-action 'self'",
-            "object-src 'none'",
-            "upgrade-insecure-requests",
-          ].join("; "),
+          value: cspDirectives.join("; "),
         },
       ],
     },

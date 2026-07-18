@@ -157,6 +157,170 @@
       "sceneId": "StormspirePeaksScene",
       "interactive": true,
       "collision": false,
+      "id": "npc-aeron-cloudstep",
+      "type": "npc",
+      "x": 320,
+      "y": 640,
+      "interactionRadius": 56,
+      "label": "Aeron Cloudstep",
+      "metadata": {
+        "npcId": "aeron-cloudstep",
+        "lines": [
+          "Aeron Cloudstep. Step where the wind has already tested the stone.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "scout"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-engineer-volt",
+      "type": "npc",
+      "x": 576,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Engineer Volt",
+      "metadata": {
+        "npcId": "engineer-volt",
+        "lines": [
+          "Engineer Volt! Don't touch the blue ones unless I say so.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "repair"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-skywarden-ilya",
+      "type": "npc",
+      "x": 704,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Skywarden Ilya",
+      "metadata": {
+        "npcId": "skywarden-ilya",
+        "lines": [
+          "Skywarden Ilya. Air routes are privilege — treat them as such.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-hermit-thane",
+      "type": "npc",
+      "x": 256,
+      "y": 896,
+      "interactionRadius": 56,
+      "label": "Hermit Thane",
+      "metadata": {
+        "npcId": "hermit-thane",
+        "lines": [
+          "Tea first. Forecasts second. I am Thane.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-storm-porter-zee",
+      "type": "npc",
+      "x": 288,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Zee Pack",
+      "metadata": {
+        "npcId": "storm-porter-zee",
+        "lines": [
+          "Hey there — I'm Zee Pack. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-storm-cook-pip2",
+      "type": "npc",
+      "x": 352,
+      "y": 608,
+      "interactionRadius": 56,
+      "label": "Pip Steam",
+      "metadata": {
+        "npcId": "storm-cook-pip2",
+        "lines": [
+          "Hey there — I'm Pip Steam. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-storm-climber-aro",
+      "type": "npc",
+      "x": 448,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Aro Grip",
+      "metadata": {
+        "npcId": "storm-climber-aro",
+        "lines": [
+          "Hey there — I'm Aro Grip. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-storm-guard-nimbus",
+      "type": "npc",
+      "x": 384,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Guard Nimbus",
+      "metadata": {
+        "npcId": "storm-guard-nimbus",
+        "lines": [
+          "Hey there — I'm Guard Nimbus. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "interactive": true,
+      "collision": false,
       "id": "res-stormspire-peaks-lightning-crystal",
       "type": "resource",
       "x": 320,
@@ -267,6 +431,19 @@
         "bossId": "stormspire-titan",
         "arenaRef": "stormspire-peaks-boss"
       }
+    },
+    {
+      "id": "lm-spire",
+      "type": "decoration",
+      "regionId": "stormspire-peaks",
+      "sceneId": "StormspirePeaksScene",
+      "x": 1152,
+      "y": 448,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Storm Spire",
+      "color": 8308991
     }
   ],
   "colliders": [
@@ -309,6 +486,30 @@
       "width": 256,
       "height": 160,
       "kind": "building"
+    },
+    {
+      "id": "cliff-drop-1",
+      "x": 448,
+      "y": 512,
+      "width": 576,
+      "height": 64,
+      "kind": "cliff"
+    },
+    {
+      "id": "wind-hazard",
+      "x": 1088,
+      "y": 320,
+      "width": 192,
+      "height": 128,
+      "kind": "hazard"
+    },
+    {
+      "id": "lm-spire-col",
+      "x": 1152,
+      "y": 448,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -327,6 +528,62 @@
         "x": 3,
         "y": 30,
         "icon": "building"
+      },
+      {
+        "id": "npc-aeron-cloudstep",
+        "label": "Aeron Cloudstep",
+        "x": 10,
+        "y": 20,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-engineer-volt",
+        "label": "Engineer Volt",
+        "x": 18,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-skywarden-ilya",
+        "label": "Skywarden Ilya",
+        "x": 22,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-hermit-thane",
+        "label": "Hermit Thane",
+        "x": 8,
+        "y": 28,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-storm-porter-zee",
+        "label": "Zee Pack",
+        "x": 9,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-storm-cook-pip2",
+        "label": "Pip Steam",
+        "x": 11,
+        "y": 19,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-storm-climber-aro",
+        "label": "Aro Grip",
+        "x": 14,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-storm-guard-nimbus",
+        "label": "Guard Nimbus",
+        "x": 12,
+        "y": 14,
+        "icon": "npc"
       },
       {
         "id": "wp-storm",

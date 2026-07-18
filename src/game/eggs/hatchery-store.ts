@@ -3,16 +3,28 @@ import { pickRarityFromRoll } from "@/game/economy/hatch-odds";
 import {
   applyCareAction,
   applyCareDecay,
+  applyCareGameplayTuning,
   careScore,
   DEFAULT_CARE_STATS,
   derivePetCondition,
+  displayCareStats,
   type CareAction,
   type CareStats,
   type PetCareCondition,
 } from "@/game/creatures/care";
+import {
+  DEFAULT_CARE_PROGRESS,
+  type PetCareProgress,
+} from "@/game/creatures/care-catalog";
 import { LAUNCH_SPECIES, getSpeciesBySlug, pickSpeciesForEgg } from "@/game/creatures/species-catalog";
 import { careBonusFromTraits } from "@/game/creatures/rpg-types";
 import { isFeatureEnabled } from "@/lib/config/feature-flags";
+import {
+  FREE_STARTER_POOL_CAP,
+  PREMIUM_EGG_CREDITS_PRICE,
+} from "@/lib/economy/egg-supply";
+import { getCreditBalance } from "@/lib/credits/ledger";
+import { spendEggPurchase } from "@/lib/credits/sinks";
 import { generatePetBiography } from "@/lib/pets/backstory-generator";
 import type { PetBiography } from "@/lib/pets/lore-types";
 import { assertOwnership } from "@/lib/security/authorization";
@@ -70,6 +82,8 @@ export type HatcheryPet = {
   /** Deterministic personal biography — generated once at hatch, versioned thereafter. */
   biography: PetBiography | null;
   biographyVersion: number;
+  /** Care XP, streaks, journal, inventory — Credits economy progress. */
+  careProgress: PetCareProgress;
 };
 
 /**
@@ -81,6 +95,10 @@ type HatcheryMaps = {
   eggs: Map<string, HatcheryEgg>;
   pets: Map<string, HatcheryPet>;
   claimsByOwner: Map<string, number>;
+  /** Global free starter releases (enforces free pool cap). */
+  freeStarterReleased: number;
+  /** Test-only cap override — null uses FREE_STARTER_POOL_CAP. */
+  freePoolCapOverride: number | null;
 };
 
 const globalForHatchery = globalThis as unknown as {
@@ -93,9 +111,21 @@ function hatcheryMaps(): HatcheryMaps {
       eggs: new Map(),
       pets: new Map(),
       claimsByOwner: new Map(),
+      freeStarterReleased: 0,
+      freePoolCapOverride: null,
     };
+  } else {
+    const maps = globalForHatchery.__riftwildsHatchery;
+    // HMR / older shape — keep existing Maps, add pool fields.
+    if (typeof maps.freeStarterReleased !== "number") maps.freeStarterReleased = 0;
+    if (!("freePoolCapOverride" in maps)) maps.freePoolCapOverride = null;
   }
   return globalForHatchery.__riftwildsHatchery;
+}
+
+function freePoolCap(): number {
+  const override = hatcheryMaps().freePoolCapOverride;
+  return override == null ? FREE_STARTER_POOL_CAP : override;
 }
 
 const eggs = hatcheryMaps().eggs;
@@ -134,6 +164,7 @@ function refreshEggStatus(egg: HatcheryEgg): HatcheryEgg {
 }
 
 function refreshPetCare(pet: HatcheryPet): HatcheryPet {
+  ensurePetCareProgress(pet);
   const elapsedMs = now() - new Date(pet.lastDecayAt).getTime();
   const hours = elapsedMs / (1000 * 60 * 60);
   if (hours > 0.01) {
@@ -147,23 +178,81 @@ function refreshPetCare(pet: HatcheryPet): HatcheryPet {
   return pet;
 }
 
+/** Ensure legacy in-memory pets get care progress scaffolding. */
+export function ensurePetCareProgress(pet: HatcheryPet): PetCareProgress {
+  if (!pet.careProgress) {
+    pet.careProgress = {
+      ...DEFAULT_CARE_PROGRESS,
+      inventory: DEFAULT_CARE_PROGRESS.inventory.map((s) => ({ ...s })),
+      journal: [],
+      titles: [],
+      badges: [],
+      cosmetics: [],
+      cooldowns: {},
+    };
+  }
+  return pet.careProgress;
+}
+
+export function savePet(pet: HatcheryPet): void {
+  pets.set(pet.publicId, pet);
+}
+
 export function eggTypeLabel(type: EggTypeKey): string {
   return EGG_TYPE_LABELS[type];
 }
 
-export function claimStarterEgg(ownerKey: string): HatcheryEgg {
-  if (!isFeatureEnabled("EGG_SYSTEM_ENABLED") && !isFeatureEnabled("STARTER_EGG_CLAIMS_ENABLED")) {
-    throw new Error("EGG_SYSTEM_DISABLED");
-  }
-  const count = claimsByOwner.get(ownerKey) ?? 0;
-  if (count >= 1) {
-    // Recover from forked in-memory instances where the claim counter
-    // survived but the egg Map did not (pre-globalThis demos / HMR).
-    const held = listEggsForOwner(ownerKey).some((e) => e.creationSource === "STARTER_CLAIM");
-    if (held) throw new Error("STARTER_ALREADY_CLAIMED");
-    claimsByOwner.set(ownerKey, 0);
-  }
+export type FreeStarterPoolStatus = {
+  cap: number;
+  released: number;
+  remaining: number;
+  exhausted: boolean;
+};
 
+export type HatcheryOfferStatus = FreeStarterPoolStatus & {
+  canClaimFree: boolean;
+  alreadyClaimedFree: boolean;
+  canBuyPremium: boolean;
+  premiumPriceCredits: number;
+  creditBalance: number;
+};
+
+function ownerHasStarterClaim(ownerKey: string): boolean {
+  // Hatched starters remain in the egg map with creationSource STARTER_CLAIM.
+  return listEggsForOwner(ownerKey).some((e) => e.creationSource === "STARTER_CLAIM");
+}
+
+export function getFreeStarterPoolStatus(): FreeStarterPoolStatus {
+  const released = hatcheryMaps().freeStarterReleased;
+  const cap = freePoolCap();
+  const remaining = Math.max(0, cap - released);
+  return {
+    cap,
+    released,
+    remaining,
+    exhausted: remaining <= 0,
+  };
+}
+
+/** Offer state for hatchery UI — free claim vs premium Credits buy. */
+export function getHatcheryOfferStatus(ownerKey: string): HatcheryOfferStatus {
+  const pool = getFreeStarterPoolStatus();
+  const alreadyClaimedFree = ownerHasStarterClaim(ownerKey);
+  const canClaimFree = !alreadyClaimedFree && !pool.exhausted;
+  return {
+    ...pool,
+    canClaimFree,
+    alreadyClaimedFree,
+    canBuyPremium: !canClaimFree,
+    premiumPriceCredits: PREMIUM_EGG_CREDITS_PRICE,
+    creditBalance: getCreditBalance(ownerKey),
+  };
+}
+
+function createIncubatingEgg(
+  ownerKey: string,
+  creationSource: HatcheryEgg["creationSource"],
+): HatcheryEgg {
   const hatchMs = 30_000; // 30s demo incubation
   const started = new Date();
   const ends = new Date(started.getTime() + hatchMs);
@@ -182,11 +271,129 @@ export function claimStarterEgg(ownerKey: string): HatcheryEgg {
     cosmeticSeed: `cos_${randomUUID().replace(/-/g, "").slice(0, 10)}`,
     generation: 0,
     createdAt: started.toISOString(),
-    creationSource: "STARTER_CLAIM",
+    creationSource,
   };
   eggs.set(publicId, egg);
-  claimsByOwner.set(ownerKey, count + 1);
   return egg;
+}
+
+export function claimStarterEgg(ownerKey: string): HatcheryEgg {
+  if (!isFeatureEnabled("EGG_SYSTEM_ENABLED") && !isFeatureEnabled("STARTER_EGG_CLAIMS_ENABLED")) {
+    throw new Error("EGG_SYSTEM_DISABLED");
+  }
+  const count = claimsByOwner.get(ownerKey) ?? 0;
+  if (count >= 1) {
+    // Recover from forked in-memory instances where the claim counter
+    // survived but the egg Map did not (pre-globalThis demos / HMR).
+    const held = listEggsForOwner(ownerKey).some((e) => e.creationSource === "STARTER_CLAIM");
+    if (held) throw new Error("STARTER_ALREADY_CLAIMED");
+    claimsByOwner.set(ownerKey, 0);
+  }
+
+  const pool = getFreeStarterPoolStatus();
+  if (pool.exhausted) {
+    throw new Error("FREE_POOL_EXHAUSTED");
+  }
+
+  const egg = createIncubatingEgg(ownerKey, "STARTER_CLAIM");
+  claimsByOwner.set(ownerKey, (claimsByOwner.get(ownerKey) ?? 0) + 1);
+  hatcheryMaps().freeStarterReleased += 1;
+  return egg;
+}
+
+export type PremiumEggPurchaseResult =
+  | { ok: true; egg: HatcheryEgg; balance: number; priceCredits: number }
+  | {
+      ok: false;
+      error:
+        | "EGG_SYSTEM_DISABLED"
+        | "FREE_CLAIM_STILL_AVAILABLE"
+        | "insufficient_credits"
+        | "invalid_amount"
+        | "purchase_failed";
+      message: string;
+      balance?: number;
+      priceCredits: number;
+    };
+
+/**
+ * Buy a Common Rift Egg with Credits when free claim is unavailable.
+ * Debits ledger first, then grants egg (creationSource SHOP). Never SOL.
+ */
+export function purchasePremiumEgg(
+  ownerKey: string,
+  opts?: { requestId?: string },
+): PremiumEggPurchaseResult {
+  const priceCredits = PREMIUM_EGG_CREDITS_PRICE;
+  if (!isFeatureEnabled("EGG_SYSTEM_ENABLED") && !isFeatureEnabled("STARTER_EGG_CLAIMS_ENABLED")) {
+    return {
+      ok: false,
+      error: "EGG_SYSTEM_DISABLED",
+      message: "Egg system is disabled",
+      priceCredits,
+    };
+  }
+
+  const offer = getHatcheryOfferStatus(ownerKey);
+  if (offer.canClaimFree) {
+    return {
+      ok: false,
+      error: "FREE_CLAIM_STILL_AVAILABLE",
+      message: "Claim your free starter egg before buying a premium egg",
+      balance: offer.creditBalance,
+      priceCredits,
+    };
+  }
+
+  const requestId =
+    opts?.requestId ?? `egg-purchase:${ownerKey}:${randomUUID().replace(/-/g, "").slice(0, 12)}`;
+  const spend = spendEggPurchase({
+    userId: ownerKey,
+    amount: priceCredits,
+    requestId,
+  });
+  if (!spend.ok) {
+    return {
+      ok: false,
+      error: spend.error === "insufficient_credits" ? "insufficient_credits" : "purchase_failed",
+      message: spend.message,
+      balance: spend.balance ?? getCreditBalance(ownerKey),
+      priceCredits,
+    };
+  }
+
+  const egg = createIncubatingEgg(ownerKey, "SHOP");
+  // Attach egg id on replay-safe metadata path — spend already committed.
+  return {
+    ok: true,
+    egg,
+    balance: spend.balance,
+    priceCredits,
+  };
+}
+
+/** Test helper — set free starter releases (does not wipe eggs). */
+export function setFreeStarterReleasedForTests(released: number): void {
+  hatcheryMaps().freeStarterReleased = Math.max(0, Math.floor(released));
+}
+
+/**
+ * Test helper — override free pool cap (use a tiny cap so exhaustion tests
+ * do not block concurrent suites that still claim free eggs).
+ * Pass `null` to restore FREE_STARTER_POOL_CAP.
+ */
+export function setFreeStarterPoolCapForTests(cap: number | null): void {
+  hatcheryMaps().freePoolCapOverride =
+    cap == null ? null : Math.max(0, Math.floor(cap));
+}
+
+/** Test helper — wipe in-memory hatchery maps + free pool counter. */
+export function resetHatcheryStoreForTests(): void {
+  hatcheryMaps().eggs.clear();
+  hatcheryMaps().pets.clear();
+  hatcheryMaps().claimsByOwner.clear();
+  hatcheryMaps().freeStarterReleased = 0;
+  hatcheryMaps().freePoolCapOverride = null;
 }
 
 export function listEggsForOwner(ownerKey: string): HatcheryEgg[] {
@@ -317,6 +524,15 @@ export function hatchEgg(
     ],
     biography,
     biographyVersion: biography?.version ?? 0,
+    careProgress: {
+      ...DEFAULT_CARE_PROGRESS,
+      inventory: DEFAULT_CARE_PROGRESS.inventory.map((s) => ({ ...s })),
+      journal: [],
+      titles: [],
+      badges: [],
+      cosmetics: [],
+      cooldowns: {},
+    },
   };
   egg.hatchStatus = "HATCHED";
   eggs.set(egg.publicId, egg);
@@ -346,6 +562,10 @@ export function hatchEgg(
   };
 }
 
+/**
+ * Low-level care apply (no Credits). Prefer `performCareAction` from care-service
+ * for player-facing care so Credits debit through the ledger first.
+ */
 export function careForPet(
   ownerKey: string,
   petPublicId: string,
@@ -357,32 +577,46 @@ export function careForPet(
   const pet = getPet(petPublicId);
   if (!pet) throw new Error("PET_NOT_FOUND");
   assertOwnership(pet.ownerKey, ownerKey);
-  pet.care = applyCareAction(pet.care, action);
+  ensurePetCareProgress(pet);
+  const before = { ...pet.care };
+  let next = applyCareAction(before, action);
+  next = applyCareGameplayTuning(before, next, action);
   const species = getSpeciesBySlug(pet.speciesSlug);
   if (species) {
     const clamp = (n: number) => Math.min(100, Math.max(0, n));
     const bonus = { happiness: 0, bond: 0, energy: 0, health: 0 };
-    if (action === "PLAY" || action === "ENCOURAGE") {
+    if (
+      action === "PLAY" ||
+      action === "ENCOURAGE" ||
+      action === "PET" ||
+      action === "SOCIALIZE"
+    ) {
       bonus.happiness = careBonusFromTraits(species.traits, "happiness");
       bonus.bond = careBonusFromTraits(species.traits, "bond");
     }
-    if (action === "FEED") {
+    if (action === "FEED" || action === "COOK_MEAL" || action === "TREAT") {
       bonus.bond = Math.max(bonus.bond, Math.floor(careBonusFromTraits(species.traits, "bond") / 2));
     }
-    if (action === "REST") {
+    if (action === "REST" || action === "SLEEP") {
       bonus.energy = careBonusFromTraits(species.traits, "energy");
     }
-    if (action === "HEAL" || action === "MEDICINE" || action === "RECOVERY_CENTER") {
+    if (
+      action === "HEAL" ||
+      action === "MEDICINE" ||
+      action === "VET" ||
+      action === "RECOVERY_CENTER"
+    ) {
       bonus.health = careBonusFromTraits(species.traits, "health");
     }
-    pet.care = {
-      ...pet.care,
-      happiness: clamp(pet.care.happiness + bonus.happiness),
-      bond: clamp(pet.care.bond + bonus.bond),
-      energy: clamp(pet.care.energy + bonus.energy),
-      health: clamp(pet.care.health + bonus.health),
+    next = {
+      ...next,
+      happiness: clamp(next.happiness + bonus.happiness),
+      bond: clamp(next.bond + bonus.bond),
+      energy: clamp(next.energy + bonus.energy),
+      health: clamp(next.health + bonus.health),
     };
   }
+  pet.care = next;
   pet.condition = derivePetCondition(
     pet.care,
     isFeatureEnabled("PERMANENT_DEATH_ENABLED"),
@@ -400,12 +634,18 @@ export function careForPet(
 }
 
 export function petCareSummary(pet: HatcheryPet) {
+  const progress = ensurePetCareProgress(pet);
   return {
     publicId: pet.publicId,
     name: pet.name,
     condition: pet.condition,
     careScore: careScore(pet.care),
-    stats: pet.care,
+    stats: displayCareStats(pet.care),
+    careXp: progress.careXp,
+    careLevel: progress.careLevel,
+    careStreak: progress.careStreak,
+    titles: progress.titles,
+    badges: progress.badges,
     rewardEligibleHint:
       pet.condition === "HEALTHY" || pet.condition === "TIRED" || pet.condition === "UNHAPPY",
   };

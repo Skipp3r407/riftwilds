@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-07-18",
+  "tooling": "Cursor GenerateImage (Grok image)",
+  "policy": "Original IP, family-friendly, cosmetic-only — no combat/economy symbolism",
+  "roots": {
+    "icons": "/assets/game/emotes/icons/",
+    "previews": "/assets/game/emotes/previews/",
+    "audio": "/assets/game/emotes/audio/",
+    "poses": "/assets/game/emotes/poses/"
+  },
+  "poseSheets": [
+    {
+      "file": "poses/pose-sheet.png",
+      "description": "Keeper pose reference: wave, cheer, bow, dance"
+    }
+  ],
+  "assets": [
+    { "key": "wave", "icon": "icons/wave.png", "preview": "previews/wave.png", "audioStub": "audio/wave.ogg" },
+    { "key": "hello", "icon": "icons/hello.png", "preview": "previews/hello.png", "audioStub": "audio/hello.ogg" },
+    { "key": "nod", "icon": "icons/nod.png", "preview": "previews/nod.png", "audioStub": "audio/nod.ogg" },
+    { "key": "bow", "icon": "icons/bow.png", "preview": "previews/bow.png", "audioStub": "audio/bow.ogg" },
+    { "key": "cheer", "icon": "icons/cheer.png", "preview": "previews/cheer.png", "audioStub": "audio/cheer.ogg" },
+    { "key": "clap", "icon": "icons/clap.png", "preview": "previews/clap.png", "audioStub": "audio/clap.ogg" },
+    { "key": "laugh", "icon": "icons/laugh.png", "preview": "previews/laugh.png", "audioStub": "audio/laugh.ogg" },
+    { "key": "shrug", "icon": "icons/shrug.png", "preview": "previews/shrug.png", "audioStub": "audio/shrug.ogg" },
+    { "key": "think", "icon": "icons/think.png", "preview": "previews/think.png", "audioStub": "audio/think.ogg" },
+    { "key": "salute", "icon": "icons/salute.png", "preview": "previews/salute.png", "audioStub": "audio/salute.ogg" },
+    { "key": "point", "icon": "icons/point.png", "preview": "previews/point.png", "audioStub": "audio/point.ogg" },
+    { "key": "sit", "icon": "icons/sit.png", "preview": "previews/sit.png", "audioStub": "audio/sit.ogg" },
+    { "key": "dance", "icon": "icons/dance.png", "preview": "previews/dance.png", "audioStub": "audio/dance.ogg" },
+    { "key": "celebrate", "icon": "icons/celebrate.png", "preview": "previews/celebrate.png", "audioStub": "audio/celebrate.ogg" },
+    { "key": "ready", "icon": "icons/ready.png", "preview": "previews/ready.png", "audioStub": "audio/ready.ogg" },
+    { "key": "not_ready", "icon": "icons/not_ready.png", "preview": "previews/not_ready.png", "audioStub": "audio/not_ready.ogg" },
+    { "key": "thanks", "icon": "icons/thanks.png", "preview": "previews/thanks.png", "audioStub": "audio/thanks.ogg" },
+    { "key": "sorry", "icon": "icons/sorry.png", "preview": "previews/sorry.png", "audioStub": "audio/sorry.ogg" },
+    { "key": "ping_follow", "icon": "icons/ping_follow.png", "preview": "previews/ping_follow.png", "audioStub": "audio/ping_follow.ogg" },
+    { "key": "ping_help", "icon": "icons/ping_help.png", "preview": "previews/ping_help.png", "audioStub": "audio/ping_help.ogg" },
+    { "key": "ping_look", "icon": "icons/ping_look.png", "preview": "previews/ping_look.png", "audioStub": "audio/ping_look.ogg" },
+    { "key": "ping_danger", "icon": "icons/ping_danger.png", "preview": "previews/ping_danger.png", "audioStub": "audio/ping_danger.ogg" },
+    { "key": "handshake", "icon": "icons/handshake.png", "preview": "previews/handshake.png", "audioStub": "audio/handshake.ogg" },
+    { "key": "high_five", "icon": "icons/high_five.png", "preview": "previews/high_five.png", "audioStub": "audio/high_five.ogg" },
+    { "key": "hug", "icon": "icons/hug.png", "preview": "previews/hug.png", "audioStub": "audio/hug.ogg" },
+    { "key": "fist_bump", "icon": "icons/fist_bump.png", "preview": "previews/fist_bump.png", "audioStub": "audio/fist_bump.ogg" },
+    { "key": "sync_dance", "icon": "icons/sync_dance.png", "preview": "previews/sync_dance.png", "audioStub": "audio/sync_dance.ogg" },
+    { "key": "rift_spark", "icon": "icons/rift_spark.png", "preview": "previews/rift_spark.png", "audioStub": "audio/rift_spark.ogg" },
+    { "key": "bloom_twirl", "icon": "icons/bloom_twirl.png", "preview": "previews/bloom_twirl.png", "audioStub": "audio/bloom_twirl.ogg" },
+    { "key": "keeper_flourish", "icon": "icons/keeper_flourish.png", "preview": "previews/keeper_flourish.png", "audioStub": "audio/keeper_flourish.ogg" }
+  ],
+  "notes": [
+    "Audio files are empty stubs — replace with authored one-shots.",
+    "Icons/previews currently share the same generated art; refine previews later if needed.",
+    "Glyph fallbacks in UI cover missing images."
+  ]
+}

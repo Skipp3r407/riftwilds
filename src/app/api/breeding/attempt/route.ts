@@ -5,9 +5,12 @@ import { featureFlagDefaults, isFeatureEnabled } from "@/lib/config/feature-flag
 import {
   evaluateBreedingEligibility,
   splitBreedingFee,
+  breedingFeeCreditsForUseIndex,
   BREEDING_RULES,
 } from "@/lib/economy/breeding-rules";
 import { lamportsToSolString } from "@/lib/items/lamports";
+import { settleDebit, settleEnsureStarter } from "@/lib/economy/core/settlement";
+import { getSessionContext } from "@/lib/auth/session";
 
 const schema = z.object({
   parentAId: z.string().min(2),
@@ -23,18 +26,21 @@ const schema = z.object({
   lastBredAtA: z.string().nullable(),
   lastBredAtB: z.string().nullable(),
   requestId: z.string().min(8).max(128).optional(),
+  demoUser: z.string().min(2).max(80).optional(),
+  /** When true, debit Credits and record a committed attempt (still no rarity guarantee). */
+  commit: z.boolean().optional().default(true),
 });
 
 /**
- * Breeding attempt shell — enforces rules, never guarantees rarity,
- * does not mint eggs or charge SOL while flags are off.
+ * Breeding attempt — Credits fee is the play path. SOL never required.
+ * Egg mint persistence remains a follow-up (BreedingRecord / EggSupplyCounter).
  */
 export async function POST(req: Request) {
   if (!isFeatureEnabled("BREEDING_ENABLED")) {
     return NextResponse.json(
       {
         error: "BREEDING_DISABLED",
-        hint: "Set BREEDING_ENABLED=true after rules review. Fee settlement still needs SOL_PURCHASES_ENABLED.",
+        hint: "Set BREEDING_ENABLED=true after rules review.",
       },
       { status: 403 },
     );
@@ -81,17 +87,53 @@ export async function POST(req: Request) {
     );
   }
 
+  const useIndex = Math.max(d.usesConsumedA, d.usesConsumedB);
   const feeLamports = a.nextFeeLamports > b.nextFeeLamports ? a.nextFeeLamports : b.nextFeeLamports;
+  const feeCredits = breedingFeeCreditsForUseIndex(useIndex);
   const split = splitBreedingFee(feeLamports);
   const requestId = d.requestId ?? `breed_${randomUUID()}`;
   const offspringGeneration = Math.max(1, 2);
 
+  const session = await getSessionContext();
+  const userId = session?.userId ?? d.demoUser ?? "demo-keeper";
+
+  let creditsSettlement: { ok: true; balance?: number; feeCredits: number } | { ok: false; message: string } | null =
+    null;
+
+  if (d.commit) {
+    settleEnsureStarter(userId);
+    const debit = settleDebit({
+      userId,
+      amount: feeCredits,
+      reason: "BREEDING_FEE",
+      requestId,
+      metadata: {
+        parentAId: d.parentAId,
+        parentBId: d.parentBId,
+        useIndex,
+      },
+    });
+    if (!debit.ok) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: debit.error,
+          message: debit.message,
+          feeCredits,
+        },
+        { status: 400 },
+      );
+    }
+    creditsSettlement = { ok: true, balance: debit.balance, feeCredits };
+  }
+
   return NextResponse.json({
     ok: true,
-    status: "PREVIEW_ONLY",
+    status: d.commit ? "CREDITS_COMMITTED" : "PREVIEW_ONLY",
     requestId,
     offspringGeneration,
     rarityGuaranteed: false,
+    feeCredits,
     feeSol: lamportsToSolString(feeLamports),
     feeLamports: feeLamports.toString(),
     feeSplit: {
@@ -100,12 +142,12 @@ export async function POST(req: Request) {
       development: split.development.toString(),
       communityEvents: split.communityEvents.toString(),
     },
-    solSettlement:
-      featureFlagDefaults.SOL_PURCHASES_ENABLED
-        ? "SOL path selected but on-chain breeding escrow is not implemented"
-        : "SOL settlement off — no charge applied",
+    creditsSettlement,
+    solSettlement: featureFlagDefaults.SOL_PURCHASES_ENABLED
+      ? "SOL path selected but on-chain breeding escrow is not implemented — Credits charged instead"
+      : "SOL settlement off — Credits is the play path",
     eggMinted: false,
     disclosures: BREEDING_RULES.disclosures,
-    note: "Rules passed. Egg mint + fee ledger persist when breeding persistence is wired to Prisma BreedingRecord / EggSupplyCounter.",
+    note: "Credits fee applied when commit=true. Egg mint + Prisma BreedingRecord wiring is backlog; rarity never guaranteed.",
   });
 }

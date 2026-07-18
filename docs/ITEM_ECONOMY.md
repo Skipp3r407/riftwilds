@@ -1,5 +1,7 @@
 # Riftwilds Item & SOL Economy — Architecture
 
+> Live equip loop, ownership APIs, world layers, and presets: see [`EQUIPMENT_AND_LOADOUTS.md`](./EQUIPMENT_AND_LOADOUTS.md).
+
 ## Compliance boundaries
 
 - Purchases are **digital entertainment products**, not investments.

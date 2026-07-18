@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils/cn";
@@ -81,9 +82,11 @@ type Props = {
   biography: BiographyPayload | null;
   speciesLore: SpeciesLorePayload | null;
   memories: Memory[];
+  /** Full encyclopedia tabs, or a shorter Story-focused set for the pet page. */
+  mode?: "full" | "story";
 };
 
-const TABS = [
+const FULL_TABS = [
   "Overview",
   "Personal Story",
   "Species Lore",
@@ -95,7 +98,15 @@ const TABS = [
   "Mysteries",
 ] as const;
 
-type Tab = (typeof TABS)[number];
+const STORY_TABS = [
+  "Personal Story",
+  "Species Lore",
+  "Memories",
+  "Relationships",
+  "Mysteries",
+] as const;
+
+type Tab = (typeof FULL_TABS)[number];
 
 function Fact({ label, value }: { label: string; value: string }) {
   return (
@@ -113,13 +124,15 @@ export function PetBiographyPanel({
   biography,
   speciesLore,
   memories,
+  mode = "full",
 }: Props) {
-  const [tab, setTab] = useState<Tab>("Overview");
+  const tabs = mode === "story" ? STORY_TABS : FULL_TABS;
+  const [tab, setTab] = useState<Tab>(mode === "story" ? "Personal Story" : "Overview");
 
   if (!biography && !speciesLore) {
     return (
       <section className="panel p-6">
-        <h2 className="font-display text-lg text-white">Biography</h2>
+        <h2 className="font-display text-lg text-white">Story & lore</h2>
         <p className="mt-2 text-sm text-[var(--text-muted)]">
           Pet lore is disabled or not yet generated for this companion.
         </p>
@@ -128,10 +141,12 @@ export function PetBiographyPanel({
   }
 
   return (
-    <section className="panel p-6">
+    <section className="panel p-5 sm:p-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="font-display text-lg text-white">Biography</h2>
+          <h2 className="font-display text-lg text-white">
+            {mode === "story" ? "Story & lore" : "Biography"}
+          </h2>
           <p className="mt-1 text-xs text-[var(--text-muted)]">
             {biography?.title ?? speciesLore?.title ?? petName}
             {biography ? ` · v${biography.version}` : null}
@@ -146,14 +161,20 @@ export function PetBiographyPanel({
         </Link>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-1.5">
-        {TABS.map((t) => (
+      <div
+        className="mt-4 flex flex-wrap gap-1.5"
+        role="tablist"
+        aria-label={mode === "story" ? "Story sections" : "Biography sections"}
+      >
+        {tabs.map((t) => (
           <button
             key={t}
             type="button"
+            role="tab"
+            aria-selected={tab === t}
             onClick={() => setTab(t)}
             className={cn(
-              "rounded-md border px-2.5 py-1 text-[11px] uppercase tracking-wider transition",
+              "focus-ring rounded-md border px-2.5 py-1 text-[11px] uppercase tracking-wider transition",
               tab === t
                 ? "border-[var(--cyan)] bg-[rgba(56,189,248,0.12)] text-white"
                 : "border-[var(--stroke)] text-[var(--text-muted)] hover:text-white",
@@ -197,6 +218,10 @@ export function PetBiographyPanel({
           </>
         ) : null}
 
+        {tab === "Personal Story" && !biography && speciesLore ? (
+          <p className="leading-relaxed text-white/90">{speciesLore.standardBio}</p>
+        ) : null}
+
         {tab === "Species Lore" && speciesLore ? (
           <>
             <p className="text-xs uppercase tracking-wider text-[var(--mint)]">
@@ -220,18 +245,30 @@ export function PetBiographyPanel({
         ) : null}
 
         {tab === "Memories" ? (
-          <ul className="space-y-2">
-            {memories.map((m) => (
-              <li key={`${m.kind}-${m.at}`} className="panel-inset px-3 py-2">
-                <span className="text-white">{m.label}</span>
-                <span className="ml-2 text-xs">{new Date(m.at).toLocaleString()}</span>
-                {m.narrative ? (
-                  <p className="mt-1 text-xs leading-relaxed">{m.narrative}</p>
-                ) : null}
-              </li>
-            ))}
-            {!memories.length ? <li>No verified memories yet.</li> : null}
-          </ul>
+          memories.length ? (
+            <ul className="space-y-2">
+              {memories.map((m) => (
+                <li key={`${m.kind}-${m.at}`} className="panel-inset px-3 py-2">
+                  <span className="text-white">{m.label}</span>
+                  <span className="ml-2 text-xs">{new Date(m.at).toLocaleString()}</span>
+                  {m.narrative ? (
+                    <p className="mt-1 text-xs leading-relaxed">{m.narrative}</p>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="flex flex-col items-center gap-3 py-6 text-center">
+              <Image
+                src="/assets/ui/pets/empty-memories.svg"
+                alt=""
+                width={120}
+                height={96}
+                className="opacity-80"
+              />
+              <p>No verified memories yet — care for this Riftling to write the next chapter.</p>
+            </div>
+          )
         ) : null}
 
         {tab === "Family" ? (
@@ -263,6 +300,10 @@ export function PetBiographyPanel({
           </div>
         ) : null}
 
+        {tab === "Relationships" && !biography ? (
+          <p>Relationship details unlock when a personal biography is generated.</p>
+        ) : null}
+
         {tab === "Achievements" ? (
           <p>
             Story achievements unlock from verified gameplay (battles, care milestones, region
@@ -289,6 +330,10 @@ export function PetBiographyPanel({
               ))}
             </ul>
           </>
+        ) : null}
+
+        {tab === "Mysteries" && !biography ? (
+          <p>Mystery threads appear when a personal biography is generated.</p>
         ) : null}
       </div>
     </section>

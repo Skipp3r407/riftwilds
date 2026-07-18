@@ -2,9 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Hero } from "@/components/marketing/hero";
 import { LiveStatus } from "@/components/marketing/live-status";
+import { CommercialShowcase } from "@/components/marketing/commercial-showcase";
+import { HatchOddsPanel } from "@/components/marketing/hatch-odds-panel";
 import { EconomySummary } from "@/components/economy";
 import { EveryPurchaseSection } from "@/components/revenue";
-import { projectConfig, hatchOddsDefault } from "@/lib/config/project";
+import { projectConfig } from "@/lib/config/project";
 import { getActivePolicy, bpsToPercentLabel } from "@/lib/revenue/policies";
 
 const howItWorks = [
@@ -90,12 +92,12 @@ const faq = [
 
 export default function HomePage() {
   const shop = getActivePolicy("SHOP_PURCHASE");
-  const odds = Object.entries(hatchOddsDefault);
 
   return (
     <>
       <Hero />
       <LiveStatus />
+      <CommercialShowcase />
 
       {/* Claim egg — primary conversion block */}
       <section id="claim" className="mx-auto max-w-7xl px-4 py-16 md:px-6">
@@ -150,7 +152,7 @@ export default function HomePage() {
               <li key={item.step}>
                 <Link
                   href={item.href}
-                  className="panel block h-full p-5 transition hover:border-[rgba(61,231,255,0.4)]"
+                  className="panel panel-interactive block h-full p-5 focus-ring"
                 >
                   <p className="font-display text-4xl text-[var(--cyan)]">{item.step}</p>
                   <h3 className="font-display mt-3 text-xl text-white">{item.title}</h3>
@@ -169,16 +171,7 @@ export default function HomePage() {
           Fixed odds shown before you hatch. Rarity is for collection and cosmetics — Arena ranked
           play normalizes equipment power.
         </p>
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
-          {odds.map(([rarity, pct]) => (
-            <div key={rarity} className="panel p-4 text-center">
-              <p className="font-display text-xs uppercase tracking-wider text-[var(--cyan)]">
-                {rarity}
-              </p>
-              <p className="font-display mt-2 text-2xl text-white">{pct}%</p>
-            </div>
-          ))}
-        </div>
+        <HatchOddsPanel />
         <Link href="/fairness" className="mt-6 inline-block text-sm text-[var(--cyan)] underline">
           Fairness & hatch model →
         </Link>
@@ -224,7 +217,7 @@ export default function HomePage() {
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <Link
             href="/arena"
-            className="panel block p-6 transition hover:border-[rgba(61,231,255,0.35)]"
+            className="panel panel-interactive block p-6 focus-ring"
           >
             <p className="font-display text-xs uppercase tracking-[0.2em] text-[var(--cyan)]">
               Arena
@@ -236,7 +229,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/shop"
-            className="panel block p-6 transition hover:border-[rgba(61,231,255,0.35)]"
+            className="panel panel-interactive block p-6 focus-ring"
           >
             <p className="font-display text-xs uppercase tracking-[0.2em] text-[var(--amber)]">
               Shop
@@ -248,7 +241,7 @@ export default function HomePage() {
           </Link>
           <Link
             href="/economy"
-            className="panel block p-6 transition hover:border-[rgba(61,231,255,0.35)]"
+            className="panel panel-interactive block p-6 focus-ring"
           >
             <p className="font-display text-xs uppercase tracking-[0.2em] text-[var(--emerald)]">
               Economy

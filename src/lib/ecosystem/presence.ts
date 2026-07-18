@@ -40,7 +40,7 @@ export function getLivePresenceSnapshot(): LivePresenceSnapshot {
   return {
     globalOnline: null,
     availability: "stub",
-    note: "Online counts stay null until the Live World multiplayer service reports presence. UI shows structure only — no fabricated player counts.",
+    note: "Online counts stay null until the Live World multiplayer service reports presence. UI shows structure only — no fabricated player counts. Social Presence XP / Town Featured titles live under /api/social-presence (meaningful activity only; never SOL).",
     regions: REGION_SEEDS.map((r) => ({
       regionSlug: r.slug,
       regionName: r.name,

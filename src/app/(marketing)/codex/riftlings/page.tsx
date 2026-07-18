@@ -14,7 +14,12 @@ export default function RiftlingCodexPage() {
       <SectionTitleBand slug="creatures" label="Riftling Codex" kicker="Encyclopedia" />
       <p className="mt-3 max-w-2xl text-sm text-[var(--text-muted)]">
         {loreList.length} launch species with short, standard, and full lore entries. Personal pet
-        biographies are generated at hatch and live on each companion’s profile.
+        biographies are generated at hatch and live on each companion’s profile. World history and
+        Gateway lore:{" "}
+        <Link href="/codex/world" className="text-[var(--cyan)] underline-offset-2 hover:underline">
+          World Codex
+        </Link>
+        .
       </p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,12 +29,14 @@ export default function RiftlingCodexPage() {
             href={`/codex/riftlings/${lore.slug}`}
             className="panel group overflow-hidden p-4 transition hover:border-[var(--cyan)]/50"
           >
-            <div className="relative mb-3 flex aspect-[4/3] items-center justify-center rounded-xl bg-[rgba(7,11,22,0.55)]">
+            <div className="relative z-[1] mb-3 aspect-[4/3] overflow-hidden rounded-xl bg-[radial-gradient(circle_at_50%_42%,rgba(90,110,150,0.38),rgba(14,18,32,0.92)_72%)] ring-1 ring-[rgba(148,197,255,0.14)]">
               <GameImage
                 src={creatureProfilePath(lore.slug)}
                 alt={`${lore.name} artwork`}
-                width={220}
-                height={180}
+                width={384}
+                height={288}
+                fill
+                loading="eager"
                 fallbackSrc={creatureIconPath(lore.slug, true)}
                 showDevBadge={false}
               />

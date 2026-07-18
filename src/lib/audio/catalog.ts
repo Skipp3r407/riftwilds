@@ -1,0 +1,271 @@
+import type { AudioBus, TerrainFootstep } from "@/lib/audio/types";
+
+/** Region exploration themes — reuse CC0 tracks under /sounds/music/. */
+export const REGION_MUSIC: Record<string, { src: string; label: string }> = {
+  "riftwild-commons": { src: "/sounds/music/sector.mp3", label: "Commons — Sector" },
+  "ember-crater": { src: "/sounds/music/urgent.mp3", label: "Ember — Urgent" },
+  "moonwater-coast": { src: "/sounds/music/airy.mp3", label: "Coast — Airy" },
+  "elderwood-forest": { src: "/sounds/music/magic-space.mp3", label: "Elderwood — Magic Space" },
+  "stormspire-peaks": { src: "/sounds/music/pulse.mp3", label: "Stormspire — Pulse" },
+  "stoneheart-canyon": { src: "/sounds/music/transmission.mp3", label: "Stoneheart — Transmission" },
+  "frostveil-basin": { src: "/sounds/music/space-graveyard.mp3", label: "Frostveil — Space Graveyard" },
+  "radiant-citadel": { src: "/sounds/music/sirens-in-darkness.mp3", label: "Radiant — Sirens" },
+  "void-hollow": { src: "/sounds/music/dark-things.mp3", label: "Void — Dark Things" },
+  "alloy-ruins": { src: "/sounds/music/menacing-otherworld.mp3", label: "Alloy — Menacing Otherworld" },
+  "spirit-marsh": { src: "/sounds/music/magic-space.mp3", label: "Spirit — Magic Space" },
+  "celestial-rift": { src: "/sounds/music/sirens-in-darkness.mp3", label: "Celestial — Sirens" },
+  menu: { src: "/sounds/music/magic-space.mp3", label: "Menu — Magic Space" },
+};
+
+export type AmbientLayerRecipe = {
+  /** Soft drone fundamental (Hz). */
+  droneHz: number;
+  droneType: OscillatorType;
+  droneGain: number;
+  /** Optional shimmer / wind noise amount 0–1. */
+  noiseGain: number;
+  noiseFilterHz: number;
+  /** Second pad interval (Hz offset or absolute). */
+  padHz?: number;
+  padGain?: number;
+  /** LFO rate for gentle motion. */
+  lfoHz?: number;
+  /** Color hint for docs / QA. */
+  mood: string;
+};
+
+export const REGION_AMBIENT: Record<string, AmbientLayerRecipe> = {
+  "riftwild-commons": {
+    droneHz: 110,
+    droneType: "sine",
+    droneGain: 0.06,
+    noiseGain: 0.02,
+    noiseFilterHz: 800,
+    padHz: 165,
+    padGain: 0.03,
+    lfoHz: 0.08,
+    mood: "soft plaza magic",
+  },
+  "ember-crater": {
+    droneHz: 70,
+    droneType: "sawtooth",
+    droneGain: 0.04,
+    noiseGain: 0.05,
+    noiseFilterHz: 400,
+    padHz: 105,
+    padGain: 0.025,
+    lfoHz: 0.12,
+    mood: "low lava rumble",
+  },
+  "moonwater-coast": {
+    droneHz: 98,
+    droneType: "sine",
+    droneGain: 0.05,
+    noiseGain: 0.06,
+    noiseFilterHz: 1200,
+    padHz: 147,
+    padGain: 0.03,
+    lfoHz: 0.15,
+    mood: "surf wash + tide",
+  },
+  "elderwood-forest": {
+    droneHz: 130,
+    droneType: "triangle",
+    droneGain: 0.055,
+    noiseGain: 0.025,
+    noiseFilterHz: 900,
+    padHz: 196,
+    padGain: 0.035,
+    lfoHz: 0.06,
+    mood: "leaf canopy hush",
+  },
+  "stormspire-peaks": {
+    droneHz: 85,
+    droneType: "triangle",
+    droneGain: 0.045,
+    noiseGain: 0.07,
+    noiseFilterHz: 2000,
+    padHz: 255,
+    padGain: 0.02,
+    lfoHz: 0.25,
+    mood: "wind + distant thunder",
+  },
+  "stoneheart-canyon": {
+    droneHz: 65,
+    droneType: "sine",
+    droneGain: 0.06,
+    noiseGain: 0.015,
+    noiseFilterHz: 500,
+    padHz: 98,
+    padGain: 0.028,
+    lfoHz: 0.05,
+    mood: "stone echo hollow",
+  },
+  "frostveil-basin": {
+    droneHz: 140,
+    droneType: "sine",
+    droneGain: 0.05,
+    noiseGain: 0.04,
+    noiseFilterHz: 2800,
+    padHz: 280,
+    padGain: 0.03,
+    lfoHz: 0.07,
+    mood: "crystalline cold",
+  },
+  "radiant-citadel": {
+    droneHz: 174,
+    droneType: "sine",
+    droneGain: 0.05,
+    noiseGain: 0.015,
+    noiseFilterHz: 1800,
+    padHz: 261,
+    padGain: 0.04,
+    lfoHz: 0.09,
+    mood: "temple light choir",
+  },
+  "void-hollow": {
+    droneHz: 55,
+    droneType: "sawtooth",
+    droneGain: 0.035,
+    noiseGain: 0.045,
+    noiseFilterHz: 350,
+    padHz: 82,
+    padGain: 0.02,
+    lfoHz: 0.04,
+    mood: "uneasy void pulse",
+  },
+  "alloy-ruins": {
+    droneHz: 90,
+    droneType: "square",
+    droneGain: 0.03,
+    noiseGain: 0.035,
+    noiseFilterHz: 1500,
+    padHz: 180,
+    padGain: 0.02,
+    lfoHz: 0.18,
+    mood: "machine hum",
+  },
+  "spirit-marsh": {
+    droneHz: 120,
+    droneType: "triangle",
+    droneGain: 0.05,
+    noiseGain: 0.03,
+    noiseFilterHz: 700,
+    padHz: 240,
+    padGain: 0.035,
+    lfoHz: 0.1,
+    mood: "lantern mist",
+  },
+  "celestial-rift": {
+    droneHz: 200,
+    droneType: "sine",
+    droneGain: 0.045,
+    noiseGain: 0.025,
+    noiseFilterHz: 3200,
+    padHz: 400,
+    padGain: 0.035,
+    lfoHz: 0.11,
+    mood: "starfield shimmer",
+  },
+  // Marketing / hub return bed — noise-led only (no audible sine hum).
+  menu: {
+    droneHz: 98,
+    droneType: "sine",
+    droneGain: 0.004,
+    noiseGain: 0.018,
+    noiseFilterHz: 900,
+    padHz: 147,
+    padGain: 0.006,
+    lfoHz: 0.05,
+    mood: "soft magical menu (no drone hum)",
+  },
+};
+
+/** Map terrain cell kinds → footstep surface. */
+export const TERRAIN_FOOTSTEP: Record<string, TerrainFootstep> = {
+  ground: "grass",
+  path: "path",
+  safe: "path",
+  accent: "grass",
+  settlement: "stone",
+  water: "water",
+  lava: "lava",
+  cliff: "stone",
+  hazard: "stone",
+  danger: "grass",
+};
+
+/** Region bias when terrain is generic ground. */
+export const REGION_FOOTSTEP_BIAS: Record<string, TerrainFootstep> = {
+  "riftwild-commons": "grass",
+  "ember-crater": "stone",
+  "moonwater-coast": "sand",
+  "elderwood-forest": "grass",
+  "stormspire-peaks": "stone",
+  "stoneheart-canyon": "stone",
+  "frostveil-basin": "snow",
+  "radiant-citadel": "stone",
+  "void-hollow": "void",
+  "alloy-ruins": "metal",
+  "spirit-marsh": "wood",
+  "celestial-rift": "void",
+};
+
+export type SfxCategory = AudioBus;
+
+export const EVENT_BUS: Record<string, SfxCategory> = {
+  "ui.click": "ui",
+  "ui.modal_open": "ui",
+  "ui.modal_close": "ui",
+  "ui.nav": "ui",
+  "ui.error": "ui",
+  "ui.map_open": "ui",
+  "ui.map_close": "ui",
+  "ui.waypoint": "ui",
+  "ui.chat_open": "ui",
+  "ui.chat_close": "ui",
+  "ui.chat_send": "ui",
+  "hatchery.claim": "sfx",
+  "hatchery.incubate_tick": "sfx",
+  "hatchery.hatch_reveal": "sfx",
+  "pets.care": "pet",
+  "pets.feed": "pet",
+  "pets.water": "pet",
+  "pets.play": "pet",
+  "pets.clean": "pet",
+  "pets.rest": "pet",
+  "pets.heal": "pet",
+  "pets.need_low": "pet",
+  "pets.equip": "pet",
+  "pets.evolve": "pet",
+  "quests.accept": "sfx",
+  "quests.objective": "sfx",
+  "quests.complete": "sfx",
+  "combat.hit": "combat",
+  "combat.ability": "combat",
+  "combat.win": "combat",
+  "combat.lose": "combat",
+  "combat.stinger": "combat",
+  "event.stinger": "combat",
+  "arena.start": "combat",
+  "shop.purchase_ok": "ui",
+  "shop.purchase_fail": "ui",
+  "world.footstep": "sfx",
+  "world.npc_talk": "sfx",
+  "world.npc_greet": "sfx",
+  "world.npc_work": "sfx",
+  "world.portal": "sfx",
+  "world.fast_travel": "sfx",
+  "world.gateway_activate": "sfx",
+  "world.gather": "sfx",
+  "world.loot": "sfx",
+  "rewards.claim": "sfx",
+  "rewards.estimate_tick": "sfx",
+  "weather.rain": "weather",
+  "weather.thunder": "weather",
+  "weather.wind": "weather",
+};
+
+export function busForEvent(id: string): SfxCategory {
+  return EVENT_BUS[id] ?? "sfx";
+}

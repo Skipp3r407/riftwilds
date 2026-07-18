@@ -108,7 +108,7 @@ export function SolPriceChip({ className }: Props) {
             <span className="text-[var(--text-muted)]">SOL</span> {formatUsd(quote.usd!)}
           </span>
           {typeof change === "number" && changeTone ? (
-            <span className={cn("hidden tabular-nums sm:inline", changeTone)}>
+            <span className={cn("hidden tabular-nums xl:inline", changeTone)}>
               {formatChange(change)}
             </span>
           ) : null}

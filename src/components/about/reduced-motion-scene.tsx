@@ -25,7 +25,11 @@ export function ReducedMotionScene({ src, alt, className, priority }: Props) {
         sizes="100vw"
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(6,8,14,0.92)] via-[rgba(6,8,14,0.45)] to-[rgba(6,8,14,0.35)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(4,6,14,0.92)] via-[rgba(4,6,14,0.55)] to-[rgba(4,6,14,0.28)]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[rgba(4,6,14,0.78)] via-[rgba(4,6,14,0.35)] to-transparent md:from-[rgba(4,6,14,0.72)] md:via-[rgba(4,6,14,0.28)]"
         aria-hidden
       />
     </div>

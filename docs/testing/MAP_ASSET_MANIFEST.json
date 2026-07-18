@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-07-18",
+  "note": "Original Riftwilds map/terrain/UI assets for Live World. Procedural tint tiles remain as runtime fallback.",
+  "uiMapIcons": [
+    { "path": "public/assets/ui/map/portal.png", "role": "portal_marker" },
+    { "path": "public/assets/ui/map/waypoint.png", "role": "waypoint_marker" },
+    { "path": "public/assets/ui/map/marker.png", "role": "generic_pin" },
+    { "path": "public/assets/ui/map/quest-available.png", "role": "quest_pin" },
+    { "path": "public/assets/ui/map/danger.png", "role": "danger_pin" },
+    { "path": "public/assets/ui/map/service-icons.png", "role": "service_icon_sheet" }
+  ],
+  "terrain": [
+    { "path": "public/assets/terrain/terrain-grass.png", "role": "ground" },
+    { "path": "public/assets/terrain/terrain-path.png", "role": "road" },
+    { "path": "public/assets/terrain/terrain-water.png", "role": "water" },
+    { "path": "public/assets/terrain/terrain-lava.png", "role": "lava" }
+  ],
+  "tilesets": [
+    { "path": "public/assets/tilesets/commons-tileset.png", "role": "commons_reference_sheet" }
+  ],
+  "regionOverviews": [
+    "public/assets/maps/riftwild-commons-overview.png",
+    "public/assets/maps/ember-crater-overview.png",
+    "public/assets/maps/moonwater-coast-overview.png",
+    "public/assets/maps/elderwood-forest-overview.png",
+    "public/assets/maps/stormspire-peaks-overview.png",
+    "public/assets/maps/stoneheart-canyon-overview.png",
+    "public/assets/maps/frostveil-basin-overview.png",
+    "public/assets/maps/radiant-citadel-overview.png",
+    "public/assets/maps/alloy-ruins-overview.png",
+    "public/assets/maps/spirit-marsh-overview.png",
+    "public/assets/maps/void-hollow-overview.png",
+    "public/assets/maps/celestial-rift-overview.png"
+  ]
+}

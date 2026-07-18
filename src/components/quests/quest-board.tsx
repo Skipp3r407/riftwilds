@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   QUEST_CATALOG,
   QUEST_CATEGORY_LABELS,
@@ -26,6 +27,11 @@ import {
   trackQuest,
   type QuestDemoState,
 } from "@/game/quests/quest-demo-store";
+import {
+  QUEST_INSET,
+  QUEST_PANEL,
+  QUEST_PANEL_ACTIVE,
+} from "@/components/quests/quest-surface";
 import { StatusChip } from "@/components/shared/page-header";
 import { playSfx } from "@/hooks/use-sfx";
 import { cn } from "@/lib/utils/cn";
@@ -142,15 +148,17 @@ export function QuestBoard() {
 
   if (!state) {
     return (
-      <div className="panel p-8 text-sm text-[var(--text-muted)]">Loading quest board…</div>
+      <div className={cn(QUEST_PANEL, "p-8 text-sm text-[var(--text-muted)]")}>
+        Loading quest board…
+      </div>
     );
   }
 
   return (
     <div className="space-y-4">
-      <div className="panel relative overflow-hidden p-4 md:p-5">
-        <div className="pointer-events-none absolute inset-0 surface-grid opacity-40" />
-        <div className="relative flex flex-wrap items-center justify-between gap-3">
+      <div className={cn(QUEST_PANEL, "relative overflow-hidden p-4 md:p-5")}>
+        <div className="pointer-events-none absolute inset-0 z-[1] surface-grid opacity-40" />
+        <div className="relative z-[1] flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2">
             <StatusChip tone="warn">DEMO TRACKING</StatusChip>
             <StatusChip tone="info">Phase 3 board</StatusChip>
@@ -158,16 +166,21 @@ export function QuestBoard() {
               {stats.active} active · {stats.completed} completed · {stats.tracked} tracked
             </span>
           </div>
-          <button
-            type="button"
-            className="btn-secondary focus-ring text-xs"
-            onClick={() => setState(resetQuestDemoState())}
-          >
-            Reset demo
-          </button>
+          <div className="flex flex-wrap items-center gap-2">
+            <Link href="/academy?lesson=b13-quests" className="btn-secondary focus-ring text-xs">
+              Academy: Quests
+            </Link>
+            <button
+              type="button"
+              className="btn-secondary focus-ring text-xs"
+              onClick={() => setState(resetQuestDemoState())}
+            >
+              Reset demo
+            </button>
+          </div>
         </div>
 
-        <div className="relative mt-4 flex flex-wrap gap-2">
+        <div className="relative z-[1] mt-4 flex flex-wrap gap-2">
           {TABS.map((t) => {
             const active = tab === t;
             return (
@@ -179,13 +192,13 @@ export function QuestBoard() {
                   setTab(t);
                 }}
                 className={cn(
-                  "focus-ring group flex items-center gap-2 rounded-lg border px-3 py-2 text-xs transition",
+                  "focus-ring group flex items-center gap-2 rounded-[var(--radius-md)] border px-3 py-2 text-xs transition",
                   active
                     ? "border-[var(--stroke-strong)] bg-[rgba(61,231,255,0.12)] text-white shadow-[0_0_24px_rgba(61,231,255,0.12)]"
-                    : "border-[var(--stroke)] bg-[rgba(8,8,14,0.35)] text-[var(--text-muted)] hover:border-[var(--cyan)]/40 hover:text-white",
+                    : "border-[var(--stroke)] bg-[rgba(8,8,14,0.35)] text-[var(--text-muted)] hover:border-[var(--stroke-strong)] hover:text-white",
                 )}
               >
-                <span className="relative size-7 shrink-0 overflow-hidden rounded-md border border-[var(--stroke)] bg-[rgba(8,8,14,0.5)]">
+                <span className="relative size-7 shrink-0 overflow-hidden rounded-[var(--radius-sm)] border border-[var(--stroke)] bg-[rgba(8,8,14,0.5)]">
                   <Image
                     src={QUEST_TAB_THUMB[t]}
                     alt=""
@@ -209,13 +222,13 @@ export function QuestBoard() {
           })}
         </div>
 
-        <div className="relative mt-4 flex flex-wrap items-center gap-2">
+        <div className="relative z-[1] mt-4 flex flex-wrap items-center gap-2">
           <label className="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[var(--text-dim)]">
             Status
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value as QuestStatus | "all")}
-              className="rounded-md border border-[var(--stroke)] bg-[var(--bg-elevated)] px-2 py-1.5 text-xs normal-case tracking-normal text-white"
+              className="rounded-[var(--radius-sm)] border border-[var(--stroke)] bg-[var(--bg-elevated)] px-2 py-1.5 text-xs normal-case tracking-normal text-white"
             >
               {STATUSES.map((s) => (
                 <option key={s} value={s}>
@@ -231,7 +244,7 @@ export function QuestBoard() {
               onChange={(e) =>
                 setDifficultyFilter(e.target.value as QuestDifficulty | "all")
               }
-              className="rounded-md border border-[var(--stroke)] bg-[var(--bg-elevated)] px-2 py-1.5 text-xs normal-case tracking-normal text-white"
+              className="rounded-[var(--radius-sm)] border border-[var(--stroke)] bg-[var(--bg-elevated)] px-2 py-1.5 text-xs normal-case tracking-normal text-white"
             >
               {DIFFICULTIES.map((d) => (
                 <option key={d} value={d}>
@@ -244,13 +257,13 @@ export function QuestBoard() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search quests…"
-            className="ml-auto min-w-[12rem] flex-1 rounded-md border border-[var(--stroke)] bg-[var(--bg-elevated)] px-3 py-1.5 text-sm text-white placeholder:text-[var(--text-dim)] sm:max-w-xs"
+            className="ml-auto min-w-[12rem] flex-1 rounded-[var(--radius-sm)] border border-[var(--stroke)] bg-[var(--bg-elevated)] px-3 py-1.5 text-sm text-white placeholder:text-[var(--text-dim)] sm:max-w-xs"
           />
         </div>
       </div>
 
       {filtered.length === 0 ? (
-        <div className="panel p-8 text-center text-sm text-[var(--text-muted)]">
+        <div className={cn(QUEST_PANEL, "p-8 text-center text-sm text-[var(--text-muted)]")}>
           No quests match these filters.
         </div>
       ) : (
@@ -306,29 +319,39 @@ function QuestCard({
   const pct = questObjectiveProgressPercent(quest, entry.progress);
   const accent = CAT_ACCENT[quest.category] ?? "var(--cyan)";
   const locked = entry.status === "locked";
+  const [artFailed, setArtFailed] = useState(false);
 
   return (
     <article
       className={cn(
-        "panel-soft relative overflow-hidden transition duration-300",
-        entry.status === "active" && "ring-1 ring-[var(--cyan)]/30",
-        entry.tracked && "shadow-[0_0_28px_rgba(61,231,255,0.1)]",
+        QUEST_PANEL,
+        "relative overflow-hidden transition duration-300",
+        (entry.status === "active" || entry.tracked) && QUEST_PANEL_ACTIVE,
         locked && "opacity-75",
       )}
       style={{
-        backgroundImage: `linear-gradient(135deg, color-mix(in srgb, ${accent} 12%, transparent), transparent 55%)`,
+        backgroundImage: `linear-gradient(180deg, transparent 0%, color-mix(in srgb, ${accent} 10%, transparent) 55%, color-mix(in srgb, ${accent} 14%, transparent) 100%)`,
       }}
     >
-      <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-[var(--stroke)] bg-[rgba(8,8,14,0.55)]">
-        <Image
-          src={questArtPath(quest.key)}
-          alt=""
-          fill
-          unoptimized
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover"
-        />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(8,8,14,0.75)] via-transparent to-transparent" />
+      {/* Bleed art under the card border so rounded top corners stay flush (no hairline gap). */}
+      <div className="relative z-[1] -mx-px -mt-px aspect-[16/9] w-[calc(100%+2px)] overflow-hidden border-b border-[var(--stroke)] bg-[rgba(8,8,14,0.72)]">
+        {!artFailed ? (
+          <Image
+            src={questArtPath(quest.key)}
+            alt=""
+            fill
+            unoptimized
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center [transform:scale(1.02)]"
+            onError={() => setArtFailed(true)}
+          />
+        ) : (
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,color-mix(in_srgb,var(--cyan)_22%,transparent),transparent_55%),linear-gradient(145deg,#12121c,#0a0a12)]"
+          />
+        )}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[rgba(8,8,14,0.8)] to-transparent" />
         <div className="absolute right-3 top-3">
           <StatusChip tone={STATUS_TONE[entry.status]}>
             {QUEST_STATUS_LABELS[entry.status]}
@@ -336,12 +359,12 @@ function QuestCard({
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="relative z-[1] p-4">
         <div className="flex flex-wrap items-start justify-between gap-2">
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2">
               <span
-                className="rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
+                className="rounded-[var(--radius-sm)] border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
                 style={{
                   color: accent,
                   borderColor: `color-mix(in srgb, ${accent} 45%, transparent)`,
@@ -352,7 +375,7 @@ function QuestCard({
               </span>
               <span
                 className={cn(
-                  "rounded border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
+                  "rounded-[var(--radius-sm)] border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
                   DIFF_COLOR[quest.difficulty],
                 )}
               >
@@ -372,110 +395,112 @@ function QuestCard({
           </div>
         </div>
 
-      <div className="mt-4 space-y-2">
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
-          Objectives
-        </p>
-        <ul className="space-y-1.5">
-          {quest.objectives.map((obj) => {
-            const current = Math.min(entry.progress[obj.key] ?? 0, obj.target);
-            const done = current >= obj.target || entry.status === "completed";
-            return (
-              <li
-                key={obj.key}
-                className="panel-inset flex items-start gap-2 px-2.5 py-2 text-xs"
-              >
-                <span
-                  className={cn(
-                    "mt-0.5 flex size-3.5 shrink-0 items-center justify-center rounded-sm border text-[9px]",
-                    done
-                      ? "border-[var(--emerald)] bg-[rgba(61,255,176,0.2)] text-[var(--emerald)]"
-                      : "border-[var(--stroke)] text-transparent",
-                  )}
-                  aria-hidden
+        <div className="mt-4 space-y-2">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
+            Objectives
+          </p>
+          <ul className="space-y-1.5">
+            {quest.objectives.map((obj) => {
+              const current = Math.min(entry.progress[obj.key] ?? 0, obj.target);
+              const done = current >= obj.target || entry.status === "completed";
+              return (
+                <li
+                  key={obj.key}
+                  className={cn(QUEST_INSET, "flex items-start gap-2 px-2.5 py-2 text-xs")}
                 >
-                  ✓
-                </span>
-                <span className={cn("flex-1", done && "text-[var(--text-muted)] line-through")}>
-                  {obj.description}
-                </span>
-                <span className="tabular-nums text-[var(--text-dim)]">
-                  {current}/{obj.target}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+                  <span
+                    className={cn(
+                      "mt-0.5 flex size-3.5 shrink-0 items-center justify-center rounded-sm border text-[9px]",
+                      done
+                        ? "border-[var(--emerald)] bg-[rgba(61,255,176,0.2)] text-[var(--emerald)]"
+                        : "border-[var(--stroke)] text-transparent",
+                    )}
+                    aria-hidden
+                  >
+                    ✓
+                  </span>
+                  <span className={cn("flex-1", done && "text-[var(--text-muted)] line-through")}>
+                    {obj.description}
+                  </span>
+                  <span className="tabular-nums text-[var(--text-dim)]">
+                    {current}/{obj.target}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-      {entry.status === "active" || entry.status === "completed" ? (
-        <div className="mt-3">
-          <div className="mb-1 flex items-center justify-between text-[10px] text-[var(--text-dim)]">
-            <span>Progress</span>
-            <span className="tabular-nums text-[var(--cyan)]">{pct}%</span>
+        {entry.status === "active" || entry.status === "completed" ? (
+          <div className="mt-3">
+            <div className="mb-1 flex items-center justify-between text-[10px] text-[var(--text-dim)]">
+              <span>Progress</span>
+              <span className="tabular-nums text-[var(--cyan)]">{pct}%</span>
+            </div>
+            <div className="h-1.5 overflow-hidden rounded-full bg-black/40">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-[var(--cyan)] to-[var(--violet)] transition-[width] duration-500"
+                style={{ width: `${pct}%` }}
+              />
+            </div>
           </div>
-          <div className="h-1.5 overflow-hidden rounded-full bg-black/40">
-            <div
-              className="h-full rounded-full bg-gradient-to-r from-[var(--cyan)] to-[var(--violet)] transition-[width] duration-500"
-              style={{ width: `${pct}%` }}
-            />
+        ) : null}
+
+        <div className="mt-4">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
+            Rewards
+          </p>
+          <div className="mt-1.5 flex flex-wrap gap-1.5">
+            {quest.rewards.map((r, i) => (
+              <span
+                key={`${quest.key}-r-${i}`}
+                className={cn(QUEST_INSET, "px-2 py-1 text-[11px] text-[var(--text)]")}
+              >
+                {formatQuestReward(r)}
+              </span>
+            ))}
           </div>
         </div>
-      ) : null}
 
-      <div className="mt-4">
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
-          Rewards
-        </p>
-        <div className="mt-1.5 flex flex-wrap gap-1.5">
-          {quest.rewards.map((r, i) => (
-            <span
-              key={`${quest.key}-r-${i}`}
-              className="rounded-md border border-[var(--stroke)] bg-[rgba(8,8,14,0.45)] px-2 py-1 text-[11px] text-[var(--text)]"
+        {locked && quest.requires?.length ? (
+          <p className="mt-3 text-[11px] text-[var(--amber)]">
+            Locked — complete{" "}
+            {quest.requires
+              .map((k) => QUEST_CATALOG.find((q) => q.key === k)?.name ?? k)
+              .join(", ")}{" "}
+            first.
+          </p>
+        ) : null}
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {entry.status === "available" ? (
+            <button type="button" className="btn-primary focus-ring text-xs" onClick={onAccept}>
+              Accept
+            </button>
+          ) : null}
+          {entry.status === "active" || entry.status === "available" ? (
+            <button
+              type="button"
+              className={cn(
+                "btn-secondary focus-ring text-xs",
+                entry.tracked && "border-[var(--stroke-strong)] text-[var(--cyan)]",
+              )}
+              onClick={onTrack}
             >
-              {formatQuestReward(r)}
+              {entry.tracked ? "Tracking" : "Track"}
+            </button>
+          ) : null}
+          {entry.status === "active" ? (
+            <button type="button" className="btn-secondary focus-ring text-xs" onClick={onAdvance}>
+              Advance (demo)
+            </button>
+          ) : null}
+          {entry.status === "completed" ? (
+            <span className="self-center text-[11px] text-[var(--emerald)]">
+              Rewards preview ready
             </span>
-          ))}
+          ) : null}
         </div>
-      </div>
-
-      {locked && quest.requires?.length ? (
-        <p className="mt-3 text-[11px] text-[var(--amber)]">
-          Locked — complete{" "}
-          {quest.requires
-            .map((k) => QUEST_CATALOG.find((q) => q.key === k)?.name ?? k)
-            .join(", ")}{" "}
-          first.
-        </p>
-      ) : null}
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        {entry.status === "available" ? (
-          <button type="button" className="btn-primary focus-ring text-xs" onClick={onAccept}>
-            Accept
-          </button>
-        ) : null}
-        {entry.status === "active" || entry.status === "available" ? (
-          <button
-            type="button"
-            className={cn(
-              "btn-secondary focus-ring text-xs",
-              entry.tracked && "border-[var(--cyan)]/50 text-[var(--cyan)]",
-            )}
-            onClick={onTrack}
-          >
-            {entry.tracked ? "Tracking" : "Track"}
-          </button>
-        ) : null}
-        {entry.status === "active" ? (
-          <button type="button" className="btn-secondary focus-ring text-xs" onClick={onAdvance}>
-            Advance (demo)
-          </button>
-        ) : null}
-        {entry.status === "completed" ? (
-          <span className="self-center text-[11px] text-[var(--emerald)]">Rewards preview ready</span>
-        ) : null}
-      </div>
       </div>
     </article>
   );

@@ -1,0 +1,43 @@
+{
+  "builtAt": "2026-07-18T06:08:48.406Z",
+  "style": "comic-cinematic-colorful",
+  "speciesFeatured": [
+    "Glowpup",
+    "Cindercub",
+    "Mossprig",
+    "Bubbloon",
+    "Voltkit",
+    "Riftpup",
+    "Luminara",
+    "Gearling",
+    "Wisplet"
+  ],
+  "ffmpeg": "C:\\Program Files\\Jellyfin\\Server\\ffmpeg.exe",
+  "results": [
+    {
+      "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-commercial-60s-16x9.mp4",
+      "duration": 60,
+      "hasVo": true
+    },
+    {
+      "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-commercial-30s-9x16.mp4",
+      "duration": 30,
+      "hasVo": true
+    },
+    {
+      "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-commercial-15s-9x16-teaser.mp4",
+      "duration": 14.848,
+      "hasVo": true
+    },
+    {
+      "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-commercial-25s-1x1.mp4",
+      "duration": 24.853,
+      "hasVo": true
+    },
+    {
+      "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-header-loop-12s-16x9-muted.mp4",
+      "duration": 12,
+      "hasVo": false
+    }
+  ]
+}

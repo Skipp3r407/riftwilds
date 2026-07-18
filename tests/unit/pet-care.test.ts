@@ -43,4 +43,11 @@ describe("pet care", () => {
   it("computes a care score", () => {
     expect(careScore(DEFAULT_CARE_STATS)).toBeGreaterThan(50);
   });
+
+  it("supports expanded companion actions", () => {
+    const petted = applyCareAction(DEFAULT_CARE_STATS, "PET");
+    const slept = applyCareAction(DEFAULT_CARE_STATS, "SLEEP");
+    expect(petted.bond).toBeGreaterThan(DEFAULT_CARE_STATS.bond);
+    expect(slept.energy).toBeGreaterThan(DEFAULT_CARE_STATS.energy);
+  });
 });

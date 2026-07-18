@@ -15,6 +15,11 @@ export default function AdminPlayersPage() {
         <li>Search by username / wallet / email identity (AuthIdentity)</li>
         <li>Soft-ban / hard-ban with audit log</li>
         <li>Wallet link merge preview (see modular-auth planWalletLinkMerge)</li>
+        <li>
+          World play sessions — inspect / force-end via{" "}
+          <code className="text-[var(--cyan)]">GET/POST /api/admin/sessions</code> (see{" "}
+          <code className="text-[var(--cyan)]">docs/admin/SESSION_ADMIN_TOOLS.md</code>)
+        </li>
       </ul>
       <Link href="/admin" className="btn-secondary focus-ring mt-6 inline-flex text-sm">
         Back to admin

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   ChevronLeft,
   ChevronRight,
@@ -11,80 +12,81 @@ import {
   VolumeX,
   X,
 } from "lucide-react";
+import { useAudio } from "@/hooks/use-audio";
 import { useSfx } from "@/hooks/use-sfx";
+import { stopAmbient } from "@/lib/audio/ambient";
+import { MUSIC_PLAYLIST, musicEngine } from "@/lib/audio/music";
 import { cn } from "@/lib/utils/cn";
 
-const STORAGE_KEY = "riftwilds-music-prefs";
+const UI_STORAGE_KEY = "riftwilds-music-ui";
+/** Collapse the floating bar after this idle window. */
+const AUTO_HIDE_MS = 30_000;
 
-const TRACKS = [
-  { src: "/sounds/music/sector.mp3", label: "Sector" },
-  { src: "/sounds/music/airy.mp3", label: "Airy" },
-  { src: "/sounds/music/magic-space.mp3", label: "Magic Space" },
-  { src: "/sounds/music/pulse.mp3", label: "Pulse" },
-  { src: "/sounds/music/urgent.mp3", label: "Urgent" },
-  { src: "/sounds/music/transmission.mp3", label: "Transmission" },
-  { src: "/sounds/music/space-graveyard.mp3", label: "Space Graveyard" },
-  { src: "/sounds/music/menacing-otherworld.mp3", label: "Menacing Otherworld" },
-  { src: "/sounds/music/dark-things.mp3", label: "Dark Things" },
-  { src: "/sounds/music/sirens-in-darkness.mp3", label: "Sirens in Darkness" },
-] as const;
-
-type Prefs = {
+type UiPrefs = {
   hidden: boolean;
-  muted: boolean;
-  volume: number;
   trackIndex: number;
 };
 
-const DEFAULT_PREFS: Prefs = {
+const DEFAULT_UI: UiPrefs = {
   hidden: false,
-  muted: false,
-  volume: 0.35,
   trackIndex: 0,
 };
 
-function readPrefs(): Prefs {
-  if (typeof window === "undefined") return DEFAULT_PREFS;
+function readUi(): UiPrefs {
+  if (typeof window === "undefined") return DEFAULT_UI;
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return DEFAULT_PREFS;
-    const parsed = JSON.parse(raw) as Partial<Prefs>;
+    const raw = localStorage.getItem(UI_STORAGE_KEY);
+    if (!raw) {
+      // migrate track from legacy music prefs
+      const legacy = localStorage.getItem("riftwilds-music-prefs");
+      if (legacy) {
+        const p = JSON.parse(legacy) as Partial<UiPrefs & { muted?: boolean; volume?: number }>;
+        return {
+          hidden: Boolean(p.hidden),
+          trackIndex:
+            typeof p.trackIndex === "number" &&
+            p.trackIndex >= 0 &&
+            p.trackIndex < MUSIC_PLAYLIST.length
+              ? p.trackIndex
+              : 0,
+        };
+      }
+      return DEFAULT_UI;
+    }
+    const parsed = JSON.parse(raw) as Partial<UiPrefs>;
     return {
       hidden: Boolean(parsed.hidden),
-      muted: Boolean(parsed.muted),
-      volume:
-        typeof parsed.volume === "number"
-          ? Math.min(1, Math.max(0, parsed.volume))
-          : DEFAULT_PREFS.volume,
       trackIndex:
         typeof parsed.trackIndex === "number" &&
         parsed.trackIndex >= 0 &&
-        parsed.trackIndex < TRACKS.length
+        parsed.trackIndex < MUSIC_PLAYLIST.length
           ? parsed.trackIndex
           : 0,
     };
   } catch {
-    return DEFAULT_PREFS;
+    return DEFAULT_UI;
   }
 }
 
-function writePrefs(prefs: Prefs) {
+function writeUi(prefs: UiPrefs) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
+    localStorage.setItem(UI_STORAGE_KEY, JSON.stringify(prefs));
   } catch {
-    /* ignore quota / private mode */
+    /* ignore */
   }
 }
 
 export function MusicPlayer() {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const pathname = usePathname();
+  const inLiveWorld = Boolean(pathname?.startsWith("/live-world"));
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const [hidden, setHidden] = useState(DEFAULT_PREFS.hidden);
-  const [muted, setMuted] = useState(DEFAULT_PREFS.muted);
-  const [volume, setVolume] = useState(DEFAULT_PREFS.volume);
-  const [trackIndex, setTrackIndex] = useState(DEFAULT_PREFS.trackIndex);
+  const [hidden, setHidden] = useState(DEFAULT_UI.hidden);
+  const [trackIndex, setTrackIndex] = useState(DEFAULT_UI.trackIndex);
   const [playlistOpen, setPlaylistOpen] = useState(false);
+  const interactingRef = useRef(false);
+  const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { volumes, setVolume, mutedAll, unlock } = useAudio();
   const {
     muted: sfxMuted,
     volume: sfxVolume,
@@ -93,112 +95,117 @@ export function MusicPlayer() {
     unlock: unlockSfx,
   } = useSfx();
 
+  const musicVolume = volumes.music;
+  const musicMuted = mutedAll || musicVolume <= 0;
+
+  function clearHideTimer() {
+    if (hideTimerRef.current != null) {
+      clearTimeout(hideTimerRef.current);
+      hideTimerRef.current = null;
+    }
+  }
+
+  function scheduleAutoHide() {
+    clearHideTimer();
+    if (!ready || hidden || interactingRef.current) return;
+    hideTimerRef.current = setTimeout(() => {
+      setPlaylistOpen(false);
+      setHidden(true);
+    }, AUTO_HIDE_MS);
+  }
+
+  function setInteracting(active: boolean) {
+    interactingRef.current = active;
+    if (active) clearHideTimer();
+    else scheduleAutoHide();
+  }
+
+  /** Reset the idle countdown (click / slider / keys while not already hovering). */
+  function bumpActivity() {
+    if (interactingRef.current) return;
+    scheduleAutoHide();
+  }
+
   useEffect(() => {
-    const prefs = readPrefs();
+    const prefs = readUi();
     setHidden(prefs.hidden);
-    setMuted(prefs.muted);
-    setVolume(prefs.volume);
     setTrackIndex(prefs.trackIndex);
+    musicEngine.init();
     setReady(true);
   }, []);
 
   useEffect(() => {
     if (!ready) return;
-    writePrefs({ hidden, muted, volume, trackIndex });
-  }, [ready, hidden, muted, volume, trackIndex]);
+    writeUi({ hidden, trackIndex });
+  }, [ready, hidden, trackIndex]);
 
+  // Start / clear the 30s idle timer when the bar is shown or collapsed.
   useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio || !ready) return;
-
-    const track = TRACKS[trackIndex] ?? TRACKS[0];
-    const nextSrc = track.src;
-    const currentPath = audio.getAttribute("src") || "";
-    const wasPlaying = !audio.paused;
-
-    if (!currentPath.endsWith(nextSrc)) {
-      audio.src = nextSrc;
-      audio.loop = true;
-      if (wasPlaying) {
-        void audio.play().catch(() => setPlaying(false));
+    if (!ready || hidden) {
+      if (hideTimerRef.current != null) {
+        clearTimeout(hideTimerRef.current);
+        hideTimerRef.current = null;
       }
+      interactingRef.current = false;
+      return;
     }
-
-    audio.muted = muted;
-    audio.volume = muted ? 0 : volume;
-  }, [ready, muted, volume, trackIndex]);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const onPlay = () => setPlaying(true);
-    const onPause = () => setPlaying(false);
-    const onEnded = () => setPlaying(false);
-
-    audio.addEventListener("play", onPlay);
-    audio.addEventListener("pause", onPause);
-    audio.addEventListener("ended", onEnded);
+    if (interactingRef.current) return;
+    hideTimerRef.current = setTimeout(() => {
+      setPlaylistOpen(false);
+      setHidden(true);
+    }, AUTO_HIDE_MS);
     return () => {
-      audio.removeEventListener("play", onPlay);
-      audio.removeEventListener("pause", onPause);
-      audio.removeEventListener("ended", onEnded);
+      if (hideTimerRef.current != null) {
+        clearTimeout(hideTimerRef.current);
+        hideTimerRef.current = null;
+      }
     };
-  }, []);
+  }, [ready, hidden]);
+
+  // Marketing pages: never keep procedural ambience running.
+  // (Old bug: auto-started menu drone + menu.wav → site-wide hum after unlock.)
+  // Live World owns regional / hub ambience; leaving that route clears the bed.
+  useEffect(() => {
+    if (!ready) return;
+    if (inLiveWorld) return;
+    stopAmbient(350);
+  }, [ready, inLiveWorld]);
 
   async function togglePlay() {
-    const audio = audioRef.current;
-    if (!audio) return;
+    unlock();
     unlockSfx();
-
-    if (!audio.getAttribute("src")) {
-      audio.src = TRACKS[trackIndex]?.src ?? TRACKS[0].src;
-      audio.loop = true;
-    }
-
-    if (audio.paused) {
-      try {
-        audio.muted = muted;
-        audio.volume = muted ? 0 : volume;
-        await audio.play();
-        setPlaying(true);
-      } catch {
-        setPlaying(false);
-      }
-    } else {
-      audio.pause();
+    if (playing) {
+      musicEngine.pause();
       setPlaying(false);
+      return;
+    }
+    await musicEngine.playTrack(trackIndex, 500);
+    setPlaying(musicEngine.isPlaying());
+  }
+
+  async function stepTrack(delta: number) {
+    unlock();
+    const next = (trackIndex + delta + MUSIC_PLAYLIST.length) % MUSIC_PLAYLIST.length;
+    setTrackIndex(next);
+    if (playing) {
+      await musicEngine.playTrack(next, 600);
+      setPlaying(musicEngine.isPlaying());
     }
   }
 
-  function stepTrack(delta: number) {
-    setTrackIndex((i) => (i + delta + TRACKS.length) % TRACKS.length);
-  }
-
-  function selectTrack(index: number) {
+  async function selectTrack(index: number) {
+    unlock();
     setTrackIndex(index);
-    const audio = audioRef.current;
-    if (!audio || playing || !audio.paused) return;
-    void (async () => {
-      try {
-        audio.src = TRACKS[index].src;
-        audio.loop = true;
-        audio.muted = muted;
-        audio.volume = muted ? 0 : volume;
-        await audio.play();
-        setPlaying(true);
-      } catch {
-        setPlaying(false);
-      }
-    })();
+    await musicEngine.playTrack(index, 600);
+    setPlaying(musicEngine.isPlaying());
   }
 
-  const track = TRACKS[trackIndex] ?? TRACKS[0];
+  const track = MUSIC_PLAYLIST[trackIndex] ?? MUSIC_PLAYLIST[0];
+
+  const shellMotion = "motion-safe:transition-[opacity,transform] motion-safe:duration-200";
 
   return (
     <>
-      <audio ref={audioRef} preload="metadata" className="hidden" aria-hidden />
-
       {!ready ? null : hidden ? (
         <button
           type="button"
@@ -208,11 +215,12 @@ export function MusicPlayer() {
             "bottom-[calc(5.25rem+var(--safe-bottom))] md:bottom-5",
             "rounded-l-lg border border-r-0 border-[var(--stroke)]",
             "bg-[rgba(18,18,28,0.92)] text-[var(--cyan)] backdrop-blur-md",
-            "shadow-[var(--shadow-panel)] transition-colors hover:bg-[rgba(22,22,37,0.98)]",
-            "hover:border-[var(--stroke-strong)]",
+            "shadow-[var(--shadow-panel)]",
+            shellMotion,
+            "hover:bg-[rgba(22,22,37,0.98)] hover:border-[var(--stroke-strong)]",
           )}
-          aria-label="Show music player"
-          title="Show music"
+          aria-label="Show ambience player"
+          title="Show ambience"
         >
           <ChevronLeft size={16} aria-hidden />
         </button>
@@ -221,7 +229,18 @@ export function MusicPlayer() {
           className={cn(
             "fixed right-3 z-[60] flex flex-col items-stretch gap-1.5",
             "bottom-[calc(5.25rem+var(--safe-bottom))] md:bottom-5 md:right-5",
+            shellMotion,
           )}
+          onPointerEnter={() => setInteracting(true)}
+          onPointerLeave={() => setInteracting(false)}
+          onFocusCapture={() => setInteracting(true)}
+          onBlurCapture={(e) => {
+            if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+              setInteracting(false);
+            }
+          }}
+          onPointerDown={bumpActivity}
+          onKeyDown={bumpActivity}
         >
           {playlistOpen ? (
             <div
@@ -232,7 +251,7 @@ export function MusicPlayer() {
               role="listbox"
               aria-label="Ambient playlist"
             >
-              {TRACKS.map((t, i) => {
+              {MUSIC_PLAYLIST.map((t, i) => {
                 const active = i === trackIndex;
                 return (
                   <button
@@ -240,7 +259,7 @@ export function MusicPlayer() {
                     type="button"
                     role="option"
                     aria-selected={active}
-                    onClick={() => selectTrack(i)}
+                    onClick={() => void selectTrack(i)}
                     className={cn(
                       "focus-ring flex w-full items-center gap-2 rounded-xl px-2.5 py-1.5 text-left text-[11px]",
                       "transition-colors",
@@ -292,7 +311,7 @@ export function MusicPlayer() {
 
             <button
               type="button"
-              onClick={() => stepTrack(-1)}
+              onClick={() => void stepTrack(-1)}
               className="focus-ring flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--cyan)]"
               aria-label="Previous track"
               title="Previous"
@@ -318,7 +337,7 @@ export function MusicPlayer() {
 
             <button
               type="button"
-              onClick={() => stepTrack(1)}
+              onClick={() => void stepTrack(1)}
               className="focus-ring flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--cyan)]"
               aria-label="Next track"
               title="Next"
@@ -374,6 +393,7 @@ export function MusicPlayer() {
                   onChange={(e) => {
                     unlockSfx();
                     setSfxVolume(Number(e.target.value));
+                    bumpActivity();
                   }}
                   className="h-1 w-12 cursor-pointer accent-[var(--amber)]"
                   aria-label="Sound effects volume"
@@ -383,13 +403,17 @@ export function MusicPlayer() {
 
             <button
               type="button"
-              onClick={() => setMuted((m) => !m)}
+              onClick={() => {
+                unlock();
+                if (musicMuted) setVolume("music", 0.35);
+                else setVolume("music", 0);
+              }}
               className="focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-colors hover:text-[var(--cyan)]"
-              aria-label={muted ? "Unmute music" : "Mute music"}
-              aria-pressed={muted}
+              aria-label={musicMuted ? "Unmute music" : "Mute music"}
+              aria-pressed={musicMuted}
               title="Music mute"
             >
-              {muted || volume === 0 ? (
+              {musicMuted ? (
                 <VolumeX size={16} aria-hidden />
               ) : (
                 <Volume2 size={16} aria-hidden />
@@ -403,12 +427,11 @@ export function MusicPlayer() {
                 min={0}
                 max={1}
                 step={0.01}
-                value={muted ? 0 : volume}
+                value={musicMuted ? 0 : musicVolume}
                 onChange={(e) => {
-                  const next = Number(e.target.value);
-                  setVolume(next);
-                  if (next > 0 && muted) setMuted(false);
-                  if (next === 0) setMuted(true);
+                  unlock();
+                  setVolume("music", Number(e.target.value));
+                  bumpActivity();
                 }}
                 className="h-1 w-16 cursor-pointer accent-[var(--cyan)]"
                 aria-label="Music volume"

@@ -206,6 +206,170 @@
       "sceneId": "RadiantCitadelScene",
       "interactive": true,
       "collision": false,
+      "id": "npc-chancellor-aurex",
+      "type": "npc",
+      "x": 512,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Chancellor Aurex",
+      "metadata": {
+        "npcId": "chancellor-aurex",
+        "lines": [
+          "Chancellor Aurex. Speak plainly — radiance hates murky deals.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "look_around"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-scholar-lyra",
+      "type": "npc",
+      "x": 640,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Scholar Lyra",
+      "metadata": {
+        "npcId": "scholar-lyra",
+        "lines": [
+          "Scholar Lyra. Hearts are not batteries — remember that.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-sentinel-cassian",
+      "type": "npc",
+      "x": 320,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Sentinel Cassian",
+      "metadata": {
+        "npcId": "sentinel-cassian",
+        "lines": [
+          "Sentinel Cassian. State your purpose and pass.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-curator-verin",
+      "type": "npc",
+      "x": 768,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Curator Verin",
+      "metadata": {
+        "npcId": "curator-verin",
+        "lines": [
+          "Curator Verin. Look with eyes, not fingers — unless invited.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "organize_goods"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-citadel-scribe-omi",
+      "type": "npc",
+      "x": 480,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Omi Page",
+      "metadata": {
+        "npcId": "citadel-scribe-omi",
+        "lines": [
+          "Hey there — I'm Omi Page. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-citadel-vendor-lux",
+      "type": "npc",
+      "x": 576,
+      "y": 544,
+      "interactionRadius": 56,
+      "label": "Lux Ware",
+      "metadata": {
+        "npcId": "citadel-vendor-lux",
+        "lines": [
+          "Hey there — I'm Lux Ware. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-citadel-acolyte-ven",
+      "type": "npc",
+      "x": 608,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Ven Light",
+      "metadata": {
+        "npcId": "citadel-acolyte-ven",
+        "lines": [
+          "Hey there — I'm Ven Light. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-citadel-guard-halo",
+      "type": "npc",
+      "x": 352,
+      "y": 544,
+      "interactionRadius": 56,
+      "label": "Guard Halo",
+      "metadata": {
+        "npcId": "citadel-guard-halo",
+        "lines": [
+          "Hey there — I'm Guard Halo. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "interactive": true,
+      "collision": false,
       "id": "res-radiant-citadel-radiant-crystal",
       "type": "resource",
       "x": 320,
@@ -316,6 +480,19 @@
         "bossId": "radiant-sentinel",
         "arenaRef": "radiant-citadel-boss"
       }
+    },
+    {
+      "id": "lm-sun",
+      "type": "decoration",
+      "regionId": "radiant-citadel",
+      "sceneId": "RadiantCitadelScene",
+      "x": 896,
+      "y": 576,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Sun Dial",
+      "color": 16765024
     }
   ],
   "colliders": [
@@ -358,6 +535,22 @@
       "width": 320,
       "height": 224,
       "kind": "building"
+    },
+    {
+      "id": "mirror-pool",
+      "x": 768,
+      "y": 640,
+      "width": 192,
+      "height": 128,
+      "kind": "water"
+    },
+    {
+      "id": "lm-sun-col",
+      "x": 896,
+      "y": 576,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -376,6 +569,62 @@
         "x": 22,
         "y": 5,
         "icon": "building"
+      },
+      {
+        "id": "npc-chancellor-aurex",
+        "label": "Chancellor Aurex",
+        "x": 16,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-scholar-lyra",
+        "label": "Scholar Lyra",
+        "x": 20,
+        "y": 14,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-sentinel-cassian",
+        "label": "Sentinel Cassian",
+        "x": 10,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-curator-verin",
+        "label": "Curator Verin",
+        "x": 24,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-citadel-scribe-omi",
+        "label": "Omi Page",
+        "x": 15,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-citadel-vendor-lux",
+        "label": "Lux Ware",
+        "x": 18,
+        "y": 17,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-citadel-acolyte-ven",
+        "label": "Ven Light",
+        "x": 19,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-citadel-guard-halo",
+        "label": "Guard Halo",
+        "x": 11,
+        "y": 17,
+        "icon": "npc"
       },
       {
         "id": "wp-radiant",

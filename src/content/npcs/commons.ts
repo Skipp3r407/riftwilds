@@ -435,13 +435,14 @@ export const COMMONS_NAMED: NpcDef[] = [
         "greeting",
         [
           "The Codex is awake. I am Archivist Solen.",
-          "Elara sends most newcomers. Shall we open an index — or stock a journal?",
+          "Elara sends most newcomers. Shall we open an index, visit the Player Academy, or stock a journal?",
         ],
         [
           choice("codex", "Open the Codex", undefined, {
             action: "open_service",
             serviceId: "open-codex",
           }),
+          choice("academy", "Where is the Academy?", "academy"),
           choice("shop", "Codex supplies", undefined, {
             action: "open_shop",
             shopId: "shop-solen-codex",
@@ -449,6 +450,14 @@ export const COMMONS_NAMED: NpcDef[] = [
           choice("lore", "What should I record first?", "lore"),
           choice("bye", "I'll return with notes", undefined, { action: "close" }),
         ],
+      ),
+      node(
+        "academy",
+        [
+          "East of the plaza — cyan eaves beside the training yard. Interact with the Player Academy building and choose Enter Academy.",
+          "Or open /academy from Help anytime. Lessons never require SOL for the basics.",
+        ],
+        [choice("back", "Back", "greeting")],
       ),
       node(
         "lore",

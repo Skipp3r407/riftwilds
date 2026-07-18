@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   AllocationCards,
@@ -21,6 +22,11 @@ import { featureFlagDefaults } from "@/lib/config/feature-flags";
 import { projectConfig } from "@/lib/config/project";
 import { GameImage } from "@/components/assets/game-image";
 import { SectionTitleBand } from "@/components/shared/page-header";
+import {
+  GROWTH_USE_ART,
+  PUBLIC_WALLET_ICONS,
+  REVENUE_SECTION_ART,
+} from "@/lib/revenue/revenue-art";
 
 export const metadata = {
   title: "Economy",
@@ -28,10 +34,25 @@ export const metadata = {
     "Treasury allocation, pet rewards, marketplace fees, and care rules for the Riftwilds economy.",
 };
 
-function WalletRow({ label, address }: { label: string; address: string }) {
+function WalletRow({
+  label,
+  address,
+  iconSrc,
+}: {
+  label: string;
+  address: string;
+  iconSrc?: string;
+}) {
   return (
     <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[var(--stroke)] py-2 text-sm">
-      <span className="text-[var(--text-muted)]">{label}</span>
+      <span className="flex items-center gap-2.5 text-[var(--text-muted)]">
+        {iconSrc ? (
+          <span className="relative h-7 w-7 shrink-0 overflow-hidden rounded-md border border-[rgba(61,231,255,0.22)] bg-[rgba(6,12,24,0.55)]">
+            <Image src={iconSrc} alt="" fill sizes="28px" className="object-cover" aria-hidden />
+          </span>
+        ) : null}
+        {label}
+      </span>
       <span className="font-mono text-xs text-white">
         {address}
         {address !== "COMING_SOON" ? (
@@ -107,35 +128,35 @@ export default function EconomyPage() {
               showDevBadge={false}
               priority
             />
-            <div className="mt-6 grid w-full grid-cols-3 gap-2 text-center text-[10px] uppercase tracking-wider text-[var(--text-muted)]">
-              <div className="rounded-lg border border-[var(--stroke)] p-2">
+            <div className="mt-6 grid w-full grid-cols-3 gap-2 text-center text-[10px] uppercase tracking-wider text-[var(--text-muted)] sm:gap-3 sm:text-xs">
+              <div className="rounded-lg border border-[var(--stroke)] px-1.5 py-2.5 sm:p-3">
                 <GameImage
                   src="/assets/ui/economy/pets.png"
                   alt="Pet care"
-                  width={40}
-                  height={40}
+                  width={80}
+                  height={80}
                   className="mx-auto"
                   showDevBadge={false}
                 />
                 Pets
               </div>
-              <div className="rounded-lg border border-[var(--stroke)] p-2">
+              <div className="rounded-lg border border-[var(--stroke)] px-1.5 py-2.5 sm:p-3">
                 <GameImage
                   src="/assets/ui/economy/market.png"
                   alt="Marketplace exchange"
-                  width={40}
-                  height={40}
+                  width={80}
+                  height={80}
                   className="mx-auto"
                   showDevBadge={false}
                 />
                 Market
               </div>
-              <div className="rounded-lg border border-[var(--stroke)] p-2">
+              <div className="rounded-lg border border-[var(--stroke)] px-1.5 py-2.5 sm:p-3">
                 <GameImage
                   src="/assets/ui/economy/growth.png"
                   alt="Ecosystem growth"
-                  width={40}
-                  height={40}
+                  width={80}
+                  height={80}
                   className="mx-auto"
                   showDevBadge={false}
                 />
@@ -161,33 +182,77 @@ export default function EconomyPage() {
           </div>
         </section>
 
-        <section id="treasury-allocation">
-          <div>
-            <h2 className="font-display text-2xl text-white">Treasury Allocation</h2>
-            <p className="mt-2 text-sm text-[var(--text-muted)]">
-              {policy.label} · Status:{" "}
-              <span className="text-[var(--amber)] uppercase">{policy.status}</span> · Effective{" "}
-              {new Date(policy.effectiveAt).toLocaleDateString()} · Updated{" "}
-              {new Date(policy.updatedAt).toLocaleDateString()} · Total {total}%
-            </p>
-          </div>
-          <div className="mt-6 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <AllocationDonut allocations={policy.allocations} />
-            <AllocationCards />
-          </div>
-          <GrowthDisclaimer className="mt-6" />
-          <div className="panel mt-6 p-5">
-            <h3 className="font-display text-lg text-white">Public wallets</h3>
-            <p className="mt-1 text-xs text-[var(--text-muted)]">
-              Addresses load from policy configuration. Demo placeholders until configured.
-            </p>
-            <div className="mt-3">
-              <WalletRow label="Collection" address={policy.collectionWallet} />
-              <WalletRow label="Growth" address={policy.growthWallet} />
-              <WalletRow label="Community Rewards" address={policy.petRewardWallet} />
-              <WalletRow label="Operations" address={policy.operationsWallet} />
-              <WalletRow label="Events" address={policy.eventsWallet} />
-              <WalletRow label="Emergency" address={policy.emergencyWallet} />
+        <section
+          id="treasury-allocation"
+          className="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--stroke)]"
+        >
+          <Image
+            src={REVENUE_SECTION_ART.allocation}
+            alt=""
+            fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover object-center"
+            aria-hidden
+            unoptimized
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(6,12,24,0.78)] via-[rgba(6,12,24,0.88)] to-[rgba(6,12,24,0.94)]"
+            aria-hidden
+          />
+          <div className="relative z-10 space-y-6 p-4 sm:p-5 md:p-6">
+            <div>
+              <h2 className="font-display text-2xl text-white drop-shadow-sm">
+                Revenue allocation
+              </h2>
+              <p className="mt-2 text-sm text-[rgba(220,230,245,0.88)]">
+                {policy.label} · Status:{" "}
+                <span className="text-[var(--amber)] uppercase">{policy.status}</span> · Effective{" "}
+                {new Date(policy.effectiveAt).toLocaleDateString()} · Updated{" "}
+                {new Date(policy.updatedAt).toLocaleDateString()} · Total {total}%
+              </p>
+            </div>
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+              <AllocationDonut allocations={policy.allocations} />
+              <AllocationCards hideHeading />
+            </div>
+            <GrowthDisclaimer />
+            <div className="panel border-[rgba(61,231,255,0.18)] bg-[rgba(6,12,24,0.72)] p-5 backdrop-blur-[2px]">
+              <h3 className="font-display text-lg text-white">Public wallets</h3>
+              <p className="mt-1 text-xs text-[var(--text-muted)]">
+                Addresses load from policy configuration. Demo placeholders until configured.
+              </p>
+              <div className="mt-3">
+                <WalletRow
+                  label="Collection"
+                  address={policy.collectionWallet}
+                  iconSrc={PUBLIC_WALLET_ICONS.Collection}
+                />
+                <WalletRow
+                  label="Growth"
+                  address={policy.growthWallet}
+                  iconSrc={PUBLIC_WALLET_ICONS.Growth}
+                />
+                <WalletRow
+                  label="Community Rewards"
+                  address={policy.petRewardWallet}
+                  iconSrc={PUBLIC_WALLET_ICONS["Community Rewards"]}
+                />
+                <WalletRow
+                  label="Operations"
+                  address={policy.operationsWallet}
+                  iconSrc={PUBLIC_WALLET_ICONS.Operations}
+                />
+                <WalletRow
+                  label="Events"
+                  address={policy.eventsWallet}
+                  iconSrc={PUBLIC_WALLET_ICONS.Events}
+                />
+                <WalletRow
+                  label="Emergency"
+                  address={policy.emergencyWallet}
+                  iconSrc={PUBLIC_WALLET_ICONS.Emergency}
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -195,64 +260,107 @@ export default function EconomyPage() {
         <section id="growth">
           <h2 className="font-display text-2xl text-white">How the Growth Treasury May Be Used</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {[
-              {
-                title: "DEX and Liquidity",
-                items: [
-                  "DEX-related launch expenses",
-                  "Liquidity initiatives",
-                  "Market infrastructure",
-                  "Trading-pair support",
-                  "Professional liquidity services when legally and technically appropriate",
-                ],
-                note: "Liquidity actions must be publicly documented and must not be described as guaranteeing token-price appreciation.",
-              },
-              {
-                title: "Marketing and Promotions",
-                items: [
-                  "DexScreener advertising or boosts",
-                  "Social-media advertising",
-                  "Community partnerships",
-                  "Promotional campaigns",
-                  "Influencer collaborations",
-                  "Content creation",
-                  "Giveaways",
-                  "Launch events",
-                ],
-              },
-              {
-                title: "Game Development",
-                items: [
-                  "Creature artwork",
-                  "Animations",
-                  "New maps",
-                  "Battle development",
-                  "Marketplace improvements",
-                  "Mobile optimization",
-                  "New quests",
-                  "Community bosses",
-                  "Security enhancements",
-                ],
-              },
-              {
-                title: "Professional Services",
-                items: [
-                  "Legal review",
-                  "Smart-contract auditing",
-                  "Accounting",
-                  "Security testing",
-                  "Infrastructure support",
-                ],
-              },
-            ].map((card) => (
-              <article key={card.title} className="panel p-5">
-                <h3 className="font-display text-lg text-white">{card.title}</h3>
-                <ul className="mt-3 space-y-1 text-sm text-[var(--text-muted)]">
-                  {card.items.map((i) => (
-                    <li key={i}>• {i}</li>
-                  ))}
-                </ul>
-                {card.note ? <p className="mt-3 text-xs text-[var(--amber)]">{card.note}</p> : null}
+            {(
+              [
+                {
+                  title: "DEX and Liquidity",
+                  art: GROWTH_USE_ART.dex,
+                  items: [
+                    "DEX-related launch expenses",
+                    "Liquidity initiatives",
+                    "Market infrastructure",
+                    "Trading-pair support",
+                    "Professional liquidity services when legally and technically appropriate",
+                  ],
+                  note: "Liquidity actions must be publicly documented and must not be described as guaranteeing token-price appreciation.",
+                },
+                {
+                  title: "Marketing and Promotions",
+                  art: GROWTH_USE_ART.marketing,
+                  items: [
+                    "DexScreener advertising or boosts",
+                    "Social-media advertising",
+                    "Community partnerships",
+                    "Promotional campaigns",
+                    "Influencer collaborations",
+                    "Content creation",
+                    "Giveaways",
+                    "Launch events",
+                  ],
+                },
+                {
+                  title: "Game Development",
+                  art: GROWTH_USE_ART.gamedev,
+                  items: [
+                    "Creature artwork",
+                    "Animations",
+                    "New maps",
+                    "Battle development",
+                    "Marketplace improvements",
+                    "Mobile optimization",
+                    "New quests",
+                    "Community bosses",
+                    "Security enhancements",
+                  ],
+                },
+                {
+                  title: "Professional Services",
+                  art: GROWTH_USE_ART.services,
+                  items: [
+                    "Legal review",
+                    "Smart-contract auditing",
+                    "Accounting",
+                    "Security testing",
+                    "Infrastructure support",
+                  ],
+                },
+              ] as const
+            ).map((card) => (
+              <article
+                key={card.title}
+                className="panel relative min-h-[16rem] overflow-hidden p-0"
+                style={{ borderLeftColor: card.art.accent, borderLeftWidth: "3px" }}
+              >
+                <Image
+                  src={card.art.imageSrc}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center"
+                  aria-hidden
+                  unoptimized
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(6,12,24,0.97)] via-[rgba(6,12,24,0.86)] to-[rgba(6,12,24,0.42)]"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[rgba(6,12,24,0.55)] via-transparent to-[rgba(6,12,24,0.28)]"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute inset-x-0 top-0 h-0.5 opacity-90"
+                  style={{
+                    background: `linear-gradient(90deg, transparent, ${card.art.accent}, transparent)`,
+                  }}
+                  aria-hidden
+                />
+                <div className="relative z-10 flex h-full flex-col p-5">
+                  <h3 className="font-display text-lg text-white drop-shadow-sm">{card.title}</h3>
+                  <ul className="mt-3 space-y-1.5 text-sm text-[rgba(200,214,232,0.9)]">
+                    {card.items.map((i) => (
+                      <li key={i} className="flex gap-2">
+                        <span style={{ color: card.art.accent }} aria-hidden>
+                          •
+                        </span>
+                        <span>{i}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {"note" in card && card.note ? (
+                    <p className="mt-3 text-xs text-[var(--amber)] drop-shadow-sm">{card.note}</p>
+                  ) : null}
+                </div>
               </article>
             ))}
           </div>

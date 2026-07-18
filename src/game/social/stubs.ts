@@ -3,6 +3,8 @@
  * APIs return structured stubs; Prisma Guild models already exist.
  */
 
+import { emoteCatalogForSocialStub } from "@/game/live-world/systems/emotes/catalog";
+
 export type EmoteDef = {
   key: string;
   label: string;
@@ -27,17 +29,8 @@ export type MentorOffer = {
   description: string;
 };
 
-export const EMOTE_CATALOG: EmoteDef[] = [
-  { key: "wave", label: "Wave", animationKey: "emote_wave", unlockHint: "Default" },
-  { key: "cheer", label: "Cheer", animationKey: "emote_cheer", unlockHint: "Attend a festival" },
-  { key: "bow", label: "Keeper Bow", animationKey: "emote_bow", unlockHint: "Join a guild" },
-  {
-    key: "rift_spark",
-    label: "Rift Spark",
-    animationKey: "emote_spark",
-    unlockHint: "Civilization era 2",
-  },
-];
+/** Re-exports Live World emote catalog (cosmetic stubs for social hub). */
+export const EMOTE_CATALOG: EmoteDef[] = emoteCatalogForSocialStub();
 
 export const DEMO_MAIL: MailMessage[] = [
   {

@@ -231,18 +231,65 @@ async function main() {
     if (!ok) failed++;
   }
 
-  // Functional hatchery smoke
+  // Functional hatchery smoke (cookie jar + guest header for mobile-safe identity)
   console.log("\n\nFunctional checks...");
-  const claim = await fetch(`${BASE}/api/hatchery/claim`, { method: "POST" });
+  const jar = new Map();
+  const takeCookies = (res) => {
+    const raw = typeof res.headers.getSetCookie === "function" ? res.headers.getSetCookie() : [];
+    for (const line of raw) {
+      const [pair] = line.split(";");
+      const eq = pair.indexOf("=");
+      if (eq > 0) jar.set(pair.slice(0, eq).trim(), pair.slice(eq + 1).trim());
+    }
+  };
+  const cookieHeader = () =>
+    [...jar.entries()].map(([k, v]) => `${k}=${v}`).join("; ");
+  const guestHeaders = (guestToken) => {
+    const h = {};
+    const c = cookieHeader();
+    if (c) h.cookie = c;
+    if (guestToken) h["x-rift-guest"] = guestToken;
+    return h;
+  };
+
+  let guestToken = null;
+  const eggsWarm = await fetch(`${BASE}/api/hatchery/eggs`, { headers: guestHeaders(guestToken) });
+  takeCookies(eggsWarm);
+  const warmJson = await eggsWarm.json().catch(() => ({}));
+  if (typeof warmJson.guestToken === "string") guestToken = warmJson.guestToken;
+
+  const claim = await fetch(`${BASE}/api/hatchery/claim`, {
+    method: "POST",
+    headers: guestHeaders(guestToken),
+  });
+  takeCookies(claim);
   const claimJson = await claim.json().catch(() => ({}));
+  if (typeof claimJson.guestToken === "string") guestToken = claimJson.guestToken;
   const claimOk = claim.status === 200 || claim.status === 409;
   console.log(`POST /api/hatchery/claim → ${claim.status} ${claimOk ? "OK" : "FAIL"}`);
   if (!claimOk) failed++;
 
-  const eggs = await fetch(`${BASE}/api/hatchery/eggs`);
+  const eggs = await fetch(`${BASE}/api/hatchery/eggs`, { headers: guestHeaders(guestToken) });
+  takeCookies(eggs);
   const eggsJson = await eggs.json().catch(() => ({}));
-  console.log(`GET /api/hatchery/eggs → ${eggs.status} eggs=${(eggsJson.eggs ?? []).length}`);
-  if (!eggs.ok) failed++;
+  const eggCount = (eggsJson.eggs ?? []).length;
+  console.log(`GET /api/hatchery/eggs → ${eggs.status} eggs=${eggCount}`);
+  if (!eggs.ok || (claim.status === 200 && eggCount < 1)) failed++;
+
+  const eggId = eggsJson.eggs?.[0]?.publicId ?? claimJson.egg?.publicId;
+  if (eggId) {
+    const hatch = await fetch(`${BASE}/api/hatchery/hatch`, {
+      method: "POST",
+      headers: { "content-type": "application/json", ...guestHeaders(guestToken) },
+      body: JSON.stringify({ eggPublicId: eggId, skipWait: true }),
+    });
+    const hatchJson = await hatch.json().catch(() => ({}));
+    const hatchOk = hatch.status === 200;
+    console.log(
+      `POST /api/hatchery/hatch (skipWait) → ${hatch.status} ${hatchOk ? "OK" : "FAIL"} species=${hatchJson.reveal?.species ?? "?"}`,
+    );
+    if (!hatchOk) failed++;
+  }
 
   console.log("\n\n=== FAILURES ===");
   const fails = results.filter((r) => !r.ok);

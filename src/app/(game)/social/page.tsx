@@ -4,6 +4,7 @@ import { PageHeader, StatusChip } from "@/components/shared/page-header";
 import { getSocialHubSnapshot } from "@/game/social/stubs";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 import { PresenceChip } from "@/components/ecosystem/presence-chip";
+import { getTownFeaturedSnapshot } from "@/lib/social-presence";
 
 export const metadata = { title: "Social" };
 
@@ -52,6 +53,9 @@ function SocialThumb({
 export default function SocialHubPage() {
   const enabled = featureFlagDefaults.ECOSYSTEM_SOCIAL_HUB_ENABLED;
   const hub = getSocialHubSnapshot();
+  const town = featureFlagDefaults.TOWN_FEATURED_PLAYER_ENABLED
+    ? getTownFeaturedSnapshot()
+    : null;
 
   return (
     <div className="space-y-6">
@@ -65,6 +69,9 @@ export default function SocialHubPage() {
         actions={
           <>
             <PresenceChip />
+            <Link href="/live-world" className="btn-secondary focus-ring text-sm">
+              Live World
+            </Link>
             <Link href="/creators" className="btn-secondary focus-ring text-sm">
               Creators
             </Link>
@@ -82,6 +89,42 @@ export default function SocialHubPage() {
       ) : (
         <>
           <p className="text-xs text-[var(--text-dim)]">{hub.note}</p>
+
+          {town ? (
+            <section className="panel p-5">
+              <h2 className="font-display text-xl text-white">Town Featured</h2>
+              <p className="mt-1 text-xs text-[var(--text-dim)]">
+                Hourly cosmetic titles for genuinely active social-hub keepers — Town Hero, Master
+                Merchant, Community Favorite. No combat power. Never SOL.
+              </p>
+              {town.featured.length === 0 ? (
+                <p className="mt-3 text-sm text-[var(--text-muted)]">
+                  No featured keepers this hour yet — earn Presence XP in towns to compete.
+                </p>
+              ) : (
+                <ul className="mt-3 space-y-2 text-sm text-[var(--text-muted)]">
+                  {town.featured.map((f) => (
+                    <li
+                      key={`${f.title}-${f.userId}`}
+                      className="flex items-center justify-between gap-3 border-b border-[var(--stroke)] py-2"
+                    >
+                      <span className="text-white">
+                        {f.title} · {f.displayName}
+                      </span>
+                      <StatusChip tone="info">{f.regionSlug}</StatusChip>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <ul className="mt-4 grid gap-2 text-xs text-[var(--text-muted)] sm:grid-cols-2">
+                {town.popularLocations.slice(0, 4).map((loc) => (
+                  <li key={loc.locationId}>
+                    {loc.label} · activity {loc.activityScore}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
 
           <section className="grid gap-4 lg:grid-cols-2">
             <article className="panel p-5">

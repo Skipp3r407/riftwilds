@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { REGION_IDENTITIES } from "@/game/world-maps/regions";
-import { NPC_CATALOG } from "@/game/world-maps/defs/npcs";
+import { NPC_CATALOG as CONTENT_NPC_CATALOG } from "@/content/npcs";
 import { ENEMY_DEFS } from "@/game/world-maps/defs/enemies";
 import { STARTER_SPECIES, EGG_CLASSES, AFFINITIES } from "@/lib/assets/manifest";
 import { WEAPON_CATALOG } from "@/lib/items/catalog/weapons";
@@ -92,7 +92,7 @@ function statusFor(
   return existsPublic(projectRoot, publicPath) ? presentStatus : preferred;
 }
 
-/** Launch pet slugs used by /assets/pets/{slug}.png (50 species portraits). */
+/** Launch pet slugs used by /assets/pets/{slug}.png (species portraits on disk). */
 export function listPetPortraitSlugs(projectRoot: string): string[] {
   const dir = path.join(projectRoot, "public/assets/pets");
   if (!fs.existsSync(dir)) return [];
@@ -226,18 +226,24 @@ export function buildExpectedAssets(projectRoot: string): AssetRecord[] {
     }
   }
 
-  // Key NPCs
-  const keyNpc = ["mira", "hatchery-keeper", "market-registrar", "arena-master"];
-  for (const npc of NPC_CATALOG) {
-    const p = `/assets/npcs/${npc.id}/portrait.png`;
+  // NPCs — region-scoped paths under public/assets/npcs/{regionId}/{slug}/
+  const keyNpc = new Set([
+    "elara-venn",
+    "mira-shellbright",
+    "rowan-vale",
+    "archivist-solen",
+    "captain-orren",
+  ]);
+  for (const npc of CONTENT_NPC_CATALOG) {
+    const p = `/assets/npcs/${npc.regionId}/${npc.slug}/portrait.png`;
     assets.push({
-      id: `npc-${npc.id}`,
+      id: `npc-${npc.slug}`,
       category: "npcs",
       publicPath: p,
-      label: `${npc.name} portrait`,
+      label: `${npc.displayName} portrait`,
       status: statusFor(projectRoot, p),
-      priority: keyNpc.includes(npc.id) ? 1 : 4,
-      promptHint: `Character portrait of ${npc.name}, role ${npc.role}, Riftwilds fantasy NPC, bust/shoulders, no text.`,
+      priority: keyNpc.has(npc.slug) || npc.kind === "named" ? (keyNpc.has(npc.slug) ? 1 : 3) : 4,
+      promptHint: `Character portrait of ${npc.displayName}, role ${npc.occupation}, Riftwilds fantasy NPC, bust/shoulders, no text.`,
     });
   }
 

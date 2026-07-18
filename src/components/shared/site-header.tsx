@@ -18,6 +18,7 @@ import { brandMarkPath, brandWordmarkPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import { headerNavGroups, type NavGroup } from "@/lib/config/nav";
 import { SolPriceChip } from "@/components/shared/sol-price-chip";
+import { TokenPriceChip } from "@/components/shared/token-price-chip";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { markOriginStorySeen } from "@/lib/origin-story";
 import { playSfx } from "@/hooks/use-sfx";
@@ -98,7 +99,11 @@ function NavDropdown({ group, pathname, openId, setOpenId }: NavDropdownProps) {
   };
 
   return (
-    <div ref={rootRef} className="hud-nav__item">
+    <div
+      ref={rootRef}
+      className="hud-nav__item"
+      onMouseEnter={openMenu}
+    >
       <button
         type="button"
         className={cn(
@@ -109,8 +114,8 @@ function NavDropdown({ group, pathname, openId, setOpenId }: NavDropdownProps) {
         aria-expanded={open}
         aria-haspopup="menu"
         aria-controls={menuId}
-        /* CSS :hover/:focus-within opens the panel; click syncs aria + sticky open. */
-        onClick={openMenu}
+        /* Hover opens via CSS + mouseEnter; click toggles sticky open for touch/keyboard. */
+        onClick={() => setOpenId(open ? null : group.id)}
         onKeyDown={onTriggerKeyDown}
       >
         <span>{group.label}</span>
@@ -158,7 +163,7 @@ function NavDropdown({ group, pathname, openId, setOpenId }: NavDropdownProps) {
   );
 }
 
-export function SiteHeader({ variant = "marketing" }: Props) {
+export function SiteHeader(_props: Props = {}) {
   const [openId, setOpenId] = useState<string | null>(null);
   const mobileToggleRef = useRef<HTMLInputElement>(null);
   const pathname = usePathname();
@@ -212,40 +217,41 @@ export function SiteHeader({ variant = "marketing" }: Props) {
         <div className="hud-nav__accent" aria-hidden="true" />
         <div className="hud-nav__rail" aria-hidden="true" />
 
-        <div className="hud-nav__row mx-auto flex max-w-7xl items-center px-4 py-2.5 md:px-6 md:py-3">
+        <div className="hud-nav__row mx-auto flex w-full max-w-[100rem] items-center px-4 py-2.5 md:px-6 md:py-3">
           <Link
             href="/"
             onClick={() => {
               playSfx("ui.nav");
               markOriginStorySeen();
             }}
-            className="hud-nav__brand focus-ring relative z-[2] flex shrink-0 items-center gap-2 md:gap-2.5"
+            className="hud-nav__brand focus-ring flex shrink-0 items-center gap-1.5 md:gap-2"
             aria-label={projectConfig.PROJECT_NAME}
           >
             <Image
               src={brandMarkPath}
               alt=""
-              width={160}
-              height={160}
+              width={512}
+              height={512}
               priority
               unoptimized
-              className="h-14 w-14 shrink-0 object-contain object-left md:h-16 md:w-16 lg:h-[4.5rem] lg:w-[4.5rem]"
+              className="hud-nav__brand-mark h-12 w-12 shrink-0 object-contain object-left md:h-14 md:w-14 xl:h-16 xl:w-16"
             />
             <Image
               src={brandWordmarkPath}
               alt="Riftwilds"
-              width={392}
-              height={70}
+              width={497}
+              height={140}
               priority
               unoptimized
-              className="h-7 w-auto shrink-0 object-contain object-left sm:h-8 md:h-9"
+              className="hud-nav__brand-wordmark h-6 w-auto shrink-0 object-contain object-left sm:h-7 md:h-7 xl:h-7"
             />
           </Link>
 
           <nav
             data-nav-root="desktop"
-            className="hud-nav__links relative z-[3] min-w-0 flex-1 items-center justify-end"
+            className="hud-nav__links min-w-0 flex-1 items-center"
             aria-label="Primary"
+            onMouseLeave={() => setOpenId(null)}
           >
             <Link
               href="/"
@@ -266,13 +272,24 @@ export function SiteHeader({ variant = "marketing" }: Props) {
                 setOpenId={setOpenId}
               />
             ))}
+            {/* HELP stays in the primary link cluster — after Community, before tickers/wallet */}
+            <Link
+              href="/academy"
+              onClick={() => playSfx("ui.nav")}
+              className={cn(
+                "hud-nav__link hud-nav__help focus-ring",
+                linkActive(pathname, "/academy") && "hud-nav__link--active",
+              )}
+            >
+              Help
+            </Link>
           </nav>
 
-          <div className="hud-nav__actions relative z-[5] flex shrink-0 items-center justify-end">
-            {variant === "game" ? (
-              <span className="status-chip status-chip--info hud-nav__network-chip">Solana</span>
-            ) : null}
-            <SolPriceChip className="hud-nav__sol" />
+          <div className="hud-nav__actions flex shrink-0 items-center justify-end">
+            <div className="hud-nav__tickers" aria-label="Market tickers">
+              <SolPriceChip className="hud-nav__sol" />
+              <TokenPriceChip className="hud-nav__token" />
+            </div>
             <WalletConnectButton />
             <label
               htmlFor="hud-nav-mobile-toggle"
@@ -298,6 +315,7 @@ export function SiteHeader({ variant = "marketing" }: Props) {
               homeActive && "hud-nav__drawer-link--active",
             )}
             onClick={() => {
+              playSfx("ui.nav");
               markOriginStorySeen();
               closeMobile();
             }}
@@ -341,6 +359,23 @@ export function SiteHeader({ variant = "marketing" }: Props) {
               </div>
             );
           })}
+
+          <div className="hud-nav__drawer-section">
+            <p className="hud-nav__drawer-label">Help</p>
+            <Link
+              href="/academy"
+              className={cn(
+                "hud-nav__drawer-link focus-ring",
+                linkActive(pathname, "/academy") && "hud-nav__drawer-link--active",
+              )}
+              onClick={() => {
+                playSfx("ui.nav");
+                closeMobile();
+              }}
+            >
+              Academy / Help
+            </Link>
+          </div>
         </nav>
       </div>
     </header>

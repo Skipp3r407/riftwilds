@@ -80,6 +80,20 @@ export function PetLoadoutEditor({ publicPetId }: { publicPetId: string }) {
     playSfx("pets.equip");
     setSaved(true);
     setTimeout(() => setSaved(false), 1200);
+    // Mirror primary slots through server ownership validation (demo companion path).
+    void (async () => {
+      const keys = [loadout.weaponKey, loadout.armorKey, loadout.cosmeticKey].filter(
+        Boolean,
+      ) as string[];
+      for (const itemId of keys) {
+        await fetch(`/api/pets/${encodeURIComponent(publicPetId)}/equipment/equip`, {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "equip", itemId }),
+        }).catch(() => null);
+      }
+    })();
   };
 
   return (
@@ -137,7 +151,7 @@ export function PetLoadoutEditor({ publicPetId }: { publicPetId: string }) {
           <Slot
             label="Weapon"
             value={loadout.weaponKey}
-            options={WEAPON_CATALOG.slice(0, 20).map((w) => ({ id: w.id, name: w.name }))}
+            options={WEAPON_CATALOG.map((w) => ({ id: w.id, name: w.name }))}
             onChange={(v) => setLoadout((l) => ({ ...l, weaponKey: v }))}
           />
           <Slot

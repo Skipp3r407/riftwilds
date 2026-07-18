@@ -67,6 +67,8 @@ docs/WORLD_MAPS.md                  # Map structure & unlock progression
 - [x] Smooth follow camera
 - [x] Collisions + map boundaries
 - [x] One active pet companion (follow + teleport recovery)
+- [x] Clickable companion → Equipment panel → owned equip → world layers
+- [x] Appearance broadcast stub via Live World multiplayer client
 - [x] Basic NPC + Space/E interact
 - [x] Desktop + mobile virtual controls
 - [x] Save last position (`localStorage`)
@@ -76,6 +78,8 @@ docs/WORLD_MAPS.md                  # Map structure & unlock progression
 - [x] 12-region world-map blueprints + unlock gates (`docs/WORLD_MAPS.md`)
 - [x] Enterable stub portals: Ember Crater, Moonwater Coast, Elderwood Forest
 
+See also: `docs/EQUIPMENT_AND_LOADOUTS.md` (ownership, presets, anchor backlog).
+
 ### Phase 2 — Multiplayer social
 
 - WebSocket instances / shards
@@ -83,6 +87,7 @@ docs/WORLD_MAPS.md                  # Map structure & unlock progression
 - Chat, emotes, friends, parties
 - Server-validated presence
 - Pet social interactions
+- Full pet appearance sync (Phase 1 only stashes `sendAppearance` stubs locally)
 
 ### Phase 3 — Activities & destinations
 
@@ -113,6 +118,16 @@ docs/WORLD_MAPS.md                  # Map structure & unlock progression
 **Desktop:** WASD or arrow keys · Shift run · E or Space talk/advance dialogue  
 
 **Mobile:** Left virtual joystick · Run · Talk
+
+## Social presence (while online)
+
+Living World Presence XP, rest hubs, Town Featured titles, and anti-AFK live under:
+
+- `docs/social/LIVING_WORLD_PRESENCE.md`
+- `docs/world/RESTED_CAMPING.md`
+- Live World HUD: Presence panel · town activity · featured banner
+
+Presence rewards meaningful social/rest activity only — never SOL for idling. Logout still removes keepers from the world by default.
 
 ## Ops notes
 

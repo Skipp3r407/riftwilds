@@ -38,6 +38,9 @@ const bodySchema = z.object({
       "SPIRIT",
     ])
     .optional(),
+  aiDifficulty: z
+    .enum(["NOVICE", "ADEPT", "VETERAN", "ELITE", "RIFTMASTER"])
+    .optional(),
 });
 
 async function ownerKey(): Promise<string> {
@@ -70,6 +73,7 @@ export async function POST(req: Request) {
       level: parsed.data.level,
     },
     opponentAffinity: parsed.data.opponentAffinity,
+    aiDifficulty: parsed.data.aiDifficulty,
   });
 
   const res = NextResponse.json(toClientSnapshot(record));

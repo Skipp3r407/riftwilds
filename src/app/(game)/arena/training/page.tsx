@@ -21,7 +21,7 @@ export default function ArenaTrainingPage() {
           <p className="font-display text-xs uppercase tracking-[0.24em] text-[var(--cyan)]">
             Riftwilds Arena
           </p>
-          <h1 className="font-display text-3xl text-white">Training</h1>
+          <h1 className="font-display text-3xl text-white">Practice</h1>
         </div>
         <Link href="/arena" className="btn-secondary focus-ring text-sm">
           Arena hub

@@ -22,6 +22,7 @@ export type WorldMapObjectType =
   | "quest"
   | "puzzle"
   | "waypoint"
+  | "gateway"
   | "shop"
   | "hazard"
   | "building"
@@ -112,13 +113,48 @@ export interface PathwayDef {
   requiredAbility?: string;
 }
 
+/** Collision / barrier kinds for containment + natural borders. */
+export type CollisionKind =
+  | "wall"
+  | "hazard"
+  | "building"
+  | "cliff"
+  /** Deep water (legacy alias for deep_water) — solid without swim/boat. */
+  | "water"
+  | "lava"
+  | "deep_water"
+  /** Walkable splash / ford — non-solid. */
+  | "shallow_water"
+  /** Non-solid overlap for seamless travel. */
+  | "transition"
+  /** Quest / story blockade (natural prop). */
+  | "blocker"
+  /** Locked portal seal (collapsed bridge, ward, gate…). */
+  | "seal";
+
 export interface CollisionRect {
   id: string;
   x: number;
   y: number;
   width: number;
   height: number;
-  kind?: "wall" | "hazard" | "building" | "cliff" | "water" | "lava";
+  kind?: CollisionKind;
+  /** Override solid semantics from kind (transitions default non-solid). */
+  solid?: boolean;
+  metadata?: {
+    toRegionId?: string;
+    entryPortalId?: string;
+    portalId?: string;
+    unlockFlag?: string;
+    message?: string;
+    barrierStyle?:
+      | "collapsed_bridge"
+      | "seal"
+      | "checkpoint"
+      | "forest"
+      | "cliff"
+      | "gate";
+  };
 }
 
 export interface MinimapMeta {

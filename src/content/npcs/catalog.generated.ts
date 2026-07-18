@@ -138,7 +138,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Elara Venn. Weathered explorer with steady eyes, wind-creased face, short-cropped dark hair streaked with ash-silver. Wearing: Travel cloak with Elderwood leaf-thread trim over layered field gear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Elara Venn. Weathered explorer with steady eyes, wind-creased face, short-cropped dark hair streaked with ash-silver. Wearing: Travel cloak with Elderwood leaf-thread trim over layered field gear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -154,7 +153,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 960,
       "y": 704
     },
-    "occupation": "Founder historian and guardian of early Riftling records"
+    "occupation": "Founder historian and guardian of early Riftling records",
+    "artStatus": "generated"
   },
   {
     "id": "rowan-vale",
@@ -290,7 +290,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Keeper Rowan Vale. Bright-eyed guide with sun-warmed brown skin, short curly hair, eager posture. Wearing: Light keeper vest with cyan path-markers and practical boots. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Keeper Rowan Vale. Bright-eyed guide with sun-warmed brown skin, short curly hair, eager posture. Wearing: Light keeper vest with cyan path-markers and practical boots. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -306,7 +305,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1088,
       "y": 800
     },
-    "occupation": "Orientation guide for new Riftkeepers"
+    "occupation": "Orientation guide for new Riftkeepers",
+    "artStatus": "generated"
   },
   {
     "id": "mira-shellbright",
@@ -460,7 +460,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mira Shellbright. Soft-featured caretaker with warm amber eyes, hair in a practical braid, gentle hands. Wearing: Soft cream-and-teal hatchery coat with protective gloves. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mira Shellbright. Soft-featured caretaker with warm amber eyes, hair in a practical braid, gentle hands. Wearing: Soft cream-and-teal hatchery coat with protective gloves. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -476,7 +475,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 384
     },
-    "occupation": "Egg incubation and early Riftling care"
+    "occupation": "Egg incubation and early Riftling care",
+    "artStatus": "generated"
   },
   {
     "id": "bram-ironroot",
@@ -629,7 +629,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Bram Ironroot. Broad-shouldered smith with soot freckles, short iron-gray beard, kind eyes. Wearing: Heavy leather apron over stone-and-metal work clothes. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Bram Ironroot. Broad-shouldered smith with soot freckles, short iron-gray beard, kind eyes. Wearing: Heavy leather apron over stone-and-metal work clothes. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -645,7 +644,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 832
     },
-    "occupation": "Blacksmith and beginner tool crafter"
+    "occupation": "Blacksmith and beginner tool crafter",
+    "artStatus": "generated"
   },
   {
     "id": "tessa-windmere",
@@ -785,7 +785,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Tessa Windmere. Quick-smiling trader with windblown auburn hair and ink marks on her fingers. Wearing: Layered merchant coat with ledger pockets and coast-thread sash. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Tessa Windmere. Quick-smiling trader with windblown auburn hair and ink marks on her fingers. Wearing: Layered merchant coat with ledger pockets and coast-thread sash. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -801,7 +800,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 1216
     },
-    "occupation": "Merchant and marketplace tutor"
+    "occupation": "Merchant and marketplace tutor",
+    "artStatus": "generated"
   },
   {
     "id": "archivist-solen",
@@ -947,7 +947,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Archivist Solen. Slender archivist with ink-dark hair in a neat knot, luminous reading lenses. Wearing: Layered scholar robes with catalog ribbons and fingerless gloves. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Archivist Solen. Slender archivist with ink-dark hair in a neat knot, luminous reading lenses. Wearing: Layered scholar robes with catalog ribbons and fingerless gloves. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -963,7 +962,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1152,
       "y": 640
     },
-    "occupation": "Riftling Codex archivist"
+    "occupation": "Riftling Codex archivist",
+    "artStatus": "generated"
   },
   {
     "id": "captain-orren",
@@ -1099,7 +1099,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Captain Orren. Tall captain with scar along jaw, close-cropped hair, watchful stance. Wearing: Reinforced commons guard coat with cyan rank thread. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Captain Orren. Tall captain with scar along jaw, close-cropped hair, watchful stance. Wearing: Reinforced commons guard coat with cyan rank thread. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -1115,7 +1114,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1344,
       "y": 448
     },
-    "occupation": "Guard captain and combat trainer"
+    "occupation": "Guard captain and combat trainer",
+    "artStatus": "generated"
   },
   {
     "id": "nyla-brook",
@@ -1255,7 +1255,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Nyla Brook. Soft-spoken healer with cool green eyes and moss-braided hair. Wearing: Pale recovery robes with herb-stained cuffs. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Nyla Brook. Soft-spoken healer with cool green eyes and moss-braided hair. Wearing: Pale recovery robes with herb-stained cuffs. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -1271,7 +1270,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1408,
       "y": 1344
     },
-    "occupation": "Healer and Recovery Center attendant"
+    "occupation": "Healer and Recovery Center attendant",
+    "artStatus": "generated"
   },
   {
     "id": "pip-gearwhistle",
@@ -1407,7 +1407,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Pip Gearwhistle. Wiry tinkerer with goggles pushed into wild copper hair, grease freckles. Wearing: Multi-pocket tech coat with Alloy Ruins scrap panels. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Pip Gearwhistle. Wiry tinkerer with goggles pushed into wild copper hair, grease freckles. Wearing: Multi-pocket tech coat with Alloy Ruins scrap panels. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -1423,7 +1422,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 896,
       "y": 320
     },
-    "occupation": "Gateway machinery inventor and repair tech"
+    "occupation": "Gateway machinery inventor and repair tech",
+    "artStatus": "generated"
   },
   {
     "id": "rook-emberfall",
@@ -1556,7 +1556,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Rook Emberfall. Athletic coordinator with ember-streaked dark hair and a confident grin. Wearing: Arena vest with scorched trim and rank sash. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Rook Emberfall. Athletic coordinator with ember-streaked dark hair and a confident grin. Wearing: Arena vest with scorched trim and rank sash. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -1572,7 +1571,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1664,
       "y": 384
     },
-    "occupation": "Training battles and beginner tournaments"
+    "occupation": "Training battles and beginner tournaments",
+    "artStatus": "generated"
   },
   {
     "id": "kael-ashwalker",
@@ -1706,7 +1706,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Kael Ashwalker. Ash-dusted scout with heat-scarred cheek and sharp amber eyes. Wearing: Heat-weave cloak over cooled-stone armor plates. Region vibe: ember crater. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Kael Ashwalker. Ash-dusted scout with heat-scarred cheek and sharp amber eyes. Wearing: Heat-weave cloak over cooled-stone armor plates. Region vibe: ember crater. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -1722,7 +1721,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 192,
       "y": 256
     },
-    "occupation": "Volcano scout and crater guide"
+    "occupation": "Volcano scout and crater guide",
+    "artStatus": "generated"
   },
   {
     "id": "forgekeeper-vessa",
@@ -1850,7 +1850,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Forgekeeper Vessa. Forge-hardened smith with braided cinder hair and glowing gauntlets. Wearing: Molten forge apron with heat-runed sleeves. Region vibe: ember crater. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Forgekeeper Vessa. Forge-hardened smith with braided cinder hair and glowing gauntlets. Wearing: Molten forge apron with heat-runed sleeves. Region vibe: ember crater. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -1866,7 +1865,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 832,
       "y": 896
     },
-    "occupation": "Ember-region weapon specialist"
+    "occupation": "Ember-region weapon specialist",
+    "artStatus": "generated"
   },
   {
     "id": "cinder-sage-malrec",
@@ -2000,7 +2000,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Cinder Sage Malrec. Ash-robed sage with soot spectacles and calm smile. Wearing: Layered cinder scholar wraps. Region vibe: ember crater. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Cinder Sage Malrec. Ash-robed sage with soot spectacles and calm smile. Wearing: Layered cinder scholar wraps. Region vibe: ember crater. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -2016,7 +2015,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 704,
       "y": 1280
     },
-    "occupation": "Scholar of volcanic Riftlings"
+    "occupation": "Scholar of volcanic Riftlings",
+    "artStatus": "generated"
   },
   {
     "id": "warden-pyra",
@@ -2137,7 +2137,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Warden Pyra. Armored warden with ember-red cloak and stern gaze. Wearing: Crater warden plate with cooled slag trim. Region vibe: ember crater. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Warden Pyra. Armored warden with ember-red cloak and stern gaze. Wearing: Crater warden plate with cooled slag trim. Region vibe: ember crater. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -2153,7 +2152,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 192
     },
-    "occupation": "Protects settlements from lava creatures"
+    "occupation": "Protects settlements from lava creatures",
+    "artStatus": "generated"
   },
   {
     "id": "luma-tidecrest",
@@ -2287,7 +2287,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Captain Luma Tidecrest. Salt-weathered captain with tide-blue eyes and coiled silver-black hair. Wearing: Harbor coat with moonwater braid cords. Region vibe: moonwater coast. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Captain Luma Tidecrest. Salt-weathered captain with tide-blue eyes and coiled silver-black hair. Wearing: Harbor coat with moonwater braid cords. Region vibe: moonwater coast. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -2303,7 +2302,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 256,
       "y": 320
     },
-    "occupation": "Harbor captain and sea-route guide"
+    "occupation": "Harbor captain and sea-route guide",
+    "artStatus": "generated"
   },
   {
     "id": "finn-coralhand",
@@ -2437,7 +2437,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Finn Coralhand. Sun-browned fisher with coral-bead bracelets and a crooked grin. Wearing: Light coastal tunic and waterproof wrap. Region vibe: moonwater coast. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Finn Coralhand. Sun-browned fisher with coral-bead bracelets and a crooked grin. Wearing: Light coastal tunic and waterproof wrap. Region vibe: moonwater coast. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -2453,7 +2452,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 768,
       "y": 1024
     },
-    "occupation": "Fisher and gathering trainer"
+    "occupation": "Fisher and gathering trainer",
+    "artStatus": "generated"
   },
   {
     "id": "oracle-selene",
@@ -2574,7 +2574,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Oracle Selene. Pale seer with moonlit hair and reflective gaze. Wearing: Sheer tide veils over practical lighthouse layers. Region vibe: moonwater coast. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Oracle Selene. Pale seer with moonlit hair and reflective gaze. Wearing: Sheer tide veils over practical lighthouse layers. Region vibe: moonwater coast. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -2590,7 +2589,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 192,
       "y": 1088
     },
-    "occupation": "Studies ocean memories and Tide Riftlings"
+    "occupation": "Studies ocean memories and Tide Riftlings",
+    "artStatus": "generated"
   },
   {
     "id": "marina-drift",
@@ -2718,7 +2718,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Marina Drift. Sturdy builder with salt curls and paint-flecked hands. Wearing: Workshop smock over coastal trousers. Region vibe: moonwater coast. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Marina Drift. Sturdy builder with salt curls and paint-flecked hands. Wearing: Workshop smock over coastal trousers. Region vibe: moonwater coast. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -2734,7 +2733,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 384
     },
-    "occupation": "Boat-builder and coastal merchant"
+    "occupation": "Boat-builder and coastal merchant",
+    "artStatus": "generated"
   },
   {
     "id": "warden-sylvi",
@@ -2868,7 +2868,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Warden Sylvi. Tall guardian with leaf-tattooed temples and keen green eyes. Wearing: Living-bark pauldrons over ranger greens. Region vibe: elderwood forest. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Warden Sylvi. Tall guardian with leaf-tattooed temples and keen green eyes. Wearing: Living-bark pauldrons over ranger greens. Region vibe: elderwood forest. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -2884,7 +2883,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 256,
       "y": 320
     },
-    "occupation": "Forest guardian"
+    "occupation": "Forest guardian",
+    "artStatus": "generated"
   },
   {
     "id": "mosskeeper-elden",
@@ -3025,7 +3025,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mosskeeper Elden. Moss-shouldered herbalist with gentle smile and soil-stained fingers. Wearing: Layered leaf-cloth robes. Region vibe: elderwood forest. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mosskeeper Elden. Moss-shouldered herbalist with gentle smile and soil-stained fingers. Wearing: Layered leaf-cloth robes. Region vibe: elderwood forest. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -3041,7 +3040,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 640,
       "y": 576
     },
-    "occupation": "Herbalist and naturalist"
+    "occupation": "Herbalist and naturalist",
+    "artStatus": "generated"
   },
   {
     "id": "fenn-quickbranch",
@@ -3162,7 +3162,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Fenn Quickbranch. Lithe scout with freckles and vine-tied hair. Wearing: Camouflage trail leathers. Region vibe: elderwood forest. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Fenn Quickbranch. Lithe scout with freckles and vine-tied hair. Wearing: Camouflage trail leathers. Region vibe: elderwood forest. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -3178,7 +3177,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 448,
       "y": 448
     },
-    "occupation": "Scout and hidden-path guide"
+    "occupation": "Scout and hidden-path guide",
+    "artStatus": "generated"
   },
   {
     "id": "grandmother-willowmere",
@@ -3299,7 +3299,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Grandmother Willowmere. Elder with silver-green hair and root-carved cane. Wearing: Willow-thread shawl over deep forest dress. Region vibe: elderwood forest. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Grandmother Willowmere. Elder with silver-green hair and root-carved cane. Wearing: Willow-thread shawl over deep forest dress. Region vibe: elderwood forest. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -3315,7 +3314,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 896,
       "y": 768
     },
-    "occupation": "Lore keeper and spiritual elder"
+    "occupation": "Lore keeper and spiritual elder",
+    "artStatus": "generated"
   },
   {
     "id": "aeron-cloudstep",
@@ -3449,7 +3449,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Aeron Cloudstep. Lean climber with windburn and sky-gray eyes. Wearing: Stormcloak with lightning-thread seams. Region vibe: stormspire peaks. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Aeron Cloudstep. Lean climber with windburn and sky-gray eyes. Wearing: Stormcloak with lightning-thread seams. Region vibe: stormspire peaks. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -3465,7 +3464,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 640
     },
-    "occupation": "Mountain pathfinder"
+    "occupation": "Mountain pathfinder",
+    "artStatus": "generated"
   },
   {
     "id": "engineer-volt",
@@ -3593,7 +3593,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Engineer Volt. Gadgeteer with static hair and insulated gloves. Wearing: Insulated lab coat with coil embroidery. Region vibe: stormspire peaks. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Engineer Volt. Gadgeteer with static hair and insulated gloves. Wearing: Insulated lab coat with coil embroidery. Region vibe: stormspire peaks. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -3609,7 +3608,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 576,
       "y": 512
     },
-    "occupation": "Storm-energy researcher"
+    "occupation": "Storm-energy researcher",
+    "artStatus": "generated"
   },
   {
     "id": "skywarden-ilya",
@@ -3730,7 +3730,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Skywarden Ilya. Wing-cloak warden with sharp profile. Wearing: Skyplate armor with cloud-silk cape. Region vibe: stormspire peaks. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Skywarden Ilya. Wing-cloak warden with sharp profile. Wearing: Skyplate armor with cloud-silk cape. Region vibe: stormspire peaks. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -3746,7 +3745,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 704,
       "y": 384
     },
-    "occupation": "Protects air routes"
+    "occupation": "Protects air routes",
+    "artStatus": "generated"
   },
   {
     "id": "hermit-thane",
@@ -3867,7 +3867,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Hermit Thane. Bearded hermit with storm-glass eyes. Wearing: Patched mountain wraps. Region vibe: stormspire peaks. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Hermit Thane. Bearded hermit with storm-glass eyes. Wearing: Patched mountain wraps. Region vibe: stormspire peaks. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -3883,7 +3882,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 256,
       "y": 896
     },
-    "occupation": "Ancient weather scholar"
+    "occupation": "Ancient weather scholar",
+    "artStatus": "generated"
   },
   {
     "id": "doran-flint",
@@ -4017,7 +4017,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Doran Flint. Stocky miner with quartz-dust beard. Wearing: Stonework overalls and reinforced boots. Region vibe: stoneheart canyon. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Doran Flint. Stocky miner with quartz-dust beard. Wearing: Stonework overalls and reinforced boots. Region vibe: stoneheart canyon. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -4033,7 +4032,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 576
     },
-    "occupation": "Miner and cave guide"
+    "occupation": "Miner and cave guide",
+    "artStatus": "generated"
   },
   {
     "id": "petra-stoneveil",
@@ -4167,7 +4167,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Petra Stoneveil. Dust-coated archaeologist with keen hazel eyes. Wearing: Field coat with sample loops. Region vibe: stoneheart canyon. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Petra Stoneveil. Dust-coated archaeologist with keen hazel eyes. Wearing: Field coat with sample loops. Region vibe: stoneheart canyon. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -4183,7 +4182,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 640,
       "y": 704
     },
-    "occupation": "Relic archaeologist"
+    "occupation": "Relic archaeologist",
+    "artStatus": "generated"
   },
   {
     "id": "marshal-korr",
@@ -4304,7 +4304,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Marshal Korr. Broad marshal with sandstone cloak. Wearing: Canyon guard harness. Region vibe: stoneheart canyon. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Marshal Korr. Broad marshal with sandstone cloak. Wearing: Canyon guard harness. Region vibe: stoneheart canyon. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -4320,7 +4319,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 256,
       "y": 384
     },
-    "occupation": "Canyon security leader"
+    "occupation": "Canyon security leader",
+    "artStatus": "generated"
   },
   {
     "id": "gemwright-opal",
@@ -4448,7 +4448,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Gemwright Opal. Elegant gemwright with prism earrings. Wearing: Velvet work apron over canyon silks. Region vibe: stoneheart canyon. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Gemwright Opal. Elegant gemwright with prism earrings. Wearing: Velvet work apron over canyon silks. Region vibe: stoneheart canyon. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -4464,7 +4463,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 512,
       "y": 448
     },
-    "occupation": "Jeweler and upgrade specialist"
+    "occupation": "Jeweler and upgrade specialist",
+    "artStatus": "generated"
   },
   {
     "id": "freya-snowmark",
@@ -4598,7 +4598,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Freya Snowmark. Frost-scarred guide with pale braid and sharp cheekbones. Wearing: Fur-lined basin coat with ice-thread seams. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Freya Snowmark. Frost-scarred guide with pale braid and sharp cheekbones. Wearing: Fur-lined basin coat with ice-thread seams. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -4614,7 +4613,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 512
     },
-    "occupation": "Cold-region survival guide"
+    "occupation": "Cold-region survival guide",
+    "artStatus": "generated"
   },
   {
     "id": "jori-icebloom",
@@ -4742,7 +4742,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Jori Icebloom. Alchemist with frostflower crown and cool blue lips from chill balm. Wearing: Insulated alchemy smock. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Jori Icebloom. Alchemist with frostflower crown and cool blue lips from chill balm. Wearing: Insulated alchemy smock. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -4758,7 +4757,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 512,
       "y": 576
     },
-    "occupation": "Alchemist and frost-herb specialist"
+    "occupation": "Alchemist and frost-herb specialist",
+    "artStatus": "generated"
   },
   {
     "id": "hunter-varek",
@@ -4892,7 +4892,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Hunter Varek. Hooded hunter with frost-scarred bow hand. Wearing: White-gray stalker leathers. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Hunter Varek. Hooded hunter with frost-scarred bow hand. Wearing: White-gray stalker leathers. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -4908,7 +4907,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 704,
       "y": 640
     },
-    "occupation": "Tracks dangerous frozen creatures"
+    "occupation": "Tracks dangerous frozen creatures",
+    "artStatus": "generated"
   },
   {
     "id": "aurora-linn",
@@ -5029,7 +5029,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Aurora Linn. Scholar with aurora-reflecting eyes and pale lavender hair tips. Wearing: Star-thread cloak over basin wool. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Aurora Linn. Scholar with aurora-reflecting eyes and pale lavender hair tips. Wearing: Star-thread cloak over basin wool. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -5045,7 +5044,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 576,
       "y": 384
     },
-    "occupation": "Studies northern lights and Celestial energy"
+    "occupation": "Studies northern lights and Celestial energy",
+    "artStatus": "generated"
   },
   {
     "id": "chancellor-aurex",
@@ -5166,7 +5166,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Chancellor Aurex. Regal chancellor with gold-thread temples and tired eyes. Wearing: Citadel mantle with radiant seals. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Chancellor Aurex. Regal chancellor with gold-thread temples and tired eyes. Wearing: Citadel mantle with radiant seals. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -5182,7 +5181,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 512,
       "y": 512
     },
-    "occupation": "Political and historical leader"
+    "occupation": "Political and historical leader",
+    "artStatus": "generated"
   },
   {
     "id": "scholar-lyra",
@@ -5316,7 +5316,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Scholar Lyra. Researcher with luminous notes orbiting her wrists. Wearing: Scholar whites with citadel gold trim. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Scholar Lyra. Researcher with luminous notes orbiting her wrists. Wearing: Scholar whites with citadel gold trim. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -5332,7 +5331,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 640,
       "y": 448
     },
-    "occupation": "Gateway Heart researcher"
+    "occupation": "Gateway Heart researcher",
+    "artStatus": "generated"
   },
   {
     "id": "sentinel-cassian",
@@ -5453,7 +5453,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Sentinel Cassian. Polished sentinel with radiant shield. Wearing: White-gold sentinel plate. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Sentinel Cassian. Polished sentinel with radiant shield. Wearing: White-gold sentinel plate. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -5469,7 +5468,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 576
     },
-    "occupation": "Citadel defender"
+    "occupation": "Citadel defender",
+    "artStatus": "generated"
   },
   {
     "id": "curator-verin",
@@ -5597,7 +5597,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Curator Verin. Curator with glass gloves and catalog monocle. Wearing: Museum coat with velvet lining. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Curator Verin. Curator with glass gloves and catalog monocle. Wearing: Museum coat with velvet lining. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -5613,7 +5612,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 768,
       "y": 512
     },
-    "occupation": "Manages recovered artifacts"
+    "occupation": "Manages recovered artifacts",
+    "artStatus": "generated"
   },
   {
     "id": "shadecaller-neris",
@@ -5747,7 +5747,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Shadecaller Neris. Veiled guide with starless eyes and calm voice. Wearing: Voidweave cloak that drinks light. Region vibe: void hollow. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Shadecaller Neris. Veiled guide with starless eyes and calm voice. Wearing: Voidweave cloak that drinks light. Region vibe: void hollow. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -5763,7 +5762,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 448
     },
-    "occupation": "Guide through unstable Void areas"
+    "occupation": "Guide through unstable Void areas",
+    "artStatus": "generated"
   },
   {
     "id": "watcher-omen",
@@ -5884,7 +5884,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Watcher Omen. Watcher with mirrored mask and still posture. Wearing: Dark monitor robes with warning runes. Region vibe: void hollow. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Watcher Omen. Watcher with mirrored mask and still posture. Wearing: Dark monitor robes with warning runes. Region vibe: void hollow. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -5900,7 +5899,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 576,
       "y": 384
     },
-    "occupation": "Monitors corruption"
+    "occupation": "Monitors corruption",
+    "artStatus": "generated"
   },
   {
     "id": "veya-dusk",
@@ -6034,7 +6034,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Veya Dusk. Researcher with dusk-purple hair and careful gloves. Wearing: Sealed research suit under a soft scarf. Region vibe: void hollow. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Veya Dusk. Researcher with dusk-purple hair and careful gloves. Wearing: Sealed research suit under a soft scarf. Region vibe: void hollow. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -6050,7 +6049,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 448,
       "y": 576
     },
-    "occupation": "Void researcher"
+    "occupation": "Void researcher",
+    "artStatus": "generated"
   },
   {
     "id": "keeper-null",
@@ -6171,7 +6171,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Keeper Null. Feature-softened figure in matte void porcelain mask. Wearing: Seamless custodian wraps. Region vibe: void hollow. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Keeper Null. Feature-softened figure in matte void porcelain mask. Wearing: Seamless custodian wraps. Region vibe: void hollow. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -6187,7 +6186,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 704,
       "y": 640
     },
-    "occupation": "Mysterious custodian of sealed ruins"
+    "occupation": "Mysterious custodian of sealed ruins",
+    "artStatus": "generated"
   },
   {
     "id": "tinker-pax",
@@ -6321,7 +6321,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Tinker Pax. Tinker with copper goggles and oil freckles. Wearing: Patchwork engineer coat. Region vibe: alloy ruins. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Tinker Pax. Tinker with copper goggles and oil freckles. Wearing: Patchwork engineer coat. Region vibe: alloy ruins. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -6337,7 +6336,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 512
     },
-    "occupation": "Ancient-machine expert"
+    "occupation": "Ancient-machine expert",
+    "artStatus": "generated"
   },
   {
     "id": "unit-ari-7",
@@ -6458,7 +6458,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Unit ARI-7. Bipedal brass-and-glass construct with a soft cyan optic and polite posture — original Riftwilds design, not a robot franchise homage. Wearing: Integrated plating with community repair patches. Region vibe: alloy ruins. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Unit ARI-7. Bipedal brass-and-glass construct with a soft cyan optic and polite posture — original Riftwilds design, not a robot franchise homage. Wearing: Integrated plating with community repair patches. Region vibe: alloy ruins. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -6474,7 +6473,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 576,
       "y": 576
     },
-    "occupation": "Original Riftwilds mechanical NPC"
+    "occupation": "Original Riftwilds mechanical NPC",
+    "artStatus": "generated"
   },
   {
     "id": "salvager-knox",
@@ -6602,7 +6602,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Salvager Knox. Scarred salvager with magnetic gauntlet. Wearing: Heavy scrap coat. Region vibe: alloy ruins. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Salvager Knox. Scarred salvager with magnetic gauntlet. Wearing: Heavy scrap coat. Region vibe: alloy ruins. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -6618,7 +6617,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 640
     },
-    "occupation": "Resource collector and merchant"
+    "occupation": "Resource collector and merchant",
+    "artStatus": "generated"
   },
   {
     "id": "professor-ferrum",
@@ -6752,7 +6752,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Professor Ferrum. Professor with steel-rim glasses and inked schematics on sleeves. Wearing: Academic coat with alloy thread. Region vibe: alloy ruins. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Professor Ferrum. Professor with steel-rim glasses and inked schematics on sleeves. Wearing: Academic coat with alloy thread. Region vibe: alloy ruins. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -6768,7 +6767,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 704,
       "y": 448
     },
-    "occupation": "Researches technology preserved by Alloy Riftlings"
+    "occupation": "Researches technology preserved by Alloy Riftlings",
+    "artStatus": "generated"
   },
   {
     "id": "medium-amara",
@@ -6902,7 +6902,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Medium Amara. Medium with lantern-lit eyes and reed-woven hair charms. Wearing: Marsh veils over practical waders. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Medium Amara. Medium with lantern-lit eyes and reed-woven hair charms. Wearing: Marsh veils over practical waders. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -6918,7 +6917,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 512
     },
-    "occupation": "Communicates with memories"
+    "occupation": "Communicates with memories",
+    "artStatus": "generated"
   },
   {
     "id": "ferryman-grey",
@@ -7039,7 +7039,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Ferryman Grey. Hooded ferryman with mist-gray beard. Wearing: Waterproof cloak and pole-gloves. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Ferryman Grey. Hooded ferryman with mist-gray beard. Wearing: Waterproof cloak and pole-gloves. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -7055,7 +7054,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 256,
       "y": 640
     },
-    "occupation": "Transports players through the marsh"
+    "occupation": "Transports players through the marsh",
+    "artStatus": "generated"
   },
   {
     "id": "lantern-keeper-sio",
@@ -7176,7 +7176,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Lantern Keeper Sio. Lantern-bearer with soft glow across freckled face. Wearing: Wick-keeper coat with many small lights. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Lantern Keeper Sio. Lantern-bearer with soft glow across freckled face. Wearing: Wick-keeper coat with many small lights. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -7192,7 +7191,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 512,
       "y": 448
     },
-    "occupation": "Protects travelers from lost spirits"
+    "occupation": "Protects travelers from lost spirits",
+    "artStatus": "generated"
   },
   {
     "id": "echo-child-nimi",
@@ -7313,7 +7313,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Echo Child Nimi. Small figure with translucent edges and a bright honest smile — original spirit-child design, not a franchise ghost. Wearing: Tattered festival clothes that shift like fog. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Echo Child Nimi. Small figure with translucent edges and a bright honest smile — original spirit-child design, not a franchise ghost. Wearing: Tattered festival clothes that shift like fog. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -7329,7 +7328,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 640,
       "y": 704
     },
-    "occupation": "Mysterious story presence tied to forgotten memories"
+    "occupation": "Mysterious story presence tied to forgotten memories",
+    "artStatus": "generated"
   },
   {
     "id": "astronomer-caelis",
@@ -7463,7 +7463,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Astronomer Caelis. Astronomer with star-chart tattoos and silver temples. Wearing: Night-observatory robes with constellation thread. Region vibe: celestial rift. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Astronomer Caelis. Astronomer with star-chart tattoos and silver temples. Wearing: Night-observatory robes with constellation thread. Region vibe: celestial rift. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -7479,7 +7478,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 448,
       "y": 512
     },
-    "occupation": "Studies cosmic Rift activity"
+    "occupation": "Studies cosmic Rift activity",
+    "artStatus": "generated"
   },
   {
     "id": "guardian-seraphine",
@@ -7600,7 +7600,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guardian Seraphine. Tall guardian with luminous sigil-halo and calm steel gaze. Wearing: Celestial plate with soft light seams — original Riftwilds design. Region vibe: celestial rift. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guardian Seraphine. Tall guardian with luminous sigil-halo and calm steel gaze. Wearing: Celestial plate with soft light seams — original Riftwilds design. Region vibe: celestial rift. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -7616,7 +7615,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 640,
       "y": 384
     },
-    "occupation": "Protects the Celestial Gateway"
+    "occupation": "Protects the Celestial Gateway",
+    "artStatus": "generated"
   },
   {
     "id": "starforger-orion",
@@ -7744,7 +7744,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Starforger Orion. Craftsman with comet-streak hair and glowing forge lenses. Wearing: Starforge apron over nightsteel. Region vibe: celestial rift. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Starforger Orion. Craftsman with comet-streak hair and glowing forge lenses. Wearing: Starforge apron over nightsteel. Region vibe: celestial rift. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -7760,7 +7759,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 512,
       "y": 640
     },
-    "occupation": "Crafts advanced Celestial equipment"
+    "occupation": "Crafts advanced Celestial equipment",
+    "artStatus": "generated"
   },
   {
     "id": "nameless-witness",
@@ -7883,7 +7883,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 56,
     "facingBehavior": "fixed",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: The Nameless Witness. Silhouette wrapped in star-mist with no readable face yet — intentional mystery, original to Riftwilds. Wearing: Veil of unresolved constellations. Region vibe: celestial rift. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: The Nameless Witness. Silhouette wrapped in star-mist with no readable face yet — intentional mystery, original to Riftwilds. Wearing: Veil of unresolved constellations. Region vibe: celestial rift. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -7899,7 +7898,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 768,
       "y": 576
     },
-    "occupation": "Story NPC whose identity is revealed later"
+    "occupation": "Story NPC whose identity is revealed later",
+    "artStatus": "generated"
   },
   {
     "id": "plaza-vendor-cal",
@@ -8020,7 +8020,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Cal Reed. Cal Reed, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Cal Reed. Cal Reed, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -8036,7 +8035,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 768,
       "y": 896
     },
-    "occupation": "Fruit cart vendor"
+    "occupation": "Fruit cart vendor",
+    "artStatus": "generated"
   },
   {
     "id": "plaza-musician-reo",
@@ -8157,7 +8157,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Reo Lark. Reo Lark, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Reo Lark. Reo Lark, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -8173,7 +8172,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1216,
       "y": 832
     },
-    "occupation": "Street musician"
+    "occupation": "Street musician",
+    "artStatus": "generated"
   },
   {
     "id": "plaza-child-mim",
@@ -8294,7 +8294,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mim Vale. Mim Vale, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mim Vale. Mim Vale, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -8310,7 +8309,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1056,
       "y": 864
     },
-    "occupation": "Curious child"
+    "occupation": "Curious child",
+    "artStatus": "generated"
   },
   {
     "id": "farm-hand-jot",
@@ -8431,7 +8431,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Jot Pell. Jot Pell, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Jot Pell. Jot Pell, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -8447,7 +8446,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 544,
       "y": 1312
     },
-    "occupation": "Farm hand"
+    "occupation": "Farm hand",
+    "artStatus": "generated"
   },
   {
     "id": "dock-sweeper-ana",
@@ -8568,7 +8568,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Ana Quill. Ana Quill, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Ana Quill. Ana Quill, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -8584,7 +8583,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 864,
       "y": 1248
     },
-    "occupation": "Dock sweeper"
+    "occupation": "Dock sweeper",
+    "artStatus": "generated"
   },
   {
     "id": "scribe-runner-kel",
@@ -8705,7 +8705,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Kel Ink. Kel Ink, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Kel Ink. Kel Ink, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -8721,7 +8720,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 992,
       "y": 576
     },
-    "occupation": "Message runner"
+    "occupation": "Message runner",
+    "artStatus": "generated"
   },
   {
     "id": "cook-pot-uma",
@@ -8842,7 +8842,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Uma Broth. Uma Broth, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Uma Broth. Uma Broth, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -8858,7 +8857,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 928,
       "y": 928
     },
-    "occupation": "Plaza cook"
+    "occupation": "Plaza cook",
+    "artStatus": "generated"
   },
   {
     "id": "gardener-sip",
@@ -8979,7 +8979,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Sip Moss. Sip Moss, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Sip Moss. Sip Moss, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -8995,7 +8994,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1600,
       "y": 704
     },
-    "occupation": "Gardener"
+    "occupation": "Gardener",
+    "artStatus": "generated"
   },
   {
     "id": "guard-east-ryn",
@@ -9116,7 +9116,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Ryn. Guard Ryn, alert Commons guard. Wearing: Guard coat with cyan trim. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Ryn. Guard Ryn, alert Commons guard. Wearing: Guard coat with cyan trim. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -9132,7 +9131,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1472,
       "y": 768
     },
-    "occupation": "Commons Guard"
+    "occupation": "Commons Guard",
+    "artStatus": "generated"
   },
   {
     "id": "guard-west-dao",
@@ -9253,7 +9253,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Dao. Guard Dao, alert Commons guard. Wearing: Guard coat with cyan trim. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Dao. Guard Dao, alert Commons guard. Wearing: Guard coat with cyan trim. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -9269,7 +9268,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 640,
       "y": 768
     },
-    "occupation": "Commons Guard"
+    "occupation": "Commons Guard",
+    "artStatus": "generated"
   },
   {
     "id": "guard-portal-hex",
@@ -9390,7 +9390,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Hex. Guard Hex, alert Commons guard. Wearing: Guard coat with cyan trim. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Hex. Guard Hex, alert Commons guard. Wearing: Guard coat with cyan trim. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -9406,7 +9405,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1024,
       "y": 384
     },
-    "occupation": "Commons Guard"
+    "occupation": "Commons Guard",
+    "artStatus": "generated"
   },
   {
     "id": "riftling-plaza-emberkit",
@@ -9527,7 +9527,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Emberkit (ambient). Cindercub-like companion resting near musician. Wearing: Natural markings. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Emberkit (ambient). Cindercub-like companion resting near musician. Wearing: Natural markings. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -9543,7 +9542,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1120,
       "y": 800
     },
-    "occupation": "Ambient companion Riftling"
+    "occupation": "Ambient companion Riftling",
+    "artStatus": "generated"
   },
   {
     "id": "riftling-hatchery-glowpup",
@@ -9664,7 +9664,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Glowpup (ambient). Soft hatchery companion near Mira. Wearing: Natural markings. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Glowpup (ambient). Soft hatchery companion near Mira. Wearing: Natural markings. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -9680,7 +9679,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 448
     },
-    "occupation": "Ambient companion Riftling"
+    "occupation": "Ambient companion Riftling",
+    "artStatus": "generated"
   },
   {
     "id": "riftling-market-pouchling",
@@ -9801,7 +9801,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Pouchling (ambient). Market companion near Tessa. Wearing: Natural markings. Region vibe: riftwild commons. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Pouchling (ambient). Market companion near Tessa. Wearing: Natural markings. Region vibe: riftwild commons. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -9817,7 +9816,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 448,
       "y": 1184
     },
-    "occupation": "Ambient companion Riftling"
+    "occupation": "Ambient companion Riftling",
+    "artStatus": "generated"
   },
   {
     "id": "ember-porter-ash",
@@ -9938,7 +9938,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Ash Porter. Ash Porter, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: ember crater. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Ash Porter. Ash Porter, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: ember crater. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -9954,7 +9953,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 160,
       "y": 288
     },
-    "occupation": "Supply porter"
+    "occupation": "Supply porter",
+    "artStatus": "generated"
   },
   {
     "id": "ember-cook-cind",
@@ -10075,7 +10075,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Cind Cook. Cind Cook, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: ember crater. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Cind Cook. Cind Cook, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: ember crater. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -10091,7 +10090,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 224,
       "y": 224
     },
-    "occupation": "Camp cook"
+    "occupation": "Camp cook",
+    "artStatus": "generated"
   },
   {
     "id": "ember-miner-bas",
@@ -10212,7 +10212,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Bas Coal. Bas Coal, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: ember crater. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Bas Coal. Bas Coal, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: ember crater. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -10228,7 +10227,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 1280,
       "y": 320
     },
-    "occupation": "Crystal hauler"
+    "occupation": "Crystal hauler",
+    "artStatus": "generated"
   },
   {
     "id": "ember-guard-lox",
@@ -10349,7 +10349,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Lox. Guard Lox, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: ember crater. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Lox. Guard Lox, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: ember crater. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -10365,7 +10364,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 288,
       "y": 160
     },
-    "occupation": "Camp guard"
+    "occupation": "Camp guard",
+    "artStatus": "generated"
   },
   {
     "id": "coast-netmender-pli",
@@ -10486,7 +10486,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Pli Net. Pli Net, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: moonwater coast. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Pli Net. Pli Net, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: moonwater coast. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -10502,7 +10501,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 192,
       "y": 352
     },
-    "occupation": "Net mender"
+    "occupation": "Net mender",
+    "artStatus": "generated"
   },
   {
     "id": "coast-child-shell",
@@ -10623,7 +10623,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Shell. Shell, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: moonwater coast. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Shell. Shell, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: moonwater coast. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -10639,7 +10638,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 704,
       "y": 960
     },
-    "occupation": "Beach child"
+    "occupation": "Beach child",
+    "artStatus": "generated"
   },
   {
     "id": "coast-innkeep-dor",
@@ -10760,7 +10760,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Dor Tide. Dor Tide, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: moonwater coast. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Dor Tide. Dor Tide, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: moonwater coast. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -10776,7 +10775,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 160,
       "y": 256
     },
-    "occupation": "Inn helper"
+    "occupation": "Inn helper",
+    "artStatus": "generated"
   },
   {
     "id": "coast-guard-brine",
@@ -10897,7 +10897,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Brine. Guard Brine, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: moonwater coast. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Brine. Guard Brine, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: moonwater coast. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -10913,7 +10912,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 288,
       "y": 288
     },
-    "occupation": "Harbor guard"
+    "occupation": "Harbor guard",
+    "artStatus": "generated"
   },
   {
     "id": "elder-forager-nim",
@@ -11034,7 +11034,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Nim Leaf. Nim Leaf, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: elderwood forest. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Nim Leaf. Nim Leaf, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: elderwood forest. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -11050,7 +11049,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 384
     },
-    "occupation": "Forager"
+    "occupation": "Forager",
+    "artStatus": "generated"
   },
   {
     "id": "elder-carver-tor",
@@ -11171,7 +11171,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Tor Bark. Tor Bark, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: elderwood forest. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Tor Bark. Tor Bark, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: elderwood forest. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -11187,7 +11186,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 512,
       "y": 512
     },
-    "occupation": "Woodcarver"
+    "occupation": "Woodcarver",
+    "artStatus": "generated"
   },
   {
     "id": "elder-singer-luma",
@@ -11308,7 +11308,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Luma Soft. Luma Soft, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: elderwood forest. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Luma Soft. Luma Soft, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: elderwood forest. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -11324,7 +11323,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 704,
       "y": 448
     },
-    "occupation": "Trail singer"
+    "occupation": "Trail singer",
+    "artStatus": "generated"
   },
   {
     "id": "elder-guard-briar",
@@ -11445,7 +11445,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Briar. Guard Briar, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: elderwood forest. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Briar. Guard Briar, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: elderwood forest. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -11461,7 +11460,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 224,
       "y": 288
     },
-    "occupation": "Grove guard"
+    "occupation": "Grove guard",
+    "artStatus": "generated"
   },
   {
     "id": "storm-porter-zee",
@@ -11582,7 +11582,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Zee Pack. Zee Pack, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stormspire peaks. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Zee Pack. Zee Pack, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stormspire peaks. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -11598,7 +11597,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 288,
       "y": 576
     },
-    "occupation": "Ridge porter"
+    "occupation": "Ridge porter",
+    "artStatus": "generated"
   },
   {
     "id": "storm-cook-pip2",
@@ -11719,7 +11719,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Pip Steam. Pip Steam, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stormspire peaks. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Pip Steam. Pip Steam, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stormspire peaks. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -11735,7 +11734,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 352,
       "y": 608
     },
-    "occupation": "Camp cook"
+    "occupation": "Camp cook",
+    "artStatus": "generated"
   },
   {
     "id": "storm-climber-aro",
@@ -11856,7 +11856,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Aro Grip. Aro Grip, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stormspire peaks. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Aro Grip. Aro Grip, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stormspire peaks. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -11872,7 +11871,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 448,
       "y": 480
     },
-    "occupation": "Climber"
+    "occupation": "Climber",
+    "artStatus": "generated"
   },
   {
     "id": "storm-guard-nimbus",
@@ -11993,7 +11993,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Nimbus. Guard Nimbus, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stormspire peaks. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Nimbus. Guard Nimbus, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stormspire peaks. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -12009,7 +12008,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 448
     },
-    "occupation": "Sky guard"
+    "occupation": "Sky guard",
+    "artStatus": "generated"
   },
   {
     "id": "stone-hauler-mog",
@@ -12130,7 +12130,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mog Dust. Mog Dust, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stoneheart canyon. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mog Dust. Mog Dust, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stoneheart canyon. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -12146,7 +12145,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 352,
       "y": 512
     },
-    "occupation": "Ore hauler"
+    "occupation": "Ore hauler",
+    "artStatus": "generated"
   },
   {
     "id": "stone-cook-peb",
@@ -12267,7 +12267,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Peb Stew. Peb Stew, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stoneheart canyon. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Peb Stew. Peb Stew, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stoneheart canyon. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -12283,7 +12282,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 288,
       "y": 448
     },
-    "occupation": "Camp cook"
+    "occupation": "Camp cook",
+    "artStatus": "generated"
   },
   {
     "id": "stone-survey-lin",
@@ -12404,7 +12404,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Lin Measure. Lin Measure, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stoneheart canyon. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Lin Measure. Lin Measure, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stoneheart canyon. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -12420,7 +12419,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 480,
       "y": 576
     },
-    "occupation": "Surveyor"
+    "occupation": "Surveyor",
+    "artStatus": "generated"
   },
   {
     "id": "stone-guard-slab",
@@ -12541,7 +12541,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Slab. Guard Slab, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stoneheart canyon. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Slab. Guard Slab, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: stoneheart canyon. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -12557,7 +12556,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 224,
       "y": 416
     },
-    "occupation": "Checkpoint guard"
+    "occupation": "Checkpoint guard",
+    "artStatus": "generated"
   },
   {
     "id": "frost-porter-yul",
@@ -12678,7 +12678,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Yul Pack. Yul Pack, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Yul Pack. Yul Pack, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -12694,7 +12693,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 288,
       "y": 480
     },
-    "occupation": "Supply porter"
+    "occupation": "Supply porter",
+    "artStatus": "generated"
   },
   {
     "id": "frost-knitter-esa",
@@ -12815,7 +12815,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Esa Wool. Esa Wool, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Esa Wool. Esa Wool, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -12831,7 +12830,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 544
     },
-    "occupation": "Knitter"
+    "occupation": "Knitter",
+    "artStatus": "generated"
   },
   {
     "id": "frost-scout-rin",
@@ -12952,7 +12952,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Rin Trail. Rin Trail, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Rin Trail. Rin Trail, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -12968,7 +12967,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 448,
       "y": 480
     },
-    "occupation": "Trail scout"
+    "occupation": "Trail scout",
+    "artStatus": "generated"
   },
   {
     "id": "frost-guard-ice",
@@ -13089,7 +13089,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Ice. Guard Ice, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Ice. Guard Ice, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: frostveil basin. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -13105,7 +13104,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 256,
       "y": 448
     },
-    "occupation": "Camp guard"
+    "occupation": "Camp guard",
+    "artStatus": "generated"
   },
   {
     "id": "citadel-scribe-omi",
@@ -13226,7 +13226,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Omi Page. Omi Page, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Omi Page. Omi Page, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -13242,7 +13241,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 480,
       "y": 480
     },
-    "occupation": "Scribe"
+    "occupation": "Scribe",
+    "artStatus": "generated"
   },
   {
     "id": "citadel-vendor-lux",
@@ -13363,7 +13363,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Lux Ware. Lux Ware, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Lux Ware. Lux Ware, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -13379,7 +13378,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 576,
       "y": 544
     },
-    "occupation": "Vendor"
+    "occupation": "Vendor",
+    "artStatus": "generated"
   },
   {
     "id": "citadel-acolyte-ven",
@@ -13500,7 +13500,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Ven Light. Ven Light, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Ven Light. Ven Light, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -13516,7 +13515,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 608,
       "y": 480
     },
-    "occupation": "Acolyte"
+    "occupation": "Acolyte",
+    "artStatus": "generated"
   },
   {
     "id": "citadel-guard-halo",
@@ -13637,7 +13637,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Halo. Guard Halo, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: radiant citadel. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Halo. Guard Halo, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: radiant citadel. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -13653,7 +13652,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 352,
       "y": 544
     },
-    "occupation": "Gate guard"
+    "occupation": "Gate guard",
+    "artStatus": "generated"
   },
   {
     "id": "void-porter-dim",
@@ -13774,7 +13774,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Dim Carry. Dim Carry, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: void hollow. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Dim Carry. Dim Carry, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: void hollow. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -13790,7 +13789,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 288,
       "y": 480
     },
-    "occupation": "Supply porter"
+    "occupation": "Supply porter",
+    "artStatus": "generated"
   },
   {
     "id": "void-scribe-umbra",
@@ -13911,7 +13911,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Umbra Note. Umbra Note, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: void hollow. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Umbra Note. Umbra Note, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: void hollow. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -13927,7 +13926,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 384,
       "y": 512
     },
-    "occupation": "Field scribe"
+    "occupation": "Field scribe",
+    "artStatus": "generated"
   },
   {
     "id": "void-scout-gloom",
@@ -14048,7 +14048,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Gloom Step. Gloom Step, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: void hollow. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Gloom Step. Gloom Step, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: void hollow. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -14064,7 +14063,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 480,
       "y": 480
     },
-    "occupation": "Edge scout"
+    "occupation": "Edge scout",
+    "artStatus": "generated"
   },
   {
     "id": "void-guard-veil",
@@ -14185,7 +14185,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Veil. Guard Veil, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: void hollow. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Veil. Guard Veil, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: void hollow. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -14201,7 +14200,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 352,
       "y": 416
     },
-    "occupation": "Threshold guard"
+    "occupation": "Threshold guard",
+    "artStatus": "generated"
   },
   {
     "id": "alloy-porter-cog",
@@ -14322,7 +14322,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Cog Haul. Cog Haul, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: alloy ruins. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Cog Haul. Cog Haul, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: alloy ruins. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -14338,7 +14337,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 352,
       "y": 544
     },
-    "occupation": "Parts porter"
+    "occupation": "Parts porter",
+    "artStatus": "generated"
   },
   {
     "id": "alloy-welder-spark",
@@ -14459,7 +14459,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Spark Weld. Spark Weld, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: alloy ruins. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Spark Weld. Spark Weld, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: alloy ruins. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -14475,7 +14474,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 448,
       "y": 512
     },
-    "occupation": "Welder"
+    "occupation": "Welder",
+    "artStatus": "generated"
   },
   {
     "id": "alloy-runner-bit",
@@ -14596,7 +14596,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Bit Run. Bit Run, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: alloy ruins. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Bit Run. Bit Run, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: alloy ruins. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -14612,7 +14611,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 512,
       "y": 480
     },
-    "occupation": "Message runner"
+    "occupation": "Message runner",
+    "artStatus": "generated"
   },
   {
     "id": "alloy-guard-bolt",
@@ -14733,7 +14733,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Bolt. Guard Bolt, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: alloy ruins. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Bolt. Guard Bolt, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: alloy ruins. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -14749,7 +14748,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 288,
       "y": 576
     },
-    "occupation": "Yard guard"
+    "occupation": "Yard guard",
+    "artStatus": "generated"
   },
   {
     "id": "marsh-porter-reed",
@@ -14870,7 +14870,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Reed Pack. Reed Pack, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Reed Pack. Reed Pack, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -14886,7 +14885,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 320,
       "y": 544
     },
-    "occupation": "Pier porter"
+    "occupation": "Pier porter",
+    "artStatus": "generated"
   },
   {
     "id": "marsh-singer-fog",
@@ -15007,7 +15007,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Fog Song. Fog Song, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Fog Song. Fog Song, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -15023,7 +15022,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 448,
       "y": 480
     },
-    "occupation": "Lantern singer"
+    "occupation": "Lantern singer",
+    "artStatus": "generated"
   },
   {
     "id": "marsh-herbal-mist",
@@ -15144,7 +15144,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mist Leaf. Mist Leaf, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Mist Leaf. Mist Leaf, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -15160,7 +15159,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 480,
       "y": 576
     },
-    "occupation": "Herbal gatherer"
+    "occupation": "Herbal gatherer",
+    "artStatus": "generated"
   },
   {
     "id": "marsh-guard-wick",
@@ -15281,7 +15281,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Wick. Guard Wick, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: spirit marsh. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Wick. Guard Wick, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: spirit marsh. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -15297,7 +15296,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 288,
       "y": 512
     },
-    "occupation": "Pier guard"
+    "occupation": "Pier guard",
+    "artStatus": "generated"
   },
   {
     "id": "celestial-acolyte-nova",
@@ -15418,7 +15418,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Nova Soft. Nova Soft, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: celestial rift. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Nova Soft. Nova Soft, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: celestial rift. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -15434,7 +15433,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 416,
       "y": 480
     },
-    "occupation": "Observatory aide"
+    "occupation": "Observatory aide",
+    "artStatus": "generated"
   },
   {
     "id": "celestial-scribe-astro",
@@ -15555,7 +15555,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Astro Quill. Astro Quill, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: celestial rift. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Astro Quill. Astro Quill, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: celestial rift. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -15571,7 +15570,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 480,
       "y": 544
     },
-    "occupation": "Sky scribe"
+    "occupation": "Sky scribe",
+    "artStatus": "generated"
   },
   {
     "id": "celestial-porter-orbit",
@@ -15692,7 +15692,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Orbit Pack. Orbit Pack, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: celestial rift. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Orbit Pack. Orbit Pack, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: celestial rift. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -15708,7 +15707,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 544,
       "y": 512
     },
-    "occupation": "Supply porter"
+    "occupation": "Supply porter",
+    "artStatus": "generated"
   },
   {
     "id": "celestial-guard-lumen",
@@ -15829,7 +15829,6 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
     "interactionRadius": 48,
     "facingBehavior": "face_player",
     "active": true,
-    "artStatus": "placeholder",
     "imagePrompts": {
       "portrait": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Lumen. Guard Lumen, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: celestial rift. Bust portrait, shoulders up, clear face, soft rim light, plain dark gradient background.",
       "fullBody": "Premium stylized fantasy adventure, Riftwilds original IP, detailed but readable at game scale, strong silhouette, no text, no watermark, no logo, not anime franchise, not Pokémon, not Zelda, not WoW. Character: Guard Lumen. Guard Lumen, everyday Commons resident with distinct clothing colors. Wearing: Practical regional daywear. Region vibe: celestial rift. Full body standing pose, feet visible, transparent or simple studio background, front three-quarter view.",
@@ -15845,7 +15844,8 @@ export const NPC_CATALOG_GENERATED: NpcDef[] = [
       "x": 608,
       "y": 416
     },
-    "occupation": "Gateway guard"
+    "occupation": "Gateway guard",
+    "artStatus": "generated"
   }
 ];
 

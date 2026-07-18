@@ -283,6 +283,12 @@ model User {
   itemPurchases        ItemPurchase[]
   paymentIntents       PaymentIntent[]
   petLoadouts          PetLoadout[]
+  worldPlaySessions    WorldPlaySession[]
+  worldSaveStates      WorldSaveState[]
+  worldSaveSnapshots   WorldSaveSnapshot[]
+  safeLogoutCheckpoints SafeLogoutCheckpoint[]
+  sleepingCharacters   SleepingCharacterStub[]
+  presenceProfiles     PlayerPresenceProfile[]
 
   @@index([role])
   @@index([createdAt])
@@ -2684,4 +2690,321 @@ model ExpansionPackRecord {
   phase       String
   enabled     Boolean  @default(true)
   manifestJson Json?
+}
+
+// ─── Live World persistence / session / save-state ───────────────────────────
+
+enum WorldPlaySessionStatus {
+  ACTIVE
+  RECONNECTING
+  DISCONNECTED
+  LOGGED_OUT_SAFE
+  LOGGED_OUT_UNSAFE
+  EXPIRED
+  FORCE_ENDED
+}
+
+enum SaveCategory {
+  A_CRITICAL
+  B_PROGRESSION
+  C_COSMETIC
+}
+
+enum LogoutZoneKind {
+  INN
+  HOME
+  CAMP
+  SETTLEMENT
+  WAYPOINT
+}
+
+/// Server-authoritative Live World presence lease (Phase 1: REST heartbeat;
+/// Phase 2+: WebSocket lease). Separate from auth Session cookie.
+model WorldPlaySession {
+  id                String                 @id @default(cuid())
+  createdAt         DateTime               @default(now())
+  updatedAt         DateTime               @updatedAt
+  userId            String?
+  /// Demo / guest identity when no User row (sess_* / guest_*).
+  ownerKey          String
+  authSessionId     String?
+  status            WorldPlaySessionStatus @default(ACTIVE)
+  mapId             String                 @default("riftwild-commons")
+  posX              Int                    @default(1024)
+  posY              Int                    @default(768)
+  facingRad         Float                  @default(0)
+  inCombat          Boolean                @default(false)
+  combatStartedAt   DateTime?
+  lastHeartbeatAt   DateTime               @default(now())
+  lastAutosaveAt    DateTime?
+  reconnectDeadline DateTime?
+  disconnectAt      DateTime?
+  logoutZoneId      String?
+  logoutZoneKind    LogoutZoneKind?
+  clientInstanceId  String?
+  version           Int                    @default(0)
+  dirtyFlagsJson    Json?
+  metadata          Json?
+
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([ownerKey, status])
+  @@index([userId, status])
+  @@index([lastHeartbeatAt])
+  @@index([reconnectDeadline])
+  @@index([status, updatedAt])
+}
+
+/// Authoritative layered save blob for Category B/C progression.
+/// Category A (credits/ownership) stays on CurrencyLedger / inventory ledgers.
+model WorldSaveState {
+  id                 String   @id @default(cuid())
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  userId             String?
+  ownerKey           String
+  version            Int      @default(0)
+  mapId              String   @default("riftwild-commons")
+  posX               Int      @default(1024)
+  posY               Int      @default(768)
+  lastSafeMapId      String?
+  lastSafePosX       Int?
+  lastSafePosY       Int?
+  lastSafeZoneId     String?
+  lastSafeZoneKind   LogoutZoneKind?
+  playStateJson      Json?
+  dirtyCategoryA     Boolean  @default(false)
+  dirtyCategoryB     Boolean  @default(false)
+  dirtyCategoryC     Boolean  @default(false)
+  lastCategoryAAt    DateTime?
+  lastCategoryBAt    DateTime?
+  lastCategoryCAt    DateTime?
+  lastRequestId      String?
+  schemaVersion      Int      @default(1)
+
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([ownerKey])
+  @@index([userId])
+  @@index([updatedAt])
+}
+
+/// Point-in-time snapshots for crash recovery / admin rollback stubs.
+model WorldSaveSnapshot {
+  id            String       @id @default(cuid())
+  createdAt     DateTime     @default(now())
+  userId        String?
+  ownerKey      String
+  version       Int
+  reason        String
+  category      SaveCategory @default(B_PROGRESSION)
+  mapId         String
+  posX          Int
+  posY          Int
+  payloadJson   Json
+  requestId     String?      @unique
+
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([ownerKey, createdAt])
+  @@index([userId, createdAt])
+}
+
+/// Last confirmed safe logout / rest checkpoint (inn / home / camp).
+model SafeLogoutCheckpoint {
+  id          String         @id @default(cuid())
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+  userId      String?
+  ownerKey    String
+  mapId       String
+  posX        Int
+  posY        Int
+  zoneId      String
+  zoneKind    LogoutZoneKind
+  restBonusApplied Boolean   @default(false)
+  loggedOutAt DateTime       @default(now())
+  requestId   String?        @unique
+
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([ownerKey])
+  @@index([userId])
+}
+
+/// Optional lightweight sleep stub visible to visitors when housing privacy allows.
+/// Default OFF — characters are removed from the world on logout.
+model SleepingCharacterStub {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  userId          String?
+  ownerKey        String
+  mapId           String
+  posX            Int
+  posY            Int
+  displayName     String?
+  appearanceJson  Json?
+  /// Only when Homestead.visitPolicy allows and feature flag is on.
+  visibleToVisitors Boolean @default(false)
+  expiresAt       DateTime
+  active          Boolean  @default(false)
+
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([ownerKey])
+  @@index([mapId, active])
+  @@index([expiresAt])
+}
+
+/// Idempotent persistence mutations (autosave / logout / restore).
+model WorldSaveIdempotency {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  ownerKey   String
+  requestId  String
+  route      String
+  responseJson Json?
+  expiresAt  DateTime
+
+  @@unique([ownerKey, requestId, route])
+  @@index([expiresAt])
+}
+
+// ─── Living Server Population (prepared — apply migration only after approval) ─
+
+enum ServerPresenceState {
+  ACTIVE
+  CASUAL_ACTIVE
+  SOCIAL_ACTIVE
+  RESTING
+  IDLE
+  AFK
+  DISCONNECTED
+  RECONNECTING
+  SAFE_LOGOUT_PENDING
+  IN_COMBAT
+  IN_EVENT
+  IN_MINIGAME
+  IN_PRIVATE_INSTANCE
+}
+
+/// Soft social presence profile — cosmetic progression, never combat power.
+model PlayerPresenceProfile {
+  id                      String              @id @default(cuid())
+  createdAt               DateTime            @default(now())
+  updatedAt               DateTime            @updatedAt
+  userId                  String?
+  ownerKey                String              @unique
+  presenceXp              Int                 @default(0)
+  lifetimePresenceXp      Int                 @default(0)
+  presenceLevel           String              @default("wanderer")
+  communityTokenBalance   Int                 @default(0)
+  currentEngagementTier   Int                 @default(0)
+  serverPresenceState     ServerPresenceState @default(IDLE)
+  selectedSocialStatus    String?
+  helperOptIn             Boolean             @default(false)
+  helperEligible          Boolean             @default(false)
+  totalQualifiedMinutes   Int                 @default(0)
+  socialStreakDays        Int                 @default(0)
+  riskScore               Int                 @default(0)
+  privacyJson             Json?
+  version                 Int                 @default(0)
+
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([presenceLevel])
+  @@index([currentEngagementTier])
+}
+
+model PlayerPresenceActivity {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  userId           String?
+  ownerKey         String
+  sessionId        String?
+  activityType     String
+  activityCategory String
+  score            Int      @default(0)
+  xpAwarded        Int      @default(0)
+  sourceEntityId   String?
+  regionId         String?
+  hubId            String?
+  occurredAt       DateTime @default(now())
+  validationStatus String   @default("ok")
+  antiAbuseStatus  String   @default("clear")
+  metadataJson     Json?
+
+  @@index([ownerKey, occurredAt])
+  @@index([userId, occurredAt])
+  @@index([hubId, occurredAt])
+}
+
+model SocialHub {
+  id                 String   @id @default(cuid())
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  worldId            String   @default("riftwilds")
+  regionId           String
+  hubKey             String   @unique
+  name               String
+  hubType            String
+  boundsJson         Json?
+  capacity           Int      @default(40)
+  presenceMultiplier Float    @default(1)
+  enabled            Boolean  @default(true)
+  scheduleJson       Json?
+  metadataJson       Json?
+
+  @@index([regionId, enabled])
+}
+
+model CommunityRewardGrant {
+  id                  String    @id @default(cuid())
+  createdAt           DateTime  @default(now())
+  userId              String?
+  ownerKey            String
+  sessionId           String?
+  rewardDefinitionId  String
+  eligibilityWindowId String?
+  idempotencyKey      String    @unique
+  rewardPayloadJson   Json
+  status              String    @default("granted")
+  denialReason        String?
+  grantedAt           DateTime  @default(now())
+  claimedAt           DateTime?
+
+  @@index([ownerKey, grantedAt])
+  @@index([userId, grantedAt])
+}
+
+model CommunityTaskDefinition {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  taskType      String
+  title         String
+  description   String
+  requirement   Int
+  rewardJson    Json
+  startAt       DateTime?
+  endAt         DateTime?
+  enabled       Boolean   @default(true)
+
+  @@index([taskType, enabled])
+}
+
+model CommunityTokenLedger {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  userId       String?
+  ownerKey     String
+  delta        Int
+  balanceAfter Int
+  reason       String
+  requestId    String   @unique
+  metadataJson Json?
+
+  @@index([ownerKey, createdAt])
 }

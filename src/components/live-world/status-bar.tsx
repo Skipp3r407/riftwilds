@@ -1,5 +1,8 @@
 "use client";
 
+import { ChevronDown } from "lucide-react";
+import { CollapsibleHudPanel, LW_HUD_BTN, LW_HUD_GLASS } from "@/components/live-world/hud-chrome";
+import { playSfx } from "@/hooks/use-sfx";
 import type { WorldHudStatus } from "@/game/live-world/types";
 
 const STATUS_LABEL: Record<WorldHudStatus["connection"], string> = {
@@ -14,9 +17,18 @@ const STATUS_LABEL: Record<WorldHudStatus["connection"], string> = {
 
 type Props = {
   status: WorldHudStatus;
+  collapsed?: boolean;
+  onCollapsedChange?: (collapsed: boolean) => void;
+  /** Leave room for top-right minimap + world pulse stack. */
+  reserveTopRight?: boolean;
 };
 
-export function LiveWorldStatusBar({ status }: Props) {
+export function LiveWorldStatusBar({
+  status,
+  collapsed = false,
+  onCollapsedChange,
+  reserveTopRight = false,
+}: Props) {
   const tone =
     status.connection === "connected" || status.connection === "local"
       ? "text-[var(--cyan)]"
@@ -24,16 +36,66 @@ export function LiveWorldStatusBar({ status }: Props) {
         ? "text-[var(--danger,#ff6b8a)]"
         : "text-[var(--amber,#ffb84d)]";
 
-  return (
-    <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-wrap items-start justify-between gap-2 p-3 md:p-4">
-      <div className="rounded-xl border border-[var(--stroke)] bg-[rgba(8,12,22,0.72)] px-3 py-2 backdrop-blur-md">
-        <p className="font-display text-sm text-white">{status.mapName}</p>
-        <p className="mt-0.5 text-[11px] text-[var(--text-muted)]">
-          {status.instanceLabel} ·{" "}
-          <span className={tone}>{STATUS_LABEL[status.connection]}</span>
-        </p>
+  const canCollapse = typeof onCollapsedChange === "function";
+
+  const topPad = reserveTopRight ? "md:pr-[15.5rem]" : "";
+
+  if (canCollapse && collapsed) {
+    return (
+      <div
+        className={`pointer-events-none absolute inset-x-0 top-0 z-20 flex items-start gap-2 p-3 md:p-4 ${topPad}`}
+      >
+        <CollapsibleHudPanel
+          collapsed
+          onCollapsedChange={onCollapsedChange}
+          title={status.mapName}
+          peekLabel={status.mapName}
+          peekExtra={
+            <span className={`text-[9px] uppercase tracking-wider ${tone}`}>
+              {STATUS_LABEL[status.connection]}
+            </span>
+          }
+          testId="live-world-status-bar"
+          className="pointer-events-auto"
+        >
+          {null}
+        </CollapsibleHudPanel>
       </div>
-      <div className="max-w-[16rem] rounded-xl border border-[var(--stroke)] bg-[rgba(8,12,22,0.72)] px-3 py-2 text-right backdrop-blur-md">
+    );
+  }
+
+  return (
+    <div
+      className={`pointer-events-none absolute inset-x-0 top-0 z-20 flex flex-wrap items-start justify-between gap-2 p-3 md:p-4 ${topPad}`}
+      data-testid="live-world-status-bar"
+      data-collapsed={collapsed ? "1" : "0"}
+    >
+      <div className={`${LW_HUD_GLASS} px-3 py-2`}>
+        <div className="flex items-start justify-between gap-2">
+          <div>
+            <p className="font-display text-sm text-white">{status.mapName}</p>
+            <p className="mt-0.5 text-[11px] text-[var(--text-muted)]">
+              {status.instanceLabel} ·{" "}
+              <span className={tone}>{STATUS_LABEL[status.connection]}</span>
+            </p>
+          </div>
+          {canCollapse ? (
+            <button
+              type="button"
+              className={`pointer-events-auto ${LW_HUD_BTN} -mr-1 -mt-0.5 px-1.5 py-1`}
+              aria-label="Hide status"
+              title="Hide status"
+              onClick={() => {
+                playSfx("ui.click");
+                onCollapsedChange(true);
+              }}
+            >
+              <ChevronDown className="h-3.5 w-3.5" aria-hidden />
+            </button>
+          ) : null}
+        </div>
+      </div>
+      <div className={`${LW_HUD_GLASS} max-w-[16rem] px-3 py-2 text-right`}>
         <p className="text-[11px] text-[var(--text-muted)]">
           {status.playerLabel} · {status.petLabel}
         </p>

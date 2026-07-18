@@ -181,6 +181,170 @@
       "sceneId": "StoneheartCanyonScene",
       "interactive": true,
       "collision": false,
+      "id": "npc-doran-flint",
+      "type": "npc",
+      "x": 320,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Doran Flint",
+      "metadata": {
+        "npcId": "doran-flint",
+        "lines": [
+          "Doran Flint. Tap twice if the ceiling sings wrong.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "pace"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-petra-stoneveil",
+      "type": "npc",
+      "x": 640,
+      "y": 704,
+      "interactionRadius": 56,
+      "label": "Petra Stoneveil",
+      "metadata": {
+        "npcId": "petra-stoneveil",
+        "lines": [
+          "Petra Stoneveil — touch relics after I tag them.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "look_around"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-marshal-korr",
+      "type": "npc",
+      "x": 256,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Marshal Korr",
+      "metadata": {
+        "npcId": "marshal-korr",
+        "lines": [
+          "Marshal Korr. Papers aren't required — sense is.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-gemwright-opal",
+      "type": "npc",
+      "x": 512,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Gemwright Opal",
+      "metadata": {
+        "npcId": "gemwright-opal",
+        "lines": [
+          "Gemwright Opal. Beauty that works — that's the rule.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "organize_goods"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-stone-hauler-mog",
+      "type": "npc",
+      "x": 352,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Mog Dust",
+      "metadata": {
+        "npcId": "stone-hauler-mog",
+        "lines": [
+          "Hey there — I'm Mog Dust. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-stone-cook-peb",
+      "type": "npc",
+      "x": 288,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Peb Stew",
+      "metadata": {
+        "npcId": "stone-cook-peb",
+        "lines": [
+          "Hey there — I'm Peb Stew. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-stone-survey-lin",
+      "type": "npc",
+      "x": 480,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Lin Measure",
+      "metadata": {
+        "npcId": "stone-survey-lin",
+        "lines": [
+          "Hey there — I'm Lin Measure. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-stone-guard-slab",
+      "type": "npc",
+      "x": 224,
+      "y": 416,
+      "interactionRadius": 56,
+      "label": "Guard Slab",
+      "metadata": {
+        "npcId": "stone-guard-slab",
+        "lines": [
+          "Hey there — I'm Guard Slab. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "interactive": true,
+      "collision": false,
       "id": "res-stoneheart-canyon-stoneheart-ore",
       "type": "resource",
       "x": 320,
@@ -291,6 +455,19 @@
         "bossId": "stoneheart-behemoth",
         "arenaRef": "stoneheart-canyon-boss"
       }
+    },
+    {
+      "id": "lm-fossil",
+      "type": "decoration",
+      "regionId": "stoneheart-canyon",
+      "sceneId": "StoneheartCanyonScene",
+      "x": 768,
+      "y": 576,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Fossil Shelf",
+      "color": 12886122
     }
   ],
   "colliders": [
@@ -333,6 +510,30 @@
       "width": 256,
       "height": 160,
       "kind": "building"
+    },
+    {
+      "id": "canyon-rim",
+      "x": 512,
+      "y": 384,
+      "width": 640,
+      "height": 64,
+      "kind": "cliff"
+    },
+    {
+      "id": "quarry-pit",
+      "x": 896,
+      "y": 704,
+      "width": 192,
+      "height": 128,
+      "kind": "hazard"
+    },
+    {
+      "id": "lm-fossil-col",
+      "x": 768,
+      "y": 576,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -351,6 +552,62 @@
         "x": 3,
         "y": 3,
         "icon": "building"
+      },
+      {
+        "id": "npc-doran-flint",
+        "label": "Doran Flint",
+        "x": 10,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-petra-stoneveil",
+        "label": "Petra Stoneveil",
+        "x": 20,
+        "y": 22,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-marshal-korr",
+        "label": "Marshal Korr",
+        "x": 8,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-gemwright-opal",
+        "label": "Gemwright Opal",
+        "x": 16,
+        "y": 14,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-stone-hauler-mog",
+        "label": "Mog Dust",
+        "x": 11,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-stone-cook-peb",
+        "label": "Peb Stew",
+        "x": 9,
+        "y": 14,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-stone-survey-lin",
+        "label": "Lin Measure",
+        "x": 15,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-stone-guard-slab",
+        "label": "Guard Slab",
+        "x": 7,
+        "y": 13,
+        "icon": "npc"
       },
       {
         "id": "wp-stone",

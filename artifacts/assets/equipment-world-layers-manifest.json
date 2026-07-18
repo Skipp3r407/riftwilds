@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-07-18T06:24:58.472Z",
+  "weapons": [
+    "/assets/items/weapons/world/wooden-paw-guard.png",
+    "/assets/items/weapons/world/ember-spark-claws.png",
+    "/assets/items/weapons/world/tide-fin-blade.png",
+    "/assets/items/weapons/world/pebble-horn-cap.png",
+    "/assets/items/weapons/world/breeze-focus-seed.png",
+    "/assets/items/weapons/world/reed-training-harness.png",
+    "/assets/items/weapons/world/smooth-stone-claw.png",
+    "/assets/items/weapons/world/cloth-battle-harness.png",
+    "/assets/items/weapons/world/ember-talons.png"
+  ],
+  "armor": [
+    "/assets/items/armor/world/cloth-pet-vest.png",
+    "/assets/items/armor/world/linen-ear-hood.png",
+    "/assets/items/armor/world/reed-chest-wrap.png",
+    "/assets/items/armor/world/mossy-back-cape.png",
+    "/assets/items/armor/world/pebble-paw-boots.png",
+    "/assets/items/armor/world/soft-tail-sleeve.png",
+    "/assets/items/armor/world/breeze-wing-bands.png"
+  ],
+  "note": "Phase-1 world equipment overlays. Full Grok batch can replace these placeholders."
+}

@@ -57,6 +57,10 @@ export function getImageApiKey(): string | undefined {
 
 /** Shared style suffix — original Riftwilds IP; never reference other franchises. */
 export const RIFTWILDS_STYLE_SUFFIX =
-  "Original Riftwilds fantasy art direction: painterly digital illustration, rich atmospheric lighting, " +
-  "readable silhouettes, game-ready concept art. No text, no logos, no watermarks, no UI chrome. " +
-  "Not Pokémon, not generic anime mascot style — unique creature-world aesthetic.";
+  "Original Riftwilds IP only — never copy other games or brands. " +
+  "Hybrid classic fantasy for a browser MMORPG: warm medieval atmosphere (timber, stone, moss, lived-in town clutter), " +
+  "colorful readable silhouettes, soft Diablo-like torch drama at night, clear Zelda-like interaction readability. " +
+  "Painterly digital illustration, soft-isometric or top-down game-ready art. " +
+  "Palette: earth greens and browns and sandstone first; cyan rift energy and amber hearth as accents only — no purple AI-fantasy default. " +
+  "Avoid hyper-realism, anime, voxel, pixel art, and generic asset-store PBR. " +
+  "No text, logos, watermarks, or UI chrome in the image.";

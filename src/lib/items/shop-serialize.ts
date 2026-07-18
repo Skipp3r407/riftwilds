@@ -1,5 +1,6 @@
 import type { AnyCatalogItem, ItemRarity } from "@/lib/items/types";
 import { serializeShopItem } from "@/lib/items/catalog";
+import { lamportsToCreditsPrice } from "@/lib/economy/core/credits-pricing";
 
 /** JSON-safe shop cards for client components. */
 export type ShopCardData = {
@@ -20,6 +21,8 @@ export type ShopCardData = {
     estimatedUsd: number | null;
     usdDisclaimer: string;
     lamports: string;
+    /** Play-currency price — Credits are never SOL. */
+    credits: number;
   };
   stats?: Record<string, number>;
   effect?: string;
@@ -49,7 +52,10 @@ export function toShopCards(
       totalSupply: s.totalSupply,
       remainingSupply: s.remainingSupply,
       compatibleAnatomy: s.compatibleAnatomy,
-      price: s.price,
+      price: {
+        ...s.price,
+        credits: lamportsToCreditsPrice(BigInt(s.price.lamports)),
+      },
       stats,
       effect,
     };

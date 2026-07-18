@@ -52,12 +52,12 @@ function main() {
       },
       {
         title: "Catalog size",
-        status: LAUNCH_SPECIES.length === 50 ? "PASS" : "FAIL",
+        status: LAUNCH_SPECIES.length === 100 ? "PASS" : "FAIL",
         summary: `${LAUNCH_SPECIES.length} launch species`,
       },
     ],
     criticalFailures: critical,
-    ok: critical.length === 0 && LAUNCH_SPECIES.length === 50,
+    ok: critical.length === 0 && LAUNCH_SPECIES.length === 100,
   };
 
   ensureArtifactsDir();

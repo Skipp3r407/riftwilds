@@ -4,13 +4,170 @@ import {
   building,
   enemyZone,
   finalizeBlueprint,
+  gatewayStoneAt,
   npcAt,
   portalRing,
   resourceAt,
 } from "@/game/world-maps/blueprint-helpers";
-import type { MapBlueprint, MapZone, PathwayDef, WorldMapObject } from "@/game/world-maps/types";
+import type {
+  CollisionRect,
+  MapBlueprint,
+  MapZone,
+  PathwayDef,
+  RegionIdentity,
+  WorldMapObject,
+} from "@/game/world-maps/types";
 import { ENEMY_DEFS } from "@/game/world-maps/defs/enemies";
 import { RESOURCE_DEFS } from "@/game/world-maps/defs/resources";
+
+function hazardCollidersFor(slug: string, T: number): CollisionRect[] {
+  const table: Record<string, CollisionRect[]> = {
+    "ember-crater": [
+      { id: "lava-strip-1", x: 18 * T, y: 14 * T, width: 16 * T, height: 2 * T, kind: "lava" },
+      { id: "lava-pool-2", x: 40 * T, y: 38 * T, width: 8 * T, height: 4 * T, kind: "lava" },
+      { id: "ash-cliff-1", x: 4 * T, y: 20 * T, width: 2 * T, height: 10 * T, kind: "cliff" },
+      {
+        id: "collapsed-lava-bridge",
+        x: 24 * T,
+        y: 16 * T,
+        width: 4 * T,
+        height: T,
+        kind: "blocker",
+        metadata: {
+          barrierStyle: "collapsed_bridge",
+          message: "The lava bridge is out — ash crews have not rebuilt it yet.",
+        },
+      },
+    ],
+    "moonwater-coast": [
+      { id: "deep-water-1", x: 18 * T, y: 36 * T, width: 20 * T, height: 3 * T, kind: "deep_water" },
+      { id: "tide-water-2", x: 40 * T, y: 34 * T, width: 10 * T, height: 6 * T, kind: "deep_water" },
+      {
+        id: "tide-shallow-ford",
+        x: 18 * T,
+        y: 34 * T,
+        width: 6 * T,
+        height: 2 * T,
+        kind: "shallow_water",
+        solid: false,
+      },
+    ],
+    "elderwood-forest": [
+      { id: "grove-stream", x: 22 * T, y: 28 * T, width: 8 * T, height: 2 * T, kind: "deep_water" },
+      { id: "root-cliff", x: 32 * T, y: 18 * T, width: 2 * T, height: 8 * T, kind: "cliff" },
+    ],
+    "stormspire-peaks": [
+      { id: "cliff-drop-1", x: 14 * T, y: 16 * T, width: 18 * T, height: 2 * T, kind: "cliff" },
+      { id: "wind-hazard", x: 34 * T, y: 10 * T, width: 6 * T, height: 4 * T, kind: "hazard" },
+    ],
+    "stoneheart-canyon": [
+      { id: "canyon-rim", x: 16 * T, y: 12 * T, width: 20 * T, height: 2 * T, kind: "cliff" },
+      { id: "quarry-pit", x: 28 * T, y: 22 * T, width: 6 * T, height: 4 * T, kind: "hazard" },
+    ],
+    "frostveil-basin": [
+      { id: "ice-water", x: 18 * T, y: 24 * T, width: 12 * T, height: 4 * T, kind: "deep_water" },
+      { id: "glacier-wall", x: 6 * T, y: 8 * T, width: 4 * T, height: 10 * T, kind: "cliff" },
+    ],
+    "radiant-citadel": [
+      { id: "mirror-pool", x: 24 * T, y: 20 * T, width: 6 * T, height: 4 * T, kind: "deep_water" },
+    ],
+    "void-hollow": [
+      { id: "void-rift", x: 20 * T, y: 18 * T, width: 8 * T, height: 3 * T, kind: "hazard" },
+      { id: "null-cliff", x: 34 * T, y: 26 * T, width: 4 * T, height: 8 * T, kind: "cliff" },
+    ],
+    "alloy-ruins": [
+      { id: "spark-pit", x: 22 * T, y: 20 * T, width: 6 * T, height: 3 * T, kind: "hazard" },
+      { id: "scrap-wall", x: 8 * T, y: 14 * T, width: 3 * T, height: 8 * T, kind: "cliff" },
+    ],
+    "spirit-marsh": [
+      { id: "marsh-water-1", x: 16 * T, y: 22 * T, width: 14 * T, height: 4 * T, kind: "deep_water" },
+      { id: "reed-bog", x: 30 * T, y: 30 * T, width: 8 * T, height: 4 * T, kind: "deep_water" },
+    ],
+    "celestial-rift": [
+      { id: "starfall-gap", x: 36 * T, y: 8 * T, width: 8 * T, height: 3 * T, kind: "hazard" },
+      { id: "rift-edge", x: 10 * T, y: 32 * T, width: 12 * T, height: 2 * T, kind: "cliff" },
+    ],
+  };
+  return table[slug] ?? [];
+}
+
+function landmarkObjectsFor(
+  slug: string,
+  region: RegionIdentity,
+  T: number,
+): WorldMapObject[] {
+  const specs: Record<string, { id: string; label: string; col: number; row: number; color: number }[]> =
+    {
+      "ember-crater": [
+        { id: "lm-bridge", label: "Lava Bridge", col: 24, row: 15, color: 0xff5a1f },
+        { id: "lm-forge", label: "Forge Spire", col: 28, row: 28, color: 0xd48a3a },
+        { id: "lm-ash-cairn", label: "Ash Cairn", col: 10, row: 8, color: 0xa05030 },
+      ],
+      "moonwater-coast": [
+        { id: "lm-beach", label: "Tide Marker", col: 28, row: 30, color: 0xc4b896 },
+        { id: "lm-light", label: "Beacon Rock", col: 8, row: 34, color: 0xe8d080 },
+        { id: "lm-net-rack", label: "Net Drying Rack", col: 12, row: 12, color: 0x6a90b0 },
+      ],
+      "elderwood-forest": [
+        { id: "lm-heart", label: "Heartwood Marker", col: 36, row: 22, color: 0x4adf7a },
+        { id: "lm-moss", label: "Moss Arch", col: 18, row: 20, color: 0x6a9040 },
+        { id: "lm-shrine-stone", label: "Shrine Stone", col: 8, row: 8, color: 0x508060 },
+      ],
+      "stormspire-peaks": [
+        { id: "lm-spire", label: "Storm Spire", col: 36, row: 14, color: 0x7ec8ff },
+        { id: "lm-beacon", label: "Wind Beacon", col: 8, row: 30, color: 0xa0d8ff },
+        { id: "lm-rope", label: "Rope Bridge Post", col: 20, row: 18, color: 0x6a8098 },
+      ],
+      "stoneheart-canyon": [
+        { id: "lm-fossil", label: "Fossil Shelf", col: 24, row: 18, color: 0xc4a06a },
+        { id: "lm-bridge", label: "Stone Bridge Pier", col: 14, row: 10, color: 0x8a7050 },
+        { id: "lm-quarry-crane", label: "Quarry Crane", col: 36, row: 8, color: 0xa08060 },
+      ],
+      "frostveil-basin": [
+        { id: "lm-aurora", label: "Aurora Cairn", col: 26, row: 20, color: 0xb0d8ff },
+        { id: "lm-ice-pier", label: "Frozen Pier", col: 20, row: 12, color: 0xd0e8f8 },
+        { id: "lm-lodge-chimney", label: "Lodge Chimney", col: 6, row: 6, color: 0x80a0c0 },
+      ],
+      "radiant-citadel": [
+        { id: "lm-sun", label: "Sun Dial", col: 28, row: 18, color: 0xffd060 },
+        { id: "lm-mirror", label: "Mirror Pool Edge", col: 24, row: 22, color: 0xf0e8c0 },
+        { id: "lm-gate-arch", label: "Golden Gate Arch", col: 8, row: 30, color: 0xffe080 },
+      ],
+      "void-hollow": [
+        { id: "lm-obelisk", label: "Null Obelisk", col: 26, row: 22, color: 0x6a40a0 },
+        { id: "lm-rift-ring", label: "Rift Ring", col: 18, row: 10, color: 0xc040ff },
+        { id: "lm-echo-tree", label: "Echo Tree", col: 36, row: 8, color: 0x503070 },
+      ],
+      "alloy-ruins": [
+        { id: "lm-gear", label: "Gear Court", col: 22, row: 16, color: 0xa0a8b0 },
+        { id: "lm-conduit", label: "Conduit Pillar", col: 10, row: 22, color: 0x3de7ff },
+        { id: "lm-scrap-pile", label: "Scrap Pile", col: 36, row: 10, color: 0x708090 },
+      ],
+      "spirit-marsh": [
+        { id: "lm-lantern", label: "Memory Lantern", col: 20, row: 24, color: 0x60c090 },
+        { id: "lm-ferry", label: "Ferry Dock", col: 8, row: 20, color: 0x408070 },
+        { id: "lm-shrine-post", label: "Shrine Post", col: 12, row: 32, color: 0x80d0b0 },
+      ],
+      "celestial-rift": [
+        { id: "lm-star", label: "Star Anchor", col: 24, row: 14, color: 0x9b7bff },
+        { id: "lm-lens", label: "Observatory Lens", col: 10, row: 22, color: 0xffd060 },
+        { id: "lm-island-pin", label: "Island Pin", col: 40, row: 10, color: 0xc0a0ff },
+      ],
+    };
+  return (specs[slug] ?? []).map((s) => ({
+    id: s.id,
+    type: "decoration" as const,
+    regionId: region.id,
+    sceneId: region.sceneKey,
+    x: s.col * T,
+    y: s.row * T,
+    width: 2 * T,
+    height: 2 * T,
+    collision: true,
+    label: s.label,
+    color: s.color,
+  }));
+}
 
 type ZoneSpec = {
   id: string;
@@ -200,13 +357,13 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
       { id: "storm-climber-aro", col: 14, row: 15 },
       { id: "storm-guard-nimbus", col: 12, row: 14 },
     ],
-    resourceIds: ["lightning-crystal", "wind-silk"],
-    enemyIds: ["storm-raptor"],
+    resourceIds: ["lightning-crystal", "wind-silk", "sky-iron", "cloudcap"],
+    enemyIds: ["storm-raptor", "spark-wisp", "gale-mite"],
     bossArena: { col: 36, row: 28, w: 8, h: 6, bossId: "stormspire-titan" },
     hiddenAreas: [{ id: "hidden-cloud-cave", label: "Cloud Cave", col: 20, row: 8 }],
     puzzles: [{ id: "puzzle-wind", label: "Wind Trial Gates", col: 20, row: 6 }],
     waypoints: [{ id: "wp-storm", label: "Camp Waypoint", col: 6, row: 32 }],
-    notes: ["Blueprint + unlock gate only until early progression scene ships."],
+    notes: ["Enterable stub with distinct wind/lightning identity — denser climb loops backlog."],
   },
   "stoneheart-canyon": {
     cols: 48,
@@ -231,13 +388,13 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
       { id: "stone-survey-lin", col: 15, row: 18 },
       { id: "stone-guard-slab", col: 7, row: 13 },
     ],
-    resourceIds: ["stoneheart-ore", "fossil-shard"],
-    enemyIds: ["rock-crawler"],
+    resourceIds: ["stoneheart-ore", "fossil-shard", "canyon-clay", "amber-vein"],
+    enemyIds: ["rock-crawler", "dust-scorpion", "slate-bat"],
     bossArena: { col: 20, row: 32, w: 10, h: 5, bossId: "stoneheart-behemoth" },
     hiddenAreas: [{ id: "hidden-fossil", label: "Fossil Chamber", col: 22, row: 8 }],
     puzzles: [{ id: "puzzle-pressure", label: "Pressure Plates", col: 12, row: 24 }],
     waypoints: [{ id: "wp-stone", label: "Camp Waypoint", col: 6, row: 6 }],
-    notes: ["Blueprint + unlock gate; placeholder scene."],
+    notes: ["Spine step 2 canyon identity — quarry, fossils, and bridges."],
   },
   "frostveil-basin": {
     cols: 48,
@@ -262,13 +419,13 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
       { id: "frost-scout-rin", col: 14, row: 15 },
       { id: "frost-guard-ice", col: 8, row: 14 },
     ],
-    resourceIds: ["frost-crystal", "ice-bloom"],
-    enemyIds: ["frost-wolf"],
+    resourceIds: ["frost-crystal", "ice-bloom", "snow-pine-resin", "glacier-glass"],
+    enemyIds: ["frost-wolf", "ice-mite", "snow-lurker"],
     bossArena: { col: 32, row: 32, w: 10, h: 5, bossId: "frostveil-warden" },
     hiddenAreas: [{ id: "hidden-spring", label: "Warm Spring", col: 8, row: 22 }],
     puzzles: [{ id: "puzzle-aurora", label: "Aurora Lights", col: 28, row: 22 }],
     waypoints: [{ id: "wp-frost", label: "Lodge Waypoint", col: 6, row: 6 }],
-    notes: ["Blueprint + unlock gate; placeholder scene."],
+    notes: ["Aurora / ice-cave identity — seasonal event hooks wired."],
   },
   "radiant-citadel": {
     cols: 48,
@@ -294,13 +451,13 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
       { id: "citadel-acolyte-ven", col: 19, row: 15 },
       { id: "citadel-guard-halo", col: 11, row: 17 },
     ],
-    resourceIds: ["radiant-crystal", "sunpetal"],
-    enemyIds: ["radiant-construct"],
+    resourceIds: ["radiant-crystal", "sunpetal", "mirror-sand", "halo-resin"],
+    enemyIds: ["radiant-construct", "light-mote", "gilded-ward"],
     bossArena: { col: 20, row: 16, w: 8, h: 5, bossId: "radiant-sentinel" },
     hiddenAreas: [{ id: "hidden-archive", label: "Restricted Archive", col: 8, row: 14 }],
     puzzles: [{ id: "puzzle-mirrors", label: "Mirror Beams", col: 26, row: 8 }],
     waypoints: [{ id: "wp-radiant", label: "Gate Waypoint", col: 6, row: 32 }],
-    notes: ["Midgame blueprint; unlock via story chapter 4."],
+    notes: ["Midgame temple identity; unlock via story chapter 4."],
   },
   "void-hollow": {
     cols: 48,
@@ -326,13 +483,13 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
       { id: "void-scout-gloom", col: 15, row: 15 },
       { id: "void-guard-veil", col: 11, row: 13 },
     ],
-    resourceIds: ["void-crystal", "rift-dust"],
-    enemyIds: ["rift-stalker"],
+    resourceIds: ["void-crystal", "rift-dust", "echo-thread", "null-shard"],
+    enemyIds: ["rift-stalker", "void-mite", "echo-shade"],
     bossArena: { col: 36, row: 32, w: 8, h: 5, bossId: "void-riftborn" },
     hiddenAreas: [{ id: "hidden-pocket", label: "Pocket Dimension", col: 20, row: 22 }],
     puzzles: [{ id: "puzzle-portals", label: "Color Portal Chain", col: 12, row: 22 }],
     waypoints: [{ id: "wp-void", label: "Camp Waypoint", col: 6, row: 6 }],
-    notes: ["Late-game blueprint; never paid unlock."],
+    notes: ["Late-game void identity; never paid unlock."],
   },
   "alloy-ruins": {
     cols: 48,
@@ -358,13 +515,13 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
       { id: "alloy-runner-bit", col: 16, row: 15 },
       { id: "alloy-guard-bolt", col: 9, row: 18 },
     ],
-    resourceIds: ["alloy-fragment", "circuit-crystal"],
-    enemyIds: ["security-drone"],
+    resourceIds: ["alloy-fragment", "circuit-crystal", "gear-oil", "spark-coil"],
+    enemyIds: ["security-drone", "scrap-mite", "arc-spider"],
     bossArena: { col: 32, row: 32, w: 10, h: 5, bossId: "alloy-warframe" },
     hiddenAreas: [{ id: "hidden-proto", label: "Prototype Lab", col: 38, row: 10 }],
     puzzles: [{ id: "puzzle-power", label: "Power Routing", col: 8, row: 22 }],
     waypoints: [{ id: "wp-alloy", label: "Settlement Waypoint", col: 6, row: 6 }],
-    notes: ["Midgame blueprint; placeholder scene."],
+    notes: ["Midgame scrap/tech identity — gear court and foundry."],
   },
   "spirit-marsh": {
     cols: 48,
@@ -390,13 +547,13 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
       { id: "marsh-herbal-mist", col: 15, row: 18 },
       { id: "marsh-guard-wick", col: 9, row: 16 },
     ],
-    resourceIds: ["spirit-bloom", "memory-shard"],
-    enemyIds: ["marsh-spirit", "spirit-spark"],
+    resourceIds: ["spirit-bloom", "memory-shard", "reed-wick", "mist-pearl"],
+    enemyIds: ["marsh-spirit", "spirit-spark", "bog-wisp"],
     bossArena: { col: 32, row: 32, w: 10, h: 5, bossId: "spirit-lantern-king" },
     hiddenAreas: [{ id: "hidden-crypt", label: "Sunken Crypt", col: 38, row: 8 }],
     puzzles: [{ id: "puzzle-lanterns", label: "Lantern Order", col: 12, row: 32 }],
     waypoints: [{ id: "wp-spirit", label: "Village Waypoint", col: 6, row: 6 }],
-    notes: ["Midgame blueprint; placeholder scene."],
+    notes: ["Midgame mist/lantern identity — shrines and whispering bog."],
   },
   "celestial-rift": {
     cols: 52,
@@ -425,8 +582,8 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
       { id: "celestial-porter-orbit", col: 17, row: 16 },
       { id: "celestial-guard-lumen", col: 19, row: 13 },
     ],
-    resourceIds: ["celestial-shard", "star-dust"],
-    enemyIds: ["starborn-guardian"],
+    resourceIds: ["celestial-shard", "star-dust", "orbit-glass", "rift-petal"],
+    enemyIds: ["starborn-guardian", "comet-mite", "astral-wisp"],
     bossArena: { col: 36, row: 34, w: 10, h: 6, bossId: "celestial-rift-entity" },
     hiddenAreas: [
       { id: "hidden-constellation", label: "Constellation Island", col: 40, row: 10 },
@@ -438,7 +595,7 @@ const SPECS: Record<string, RegionBlueprintSpec> = {
     ],
     waypoints: [{ id: "wp-celestial", label: "Landing Waypoint", col: 8, row: 6 }],
     notes: [
-      "Endgame blueprint only until gateway restored.",
+      "Endgame starfield identity — gateway restoration gated.",
       "Never requires paid pets or paid region unlocks.",
     ],
   },
@@ -547,6 +704,7 @@ function buildFromSpec(slug: string): MapBlueprint {
       metadata: { fastTravel: true },
     })),
     ...portalRing(region, region.spawn.x, region.spawn.y - 2 * T, 2 * T),
+    gatewayStoneAt(region, region.spawn.x + 2 * T, region.spawn.y - 1 * T),
   ];
 
   if (spec.bossArena) {
@@ -566,31 +724,22 @@ function buildFromSpec(slug: string): MapBlueprint {
     });
   }
 
-  // Hazard strip for ember lava / coast water
-  const hazardColliders =
-    slug === "ember-crater"
-      ? [
-          {
-            id: "lava-strip-1",
-            x: 18 * T,
-            y: 14 * T,
-            width: 16 * T,
-            height: 2 * T,
-            kind: "lava" as const,
-          },
-        ]
-      : slug === "moonwater-coast"
-        ? [
-            {
-              id: "deep-water-1",
-              x: 18 * T,
-              y: 36 * T,
-              width: 20 * T,
-              height: 3 * T,
-              kind: "water" as const,
-            },
-          ]
-        : [];
+  // Region-specific hazard / terrain colliders (roads come from pathways)
+  const hazardColliders = hazardCollidersFor(slug, T);
+
+  // Landmark decorations so stubs aren't empty flats
+  const landmarks = landmarkObjectsFor(slug, region, T);
+  for (const lm of landmarks) {
+    objects.push(lm);
+  }
+  const landmarkColliders: CollisionRect[] = landmarks.map((lm) => ({
+    id: `${lm.id}-col`,
+    x: lm.x,
+    y: lm.y,
+    width: lm.width ?? 64,
+    height: lm.height ?? 64,
+    kind: "building" as const,
+  }));
 
   const safeZones = zones
     .filter((z) => z.safe)
@@ -608,7 +757,11 @@ function buildFromSpec(slug: string): MapBlueprint {
     zones,
     pathways,
     objects,
-    colliders: [...built.map((b) => b.collider), ...hazardColliders],
+    colliders: [
+      ...built.map((b) => b.collider),
+      ...hazardColliders,
+      ...landmarkColliders,
+    ],
     safeZones,
     spawn: region.spawn,
     notes: spec.notes,

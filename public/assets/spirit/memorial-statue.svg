@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="512" height="512">
+  <defs>
+    <radialGradient id="aura" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#7ec8ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0a1220" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a2744"/>
+      <stop offset="55%" stop-color="#2a4a6a"/>
+      <stop offset="100%" stop-color="#0d1828"/>
+    </linearGradient>
+    <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5ad0c0" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="64" cy="64" r="52" fill="url(#aura)"/>
+  <rect x="54" y="48" width="20" height="50" rx="4" fill="#94a3b8"/>
+  <circle cx="64" cy="36" r="14" fill="#cbd5e1"/>
+  <ellipse cx="64" cy="100" rx="28" ry="8" fill="#64748b"/>
+  <circle cx="64" cy="20" r="6" fill="#fde68a" opacity="0.9"/>
+
+</svg>

@@ -101,7 +101,7 @@ export default function ArenaHomePage() {
           <Link
             key={link.href}
             href={link.href}
-            className="panel group block overflow-hidden transition hover:border-[rgba(61,231,255,0.35)] hover:shadow-[0_0_24px_rgba(61,231,255,0.1)]"
+            className="panel panel-interactive group block overflow-hidden focus-ring"
           >
             <div className="section-card-thumb border-b border-[rgba(61,231,255,0.12)]">
               <Image

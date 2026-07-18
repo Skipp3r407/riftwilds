@@ -67,7 +67,7 @@ function main() {
     sections: [
       {
         title: "Species coverage",
-        status: pets.length === 50 ? "PASS" : "FAIL",
+        status: pets.length === 100 ? "PASS" : "FAIL",
         summary: `${pets.length} species simulated`,
       },
       {
@@ -82,8 +82,8 @@ function main() {
         summary: "Egg mint + fee ledger not wired; eligibility rules only",
       },
     ],
-    criticalFailures: pets.length !== 50 ? ["LAUNCH_SPECIES count != 50"] : [],
-    ok: pets.length === 50,
+    criticalFailures: pets.length !== 100 ? ["LAUNCH_SPECIES count != 100"] : [],
+    ok: pets.length === 100,
   };
 
   ensureArtifactsDir();

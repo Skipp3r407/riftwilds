@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { GameImage } from "@/components/assets/game-image";
 import { RarityBadge, RarityFrame } from "@/components/items/rarity-badge";
 import { SupportsEconomyBadge } from "@/components/revenue/supports-economy-badge";
 import { itemDisclosures } from "@/lib/items/disclosures";
@@ -39,12 +39,14 @@ export function ShopItemCard({
         >
           <div className="panel-inset relative mx-auto flex h-28 w-28 items-center justify-center overflow-hidden">
             <div className="pointer-events-none absolute inset-0 surface-grid opacity-25" />
-            <Image
+            <GameImage
               src={item.iconPath}
               alt=""
               width={112}
               height={112}
               className="relative object-contain drop-shadow-[0_0_16px_rgba(61,231,255,0.2)]"
+              fallbackSrc={item.iconPath.replace(/\.png(\?.*)?$/i, ".svg")}
+              showDevBadge={false}
               unoptimized
             />
           </div>

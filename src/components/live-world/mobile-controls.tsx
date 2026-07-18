@@ -100,6 +100,17 @@ export function LiveWorldMobileControls({ bridge, enabled }: Props) {
         >
           Talk
         </button>
+        <button
+          type="button"
+          className="focus-ring h-14 w-14 rounded-full border border-[rgba(155,123,255,0.45)] bg-[rgba(155,123,255,0.18)] text-xs font-semibold text-white backdrop-blur-md"
+          onClick={() => {
+            if (bridge.emoteUi.get().mode === "wheel") bridge.closeEmoteUi();
+            else bridge.openEmoteWheel();
+          }}
+          onDoubleClick={() => bridge.openEmotePanel()}
+        >
+          Emote
+        </button>
       </div>
     </div>
   );

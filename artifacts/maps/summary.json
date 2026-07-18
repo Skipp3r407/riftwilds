@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T21:08:39.240Z",
+  "generatedAt": "2026-07-18T05:12:21.661Z",
   "regionCount": 12,
   "fails": 0,
   "missing": [],
@@ -9,73 +9,73 @@
     {
       "slug": "riftwild-commons",
       "completeness": "FULL",
-      "objects": 51,
-      "zones": 14
+      "objects": 64,
+      "zones": 17
     },
     {
       "slug": "ember-crater",
       "completeness": "PARTIAL",
-      "objects": 21,
+      "objects": 30,
       "zones": 8
     },
     {
       "slug": "moonwater-coast",
       "completeness": "PARTIAL",
-      "objects": 19,
+      "objects": 28,
       "zones": 7
     },
     {
       "slug": "elderwood-forest",
       "completeness": "PARTIAL",
-      "objects": 20,
+      "objects": 29,
       "zones": 7
     },
     {
       "slug": "stormspire-peaks",
       "completeness": "PARTIAL",
-      "objects": 10,
+      "objects": 19,
       "zones": 5
     },
     {
       "slug": "stoneheart-canyon",
       "completeness": "PARTIAL",
-      "objects": 10,
+      "objects": 19,
       "zones": 6
     },
     {
       "slug": "frostveil-basin",
       "completeness": "PARTIAL",
-      "objects": 10,
+      "objects": 19,
       "zones": 6
     },
     {
       "slug": "radiant-citadel",
       "completeness": "PARTIAL",
-      "objects": 10,
+      "objects": 19,
       "zones": 7
     },
     {
       "slug": "void-hollow",
       "completeness": "PARTIAL",
-      "objects": 10,
+      "objects": 19,
       "zones": 7
     },
     {
       "slug": "alloy-ruins",
       "completeness": "PARTIAL",
-      "objects": 10,
+      "objects": 19,
       "zones": 7
     },
     {
       "slug": "spirit-marsh",
       "completeness": "PARTIAL",
-      "objects": 11,
+      "objects": 20,
       "zones": 7
     },
     {
       "slug": "celestial-rift",
       "completeness": "PARTIAL",
-      "objects": 13,
+      "objects": 22,
       "zones": 7
     }
   ]

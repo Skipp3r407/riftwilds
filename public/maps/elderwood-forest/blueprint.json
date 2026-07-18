@@ -242,17 +242,163 @@
       "sceneId": "ElderwoodForestScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-elder-ranger",
+      "id": "npc-warden-sylvi",
       "type": "npc",
       "x": 256,
       "y": 256,
       "interactionRadius": 56,
-      "label": "Ranger Thorn",
+      "label": "Warden Sylvi",
       "metadata": {
-        "npcId": "elder-ranger",
+        "npcId": "warden-sylvi",
         "lines": [
-          "Elderwood paths twist. Follow the glowing moss if you get lost."
-        ]
+          "Warden Sylvi. Follow glowing moss if the paths twist.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-mosskeeper-elden",
+      "type": "npc",
+      "x": 640,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Mosskeeper Elden",
+      "metadata": {
+        "npcId": "mosskeeper-elden",
+        "lines": [
+          "Mosskeeper Elden. Take leaves that offer themselves.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "mix_remedies"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-fenn-quickbranch",
+      "type": "npc",
+      "x": 448,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Fenn Quickbranch",
+      "metadata": {
+        "npcId": "fenn-quickbranch",
+        "lines": [
+          "Fenn Quickbranch — if you blink, you'll miss the real path.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "scout"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-grandmother-willowmere",
+      "type": "npc",
+      "x": 896,
+      "y": 768,
+      "interactionRadius": 56,
+      "label": "Grandmother Willowmere",
+      "metadata": {
+        "npcId": "grandmother-willowmere",
+        "lines": [
+          "Sit. Stories grow slower than trees — and last longer. I am Willowmere.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-elder-forager-nim",
+      "type": "npc",
+      "x": 384,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Nim Leaf",
+      "metadata": {
+        "npcId": "elder-forager-nim",
+        "lines": [
+          "Hey there — I'm Nim Leaf. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-elder-carver-tor",
+      "type": "npc",
+      "x": 512,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Tor Bark",
+      "metadata": {
+        "npcId": "elder-carver-tor",
+        "lines": [
+          "Hey there — I'm Tor Bark. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-elder-singer-luma",
+      "type": "npc",
+      "x": 704,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Luma Soft",
+      "metadata": {
+        "npcId": "elder-singer-luma",
+        "lines": [
+          "Hey there — I'm Luma Soft. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-elder-guard-briar",
+      "type": "npc",
+      "x": 224,
+      "y": 288,
+      "interactionRadius": 56,
+      "label": "Guard Briar",
+      "metadata": {
+        "npcId": "elder-guard-briar",
+        "lines": [
+          "Hey there — I'm Guard Briar. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
       }
     },
     {
@@ -474,6 +620,32 @@
         "bossId": "elderwood-heartwood",
         "arenaRef": "elderwood-forest-boss"
       }
+    },
+    {
+      "id": "lm-heart",
+      "type": "decoration",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 1152,
+      "y": 704,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Heartwood Marker",
+      "color": 4906874
+    },
+    {
+      "id": "lm-moss",
+      "type": "decoration",
+      "regionId": "elderwood-forest",
+      "sceneId": "ElderwoodForestScene",
+      "x": 576,
+      "y": 640,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Moss Arch",
+      "color": 6983744
     }
   ],
   "colliders": [
@@ -532,6 +704,38 @@
       "width": 256,
       "height": 192,
       "kind": "building"
+    },
+    {
+      "id": "grove-stream",
+      "x": 704,
+      "y": 896,
+      "width": 256,
+      "height": 64,
+      "kind": "water"
+    },
+    {
+      "id": "root-cliff",
+      "x": 1024,
+      "y": 576,
+      "width": 64,
+      "height": 256,
+      "kind": "cliff"
+    },
+    {
+      "id": "lm-heart-col",
+      "x": 1152,
+      "y": 704,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
+    },
+    {
+      "id": "lm-moss-col",
+      "x": 576,
+      "y": 640,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -566,10 +770,59 @@
         "icon": "building"
       },
       {
-        "id": "npc-elder-ranger",
-        "label": "Ranger Thorn",
+        "id": "npc-warden-sylvi",
+        "label": "Warden Sylvi",
         "x": 8,
         "y": 8,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-mosskeeper-elden",
+        "label": "Mosskeeper Elden",
+        "x": 20,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-fenn-quickbranch",
+        "label": "Fenn Quickbranch",
+        "x": 14,
+        "y": 14,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-grandmother-willowmere",
+        "label": "Grandmother Willowmere",
+        "x": 28,
+        "y": 24,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-elder-forager-nim",
+        "label": "Nim Leaf",
+        "x": 12,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-elder-carver-tor",
+        "label": "Tor Bark",
+        "x": 16,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-elder-singer-luma",
+        "label": "Luma Soft",
+        "x": 22,
+        "y": 14,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-elder-guard-briar",
+        "label": "Guard Briar",
+        "x": 7,
+        "y": 9,
         "icon": "npc"
       },
       {

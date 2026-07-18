@@ -32,6 +32,15 @@ const rows: Array<[string, string, ItemRarity, string]> = [
   ["celestial-star-fragment", "Celestial Star Fragment", "CELESTIAL", "Star fragment for prestige crafts."],
   ["harmony-crystal", "Harmony Crystal", "CELESTIAL", "Balanced harmony crystal."],
   ["constellation-core", "Constellation Core", "CELESTIAL", "Constellation crafting core."],
+  // Expansion batch — crafting materials
+  ["reed-strand", "Reed Strand", "COMMON", "Flexible reed for wraps and harnesses."],
+  ["dune-glass", "Dune Glass", "COMMON", "Wind-polished desert glass bead."],
+  ["spark-flint", "Spark Flint", "UNCOMMON", "Flint that throws warm ember sparks."],
+  ["kelp-silk", "Kelp Silk", "UNCOMMON", "Silky tide fiber for light gear."],
+  ["frost-needle", "Frost Needle", "RARE", "Needle of condensed frost crystal."],
+  ["void-silk", "Void Silk", "RARE", "Shadow-soft silk from quiet rifts."],
+  ["dawn-pollen", "Dawn Pollen", "EPIC", "Golden pollen gathered at first light."],
+  ["rift-resin", "Rift Resin", "LEGENDARY", "Sticky resin that seals rift seams."],
 ];
 
 export const MATERIAL_CATALOG: MaterialCatalogItem[] = rows.map(([id, name, rarity, description]) => ({

@@ -1,0 +1,198 @@
+/**
+ * Job boards — public work orders with Credit rewards + fee sinks.
+ */
+
+export type JobDef = {
+  id: string;
+  regionId: string;
+  title: string;
+  description: string;
+  creditReward: number;
+  feeCost: number;
+  feeReason: "JOB_BOARD_FEE" | "SERVICE_FEE" | "TRAVEL_FEE";
+  durationMinutes: number;
+  dailyLimit: number;
+  requiredProfession?: string;
+};
+
+export const JOB_BOARD: JobDef[] = [
+  {
+    id: "job-commons-lanterns",
+    regionId: "riftwild-commons",
+    title: "Trim Plaza Lanterns",
+    description: "Clean and trim Commons lanterns before nightfall.",
+    creditReward: 40,
+    feeCost: 5,
+    feeReason: "JOB_BOARD_FEE",
+    durationMinutes: 15,
+    dailyLimit: 3,
+    requiredProfession: "caretaker",
+  },
+  {
+    id: "job-commons-courier",
+    regionId: "riftwild-commons",
+    title: "Plaza Parcel Run",
+    description: "Deliver parcels between Hatchery and Trading Post.",
+    creditReward: 55,
+    feeCost: 10,
+    feeReason: "TRAVEL_FEE",
+    durationMinutes: 20,
+    dailyLimit: 4,
+    requiredProfession: "courier",
+  },
+  {
+    id: "job-commons-sweep",
+    regionId: "riftwild-commons",
+    title: "Path Sweep",
+    description: "Clear moss from plaza paths for the evening market.",
+    creditReward: 30,
+    feeCost: 0,
+    feeReason: "JOB_BOARD_FEE",
+    durationMinutes: 10,
+    dailyLimit: 5,
+    requiredProfession: "forager",
+  },
+  {
+    id: "job-ember-bellows",
+    regionId: "ember-crater",
+    title: "Bellows Shift",
+    description: "Keep the forge bellows steady for one cycle.",
+    creditReward: 60,
+    feeCost: 15,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 25,
+    dailyLimit: 3,
+    requiredProfession: "tinker",
+  },
+  {
+    id: "job-coast-courier",
+    regionId: "moonwater-coast",
+    title: "Pier Parcel",
+    description: "Run sealed parcels along the tide piers.",
+    creditReward: 50,
+    feeCost: 12,
+    feeReason: "TRAVEL_FEE",
+    durationMinutes: 20,
+    dailyLimit: 4,
+    requiredProfession: "courier",
+  },
+  {
+    id: "job-storm-beacon",
+    regionId: "stormspire-peaks",
+    title: "Beacon Keep",
+    description: "Maintain a storm beacon through one weather cycle.",
+    creditReward: 70,
+    feeCost: 20,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 30,
+    dailyLimit: 2,
+  },
+  {
+    id: "job-stone-bridge",
+    regionId: "stoneheart-canyon",
+    title: "Bridge Patch",
+    description: "Patch stoneheart bridge markers.",
+    creditReward: 55,
+    feeCost: 15,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 25,
+    dailyLimit: 3,
+    requiredProfession: "restorer",
+  },
+  {
+    id: "job-elder-moss",
+    regionId: "elderwood-forest",
+    title: "Moss Bundle Run",
+    description: "Gather and deliver elder moss to the grove singers.",
+    creditReward: 45,
+    feeCost: 8,
+    feeReason: "TRAVEL_FEE",
+    durationMinutes: 18,
+    dailyLimit: 4,
+    requiredProfession: "forager",
+  },
+  {
+    id: "job-elder-shrine",
+    regionId: "elderwood-forest",
+    title: "Shrine Sweep",
+    description: "Clear leaffall from the grove shrine steps.",
+    creditReward: 40,
+    feeCost: 5,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 15,
+    dailyLimit: 3,
+    requiredProfession: "caretaker",
+  },
+  {
+    id: "job-frost-survey",
+    regionId: "frostveil-basin",
+    title: "Ice Cave Survey",
+    description: "Map a safe loop through the ice cave network.",
+    creditReward: 60,
+    feeCost: 15,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 25,
+    dailyLimit: 3,
+  },
+  {
+    id: "job-radiant-archive",
+    regionId: "radiant-citadel",
+    title: "Archive Cataloguing",
+    description: "Sort sun-bleached scrolls in the Hall of Records.",
+    creditReward: 65,
+    feeCost: 18,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 30,
+    dailyLimit: 2,
+  },
+  {
+    id: "job-void-seal",
+    regionId: "void-hollow",
+    title: "Seal Patrol",
+    description: "Check void seal markers along shattered pathways.",
+    creditReward: 70,
+    feeCost: 20,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 30,
+    dailyLimit: 2,
+  },
+  {
+    id: "job-alloy-foundry",
+    regionId: "alloy-ruins",
+    title: "Foundry Shift",
+    description: "Keep conduit power routed for one foundry cycle.",
+    creditReward: 65,
+    feeCost: 18,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 28,
+    dailyLimit: 3,
+    requiredProfession: "tinker",
+  },
+  {
+    id: "job-spirit-shrine",
+    regionId: "spirit-marsh",
+    title: "Memory Shrine Tend",
+    description: "Relight shrine posts along the mist walkways.",
+    creditReward: 55,
+    feeCost: 12,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 22,
+    dailyLimit: 3,
+    requiredProfession: "caretaker",
+  },
+  {
+    id: "job-celestial-observatory",
+    regionId: "celestial-rift",
+    title: "Observatory Calibration",
+    description: "Align astral lenses before the next starfall window.",
+    creditReward: 75,
+    feeCost: 22,
+    feeReason: "SERVICE_FEE",
+    durationMinutes: 35,
+    dailyLimit: 2,
+  },
+];
+
+export function jobsForRegion(regionId: string): JobDef[] {
+  return JOB_BOARD.filter((j) => j.regionId === regionId);
+}

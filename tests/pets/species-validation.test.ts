@@ -18,10 +18,10 @@ import {
 const ROOT = path.resolve(__dirname, "../..");
 
 describe("LAUNCH_SPECIES catalog", () => {
-  it("ships exactly 50 unique slugs", () => {
-    expect(LAUNCH_SPECIES).toHaveLength(50);
+  it("ships exactly 100 unique slugs", () => {
+    expect(LAUNCH_SPECIES).toHaveLength(100);
     const slugs = LAUNCH_SPECIES.map((s) => s.slug);
-    expect(new Set(slugs).size).toBe(50);
+    expect(new Set(slugs).size).toBe(100);
   });
 
   it("has complete RPG kits", () => {
@@ -43,6 +43,14 @@ describe("LAUNCH_SPECIES catalog", () => {
     expect(missing).toEqual([]);
   });
 
+  it("has list thumb WebPs on disk for every launch species", () => {
+    const missing = LAUNCH_SPECIES.filter((sp) => {
+      const disk = path.join(ROOT, "public", "assets", "pets", "thumbs", `${sp.slug}.webp`);
+      return !existsSync(disk);
+    }).map((s) => s.slug);
+    expect(missing).toEqual([]);
+  });
+
   it("pickSpeciesForEgg is deterministic for a seed", () => {
     const a = pickSpeciesForEgg("EMBER", "COMMON", "seed-fixed-1");
     const b = pickSpeciesForEgg("EMBER", "COMMON", "seed-fixed-1");
@@ -57,7 +65,7 @@ describe("pet factory", () => {
     const b = createPetForEverySpecies({ seed: "batch" });
     expect(a).toHaveLength(allLaunchSpecies().length);
     expect(a.map((p) => p.publicId)).toEqual(b.map((p) => p.publicId));
-    expect(new Set(a.map((p) => p.speciesSlug)).size).toBe(50);
+    expect(new Set(a.map((p) => p.speciesSlug)).size).toBe(100);
   });
 
   it("creates pairs for matchup tests", () => {

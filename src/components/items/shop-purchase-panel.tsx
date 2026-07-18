@@ -8,11 +8,13 @@ import { itemDisclosures } from "@/lib/items/disclosures";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 import { lamportsToSolString } from "@/lib/items/lamports";
 import {
+  evaluateCreditsPurchase,
   evaluateInGameSolPurchase,
   evaluateWalletSolPurchase,
   resolveShopPurchase,
   type ShopPaymentMethod,
 } from "@/lib/shop/purchase";
+import { fetchCreditsBalance, getDemoCreditsUserId } from "@/lib/credits/client";
 import { playSfx } from "@/hooks/use-sfx";
 import { cn } from "@/lib/utils/cn";
 
@@ -31,6 +33,8 @@ type Props = {
   onEarnedBalanceChange: (next: bigint) => void;
   onGrantItem: (item: ShopCardData) => void;
   onClose: () => void;
+  /** Optional — after purchase, offer Equip Now for weapons/armor/cosmetics. */
+  onEquipNow?: (item: ShopCardData) => void;
 };
 
 export function ShopPurchasePanel({
@@ -39,17 +43,24 @@ export function ShopPurchasePanel({
   onEarnedBalanceChange,
   onGrantItem,
   onClose,
+  onEquipNow,
 }: Props) {
   const { publicKey, connected } = useWallet();
   const { connection } = useConnection();
   const { setVisible } = useWalletModal();
   const [walletLamports, setWalletLamports] = useState<bigint | null>(null);
-  const [method, setMethod] = useState<ShopPaymentMethod>("IN_GAME_SOL");
+  const [creditsBalance, setCreditsBalance] = useState(0);
+  const [method, setMethod] = useState<ShopPaymentMethod>("CREDITS");
   const [status, setStatus] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [purchased, setPurchased] = useState(false);
   useModalSfx();
 
+  const equippable =
+    item.family === "WEAPON" || item.family === "ARMOR" || item.family === "COSMETIC";
+
   const priceLamports = useMemo(() => BigInt(item.price.lamports), [item.price.lamports]);
+  const priceCredits = item.price.credits;
 
   const walletGate = useMemo(
     () => ({
@@ -63,6 +74,17 @@ export function ShopPurchasePanel({
 
   const walletEval = evaluateWalletSolPurchase(walletGate, priceLamports);
   const inGameEval = evaluateInGameSolPurchase(earnedLamports, priceLamports);
+  const creditsEval = evaluateCreditsPurchase(creditsBalance, priceCredits);
+
+  useEffect(() => {
+    let cancelled = false;
+    void fetchCreditsBalance(getDemoCreditsUserId()).then((b) => {
+      if (!cancelled && b) setCreditsBalance(b.balance);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -88,6 +110,48 @@ export function ShopPurchasePanel({
     setBusy(true);
     setStatus(null);
     playSfx("ui.click");
+
+    if (method === "CREDITS") {
+      const requestId = `shop_${item.id}_${Date.now().toString(36)}`;
+      try {
+        const res = await fetch("/api/shop/purchase", {
+          method: "POST",
+          credentials: "include",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            itemId: item.id,
+            requestId,
+            demoUser: getDemoCreditsUserId(),
+            method: "CREDITS",
+          }),
+        });
+        const data = (await res.json()) as {
+          ok?: boolean;
+          balance?: number;
+          error?: string;
+          message?: string;
+        };
+        if (!res.ok || !data.ok) {
+          playSfx("shop.purchase_fail");
+          setStatus(data.message ?? data.error ?? "Credits purchase failed");
+          setBusy(false);
+          return;
+        }
+        if (typeof data.balance === "number") setCreditsBalance(data.balance);
+        onGrantItem(item);
+        playSfx("shop.purchase_ok");
+        setStatus("Purchased with Credits. Item added to your inventory.");
+        setPurchased(true);
+        setBusy(false);
+        return;
+      } catch {
+        playSfx("shop.purchase_fail");
+        setStatus("Network error during Credits checkout.");
+        setBusy(false);
+        return;
+      }
+    }
+
     const result = resolveShopPurchase({
       method,
       priceLamports,
@@ -104,13 +168,28 @@ export function ShopPurchasePanel({
       onEarnedBalanceChange(result.nextEarnedLamports);
     }
     onGrantItem(item);
+    try {
+      await fetch("/api/inventory/grant", {
+        method: "POST",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ itemId: item.id, quantity: 1, source: "shop" }),
+      });
+    } catch {
+      /* local inventory still granted */
+    }
     playSfx("shop.purchase_ok");
     setStatus(result.message);
+    setPurchased(true);
     setBusy(false);
   }
 
   const selectedDisabled =
-    method === "IN_GAME_SOL" ? !inGameEval.ok : !walletEval.ok;
+    method === "CREDITS"
+      ? !creditsEval.ok
+      : method === "IN_GAME_SOL"
+        ? !inGameEval.ok
+        : !walletEval.ok;
 
   return (
     <div
@@ -131,7 +210,10 @@ export function ShopPurchasePanel({
               {item.name}
             </h2>
             <p className="mt-1 font-display text-lg text-[var(--cyan)]">
-              {item.price.sol} SOL
+              {priceCredits} Credits
+              <span className="ml-2 text-xs font-sans text-[var(--text-muted)]">
+                ({item.price.sol} SOL optional)
+              </span>
             </p>
           </div>
           <button type="button" className="btn-secondary focus-ring text-xs" onClick={onClose}>
@@ -143,11 +225,23 @@ export function ShopPurchasePanel({
 
         <div className="mt-4 grid gap-2">
           <PaymentOption
+            active={method === "CREDITS"}
+            title="Pay with Credits"
+            subtitle={`${creditsBalance} Credits available · play currency`}
+            disabled={!creditsEval.ok && method !== "CREDITS"}
+            hint={
+              !creditsEval.ok
+                ? creditsEval.reason
+                : "Required play path. Never requires SOL."
+            }
+            onClick={() => setMethod("CREDITS")}
+          />
+          <PaymentOption
             active={method === "IN_GAME_SOL"}
             title="Pay with In-game SOL"
             subtitle={`Earned / playable balance · ${lamportsToSolString(earnedLamports)} SOL available`}
             disabled={!inGameEval.ok}
-            hint={!inGameEval.ok ? inGameEval.reason : "Settles instantly from your playable balance."}
+            hint={!inGameEval.ok ? inGameEval.reason : "Optional local balance — not chain SOL."}
             onClick={() => setMethod("IN_GAME_SOL")}
           />
           <PaymentOption
@@ -164,7 +258,7 @@ export function ShopPurchasePanel({
             hint={
               !walletEval.ok
                 ? walletEval.reason
-                : "Flags allow checkout shell — on-chain transfer still Phase 2."
+                : "Optional — on-chain settlement remains flagged off."
             }
             onClick={() => setMethod("WALLET_SOL")}
           />
@@ -188,9 +282,11 @@ export function ShopPurchasePanel({
         >
           {busy
             ? "Processing…"
-            : method === "IN_GAME_SOL"
-              ? "Confirm In-game SOL purchase"
-              : "Confirm Wallet SOL purchase"}
+            : method === "CREDITS"
+              ? "Confirm Credits purchase"
+              : method === "IN_GAME_SOL"
+                ? "Confirm In-game SOL purchase"
+                : "Confirm Wallet SOL purchase"}
         </button>
 
         {status ? (
@@ -199,7 +295,8 @@ export function ShopPurchasePanel({
               "mt-3 text-xs",
               status.toLowerCase().includes("insufficient") ||
                 status.toLowerCase().includes("gated") ||
-                status.toLowerCase().includes("connect")
+                status.toLowerCase().includes("connect") ||
+                status.toLowerCase().includes("failed")
                 ? "text-[var(--amber)]"
                 : "text-[var(--mint)]",
             )}
@@ -208,8 +305,23 @@ export function ShopPurchasePanel({
           </p>
         ) : null}
 
+        {purchased && equippable ? (
+          <button
+            type="button"
+            className="btn-secondary focus-ring mt-3 w-full text-sm"
+            onClick={() => {
+              playSfx("pets.equip");
+              onEquipNow?.(item);
+              onClose();
+            }}
+          >
+            Equip Now
+          </button>
+        ) : null}
+
         <p className="mt-4 text-[9px] leading-snug text-[var(--text-muted)]">
-          {itemDisclosures.shop} {itemDisclosures.sol}
+          Credits are play currency — not SOL, not a token claim. {itemDisclosures.shop}{" "}
+          {itemDisclosures.sol}
         </p>
       </div>
     </div>

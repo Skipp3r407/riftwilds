@@ -1,49 +1,46 @@
-# Grok NPC Generation Report
+# Grok Generation Report — Live World Showcase
 
-**Date:** 2026-07-17  
-**Tooling:** Cursor `GenerateImage` + project `scripts/npcs/sync-npc-assets.mjs`  
-**IP:** Original Riftwilds only (no Pokémon / Zelda / WoW / FF / RuneScape / Genshin / Disney / Marvel / DC / anime franchise / NFT clones)
+**Date:** 2026-07-18  
+**Tooling:** Cursor `GenerateImage` + `install-live-world-showcase-art.mjs` + `mask-npc-black.mjs` + `build-npc-overworld-sheets.mjs`  
+**IP:** Original Riftwilds only
 
-## Summary
+## Commons showcase (this pass)
 
-| Asset type | Named NPCs (54) | Notes |
-|---|---|---|
-| Portrait | **54 / 54 generated** | Distinct Grok images per named NPC |
-| Full-body | **54 / 54 distinct** | Dedicated full-body gens (not portrait copies) |
-| Thumbnail | **54 / 54** | Derived from portrait for dialogue/UI scale |
-| Sprite | **20 distinct + 34 portrait-reuse** | Dedicated sprites for Commons cast + region guides; others use portrait as interim game sprite |
-| Ambient NPCs | Labeled SVG/PNG placeholders | Density NPCs share templates; named cast prioritized |
+| Element | Status | Notes |
+|---------|--------|-------|
+| Player Keeper | **Generated + wired** | `game/actors/player-keeper.png` — no circle when loaded |
+| Pet / Riftling follower | **Generated + wired** | `game/actors/pet-riftling.png` |
+| Riftstone Monument | **Generated + wired** | Dedicated prop (not crystal stand-in) |
+| Training dummies | **Generated + wired** | Replaces signpost alias |
+| Resource berry / herb / fish | **Generated + wired** | No green circle when textures present |
+| Portal plaza facade | **Wired** | Uses existing `portal-circle` building tex at hub |
+| Cal Reed | **Complete** | Distinct full-body, dialogue portrait, sprite, sheet, thumbnail |
+| Ambient Commons NPCs | **Full-bodies + sheets** | 11 ambient humans + 3 riftlings |
+| Named Commons cast | **Sheets rebuilt** | Existing Grok art retained; sheets refreshed |
+| Minimap icons | **Generated + wired** | portal / waypoint / player / quest crops |
+| Premium terrain / buildings | **Previously installed** | Not thrash-regenerated this pass |
 
-## Commons starter cast (priority)
+## Catalog
 
-All ten named Commons NPCs have portrait + full-body + thumbnail installed under:
+`generate-npc-catalog.mjs` now sets `artStatus` from disk (`generated` when portrait + full-body + sprite > 2KB).
 
-`public/assets/npcs/riftwild-commons/{slug}/`
+## Blockers / remaining (honest)
 
-Dedicated sprites generated for: Rowan, Elara, Mira, Orren, Bram, Tessa, Pip, Kael (guide).
+| Item | Status |
+|------|--------|
+| Multi-frame hand-authored walk cycles | Procedural 4-frame sheets from single pose |
+| Non-Commons region terrain premium pass | Still legacy paint until `isPremiumRegion` expanded |
+| Enterable interiors | Stub inspect lines only |
+| Enemy combat sprites in Commons wilds | PvE zones remain soft markers when flag on |
+| True RGBA from Grok at source | Studio white → flood-fill mask (good, not perfect on pale cloth) |
+| Parallel masking / isometric polish agents | Coordinate — do not overwrite their terrain masters blindly |
 
-## Regional named cast
-
-Portraits + distinct full-bodies generated for Ember, Coast, Elderwood, Stormspire, Stoneheart, Frostveil, Radiant, Void, Alloy, Spirit Marsh, and Celestial (NPCs 11–54).
-
-## Blockers / honesty
-
-- **Sprite sheets (idle/walk frames):** not authored as multi-frame atlases yet. Engine uses single-frame textures with ambient bob/face-player motion in Phaser.
-- **Ambient citizen unique art:** placeholders + varied names/positions; not 58 unique Grok portraits (named cast completed first).
-- **Transparent cutouts:** studio/dark backgrounds used; automated mask pass not run on every file.
-- **No false claims:** see `NPC_ASSET_MANIFEST.json` for per-NPC `fullBodyDistinct` / `spriteDistinct` flags.
-
-## Regeneration queue (optional polish)
-
-1. Multi-frame sprite sheets for Commons 10 + region guides  
-2. Aggressive transparency mask on full-body assets  
-3. Unique ambient portraits for Commons 8 citizens + 3 guards  
-
-## Commands used
+## Commands
 
 ```bash
+node scripts/assets/install-live-world-showcase-art.mjs
+node scripts/assets/install-premium-world-art.mjs
+npm run assets:mask:npc-black -- --all-png public/assets/game/actors
+npm run assets:npc-sheets
 node scripts/npcs/generate-npc-catalog.mjs
-node scripts/npcs/generate-placeholders.mjs
-# GenerateImage × portraits/full-bodies/sprites (Cursor)
-node scripts/npcs/sync-npc-assets.mjs
 ```

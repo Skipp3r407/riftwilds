@@ -34,12 +34,13 @@ export function CreatureCard({
 }: CreatureCardProps) {
   return (
     <article className={cn("panel overflow-hidden p-4", className)}>
-      <div className="relative mb-3 flex aspect-square items-center justify-center rounded-xl bg-[rgba(7,11,22,0.55)]">
+      <div className="relative z-[1] mb-3 aspect-square overflow-hidden rounded-xl bg-[radial-gradient(circle_at_50%_42%,rgba(90,110,150,0.38),rgba(14,18,32,0.92)_72%)] ring-1 ring-[rgba(148,197,255,0.14)]">
         <GameImage
           src={creatureProfilePath(slug)}
           alt={`${name} profile artwork`}
-          width={280}
-          height={280}
+          width={384}
+          height={384}
+          fill
           fallbackSrc={creatureIconPath(slug, true)}
           showDevBadge={false}
         />

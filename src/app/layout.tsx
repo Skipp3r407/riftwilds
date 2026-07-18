@@ -3,6 +3,7 @@ import { Manrope, Orbitron } from "next/font/google";
 import { WalletProviderDynamic } from "@/components/wallet/wallet-provider-dynamic";
 import { QueryProvider } from "@/components/shared/query-provider";
 import { MusicPlayer } from "@/components/shared/music-player";
+import { HudInteraction } from "@/components/shared/hud-interaction";
 import { projectConfig } from "@/lib/config/project";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import "./globals.css";
@@ -27,8 +28,30 @@ export const metadata: Metadata = {
   applicationName: projectConfig.PROJECT_NAME,
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: [{ url: "/assets/brand/riftwilds-mark.png?v=theme2", type: "image/png" }],
-    apple: [{ url: "/assets/brand/riftwilds-mark.png?v=theme2", type: "image/png" }],
+    icon: [{ url: "/assets/brand/riftwilds-mark.png?v=theme3", type: "image/png" }],
+    apple: [{ url: "/assets/brand/riftwilds-mark.png?v=theme3", type: "image/png" }],
+  },
+  openGraph: {
+    title: `${projectConfig.PROJECT_NAME} — Hatch. Explore. Battle. Evolve.`,
+    description:
+      "Enter the Riftwilds, hatch mysterious Riftlings, train your team, and explore a community-owned creature universe on Solana.",
+    siteName: projectConfig.PROJECT_NAME,
+    images: [
+      {
+        url: "/assets/marketing/og-default.png",
+        width: 1200,
+        height: 675,
+        alt: "Riftwilds — a living rift landscape with hatchery light and lantern plaza",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${projectConfig.PROJECT_NAME} — Hatch. Explore. Battle. Evolve.`,
+    description:
+      "Enter the Riftwilds, hatch mysterious Riftlings, train your team, and explore a community-owned creature universe on Solana.",
+    images: ["/assets/marketing/og-default.png"],
   },
   appleWebApp: {
     capable: true,
@@ -52,6 +75,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <QueryProvider>
           <WalletProviderDynamic>{children}</WalletProviderDynamic>
         </QueryProvider>
+        <HudInteraction />
         <MusicPlayer />
       </body>
     </html>

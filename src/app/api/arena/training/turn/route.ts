@@ -8,10 +8,28 @@ import { getTrainingBattle, submitTrainingTurn, toClientSnapshot } from "@/game/
 const bodySchema = z.object({
   publicId: z.string().min(4),
   action: z.object({
-    kind: z.enum(["BASIC_ATTACK", "ABILITY", "DEFEND", "FOCUS", "ITEM", "SURRENDER"]),
+    kind: z.enum([
+      "BASIC_ATTACK",
+      "ATTACK",
+      "ABILITY",
+      "ULTIMATE",
+      "DEFEND",
+      "GUARD",
+      "FOCUS",
+      "CHARGE",
+      "MEDITATE",
+      "ANALYZE",
+      "SWITCH",
+      "ITEM",
+      "RETREAT",
+      "SURRENDER",
+    ]),
     abilityId: z.string().optional(),
     itemId: z.string().optional(),
+    switchSlot: z.number().int().min(0).max(5).optional(),
   }),
+  clientActionId: z.string().min(4).max(80).optional(),
+  timedOut: z.boolean().optional(),
 });
 
 async function ownerKey(): Promise<string | null> {
@@ -48,11 +66,20 @@ export async function POST(req: Request) {
       publicId: parsed.data.publicId,
       ownerKey: key,
       action: parsed.data.action,
+      clientActionId: parsed.data.clientActionId,
+      timedOut: parsed.data.timedOut,
     });
     return NextResponse.json(toClientSnapshot(record));
   } catch (e) {
     const msg = e instanceof Error ? e.message : "ERROR";
-    const status = msg === "FORBIDDEN" ? 403 : msg === "BATTLE_NOT_ACTIVE" ? 409 : 400;
+    const status =
+      msg === "FORBIDDEN"
+        ? 403
+        : msg === "BATTLE_NOT_ACTIVE"
+          ? 409
+          : msg === "RATE_LIMITED"
+            ? 429
+            : 400;
     return NextResponse.json({ error: msg }, { status });
   }
 }

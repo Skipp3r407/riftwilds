@@ -111,7 +111,7 @@ describe("shop purchase resolution", () => {
     expect(shell.ok).toBe(true);
     if (shell.ok) {
       expect(shell.chainWrite).toBe(false);
-      expect(shell.message.toLowerCase()).toContain("phase 2");
+      expect(shell.message.toLowerCase()).toContain("flagged off");
     }
   });
 });

@@ -205,6 +205,170 @@
       "sceneId": "AlloyRuinsScene",
       "interactive": true,
       "collision": false,
+      "id": "npc-tinker-pax",
+      "type": "npc",
+      "x": 384,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Tinker Pax",
+      "metadata": {
+        "npcId": "tinker-pax",
+        "lines": [
+          "Tinker Pax! If it once hummed for the Gateways, I want a listen.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "repair"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-unit-ari-7",
+      "type": "npc",
+      "x": 576,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Unit ARI-7",
+      "metadata": {
+        "npcId": "unit-ari-7",
+        "lines": [
+          "Unit ARI-7 online. Query: do you require navigation assistance?",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-salvager-knox",
+      "type": "npc",
+      "x": 320,
+      "y": 640,
+      "interactionRadius": 56,
+      "label": "Salvager Knox",
+      "metadata": {
+        "npcId": "salvager-knox",
+        "lines": [
+          "Salvager Knox. Cash for clean scrap. No cursed cores.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "organize_goods"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-professor-ferrum",
+      "type": "npc",
+      "x": 704,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Professor Ferrum",
+      "metadata": {
+        "npcId": "professor-ferrum",
+        "lines": [
+          "Professor Ferrum. Alloy minds are not spare parts.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-alloy-porter-cog",
+      "type": "npc",
+      "x": 352,
+      "y": 544,
+      "interactionRadius": 56,
+      "label": "Cog Haul",
+      "metadata": {
+        "npcId": "alloy-porter-cog",
+        "lines": [
+          "Hey there — I'm Cog Haul. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-alloy-welder-spark",
+      "type": "npc",
+      "x": 448,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Spark Weld",
+      "metadata": {
+        "npcId": "alloy-welder-spark",
+        "lines": [
+          "Hey there — I'm Spark Weld. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-alloy-runner-bit",
+      "type": "npc",
+      "x": 512,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Bit Run",
+      "metadata": {
+        "npcId": "alloy-runner-bit",
+        "lines": [
+          "Hey there — I'm Bit Run. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-alloy-guard-bolt",
+      "type": "npc",
+      "x": 288,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Guard Bolt",
+      "metadata": {
+        "npcId": "alloy-guard-bolt",
+        "lines": [
+          "Hey there — I'm Guard Bolt. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "interactive": true,
+      "collision": false,
       "id": "res-alloy-ruins-alloy-fragment",
       "type": "resource",
       "x": 320,
@@ -315,6 +479,19 @@
         "bossId": "alloy-warframe",
         "arenaRef": "alloy-ruins-boss"
       }
+    },
+    {
+      "id": "lm-gear",
+      "type": "decoration",
+      "regionId": "alloy-ruins",
+      "sceneId": "AlloyRuinsScene",
+      "x": 704,
+      "y": 512,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Gear Court",
+      "color": 10528944
     }
   ],
   "colliders": [
@@ -357,6 +534,30 @@
       "width": 256,
       "height": 160,
       "kind": "building"
+    },
+    {
+      "id": "spark-pit",
+      "x": 704,
+      "y": 640,
+      "width": 192,
+      "height": 96,
+      "kind": "hazard"
+    },
+    {
+      "id": "scrap-wall",
+      "x": 256,
+      "y": 448,
+      "width": 96,
+      "height": 256,
+      "kind": "cliff"
+    },
+    {
+      "id": "lm-gear-col",
+      "x": 704,
+      "y": 512,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -375,6 +576,62 @@
         "x": 3,
         "y": 3,
         "icon": "building"
+      },
+      {
+        "id": "npc-tinker-pax",
+        "label": "Tinker Pax",
+        "x": 12,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-unit-ari-7",
+        "label": "Unit ARI-7",
+        "x": 18,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-salvager-knox",
+        "label": "Salvager Knox",
+        "x": 10,
+        "y": 20,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-professor-ferrum",
+        "label": "Professor Ferrum",
+        "x": 22,
+        "y": 14,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-alloy-porter-cog",
+        "label": "Cog Haul",
+        "x": 11,
+        "y": 17,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-alloy-welder-spark",
+        "label": "Spark Weld",
+        "x": 14,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-alloy-runner-bit",
+        "label": "Bit Run",
+        "x": 16,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-alloy-guard-bolt",
+        "label": "Guard Bolt",
+        "x": 9,
+        "y": 18,
+        "icon": "npc"
       },
       {
         "id": "wp-alloy",

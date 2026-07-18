@@ -12,9 +12,22 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [["list"], ["html", { open: "never", outputFolder: "playwright-report" }]],
   use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:3000",
+    // Prefer localhost over 127.0.0.1 so Next.js dev assets aren't treated as cross-origin.
+    baseURL: process.env.PLAYWRIGHT_BASE_URL ?? "http://localhost:3000",
     trace: "on-first-retry",
   },
-  projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
+  projects: [
+    { name: "chromium", use: { ...devices["Desktop Chrome"] } },
+    {
+      name: "mobile-chrome",
+      testMatch: /hatchery-mobile\.spec\.ts/,
+      use: { ...devices["Pixel 5"] },
+    },
+    {
+      name: "mobile-safari",
+      testMatch: /hatchery-mobile\.spec\.ts/,
+      use: { ...devices["iPhone 13"] },
+    },
+  ],
   /* Do not auto-start webServer here — keep e2e opt-in until CI has a stable server. */
 });

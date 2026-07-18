@@ -9,13 +9,13 @@
   "orientation": "any",
   "icons": [
     {
-      "src": "/assets/brand/riftwilds-mark.png?v=theme2",
+      "src": "/assets/brand/riftwilds-mark.png?v=theme3",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/brand/riftwilds-mark.png?v=theme2",
+      "src": "/assets/brand/riftwilds-mark.png?v=theme3",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

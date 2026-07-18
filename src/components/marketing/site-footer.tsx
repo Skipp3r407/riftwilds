@@ -11,7 +11,7 @@ export function SiteFooter() {
   const [copied, setCopied] = useState(false);
 
   return (
-    <footer className="mt-auto border-t border-[var(--stroke)] bg-[rgba(10,10,15,0.92)]">
+    <footer className="site-footer-hud mt-auto border-t border-[var(--stroke)] bg-[rgba(10,10,15,0.92)]">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4 md:px-6">
         <div className="md:col-span-2">
           <Link
@@ -23,16 +23,16 @@ export function SiteFooter() {
             <Image
               src={brandMarkPath}
               alt=""
-              width={80}
-              height={80}
+              width={512}
+              height={512}
               unoptimized
               className="h-14 w-14 object-contain"
             />
             <Image
               src={brandWordmarkPath}
               alt="Riftwilds"
-              width={280}
-              height={50}
+              width={497}
+              height={140}
               unoptimized
               className="h-6 w-auto object-contain"
             />
@@ -66,52 +66,52 @@ export function SiteFooter() {
           <p className="font-display text-xs uppercase tracking-[0.2em] text-white">Play</p>
           <ul className="mt-3 space-y-2 text-sm text-[var(--text-muted)]">
             <li>
-              <Link href="/hatchery" className="hover:text-[var(--cyan)]">
+              <Link href="/hatchery" className="footer-link">
                 Claim egg
               </Link>
             </li>
             <li>
-              <Link href="/play" className="hover:text-[var(--cyan)]">
+              <Link href="/play" className="footer-link">
                 Dashboard
               </Link>
             </li>
             <li>
-              <Link href="/world" className="hover:text-[var(--cyan)]">
+              <Link href="/world" className="footer-link">
                 World
               </Link>
             </li>
             <li>
-              <Link href="/live-world" className="hover:text-[var(--cyan)]">
+              <Link href="/live-world" className="footer-link">
                 Live World
               </Link>
             </li>
             <li>
-              <Link href="/arena" className="hover:text-[var(--cyan)]">
+              <Link href="/arena" className="footer-link">
                 Arena
               </Link>
             </li>
             <li>
-              <Link href="/shop" className="hover:text-[var(--cyan)]">
+              <Link href="/shop" className="footer-link">
                 Shop
               </Link>
             </li>
             <li>
-              <Link href="/guilds" className="hover:text-[var(--cyan)]">
+              <Link href="/guilds" className="footer-link">
                 Guilds
               </Link>
             </li>
             <li>
-              <Link href="/homestead" className="hover:text-[var(--cyan)]">
+              <Link href="/homestead" className="footer-link">
                 Homestead
               </Link>
             </li>
             <li>
-              <Link href="/marketplace" className="hover:text-[var(--cyan)]">
+              <Link href="/marketplace" className="footer-link">
                 Market
               </Link>
             </li>
             <li>
-              <Link href="/memorials" className="hover:text-[var(--cyan)]">
+              <Link href="/memorials" className="footer-link">
                 Memorials
               </Link>
             </li>
@@ -122,37 +122,42 @@ export function SiteFooter() {
           <p className="font-display text-xs uppercase tracking-[0.2em] text-white">Learn</p>
           <ul className="mt-3 space-y-2 text-sm text-[var(--text-muted)]">
             <li>
-              <Link href="/about" className="hover:text-[var(--cyan)]">
+              <Link href="/about" className="footer-link">
                 About / Story
               </Link>
             </li>
             <li>
-              <Link href="/economy" className="hover:text-[var(--cyan)]">
+              <Link href="/economy" className="footer-link">
                 Economy
               </Link>
             </li>
             <li>
-              <Link href="/fairness" className="hover:text-[var(--cyan)]">
+              <Link href="/fairness" className="footer-link">
                 Fairness
               </Link>
             </li>
             <li>
-              <Link href="/docs" className="hover:text-[var(--cyan)]">
+              <Link href="/academy" className="footer-link">
+                Academy / Help
+              </Link>
+            </li>
+            <li>
+              <Link href="/docs" className="footer-link">
                 Docs
               </Link>
             </li>
             <li>
-              <Link href="/transparency" className="hover:text-[var(--cyan)]">
+              <Link href="/transparency" className="footer-link">
                 Transparency
               </Link>
             </li>
             <li>
-              <Link href="/legal/risk" className="hover:text-[var(--cyan)]">
+              <Link href="/legal/risk" className="footer-link">
                 Risk disclosure
               </Link>
             </li>
             <li>
-              <Link href="/legal/terms" className="hover:text-[var(--cyan)]">
+              <Link href="/legal/terms" className="footer-link">
                 Terms
               </Link>
             </li>

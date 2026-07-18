@@ -95,6 +95,22 @@ export const ACHIEVEMENT_CATALOG: AchievementDef[] = [
     criteria: { metric: "region_discovery", target: 12 },
   }),
   a({
+    key: "gateway_network_5",
+    name: "Stonewalker",
+    description: "Activate 5 Gateway Stones across the Riftwilds.",
+    category: "exploration",
+    tier: "silver",
+    criteria: { metric: "gateway_activations", target: 5 },
+  }),
+  a({
+    key: "gateway_network_12",
+    name: "Network of Stones",
+    description: "Activate every launch Gateway Stone.",
+    category: "exploration",
+    tier: "gold",
+    criteria: { metric: "gateway_activations", target: 12 },
+  }),
+  a({
     key: "live_world_enter",
     name: "Step Into the Wilds",
     description: "Enter the playable Live World.",

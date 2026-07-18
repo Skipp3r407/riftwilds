@@ -60,7 +60,8 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
       accent: 0x243848,
       water: 0x1e5a8a,
     },
-    spawn: { x: 360, y: 420 },
+    // East of Tide Inn / north of Fish Market — clear of building colliders
+    spawn: { x: 16 * 32, y: 10 * 32 },
     instanceCapacity: 32,
     playability: "enterable_stub",
     sceneKey: "MoonwaterCoastScene",
@@ -106,7 +107,7 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     },
     spawn: { x: 300, y: 480 },
     instanceCapacity: 28,
-    playability: "blueprint_only",
+    playability: "enterable_stub",
     sceneKey: "StormspirePeaksScene",
     bossName: "Stormspire Titan",
     hubOpen: false,
@@ -127,7 +128,7 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     },
     spawn: { x: 320, y: 400 },
     instanceCapacity: 28,
-    playability: "blueprint_only",
+    playability: "enterable_stub",
     sceneKey: "StoneheartCanyonScene",
     bossName: "Stoneheart Behemoth",
     hubOpen: false,
@@ -149,7 +150,7 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     },
     spawn: { x: 340, y: 420 },
     instanceCapacity: 28,
-    playability: "blueprint_only",
+    playability: "enterable_stub",
     sceneKey: "FrostveilBasinScene",
     bossName: "Frostveil Warden",
     hubOpen: false,
@@ -170,7 +171,7 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     },
     spawn: { x: 360, y: 400 },
     instanceCapacity: 28,
-    playability: "blueprint_only",
+    playability: "enterable_stub",
     sceneKey: "RadiantCitadelScene",
     bossName: "Radiant Sentinel",
     hubOpen: false,
@@ -192,7 +193,7 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     },
     spawn: { x: 320, y: 400 },
     instanceCapacity: 24,
-    playability: "blueprint_only",
+    playability: "enterable_stub",
     sceneKey: "VoidHollowScene",
     bossName: "Void Riftborn",
     hubOpen: false,
@@ -214,7 +215,7 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     },
     spawn: { x: 340, y: 400 },
     instanceCapacity: 28,
-    playability: "blueprint_only",
+    playability: "enterable_stub",
     sceneKey: "AlloyRuinsScene",
     bossName: "Alloy Warframe",
     hubOpen: false,
@@ -236,7 +237,7 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     },
     spawn: { x: 320, y: 400 },
     instanceCapacity: 28,
-    playability: "blueprint_only",
+    playability: "enterable_stub",
     sceneKey: "SpiritMarshScene",
     bossName: "Spirit Lantern King",
     hubOpen: false,
@@ -258,7 +259,7 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     },
     spawn: { x: 400, y: 420 },
     instanceCapacity: 20,
-    playability: "blueprint_only",
+    playability: "enterable_stub",
     sceneKey: "CelestialRiftScene",
     bossName: "Celestial Rift Entity",
     hubOpen: false,
@@ -271,7 +272,7 @@ export const REGION_BY_SLUG = Object.fromEntries(
 
 export const WORLD_PAGE_SLUGS = REGION_IDENTITIES.map((r) => r.slug);
 
-/** Progression gates — story/level/reputation only; never paid pets. */
+/** Progression gates — story/level/reputation/restoration; never paid pets. */
 export type UnlockGate = {
   regionId: string;
   requires: {
@@ -280,10 +281,17 @@ export type UnlockGate = {
     regionVisit?: string;
     bossDefeat?: string;
     gatewayRestored?: string;
+    /** [factionId, minimum score] */
+    reputationMin?: [string, number];
+    questComplete?: string;
   };
   note: string;
 };
 
+/**
+ * Continent spine: Commons → Elderwood → Stoneheart → Stormspire → Radiant.
+ * Other regions hang off hub/peer links; unlocks never require SOL or paid pets.
+ */
 export const REGION_UNLOCK_GATES: UnlockGate[] = [
   {
     regionId: "riftwild-commons",
@@ -303,17 +311,25 @@ export const REGION_UNLOCK_GATES: UnlockGate[] = [
   {
     regionId: "elderwood-forest",
     requires: {},
-    note: "Open at start from Commons Portal Circle.",
-  },
-  {
-    regionId: "stormspire-peaks",
-    requires: { storyChapter: "chapter-2", playerLevel: 8 },
-    note: "Early progression — no paid unlock.",
+    note: "Spine step 1 — open at start from Commons.",
   },
   {
     regionId: "stoneheart-canyon",
-    requires: { storyChapter: "chapter-2", playerLevel: 10 },
-    note: "Early progression — no paid unlock.",
+    requires: {
+      storyChapter: "chapter-2",
+      playerLevel: 10,
+      regionVisit: "elderwood-forest",
+    },
+    note: "Spine step 2 — visit Elderwood first; never paid.",
+  },
+  {
+    regionId: "stormspire-peaks",
+    requires: {
+      storyChapter: "chapter-2",
+      playerLevel: 8,
+      regionVisit: "stoneheart-canyon",
+    },
+    note: "Spine step 3 — after Stoneheart; never paid.",
   },
   {
     regionId: "frostveil-basin",
@@ -322,18 +338,30 @@ export const REGION_UNLOCK_GATES: UnlockGate[] = [
   },
   {
     regionId: "radiant-citadel",
-    requires: { storyChapter: "chapter-4", playerLevel: 18 },
-    note: "Midgame — story + level.",
+    requires: {
+      storyChapter: "chapter-4",
+      playerLevel: 18,
+      regionVisit: "stormspire-peaks",
+    },
+    note: "Spine step 4 — after Stormspire; never paid.",
   },
   {
     regionId: "alloy-ruins",
-    requires: { storyChapter: "chapter-4", playerLevel: 20 },
-    note: "Midgame — story + level.",
+    requires: {
+      storyChapter: "chapter-4",
+      playerLevel: 20,
+      reputationMin: ["forgebound", 10],
+    },
+    note: "Midgame — story + Forgebound reputation.",
   },
   {
     regionId: "spirit-marsh",
-    requires: { storyChapter: "chapter-5", playerLevel: 22 },
-    note: "Midgame — story + level.",
+    requires: {
+      storyChapter: "chapter-5",
+      playerLevel: 22,
+      regionVisit: "elderwood-forest",
+    },
+    note: "Midgame — story + Elderwood visit.",
   },
   {
     regionId: "void-hollow",
@@ -363,6 +391,9 @@ export function isRegionUnlockedLocally(
     storyChapters: string[];
     bossesDefeated: string[];
     gateways: string[];
+    regionsVisited?: string[];
+    reputation?: Record<string, number>;
+    completedQuests?: string[];
   } = {
     playerLevel: 1,
     storyChapters: [],
@@ -380,5 +411,21 @@ export function isRegionUnlockedLocally(
     return false;
   if (r.gatewayRestored && !progress.gateways.includes(r.gatewayRestored))
     return false;
+  if (
+    r.regionVisit &&
+    !(progress.regionsVisited ?? []).includes(r.regionVisit)
+  ) {
+    return false;
+  }
+  if (r.reputationMin) {
+    const [faction, min] = r.reputationMin;
+    if ((progress.reputation?.[faction] ?? 0) < min) return false;
+  }
+  if (
+    r.questComplete &&
+    !(progress.completedQuests ?? []).includes(r.questComplete)
+  ) {
+    return false;
+  }
   return true;
 }

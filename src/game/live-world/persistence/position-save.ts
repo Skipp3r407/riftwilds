@@ -5,6 +5,11 @@ const STORAGE_KEY = "riftwilds.liveWorld.position.v1";
 /** Matches Commons blueprint spawn (32,24) tiles × 32px. */
 export const DEFAULT_SPAWN = { mapId: "riftwild-commons", x: 1024, y: 768 };
 
+/**
+ * Client cache only. Authoritative position / restore lives on
+ * `/api/persistence/*` + `src/lib/persistence` (see docs/persistence/ARCHITECTURE.md).
+ */
+
 export function loadSavedPosition(): SavedWorldPosition | null {
   if (typeof window === "undefined") return null;
   try {

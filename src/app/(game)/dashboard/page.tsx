@@ -155,7 +155,7 @@ export default function PlayerDashboardPage() {
                   <Link
                     key={panel.id}
                     href={panel.href}
-                    className="panel group flex flex-col overflow-hidden transition hover:border-[rgba(61,231,255,0.35)] hover:shadow-[0_0_24px_rgba(61,231,255,0.1)] focus-ring"
+                    className="panel panel-interactive group flex flex-col overflow-hidden focus-ring"
                   >
                     {body}
                   </Link>

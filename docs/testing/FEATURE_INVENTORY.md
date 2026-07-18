@@ -27,7 +27,8 @@
 | Pet care | `/pets/[id]`, care APIs | PARTIAL | Unit + API; in-memory pets |
 | Collection | `/collection` | PARTIAL | Shell + demo data |
 | Quests | `/quests` | PARTIAL | Demo tracking labeled; catalog present |
-| Live World (Phaser shell) | `/live-world` | PARTIAL | Page loads; multiplayer authority still local/stub |
+| Live World (Phaser shell) | `/live-world` | PARTIAL | Companion click→Equipment→world layers; MP appearance stub only |
+| Pet equipment / loadouts | `/live-world` panel + `/api/pets/*/equipment` | PARTIAL | Server ownership + presets; Prisma durable sync Phase 2 |
 | World map | `/world` | PASS | 200; region art expanding |
 | Arena training | `/arena`, `/arena/training` | PARTIAL | Engine unit-tested; ranked/duels OFF |
 | Marketplace browse | `/marketplace` | PARTIAL | Demo catalog; `MARKETPLACE_ENABLED=false`, SOL escrow OFF |

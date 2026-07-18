@@ -5,6 +5,7 @@
 
 import { solToLamports } from "@/lib/items/lamports";
 import { EGG_SUPPLY_GLOBAL } from "@/lib/economy/egg-supply";
+import { lamportsToCreditsPrice } from "@/lib/economy/core/credits-pricing";
 
 export const BREEDING_RULES = {
   usesPerPet: { min: 3, max: 5, active: 5 },
@@ -18,8 +19,10 @@ export const BREEDING_RULES = {
   /** Hard rule: rarity rolls stay probabilistic — never guaranteed. */
   rarityGuaranteed: false,
   maxEggsPerWeekGlobal: EGG_SUPPLY_GLOBAL.maxBreedingEggsPerWeekGlobal,
-  /** Rising fee table per use index (0-based). Configurable SOL strings. */
+  /** Rising fee table per use index (0-based). Configurable SOL strings (display / optional). */
   feeSolByUseIndex: ["0.05", "0.08", "0.12", "0.20", "0.35"] as const,
+  /** Play path — Credits fees (SOL never required). */
+  feeCreditsByUseIndex: [80, 120, 180, 280, 400] as const,
   /**
    * Fee split of breeding fee (not marketplace sale).
    * Project reserve / holder vault / development / community events.
@@ -54,6 +57,18 @@ export function breedingFeeLamportsForUseIndex(useIndex: number): bigint {
   const table = BREEDING_RULES.feeSolByUseIndex;
   const idx = Math.min(Math.max(0, useIndex), table.length - 1);
   return solToLamports(table[idx]!);
+}
+
+/** Authoritative play-currency breeding fee. */
+export function breedingFeeCreditsForUseIndex(useIndex: number): number {
+  const table = BREEDING_RULES.feeCreditsByUseIndex;
+  const idx = Math.min(Math.max(0, useIndex), table.length - 1);
+  return table[idx]!;
+}
+
+/** Soft map from optional SOL quote → Credits (informational). */
+export function breedingFeeCreditsFromLamports(lamports: bigint): number {
+  return Math.max(40, Math.round(lamportsToCreditsPrice(lamports) / 20));
 }
 
 export function cooldownEndsAt(lastBredAt: string | null, nowMs = Date.now()): string | null {
@@ -120,7 +135,11 @@ export function serializeBreedingRules() {
     rarityGuaranteed: BREEDING_RULES.rarityGuaranteed,
     maxEggsPerWeekGlobal: BREEDING_RULES.maxEggsPerWeekGlobal,
     feeSolByUseIndex: [...BREEDING_RULES.feeSolByUseIndex],
+    feeCreditsByUseIndex: [...BREEDING_RULES.feeCreditsByUseIndex],
     feeSplitBps: { ...BREEDING_RULES.feeSplitBps },
-    disclosures: { ...BREEDING_RULES.disclosures },
+    disclosures: {
+      ...BREEDING_RULES.disclosures,
+      creditsPlayPath: "Breeding fees settle in Credits. SOL is never required.",
+    },
   };
 }

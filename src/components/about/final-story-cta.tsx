@@ -56,6 +56,9 @@ export function FinalStoryCTA({ className }: Props) {
           <ImageButton href="/live-world" variant="secondary" className="text-base">
             BEGIN YOUR STORY
           </ImageButton>
+          <ImageButton href="/academy?lesson=b01-welcome" variant="secondary" className="text-base">
+            Player Academy
+          </ImageButton>
           <ImageButton href="/codex/riftlings" variant="secondary" className="text-base">
             Open the Codex
           </ImageButton>

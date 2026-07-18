@@ -1,11 +1,14 @@
 /**
- * Shop purchase resolution — Wallet SOL vs In-game / earned SOL.
+ * Shop purchase resolution — Credits (play path), In-game SOL, Wallet SOL (flagged).
  * Real chain settlement stays behind SOL_* feature flags.
  */
 
 import { debitEarnedSol } from "@/lib/shop/earned-sol";
+import { lamportsToCreditsPrice } from "@/lib/economy/core/credits-pricing";
+import { settleDebit, settleEnsureStarter } from "@/lib/economy/core/settlement";
+import { isFeatureEnabled } from "@/lib/config/feature-flags";
 
-export type ShopPaymentMethod = "WALLET_SOL" | "IN_GAME_SOL";
+export type ShopPaymentMethod = "CREDITS" | "WALLET_SOL" | "IN_GAME_SOL";
 
 export type WalletSolGate = {
   walletConnected: boolean;
@@ -14,10 +17,9 @@ export type WalletSolGate = {
   solPurchasesEnabled: boolean;
 };
 
-export function walletSolSettlementEnabled(gate: Pick<
-  WalletSolGate,
-  "solItemPurchasesEnabled" | "solPurchasesEnabled"
->): boolean {
+export function walletSolSettlementEnabled(
+  gate: Pick<WalletSolGate, "solItemPurchasesEnabled" | "solPurchasesEnabled">,
+): boolean {
   return gate.solItemPurchasesEnabled && gate.solPurchasesEnabled;
 }
 
@@ -52,15 +54,31 @@ export function evaluateInGameSolPurchase(
   return { ok: true };
 }
 
+export function evaluateCreditsPurchase(
+  balance: number,
+  priceCredits: number,
+): { ok: true } | { ok: false; reason: string } {
+  if (!isFeatureEnabled("SHOP_CREDITS_CHECKOUT_ENABLED")) {
+    return { ok: false, reason: "Credits shop checkout is disabled." };
+  }
+  if (!Number.isInteger(priceCredits) || priceCredits < 1) {
+    return { ok: false, reason: "Invalid Credits price." };
+  }
+  if (balance < priceCredits) {
+    return { ok: false, reason: "Insufficient Credits for this item." };
+  }
+  return { ok: true };
+}
+
 export type PurchaseResult =
   | {
       ok: true;
       method: ShopPaymentMethod;
-      /** Present for in-game settlements. */
       nextEarnedLamports?: bigint;
+      nextCreditsBalance?: number;
       /**
        * Wallet path: true only when flags allow and we record a local grant shell.
-       * Real chain writes remain Phase 2.
+       * Real chain writes remain Phase 15.
        */
       chainWrite: boolean;
       message: string;
@@ -68,18 +86,67 @@ export type PurchaseResult =
   | { ok: false; reason: string };
 
 /**
- * Resolve a purchase attempt. In-game SOL always settles locally when funded.
- * Wallet SOL never performs a chain write here — when flags are on it records a
- * local grant shell so UX can be exercised safely.
+ * Resolve a purchase attempt.
+ * Credits = required play path (server-authoritative when called via API).
+ * In-game SOL settles locally when funded.
+ * Wallet SOL never performs a chain write here.
  */
 export function resolveShopPurchase(params: {
   method: ShopPaymentMethod;
   priceLamports: bigint;
   earnedLamports: bigint;
   wallet: WalletSolGate;
+  /** Required when method is CREDITS (client preview or server settle). */
+  creditsBalance?: number;
+  priceCredits?: number;
+  userId?: string;
+  requestId?: string;
+  itemId?: string;
+  /** When true, debit Credits ledger (server). Client preview should pass false. */
+  settleCredits?: boolean;
 }): PurchaseResult {
   if (params.priceLamports < 0n) {
     return { ok: false, reason: "Invalid price." };
+  }
+
+  if (params.method === "CREDITS") {
+    const priceCredits =
+      params.priceCredits ?? lamportsToCreditsPrice(params.priceLamports);
+    const balance = params.creditsBalance ?? 0;
+    const check = evaluateCreditsPurchase(balance, priceCredits);
+    if (!check.ok) return check;
+
+    if (params.settleCredits) {
+      if (!params.userId || !params.requestId) {
+        return { ok: false, reason: "Credits settle requires userId and requestId." };
+      }
+      settleEnsureStarter(params.userId);
+      const debit = settleDebit({
+        userId: params.userId,
+        amount: priceCredits,
+        reason: "SHOP_BUY",
+        requestId: params.requestId,
+        metadata: { itemId: params.itemId, method: "CREDITS" },
+      });
+      if (!debit.ok) {
+        return { ok: false, reason: debit.message };
+      }
+      return {
+        ok: true,
+        method: "CREDITS",
+        nextCreditsBalance: debit.balance,
+        chainWrite: false,
+        message: "Purchased with Credits. Item added to your inventory.",
+      };
+    }
+
+    return {
+      ok: true,
+      method: "CREDITS",
+      nextCreditsBalance: balance - priceCredits,
+      chainWrite: false,
+      message: "Credits purchase ready — confirm via server checkout.",
+    };
   }
 
   if (params.method === "IN_GAME_SOL") {
@@ -106,6 +173,6 @@ export function resolveShopPurchase(params: {
     method: "WALLET_SOL",
     chainWrite: false,
     message:
-      "Wallet SOL purchase recorded locally (settlement shell). On-chain transfer remains Phase 2.",
+      "Wallet SOL purchase recorded locally (settlement shell). On-chain transfer remains flagged off.",
   };
 }

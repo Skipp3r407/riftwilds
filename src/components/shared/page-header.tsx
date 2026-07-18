@@ -197,17 +197,37 @@ export function EmptyState({
   description,
   action,
   className,
+  imageSrc,
+  imageAlt,
 }: {
   title: string;
   description?: string;
   action?: React.ReactNode;
   className?: string;
+  /** Optional illustrated empty-state art under /assets/ui/empty-states/ */
+  imageSrc?: string;
+  imageAlt?: string;
 }) {
   return (
     <div className={cn("empty-state", className)}>
+      {imageSrc ? (
+        // eslint-disable-next-line @next/next/no-img-element -- small decorative empty-state art
+        <img
+          src={imageSrc}
+          alt={imageAlt ?? ""}
+          width={160}
+          height={160}
+          className="mb-3 h-28 w-28 object-cover opacity-90"
+        />
+      ) : (
+        <div
+          className="mb-3 h-1 w-16 rounded-full bg-gradient-to-r from-transparent via-[var(--cyan)] to-transparent opacity-70"
+          aria-hidden
+        />
+      )}
       <p className="font-display text-xl text-white">{title}</p>
       {description ? <p className="mt-2 max-w-md text-sm text-[var(--text-muted)]">{description}</p> : null}
-      {action ? <div className="mt-4">{action}</div> : null}
+      {action ? <div className="relative z-[1] mt-4">{action}</div> : null}
     </div>
   );
 }

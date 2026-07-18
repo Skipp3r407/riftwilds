@@ -9,9 +9,9 @@ import { abilitiesForSpecies } from "@/game/arena/abilities";
 import { buildCombatant } from "@/game/arena/combatants";
 
 describe("species RPG kits", () => {
-  it("covers all 50 launch species with abilities and traits", () => {
-    expect(LAUNCH_SPECIES).toHaveLength(50);
-    expect(Object.keys(SPECIES_KITS)).toHaveLength(50);
+  it("covers all 100 launch species with abilities and traits", () => {
+    expect(LAUNCH_SPECIES).toHaveLength(100);
+    expect(Object.keys(SPECIES_KITS)).toHaveLength(100);
     expect(assertLaunchKitsComplete()).toBe(true);
   });
 

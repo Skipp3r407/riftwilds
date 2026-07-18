@@ -181,6 +181,170 @@
       "sceneId": "FrostveilBasinScene",
       "interactive": true,
       "collision": false,
+      "id": "npc-freya-snowmark",
+      "type": "npc",
+      "x": 320,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Freya Snowmark",
+      "metadata": {
+        "npcId": "freya-snowmark",
+        "lines": [
+          "Freya Snowmark. Warmth first. Glory later.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "scout"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-jori-icebloom",
+      "type": "npc",
+      "x": 512,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "Jori Icebloom",
+      "metadata": {
+        "npcId": "jori-icebloom",
+        "lines": [
+          "Jori Icebloom. Sip slow — frost potions bite back if rushed.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "mix_remedies"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-hunter-varek",
+      "type": "npc",
+      "x": 704,
+      "y": 640,
+      "interactionRadius": 56,
+      "label": "Hunter Varek",
+      "metadata": {
+        "npcId": "hunter-varek",
+        "lines": [
+          "Varek. If tracks glow blue, do not follow alone.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-aurora-linn",
+      "type": "npc",
+      "x": 576,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Aurora Linn",
+      "metadata": {
+        "npcId": "aurora-linn",
+        "lines": [
+          "Aurora Linn. The lights are not only pretty — they speak.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-frost-porter-yul",
+      "type": "npc",
+      "x": 288,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Yul Pack",
+      "metadata": {
+        "npcId": "frost-porter-yul",
+        "lines": [
+          "Hey there — I'm Yul Pack. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-frost-knitter-esa",
+      "type": "npc",
+      "x": 384,
+      "y": 544,
+      "interactionRadius": 56,
+      "label": "Esa Wool",
+      "metadata": {
+        "npcId": "frost-knitter-esa",
+        "lines": [
+          "Hey there — I'm Esa Wool. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-frost-scout-rin",
+      "type": "npc",
+      "x": 448,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Rin Trail",
+      "metadata": {
+        "npcId": "frost-scout-rin",
+        "lines": [
+          "Hey there — I'm Rin Trail. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-frost-guard-ice",
+      "type": "npc",
+      "x": 256,
+      "y": 448,
+      "interactionRadius": 56,
+      "label": "Guard Ice",
+      "metadata": {
+        "npcId": "frost-guard-ice",
+        "lines": [
+          "Hey there — I'm Guard Ice. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "interactive": true,
+      "collision": false,
       "id": "res-frostveil-basin-frost-crystal",
       "type": "resource",
       "x": 320,
@@ -291,6 +455,19 @@
         "bossId": "frostveil-warden",
         "arenaRef": "frostveil-basin-boss"
       }
+    },
+    {
+      "id": "lm-aurora",
+      "type": "decoration",
+      "regionId": "frostveil-basin",
+      "sceneId": "FrostveilBasinScene",
+      "x": 832,
+      "y": 640,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Aurora Cairn",
+      "color": 11589887
     }
   ],
   "colliders": [
@@ -333,6 +510,30 @@
       "width": 256,
       "height": 160,
       "kind": "building"
+    },
+    {
+      "id": "ice-water",
+      "x": 576,
+      "y": 768,
+      "width": 384,
+      "height": 128,
+      "kind": "water"
+    },
+    {
+      "id": "glacier-wall",
+      "x": 192,
+      "y": 256,
+      "width": 128,
+      "height": 320,
+      "kind": "cliff"
+    },
+    {
+      "id": "lm-aurora-col",
+      "x": 832,
+      "y": 640,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -351,6 +552,62 @@
         "x": 3,
         "y": 3,
         "icon": "building"
+      },
+      {
+        "id": "npc-freya-snowmark",
+        "label": "Freya Snowmark",
+        "x": 10,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-jori-icebloom",
+        "label": "Jori Icebloom",
+        "x": 16,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-hunter-varek",
+        "label": "Hunter Varek",
+        "x": 22,
+        "y": 20,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-aurora-linn",
+        "label": "Aurora Linn",
+        "x": 18,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-frost-porter-yul",
+        "label": "Yul Pack",
+        "x": 9,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-frost-knitter-esa",
+        "label": "Esa Wool",
+        "x": 12,
+        "y": 17,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-frost-scout-rin",
+        "label": "Rin Trail",
+        "x": 14,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-frost-guard-ice",
+        "label": "Guard Ice",
+        "x": 8,
+        "y": 14,
+        "icon": "npc"
       },
       {
         "id": "wp-frost",

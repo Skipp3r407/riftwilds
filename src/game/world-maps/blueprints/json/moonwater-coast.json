@@ -241,17 +241,163 @@
       "sceneId": "MoonwaterCoastScene",
       "interactive": true,
       "collision": false,
-      "id": "npc-coast-fisher",
+      "id": "npc-luma-tidecrest",
       "type": "npc",
       "x": 256,
       "y": 320,
       "interactionRadius": 56,
-      "label": "Captain Mirelle",
+      "label": "Captain Luma Tidecrest",
       "metadata": {
-        "npcId": "coast-fisher",
+        "npcId": "luma-tidecrest",
         "lines": [
-          "Tide gates open on the cycle. Watch the pools before you dive."
-        ]
+          "Captain Luma Tidecrest. Tide gates don't wait for hesitation.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "look_around"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-finn-coralhand",
+      "type": "npc",
+      "x": 768,
+      "y": 1024,
+      "interactionRadius": 56,
+      "label": "Finn Coralhand",
+      "metadata": {
+        "npcId": "finn-coralhand",
+        "lines": [
+          "Finn Coralhand. Cast quiet — the pools remember greed.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "fish"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-oracle-selene",
+      "type": "npc",
+      "x": 192,
+      "y": 1088,
+      "interactionRadius": 56,
+      "label": "Oracle Selene",
+      "metadata": {
+        "npcId": "oracle-selene",
+        "lines": [
+          "The sea keeps what the land forgets. I am Selene.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-marina-drift",
+      "type": "npc",
+      "x": 384,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Marina Drift",
+      "metadata": {
+        "npcId": "marina-drift",
+        "lines": [
+          "Marina Drift — boats, bolts, and beginner coastal kits.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "organize_goods"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-coast-netmender-pli",
+      "type": "npc",
+      "x": 192,
+      "y": 352,
+      "interactionRadius": 56,
+      "label": "Pli Net",
+      "metadata": {
+        "npcId": "coast-netmender-pli",
+        "lines": [
+          "Hey there — I'm Pli Net. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-coast-child-shell",
+      "type": "npc",
+      "x": 704,
+      "y": 960,
+      "interactionRadius": 56,
+      "label": "Shell",
+      "metadata": {
+        "npcId": "coast-child-shell",
+        "lines": [
+          "Hey there — I'm Shell. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-coast-innkeep-dor",
+      "type": "npc",
+      "x": 160,
+      "y": 256,
+      "interactionRadius": 56,
+      "label": "Dor Tide",
+      "metadata": {
+        "npcId": "coast-innkeep-dor",
+        "lines": [
+          "Hey there — I'm Dor Tide. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-coast-guard-brine",
+      "type": "npc",
+      "x": 288,
+      "y": 288,
+      "interactionRadius": 56,
+      "label": "Guard Brine",
+      "metadata": {
+        "npcId": "coast-guard-brine",
+        "lines": [
+          "Hey there — I'm Guard Brine. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
       }
     },
     {
@@ -457,6 +603,32 @@
         "bossId": "moonwater-leviathan",
         "arenaRef": "moonwater-coast-boss"
       }
+    },
+    {
+      "id": "lm-beach",
+      "type": "decoration",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 896,
+      "y": 960,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Tide Marker",
+      "color": 12892310
+    },
+    {
+      "id": "lm-light",
+      "type": "decoration",
+      "regionId": "moonwater-coast",
+      "sceneId": "MoonwaterCoastScene",
+      "x": 256,
+      "y": 1088,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Beacon Rock",
+      "color": 15257728
     }
   ],
   "colliders": [
@@ -523,6 +695,30 @@
       "width": 640,
       "height": 96,
       "kind": "water"
+    },
+    {
+      "id": "tide-water-2",
+      "x": 1280,
+      "y": 1088,
+      "width": 320,
+      "height": 192,
+      "kind": "water"
+    },
+    {
+      "id": "lm-beach-col",
+      "x": 896,
+      "y": 960,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
+    },
+    {
+      "id": "lm-light-col",
+      "x": 256,
+      "y": 1088,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -557,10 +753,59 @@
         "icon": "building"
       },
       {
-        "id": "npc-coast-fisher",
-        "label": "Captain Mirelle",
+        "id": "npc-luma-tidecrest",
+        "label": "Captain Luma Tidecrest",
         "x": 8,
         "y": 10,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-finn-coralhand",
+        "label": "Finn Coralhand",
+        "x": 24,
+        "y": 32,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-oracle-selene",
+        "label": "Oracle Selene",
+        "x": 6,
+        "y": 34,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-marina-drift",
+        "label": "Marina Drift",
+        "x": 12,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-coast-netmender-pli",
+        "label": "Pli Net",
+        "x": 6,
+        "y": 11,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-coast-child-shell",
+        "label": "Shell",
+        "x": 22,
+        "y": 30,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-coast-innkeep-dor",
+        "label": "Dor Tide",
+        "x": 5,
+        "y": 8,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-coast-guard-brine",
+        "label": "Guard Brine",
+        "x": 9,
+        "y": 9,
         "icon": "npc"
       },
       {

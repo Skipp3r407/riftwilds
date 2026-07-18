@@ -223,6 +223,171 @@
       "sceneId": "CelestialRiftScene",
       "interactive": true,
       "collision": false,
+      "id": "npc-astronomer-caelis",
+      "type": "npc",
+      "x": 448,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Astronomer Caelis",
+      "metadata": {
+        "npcId": "astronomer-caelis",
+        "lines": [
+          "Astronomer Caelis. Look up — carefully.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "read"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-guardian-seraphine",
+      "type": "npc",
+      "x": 640,
+      "y": 384,
+      "interactionRadius": 56,
+      "label": "Guardian Seraphine",
+      "metadata": {
+        "npcId": "guardian-seraphine",
+        "lines": [
+          "Guardian Seraphine. Approach with purpose, not appetite.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-starforger-orion",
+      "type": "npc",
+      "x": 512,
+      "y": 640,
+      "interactionRadius": 56,
+      "label": "Starforger Orion",
+      "metadata": {
+        "npcId": "starforger-orion",
+        "lines": [
+          "Starforger Orion. Bring mastery — not shopping lists.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "forge"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-nameless-witness",
+      "type": "npc",
+      "x": 768,
+      "y": 576,
+      "interactionRadius": 56,
+      "label": "The Nameless Witness",
+      "metadata": {
+        "npcId": "nameless-witness",
+        "lines": [
+          "…You came farther than most.",
+          "Names can wait. Keeping cannot.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-celestial-acolyte-nova",
+      "type": "npc",
+      "x": 416,
+      "y": 480,
+      "interactionRadius": 56,
+      "label": "Nova Soft",
+      "metadata": {
+        "npcId": "celestial-acolyte-nova",
+        "lines": [
+          "Hey there — I'm Nova Soft. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-celestial-scribe-astro",
+      "type": "npc",
+      "x": 480,
+      "y": 544,
+      "interactionRadius": 56,
+      "label": "Astro Quill",
+      "metadata": {
+        "npcId": "celestial-scribe-astro",
+        "lines": [
+          "Hey there — I'm Astro Quill. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-celestial-porter-orbit",
+      "type": "npc",
+      "x": 544,
+      "y": 512,
+      "interactionRadius": 56,
+      "label": "Orbit Pack",
+      "metadata": {
+        "npcId": "celestial-porter-orbit",
+        "lines": [
+          "Hey there — I'm Orbit Pack. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "idle"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
+      "id": "npc-celestial-guard-lumen",
+      "type": "npc",
+      "x": 608,
+      "y": 416,
+      "interactionRadius": 56,
+      "label": "Guard Lumen",
+      "metadata": {
+        "npcId": "celestial-guard-lumen",
+        "lines": [
+          "Hey there — I'm Guard Lumen. Just passing the day.",
+          "Need directions? The plaza Riftstone is the heart of Commons.",
+          "Still walking the paths? Good. The Commons needs keepers who return."
+        ],
+        "behavior": "patrol"
+      }
+    },
+    {
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "interactive": true,
+      "collision": false,
       "id": "res-celestial-rift-celestial-shard",
       "type": "resource",
       "x": 320,
@@ -356,6 +521,19 @@
         "bossId": "celestial-rift-entity",
         "arenaRef": "celestial-rift-boss"
       }
+    },
+    {
+      "id": "lm-star",
+      "type": "decoration",
+      "regionId": "celestial-rift",
+      "sceneId": "CelestialRiftScene",
+      "x": 768,
+      "y": 448,
+      "width": 64,
+      "height": 64,
+      "collision": true,
+      "label": "Star Anchor",
+      "color": 10189823
     }
   ],
   "colliders": [
@@ -406,6 +584,30 @@
       "width": 320,
       "height": 192,
       "kind": "building"
+    },
+    {
+      "id": "starfall-gap",
+      "x": 1152,
+      "y": 256,
+      "width": 256,
+      "height": 96,
+      "kind": "hazard"
+    },
+    {
+      "id": "rift-edge",
+      "x": 320,
+      "y": 1024,
+      "width": 384,
+      "height": 64,
+      "kind": "cliff"
+    },
+    {
+      "id": "lm-star-col",
+      "x": 768,
+      "y": 448,
+      "width": 64,
+      "height": 64,
+      "kind": "building"
     }
   ],
   "camera": {
@@ -431,6 +633,62 @@
         "x": 6,
         "y": 20,
         "icon": "building"
+      },
+      {
+        "id": "npc-astronomer-caelis",
+        "label": "Astronomer Caelis",
+        "x": 14,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-guardian-seraphine",
+        "label": "Guardian Seraphine",
+        "x": 20,
+        "y": 12,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-starforger-orion",
+        "label": "Starforger Orion",
+        "x": 16,
+        "y": 20,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-nameless-witness",
+        "label": "The Nameless Witness",
+        "x": 24,
+        "y": 18,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-celestial-acolyte-nova",
+        "label": "Nova Soft",
+        "x": 13,
+        "y": 15,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-celestial-scribe-astro",
+        "label": "Astro Quill",
+        "x": 15,
+        "y": 17,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-celestial-porter-orbit",
+        "label": "Orbit Pack",
+        "x": 17,
+        "y": 16,
+        "icon": "npc"
+      },
+      {
+        "id": "npc-celestial-guard-lumen",
+        "label": "Guard Lumen",
+        "x": 19,
+        "y": 13,
+        "icon": "npc"
       },
       {
         "id": "wp-celestial",

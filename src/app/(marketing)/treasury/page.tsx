@@ -1,9 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { SectionTitleBand, StatusChip } from "@/components/shared/page-header";
+import { StatusChip } from "@/components/shared/page-header";
+import { TreasuryBucketCard } from "@/components/ecosystem/treasury-bucket-card";
+import { TreasuryBudgetVisual } from "@/components/ecosystem/treasury-budget-visual";
 import type { CommunityTreasuryDashboard } from "@/lib/ecosystem/treasury";
+import { TREASURY_HERO_SRC } from "@/lib/ecosystem/treasury-art";
 
 export default function TreasuryPage() {
   const [treasury, setTreasury] = useState<CommunityTreasuryDashboard | null>(null);
@@ -21,24 +25,45 @@ export default function TreasuryPage() {
 
   return (
     <div className="mx-auto max-w-5xl space-y-8 px-4 py-10 md:px-6">
-      <div>
-        <SectionTitleBand slug="treasury" label="Community Treasury" kicker="Transparent ledger" />
-        <p className="page-lede mt-4">
-          Growth, reward vault, events, operations, and reserves. Blank means unknown — not zero.
-          Token purchases do not fabricate pet SOL income.
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <Link href="/rewards" className="btn-primary focus-ring text-sm">
-            Reward Center
-          </Link>
-          <Link href="/transparency" className="btn-secondary focus-ring text-sm">
-            Transparency
-          </Link>
-          <Link href="/token" className="btn-secondary focus-ring text-sm">
-            Token
-          </Link>
+      <header className="panel relative overflow-hidden p-0">
+        <div className="relative min-h-[200px] sm:min-h-[240px] md:min-h-[280px]">
+          <Image
+            src={TREASURY_HERO_SRC}
+            alt="Riftwilds community treasury vault hall"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            className="object-cover object-center"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[rgba(6,12,24,0.94)] via-[rgba(6,12,24,0.72)] to-[rgba(6,12,24,0.35)]"
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(6,12,24,0.92)] via-transparent to-[rgba(6,12,24,0.4)]"
+            aria-hidden
+          />
+          <div className="relative z-10 flex h-full min-h-[200px] flex-col justify-end p-5 sm:min-h-[240px] sm:p-6 md:min-h-[280px] md:p-8">
+            <p className="page-kicker">Transparent ledger</p>
+            <h1 className="page-title mt-2 text-left drop-shadow-sm">Community Treasury</h1>
+            <p className="page-lede mt-3 max-w-xl text-left text-[rgba(220,230,245,0.92)]">
+              Growth, reward vault, events, operations, and reserves. Blank means unknown — not zero.
+              Token purchases do not fabricate pet SOL income.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Link href="/rewards" className="btn-primary focus-ring text-sm">
+                Reward Center
+              </Link>
+              <Link href="/transparency" className="btn-secondary focus-ring text-sm">
+                Transparency
+              </Link>
+              <Link href="/token" className="btn-secondary focus-ring text-sm">
+                Token
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
 
       {loading ? (
         <p className="text-sm text-[var(--text-muted)]">Loading treasury…</p>
@@ -54,38 +79,12 @@ export default function TreasuryPage() {
           </div>
 
           <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {treasury.buckets.map((b) => (
-              <article key={b.key} className="panel p-4">
-                <h2 className="font-display text-lg text-white">{b.label}</h2>
-                <p className="mt-1 text-xs text-[var(--text-muted)]">{b.description}</p>
-                <p className="mt-3 font-display text-2xl text-white">{b.balanceLabel}</p>
-                <p className="mt-1 text-[10px] text-[var(--text-dim)]">
-                  {b.asset}
-                  {b.isDemo ? " · demo / awaiting ledger" : ""}
-                  {b.verified ? " · verified" : ""}
-                </p>
-              </article>
+            {treasury.buckets.map((b, index) => (
+              <TreasuryBucketCard key={b.key} bucket={b} priority={index < 2} />
             ))}
           </section>
 
-          <section className="panel p-5">
-            <h2 className="font-display text-xl text-white">Budget policy</h2>
-            <p className="mt-2 text-xs text-[var(--text-muted)]">{treasury.growthNote}</p>
-            <ul className="mt-4 space-y-2 text-sm">
-              {treasury.budgets.map((line) => (
-                <li
-                  key={line.key}
-                  className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[var(--stroke)] py-2"
-                >
-                  <span className="text-white">
-                    {line.label}{" "}
-                    <span className="text-[var(--text-dim)]">({line.allocationPercent}%)</span>
-                  </span>
-                  <span className="text-xs text-[var(--text-muted)]">{line.note}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
+          <TreasuryBudgetVisual budgets={treasury.budgets} growthNote={treasury.growthNote} />
 
           <section className="grid gap-4 md:grid-cols-2">
             <div className="panel p-5">

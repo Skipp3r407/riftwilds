@@ -3,26 +3,26 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useWallet } from "@solana/wallet-adapter-react";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
+import { useActiveWallet } from "@/hooks/use-active-wallet";
 import { rewardSourceArtPath } from "@/lib/assets/paths";
 import type { RewardCenterDashboard } from "@/lib/ecosystem/reward-center";
 
 export default function RewardsPage() {
-  const { publicKey } = useWallet();
+  const { address, viewOnly } = useActiveWallet();
   const [center, setCenter] = useState<RewardCenterDashboard | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const q = publicKey ? `?wallet=${publicKey.toBase58()}` : "";
+    const q = address ? `?wallet=${address}` : "";
     setLoading(true);
     void fetch(`/api/rewards/center${q}`)
       .then((r) => r.json())
       .then((json: { center?: RewardCenterDashboard }) => setCenter(json.center ?? null))
       .catch(() => setCenter(null))
       .finally(() => setLoading(false));
-  }, [publicKey]);
+  }, [address]);
 
   return (
     <div className="space-y-6">
@@ -35,6 +35,9 @@ export default function RewardsPage() {
         statusTone={center?.claimsEnabled ? "warn" : "info"}
         actions={
           <>
+            <Link href="/loyalty" className="btn-primary focus-ring text-sm">
+              Loyalty / Rift Storm
+            </Link>
             <Link href="/treasury" className="btn-secondary focus-ring text-sm">
               Treasury
             </Link>
@@ -68,7 +71,12 @@ export default function RewardsPage() {
           </div>
           {!center.wallet.connected ? (
             <p className="mt-2 text-xs text-[var(--text-muted)]">
-              Connect a wallet to see claimable vault balances. Soft play does not require a wallet.
+              Connect a wallet or paste an address to see claimable vault balances. Soft play does
+              not require a wallet.
+            </p>
+          ) : viewOnly ? (
+            <p className="mt-2 text-xs text-[var(--amber)]">
+              View-only — lookups only. Claiming still requires a signed wallet session.
             </p>
           ) : null}
         </section>

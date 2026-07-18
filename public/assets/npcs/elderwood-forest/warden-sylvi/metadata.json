@@ -17,5 +17,9 @@
     "thumbnail": true
   },
   "artStatus": "generated",
-  "updatedAt": "2026-07-17T23:20:13.178Z"
+  "updatedAt": "2026-07-17T23:20:13.178Z",
+  "derivedAt": "2026-07-18T05:18:29.111Z",
+  "fullBodyDistinct": false,
+  "spriteDistinct": false,
+  "note": "Portrait generated; full-body/sprite derived from portrait pending dedicated sheets"
 }

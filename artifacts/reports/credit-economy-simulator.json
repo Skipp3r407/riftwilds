@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "disclaimer": "Credits are in-game soft currency for Riftwilds gameplay. They are not SOL, not a cryptocurrency, not an investment, and never convert to guaranteed token or SOL profit.",
+  "generatedAt": "2026-07-18T05:08:48.295Z",
+  "playthrough": {
+    "passed": true,
+    "earned": 360,
+    "spent": 110,
+    "finalBalance": 250,
+    "steps": 16
+  },
+  "horizons": [
+    {
+      "days": 7,
+      "players": 1000,
+      "projectedFaucetPerPlayer": 400,
+      "projectedSinkPerPlayer": 140,
+      "netPerPlayer": 289,
+      "circulationEstimate": 2020000,
+      "sinkRatio": 0.35
+    },
+    {
+      "days": 30,
+      "players": 1000,
+      "projectedFaucetPerPlayer": 400,
+      "projectedSinkPerPlayer": 140,
+      "netPerPlayer": 267,
+      "circulationEstimate": 8000000,
+      "sinkRatio": 0.35
+    },
+    {
+      "days": 90,
+      "players": 1000,
+      "projectedFaucetPerPlayer": 400,
+      "projectedSinkPerPlayer": 140,
+      "netPerPlayer": 262,
+      "circulationEstimate": 23600000,
+      "sinkRatio": 0.35
+    }
+  ],
+  "faucetRulesCount": 13,
+  "sinkRulesCount": 14,
+  "notes": [
+    "Simulation is a model — not live ledger truth.",
+    "No extreme auto-tuning; admin adjusts config.",
+    "Credits are not SOL / token profit."
+  ]
+}

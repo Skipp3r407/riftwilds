@@ -7,6 +7,7 @@
  * - Generated cinematic masters live in `public/assets/about/`.
  * - Graphic-novel comic panels live in `public/assets/about/comic/` (wordless art;
  *   titles/captions stay in HTML).
+ * - Lifecycle / bridge card backgrounds live in `public/assets/about/lifecycle/`.
  * - Chapters without a dedicated master may reuse region/wallpaper art as interim
  *   backgrounds until more scene PNGs are produced.
  * - Story-first: no investment, token-price, or marketplace-profit framing here.
@@ -132,9 +133,35 @@ export const aboutScenePaths = {
   comicInfoRiftkeeper: "/assets/about/comic/comic-info-riftkeeper.png",
   comicInfoLiveWorld: "/assets/about/comic/comic-info-live-world.png",
   comicInfoWhatYouCanDo: "/assets/about/comic/comic-info-what-you-can-do.png",
+  comicInfoLivingWorld: "/assets/about/comic/comic-info-living-world.png",
+  comicInfoBuiltToGrow: "/assets/about/comic/comic-info-built-to-grow.png",
+  comicInfoWhyMade: "/assets/about/comic/comic-info-why-riftlings-made.png",
+  comicInfoWhyEggs: "/assets/about/comic/comic-info-why-eggs.png",
+  comicInfoWhyEvolve: "/assets/about/comic/comic-info-why-evolve.png",
   comicChapterBefore: "/assets/about/comic/comic-chapter-before-inset.png",
   comicChapterDiscovery: "/assets/about/comic/comic-chapter-discovery-inset.png",
   comicChapterRiftlings: "/assets/about/comic/comic-chapter-riftlings-inset.png",
+  /** Lifecycle step + Fracture→Keeper bridge card backgrounds */
+  lifecycleFragment: "/assets/about/lifecycle/lifecycle-fragment.png",
+  lifecycleBond: "/assets/about/lifecycle/lifecycle-bond.png",
+  lifecycleEgg: "/assets/about/lifecycle/lifecycle-egg.png",
+  lifecycleHatch: "/assets/about/lifecycle/lifecycle-hatch.png",
+  lifecycleIdentity: "/assets/about/lifecycle/lifecycle-identity.png",
+  bridgeFracture: "/assets/about/lifecycle/bridge-fracture.png",
+  bridgeFirstEggs: "/assets/about/lifecycle/bridge-first-eggs.png",
+  bridgeFirstKeeper: "/assets/about/lifecycle/bridge-first-keeper.png",
+  /** Affinity birth vignette thumbnails (wordless comic moments) */
+  vignetteEmber: "/assets/about/comic/birth-vignette-ember.png",
+  vignetteTide: "/assets/about/comic/birth-vignette-tide.png",
+  vignetteGrove: "/assets/about/comic/birth-vignette-grove.png",
+  vignetteStorm: "/assets/about/comic/birth-vignette-storm.png",
+  vignetteStone: "/assets/about/comic/birth-vignette-stone.png",
+  vignetteFrost: "/assets/about/comic/birth-vignette-frost.png",
+  vignetteRadiant: "/assets/about/comic/birth-vignette-radiant.png",
+  vignetteVoid: "/assets/about/comic/birth-vignette-void.png",
+  vignetteAlloy: "/assets/about/comic/birth-vignette-alloy.png",
+  vignetteSpirit: "/assets/about/comic/birth-vignette-spirit.png",
+  vignetteCelestial: "/assets/about/comic/birth-vignette-celestial.png",
   /** Interim reuse */
   radiant: "/assets/regions/radiant-citadel.png",
   celestial: "/assets/regions/celestial-rift.png",
@@ -495,6 +522,10 @@ export const whyRiftlingsWereMade: InfoBlock = {
     "Not trophies, currency, or gambling tokens in the origin lore",
     "Battling later grew as training, defense, affinity control, competition, teamwork, and preparation for dangerous regions",
   ],
+  comic: {
+    src: aboutScenePaths.comicInfoWhyMade,
+    alt: "Comic illustration of a Riftling cradling a glowing fragment of a living ecosystem against a fractured world",
+  },
 };
 
 export const whyEggsExist: InfoBlock = {
@@ -505,6 +536,10 @@ export const whyEggsExist: InfoBlock = {
     "Egg shells form from crystallized Gateway energy plus regional matter — minerals, plant fibers, condensed weather, tide-salt, ashglass, memory residue, machine filament, or starlit frost, depending on where the bond takes hold.",
     "Inside the egg, the developing Riftling forms a stable body, a dominant affinity, a genetic pattern, and the first soft outline of a personal identity. The shell is not a prison. It is a protected becoming — a quiet room between fragment and self — until the creature can meet the world without dissolving back into raw energy.",
   ],
+  comic: {
+    src: aboutScenePaths.comicInfoWhyEggs,
+    alt: "Comic illustration of a crystalline Gateway egg glowing among roots and minerals with a soft silhouette forming inside",
+  },
 };
 
 export const whyPetsEvolve: InfoBlock = {
@@ -524,6 +559,10 @@ export const whyPetsEvolve: InfoBlock = {
     "Their genetics awaken",
     "They complete an ancient trial",
   ],
+  comic: {
+    src: aboutScenePaths.comicInfoWhyEvolve,
+    alt: "Comic illustration of a Riftling mid-evolution, its earlier form dissolving into light as a stronger silhouette emerges",
+  },
 };
 
 export const originDiagramNodes: OriginDiagramNode[] = [
@@ -649,6 +688,10 @@ export const infoBlocks: InfoBlock[] = [
     body: [
       "Pets have memories and develop preferences. Regions change. Events occur. New paths appear. The story expands. Your choices shape personal pet journeys — and the world keeps moving whether or not you are watching.",
     ],
+    comic: {
+      src: aboutScenePaths.comicInfoLivingWorld,
+      alt: "Comic illustration of a companion overlooking a living settlement where biomes and memory-light keep shifting",
+    },
   },
   {
     id: "built-to-grow",
@@ -656,6 +699,10 @@ export const infoBlocks: InfoBlock[] = [
     body: [
       "Riftwilds is designed as an expanding game world with room for new regions, creatures, quests, events, and stories. Schedules stay flexible — the world grows as the tale is ready to be told.",
     ],
+    comic: {
+      src: aboutScenePaths.comicInfoBuiltToGrow,
+      alt: "Comic illustration of an expanding world map budding new regions from a glowing Gateway Heart",
+    },
   },
 ];
 
@@ -675,6 +722,14 @@ export type BirthStep = {
   title: string;
   comicCaption: string;
   body: string;
+  /** Atmospheric card background (wordless) */
+  image: ComicArt;
+};
+
+export type BridgeStep = {
+  title: string;
+  body: string;
+  image: ComicArt;
 };
 
 export type BirthComicPanel = {
@@ -692,6 +747,9 @@ export type AffinityBirthVignette = {
   bondMatter: string;
   comicCaption: string;
   prose: string;
+  /** Wordless comic thumbnail — caption stays in HTML */
+  thumbSrc: string;
+  thumbAlt: string;
 };
 
 export type FullLorePanel = {
@@ -719,30 +777,50 @@ export const howRiftlingsCameToBe = {
       title: "Fragment",
       comicCaption: "The cores divide — thousands of living sparks leave the broken network.",
       body: "Each Gateway Heart released living fragments of itself: soft pieces of consciousness threaded with affinity. They drifted through the Riftwilds like seeds after a storm — searching not for owners, but for anything still alive enough to hold a memory.",
+      image: {
+        src: aboutScenePaths.lifecycleFragment,
+        alt: "Luminous cyan-amber consciousness shards drifting through a broken gateway void",
+      },
     },
     {
       id: "bond",
       title: "Bond",
       comicCaption: "A spark finds a pulse — animal, plant, crystal, storm, machine, or memory.",
       body: "When a fragment touched surviving life or force, it bonded. Ember fragments sought heat and ash-born creatures. Tide sought moonwater and living currents. Grove sought seed and root. Storm sought skyfracture. Stone sought canyon bone. Frost sought still ice. Radiant sought healing light. Void sought hush and hollow. Alloy sought growing machines. Spirit sought remembered voices. Celestial sought the thin places between maps.",
+      image: {
+        src: aboutScenePaths.lifecycleBond,
+        alt: "A glowing spark bonding with roots, crystals, and living matter in a dark ruin grove",
+      },
     },
     {
       id: "egg",
       title: "Egg",
       comicCaption: "Crystallized energy and regional matter close into a shell of protected becoming.",
       body: "A raw bond is unstable. The fragment and its chosen matter needed time to braid without tearing. Shells formed from crystallized Gateway energy plus the region’s own substance — ashglass, tide-salt, rootfiber, ozone lace, fossil grit, frostfilm, prismdust, echo-mist, machine filament, marshlight, or starlit frost. Inside: quiet. Outside: a world still rearranging itself.",
+      image: {
+        src: aboutScenePaths.lifecycleEgg,
+        alt: "A crystalline Riftling egg forming in a nested lattice of cyan and amber light",
+      },
     },
     {
       id: "hatch",
       title: "Hatch",
       comicCaption: "The shell opens — a living archive takes its first breath.",
       body: "When the body could hold the energy, the egg opened. The first Riftlings were small, strange, and full of inherited feeling. They carried ecosystems, routes, songs, and griefs that were not yet their own — and they looked for someone who could help them sort the difference.",
+      image: {
+        src: aboutScenePaths.lifecycleHatch,
+        alt: "A crystalline egg cracking open with cyan light as a small Riftling silhouette emerges",
+      },
     },
     {
       id: "identity",
       title: "Identity",
       comicCaption: "Care, trust, and shared days turn an archive into a self.",
       body: "Alone, many Riftlings drifted toward unstable Rifts or drowned in borrowed memories. With a Riftkeeper, they began to choose: which memories to keep, which fears to name, which futures to grow toward. That is when a preserved piece of the world becomes a companion — a pet with a future, not only a past.",
+      image: {
+        src: aboutScenePaths.lifecycleIdentity,
+        alt: "Silhouettes of a keeper and glowing companion sharing a quiet bonded moment at dusk",
+      },
     },
   ] satisfies BirthStep[],
   bridge: {
@@ -751,16 +829,28 @@ export const howRiftlingsCameToBe = {
       {
         title: "The Fracture",
         body: "The Prime Gateway broke. Regions overlapped. Histories began to slip. The living cores could not restore the old map.",
+        image: {
+          src: aboutScenePaths.bridgeFracture,
+          alt: "The Prime Gateway shattering as regions overlap in cyan and amber rift light",
+        },
       },
       {
         title: "The First Eggs",
         body: "Fragments bonded with surviving life and closed into eggs across the Riftwilds — the world’s softest emergency plan.",
+        image: {
+          src: aboutScenePaths.bridgeFirstEggs,
+          alt: "Multiple luminous crystalline eggs nestled across a dark wild Riftwilds landscape",
+        },
       },
       {
         title: "The First Keeper",
         body: "Elara Venn carried a damaged egg through nine collapsing days. When it hatched, she refused every title and became the pattern others would follow: not ownership — keeping.",
+        image: {
+          src: aboutScenePaths.bridgeFirstKeeper,
+          alt: "A lone silhouetted keeper carrying a damaged glowing egg through a collapsing storm path",
+        },
       },
-    ],
+    ] satisfies BridgeStep[],
   },
   preservationNote: {
     heading: "Why they were never weapons",
@@ -811,6 +901,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "A spark nests in cooling ash — warmth refuses to die.",
     prose:
       "In the Emberlands, fragments sank into ash beds and bonded with creatures that still carried heat under their fur. The first Ember eggs glowed like banked coals. When they hatched, they carried the warmth of volcanic ecosystems that Rifts had half-erased — living hearth-memory, not fire for war.",
+    thumbSrc: aboutScenePaths.vignetteEmber,
+    thumbAlt: "Amber spark nesting in cooling volcanic ash beside a small ash-born creature",
   },
   {
     id: "tide",
@@ -820,6 +912,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "A current remembers a shore that moved away.",
     prose:
       "Along Moonwater coasts, fragments rode the twin-moon pull and bonded with tide-life and condensed spray. Tide eggs formed in rock pools that should not have existed after the Fracture. Their hatchlings remembered routes between shores that no longer lined up — maps written in motion.",
+    thumbSrc: aboutScenePaths.vignetteTide,
+    thumbAlt: "Cyan spark riding moonlit tidewater in a rocky coastal pool",
   },
   {
     id: "grove",
@@ -829,6 +923,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "A seed and a spark agree to grow together.",
     prose:
       "In Elderwood hollows, fragments braided with seeds, moss, and the quiet intelligence of old roots. Grove eggs nested in fallen trunks like patient promises. Hatchlings preserved forests swallowed by unstable Rifts — green archives that still knew how to breathe.",
+    thumbSrc: aboutScenePaths.vignetteGrove,
+    thumbAlt: "Glowing seed and spark braiding inside a mossy Elderwood hollow",
   },
   {
     id: "storm",
@@ -838,6 +934,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "Lightning softens into a heartbeat.",
     prose:
       "Above Stormspire, fragments rode thunderheads and bonded with sky-life and condensed storm energy. Storm eggs formed where ozone thickened into stillness between strikes. Their young carried weather-memory — how to warn, how to guide, how to keep a path open when the sky forgets itself.",
+    thumbSrc: aboutScenePaths.vignetteStorm,
+    thumbAlt: "Softened lightning heartbeat hovering between stormspire peaks",
   },
   {
     id: "stone",
@@ -847,6 +945,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "History settles into a shell of dust and patience.",
     prose:
       "In Stoneheart canyons, fragments sank into fossil dust and bonded with enduring creatures and the mineral memory of ruins. Stone eggs looked almost ordinary until light touched their ridges. Hatchlings wore the patterns of lost civilizations — quiet historians with paws.",
+    thumbSrc: aboutScenePaths.vignetteStone,
+    thumbAlt: "Fossil grit and canyon dust closing into a patient stone shell of light",
   },
   {
     id: "frost",
@@ -856,6 +956,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "Cold keeps a secret until it is ready to wake.",
     prose:
       "Across Frostveil Basin, fragments cooled into frostfilm and bonded with creatures of powder and thin ice. Frost eggs waited under snow that fell out of season. When they opened, they carried winters that had been displaced by Rift weather — stillness as shelter, not as ending.",
+    thumbSrc: aboutScenePaths.vignetteFrost,
+    thumbAlt: "Cyan spark sealed under powder snow and still ice in a frozen basin",
   },
   {
     id: "radiant",
@@ -865,6 +967,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "Light learns a gentler purpose than glare.",
     prose:
       "Beneath and beyond the Radiant Citadel, fragments gathered prismdawn and bonded with soft light-life. Radiant eggs formed where sunshaft pooled into calm. Hatchlings preserved healing knowledge and bright memory — reminders that the Gateways once balanced life, not just power.",
+    thumbSrc: aboutScenePaths.vignetteRadiant,
+    thumbAlt: "Warm prismdawn light pooling among crystals before a soft radiant creature",
   },
   {
     id: "void",
@@ -874,6 +978,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "Even emptiness can hold what must not be lost.",
     prose:
       "At Void Hollow’s edges, fragments settled into hush and bonded with echo-life and residual absence. Void eggs appeared where mist gathered into stillness. Their young protected what would otherwise dissolve between realities — the quiet between names, the soft shapes of almost-forgotten things.",
+    thumbSrc: aboutScenePaths.vignetteVoid,
+    thumbAlt: "Violet-cyan hush spark held in hollowsilence mist at a void edge",
   },
   {
     id: "alloy",
@@ -883,6 +989,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "A machine remembers it was grown, not only built.",
     prose:
       "In Alloy ruins, fragments threaded through machines that still tried to grow beside living things. Alloy eggs formed in workshops where filament met moss. Hatchlings carried craft-knowledge and repair-instinct — living tools of continuity, never meant as chained servants.",
+    thumbSrc: aboutScenePaths.vignetteAlloy,
+    thumbAlt: "Living machinery and gear-moss forming a workshop egg of cyan-amber light",
   },
   {
     id: "spirit",
@@ -892,6 +1000,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "A memory asks for a body so it will not fade.",
     prose:
       "Through Spirit Marsh, fragments bonded with memories the living could no longer carry alone. Spirit eggs glowed like lanterns in reed-fog. Hatchlings sheltered names, songs, and farewells — archives of feeling that would have vanished when the world’s timelines slipped.",
+    thumbSrc: aboutScenePaths.vignetteSpirit,
+    thumbAlt: "Marshlight lanterns and a soft spirit spark gathering in reed-fog",
   },
   {
     id: "celestial",
@@ -901,6 +1011,8 @@ export const affinityBirthVignettes: AffinityBirthVignette[] = [
     comicCaption: "A spark listens to a call from beyond every map.",
     prose:
       "Near the Celestial Rift, rare fragments bonded with starlit frost and the thin places between regions. Celestial eggs were scarce and unstable — often damaged, often found by those already walking impossible paths. Some keepers whisper that Elara’s first companion carried this affinity, or all affinities at once. The truth remains part of the world’s open question.",
+    thumbSrc: aboutScenePaths.vignetteCelestial,
+    thumbAlt: "Starlit frost egg under a celestial rift of map-light and constellation glow",
   },
 ];
 
@@ -1000,6 +1112,11 @@ export const aboutAssetManifest = {
     "comic/comic-info-riftkeeper.png",
     "comic/comic-info-live-world.png",
     "comic/comic-info-what-you-can-do.png",
+    "comic/comic-info-living-world.png",
+    "comic/comic-info-built-to-grow.png",
+    "comic/comic-info-why-riftlings-made.png",
+    "comic/comic-info-why-eggs.png",
+    "comic/comic-info-why-evolve.png",
     "comic/comic-chapter-before-inset.png",
     "comic/comic-chapter-discovery-inset.png",
     "comic/comic-chapter-riftlings-inset.png",

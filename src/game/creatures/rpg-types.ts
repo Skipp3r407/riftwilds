@@ -78,13 +78,14 @@ export function toArenaAbility(
     category: arenaCategory,
     power: ability.power,
     accuracy: ability.accuracy ?? (isSelf ? 100 : 90),
-    energyCost: ability.energyCost,
+    energyCost: ability.category === "ULTIMATE" ? 0 : ability.energyCost,
     priority:
       ability.priority ??
       (ability.category === "DEFEND" ? 2 : ability.category === "ULTIMATE" ? -1 : 0),
     cooldown: ability.cooldown,
     target,
     status: ability.status,
+    riftBurstCost: ability.category === "ULTIMATE" ? 100 : undefined,
   };
 }
 

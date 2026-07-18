@@ -49,6 +49,56 @@ import lore_veilhare from "./veilhare";
 import lore_auralynx from "./auralynx";
 import lore_hollowmoth from "./hollowmoth";
 import lore_celestora from "./celestora";
+import lore_slagpup from "./slagpup";
+import lore_pyrespore from "./pyrespore";
+import lore_cinderquill from "./cinderquill";
+import lore_lavaling from "./lavaling";
+import lore_furnacebeetle from "./furnacebeetle";
+import lore_brinepaw from "./brinepaw";
+import lore_kelpwisp from "./kelpwisp";
+import lore_sprayfin from "./sprayfin";
+import lore_pearlurk from "./pearlurk";
+import lore_tidequill from "./tidequill";
+import lore_fernfox from "./fernfox";
+import lore_saplingo from "./saplingo";
+import lore_vinepup from "./vinepup";
+import lore_thornling from "./thornling";
+import lore_mossdrake from "./mossdrake";
+import lore_galekit from "./galekit";
+import lore_cloudleaper from "./cloudleaper";
+import lore_sparkmoth from "./sparkmoth";
+import lore_windrift from "./windrift";
+import lore_thunderpaw from "./thunderpaw";
+import lore_shalehorn from "./shalehorn";
+import lore_gritling from "./gritling";
+import lore_basaltpup from "./basaltpup";
+import lore_crystowl from "./crystowl";
+import lore_rubblefin from "./rubblefin";
+import lore_glazehare from "./glazehare";
+import lore_rimewing from "./rimewing";
+import lore_iciclepup from "./iciclepup";
+import lore_snowglyph from "./snowglyph";
+import lore_frostbloom from "./frostbloom";
+import lore_dawnkit from "./dawnkit";
+import lore_prismoth from "./prismoth";
+import lore_solfinch from "./solfinch";
+import lore_gleamhare from "./gleamhare";
+import lore_lightspire from "./lightspire";
+import lore_umbralisk from "./umbralisk";
+import lore_duskling from "./duskling";
+import lore_nullpaw from "./nullpaw";
+import lore_echofig from "./echofig";
+import lore_shadowmire from "./shadowmire";
+import lore_boltgear from "./boltgear";
+import lore_scrapowl from "./scrapowl";
+import lore_copperfin from "./copperfin";
+import lore_wirefox from "./wirefox";
+import lore_chronobeetle from "./chronobeetle";
+import lore_ghostbloom from "./ghostbloom";
+import lore_dreamhare from "./dreamhare";
+import lore_wispdeer from "./wispdeer";
+import lore_soulmoth from "./soulmoth";
+import lore_starveil from "./starveil";
 
 export const SPECIES_LORE_BY_SLUG: Record<string, SpeciesLore> = {
   "cindercub": lore_cindercub,
@@ -101,6 +151,56 @@ export const SPECIES_LORE_BY_SLUG: Record<string, SpeciesLore> = {
   "auralynx": lore_auralynx,
   "hollowmoth": lore_hollowmoth,
   "celestora": lore_celestora,
+  "slagpup": lore_slagpup,
+  "pyrespore": lore_pyrespore,
+  "cinderquill": lore_cinderquill,
+  "lavaling": lore_lavaling,
+  "furnacebeetle": lore_furnacebeetle,
+  "brinepaw": lore_brinepaw,
+  "kelpwisp": lore_kelpwisp,
+  "sprayfin": lore_sprayfin,
+  "pearlurk": lore_pearlurk,
+  "tidequill": lore_tidequill,
+  "fernfox": lore_fernfox,
+  "saplingo": lore_saplingo,
+  "vinepup": lore_vinepup,
+  "thornling": lore_thornling,
+  "mossdrake": lore_mossdrake,
+  "galekit": lore_galekit,
+  "cloudleaper": lore_cloudleaper,
+  "sparkmoth": lore_sparkmoth,
+  "windrift": lore_windrift,
+  "thunderpaw": lore_thunderpaw,
+  "shalehorn": lore_shalehorn,
+  "gritling": lore_gritling,
+  "basaltpup": lore_basaltpup,
+  "crystowl": lore_crystowl,
+  "rubblefin": lore_rubblefin,
+  "glazehare": lore_glazehare,
+  "rimewing": lore_rimewing,
+  "iciclepup": lore_iciclepup,
+  "snowglyph": lore_snowglyph,
+  "frostbloom": lore_frostbloom,
+  "dawnkit": lore_dawnkit,
+  "prismoth": lore_prismoth,
+  "solfinch": lore_solfinch,
+  "gleamhare": lore_gleamhare,
+  "lightspire": lore_lightspire,
+  "umbralisk": lore_umbralisk,
+  "duskling": lore_duskling,
+  "nullpaw": lore_nullpaw,
+  "echofig": lore_echofig,
+  "shadowmire": lore_shadowmire,
+  "boltgear": lore_boltgear,
+  "scrapowl": lore_scrapowl,
+  "copperfin": lore_copperfin,
+  "wirefox": lore_wirefox,
+  "chronobeetle": lore_chronobeetle,
+  "ghostbloom": lore_ghostbloom,
+  "dreamhare": lore_dreamhare,
+  "wispdeer": lore_wispdeer,
+  "soulmoth": lore_soulmoth,
+  "starveil": lore_starveil,
 };
 
 export function getSpeciesLore(slug: string): SpeciesLore | undefined {
@@ -161,5 +261,55 @@ export const SPECIES_LORE_SLUGS = [
   "veilhare",
   "auralynx",
   "hollowmoth",
-  "celestora"
+  "celestora",
+  "slagpup",
+  "pyrespore",
+  "cinderquill",
+  "lavaling",
+  "furnacebeetle",
+  "brinepaw",
+  "kelpwisp",
+  "sprayfin",
+  "pearlurk",
+  "tidequill",
+  "fernfox",
+  "saplingo",
+  "vinepup",
+  "thornling",
+  "mossdrake",
+  "galekit",
+  "cloudleaper",
+  "sparkmoth",
+  "windrift",
+  "thunderpaw",
+  "shalehorn",
+  "gritling",
+  "basaltpup",
+  "crystowl",
+  "rubblefin",
+  "glazehare",
+  "rimewing",
+  "iciclepup",
+  "snowglyph",
+  "frostbloom",
+  "dawnkit",
+  "prismoth",
+  "solfinch",
+  "gleamhare",
+  "lightspire",
+  "umbralisk",
+  "duskling",
+  "nullpaw",
+  "echofig",
+  "shadowmire",
+  "boltgear",
+  "scrapowl",
+  "copperfin",
+  "wirefox",
+  "chronobeetle",
+  "ghostbloom",
+  "dreamhare",
+  "wispdeer",
+  "soulmoth",
+  "starveil"
 ] as const;

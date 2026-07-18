@@ -45,13 +45,18 @@ export function ParallaxScene({ src, alt, className, priority, accent }: Props) 
           sizes="100vw"
         />
       </motion.div>
+      {/* Bottom + left scrims keep chapter copy readable without hiding the art */}
       <div
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(6,8,14,0.94)] via-[rgba(6,8,14,0.5)] to-[rgba(6,8,14,0.28)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(4,6,14,0.92)] via-[rgba(4,6,14,0.55)] to-[rgba(4,6,14,0.22)]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[rgba(4,6,14,0.78)] via-[rgba(4,6,14,0.35)] to-transparent md:from-[rgba(4,6,14,0.72)] md:via-[rgba(4,6,14,0.28)]"
         aria-hidden
       />
       {accent ? (
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 opacity-40 mix-blend-screen"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 opacity-25 mix-blend-screen"
           style={{
             background: `linear-gradient(to top, ${accent}, transparent)`,
           }}

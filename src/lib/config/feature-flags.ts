@@ -12,6 +12,14 @@ export const featureFlagDefaults = {
   HATCHING_ENABLED: true,
   CARE_ENABLED: true,
   PERMANENT_DEATH_ENABLED: false,
+  /** Riftling Life & Spirit — Downed, Spirit Realm, recovery methods. */
+  SPIRIT_SYSTEM_ENABLED: true,
+  /** Optional Instant Spirit Recall (SOL convenience). Never required. */
+  SOL_SPIRIT_RECALL_ENABLED: false,
+  /** Hardcore permadeath — opt-in only with explicit warnings. */
+  HARDCORE_MODE_ENABLED: true,
+  /** Memorial Garden + ancestor lore surfaces. */
+  MEMORIAL_GARDEN_ENABLED: true,
   EXPLORATION_ENABLED: false,
   /** Legacy flag — prefer ARENA_ENABLED for Riftwilds Arena. */
   BATTLES_ENABLED: true,
@@ -19,8 +27,8 @@ export const featureFlagDefaults = {
   MARKETPLACE_ENABLED: false,
   /** Browse demo / scaffolding catalog even when live marketplace writes are off. */
   MARKETPLACE_DEMO_CATALOG_ENABLED: true,
-  /** Create / cancel listings (still demo-credit unless SOL flags are on). */
-  MARKETPLACE_WRITES_ENABLED: false,
+  /** Create / cancel / Credits purchase (SOL escrow stays off). */
+  MARKETPLACE_WRITES_ENABLED: true,
   MARKETPLACE_EGG_SALES_ENABLED: true,
   MARKETPLACE_PET_SALES_ENABLED: true,
   MARKETPLACE_BUNDLE_LISTINGS_ENABLED: true,
@@ -37,7 +45,8 @@ export const featureFlagDefaults = {
 
   // ─── MMO systems (Phase 1 shells + progressive unlock) ─────────────────────
   EGG_SYSTEM_ENABLED: true,
-  BREEDING_ENABLED: false,
+  /** Credits-fee breeding path live; SOL fee never required. */
+  BREEDING_ENABLED: true,
   GENETICS_ENABLED: true,
   PET_CARE_ENABLED: true,
   /** Species lore Codex + deterministic personal biographies at hatch. */
@@ -61,6 +70,16 @@ export const featureFlagDefaults = {
   /** Secondary / embed camera — not the default UX. */
   LIVE_WORLD_SPECTATOR_MODE_ENABLED: false,
   LIVE_WORLD_MOBILE_CONTROLS_ENABLED: true,
+  /** Player emotes, wheel, pings, consent stubs — cosmetic only. */
+  LIVE_WORLD_EMOTES_ENABLED: true,
+
+  // ─── Live World persistence / save-state ───────────────────────────────────
+  /** Server session + autosave + safe logout APIs. */
+  WORLD_PERSISTENCE_ENABLED: true,
+  /** Persist WorldSaveState to Prisma when client regenerated + migration applied. */
+  WORLD_PERSISTENCE_PRISMA_ENABLED: false,
+  /** Sleeping character stubs in world — DEFAULT OFF. */
+  SLEEPING_CHARACTERS_ENABLED: false,
 
   RANKED_ENABLED: false,
   UPGRADES_ENABLED: false,
@@ -180,6 +199,23 @@ export const featureFlagDefaults = {
   /** Post-grad nav emphasis (Play / Dashboard / Treasury / Rewards / World). */
   ECOSYSTEM_POST_GRAD_NAV_ENABLED: true,
 
+  // ─── Credits soft currency + content systems ───────────────────────────────
+  /** Server-authoritative Credits ledger APIs. */
+  CREDITS_LEDGER_ENABLED: true,
+  /**
+   * Persist Credits to Prisma CurrencyLedger + PlayerProfile.softCurrency when
+   * DATABASE_URL is configured and the user row exists. Memory remains hot path.
+   */
+  CREDITS_PRISMA_ENABLED: true,
+  /** Map Goals panel + /api/map-goals. */
+  MAP_GOALS_ENABLED: true,
+  /** AI NPC dialogue with authored fallback (never grants rewards). */
+  NPC_AI_DIALOGUE_ENABLED: true,
+  /** Job board + public events content surfaces. */
+  JOB_BOARD_EVENTS_ENABLED: true,
+  /** Admin Content Studio shell. */
+  ADMIN_CONTENT_STUDIO_ENABLED: true,
+
   // ─── Modular auth (email/social first, wallet optional) ────────────────────
   /** Show email/social-first login scaffolding. */
   AUTH_EMAIL_ENABLED: false,
@@ -192,6 +228,66 @@ export const featureFlagDefaults = {
   AUTH_CLERK_BRIDGE_ENABLED: false,
   /** Login / account page with modular providers. */
   AUTH_MODULAR_LOGIN_UI_ENABLED: true,
+
+  // ─── Loyalty / streaks / airdrops / Rift Storm ──────────────────────────────
+  /** Account loyalty streaks, weighted airdrops, milestones, Loyalty Shop. */
+  LOYALTY_SYSTEM_ENABLED: true,
+  /** Daily weighted airdrop claims (anti-AFK + pity). */
+  LOYALTY_DAILY_AIRDROP_ENABLED: true,
+  /** Loyalty Token cosmetics shop (never gameplay advantages). */
+  LOYALTY_SHOP_ENABLED: true,
+  /** Rift Storm global / regional airdrop events. */
+  RIFT_STORM_ENABLED: true,
+  /** Optional promo SOL from treasury pool — default OFF; never required. */
+  RIFT_STORM_SOL_ENABLED: false,
+  /** Social announce opt-in blurbs for loyalty / storm claims. */
+  LOYALTY_SOCIAL_ANNOUNCE_ENABLED: true,
+
+  // ─── Master Economy Core (Phases 1–16) ─────────────────────────────────────
+  /** Unified SettlementService facade over Credits (+ optional adapters). */
+  MASTER_ECONOMY_CORE_ENABLED: true,
+  /** Shop checkout with Credits (required play path). */
+  SHOP_CREDITS_CHECKOUT_ENABLED: true,
+  /** Creator marketplace listing kind + royalty splits (Credits). */
+  CREATOR_MARKETPLACE_ENABLED: true,
+  /** Land parcel registry + Credits claim. */
+  LAND_OWNERSHIP_ENABLED: true,
+  /** Homestead Credits persistence path. */
+  HOUSING_ECONOMY_ENABLED: true,
+  /** Guild bank Credits. */
+  GUILD_ECONOMY_ENABLED: true,
+  /** Season pass Credits track. */
+  SEASON_PASS_ENABLED: true,
+  /** Player-owned shopfronts (Credits). */
+  PLAYER_SHOPS_ENABLED: true,
+  /** Tournament entry/prize in Credits or AP — never real-value wagering. */
+  TOURNAMENT_ECONOMY_ENABLED: true,
+  /** Off-chain collectibles registry. */
+  COLLECTIBLES_ECONOMY_ENABLED: true,
+  /** Spirit recovery HTTP surface (extends game/spirit — does not replace). */
+  SPIRIT_RECOVERY_API_ENABLED: true,
+
+  // ─── Living World social presence / rest / town reputation ─────────────────
+  /** Presence XP, rest hubs, social density, anti-AFK (never SOL / never P2W). */
+  SOCIAL_PRESENCE_ENABLED: true,
+  /** Full Living Server Population System (extends social presence). */
+  LIVING_SERVER_POPULATION_ENABLED: true,
+  /** Idle participation soft rewards every 15–30m of genuine activity. */
+  SOCIAL_PRESENCE_IDLE_REWARDS_ENABLED: true,
+  /** Hourly Town Hero / Master Merchant / Community Favorite cosmetics. */
+  TOWN_FEATURED_PLAYER_ENABLED: true,
+  /** Home visit likes / guestbook / popularity stubs. */
+  SOCIAL_HOME_VISITS_ENABLED: true,
+  /** Mini community event stubs (merchant, musician, fireworks…). */
+  SOCIAL_COMMUNITY_EVENTS_ENABLED: true,
+  /** Account-bound Community Tokens (never SOL, never transferable). */
+  COMMUNITY_TOKENS_ENABLED: true,
+  /** Opt-in new-player Helper role. */
+  SOCIAL_HELPER_SYSTEM_ENABLED: true,
+  /** Player performance stubs at music stages. */
+  SOCIAL_PERFORMANCES_ENABLED: true,
+  /** Riftling socialization in hubs (privacy-gated). */
+  RIFTLING_SOCIALIZATION_ENABLED: true,
 } as const;
 
 export type FeatureFlagKey = keyof typeof featureFlagDefaults;

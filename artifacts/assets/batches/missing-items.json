@@ -1,0 +1,457 @@
+[
+  {
+    "id": "item-ember-spark-claws",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/ember-spark-claws.png",
+    "priority": 2,
+    "label": "Ember Spark Claws"
+  },
+  {
+    "id": "item-tide-fin-blade",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/tide-fin-blade.png",
+    "priority": 2,
+    "label": "Tide Fin Blade"
+  },
+  {
+    "id": "item-pebble-horn-cap",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/pebble-horn-cap.png",
+    "priority": 2,
+    "label": "Pebble Horn Cap"
+  },
+  {
+    "id": "item-breeze-focus-seed",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/breeze-focus-seed.png",
+    "priority": 2,
+    "label": "Breeze Focus Seed"
+  },
+  {
+    "id": "item-reed-training-harness",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/reed-training-harness.png",
+    "priority": 2,
+    "label": "Reed Training Harness"
+  },
+  {
+    "id": "item-frostbite-paw-spikes",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/frostbite-paw-spikes.png",
+    "priority": 2,
+    "label": "Frostbite Paw Spikes"
+  },
+  {
+    "id": "item-kelp-lash-coil",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/kelp-lash-coil.png",
+    "priority": 2,
+    "label": "Kelp Lash Coil"
+  },
+  {
+    "id": "item-thunder-tine-crest",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/thunder-tine-crest.png",
+    "priority": 2,
+    "label": "Thunder Tine Crest"
+  },
+  {
+    "id": "item-spirit-lantern-orb",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/spirit-lantern-orb.png",
+    "priority": 2,
+    "label": "Spirit Lantern Orb"
+  },
+  {
+    "id": "item-dune-sand-harness",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/dune-sand-harness.png",
+    "priority": 2,
+    "label": "Dune Sand Harness"
+  },
+  {
+    "id": "item-magma-rake-claws",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/magma-rake-claws.png",
+    "priority": 2,
+    "label": "Magma Rake Claws"
+  },
+  {
+    "id": "item-glacier-tail-scythe",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/glacier-tail-scythe.png",
+    "priority": 2,
+    "label": "Glacier Tail Scythe"
+  },
+  {
+    "id": "item-radiant-horn-lance",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/radiant-horn-lance.png",
+    "priority": 2,
+    "label": "Radiant Horn Lance"
+  },
+  {
+    "id": "item-void-whisper-orb",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/void-whisper-orb.png",
+    "priority": 2,
+    "label": "Void Whisper Orb"
+  },
+  {
+    "id": "item-alloy-brace-harness",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/alloy-brace-harness.png",
+    "priority": 2,
+    "label": "Alloy Brace Harness"
+  },
+  {
+    "id": "item-stormfang-gauntlets",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/stormfang-gauntlets.png",
+    "priority": 2,
+    "label": "Stormfang Gauntlets"
+  },
+  {
+    "id": "item-worldvine-tail-flail",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/worldvine-tail-flail.png",
+    "priority": 2,
+    "label": "Worldvine Tail Flail"
+  },
+  {
+    "id": "item-eclipse-horn-crown",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/eclipse-horn-crown.png",
+    "priority": 2,
+    "label": "Eclipse Horn Crown"
+  },
+  {
+    "id": "item-aurora-focus-prism",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/aurora-focus-prism.png",
+    "priority": 2,
+    "label": "Aurora Focus Prism"
+  },
+  {
+    "id": "item-rift-singer-harness",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/rift-singer-harness.png",
+    "priority": 2,
+    "label": "Rift Singer Harness"
+  },
+  {
+    "id": "item-starlit-paw-crescents",
+    "category": "items",
+    "path": "/assets/items/weapons/icons/starlit-paw-crescents.png",
+    "priority": 2,
+    "label": "Starlit Paw Crescents"
+  },
+  {
+    "id": "item-linen-ear-hood",
+    "category": "items",
+    "path": "/assets/items/armor/icons/linen-ear-hood.png",
+    "priority": 2,
+    "label": "Linen Ear Hood"
+  },
+  {
+    "id": "item-reed-chest-wrap",
+    "category": "items",
+    "path": "/assets/items/armor/icons/reed-chest-wrap.png",
+    "priority": 2,
+    "label": "Reed Chest Wrap"
+  },
+  {
+    "id": "item-mossy-back-cape",
+    "category": "items",
+    "path": "/assets/items/armor/icons/mossy-back-cape.png",
+    "priority": 2,
+    "label": "Mossy Back Cape"
+  },
+  {
+    "id": "item-pebble-paw-boots",
+    "category": "items",
+    "path": "/assets/items/armor/icons/pebble-paw-boots.png",
+    "priority": 2,
+    "label": "Pebble Paw Boots"
+  },
+  {
+    "id": "item-soft-tail-sleeve",
+    "category": "items",
+    "path": "/assets/items/armor/icons/soft-tail-sleeve.png",
+    "priority": 2,
+    "label": "Soft Tail Sleeve"
+  },
+  {
+    "id": "item-breeze-wing-bands",
+    "category": "items",
+    "path": "/assets/items/armor/icons/breeze-wing-bands.png",
+    "priority": 2,
+    "label": "Breeze Wing Bands"
+  },
+  {
+    "id": "item-tidefoam-collar",
+    "category": "items",
+    "path": "/assets/items/armor/icons/tidefoam-collar.png",
+    "priority": 2,
+    "label": "Tidefoam Collar"
+  },
+  {
+    "id": "item-ember-scale-vest",
+    "category": "items",
+    "path": "/assets/items/armor/icons/ember-scale-vest.png",
+    "priority": 2,
+    "label": "Ember Scale Vest"
+  },
+  {
+    "id": "item-frost-pelt-cloak",
+    "category": "items",
+    "path": "/assets/items/armor/icons/frost-pelt-cloak.png",
+    "priority": 2,
+    "label": "Frost Pelt Cloak"
+  },
+  {
+    "id": "item-storm-grip-wraps",
+    "category": "items",
+    "path": "/assets/items/armor/icons/storm-grip-wraps.png",
+    "priority": 2,
+    "label": "Storm Grip Wraps"
+  },
+  {
+    "id": "item-grove-tail-guard",
+    "category": "items",
+    "path": "/assets/items/armor/icons/grove-tail-guard.png",
+    "priority": 2,
+    "label": "Grove Tail Guard"
+  },
+  {
+    "id": "item-radiant-wing-veils",
+    "category": "items",
+    "path": "/assets/items/armor/icons/radiant-wing-veils.png",
+    "priority": 2,
+    "label": "Radiant Wing Veils"
+  },
+  {
+    "id": "item-alloy-rib-cuirass",
+    "category": "items",
+    "path": "/assets/items/armor/icons/alloy-rib-cuirass.png",
+    "priority": 2,
+    "label": "Alloy Rib Cuirass"
+  },
+  {
+    "id": "item-voidmist-hood",
+    "category": "items",
+    "path": "/assets/items/armor/icons/voidmist-hood.png",
+    "priority": 2,
+    "label": "Voidmist Hood"
+  },
+  {
+    "id": "item-spiritweave-sash",
+    "category": "items",
+    "path": "/assets/items/armor/icons/spiritweave-sash.png",
+    "priority": 2,
+    "label": "Spiritweave Sash"
+  },
+  {
+    "id": "item-glacial-barrier-shell",
+    "category": "items",
+    "path": "/assets/items/armor/icons/glacial-barrier-shell.png",
+    "priority": 2,
+    "label": "Glacial Barrier Shell"
+  },
+  {
+    "id": "item-constellation-paw-slippers",
+    "category": "items",
+    "path": "/assets/items/armor/icons/constellation-paw-slippers.png",
+    "priority": 2,
+    "label": "Constellation Paw Slippers"
+  },
+  {
+    "id": "item-dawnstar-plume-mantle",
+    "category": "items",
+    "path": "/assets/items/armor/icons/dawnstar-plume-mantle.png",
+    "priority": 2,
+    "label": "Dawnstar Plume Mantle"
+  },
+  {
+    "id": "item-spark-healing-draught",
+    "category": "items",
+    "path": "/assets/items/potions/icons/spark-healing-draught.png",
+    "priority": 2,
+    "label": "Spark Healing Draught"
+  },
+  {
+    "id": "item-tide-mend-vial",
+    "category": "items",
+    "path": "/assets/items/potions/icons/tide-mend-vial.png",
+    "priority": 2,
+    "label": "Tide Mend Vial"
+  },
+  {
+    "id": "item-storm-surge-sip",
+    "category": "items",
+    "path": "/assets/items/potions/icons/storm-surge-sip.png",
+    "priority": 2,
+    "label": "Storm Surge Sip"
+  },
+  {
+    "id": "item-frost-focus-brew",
+    "category": "items",
+    "path": "/assets/items/potions/icons/frost-focus-brew.png",
+    "priority": 2,
+    "label": "Frost Focus Brew"
+  },
+  {
+    "id": "item-ember-soothe-balm",
+    "category": "items",
+    "path": "/assets/items/potions/icons/ember-soothe-balm.png",
+    "priority": 2,
+    "label": "Ember Soothe Balm"
+  },
+  {
+    "id": "item-stone-steady-draught",
+    "category": "items",
+    "path": "/assets/items/potions/icons/stone-steady-draught.png",
+    "priority": 2,
+    "label": "Stone Steady Draught"
+  },
+  {
+    "id": "item-crystal-berry-snack",
+    "category": "items",
+    "path": "/assets/items/potions/icons/crystal-berry-snack.png",
+    "priority": 2,
+    "label": "Crystal Berry Snack"
+  },
+  {
+    "id": "item-glowmoss-chew",
+    "category": "items",
+    "path": "/assets/items/potions/icons/glowmoss-chew.png",
+    "priority": 2,
+    "label": "Glowmoss Chew"
+  },
+  {
+    "id": "item-ripple-ball-toy",
+    "category": "items",
+    "path": "/assets/items/potions/icons/ripple-ball-toy.png",
+    "priority": 2,
+    "label": "Ripple Ball Toy"
+  },
+  {
+    "id": "item-whisper-bell-toy",
+    "category": "items",
+    "path": "/assets/items/potions/icons/whisper-bell-toy.png",
+    "priority": 2,
+    "label": "Whisper Bell Toy"
+  },
+  {
+    "id": "item-nest-fluff-pillow",
+    "category": "items",
+    "path": "/assets/items/potions/icons/nest-fluff-pillow.png",
+    "priority": 2,
+    "label": "Nest Fluff Pillow"
+  },
+  {
+    "id": "item-grooming-comb-set",
+    "category": "items",
+    "path": "/assets/items/potions/icons/grooming-comb-set.png",
+    "priority": 2,
+    "label": "Grooming Comb Set"
+  },
+  {
+    "id": "item-bond-ribbon",
+    "category": "items",
+    "path": "/assets/items/potions/icons/bond-ribbon.png",
+    "priority": 2,
+    "label": "Bond Ribbon"
+  },
+  {
+    "id": "item-aurora-treat",
+    "category": "items",
+    "path": "/assets/items/potions/icons/aurora-treat.png",
+    "priority": 2,
+    "label": "Aurora Treat"
+  },
+  {
+    "id": "item-moonpetal-bath-salts",
+    "category": "items",
+    "path": "/assets/items/potions/icons/moonpetal-bath-salts.png",
+    "priority": 2,
+    "label": "Moonpetal Bath Salts"
+  },
+  {
+    "id": "item-vitality-petal-tea",
+    "category": "items",
+    "path": "/assets/items/potions/icons/vitality-petal-tea.png",
+    "priority": 2,
+    "label": "Vitality Petal Tea"
+  },
+  {
+    "id": "item-rift-salve-kit",
+    "category": "items",
+    "path": "/assets/items/potions/icons/rift-salve-kit.png",
+    "priority": 2,
+    "label": "Rift Salve Kit"
+  },
+  {
+    "id": "item-starlit-lullaby-charm",
+    "category": "items",
+    "path": "/assets/items/potions/icons/starlit-lullaby-charm.png",
+    "priority": 2,
+    "label": "Starlit Lullaby Charm"
+  },
+  {
+    "id": "item-reed-strand",
+    "category": "items",
+    "path": "/assets/items/materials/icons/reed-strand.png",
+    "priority": 2,
+    "label": "Reed Strand"
+  },
+  {
+    "id": "item-dune-glass",
+    "category": "items",
+    "path": "/assets/items/materials/icons/dune-glass.png",
+    "priority": 2,
+    "label": "Dune Glass"
+  },
+  {
+    "id": "item-spark-flint",
+    "category": "items",
+    "path": "/assets/items/materials/icons/spark-flint.png",
+    "priority": 2,
+    "label": "Spark Flint"
+  },
+  {
+    "id": "item-kelp-silk",
+    "category": "items",
+    "path": "/assets/items/materials/icons/kelp-silk.png",
+    "priority": 2,
+    "label": "Kelp Silk"
+  },
+  {
+    "id": "item-frost-needle",
+    "category": "items",
+    "path": "/assets/items/materials/icons/frost-needle.png",
+    "priority": 2,
+    "label": "Frost Needle"
+  },
+  {
+    "id": "item-void-silk",
+    "category": "items",
+    "path": "/assets/items/materials/icons/void-silk.png",
+    "priority": 2,
+    "label": "Void Silk"
+  },
+  {
+    "id": "item-dawn-pollen",
+    "category": "items",
+    "path": "/assets/items/materials/icons/dawn-pollen.png",
+    "priority": 2,
+    "label": "Dawn Pollen"
+  },
+  {
+    "id": "item-rift-resin",
+    "category": "items",
+    "path": "/assets/items/materials/icons/rift-resin.png",
+    "priority": 2,
+    "label": "Rift Resin"
+  }
+]
