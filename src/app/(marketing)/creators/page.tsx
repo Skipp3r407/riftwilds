@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SectionTitleBand, StatusChip } from "@/components/shared/page-header";
 import { getCreatorHubSnapshot } from "@/lib/ecosystem/creator-hub";
@@ -12,7 +13,12 @@ export default function CreatorHubPage() {
   return (
     <div className="mx-auto max-w-5xl space-y-8 px-4 py-10 md:px-6">
       <div>
-        <SectionTitleBand slug="creators" label={hub.title} kicker="Creator economy" />
+        <SectionTitleBand
+          slug="creators"
+          label={hub.title}
+          kicker="Creator economy"
+          atmosphere={false}
+        />
         <p className="page-lede mt-4">{hub.lede}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           <Link href="/marketplace" className="btn-primary focus-ring text-sm">
@@ -32,19 +38,31 @@ export default function CreatorHubPage() {
         <>
           <section className="grid gap-3 md:grid-cols-2">
             {hub.creators.map((c) => (
-              <article key={c.id} className="panel p-5">
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <h2 className="font-display text-xl text-white">{c.displayName}</h2>
-                    <p className="text-xs text-[var(--text-dim)]">@{c.handle}</p>
-                  </div>
-                  <StatusChip tone="info">{c.packCount} packs</StatusChip>
+              <article key={c.id} className="panel group flex flex-col overflow-hidden">
+                <div className="section-card-thumb border-b border-[rgba(61,231,255,0.12)]">
+                  <Image
+                    src={c.artSrc}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="section-card-thumb__img object-contain p-4"
+                    unoptimized
+                  />
                 </div>
-                <p className="mt-3 text-sm text-[var(--text-muted)]">{c.bio}</p>
-                <p className="mt-2 text-xs text-[var(--text-dim)]">
-                  {c.specialties.join(" · ")}
-                  {c.tipEnabled ? " · tips on" : " · tips off"}
-                </p>
+                <div className="flex flex-1 flex-col p-5">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <h2 className="font-display text-xl text-white">{c.displayName}</h2>
+                      <p className="text-xs text-[var(--text-dim)]">@{c.handle}</p>
+                    </div>
+                    <StatusChip tone="info">{c.packCount} packs</StatusChip>
+                  </div>
+                  <p className="mt-3 text-sm text-[var(--text-muted)]">{c.bio}</p>
+                  <p className="mt-2 text-xs text-[var(--text-dim)]">
+                    {c.specialties.join(" · ")}
+                    {c.tipEnabled ? " · tips on" : " · tips off"}
+                  </p>
+                </div>
               </article>
             ))}
           </section>
@@ -55,12 +73,24 @@ export default function CreatorHubPage() {
               {hub.offers.map((o) => (
                 <li
                   key={o.id}
-                  className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[var(--stroke)] py-2"
+                  className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--stroke)] py-2"
                 >
-                  <span className="text-white">
-                    {o.title}{" "}
-                    <span className="text-xs text-[var(--text-dim)]">({o.kind})</span>
-                  </span>
+                  <div className="flex min-w-0 items-center gap-3">
+                    <div className="inventory-item-thumb inventory-item-thumb--sm relative">
+                      <Image
+                        src={o.artSrc}
+                        alt=""
+                        width={40}
+                        height={40}
+                        className="inventory-item-thumb__img object-contain"
+                        unoptimized
+                      />
+                    </div>
+                    <span className="text-white">
+                      {o.title}{" "}
+                      <span className="text-xs text-[var(--text-dim)]">({o.kind})</span>
+                    </span>
+                  </div>
                   <span className="text-xs text-[var(--text-muted)]">
                     {o.priceLabel} · {o.status}
                   </span>

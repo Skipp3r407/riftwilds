@@ -66,8 +66,12 @@ export function createLiveWorldGame(
     },
     scale: {
       // RESIZE fills the parent — no FIT letterboxing on the game canvas.
+      // Parent is the React canvas host; shell expands that host before Fullscreen API.
       mode: Phaser.Scale.RESIZE,
       autoCenter: Phaser.Scale.NO_CENTER,
+      expandParent: false,
+      // Check parent bounds often enough that FS / viewport-expand class flips are caught.
+      resizeInterval: 250,
     },
     scene: [],
     banner: false,
@@ -87,12 +91,27 @@ export function createLiveWorldGame(
   game.scene.add(SPIRIT_KEY, SpiritMarshScene, false);
   game.scene.add(VOID_KEY, VoidHollowScene, false);
   game.scene.add(CELESTIAL_KEY, CelestialRiftScene, false);
+
+  // Dev/test probe — Playwright + F3 tooling read this; never rely on it in prod UI.
+  if (process.env.NODE_ENV !== "production") {
+    (globalThis as unknown as { __LIVE_WORLD_GAME__?: Phaser.Game }).__LIVE_WORLD_GAME__ =
+      game;
+  }
+
   return game;
 }
 
 export function destroyLiveWorldGame(game: Phaser.Game | null | undefined): void {
   if (!game) return;
   try {
+    if (
+      process.env.NODE_ENV !== "production" &&
+      (globalThis as unknown as { __LIVE_WORLD_GAME__?: Phaser.Game }).__LIVE_WORLD_GAME__ ===
+        game
+    ) {
+      delete (globalThis as unknown as { __LIVE_WORLD_GAME__?: Phaser.Game })
+        .__LIVE_WORLD_GAME__;
+    }
     game.destroy(true);
   } catch {
     /* already torn down */

@@ -147,7 +147,7 @@ export function LoyaltyDashboard() {
     <div className="space-y-6">
       <PageHeader
         kicker="Loyalty"
-        titleSlug="rewards"
+        titleSlug="loyalty"
         title="Streaks & Rift Storm"
         description="Daily streaks, weighted airdrops, and server-wide Rift Storm events — fair odds by loyalty tier, never pay-to-win."
         status={status?.tier.label ?? "…"}

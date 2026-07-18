@@ -4,7 +4,11 @@
 
 import type { MapBlueprint } from "@/game/world-maps/types";
 import type { TerrainCellKind } from "@/game/live-world/systems/terrain-paint";
-import type { PropKey, TerrainKey } from "@/game/live-world/systems/premium/asset-keys";
+import {
+  type PropKey,
+  type TerrainKey,
+  type TreePropKey,
+} from "@/game/live-world/systems/premium/asset-keys";
 
 export function isPremiumRegion(slug: string): boolean {
   return slug === "riftwild-commons";
@@ -54,7 +58,13 @@ function pickSettlement(
   zoneId: string | undefined,
 ): TerrainKey {
   if (zoneId?.includes("farm") || zoneId?.includes("public-farm")) return "farm-soil";
-  if (zoneId?.includes("training")) return "training-dirt";
+  if (zoneId?.includes("training") || zoneId?.includes("arena")) return "training-dirt";
+  if (zoneId?.includes("market")) {
+    return hash2(col, row, 13) < 0.55 ? "plaza-street" : "settlement-soil";
+  }
+  if (zoneId?.includes("entertainment") || zoneId?.includes("noble")) {
+    return hash2(col, row, 14) < 0.4 ? "plaza-moss" : "plaza-street";
+  }
   if (kind === "safe" || kind === "accent") {
     return hash2(col, row, 11) < 0.5 ? "plaza-street" : "settlement-soil";
   }
@@ -89,7 +99,7 @@ export function resolveTerrainTexture(
     case "accent":
     case "settlement":
       if (zoneId === "central-plaza" || zoneId === "portal-circle") {
-        return pickPlaza(col, row, 32, 22);
+        return pickPlaza(col, row, 31, 22);
       }
       return pickSettlement(kind, col, row, zoneId);
     case "danger":
@@ -114,13 +124,17 @@ export function buildElevationGrid(blueprint: MapBlueprint): ElevationGrid {
       let h = 1;
       const x = col * T + T / 2;
       const y = row * T + T / 2;
-      if (col < 8 || row < 6) h = 2;
-      if (col > cols - 8 && row > 20 && row < 34) h = 2;
+      // Outer rim / walls feel raised
+      if (col < 4 || col > cols - 5 || row < 3 || row > rows - 4) h = 2;
+      // Archive terrace + training ridge (verticality)
+      if (col >= 38 && col <= 52 && row >= 10 && row <= 26) h = 2;
+      if (col >= 40 && col <= 50 && row >= 16 && row <= 22) h = 3;
+      // Portal sanctum rise
+      if (col >= 24 && col <= 40 && row >= 2 && row <= 11) h = 2;
+      // Dock basin
       if (col >= 22 && col <= 34 && row >= 36 && row <= 44) h = 0;
-      if (col >= 38 && col <= 48 && row >= 10 && row <= 18) h = 2;
-      if (col >= 24 && col <= 40 && row >= 3 && row <= 10) h = 2;
-      if (hash2(col, row, 21) > 0.92) h = Math.min(3, h + 1);
-      if (hash2(col, row, 22) < 0.06) h = Math.max(0, h - 1);
+      if (hash2(col, row, 21) > 0.93) h = Math.min(3, h + 1);
+      if (hash2(col, row, 22) < 0.05) h = Math.max(0, h - 1);
       const z = blueprint.zones.find(
         (zz) =>
           x >= zz.x &&
@@ -129,6 +143,8 @@ export function buildElevationGrid(blueprint: MapBlueprint): ElevationGrid {
           y < zz.y + zz.height,
       );
       if (z?.id === "fishing-pond") h = 0;
+      if (z?.id === "noble-zone" || z?.id === "library-zone") h = Math.max(h, 2);
+      if (z?.id === "academy-zone") h = Math.max(h, 2);
       line.push(h);
     }
     heights.push(line);
@@ -143,6 +159,139 @@ export type ScatterSpec = {
   scale?: number;
   depth?: number;
 };
+
+type DistrictScatter = {
+  cx: number;
+  cy: number;
+  keys: PropKey[];
+  count: number;
+  radius: number;
+  salt: number;
+};
+
+/** District-anchored clutter — every empty pocket gets purpose props. */
+function districtAnchors(T: number): DistrictScatter[] {
+  return [
+    // Central plaza — benches, lanterns, flower beds around fountain
+    { cx: 31 * T, cy: 22 * T, keys: ["bench", "lantern-post", "flowers", "banner-pole"], count: 10, radius: 95, salt: 1 },
+    // Market — stalls, crates, barrels, packing alley clutter
+    { cx: 9 * T, cy: 36 * T, keys: ["market-stall", "barrel", "crate", "banner-pole"], count: 12, radius: 78, salt: 2 },
+    { cx: 12 * T, cy: 39 * T, keys: ["barrel", "crate", "flowers", "signpost"], count: 6, radius: 42, salt: 22 },
+    // Residential — laundry-adjacent benches, lanterns, gardens + street trees
+    {
+      cx: 7 * T,
+      cy: 16 * T,
+      keys: ["bench", "lantern-post", "flowers", "bush-berry", "tree-flowering", "tree-birch"],
+      count: 10,
+      radius: 52,
+      salt: 9,
+    },
+    // Crafting — forge props + smoke campfire
+    { cx: 8 * T, cy: 25 * T, keys: ["anvil-forge", "barrel", "crate", "lantern-post"], count: 7, radius: 55, salt: 3 },
+    // Entertainment / tavern patio
+    { cx: 17 * T, cy: 24 * T, keys: ["bench", "barrel", "lantern-post", "banner-pole", "flowers"], count: 8, radius: 48, salt: 30 },
+    // Hatchery nest soft greens — flowering + birch canopy
+    {
+      cx: 9 * T,
+      cy: 7 * T,
+      keys: ["tree-flowering", "tree-birch", "tree-small", "flowers", "bush-berry", "lantern-post"],
+      count: 11,
+      radius: 64,
+      salt: 4,
+    },
+    // Guild banners
+    { cx: 52 * T, cy: 37 * T, keys: ["banner-pole", "bench", "lantern-post", "crate"], count: 7, radius: 58, salt: 5 },
+    // Military / training
+    { cx: 43 * T, cy: 13 * T, keys: ["signpost", "barrel", "rock-moss", "banner-pole"], count: 6, radius: 48, salt: 6 },
+    // Noble terrace / archive approach — ornamental trees
+    {
+      cx: 42 * T,
+      cy: 20 * T,
+      keys: ["lantern-post", "bench", "banner-pole", "flowers", "tree-birch", "tree-flowering"],
+      count: 8,
+      radius: 44,
+      salt: 11,
+    },
+    // Dock / pier
+    { cx: 27 * T, cy: 39 * T, keys: ["barrel", "crate", "signpost", "flowers"], count: 6, radius: 40, salt: 31 },
+    // Farmland hedgerows — orchard fruit trees
+    {
+      cx: 17 * T,
+      cy: 41 * T,
+      keys: ["tree-orchard", "bush-berry", "flowers", "rock-moss", "signpost"],
+      count: 9,
+      radius: 42,
+      salt: 32,
+    },
+    // Recovery gardens
+    {
+      cx: 42 * T,
+      cy: 41 * T,
+      keys: ["bench", "flowers", "lantern-post", "bush-berry", "tree-birch", "tree-flowering"],
+      count: 8,
+      radius: 40,
+      salt: 10,
+    },
+    // Lantern grove park — mixed canopy
+    {
+      cx: 54 * T,
+      cy: 19 * T,
+      keys: ["tree-oak", "tree-pine", "tree-birch", "tree-flowering", "bush-berry", "rock-moss", "flowers", "lantern-post"],
+      count: 14,
+      radius: 72,
+      salt: 7,
+    },
+    // Forest gate thicket — pines + oak + rift fringe
+    {
+      cx: 56 * T,
+      cy: 12 * T,
+      keys: ["tree-pine", "tree-oak", "tree-rift", "rock-moss", "bush-berry"],
+      count: 11,
+      radius: 55,
+      salt: 24,
+    },
+    // Outer woods fringe — dense mixed forest
+    {
+      cx: 4 * T,
+      cy: 4 * T,
+      keys: ["tree-pine", "tree-oak", "tree-rift", "tree-birch", "rock-moss", "ruin-arch", "bush-berry"],
+      count: 14,
+      radius: 70,
+      salt: 8,
+    },
+    // Portal sanctum — rift-touched sentinels
+    {
+      cx: 32 * T,
+      cy: 7 * T,
+      keys: ["lantern-post", "rift-crystal", "flowers", "tree-rift", "tree-birch"],
+      count: 9,
+      radius: 68,
+      salt: 12,
+    },
+    // Secret garden — flowering orchard pocket
+    {
+      cx: 57 * T,
+      cy: 28 * T,
+      keys: ["tree-flowering", "tree-orchard", "tree-birch", "bush-berry", "flowers"],
+      count: 8,
+      radius: 40,
+      salt: 23,
+    },
+  ];
+}
+
+function pickPathTree(i: number, ax: number, ay: number): TreePropKey {
+  const pool: TreePropKey[] = [
+    "tree-oak",
+    "tree-pine",
+    "tree-birch",
+    "tree-flowering",
+    "tree-orchard",
+    "tree-small",
+  ];
+  const idx = Math.floor(hash2(i, ax, ay) * pool.length) % pool.length;
+  return pool[idx]!;
+}
 
 export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
   const T = blueprint.tileSize;
@@ -168,48 +317,42 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
     }
   };
 
-  addRing(32 * T, 22 * T, ["bench", "lantern-post", "flowers", "banner-pole"], 8, 90, 1);
-  out.push({ key: "rift-crystal", x: 32 * T + 16, y: 22 * T + 16, scale: 1.15 });
-  addRing(10 * T, 38 * T, ["market-stall", "barrel", "crate", "banner-pole"], 9, 72, 2);
-  addRing(11 * T, 40 * T, ["barrel", "crate", "flowers"], 5, 48, 22);
-  addRing(8 * T, 22 * T, ["anvil-forge", "barrel", "crate", "lantern-post"], 6, 55, 3);
-  out.push({ key: "campfire", x: 9 * T, y: 24 * T, scale: 0.95 });
-  addRing(9 * T, 8 * T, ["tree-small", "flowers", "bush-berry", "lantern-post"], 8, 64, 4);
-  addRing(52 * T, 38 * T, ["banner-pole", "bench", "lantern-post", "crate"], 6, 55, 5);
-  addRing(42 * T, 15 * T, ["signpost", "barrel", "rock-moss", "bush-berry"], 5, 48, 6);
-  // Forest edge / wilderness — denser vegetation (Ultima lived-in greens)
-  addRing(54 * T, 20 * T, ["tree-small", "bush-berry", "rock-moss", "flowers"], 14, 88, 7);
-  addRing(56 * T, 28 * T, ["tree-small", "bush-berry", "flowers"], 8, 70, 23);
-  addRing(50 * T, 8 * T, ["tree-small", "rock-moss", "bush-berry"], 7, 60, 24);
+  for (const d of districtAnchors(T)) {
+    addRing(d.cx, d.cy, d.keys, d.count, d.radius, d.salt);
+  }
+
+  // Landmark singles
+  out.push({ key: "rift-crystal", x: 31 * T + 16, y: 21 * T + 16, scale: 1.15 });
+  out.push({ key: "campfire", x: 9 * T, y: 26 * T, scale: 0.95 });
   out.push({ key: "bridge", x: 26 * T, y: 39 * T, scale: 1.2 });
+  out.push({ key: "watchtower", x: 48 * T, y: 11 * T, scale: 1.05 });
+  out.push({ key: "watchtower", x: 14 * T, y: 9 * T, scale: 0.95 });
+  out.push({ key: "watchtower", x: 55 * T, y: 34 * T, scale: 0.9 });
   out.push({ key: "bench", x: 30 * T, y: 37 * T, scale: 0.9 });
   out.push({ key: "flowers", x: 28 * T, y: 38 * T, scale: 0.75 });
   out.push({ key: "bush-berry", x: 24 * T, y: 40 * T, scale: 0.85 });
-  out.push({ key: "watchtower", x: 48 * T, y: 12 * T, scale: 1.05 });
-  out.push({ key: "watchtower", x: 14 * T, y: 10 * T, scale: 0.95 });
-  addRing(5 * T, 5 * T, ["tree-small", "rock-moss", "ruin-arch", "bush-berry"], 12, 78, 8);
-  addRing(8 * T, 12 * T, ["tree-small", "bush-berry", "flowers"], 6, 50, 25);
-  addRing(4 * T, 16 * T, ["barrel", "bench", "lantern-post", "flowers"], 5, 42, 9);
-  addRing(44 * T, 41 * T, ["bench", "flowers", "lantern-post", "bush-berry"], 5, 40, 10);
-  addRing(38 * T, 20 * T, ["lantern-post", "bench", "banner-pole", "flowers"], 4, 42, 11);
-  addRing(32 * T, 7 * T, ["lantern-post", "rift-crystal", "flowers"], 6, 70, 12);
-  // Residential / training clutter
-  addRing(20 * T, 30 * T, ["barrel", "crate", "flowers", "lantern-post"], 5, 45, 26);
-  addRing(36 * T, 32 * T, ["bench", "flowers", "bush-berry"], 4, 38, 27);
 
+  // Alley clutter along pathways — lived-in street details
   for (const path of blueprint.pathways) {
     for (let i = 0; i < path.waypoints.length - 1; i++) {
       const a = path.waypoints[i]!;
       const b = path.waypoints[i + 1]!;
-      if (hash2(a.x, a.y, i) < 0.55) {
+      if (hash2(a.x, a.y, i) < 0.62) {
         out.push({
-          key: hash2(b.x, b.y, i) < 0.4 ? "flowers" : hash2(i, a.y, 3) < 0.5 ? "rock-moss" : "bush-berry",
+          key:
+            hash2(b.x, b.y, i) < 0.35
+              ? "flowers"
+              : hash2(i, a.y, 3) < 0.45
+                ? "rock-moss"
+                : hash2(i, b.x, 4) < 0.5
+                  ? "barrel"
+                  : "bush-berry",
           x: (a.x + b.x) / 2 + (hash2(i, a.x) - 0.5) * 28,
           y: (a.y + b.y) / 2 + (hash2(i, a.y) - 0.5) * 28,
           scale: 0.7,
         });
       }
-      if (hash2(a.x, b.y, 99) < 0.22) {
+      if (hash2(a.x, b.y, 99) < 0.2) {
         out.push({
           key: "signpost",
           x: (a.x + b.x) / 2,
@@ -217,9 +360,17 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
           scale: 0.85,
         });
       }
+      if (hash2(b.x, a.y, 17) < 0.16) {
+        out.push({
+          key: "lantern-post",
+          x: (a.x + b.x) / 2 + (hash2(i, 8) - 0.5) * 24,
+          y: (a.y + b.y) / 2 + (hash2(i, 9) - 0.5) * 24,
+          scale: 0.8,
+        });
+      }
       if (hash2(b.x, a.y, 17) < 0.18) {
         out.push({
-          key: "tree-small",
+          key: pickPathTree(i, a.x, a.y),
           x: (a.x + b.x) / 2 + (hash2(i, 5) - 0.5) * 40,
           y: (a.y + b.y) / 2 + (hash2(i, 6) - 0.5) * 40,
           scale: 0.8 + hash2(i, 7) * 0.25,
@@ -229,4 +380,23 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
   }
 
   return out;
+}
+
+/** Soft LOD: drop far scatter when performance mode requests fewer props. */
+export function filterScatterForBudget(
+  specs: ScatterSpec[],
+  budget: "full" | "medium" | "low",
+): ScatterSpec[] {
+  if (budget === "full") return specs;
+  if (budget === "medium") {
+    return specs.filter((_, i) => i % 2 === 0 || specs[i]!.key === "lantern-post" || specs[i]!.key === "watchtower");
+  }
+  return specs.filter(
+    (s, i) =>
+      i % 3 === 0 ||
+      s.key === "watchtower" ||
+      s.key === "bridge" ||
+      s.key === "rift-crystal" ||
+      s.key === "campfire",
+  );
 }

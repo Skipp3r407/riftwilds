@@ -52,15 +52,30 @@ Persisted on `riftwilds-live-world-immersive-v1`:
 |------|--------|
 | `toolbarCollapsed` | Bottom immersion toolbar → peek tab |
 | `presenceHudCollapsed` | Presence / social (bottom-left) |
-| `townActivityCollapsed` | World pulse / population (top-right) |
-| `statusChromeCollapsed` | Map status chips (top) |
+| `townActivityCollapsed` | World pulse (mid-left) |
+| `statusChromeCollapsed` | Location / weather (top-left) |
 | `minimapCollapsed` | Minimap (existing) |
 
 Display settings can apply a mode-matched layout via `suggestedChromeCollapseForHudMode` (Immersive / Cinematic prefer peek tabs). Manual collapse toggles still persist across sessions. Auto-hide fades chrome; the toolbar peek stays faintly available in Immersive mode.
 
-## Top-right stack
+## Reference composition (edge-docked)
 
-When the minimap corner is **top-right**, it shares a vertical column with **World pulse** (popular hubs / population) via `hud-slots.ts` — minimap above, pulse below — so they never paint on top of each other. Status chips reserve right padding on desktop. Moving the minimap to another corner leaves World pulse alone in the stack.
+| Slot | Content |
+|------|---------|
+| Top-left | Location + connection + weather/season |
+| Mid-left | World Pulse (world-events + community stubs) |
+| Bottom-left | Chat + presence peek (`flex-col-reverse` stack) |
+| Top-center | Credits (CR) + Happening Now card |
+| Top-right | Map goals / Fullscreen / Exit world pills |
+| Right column | Minimap → nearby → daily tasks → social status |
+| Bottom-center | Companion Health + Energy orbs + life/social hotbar |
+| Bottom-right | Radial menu (Inventory, Academy, Riftlings, Quests, Map, Market, Guild, Settings) |
+
+Center stays clear for the world. Site nav auto-hide on `/live-world` and floating-chip idle-fade remain coordinated (do not revert).
+
+## Right column + mid-left stacks
+
+When the minimap corner is **top-right**, it docks in the **right column** with nearby/tasks/status via `hud-slots.ts`. **World Pulse** docks **mid-left** (not under the minimap). Status chrome reserves right padding on desktop.
 
 ## Free-form panel drag
 

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 type StormProps = {
   active?: boolean;
   phase?: string;
@@ -50,14 +52,23 @@ export function RiftStormBanner({
       aria-live="polite"
       data-reduced-motion="respect"
     >
+      <Image
+        src="/assets/loyalty/rift-storm-banner.png?v=ls2"
+        alt=""
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center opacity-35"
+        unoptimized
+      />
       <div
-        className="pointer-events-none absolute inset-0 opacity-30"
+        className="pointer-events-none absolute inset-0 opacity-40"
         style={{
           background:
             active || warning
-              ? "radial-gradient(ellipse at top, rgba(251,191,36,0.35), transparent 55%)"
-              : "transparent",
+              ? "radial-gradient(ellipse at top, rgba(251,191,36,0.35), transparent 55%), linear-gradient(180deg, rgba(8,10,18,0.55), rgba(8,10,18,0.85))"
+              : "linear-gradient(180deg, rgba(8,10,18,0.55), rgba(8,10,18,0.88))",
         }}
+        aria-hidden
       />
       <div className="relative space-y-3">
         <div className="flex flex-wrap items-start justify-between gap-3">

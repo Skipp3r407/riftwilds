@@ -88,7 +88,22 @@ export function InventoryBrowser() {
       {filtered.length === 0 ? (
         <p className="text-sm text-[var(--text-muted)]">No items in this tab.</p>
       ) : view === "grid" ? (
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="relative">
+          <div
+            className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.07]"
+            aria-hidden
+          >
+            <GameImage
+              src="/assets/ui/inventory/crest-watermark.png?v=inv2"
+              alt=""
+              width={280}
+              height={280}
+              showDevBadge={false}
+              unoptimized
+              className="max-h-[min(420px,55vw)] w-auto object-contain"
+            />
+          </div>
+        <ul className="relative grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((r) => (
             <li key={r.id} className="panel p-4">
               <div className="flex gap-3">
@@ -128,6 +143,7 @@ export function InventoryBrowser() {
             </li>
           ))}
         </ul>
+        </div>
       ) : (
         <ul className="panel-soft divide-y divide-[var(--stroke)] overflow-hidden">
           {filtered.map((r) => (

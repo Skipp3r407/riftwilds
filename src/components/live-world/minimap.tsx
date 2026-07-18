@@ -66,7 +66,7 @@ function MinimapDragBar({
   if (!dragHandleProps) return null;
   return (
     <div
-      className={`mb-1 flex w-full items-center gap-1.5 rounded-md border border-[var(--border)] bg-black/55 px-2 py-0.5 text-[9px] text-[var(--text-dim)] ${dragHandleProps.className}`}
+      className={`mb-1 flex w-full items-center gap-1.5 rounded-lg border border-[var(--stroke-bronze)]/70 bg-[rgba(14,12,10,0.72)] px-2 py-1 text-[9px] tracking-wide text-[var(--stone)] ${dragHandleProps.className}`}
       onPointerDown={dragHandleProps.onPointerDown}
       onPointerMove={dragHandleProps.onPointerMove}
       onPointerUp={dragHandleProps.onPointerUp}
@@ -75,7 +75,7 @@ function MinimapDragBar({
       data-hud-drag-handle={dragHandleProps["data-hud-drag-handle"]}
       title={dragHandleProps.title}
     >
-      <HudDragGrip className="text-white/70" />
+      <HudDragGrip className="text-[var(--stone)]/80" />
       <span>{label}</span>
     </div>
   );
@@ -182,7 +182,7 @@ export function LiveWorldMinimap({
           type="button"
           data-no-drag
           data-testid="live-world-minimap"
-          className="relative overflow-hidden rounded-md border border-[var(--border)] bg-[#0a101c]/92 shadow-lg"
+          className="lw-hud-glass relative overflow-hidden rounded-xl border border-[var(--stroke-bronze)] bg-[#0a101c]/92"
           style={{ width: size, height: size }}
           aria-label="Open world map"
           onClick={() => {
@@ -263,11 +263,11 @@ export function LiveWorldMinimap({
               }}
             />
           </div>
-          <span className="absolute bottom-1 left-1 text-[9px] text-[var(--text-dim)]">
+          <span className="absolute bottom-1.5 left-1.5 max-w-[85%] truncate rounded bg-black/55 px-1.5 py-0.5 text-[9px] font-medium tracking-wide text-[var(--stone)]">
             {bp.name}
           </span>
           {nearby.length > 0 && (
-            <span className="absolute right-1 top-1 rounded bg-black/50 px-1 text-[8px] text-[var(--cyan)]">
+            <span className="absolute right-1.5 top-1.5 rounded border border-[var(--stroke-bronze)]/50 bg-black/55 px-1.5 py-0.5 text-[8px] tabular-nums text-[var(--cyan)]">
               {nearby.length} near
             </span>
           )}
@@ -285,10 +285,10 @@ export function LiveWorldMinimap({
                 key={m}
                 type="button"
                 data-no-drag
-                className={`focus-ring rounded px-1.5 py-0.5 text-[10px] ${
+                className={`focus-ring min-h-7 min-w-7 rounded-md border px-1.5 py-0.5 text-[10px] ${
                   mode === m
-                    ? "bg-[var(--cyan)]/20 text-[var(--cyan)]"
-                    : "bg-black/40 text-[var(--text-dim)]"
+                    ? "border-[var(--stroke-amber)] bg-[rgba(255,184,77,0.14)] text-[var(--amber)]"
+                    : "border-[var(--stroke)]/60 bg-[rgba(12,10,8,0.55)] text-[var(--text-muted)] hover:border-[var(--stroke-amber)] hover:text-[var(--text)]"
                 }`}
                 onClick={() => {
                   setMode(m);
@@ -301,7 +301,7 @@ export function LiveWorldMinimap({
             <button
               type="button"
               data-no-drag
-              className="focus-ring rounded bg-black/40 px-1.5 py-0.5 text-[10px] text-[var(--text-dim)]"
+              className="focus-ring min-h-7 min-w-7 rounded-md border border-[var(--stroke)]/60 bg-[rgba(12,10,8,0.55)] px-1.5 py-0.5 text-[10px] text-[var(--text-muted)] hover:border-[var(--stroke-amber)] hover:text-[var(--text)]"
               title="Collapse"
               onClick={() => onSettingsPatch?.({ minimapCollapsed: true })}
             >
@@ -310,7 +310,7 @@ export function LiveWorldMinimap({
             <button
               type="button"
               data-no-drag
-              className="focus-ring rounded bg-black/40 px-1.5 py-0.5 text-[10px] text-[var(--text-dim)]"
+              className="focus-ring min-h-7 min-w-7 rounded-md border border-[var(--stroke)]/60 bg-[rgba(12,10,8,0.55)] px-1.5 py-0.5 text-[10px] text-[var(--text-muted)] hover:border-[var(--stroke-amber)] hover:text-[var(--text)]"
               title="Move corner"
               onClick={() => {
                 const order: MinimapCorner[] = [

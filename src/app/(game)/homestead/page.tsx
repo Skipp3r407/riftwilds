@@ -23,9 +23,17 @@ export default function HomesteadPage() {
         status={featureFlagDefaults.HOMESTEADS_ENABLED ? "Open" : "Phase 6 shell"}
         statusTone={featureFlagDefaults.HOMESTEADS_ENABLED ? "live" : "warn"}
         actions={
-          <Link href="/api/housing/catalog" className="btn-secondary focus-ring text-sm">
-            Housing catalog API
-          </Link>
+          <>
+            <Link href="/housing" className="btn-primary focus-ring text-sm">
+              Player Housing
+            </Link>
+            <Link href="/neighborhoods" className="btn-secondary focus-ring text-sm">
+              Neighborhoods
+            </Link>
+            <Link href="/api/housing/catalog" className="btn-secondary focus-ring text-sm">
+              Housing catalog API
+            </Link>
+          </>
         }
       />
       <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

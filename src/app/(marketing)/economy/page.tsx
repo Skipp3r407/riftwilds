@@ -78,7 +78,17 @@ export default function EconomyPage() {
     <div className="pb-16">
       <section className="relative overflow-hidden px-4 pb-12 pt-10 md:px-6 md:pt-16">
         <div className="pointer-events-none absolute inset-0">
-          <div className="portal-glow absolute left-1/2 top-8 h-48 w-48 -translate-x-1/2 rounded-full opacity-70" />
+          <Image
+            src="/assets/economy/purchase-flow-banner.png?v=ec2"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center opacity-40"
+            unoptimized
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8,10,18,0.55)] via-[rgba(8,10,18,0.75)] to-[rgba(8,10,18,0.95)]" />
+          <div className="portal-glow absolute left-1/2 top-8 h-48 w-48 -translate-x-1/2 rounded-full opacity-50" />
         </div>
         <div className="relative mx-auto max-w-7xl">
           <SectionTitleBand

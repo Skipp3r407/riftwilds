@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { EconomySummary } from "@/components/economy";
@@ -49,28 +50,46 @@ export default function TokenPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-10 md:px-6">
-      <SectionTitleBand slug="token" label="Token" kicker="Ecosystem utility" />
-      <p className="page-lede mt-4">
-        {projectConfig.TOKEN_NAME} ({projectConfig.TOKEN_SYMBOL}) is ecosystem utility for
-        cosmetics, fees, crafting, guilds, housing, arena, eggs, season pass, events, and creator
-        purchases — not a promise of profit. Pump.fun was the launch chapter; this site is the
-        product.
-      </p>
-
-      <div className="mt-4 flex flex-wrap gap-2">
-        <Link href="/analytics/token" className="btn-primary focus-ring text-sm">
-          Live analytics
-        </Link>
-        <Link href="/treasury" className="btn-secondary focus-ring text-sm">
-          Treasury
-        </Link>
-        <Link href="/rewards" className="btn-secondary focus-ring text-sm">
-          Rewards
-        </Link>
-        <Link href="/play" className="btn-secondary focus-ring text-sm">
-          Play
-        </Link>
-      </div>
+      <section className="panel relative overflow-hidden p-0">
+        <div className="relative min-h-[200px] px-5 py-6 sm:px-6 sm:py-8">
+          <Image
+            src="/assets/ui/token/utility-banner.png?v=tk2"
+            alt=""
+            fill
+            sizes="(max-width: 896px) 100vw, 896px"
+            className="object-cover object-center opacity-45"
+            unoptimized
+            priority
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[rgba(6,12,24,0.92)] via-[rgba(6,12,24,0.78)] to-[rgba(6,12,24,0.55)]"
+            aria-hidden
+          />
+          <div className="relative z-10">
+            <SectionTitleBand slug="token" label="Token" kicker="Ecosystem utility" />
+            <p className="page-lede mt-4 max-w-2xl text-[rgba(220,230,245,0.92)]">
+              {projectConfig.TOKEN_NAME} ({projectConfig.TOKEN_SYMBOL}) is ecosystem utility for
+              cosmetics, fees, crafting, guilds, housing, arena, eggs, season pass, events, and
+              creator purchases — not a promise of profit. Pump.fun was the launch chapter; this
+              site is the product.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Link href="/analytics/token" className="btn-primary focus-ring text-sm">
+                Live analytics
+              </Link>
+              <Link href="/treasury" className="btn-secondary focus-ring text-sm">
+                Treasury
+              </Link>
+              <Link href="/rewards" className="btn-secondary focus-ring text-sm">
+                Rewards
+              </Link>
+              <Link href="/play" className="btn-secondary focus-ring text-sm">
+                Play
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {analytics ? (
         <section className="mt-8 space-y-3">

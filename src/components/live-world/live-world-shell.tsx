@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -46,16 +47,25 @@ import { HudLayer } from "@/components/live-world/hud-layer";
 import { MapGoalsPanel } from "@/components/map-goals/map-goals-panel";
 import { CreditsBalanceChip } from "@/components/credits/credits-balance-chip";
 import { SocialPresenceHud } from "@/components/live-world/social-presence-hud";
-import { TownActivityPanel } from "@/components/live-world/town-activity-panel";
+import { WorldPulsePanel } from "@/components/live-world/world-pulse-panel";
+import { RightColumnHud } from "@/components/live-world/right-column-hud";
+import { VitalOrbs } from "@/components/live-world/vital-orbs";
+import { ActionHotbar, type HotbarActionId } from "@/components/live-world/action-hotbar";
+import { WorldRadialMenu } from "@/components/live-world/world-radial-menu";
 import { FeaturedPlayerBanner } from "@/components/live-world/featured-player-banner";
 import {
+  bottomCenterVitalsDockClass,
   bottomLeftHudStackClass,
+  bottomRightRadialClass,
   chatUsesBottomLeftStack,
   interactPromptDockClass,
+  midLeftHudStackClass,
   minimapUsesTopRightStack,
   presenceUsesBottomLeftStack,
-  topRightHudStackClass,
-  townActivityUsesTopRightStack,
+  rightColumnHudStackClass,
+  topCenterHudClass,
+  topRightUtilityClass,
+  townActivityUsesMidLeftStack,
   worldClockDockClass,
 } from "@/components/live-world/hud-slots";
 import { getInputManager } from "@/game/live-world/input/input-manager";
@@ -65,6 +75,7 @@ import type {
   HudPanelPosition,
 } from "@/game/live-world/systems/immersive/types";
 import { isFullscreenShortcut } from "@/game/live-world/systems/immersive/fullscreen";
+import { resolveLiveWorldDisplayLayout } from "@/game/live-world/systems/immersive/display-layout";
 import { capturePhotoStub } from "@/game/live-world/systems/immersive/photo-mode";
 import { useImmersiveSettings } from "@/hooks/use-immersive-settings";
 import { useLiveWorldFullscreen } from "@/hooks/use-live-world-fullscreen";
@@ -75,6 +86,7 @@ import { HappeningNowBanner } from "@/components/live-world/happening-now-banner
 import { playSfx } from "@/hooks/use-sfx";
 import { startMenuAmbient, stopAmbient } from "@/lib/audio/ambient";
 import { playMenuMusic } from "@/lib/audio/music";
+import { LW_HUD_BTN } from "@/components/live-world/hud-chrome";
 
 type Props = {
   playable: boolean;
@@ -432,7 +444,19 @@ export function LiveWorldShell({ playable }: Props) {
   if (!entered) {
     return (
       <section className="panel relative overflow-hidden p-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(61,231,255,0.18),transparent_50%),radial-gradient(ellipse_at_70%_80%,rgba(155,123,255,0.12),transparent_45%),linear-gradient(160deg,#0a0a0f,#12121c)]" />
+        <Image
+          src="/assets/live-world/commons-entry.png?v=lw2"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          unoptimized
+        />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(61,231,255,0.12),transparent_50%),linear-gradient(160deg,rgba(10,10,15,0.82),rgba(18,18,28,0.78))]"
+          aria-hidden
+        />
         <div className="relative flex min-h-[420px] flex-col items-center justify-center px-6 py-16 text-center">
           <p className="page-kicker">Playable habitat</p>
           <h2 className="mt-3 font-display text-3xl text-white md:text-4xl">
@@ -483,13 +507,7 @@ export function LiveWorldShell({ playable }: Props) {
     );
   }
 
-  const hostClass = expandedViewport
-    ? "fixed inset-0 z-[80] bg-[#0a101c]"
-    : "panel relative overflow-hidden p-0";
-
-  const canvasWrapClass = expandedViewport
-    ? "relative h-full w-full bg-[#0a101c]"
-    : "relative h-[min(72vh,720px)] min-h-[420px] w-full bg-[#0a101c]";
+  const { hostClass, canvasWrapClass } = resolveLiveWorldDisplayLayout(expandedViewport);
 
   return (
     <section
@@ -503,12 +521,15 @@ export function LiveWorldShell({ playable }: Props) {
       onMouseMove={() => reveal("pointer")}
       onPointerDown={() => reveal("pointer")}
     >
-      <div className={canvasWrapClass}>
-        {bridge ? <LiveWorldGameCanvas bridge={bridge} className="absolute inset-0" /> : null}
+      <div className={canvasWrapClass} data-testid="live-world-canvas-wrap">
+        {bridge ? (
+          <LiveWorldGameCanvas bridge={bridge} className="absolute inset-0 z-0" />
+        ) : null}
         <LiveWorldLoadingScreen progress={progress} visible={!ready} />
 
         {!photoMode ? (
           <>
+            {/* Top-left: location + weather */}
             {showLayer("status") ? (
               <HudLayer opacity={hudOpacity} settings={settings}>
                 <LiveWorldStatusBar
@@ -529,22 +550,127 @@ export function LiveWorldShell({ playable }: Props) {
               </HudLayer>
             ) : null}
 
-            {/* Floating center chips idle-fade on their own (stay hoverable when chrome hides). */}
-            <WorldClockChip
-              regionSlug={(status ?? statusFallback).mapName
-                .toLowerCase()
-                .replace(/\s+/g, "-")}
-              className={worldClockDockClass(settings)}
-            />
-            <HappeningNowBanner
-              view={worldEvents.view}
-              onParticipate={(action) => {
-                void worldEvents.participate(action, ["MOVE", "INTERACT"]);
-                reveal("manual");
-              }}
-            />
+            {/* Mid-left: World Pulse event list */}
+            {showLayer("status") && townActivityUsesMidLeftStack(settings) ? (
+              <HudLayer opacity={hudOpacity} settings={settings}>
+                <div
+                  className={midLeftHudStackClass(settings.statusChromeCollapsed)}
+                  data-testid="live-world-mid-left-stack"
+                >
+                  <WorldPulsePanel
+                    worldEvents={worldEvents.view}
+                    snapshot={socialPresence.snapshot}
+                    stacked
+                    collapsed={settings.townActivityCollapsed}
+                    onCollapsedChange={(townActivityCollapsed) => {
+                      updateSettings({ townActivityCollapsed });
+                      reveal("manual");
+                    }}
+                    panelLayout={settings.hudPanelLayout}
+                    onPanelPositionChange={(pos) =>
+                      setPanelPosition("townActivity", pos)
+                    }
+                  />
+                </div>
+              </HudLayer>
+            ) : null}
 
-            {/* Bottom-left column: presence peek + chat — no overlap */}
+            {showLayer("status") && !townActivityUsesMidLeftStack(settings) ? (
+              <HudLayer opacity={hudOpacity} settings={settings}>
+                <WorldPulsePanel
+                  worldEvents={worldEvents.view}
+                  snapshot={socialPresence.snapshot}
+                  collapsed={settings.townActivityCollapsed}
+                  onCollapsedChange={(townActivityCollapsed) => {
+                    updateSettings({ townActivityCollapsed });
+                    reveal("manual");
+                  }}
+                  panelLayout={settings.hudPanelLayout}
+                  onPanelPositionChange={(pos) =>
+                    setPanelPosition("townActivity", pos)
+                  }
+                />
+              </HudLayer>
+            ) : null}
+
+            {/* Top-center: Credits + Happening Now (chips still idle-fade) */}
+            {showLayer("credits") || showLayer("status") ? (
+              <HudLayer opacity={hudOpacity} settings={settings}>
+                <div className={topCenterHudClass()} data-testid="live-world-top-center">
+                  {featureFlagDefaults.CREDITS_LEDGER_ENABLED && showLayer("credits") ? (
+                    <div className="pointer-events-auto">
+                      <CreditsBalanceChip />
+                    </div>
+                  ) : null}
+                  <HappeningNowBanner
+                    view={worldEvents.view}
+                    stacked
+                    onParticipate={(action) => {
+                      void worldEvents.participate(action, ["MOVE", "INTERACT"]);
+                      reveal("manual");
+                    }}
+                  />
+                  <p className="pointer-events-none text-center text-[9px] text-[var(--text-dim)]">
+                    WASD · Shift sprint · E interact · T emotes · M map
+                  </p>
+                </div>
+              </HudLayer>
+            ) : null}
+
+            {/* Top-right utility pills */}
+            {showLayer("credits") ? (
+              <HudLayer opacity={hudOpacity} settings={settings}>
+                <div className={topRightUtilityClass()} data-testid="live-world-top-right-utils">
+                  {mapGoalsEnabled ? (
+                    <button
+                      type="button"
+                      className={`${LW_HUD_BTN} pointer-events-auto`}
+                      onClick={() => {
+                        playSfx("ui.click");
+                        setShowMapGoals((v) => !v);
+                        reveal("manual");
+                      }}
+                    >
+                      {showMapGoals ? "Hide goals" : "Map goals"}
+                    </button>
+                  ) : null}
+                  <FullscreenToggleButton
+                    active={fullscreen.active}
+                    onToggle={toggleFullscreen}
+                    compact
+                  />
+                  <button
+                    type="button"
+                    className={`${LW_HUD_BTN} pointer-events-auto`}
+                    onClick={() => {
+                      playSfx("ui.click");
+                      void fullscreen.exit();
+                      stopAmbient(400);
+                      void startMenuAmbient(800);
+                      void playMenuMusic(900);
+                      setEntered(false);
+                      setReady(false);
+                      setProgress(0);
+                      setPhotoMode(false);
+                    }}
+                  >
+                    Exit world
+                  </button>
+                </div>
+              </HudLayer>
+            ) : null}
+
+            {/* Keep clock mounted for weather audio sync; weather line also in status bar */}
+            <div className="sr-only" aria-hidden>
+              <WorldClockChip
+                regionSlug={(status ?? statusFallback).mapName
+                  .toLowerCase()
+                  .replace(/\s+/g, "-")}
+                className={worldClockDockClass(settings)}
+              />
+            </div>
+
+            {/* Bottom-left: presence peek + chat (coordinate with concurrent stacking work) */}
             {(showLayer("status") && presenceUsesBottomLeftStack(settings)) ||
             (bridge && showLayer("chat") && chatUsesBottomLeftStack(settings)) ? (
               <div
@@ -616,63 +742,83 @@ export function LiveWorldShell({ playable }: Props) {
               </HudLayer>
             ) : null}
 
-            {/* Top-right column: minimap (TR) + world pulse / popular hubs — no overlap */}
-            {(showLayer("status") && townActivityUsesTopRightStack(settings)) ||
-            (bridge &&
-              showLayer("minimap") &&
-              minimapUsesTopRightStack(settings)) ? (
+            {/* Right column: minimap → nearby → daily tasks → social status */}
+            {(showLayer("status") ||
+              (bridge && showLayer("minimap") && minimapUsesTopRightStack(settings))) ? (
               <HudLayer opacity={hudOpacity} settings={settings}>
                 <div
-                  className={topRightHudStackClass(settings.statusChromeCollapsed)}
-                  data-testid="live-world-top-right-stack"
+                  className={rightColumnHudStackClass(settings.statusChromeCollapsed)}
+                  data-testid="live-world-right-column-stack"
                 >
-                  {bridge &&
-                  showLayer("minimap") &&
-                  minimapUsesTopRightStack(settings) ? (
-                    <LiveWorldMinimap
-                      bridge={bridge}
-                      settings={settings}
-                      onSettingsPatch={updateSettings}
-                      stacked
-                      panelLayout={settings.hudPanelLayout}
-                      onPanelPositionChange={(pos) => setPanelPosition("minimap", pos)}
-                    />
-                  ) : null}
-                  {showLayer("status") && townActivityUsesTopRightStack(settings) ? (
-                    <TownActivityPanel
-                      snapshot={socialPresence.snapshot}
-                      compact
-                      stacked
-                      collapsed={settings.townActivityCollapsed}
-                      onCollapsedChange={(townActivityCollapsed) => {
-                        updateSettings({ townActivityCollapsed });
-                        reveal("manual");
-                      }}
-                      panelLayout={settings.hudPanelLayout}
-                      onPanelPositionChange={(pos) =>
-                        setPanelPosition("townActivity", pos)
-                      }
-                    />
-                  ) : null}
+                  <RightColumnHud
+                    snapshot={socialPresence.snapshot}
+                    minimap={
+                      bridge &&
+                      showLayer("minimap") &&
+                      minimapUsesTopRightStack(settings) ? (
+                        <LiveWorldMinimap
+                          bridge={bridge}
+                          settings={settings}
+                          onSettingsPatch={updateSettings}
+                          stacked
+                          panelLayout={settings.hudPanelLayout}
+                          onPanelPositionChange={(pos) =>
+                            setPanelPosition("minimap", pos)
+                          }
+                        />
+                      ) : null
+                    }
+                  />
                 </div>
               </HudLayer>
             ) : null}
 
-            {showLayer("status") && !townActivityUsesTopRightStack(settings) ? (
+            {/* Bottom-center: Health/Energy orbs + life/social hotbar */}
+            {showLayer("toolbar") ? (
               <HudLayer opacity={hudOpacity} settings={settings}>
-                <TownActivityPanel
-                  snapshot={socialPresence.snapshot}
-                  compact
-                  collapsed={settings.townActivityCollapsed}
-                  onCollapsedChange={(townActivityCollapsed) => {
-                    updateSettings({ townActivityCollapsed });
-                    reveal("manual");
-                  }}
-                  panelLayout={settings.hudPanelLayout}
-                  onPanelPositionChange={(pos) =>
-                    setPanelPosition("townActivity", pos)
-                  }
-                />
+                <div
+                  className={bottomCenterVitalsDockClass(settings)}
+                  data-testid="live-world-vitals-dock"
+                >
+                  <div className="flex items-end gap-2 md:gap-3">
+                    <VitalOrbs />
+                    <ActionHotbar
+                      onAction={(id: HotbarActionId) => {
+                        reveal("manual");
+                        if (!bridge) return;
+                        if (id === "map") bridge.openWorldMap();
+                        if (id === "inventory") {
+                          playSfx("ui.nav");
+                          router.push("/inventory");
+                        }
+                        if (id === "wave") {
+                          void socialPresence.recordAction("WAVE", "EMOTE");
+                        }
+                        if (id === "rest") {
+                          void socialPresence.recordAction("CAMPFIRE_REST", "INTERACT");
+                        }
+                        if (id === "pet") toggleRiftlingFocus();
+                      }}
+                    />
+                  </div>
+                </div>
+              </HudLayer>
+            ) : null}
+
+            {/* Bottom-right radial menu */}
+            {showLayer("toolbar") ? (
+              <HudLayer opacity={hudOpacity} settings={settings}>
+                <div className={bottomRightRadialClass()}>
+                  <WorldRadialMenu
+                    onOpenMap={() => bridge?.openWorldMap()}
+                    onOpenSettings={() => {
+                      setShowPause(false);
+                      setShowDisplaySettings(true);
+                      getInputManager().setActivePanel("settings");
+                      reveal("menu");
+                    }}
+                  />
+                </div>
               </HudLayer>
             ) : null}
 
@@ -748,6 +894,7 @@ export function LiveWorldShell({ playable }: Props) {
                 onPanelPositionChange={(pos) => setPanelPosition("toolbar", pos)}
               />
             ) : null}
+
           </>
         ) : (
           <div className="pointer-events-auto absolute inset-x-0 top-3 z-40 flex justify-center">
@@ -854,59 +1001,12 @@ export function LiveWorldShell({ playable }: Props) {
         ) : null}
 
         {mapGoalsEnabled && showMapGoals && !photoMode ? (
-          <div className="pointer-events-auto absolute bottom-14 left-3 z-30 max-h-[50%] w-[min(100%-1.5rem,22rem)] overflow-auto md:bottom-auto md:left-auto md:right-3 md:top-14">
+          <div className="pointer-events-auto absolute right-3 top-[4.5rem] z-35 max-h-[45%] w-[min(100%-1.5rem,20rem)] overflow-auto md:right-4 md:top-20">
             <MapGoalsPanel starterOnly />
           </div>
         ) : null}
 
-        {!photoMode && showLayer("credits") ? (
-          <HudLayer
-            opacity={hudOpacity}
-            settings={settings}
-            className="absolute bottom-3 left-3 z-20 flex flex-wrap items-center gap-2 md:left-auto md:right-3 md:top-3 md:bottom-auto"
-          >
-            {featureFlagDefaults.CREDITS_LEDGER_ENABLED ? (
-              <div className="pointer-events-auto">
-                <CreditsBalanceChip />
-              </div>
-            ) : null}
-            {mapGoalsEnabled ? (
-              <button
-                type="button"
-                className="btn-secondary focus-ring pointer-events-auto text-xs"
-                onClick={() => {
-                  playSfx("ui.click");
-                  setShowMapGoals((v) => !v);
-                  reveal("manual");
-                }}
-              >
-                {showMapGoals ? "Hide goals" : "Map goals"}
-              </button>
-            ) : null}
-            <FullscreenToggleButton
-              active={fullscreen.active}
-              onToggle={toggleFullscreen}
-              compact
-            />
-            <button
-              type="button"
-              className="btn-secondary focus-ring pointer-events-auto text-xs"
-              onClick={() => {
-                playSfx("ui.click");
-                void fullscreen.exit();
-                stopAmbient(400);
-                void startMenuAmbient(800);
-                void playMenuMusic(900);
-                setEntered(false);
-                setReady(false);
-                setProgress(0);
-                setPhotoMode(false);
-              }}
-            >
-              Exit world
-            </button>
-          </HudLayer>
-        ) : null}
+        {/* Credits / utils live in top-center + top-right reference docks above */}
       </div>
     </section>
   );

@@ -33,6 +33,17 @@ export const TERRAIN_KEYS = [
   "training-dirt",
 ] as const;
 
+/** Canopy trees — all share occlusion / sway treatment in world-props. */
+export const TREE_PROP_KEYS = [
+  "tree-small",
+  "tree-oak",
+  "tree-pine",
+  "tree-birch",
+  "tree-flowering",
+  "tree-rift",
+  "tree-orchard",
+] as const;
+
 export const PROP_KEYS = [
   "barrel",
   "crate",
@@ -40,7 +51,7 @@ export const PROP_KEYS = [
   "riftstone-monument",
   "lantern-post",
   "bush-berry",
-  "tree-small",
+  ...TREE_PROP_KEYS,
   "rock-moss",
   "flowers",
   "market-stall",
@@ -57,6 +68,12 @@ export const PROP_KEYS = [
   "resource-herb",
   "resource-fish",
 ] as const;
+
+export type TreePropKey = (typeof TREE_PROP_KEYS)[number];
+
+export function isTreeProp(key: string): key is TreePropKey {
+  return (TREE_PROP_KEYS as readonly string[]).includes(key);
+}
 
 export const ACTOR_KEYS = ["player-keeper", "pet-riftling"] as const;
 
@@ -100,6 +117,7 @@ export function buildingKeyFromObjectId(id: string): BuildingKey | null {
     hatchery: "hatchery",
     arena: "arena",
     market: "market",
+    "market-annex": "market",
     guild: "guild",
     workshop: "workshop",
     "crafting-workshop": "workshop",
@@ -108,6 +126,9 @@ export function buildingKeyFromObjectId(id: string): BuildingKey | null {
     "player-academy": "academy",
     "recovery-center": "recovery-center",
     "homestead-path": "homestead-path",
+    "cottage-north": "homestead-path",
+    "cottage-south": "homestead-path",
+    "tavern-tankard": "homestead-path",
     forge: "workshop",
   };
   return aliases[slug] ?? (BUILDING_KEYS.includes(slug as BuildingKey) ? (slug as BuildingKey) : null);

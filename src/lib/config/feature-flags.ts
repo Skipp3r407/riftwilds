@@ -65,7 +65,7 @@ export const featureFlagDefaults = {
   LIVE_WORLD_GATHERING_ENABLED: true,
   LIVE_WORLD_EVENTS_ENABLED: true,
   LIVE_WORLD_WORLD_BOSSES_ENABLED: true,
-  LIVE_WORLD_HOMESTEADS_ENABLED: false,
+  LIVE_WORLD_HOMESTEADS_ENABLED: true,
   LIVE_WORLD_GUILDS_ENABLED: false,
   /** Secondary / embed camera — not the default UX. */
   LIVE_WORLD_SPECTATOR_MODE_ENABLED: false,
@@ -87,7 +87,7 @@ export const featureFlagDefaults = {
   REVENUE_SPLIT_ENABLED: true,
   HOLDER_REWARDS_ENABLED: true,
   GUILDS_ENABLED: false,
-  HOMESTEADS_ENABLED: false,
+  HOMESTEADS_ENABLED: true,
   FARMING_ENABLED: false,
   PET_JOBS_ENABLED: false,
   WORLD_BOSSES_ENABLED: false,
@@ -254,6 +254,18 @@ export const featureFlagDefaults = {
   LAND_OWNERSHIP_ENABLED: true,
   /** Homestead Credits persistence path. */
   HOUSING_ECONOMY_ENABLED: true,
+  /** Private player home instances + build mode (extends homestead). */
+  PLAYER_HOUSING_ENABLED: true,
+  /** Persist housing tables via Prisma — prepare-only until migration approved. */
+  PLAYER_HOUSING_PRISMA_ENABLED: false,
+  /** Shared neighborhood exteriors + land deeds (private interiors stay instanced). */
+  PLAYER_NEIGHBORHOODS_ENABLED: true,
+  /** Persist neighborhood tables via Prisma — prepare-only until migration approved. */
+  PLAYER_NEIGHBORHOODS_PRISMA_ENABLED: false,
+  /** Automatic World Expansion — capacity, generation, assignment, overflow. */
+  WORLD_EXPANSION_ENABLED: true,
+  /** Persist world-expansion tables via Prisma — prepare-only until migration approved. */
+  WORLD_EXPANSION_PRISMA_ENABLED: false,
   /** Guild bank Credits. */
   GUILD_ECONOMY_ENABLED: true,
   /** Season pass Credits track. */

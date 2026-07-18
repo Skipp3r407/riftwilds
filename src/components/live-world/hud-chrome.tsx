@@ -10,13 +10,29 @@ import {
 
 /** Shared warm glass surface for Live World immersion HUD (fantasy chrome). */
 export const LW_HUD_GLASS =
-  "lw-hud-glass rounded-xl border border-[var(--stroke-bronze)] bg-[rgba(20,18,14,0.78)] shadow-[0_8px_28px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(232,213,176,0.1)] backdrop-blur-md";
+  "lw-hud-glass rounded-xl border border-[var(--stroke-bronze)] backdrop-blur-md";
 
 export const LW_HUD_BTN =
-  "lw-hud-btn focus-ring inline-flex items-center gap-1.5 rounded-lg border border-[var(--stroke)] bg-[rgba(20,16,12,0.45)] px-2.5 py-1.5 text-[10px] font-medium tracking-wide text-[var(--text-muted)] transition-[color,background,border-color,box-shadow] duration-150 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.08)] hover:text-[var(--text)]";
+  "lw-hud-btn focus-ring inline-flex min-h-9 items-center gap-1.5 rounded-lg border border-[var(--stroke)] bg-[rgba(20,16,12,0.5)] px-2.5 py-1.5 text-[10px] font-medium tracking-wide text-[var(--text-muted)] transition-[color,background,border-color,box-shadow,transform] duration-150 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.1)] hover:text-[var(--text)] active:scale-[0.98]";
 
 export const LW_HUD_BTN_ACTIVE =
-  "border-[var(--stroke-strong)] bg-[rgba(61,231,255,0.1)] text-[var(--cyan)] shadow-[0_0_12px_rgba(61,231,255,0.1)]";
+  "border-[var(--stroke-amber)] bg-[rgba(255,184,77,0.12)] text-[var(--amber)] shadow-[0_0_0_1px_rgba(184,140,74,0.2),inset_0_1px_0_rgba(232,213,176,0.12)]";
+
+/** Collapsed edge peeks (Chat / Presence / Immersive toolbar). */
+export const LW_HUD_PEEK =
+  "lw-hud-peek inline-flex min-h-9 items-center gap-1.5 rounded-t-xl rounded-b-md border border-[var(--stroke-bronze)] border-b-0 bg-[rgba(18,16,12,0.88)] px-3 py-1.5 shadow-[0_-4px_18px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(232,213,176,0.1)] backdrop-blur-md";
+
+/** Right-column / card section titles. */
+export const LW_HUD_CARD_TITLE =
+  "lw-hud-card-title font-display text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--stone)]";
+
+/** Circular utility / radial icon buttons. */
+export const LW_HUD_ICON_BTN =
+  "lw-hud-icon-btn focus-ring flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--stroke-bronze)] bg-[rgba(20,18,14,0.86)] text-[var(--amber)] shadow-[0_4px_14px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(232,213,176,0.14)] backdrop-blur-md transition-[transform,border-color,background,color,box-shadow] duration-150 hover:scale-105 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.1)] hover:text-[var(--radiant)] active:scale-95";
+
+/** Hotbar action slots. */
+export const LW_HUD_SLOT =
+  "lw-hud-slot focus-ring group relative flex h-11 w-11 flex-col items-center justify-center rounded-lg border border-[var(--stroke)] bg-[rgba(14,12,10,0.72)] text-[var(--text-muted)] transition-[color,background,border-color,box-shadow,transform] duration-150 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.1)] hover:text-[var(--text)] active:scale-95";
 
 type CollapseToggleProps = {
   collapsed: boolean;
@@ -40,7 +56,7 @@ export function HudCollapseToggle({
   return (
     <button
       type="button"
-      className={`${LW_HUD_BTN} ${chevronOnly ? "px-1.5 py-1" : ""} ${className}`}
+      className={`${LW_HUD_BTN} ${chevronOnly ? "min-h-8 px-1.5 py-1" : ""} ${className}`}
       aria-expanded={!collapsed}
       aria-label={label}
       title={label}
@@ -97,9 +113,9 @@ export function CollapsibleHudPanel({
     return (
       <div className={`pointer-events-auto ${className}`} data-testid={testId} data-collapsed="1">
         <div
-          className={`${LW_HUD_GLASS} ${LW_HUD_BTN} gap-2 px-2.5 py-1.5 ${
-            edge === "bottom" ? "rounded-t-xl rounded-b-md" : ""
-          } ${dragHandleProps?.className ?? ""}`}
+          className={`${edge === "bottom" ? LW_HUD_PEEK : `${LW_HUD_GLASS} ${LW_HUD_BTN} gap-2 px-2.5 py-1.5`} ${
+            dragHandleProps?.className ?? ""
+          }`}
           {...(dragHandleProps
             ? {
                 onPointerDown: dragHandleProps.onPointerDown,
@@ -112,10 +128,10 @@ export function CollapsibleHudPanel({
               }
             : {})}
         >
-          {dragHandleProps ? <HudDragGrip className="text-white/80" /> : null}
+          {dragHandleProps ? <HudDragGrip className="text-[var(--stone)]/80" /> : null}
           <button
             type="button"
-            className="inline-flex items-center gap-1.5"
+            className="inline-flex min-h-8 items-center gap-1.5"
             data-no-drag
             aria-expanded={false}
             aria-label={peekLabel ?? `Show ${title}`}
@@ -125,8 +141,10 @@ export function CollapsibleHudPanel({
               onCollapsedChange(false);
             }}
           >
-            <ChevronUp className="h-3.5 w-3.5 shrink-0 text-[var(--cyan)]" aria-hidden />
-            <span className="font-display text-[11px] text-white/90">{peekLabel ?? title}</span>
+            <ChevronUp className="h-3.5 w-3.5 shrink-0 text-[var(--amber)]" aria-hidden />
+            <span className="font-display text-[11px] tracking-wide text-[var(--text)]">
+              {peekLabel ?? title}
+            </span>
             {peekExtra}
           </button>
         </div>
@@ -141,7 +159,7 @@ export function CollapsibleHudPanel({
       data-collapsed="0"
     >
       <div
-        className={`flex items-center justify-between gap-2 border-b border-[var(--stroke)]/60 px-3 py-1.5 ${
+        className={`flex items-center justify-between gap-2 border-b border-[var(--stroke)]/70 px-3 py-2 ${
           dragHandleProps?.className ?? ""
         }`}
         {...(dragHandleProps
@@ -156,8 +174,8 @@ export function CollapsibleHudPanel({
             }
           : {})}
       >
-        <p className="flex min-w-0 items-center gap-1.5 font-display text-xs tracking-wide text-white">
-          {dragHandleProps ? <HudDragGrip className="text-white/70" /> : null}
+        <p className="flex min-w-0 items-center gap-1.5 font-display text-xs tracking-wide text-[var(--text)]">
+          {dragHandleProps ? <HudDragGrip className="text-[var(--stone)]/70" /> : null}
           <span className="truncate">{title}</span>
         </p>
         <div className="flex items-center gap-1.5" data-no-drag>
@@ -171,7 +189,7 @@ export function CollapsibleHudPanel({
           />
         </div>
       </div>
-      <div className="px-3 py-2">{children}</div>
+      <div className="px-3 py-2.5">{children}</div>
     </div>
   );
 }

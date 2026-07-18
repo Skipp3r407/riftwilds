@@ -43,6 +43,27 @@ export function getHomestead(userId: string): HomesteadState | null {
   return store().byUser.get(userId) ?? null;
 }
 
+/** Bridge from Player Housing without a second Credits debit. */
+export function ensureHomesteadMirror(params: {
+  userId: string;
+  name: string;
+}): HomesteadState {
+  const existing = store().byUser.get(params.userId);
+  if (existing) return existing;
+  const starterRoom = HOMESTEAD_ROOMS[0]?.roomKey ?? "pet-house";
+  const homestead: HomesteadState = {
+    userId: params.userId,
+    publicId: `hs_${params.userId.slice(0, 12)}`,
+    name: params.name.slice(0, 40) || "Homestead",
+    themeKey: "commons-grove",
+    unlockedRooms: [starterRoom],
+    furniture: [],
+    createdAt: new Date().toISOString(),
+  };
+  store().byUser.set(params.userId, homestead);
+  return homestead;
+}
+
 export function createHomestead(params: {
   userId: string;
   name: string;

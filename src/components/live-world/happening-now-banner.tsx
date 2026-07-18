@@ -6,23 +6,32 @@ import { FloatingHudChip } from "@/components/live-world/floating-hud-chip";
 type Props = {
   view: WorldEventPlayerView | null;
   onParticipate?: (action: string) => void;
+  /** When true, parent owns absolute placement (top-center stack). */
+  stacked?: boolean;
+  className?: string;
 };
 
 /** Compact Live World strip for the active Dynamic World Event. */
-export function HappeningNowBanner({ view, onParticipate }: Props) {
+export function HappeningNowBanner({
+  view,
+  onParticipate,
+  stacked = false,
+  className,
+}: Props) {
   const active = view?.active;
   if (!view?.enabled || !active) return null;
   if (!["ANNOUNCED", "ACTIVE", "RESOLVING"].includes(active.phase)) return null;
 
   const activityKey = `${active.key}|${active.phase}|${active.regionSlug}`;
 
+  const wrapClass = stacked
+    ? `pointer-events-none w-full ${className ?? ""}`
+    : `pointer-events-none absolute left-1/2 top-14 z-30 w-[min(28rem,calc(100%-2rem))] -translate-x-1/2 md:top-16 ${className ?? ""}`;
+
   return (
-    <div
-      className="pointer-events-none absolute left-1/2 top-14 z-30 w-[min(28rem,calc(100%-2rem))] -translate-x-1/2 md:top-16"
-      data-testid="happening-now-banner"
-    >
+    <div className={wrapClass} data-testid="happening-now-banner">
       <FloatingHudChip activityKey={activityKey} testId="happening-now-banner-fade">
-        <div className="rounded-xl border border-[var(--stroke)] bg-[rgba(8,12,22,0.78)] px-3 py-2 backdrop-blur-md">
+        <div className="rounded-xl border border-[var(--stroke-bronze)] bg-[rgba(20,18,14,0.78)] px-3 py-2 shadow-[0_8px_28px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(232,213,176,0.1)] backdrop-blur-md">
           <p className="text-[10px] font-medium uppercase tracking-wider text-[var(--text-dim)]">
             Happening now
           </p>

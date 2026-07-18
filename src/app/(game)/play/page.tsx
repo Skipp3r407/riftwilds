@@ -21,6 +21,8 @@ const quickActions: {
   { href: "/academy", label: "Academy / Help", slug: "academy", variant: "secondary" },
   { href: "/profile", label: "Profile", slug: "profile", variant: "secondary" },
   { href: "/inventory", label: "Inventory", slug: "inventory", variant: "secondary" },
+  { href: "/housing", label: "Housing", slug: "homestead", variant: "secondary" },
+  { href: "/neighborhoods", label: "Neighborhoods", slug: "homestead", variant: "secondary" },
   { href: "/homestead", label: "Homestead", slug: "homestead", variant: "secondary" },
   { href: "/guilds", label: "Guilds", slug: "guilds", variant: "secondary" },
   { href: "/economy", label: "Economy", slug: "economy", variant: "secondary" },

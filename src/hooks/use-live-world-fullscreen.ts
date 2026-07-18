@@ -8,6 +8,7 @@ import {
   requestNativeFullscreen,
   type EnterFullscreenResult,
 } from "@/game/live-world/systems/immersive/fullscreen";
+import { waitForNextLayout } from "@/game/live-world/systems/immersive/display-layout";
 import type { WindowModePreference } from "@/game/live-world/systems/immersive/types";
 
 export type DisplayMode = "windowed" | "native-fullscreen" | "viewport-expand";
@@ -21,6 +22,10 @@ type Options = {
 
 /**
  * Fullscreen + viewport-expand fallback. Exit never traps — Esc / UI / browser chrome.
+ *
+ * Enter always applies expanded CSS first, waits a layout frame, then requests
+ * native fullscreen when available — so the canvas parent is never 0×0 / short
+ * letterboxed inside a black :fullscreen stage.
  */
 export function useLiveWorldFullscreen(options: Options = {}) {
   const [displayMode, setDisplayMode] = useState<DisplayMode>("windowed");
@@ -54,8 +59,14 @@ export function useLiveWorldFullscreen(options: Options = {}) {
 
   const enter = useCallback(async (): Promise<EnterFullscreenResult> => {
     const preferExpand = preferenceRef.current === "viewport-expand";
+
+    // Always expand CSS first (same active layout as native FS). Using
+    // viewport-expand here avoids fullscreenchange sync collapsing a premature
+    // "native-fullscreen" mode before requestFullscreen resolves.
+    setDisplayMode("viewport-expand");
+    await waitForNextLayout();
+
     if (preferExpand || !apiAvailable) {
-      setDisplayMode("viewport-expand");
       onPrefRef.current?.("viewport-expand");
       return {
         ok: true,
@@ -68,9 +79,11 @@ export function useLiveWorldFullscreen(options: Options = {}) {
     if (result.ok && result.mode === "native") {
       setDisplayMode("native-fullscreen");
       onPrefRef.current?.("browser-fullscreen");
+      await waitForNextLayout();
       return result;
     }
-    setDisplayMode("viewport-expand");
+
+    // API denied — stay on viewport-expand so the Commons still fills the display.
     onPrefRef.current?.("viewport-expand");
     return result;
   }, [apiAvailable, targetRef]);
@@ -81,6 +94,7 @@ export function useLiveWorldFullscreen(options: Options = {}) {
     }
     setDisplayMode("windowed");
     onPrefRef.current?.("windowed");
+    await waitForNextLayout();
   }, []);
 
   const toggle = useCallback(async () => {

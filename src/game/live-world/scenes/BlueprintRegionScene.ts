@@ -85,6 +85,12 @@ import {
   isPremiumRegion,
   spawnPremiumProps,
   trySpawnBuildingSprite,
+  collectOccluders,
+  updateOccluderFades,
+  drawCityWallVisuals,
+  depthAt,
+  DEPTH,
+  type Occluder,
   trySpawnDecorationSprite,
   trySpawnResourceSprite,
   type AtmosphereHandles,
@@ -274,6 +280,8 @@ export class BlueprintRegionScene extends Phaser.Scene {
   protected hubLabelSet = new Set(
     REST_HUB_CATALOG.map((h) => h.label.trim().toLowerCase()),
   );
+  /** Premium occluders (buildings, trees, docks) for 2.5D roof/canopy fade. */
+  protected occluders: Occluder[] = [];
 
   constructor(key: string) {
     super({ key });
@@ -301,11 +309,17 @@ export class BlueprintRegionScene extends Phaser.Scene {
     this.drawGround(palette);
     this.drawZones();
     if (this.premium) {
-      spawnPremiumProps(this, this.blueprint);
+      const propSpawn = spawnPremiumProps(this, this.blueprint, "full");
+      this.occluders.push(...propSpawn.occluders);
+      drawCityWallVisuals(this, this.blueprint);
     }
     this.solidGroup = this.physics.add.staticGroup();
     this.buildColliders();
     this.spawnWorldObjects(loaded.blueprint.objects);
+    if (this.premium) {
+      // Re-collect after buildings spawn so facades join tree/dock occluders
+      this.occluders = collectOccluders(this);
+    }
 
     const spawn = this.resolveSpawn();
     const playerTex = this.textures.exists(actorTex("player-keeper"))
@@ -316,8 +330,10 @@ export class BlueprintRegionScene extends Phaser.Scene {
       : "pet-companion";
     this.player = this.physics.add.sprite(spawn.x, spawn.y, playerTex);
     this.player.setCollideWorldBounds(true);
-    this.player.setDepth(10);
+    this.player.setDepth(depthAt(DEPTH.actor, spawn.y));
     this.player.setOrigin(0.5, 1);
+    this.player.setVisible(true);
+    this.player.setAlpha(1);
     if (playerTex.startsWith("pw-actor-")) {
       // Slightly larger than tile (32) so Keeper reads at default camera zoom.
       this.player.setDisplaySize(50, 60);
@@ -327,10 +343,13 @@ export class BlueprintRegionScene extends Phaser.Scene {
     } else {
       this.player.setCircle(12, 4, 4);
     }
+    (this.player.body as Phaser.Physics.Arcade.Body).allowGravity = false;
 
     this.pet = this.physics.add.sprite(spawn.x - 36, spawn.y + 8, petTex);
-    this.pet.setDepth(9);
+    this.pet.setDepth(depthAt(DEPTH.actor, spawn.y + 8, -0.2));
     this.pet.setOrigin(0.5, 1);
+    this.pet.setVisible(true);
+    this.pet.setAlpha(1);
     if (petTex.startsWith("pw-actor-")) {
       this.pet.setDisplaySize(36, 36);
       const body = this.pet.body as Phaser.Physics.Arcade.Body;
@@ -559,15 +578,19 @@ export class BlueprintRegionScene extends Phaser.Scene {
       const petBreath = 1 + Math.sin(time / 420 + 1.2) * 0.045;
       this.pet.setDisplaySize(36 * petBreath, 36 * (moving ? 1 : petBreath));
     }
-    // Y-sort actors for pseudo-isometric readability
-    this.player.setDepth(10 + this.player.y * 0.01);
-    this.pet.setDepth(9 + this.pet.y * 0.01);
+    // Y-sort actors in the actor band (between street props and canopy)
+    this.player.setDepth(depthAt(DEPTH.actor, this.player.y));
+    this.pet.setDepth(depthAt(DEPTH.actor, this.pet.y, -0.2));
     this.petEquipmentLayers?.syncPositions();
     for (const it of this.interactables) {
       if (it.kind === "npc" && it.sprite) {
-        it.sprite.setDepth(8 + it.sprite.y * 0.01);
-        it.nameLabel?.setDepth(9 + it.sprite.y * 0.01);
+        it.sprite.setDepth(depthAt(DEPTH.actor, it.sprite.y, -0.5));
+        it.nameLabel?.setDepth(depthAt(DEPTH.nameplate, it.sprite.y));
       }
+    }
+    // 2.5D occlusion — roofs, tree canopies, docks fade when player walks behind
+    if (this.occluders.length > 0) {
+      updateOccluderFades(this.occluders, this.player.x, this.player.y);
     }
   }
 
@@ -583,6 +606,8 @@ export class BlueprintRegionScene extends Phaser.Scene {
     }
     if (input.wasJustPressed("escape") && this.bridge.interactionMenu.get()) {
       this.bridge.interactionMenu.set(null);
+      // Keep panel state in sync — a leftover modalOpen zeroes WASD desire.
+      input.closePanel();
     }
     if (input.wasJustPressed("escape") && this.bridge.emoteUi.get().mode !== "closed") {
       this.bridge.closeEmoteUi();

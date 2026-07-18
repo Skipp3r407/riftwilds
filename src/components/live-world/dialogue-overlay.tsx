@@ -30,6 +30,25 @@ type Props = {
   promptClassName?: string;
 };
 
+function InteractPromptChip({ label }: { label: string }) {
+  const hintMatch = label.match(/\(([^)]+)\)\s*\.?$/);
+  const hint = hintMatch?.[1]?.trim() ?? null;
+  const title = (hintMatch ? label.slice(0, hintMatch.index) : label)
+    .replace(/\s*[—–-]\s*$/, "")
+    .trim() || label;
+
+  return (
+    <div className="lw-hud-interact-prompt" title={label}>
+      <span className="lw-hud-interact-prompt__label truncate">{title}</span>
+      {hint ? (
+        <span className="lw-hud-interact-prompt__hint" aria-hidden>
+          {hint}
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 export function LiveWorldDialogueOverlay({
   dialogue,
   prompt,
@@ -269,9 +288,7 @@ export function LiveWorldDialogueOverlay({
         activityKey={prompt.label}
         testId="live-world-interact-prompt-fade"
       >
-        <div className="rounded-full border border-[var(--stroke-bronze)] bg-[rgba(20,16,12,0.8)] px-4 py-2 text-xs text-[var(--text-muted)] backdrop-blur-md">
-          {prompt.label}
-        </div>
+        <InteractPromptChip label={prompt.label} />
       </FloatingHudChip>
     </div>
   );

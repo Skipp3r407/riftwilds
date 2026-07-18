@@ -44,7 +44,10 @@ export type AnalyticsEventName =
   | "newspaper_issue"
   | "life_skill_xp"
   | "secret_discovery"
-  | "festival_join";
+  | "festival_join"
+  | "world_expansion_planned"
+  | "world_expansion_generated"
+  | "world_expansion_opened";
 
 export type AnalyticsEvent = {
   name: AnalyticsEventName;

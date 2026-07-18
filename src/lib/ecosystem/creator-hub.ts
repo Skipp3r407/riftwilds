@@ -11,6 +11,8 @@ export type CreatorProfileStub = {
   specialties: string[];
   tipEnabled: boolean;
   packCount: number;
+  /** Transparent cutout under public/assets/creators/ */
+  artSrc: string;
 };
 
 export type CreatorOfferStub = {
@@ -20,7 +22,12 @@ export type CreatorOfferStub = {
   kind: "cosmetic_pack" | "lore_drop" | "event_sponsor" | "homestead_kit";
   priceLabel: string;
   status: "stub" | "preview";
+  /** Transparent cutout under public/assets/creators/offers/ */
+  artSrc: string;
 };
+
+/** Bump when Creator Hub cutouts are regenerated. */
+export const CREATOR_HUB_ART_V = "ch1";
 
 export type CreatorHubSnapshot = {
   title: string;
@@ -41,6 +48,7 @@ export function getCreatorHubSnapshot(): CreatorHubSnapshot {
       specialties: ["lore", "codex"],
       tipEnabled: false,
       packCount: 2,
+      artSrc: `/assets/creators/echo-archives.png?v=${CREATOR_HUB_ART_V}`,
     },
     {
       id: "creator_forge",
@@ -50,6 +58,7 @@ export function getCreatorHubSnapshot(): CreatorHubSnapshot {
       specialties: ["cosmetics", "housing"],
       tipEnabled: false,
       packCount: 1,
+      artSrc: `/assets/creators/ember-atelier.png?v=${CREATOR_HUB_ART_V}`,
     },
   ];
 
@@ -65,6 +74,7 @@ export function getCreatorHubSnapshot(): CreatorHubSnapshot {
         kind: "lore_drop",
         priceLabel: "Token utility (stub)",
         status: "stub",
+        artSrc: `/assets/creators/offers/groveheart-field-notes.png?v=${CREATOR_HUB_ART_V}`,
       },
       {
         id: "offer_cosmo_1",
@@ -73,6 +83,7 @@ export function getCreatorHubSnapshot(): CreatorHubSnapshot {
         kind: "homestead_kit",
         priceLabel: "Token utility (stub)",
         status: "preview",
+        artSrc: `/assets/creators/offers/lantern-homestead-kit.png?v=${CREATOR_HUB_ART_V}`,
       },
     ],
     guidelines: [

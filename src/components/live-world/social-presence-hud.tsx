@@ -89,14 +89,14 @@ export function SocialPresenceHud({
   const extras = (
     <>
       {featuredSelf.length > 0 && !collapsed ? (
-        <div className="rounded-xl border border-[var(--amber,#ffb84d)]/35 bg-[rgba(8,12,22,0.72)] px-3 py-2 text-[10px] text-[var(--amber,#ffb84d)]">
+        <div className="rounded-xl border border-[var(--stroke-amber)] bg-[rgba(20,16,12,0.82)] px-3 py-2 text-[10px] text-[var(--amber)] shadow-[inset_0_1px_0_rgba(232,213,176,0.08)]">
           Featured this hour:{" "}
           {featuredSelf.map((f) => `${f.title} (${f.displayName})`).join(" · ")}
         </div>
       ) : null}
 
       {toast ? (
-        <p className="rounded bg-black/70 px-2 py-1 text-[11px] text-[var(--text-muted)]">
+        <p className="rounded-lg border border-[var(--stroke)]/60 bg-[rgba(12,10,8,0.85)] px-2.5 py-1.5 text-[11px] text-[var(--text-muted)]">
           {toast}
         </p>
       ) : null}
@@ -114,10 +114,14 @@ export function SocialPresenceHud({
       title="Presence"
       peekLabel="Presence"
       peekExtra={
-        <span className="text-[10px] text-[var(--cyan)]">{snapshot.presenceXp} XP</span>
+        <span className="text-[10px] tabular-nums text-[var(--amber)]">
+          {snapshot.presenceXp} XP
+        </span>
       }
       headerExtra={
-        <span className="text-[11px] text-[var(--cyan)]">{snapshot.presenceXp} XP</span>
+        <span className="text-[11px] tabular-nums text-[var(--amber)]">
+          {snapshot.presenceXp} XP
+        </span>
       }
       testId="social-presence-hud"
       panelClassName="max-w-[20rem]"
@@ -127,12 +131,14 @@ export function SocialPresenceHud({
     </CollapsibleHudPanel>
   ) : (
     <div
-      className="pointer-events-auto rounded-xl border border-[var(--stroke)] bg-[rgba(8,12,22,0.78)] px-3 py-2 backdrop-blur-md"
+      className="pointer-events-auto rounded-xl border border-[var(--stroke-bronze)] bg-[rgba(20,18,14,0.82)] px-3 py-2 shadow-[0_8px_28px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(232,213,176,0.1)] backdrop-blur-md"
       data-testid="social-presence-hud"
     >
       <div className="flex items-baseline justify-between gap-3">
-        <p className="font-display text-sm text-white">Presence</p>
-        <p className="text-[11px] text-[var(--cyan)]">{snapshot.presenceXp} XP</p>
+        <p className="font-display text-sm text-[var(--text)]">Presence</p>
+        <p className="text-[11px] tabular-nums text-[var(--amber)]">
+          {snapshot.presenceXp} XP
+        </p>
       </div>
       <div className="mt-1">{body}</div>
     </div>
@@ -162,10 +168,14 @@ export function SocialPresenceHud({
             title="Presence"
             peekLabel="Presence"
             peekExtra={
-              <span className="text-[10px] text-[var(--cyan)]">{snapshot.presenceXp} XP</span>
+              <span className="text-[10px] tabular-nums text-[var(--amber)]">
+                {snapshot.presenceXp} XP
+              </span>
             }
             headerExtra={
-              <span className="text-[11px] text-[var(--cyan)]">{snapshot.presenceXp} XP</span>
+              <span className="text-[11px] tabular-nums text-[var(--amber)]">
+                {snapshot.presenceXp} XP
+              </span>
             }
             testId="social-presence-hud"
             panelClassName="max-w-[20rem]"

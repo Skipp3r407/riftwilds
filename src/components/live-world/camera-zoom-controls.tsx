@@ -20,12 +20,13 @@ export function LiveWorldCameraZoomControls({ bridge }: Props) {
 
   return (
     <div
-      className="pointer-events-auto absolute bottom-3 right-3 z-20 flex items-center gap-1 rounded-xl border border-[var(--stroke)] bg-[rgba(8,12,22,0.72)] p-1 backdrop-blur-md md:bottom-14"
+      className="lw-hud-zoom pointer-events-auto absolute bottom-3 right-3 z-20 md:bottom-14"
       aria-label="Camera zoom"
+      data-testid="live-world-zoom-controls"
     >
       <button
         type="button"
-        className="focus-ring flex h-8 w-8 items-center justify-center rounded-lg text-sm text-white hover:bg-white/10 disabled:opacity-35"
+        className="lw-hud-zoom__btn focus-ring"
         aria-label="Zoom out"
         disabled={zoom <= MIN_ZOOM + 0.001}
         onClick={() => {
@@ -35,12 +36,10 @@ export function LiveWorldCameraZoomControls({ bridge }: Props) {
       >
         −
       </button>
-      <span className="min-w-[2.75rem] text-center text-[10px] tabular-nums text-[var(--text-muted)]">
-        {zoom.toFixed(1)}×
-      </span>
+      <span className="lw-hud-zoom__value">{zoom.toFixed(1)}×</span>
       <button
         type="button"
-        className="focus-ring flex h-8 w-8 items-center justify-center rounded-lg text-sm text-white hover:bg-white/10 disabled:opacity-35"
+        className="lw-hud-zoom__btn focus-ring"
         aria-label="Zoom in"
         disabled={zoom >= MAX_ZOOM - 0.001}
         onClick={() => {

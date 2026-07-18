@@ -163,11 +163,11 @@ export function LiveWorldToolbar({
           }
         : {})}
     >
-      {dragHandleProps ? <HudDragGrip className="text-white/70" /> : null}
+      {dragHandleProps ? <HudDragGrip className="text-[var(--stone)]/80" /> : null}
       <button
         type="button"
         data-no-drag
-        className={`${LW_HUD_GLASS} ${LW_HUD_BTN} gap-2 rounded-b-none rounded-t-xl border-b-0 px-3 py-1.5`}
+        className="lw-hud-peek focus-ring gap-2"
         aria-expanded={false}
         aria-label="Show immersion toolbar"
         title="Show toolbar"
@@ -176,9 +176,9 @@ export function LiveWorldToolbar({
           onCollapsedChange(false);
         }}
       >
-        <ChevronUp className="h-3.5 w-3.5 text-[var(--cyan)]" aria-hidden />
-        <span className="font-display text-[11px] text-white/90">HUD</span>
-        <span className="text-[9px] uppercase tracking-wider text-[var(--text-dim)]">
+        <ChevronUp className="h-3.5 w-3.5 text-[var(--amber)]" aria-hidden />
+        <span className="font-display text-[11px] tracking-wide text-[var(--text)]">HUD</span>
+        <span className="text-[9px] uppercase tracking-[0.12em] text-[var(--text-muted)]">
           {hudMode}
         </span>
       </button>

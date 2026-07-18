@@ -10,6 +10,7 @@ import { paintTerrainGrid } from "@/game/live-world/systems/terrain-paint";
 import {
   TERRAIN_KEYS,
   PROP_KEYS,
+  TREE_PROP_KEYS,
   BUILDING_KEYS,
 } from "@/game/live-world/systems/premium/asset-keys";
 import fs from "node:fs";
@@ -54,6 +55,8 @@ describe("Live World premium Commons", () => {
     expect(kinds.has("lantern-post")).toBe(true);
     expect(kinds.has("tree-small")).toBe(true);
     expect(kinds.has("market-stall")).toBe(true);
+    const treeKinds = TREE_PROP_KEYS.filter((k) => kinds.has(k));
+    expect(treeKinds.length).toBeGreaterThanOrEqual(4);
   });
 
   it("ships premium art files under public/assets/game", () => {
@@ -63,7 +66,7 @@ describe("Live World premium Commons", () => {
         fs.existsSync(path.join(root, "public/assets/game/terrain", `${key}.png`)),
       ).toBe(true);
     }
-    for (const key of ["barrel", "tree-small", "lantern-post", "campfire"]) {
+    for (const key of ["barrel", "tree-small", "lantern-post", "campfire", ...TREE_PROP_KEYS]) {
       expect(
         fs.existsSync(path.join(root, "public/assets/game/props", `${key}.png`)),
       ).toBe(true);

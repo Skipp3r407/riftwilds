@@ -1,6 +1,10 @@
 /**
  * Browser Fullscreen API helpers with graceful viewport-expand fallback.
  * Does not trap the user — exit always available via API, Esc (browser), or UI.
+ *
+ * Important: callers should expand the Live World host layout *before*
+ * `requestNativeFullscreen` so Phaser Scale.RESIZE measures a non-zero parent
+ * (and so we never fullscreen a `.panel` backdrop-filter ancestor mid-frame).
  */
 
 export type FullscreenCapability = {

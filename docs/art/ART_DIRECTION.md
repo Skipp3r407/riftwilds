@@ -1,7 +1,7 @@
 # Riftwilds Art Direction — Master Bible
 
 > **Authority:** This document is the source of truth for all visual work.  
-> Companion guides: [STYLE_GUIDE](./STYLE_GUIDE.md) · [COLOR_PALETTE](./COLOR_PALETTE.md) · [LIGHTING_GUIDE](./LIGHTING_GUIDE.md) · [ENVIRONMENT_GUIDE](./ENVIRONMENT_GUIDE.md) · [RIFTLING_GUIDE](./RIFTLING_GUIDE.md) · [UI_GUIDE](./UI_GUIDE.md) · [ANIMATION_GUIDE](./ANIMATION_GUIDE.md)  
+> Companion guides: [STYLE_GUIDE](./STYLE_GUIDE.md) · [COLOR_PALETTE](./COLOR_PALETTE.md) · [LIGHTING_GUIDE](./LIGHTING_GUIDE.md) · [ENVIRONMENT_GUIDE](./ENVIRONMENT_GUIDE.md) · [RIFTLING_GUIDE](./RIFTLING_GUIDE.md) · [UI_GUIDE](./UI_GUIDE.md) · [ANIMATION_GUIDE](./ANIMATION_GUIDE.md) · [LIVING_TOWNS](./LIVING_TOWNS.md) · [ASSET_PIPELINE_2D3D](./ASSET_PIPELINE_2D3D.md)  
 > Living audit: [ASSET_AUDIT](./ASSET_AUDIT.md) · [ART_BACKLOG](./ART_BACKLOG.md)
 
 ## Reference mood
@@ -70,6 +70,11 @@ Every image job must end with (or include) the shared suffix from `src/lib/asset
 - Atmosphere particles respect immersive settings density.
 - Terrain is tiled images + light elevation faces — no runtime mesh generation.
 - Non-Commons regions may use fallback terrain until premium packs ship (streaming stub pattern).
+- Living Towns depth bands + occluder fade: see [LIVING_TOWNS](./LIVING_TOWNS.md); keep canopy counts district-anchored.
+
+## Living Towns (urban design)
+
+Commons is the **city-builder showcase**: districts, walls/gates, road→plaza hubs, alleys, and 2.5D occlusion — not a field of random buildings. Extend the warm Ultima/RS hybrid; do not invent a purple theme.
 
 ## Success criteria for art passes
 

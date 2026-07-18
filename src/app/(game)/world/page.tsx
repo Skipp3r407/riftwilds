@@ -2,6 +2,7 @@ import Link from "next/link";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
 import { RegionBanner } from "@/components/assets/region-banner";
+import { MapDirectoryPanel } from "@/components/world-expansion/map-directory";
 
 export const metadata = { title: "World" };
 
@@ -44,6 +45,20 @@ export default function WorldPage() {
           </Link>
         }
       />
+      {featureFlagDefaults.WORLD_EXPANSION_ENABLED ? (
+        <section className="panel space-y-3 p-5">
+          <div>
+            <p className="page-kicker">Settlements</p>
+            <h2 className="font-display text-lg text-white">Live map directory</h2>
+            <p className="mt-1 text-sm text-[var(--text-muted)]">
+              Quiet→Full crowd labels · friends · guild · events · housing. Temporary overflow maps
+              never host permanent deeds.
+            </p>
+          </div>
+          <MapDirectoryPanel />
+        </section>
+      ) : null}
+
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {REGIONS.map(([name, blurb, open, slug]) => (
           <div key={name} className="panel overflow-hidden p-0">

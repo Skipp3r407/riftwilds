@@ -47,6 +47,10 @@ const TITLE_ATMOSPHERE: Record<string, string> = {
   pets: `${WALLPAPER_DIR}/pets.png`,
   battle: `${WALLPAPER_DIR}/battle.png`,
   memorials: `${WALLPAPER_DIR}/memorials.png`,
+  rewards: `${WALLPAPER_DIR}/rewards.png`,
+  loyalty: `/assets/loyalty/rift-storm-banner.png`,
+  ecosystem: `/assets/ui/ecosystem/living-world-cta.png`,
+  treasury: `/assets/treasury/hero.png`,
 };
 
 function normalizeSlug(slug: string | undefined | null): string | undefined {
@@ -90,5 +94,6 @@ export function titleAtmospherePath(
 
   if (TITLE_ATMOSPHERE[key]) return `${TITLE_ATMOSPHERE[key]}?v=${ATMOSPHERE_V}`;
 
-  return `${TITLE_BANNER_DIR}/${key}.png?v=${ATMOSPHERE_V}`;
+  // Do not invent paths for unlisted slugs (avoids empty/broken title plates).
+  return undefined;
 }

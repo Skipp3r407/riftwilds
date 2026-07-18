@@ -16,6 +16,8 @@ import {
   HudDragGrip,
   type HudDragHandleProps,
 } from "@/components/live-world/draggable-hud-panel";
+import { LW_HUD_GLASS, LW_HUD_PEEK } from "@/components/live-world/hud-chrome";
+import { ChevronUp } from "lucide-react";
 
 type Props = {
   bridge: LiveWorldBridge;
@@ -126,7 +128,9 @@ export function LiveWorldChatPanel({
   };
 
   const panelBg =
-    chatMode === "transparent" ? "bg-[#0a101c]/55" : "bg-[#0a101c]/95";
+    chatMode === "transparent"
+      ? "bg-[rgba(14,16,20,0.55)]"
+      : "bg-[rgba(14,16,20,0.92)]";
   const width = floatExpanded ? "w-[min(100%-1.5rem,480px)]" : "w-[min(100%-1.5rem,360px)]";
   const defaultClass = stacked
     ? `pointer-events-auto relative z-30 ${width}`
@@ -149,11 +153,13 @@ export function LiveWorldChatPanel({
             }
           : {})}
       >
-        {dragHandleProps ? <HudDragGrip className="text-white/70" /> : null}
+        {dragHandleProps ? <HudDragGrip className="text-[var(--stone)]/80" /> : null}
         <button
           type="button"
-          className="btn-secondary focus-ring text-xs"
+          className={`${stacked ? LW_HUD_PEEK : `${LW_HUD_GLASS} min-h-9 px-3 py-1.5`} focus-ring gap-1.5`}
           data-no-drag
+          aria-label="Open chat"
+          title="Open chat (Enter)"
           onClick={() => {
             playSfx("ui.chat_open");
             setOpen(true);
@@ -161,13 +167,19 @@ export function LiveWorldChatPanel({
             getInputManager().setActivePanel("chat");
           }}
         >
-          Chat (Enter)
+          <ChevronUp className="h-3.5 w-3.5 shrink-0 text-[var(--amber)]" aria-hidden />
+          <span className="font-display text-[11px] tracking-wide text-[var(--text)]">Chat</span>
+          <span className="text-[9px] uppercase tracking-wider text-[var(--text-muted)]">
+            Enter
+          </span>
         </button>
       </div>
     ) : (
-      <div className={`overflow-hidden rounded-md border border-[var(--border)] ${panelBg} shadow-xl`}>
+      <div
+        className={`${LW_HUD_GLASS} overflow-hidden ${panelBg}`}
+      >
         <div
-          className={`flex items-center gap-1 border-b border-[var(--border)] px-2 py-1 ${
+          className={`flex items-center gap-1 border-b border-[var(--stroke)]/70 px-2 py-1.5 ${
             dragHandleProps?.className ?? ""
           }`}
           {...(dragHandleProps
@@ -182,14 +194,16 @@ export function LiveWorldChatPanel({
               }
             : {})}
         >
-          {dragHandleProps ? <HudDragGrip className="text-white/60" /> : null}
+          {dragHandleProps ? <HudDragGrip className="text-[var(--stone)]/70" /> : null}
           {TABS.map((t) => (
             <button
               key={t}
               type="button"
               data-no-drag
-              className={`rounded px-2 py-0.5 text-[10px] capitalize ${
-                tab === t ? "bg-[var(--cyan)]/20 text-[var(--cyan)]" : "text-[var(--text-dim)]"
+              className={`rounded-md px-2 py-1 text-[10px] capitalize transition-colors ${
+                tab === t
+                  ? "bg-[rgba(255,184,77,0.14)] text-[var(--amber)]"
+                  : "text-[var(--text-muted)] hover:text-[var(--text)]"
               }`}
               onClick={() => setTab(t)}
             >
@@ -199,7 +213,7 @@ export function LiveWorldChatPanel({
           <button
             type="button"
             data-no-drag
-            className="text-[10px] text-[var(--text-dim)]"
+            className="text-[10px] text-[var(--text-muted)] hover:text-[var(--text)]"
             title="Expand / float resize stub"
             onClick={() => setFloatExpanded((v) => !v)}
           >
@@ -208,7 +222,7 @@ export function LiveWorldChatPanel({
           <button
             type="button"
             data-no-drag
-            className="ml-auto text-[10px] text-[var(--text-dim)]"
+            className="ml-auto text-[10px] text-[var(--text-muted)] hover:text-[var(--text)]"
             onClick={() => {
               playSfx("ui.chat_close");
               setOpen(false);
@@ -218,7 +232,7 @@ export function LiveWorldChatPanel({
             Esc
           </button>
         </div>
-        <ul className="max-h-36 space-y-1 overflow-y-auto px-2 py-2 text-[11px]">
+        <ul className="max-h-36 space-y-1 overflow-y-auto px-2.5 py-2 text-[11px]">
           {messages.slice(-40).map((m) => (
             <li key={m.id}>
               <span className="text-[var(--cyan)]">{m.from}</span>
@@ -230,7 +244,7 @@ export function LiveWorldChatPanel({
           ))}
         </ul>
         <form
-          className="flex gap-1 border-t border-[var(--border)] p-2"
+          className="flex gap-1.5 border-t border-[var(--stroke)]/70 p-2"
           onSubmit={(e) => {
             e.preventDefault();
             submit();
@@ -251,7 +265,7 @@ export function LiveWorldChatPanel({
               }
             }}
             placeholder="Message or /command…"
-            className="focus-ring min-w-0 flex-1 rounded border border-[var(--border)] bg-black/40 px-2 py-1 text-xs text-white"
+            className="focus-ring min-w-0 flex-1 rounded-lg border border-[var(--stroke)] bg-[rgba(8,10,14,0.55)] px-2.5 py-1.5 text-xs text-[var(--text)]"
             maxLength={240}
             autoComplete="off"
           />

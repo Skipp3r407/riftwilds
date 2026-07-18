@@ -121,12 +121,23 @@ export function MarketplaceBrowser() {
       {error ? <p className="text-sm text-[var(--coral)]">{error}</p> : null}
 
       <div className="grid gap-6 xl:grid-cols-[1.4fr_1fr]">
-        <div className="space-y-3">
-          <h2 className="font-display text-xl text-white">Live desk (demo catalog)</h2>
+        <div className="panel relative space-y-3 overflow-hidden p-4">
+          <div
+            className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-25"
+            style={{ backgroundImage: "url(/assets/marketplace/desk-atmosphere.png?v=mk2)" }}
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(8,10,18,0.55)] to-[rgba(8,10,18,0.92)]"
+            aria-hidden
+          />
+          <h2 className="relative z-[1] font-display text-xl text-white">Live desk (demo catalog)</h2>
           {listings.length === 0 ? (
-            <p className="panel p-6 text-sm text-[var(--text-muted)]">No listings in this category.</p>
+            <p className="relative z-[1] panel p-6 text-sm text-[var(--text-muted)]">
+              No listings in this category.
+            </p>
           ) : (
-            <div className="space-y-3">
+            <div className="relative z-[1] space-y-3">
               {listings.map((listing) => {
                 if (listing.kind === "EGG") {
                   return (
@@ -172,7 +183,7 @@ export function MarketplaceBrowser() {
           )}
 
           {selected ? (
-            <div className="panel space-y-3 p-4">
+            <div className="relative z-[1] panel space-y-3 p-4">
               <p className="text-sm text-white">
                 Selected: <span className="font-display">{selected.title}</span>
               </p>

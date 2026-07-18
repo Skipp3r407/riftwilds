@@ -84,6 +84,7 @@ export const headerNavGroups: NavGroup[] = [
       { href: "/live-world", label: "Live World" },
       { href: "/restoration", label: "World Restoration" },
       { href: "/about", label: "About / Story" },
+      { href: "/comics", label: "Comics" },
       { href: "/academy", label: "Player Academy" },
       { href: "/codex/riftlings", label: "Riftling Codex" },
       { href: "/codex/world", label: "World Codex" },

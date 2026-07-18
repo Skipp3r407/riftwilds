@@ -3008,3 +3008,598 @@ model CommunityTokenLedger {
 
   @@index([ownerKey, createdAt])
 }
+
+// ─── Player Housing + Neighborhoods (PREPARE ONLY — flags off for Prisma) ────
+
+/// Private home shell unique to owner (PLAYER_HOME).
+model PlayerHome {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  publicId        String   @unique
+  ownerUserId     String   @unique
+  name            String
+  propertyTier    String
+  acquisition     String
+  plotId          String?
+  neighborhoodId  String?
+  visitPolicy     String   @default("FRIENDS")
+  themeKey        String?
+  exteriorFacadeKey String?
+  musicAmbient    String?
+  lightingGlobal  String   @default("day_hearth")
+  likes           Int      @default(0)
+  featured        Boolean  @default(false)
+  expansionLevel  Int      @default(0)
+  revision        Int      @default(1)
+  stateJson       Json?
+
+  instance   HomeInstance?
+  rooms      HomeRoom[]
+  furniture  HomeFurniture[]
+  storage    HomeStorageSlot[]
+  visitors   HomeVisitor[]
+  permissions HomePermission[]
+  blueprints HomeBlueprint[]
+  ratings    HomeRating[]
+  events     HomeEvent[]
+  garden     HomeGardenPlot[]
+  npcs       HomeNpc[]
+
+  @@index([neighborhoodId])
+  @@index([visitPolicy, featured])
+}
+
+/// Runtime private instance handle (HOME_INSTANCE).
+model HomeInstance {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  homeId       String   @unique
+  ownerUserId  String
+  instanceKey  String   @unique
+  entryKind    String   @default("door")
+  worldMapId   String?
+  worldPosX    Int?
+  worldPosY    Int?
+  metadataJson Json?
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@index([ownerUserId])
+}
+
+model HomeRoom {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  homeId      String
+  roomKey     String
+  name        String
+  unlocked    Boolean  @default(false)
+  wallKey     String   @default("wall_timber")
+  floorKey    String   @default("floor_plank")
+  lightingPreset String @default("hearth_warm")
+  musicTrack  String?
+  weatherThroughWindows Boolean @default(true)
+  isSecret    Boolean  @default(false)
+  layoutJson  Json?
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@unique([homeId, roomKey])
+}
+
+model HomeFurniture {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  homeId       String
+  roomKey      String
+  instanceId   String   @unique
+  skuKey       String
+  posX         Int      @default(0)
+  posY         Int      @default(0)
+  rotation     Int      @default(0)
+  scale        Float    @default(1)
+  layer        Int      @default(1)
+  locked       Boolean  @default(false)
+  metadataJson Json?
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@index([homeId, roomKey])
+  @@index([skuKey])
+}
+
+model HomeStorageSlot {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  homeId       String
+  slotId       String   @unique
+  category     String
+  itemKey      String
+  qty          Int      @default(0)
+  depositToken String
+  metadataJson Json?
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@unique([homeId, category, itemKey])
+  @@index([depositToken])
+}
+
+model HomeVisitor {
+  id            String   @id @default(cuid())
+  createdAt     DateTime @default(now())
+  homeId        String
+  visitorId     String
+  liked         Boolean  @default(false)
+  rating        Int?
+  guestbookNote String?
+  emoteUsed     String?
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@index([homeId, createdAt])
+  @@index([visitorId, createdAt])
+}
+
+model HomePermission {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  homeId    String
+  role      String
+  subjectId String?
+  flagsJson Json
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@index([homeId, role])
+  @@index([subjectId])
+}
+
+model HomeBlueprint {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  blueprintId      String   @unique
+  homeId           String
+  ownerUserId      String
+  name             String
+  roomSnapshotJson Json
+  creditsPrice     Int?
+  listed           Boolean  @default(false)
+  hash             String
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@index([ownerUserId, listed])
+  @@index([hash])
+}
+
+model HomeRating {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  homeId    String
+  raterId   String
+  score     Int
+  note      String?
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@unique([homeId, raterId])
+}
+
+model HomeEvent {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  homeId       String
+  title        String
+  kind         String
+  startsAt     DateTime
+  endsAt       DateTime
+  invitePolicy String
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@index([homeId, startsAt])
+}
+
+model HomeGardenPlot {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  homeId    String
+  plotKey   String
+  cropKey   String?
+  plantedAt DateTime?
+  readyAt   DateTime?
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@unique([homeId, plotKey])
+}
+
+model HomeNpc {
+  id      String   @id @default(cuid())
+  homeId  String
+  npcKey  String
+  name    String
+  role    String
+  roomKey String
+
+  home PlayerHome @relation(fields: [homeId], references: [id], onDelete: Cascade)
+
+  @@index([homeId])
+}
+
+model PlayerNeighborhood {
+  id                 String   @id @default(cuid())
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  neighborhoodId     String   @unique
+  name               String
+  regionSlug         String
+  mapId              String
+  stage              String   @default("hamlet")
+  occupiedHomes      Int      @default(0)
+  plotCap            Int      @default(36)
+  reputation         Int      @default(0)
+  seasonalDecorTheme String?
+  sharedRoads        Boolean  @default(true)
+  lightingPreset     String   @default("lantern_dusk")
+  stateJson          Json?
+
+  districts  NeighborhoodDistrict[]
+  plots      PlayerPlot[]
+  projects   CommunityProject[]
+  contributions PlayerContribution[]
+  buildings  PublicBuilding[]
+  stores     PlayerStore[]
+  government PlayerGovernment?
+  events     NeighborhoodEvent[]
+  landmarks  NeighborhoodLandmark[]
+}
+
+model NeighborhoodDistrict {
+  id             String   @id @default(cuid())
+  neighborhoodPk String
+  districtId     String
+  kind           String
+  name           String
+  flavor         String
+  plotIdsJson    Json
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+
+  @@unique([neighborhoodPk, districtId])
+}
+
+model PlayerPlot {
+  id                 String   @id @default(cuid())
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  plotId             String   @unique
+  neighborhoodPk     String
+  districtId         String
+  ownerUserId        String?
+  deedSize           String
+  col                Int
+  row                Int
+  biome              String
+  elevation          String
+  roadAccess         Boolean  @default(true)
+  waterAccess        Boolean  @default(false)
+  buildLimit         Int
+  decorLimit         Int
+  status             String   @default("vacant")
+  homeId             String?
+  exteriorFacadeKey  String?
+  mailbox            Boolean  @default(true)
+  abandonedWarnedAt  DateTime?
+  lastActivityAt     DateTime @default(now())
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+
+  @@index([neighborhoodPk, status])
+  @@index([ownerUserId])
+}
+
+model CommunityProject {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  projectId        String   @unique
+  neighborhoodPk   String
+  kind             String
+  name             String
+  goalMaterials    Int
+  donatedMaterials Int      @default(0)
+  completed        Boolean  @default(false)
+  worldStateKey    String
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+
+  @@index([neighborhoodPk, completed])
+}
+
+model PlayerContribution {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  neighborhoodPk String
+  userId         String
+  materials      Int
+  projectId      String?
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+
+  @@index([neighborhoodPk, createdAt])
+  @@index([userId, createdAt])
+}
+
+model PublicBuilding {
+  id             String   @id @default(cuid())
+  neighborhoodPk String
+  key            String
+  label          String
+  unlocked       Boolean  @default(false)
+  unlockStage    String
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+
+  @@unique([neighborhoodPk, key])
+}
+
+model PlayerStore {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  storeId          String   @unique
+  neighborhoodPk   String
+  plotId           String
+  ownerUserId      String
+  name             String
+  hours            String
+  displayItemsJson Json
+  open             Boolean  @default(true)
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+
+  @@index([ownerUserId])
+}
+
+model PlayerGovernment {
+  id             String   @id @default(cuid())
+  updatedAt      DateTime @updatedAt
+  neighborhoodPk String   @unique
+  mayorUserId    String?
+  councilJson    Json
+  motionsJson    Json
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+}
+
+model NeighborhoodEvent {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  neighborhoodPk String
+  title          String
+  kind           String
+  startsAt       DateTime
+  endsAt         DateTime
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+
+  @@index([neighborhoodPk, startsAt])
+}
+
+model NeighborhoodLandmark {
+  id             String   @id @default(cuid())
+  landmarkId     String   @unique
+  neighborhoodPk String
+  name           String
+  kind           String
+  col            Int
+  row            Int
+  seasonalDecor  String?
+
+  neighborhood PlayerNeighborhood @relation(fields: [neighborhoodPk], references: [id], onDelete: Cascade)
+
+  @@index([neighborhoodPk])
+}
+
+// ─── Automatic World Expansion (PREPARE ONLY — WORLD_EXPANSION_PRISMA_ENABLED) ─
+
+/// WORLD_MAP — permanent neighborhoods or temporary overflow instances.
+model WorldMap {
+  id                     String   @id @default(cuid())
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  mapId                  String   @unique
+  publicName             String
+  templateKey            String
+  biome                  String
+  mapKind                String
+  lifecycle              String
+  seed                   String
+  regionSlug             String
+  neighborhoodId         String?
+  allowsPermanentHousing Boolean  @default(true)
+  softPlayerLimit        Int
+  hardPlayerLimit        Int
+  plotsTotal             Int      @default(0)
+  plotsOccupied          Int      @default(0)
+  playersOnline          Int      @default(0)
+  visitors               Int      @default(0)
+  entityCount            Int      @default(0)
+  tickLatencyMs          Int      @default(0)
+  crowdLabel             String   @default("Quiet")
+  founderTitleKey        String?
+  generatorVersion       String
+  templateVersion        String
+  seedVersion            String
+  parentMapId            String?
+  overflowEventKey       String?
+  expiresAt              DateTime?
+  stateJson              Json?
+  validationReportId     String?
+  openedAt               DateTime?
+  archivedAt             DateTime?
+
+  capacityMetrics CapacityMetric[]
+  assignments     PlayerMapAssignment[]
+  expansionReqs   ExpansionRequest[]    @relation("ExpansionSource")
+  resultingReqs   ExpansionRequest[]    @relation("ExpansionResult")
+  generationJobs  GenerationJob[]
+  relocationsFrom RelocationRequest[]   @relation("RelocateFrom")
+  relocationsTo   RelocationRequest[]   @relation("RelocateTo")
+  validationReports ValidationReport[]
+
+  @@index([lifecycle, mapKind])
+  @@index([regionSlug])
+  @@index([overflowEventKey])
+}
+
+/// MAP_TEMPLATE catalog row (data-driven; runtime also ships code defaults).
+model MapTemplate {
+  id                     String   @id @default(cuid())
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  key                    String   @unique
+  name                   String
+  biome                  String
+  mapKind                String
+  blurb                  String
+  housingStylesJson      Json
+  districtKindsJson      Json
+  hubsJson               Json
+  roadStyle              String
+  performanceBudgetJson  Json
+  softPlayerLimit        Int
+  hardPlayerLimit        Int
+  targetPlotMin          Int
+  targetPlotMax          Int
+  allowsPermanentHousing Boolean
+  generatorVersion       String
+}
+
+model ExpansionRequest {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  requestId        String   @unique
+  reason           String
+  sourceMapId      String?
+  templateKey      String
+  mapKind          String
+  lifecycle        String
+  priority         Int      @default(50)
+  jobId            String?
+  resultingMapId   String?
+  note             String?
+  adminActorId     String?
+
+  sourceMap    WorldMap? @relation("ExpansionSource", fields: [sourceMapId], references: [mapId])
+  resultingMap WorldMap? @relation("ExpansionResult", fields: [resultingMapId], references: [mapId])
+  jobs         GenerationJob[]
+
+  @@index([lifecycle, priority])
+  @@index([sourceMapId])
+}
+
+model GenerationJob {
+  id                 String   @id @default(cuid())
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  jobId              String   @unique
+  expansionRequestId String
+  status             String
+  attempts           Int      @default(0)
+  maxAttempts        Int      @default(3)
+  seed               String
+  templateKey        String
+  mapId              String?
+  lastError          String?
+
+  request ExpansionRequest @relation(fields: [expansionRequestId], references: [requestId], onDelete: Cascade)
+  map     WorldMap?        @relation(fields: [mapId], references: [mapId])
+
+  @@index([status])
+  @@index([expansionRequestId])
+}
+
+model CapacityMetric {
+  id                 String   @id @default(cuid())
+  createdAt          DateTime @default(now())
+  mapId              String
+  playersOnline      Int
+  plotsOccupied      Int
+  plotsTotal         Int
+  visitors           Int
+  entityCount        Int
+  tickLatencyMs      Int
+  softPlayerLimit    Int
+  hardPlayerLimit    Int
+  rollingLoadAvg     Float
+  spikeDetected      Boolean  @default(false)
+  forecastNeedsExpansion Boolean @default(false)
+  forecastNeedsOverflow  Boolean @default(false)
+  payloadJson        Json?
+
+  map WorldMap @relation(fields: [mapId], references: [mapId], onDelete: Cascade)
+
+  @@index([mapId, createdAt])
+}
+
+model PlayerMapAssignment {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  userId      String   @unique
+  mapId       String
+  reason      String
+  assignedAt  DateTime @default(now())
+  stickyUntil DateTime?
+
+  map WorldMap @relation(fields: [mapId], references: [mapId], onDelete: Cascade)
+
+  @@index([mapId])
+}
+
+model RelocationRequest {
+  id                    String   @id @default(cuid())
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  relocationId          String   @unique
+  userId                String
+  fromMapId             String
+  toMapId               String
+  fromPlotId            String?
+  toPlotId              String?
+  status                String
+  snapshotHash          String?
+  furnitureIdsJson      Json
+  idempotencyKey        String   @unique
+  guildApprovalRequired Boolean  @default(false)
+  guildApprovedBy       String?
+  error                 String?
+
+  fromMap WorldMap @relation("RelocateFrom", fields: [fromMapId], references: [mapId])
+  toMap   WorldMap @relation("RelocateTo", fields: [toMapId], references: [mapId])
+
+  @@index([userId, status])
+  @@index([toMapId])
+}
+
+model ValidationReport {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  reportId        String   @unique
+  mapId           String
+  passed          Boolean
+  checksJson      Json
+  visualQaJson    Json
+
+  map WorldMap @relation(fields: [mapId], references: [mapId], onDelete: Cascade)
+
+  @@index([mapId, passed])
+}

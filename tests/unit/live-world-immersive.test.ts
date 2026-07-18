@@ -17,6 +17,10 @@ import {
   describeFullscreenLabel,
   isFullscreenShortcut,
   isFullscreenApiAvailable,
+  resolveLiveWorldDisplayLayout,
+  readElementContentSize,
+  hasPlayableViewportSize,
+  MIN_PLAYABLE_VIEWPORT,
   resolveParticleEmitScale,
   shouldCullPropAtDistance,
   togglePhotoMode,
@@ -242,6 +246,51 @@ describe("Fullscreen helpers", () => {
 
   it("reports API availability without throwing", () => {
     expect(typeof isFullscreenApiAvailable()).toBe("boolean");
+  });
+});
+
+describe("Live World display layout (fullscreen canvas parent)", () => {
+  it("uses flex fill classes when expanded and never applies .panel", () => {
+    const expanded = resolveLiveWorldDisplayLayout(true);
+    expect(expanded.hostClass).toMatch(/fixed/);
+    expect(expanded.hostClass).toMatch(/h-dvh|inset-0/);
+    expect(expanded.hostClass).not.toMatch(/\bpanel\b/);
+    expect(expanded.canvasWrapClass).toMatch(/flex-1/);
+    expect(expanded.canvasWrapClass).toMatch(/min-h-0/);
+
+    const windowed = resolveLiveWorldDisplayLayout(false);
+    expect(windowed.hostClass).not.toMatch(/\bpanel\b/);
+    expect(windowed.canvasWrapClass).toMatch(/min-h-\[420px\]/);
+  });
+
+  it("treats canvas parent size as playable only when both axes are non-zero", () => {
+    expect(hasPlayableViewportSize({ width: 0, height: 720 })).toBe(false);
+    expect(hasPlayableViewportSize({ width: 960, height: 0 })).toBe(false);
+    expect(
+      hasPlayableViewportSize({
+        width: MIN_PLAYABLE_VIEWPORT,
+        height: MIN_PLAYABLE_VIEWPORT,
+      }),
+    ).toBe(true);
+
+    const sized = {
+      getBoundingClientRect: () =>
+        ({
+          width: 1920,
+          height: 1080,
+          x: 0,
+          y: 0,
+          top: 0,
+          left: 0,
+          right: 1920,
+          bottom: 1080,
+          toJSON: () => ({}),
+        }) as DOMRect,
+    };
+    const size = readElementContentSize(sized);
+    expect(hasPlayableViewportSize(size)).toBe(true);
+    expect(size.width).toBe(1920);
+    expect(size.height).toBe(1080);
   });
 });
 

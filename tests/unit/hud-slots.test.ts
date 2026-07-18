@@ -3,16 +3,19 @@ import {
   bottomLeftHudStackClass,
   chatUsesBottomLeftStack,
   interactPromptDockClass,
+  midLeftHudStackClass,
   minimapUsesTopRightStack,
   presenceUsesBottomLeftStack,
+  rightColumnHudStackClass,
   topRightHudStackClass,
+  townActivityUsesMidLeftStack,
   townActivityUsesTopRightStack,
   toolbarUsesBottomCenterDock,
   worldClockDockClass,
 } from "@/components/live-world/hud-slots";
 
 describe("hud slots", () => {
-  it("docks minimap into top-right stack by default corner", () => {
+  it("docks minimap into right column by default corner", () => {
     expect(
       minimapUsesTopRightStack({ minimapCorner: "top-right", hudPanelLayout: {} }),
     ).toBe(true);
@@ -21,13 +24,21 @@ describe("hud slots", () => {
     ).toBe(false);
   });
 
-  it("keeps stack class below expanded status", () => {
+  it("keeps right column below expanded status", () => {
+    expect(rightColumnHudStackClass(false)).toContain("top-20");
+    expect(rightColumnHudStackClass(true)).toContain("top-12");
     expect(topRightHudStackClass(false)).toContain("top-20");
-    expect(topRightHudStackClass(true)).toContain("top-12");
   });
 
-  it("keeps world pulse docked until free-positioned", () => {
+  it("docks world pulse mid-left until free-positioned", () => {
+    expect(townActivityUsesMidLeftStack({ hudPanelLayout: {} })).toBe(true);
     expect(townActivityUsesTopRightStack({ hudPanelLayout: {} })).toBe(true);
+    expect(midLeftHudStackClass(false)).toContain("left-3");
+    expect(
+      townActivityUsesMidLeftStack({
+        hudPanelLayout: { townActivity: { x: 10, y: 20 } },
+      }),
+    ).toBe(false);
   });
 
   it("docks chat + presence into bottom-left stack until free-positioned", () => {
@@ -45,7 +56,7 @@ describe("hud slots", () => {
     expect(bottomLeftHudStackClass()).toContain("bottom-3");
   });
 
-  it("raises world clock and interact prompt above docked toolbar", () => {
+  it("raises world clock and interact prompt above docked toolbar / vitals", () => {
     expect(toolbarUsesBottomCenterDock({ hudPanelLayout: {} })).toBe(true);
     expect(
       worldClockDockClass({ hudPanelLayout: {}, toolbarCollapsed: true }),
@@ -55,12 +66,12 @@ describe("hud slots", () => {
     ).toContain("bottom-[4.75rem]");
     expect(
       interactPromptDockClass({ hudPanelLayout: {}, toolbarCollapsed: true }),
-    ).toContain("bottom-36");
+    ).toContain("bottom-40");
     expect(
       interactPromptDockClass({
         hudPanelLayout: { toolbar: { x: 10, y: 10 } },
         toolbarCollapsed: true,
       }),
-    ).toContain("md:bottom-16");
+    ).toContain("md:bottom-28");
   });
 });
