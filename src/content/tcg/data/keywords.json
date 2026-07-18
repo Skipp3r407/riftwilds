@@ -1,0 +1,215 @@
+[
+  {
+    "id": "ward",
+    "name": "Ward",
+    "shortText": "Blocks the next hostile spell or ability.",
+    "rules": "While Ward is active, the next spell or activated ability that would affect this unit is prevented, then Ward is removed. Attack damage ignores Ward.",
+    "interactions": [
+      "Shatter removes Ward",
+      "Echo copies do not inherit spent Ward"
+    ],
+    "counterplay": [
+      "Attack instead of casting",
+      "Shatter",
+      "Silence before casting"
+    ],
+    "animationHint": "Cyan glass shell fractures once"
+  },
+  {
+    "id": "corrupt",
+    "name": "Corrupt",
+    "shortText": "Drain 1 from a target; store as Void residue.",
+    "rules": "When you Corrupt a target, deal 1 damage or reduce a buff by 1 (controller chooses legal mode). Gain 1 Void Residue (max 3) usable for Void cards.",
+    "interactions": [
+      "Soulbind shares Residue",
+      "Light cards purge Residue"
+    ],
+    "counterplay": [
+      "Ward",
+      "Heal",
+      "Leave board empty"
+    ],
+    "animationHint": "Violet tendril siphon"
+  },
+  {
+    "id": "awaken",
+    "name": "Awaken",
+    "shortText": "Transforms after a condition is met.",
+    "rules": "When Awaken condition is met, replace this card with its awakened form (same board slot). Awaken is once per card instance.",
+    "interactions": [
+      "Ancient may delay Awaken",
+      "Tokens cannot Awaken unless specified"
+    ],
+    "counterplay": [
+      "Destroy before condition",
+      "Silence"
+    ],
+    "animationHint": "Rift-crack silhouette rebuild"
+  },
+  {
+    "id": "overflow",
+    "name": "Overflow",
+    "shortText": "Excess healing or damage spills to neighbors.",
+    "rules": "Healing beyond max HP becomes 1 damage to a random enemy. Damage beyond lethal becomes 1 damage to an adjacent enemy.",
+    "interactions": [
+      "Guardian redirects Overflow damage",
+      "Bloom converts Overflow heal to +1/+1"
+    ],
+    "counterplay": [
+      "Space units apart",
+      "Guardian"
+    ],
+    "animationHint": "Ripple splash between tiles"
+  },
+  {
+    "id": "riftbond",
+    "name": "Riftbond",
+    "shortText": "Links to your active Riftling companion.",
+    "rules": "While Riftbond is active, this card gains +1/+1 if your companion shares its element. If companion is absent, draw a Companion token once.",
+    "interactions": [
+      "Harmony doubles the bonus",
+      "Soulbind can pair two Riftbond units"
+    ],
+    "counterplay": [
+      "Silence",
+      "Kill companion card first"
+    ],
+    "animationHint": "Cyan thread to companion portrait"
+  },
+  {
+    "id": "echo",
+    "name": "Echo",
+    "shortText": "May replay a cheap spell this turn.",
+    "rules": "After you cast a spell costing 2 or less, you may Echo it once this turn at +1 energy (cannot Echo an Echo).",
+    "interactions": [
+      "Arcane cards reduce Echo surcharge",
+      "Trap spells cannot Echo"
+    ],
+    "counterplay": [
+      "Tax energy",
+      "Counter the first cast"
+    ],
+    "animationHint": "Afterimage of the spell glyph"
+  },
+  {
+    "id": "bloom",
+    "name": "Bloom",
+    "shortText": "Grows +1/+1 at dawn of your turn.",
+    "rules": "At the start of your turn, this unit gains +1/+1. Bloom stacks. Silence removes future Bloom ticks.",
+    "interactions": [
+      "Overflow heal becomes Bloom stacks",
+      "Nature locations accelerate Bloom"
+    ],
+    "counterplay": [
+      "Silence",
+      "Hard removal"
+    ],
+    "animationHint": "Moss rings expand under feet"
+  },
+  {
+    "id": "shatter",
+    "name": "Shatter",
+    "shortText": "Destroys Ward and deals 1.",
+    "rules": "Shatter removes Ward from the target, then deals 1 damage. If no Ward, deal 2 instead.",
+    "interactions": [
+      "Crystal cards may Shatter for free once",
+      "Equipment can grant Shatter"
+    ],
+    "counterplay": [
+      "Recast Ward after",
+      "Buff HP"
+    ],
+    "animationHint": "Glass crack burst"
+  },
+  {
+    "id": "guardian",
+    "name": "Guardian",
+    "shortText": "Must be attacked first.",
+    "rules": "Enemy attacks must target a Guardian if one is present (owner's side). Spells may ignore unless they say otherwise.",
+    "interactions": [
+      "Charge can ignore Guardian once",
+      "Overflow damage still hits neighbors"
+    ],
+    "counterplay": [
+      "Removal spells",
+      "Charge",
+      "Corrupt over time"
+    ],
+    "animationHint": "Shield stance, amber rim"
+  },
+  {
+    "id": "soulbind",
+    "name": "Soulbind",
+    "shortText": "Pair two allies; share a keyword.",
+    "rules": "Choose two allied units. They share one keyword you control until either leaves. If one dies, the other takes 1.",
+    "interactions": [
+      "Riftbond + Soulbind",
+      "Spirit cards reduce death ping"
+    ],
+    "counterplay": [
+      "Kill one to ping the other",
+      "Silence"
+    ],
+    "animationHint": "Soft violet tether"
+  },
+  {
+    "id": "harmony",
+    "name": "Harmony",
+    "shortText": "Buffs escalate when elements match.",
+    "rules": "If you control 2+ units of the same element, Harmony effects resolve twice.",
+    "interactions": [
+      "Locations can grant temporary element",
+      "Celestial counts as any for Harmony once/game"
+    ],
+    "counterplay": [
+      "Split board diversity",
+      "Silence aura"
+    ],
+    "animationHint": "Chord-ring pulse"
+  },
+  {
+    "id": "charge",
+    "name": "Charge",
+    "shortText": "Can attack the turn it arrives.",
+    "rules": "This unit may attack on the turn it enters play. Still subject to Guardian rules unless it also has a ignore clause.",
+    "interactions": [
+      "Fire aggro staples",
+      "Empower scales Charge damage"
+    ],
+    "counterplay": [
+      "Guardian walls",
+      "Traps"
+    ],
+    "animationHint": "Dust streak dash-in"
+  },
+  {
+    "id": "empower",
+    "name": "Empower",
+    "shortText": "Scales with spent Rift Energy this turn.",
+    "rules": "Effects with Empower gain +1 for every 2 Rift Energy already spent this turn (after paying this card).",
+    "interactions": [
+      "Ramp enablers",
+      "Storm Overflow"
+    ],
+    "counterplay": [
+      "Keep opponent under curve",
+      "Drain energy"
+    ],
+    "animationHint": "Amber numerals climb"
+  },
+  {
+    "id": "ancient",
+    "name": "Ancient",
+    "shortText": "Once-per-game powerful clause.",
+    "rules": "An Ancient effect can resolve only once per player per game for that card name.",
+    "interactions": [
+      "Mythic heroes",
+      "Quest completion cards"
+    ],
+    "counterplay": [
+      "Force early Ancient",
+      "Deny setup"
+    ],
+    "animationHint": "Stone glyph ignition"
+  }
+]

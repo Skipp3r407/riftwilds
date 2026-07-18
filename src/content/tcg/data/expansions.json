@@ -1,0 +1,124 @@
+[
+  {
+    "id": "rise-of-the-rift",
+    "name": "Rise of the Rift",
+    "code": "ROTR",
+    "status": "foundational",
+    "story": "After the Fracture, Keepers gather in Riftwild Commons. The first formal Rift Duels teach that every conflict can be settled with Rift Energy rather than blades.",
+    "newRegion": "riftwild-commons",
+    "estimatedCardCount": 400,
+    "themes": [
+      "keepers",
+      "commons",
+      "first bond",
+      "rift energy",
+      "full riftling roster"
+    ],
+    "releaseOrder": 1
+  },
+  {
+    "id": "frozen-kingdom",
+    "name": "Frozen Kingdom",
+    "code": "FRZN",
+    "status": "planned",
+    "story": "Frostveil Basin seals thaw — ice courts demand tribute in duels.",
+    "newRegion": "frostveil-basin",
+    "estimatedCardCount": 100,
+    "themes": [
+      "ice",
+      "oaths",
+      "silence"
+    ],
+    "releaseOrder": 2
+  },
+  {
+    "id": "pirates-of-azure-bay",
+    "name": "Pirates of Azure Bay",
+    "code": "AZURE",
+    "status": "planned",
+    "story": "Moonwater Coast privateers wager packs on tide decks.",
+    "newRegion": "moonwater-coast",
+    "estimatedCardCount": 100,
+    "themes": [
+      "water",
+      "plunder",
+      "traps"
+    ],
+    "releaseOrder": 3
+  },
+  {
+    "id": "shadow-eclipse",
+    "name": "Shadow Eclipse",
+    "code": "ECLS",
+    "status": "planned",
+    "story": "Void Hollow swallows daylight; Corrupt strategies peak.",
+    "newRegion": "void-hollow",
+    "estimatedCardCount": 110,
+    "themes": [
+      "shadow",
+      "void",
+      "corrupt"
+    ],
+    "releaseOrder": 4
+  },
+  {
+    "id": "ancient-titans",
+    "name": "Ancient Titans",
+    "code": "TITN",
+    "status": "planned",
+    "story": "Stoneheart Canyon wakes colossi that play as Locations.",
+    "newRegion": "stoneheart-canyon",
+    "estimatedCardCount": 90,
+    "themes": [
+      "earth",
+      "ancient",
+      "locations"
+    ],
+    "releaseOrder": 5
+  },
+  {
+    "id": "festival-of-lanterns",
+    "name": "Festival of Lanterns",
+    "code": "LANN",
+    "status": "planned",
+    "story": "Commons festival season — holiday frames and Harmony decks.",
+    "newRegion": "riftwild-commons",
+    "estimatedCardCount": 80,
+    "themes": [
+      "festival",
+      "light",
+      "holiday"
+    ],
+    "releaseOrder": 6
+  },
+  {
+    "id": "crystal-wars",
+    "name": "Crystal Wars",
+    "code": "CRYS",
+    "status": "planned",
+    "story": "Radiant Citadel and Alloy Ruins contest Shatter protocols.",
+    "newRegion": "radiant-citadel",
+    "estimatedCardCount": 100,
+    "themes": [
+      "crystal",
+      "metal",
+      "shatter"
+    ],
+    "releaseOrder": 7
+  },
+  {
+    "id": "dragon-rebellion",
+    "name": "Dragon Rebellion",
+    "code": "DRGN",
+    "status": "planned",
+    "story": "Miniature Riftwyrms refuse cages; legendary Awaken lines.",
+    "newRegion": "ember-crater",
+    "estimatedCardCount": 100,
+    "themes": [
+      "fire",
+      "legendary",
+      "awaken"
+    ],
+    "releaseOrder": 8
+  }
+]

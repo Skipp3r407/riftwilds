@@ -1,0 +1,132 @@
+[
+  {
+    "id": "frame-common",
+    "name": "Commons Timber",
+    "appliesTo": [
+      "common"
+    ],
+    "layers": [
+      "wood",
+      "ink-rule",
+      "parchment-inset"
+    ],
+    "accentColor": "#8b5a3c",
+    "notes": "Quiet default"
+  },
+  {
+    "id": "frame-rare",
+    "name": "Cyan Inlay",
+    "appliesTo": [
+      "rare",
+      "uncommon"
+    ],
+    "layers": [
+      "stone",
+      "cyan-filigree"
+    ],
+    "accentColor": "#3de7ff",
+    "notes": "Rift accent corners"
+  },
+  {
+    "id": "frame-epic",
+    "name": "Amber Vault",
+    "appliesTo": [
+      "epic"
+    ],
+    "layers": [
+      "metal",
+      "amber-gems"
+    ],
+    "accentColor": "#ffb84d",
+    "notes": "Heavier bezel"
+  },
+  {
+    "id": "frame-legendary",
+    "name": "Gateway Heart",
+    "appliesTo": [
+      "legendary",
+      "mythic"
+    ],
+    "layers": [
+      "crystal",
+      "animated-sheen"
+    ],
+    "accentColor": "#66e0ff",
+    "notes": "Soft pulse, not neon spam"
+  },
+  {
+    "id": "frame-elemental",
+    "name": "Element Halo",
+    "appliesTo": [
+      "all"
+    ],
+    "layers": [
+      "element-ring"
+    ],
+    "accentColor": "per-element",
+    "notes": "Outer ring recolors by element"
+  },
+  {
+    "id": "frame-holiday",
+    "name": "Lantern Lace",
+    "appliesTo": [
+      "holiday",
+      "seasonal"
+    ],
+    "layers": [
+      "lantern-motifs"
+    ],
+    "accentColor": "#ffc070",
+    "notes": "Festival only"
+  },
+  {
+    "id": "frame-animated",
+    "name": "Living Edge",
+    "appliesTo": [
+      "animated"
+    ],
+    "layers": [
+      "particle-edge"
+    ],
+    "accentColor": "#3de7ff",
+    "notes": "Requires reduced-motion fallback"
+  },
+  {
+    "id": "frame-founder",
+    "name": "Founder Seal",
+    "appliesTo": [
+      "founder"
+    ],
+    "layers": [
+      "wax-seal",
+      "signature-plate"
+    ],
+    "accentColor": "#ffe566",
+    "notes": "Cosmetic prestige"
+  },
+  {
+    "id": "frame-champion",
+    "name": "Tournament Laurel",
+    "appliesTo": [
+      "collector"
+    ],
+    "layers": [
+      "laurel",
+      "rank-pip"
+    ],
+    "accentColor": "#ffb84d",
+    "notes": "Earned in events"
+  },
+  {
+    "id": "frame-tournament",
+    "name": "Arena Bracket",
+    "appliesTo": [
+      "tournament"
+    ],
+    "layers": [
+      "bracket-corners"
+    ],
+    "accentColor": "#3d9bff",
+    "notes": "PvP seasonal"
+  }
+]

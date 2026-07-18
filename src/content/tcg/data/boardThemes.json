@@ -1,0 +1,155 @@
+[
+  {
+    "id": "board-forest",
+    "name": "Elderwood Clearing",
+    "regionHint": "elderwood-forest",
+    "ambientAnimation": "sway leaves",
+    "weather": "soft pollen",
+    "particles": [
+      "leaf_motes",
+      "fireflies"
+    ],
+    "musicCue": "music/zones/elderwood",
+    "interactiveProps": [
+      "stump table",
+      "moss bench"
+    ],
+    "artPrompt": "Top-down fantasy duel board in elder forest, painterly, no UI text"
+  },
+  {
+    "id": "board-castle",
+    "name": "Citadel Steps",
+    "regionHint": "radiant-citadel",
+    "ambientAnimation": "banner flutter",
+    "weather": "clear gold light",
+    "particles": [
+      "dust_gold"
+    ],
+    "musicCue": "music/zones/citadel",
+    "interactiveProps": [
+      "banner poles"
+    ],
+    "artPrompt": "Marble courtyard duel board, radiant fantasy, no text"
+  },
+  {
+    "id": "board-volcano",
+    "name": "Ember Crater Rim",
+    "regionHint": "ember-crater",
+    "ambientAnimation": "heat shimmer",
+    "weather": "ash drift",
+    "particles": [
+      "embers"
+    ],
+    "musicCue": "music/zones/ember",
+    "interactiveProps": [
+      "cooling stones"
+    ],
+    "artPrompt": "Volcanic overlook duel board, warm painterly fantasy"
+  },
+  {
+    "id": "board-frozen",
+    "name": "Frostveil Mirror",
+    "regionHint": "frostveil-basin",
+    "ambientAnimation": "ice crackle",
+    "weather": "light snow",
+    "particles": [
+      "snow"
+    ],
+    "musicCue": "music/zones/frostveil",
+    "interactiveProps": [
+      "ice lanterns"
+    ],
+    "artPrompt": "Frozen lake duel board, soft blues, fantasy"
+  },
+  {
+    "id": "board-ruins",
+    "name": "Alloy Ruin Floor",
+    "regionHint": "alloy-ruins",
+    "ambientAnimation": "gear ticks",
+    "weather": "dry wind",
+    "particles": [
+      "sparks"
+    ],
+    "musicCue": "music/zones/alloy",
+    "interactiveProps": [
+      "broken gears"
+    ],
+    "artPrompt": "Ancient metal ruins duel board, teal accents"
+  },
+  {
+    "id": "board-sky",
+    "name": "Stormspire Perch",
+    "regionHint": "stormspire-peaks",
+    "ambientAnimation": "cloud scroll",
+    "weather": "distant lightning",
+    "particles": [
+      "wind_streaks"
+    ],
+    "musicCue": "music/zones/stormspire",
+    "interactiveProps": [
+      "anchored flags"
+    ],
+    "artPrompt": "Sky temple platform duel board, stormy fantasy"
+  },
+  {
+    "id": "board-ship",
+    "name": "Azure Deck",
+    "regionHint": "moonwater-coast",
+    "ambientAnimation": "ship sway",
+    "weather": "sea mist",
+    "particles": [
+      "spray"
+    ],
+    "musicCue": "music/zones/moonwater",
+    "interactiveProps": [
+      "ropes",
+      "barrels"
+    ],
+    "artPrompt": "Pirate ship deck duel board, fantasy coast"
+  },
+  {
+    "id": "board-crystal",
+    "name": "Crystal Cavern",
+    "regionHint": "radiant-citadel",
+    "ambientAnimation": "prism pulse",
+    "weather": "still air",
+    "particles": [
+      "crystal_dust"
+    ],
+    "musicCue": "music/zones/crystal",
+    "interactiveProps": [
+      "resonant pillars"
+    ],
+    "artPrompt": "Crystal cavern duel board, cyan refract light"
+  },
+  {
+    "id": "board-festival",
+    "name": "Lantern Plaza",
+    "regionHint": "riftwild-commons",
+    "ambientAnimation": "lantern bob",
+    "weather": "clear evening",
+    "particles": [
+      "lantern_glow"
+    ],
+    "musicCue": "music/festivals/lanterns",
+    "interactiveProps": [
+      "food stalls"
+    ],
+    "artPrompt": "Festival plaza duel board, warm lanterns, commons"
+  },
+  {
+    "id": "board-haunted",
+    "name": "Hollow Lane",
+    "regionHint": "void-hollow",
+    "ambientAnimation": "shadow crawl",
+    "weather": "false night",
+    "particles": [
+      "void_wisps"
+    ],
+    "musicCue": "music/zones/void",
+    "interactiveProps": [
+      "tilted lamps"
+    ],
+    "artPrompt": "Haunted village lane duel board, void teal, fantasy"
+  }
+]

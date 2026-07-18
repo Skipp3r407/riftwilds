@@ -1,0 +1,652 @@
+[
+  {
+    "id": "hero-elara-venn",
+    "name": "Elara Venn",
+    "title": "Road-Warden of the First Bond",
+    "element": "nature",
+    "biography": "Walked deserts that had never met forests, carrying an egg that would teach the Commons its name.",
+    "personality": [
+      "steadfast",
+      "curious",
+      "protective"
+    ],
+    "voice": "Warm alto, travel-worn, never cruel",
+    "passive": {
+      "id": "elara-p",
+      "name": "Honest Invitation",
+      "timing": "passive",
+      "text": "Companions you play gain +0/+1.",
+      "effects": [
+        {
+          "op": "buff_hp",
+          "value": 1,
+          "target": "self"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "elara-u",
+      "name": "The First Road",
+      "timing": "ultimate",
+      "text": "Ancient: put a Riftling from your deck into play exhausted.",
+      "energyCost": 8,
+      "effects": [
+        {
+          "op": "ancient_once",
+          "value": 1
+        }
+      ]
+    },
+    "deckPreference": [
+      "nature",
+      "riftbond",
+      "companions"
+    ],
+    "startingCardIds": [
+      "rotr-c-mossprig",
+      "rotr-c-commonspark",
+      "rotr-s-bloom-draft"
+    ],
+    "difficulty": "easy",
+    "visualIdentity": "Travel cloak, satchel, egg-warm amber accents",
+    "portraitPromptId": "art-elara-venn",
+    "relatedRegion": "riftwild-commons",
+    "relatedNpc": "elara"
+  },
+  {
+    "id": "hero-mira-care",
+    "name": "Mira",
+    "title": "Care-Warden of the Plaza",
+    "element": "light",
+    "biography": "Runs the softest shop in the hardest storms — teaches that survival is a deck you rebuild daily.",
+    "personality": [
+      "kind",
+      "practical",
+      "sharp when needed"
+    ],
+    "voice": "Bright midrange, shop-bell cadence",
+    "passive": {
+      "id": "mira-p",
+      "name": "Satchel Ready",
+      "timing": "passive",
+      "text": "The first heal each turn also draws if you are behind on life.",
+      "effects": [
+        {
+          "op": "heal",
+          "value": 0,
+          "aiHint": "conditional draw"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "mira-u",
+      "name": "Soft Victory",
+      "timing": "ultimate",
+      "text": "Ancient: fully heal your hero and grant Ward to all allies.",
+      "energyCost": 9,
+      "effects": [
+        {
+          "op": "ancient_once"
+        },
+        {
+          "op": "ward_grant",
+          "target": "all_allies"
+        }
+      ]
+    },
+    "deckPreference": [
+      "light",
+      "heal",
+      "ward"
+    ],
+    "startingCardIds": [
+      "rotr-s-lantern-lift",
+      "rotr-s-tide-mend",
+      "rotr-e-lantern-badge"
+    ],
+    "difficulty": "easy",
+    "visualIdentity": "Apron, care badges, cyan vials",
+    "portraitPromptId": "art-mira-care",
+    "relatedRegion": "riftwild-commons",
+    "relatedNpc": "mira"
+  },
+  {
+    "id": "hero-kael-forge",
+    "name": "Kael",
+    "title": "Forge-Warden",
+    "element": "fire",
+    "biography": "Believes every blade should be a promise; every duel a tempering.",
+    "personality": [
+      "blunt",
+      "loyal",
+      "perfectionist"
+    ],
+    "voice": "Gravel baritone, hammer rhythm",
+    "passive": {
+      "id": "kael-p",
+      "name": "Temper Line",
+      "timing": "passive",
+      "text": "Equipment you play grants +1 Attack.",
+      "effects": [
+        {
+          "op": "buff_atk",
+          "value": 1
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "kael-u",
+      "name": "White Heat",
+      "timing": "ultimate",
+      "text": "Ancient: Empower your board — +2 Attack this turn.",
+      "energyCost": 8,
+      "effects": [
+        {
+          "op": "empower_scale",
+          "value": 2,
+          "keyword": "empower"
+        }
+      ]
+    },
+    "deckPreference": [
+      "fire",
+      "equipment",
+      "empower"
+    ],
+    "startingCardIds": [
+      "rotr-c-cindercub",
+      "rotr-s-forge-temper",
+      "rotr-e-ember-collar"
+    ],
+    "difficulty": "medium",
+    "visualIdentity": "Scorched apron, ember eyes, iron shoulders",
+    "portraitPromptId": "art-kael-forge",
+    "relatedRegion": "ember-crater"
+  },
+  {
+    "id": "hero-brine",
+    "name": "Captain Brine",
+    "title": "Tide Warrant",
+    "element": "water",
+    "biography": "Privateer who only steals unfair advantages — keeps the rest for the crew.",
+    "personality": [
+      "wry",
+      "brave",
+      "greedy for stories"
+    ],
+    "voice": "Salt-rough tenor",
+    "passive": {
+      "id": "brine-p",
+      "name": "Fair Plunder",
+      "timing": "passive",
+      "text": "When you Overflow, draw a card once/turn.",
+      "effects": [
+        {
+          "op": "draw",
+          "value": 1,
+          "keyword": "overflow"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "brine-u",
+      "name": "Azure Claim",
+      "timing": "ultimate",
+      "text": "Ancient: fill your board edges with 1/1 Spark Fragments.",
+      "energyCost": 7,
+      "effects": [
+        {
+          "op": "summon_token",
+          "tokenId": "rotr-t-spark-fragment",
+          "value": 3
+        }
+      ]
+    },
+    "deckPreference": [
+      "water",
+      "overflow",
+      "tokens"
+    ],
+    "startingCardIds": [
+      "rotr-c-bubbloon",
+      "rotr-s-harbor-fog",
+      "rotr-l-moonwater-pier"
+    ],
+    "difficulty": "medium",
+    "visualIdentity": "Coat with tide-cyan trim, crooked grin",
+    "portraitPromptId": "art-captain-brine",
+    "relatedRegion": "moonwater-coast"
+  },
+  {
+    "id": "hero-solen",
+    "name": "Archivist Solen",
+    "title": "Catalog of Fractures",
+    "element": "arcane",
+    "biography": "Maps every Rift event so no Keeper fights the same mistake twice.",
+    "personality": [
+      "precise",
+      "curious",
+      "dry humor"
+    ],
+    "voice": "Quiet scholarly",
+    "passive": {
+      "id": "solen-p",
+      "name": "Index",
+      "timing": "passive",
+      "text": "Spells cost 1 less for each Location you control (max 2).",
+      "effects": [
+        {
+          "op": "custom",
+          "notes": "spell discount"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "solen-u",
+      "name": "Reprint Memory",
+      "timing": "ultimate",
+      "text": "Ancient: Echo your last spell without surcharge.",
+      "energyCost": 8,
+      "effects": [
+        {
+          "op": "echo_replay",
+          "keyword": "echo"
+        }
+      ]
+    },
+    "deckPreference": [
+      "arcane",
+      "echo",
+      "locations"
+    ],
+    "startingCardIds": [
+      "rotr-s-spirit-echo",
+      "rotr-s-arc-latch",
+      "rotr-l-riftwild-plaza"
+    ],
+    "difficulty": "hard",
+    "visualIdentity": "Spectacles, floating index cards, citadel gold",
+    "portraitPromptId": "art-archivist-solen",
+    "relatedRegion": "radiant-citadel"
+  },
+  {
+    "id": "hero-nyx-hollow",
+    "name": "Nyx",
+    "title": "Threshold Speaker",
+    "element": "void",
+    "biography": "Bargains with silence; teaches Corrupt as a language, not a crime.",
+    "personality": [
+      "calm",
+      "unnerving",
+      "fair"
+    ],
+    "voice": "Near-whisper, exact words",
+    "passive": {
+      "id": "nyx-p",
+      "name": "Residue Well",
+      "timing": "passive",
+      "text": "Corrupt Residue starts at 1.",
+      "effects": [
+        {
+          "op": "corrupt_drain",
+          "value": 0
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "nyx-u",
+      "name": "Eclipse Ledger",
+      "timing": "ultimate",
+      "text": "Ancient: Silence the board, then deal 1 to all enemies.",
+      "energyCost": 9,
+      "effects": [
+        {
+          "op": "silence",
+          "target": "board"
+        },
+        {
+          "op": "deal_damage",
+          "value": 1,
+          "target": "all_enemies"
+        }
+      ]
+    },
+    "deckPreference": [
+      "void",
+      "shadow",
+      "corrupt"
+    ],
+    "startingCardIds": [
+      "rotr-c-voidling",
+      "rotr-s-shade-tax",
+      "rotr-s-corrupt-whisper"
+    ],
+    "difficulty": "hard",
+    "visualIdentity": "Veil of ink, polite smile",
+    "portraitPromptId": "art-nyx-hollow",
+    "relatedRegion": "void-hollow"
+  },
+  {
+    "id": "hero-thorn",
+    "name": "Thorn Keeper",
+    "title": "Elderwood Warden",
+    "element": "nature",
+    "biography": "Talks to moss like neighbors; Bloom decks are just gardening with stakes.",
+    "personality": [
+      "patient",
+      "stern",
+      "gentle"
+    ],
+    "voice": "Low forest hush",
+    "passive": {
+      "id": "thorn-p",
+      "name": "Canopy",
+      "timing": "passive",
+      "text": "Bloom units enter with Ward.",
+      "effects": [
+        {
+          "op": "ward_grant",
+          "keyword": "bloom"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "thorn-u",
+      "name": "Season Turn",
+      "timing": "ultimate",
+      "text": "Ancient: double Bloom stacks on your board.",
+      "energyCost": 8,
+      "effects": [
+        {
+          "op": "bloom_grow",
+          "value": 2
+        }
+      ]
+    },
+    "deckPreference": [
+      "nature",
+      "bloom",
+      "guardian"
+    ],
+    "startingCardIds": [
+      "rotr-c-mossprig",
+      "rotr-c-bramblefox",
+      "rotr-l-elderwood-path"
+    ],
+    "difficulty": "medium",
+    "visualIdentity": "Antler-crown twigs, green cloak",
+    "portraitPromptId": "art-thorn-keeper",
+    "relatedRegion": "elderwood-forest"
+  },
+  {
+    "id": "hero-volta",
+    "name": "Volta",
+    "title": "Peak Ledger",
+    "element": "storm",
+    "biography": "Counts lightning strikes for fun; Charge is just honesty about impatience.",
+    "personality": [
+      "manic",
+      "brilliant",
+      "loyal"
+    ],
+    "voice": "Fast, crackling",
+    "passive": {
+      "id": "volta-p",
+      "name": "Static Index",
+      "timing": "passive",
+      "text": "Charge units you play deal 1 on entry.",
+      "effects": [
+        {
+          "op": "deal_damage",
+          "value": 1,
+          "keyword": "charge"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "volta-u",
+      "name": "Sky Writ",
+      "timing": "ultimate",
+      "text": "Ancient: give Charge to your whole board.",
+      "energyCost": 7,
+      "effects": [
+        {
+          "op": "charge_ready",
+          "target": "all_allies"
+        }
+      ]
+    },
+    "deckPreference": [
+      "storm",
+      "charge",
+      "empower"
+    ],
+    "startingCardIds": [
+      "rotr-c-voltkit",
+      "rotr-c-galekit",
+      "rotr-s-storm-sip"
+    ],
+    "difficulty": "medium",
+    "visualIdentity": "Wind-torn scarf, spark gloves",
+    "portraitPromptId": "art-volta",
+    "relatedRegion": "stormspire-peaks"
+  },
+  {
+    "id": "hero-basalt",
+    "name": "Basalt",
+    "title": "Gate of Stoneheart",
+    "element": "earth",
+    "biography": "Moves like geology — slow until it isn't.",
+    "personality": [
+      "stoic",
+      "protective",
+      "dry jokes"
+    ],
+    "voice": "Rumbling slow",
+    "passive": {
+      "id": "basalt-p",
+      "name": "Keystone",
+      "timing": "passive",
+      "text": "Guardians have +0/+1.",
+      "effects": [
+        {
+          "op": "buff_hp",
+          "value": 1,
+          "keyword": "guardian"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "basalt-u",
+      "name": "Lock the Pass",
+      "timing": "ultimate",
+      "text": "Ancient: summon two Guardian Pebblit tokens.",
+      "energyCost": 8,
+      "effects": [
+        {
+          "op": "summon_token",
+          "tokenId": "rotr-c-pebblit",
+          "value": 2
+        }
+      ]
+    },
+    "deckPreference": [
+      "earth",
+      "guardian",
+      "locations"
+    ],
+    "startingCardIds": [
+      "rotr-c-pebblit",
+      "rotr-c-shalehorn",
+      "rotr-l-stoneheart-gate"
+    ],
+    "difficulty": "easy",
+    "visualIdentity": "Stone pauldrons, canyon ochre",
+    "portraitPromptId": "art-basalt",
+    "relatedRegion": "stoneheart-canyon"
+  },
+  {
+    "id": "hero-lumen",
+    "name": "Lumen",
+    "title": "Choir Lead",
+    "element": "light",
+    "biography": "Believes Harmony is not sameness — it is listening.",
+    "personality": [
+      "empathetic",
+      "disciplined",
+      "hopeful"
+    ],
+    "voice": "Clear soprano speaking voice",
+    "passive": {
+      "id": "lumen-p",
+      "name": "Resonance",
+      "timing": "passive",
+      "text": "Harmony triggers an extra heal 1.",
+      "effects": [
+        {
+          "op": "heal",
+          "value": 1,
+          "keyword": "harmony"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "lumen-u",
+      "name": "Full Choir",
+      "timing": "ultimate",
+      "text": "Ancient: set all ally elements to Light this turn for Harmony.",
+      "energyCost": 9,
+      "effects": [
+        {
+          "op": "harmony_buff",
+          "value": 1
+        }
+      ]
+    },
+    "deckPreference": [
+      "light",
+      "harmony",
+      "ward"
+    ],
+    "startingCardIds": [
+      "rotr-c-luminara",
+      "rotr-c-dawnkit",
+      "rotr-l-citadel-choir"
+    ],
+    "difficulty": "hard",
+    "visualIdentity": "White-gold vestments, soft halo motes",
+    "portraitPromptId": "art-lumen",
+    "relatedRegion": "radiant-citadel"
+  },
+  {
+    "id": "hero-cog",
+    "name": "Cogmother",
+    "title": "Alloy Tender",
+    "element": "metal",
+    "biography": "Oils Gearlings like grandchildren; builds decks like machines that forgive.",
+    "personality": [
+      "inventive",
+      "nurturing",
+      "stubborn"
+    ],
+    "voice": "Warm with metallic consonants",
+    "passive": {
+      "id": "cog-p",
+      "name": "Spare Parts",
+      "timing": "passive",
+      "text": "When a Metal unit dies, gain a Spark Fragment.",
+      "effects": [
+        {
+          "op": "summon_token",
+          "tokenId": "rotr-t-spark-fragment"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "cog-u",
+      "name": "Assembly Hymn",
+      "timing": "ultimate",
+      "text": "Ancient: equip all allies with a temporary +1/+1.",
+      "energyCost": 8,
+      "effects": [
+        {
+          "op": "buff_atk",
+          "value": 1
+        },
+        {
+          "op": "buff_hp",
+          "value": 1
+        }
+      ]
+    },
+    "deckPreference": [
+      "metal",
+      "equipment",
+      "tokens"
+    ],
+    "startingCardIds": [
+      "rotr-c-gearling",
+      "rotr-c-cogpup",
+      "rotr-r-forge-relic"
+    ],
+    "difficulty": "medium",
+    "visualIdentity": "Goggles, brass vines, kind eyes",
+    "portraitPromptId": "art-cogmother",
+    "relatedRegion": "alloy-ruins"
+  },
+  {
+    "id": "hero-astral",
+    "name": "Astral",
+    "title": "Rift Astronomer",
+    "element": "celestial",
+    "biography": "Charts Celestial Rift openings like tides; mythic lines are just math with wonder.",
+    "personality": [
+      "aloof",
+      "kind",
+      "obsessive"
+    ],
+    "voice": "Soft, distant",
+    "passive": {
+      "id": "astral-p",
+      "name": "Orbit",
+      "timing": "passive",
+      "text": "Once/game, Celestial counts as any element for Harmony.",
+      "effects": [
+        {
+          "op": "harmony_buff",
+          "notes": "once"
+        }
+      ]
+    },
+    "ultimate": {
+      "id": "astral-u",
+      "name": "Open Gate",
+      "timing": "ultimate",
+      "text": "Ancient: gain 3 energy and Awaken a unit.",
+      "energyCost": 10,
+      "effects": [
+        {
+          "op": "gain_energy",
+          "value": 3
+        },
+        {
+          "op": "awaken_transform"
+        }
+      ]
+    },
+    "deckPreference": [
+      "celestial",
+      "awaken",
+      "ramp"
+    ],
+    "startingCardIds": [
+      "rotr-c-celestora",
+      "rotr-s-star-dust",
+      "rotr-a-artifact-gate-key"
+    ],
+    "difficulty": "expert",
+    "visualIdentity": "Star-map cloak, calm eyes",
+    "portraitPromptId": "art-astral",
+    "relatedRegion": "celestial-rift"
+  }
+]

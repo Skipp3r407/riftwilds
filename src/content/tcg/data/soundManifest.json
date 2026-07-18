@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "notes": "Cue IDs only — wire to audio bus later. Prefer original/procedural SFX.",
+  "cues": [
+    {
+      "id": "sfx/tcg/death_soft",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_arcane",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_celestial",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_crystal",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_earth",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_fire",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_light",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_metal",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_nature",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_neutral",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_poison",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_shadow",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_spirit",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_storm",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_void",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/hit_water",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_arcane",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_celestial",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_crystal",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_earth",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_fire",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_light",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_metal",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_nature",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_neutral",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_poison",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_shadow",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_spirit",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_storm",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_void",
+      "bus": "combat",
+      "status": "placeholder"
+    },
+    {
+      "id": "sfx/tcg/play_water",
+      "bus": "combat",
+      "status": "placeholder"
+    }
+  ]
+}
