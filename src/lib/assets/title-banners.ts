@@ -27,6 +27,7 @@ const TITLE_ATMOSPHERE: Record<string, string> = {
   world: `${WALLPAPER_DIR}/world.png`,
   "live-world": `${WALLPAPER_DIR}/live-world.png`,
   live: `${WALLPAPER_DIR}/live-world.png`,
+  restoration: `${WALLPAPER_DIR}/world-restoration.png`,
   arena: `${WALLPAPER_DIR}/arena.png`,
   marketplace: `${WALLPAPER_DIR}/marketplace.png`,
   shop: `${WALLPAPER_DIR}/shop.png`,

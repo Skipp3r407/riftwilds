@@ -36,6 +36,16 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-restoration-wallpaper",
+    date: "2026-07-18",
+    title: "World Restoration atmospheric wallpaper",
+    summary:
+      "World Restoration gets a full-bleed Riftwilds landscape background so the living-world dashboard feels restored instead of flat scanlines.",
+    added: [
+      "Full-bleed World Restoration wallpaper (rift sky, forests, forges, coasts) on /restoration",
+    ],
+  },
+  {
     id: "2026-07-18-tcg-creature-bio-images",
     date: "2026-07-18",
     title: "Illustrated Creature Bio sections",
