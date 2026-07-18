@@ -107,7 +107,9 @@
     "mp4Rendered": true,
     "comicFrames": true,
     "ttsVoiceover": true,
-    "ttsProvider": "windows-sapi",
+    "ttsProvider": "elevenlabs-or-edge-or-sapi",
+    "elevenlabsNarrationDocs": "docs/audio/ELEVENLABS_NARRATION.md",
+    "elevenlabsNarrateScript": "npm run assets:narrate",
     "musicDucking": true,
     "gameplayCapture": false
   }

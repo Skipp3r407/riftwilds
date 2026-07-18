@@ -1,38 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="850" height="1100" viewBox="0 0 850 1100">
   <rect width="850" height="1100" fill="#ffffff"/>
   <rect x="28" y="28" width="794" height="1044" fill="none" stroke="#1a1a1a" stroke-width="3" rx="8"/>
   <text x="425" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1a1a1a">Riftwild Commons</text>
-  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page</text>
-  <g transform="translate(0, 40)" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    
-      <!-- sky hills -->
-      <path d="M60 420 Q200 280 360 360 Q500 260 680 340 Q760 300 790 360 L790 820 L60 820 Z" stroke-width="2.5"/>
-      <!-- fountain -->
-      <ellipse cx="425" cy="620" rx="120" ry="28"/>
-      <path d="M340 620 L360 520 L490 520 L510 620"/>
-      <ellipse cx="425" cy="520" rx="70" ry="16"/>
-      <path d="M390 520 L400 460 L450 460 L460 520"/>
-      <ellipse cx="425" cy="460" rx="40" ry="12"/>
-      <circle cx="425" cy="430" r="14"/>
-      <path d="M425 416 Q410 390 425 370 Q440 390 425 416" stroke-width="2"/>
-      <!-- plaza stones -->
-      <path d="M120 720 L730 720"/>
-      <path d="M160 760 L690 760"/>
-      <path d="M200 800 L650 800"/>
-      <!-- banners -->
-      <path d="M180 380 L180 520"/>
-      <path d="M180 380 Q210 400 180 430 Q150 400 180 380"/>
-      <path d="M670 360 L670 500"/>
-      <path d="M670 360 Q700 380 670 410 Q640 380 670 360"/>
-      <!-- gateway stones far -->
-      <rect x="140" y="480" width="36" height="90" rx="4"/>
-      <rect x="674" y="470" width="36" height="100" rx="4"/>
-      <!-- sun -->
-      <circle cx="680" cy="200" r="42"/>
-      <path d="M680 140 L680 120 M730 160 L745 145 M740 200 L760 200 M730 240 L745 255 M680 260 L680 280 M630 240 L615 255 M620 200 L600 200 M630 160 L615 145" stroke-width="2"/>
-      <text x="425" y="900" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#222" stroke="none">Welcome to the Commons plaza</text>
-    
-  </g>
+  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page · game sketch</text>
+  <image x="60" y="130" width="730" height="880" preserveAspectRatio="xMidYMid meet" xlink:href="riftwild-commons.png"/>
   <text x="425" y="1068" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#555555">Free for personal &amp; kids use · Not for resale · riftwilds.com</text>
 </svg>

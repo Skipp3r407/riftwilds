@@ -45,6 +45,8 @@ type VersionId = (typeof VERSIONS)[number]["id"];
 /**
  * Marketing commercial block — comic-cinematic MP4s (colorful Riftling panels),
  * music bed + AI narrator VO baked in, captions, posters.
+ * Regenerate VO with ElevenLabs: npm run assets:narrate -- --commercials
+ * then npm run commercials:build (see docs/audio/ELEVENLABS_NARRATION.md).
  * No loud autoplay. CTA language matches closed alpha.
  */
 export function CommercialShowcase() {

@@ -2,6 +2,8 @@
 
 Configurable hubs that attract keepers and grant small Presence multipliers.
 
+For **friends, private messages, blocks, and the `/social` inbox**, see [FRIENDS_AND_PM.md](./FRIENDS_AND_PM.md).
+
 ## Hub types
 
 Town square · marketplace · tavern · inn · park · beach · fishing dock · library · guild hall · festival grounds · home district · campground · Riftling park · music stage · arena viewing · crafting plaza · port · sanctuary · public farm · **new-player welcome center**

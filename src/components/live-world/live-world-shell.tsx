@@ -333,6 +333,10 @@ export function LiveWorldShell({ playable }: Props) {
           input.closePanel();
           return;
         }
+        // Chat panel collapses to peek on Escape; do not open pause.
+        if (panel === "chat") {
+          return;
+        }
         if (!panel || panel === "pause") {
           setShowPause((v) => {
             const nextOpen = !v;
@@ -621,14 +625,11 @@ export function LiveWorldShell({ playable }: Props) {
                       reveal("manual");
                     }}
                   />
-                  <p className="pointer-events-none text-center text-[9px] text-[var(--text-dim)]">
-                    WASD · Shift sprint · E interact · T emotes · M map
-                  </p>
                 </div>
               </HudLayer>
             ) : null}
 
-            {/* Top-right utility pills */}
+            {/* Top-right utility: goals + fullscreen icon + system menu */}
             {showLayer("credits") ? (
               <HudLayer opacity={hudOpacity} settings={settings}>
                 <div className={topRightUtilityClass()} data-testid="live-world-top-right-utils">
@@ -642,30 +643,28 @@ export function LiveWorldShell({ playable }: Props) {
                         reveal("manual");
                       }}
                     >
-                      {showMapGoals ? "Hide goals" : "Map goals"}
+                      {showMapGoals ? "Hide goals" : "Goals"}
                     </button>
                   ) : null}
                   <FullscreenToggleButton
                     active={fullscreen.active}
                     onToggle={toggleFullscreen}
-                    compact
+                    iconOnly
+                    className={`${LW_HUD_BTN} pointer-events-auto !px-2`}
                   />
                   <button
                     type="button"
                     className={`${LW_HUD_BTN} pointer-events-auto`}
+                    title="System menu (Esc)"
+                    aria-label="Open system menu"
                     onClick={() => {
                       playSfx("ui.click");
-                      void fullscreen.exit();
-                      stopAmbient(400);
-                      void startMenuAmbient(800);
-                      void playMenuMusic(900);
-                      setEntered(false);
-                      setReady(false);
-                      setProgress(0);
-                      setPhotoMode(false);
+                      setShowPause(true);
+                      getInputManager().setActivePanel("pause");
+                      reveal("menu");
                     }}
                   >
-                    Exit world
+                    Menu
                   </button>
                 </div>
               </HudLayer>
@@ -718,6 +717,7 @@ export function LiveWorldShell({ playable }: Props) {
                     <LiveWorldChatPanel
                       bridge={bridge}
                       chatMode={settings.chatMode}
+                      onChatModeChange={(chatMode) => updateSettings({ chatMode })}
                       onRevealHud={revealHudMessage}
                       stacked
                       panelLayout={settings.hudPanelLayout}
@@ -763,6 +763,11 @@ export function LiveWorldShell({ playable }: Props) {
                 >
                   <RightColumnHud
                     snapshot={socialPresence.snapshot}
+                    nearbyOpen={settings.nearbyDrawerOpen}
+                    onNearbyOpenChange={(nearbyDrawerOpen) => {
+                      updateSettings({ nearbyDrawerOpen });
+                      reveal("manual");
+                    }}
                     minimap={
                       bridge &&
                       showLayer("minimap") &&
@@ -796,6 +801,18 @@ export function LiveWorldShell({ playable }: Props) {
                     <ActionHotbar
                       onAction={(id: HotbarActionId) => {
                         reveal("manual");
+                        if (id === "chat") {
+                          getInputManager().pulseAction("openChat");
+                          return;
+                        }
+                        if (id === "emote") {
+                          getInputManager().pulseAction("openEmoteWheel");
+                          return;
+                        }
+                        if (id === "interact") {
+                          bridge?.queueInteract();
+                          return;
+                        }
                         if (!bridge) return;
                         if (id === "map") bridge.openWorldMap();
                         if (id === "inventory") {
@@ -852,6 +869,7 @@ export function LiveWorldShell({ playable }: Props) {
                     <LiveWorldChatPanel
                       bridge={bridge}
                       chatMode={settings.chatMode}
+                      onChatModeChange={(chatMode) => updateSettings({ chatMode })}
                       onRevealHud={revealHudMessage}
                       panelLayout={settings.hudPanelLayout}
                       onPanelPositionChange={(pos) => setPanelPosition("chat", pos)}

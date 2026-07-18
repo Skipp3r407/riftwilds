@@ -323,7 +323,7 @@ export function SiteHeader(_props: Props = {}) {
             <Image
               src={brandWordmarkPath}
               alt="Riftwilds"
-              width={497}
+              width={491}
               height={140}
               priority
               unoptimized
@@ -366,6 +366,16 @@ export function SiteHeader(_props: Props = {}) {
               )}
             >
               Help
+            </Link>
+            <Link
+              href="/feedback"
+              onClick={() => playSfx("ui.nav")}
+              className={cn(
+                "hud-nav__link focus-ring",
+                linkActive(pathname, "/feedback") && "hud-nav__link--active",
+              )}
+            >
+              Feedback
             </Link>
           </nav>
 
@@ -458,6 +468,19 @@ export function SiteHeader(_props: Props = {}) {
               }}
             >
               Academy / Help
+            </Link>
+            <Link
+              href="/feedback"
+              className={cn(
+                "hud-nav__drawer-link focus-ring",
+                linkActive(pathname, "/feedback") && "hud-nav__drawer-link--active",
+              )}
+              onClick={() => {
+                playSfx("ui.nav");
+                closeMobile();
+              }}
+            >
+              Feedback / Bug Report
             </Link>
           </div>
         </nav>

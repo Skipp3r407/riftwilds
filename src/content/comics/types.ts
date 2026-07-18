@@ -157,6 +157,8 @@ export type ComicProgressState = {
     highContrast: boolean;
     musicEnabled: boolean;
     sfxEnabled: boolean;
+    /** Pre-generated ElevenLabs page VO (silent if clips missing) */
+    narrationEnabled: boolean;
     zoom: number;
   };
 };

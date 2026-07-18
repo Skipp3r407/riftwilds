@@ -8,10 +8,10 @@ import { projectConfig } from "@/lib/config/project";
 export const metadata: Metadata = {
   title: "Coloring Pages | Kids Corner",
   description:
-    "Free printable Riftwilds coloring pages for kids and families — Spark, Commons, Circus, and more.",
+    "Free printable Riftwilds coloring pages — detailed game-sketch line art of Spark, Commons, Circus, and more.",
   openGraph: {
     title: "Riftwilds Coloring Pages",
-    description: "Printable Riftling coloring sheets — free for personal and kids’ use.",
+    description: "Printable game-sketch Riftling sheets — free for personal and kids’ use.",
     images: [{ url: "/assets/coloring/spark.png" }],
   },
 };
@@ -25,13 +25,16 @@ export default function ColoringPage() {
         <p className="page-kicker">Parents &amp; kids</p>
         <h1 className="font-display mt-3 text-4xl text-white md:text-5xl">Coloring Pages</h1>
         <p className="mt-4 max-w-2xl text-sm text-[var(--text-muted)] md:text-base">
-          Printable line art from {projectConfig.UNIVERSE_NAME}. Free for personal and kids’ use —
-          crayons welcome.
+          Printable game-sketch line art from {projectConfig.UNIVERSE_NAME} — concept-style outlines
+          kids can color. Free for personal use; crayons welcome.
         </p>
         <p className="mt-2 text-xs text-[var(--text-dim)]">{COLORING_CREDIT}</p>
         <div className="mt-6 flex flex-wrap gap-2">
           <Link href="/fan-kit#kids" className="btn-secondary focus-ring text-sm">
             Parents &amp; Kids Corner
+          </Link>
+          <Link href="/printables" className="btn-secondary focus-ring text-sm">
+            300 DPI printables
           </Link>
           <Link href="/comics" className="btn-secondary focus-ring text-sm">
             Comics
@@ -89,6 +92,19 @@ export default function ColoringPage() {
       </section>
 
       <WallpaperDownloads showIndexLink={false} />
+
+      <section className="panel flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h2 className="font-display text-lg text-white">Full-color 300 DPI printables</h2>
+          <p className="mt-1 text-sm text-[var(--text-muted)]">
+            Sticker sheets, posters, bookmarks, trading cards, and a circus party invite — separate
+            from these line-art coloring pages.
+          </p>
+        </div>
+        <Link href="/printables" className="btn-primary focus-ring shrink-0 text-sm">
+          Open printables
+        </Link>
+      </section>
 
       <section className="panel flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
         <div>

@@ -1,5 +1,12 @@
 /**
- * Generate original Riftwilds kids coloring sheets + desktop wallpapers.
+ * Generate Riftwilds desktop wallpapers (+ legacy geometric coloring SVGs).
+ *
+ * Coloring sheets are now game-sketch line art installed by:
+ *   node scripts/assets/install-coloring-sketches.mjs
+ *
+ * This script still builds wallpapers. Coloring SVG art below is retained as
+ * fallback only — set WRITE_LEGACY_COLORING=1 to overwrite sketch PNGs/PDFs.
+ *
  * Run: node scripts/assets/generate-coloring-and-wallpapers.mjs
  */
 import fs from "node:fs";
@@ -764,15 +771,33 @@ async function writeWallpaper(theme) {
 async function main() {
   ensureDir(COLORING_DIR);
   ensureDir(WALLPAPER_DIR);
-  console.log("Generating coloring sheets…");
-  for (const sheet of COLORING) {
-    await writeColoringSheet(sheet);
+  const writeLegacyColoring = process.env.WRITE_LEGACY_COLORING === "1";
+  if (writeLegacyColoring) {
+    console.log("Generating LEGACY geometric coloring sheets (overwrites sketches)…");
+    for (const sheet of COLORING) {
+      await writeColoringSheet(sheet);
+    }
+  } else {
+    console.log(
+      "Skipping coloring sheets (game sketches). Use install-coloring-sketches.mjs, or WRITE_LEGACY_COLORING=1.",
+    );
   }
-  console.log("Generating wallpapers…");
-  for (const wp of WALLPAPERS) {
-    await writeWallpaper(wp);
+  // Battle cinematic PNGs live in public/assets/wallpapers/*.png (GenerateImage).
+  // Abstract SVG wallpapers are legacy — only rewrite when forced.
+  const writeLegacyWallpapers = process.env.WRITE_LEGACY_WALLPAPERS === "1";
+  if (writeLegacyWallpapers) {
+    console.log("Generating LEGACY geometric wallpapers (overwrites battle PNGs)…");
+    for (const wp of WALLPAPERS) {
+      await writeWallpaper(wp);
+    }
+  } else {
+    console.log(
+      "Skipping wallpapers (cinematic battle PNGs). Set WRITE_LEGACY_WALLPAPERS=1 to overwrite with geometric SVGs.",
+    );
   }
-  console.log(`Done. ${COLORING.length} coloring + ${WALLPAPERS.length} wallpapers.`);
+  console.log(
+    `Done. ${writeLegacyColoring ? COLORING.length : 0} coloring + ${writeLegacyWallpapers ? WALLPAPERS.length : 0} wallpapers.`,
+  );
 }
 
 main().catch((err) => {

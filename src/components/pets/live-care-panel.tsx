@@ -219,9 +219,10 @@ export function LiveCarePanel({ publicPetId }: { publicPetId: string }) {
           : action === "REST" || action === "SLEEP"
             ? "idle"
             : "cry";
-      if (pet.speciesSlug) {
-        playRiftlingCry(pet.speciesSlug, { mood });
-        setCompanionSpeciesSlug(pet.speciesSlug);
+      const speciesSlug = pet?.speciesSlug;
+      if (speciesSlug) {
+        playRiftlingCry(speciesSlug, { mood });
+        setCompanionSpeciesSlug(speciesSlug);
       }
       setPet(data.pet);
       if (typeof data.care?.creditsBalance === "number") {

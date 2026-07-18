@@ -1,0 +1,4685 @@
+{
+  "version": 2,
+  "installedAt": "2026-07-18T17:02:46.090Z",
+  "catalogCount": 1284,
+  "worldPackCount": 232,
+  "engineNote": "No XAI_API_KEY — procedural SVG quality pass installed into Live World",
+  "byFamily": {
+    "tree": 28,
+    "bush": 14,
+    "flower": 16,
+    "mushroom": 12,
+    "grass": 8,
+    "rock": 10,
+    "crate": 11,
+    "barrel": 10,
+    "lantern": 12,
+    "sign": 10,
+    "furniture": 10,
+    "goods": 10,
+    "tool": 6,
+    "stall": 10,
+    "fence": 10,
+    "gate": 4,
+    "bridge": 3,
+    "dock": 3,
+    "wall": 5,
+    "door": 4,
+    "animal": 14,
+    "riftling": 8,
+    "npc": 10,
+    "keeper": 4
+  },
+  "props": [
+    {
+      "id": "tree-oak-summer-mature",
+      "key": "lw-tree-oak-summer-mature",
+      "path": "/assets/game/props/lw-tree-oak-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-oak-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "oak",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-pine-summer-mature",
+      "key": "lw-tree-pine-summer-mature",
+      "path": "/assets/game/props/lw-tree-pine-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-pine-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "pine",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-birch-summer-mature",
+      "key": "lw-tree-birch-summer-mature",
+      "path": "/assets/game/props/lw-tree-birch-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-birch-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "birch",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-willow-summer-mature",
+      "key": "lw-tree-willow-summer-mature",
+      "path": "/assets/game/props/lw-tree-willow-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-willow-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "willow",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-maple-summer-mature",
+      "key": "lw-tree-maple-summer-mature",
+      "path": "/assets/game/props/lw-tree-maple-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-maple-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "maple",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-ash-summer-mature",
+      "key": "lw-tree-ash-summer-mature",
+      "path": "/assets/game/props/lw-tree-ash-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-ash-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "ash",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-elder-summer-mature",
+      "key": "lw-tree-elder-summer-mature",
+      "path": "/assets/game/props/lw-tree-elder-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-elder-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "elder",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-rift-crystal-summer-mature",
+      "key": "lw-tree-rift-crystal-summer-mature",
+      "path": "/assets/game/props/lw-tree-rift-crystal-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-rift-crystal-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "rift-crystal",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-orchard-summer-mature",
+      "key": "lw-tree-orchard-summer-mature",
+      "path": "/assets/game/props/lw-tree-orchard-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-orchard-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "orchard",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-flowering-summer-mature",
+      "key": "lw-tree-flowering-summer-mature",
+      "path": "/assets/game/props/lw-tree-flowering-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-flowering-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "flowering",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-cypress-summer-mature",
+      "key": "lw-tree-cypress-summer-mature",
+      "path": "/assets/game/props/lw-tree-cypress-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-cypress-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "cypress",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-mangrove-summer-mature",
+      "key": "lw-tree-mangrove-summer-mature",
+      "path": "/assets/game/props/lw-tree-mangrove-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-mangrove-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "mangrove",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-aspen-summer-mature",
+      "key": "lw-tree-aspen-summer-mature",
+      "path": "/assets/game/props/lw-tree-aspen-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-aspen-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "aspen",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-hollow-summer-mature",
+      "key": "lw-tree-hollow-summer-mature",
+      "path": "/assets/game/props/lw-tree-hollow-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-hollow-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "hollow",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-twin-trunk-summer-mature",
+      "key": "lw-tree-twin-trunk-summer-mature",
+      "path": "/assets/game/props/lw-tree-twin-trunk-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-twin-trunk-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "twin-trunk",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-canopy-umbrella-summer-mature",
+      "key": "lw-tree-canopy-umbrella-summer-mature",
+      "path": "/assets/game/props/lw-tree-canopy-umbrella-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-canopy-umbrella-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "canopy-umbrella",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-moss-tower-summer-mature",
+      "key": "lw-tree-moss-tower-summer-mature",
+      "path": "/assets/game/props/lw-tree-moss-tower-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-moss-tower-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "moss-tower",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-ember-bark-summer-mature",
+      "key": "lw-tree-ember-bark-summer-mature",
+      "path": "/assets/game/props/lw-tree-ember-bark-summer-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-ember-bark-summer-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "ember-bark",
+        "summer",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-oak-autumn-mature",
+      "key": "lw-tree-oak-autumn-mature",
+      "path": "/assets/game/props/lw-tree-oak-autumn-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-oak-autumn-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "oak",
+        "autumn",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-pine-autumn-mature",
+      "key": "lw-tree-pine-autumn-mature",
+      "path": "/assets/game/props/lw-tree-pine-autumn-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-pine-autumn-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "pine",
+        "autumn",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-birch-autumn-mature",
+      "key": "lw-tree-birch-autumn-mature",
+      "path": "/assets/game/props/lw-tree-birch-autumn-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-birch-autumn-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "birch",
+        "autumn",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-willow-autumn-mature",
+      "key": "lw-tree-willow-autumn-mature",
+      "path": "/assets/game/props/lw-tree-willow-autumn-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-willow-autumn-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "willow",
+        "autumn",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-maple-autumn-mature",
+      "key": "lw-tree-maple-autumn-mature",
+      "path": "/assets/game/props/lw-tree-maple-autumn-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-maple-autumn-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "maple",
+        "autumn",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-ash-autumn-mature",
+      "key": "lw-tree-ash-autumn-mature",
+      "path": "/assets/game/props/lw-tree-ash-autumn-mature.png",
+      "libraryPath": "/assets/game/library/trees/tree-ash-autumn-mature.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "ash",
+        "autumn",
+        "mature",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-oak-spring-sapling",
+      "key": "lw-tree-oak-spring-sapling",
+      "path": "/assets/game/props/lw-tree-oak-spring-sapling.png",
+      "libraryPath": "/assets/game/library/trees/tree-oak-spring-sapling.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "oak",
+        "spring",
+        "sapling",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-pine-spring-sapling",
+      "key": "lw-tree-pine-spring-sapling",
+      "path": "/assets/game/props/lw-tree-pine-spring-sapling.png",
+      "libraryPath": "/assets/game/library/trees/tree-pine-spring-sapling.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "pine",
+        "spring",
+        "sapling",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-birch-spring-sapling",
+      "key": "lw-tree-birch-spring-sapling",
+      "path": "/assets/game/props/lw-tree-birch-spring-sapling.png",
+      "libraryPath": "/assets/game/library/trees/tree-birch-spring-sapling.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "birch",
+        "spring",
+        "sapling",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "tree-willow-spring-sapling",
+      "key": "lw-tree-willow-spring-sapling",
+      "path": "/assets/game/props/lw-tree-willow-spring-sapling.png",
+      "libraryPath": "/assets/game/library/trees/tree-willow-spring-sapling.webp",
+      "category": "trees",
+      "family": "tree",
+      "layer": "overhead",
+      "tags": [
+        "tree",
+        "canopy",
+        "willow",
+        "spring",
+        "sapling",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-berry-summer-large",
+      "key": "lw-bush-berry-summer-large",
+      "path": "/assets/game/props/lw-bush-berry-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-berry-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "berry",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-thorn-summer-large",
+      "key": "lw-bush-thorn-summer-large",
+      "path": "/assets/game/props/lw-bush-thorn-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-thorn-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "thorn",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-moss-summer-large",
+      "key": "lw-bush-moss-summer-large",
+      "path": "/assets/game/props/lw-bush-moss-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-moss-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "moss",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-fern-summer-large",
+      "key": "lw-bush-fern-summer-large",
+      "path": "/assets/game/props/lw-bush-fern-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-fern-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "fern",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-heather-summer-large",
+      "key": "lw-bush-heather-summer-large",
+      "path": "/assets/game/props/lw-bush-heather-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-heather-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "heather",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-lavender-rift-summer-large",
+      "key": "lw-bush-lavender-rift-summer-large",
+      "path": "/assets/game/props/lw-bush-lavender-rift-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-lavender-rift-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "lavender-rift",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-holly-summer-large",
+      "key": "lw-bush-holly-summer-large",
+      "path": "/assets/game/props/lw-bush-holly-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-holly-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "holly",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-bramble-summer-large",
+      "key": "lw-bush-bramble-summer-large",
+      "path": "/assets/game/props/lw-bush-bramble-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-bramble-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "bramble",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-sage-summer-large",
+      "key": "lw-bush-sage-summer-large",
+      "path": "/assets/game/props/lw-bush-sage-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-sage-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "sage",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-juniper-summer-large",
+      "key": "lw-bush-juniper-summer-large",
+      "path": "/assets/game/props/lw-bush-juniper-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-juniper-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "juniper",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-rosehip-summer-large",
+      "key": "lw-bush-rosehip-summer-large",
+      "path": "/assets/game/props/lw-bush-rosehip-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-rosehip-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "rosehip",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-cloudberry-summer-large",
+      "key": "lw-bush-cloudberry-summer-large",
+      "path": "/assets/game/props/lw-bush-cloudberry-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-cloudberry-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "cloudberry",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-rift-bloom-summer-large",
+      "key": "lw-bush-rift-bloom-summer-large",
+      "path": "/assets/game/props/lw-bush-rift-bloom-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-rift-bloom-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "rift-bloom",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "bush-ember-scrub-summer-large",
+      "key": "lw-bush-ember-scrub-summer-large",
+      "path": "/assets/game/props/lw-bush-ember-scrub-summer-large.png",
+      "libraryPath": "/assets/game/library/bushes/bush-ember-scrub-summer-large.webp",
+      "category": "bushes",
+      "family": "bush",
+      "layer": "prop",
+      "tags": [
+        "bush",
+        "ember-scrub",
+        "summer",
+        "large",
+        "vegetation"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-dawnpetal-moss-small",
+      "key": "lw-flower-dawnpetal-moss-small",
+      "path": "/assets/game/props/lw-flower-dawnpetal-moss-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-dawnpetal-moss-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "dawnpetal",
+        "moss",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-dawnpetal-amber-small",
+      "key": "lw-flower-dawnpetal-amber-small",
+      "path": "/assets/game/props/lw-flower-dawnpetal-amber-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-dawnpetal-amber-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "dawnpetal",
+        "amber",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-dawnpetal-cyan-small",
+      "key": "lw-flower-dawnpetal-cyan-small",
+      "path": "/assets/game/props/lw-flower-dawnpetal-cyan-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-dawnpetal-cyan-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "dawnpetal",
+        "cyan",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-riftlily-moss-small",
+      "key": "lw-flower-riftlily-moss-small",
+      "path": "/assets/game/props/lw-flower-riftlily-moss-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-riftlily-moss-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "riftlily",
+        "moss",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-riftlily-amber-small",
+      "key": "lw-flower-riftlily-amber-small",
+      "path": "/assets/game/props/lw-flower-riftlily-amber-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-riftlily-amber-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "riftlily",
+        "amber",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-riftlily-cyan-small",
+      "key": "lw-flower-riftlily-cyan-small",
+      "path": "/assets/game/props/lw-flower-riftlily-cyan-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-riftlily-cyan-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "riftlily",
+        "cyan",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-ambercup-moss-small",
+      "key": "lw-flower-ambercup-moss-small",
+      "path": "/assets/game/props/lw-flower-ambercup-moss-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-ambercup-moss-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "ambercup",
+        "moss",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-ambercup-amber-small",
+      "key": "lw-flower-ambercup-amber-small",
+      "path": "/assets/game/props/lw-flower-ambercup-amber-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-ambercup-amber-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "ambercup",
+        "amber",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-ambercup-cyan-small",
+      "key": "lw-flower-ambercup-cyan-small",
+      "path": "/assets/game/props/lw-flower-ambercup-cyan-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-ambercup-cyan-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "ambercup",
+        "cyan",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-mossbell-moss-small",
+      "key": "lw-flower-mossbell-moss-small",
+      "path": "/assets/game/props/lw-flower-mossbell-moss-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-mossbell-moss-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "mossbell",
+        "moss",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-mossbell-amber-small",
+      "key": "lw-flower-mossbell-amber-small",
+      "path": "/assets/game/props/lw-flower-mossbell-amber-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-mossbell-amber-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "mossbell",
+        "amber",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-mossbell-cyan-small",
+      "key": "lw-flower-mossbell-cyan-small",
+      "path": "/assets/game/props/lw-flower-mossbell-cyan-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-mossbell-cyan-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "mossbell",
+        "cyan",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-skythistle-moss-small",
+      "key": "lw-flower-skythistle-moss-small",
+      "path": "/assets/game/props/lw-flower-skythistle-moss-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-skythistle-moss-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "skythistle",
+        "moss",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-skythistle-amber-small",
+      "key": "lw-flower-skythistle-amber-small",
+      "path": "/assets/game/props/lw-flower-skythistle-amber-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-skythistle-amber-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "skythistle",
+        "amber",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-skythistle-cyan-small",
+      "key": "lw-flower-skythistle-cyan-small",
+      "path": "/assets/game/props/lw-flower-skythistle-cyan-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-skythistle-cyan-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "skythistle",
+        "cyan",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "flower-hearthbloom-moss-small",
+      "key": "lw-flower-hearthbloom-moss-small",
+      "path": "/assets/game/props/lw-flower-hearthbloom-moss-small.png",
+      "libraryPath": "/assets/game/library/flowers/flower-hearthbloom-moss-small.webp",
+      "category": "flowers",
+      "family": "flower",
+      "layer": "prop",
+      "tags": [
+        "flower",
+        "hearthbloom",
+        "moss",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-cap-amber-small",
+      "key": "lw-mushroom-cap-amber-small",
+      "path": "/assets/game/props/lw-mushroom-cap-amber-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-cap-amber-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "cap-amber",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-cap-cyan-small",
+      "key": "lw-mushroom-cap-cyan-small",
+      "path": "/assets/game/props/lw-mushroom-cap-cyan-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-cap-cyan-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "cap-cyan",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-shelf-small",
+      "key": "lw-mushroom-shelf-small",
+      "path": "/assets/game/props/lw-mushroom-shelf-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-shelf-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "shelf",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-cluster-small",
+      "key": "lw-mushroom-cluster-small",
+      "path": "/assets/game/props/lw-mushroom-cluster-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-cluster-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "cluster",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-glow-spore-small",
+      "key": "lw-mushroom-glow-spore-small",
+      "path": "/assets/game/props/lw-mushroom-glow-spore-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-glow-spore-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "glow-spore",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-hollow-stem-small",
+      "key": "lw-mushroom-hollow-stem-small",
+      "path": "/assets/game/props/lw-mushroom-hollow-stem-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-hollow-stem-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "hollow-stem",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-rift-morel-small",
+      "key": "lw-mushroom-rift-morel-small",
+      "path": "/assets/game/props/lw-mushroom-rift-morel-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-rift-morel-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "rift-morel",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-ember-puff-small",
+      "key": "lw-mushroom-ember-puff-small",
+      "path": "/assets/game/props/lw-mushroom-ember-puff-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-ember-puff-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "ember-puff",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-frost-cap-small",
+      "key": "lw-mushroom-frost-cap-small",
+      "path": "/assets/game/props/lw-mushroom-frost-cap-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-frost-cap-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "frost-cap",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-tide-gill-small",
+      "key": "lw-mushroom-tide-gill-small",
+      "path": "/assets/game/props/lw-mushroom-tide-gill-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-tide-gill-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "tide-gill",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-spirit-bell-small",
+      "key": "lw-mushroom-spirit-bell-small",
+      "path": "/assets/game/props/lw-mushroom-spirit-bell-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-spirit-bell-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "spirit-bell",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "mushroom-stone-bracket-small",
+      "key": "lw-mushroom-stone-bracket-small",
+      "path": "/assets/game/props/lw-mushroom-stone-bracket-small.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-stone-bracket-small.webp",
+      "category": "mushrooms",
+      "family": "mushroom",
+      "layer": "prop",
+      "tags": [
+        "mushroom",
+        "stone-bracket",
+        "small"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "grass-tuft-commons",
+      "key": "lw-grass-tuft-commons",
+      "path": "/assets/game/props/lw-grass-tuft-commons.png",
+      "libraryPath": "/assets/game/library/grass/grass-tuft-commons.webp",
+      "category": "grass",
+      "family": "grass",
+      "layer": "ground",
+      "tags": [
+        "grass",
+        "tuft",
+        "commons",
+        "decal"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "grass-clump-commons",
+      "key": "lw-grass-clump-commons",
+      "path": "/assets/game/props/lw-grass-clump-commons.png",
+      "libraryPath": "/assets/game/library/grass/grass-clump-commons.webp",
+      "category": "grass",
+      "family": "grass",
+      "layer": "ground",
+      "tags": [
+        "grass",
+        "clump",
+        "commons",
+        "decal"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "grass-blade-tall-commons",
+      "key": "lw-grass-blade-tall-commons",
+      "path": "/assets/game/props/lw-grass-blade-tall-commons.png",
+      "libraryPath": "/assets/game/library/grass/grass-blade-tall-commons.webp",
+      "category": "grass",
+      "family": "grass",
+      "layer": "ground",
+      "tags": [
+        "grass",
+        "blade-tall",
+        "commons",
+        "decal"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "grass-meadow-commons",
+      "key": "lw-grass-meadow-commons",
+      "path": "/assets/game/props/lw-grass-meadow-commons.png",
+      "libraryPath": "/assets/game/library/grass/grass-meadow-commons.webp",
+      "category": "grass",
+      "family": "grass",
+      "layer": "ground",
+      "tags": [
+        "grass",
+        "meadow",
+        "commons",
+        "decal"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "grass-dry-patch-commons",
+      "key": "lw-grass-dry-patch-commons",
+      "path": "/assets/game/props/lw-grass-dry-patch-commons.png",
+      "libraryPath": "/assets/game/library/grass/grass-dry-patch-commons.webp",
+      "category": "grass",
+      "family": "grass",
+      "layer": "ground",
+      "tags": [
+        "grass",
+        "dry-patch",
+        "commons",
+        "decal"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "grass-reed-commons",
+      "key": "lw-grass-reed-commons",
+      "path": "/assets/game/props/lw-grass-reed-commons.png",
+      "libraryPath": "/assets/game/library/grass/grass-reed-commons.webp",
+      "category": "grass",
+      "family": "grass",
+      "layer": "ground",
+      "tags": [
+        "grass",
+        "reed",
+        "commons",
+        "decal"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "grass-fern-floor-commons",
+      "key": "lw-grass-fern-floor-commons",
+      "path": "/assets/game/props/lw-grass-fern-floor-commons.png",
+      "libraryPath": "/assets/game/library/grass/grass-fern-floor-commons.webp",
+      "category": "grass",
+      "family": "grass",
+      "layer": "ground",
+      "tags": [
+        "grass",
+        "fern-floor",
+        "commons",
+        "decal"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "grass-moss-carpet-commons",
+      "key": "lw-grass-moss-carpet-commons",
+      "path": "/assets/game/props/lw-grass-moss-carpet-commons.png",
+      "libraryPath": "/assets/game/library/grass/grass-moss-carpet-commons.webp",
+      "category": "grass",
+      "family": "grass",
+      "layer": "ground",
+      "tags": [
+        "grass",
+        "moss-carpet",
+        "commons",
+        "decal"
+      ],
+      "districts": [
+        "grove",
+        "residential",
+        "recovery",
+        "farm"
+      ]
+    },
+    {
+      "id": "rock-boulder-moss",
+      "key": "lw-rock-boulder-moss",
+      "path": "/assets/game/props/lw-rock-boulder-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-boulder-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "boulder",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-pile-moss",
+      "key": "lw-rock-pile-moss",
+      "path": "/assets/game/props/lw-rock-pile-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-pile-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "pile",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-flat-slab-moss",
+      "key": "lw-rock-flat-slab-moss",
+      "path": "/assets/game/props/lw-rock-flat-slab-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-flat-slab-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "flat-slab",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-spire-moss",
+      "key": "lw-rock-spire-moss",
+      "path": "/assets/game/props/lw-rock-spire-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-spire-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "spire",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-moss-rock-moss",
+      "key": "lw-rock-moss-rock-moss",
+      "path": "/assets/game/props/lw-rock-moss-rock-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-moss-rock-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "moss-rock",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-rift-shard-moss",
+      "key": "lw-rock-rift-shard-moss",
+      "path": "/assets/game/props/lw-rock-rift-shard-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-rift-shard-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "rift-shard",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-ember-scoria-moss",
+      "key": "lw-rock-ember-scoria-moss",
+      "path": "/assets/game/props/lw-rock-ember-scoria-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-ember-scoria-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "ember-scoria",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-frost-chunk-moss",
+      "key": "lw-rock-frost-chunk-moss",
+      "path": "/assets/game/props/lw-rock-frost-chunk-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-frost-chunk-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "frost-chunk",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-tide-smooth-moss",
+      "key": "lw-rock-tide-smooth-moss",
+      "path": "/assets/game/props/lw-rock-tide-smooth-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-tide-smooth-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "tide-smooth",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "rock-spirit-orb-stone-moss",
+      "key": "lw-rock-spirit-orb-stone-moss",
+      "path": "/assets/game/props/lw-rock-spirit-orb-stone-moss.png",
+      "libraryPath": "/assets/game/library/rocks/rock-spirit-orb-stone-moss.webp",
+      "category": "rocks",
+      "family": "rock",
+      "layer": "prop",
+      "tags": [
+        "rock",
+        "spirit-orb-stone",
+        "moss"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "crate-plain-moss",
+      "key": "lw-crate-plain-moss",
+      "path": "/assets/game/props/lw-crate-plain-moss.png",
+      "libraryPath": "/assets/game/library/props/crate-plain-moss.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "plain",
+        "moss"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-plain-amber",
+      "key": "lw-crate-plain-amber",
+      "path": "/assets/game/props/lw-crate-plain-amber.png",
+      "libraryPath": "/assets/game/library/props/crate-plain-amber.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "plain",
+        "amber"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-plain-cyan",
+      "key": "lw-crate-plain-cyan",
+      "path": "/assets/game/props/lw-crate-plain-cyan.png",
+      "libraryPath": "/assets/game/library/props/crate-plain-cyan.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "plain",
+        "cyan"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-banded-moss",
+      "key": "lw-crate-banded-moss",
+      "path": "/assets/game/props/lw-crate-banded-moss.png",
+      "libraryPath": "/assets/game/library/props/crate-banded-moss.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "banded",
+        "moss"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-banded-amber",
+      "key": "lw-crate-banded-amber",
+      "path": "/assets/game/props/lw-crate-banded-amber.png",
+      "libraryPath": "/assets/game/library/props/crate-banded-amber.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "banded",
+        "amber"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-banded-cyan",
+      "key": "lw-crate-banded-cyan",
+      "path": "/assets/game/props/lw-crate-banded-cyan.png",
+      "libraryPath": "/assets/game/library/props/crate-banded-cyan.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "banded",
+        "cyan"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-open-moss",
+      "key": "lw-crate-open-moss",
+      "path": "/assets/game/props/lw-crate-open-moss.png",
+      "libraryPath": "/assets/game/library/props/crate-open-moss.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "open",
+        "moss"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-open-amber",
+      "key": "lw-crate-open-amber",
+      "path": "/assets/game/props/lw-crate-open-amber.png",
+      "libraryPath": "/assets/game/library/props/crate-open-amber.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "open",
+        "amber"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-open-cyan",
+      "key": "lw-crate-open-cyan",
+      "path": "/assets/game/props/lw-crate-open-cyan.png",
+      "libraryPath": "/assets/game/library/props/crate-open-cyan.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "open",
+        "cyan"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "crate-marked-moss",
+      "key": "lw-crate-marked-moss",
+      "path": "/assets/game/props/lw-crate-marked-moss.png",
+      "libraryPath": "/assets/game/library/props/crate-marked-moss.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "marked",
+        "moss"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-oak-moss",
+      "key": "lw-barrel-oak-moss",
+      "path": "/assets/game/props/lw-barrel-oak-moss.png",
+      "libraryPath": "/assets/game/library/props/barrel-oak-moss.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "oak",
+        "moss"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-oak-amber",
+      "key": "lw-barrel-oak-amber",
+      "path": "/assets/game/props/lw-barrel-oak-amber.png",
+      "libraryPath": "/assets/game/library/props/barrel-oak-amber.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "oak",
+        "amber"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-oak-cyan",
+      "key": "lw-barrel-oak-cyan",
+      "path": "/assets/game/props/lw-barrel-oak-cyan.png",
+      "libraryPath": "/assets/game/library/props/barrel-oak-cyan.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "oak",
+        "cyan"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-iron-ring-moss",
+      "key": "lw-barrel-iron-ring-moss",
+      "path": "/assets/game/props/lw-barrel-iron-ring-moss.png",
+      "libraryPath": "/assets/game/library/props/barrel-iron-ring-moss.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "iron-ring",
+        "moss"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-iron-ring-amber",
+      "key": "lw-barrel-iron-ring-amber",
+      "path": "/assets/game/props/lw-barrel-iron-ring-amber.png",
+      "libraryPath": "/assets/game/library/props/barrel-iron-ring-amber.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "iron-ring",
+        "amber"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-iron-ring-cyan",
+      "key": "lw-barrel-iron-ring-cyan",
+      "path": "/assets/game/props/lw-barrel-iron-ring-cyan.png",
+      "libraryPath": "/assets/game/library/props/barrel-iron-ring-cyan.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "iron-ring",
+        "cyan"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-leaky-moss",
+      "key": "lw-barrel-leaky-moss",
+      "path": "/assets/game/props/lw-barrel-leaky-moss.png",
+      "libraryPath": "/assets/game/library/props/barrel-leaky-moss.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "leaky",
+        "moss"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-leaky-amber",
+      "key": "lw-barrel-leaky-amber",
+      "path": "/assets/game/props/lw-barrel-leaky-amber.png",
+      "libraryPath": "/assets/game/library/props/barrel-leaky-amber.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "leaky",
+        "amber"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-leaky-cyan",
+      "key": "lw-barrel-leaky-cyan",
+      "path": "/assets/game/props/lw-barrel-leaky-cyan.png",
+      "libraryPath": "/assets/game/library/props/barrel-leaky-cyan.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "leaky",
+        "cyan"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "barrel-ember-seal-moss",
+      "key": "lw-barrel-ember-seal-moss",
+      "path": "/assets/game/props/lw-barrel-ember-seal-moss.png",
+      "libraryPath": "/assets/game/library/props/barrel-ember-seal-moss.webp",
+      "category": "props-barrels",
+      "family": "barrel",
+      "layer": "prop",
+      "tags": [
+        "barrel",
+        "prop",
+        "ember-seal",
+        "moss"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "lantern-post",
+      "key": "lw-lantern-post",
+      "path": "/assets/game/props/lw-lantern-post.png",
+      "libraryPath": "/assets/game/library/props/lantern-post.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "post",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-hanging",
+      "key": "lw-lantern-hanging",
+      "path": "/assets/game/props/lw-lantern-hanging.png",
+      "libraryPath": "/assets/game/library/props/lantern-hanging.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "hanging",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-table",
+      "key": "lw-lantern-table",
+      "path": "/assets/game/props/lw-lantern-table.png",
+      "libraryPath": "/assets/game/library/props/lantern-table.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "table",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-rift-glow",
+      "key": "lw-lantern-rift-glow",
+      "path": "/assets/game/props/lw-lantern-rift-glow.png",
+      "libraryPath": "/assets/game/library/props/lantern-rift-glow.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "rift-glow",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-ember",
+      "key": "lw-lantern-ember",
+      "path": "/assets/game/props/lw-lantern-ember.png",
+      "libraryPath": "/assets/game/library/props/lantern-ember.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "ember",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-frost",
+      "key": "lw-lantern-frost",
+      "path": "/assets/game/props/lw-lantern-frost.png",
+      "libraryPath": "/assets/game/library/props/lantern-frost.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "frost",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-paper",
+      "key": "lw-lantern-paper",
+      "path": "/assets/game/props/lw-lantern-paper.png",
+      "libraryPath": "/assets/game/library/props/lantern-paper.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "paper",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-cage",
+      "key": "lw-lantern-cage",
+      "path": "/assets/game/props/lw-lantern-cage.png",
+      "libraryPath": "/assets/game/library/props/lantern-cage.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "cage",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-well",
+      "key": "lw-lantern-well",
+      "path": "/assets/game/props/lw-lantern-well.png",
+      "libraryPath": "/assets/game/library/props/lantern-well.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "well",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-plaza",
+      "key": "lw-lantern-plaza",
+      "path": "/assets/game/props/lw-lantern-plaza.png",
+      "libraryPath": "/assets/game/library/props/lantern-plaza.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "plaza",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-alley",
+      "key": "lw-lantern-alley",
+      "path": "/assets/game/props/lw-lantern-alley.png",
+      "libraryPath": "/assets/game/library/props/lantern-alley.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "alley",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "lantern-dock",
+      "key": "lw-lantern-dock",
+      "path": "/assets/game/props/lw-lantern-dock.png",
+      "libraryPath": "/assets/game/library/props/lantern-dock.webp",
+      "category": "props-lanterns",
+      "family": "lantern",
+      "layer": "prop",
+      "tags": [
+        "lantern",
+        "prop",
+        "dock",
+        "light"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "sign-wood-blank",
+      "key": "lw-sign-wood-blank",
+      "path": "/assets/game/props/lw-sign-wood-blank.png",
+      "libraryPath": "/assets/game/library/props/sign-wood-blank.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "wood-blank"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-arrow-left",
+      "key": "lw-sign-arrow-left",
+      "path": "/assets/game/props/lw-sign-arrow-left.png",
+      "libraryPath": "/assets/game/library/props/sign-arrow-left.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "arrow-left"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-arrow-right",
+      "key": "lw-sign-arrow-right",
+      "path": "/assets/game/props/lw-sign-arrow-right.png",
+      "libraryPath": "/assets/game/library/props/sign-arrow-right.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "arrow-right"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-market",
+      "key": "lw-sign-market",
+      "path": "/assets/game/props/lw-sign-market.png",
+      "libraryPath": "/assets/game/library/props/sign-market.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "market"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-inn",
+      "key": "lw-sign-inn",
+      "path": "/assets/game/props/lw-sign-inn.png",
+      "libraryPath": "/assets/game/library/props/sign-inn.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "inn"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-danger",
+      "key": "lw-sign-danger",
+      "path": "/assets/game/props/lw-sign-danger.png",
+      "libraryPath": "/assets/game/library/props/sign-danger.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "danger"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-portal",
+      "key": "lw-sign-portal",
+      "path": "/assets/game/props/lw-sign-portal.png",
+      "libraryPath": "/assets/game/library/props/sign-portal.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "portal"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-guild",
+      "key": "lw-sign-guild",
+      "path": "/assets/game/props/lw-sign-guild.png",
+      "libraryPath": "/assets/game/library/props/sign-guild.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "guild"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-farm",
+      "key": "lw-sign-farm",
+      "path": "/assets/game/props/lw-sign-farm.png",
+      "libraryPath": "/assets/game/library/props/sign-farm.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "farm"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "sign-training",
+      "key": "lw-sign-training",
+      "path": "/assets/game/props/lw-sign-training.png",
+      "libraryPath": "/assets/game/library/props/sign-training.webp",
+      "category": "props-signs",
+      "family": "sign",
+      "layer": "prop",
+      "tags": [
+        "sign",
+        "prop",
+        "training"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "furniture-bench",
+      "key": "lw-furniture-bench",
+      "path": "/assets/game/props/lw-furniture-bench.png",
+      "libraryPath": "/assets/game/library/props/furniture-bench.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "bench"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-table",
+      "key": "lw-furniture-table",
+      "path": "/assets/game/props/lw-furniture-table.png",
+      "libraryPath": "/assets/game/library/props/furniture-table.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "table"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-stool",
+      "key": "lw-furniture-stool",
+      "path": "/assets/game/props/lw-furniture-stool.png",
+      "libraryPath": "/assets/game/library/props/furniture-stool.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "stool"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-shelf",
+      "key": "lw-furniture-shelf",
+      "path": "/assets/game/props/lw-furniture-shelf.png",
+      "libraryPath": "/assets/game/library/props/furniture-shelf.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "shelf"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-chest",
+      "key": "lw-furniture-chest",
+      "path": "/assets/game/props/lw-furniture-chest.png",
+      "libraryPath": "/assets/game/library/props/furniture-chest.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "chest"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-bed-frame",
+      "key": "lw-furniture-bed-frame",
+      "path": "/assets/game/props/lw-furniture-bed-frame.png",
+      "libraryPath": "/assets/game/library/props/furniture-bed-frame.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "bed-frame"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-loom",
+      "key": "lw-furniture-loom",
+      "path": "/assets/game/props/lw-furniture-loom.png",
+      "libraryPath": "/assets/game/library/props/furniture-loom.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "loom"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-anvil-stand",
+      "key": "lw-furniture-anvil-stand",
+      "path": "/assets/game/props/lw-furniture-anvil-stand.png",
+      "libraryPath": "/assets/game/library/props/furniture-anvil-stand.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "anvil-stand"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-desk",
+      "key": "lw-furniture-desk",
+      "path": "/assets/game/props/lw-furniture-desk.png",
+      "libraryPath": "/assets/game/library/props/furniture-desk.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "desk"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "furniture-bookcase",
+      "key": "lw-furniture-bookcase",
+      "path": "/assets/game/props/lw-furniture-bookcase.png",
+      "libraryPath": "/assets/game/library/props/furniture-bookcase.webp",
+      "category": "props-furniture",
+      "family": "furniture",
+      "layer": "prop",
+      "tags": [
+        "furniture",
+        "prop",
+        "bookcase"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "goods-apple-crate",
+      "key": "lw-goods-apple-crate",
+      "path": "/assets/game/props/lw-goods-apple-crate.png",
+      "libraryPath": "/assets/game/library/props/goods-apple-crate.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "apple-crate"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-herb-bundle",
+      "key": "lw-goods-herb-bundle",
+      "path": "/assets/game/props/lw-goods-herb-bundle.png",
+      "libraryPath": "/assets/game/library/props/goods-herb-bundle.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "herb-bundle"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-fish-basket",
+      "key": "lw-goods-fish-basket",
+      "path": "/assets/game/props/lw-goods-fish-basket.png",
+      "libraryPath": "/assets/game/library/props/goods-fish-basket.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "fish-basket"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-cloth-roll",
+      "key": "lw-goods-cloth-roll",
+      "path": "/assets/game/props/lw-goods-cloth-roll.png",
+      "libraryPath": "/assets/game/library/props/goods-cloth-roll.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "cloth-roll"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-pottery",
+      "key": "lw-goods-pottery",
+      "path": "/assets/game/props/lw-goods-pottery.png",
+      "libraryPath": "/assets/game/library/props/goods-pottery.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "pottery"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-spice-sack",
+      "key": "lw-goods-spice-sack",
+      "path": "/assets/game/props/lw-goods-spice-sack.png",
+      "libraryPath": "/assets/game/library/props/goods-spice-sack.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "spice-sack"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-cheese-wheel",
+      "key": "lw-goods-cheese-wheel",
+      "path": "/assets/game/props/lw-goods-cheese-wheel.png",
+      "libraryPath": "/assets/game/library/props/goods-cheese-wheel.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "cheese-wheel"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-bread-board",
+      "key": "lw-goods-bread-board",
+      "path": "/assets/game/props/lw-goods-bread-board.png",
+      "libraryPath": "/assets/game/library/props/goods-bread-board.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "bread-board"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-egg-basket",
+      "key": "lw-goods-egg-basket",
+      "path": "/assets/game/props/lw-goods-egg-basket.png",
+      "libraryPath": "/assets/game/library/props/goods-egg-basket.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "egg-basket"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "goods-crystal-tray",
+      "key": "lw-goods-crystal-tray",
+      "path": "/assets/game/props/lw-goods-crystal-tray.png",
+      "libraryPath": "/assets/game/library/props/goods-crystal-tray.webp",
+      "category": "props-goods",
+      "family": "goods",
+      "layer": "prop",
+      "tags": [
+        "goods",
+        "market",
+        "prop",
+        "crystal-tray"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "tool-hammer",
+      "key": "lw-tool-hammer",
+      "path": "/assets/game/props/lw-tool-hammer.png",
+      "libraryPath": "/assets/game/library/props/tool-hammer.webp",
+      "category": "props-tools",
+      "family": "tool",
+      "layer": "prop",
+      "tags": [
+        "tool",
+        "prop",
+        "hammer"
+      ],
+      "districts": [
+        "plaza"
+      ]
+    },
+    {
+      "id": "tool-axe",
+      "key": "lw-tool-axe",
+      "path": "/assets/game/props/lw-tool-axe.png",
+      "libraryPath": "/assets/game/library/props/tool-axe.webp",
+      "category": "props-tools",
+      "family": "tool",
+      "layer": "prop",
+      "tags": [
+        "tool",
+        "prop",
+        "axe"
+      ],
+      "districts": [
+        "plaza"
+      ]
+    },
+    {
+      "id": "tool-pick",
+      "key": "lw-tool-pick",
+      "path": "/assets/game/props/lw-tool-pick.png",
+      "libraryPath": "/assets/game/library/props/tool-pick.webp",
+      "category": "props-tools",
+      "family": "tool",
+      "layer": "prop",
+      "tags": [
+        "tool",
+        "prop",
+        "pick"
+      ],
+      "districts": [
+        "plaza"
+      ]
+    },
+    {
+      "id": "tool-hoe",
+      "key": "lw-tool-hoe",
+      "path": "/assets/game/props/lw-tool-hoe.png",
+      "libraryPath": "/assets/game/library/props/tool-hoe.webp",
+      "category": "props-tools",
+      "family": "tool",
+      "layer": "prop",
+      "tags": [
+        "tool",
+        "prop",
+        "hoe"
+      ],
+      "districts": [
+        "plaza"
+      ]
+    },
+    {
+      "id": "tool-fishing-rod",
+      "key": "lw-tool-fishing-rod",
+      "path": "/assets/game/props/lw-tool-fishing-rod.png",
+      "libraryPath": "/assets/game/library/props/tool-fishing-rod.webp",
+      "category": "props-tools",
+      "family": "tool",
+      "layer": "prop",
+      "tags": [
+        "tool",
+        "prop",
+        "fishing-rod"
+      ],
+      "districts": [
+        "plaza"
+      ]
+    },
+    {
+      "id": "tool-saw",
+      "key": "lw-tool-saw",
+      "path": "/assets/game/props/lw-tool-saw.png",
+      "libraryPath": "/assets/game/library/props/tool-saw.webp",
+      "category": "props-tools",
+      "family": "tool",
+      "layer": "prop",
+      "tags": [
+        "tool",
+        "prop",
+        "saw"
+      ],
+      "districts": [
+        "plaza"
+      ]
+    },
+    {
+      "id": "stall-produce",
+      "key": "lw-stall-produce",
+      "path": "/assets/game/props/lw-stall-produce.png",
+      "libraryPath": "/assets/game/library/buildings/stall-produce.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "produce"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-fish",
+      "key": "lw-stall-fish",
+      "path": "/assets/game/props/lw-stall-fish.png",
+      "libraryPath": "/assets/game/library/buildings/stall-fish.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "fish"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-cloth",
+      "key": "lw-stall-cloth",
+      "path": "/assets/game/props/lw-stall-cloth.png",
+      "libraryPath": "/assets/game/library/buildings/stall-cloth.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "cloth"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-tools",
+      "key": "lw-stall-tools",
+      "path": "/assets/game/props/lw-stall-tools.png",
+      "libraryPath": "/assets/game/library/buildings/stall-tools.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "tools"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-potions",
+      "key": "lw-stall-potions",
+      "path": "/assets/game/props/lw-stall-potions.png",
+      "libraryPath": "/assets/game/library/buildings/stall-potions.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "potions"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-pets",
+      "key": "lw-stall-pets",
+      "path": "/assets/game/props/lw-stall-pets.png",
+      "libraryPath": "/assets/game/library/buildings/stall-pets.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "pets"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-books",
+      "key": "lw-stall-books",
+      "path": "/assets/game/props/lw-stall-books.png",
+      "libraryPath": "/assets/game/library/buildings/stall-books.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "books"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-bakery",
+      "key": "lw-stall-bakery",
+      "path": "/assets/game/props/lw-stall-bakery.png",
+      "libraryPath": "/assets/game/library/buildings/stall-bakery.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "bakery"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-smithy-stand",
+      "key": "lw-stall-smithy-stand",
+      "path": "/assets/game/props/lw-stall-smithy-stand.png",
+      "libraryPath": "/assets/game/library/buildings/stall-smithy-stand.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "smithy-stand"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "stall-flower",
+      "key": "lw-stall-flower",
+      "path": "/assets/game/props/lw-stall-flower.png",
+      "libraryPath": "/assets/game/library/buildings/stall-flower.webp",
+      "category": "stalls",
+      "family": "stall",
+      "layer": "structure",
+      "tags": [
+        "stall",
+        "market",
+        "flower"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    },
+    {
+      "id": "fence-wood-post",
+      "key": "lw-fence-wood-post",
+      "path": "/assets/game/props/lw-fence-wood-post.png",
+      "libraryPath": "/assets/game/library/buildings/fence-wood-post.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "wood-post"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-wood-rail",
+      "key": "lw-fence-wood-rail",
+      "path": "/assets/game/props/lw-fence-wood-rail.png",
+      "libraryPath": "/assets/game/library/buildings/fence-wood-rail.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "wood-rail"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-stone-low",
+      "key": "lw-fence-stone-low",
+      "path": "/assets/game/props/lw-fence-stone-low.png",
+      "libraryPath": "/assets/game/library/buildings/fence-stone-low.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "stone-low"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-iron-spike",
+      "key": "lw-fence-iron-spike",
+      "path": "/assets/game/props/lw-fence-iron-spike.png",
+      "libraryPath": "/assets/game/library/buildings/fence-iron-spike.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "iron-spike"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-hedge",
+      "key": "lw-fence-hedge",
+      "path": "/assets/game/props/lw-fence-hedge.png",
+      "libraryPath": "/assets/game/library/buildings/fence-hedge.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "hedge"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-rope",
+      "key": "lw-fence-rope",
+      "path": "/assets/game/props/lw-fence-rope.png",
+      "libraryPath": "/assets/game/library/buildings/fence-rope.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "rope"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-rift-rail",
+      "key": "lw-fence-rift-rail",
+      "path": "/assets/game/props/lw-fence-rift-rail.png",
+      "libraryPath": "/assets/game/library/buildings/fence-rift-rail.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "rift-rail"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-gate-post",
+      "key": "lw-fence-gate-post",
+      "path": "/assets/game/props/lw-fence-gate-post.png",
+      "libraryPath": "/assets/game/library/buildings/fence-gate-post.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "gate-post"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-corner",
+      "key": "lw-fence-corner",
+      "path": "/assets/game/props/lw-fence-corner.png",
+      "libraryPath": "/assets/game/library/buildings/fence-corner.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "corner"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "fence-broken",
+      "key": "lw-fence-broken",
+      "path": "/assets/game/props/lw-fence-broken.png",
+      "libraryPath": "/assets/game/library/buildings/fence-broken.webp",
+      "category": "fences",
+      "family": "fence",
+      "layer": "prop",
+      "tags": [
+        "fence",
+        "broken"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "gate-timber",
+      "key": "lw-gate-timber",
+      "path": "/assets/game/props/lw-gate-timber.png",
+      "libraryPath": "/assets/game/library/buildings/gate-timber.webp",
+      "category": "gates",
+      "family": "gate",
+      "layer": "structure",
+      "tags": [
+        "gate",
+        "timber"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "gate-stone-arch",
+      "key": "lw-gate-stone-arch",
+      "path": "/assets/game/props/lw-gate-stone-arch.png",
+      "libraryPath": "/assets/game/library/buildings/gate-stone-arch.webp",
+      "category": "gates",
+      "family": "gate",
+      "layer": "structure",
+      "tags": [
+        "gate",
+        "stone-arch"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "gate-iron",
+      "key": "lw-gate-iron",
+      "path": "/assets/game/props/lw-gate-iron.png",
+      "libraryPath": "/assets/game/library/buildings/gate-iron.webp",
+      "category": "gates",
+      "family": "gate",
+      "layer": "structure",
+      "tags": [
+        "gate",
+        "iron"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "gate-portcullis-stub",
+      "key": "lw-gate-portcullis-stub",
+      "path": "/assets/game/props/lw-gate-portcullis-stub.png",
+      "libraryPath": "/assets/game/library/buildings/gate-portcullis-stub.webp",
+      "category": "gates",
+      "family": "gate",
+      "layer": "structure",
+      "tags": [
+        "gate",
+        "portcullis-stub"
+      ],
+      "districts": [
+        "plaza",
+        "residential",
+        "guild"
+      ]
+    },
+    {
+      "id": "bridge-wood-short",
+      "key": "lw-bridge-wood-short",
+      "path": "/assets/game/props/lw-bridge-wood-short.png",
+      "libraryPath": "/assets/game/library/buildings/bridge-wood-short.webp",
+      "category": "bridges",
+      "family": "bridge",
+      "layer": "structure",
+      "tags": [
+        "bridge",
+        "wood-short"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "bridge-wood-long",
+      "key": "lw-bridge-wood-long",
+      "path": "/assets/game/props/lw-bridge-wood-long.png",
+      "libraryPath": "/assets/game/library/buildings/bridge-wood-long.webp",
+      "category": "bridges",
+      "family": "bridge",
+      "layer": "structure",
+      "tags": [
+        "bridge",
+        "wood-long"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "bridge-stone-arch",
+      "key": "lw-bridge-stone-arch",
+      "path": "/assets/game/props/lw-bridge-stone-arch.png",
+      "libraryPath": "/assets/game/library/buildings/bridge-stone-arch.webp",
+      "category": "bridges",
+      "family": "bridge",
+      "layer": "structure",
+      "tags": [
+        "bridge",
+        "stone-arch"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "dock-plank",
+      "key": "lw-dock-plank",
+      "path": "/assets/game/props/lw-dock-plank.png",
+      "libraryPath": "/assets/game/library/buildings/dock-plank.webp",
+      "category": "docks",
+      "family": "dock",
+      "layer": "structure",
+      "tags": [
+        "dock",
+        "plank"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "dock-pile",
+      "key": "lw-dock-pile",
+      "path": "/assets/game/props/lw-dock-pile.png",
+      "libraryPath": "/assets/game/library/buildings/dock-pile.webp",
+      "category": "docks",
+      "family": "dock",
+      "layer": "structure",
+      "tags": [
+        "dock",
+        "pile"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "dock-crate-edge",
+      "key": "lw-dock-crate-edge",
+      "path": "/assets/game/props/lw-dock-crate-edge.png",
+      "libraryPath": "/assets/game/library/buildings/dock-crate-edge.webp",
+      "category": "docks",
+      "family": "dock",
+      "layer": "structure",
+      "tags": [
+        "dock",
+        "crate-edge"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "wall-timber-front",
+      "key": "lw-wall-timber-front",
+      "path": "/assets/game/props/lw-wall-timber-front.png",
+      "libraryPath": "/assets/game/library/buildings/wall-timber-front.webp",
+      "category": "buildings-walls",
+      "family": "wall",
+      "layer": "structure",
+      "tags": [
+        "wall",
+        "modular",
+        "timber",
+        "front"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "wall-stone-front",
+      "key": "lw-wall-stone-front",
+      "path": "/assets/game/props/lw-wall-stone-front.png",
+      "libraryPath": "/assets/game/library/buildings/wall-stone-front.webp",
+      "category": "buildings-walls",
+      "family": "wall",
+      "layer": "structure",
+      "tags": [
+        "wall",
+        "modular",
+        "stone",
+        "front"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "wall-mixed-front",
+      "key": "lw-wall-mixed-front",
+      "path": "/assets/game/props/lw-wall-mixed-front.png",
+      "libraryPath": "/assets/game/library/buildings/wall-mixed-front.webp",
+      "category": "buildings-walls",
+      "family": "wall",
+      "layer": "structure",
+      "tags": [
+        "wall",
+        "modular",
+        "mixed",
+        "front"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "wall-adobe-front",
+      "key": "lw-wall-adobe-front",
+      "path": "/assets/game/props/lw-wall-adobe-front.png",
+      "libraryPath": "/assets/game/library/buildings/wall-adobe-front.webp",
+      "category": "buildings-walls",
+      "family": "wall",
+      "layer": "structure",
+      "tags": [
+        "wall",
+        "modular",
+        "adobe",
+        "front"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "wall-rift-inlaid-front",
+      "key": "lw-wall-rift-inlaid-front",
+      "path": "/assets/game/props/lw-wall-rift-inlaid-front.png",
+      "libraryPath": "/assets/game/library/buildings/wall-rift-inlaid-front.webp",
+      "category": "buildings-walls",
+      "family": "wall",
+      "layer": "structure",
+      "tags": [
+        "wall",
+        "modular",
+        "rift-inlaid",
+        "front"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "door-plank-closed",
+      "key": "lw-door-plank-closed",
+      "path": "/assets/game/props/lw-door-plank-closed.png",
+      "libraryPath": "/assets/game/library/buildings/door-plank-closed.webp",
+      "category": "buildings-doors",
+      "family": "door",
+      "layer": "structure",
+      "tags": [
+        "door",
+        "plank",
+        "closed"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "door-arched-closed",
+      "key": "lw-door-arched-closed",
+      "path": "/assets/game/props/lw-door-arched-closed.png",
+      "libraryPath": "/assets/game/library/buildings/door-arched-closed.webp",
+      "category": "buildings-doors",
+      "family": "door",
+      "layer": "structure",
+      "tags": [
+        "door",
+        "arched",
+        "closed"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "door-iron-band-closed",
+      "key": "lw-door-iron-band-closed",
+      "path": "/assets/game/props/lw-door-iron-band-closed.png",
+      "libraryPath": "/assets/game/library/buildings/door-iron-band-closed.webp",
+      "category": "buildings-doors",
+      "family": "door",
+      "layer": "structure",
+      "tags": [
+        "door",
+        "iron-band",
+        "closed"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "door-stable-closed",
+      "key": "lw-door-stable-closed",
+      "path": "/assets/game/props/lw-door-stable-closed.png",
+      "libraryPath": "/assets/game/library/buildings/door-stable-closed.webp",
+      "category": "buildings-doors",
+      "family": "door",
+      "layer": "structure",
+      "tags": [
+        "door",
+        "stable",
+        "closed"
+      ],
+      "districts": [
+        "forest",
+        "dock",
+        "plaza"
+      ]
+    },
+    {
+      "id": "animal-grove-hare",
+      "key": "lw-animal-grove-hare",
+      "path": "/assets/game/props/lw-animal-grove-hare.png",
+      "libraryPath": "/assets/game/library/animals/animal-grove-hare.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "grove-hare"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-plaza-pigeon",
+      "key": "lw-animal-plaza-pigeon",
+      "path": "/assets/game/props/lw-animal-plaza-pigeon.png",
+      "libraryPath": "/assets/game/library/animals/animal-plaza-pigeon.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "plaza-pigeon"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-dock-gull",
+      "key": "lw-animal-dock-gull",
+      "path": "/assets/game/props/lw-animal-dock-gull.png",
+      "libraryPath": "/assets/game/library/animals/animal-dock-gull.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "dock-gull"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-meadow-fox",
+      "key": "lw-animal-meadow-fox",
+      "path": "/assets/game/props/lw-animal-meadow-fox.png",
+      "libraryPath": "/assets/game/library/animals/animal-meadow-fox.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "meadow-fox"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-barn-cat",
+      "key": "lw-animal-barn-cat",
+      "path": "/assets/game/props/lw-animal-barn-cat.png",
+      "libraryPath": "/assets/game/library/animals/animal-barn-cat.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "barn-cat"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-yard-hen",
+      "key": "lw-animal-yard-hen",
+      "path": "/assets/game/props/lw-animal-yard-hen.png",
+      "libraryPath": "/assets/game/library/animals/animal-yard-hen.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "yard-hen"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-pond-turtle",
+      "key": "lw-animal-pond-turtle",
+      "path": "/assets/game/props/lw-animal-pond-turtle.png",
+      "libraryPath": "/assets/game/library/animals/animal-pond-turtle.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "pond-turtle"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-forest-deer",
+      "key": "lw-animal-forest-deer",
+      "path": "/assets/game/props/lw-animal-forest-deer.png",
+      "libraryPath": "/assets/game/library/animals/animal-forest-deer.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "forest-deer"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-ember-salamander",
+      "key": "lw-animal-ember-salamander",
+      "path": "/assets/game/props/lw-animal-ember-salamander.png",
+      "libraryPath": "/assets/game/library/animals/animal-ember-salamander.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "ember-salamander"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-frost-hare",
+      "key": "lw-animal-frost-hare",
+      "path": "/assets/game/props/lw-animal-frost-hare.png",
+      "libraryPath": "/assets/game/library/animals/animal-frost-hare.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "frost-hare"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-tide-crab",
+      "key": "lw-animal-tide-crab",
+      "path": "/assets/game/props/lw-animal-tide-crab.png",
+      "libraryPath": "/assets/game/library/animals/animal-tide-crab.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "tide-crab"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-spirit-moth",
+      "key": "lw-animal-spirit-moth",
+      "path": "/assets/game/props/lw-animal-spirit-moth.png",
+      "libraryPath": "/assets/game/library/animals/animal-spirit-moth.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "spirit-moth"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-stone-badger",
+      "key": "lw-animal-stone-badger",
+      "path": "/assets/game/props/lw-animal-stone-badger.png",
+      "libraryPath": "/assets/game/library/animals/animal-stone-badger.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "stone-badger"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "animal-storm-swift",
+      "key": "lw-animal-storm-swift",
+      "path": "/assets/game/props/lw-animal-storm-swift.png",
+      "libraryPath": "/assets/game/library/animals/animal-storm-swift.webp",
+      "category": "animals",
+      "family": "animal",
+      "layer": "entity",
+      "tags": [
+        "animal",
+        "creature",
+        "storm-swift"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "riftling-sparklet-juvenile",
+      "key": "lw-riftling-sparklet-juvenile",
+      "path": "/assets/game/props/lw-riftling-sparklet-juvenile.png",
+      "libraryPath": "/assets/game/library/riftlings/riftling-sparklet-juvenile.webp",
+      "category": "riftlings",
+      "family": "riftling",
+      "layer": "entity",
+      "tags": [
+        "riftling",
+        "creature",
+        "sparklet",
+        "juvenile"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "riftling-mossbun-juvenile",
+      "key": "lw-riftling-mossbun-juvenile",
+      "path": "/assets/game/props/lw-riftling-mossbun-juvenile.png",
+      "libraryPath": "/assets/game/library/riftlings/riftling-mossbun-juvenile.webp",
+      "category": "riftlings",
+      "family": "riftling",
+      "layer": "entity",
+      "tags": [
+        "riftling",
+        "creature",
+        "mossbun",
+        "juvenile"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "riftling-emberpup-juvenile",
+      "key": "lw-riftling-emberpup-juvenile",
+      "path": "/assets/game/props/lw-riftling-emberpup-juvenile.png",
+      "libraryPath": "/assets/game/library/riftlings/riftling-emberpup-juvenile.webp",
+      "category": "riftlings",
+      "family": "riftling",
+      "layer": "entity",
+      "tags": [
+        "riftling",
+        "creature",
+        "emberpup",
+        "juvenile"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "riftling-tideling-juvenile",
+      "key": "lw-riftling-tideling-juvenile",
+      "path": "/assets/game/props/lw-riftling-tideling-juvenile.png",
+      "libraryPath": "/assets/game/library/riftlings/riftling-tideling-juvenile.webp",
+      "category": "riftlings",
+      "family": "riftling",
+      "layer": "entity",
+      "tags": [
+        "riftling",
+        "creature",
+        "tideling",
+        "juvenile"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "riftling-frostnip-juvenile",
+      "key": "lw-riftling-frostnip-juvenile",
+      "path": "/assets/game/props/lw-riftling-frostnip-juvenile.png",
+      "libraryPath": "/assets/game/library/riftlings/riftling-frostnip-juvenile.webp",
+      "category": "riftlings",
+      "family": "riftling",
+      "layer": "entity",
+      "tags": [
+        "riftling",
+        "creature",
+        "frostnip",
+        "juvenile"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "riftling-stormkit-juvenile",
+      "key": "lw-riftling-stormkit-juvenile",
+      "path": "/assets/game/props/lw-riftling-stormkit-juvenile.png",
+      "libraryPath": "/assets/game/library/riftlings/riftling-stormkit-juvenile.webp",
+      "category": "riftlings",
+      "family": "riftling",
+      "layer": "entity",
+      "tags": [
+        "riftling",
+        "creature",
+        "stormkit",
+        "juvenile"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "riftling-stoneling-juvenile",
+      "key": "lw-riftling-stoneling-juvenile",
+      "path": "/assets/game/props/lw-riftling-stoneling-juvenile.png",
+      "libraryPath": "/assets/game/library/riftlings/riftling-stoneling-juvenile.webp",
+      "category": "riftlings",
+      "family": "riftling",
+      "layer": "entity",
+      "tags": [
+        "riftling",
+        "creature",
+        "stoneling",
+        "juvenile"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "riftling-spiritwisp-juvenile",
+      "key": "lw-riftling-spiritwisp-juvenile",
+      "path": "/assets/game/props/lw-riftling-spiritwisp-juvenile.png",
+      "libraryPath": "/assets/game/library/riftlings/riftling-spiritwisp-juvenile.webp",
+      "category": "riftlings",
+      "family": "riftling",
+      "layer": "entity",
+      "tags": [
+        "riftling",
+        "creature",
+        "spiritwisp",
+        "juvenile"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-merchant",
+      "key": "lw-npc-merchant",
+      "path": "/assets/game/props/lw-npc-merchant.png",
+      "libraryPath": "/assets/game/library/npcs/npc-merchant.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "merchant",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-guard",
+      "key": "lw-npc-guard",
+      "path": "/assets/game/props/lw-npc-guard.png",
+      "libraryPath": "/assets/game/library/npcs/npc-guard.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "guard",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-gardener",
+      "key": "lw-npc-gardener",
+      "path": "/assets/game/props/lw-npc-gardener.png",
+      "libraryPath": "/assets/game/library/npcs/npc-gardener.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "gardener",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-courier",
+      "key": "lw-npc-courier",
+      "path": "/assets/game/props/lw-npc-courier.png",
+      "libraryPath": "/assets/game/library/npcs/npc-courier.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "courier",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-fisher",
+      "key": "lw-npc-fisher",
+      "path": "/assets/game/props/lw-npc-fisher.png",
+      "libraryPath": "/assets/game/library/npcs/npc-fisher.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "fisher",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-smith",
+      "key": "lw-npc-smith",
+      "path": "/assets/game/props/lw-npc-smith.png",
+      "libraryPath": "/assets/game/library/npcs/npc-smith.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "smith",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-scholar",
+      "key": "lw-npc-scholar",
+      "path": "/assets/game/props/lw-npc-scholar.png",
+      "libraryPath": "/assets/game/library/npcs/npc-scholar.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "scholar",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-cook",
+      "key": "lw-npc-cook",
+      "path": "/assets/game/props/lw-npc-cook.png",
+      "libraryPath": "/assets/game/library/npcs/npc-cook.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "cook",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-child",
+      "key": "lw-npc-child",
+      "path": "/assets/game/props/lw-npc-child.png",
+      "libraryPath": "/assets/game/library/npcs/npc-child.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "child",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "npc-elder",
+      "key": "lw-npc-elder",
+      "path": "/assets/game/props/lw-npc-elder.png",
+      "libraryPath": "/assets/game/library/npcs/npc-elder.webp",
+      "category": "npcs",
+      "family": "npc",
+      "layer": "entity",
+      "tags": [
+        "npc",
+        "elder",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "keeper-travel-cloak",
+      "key": "lw-keeper-travel-cloak",
+      "path": "/assets/game/props/lw-keeper-travel-cloak.png",
+      "libraryPath": "/assets/game/library/npcs/keeper-travel-cloak.webp",
+      "category": "keepers",
+      "family": "keeper",
+      "layer": "entity",
+      "tags": [
+        "keeper",
+        "player",
+        "travel-cloak",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "keeper-plaza-coat",
+      "key": "lw-keeper-plaza-coat",
+      "path": "/assets/game/props/lw-keeper-plaza-coat.png",
+      "libraryPath": "/assets/game/library/npcs/keeper-plaza-coat.webp",
+      "category": "keepers",
+      "family": "keeper",
+      "layer": "entity",
+      "tags": [
+        "keeper",
+        "player",
+        "plaza-coat",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "keeper-grove-vest",
+      "key": "lw-keeper-grove-vest",
+      "path": "/assets/game/props/lw-keeper-grove-vest.png",
+      "libraryPath": "/assets/game/library/npcs/keeper-grove-vest.webp",
+      "category": "keepers",
+      "family": "keeper",
+      "layer": "entity",
+      "tags": [
+        "keeper",
+        "player",
+        "grove-vest",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "keeper-ember-apron",
+      "key": "lw-keeper-ember-apron",
+      "path": "/assets/game/props/lw-keeper-ember-apron.png",
+      "libraryPath": "/assets/game/library/npcs/keeper-ember-apron.webp",
+      "category": "keepers",
+      "family": "keeper",
+      "layer": "entity",
+      "tags": [
+        "keeper",
+        "player",
+        "ember-apron",
+        "full-body"
+      ],
+      "districts": [
+        "plaza",
+        "market",
+        "residential"
+      ]
+    },
+    {
+      "id": "crate-market-amber",
+      "key": "lw-crate-market-amber",
+      "path": "/assets/game/props/lw-crate-market-amber.png",
+      "libraryPath": "/assets/game/library/props/crate-market-amber.webp",
+      "category": "props-crates",
+      "family": "crate",
+      "layer": "prop",
+      "tags": [
+        "crate",
+        "prop",
+        "market",
+        "amber"
+      ],
+      "districts": [
+        "market",
+        "dock",
+        "craft"
+      ]
+    }
+  ]
+}

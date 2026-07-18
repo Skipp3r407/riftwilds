@@ -82,10 +82,11 @@ export function WallpaperDownloads({
         <div>
           <p className="page-kicker">Desktop &amp; phone</p>
           <h2 id="wallpapers-heading" className="font-display mt-2 text-2xl text-white md:text-3xl">
-            Wallpapers
+            Battle Wallpapers
           </h2>
           <p className="mt-2 max-w-xl text-sm text-[var(--text-muted)]">
-            Fifteen original Riftwilds scenes — 1920×1080, ready to set as your desktop background.
+            Fifteen cinematic Riftwilds warfronts — Keepers, Riftlings, and the stakes they fight for.
+            1920×1080, ready for your desktop.
           </p>
         </div>
         {showIndexLink ? (

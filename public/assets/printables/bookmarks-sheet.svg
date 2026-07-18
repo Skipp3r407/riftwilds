@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+  <defs>
+  <linearGradient id="parchment" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#f4e8d0"/><stop offset="0.55" stop-color="#e8d5b0"/><stop offset="1" stop-color="#d4bc8e"/>
+  </linearGradient>
+  <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#1a1510"/><stop offset="0.5" stop-color="#141820"/><stop offset="1" stop-color="#0e1218"/>
+  </linearGradient>
+  <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#e8c878"/><stop offset="0.4" stop-color="#c4a882"/><stop offset="1" stop-color="#8b6914"/>
+  </linearGradient>
+  <linearGradient id="rift" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#66e0ff"/><stop offset="0.5" stop-color="#3de7ff"/><stop offset="1" stop-color="#1a8fb8"/>
+  </linearGradient>
+  <radialGradient id="amberGlow" cx="50%" cy="40%" r="50%">
+    <stop stop-color="#ffe566" stop-opacity="0.55"/><stop offset="0.55" stop-color="#ffb84d" stop-opacity="0.2"/><stop offset="1" stop-color="#ffb84d" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="cyanGlow" cx="50%" cy="35%" r="55%">
+    <stop stop-color="#3de7ff" stop-opacity="0.45"/><stop offset="0.6" stop-color="#3de7ff" stop-opacity="0.12"/><stop offset="1" stop-color="#3de7ff" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="6"/>
+  </filter></defs>
+  <rect width="850" height="1100" fill="url(#parchment)"/>
+  <rect x="24" y="24" width="802" height="1052" fill="none" stroke="#8b6914" stroke-width="3" rx="12"/>
+  
+  <text x="425" y="72" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#8b6914" letter-spacing="6">RIFTWILDS</text>
+  <text x="425" y="122" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#1a1510" font-weight="700">Adventure Bookmark Trio</text>
+  <text x="425" y="158" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5a5044">Cut out · Laminate optional · ~2×7" each</text>
+  
+    <rect x="70" y="185" width="220" height="790" rx="10" fill="#141210"/>
+    <rect x="70" y="185" width="220" height="790" rx="10" fill="none" stroke="#ffb84d" stroke-width="4"/>
+    <rect x="80" y="195" width="200" height="770" rx="6" fill="none" stroke="#c4a882" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="180" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#ffb84d" letter-spacing="3">RIFTWILDS</text>
+    <g transform="translate(80, 270)"><g transform="translate(15,20) scale(0.9)">
+    <ellipse cx="100" cy="182" rx="48" ry="9" fill="#2a2118" opacity="0.3"/>
+    <!-- leaner body -->
+    <ellipse cx="100" cy="132" rx="40" ry="38" fill="#e8a838"/>
+    <ellipse cx="100" cy="124" rx="30" ry="28" fill="#ffc84a"/>
+    <ellipse cx="90" cy="112" rx="10" ry="8" fill="#fff0a8" opacity="0.45"/>
+    <!-- hind legs -->
+    <path d="M70 150 Q62 168 68 178 Q78 176 80 160 Z" fill="#d4922a"/>
+    <path d="M130 150 Q138 168 132 178 Q122 176 120 160 Z" fill="#d4922a"/>
+    <ellipse cx="68" cy="178" rx="10" ry="5" fill="#b87820"/>
+    <ellipse cx="132" cy="178" rx="10" ry="5" fill="#b87820"/>
+    <!-- forelegs -->
+    <path d="M62 128 Q48 145 52 160 Q64 158 70 140 Z" fill="#ffb84d"/>
+    <path d="M138 128 Q152 145 148 160 Q136 158 130 140 Z" fill="#ffb84d"/>
+    <!-- head (smaller vs body) -->
+    <ellipse cx="100" cy="72" rx="34" ry="32" fill="#ffe566"/>
+    <ellipse cx="100" cy="68" rx="24" ry="20" fill="#fff2a0"/>
+    <!-- pointed ears -->
+    <path d="M72 58 L60 18 L84 50 Z" fill="#ff9a2a"/>
+    <path d="M72 52 L64 28 L80 48 Z" fill="#ffc84a"/>
+    <path d="M128 58 L140 18 L116 50 Z" fill="#ff9a2a"/>
+    <path d="M128 52 L136 28 L120 48 Z" fill="#ffc84a"/>
+    <!-- flame mane crest -->
+    <path d="M82 42c-10-20 0-34 16-38 0 12 6 20 12 26-10-2-18 2-28 12Z" fill="#ff5a20"/>
+    <path d="M118 42c10-20 0-34-16-38 0 12-6 20-12 26 10-2 18 2 28 12Z" fill="#ff5a20"/>
+    <path d="M100 12c5 8 7 16 3 26 9-5 12-14 9-26-3 3-7 3-12 0Z" fill="#ffb84d"/>
+    <!-- determined face — smaller eyes -->
+    <ellipse cx="88" cy="70" rx="4.5" ry="5.5" fill="#1a1510"/>
+    <ellipse cx="112" cy="70" rx="4.5" ry="5.5" fill="#1a1510"/>
+    <circle cx="89.5" cy="68.5" r="1.4" fill="#fff" opacity="0.85"/>
+    <circle cx="113.5" cy="68.5" r="1.4" fill="#fff" opacity="0.85"/>
+    <ellipse cx="100" cy="80" rx="4" ry="3" fill="#e85a28"/>
+    <path d="M92 90c5 5 11 5 16 0" stroke="#1a1510" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <!-- cyan rift crystal brow -->
+    <path d="M100 36 L110 54 L100 62 L90 54 Z" fill="#3de7ff"/>
+    <path d="M100 40 L106 52 L100 58 L94 52 Z" fill="#a8f4ff" opacity="0.8"/>
+    <!-- flame tail -->
+    <path d="M142 120c22-2 32 12 24 32-12-8-18-4-24 8 4-14 2-26 0-40Z" fill="#ff7a3d"/>
+    <path d="M148 128c12 0 18 8 14 18-7-4-11-2-14 4 2-8 0-14 0-22Z" fill="#ffe566"/>
+    <circle cx="46" cy="48" r="2.5" fill="#3de7ff" opacity="0.9"/>
+    <circle cx="162" cy="64" r="2" fill="#ffb84d" opacity="0.85"/>
+  </g></g>
+    <text x="180" y="780" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#f3efe6">Spark</text>
+    <text x="180" y="820" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#e8d5b0">Stand with the light</text>
+    <text x="180" y="920" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#7a7064" transform="rotate(-90 180 920)">300 DPI · Cut along edge</text>
+    <rect x="70" y="185" width="220" height="790" rx="10" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/>
+    <rect x="330" y="185" width="220" height="790" rx="10" fill="#141210"/>
+    <rect x="330" y="185" width="220" height="790" rx="10" fill="none" stroke="#ff7a3d" stroke-width="4"/>
+    <rect x="340" y="195" width="200" height="770" rx="6" fill="none" stroke="#c4a882" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="440" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#ff7a3d" letter-spacing="3">RIFTWILDS</text>
+    <g transform="translate(340, 270)"><g transform="translate(40,40) scale(0.55)"><g transform="translate(110,120) scale(1)">
+    <path d="M-140 180 L0 -120 L140 180 Z" fill="#c44840"/>
+    <path d="M-140 180 L0 -120 L140 180 Z" fill="none" stroke="#8b2018" stroke-width="4"/>
+    <path d="M0 -120 L0 180" stroke="#ffe566" stroke-width="6"/>
+    <path d="M-80 40 L80 40" stroke="#ffe566" stroke-width="4"/>
+    <path d="M-50 110 L50 110" stroke="#ffe566" stroke-width="3"/>
+    <path d="M0 -120 L0 -160"/><path d="M0 -160 L28 -140 L0 -128" fill="#ffb84d"/>
+    
+      <path d="M40 -40 L90 40 L70 50 L30 -20 Z" fill="#1a1510" opacity="0.55"/>
+      <path d="M-20 60 L40 160" stroke="#3de7ff" stroke-width="3" opacity="0.6"/>
+      <circle cx="60" cy="-20" r="8" fill="#ff7a3d" opacity="0.7"/>
+    
+    <path d="M-30 180 Q0 120 30 180" fill="#1a1510"/>
+  </g></g></g>
+    <text x="440" y="780" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#f3efe6">Circus</text>
+    <text x="440" y="820" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#e8d5b0">Defend the big top</text>
+    <text x="440" y="920" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#7a7064" transform="rotate(-90 440 920)">300 DPI · Cut along edge</text>
+    <rect x="330" y="185" width="220" height="790" rx="10" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/>
+    <rect x="590" y="185" width="220" height="790" rx="10" fill="#141210"/>
+    <rect x="590" y="185" width="220" height="790" rx="10" fill="none" stroke="#3de7ff" stroke-width="4"/>
+    <rect x="600" y="195" width="200" height="770" rx="6" fill="none" stroke="#c4a882" stroke-opacity="0.4" stroke-width="1.5"/>
+    <text x="700" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#3de7ff" letter-spacing="3">RIFTWILDS</text>
+    <g transform="translate(600, 270)"><g transform="translate(20,30) scale(1.1)"><g transform="scale(1)">
+    <path d="M70 10l16 12 20-4 8 20 18 10-8 20 8 20-18 10-8 20-20-4-16 12-16-12-20 4-8-20-18-10 8-20-8-20 18-10 8-20 20 4 16-12Z" fill="#c4a882"/>
+    <circle cx="70" cy="70" r="32" fill="#1a1510"/>
+    <ellipse cx="70" cy="62" rx="13" ry="16" fill="#e8d5b0"/>
+    <path d="M48 92c10-12 34-12 44 0" fill="#3de7ff" opacity="0.8"/>
+    <path d="M70 36l4 10 10 2-8 7 2 10-8-5-8 5 2-10-8-7 10-2 4-10Z" fill="#ffb84d"/>
+  </g></g>
+        <g transform="translate(40,160) scale(0.55)">
+    <ellipse cx="100" cy="178" rx="48" ry="10" fill="#2a2118" opacity="0.26"/>
+    <ellipse cx="100" cy="134" rx="46" ry="38" fill="#3d8a48"/>
+    <ellipse cx="100" cy="126" rx="34" ry="28" fill="#5aad62"/>
+    <ellipse cx="88" cy="114" rx="12" ry="9" fill="#8fd49a" opacity="0.55"/>
+    <ellipse cx="70" cy="164" rx="12" ry="14" fill="#2f6a38"/>
+    <ellipse cx="130" cy="164" rx="12" ry="14" fill="#2f6a38"/>
+    <ellipse cx="68" cy="176" rx="10" ry="6" fill="#245030"/>
+    <ellipse cx="132" cy="176" rx="10" ry="6" fill="#245030"/>
+    <path d="M48 120 Q30 100 42 78 Q58 90 56 112 Z" fill="#4a9a58"/>
+    <path d="M152 120 Q170 100 158 78 Q142 90 144 112 Z" fill="#4a9a58"/>
+    <ellipse cx="100" cy="86" rx="38" ry="34" fill="#5aad62"/>
+    <ellipse cx="100" cy="80" rx="26" ry="22" fill="#8fd49a"/>
+    <ellipse cx="86" cy="82" rx="5.5" ry="6.5" fill="#2a2118"/>
+    <ellipse cx="114" cy="82" rx="5.5" ry="6.5" fill="#2a2118"/>
+    <circle cx="87.5" cy="80" r="1.8" fill="#fff" opacity="0.85"/>
+    <circle cx="115.5" cy="80" r="1.8" fill="#fff" opacity="0.85"/>
+    <path d="M90 98c6 7 14 7 20 0" stroke="#2a2118" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- leaf crest -->
+    <path d="M100 28c16 22 8 40-4 56 24-6 38-24 32-52-8 6-16 6-28-4Z" fill="#3dffb0"/>
+    <path d="M100 36c10 14 6 28-2 40 16-4 26-16 22-36-6 4-12 4-20-4Z" fill="#7dffc0" opacity="0.75"/>
+    <path d="M72 48c-10 18 0 32 12 40-16 4-30-6-30-26 6 2 10 0 18-14Z" fill="#4a9a58"/>
+    <path d="M128 48c10 18 0 32-12 40 16 4 30-6 30-26-6 2-10 0-18-14Z" fill="#4a9a58"/>
+    <path d="M100 54 L106 68 L100 74 L94 68 Z" fill="#3de7ff" opacity="0.85"/>
+    <ellipse cx="42" cy="150" rx="8" ry="10" fill="#3d8a48"/>
+    <ellipse cx="158" cy="150" rx="8" ry="10" fill="#3d8a48"/>
+  </g></g>
+    <text x="700" y="780" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#f3efe6">Keeper</text>
+    <text x="700" y="820" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#e8d5b0">Care · Explore · Protect</text>
+    <text x="700" y="920" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#7a7064" transform="rotate(-90 700 920)">300 DPI · Cut along edge</text>
+    <rect x="590" y="185" width="220" height="790" rx="10" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/>
+  <text x="425" y="1055" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5a5044">Riftwilds · 300 DPI print · Personal use only · Not for resale</text>
+  <text x="425" y="1081" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#7a7064">US Letter · Bookmarks</text>
+</svg>

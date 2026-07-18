@@ -2,6 +2,18 @@
  * Texture keys for premium Live World art under public/assets/game/
  */
 
+import {
+  LIBRARY_WORLD_KEYS,
+  isLibraryTreeKey,
+  isLibraryWorldKey,
+} from "@/content/assets/library-world-keys";
+
+export { LIBRARY_WORLD_KEYS, isLibraryWorldKey, isLibraryTreeKey };
+export {
+  isLibraryBushKey,
+  isLibraryFlowerKey,
+} from "@/content/assets/library-world-keys";
+
 export const TERRAIN_KEYS = [
   "grass-lush",
   "grass-flowers-blue",
@@ -44,6 +56,17 @@ export const TREE_PROP_KEYS = [
   "tree-orchard",
 ] as const;
 
+/** Legacy short aliases (still installed by assets:install:library). */
+export const LIBRARY_PROP_KEYS = [
+  "lib-tree-oak-summer",
+  "lib-bush-moss",
+  "lib-flower-riftlily",
+  "lib-mushroom-amber",
+  "lib-fence-post",
+  "lib-crate-market",
+  "lib-lantern-rift",
+] as const;
+
 export const PROP_KEYS = [
   "barrel",
   "crate",
@@ -67,12 +90,18 @@ export const PROP_KEYS = [
   "resource-berry",
   "resource-herb",
   "resource-fish",
+  ...LIBRARY_PROP_KEYS,
+  ...LIBRARY_WORLD_KEYS,
 ] as const;
 
 export type TreePropKey = (typeof TREE_PROP_KEYS)[number];
 
 export function isTreeProp(key: string): key is TreePropKey {
-  return (TREE_PROP_KEYS as readonly string[]).includes(key);
+  return (
+    (TREE_PROP_KEYS as readonly string[]).includes(key) ||
+    key === "lib-tree-oak-summer" ||
+    isLibraryTreeKey(key)
+  );
 }
 
 export const ACTOR_KEYS = ["player-keeper", "pet-riftling"] as const;

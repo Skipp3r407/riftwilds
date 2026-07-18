@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "installedAt": "2026-07-18T17:02:46.090Z",
+  "catalogCount": 1284,
+  "bootProps": [
+    {
+      "id": "tree-oak-summer-mature",
+      "key": "lib-tree-oak-summer",
+      "path": "/assets/game/props/lib-tree-oak-summer.png",
+      "libraryPath": "/assets/game/library/trees/tree-oak-summer-mature.webp"
+    },
+    {
+      "id": "bush-moss-summer-large",
+      "key": "lib-bush-moss",
+      "path": "/assets/game/props/lib-bush-moss.png",
+      "libraryPath": "/assets/game/library/bushes/bush-moss-summer-large.webp"
+    },
+    {
+      "id": "flower-riftlily-cyan-small",
+      "key": "lib-flower-riftlily",
+      "path": "/assets/game/props/lib-flower-riftlily.png",
+      "libraryPath": "/assets/game/library/flowers/flower-riftlily-cyan-small.webp"
+    },
+    {
+      "id": "mushroom-cap-amber-small",
+      "key": "lib-mushroom-amber",
+      "path": "/assets/game/props/lib-mushroom-amber.png",
+      "libraryPath": "/assets/game/library/mushrooms/mushroom-cap-amber-small.webp"
+    },
+    {
+      "id": "lantern-rift-glow",
+      "key": "lib-lantern-rift",
+      "path": "/assets/game/props/lib-lantern-rift.png",
+      "libraryPath": "/assets/game/library/props/lantern-rift-glow.webp"
+    },
+    {
+      "id": "fence-wood-post",
+      "key": "lib-fence-post",
+      "path": "/assets/game/props/lib-fence-post.png",
+      "libraryPath": "/assets/game/library/buildings/fence-wood-post.webp"
+    },
+    {
+      "id": "crate-market-amber",
+      "key": "lib-crate-market",
+      "path": "/assets/game/props/lib-crate-market.png",
+      "libraryPath": "/assets/game/library/props/crate-market-amber.webp"
+    }
+  ],
+  "worldPackCount": 232
+}

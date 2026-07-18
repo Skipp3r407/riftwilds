@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" role="img" aria-label="Riftwilds">
+  <defs>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e8f0f8"/>
+      <stop offset="28%" stop-color="#9eb4c9"/>
+      <stop offset="55%" stop-color="#5d738c"/>
+      <stop offset="78%" stop-color="#c5d4e4"/>
+      <stop offset="100%" stop-color="#7f93a8"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8fefff"/>
+      <stop offset="50%" stop-color="#d7f8ff"/>
+      <stop offset="100%" stop-color="#8fefff"/>
+    </linearGradient>
+    <radialGradient id="gem" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe2a0"/>
+      <stop offset="45%" stop-color="#ffb84d"/>
+      <stop offset="100%" stop-color="#c46a18"/>
+    </radialGradient>
+    <filter id="textBloom" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <text x="360" y="92" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="72" font-weight="700" letter-spacing="10"
+        fill="url(#metal)" stroke="#1a2430" stroke-width="1.2"
+        filter="url(#textBloom)">RIFTWILDS</text>
+  <text x="360" y="92" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="72" font-weight="700" letter-spacing="10"
+        fill="none" stroke="url(#edge)" stroke-width="0.9" opacity="0.55">RIFTWILDS</text>
+  <!-- underline -->
+  <line x1="78" y1="118" x2="330" y2="118" stroke="#3de7ff" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
+  <line x1="390" y1="118" x2="642" y2="118" stroke="#3de7ff" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
+  <polygon points="360,104 372,118 360,132 348,118" fill="url(#gem)"/>
+  <polygon points="360,110 366,118 360,126 354,118" fill="#fff1c8" opacity="0.8"/>
+</svg>

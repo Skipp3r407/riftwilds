@@ -1,6 +1,7 @@
 /**
- * Riftwilds kids coloring pages — original printable line art.
+ * Riftwilds kids coloring pages — printable game-sketch line art.
  * Free for personal / kids use; not for resale.
+ * Assets: public/assets/coloring/* (install via scripts/assets/install-coloring-sketches.mjs).
  */
 
 export type ColoringSheet = {
@@ -27,7 +28,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     slug: "spark",
     title: "Spark coloring page",
     shortLabel: "Spark",
-    description: "Spark the Glowpup — a friendly companion ready for crayons.",
+    description: "Spark the Glowpup — game-style sketch with backpack, scarf, and glowing-tip tail.",
     pngSrc: "/assets/coloring/spark.png",
     svgSrc: "/assets/coloring/spark.svg",
     pdfSrc: "/assets/coloring/spark.pdf",
@@ -38,7 +39,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     slug: "riftwild-commons",
     title: "Riftwild Commons",
     shortLabel: "Commons",
-    description: "The welcoming plaza, fountain, and gateway stones of Riftwild Commons.",
+    description: "Riftwild Commons plaza — timber halls, fountain, and the glowing gateway stone.",
     pngSrc: "/assets/coloring/riftwild-commons.png",
     svgSrc: "/assets/coloring/riftwild-commons.svg",
     pdfSrc: "/assets/coloring/riftwild-commons.pdf",
@@ -49,7 +50,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     slug: "traveling-circus",
     title: "Traveling Circus",
     shortLabel: "Circus",
-    description: "A cheerful circus tent, balloons, and a friendly ringmaster hat.",
+    description: "Traveling Circus night — stage, wagon, banners, and a crowd of Riftlings.",
     pngSrc: "/assets/coloring/traveling-circus.png",
     svgSrc: "/assets/coloring/traveling-circus.svg",
     pdfSrc: "/assets/coloring/traveling-circus.pdf",
@@ -60,7 +61,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     slug: "hatchery-egg",
     title: "Hatchery Egg",
     shortLabel: "Hatchery",
-    description: "A cozy hatchery egg on a nest of soft leaves — almost ready to hatch!",
+    description: "A hatchery egg with rift-scale plates in a mossy nest — almost ready to hatch!",
     pngSrc: "/assets/coloring/hatchery-egg.png",
     svgSrc: "/assets/coloring/hatchery-egg.svg",
     pdfSrc: "/assets/coloring/hatchery-egg.pdf",
@@ -71,7 +72,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     slug: "riftling-friends",
     title: "Riftling Friends",
     shortLabel: "Friends",
-    description: "Three cheerful Riftlings playing together under a gentle sun.",
+    description: "Three Riftling friends in a meadow — Glowpup, berry-kin, and moss-kin.",
     pngSrc: "/assets/coloring/riftling-friends.png",
     svgSrc: "/assets/coloring/riftling-friends.svg",
     pdfSrc: "/assets/coloring/riftling-friends.pdf",
@@ -82,7 +83,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     slug: "elara-venn",
     title: "Elara Venn",
     shortLabel: "Elara",
-    description: "Elara Venn, the kind Commons guide, with her satchel and smile.",
+    description: "Elara Venn, Commons guide — cloak, satchel, and the gateway stone behind her.",
     pngSrc: "/assets/coloring/elara-venn.png",
     svgSrc: "/assets/coloring/elara-venn.svg",
     pdfSrc: "/assets/coloring/elara-venn.pdf",
@@ -93,7 +94,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     slug: "gateway-stones",
     title: "Gateway Stones",
     shortLabel: "Gateways",
-    description: "The five Gateway Stones that welcome travelers into the Commons.",
+    description: "An ornate Gateway Stone with floating crystals and mossy steps.",
     pngSrc: "/assets/coloring/gateway-stones.png",
     svgSrc: "/assets/coloring/gateway-stones.svg",
     pdfSrc: "/assets/coloring/gateway-stones.pdf",
@@ -104,7 +105,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     slug: "elderwood-path",
     title: "Elderwood Path",
     shortLabel: "Elderwood",
-    description: "A sunny forest path with friendly trees and a little bridge.",
+    description: "Elderwood path — ancient trees, lanterns, and a little bridge over a stream.",
     pngSrc: "/assets/coloring/elderwood-path.png",
     svgSrc: "/assets/coloring/elderwood-path.svg",
     pdfSrc: "/assets/coloring/elderwood-path.pdf",

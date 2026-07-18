@@ -95,7 +95,12 @@
     "assets:report": "tsx scripts/assets/report-assets.ts",
     "assets:all": "npm run assets:scan && npm run assets:generate:all && npm run assets:validate && npm run assets:report",
     "assets:audio": "node scripts/assets/generate-audio-sfx.mjs",
-    "assets:riftling-cries": "node scripts/assets/generate-riftling-cries.mjs"
+    "assets:riftling-cries": "node scripts/assets/generate-riftling-cries.mjs",
+    "assets:narrate": "node scripts/audio/elevenlabs-narrate.mjs",
+    "assets:printables": "node scripts/assets/generate-printables.mjs",
+    "assets:generate:library": "node scripts/assets/generate-game-library.mjs",
+    "assets:install:library": "node scripts/assets/install-game-library.mjs",
+    "patch-notes:add": "node scripts/patch-notes/add-entry.mjs"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

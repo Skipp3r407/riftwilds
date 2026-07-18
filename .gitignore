@@ -42,6 +42,7 @@ yarn-error.log*
 /artifacts/**/*.log
 /artifacts/prod-server*.log
 /.cursor/
+/.cache/
 
 # vercel
 .vercel

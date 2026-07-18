@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { playSfx } from "@/hooks/use-sfx";
+import { useSocialBadgeCount } from "@/components/social/social-nav-badge";
 import { projectConfig } from "@/lib/config/project";
 import { extraSidebarNav, sidebarNav } from "@/lib/config/nav";
 import { cn } from "@/lib/utils/cn";
@@ -14,6 +15,7 @@ function isActive(pathname: string, href: string) {
 
 export function GameSidebar() {
   const pathname = usePathname();
+  const socialBadge = useSocialBadgeCount();
 
   return (
     <aside className="shell-sidebar hidden w-60 shrink-0 p-4 lg:block">
@@ -31,15 +33,23 @@ export function GameSidebar() {
       <nav className="relative z-[1] mt-5 flex flex-col gap-0.5" aria-label="Game sidebar">
         {sidebarNav.map((link) => {
           const active = isActive(pathname, link.href);
+          const showBadge = link.href === "/social" && socialBadge > 0;
           return (
             <Link
               key={link.href}
-              href={link.href}
+              href={link.href === "/social" && showBadge ? "/social?tab=messages" : link.href}
               onClick={() => playSfx("ui.nav")}
               className={cn("nav-link focus-ring", active && "nav-link--active")}
               aria-current={active ? "page" : undefined}
             >
-              {link.label}
+              <span className="flex w-full items-center justify-between gap-2">
+                <span>{link.label}</span>
+                {showBadge ? (
+                  <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--amber)] px-1 text-[10px] font-medium text-black">
+                    {socialBadge > 9 ? "9+" : socialBadge}
+                  </span>
+                ) : null}
+              </span>
             </Link>
           );
         })}

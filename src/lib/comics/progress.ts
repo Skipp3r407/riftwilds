@@ -24,6 +24,7 @@ export function createEmptyComicProgress(): ComicProgressState {
       highContrast: false,
       musicEnabled: false,
       sfxEnabled: true,
+      narrationEnabled: false,
       zoom: 1,
     },
   };

@@ -42,11 +42,17 @@ set OPENAI_TTS_MODEL=tts-1-hd
 npm run commercials:vo
 npm run commercials:build
 
-# Or ElevenLabs
+# Or ElevenLabs (preferred warm narrator path)
 set ELEVENLABS_API_KEY=...
-set ELEVENLABS_VOICE_ID=your-deep-narrative-voice-id
+set ELEVENLABS_VOICE_ID=21m00Tcm4TlvDq8ikWAM
+npm run assets:narrate -- --commercials
+npm run commercials:build
+# or force via commercials:vo:
+set COMMERCIAL_TTS=elevenlabs
 npm run commercials:all
 ```
+
+Full ElevenLabs setup (comics + commercials): [docs/audio/ELEVENLABS_NARRATION.md](../audio/ELEVENLABS_NARRATION.md).
 
 Active engine is written to `public/assets/commercials/audio/VO_ENGINE.json`.
 

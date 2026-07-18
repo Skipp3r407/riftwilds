@@ -3603,3 +3603,123 @@ model ValidationReport {
 
   @@index([mapId, passed])
 }
+
+// ─── Player feedback (prepared — apply migration only after approval) ─
+/// Anonymous public bug / idea intake. Runtime uses in-memory store until migrated.
+model PlayerFeedback {
+  id           String   @id @default(cuid())
+  createdAt    DateTime @default(now())
+  kind         String // bug | feedback
+  status       String   @default("OPEN")
+  title        String?
+  category     String?
+  severity     String?
+  message      String
+  email        String?
+  pageUrl      String?
+  userAgent    String?
+  source       String?
+  metadataJson Json?
+  requestId    String?
+
+  @@index([status, createdAt])
+  @@index([kind, createdAt])
+}
+
+// ─── Friends + private messages (PREPARED ONLY) ───────────────────────────────
+// Hot path: src/lib/social (in-memory). Enable FRIENDS_AND_PM_PRISMA_ENABLED
+// only after migrate deploy approval. ownerKey is user_* or guest_* (no wallet required).
+
+model SocialProfileRow {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  ownerKey        String   @unique
+  handle          String   @unique
+  displayName     String
+  rankTitle       String   @default("Hatchling Keeper")
+  avatarSrc       String?
+  messagePrivacy  String   @default("friends_only")
+  lastSeenAt      DateTime @default(now())
+  systemKeeper    Boolean  @default(false)
+
+  @@index([lastSeenAt])
+}
+
+model FriendshipRow {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  ownerKeyA  String
+  ownerKeyB  String
+
+  @@unique([ownerKeyA, ownerKeyB])
+  @@index([ownerKeyA])
+  @@index([ownerKeyB])
+}
+
+model FriendRequestRow {
+  id            String   @id @default(cuid())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  fromOwnerKey  String
+  toOwnerKey    String
+  status        String   @default("pending")
+  note          String?
+
+  @@index([toOwnerKey, status])
+  @@index([fromOwnerKey, status])
+}
+
+model SocialBlockRow {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  blockerOwnerKey  String
+  blockedOwnerKey  String
+  reason           String?
+
+  @@unique([blockerOwnerKey, blockedOwnerKey])
+  @@index([blockerOwnerKey])
+}
+
+model DirectMessageThreadRow {
+  id             String    @id @default(cuid())
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  ownerKeyA      String
+  ownerKeyB      String
+  lastMessageAt  DateTime?
+
+  messages DirectMessageRow[]
+
+  @@unique([ownerKeyA, ownerKeyB])
+  @@index([lastMessageAt])
+}
+
+model DirectMessageRow {
+  id              String    @id @default(cuid())
+  createdAt       DateTime  @default(now())
+  threadId        String
+  senderOwnerKey  String
+  body            String
+  readAt          DateTime?
+
+  thread DirectMessageThreadRow @relation(fields: [threadId], references: [id], onDelete: Cascade)
+
+  @@index([threadId, createdAt])
+  @@index([senderOwnerKey])
+}
+
+model SocialReportRow {
+  id                 String   @id @default(cuid())
+  createdAt          DateTime @default(now())
+  reporterOwnerKey   String
+  targetOwnerKey     String
+  targetType         String
+  targetId           String
+  reason             String
+  details            String?
+  status             String   @default("open")
+
+  @@index([status, createdAt])
+  @@index([reporterOwnerKey])
+}

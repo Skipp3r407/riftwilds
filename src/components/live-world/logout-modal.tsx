@@ -66,8 +66,8 @@ export function LiveWorldLogoutModal({
         </h3>
         {safe && preview.zone ? (
           <p className="mt-2 text-sm text-[var(--text-muted)]">
-            Resting at <span className="text-white">{preview.zone.name}</span> (
-            {preview.zone.zoneKind.toLowerCase()}). Progress will be checkpointed.
+            Resting at <span className="text-white">{preview.zone.name}</span>. Progress
+            will be checkpointed.
           </p>
         ) : (
           <p className="mt-2 text-sm text-[var(--amber)]">

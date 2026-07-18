@@ -5,11 +5,11 @@ import { projectConfig } from "@/lib/config/project";
 export const metadata: Metadata = {
   title: "Fan Kit | Downloads & Share",
   description:
-    "Free Riftwilds Fan Kit — wallpapers, stickers, avatar frames, coloring, soundtrack teasers, and shareable moment cards for Keepers, kids, and streamers.",
+    "Free Riftwilds Fan Kit — wallpapers, stickers, 300 DPI printables, avatar frames, coloring, soundtrack teasers, and shareable moment cards for Keepers, kids, and streamers.",
   openGraph: {
     title: "Riftwilds Fan Kit",
     description:
-      "Downloads, stickers, coloring, and share cards for the Riftwilds community.",
+      "Downloads, stickers, 300 DPI printables, coloring, and share cards for the Riftwilds community.",
     type: "website",
     siteName: projectConfig.PROJECT_NAME,
     images: [{ url: "/assets/marketing/og-default.png" }],

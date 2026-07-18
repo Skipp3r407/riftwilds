@@ -8,10 +8,10 @@ import { hasCustomHudPanelPosition } from "@/game/live-world/systems/immersive/h
  * - Bottom-left: chat (+ presence peek)
  * - Top-center: Credits + Happening Now
  * - Top-right: utility pills (goals / fullscreen / exit)
- * - Right column: minimap → nearby → daily tasks → social status
- * - Bottom-center: vitals orbs + action hotbar
- * - Bottom-right: radial menu icons
- * Center of screen stays clear for the world.
+ * - Right column: minimap → nearby badge/drawer → pinned objectives → presence
+ * - Bottom-center: vitals orbs + consolidated action bar
+ * - Bottom-right: compact radial / system shortcuts
+ * Center of screen stays clear for the world (Level-2 panels collapsed by default).
  */
 
 /** Mid-left World Pulse stack (below status chrome). */
@@ -27,11 +27,11 @@ export function townActivityUsesMidLeftStack(
   return !hasCustomHudPanelPosition(settings.hudPanelLayout, "townActivity");
 }
 
-/** Right column: minimap + nearby + tasks + status. */
+/** Right column: minimap + nearby badge + objectives (narrower for play space). */
 export function rightColumnHudStackClass(statusCollapsed: boolean): string {
   return statusCollapsed
-    ? "pointer-events-none absolute right-3 top-12 z-30 flex w-[min(15rem,calc(100%-1.5rem))] flex-col items-end gap-1.5 md:right-4 md:gap-2"
-    : "pointer-events-none absolute right-3 top-[4.75rem] z-30 flex w-[min(15rem,calc(100%-1.5rem))] flex-col items-end gap-1.5 md:right-4 md:top-20 md:gap-2";
+    ? "pointer-events-none absolute right-3 top-12 z-30 flex w-[min(12.5rem,calc(100%-1.5rem))] flex-col items-end gap-1 md:right-4"
+    : "pointer-events-none absolute right-3 top-[4.25rem] z-30 flex w-[min(12.5rem,calc(100%-1.5rem))] flex-col items-end gap-1 md:right-4 md:top-[4.75rem]";
 }
 
 /** @deprecated Prefer rightColumnHudStackClass — kept for free-drag fallbacks. */
@@ -125,12 +125,12 @@ export function interactPromptDockClass(
 
 /** Top-center credits + happening now. */
 export function topCenterHudClass(): string {
-  return "pointer-events-none absolute left-1/2 top-3 z-30 flex w-[min(28rem,calc(100%-12rem))] -translate-x-1/2 flex-col items-center gap-2 md:top-4";
+  return "pointer-events-none absolute left-1/2 top-2 z-30 flex w-[min(18rem,calc(100%-10rem))] -translate-x-1/2 flex-col items-center gap-1.5 md:top-3";
 }
 
-/** Top-right utility pills (Map goals / Fullscreen / Exit). */
+/** Top-right utility (Goals / Fullscreen icon / System menu). */
 export function topRightUtilityClass(): string {
-  return "pointer-events-none absolute right-3 top-3 z-35 flex flex-wrap items-center justify-end gap-1.5 md:right-4 md:top-4";
+  return "pointer-events-none absolute right-3 top-2 z-35 flex flex-wrap items-center justify-end gap-1 md:right-4 md:top-3";
 }
 
 /** Bottom-right circular menu. */

@@ -81,6 +81,15 @@ npm run assets:riftling-cries
 
 Default engine is **procedural** original synthesis (affinity-flavored, unique per slug). Grok image tooling in this repo does not generate audio; xAI TTS is optional when `XAI_API_KEY` is set.
 
+## Comic storybook + commercial VO (ElevenLabs)
+
+Pre-generated TTS only (no browser API calls). See [ELEVENLABS_NARRATION.md](./ELEVENLABS_NARRATION.md).
+
+```bash
+npm run assets:narrate
+# npm run assets:narrate -- --dry-run
+```
+
 ## License policy
 
 Original / AI-generated / CC0 only. No copyrighted game audio or commercial sample packs.

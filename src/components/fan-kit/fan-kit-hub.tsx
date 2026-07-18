@@ -22,12 +22,14 @@ import { NewsletterSignup } from "@/components/fan-kit/newsletter-signup";
 import { ShareButton, CopyLinkButton } from "@/components/fan-kit/share-button";
 import { SocialCtas } from "@/components/fan-kit/social-ctas";
 import { ColoringDownloads } from "@/components/coloring/coloring-downloads";
+import { PrintablesDownloads } from "@/components/printables/printables-downloads";
 import { WallpaperDownloads } from "@/components/wallpapers/wallpaper-downloads";
 import { StatusChip } from "@/components/shared/page-header";
 import { projectConfig } from "@/lib/config/project";
 
 const NAV_ANCHORS = [
   { href: "#downloads", label: "Downloads" },
+  { href: "#printables", label: "Printables" },
   { href: "#share", label: "Share" },
   { href: "#listen", label: "Listen" },
   { href: "#meet", label: "Riftlings" },
@@ -72,6 +74,9 @@ export function FanKitHub() {
           </Link>
           <Link href="/coloring" className="btn-secondary focus-ring">
             Coloring pages
+          </Link>
+          <Link href="/printables" className="btn-secondary focus-ring">
+            300 DPI printables
           </Link>
           <Link href="/creators" className="btn-secondary focus-ring">
             Creator Hub
@@ -143,6 +148,13 @@ export function FanKitHub() {
 
         <ColoringDownloads showIndexLink />
         <p className="text-xs text-[var(--text-dim)]">{COLORING_CREDIT}</p>
+      </section>
+
+      <section id="printables" className="scroll-mt-24 space-y-4" aria-labelledby="printables-section-heading">
+        <h2 id="printables-section-heading" className="sr-only">
+          300 DPI printables
+        </h2>
+        <PrintablesDownloads showIndexLink />
       </section>
 
       <section id="share" className="scroll-mt-24 space-y-4" aria-labelledby="share-heading">
@@ -267,6 +279,9 @@ export function FanKitHub() {
         <div className="flex flex-wrap gap-2">
           <Link href="/coloring" className="btn-primary focus-ring text-sm">
             Coloring downloads
+          </Link>
+          <Link href="/printables" className="btn-secondary focus-ring text-sm">
+            300 DPI printables
           </Link>
           <Link href="/comics" className="btn-secondary focus-ring text-sm">
             Comics library

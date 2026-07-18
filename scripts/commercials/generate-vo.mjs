@@ -140,7 +140,9 @@ function speakOpenAI(text, wavPath) {
 function speakElevenLabs(text, wavPath) {
   const key = process.env.ELEVENLABS_API_KEY?.trim();
   if (!key) throw new Error("ELEVENLABS_API_KEY missing");
-  const voiceId = process.env.ELEVENLABS_VOICE_ID || "21m00Tcm4TlvDq8ikWAM"; // Rachel; override for deep male
+  // Warm storytelling default (Rachel). Override with ELEVENLABS_VOICE_ID.
+  // Shared defaults live in scripts/audio/elevenlabs-client.mjs
+  const voiceId = process.env.ELEVENLABS_VOICE_ID || "21m00Tcm4TlvDq8ikWAM";
   const mp3 = wavPath.replace(/\.wav$/i, ".mp3");
   const body = JSON.stringify({
     text,

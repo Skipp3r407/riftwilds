@@ -109,10 +109,14 @@ export function isDevPlaceholderPath(path: string): boolean {
   return path.includes("/placeholders/");
 }
 
-/** Brand lockups - transparent PNGs for dark UI chrome. */
-export const brandLogoPath = "/assets/brand/riftwilds-logo.png?v=theme3";
-export const brandMarkPath = "/assets/brand/riftwilds-mark.png?v=theme3";
-export const brandWordmarkPath = "/assets/brand/riftwilds-wordmark.png?v=theme3";
+/** Brand lockups - transparent PNGs/SVGs for dark UI chrome. Bump ?v= after regenerating. */
+export const BRAND_ASSET_V = "theme4";
+export const brandLogoPath = `/assets/brand/riftwilds-logo.png?v=${BRAND_ASSET_V}`;
+export const brandMarkPath = `/assets/brand/riftwilds-mark.png?v=${BRAND_ASSET_V}`;
+export const brandWordmarkPath = `/assets/brand/riftwilds-wordmark.png?v=${BRAND_ASSET_V}`;
+export const brandLogoSvgPath = `/assets/brand/riftwilds-logo.svg?v=${BRAND_ASSET_V}`;
+export const brandMarkSvgPath = `/assets/brand/riftwilds-mark.svg?v=${BRAND_ASSET_V}`;
+export const brandWordmarkSvgPath = `/assets/brand/riftwilds-wordmark.svg?v=${BRAND_ASSET_V}`;
 export const brandCoinIconPath = "/assets/brand/rift-coin-icon.svg";
 
 export { SECTION_TITLES, sectionTitlePath, sectionTitleFromLabel } from "@/lib/assets/section-titles";

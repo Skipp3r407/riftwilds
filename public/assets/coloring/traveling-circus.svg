@@ -1,40 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="850" height="1100" viewBox="0 0 850 1100">
   <rect width="850" height="1100" fill="#ffffff"/>
   <rect x="28" y="28" width="794" height="1044" fill="none" stroke="#1a1a1a" stroke-width="3" rx="8"/>
   <text x="425" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1a1a1a">Traveling Circus</text>
-  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page</text>
-  <g transform="translate(0, 40)" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    
-      <!-- tent -->
-      <path d="M200 700 L425 280 L650 700 Z"/>
-      <path d="M425 280 L425 700"/>
-      <path d="M280 560 L570 560"/>
-      <path d="M320 640 L530 640"/>
-      <!-- stripes suggestion -->
-      <path d="M340 420 L300 620" stroke-width="1.8"/>
-      <path d="M510 420 L550 620" stroke-width="1.8"/>
-      <!-- entrance -->
-      <path d="M380 700 Q425 600 470 700"/>
-      <!-- flags -->
-      <path d="M425 280 L425 220"/>
-      <path d="M425 220 L470 240 L425 260"/>
-      <path d="M250 520 L250 460 L290 480 L250 500"/>
-      <path d="M600 520 L600 460 L640 480 L600 500"/>
-      <!-- balloons -->
-      <ellipse cx="160" cy="360" rx="28" ry="36"/>
-      <path d="M160 396 Q155 430 170 460"/>
-      <ellipse cx="720" cy="340" rx="26" ry="34"/>
-      <path d="M720 374 Q725 410 710 450"/>
-      <ellipse cx="120" cy="420" rx="20" ry="26"/>
-      <path d="M120 446 Q118 470 130 490"/>
-      <!-- ringmaster hat -->
-      <ellipse cx="425" cy="820" rx="70" ry="12"/>
-      <path d="M390 820 L400 760 L450 760 L460 820"/>
-      <path d="M380 760 L470 760"/>
-      <ellipse cx="425" cy="760" rx="50" ry="10"/>
-      <text x="425" y="920" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#222" stroke="none">Under the big top!</text>
-    
-  </g>
+  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page · game sketch</text>
+  <image x="60" y="130" width="730" height="880" preserveAspectRatio="xMidYMid meet" xlink:href="traveling-circus.png"/>
   <text x="425" y="1068" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#555555">Free for personal &amp; kids use · Not for resale · riftwilds.com</text>
 </svg>

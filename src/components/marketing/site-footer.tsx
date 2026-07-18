@@ -31,7 +31,7 @@ export function SiteFooter() {
             <Image
               src={brandWordmarkPath}
               alt="Riftwilds"
-              width={497}
+              width={491}
               height={140}
               unoptimized
               className="h-6 w-auto object-contain"
@@ -64,6 +64,10 @@ export function SiteFooter() {
             Downloads &amp; shareables:{" "}
             <Link href="/fan-kit" className="footer-link text-[var(--cyan)]">
               Fan Kit
+            </Link>
+            {" · "}
+            <Link href="/printables" className="footer-link text-[var(--cyan)]">
+              Printables
             </Link>
             {" · "}
             <Link href="/press" className="footer-link text-[var(--cyan)]">
@@ -152,6 +156,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/printables" className="footer-link">
+                Printables
+              </Link>
+            </li>
+            <li>
               <Link href="/press" className="footer-link">
                 Press / Streamers
               </Link>
@@ -159,6 +168,11 @@ export function SiteFooter() {
             <li>
               <Link href="/creators" className="footer-link">
                 Creator Hub
+              </Link>
+            </li>
+            <li>
+              <Link href="/social" className="footer-link">
+                Social Hub
               </Link>
             </li>
             <li>
@@ -174,6 +188,16 @@ export function SiteFooter() {
             <li>
               <Link href="/academy" className="footer-link">
                 Academy / Help
+              </Link>
+            </li>
+            <li>
+              <Link href="/feedback" className="footer-link">
+                Feedback / Bugs
+              </Link>
+            </li>
+            <li>
+              <Link href="/patch-notes" className="footer-link">
+                Patch Notes
               </Link>
             </li>
             <li>

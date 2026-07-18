@@ -37,6 +37,7 @@ import {
   updateComicSettings,
 } from "@/lib/comics";
 import { playCoverOpenSound, playPageTurnSound } from "@/lib/comics/page-turn-sound";
+import { useComicNarration } from "@/hooks/use-comic-narration";
 import { cn } from "@/lib/utils/cn";
 
 type Props = {
@@ -206,6 +207,13 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
 
   const current = issue.pages[page - 1]!;
   const settings = progress.settings;
+  const narration = useComicNarration({
+    issueSlug: issue.slug,
+    pageNumber: page,
+    page: current,
+    enabled: settings.narrationEnabled,
+    active: coverOpen || !cover,
+  });
 
   const onHotspot = (h: ComicHotspot) => {
     setProgress((p) => {
@@ -380,6 +388,45 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
           >
             Page sound {settings.sfxEnabled ? "On" : "Off"}
           </button>
+          <button
+            type="button"
+            className="btn-secondary focus-ring text-sm"
+            onClick={() =>
+              setProgress((p) =>
+                updateComicSettings(p, { narrationEnabled: !p.settings.narrationEnabled }),
+              )
+            }
+            aria-pressed={settings.narrationEnabled}
+            title="Storybook voiceover (ElevenLabs clips when generated)"
+          >
+            Narration {settings.narrationEnabled ? "On" : "Off"}
+          </button>
+          {settings.narrationEnabled && (
+            <>
+              <button
+                type="button"
+                className="btn-secondary focus-ring text-sm"
+                onClick={() => narration.togglePlay()}
+                disabled={!narration.available || narration.status === "missing"}
+                aria-pressed={narration.playing}
+              >
+                {narration.playing ? "Pause VO" : "Play VO"}
+              </button>
+              <button
+                type="button"
+                className="btn-secondary focus-ring text-sm"
+                onClick={() => narration.toggleMute()}
+                aria-pressed={narration.muted}
+              >
+                VO {narration.muted ? "Muted" : "Audible"}
+              </button>
+              {narration.status === "missing" && (
+                <span className="px-1 text-xs text-[rgba(232,213,176,0.55)]">
+                  No clip for this page
+                </span>
+              )}
+            </>
+          )}
         </div>
 
         {toast && (
@@ -553,7 +600,8 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
         <p className="sr-only">
           Keyboard: Left/Right or A/D to turn pages, F for fullscreen, Home/End for first/last page.
           Swipe on touch devices. Gamepad D-pad supported as best-effort stub. Page-turn sound toggle
-          plays a soft paper rustle. Prefer reduced motion for a simple crossfade instead of a 3D flip.
+          plays a soft paper rustle. Narration toggle plays pre-generated storybook voiceover when
+          clips exist. Prefer reduced motion for a simple crossfade instead of a 3D flip.
         </p>
       </div>
     </div>

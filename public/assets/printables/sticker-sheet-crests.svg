@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+  <defs>
+  <linearGradient id="parchment" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#f4e8d0"/><stop offset="0.55" stop-color="#e8d5b0"/><stop offset="1" stop-color="#d4bc8e"/>
+  </linearGradient>
+  <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#1a1510"/><stop offset="0.5" stop-color="#141820"/><stop offset="1" stop-color="#0e1218"/>
+  </linearGradient>
+  <linearGradient id="bronze" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#e8c878"/><stop offset="0.4" stop-color="#c4a882"/><stop offset="1" stop-color="#8b6914"/>
+  </linearGradient>
+  <linearGradient id="rift" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#66e0ff"/><stop offset="0.5" stop-color="#3de7ff"/><stop offset="1" stop-color="#1a8fb8"/>
+  </linearGradient>
+  <radialGradient id="amberGlow" cx="50%" cy="40%" r="50%">
+    <stop stop-color="#ffe566" stop-opacity="0.55"/><stop offset="0.55" stop-color="#ffb84d" stop-opacity="0.2"/><stop offset="1" stop-color="#ffb84d" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="cyanGlow" cx="50%" cy="35%" r="55%">
+    <stop stop-color="#3de7ff" stop-opacity="0.45"/><stop offset="0.6" stop-color="#3de7ff" stop-opacity="0.12"/><stop offset="1" stop-color="#3de7ff" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="6"/>
+  </filter></defs>
+  <rect width="850" height="1100" fill="url(#parchment)"/>
+  <rect x="24" y="24" width="802" height="1052" fill="none" stroke="#8b6914" stroke-width="3" rx="12"/>
+  
+  <text x="425" y="72" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#8b6914" letter-spacing="6">RIFTWILDS</text>
+  <text x="425" y="122" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#1a1510" font-weight="700">Crest and Badge Stickers</text>
+  <text x="425" y="158" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5a5044">Keeper seals · Hatchery marks · Commons pride</text>
+  <rect x="80" y="190" width="210" height="230" rx="26" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/><g transform="translate(115,212)"><g transform="scale(1.35)">
+    <rect x="8" y="8" width="124" height="124" rx="18" fill="#1a1510" stroke="#c4a882" stroke-width="5"/>
+    <circle cx="70" cy="56" r="26" fill="none" stroke="#3de7ff" stroke-width="4"/>
+    <circle cx="70" cy="56" r="8" fill="#ffb84d"/>
+    <path d="M38 96h64" stroke="#c4a882" stroke-width="5" stroke-linecap="round"/>
+    <path d="M48 28l22 12 22-12" stroke="#e8d5b0" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M70 82 L78 96 L70 104 L62 96 Z" fill="#3de7ff" opacity="0.8"/>
+  </g></g><text x="185" y="408" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1a1510">Commons Crest</text><rect x="320" y="190" width="210" height="230" rx="26" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/><g transform="translate(355,212)"><g transform="scale(1.35)">
+    <ellipse cx="70" cy="120" rx="50" ry="12" fill="#3d8a48" opacity="0.45"/>
+    <ellipse cx="70" cy="64" rx="42" ry="56" fill="#e8d5b0"/>
+    <ellipse cx="70" cy="64" rx="34" ry="46" fill="#f3efe6"/>
+    <path d="M48 50c16-8 32 2 40 16" stroke="#3de7ff" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M70 40 L78 56 L70 64 L62 56 Z" fill="#ffb84d"/>
+    <circle cx="70" cy="78" r="6" fill="#3de7ff" opacity="0.7"/>
+  </g></g><text x="425" y="408" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1a1510">Hatch Egg</text><rect x="560" y="190" width="210" height="230" rx="26" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/><g transform="translate(595,212)"><g transform="scale(1.25)">
+    <path d="M70 118s-48-30-62-60C-2 36 12 16 32 16c14 0 26 10 38 24C82 26 94 16 108 16c20 0 34 20 24 42-14 30-62 60-62 60Z" fill="#c44840"/>
+    <path d="M70 108s-38-24-50-48c-8-16 4-32 20-32 12 0 22 8 30 20 8-12 18-20 30-20 16 0 28 16 20 32-12 24-50 48-50 48Z" fill="#e87870"/>
+    <path d="M70 70 L76 82 L70 88 L64 82 Z" fill="#3de7ff" opacity="0.7"/>
+  </g></g><text x="665" y="408" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1a1510">Care Heart</text><rect x="80" y="470" width="210" height="230" rx="26" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/><g transform="translate(115,492)"><g transform="scale(1.15)">
+    <path d="M70 10l16 12 20-4 8 20 18 10-8 20 8 20-18 10-8 20-20-4-16 12-16-12-20 4-8-20-18-10 8-20-8-20 18-10 8-20 20 4 16-12Z" fill="#c4a882"/>
+    <circle cx="70" cy="70" r="32" fill="#1a1510"/>
+    <ellipse cx="70" cy="62" rx="13" ry="16" fill="#e8d5b0"/>
+    <path d="M48 92c10-12 34-12 44 0" fill="#3de7ff" opacity="0.8"/>
+    <path d="M70 36l4 10 10 2-8 7 2 10-8-5-8 5 2-10-8-7 10-2 4-10Z" fill="#ffb84d"/>
+  </g></g><text x="185" y="688" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1a1510">Keeper Badge</text><rect x="320" y="470" width="210" height="230" rx="26" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/><g transform="translate(355,492)"><g><g transform="translate(0,0) scale(0.85)">
+    <ellipse cx="100" cy="182" rx="48" ry="9" fill="#2a2118" opacity="0.3"/>
+    <!-- leaner body -->
+    <ellipse cx="100" cy="132" rx="40" ry="38" fill="#e8a838"/>
+    <ellipse cx="100" cy="124" rx="30" ry="28" fill="#ffc84a"/>
+    <ellipse cx="90" cy="112" rx="10" ry="8" fill="#fff0a8" opacity="0.45"/>
+    <!-- hind legs -->
+    <path d="M70 150 Q62 168 68 178 Q78 176 80 160 Z" fill="#d4922a"/>
+    <path d="M130 150 Q138 168 132 178 Q122 176 120 160 Z" fill="#d4922a"/>
+    <ellipse cx="68" cy="178" rx="10" ry="5" fill="#b87820"/>
+    <ellipse cx="132" cy="178" rx="10" ry="5" fill="#b87820"/>
+    <!-- forelegs -->
+    <path d="M62 128 Q48 145 52 160 Q64 158 70 140 Z" fill="#ffb84d"/>
+    <path d="M138 128 Q152 145 148 160 Q136 158 130 140 Z" fill="#ffb84d"/>
+    <!-- head (smaller vs body) -->
+    <ellipse cx="100" cy="72" rx="34" ry="32" fill="#ffe566"/>
+    <ellipse cx="100" cy="68" rx="24" ry="20" fill="#fff2a0"/>
+    <!-- pointed ears -->
+    <path d="M72 58 L60 18 L84 50 Z" fill="#ff9a2a"/>
+    <path d="M72 52 L64 28 L80 48 Z" fill="#ffc84a"/>
+    <path d="M128 58 L140 18 L116 50 Z" fill="#ff9a2a"/>
+    <path d="M128 52 L136 28 L120 48 Z" fill="#ffc84a"/>
+    <!-- flame mane crest -->
+    <path d="M82 42c-10-20 0-34 16-38 0 12 6 20 12 26-10-2-18 2-28 12Z" fill="#ff5a20"/>
+    <path d="M118 42c10-20 0-34-16-38 0 12-6 20-12 26 10-2 18 2 28 12Z" fill="#ff5a20"/>
+    <path d="M100 12c5 8 7 16 3 26 9-5 12-14 9-26-3 3-7 3-12 0Z" fill="#ffb84d"/>
+    <!-- determined face — smaller eyes -->
+    <ellipse cx="88" cy="70" rx="4.5" ry="5.5" fill="#1a1510"/>
+    <ellipse cx="112" cy="70" rx="4.5" ry="5.5" fill="#1a1510"/>
+    <circle cx="89.5" cy="68.5" r="1.4" fill="#fff" opacity="0.85"/>
+    <circle cx="113.5" cy="68.5" r="1.4" fill="#fff" opacity="0.85"/>
+    <ellipse cx="100" cy="80" rx="4" ry="3" fill="#e85a28"/>
+    <path d="M92 90c5 5 11 5 16 0" stroke="#1a1510" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <!-- cyan rift crystal brow -->
+    <path d="M100 36 L110 54 L100 62 L90 54 Z" fill="#3de7ff"/>
+    <path d="M100 40 L106 52 L100 58 L94 52 Z" fill="#a8f4ff" opacity="0.8"/>
+    <!-- flame tail -->
+    <path d="M142 120c22-2 32 12 24 32-12-8-18-4-24 8 4-14 2-26 0-40Z" fill="#ff7a3d"/>
+    <path d="M148 128c12 0 18 8 14 18-7-4-11-2-14 4 2-8 0-14 0-22Z" fill="#ffe566"/>
+    <circle cx="46" cy="48" r="2.5" fill="#3de7ff" opacity="0.9"/>
+    <circle cx="162" cy="64" r="2" fill="#ffb84d" opacity="0.85"/>
+  </g></g></g><text x="425" y="688" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1a1510">Spark Seal</text><rect x="560" y="470" width="210" height="230" rx="26" fill="none" stroke="#8b6914" stroke-width="2" stroke-dasharray="8 6" opacity="0.65"/><g transform="translate(595,492)"><g><g transform="translate(0,0) scale(0.85)">
+    <ellipse cx="100" cy="180" rx="46" ry="9" fill="#2a2118" opacity="0.22"/>
+    <circle cx="100" cy="110" r="58" fill="#2a6eb8" opacity="0.55"/>
+    <circle cx="100" cy="110" r="52" fill="#3d9bff" opacity="0.75"/>
+    <circle cx="100" cy="110" r="42" fill="#7ec8ff" opacity="0.85"/>
+    <ellipse cx="82" cy="92" rx="16" ry="12" fill="#fff" opacity="0.4"/>
+    <ellipse cx="88" cy="118" rx="6" ry="7" fill="#1a3048"/>
+    <ellipse cx="116" cy="118" rx="6" ry="7" fill="#1a3048"/>
+    <circle cx="90" cy="116" r="1.8" fill="#fff" opacity="0.9"/>
+    <circle cx="118" cy="116" r="1.8" fill="#fff" opacity="0.9"/>
+    <path d="M90 136c6 9 14 9 20 0" stroke="#1a3048" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+    <circle cx="52" cy="78" r="14" fill="#a8e7ff" opacity="0.7"/>
+    <circle cx="154" cy="88" r="12" fill="#a8e7ff" opacity="0.6"/>
+    <circle cx="148" cy="150" r="10" fill="#3de7ff" opacity="0.5"/>
+    <circle cx="56" cy="148" r="9" fill="#3de7ff" opacity="0.45"/>
+    <circle cx="100" cy="58" r="6" fill="#e8d5b0" opacity="0.9"/>
+    <circle cx="100" cy="58" r="3.5" fill="#3de7ff"/>
+    <path d="M70 160 Q100 178 130 160" fill="none" stroke="#7ec8ff" stroke-width="3" opacity="0.5"/>
+  </g></g></g><text x="665" y="688" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1a1510">Tide Mark</text>
+  <text x="425" y="1055" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#5a5044">Riftwilds · 300 DPI print · Personal use only · Not for resale</text>
+  <text x="425" y="1081" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#7a7064">US Letter · Stickers</text>
+</svg>

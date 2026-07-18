@@ -1,5 +1,7 @@
 # Legends of the Rift
 
+Storybook voiceover (optional ElevenLabs page clips): see [docs/audio/ELEVENLABS_NARRATION.md](../audio/ELEVENLABS_NARRATION.md) and `npm run assets:narrate`.
+
 Official ten-issue Riftwilds comic series (original IP).
 
 ## Routes

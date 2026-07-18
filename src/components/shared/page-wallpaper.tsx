@@ -72,6 +72,8 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/pets", name: "pets", opacity: 0.4 },
   { prefix: "/creature", name: "creatures", opacity: 0.38 },
   { prefix: "/docs", name: "docs", opacity: 0.4 },
+  { prefix: "/patch-notes", name: "docs", opacity: 0.38 },
+  { prefix: "/updates", name: "docs", opacity: 0.38 },
   { prefix: "/battle", name: "battle", opacity: 0.4 },
   { prefix: "/memorials", name: "memorials", opacity: 0.4 },
   { prefix: "/legal", name: "docs", opacity: 0.35 },

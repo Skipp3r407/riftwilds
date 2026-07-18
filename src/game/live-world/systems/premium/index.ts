@@ -2,6 +2,8 @@ export {
   TERRAIN_KEYS,
   PROP_KEYS,
   TREE_PROP_KEYS,
+  LIBRARY_PROP_KEYS,
+  LIBRARY_WORLD_KEYS,
   BUILDING_KEYS,
   ACTOR_KEYS,
   terrainTex,
@@ -10,6 +12,8 @@ export {
   actorTex,
   buildingKeyFromObjectId,
   isTreeProp,
+  isLibraryWorldKey,
+  isLibraryTreeKey,
 } from "@/game/live-world/systems/premium/asset-keys";
 export {
   buildElevationGrid,
@@ -31,6 +35,7 @@ export {
   collectBuildingFacades,
   collectOccluders,
   drawCityWallVisuals,
+  drawTownStreetFurniture,
   type BuildingFacade,
   type Occluder,
   type PremiumPropSpawnResult,
@@ -40,6 +45,12 @@ export {
   depthAt,
   addContactShadow,
 } from "@/game/live-world/systems/premium/depth-layers";
+export {
+  KEEPER_DISPLAY,
+  PET_DISPLAY,
+  actorContactShadow,
+  scaleNpcDisplayHeight,
+} from "@/game/live-world/systems/premium/actor-presentation";
 export {
   createAtmosphere,
   type AtmosphereHandles,

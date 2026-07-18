@@ -194,6 +194,10 @@ export const featureFlagDefaults = {
   ECOSYSTEM_CREATOR_HUB_ENABLED: true,
   /** Social hub stubs (friends / party / DM / posts / calendar). */
   ECOSYSTEM_SOCIAL_HUB_ENABLED: true,
+  /** Server-authoritative friends + private messages (in-memory hot path). */
+  FRIENDS_AND_PM_ENABLED: true,
+  /** Persist friends/PM tables via Prisma — prepare-only until migration approved. */
+  FRIENDS_AND_PM_PRISMA_ENABLED: false,
   /** Marketplace browse categories (housing, cosmetics, wishlists…). */
   ECOSYSTEM_MARKETPLACE_BROWSE_ENABLED: true,
   /** Post-grad nav emphasis (Play / Dashboard / Treasury / Rewards / World). */

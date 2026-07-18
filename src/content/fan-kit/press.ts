@@ -11,7 +11,7 @@ export const PRESS_BLURB = {
   talkingPoints: [
     "Start free at the Hatchery — claim an egg, meet a Riftling.",
     "Show Legends of the Rift comics + Live World plaza walk.",
-    "Point kids/parents to /coloring and /fan-kit (safe downloads).",
+    "Point kids/parents to /coloring, /printables (300 DPI), and /fan-kit (safe downloads).",
     "Creator Hub for community packs; Fan Kit for logos & stickers.",
   ],
   keyArtHref: "/assets/marketing/og-default.png",
@@ -36,8 +36,8 @@ export const KIDS_CORNER = {
       body: "Core care and comics don’t require spending. Live World chat is community-facing — parents should supervise younger players online.",
     },
     {
-      title: "Coloring & comics",
-      body: "Free printable coloring pages and the Legends of the Rift comic series are made for shared couch time.",
+      title: "Coloring, printables & comics",
+      body: "Free line-art coloring pages, 300 DPI full-color printables (stickers, posters, cards), and Legends of the Rift comics for shared couch time.",
     },
     {
       title: "No pay-to-win care",

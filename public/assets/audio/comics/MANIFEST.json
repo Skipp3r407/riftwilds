@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "provider": "none",
+  "voiceId": "21m00Tcm4TlvDq8ikWAM",
+  "modelId": "eleven_multilingual_v2",
+  "generatedAt": "2026-07-18T16:39:05.803Z",
+  "tip": "Set ELEVENLABS_API_KEY then re-run npm run assets:narrate (see docs/audio/ELEVENLABS_NARRATION.md).",
+  "issues": [
+    {
+      "slug": "the-first-rift",
+      "issueNumber": 1,
+      "title": "The First Rift",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "file": "page-01.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-01.mp3",
+          "text": "The sky tears\n\nAeryndra's Prime Gateway screamed once — then the world learned how to layer.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 2,
+          "file": "page-02.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-02.mp3",
+          "text": "Nine days before the Commons had a name\n\nRoads crossed deserts that had never met forests.\n\nElara Venn says: The egg is warm. That is enough to keep walking.\n\nElara Venn thinks: If I name myself hero, I will fail the small thing in my arms.\n\nStranger says: Take the crown road — safer.\n\nElara Venn says: Safer for whom?",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 3,
+          "file": "page-03.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-03.mp3",
+          "text": "She shared waybread with a child who had lost a name.\n\nElara Venn says: Call the creature yours to keep — not yours to own.\n\nCodex echo: Waybread on the First Night",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 4,
+          "file": "page-04.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-04.mp3",
+          "text": "Gateway Hearts\n\nCodex fragment — recovered from the margin.\n\nGateway Hearts: Hearts were living cores. Stones are travel shards. The Commons Riftstone is a fragment of the Prime — maps of places not yet found.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 5,
+          "file": "page-05.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-05.mp3",
+          "text": "The Riftstone claims mud\n\nFarmers, healers, and Keepers gathered where stable paths still intersected.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 6,
+          "file": "page-06.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-06.mp3",
+          "text": "Mira (young) says: Is it… looking at me?\n\nElara Venn says: It is remembering the world. Help it stay gentle.\n\nThe Soft Exodus had closed into eggs. Battle culture would come later.\n\nVillage elder says: What do we call you?\n\nElara Venn says: Courier. Keeper, if the egg agrees.\n\nSecret symbol: FIRST-LIGHT-01\n\nFirst Riftling thinks: …keep…\n\nOriginal IP note: Riftlings are living archives — not weapons-first. Preservation before prowess.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 7,
+          "file": "page-07.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-07.mp3",
+          "text": "Years soft-shifted. Elara's bond slowed her aging — Spirit bleed, not magic vanity.\n\nElara Venn says: New Keepers still arrive with empty hands and full fear.\n\nElara Venn says: Good. Fear means they noticed the egg is becoming.\n\nPlay this chapter in Live World when you are ready.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 8,
+          "file": "page-08.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-08.mp3",
+          "text": "The road remembers\n\nFootpaths in the Riftwilds rewrite themselves overnight. Maps are promises, not contracts.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 9,
+          "file": "page-09.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-09.mp3",
+          "text": "Quiet between storms\n\nBetween named trials, Keepers learn the oldest skill: waiting without wasting the wait.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 10,
+          "file": "page-10.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-10.mp3",
+          "text": "The road remembers\n\nFootpaths in the Riftwilds rewrite themselves overnight. Maps are promises, not contracts.\n\nElara Venn says: If the path changes, walk it anyway. The Heart notices who still shows up.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 11,
+          "file": "page-11.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-11.mp3",
+          "text": "Quiet between storms\n\nBetween named trials, Keepers learn the oldest skill: waiting without wasting the wait.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 12,
+          "file": "page-12.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-12.mp3",
+          "text": "The road remembers\n\nFootpaths in the Riftwilds rewrite themselves overnight. Maps are promises, not contracts.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 13,
+          "file": "page-13.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-13.mp3",
+          "text": "Quiet between storms\n\nBetween named trials, Keepers learn the oldest skill: waiting without wasting the wait.\n\nElara Venn says: If the path changes, walk it anyway. The Heart notices who still shows up.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 14,
+          "file": "page-14.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-14.mp3",
+          "text": "The road remembers\n\nFootpaths in the Riftwilds rewrite themselves overnight. Maps are promises, not contracts.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 15,
+          "file": "page-15.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-15.mp3",
+          "text": "Quiet between storms\n\nBetween named trials, Keepers learn the oldest skill: waiting without wasting the wait.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 16,
+          "file": "page-16.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-16.mp3",
+          "text": "The road remembers\n\nFootpaths in the Riftwilds rewrite themselves overnight. Maps are promises, not contracts.\n\nElara Venn says: If the path changes, walk it anyway. The Heart notices who still shows up.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 17,
+          "file": "page-17.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-17.mp3",
+          "text": "Quiet between storms\n\nBetween named trials, Keepers learn the oldest skill: waiting without wasting the wait.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 18,
+          "file": "page-18.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-18.mp3",
+          "text": "The road remembers\n\nFootpaths in the Riftwilds rewrite themselves overnight. Maps are promises, not contracts.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 19,
+          "file": "page-19.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-19.mp3",
+          "text": "Quiet between storms\n\nBetween named trials, Keepers learn the oldest skill: waiting without wasting the wait.\n\nElara Venn says: If the path changes, walk it anyway. The Heart notices who still shows up.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 20,
+          "file": "page-20.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-20.mp3",
+          "text": "The road remembers\n\nFootpaths in the Riftwilds rewrite themselves overnight. Maps are promises, not contracts.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 21,
+          "file": "page-21.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-21.mp3",
+          "text": "Quiet between storms\n\nBetween named trials, Keepers learn the oldest skill: waiting without wasting the wait.\n\nElara Venn says: Carry water. Carry kindness. Carry the name of whoever waits for you.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 22,
+          "file": "page-22.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-22.mp3",
+          "text": "The road remembers\n\nFootpaths in the Riftwilds rewrite themselves overnight. Maps are promises, not contracts.\n\nElara Venn says: If the path changes, walk it anyway. The Heart notices who still shows up.\n\nKeeper thinks: Credits buy supplies. Courage is not for sale.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 23,
+          "file": "page-23.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-23.mp3",
+          "text": "Issue complete\n\nYou finished Issue #1: The First Rift.\n\nElara Venn carries a damaged egg through the Fracture's first nights and names the path of keeping at the Riftstone.\n\nPlay this chapter → Enter Live World — Commons",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 24,
+          "file": "page-24.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-24.mp3",
+          "text": "Shape the side-story\n\nWhat should Elara's next courier route emphasize?\n\nCare first says: More hatchery ethics scenes next arc.\n\nExploration says: Push toward unmapped Gateway paths.",
+          "status": "skipped"
+        }
+      ]
+    }
+  ]
+}

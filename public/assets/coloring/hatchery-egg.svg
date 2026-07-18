@@ -1,34 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="850" height="1100" viewBox="0 0 850 1100">
   <rect width="850" height="1100" fill="#ffffff"/>
   <rect x="28" y="28" width="794" height="1044" fill="none" stroke="#1a1a1a" stroke-width="3" rx="8"/>
   <text x="425" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1a1a1a">Hatchery Egg</text>
-  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page</text>
-  <g transform="translate(0, 40)" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    
-      <!-- nest -->
-      <ellipse cx="425" cy="720" rx="220" ry="60"/>
-      <path d="M220 700 Q280 640 340 700 Q380 660 425 710 Q470 660 510 700 Q570 640 630 700" stroke-width="2"/>
-      <path d="M250 730 Q320 690 400 740 Q450 700 520 735 Q580 700 620 730" stroke-width="1.8"/>
-      <!-- egg -->
-      <ellipse cx="425" cy="520" rx="110" ry="150"/>
-      <path d="M370 450 Q425 420 480 450" stroke-width="1.8"/>
-      <path d="M355 520 Q425 490 495 520" stroke-width="1.8"/>
-      <path d="M365 590 Q425 560 485 590" stroke-width="1.8"/>
-      <!-- cute face peek -->
-      <circle cx="400" cy="500" r="8" fill="#111" stroke="none"/>
-      <circle cx="450" cy="500" r="8" fill="#111" stroke="none"/>
-      <path d="M410 535 Q425 548 440 535"/>
-      <!-- leaves -->
-      <path d="M260 680 Q220 620 280 640 Q250 680 260 680"/>
-      <path d="M590 680 Q630 620 570 640 Q600 680 590 680"/>
-      <!-- sparkles -->
-      <path d="M280 360 L288 380 L308 388 L288 396 L280 416 L272 396 L252 388 L272 380 Z" stroke-width="2"/>
-      <path d="M580 300 L586 318 L604 324 L586 330 L580 348 L574 330 L556 324 L574 318 Z" stroke-width="2"/>
-      <circle cx="320" cy="300" r="6"/>
-      <circle cx="540" cy="280" r="5"/>
-      <text x="425" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#222" stroke="none">Soon to hatch…</text>
-    
-  </g>
+  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page · game sketch</text>
+  <image x="60" y="130" width="730" height="880" preserveAspectRatio="xMidYMid meet" xlink:href="hatchery-egg.png"/>
   <text x="425" y="1068" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#555555">Free for personal &amp; kids use · Not for resale · riftwilds.com</text>
 </svg>

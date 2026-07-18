@@ -1,53 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="850" height="1100" viewBox="0 0 850 1100">
   <rect width="850" height="1100" fill="#ffffff"/>
   <rect x="28" y="28" width="794" height="1044" fill="none" stroke="#1a1a1a" stroke-width="3" rx="8"/>
   <text x="425" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1a1a1a">Riftling Friends</text>
-  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page</text>
-  <g transform="translate(0, 40)" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    
-      <!-- sun -->
-      <circle cx="680" cy="220" r="50"/>
-      <path d="M680 150 V130 M740 180 L755 165 M760 220 H780 M740 260 L755 275 M680 290 V310 M620 260 L605 275 M600 220 H580 M620 180 L605 165" stroke-width="2"/>
-      <!-- left critter (round) -->
-      <ellipse cx="250" cy="560" rx="90" ry="100"/>
-      <circle cx="220" cy="540" r="12"/>
-      <circle cx="280" cy="540" r="12"/>
-      <circle cx="220" cy="540" r="4" fill="#111" stroke="none"/>
-      <circle cx="280" cy="540" r="4" fill="#111" stroke="none"/>
-      <path d="M230 590 Q250 610 270 590"/>
-      <path d="M190 480 Q170 430 220 470"/>
-      <path d="M310 480 Q330 430 280 470"/>
-      <ellipse cx="210" cy="650" rx="28" ry="18"/>
-      <ellipse cx="290" cy="650" rx="28" ry="18"/>
-      <!-- middle Spark-like -->
-      <ellipse cx="425" cy="540" rx="85" ry="95"/>
-      <circle cx="400" cy="520" r="11"/>
-      <circle cx="450" cy="520" r="11"/>
-      <circle cx="400" cy="520" r="4" fill="#111" stroke="none"/>
-      <circle cx="450" cy="520" r="4" fill="#111" stroke="none"/>
-      <path d="M405 560 Q425 580 445 560"/>
-      <path d="M370 470 Q355 420 400 455"/>
-      <path d="M480 470 Q495 420 450 455"/>
-      <ellipse cx="390" cy="630" rx="26" ry="16"/>
-      <ellipse cx="460" cy="630" rx="26" ry="16"/>
-      <!-- right tall critter -->
-      <ellipse cx="600" cy="550" rx="70" ry="110"/>
-      <circle cx="575" cy="510" r="10"/>
-      <circle cx="625" cy="510" r="10"/>
-      <circle cx="575" cy="510" r="3.5" fill="#111" stroke="none"/>
-      <circle cx="625" cy="510" r="3.5" fill="#111" stroke="none"/>
-      <path d="M580 555 Q600 575 620 555"/>
-      <path d="M560 440 Q540 390 580 430"/>
-      <path d="M640 440 Q660 390 620 430"/>
-      <path d="M600 660 Q600 720 600 740" stroke-width="2"/>
-      <ellipse cx="600" cy="750" rx="40" ry="14"/>
-      <!-- ground -->
-      <ellipse cx="425" cy="780" rx="280" ry="30" stroke-width="2"/>
-      <path d="M140 760 Q200 740 260 760" stroke-width="1.5"/>
-      <path d="M560 760 Q620 740 700 760" stroke-width="1.5"/>
-      <text x="425" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#222" stroke="none">Friends of the Riftwilds</text>
-    
-  </g>
+  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page · game sketch</text>
+  <image x="60" y="130" width="730" height="880" preserveAspectRatio="xMidYMid meet" xlink:href="riftling-friends.png"/>
   <text x="425" y="1068" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#555555">Free for personal &amp; kids use · Not for resale · riftwilds.com</text>
 </svg>

@@ -1,52 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="850" height="1100" viewBox="0 0 850 1100">
   <rect width="850" height="1100" fill="#ffffff"/>
   <rect x="28" y="28" width="794" height="1044" fill="none" stroke="#1a1a1a" stroke-width="3" rx="8"/>
   <text x="425" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1a1a1a">Elara Venn</text>
-  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page</text>
-  <g transform="translate(0, 40)" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    
-      <!-- ground -->
-      <ellipse cx="425" cy="820" rx="180" ry="28" stroke-width="2"/>
-      <!-- boots -->
-      <path d="M370 780 L360 820 L400 820 L395 780 Z"/>
-      <path d="M455 780 L450 820 L490 820 L480 780 Z"/>
-      <!-- legs / tunic -->
-      <path d="M380 620 L370 780 L480 780 L470 620 Z"/>
-      <path d="M360 620 Q425 660 490 620 L480 700 L370 700 Z" stroke-width="2"/>
-      <!-- belt -->
-      <path d="M375 700 L475 700"/>
-      <rect x="410" y="690" width="30" height="20" rx="3"/>
-      <!-- torso / cloak -->
-      <path d="M350 480 Q425 450 500 480 L490 620 L360 620 Z"/>
-      <path d="M340 500 Q300 560 330 640" stroke-width="2"/>
-      <path d="M510 500 Q550 560 520 640" stroke-width="2"/>
-      <!-- arms -->
-      <path d="M360 520 Q300 560 320 620"/>
-      <path d="M490 520 Q550 560 530 620"/>
-      <circle cx="315" cy="630" r="14"/>
-      <circle cx="535" cy="630" r="14"/>
-      <!-- satchel -->
-      <path d="M460 640 Q520 650 510 720 Q470 740 450 700 Z"/>
-      <path d="M455 640 Q440 600 460 580"/>
-      <!-- head -->
-      <circle cx="425" cy="400" r="70"/>
-      <!-- hair -->
-      <path d="M360 390 Q355 320 425 300 Q495 320 490 390 Q470 340 425 335 Q380 340 360 390"/>
-      <path d="M355 420 Q340 480 360 520" stroke-width="2"/>
-      <path d="M495 420 Q510 480 490 520" stroke-width="2"/>
-      <!-- face -->
-      <circle cx="400" cy="400" r="6" fill="#111" stroke="none"/>
-      <circle cx="450" cy="400" r="6" fill="#111" stroke="none"/>
-      <path d="M405 435 Q425 452 445 435"/>
-      <path d="M390 385 Q400 378 410 385" stroke-width="1.5"/>
-      <path d="M440 385 Q450 378 460 385" stroke-width="1.5"/>
-      <!-- staff -->
-      <path d="M200 820 L280 300"/>
-      <circle cx="285" cy="280" r="22"/>
-      <path d="M285 258 L285 240 M305 270 L320 255 M305 295 L320 310 M265 270 L250 255 M265 295 L250 310" stroke-width="1.5"/>
-      <text x="425" y="920" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#222" stroke="none">Guide of the Commons</text>
-    
-  </g>
+  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page · game sketch</text>
+  <image x="60" y="130" width="730" height="880" preserveAspectRatio="xMidYMid meet" xlink:href="elara-venn.png"/>
   <text x="425" y="1068" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#555555">Free for personal &amp; kids use · Not for resale · riftwilds.com</text>
 </svg>

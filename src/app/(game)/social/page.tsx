@@ -1,33 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
+import { SocialHub } from "@/components/social/social-hub";
+import { SocialNavBadge } from "@/components/social/social-nav-badge";
 import { getSocialHubSnapshot } from "@/game/social/stubs";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 import { PresenceChip } from "@/components/ecosystem/presence-chip";
 import { getTownFeaturedSnapshot } from "@/lib/social-presence";
 
 export const metadata = { title: "Social" };
-
-function SocialAvatar({
-  src,
-  alt,
-  size = 40,
-}: {
-  src: string;
-  alt: string;
-  size?: number;
-}) {
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={size}
-      height={size}
-      className="shrink-0 rounded-full border border-[var(--stroke)] object-cover"
-      unoptimized
-    />
-  );
-}
 
 function SocialThumb({
   src,
@@ -50,8 +32,28 @@ function SocialThumb({
   );
 }
 
+function SocialAvatar({
+  src,
+  size = 36,
+}: {
+  src: string;
+  size?: number;
+}) {
+  return (
+    <Image
+      src={src}
+      alt=""
+      width={size}
+      height={size}
+      className="shrink-0 rounded-full border border-[var(--stroke)] object-cover"
+      unoptimized
+    />
+  );
+}
+
 export default function SocialHubPage() {
   const enabled = featureFlagDefaults.ECOSYSTEM_SOCIAL_HUB_ENABLED;
+  const friendsPm = featureFlagDefaults.FRIENDS_AND_PM_ENABLED;
   const hub = getSocialHubSnapshot();
   const town = featureFlagDefaults.TOWN_FEATURED_PLAYER_ENABLED
     ? getTownFeaturedSnapshot()
@@ -63,11 +65,12 @@ export default function SocialHubPage() {
         kicker="Community"
         titleSlug="social"
         title="Social Hub"
-        description="Friends, party, messages, community posts, and the event calendar — stubs until presence and moderation ship."
-        status={enabled ? "Stubs live" : "Paused"}
-        statusTone={enabled ? "info" : "warn"}
+        description="Add friends, send private messages, manage requests and safety — Credits only, no wallet required for basics."
+        status={friendsPm ? "Friends + PM live" : enabled ? "Stubs" : "Paused"}
+        statusTone={friendsPm ? "info" : enabled ? "warn" : "warn"}
         actions={
           <>
+            <SocialNavBadge />
             <PresenceChip />
             <Link href="/live-world" className="btn-secondary focus-ring text-sm">
               Live World
@@ -88,7 +91,21 @@ export default function SocialHubPage() {
         </section>
       ) : (
         <>
-          <p className="text-xs text-[var(--text-dim)]">{hub.note}</p>
+          {friendsPm ? (
+            <Suspense
+              fallback={
+                <section className="panel p-5 text-sm text-[var(--text-muted)]">
+                  Loading friends &amp; messages…
+                </section>
+              }
+            >
+              <SocialHub />
+            </Suspense>
+          ) : (
+            <section className="panel p-5 text-sm text-[var(--text-muted)]">
+              Friends &amp; PM paused by `FRIENDS_AND_PM_ENABLED`.
+            </section>
+          )}
 
           {town ? (
             <section className="panel p-5">
@@ -116,53 +133,21 @@ export default function SocialHubPage() {
                   ))}
                 </ul>
               )}
-              <ul className="mt-4 grid gap-2 text-xs text-[var(--text-muted)] sm:grid-cols-2">
-                {town.popularLocations.slice(0, 4).map((loc) => (
-                  <li key={loc.locationId}>
-                    {loc.label} · activity {loc.activityScore}
-                  </li>
-                ))}
-              </ul>
             </section>
           ) : null}
 
           <section className="grid gap-4 lg:grid-cols-2">
             <article className="panel p-5">
-              <h2 className="font-display text-xl text-white">Friends</h2>
-              <ul className="mt-3 space-y-2 text-sm text-[var(--text-muted)]">
-                {hub.friends.map((f) => (
-                  <li
-                    key={f.id}
-                    className="flex items-center justify-between gap-3 border-b border-[var(--stroke)] py-2"
-                  >
-                    <span className="flex min-w-0 items-center gap-3">
-                      <SocialAvatar src={f.avatarSrc} alt="" />
-                      <span className="min-w-0">
-                        <span className="text-white">{f.displayName}</span> · {f.rankTitle}
-                      </span>
-                    </span>
-                    <StatusChip tone="default">{f.status}</StatusChip>
-                  </li>
-                ))}
-              </ul>
-            </article>
-
-            <article className="panel p-5">
               <h2 className="font-display text-xl text-white">Party</h2>
+              <p className="mt-1 text-xs text-[var(--text-dim)]">
+                Party invites from Friends are stubs until multiplayer Phase 2.
+              </p>
               <div className="mt-3 flex gap-3">
-                <SocialThumb
-                  src={hub.party.objectiveThumbSrc}
-                  alt=""
-                  size={72}
-                />
+                <SocialThumb src={hub.party.objectiveThumbSrc} alt="" size={72} />
                 <div className="min-w-0 flex-1">
                   <p className="text-sm text-white">{hub.party.objective}</p>
                   <div className="mt-2 flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                    <SocialAvatar
-                      src={hub.party.leaderAvatarSrc}
-                      alt=""
-                      size={28}
-                    />
+                    <SocialAvatar src={hub.party.leaderAvatarSrc} size={28} />
                     <span>
                       Leader {hub.party.leaderLabel} · {hub.party.memberLabels.length}/
                       {hub.party.maxSize} members
@@ -171,56 +156,26 @@ export default function SocialHubPage() {
                 </div>
               </div>
             </article>
-          </section>
 
-          <section className="grid gap-4 lg:grid-cols-2">
             <article className="panel p-5">
-              <h2 className="font-display text-xl text-white">Direct messages</h2>
+              <h2 className="font-display text-xl text-white">Mail &amp; community</h2>
               <ul className="mt-3 space-y-2 text-xs text-[var(--text-muted)]">
-                {hub.dms.map((dm) => (
-                  <li key={dm.id} className="flex items-start gap-3">
-                    <SocialAvatar src={dm.avatarSrc} alt="" size={36} />
-                    <span>
-                      <span className="text-white">{dm.fromLabel}</span> — {dm.preview}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <h3 className="mt-4 font-display text-lg text-white">Mail</h3>
-              <ul className="mt-2 space-y-2 text-xs text-[var(--text-muted)]">
                 {hub.mail.map((m) => (
                   <li key={m.id} className="flex items-start gap-3">
-                    {m.avatarSrc ? (
-                      <SocialAvatar src={m.avatarSrc} alt="" size={36} />
-                    ) : null}
+                    {m.avatarSrc ? <SocialAvatar src={m.avatarSrc} /> : null}
                     <span>
                       <span className="text-white">{m.subject}</span> — {m.fromLabel}
                     </span>
                   </li>
                 ))}
               </ul>
-            </article>
-
-            <article className="panel p-5">
-              <h2 className="font-display text-xl text-white">Community posts</h2>
-              <ul className="mt-3 space-y-3 text-sm">
-                {hub.posts.map((p) => (
-                  <li
-                    key={p.id}
-                    className="flex gap-3 border-b border-[var(--stroke)] pb-3"
-                  >
-                    <SocialThumb src={p.thumbSrc} alt="" size={64} />
+              <ul className="mt-4 space-y-3 text-sm">
+                {hub.posts.slice(0, 2).map((p) => (
+                  <li key={p.id} className="flex gap-3 border-b border-[var(--stroke)] pb-3">
+                    <SocialThumb src={p.thumbSrc} alt="" size={56} />
                     <div className="min-w-0 flex-1">
                       <p className="text-white">{p.title}</p>
                       <p className="mt-1 text-xs text-[var(--text-muted)]">{p.body}</p>
-                      <p className="mt-1 flex items-center gap-1.5 text-[10px] text-[var(--text-dim)]">
-                        {p.authorAvatarSrc ? (
-                          <SocialAvatar src={p.authorAvatarSrc} alt="" size={16} />
-                        ) : null}
-                        <span>
-                          {p.channel} · {p.authorLabel}
-                        </span>
-                      </p>
                     </div>
                   </li>
                 ))}

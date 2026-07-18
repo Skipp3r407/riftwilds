@@ -269,6 +269,6 @@ export function getSocialHubSnapshot() {
     calendar: listEventCalendarStubs(),
     mentors: MENTOR_OFFERS,
     chat: demoChatChannels(),
-    note: "Social graph and chat stay stubs until presence + moderation services ship.",
+    note: "Party / mail / community posts remain stubs. Friends + PMs ship via /api/social (see docs/social/FRIENDS_AND_PM.md).",
   };
 }
