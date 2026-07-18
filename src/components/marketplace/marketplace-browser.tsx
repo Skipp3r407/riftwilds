@@ -6,27 +6,34 @@ import { PetListingCard } from "@/components/marketplace/pet-listing-card";
 import { PriceHistoryPanel } from "@/components/marketplace/price-history-panel";
 import { SupplyStatusPanel } from "@/components/marketplace/supply-status-panel";
 import { ListAssetPanel } from "@/components/marketplace/list-asset-panel";
+import { GameImage } from "@/components/assets/game-image";
 import type { MarketplaceListingView } from "@/lib/marketplace/types";
+import { resolveMarketplaceProductIcon } from "@/lib/marketplace/product-icons";
 import { playSfx } from "@/hooks/use-sfx";
 import { cn } from "@/lib/utils/cn";
 
 type CategoryId =
   | "ALL"
-  | "CARDS"
   | "PACKS"
+  | "CARDS"
+  | "EQUIPMENT"
+  | "COLLECTIBLES"
   | "EGGS"
   | "PETS"
-  | "EQUIPMENT"
   | "CONSUMABLES"
   | "PROPERTY";
 
-const TABS: { id: CategoryId; label: string }[] = [
+const PRIMARY_TABS: { id: CategoryId; label: string }[] = [
   { id: "ALL", label: "All" },
-  { id: "CARDS", label: "Cards" },
-  { id: "PACKS", label: "Packs" },
+  { id: "PACKS", label: "Card packs" },
+  { id: "CARDS", label: "Single cards" },
+  { id: "EQUIPMENT", label: "Binders & cosmetics" },
+  { id: "COLLECTIBLES", label: "Collectibles" },
+];
+
+const SECONDARY_TABS: { id: CategoryId; label: string }[] = [
   { id: "EGGS", label: "Eggs" },
   { id: "PETS", label: "Pets" },
-  { id: "EQUIPMENT", label: "Cosmetics / gear" },
   { id: "CONSUMABLES", label: "Consumables" },
   { id: "PROPERTY", label: "Property" },
 ];
@@ -38,10 +45,19 @@ type Flags = {
   MARKETPLACE_BUNDLE_LISTINGS_ENABLED?: boolean;
   REAL_SOL_MARKETPLACE_ENABLED: boolean;
   SOL_PURCHASES_ENABLED: boolean;
+  SOL_MARKETPLACE_ENABLED?: boolean;
 };
 
+function listingIcon(listing: MarketplaceListingView): string | null {
+  return (
+    listing.item?.iconPath ??
+    resolveMarketplaceProductIcon(listing.item?.key) ??
+    null
+  );
+}
+
 export function MarketplaceBrowser() {
-  const [category, setCategory] = useState<CategoryId>("CARDS");
+  const [category, setCategory] = useState<CategoryId>("PACKS");
   const [listings, setListings] = useState<MarketplaceListingView[]>([]);
   const [flags, setFlags] = useState<Flags | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -95,10 +111,12 @@ export function MarketplaceBrowser() {
     void load();
   };
 
+  const selectedIcon = selected ? listingIcon(selected) : null;
+
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap gap-2">
-        {TABS.map((tab) => (
+      <div className="flex flex-wrap items-center gap-2">
+        {PRIMARY_TABS.map((tab) => (
           <button
             key={tab.id}
             type="button"
@@ -114,6 +132,26 @@ export function MarketplaceBrowser() {
             )}
           >
             {tab.label}
+          </button>
+        ))}
+        <span className="text-[10px] text-[var(--text-dim)]">·</span>
+        {SECONDARY_TABS.map((tab) => (
+          <button
+            key={tab.id}
+            type="button"
+            onClick={() => {
+              playSfx("ui.nav");
+              setCategory(tab.id);
+            }}
+            className={cn(
+              "rounded-md border px-2.5 py-1 text-xs transition",
+              category === tab.id
+                ? "border-[var(--cyan)] bg-[rgba(61,231,255,0.08)] text-white"
+                : "border-[var(--stroke)] text-[var(--text-dim)] hover:text-[var(--text-muted)]",
+            )}
+            title="Companion / Live World secondary market"
+          >
+            {tab.label}
             {tab.id === "PROPERTY" ? " (stub)" : ""}
           </button>
         ))}
@@ -121,10 +159,10 @@ export function MarketplaceBrowser() {
 
       {flags ? (
         <p className="text-xs text-[var(--text-muted)]">
-          Catalog demo={String(flags.MARKETPLACE_DEMO_CATALOG_ENABLED)} · writes=
+          Credits settle the card desk · catalog demo=
+          {String(flags.MARKETPLACE_DEMO_CATALOG_ENABLED)} · writes=
           {String(writesEnabled)} · SOL marketplace=
-          {String(flags.REAL_SOL_MARKETPLACE_ENABLED)} · SOL purchases=
-          {String(flags.SOL_PURCHASES_ENABLED)}
+          {String(flags.SOL_MARKETPLACE_ENABLED ?? false)} (optional, never required for power)
         </p>
       ) : null}
 
@@ -142,17 +180,18 @@ export function MarketplaceBrowser() {
             aria-hidden
           />
           <h2 className="relative z-[1] font-display text-xl text-white">
-            Rift Battle desk (demo catalog)
+            Card trade desk
           </h2>
           <p className="relative z-[1] text-xs text-[var(--text-muted)]">
-            Cards & packs lead the desk. Credits settlement is the play path — SOL stays optional.
+            Packs, singles, binders, and sleeves lead. Credits are the play path — SOL stays
+            optional and never buys competitive power.
           </p>
           {listings.length === 0 ? (
             <p className="relative z-[1] panel p-6 text-sm text-[var(--text-muted)]">
               No listings in this category.
             </p>
           ) : (
-            <div className="relative z-[1] space-y-3">
+            <div className="relative z-[1] grid gap-3 sm:grid-cols-2">
               {listings.map((listing) => {
                 if (listing.kind === "EGG") {
                   return (
@@ -174,23 +213,50 @@ export function MarketplaceBrowser() {
                     />
                   );
                 }
+                const icon = listingIcon(listing);
+                const credits =
+                  listing.priceCredits ??
+                  Math.round(Number.parseFloat(listing.priceSol) * 10_000);
                 return (
                   <button
                     key={listing.publicId}
                     type="button"
                     onClick={() => setSelectedId(listing.publicId)}
                     className={cn(
-                      "panel w-full p-4 text-left",
+                      "panel flex w-full gap-3 p-3 text-left transition",
                       selectedId === listing.publicId && "border-[var(--cyan)]",
                     )}
                   >
-                    <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--text-muted)]">
-                      {listing.category}
-                    </p>
-                    <h3 className="mt-1 font-display text-lg text-white">{listing.title}</h3>
-                    <p className="mt-1 text-sm text-[var(--text-muted)]">
-                      {listing.item?.rarity} · {listing.priceSol} SOL
-                    </p>
+                    <div className="panel-inset relative flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden">
+                      {icon ? (
+                        <GameImage
+                          src={icon}
+                          alt=""
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                          fallbackSrc={icon.replace(/\.png(\?.*)?$/i, ".svg")}
+                          showDevBadge={false}
+                          unoptimized
+                        />
+                      ) : (
+                        <span className="text-[10px] text-[var(--text-dim)]">TCG</span>
+                      )}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--text-muted)]">
+                        {listing.category}
+                      </p>
+                      <h3 className="mt-0.5 font-display text-base text-white">
+                        {listing.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-[var(--cyan)]">
+                        {credits.toLocaleString()} Credits
+                      </p>
+                      <p className="text-[10px] text-[var(--text-muted)]">
+                        {listing.item?.rarity} · optional {listing.priceSol} SOL
+                      </p>
+                    </div>
                   </button>
                 );
               })}
@@ -199,20 +265,45 @@ export function MarketplaceBrowser() {
 
           {selected ? (
             <div className="relative z-[1] panel space-y-3 p-4">
-              <p className="text-sm text-white">
-                Selected: <span className="font-display">{selected.title}</span>
-              </p>
-              <p className="text-xs text-[var(--text-muted)]">
-                Sale fee disclosure: {selected.feeDisclosure.saleFeeNote} Listing fee{" "}
-                {selected.feeDisclosure.listingFeeSol} SOL (non-refundable).
-              </p>
+              <div className="flex gap-3">
+                {selectedIcon ? (
+                  <div className="panel-inset flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden">
+                    <GameImage
+                      src={selectedIcon}
+                      alt=""
+                      width={96}
+                      height={96}
+                      className="object-contain"
+                      fallbackSrc={selectedIcon.replace(/\.png(\?.*)?$/i, ".svg")}
+                      showDevBadge={false}
+                      unoptimized
+                    />
+                  </div>
+                ) : null}
+                <div>
+                  <p className="text-sm text-white">
+                    Selected: <span className="font-display">{selected.title}</span>
+                  </p>
+                  <p className="mt-1 text-sm text-[var(--cyan)]">
+                    {(
+                      selected.priceCredits ??
+                      Math.round(Number.parseFloat(selected.priceSol) * 10_000)
+                    ).toLocaleString()}{" "}
+                    Credits
+                  </p>
+                  <p className="text-xs text-[var(--text-muted)]">
+                    Sale fee disclosure: {selected.feeDisclosure.saleFeeNote} Listing fee{" "}
+                    {selected.feeDisclosure.listingFeeSol} SOL (non-refundable).
+                  </p>
+                </div>
+              </div>
               <button
                 type="button"
                 disabled={!writesEnabled}
                 onClick={() => void purchase()}
                 className="btn-primary focus-ring disabled:opacity-40"
               >
-                Purchase (demo credits)
+                Purchase (Credits)
               </button>
               {purchaseMsg ? (
                 <p className="text-xs text-[var(--text-muted)]">{purchaseMsg}</p>

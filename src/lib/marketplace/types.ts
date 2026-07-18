@@ -79,7 +79,14 @@ export type MarketplaceListingView = {
   bundledItems: { key: string; name: string; slot?: string }[];
   egg: EggListingDisclosure | null;
   pet: PetListingDisclosure | null;
-  item: { key: string; name: string; rarity: string; category: string } | null;
+  item: {
+    key: string;
+    name: string;
+    rarity: string;
+    category: string;
+    /** Product art for listing cards / detail pane. */
+    iconPath?: string | null;
+  } | null;
   feeDisclosure: {
     listingFeeSol: string;
     saleFeeNote: string;

@@ -18,13 +18,13 @@ export type ShopSectionId =
   | "packs"
   | "binders"
   | "card-cosmetics"
+  | "cosmetics"
+  | "recovery"
   | "weapons"
   | "armor"
   | "potions"
   | "magic"
-  | "materials"
-  | "cosmetics"
-  | "recovery";
+  | "materials";
 
 export type ShopSectionDef = {
   id: ShopSectionId;
@@ -32,16 +32,18 @@ export type ShopSectionDef = {
   label: string;
   href: string;
   description: string;
+  /** Soft-hide in primary nav chrome (still linked from legacy pages). */
+  demoted?: boolean;
 };
 
-/** TCG-first shop IA — packs/binders/cosmetics lead; legacy gear stays available. */
+/** TCG card-shop IA — packs/binders/cosmetics lead; Live World gear is demoted. */
 export const SHOP_SECTIONS: ShopSectionDef[] = [
   {
     id: "featured",
     slug: "featured",
     label: "Featured",
     href: "/shop/featured",
-    description: "Rift Battle packs, binder pages, and deck slots — Credits-first.",
+    description: "Card packs, binder pages, and deck slots — Credits-first Rift Battle goods.",
   },
   {
     id: "packs",
@@ -62,35 +64,39 @@ export const SHOP_SECTIONS: ShopSectionDef[] = [
     slug: "card-cosmetics",
     label: "Card cosmetics",
     href: "/shop/card-cosmetics",
-    description: "Sleeves and board skins — optional prestige, SOL never required to play.",
+    description: "Sleeves and board skins — optional prestige, never competitive power.",
   },
   {
     id: "cosmetics",
     slug: "cosmetics",
     label: "Prestige looks",
     href: "/shop/cosmetics",
-    description: "Legacy celestial looks — still entertainment items only.",
+    description: "Legacy celestial looks — entertainment cosmetics only.",
+    demoted: true,
   },
   {
     id: "recovery",
     slug: "recovery",
     label: "Care & recovery",
     href: "/shop/recovery",
-    description: "Care meals and revival supplies for Riftling health loops.",
+    description: "Care meals and revival supplies for companion health loops.",
+    demoted: true,
   },
   {
     id: "weapons",
     slug: "weapons",
-    label: "Weapons",
+    label: "Legacy weapons",
     href: "/shop/weapons",
-    description: "Legacy Arena loadout weapons — soft-secondary to Rift Battles.",
+    description: "Live World / Arena loadout weapons — not Rift Battle power.",
+    demoted: true,
   },
   {
     id: "armor",
     slug: "armor",
-    label: "Armor",
+    label: "Legacy armor",
     href: "/shop/armor",
-    description: "Legacy harnesses and guards — soft-secondary.",
+    description: "Live World harnesses and guards — soft-secondary.",
+    demoted: true,
   },
   {
     id: "potions",
@@ -98,13 +104,15 @@ export const SHOP_SECTIONS: ShopSectionDef[] = [
     label: "Potions",
     href: "/shop/potions",
     description: "Healing and status tonics with listed effects.",
+    demoted: true,
   },
   {
     id: "magic",
     slug: "magic",
-    label: "Magic",
+    label: "Ability scrolls",
     href: "/shop/magic",
-    description: "Ability scrolls that teach a disclosed skill to compatible pets.",
+    description: "Scrolls that teach a disclosed skill to compatible pets.",
+    demoted: true,
   },
   {
     id: "materials",
@@ -112,6 +120,7 @@ export const SHOP_SECTIONS: ShopSectionDef[] = [
     label: "Materials",
     href: "/shop/materials",
     description: "Crafting inputs and affinity dusts.",
+    demoted: true,
   },
 ];
 
@@ -156,10 +165,8 @@ export function getShopSectionItems(
 ): ShopCardData[] {
   switch (sectionId) {
     case "featured":
-      return [
-        ...getTcgFeaturedOffers(),
-        ...toShopCards(getShopItemsByCategory("FEATURED"), solUsdRate).slice(0, 4),
-      ];
+      // TCG desk only — Live World weapons stay in legacy sections.
+      return getTcgFeaturedOffers();
     case "packs":
       return getTcgPackOffers();
     case "binders":

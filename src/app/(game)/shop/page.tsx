@@ -12,22 +12,22 @@ export const metadata = { title: "Shop" };
 export default function ShopHomePage() {
   const stats = catalogStats();
   const sections = getAllShopSectionsWithItems(150);
-  const catalogSummary = `TCG packs & binders lead · legacy gear still listed (${stats.weapons} weapons · ${stats.armor} armor · ${stats.abilities} scrolls).`;
+  const catalogSummary = `Card shop first — packs, binders, sleeves, board skins. Live World gear is demoted (${stats.weapons} weapons · ${stats.armor} armor · ${stats.abilities} scrolls still available).`;
 
   return (
     <div className="space-y-6">
       <PageHeader
-        kicker="Rift Battle shop"
+        kicker="Card shop · Rift Battles"
         titleSlug="shop"
         title="Shop"
         description={
           <>
-            Buy card packs, binder pages, deck slots, and duel cosmetics with Credits. SOL stays
-            optional for prestige skins — never required to play Rift Battles. No paid loot boxes.{" "}
-            {catalogSummary}
+            Build your Card Binder with Credits — packs, binder pages, deck slots, sleeves, and
+            board skins. SOL is optional cosmetics only and never buys competitive power. No paid
+            loot boxes. {catalogSummary}
           </>
         }
-        status="TCG catalog"
+        status="Credits-first"
         statusTone="live"
         actions={
           <>
@@ -37,8 +37,8 @@ export default function ShopHomePage() {
             <Link href="/tcg/collection" className="btn-secondary focus-ring">
               Card Binder
             </Link>
-            <Link href="/inventory" className="btn-secondary focus-ring">
-              Inventory
+            <Link href="/marketplace" className="btn-secondary focus-ring">
+              Trade desk
             </Link>
           </>
         }

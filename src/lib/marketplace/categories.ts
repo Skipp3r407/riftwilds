@@ -5,13 +5,26 @@ export type MarketplaceCategoryTab = {
   label: string;
   description: string;
   enabled: boolean;
+  /** Demote Live World companion goods below the card desk. */
+  demoted?: boolean;
   subfilters: { id: string; label: string }[];
 };
 
 export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
   {
+    id: "PACKS",
+    label: "Card packs",
+    description: "Disclosed card packs — no paid mystery gear. Credits-first trades.",
+    enabled: true,
+    subfilters: [
+      { id: "starter", label: "Starter" },
+      { id: "affinity", label: "Affinity" },
+      { id: "seasonal", label: "Seasonal" },
+    ],
+  },
+  {
     id: "CARDS",
-    label: "Cards",
+    label: "Single cards",
     description: "Single Rift Battle cards for binders and decks — Credits-first trades.",
     enabled: true,
     subfilters: [
@@ -21,17 +34,6 @@ export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
       { id: "tide", label: "Tide" },
       { id: "grove", label: "Grove" },
       { id: "rare-plus", label: "Rare+" },
-    ],
-  },
-  {
-    id: "PACKS",
-    label: "Packs",
-    description: "Disclosed card packs — no paid mystery gear.",
-    enabled: true,
-    subfilters: [
-      { id: "starter", label: "Starter" },
-      { id: "affinity", label: "Affinity" },
-      { id: "seasonal", label: "Seasonal" },
     ],
   },
   {
@@ -48,10 +50,25 @@ export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
     ],
   },
   {
+    id: "EQUIPMENT",
+    label: "Cosmetics & binders",
+    description: "Sleeves, board skins, binder QoL — prestige only. Legacy loadout gear is demoted.",
+    enabled: true,
+    subfilters: [
+      { id: "sleeve", label: "Card sleeves" },
+      { id: "board", label: "Board skins" },
+      { id: "binder", label: "Binder pages" },
+      { id: "deck", label: "Deck slots" },
+      { id: "weapon", label: "Legacy weapons" },
+      { id: "armor", label: "Legacy armor" },
+    ],
+  },
+  {
     id: "EGGS",
     label: "Eggs",
     description: "Unopened eggs — disclosed ranges only until hatch.",
     enabled: true,
+    demoted: true,
     subfilters: [
       { id: "official", label: "Official" },
       { id: "bred", label: "Bred" },
@@ -63,8 +80,9 @@ export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
   {
     id: "PETS",
     label: "Pets",
-    description: "Hatched pets with known traits and battle records.",
+    description: "Hatched pets with known traits — companion secondary market.",
     enabled: true,
+    demoted: true,
     subfilters: [
       { id: "hatchling", label: "Hatchling" },
       { id: "young", label: "Young" },
@@ -76,22 +94,11 @@ export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
     ],
   },
   {
-    id: "EQUIPMENT",
-    label: "Equipment",
-    description: "Legacy loadout gear — secondary to cards & packs.",
-    enabled: true,
-    subfilters: [
-      { id: "weapon", label: "Weapons" },
-      { id: "armor", label: "Armor" },
-      { id: "scroll", label: "Scrolls" },
-      { id: "sleeve", label: "Card sleeves" },
-    ],
-  },
-  {
     id: "CONSUMABLES",
     label: "Consumables",
     description: "Potions, care items, and materials.",
     enabled: true,
+    demoted: true,
     subfilters: [
       { id: "potion", label: "Potions" },
       { id: "care", label: "Care" },
@@ -103,6 +110,7 @@ export const MARKETPLACE_CATEGORIES: MarketplaceCategoryTab[] = [
     label: "Property",
     description: "Homesteads and land — Living World future.",
     enabled: false,
+    demoted: true,
     subfilters: [{ id: "homestead", label: "Homestead (stub)" }],
   },
 ];

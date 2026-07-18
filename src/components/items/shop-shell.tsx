@@ -201,7 +201,7 @@ export function ShopShell({ sections, catalogSummary }: Props) {
         <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
           <div className="space-y-8">
             <nav className="panel sticky top-16 z-10 flex flex-wrap gap-1.5 px-3 py-2">
-              {SHOP_SECTIONS.map((s) => (
+              {SHOP_SECTIONS.filter((s) => !s.demoted).map((s) => (
                 <a
                   key={s.id}
                   href={`#shop-${s.id}`}
@@ -212,6 +212,23 @@ export function ShopShell({ sections, catalogSummary }: Props) {
                       ? "bg-[rgba(61,231,255,0.2)] text-[var(--cyan)]"
                       : "text-[var(--text-muted)] hover:text-white",
                   )}
+                >
+                  {s.label}
+                </a>
+              ))}
+              <span className="self-center px-1 text-[10px] text-[var(--text-dim)]">·</span>
+              {SHOP_SECTIONS.filter((s) => s.demoted).map((s) => (
+                <a
+                  key={s.id}
+                  href={`#shop-${s.id}`}
+                  onClick={() => setActiveSection(s.id)}
+                  className={cn(
+                    "focus-ring rounded-md px-2 py-1 text-[10px] uppercase tracking-wide",
+                    activeSection === s.id
+                      ? "bg-[rgba(61,231,255,0.12)] text-[var(--cyan)]"
+                      : "text-[var(--text-dim)] hover:text-[var(--text-muted)]",
+                  )}
+                  title="Live World / companion goods — secondary to Rift Battles"
                 >
                   {s.label}
                 </a>
@@ -229,17 +246,44 @@ export function ShopShell({ sections, catalogSummary }: Props) {
               />
             ) : null}
 
-            {browseSections.map(({ section, items }) => (
-              <ShopSectionBlock
-                key={section.id}
-                section={section}
-                items={items}
-                selectedId={selectedId}
-                onSelect={setSelectedId}
-                onPurchase={openPurchase}
-                purchasesEnabled
-              />
-            ))}
+            {browseSections
+              .filter(({ section }) => !section.demoted)
+              .map(({ section, items }) => (
+                <ShopSectionBlock
+                  key={section.id}
+                  section={section}
+                  items={items}
+                  selectedId={selectedId}
+                  onSelect={setSelectedId}
+                  onPurchase={openPurchase}
+                  purchasesEnabled
+                />
+              ))}
+
+            <details className="panel p-4">
+              <summary className="cursor-pointer font-display text-lg text-[var(--text-muted)]">
+                Live World & companion goods
+              </summary>
+              <p className="mt-1 text-xs text-[var(--text-dim)]">
+                Weapons, armor, potions, and scrolls are soft-secondary — they do not buy Rift
+                Battle power.
+              </p>
+              <div className="mt-4 space-y-8">
+                {browseSections
+                  .filter(({ section }) => section.demoted)
+                  .map(({ section, items }) => (
+                    <ShopSectionBlock
+                      key={section.id}
+                      section={section}
+                      items={items}
+                      selectedId={selectedId}
+                      onSelect={setSelectedId}
+                      onPurchase={openPurchase}
+                      purchasesEnabled
+                    />
+                  ))}
+              </div>
+            </details>
           </div>
 
           <aside className="space-y-3 lg:sticky lg:top-20 lg:self-start">

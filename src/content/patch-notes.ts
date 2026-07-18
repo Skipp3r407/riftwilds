@@ -36,6 +36,23 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-tcg-card-market",
+    date: "2026-07-18",
+    title: "Card shop & trade desk redesign",
+    summary:
+      "Market surfaces now lead with Rift Battle packs, binders, and cosmetics — Credits-first, with original product art replacing placeholder icons.",
+    added: [
+      "Unique product art for Ember Spark / Tideglass / Grove / Stormspire packs, Binder Page, Extra Deck Slot, sleeves, board skin, and Keeper Folio",
+      "Marketplace demo listings for Tideglass Pack, Binder Page, and Extra Deck Slot with product thumbnails",
+    ],
+    changed: [
+      "Shop Featured is TCG-only; Live World weapons/armor/potions move under a demoted companion section",
+      "Shop and Trade Desk emphasize Credits pricing; SOL stays optional cosmetics, never required for power",
+      "Marketplace categories and tabs lead with Card packs / Single cards / Binders & cosmetics; eggs and pets are secondary",
+      "Market nav labels: Card Shop + Trade Desk",
+    ],
+  },
+  {
     id: "2026-07-18-hero-random-riftlings",
     date: "2026-07-18",
     title: "Home hero Mystery Egg previews randomize",

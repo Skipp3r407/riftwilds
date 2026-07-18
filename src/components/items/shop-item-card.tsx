@@ -80,11 +80,14 @@ export function ShopItemCard({
             </p>
           ) : null}
           <div className="mt-3">
-            <p className="font-display text-lg text-white">{item.price.sol} SOL</p>
+            <p className="font-display text-lg text-[var(--cyan)]">
+              {item.price.credits.toLocaleString()} Credits
+            </p>
             <p className="text-[10px] text-[var(--text-muted)]">
+              Optional wallet path · {item.price.sol} SOL
               {item.price.estimatedUsd != null
-                ? `≈ $${item.price.estimatedUsd.toFixed(2)} USD`
-                : "USD estimate unavailable"}
+                ? ` · ≈ $${item.price.estimatedUsd.toFixed(2)} USD`
+                : ""}
             </p>
             <p className="text-[10px] text-[var(--text-muted)]">{item.price.usdDisclaimer}</p>
             {item.supply === "LIMITED" ? (
@@ -107,7 +110,7 @@ export function ShopItemCard({
           <button
             type="button"
             className="btn-primary focus-ring flex-1 text-xs"
-            title="Choose Wallet SOL or In-game SOL"
+            title="Credits checkout · optional SOL"
             onClick={() => onPurchase?.(item.id)}
           >
             Buy
