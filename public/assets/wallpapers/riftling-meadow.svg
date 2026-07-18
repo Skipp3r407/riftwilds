@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky-riftling-meadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6eb5ff"/><stop offset="55%" stop-color="#b8e0ff"/><stop offset="100%" stop-color="#ffe8a8"/>
+    </linearGradient>
+    <linearGradient id="mid-riftling-meadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dcea0" stop-opacity="0.2"/><stop offset="100%" stop-color="#f5c16c" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="glow-riftling-meadow" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#fff6d5" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#ffb84d" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#070b16" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground-riftling-meadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a8f5a"/><stop offset="100%" stop-color="#2d5a38"/>
+    </linearGradient>
+    <filter id="soft-riftling-meadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#sky-riftling-meadow)"/>
+  <rect width="100%" height="100%" fill="url(#glow-riftling-meadow)"/>
+  
+      <ellipse cx="400" cy="720" rx="80" ry="90" fill="#e8c4a0" opacity="0.7"/>
+      <ellipse cx="960" cy="700" rx="70" ry="80" fill="#b8d4ff" opacity="0.75"/>
+      <ellipse cx="1400" cy="730" rx="75" ry="95" fill="#f0a878" opacity="0.7"/>
+      <circle cx="1500" cy="180" r="90" fill="#fff2a8" opacity="0.9"/>
+      <path d="M0 780 Q400 700 800 760 Q1200 820 1920 740 L1920 1080 L0 1080 Z" fill="#3d7a4a" opacity="0.8"/>
+      <circle cx="500" cy="850" r="8" fill="#ff8fab" opacity="0.8"/>
+      <circle cx="700" cy="900" r="6" fill="#ffd166" opacity="0.8"/>
+      <circle cx="1100" cy="860" r="7" fill="#ff8fab" opacity="0.75"/>
+    
+  <rect y="620" width="100%" height="460" fill="url(#ground-riftling-meadow)"/>
+  <rect y="0" width="100%" height="100%" fill="url(#mid-riftling-meadow)" opacity="0.22"/>
+  <!-- brand whisper -->
+  <text x="60" y="1020" font-family="Georgia, serif" font-size="28" fill="#e8d5b0" opacity="0.55">Riftling Meadow</text>
+  <text x="60" y="1050" font-family="Georgia, serif" font-size="16" fill="#c4a882" opacity="0.4">Riftwilds</text>
+</svg>

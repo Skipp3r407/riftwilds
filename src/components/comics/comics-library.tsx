@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { ComicIssue, ComicProgressState } from "@/content/comics/types";
 import { ComicCoverCard } from "@/components/comics/comic-cover-card";
+import { ColoringDownloads } from "@/components/coloring/coloring-downloads";
+import { WallpaperDownloads } from "@/components/wallpapers/wallpaper-downloads";
 import {
   createEmptyComicProgress,
   loadComicProgress,
@@ -36,6 +38,12 @@ export function ComicsLibrary({ issues, seriesTitle, seriesSubtitle }: Props) {
           <Link href={`/comics/${issues[0]?.slug ?? ""}`} className="btn-primary focus-ring">
             Start Issue #1
           </Link>
+          <Link href="/fan-kit" className="btn-secondary focus-ring">
+            Fan Kit
+          </Link>
+          <Link href="/coloring" className="btn-secondary focus-ring">
+            Coloring
+          </Link>
           <Link href="/codex/world" className="btn-secondary focus-ring">
             World Codex
           </Link>
@@ -59,17 +67,36 @@ export function ComicsLibrary({ issues, seriesTitle, seriesSubtitle }: Props) {
         </div>
       </section>
 
+      <div className="mt-12 space-y-10">
+        <ColoringDownloads />
+        <WallpaperDownloads />
+      </div>
+
       <section className="panel mt-12 p-6" aria-label="Series extras">
         <h2 className="font-display text-xl text-white">Bonus &amp; extras</h2>
         <p className="mt-2 text-sm text-[var(--text-muted)]">
-          Developer commentary, character/location bios, timeline notes, and wallpaper stubs live
-          inside each issue reader (end pages + sidebar). Issue #3 links to the Traveling Circus
-          world event.
+          Developer commentary, character/location bios, and timeline notes live inside each issue
+          reader (end pages + sidebar). Issue #3 links to the Traveling Circus world event. Free
+          coloring pages and desktop wallpapers are above — also at{" "}
+          <Link href="/coloring" className="text-[var(--cyan)] underline-offset-2 hover:underline">
+            /coloring
+          </Link>
+          .
         </p>
         <ul className="mt-4 grid gap-2 text-sm text-[var(--cyan)] sm:grid-cols-2">
           <li>
             <Link href="/comics/the-traveling-circus" className="hover:underline">
               Issue #3 → Circus live event
+            </Link>
+          </li>
+          <li>
+            <Link href="/fan-kit#share" className="hover:underline">
+              Shareable moment cards
+            </Link>
+          </li>
+          <li>
+            <Link href="/fan-kit" className="hover:underline">
+              Wallpapers &amp; stickers (Fan Kit)
             </Link>
           </li>
           <li>

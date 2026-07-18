@@ -5,14 +5,14 @@ import type { ComicHotspot, ComicPage } from "@/content/comics/types";
 import { cn } from "@/lib/utils/cn";
 
 const ATMOS: Record<string, string> = {
-  dawn: "from-[#3a2820] via-[#2f5a3a] to-[#0a1830]",
-  day: "from-[#2f5a3a] via-[#4a8f4a] to-[#1a2840]",
-  dusk: "from-[#3a2820] via-[#8b5a3c] to-[#121a28]",
-  night: "from-[#0a1830] via-[#121a28] to-[#1a1510]",
-  rift: "from-[#121a28] via-[#1a2840] to-[#2a2118]",
-  festival: "from-[#1a2030] via-[#3a2820] to-[#0a1830]",
-  storm: "from-[#1a2438] via-[#3d4a60] to-[#0a1830]",
-  ruin: "from-[#2a2118] via-[#5c3d2e] to-[#121a28]",
+  dawn: "from-[#3a2820]/80 via-[#2f5a3a]/55 to-[#0a1830]/70",
+  day: "from-[#2f5a3a]/70 via-[#4a8f4a]/45 to-[#1a2840]/65",
+  dusk: "from-[#3a2820]/80 via-[#8b5a3c]/55 to-[#121a28]/70",
+  night: "from-[#0a1830]/75 via-[#121a28]/60 to-[#1a1510]/80",
+  rift: "from-[#121a28]/75 via-[#1a2840]/55 to-[#2a2118]/70",
+  festival: "from-[#1a2030]/70 via-[#3a2820]/55 to-[#0a1830]/70",
+  storm: "from-[#1a2438]/75 via-[#3d4a60]/50 to-[#0a1830]/75",
+  ruin: "from-[#2a2118]/80 via-[#5c3d2e]/55 to-[#121a28]/70",
 };
 
 type Props = {
@@ -25,7 +25,7 @@ type Props = {
   zoom?: number;
 };
 
-function Bubbles({ page }: { page: ComicPage }) {
+function Bubbles({ page, ink }: { page: ComicPage; ink: boolean }) {
   const bubbles = page.panels.flatMap((p) => p.bubbles);
   return (
     <div className="space-y-3">
@@ -34,7 +34,10 @@ function Bubbles({ page }: { page: ComicPage }) {
           return (
             <p
               key={i}
-              className="font-display text-center text-2xl uppercase tracking-widest text-[var(--amber)]"
+              className={cn(
+                "font-display text-center text-2xl uppercase tracking-widest",
+                ink ? "text-[#8b5a3c]" : "text-[var(--amber)]",
+              )}
             >
               {b.text}
             </p>
@@ -45,8 +48,11 @@ function Bubbles({ page }: { page: ComicPage }) {
             <p
               key={i}
               className={cn(
-                "rounded-md border border-[rgba(196,168,130,0.35)] bg-[rgba(232,213,176,0.08)] px-3 py-2 text-sm italic leading-relaxed text-[var(--stone)]",
-                b.kind === "caption" && "not-italic text-[var(--text-muted)]",
+                "rounded-md border px-3 py-2 text-sm italic leading-relaxed",
+                ink
+                  ? "border-[rgba(92,61,46,0.35)] bg-[rgba(255,248,230,0.45)] text-[#2a2118]"
+                  : "border-[rgba(196,168,130,0.35)] bg-[rgba(232,213,176,0.08)] text-[var(--stone)]",
+                b.kind === "caption" && "not-italic opacity-80",
               )}
             >
               {b.text}
@@ -59,12 +65,21 @@ function Bubbles({ page }: { page: ComicPage }) {
             className={cn(
               "relative max-w-[92%] rounded-2xl px-4 py-3 text-sm leading-relaxed",
               b.kind === "thought"
-                ? "ml-auto border border-dashed border-[rgba(61,231,255,0.35)] bg-[rgba(61,231,255,0.08)] text-[var(--cyan)]"
-                : "border border-[rgba(255,255,255,0.14)] bg-[rgba(255,255,255,0.06)] text-white",
+                ? ink
+                  ? "ml-auto border border-dashed border-[rgba(92,61,46,0.45)] bg-[rgba(255,248,230,0.55)] text-[#3a2820]"
+                  : "ml-auto border border-dashed border-[rgba(196,168,130,0.45)] bg-[rgba(232,213,176,0.1)] text-[var(--stone)]"
+                : ink
+                  ? "border border-[rgba(42,33,24,0.2)] bg-[rgba(255,252,245,0.72)] text-[#2a2118] shadow-sm"
+                  : "border border-[rgba(255,255,255,0.14)] bg-[rgba(255,255,255,0.06)] text-white",
             )}
           >
             {b.speaker && (
-              <p className="mb-1 text-[10px] uppercase tracking-[0.16em] text-[var(--amber)]">
+              <p
+                className={cn(
+                  "mb-1 text-[10px] uppercase tracking-[0.16em]",
+                  ink ? "text-[#8b5a3c]" : "text-[var(--amber)]",
+                )}
+              >
                 {b.speaker}
               </p>
             )}
@@ -88,20 +103,22 @@ export function ComicPageView({
   const artSrc = page.artSrc ?? page.panels.find((p) => p.artSrc)?.artSrc;
   const atm = page.atmosphere ?? "day";
   const gradient = ATMOS[atm] ?? ATMOS.day;
+  /** Dark mode = reading lamp on parchment (still warm paper). */
+  const parchment = !highContrast;
+  const lamp = parchment && darkMode;
 
   return (
     <article
       className={cn(
-        "relative mx-auto w-full max-w-3xl overflow-hidden rounded-xl border shadow-2xl",
+        "relative mx-auto w-full max-w-3xl overflow-hidden",
         highContrast
-          ? "border-white bg-black text-white"
-          : "border-[var(--stroke)] bg-[rgba(10,14,24,0.95)]",
-        !darkMode && "bg-[rgba(232,213,176,0.95)] text-[#2a2118]",
+          ? "rounded-xl border border-white bg-black text-white shadow-2xl"
+          : cn("comic-page-paper", lamp && "comic-page-paper--lamp"),
       )}
       style={{ transform: `scale(${zoom})`, transformOrigin: "top center" }}
       aria-label={`${issueTitle}, page ${page.pageNumber}`}
     >
-      <div className={cn("relative min-h-[70vh] bg-gradient-to-b", gradient)}>
+      <div className={cn("relative z-[2] min-h-[70vh] bg-gradient-to-b", gradient)}>
         {artSrc ? (
           <div className="relative aspect-[3/4] w-full sm:aspect-[4/5]">
             <Image
@@ -113,7 +130,14 @@ export function ComicPageView({
               unoptimized
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+            <div
+              className={cn(
+                "absolute inset-0",
+                parchment
+                  ? "bg-gradient-to-t from-[rgba(42,33,24,0.88)] via-[rgba(42,33,24,0.2)] to-transparent"
+                  : "bg-gradient-to-t from-black/85 via-black/25 to-transparent",
+              )}
+            />
           </div>
         ) : (
           <div className="aspect-[3/4] w-full" aria-hidden />
@@ -129,7 +153,9 @@ export function ComicPageView({
                 "absolute z-10 rounded-md border-2 focus-ring transition",
                 found
                   ? "border-[var(--emerald)] bg-[rgba(74,223,122,0.25)]"
-                  : "border-[var(--cyan)]/40 bg-[rgba(61,231,255,0.12)] hover:bg-[rgba(61,231,255,0.28)]",
+                  : parchment
+                    ? "border-[rgba(139,90,60,0.55)] bg-[rgba(232,213,176,0.18)] hover:bg-[rgba(232,213,176,0.35)]"
+                    : "border-[var(--cyan)]/40 bg-[rgba(61,231,255,0.12)] hover:bg-[rgba(61,231,255,0.28)]",
               )}
               style={{
                 left: `${h.x}%`,
@@ -146,7 +172,14 @@ export function ComicPageView({
 
         <div className="relative z-[2] space-y-4 p-4 pb-8 md:p-6">
           {page.title && (
-            <h3 className="font-display text-2xl text-white drop-shadow">{page.title}</h3>
+            <h3
+              className={cn(
+                "font-display text-2xl drop-shadow",
+                parchment ? "text-[#f5ead2]" : "text-white",
+              )}
+            >
+              {page.title}
+            </h3>
           )}
 
           {page.layout !== "splash" && page.panels.length > 1 && (
@@ -162,14 +195,24 @@ export function ComicPageView({
               {page.panels.map((panel) => (
                 <div
                   key={panel.id}
-                  className="rounded-lg border border-[rgba(255,255,255,0.12)] bg-black/35 p-3"
+                  className={cn(
+                    "rounded-lg border p-3",
+                    parchment
+                      ? "border-[rgba(42,33,24,0.2)] bg-[rgba(255,248,230,0.55)]"
+                      : "border-[rgba(255,255,255,0.12)] bg-black/35",
+                  )}
                 >
                   {panel.caption && (
-                    <p className="mb-2 text-xs uppercase tracking-wider text-[var(--mint)]">
+                    <p
+                      className={cn(
+                        "mb-2 text-xs uppercase tracking-wider",
+                        parchment ? "text-[#5c3d2e]" : "text-[var(--mint)]",
+                      )}
+                    >
                       {panel.caption}
                     </p>
                   )}
-                  <Bubbles page={{ ...page, panels: [panel] }} />
+                  <Bubbles page={{ ...page, panels: [panel] }} ink={parchment} />
                 </div>
               ))}
             </div>
@@ -181,26 +224,59 @@ export function ComicPageView({
             page.layout === "end" ||
             page.layout === "wide" ||
             page.panels.length === 1) &&
-            page.panels.length <= 1 && <Bubbles page={page} />}
+            page.panels.length <= 1 && <Bubbles page={page} ink={parchment} />}
 
           {page.loreSidebar && (
-            <aside className="rounded-lg border border-[rgba(61,231,255,0.3)] bg-[rgba(10,24,40,0.75)] p-4">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--cyan)]">
+            <aside
+              className={cn(
+                "rounded-lg border p-4",
+                parchment
+                  ? "border-[rgba(139,90,60,0.45)] bg-[rgba(255,248,230,0.65)]"
+                  : "border-[rgba(61,231,255,0.3)] bg-[rgba(10,24,40,0.75)]",
+              )}
+            >
+              <p
+                className={cn(
+                  "text-[10px] uppercase tracking-[0.18em]",
+                  parchment ? "text-[#8b5a3c]" : "text-[var(--cyan)]",
+                )}
+              >
                 Lore sidebar
               </p>
-              <h4 className="font-display mt-1 text-lg text-white">{page.loreSidebar.title}</h4>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">
+              <h4
+                className={cn(
+                  "font-display mt-1 text-lg",
+                  parchment ? "text-[#2a2118]" : "text-white",
+                )}
+              >
+                {page.loreSidebar.title}
+              </h4>
+              <p
+                className={cn(
+                  "mt-2 text-sm leading-relaxed",
+                  parchment ? "text-[#3a2820]/90" : "text-[var(--text-muted)]",
+                )}
+              >
                 {page.loreSidebar.body}
               </p>
             </aside>
           )}
 
           {page.developerNote && (
-            <p className="text-xs text-[var(--text-muted)]">Dev note: {page.developerNote}</p>
+            <p className={cn("text-xs", parchment ? "text-[#5c3d2e]/80" : "text-[var(--text-muted)]")}>
+              Dev note: {page.developerNote}
+            </p>
           )}
         </div>
       </div>
-      <footer className="flex items-center justify-between border-t border-[var(--stroke)] px-4 py-2 text-xs text-[var(--text-muted)]">
+      <footer
+        className={cn(
+          "relative z-[2] flex items-center justify-between border-t px-4 py-2 text-xs",
+          parchment
+            ? "border-[rgba(92,61,46,0.35)] text-[#5c3d2e]"
+            : "border-[var(--stroke)] text-[var(--text-muted)]",
+        )}
+      >
         <span>{issueTitle}</span>
         <span>Page {page.pageNumber}</span>
       </footer>

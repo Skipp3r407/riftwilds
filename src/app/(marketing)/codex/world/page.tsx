@@ -1,7 +1,9 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { GameImage } from "@/components/assets/game-image";
+import { ColoringDownloads } from "@/components/coloring/coloring-downloads";
 import { SectionTitleBand } from "@/components/shared/page-header";
+import { WallpaperDownloads } from "@/components/wallpapers/wallpaper-downloads";
 import { WORLD_LORE_ENTRIES } from "@/content/codex/world-lore";
 
 export const metadata: Metadata = {
@@ -42,18 +44,20 @@ export default function WorldCodexPage() {
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {WORLD_LORE_ENTRIES.map((entry) => (
           <article key={entry.id} className="panel overflow-hidden p-4">
-            {entry.artSrc ? (
-              <div className="relative z-[1] mb-3 aspect-[16/10] overflow-hidden rounded-xl bg-[radial-gradient(circle_at_50%_42%,rgba(90,110,150,0.38),rgba(14,18,32,0.92)_72%)] ring-1 ring-[rgba(148,197,255,0.14)]">
+            <div className="relative z-[1] mb-3 aspect-[16/10] overflow-hidden rounded-xl bg-[radial-gradient(circle_at_50%_42%,rgba(90,110,150,0.38),rgba(14,18,32,0.92)_72%)] ring-1 ring-[rgba(148,197,255,0.14)]">
+              {entry.artSrc ? (
                 <GameImage
                   src={entry.artSrc}
                   alt={`Illustration for ${entry.title}`}
                   width={480}
                   height={300}
                   fill
+                  objectFit="cover"
                   showDevBadge={false}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-              </div>
-            ) : null}
+              ) : null}
+            </div>
             <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--mint)]">
               {CATEGORY_LABEL[entry.category]}
             </p>
@@ -66,6 +70,11 @@ export default function WorldCodexPage() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="mt-12 space-y-10">
+        <ColoringDownloads />
+        <WallpaperDownloads />
       </div>
     </div>
   );

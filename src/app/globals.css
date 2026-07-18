@@ -2775,4 +2775,282 @@ a.panel:hover .section-card-thumb__img {
   .hud-atmosphere__cursor {
     display: none;
   }
+
+  .comic-book-leaf,
+  .comic-book-cover {
+    transition: none !important;
+  }
+}
+
+/* ── Legends of the Rift — book-like comic reader ── */
+.comic-book-lamp {
+  --comic-paper: #e8d5b0;
+  --comic-paper-deep: #c9b08a;
+  --comic-ink: #2a2118;
+  --comic-leather: #3a2820;
+  --comic-leather-edge: #5c3d2e;
+  --comic-gold: rgba(196, 168, 130, 0.55);
+  padding: 1.25rem 0.75rem 1.75rem;
+}
+
+.comic-book-lamp--night {
+  --comic-paper: #dcc4a0;
+  --comic-paper-deep: #b89a72;
+}
+
+.comic-book-vignette {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 42%, rgba(255, 214, 150, 0.14), transparent 62%),
+    radial-gradient(ellipse 100% 90% at 50% 50%, transparent 45%, rgba(8, 6, 4, 0.55) 100%);
+  border-radius: 1.5rem;
+  z-index: 0;
+}
+
+.comic-book-lamp--day .comic-book-vignette {
+  background:
+    radial-gradient(ellipse 75% 60% at 50% 40%, rgba(255, 236, 200, 0.22), transparent 65%),
+    radial-gradient(ellipse 100% 95% at 50% 55%, transparent 50%, rgba(42, 33, 24, 0.18) 100%);
+}
+
+.comic-book {
+  position: relative;
+  z-index: 1;
+  max-width: 48rem;
+  margin-inline: auto;
+  border-radius: 0.35rem 0.85rem 0.85rem 0.35rem;
+  background:
+    linear-gradient(90deg, rgba(58, 40, 32, 0.95) 0%, rgba(92, 61, 46, 0.4) 1.2%, transparent 2.5%),
+    linear-gradient(165deg, #2a2118 0%, #1a1510 100%);
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.45),
+    0 4px 12px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(232, 213, 176, 0.12);
+  padding: 0.65rem 0.85rem 0.65rem 1.1rem;
+}
+
+.comic-book-spine {
+  position: absolute;
+  left: 0;
+  top: 4%;
+  bottom: 4%;
+  width: 0.55rem;
+  border-radius: 0.2rem 0 0 0.2rem;
+  background: linear-gradient(
+    180deg,
+    #5c3d2e 0%,
+    #3a2820 35%,
+    #2a2118 70%,
+    #5c3d2e 100%
+  );
+  box-shadow:
+    2px 0 6px rgba(0, 0, 0, 0.35),
+    inset -1px 0 0 rgba(232, 213, 176, 0.15);
+  z-index: 4;
+}
+
+.comic-book-stack {
+  position: absolute;
+  top: 3%;
+  bottom: 3%;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--comic-paper) 0px,
+    var(--comic-paper) 1px,
+    var(--comic-paper-deep) 1px,
+    var(--comic-paper-deep) 2px,
+    #a89070 2px,
+    #a89070 3px
+  );
+  box-shadow: inset 0 0 4px rgba(42, 33, 24, 0.25);
+}
+
+.comic-book-stack--left {
+  left: 0.55rem;
+  border-radius: 0 1px 1px 0;
+  opacity: 0.85;
+}
+
+.comic-book-stack--right {
+  right: 0.35rem;
+  border-radius: 1px 2px 2px 1px;
+  opacity: 0.9;
+  box-shadow:
+    2px 0 0 rgba(42, 33, 24, 0.15),
+    4px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.comic-book-pages {
+  position: relative;
+  border-radius: 0.15rem 0.55rem 0.55rem 0.15rem;
+  overflow: visible;
+}
+
+.comic-book-leaf,
+.comic-book-cover {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+.comic-book-leaf-shadow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 33, 24, 0.22) 0%,
+    transparent 8%,
+    transparent 92%,
+    rgba(42, 33, 24, 0.12) 100%
+  );
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+.comic-book-curl {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 18%;
+  z-index: 7;
+  border-radius: 0 0.45rem 0.45rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 248, 230, 0.08) 45%,
+    rgba(42, 33, 24, 0.12) 100%
+  );
+  mix-blend-mode: soft-light;
+}
+
+.comic-book-cover {
+  display: block;
+  border-radius: 0.15rem 0.55rem 0.55rem 0.15rem;
+  border: 1px solid var(--comic-gold);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 3px rgba(58, 40, 32, 0.55);
+  cursor: pointer;
+}
+
+.comic-book-cover-sheen {
+  background:
+    linear-gradient(115deg, transparent 40%, rgba(255, 236, 200, 0.12) 48%, transparent 56%),
+    linear-gradient(180deg, transparent 55%, rgba(10, 8, 6, 0.55) 100%);
+}
+
+.comic-book-cover-cta {
+  background: linear-gradient(180deg, transparent, rgba(20, 14, 10, 0.82));
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.comic-page-paper {
+  position: relative;
+  background-color: var(--comic-paper, #e8d5b0);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 248, 230, 0.45), transparent 45%),
+    radial-gradient(ellipse at 80% 90%, rgba(139, 90, 60, 0.12), transparent 40%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  color: var(--comic-ink, #2a2118);
+  border: 1px solid rgba(92, 61, 46, 0.45);
+  border-radius: 0.15rem 0.45rem 0.45rem 0.15rem;
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.35),
+    inset 0 0 40px rgba(90, 60, 40, 0.08),
+    inset 0 1px 0 rgba(255, 248, 230, 0.35);
+}
+
+.comic-page-paper::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(232, 213, 176, 0.25),
+    inset 8px 0 18px rgba(42, 33, 24, 0.06);
+  background: linear-gradient(
+    90deg,
+    rgba(90, 60, 40, 0.1) 0%,
+    transparent 4%,
+    transparent 96%,
+    rgba(90, 60, 40, 0.08) 100%
+  );
+}
+
+.comic-page-paper--lamp {
+  background-color: #c9b08a;
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(255, 190, 100, 0.08),
+    inset 0 0 50px rgba(40, 28, 16, 0.22),
+    inset 0 1px 0 rgba(255, 220, 160, 0.2);
+}
+
+.comic-page-paper--lamp::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 35%,
+    rgba(255, 210, 140, 0.12),
+    transparent 70%
+  );
+}
+
+.comic-thumb-edge {
+  position: relative;
+  min-height: 2.75rem;
+  border-radius: 1px 4px 4px 1px;
+  background:
+    linear-gradient(90deg, rgba(58, 40, 32, 0.5) 0%, transparent 8%),
+    repeating-linear-gradient(
+      180deg,
+      #e8d5b0 0px,
+      #e8d5b0 2px,
+      #c9b08a 2px,
+      #c9b08a 3px
+    );
+  border: 1px solid rgba(92, 61, 46, 0.5);
+  color: #2a2118;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.comic-thumb-edge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(196, 168, 130, 0.75);
+}
+
+.comic-thumb-edge--active {
+  border-color: rgba(212, 168, 90, 0.95);
+  box-shadow:
+    0 0 0 1px rgba(212, 168, 90, 0.4),
+    2px 3px 8px rgba(0, 0, 0, 0.35);
+  background:
+    linear-gradient(90deg, rgba(58, 40, 32, 0.55) 0%, transparent 10%),
+    linear-gradient(180deg, #f0e0c0, #d4bc8e);
+}
+
+.comic-reader-shell {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 20%, rgba(90, 60, 40, 0.35), transparent 55%),
+    radial-gradient(ellipse at top, rgba(42, 33, 24, 0.95), #0c0a08 72%);
+}
+
+.comic-reader-shell--day {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 18%, rgba(232, 213, 176, 0.18), transparent 55%),
+    radial-gradient(ellipse at top, rgba(58, 48, 36, 0.9), #14110e 75%);
 }

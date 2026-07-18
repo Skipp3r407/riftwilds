@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630">
+      <stop stop-color="#1a1510"/>
+      <stop offset="0.45" stop-color="#0f1826"/>
+      <stop offset="1" stop-color="#12161c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="20%" r="55%">
+      <stop stop-color="#3de7ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3de7ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="48" y="48" width="1104" height="534" rx="28" fill="none" stroke="#c4a882" stroke-opacity="0.35" stroke-width="3"/>
+  <text x="96" y="140" fill="#ffb84d" font-family="Georgia, serif" font-size="28" letter-spacing="6">RIFTWILDS</text>
+  <text x="96" y="260" fill="#f3efe6" font-family="Georgia, serif" font-size="64" font-weight="700">I hatched a Riftling</text>
+  <text x="96" y="340" fill="#a89b86" font-family="Georgia, serif" font-size="30">Free egg · Care · Explore</text>
+  <rect x="96" y="420" width="220" height="56" rx="14" fill="#3de7ff"/>
+  <text x="206" y="456" text-anchor="middle" fill="#0c0e12" font-family="Georgia, serif" font-size="22" font-weight="700">Share the story</text>
+  <circle cx="980" cy="320" r="120" fill="#3de7ff" opacity="0.2"/>
+  <circle cx="980" cy="320" r="80" fill="none" stroke="#3de7ff" stroke-width="6"/>
+  <ellipse cx="980" cy="320" rx="36" ry="48" fill="#e8d5b0" opacity="0.9"/>
+</svg>

@@ -32,6 +32,12 @@ export default function LiveWorldPage() {
             <Link href="/world" className="btn-secondary focus-ring">
               World map
             </Link>
+            <Link href="/about" className="btn-secondary focus-ring">
+              About / Story
+            </Link>
+            <Link href="/fan-kit#share" className="btn-secondary focus-ring">
+              Share Commons
+            </Link>
           </>
         }
       />
@@ -39,6 +45,24 @@ export default function LiveWorldPage() {
       <div id="enter-live-world">
         <LiveWorldShell playable={playable} />
       </div>
+
+      <section className="panel flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h2 className="font-display text-lg text-white">Share the Commons</h2>
+          <p className="mt-1 text-sm text-[var(--text-muted)]">
+            Invite a friend to the plaza — stickers, wallpapers, and moment cards live in the Fan
+            Kit.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/fan-kit#share" className="btn-primary focus-ring text-sm">
+            Moment cards
+          </Link>
+          <Link href="/about" className="btn-secondary focus-ring text-sm">
+            Origin story
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

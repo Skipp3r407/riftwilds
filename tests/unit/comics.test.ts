@@ -9,12 +9,16 @@ import {
   clampPage,
   continuePage,
   createEmptyComicProgress,
+  flipDirection,
   markHotspotFound,
   nextPage,
   pageFromKeyboard,
+  pageTurnMotion,
   prevPage,
   readingPercent,
   setCurrentPage,
+  shouldOfferCoverIntro,
+  stackThickness,
   toggleFavoriteIssue,
 } from "@/lib/comics";
 
@@ -55,6 +59,35 @@ describe("Comic reader navigation", () => {
     expect(pageFromKeyboard("ArrowLeft", 5, 24)).toBe(4);
     expect(pageFromKeyboard("Home", 5, 24)).toBe(1);
     expect(pageFromKeyboard("End", 5, 24)).toBe(24);
+  });
+});
+
+describe("Comic page-turn motion", () => {
+  it("resolves flip direction and stack thickness", () => {
+    expect(flipDirection(3, 4)).toBe(1);
+    expect(flipDirection(4, 3)).toBe(-1);
+    expect(flipDirection(2, 2)).toBe(0);
+    expect(stackThickness(1, 24)).toEqual({ left: 0, right: 1 });
+    expect(stackThickness(24, 24)).toEqual({ left: 1, right: 0 });
+    const mid = stackThickness(12, 23);
+    expect(mid.left + mid.right).toBeCloseTo(1);
+  });
+
+  it("uses crossfade under reduced motion and flip otherwise", () => {
+    const calm = pageTurnMotion(true);
+    expect(calm.mode).toBe("crossfade");
+    expect(calm.durationMs).toBeLessThan(400);
+
+    const flip = pageTurnMotion(false);
+    expect(flip.mode).toBe("flip");
+    expect(flip.durationMs).toBeGreaterThan(calm.durationMs);
+    expect(flip.ease).toHaveLength(4);
+  });
+
+  it("offers cover intro only on page 1 when not yet opened", () => {
+    expect(shouldOfferCoverIntro(1, false)).toBe(true);
+    expect(shouldOfferCoverIntro(1, true)).toBe(false);
+    expect(shouldOfferCoverIntro(5, false)).toBe(false);
   });
 });
 

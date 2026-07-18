@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky-circus-night" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d0818"/><stop offset="60%" stop-color="#2a1840"/><stop offset="100%" stop-color="#5a2a4a"/>
+    </linearGradient>
+    <linearGradient id="mid-circus-night" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b6b" stop-opacity="0.2"/><stop offset="100%" stop-color="#ffb84d" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="glow-circus-night" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#fff6d5" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#ffb84d" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#070b16" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground-circus-night" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1a28"/><stop offset="100%" stop-color="#120810"/>
+    </linearGradient>
+    <filter id="soft-circus-night" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#sky-circus-night)"/>
+  <rect width="100%" height="100%" fill="url(#glow-circus-night)"/>
+  
+      <path d="M640 900 L960 280 L1280 900 Z" fill="#c44b4b" opacity="0.75"/>
+      <path d="M960 280 L960 900" stroke="#ffd27a" stroke-width="4" opacity="0.6"/>
+      <path d="M760 650 L1160 650" stroke="#ffd27a" stroke-width="3" opacity="0.45"/>
+      <circle cx="400" cy="400" r="30" fill="#ff6b6b" opacity="0.7"/>
+      <circle cx="1500" cy="360" r="28" fill="#3de7ff" opacity="0.65"/>
+      <circle cx="300" cy="500" r="22" fill="#ffb84d" opacity="0.7"/>
+      <path d="M400 430 Q395 500 410 560" stroke="#e8d5b0" stroke-width="2" fill="none" opacity="0.5"/>
+      <circle cx="200" cy="200" r="3" fill="#fff" opacity="0.8"/>
+      <circle cx="1600" cy="180" r="2.5" fill="#fff" opacity="0.7"/>
+      <circle cx="1200" cy="140" r="2" fill="#fff" opacity="0.7"/>
+      <ellipse cx="960" cy="920" rx="400" ry="40" fill="#1a1018" opacity="0.6"/>
+    
+  <rect y="620" width="100%" height="460" fill="url(#ground-circus-night)"/>
+  <rect y="0" width="100%" height="100%" fill="url(#mid-circus-night)" opacity="0.22"/>
+  <!-- brand whisper -->
+  <text x="60" y="1020" font-family="Georgia, serif" font-size="28" fill="#e8d5b0" opacity="0.55">Circus Night</text>
+  <text x="60" y="1050" font-family="Georgia, serif" font-size="16" fill="#c4a882" opacity="0.4">Riftwilds</text>
+</svg>

@@ -127,6 +127,31 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/comics" className="footer-link">
+                Comics
+              </Link>
+            </li>
+            <li>
+              <Link href="/fan-kit" className="footer-link">
+                Fan Kit
+              </Link>
+            </li>
+            <li>
+              <Link href="/coloring" className="footer-link">
+                Coloring
+              </Link>
+            </li>
+            <li>
+              <Link href="/press" className="footer-link">
+                Press / Streamers
+              </Link>
+            </li>
+            <li>
+              <Link href="/creators" className="footer-link">
+                Creator Hub
+              </Link>
+            </li>
+            <li>
               <Link href="/economy" className="footer-link">
                 Economy
               </Link>

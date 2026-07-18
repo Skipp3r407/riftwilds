@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+  <rect width="850" height="1100" fill="#ffffff"/>
+  <rect x="28" y="28" width="794" height="1044" fill="none" stroke="#1a1a1a" stroke-width="3" rx="8"/>
+  <text x="425" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1a1a1a">Elderwood Path</text>
+  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page</text>
+  <g transform="translate(0, 40)" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    
+      <!-- path -->
+      <path d="M300 820 Q360 600 400 400 Q430 280 450 200" stroke-width="3"/>
+      <path d="M550 820 Q490 600 470 400 Q455 280 450 200" stroke-width="3"/>
+      <path d="M320 700 Q425 720 530 700" stroke-width="1.5"/>
+      <path d="M350 560 Q425 580 500 560" stroke-width="1.5"/>
+      <!-- left trees -->
+      <path d="M180 820 L200 420"/>
+      <path d="M200 450 Q120 380 160 300 Q220 340 200 450"/>
+      <path d="M200 480 Q100 420 140 320 Q230 380 200 480"/>
+      <path d="M120 820 L140 500"/>
+      <path d="M140 520 Q60 460 100 380 Q180 440 140 520"/>
+      <!-- right trees -->
+      <path d="M680 820 L660 400"/>
+      <path d="M660 430 Q740 360 700 280 Q640 330 660 430"/>
+      <path d="M660 470 Q760 400 720 310 Q630 380 660 470"/>
+      <path d="M740 820 L720 520"/>
+      <path d="M720 540 Q800 480 760 400 Q690 460 720 540"/>
+      <!-- bridge -->
+      <path d="M360 640 Q425 600 490 640"/>
+      <path d="M370 655 Q425 625 480 655"/>
+      <path d="M380 640 L380 670"/>
+      <path d="M470 640 L470 670"/>
+      <!-- stream -->
+      <path d="M200 680 Q320 700 360 655" stroke-width="1.8"/>
+      <path d="M490 655 Q560 700 700 690" stroke-width="1.8"/>
+      <!-- mushrooms -->
+      <path d="M260 780 L260 800"/>
+      <path d="M240 780 Q260 750 280 780 Z"/>
+      <path d="M600 790 L600 810"/>
+      <path d="M585 790 Q600 765 615 790 Z"/>
+      <!-- birds -->
+      <path d="M400 240 Q410 230 420 240" stroke-width="1.8"/>
+      <path d="M480 220 Q490 210 500 220" stroke-width="1.8"/>
+      <text x="425" y="940" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#222" stroke="none">A sunny path through Elderwood</text>
+    
+  </g>
+  <text x="425" y="1068" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#555555">Free for personal &amp; kids use · Not for resale · riftwilds.com</text>
+</svg>

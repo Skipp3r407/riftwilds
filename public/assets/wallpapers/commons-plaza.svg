@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky-commons-plaza" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a2744"/><stop offset="45%" stop-color="#3d5a80"/><stop offset="100%" stop-color="#f0c27a"/>
+    </linearGradient>
+    <linearGradient id="mid-commons-plaza" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3de7ff" stop-opacity="0.15"/><stop offset="100%" stop-color="#ffb84d" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="glow-commons-plaza" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#fff6d5" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#ffb84d" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#070b16" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ground-commons-plaza" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5a4632"/><stop offset="100%" stop-color="#2a1f14"/>
+    </linearGradient>
+    <filter id="soft-commons-plaza" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#sky-commons-plaza)"/>
+  <rect width="100%" height="100%" fill="url(#glow-commons-plaza)"/>
+  
+      <ellipse cx="960" cy="420" rx="220" ry="40" fill="#7ec8e3" opacity="0.35"/>
+      <ellipse cx="960" cy="400" rx="140" ry="24" fill="#a8e6ff" opacity="0.4"/>
+      <circle cx="960" cy="320" r="28" fill="#fff0c0" opacity="0.85"/>
+      <path d="M820 700 Q960 560 1100 700" fill="#c4a882" opacity="0.5"/>
+      <rect x="200" y="580" width="24" height="120" rx="4" fill="#d4b896" opacity="0.55"/>
+      <rect x="1680" y="560" width="24" height="140" rx="4" fill="#d4b896" opacity="0.55"/>
+      <path d="M0 720 Q480 640 960 700 Q1440 760 1920 680 L1920 1080 L0 1080 Z" fill="#3d3226" opacity="0.65"/>
+      <circle cx="1480" cy="220" r="70" fill="#ffd27a" opacity="0.75"/>
+    
+  <rect y="620" width="100%" height="460" fill="url(#ground-commons-plaza)"/>
+  <rect y="0" width="100%" height="100%" fill="url(#mid-commons-plaza)" opacity="0.22"/>
+  <!-- brand whisper -->
+  <text x="60" y="1020" font-family="Georgia, serif" font-size="28" fill="#e8d5b0" opacity="0.55">Commons Plaza</text>
+  <text x="60" y="1050" font-family="Georgia, serif" font-size="16" fill="#c4a882" opacity="0.4">Riftwilds</text>
+</svg>

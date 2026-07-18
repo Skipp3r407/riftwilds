@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2550" height="3300" viewBox="0 0 850 1100">
+  <rect width="850" height="1100" fill="#ffffff"/>
+  <rect x="28" y="28" width="794" height="1044" fill="none" stroke="#1a1a1a" stroke-width="3" rx="8"/>
+  <text x="425" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#1a1a1a">Gateway Stones</text>
+  <text x="425" y="98" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#444444">Riftwilds · Kids coloring page</text>
+  <g transform="translate(0, 40)" fill="none" stroke="#111111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    
+      <!-- ground arc -->
+      <path d="M80 780 Q425 860 770 780" stroke-width="2.5"/>
+      <path d="M100 820 Q425 900 750 820" stroke-width="1.8"/>
+      <!-- five standing stones -->
+      <path d="M140 780 L160 420 L220 420 L240 780 Z"/>
+      <path d="M260 790 L285 480 L345 480 L360 790 Z"/>
+      <path d="M390 800 L415 380 L485 380 L510 800 Z"/>
+      <path d="M530 790 L555 470 L615 470 L640 790 Z"/>
+      <path d="M650 780 L675 430 L735 430 L760 780 Z"/>
+      <!-- carved swirls -->
+      <path d="M175 520 Q190 500 205 520" stroke-width="1.8"/>
+      <path d="M300 560 Q315 540 330 560" stroke-width="1.8"/>
+      <path d="M435 500 Q450 470 465 500" stroke-width="1.8"/>
+      <path d="M570 550 Q585 530 600 550" stroke-width="1.8"/>
+      <path d="M690 520 Q705 500 720 520" stroke-width="1.8"/>
+      <!-- glow rings (line art) -->
+      <ellipse cx="450" cy="400" rx="50" ry="18" stroke-width="1.8"/>
+      <ellipse cx="450" cy="400" rx="30" ry="10" stroke-width="1.5"/>
+      <!-- stars -->
+      <circle cx="200" cy="220" r="4" fill="#111" stroke="none"/>
+      <circle cx="320" cy="180" r="3" fill="#111" stroke="none"/>
+      <circle cx="500" cy="200" r="4" fill="#111" stroke="none"/>
+      <circle cx="650" cy="170" r="3" fill="#111" stroke="none"/>
+      <circle cx="720" cy="250" r="3.5" fill="#111" stroke="none"/>
+      <path d="M425 160 L433 180 L453 186 L433 192 L425 212 L417 192 L397 186 L417 180 Z" stroke-width="2"/>
+      <text x="425" y="960" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#222" stroke="none">Five stones, one welcome song</text>
+    
+  </g>
+  <text x="425" y="1068" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#555555">Free for personal &amp; kids use · Not for resale · riftwilds.com</text>
+</svg>

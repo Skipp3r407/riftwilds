@@ -25,7 +25,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
       "Aeryndra was never a single crown. It was a lattice of regions balanced by Gateway Hearts.",
       "After the Fracture, people named the layered lands the Riftwilds. The old name still means the whole.",
     ],
-    artSrc: "/assets/story/timeline/age-of-gateways.png",
+    artSrc: "/assets/codex/world/aeryndra.png",
   },
   {
     id: "wl-fracture",
@@ -36,7 +36,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
       "A coalition linked every Heart at once to end famine and sickness. For one moment it worked.",
       "Then the Prime broke. Forests crossed deserts; time skewed; openings called Rifts appeared.",
     ],
-    artSrc: "/assets/about/about-fracture.png",
+    artSrc: "/assets/codex/world/fracture.png",
   },
   {
     id: "wl-soft-exodus",
@@ -47,7 +47,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
       "Unable to repair the Prime, the Hearts divided themselves. Fragments bonded with surviving life and closed into eggs.",
       "Riftlings are living archives — preservation first. Battle culture came later as survival training.",
     ],
-    artSrc: "/assets/about/about-first-riftlings.png",
+    artSrc: "/assets/codex/world/soft-exodus.png",
   },
   {
     id: "wl-elara",
@@ -59,7 +59,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
       "She still greets new Keepers by the Riftstone and authorizes first portals with measured hope.",
     ],
     relatedRegionIds: ["riftwild-commons", "elderwood-forest"],
-    artSrc: "/assets/about/comic/comic-elara-portrait.png",
+    artSrc: "/assets/codex/world/elara-venn.png",
   },
   {
     id: "wl-commons",
@@ -71,7 +71,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
       "It remains the hub of hatchery life, plaza work, and the starter path of every modern Keeper.",
     ],
     relatedRegionIds: ["riftwild-commons"],
-    artSrc: "/assets/regions/riftwild-commons.png",
+    artSrc: "/assets/codex/world/riftwild-commons.png",
   },
   {
     id: "wl-hatchery-compact",
@@ -83,6 +83,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
       "Eggs are becoming, not inventory. Credits may price supplies; consent is not for sale.",
     ],
     relatedRegionIds: ["riftwild-commons"],
+    artSrc: "/assets/codex/world/hatchery-compact.png",
   },
   {
     id: "wl-celestora",
@@ -94,6 +95,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
       "Archivist Solen still teaches from its indexes; Archivist-General Serae fears its truths in the wrong hands.",
     ],
     relatedRegionIds: ["radiant-citadel", "celestial-rift"],
+    artSrc: "/assets/codex/world/celestora-tradition.png",
   },
   {
     id: "wl-present-awakening",
@@ -105,7 +107,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
       "Something beyond mapped regions calls — help, or unfinished Activation. The next chapter is unwritten.",
     ],
     relatedRegionIds: ["celestial-rift"],
-    artSrc: "/assets/story/timeline/present-awakening.png",
+    artSrc: "/assets/codex/world/present-awakening.png",
   },
   {
     id: "wl-book-waybread",
@@ -118,6 +120,7 @@ export const WORLD_LORE_ENTRIES: WorldLoreEntry[] = [
     ],
     relatedBookIds: ["CW-01"],
     relatedRegionIds: ["riftwild-commons"],
+    artSrc: "/assets/codex/world/waybread-first-night.png",
   },
 ];
 

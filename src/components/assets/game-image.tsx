@@ -20,6 +20,10 @@ type GameImageProps = {
   unoptimized?: boolean;
   /** Stretch to parent; use inside an sized aspect-square well. */
   fill?: boolean;
+  /** How the image fills its box when `fill` is true. Default contain (pets/icons). */
+  objectFit?: "contain" | "cover";
+  /** Passed to next/image when `fill` is true. */
+  sizes?: string;
 };
 
 /**
@@ -49,6 +53,8 @@ export function GameImage({
   loading,
   unoptimized,
   fill = false,
+  objectFit = "contain",
+  sizes,
 }: GameImageProps) {
   const [current, setCurrent] = useState(src);
   const isPlaceholder = isDevPlaceholderPath(current);
@@ -59,6 +65,10 @@ export function GameImage({
 
   const skipOpt = shouldSkipOptimizer(current, unoptimized);
   const loadMode = priority ? undefined : loading;
+  const fitClass =
+    objectFit === "cover"
+      ? "object-cover object-center"
+      : "object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]";
 
   const onError = () => {
     const pathOnly = current.split("?")[0] ?? current;
@@ -89,11 +99,11 @@ export function GameImage({
           src={current}
           alt={alt}
           fill
-          sizes="(max-width: 768px) 50vw, 220px"
+          sizes={sizes ?? "(max-width: 768px) 50vw, 220px"}
           priority={priority}
           loading={loadMode}
           unoptimized={skipOpt}
-          className="object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
+          className={fitClass}
           onError={onError}
         />
         {showDevBadge && isPlaceholder && process.env.NODE_ENV === "development" ? (
