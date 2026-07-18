@@ -3,7 +3,7 @@
 **Status:** Binding product direction (2026-07)  
 **Codename:** RIFTWILDS REBORN  
 **Launch emphasis:** TCG / Rift Battles first · Living World = future release  
-**Related:** [ROADMAP.md](./ROADMAP.md) · [GAMEPLAY_LOOP.md](../gameplay/GAMEPLAY_LOOP.md) · [CARD_SYSTEM.md](../gameplay/CARD_SYSTEM.md)
+**Related:** [ROADMAP.md](./ROADMAP.md) · [PRODUCT_ECONOMY_ROADMAP.md](./PRODUCT_ECONOMY_ROADMAP.md) · [GAMEPLAY_LOOP.md](../gameplay/GAMEPLAY_LOOP.md) · [CARD_SYSTEM.md](../gameplay/CARD_SYSTEM.md)
 
 ## One-sentence vision
 

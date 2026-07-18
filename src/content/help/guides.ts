@@ -43,6 +43,11 @@ export const HELP_QUICK_LINKS: HelpQuickLink[] = [
     label: "Marketplace",
     blurb: "Trade cards and packs with Credits.",
   },
+  {
+    href: "/roadmap",
+    label: "Roadmap",
+    blurb: "Rift Battles now, coin expansion next, Living World later.",
+  },
 ];
 
 export const HELP_SECTIONS: HelpSection[] = [

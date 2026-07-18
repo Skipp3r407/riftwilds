@@ -1,6 +1,7 @@
 # Riftwilds Master Economy Roadmap (Phases 1–16)
 
 **Authority:** Phase 0 audit (`PHASE_0_AUDIT.md`) + architecture map (`ARCHITECTURE_MAP.md`).  
+**Player-facing product framing:** `docs/vision/PRODUCT_ECONOMY_ROADMAP.md` · public `/roadmap`.  
 **Invariant:** Credits = required play currency. SOL never required for basic play. Optional SOL is treasury-safe and feature-flagged. No “buy coin → pet SOL.”
 
 ---

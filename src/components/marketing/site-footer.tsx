@@ -191,6 +191,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link href="/roadmap" className="footer-link">
+                Roadmap
+              </Link>
+            </li>
+            <li>
               <Link href="/academy" className="footer-link">
                 Player Academy
               </Link>

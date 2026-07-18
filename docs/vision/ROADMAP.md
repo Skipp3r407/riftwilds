@@ -61,6 +61,7 @@
 
 ## Cross-links
 
+- **Player + product roadmap (TCG · coin · Living World):** [PRODUCT_ECONOMY_ROADMAP.md](./PRODUCT_ECONOMY_ROADMAP.md) · public `/roadmap`  
 - Economy: `docs/economy/MASTER_ECONOMY_ROADMAP.md`  
 - Live World: `docs/LIVE_WORLD_PLAYABLE.md`  
 - Arena (legacy primary combat): `docs/ARENA_ARCHITECTURE.md`  

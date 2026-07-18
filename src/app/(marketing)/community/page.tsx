@@ -23,6 +23,9 @@ export default async function CommunityPage() {
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
+        <Link href="/roadmap" className="btn-secondary focus-ring text-sm">
+          Product roadmap
+        </Link>
         <Link href="/token" className="btn-secondary focus-ring text-sm">
           Token access
         </Link>

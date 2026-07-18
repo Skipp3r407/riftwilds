@@ -36,6 +36,18 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-product-economy-roadmap",
+    date: "2026-07-18",
+    title: "Public product & economy roadmap",
+    summary:
+      "A player-facing roadmap for Rift Battles now, Credits/coin expansion next, and Living World as a later release — SOL stays optional and never required for core play.",
+    added: [
+      "Public /roadmap page — Now (Rift Battles), Next (Gold · Rift Shards · optional SOL), Later (Living World)",
+      "docs/vision/PRODUCT_ECONOMY_ROADMAP.md aligned with vision and economy docs",
+      "Roadmap links from Play / Economy / Community nav, Help destinations, Community page, and Learn footer",
+    ],
+  },
+  {
     id: "2026-07-18-riftling-avatar-unlocks",
     date: "2026-07-18",
     title: "More Riftling avatars with unlock paths",
