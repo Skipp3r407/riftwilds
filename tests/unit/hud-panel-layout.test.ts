@@ -28,6 +28,17 @@ describe("hud panel layout", () => {
     expect(layout.presence).toBeUndefined();
   });
 
+  it("clears overlapping chat + presence free-form positions", () => {
+    const layout = normalizeHudPanelLayout({
+      chat: { x: 12, y: 400 },
+      presence: { x: 16, y: 404 },
+      toolbar: { x: 200, y: 20 },
+    });
+    expect(layout.chat).toBeUndefined();
+    expect(layout.presence).toBeUndefined();
+    expect(layout.toolbar).toEqual({ x: 200, y: 20 });
+  });
+
   it("clamps and snaps near edges", () => {
     const clamped = clampHudPanelPosition(-40, 9999, 100, 80, 400, 300);
     expect(clamped.x).toBe(4);
