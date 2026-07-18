@@ -30,7 +30,7 @@ const CONCURRENCY = 6;
 
 const RARITY_ACCENT = {
   common: "#8b5a3c",
-  uncommon: "#5a9e6a",
+  uncommon: "#3de7ff",
   rare: "#3de7ff",
   epic: "#ffb84d",
   legendary: "#66e0ff",
@@ -195,13 +195,14 @@ function frameSvg(card, accent) {
     )
     .join("\n");
 
+  // Frame chrome only — art window stays transparent so creature art shows through.
+  const ax = ART.x;
+  const ay = ART.y;
+  const aw = ART.w;
+  const ah = ART.h;
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${c0}"/>
-      <stop offset="100%" stop-color="${c1}"/>
-    </linearGradient>
     <linearGradient id="plate" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#1a1410" stop-opacity="0.92"/>
       <stop offset="100%" stop-color="#0e1218" stop-opacity="0.92"/>
@@ -211,14 +212,36 @@ function frameSvg(card, accent) {
       <stop offset="55%" stop-color="#ffb84d"/>
       <stop offset="100%" stop-color="#8a5a18"/>
     </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${c0}" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="${c1}" stop-opacity="0.98"/>
+    </linearGradient>
   </defs>
 
-  <rect width="${W}" height="${H}" rx="22" fill="url(#bg)"/>
+  <!-- body panels around the art cutout (even-odd) -->
+  <path fill="url(#panel)" fill-rule="evenodd" d="
+    M 22 22
+    h ${W - 44}
+    a 16 16 0 0 1 16 16
+    v ${H - 76}
+    a 16 16 0 0 1 -16 16
+    h -${W - 44}
+    a 16 16 0 0 1 -16 -16
+    v -${H - 76}
+    a 16 16 0 0 1 16 -16
+    Z
+    M ${ax} ${ay}
+    h ${aw}
+    v ${ah}
+    h -${aw}
+    Z
+  "/>
+
   <rect x="10" y="10" width="${W - 20}" height="${H - 20}" rx="16" fill="none" stroke="${accent}" stroke-width="3" opacity="0.95"/>
   <rect x="18" y="18" width="${W - 36}" height="${H - 36}" rx="12" fill="none" stroke="${accent}" stroke-width="1" opacity="0.35"/>
 
-  <!-- art window chrome -->
-  <rect x="${ART.x - 4}" y="${ART.y - 4}" width="${ART.w + 8}" height="${ART.h + 8}" rx="10" fill="#0a0e14" stroke="${accent}" stroke-width="2" opacity="0.9"/>
+  <!-- art window chrome (stroke only) -->
+  <rect x="${ax - 4}" y="${ay - 4}" width="${aw + 8}" height="${ah + 8}" rx="10" fill="none" stroke="${accent}" stroke-width="2" opacity="0.95"/>
 
   <!-- name plate -->
   <rect x="28" y="28" width="360" height="36" rx="8" fill="url(#plate)" stroke="${accent}" stroke-width="1.2" opacity="0.95"/>
@@ -261,18 +284,7 @@ async function compositeCard(card, sourceDisk, outPath) {
   const accent = RARITY_ACCENT[card.rarity] || RARITY_ACCENT.common;
   const [c0, c1] = ELEMENT_BG[card.element] || ELEMENT_BG.neutral;
 
-  const base = await sharp({
-    create: {
-      width: W,
-      height: H,
-      channels: 4,
-      background: { r: 12, g: 16, b: 22, alpha: 1 },
-    },
-  })
-    .png()
-    .toBuffer();
-
-  // Soft elemental wash behind art
+  // Soft elemental wash (visible through art cutout + behind transparent PNG pets)
   const wash = Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -286,19 +298,20 @@ async function compositeCard(card, sourceDisk, outPath) {
 
   const artBuf = await sharp(sourceDisk)
     .resize(ART.w, ART.h, {
-      fit: "cover",
+      fit: "contain",
       position: "centre",
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
     })
     .png()
     .toBuffer();
 
   const overlay = Buffer.from(frameSvg(card, accent));
 
-  await sharp(base)
+  await sharp(wash)
+    .png()
     .composite([
-      { input: wash, top: 0, left: 0 },
       { input: artBuf, top: ART.y, left: ART.x },
-      { input: overlay, top: 0, left: 0 },
+      { input: await sharp(overlay).png().toBuffer(), top: 0, left: 0 },
     ])
     .webp({ quality: 86, alphaQuality: 90 })
     .toFile(outPath);

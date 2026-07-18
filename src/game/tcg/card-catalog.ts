@@ -1,7 +1,7 @@
 import type { AffinityName } from "@prisma/client";
 import {
   getCardById,
-  resolveCardImagePath,
+  TCG_CARD_IMAGES,
   TCG_CARDS,
   type TcgCard,
   type TcgElement,
@@ -70,10 +70,8 @@ export function contentCardToEngineDef(card: TcgCard): TcgCardDef {
     type === "UNIT"
       ? Math.max(1, card.attack ?? 1)
       : spellPower(card);
-  const resolved = resolveCardImagePath(card);
   const cardImagePath =
-    card.art.cardImagePath ||
-    (resolved?.startsWith("/assets/tcg/cards/") ? resolved : undefined);
+    card.art.cardImagePath || TCG_CARD_IMAGES.cards[card.id] || undefined;
   return {
     id: card.id,
     name: card.localization.name,
