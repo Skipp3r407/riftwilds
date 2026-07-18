@@ -52,6 +52,7 @@ export {
   scaleNpcDisplayHeight,
   ensureCozyActorAnims,
   playCozyActorAnim,
+  applyCompanionSpeciesVisual,
   KEEPER_WALK_ANIM,
   PET_WALK_ANIM,
 } from "@/game/live-world/systems/premium/actor-presentation";
@@ -61,6 +62,16 @@ export {
   KEEPER_SHEET_FRAME,
   PET_SHEET_FRAME,
 } from "@/game/live-world/systems/premium/asset-keys";
+export {
+  COZY_COMPANION_ACTORS,
+  cozyActorForSpecies,
+  resolveCompanionTexture,
+  pickLoadedCompanionTex,
+  companionPetLabel,
+  DEFAULT_COZY_COMPANION,
+  type CozyCompanionActor,
+  type CompanionTextureChoice,
+} from "@/game/live-world/systems/premium/companion-species";
 export {
   createAtmosphere,
   type AtmosphereHandles,

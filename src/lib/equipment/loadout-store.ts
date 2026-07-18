@@ -120,10 +120,12 @@ export function activatePreset(
 
 function resolvePetContext(ownerKey: string, publicPetId: string) {
   // Demo companion id used by Live World when hatchery pet isn't loaded yet.
+  // Species art for the follower is driven client-side from hatch persist /
+  // /api/pets — this stub must not force Alloybit/Cindercub onto the sprite.
   if (publicPetId === "demo-riftling" || publicPetId === "live-companion") {
     return {
       ok: true as const,
-      speciesSlug: "cindercub",
+      speciesSlug: "riftpup",
       anatomy: anatomyTagsForBodyType("QUADRUPED"),
       level: 5,
       demo: true,

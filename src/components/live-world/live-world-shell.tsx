@@ -15,6 +15,7 @@ import type {
   WorldHudStatus,
 } from "@/game/live-world/types";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
+import { getCompanionSpeciesSlug, setCompanionSpeciesSlug } from "@/lib/audio/riftling-cries";
 import { LiveWorldGameCanvas } from "@/components/live-world/game-canvas";
 import { LiveWorldLoadingScreen } from "@/components/live-world/loading-screen";
 import { LiveWorldStatusBar } from "@/components/live-world/status-bar";
@@ -272,6 +273,8 @@ export function LiveWorldShell({ playable }: Props) {
   useEffect(() => {
     if (!entered || !playable) return;
     const next = createLiveWorldBridge();
+    // Seed hatch species before Phaser Boot so the follower spawns with correct art.
+    next.setCompanionSpeciesSlug(getCompanionSpeciesSlug());
     setBridge(next);
     const input = getInputManager();
     input.attach();
@@ -404,11 +407,30 @@ export function LiveWorldShell({ playable }: Props) {
     return () => unsubs.forEach((u) => u());
   }, [bridge, router, reveal]);
 
-  /** Hydrate companion cosmetic layers from server loadout when the scene is ready. */
+  /**
+   * Hydrate companion species (hatch art) + cosmetic layers when the scene is ready.
+   * Species comes from owned pets / local hatch persist — never from ambient village props.
+   */
   useEffect(() => {
     if (!bridge || !ready) return;
     let cancelled = false;
     void (async () => {
+      try {
+        const petsRes = await fetch("/api/pets", { credentials: "include" });
+        const petsData = (await petsRes.json()) as {
+          pets?: Array<{ speciesSlug?: string }>;
+        };
+        if (!cancelled && petsRes.ok && Array.isArray(petsData.pets)) {
+          const slug = petsData.pets.find((p) => typeof p.speciesSlug === "string")
+            ?.speciesSlug;
+          if (slug) {
+            setCompanionSpeciesSlug(slug);
+            bridge.setCompanionSpeciesSlug(slug);
+          }
+        }
+      } catch {
+        /* guest / offline — fall back to localStorage hatch slug */
+      }
       try {
         const res = await fetch("/api/pets/live-companion/equipment", {
           credentials: "include",

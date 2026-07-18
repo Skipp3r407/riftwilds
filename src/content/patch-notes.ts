@@ -36,6 +36,24 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-live-world-hatched-companion",
+    date: "2026-07-18",
+    title: "Live World companion matches your hatch",
+    summary:
+      "Your following Riftling in Live World now uses the same species look as the pet you hatched — Glowpup-line sparklets stay distinct from Alloybits and other affinities.",
+    fixed: [
+      "Live World follower no longer always shows the generic cozy Spark sheet regardless of hatch species",
+      "HUD companion label uses your hatched species name instead of a hardcoded Spark stub",
+    ],
+    changed: [
+      "Companion overworld art maps hatch species (and affinity fallback) to matching cozy pixel walk sheets",
+      "Ambient village Riftlings stay decorative props and no longer share the player companion’s identity or anim keys",
+    ],
+    added: [
+      "Extra cozy companion palettes for storm, spirit, void, alloy, and radiant affinities",
+    ],
+  },
+  {
     id: "2026-07-18-economy-page-backgrounds",
     date: "2026-07-18",
     title: "Cinematic economy & care backgrounds",

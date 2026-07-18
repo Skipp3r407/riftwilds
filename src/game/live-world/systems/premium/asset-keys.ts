@@ -94,6 +94,11 @@ export const COZY_AMBIENT_PROP_KEYS = [
   "ambient-riftling-frostnip",
   "ambient-riftling-tideling",
   "ambient-riftling-stoneling",
+  "ambient-riftling-stormkit",
+  "ambient-riftling-spiritwisp",
+  "ambient-riftling-voidling",
+  "ambient-riftling-alloybit",
+  "ambient-riftling-radiantpup",
   "picket-fence",
   "picket-fence-gate",
   "yard-fence-corner",
@@ -148,6 +153,11 @@ export const ACTOR_KEYS = [
   "riftling-frostnip",
   "riftling-tideling",
   "riftling-stoneling",
+  "riftling-stormkit",
+  "riftling-spiritwisp",
+  "riftling-voidling",
+  "riftling-alloybit",
+  "riftling-radiantpup",
 ] as const;
 
 /** 4-frame walk/idle sheets (frame size after ×3 upscale from generator). */
@@ -160,6 +170,11 @@ export const ACTOR_SHEET_KEYS = [
   "riftling-frostnip-sheet",
   "riftling-tideling-sheet",
   "riftling-stoneling-sheet",
+  "riftling-stormkit-sheet",
+  "riftling-spiritwisp-sheet",
+  "riftling-voidling-sheet",
+  "riftling-alloybit-sheet",
+  "riftling-radiantpup-sheet",
 ] as const;
 
 export const KEEPER_SHEET_FRAME = 96;

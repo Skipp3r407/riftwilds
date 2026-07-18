@@ -40,7 +40,11 @@ import {
   syncKillerReputation,
 } from "@/game/npcs/play-state";
 import { playSfx } from "@/lib/audio/sfx";
-import { playCompanionCry } from "@/lib/audio/riftling-cries";
+import {
+  getCompanionSpeciesSlug,
+  playCompanionCry,
+  setCompanionSpeciesSlug,
+} from "@/lib/audio/riftling-cries";
 import { playFootstep } from "@/lib/audio/footsteps";
 import { startRegionAmbient, stopAmbient } from "@/lib/audio/ambient";
 import { playRegionMusic } from "@/lib/audio/music";
@@ -97,6 +101,9 @@ import {
   actorContactShadow,
   ensureCozyActorAnims,
   playCozyActorAnim,
+  applyCompanionSpeciesVisual,
+  companionPetLabel,
+  type CozyCompanionActor,
   type Occluder,
   trySpawnDecorationSprite,
   trySpawnResourceSprite,
@@ -268,6 +275,10 @@ export class BlueprintRegionScene extends Phaser.Scene {
   protected unsubEmoteBus: (() => void) | null = null;
   protected petEquipmentLayers: PetEquipmentLayerManager | null = null;
   protected unsubPetAppearance: (() => void) | null = null;
+  protected unsubCompanionSpecies: (() => void) | null = null;
+  /** Cozy actor id for the player follower — never ambient prop identities. */
+  protected companionActor: CozyCompanionActor | null = null;
+  protected companionSpeciesSlug: string | null = null;
   protected petSelected = false;
   /** Runtime solids (blueprint solids + locked portal seals). */
   protected runtimeSolids: CollisionRect[] = [];
@@ -341,17 +352,14 @@ export class BlueprintRegionScene extends Phaser.Scene {
     const spawn = this.resolveSpawn();
     ensureCozyActorAnims(this);
     const keeperSheet = actorSheetTex("player-keeper-sheet");
-    const petSheet = actorSheetTex("pet-riftling-sheet");
     const playerTex = this.textures.exists(keeperSheet)
       ? keeperSheet
       : this.textures.exists(actorTex("player-keeper"))
         ? actorTex("player-keeper")
         : "player-avatar";
-    const petTex = this.textures.exists(petSheet)
-      ? petSheet
-      : this.textures.exists(actorTex("pet-riftling"))
-        ? actorTex("pet-riftling")
-        : "pet-companion";
+    const initialSpecies =
+      this.bridge.companionSpeciesSlug.get() ?? getCompanionSpeciesSlug();
+    this.companionSpeciesSlug = initialSpecies;
     this.player = this.physics.add.sprite(spawn.x, spawn.y, playerTex);
     this.player.setCollideWorldBounds(true);
     this.player.setDepth(depthAt(DEPTH.actor, spawn.y));
@@ -369,17 +377,23 @@ export class BlueprintRegionScene extends Phaser.Scene {
     }
     (this.player.body as Phaser.Physics.Arcade.Body).allowGravity = false;
 
-    this.pet = this.physics.add.sprite(spawn.x - 36, spawn.y + 8, petTex);
+    // Spawn with a safe placeholder; applyCompanionSpeciesVisual sets hatch-matched art.
+    const petPlaceholder = this.textures.exists(actorSheetTex("pet-riftling-sheet"))
+      ? actorSheetTex("pet-riftling-sheet")
+      : this.textures.exists(actorTex("pet-riftling"))
+        ? actorTex("pet-riftling")
+        : "pet-companion";
+    this.pet = this.physics.add.sprite(spawn.x - 36, spawn.y + 8, petPlaceholder);
     this.pet.setDepth(depthAt(DEPTH.actor, spawn.y + 8, -0.2));
     this.pet.setOrigin(0.5, 1);
     this.pet.setVisible(true);
     this.pet.setAlpha(1);
-    if (petTex.startsWith("pw-actor-")) {
-      this.pet.setDisplaySize(PET_DISPLAY.w, PET_DISPLAY.h);
-      const body = this.pet.body as Phaser.Physics.Arcade.Body;
-      body.setSize(16, 14);
-      body.setOffset((this.pet.width - 16) / 2, this.pet.height - 14);
-    } else {
+    this.companionActor = applyCompanionSpeciesVisual(
+      this,
+      this.pet,
+      initialSpecies,
+    );
+    if (!this.pet.texture.key.startsWith("pw-actor-")) {
       this.pet.setCircle(8, 4, 4);
     }
     (this.pet.body as Phaser.Physics.Arcade.Body).allowGravity = false;
@@ -411,6 +425,19 @@ export class BlueprintRegionScene extends Phaser.Scene {
     this.unsubPetAppearance = this.bridge.petAppearance.subscribe((snap) => {
       this.petEquipmentLayers?.applyAppearance(snap);
       if (snap) this.broadcastAppearanceStub(snap);
+      // Demo live-companion appearance often stubs speciesSlug — only adopt
+      // non-demo pets, and never let cosmetics overwrite hatch identity.
+      if (
+        snap?.speciesSlug &&
+        snap.publicPetId &&
+        snap.publicPetId !== COMPANION_PET_ID &&
+        snap.publicPetId !== "demo-riftling"
+      ) {
+        this.applyCompanionSpecies(snap.speciesSlug);
+      }
+    });
+    this.unsubCompanionSpecies = this.bridge.companionSpeciesSlug.subscribe((slug) => {
+      if (slug) this.applyCompanionSpecies(slug);
     });
 
     this.unsubEmoteBus = this.bridge.emotes.bus.subscribe((ev) => this.onEmoteBus(ev));
@@ -419,6 +446,8 @@ export class BlueprintRegionScene extends Phaser.Scene {
       this.unsubEmoteBus = null;
       this.unsubPetAppearance?.();
       this.unsubPetAppearance = null;
+      this.unsubCompanionSpecies?.();
+      this.unsubCompanionSpecies = null;
       this.petEquipmentLayers?.destroy();
       this.petEquipmentLayers = null;
       this.emoteVisual?.destroy();
@@ -630,7 +659,8 @@ export class BlueprintRegionScene extends Phaser.Scene {
       }
     }
     if (this.pet.texture.key.startsWith("pw-actor-")) {
-      playCozyActorAnim(this.pet, petMoving, "pet");
+      // Species-specific walk/idle — never reuse ambient prop sheets.
+      playCozyActorAnim(this.pet, petMoving, "pet", this.companionActor);
       const petBreath = 1 + Math.sin(time / 420 + 1.2) * 0.045;
       this.pet.setDisplaySize(
         PET_DISPLAY.w * petBreath,
@@ -1947,13 +1977,38 @@ export class BlueprintRegionScene extends Phaser.Scene {
     );
   }
 
+  /** Swap follower art + HUD label to match hatched species (not ambient NPCs). */
+  protected applyCompanionSpecies(speciesSlug: string): void {
+    if (!this.pet || !speciesSlug) return;
+    if (this.companionSpeciesSlug === speciesSlug && this.companionActor) {
+      // Still refresh label in case status was stubbed as Spark.
+      const cur = this.bridge.status.get();
+      const label = companionPetLabel(speciesSlug);
+      if (cur.petLabel !== label) {
+        this.bridge.status.set({ ...cur, petLabel: label });
+      }
+      return;
+    }
+    this.companionSpeciesSlug = speciesSlug;
+    setCompanionSpeciesSlug(speciesSlug);
+    this.companionActor = applyCompanionSpeciesVisual(this, this.pet, speciesSlug);
+    const cur = this.bridge.status.get();
+    this.bridge.status.set({
+      ...cur,
+      petLabel: companionPetLabel(speciesSlug),
+    });
+  }
+
   protected async bootstrapConnection(): Promise<void> {
+    const petLabel = companionPetLabel(
+      this.companionSpeciesSlug ?? getCompanionSpeciesSlug(),
+    );
     this.bridge.status.set({
       connection: "connecting",
       mapName: this.blueprint.name,
       instanceLabel: "Joining…",
       playerLabel: "Keeper",
-      petLabel: "Spark Companion",
+      petLabel,
       hint: "Connecting…",
     });
     const result = await this.mp.connect();
@@ -1977,7 +2032,7 @@ export class BlueprintRegionScene extends Phaser.Scene {
       instanceLabel:
         result === "connected" ? "Instance online" : "Local solo (Phase 1)",
       playerLabel: "Keeper",
-      petLabel: "Spark Companion",
+      petLabel,
       hint: "WASD · Shift sprint · E interact · T emotes · M map · Enter chat · scroll / +− zoom",
     });
   }

@@ -826,24 +826,29 @@ function drawKeeper(c, frame = 0) {
   outlineOpaque(c);
 }
 
+const RIFTLING_PALETTES = {
+  spark: { body: [255, 210, 90], accent: C.cyan, tip: C.cyan },
+  moss: { body: [90, 170, 90], accent: C.cyan, tip: C.cyan },
+  ember: { body: [230, 120, 70], accent: C.amber, tip: [255, 140, 60] },
+  frost: { body: [160, 210, 240], accent: C.amber, tip: [200, 230, 255] },
+  tide: { body: [70, 150, 210], accent: C.amber, tip: [100, 200, 230] },
+  stone: { body: [150, 140, 130], accent: C.amber, tip: [180, 170, 150] },
+  storm: { body: [120, 140, 220], accent: C.cyan, tip: [200, 220, 255] },
+  spirit: { body: [200, 180, 230], accent: C.cyan, tip: [230, 210, 255] },
+  void: { body: [70, 55, 95], accent: [180, 120, 255], tip: [120, 80, 180] },
+  alloy: { body: [150, 155, 165], accent: C.amber, tip: [90, 200, 210] },
+  radiant: { body: [255, 235, 160], accent: C.amber, tip: [255, 250, 200] },
+};
+
 function drawRiftling(c, palette = "spark", frame = 0) {
   for (let i = 0; i < c.data.length; i++) c.data[i] = 0;
   const cx = 12;
   const foot = 22;
-  const body =
-    palette === "ember"
-      ? [230, 120, 70]
-      : palette === "moss"
-        ? [90, 170, 90]
-        : palette === "frost"
-          ? [160, 210, 240]
-          : palette === "tide"
-            ? [70, 150, 210]
-            : palette === "stone"
-              ? [150, 140, 130]
-              : [255, 210, 90];
+  const pal = RIFTLING_PALETTES[palette] ?? RIFTLING_PALETTES.spark;
+  const body = pal.body;
   const belly = [255, 240, 210];
-  const accent = palette === "moss" || palette === "spark" ? C.cyan : C.amber;
+  const accent = pal.accent;
+  const tip = pal.tip;
   const hop = frame === 0 ? 0 : frame === 1 ? -1 : frame === 2 ? 0 : -2;
   const paw = frame === 1 ? 1 : frame === 3 ? -1 : 0;
   fillEllipse(c, cx + 1, foot, 6, 2, C.shadow);
@@ -859,7 +864,12 @@ function drawRiftling(c, palette = "spark", frame = 0) {
   set(c, cx, foot - 11 + hop, accent);
   fillRect(c, cx - 4 + paw, foot - 3, 2, 2, body);
   fillRect(c, cx + 2 - paw, foot - 3, 2, 2, body);
-  set(c, cx + 6, foot - 16 + hop, C.cyan);
+  set(c, cx + 6, foot - 16 + hop, tip);
+  // Alloybit gear ear tip — distinct from sparklet cyan freckle
+  if (palette === "alloy") {
+    set(c, cx - 6, foot - 19 + hop, tip);
+    set(c, cx + 6, foot - 19 + hop, tip);
+  }
   outlineOpaque(c);
 }
 
@@ -1003,6 +1013,11 @@ async function genActors() {
     ["riftling-frostnip", "frost"],
     ["riftling-tideling", "tide"],
     ["riftling-stoneling", "stone"],
+    ["riftling-stormkit", "storm"],
+    ["riftling-spiritwisp", "spirit"],
+    ["riftling-voidling", "void"],
+    ["riftling-alloybit", "alloy"],
+    ["riftling-radiantpup", "radiant"],
   ];
   for (const [name, pal] of pals) {
     const c = makeCanvas(24, 24);

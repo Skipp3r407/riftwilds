@@ -124,6 +124,11 @@ export class LiveWorldBridge {
   /** Active companion appearance — Phaser layers subscribe. */
   readonly petAppearance = createChannel<AppearanceSnapshot | null>(null);
   readonly appearanceRevision = createChannel(0);
+  /**
+   * Hatchery / care companion species slug for Live World follower art.
+   * Prefer this over demo `live-companion` appearance.speciesSlug (often a stub).
+   */
+  readonly companionSpeciesSlug = createChannel<string | null>(null);
 
   private interactQueued = false;
   private zoomDeltaQueued = 0;
@@ -216,6 +221,12 @@ export class LiveWorldBridge {
   setPetAppearance(snap: AppearanceSnapshot | null): void {
     this.petAppearance.set(snap);
     this.appearanceRevision.set(snap?.revision ?? this.appearanceRevision.get() + 1);
+  }
+
+  /** Push hatched companion species so Phaser can swap follower textures. */
+  setCompanionSpeciesSlug(slug: string | null | undefined): void {
+    const next = slug?.trim() || null;
+    this.companionSpeciesSlug.set(next);
   }
 
   playEmote(key: string, source: "wheel" | "chat" | "ping" | "admin" = "wheel") {
