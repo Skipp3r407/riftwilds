@@ -127,7 +127,7 @@ export class BootScene extends Phaser.Scene {
   create(): void {
     this.bridge.loadingProgress.set(0.7);
 
-    // Circle fallbacks only when Grok actor PNGs failed to load.
+    // Circle fallbacks only when actor PNGs failed to load.
     if (!this.textures.exists(actorTex("player-keeper"))) {
       drawCircleTexture(this, "player-avatar", 14, 0x3de7ff, 0xffffff);
     }
@@ -135,9 +135,9 @@ export class BootScene extends Phaser.Scene {
       drawCircleTexture(this, "pet-companion", 10, 0xffb84d, 0xfff0d0);
     }
     drawCircleTexture(this, "npc-keeper", 13, 0x9b7bff, 0xe8e0ff);
-    drawRectTexture(this, "tile-plaza", 32, 32, 0x1a2438);
-    drawRectTexture(this, "tile-path", 32, 32, 0x243048);
-    drawRectTexture(this, "tile-grass", 32, 32, 0x15261c);
+    drawRectTexture(this, "tile-plaza", 32, 32, 0xc4a882);
+    drawRectTexture(this, "tile-path", 32, 32, 0xb89460);
+    drawRectTexture(this, "tile-grass", 32, 32, 0x4a9e4a);
     drawRectTexture(this, "solid-block", 16, 16, 0xff00ff);
 
     this.registerNpcAnimations();

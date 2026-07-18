@@ -88,14 +88,21 @@ import {
   collectOccluders,
   updateOccluderFades,
   drawCityWallVisuals,
+  drawTownStreetFurniture,
   depthAt,
   DEPTH,
+  addContactShadow,
+  KEEPER_DISPLAY,
+  PET_DISPLAY,
+  actorContactShadow,
   type Occluder,
   trySpawnDecorationSprite,
   trySpawnResourceSprite,
   type AtmosphereHandles,
   type IsoCameraController,
 } from "@/game/live-world/systems/premium";
+import { loadImmersiveSettings } from "@/game/live-world/systems/immersive/settings";
+import { resolveGraphicsQuality } from "@/game/live-world/systems/immersive/graphics-quality";
 import { ZOOM_STEP } from "@/game/live-world/systems/premium/camera-zoom";
 import { actorTex } from "@/game/live-world/systems/premium/asset-keys";
 import {
@@ -282,6 +289,9 @@ export class BlueprintRegionScene extends Phaser.Scene {
   );
   /** Premium occluders (buildings, trees, docks) for 2.5D roof/canopy fade. */
   protected occluders: Occluder[] = [];
+  /** Soft directional contact shadows under Keeper / companion. */
+  protected playerShadow: Phaser.GameObjects.Ellipse | null = null;
+  protected petShadow: Phaser.GameObjects.Ellipse | null = null;
 
   constructor(key: string) {
     super({ key });
@@ -300,18 +310,20 @@ export class BlueprintRegionScene extends Phaser.Scene {
     this.premium = isPremiumRegion(this.regionSlug);
     const region = REGION_BY_SLUG[this.regionSlug];
     const palette = region?.tilePalette ?? {
-      ground: 0x15261c,
-      path: 0x243048,
-      accent: 0x1a2438,
+      ground: 0x4a9e4a,
+      path: 0xb89460,
+      accent: 0xc4a882,
     };
 
     this.ensureTileTextures(palette);
     this.drawGround(palette);
     this.drawZones();
     if (this.premium) {
-      const propSpawn = spawnPremiumProps(this, this.blueprint, "full");
+      const gfx = resolveGraphicsQuality(loadImmersiveSettings().graphicsQuality);
+      const propSpawn = spawnPremiumProps(this, this.blueprint, gfx.propBudget);
       this.occluders.push(...propSpawn.occluders);
       drawCityWallVisuals(this, this.blueprint);
+      drawTownStreetFurniture(this, this.blueprint, gfx.propBudget);
     }
     this.solidGroup = this.physics.add.staticGroup();
     this.buildColliders();
@@ -335,11 +347,11 @@ export class BlueprintRegionScene extends Phaser.Scene {
     this.player.setVisible(true);
     this.player.setAlpha(1);
     if (playerTex.startsWith("pw-actor-")) {
-      // Slightly larger than tile (32) so Keeper reads at default camera zoom.
-      this.player.setDisplaySize(50, 60);
+      // +20% vs prior pass — Keeper reads clearly at default camera zoom.
+      this.player.setDisplaySize(KEEPER_DISPLAY.w, KEEPER_DISPLAY.h);
       const body = this.player.body as Phaser.Physics.Arcade.Body;
-      body.setSize(18, 16);
-      body.setOffset((this.player.width - 18) / 2, this.player.height - 16);
+      body.setSize(20, 18);
+      body.setOffset((this.player.width - 20) / 2, this.player.height - 18);
     } else {
       this.player.setCircle(12, 4, 4);
     }
@@ -351,14 +363,35 @@ export class BlueprintRegionScene extends Phaser.Scene {
     this.pet.setVisible(true);
     this.pet.setAlpha(1);
     if (petTex.startsWith("pw-actor-")) {
-      this.pet.setDisplaySize(36, 36);
+      this.pet.setDisplaySize(PET_DISPLAY.w, PET_DISPLAY.h);
       const body = this.pet.body as Phaser.Physics.Arcade.Body;
-      body.setSize(14, 12);
-      body.setOffset((this.pet.width - 14) / 2, this.pet.height - 12);
+      body.setSize(16, 14);
+      body.setOffset((this.pet.width - 16) / 2, this.pet.height - 14);
     } else {
       this.pet.setCircle(8, 4, 4);
     }
     (this.pet.body as Phaser.Physics.Arcade.Body).allowGravity = false;
+
+    if (this.premium) {
+      const pShadow = actorContactShadow(KEEPER_DISPLAY.w, KEEPER_DISPLAY.h, "keeper");
+      this.playerShadow = addContactShadow(
+        this,
+        spawn.x + pShadow.offsetX,
+        spawn.y + pShadow.offsetY,
+        pShadow.width,
+        pShadow.height,
+        pShadow.alpha,
+      );
+      const cShadow = actorContactShadow(PET_DISPLAY.w, PET_DISPLAY.h, "pet");
+      this.petShadow = addContactShadow(
+        this,
+        spawn.x - 36 + cShadow.offsetX,
+        spawn.y + 8 + cShadow.offsetY,
+        cShadow.width,
+        cShadow.height,
+        cShadow.alpha,
+      );
+    }
 
     this.petEquipmentLayers = new PetEquipmentLayerManager(this, this.pet);
     this.pet.setInteractive({ useHandCursor: true, pixelPerfect: false });
@@ -572,13 +605,33 @@ export class BlueprintRegionScene extends Phaser.Scene {
     const moving = !!body && (Math.abs(body.velocity.x) + Math.abs(body.velocity.y) > 8);
     if (this.player.texture.key.startsWith("pw-actor-")) {
       const breath = moving ? 1 : 1 + Math.sin(time / 480) * 0.03;
-      this.player.setDisplaySize(50 * breath, 60 * (moving ? 1 : breath));
+      this.player.setDisplaySize(
+        KEEPER_DISPLAY.w * breath,
+        KEEPER_DISPLAY.h * (moving ? 1 : breath),
+      );
     }
     if (this.pet.texture.key.startsWith("pw-actor-")) {
       const petBreath = 1 + Math.sin(time / 420 + 1.2) * 0.045;
-      this.pet.setDisplaySize(36 * petBreath, 36 * (moving ? 1 : petBreath));
+      this.pet.setDisplaySize(
+        PET_DISPLAY.w * petBreath,
+        PET_DISPLAY.h * (moving ? 1 : petBreath),
+      );
     }
-    // Y-sort actors in the actor band (between street props and canopy)
+    // Ground-anchor shadows follow feet (directional afternoon bias)
+    if (this.playerShadow) {
+      const s = actorContactShadow(KEEPER_DISPLAY.w, KEEPER_DISPLAY.h, "keeper");
+      this.playerShadow.setPosition(
+        this.player.x + s.offsetX,
+        this.player.y + s.offsetY,
+      );
+      this.playerShadow.setDepth(depthAt(DEPTH.groundShadow, this.player.y));
+    }
+    if (this.petShadow) {
+      const s = actorContactShadow(PET_DISPLAY.w, PET_DISPLAY.h, "pet");
+      this.petShadow.setPosition(this.pet.x + s.offsetX, this.pet.y + s.offsetY);
+      this.petShadow.setDepth(depthAt(DEPTH.groundShadow, this.pet.y));
+    }
+    // Y-sort actors by ground anchor (footY) so they pass behind/in front of structures
     this.player.setDepth(depthAt(DEPTH.actor, this.player.y));
     this.pet.setDepth(depthAt(DEPTH.actor, this.pet.y, -0.2));
     this.petEquipmentLayers?.syncPositions();
@@ -1040,7 +1093,7 @@ export class BlueprintRegionScene extends Phaser.Scene {
       // Sheets are square frames with bottom-centered figures — keep square display
       const h = baseH * (walking ? 1 : breath);
       it.sprite.setDisplaySize(h, h);
-      it.sprite.setDepth(8 + it.sprite.y * 0.01);
+      it.sprite.setDepth(depthAt(DEPTH.actor, it.sprite.y, -0.5));
 
       const idleKey = npcIdleAnimKey(it.npcSlug);
       const walkKey = npcWalkAnimKey(it.npcSlug);
@@ -1058,7 +1111,7 @@ export class BlueprintRegionScene extends Phaser.Scene {
       it.y = it.sprite.y;
       // Nameplate position / fade / deconflict handled by updateWorldNameplates().
       if (it.nameLabel) {
-        it.nameLabel.setDepth(9 + it.sprite.y * 0.01);
+        it.nameLabel.setDepth(depthAt(DEPTH.nameplate, it.sprite.y));
       }
 
       // Occasional work stub when a working NPC is near the player
@@ -1504,7 +1557,18 @@ export class BlueprintRegionScene extends Phaser.Scene {
         sprite.setOrigin(0.5, 1);
         sprite.setDisplaySize(h, h);
         sprite.setImmovable(true);
-        sprite.setDepth(8);
+        sprite.setDepth(depthAt(DEPTH.actor, o.y));
+        if (this.premium) {
+          const sh = actorContactShadow(h, h, "npc");
+          addContactShadow(
+            this,
+            o.x + sh.offsetX,
+            o.y + sh.offsetY,
+            sh.width,
+            sh.height,
+            sh.alpha,
+          );
+        }
         (sprite.body as Phaser.Physics.Arcade.Body).allowGravity = false;
         {
           const body = sprite.body as Phaser.Physics.Arcade.Body;

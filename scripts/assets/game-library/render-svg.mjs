@@ -18,26 +18,28 @@ function rnd(seed, i = 0) {
 }
 
 const PAL = {
-  moss: "#4a7a45",
-  mossDark: "#2f5230",
-  mossLight: "#6b9a5a",
-  bark: "#6b4a2e",
-  barkDark: "#3d2a18",
-  sandstone: "#c4a882",
-  sandDark: "#8a6f4b",
-  amber: "#e8a84a",
-  amberBright: "#ffc76b",
-  cyan: "#3ecfbf",
-  cyanDeep: "#1a8a8a",
-  earth: "#5c4030",
-  cream: "#f0e6d2",
-  stone: "#8a8f7a",
+  // Cozy pixel RPG outdoors — lush greens, warm browns, soft cyan accents
+  moss: "#4aa04a",
+  mossDark: "#2f6a34",
+  mossLight: "#7bc86a",
+  bark: "#8a5a32",
+  barkDark: "#4a2e18",
+  sandstone: "#d4b888",
+  sandDark: "#a07848",
+  amber: "#f0b04a",
+  amberBright: "#ffd078",
+  cyan: "#3de7ff",
+  cyanDeep: "#1a9aaa",
+  earth: "#6a4830",
+  cream: "#f4ead4",
+  stone: "#9a9f8a",
   stoneDark: "#5a5e4e",
-  water: "#3d8bb8",
-  waterDeep: "#1e5a78",
+  water: "#46aad8",
+  waterDeep: "#2a6e98",
   ember: "#d4652f",
   frost: "#a8d4e8",
-  shadow: "rgba(20,30,20,0.35)",
+  outline: "#2a2218",
+  shadow: "rgba(30,40,24,0.32)",
 };
 
 function seasonTint(season) {
@@ -58,28 +60,28 @@ function wrap(w, h, body) {
 <svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
   <defs>
     <linearGradient id="leafGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7ab86a"/>
-      <stop offset="100%" stop-color="#3d6a38"/>
+      <stop offset="0%" stop-color="#8ad078"/>
+      <stop offset="100%" stop-color="#3d7a3a"/>
     </linearGradient>
     <linearGradient id="barkGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#8a6238"/>
+      <stop offset="0%" stop-color="#a07040"/>
       <stop offset="100%" stop-color="#3d2a18"/>
     </linearGradient>
     <radialGradient id="glowAmber" cx="50%" cy="40%" r="50%">
-      <stop offset="0%" stop-color="#ffc76b" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#e8a84a" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#ffd078" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#f0b04a" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glowCyan" cx="50%" cy="40%" r="50%">
-      <stop offset="0%" stop-color="#6eefe0" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#1a8a8a" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#7ef0ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1a9aaa" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="1.1" result="b"/>
-      <feOffset dy="1.2" result="o"/>
-      <feMerge><feMergeNode in="o"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="chunk" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.35" flood-color="${PAL.outline}" flood-opacity="0.55"/>
     </filter>
   </defs>
-  ${body}
+  <g filter="url(#chunk)" stroke="${PAL.outline}" stroke-width="1.15" stroke-linejoin="round" paint-order="stroke fill">
+    ${body}
+  </g>
 </svg>`;
 }
 
@@ -210,7 +212,7 @@ export function renderEntrySvg(entry) {
         <circle cx="${w / 2}" cy="${h / 2}" r="${w * 0.28}" fill="${PAL.moss}"/>`;
   }
 
-  return wrap(w, h, `<g filter="url(#soft)">${body}</g>`);
+  return wrap(w, h, body);
 }
 
 function treeSvg(w, h, seed, v) {
@@ -218,35 +220,41 @@ function treeSvg(w, h, seed, v) {
   const t = seasonTint(v.season);
   const cx = w / 2;
   const foot = h * 0.92;
-  const trunkH = h * 0.38 * sc;
-  const canopyR = w * 0.32 * sc;
+  const trunkH = h * 0.36 * sc;
+  const canopyR = w * 0.3 * sc;
   const rift = String(v.type).includes("rift") || String(v.type).includes("crystal");
   const pine = String(v.type).includes("pine") || String(v.type).includes("needle") || String(v.type).includes("cypress");
-  const blobs = 7 + (seed % 4);
+  const stroke = `stroke="${PAL.outline}" stroke-width="1.4"`;
   let foliage = "";
   if (pine) {
     for (let i = 0; i < 4; i++) {
-      const y = foot - trunkH - i * canopyR * 0.35;
-      const rw = canopyR * (1.05 - i * 0.18);
-      foliage += `<path d="M${cx} ${y - rw * 0.7} L${cx + rw} ${y + rw * 0.25} L${cx - rw} ${y + rw * 0.25} Z" fill="${i % 2 ? t.leaf : PAL.mossDark}"/>`;
+      const y = foot - trunkH - i * canopyR * 0.34;
+      const rw = canopyR * (1.08 - i * 0.18);
+      foliage += `<path d="M${cx} ${y - rw * 0.7} L${cx + rw} ${y + rw * 0.28} L${cx - rw} ${y + rw * 0.28} Z" fill="${i % 2 ? t.leaf : PAL.mossDark}" ${stroke}/>`;
     }
   } else {
-    for (let i = 0; i < blobs; i++) {
-      const a = rnd(seed, i) * Math.PI * 2;
-      const r = canopyR * (0.5 + rnd(seed, i + 10) * 0.55);
-      const ox = Math.cos(a) * canopyR * 0.5;
-      const oy = Math.sin(a) * canopyR * 0.32 - canopyR * 0.15;
-      foliage += `<ellipse cx="${cx + ox}" cy="${foot - trunkH - canopyR * 0.25 + oy}" rx="${r}" ry="${r * 0.82}" fill="${i % 2 ? t.leaf : PAL.mossDark}" opacity="0.94"/>`;
+    // Chunky rounded canopy lobes (readable cute-RPG silhouette, not soft painterly blobs)
+    const lobes = [
+      [0, -0.15, 1],
+      [-0.55, 0.05, 0.72],
+      [0.55, 0.08, 0.7],
+      [-0.25, -0.45, 0.62],
+      [0.28, -0.42, 0.6],
+      [0, 0.28, 0.68],
+    ];
+    for (let i = 0; i < lobes.length; i++) {
+      const [ox, oy, rs] = lobes[i];
+      const r = canopyR * rs;
+      foliage += `<ellipse cx="${cx + ox * canopyR}" cy="${foot - trunkH - canopyR * 0.2 + oy * canopyR}" rx="${r}" ry="${r * 0.86}" fill="${i % 2 ? t.leaf : PAL.mossDark}" ${stroke}/>`;
     }
-    foliage += `<ellipse cx="${cx - canopyR * 0.15}" cy="${foot - trunkH - canopyR * 0.45}" rx="${canopyR * 0.35}" ry="${canopyR * 0.22}" fill="#fff" opacity="0.12"/>`;
+    foliage += `<ellipse cx="${cx - canopyR * 0.2}" cy="${foot - trunkH - canopyR * 0.55}" rx="${canopyR * 0.28}" ry="${canopyR * 0.16}" fill="#fff" opacity="0.18"/>`;
   }
   return `
-    <ellipse cx="${cx}" cy="${foot}" rx="${canopyR * 0.6}" ry="${h * 0.055}" fill="${PAL.shadow}"/>
-    <path d="M${cx - 7 * sc} ${foot} L${cx - 4.5 * sc} ${foot - trunkH} L${cx + 4.5 * sc} ${foot - trunkH} L${cx + 7 * sc} ${foot} Z" fill="${PAL.bark}"/>
-    <path d="M${cx - 2 * sc} ${foot - trunkH * 0.3} L${cx - 12 * sc} ${foot - trunkH * 0.55}" stroke="${PAL.barkDark}" stroke-width="${2 * sc}" stroke-linecap="round"/>
+    <ellipse cx="${cx}" cy="${foot}" rx="${canopyR * 0.55}" ry="${h * 0.05}" fill="${PAL.shadow}" stroke="none"/>
+    <path d="M${cx - 6 * sc} ${foot} L${cx - 4 * sc} ${foot - trunkH} L${cx + 4 * sc} ${foot - trunkH} L${cx + 6 * sc} ${foot} Z" fill="${PAL.bark}" ${stroke}/>
     ${foliage}
-    ${rift ? `<circle cx="${cx}" cy="${foot - trunkH - canopyR * 0.35}" r="${canopyR * 0.2}" fill="${PAL.cyan}" opacity="0.8"/><circle cx="${cx}" cy="${foot - trunkH - canopyR * 0.35}" r="${canopyR * 0.35}" fill="${PAL.cyan}" opacity="0.2"/>` : ""}
-    ${v.season === "spring" || v.season === "autumn" ? `<circle cx="${cx + canopyR * 0.28}" cy="${foot - trunkH - canopyR * 0.5}" r="3.2" fill="${t.accent}"/><circle cx="${cx - canopyR * 0.22}" cy="${foot - trunkH - canopyR * 0.32}" r="2.6" fill="${t.accent}"/><circle cx="${cx + canopyR * 0.05}" cy="${foot - trunkH - canopyR * 0.15}" r="2.2" fill="${t.accent}"/>` : ""}
+    ${rift ? `<circle cx="${cx}" cy="${foot - trunkH - canopyR * 0.35}" r="${canopyR * 0.18}" fill="${PAL.cyan}" ${stroke}/><circle cx="${cx}" cy="${foot - trunkH - canopyR * 0.35}" r="${canopyR * 0.32}" fill="${PAL.cyan}" opacity="0.22" stroke="none"/>` : ""}
+    ${v.season === "spring" || v.season === "autumn" ? `<circle cx="${cx + canopyR * 0.28}" cy="${foot - trunkH - canopyR * 0.5}" r="3.2" fill="${t.accent}" ${stroke}/><circle cx="${cx - canopyR * 0.22}" cy="${foot - trunkH - canopyR * 0.32}" r="2.6" fill="${t.accent}" ${stroke}/><circle cx="${cx + canopyR * 0.05}" cy="${foot - trunkH - canopyR * 0.15}" r="2.2" fill="${t.accent}" ${stroke}/>` : ""}
   `;
 }
 
@@ -433,12 +441,14 @@ function stallSvg(w, h, seed, v) {
 }
 
 function fenceSvg(w, h, seed, v) {
+  const s = `stroke="${PAL.outline}" stroke-width="1.3"`;
   return `
-    <ellipse cx="${w / 2}" cy="${h * 0.92}" rx="20" ry="4" fill="${PAL.shadow}"/>
-    <rect x="${w * 0.2}" y="${h * 0.35}" width="5" height="${h * 0.5}" fill="${PAL.bark}"/>
-    <rect x="${w * 0.75}" y="${h * 0.35}" width="5" height="${h * 0.5}" fill="${PAL.bark}"/>
-    <rect x="${w * 0.2}" y="${h * 0.45}" width="${w * 0.6}" height="4" fill="${PAL.barkDark}"/>
-    <rect x="${w * 0.2}" y="${h * 0.62}" width="${w * 0.6}" height="4" fill="${PAL.barkDark}"/>
+    <ellipse cx="${w / 2}" cy="${h * 0.92}" rx="20" ry="4" fill="${PAL.shadow}" stroke="none"/>
+    <rect x="${w * 0.18}" y="${h * 0.32}" width="6" height="${h * 0.52}" rx="1" fill="${PAL.cream}" ${s}/>
+    <rect x="${w * 0.46}" y="${h * 0.32}" width="6" height="${h * 0.52}" rx="1" fill="${PAL.cream}" ${s}/>
+    <rect x="${w * 0.74}" y="${h * 0.32}" width="6" height="${h * 0.52}" rx="1" fill="${PAL.cream}" ${s}/>
+    <rect x="${w * 0.16}" y="${h * 0.48}" width="${w * 0.66}" height="5" fill="${PAL.bark}" ${s}/>
+    <rect x="${w * 0.16}" y="${h * 0.64}" width="${w * 0.66}" height="5" fill="${PAL.bark}" ${s}/>
   `;
 }
 
@@ -480,12 +490,13 @@ function crateSvg(w, h, seed, v) {
 }
 
 function barrelSvg(w, h, seed, v) {
+  const s = `stroke="${PAL.outline}" stroke-width="1.35"`;
   return `
-    <ellipse cx="${w / 2}" cy="${h * 0.9}" rx="14" ry="4" fill="${PAL.shadow}"/>
-    <ellipse cx="${w / 2}" cy="${h * 0.7}" rx="16" ry="22" fill="${PAL.bark}"/>
-    <ellipse cx="${w / 2}" cy="${h * 0.52}" rx="14" ry="5" fill="${PAL.barkDark}"/>
-    <ellipse cx="${w / 2}" cy="${h * 0.85}" rx="14" ry="5" fill="${PAL.barkDark}"/>
-    <rect x="${w * 0.35}" y="${h * 0.55}" width="4" height="8" fill="${PAL.amber}"/>
+    <ellipse cx="${w / 2}" cy="${h * 0.9}" rx="14" ry="4" fill="${PAL.shadow}" stroke="none"/>
+    <ellipse cx="${w / 2}" cy="${h * 0.68}" rx="15" ry="20" fill="${PAL.bark}" ${s}/>
+    <ellipse cx="${w / 2}" cy="${h * 0.5}" rx="13" ry="4" fill="${PAL.barkDark}" ${s}/>
+    <ellipse cx="${w / 2}" cy="${h * 0.82}" rx="13" ry="4" fill="${PAL.barkDark}" ${s}/>
+    <rect x="${w * 0.34}" y="${h * 0.56}" width="5" height="9" fill="${PAL.amber}" ${s}/>
   `;
 }
 

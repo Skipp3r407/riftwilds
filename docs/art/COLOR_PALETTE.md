@@ -12,7 +12,7 @@ Cyan and amber are brand signals — never flood every surface. Violet/void hues
 | Token / name | Hex | Use |
 |--------------|-----|-----|
 | Forest canopy | `#2f5a3a` | Deep foliage, night trees |
-| Meadow green | `#4a8f4a` → `#5aad62` | Grass midtones (`--grove`) |
+| Meadow green | `#4a9e4a` → `#7bc86a` | Commons grass midtones (cozy outdoors) |
 | Moss | `#6b8f4e` | Path edges, ruins |
 | Bark brown | `#5c3d2e` | Timber, props |
 | Leather | `#8b5a3c` | Costumes, UI wood |

@@ -56,7 +56,12 @@ export function createLiveWorldGame(
     parent: options.parent,
     width,
     height,
-    backgroundColor: "#0a101c",
+    // Cozy meadow clear color (not grim navy void)
+    backgroundColor: "#4a9e4a",
+    // Crisp 16-bit style sprites / tiles
+    pixelArt: true,
+    roundPixels: true,
+    antialias: false,
     physics: {
       default: "arcade",
       arcade: {

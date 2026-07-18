@@ -1,12 +1,16 @@
 # Riftwilds Art Direction — Master Bible
 
 > **Authority:** This document is the source of truth for all visual work.  
-> Companion guides: [STYLE_GUIDE](./STYLE_GUIDE.md) · [COLOR_PALETTE](./COLOR_PALETTE.md) · [LIGHTING_GUIDE](./LIGHTING_GUIDE.md) · [ENVIRONMENT_GUIDE](./ENVIRONMENT_GUIDE.md) · [RIFTLING_GUIDE](./RIFTLING_GUIDE.md) · [UI_GUIDE](./UI_GUIDE.md) · [ANIMATION_GUIDE](./ANIMATION_GUIDE.md) · [LIVING_TOWNS](./LIVING_TOWNS.md) · [ASSET_PIPELINE_2D3D](./ASSET_PIPELINE_2D3D.md)  
+> Companion guides: [STYLE_GUIDE](./STYLE_GUIDE.md) · [COLOR_PALETTE](./COLOR_PALETTE.md) · [LIGHTING_GUIDE](./LIGHTING_GUIDE.md) · [ENVIRONMENT_GUIDE](./ENVIRONMENT_GUIDE.md) · [RIFTLING_GUIDE](./RIFTLING_GUIDE.md) · [UI_GUIDE](./UI_GUIDE.md) · [ANIMATION_GUIDE](./ANIMATION_GUIDE.md) · [LIVING_TOWNS](./LIVING_TOWNS.md) · [ASSET_PIPELINE_2D3D](./ASSET_PIPELINE_2D3D.md) · [GAME_ASSET_LIBRARY](./GAME_ASSET_LIBRARY.md)  
 > Living audit: [ASSET_AUDIT](./ASSET_AUDIT.md) · [ART_BACKLOG](./ART_BACKLOG.md)
 
 ## Reference mood
 
-Commons target look (Grok concept, original IP): `commons-mood.png` in this folder and `/assets/art/direction/commons-mood.png`.
+Commons target look (concept moodboard, original IP): `commons-mood.png` in this folder and `/assets/art/direction/commons-mood.png`.
+
+**Live World feel target (2026):** cozy 16-bit / cute fantasy RPG village — lush grass, warm dirt paths, dense lived-in clutter, bright cheerful day lighting — while keeping Riftwilds identity (Riftlings, rift cyan/amber accents, eggs, Commons vernacular). **Feel only; never ship third-party packs.**
+
+Regenerate the original-IP pack: `npm run assets:generate:cozy-world` (terrain, cottages, props, Keeper + Riftling actors).
 
 ## North star
 
@@ -14,12 +18,12 @@ Riftwilds is a **browser MMORPG** with a hybrid classic-fantasy identity:
 
 | Influence (feel only — never copy assets) | Weight | What we take |
 |-------------------------------------------|--------|--------------|
-| Ultima Online–era medieval atmosphere | ~60% | Settled earth, timber & stone towns, lived-in clutter, warm day cycle |
-| Classic RuneScape readability | ~30% | Clear silhouettes, saturated local color, distinct districts at a glance |
-| Diablo-like lighting drama | ~10% | Torch bloom at night, rim light, deep shadows in interiors/ruins |
-| Zelda-like clarity | support | Interaction affordances, readable water/paths, friendly creature shape language |
+| Cozy top-down pixel RPG village (Stardew-like *feel*) | ~45% | Lush greens, warm paths, cute buildings/props, dense nature + town clutter, bright day |
+| Ultima Online–era lived-in town | ~30% | Timber & stone vernacular, pathway wear, district hubs |
+| Classic RuneScape readability | ~15% | Clear silhouettes, saturated local color at a glance |
+| Soft night drama + Zelda clarity | ~10% | Hearth/torch pools at dusk, readable water/paths, friendly creature shapes |
 
-**Modernize for browser:** painterly 2D / soft-isometric sprites, not hyper-real 3D, not pixel art, not voxel, not anime, not generic asset-store PBR.
+**Modernize for browser:** chunky readable top-down / soft 3⁄4 sprites with clean outlines — not hyper-real 3D, not voxel, not anime, not generic asset-store PBR. Hand-authored Kenmi-quality tilesets are a future bar; procedural cozy pixel + library props are the shippable first pass.
 
 ## Original IP — hard rules
 
@@ -30,10 +34,10 @@ Riftwilds is a **browser MMORPG** with a hybrid classic-fantasy identity:
 
 ## Visual pillars
 
-1. **Warm earth first** — greens, browns, sandstone, moss, gold leaf. Cyan + amber are *accents* (rift energy + hearth), not the whole UI.
-2. **Lived-in world** — barrels, stalls, lanterns, path wear, vegetation density. Empty plazas fail the Ultima test.
-3. **Readable at game scale** — actors ~40–54px tall in Commons; silhouette > micro-detail.
-4. **Atmosphere without mud** — night is cool navy + warm torch pools; day is golden-green, not grey fog soup.
+1. **Warm earth first** — lush greens, warm browns, sandstone, moss, gold leaf. Cyan + amber are *accents* (rift energy + hearth), not the whole UI.
+2. **Lived-in world** — fences, barrels, benches, flowers, stalls, lanterns, path wear. Empty plazas fail the cozy-village test.
+3. **Readable at game scale** — actors ~40–54px+ tall in Commons; chunky silhouette + outline > micro-detail.
+4. **Atmosphere without mud** — day stays bright/friendly outdoors; night is soft navy + warm torch pools — not grey fog soup.
 5. **Performance-aware beauty** — LOD, particle budgets, streaming stubs; polish Commons first as the showcase.
 
 ## Surface hierarchy
@@ -50,8 +54,8 @@ Riftwilds is a **browser MMORPG** with a hybrid classic-fantasy identity:
 Every image job must end with (or include) the shared suffix from `src/lib/assets/image-provider.ts` (`RIFTWILDS_STYLE_SUFFIX`), which encodes this bible. Additional rules:
 
 - Full-body world actors: feet visible, clean silhouette, transparent or pure studio plate for masking.
-- Terrain: top-down orthographic, tileable, painterly, warm greens/browns.
-- Buildings: isometric cutout facade, no opaque scenic rectangle, door readable at distance.
+- Terrain: top-down tileable, chunky cozy pixel or soft 3⁄4, warm lush greens/browns.
+- Buildings: cutout facade (soft 3⁄4 OK), no opaque scenic rectangle, door readable at distance.
 - No text, watermarks, UI frames, or third-party logos in source art.
 
 ## Anti-patterns (reject / regenerate)
@@ -81,6 +85,6 @@ Commons is the **city-builder showcase**: districts, walls/gates, road→plaza h
 A pass is “done enough” when:
 
 1. Docs in this folder match what players see in Commons + primary UI chrome.
-2. A screenshot of Commons reads as **warm medieval hub with rift accents**, not tech dashboard over grass.
+2. A screenshot of Commons reads as **cozy fantasy village with rift accents**, not tech dashboard over dark grass.
 3. Named Commons NPCs pass floating-head audit (`npm run assets:audit:npc-world`).
 4. Backlog honestly lists what remains — do not claim whole-game art completion.

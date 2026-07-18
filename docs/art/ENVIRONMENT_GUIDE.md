@@ -4,18 +4,20 @@ Implementation: `premium-logic.ts`, `layered-terrain.ts`, `world-props.ts`, terr
 
 ## Commons as showcase
 
-The Riftwild Commons must feel like a **living medieval hub** where rift energy is a resident guest, not a sci-fi overlay.
+The Riftwild Commons must feel like a **cozy fantasy village hub** where rift energy is a resident guest, not a sci-fi overlay. Target read: lush top-down cute RPG outdoors (original IP only).
 
 ### Terrain language
 
 | Kind | Look |
 |------|------|
-| Grass | Warm meadow greens, flower/fern variants, dry patches at wild edges |
-| Path | Worn dirt → stone blend; bloom at plaza approaches |
-| Plaza | Sandstone, medallion near Riftstone, moss in joints |
-| Settlement soil | Packed earth near buildings |
-| Water | Clear stream/pond with cyan caustics; readable stones beneath |
+| Grass | Bright lush meadow greens, flower/fern variants, dry patches at wild edges |
+| Path | Warm sandy dirt → stone blend; soft bloom at plaza approaches |
+| Plaza | Sandstone, medallion near Riftstone (subtle cyan), moss in joints |
+| Settlement soil | Packed warm earth near buildings |
+| Water | Soft bright stream/pond with sparkle; readable shore |
 | Cliff / elevation | Soft face rectangles + drop shadows; height 0–3 |
+
+Regenerate full cozy pixel pack (terrain + cottages + props + actors): `npm run assets:generate:cozy-world`.
 
 ### Vegetation density targets (Commons)
 

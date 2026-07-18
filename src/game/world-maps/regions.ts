@@ -12,10 +12,11 @@ export const REGION_IDENTITIES: RegionIdentity[] = [
     weatherKeys: ["clear", "light_rain", "mist", "fireflies", "rift_aurora"],
     defaultWeather: "clear",
     tilePalette: {
-      ground: 0x15261c,
-      path: 0x243048,
-      accent: 0x1a2438,
-      water: 0x1a3a5c,
+      // Cozy pixel RPG outdoors — lush meadow, warm path, soft water (rift cyan accents elsewhere)
+      ground: 0x4a9e4a,
+      path: 0xb89460,
+      accent: 0xc4a882,
+      water: 0x46aad8,
     },
     spawn: { x: 1024, y: 768 },
     instanceCapacity: 40,

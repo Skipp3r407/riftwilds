@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "installedAt": "2026-07-18T17:02:46.090Z",
+  "installedAt": "2026-07-18T17:26:20.461Z",
   "catalogCount": 1284,
   "worldPackCount": 232,
-  "engineNote": "No XAI_API_KEY — procedural SVG quality pass installed into Live World",
+  "engineNote": "Procedural SVG quality pass installed into Live World (default; no API key). Optional GAME_LIBRARY_ENGINE=grok is a paid upgrade only.",
   "byFamily": {
     "tree": 28,
     "bush": 14,

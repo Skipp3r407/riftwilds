@@ -36,6 +36,27 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-cozy-pixel-commons",
+    date: "2026-07-18",
+    title: "Commons goes cozy pixel village",
+    summary:
+      "Live World Commons shifts to a bright cute fantasy RPG look — lush grass, dirt paths, cottage facades, denser clutter, and chibi Keeper/Riftling sprites (original IP).",
+    added: [
+      "Original cozy 16-bit terrain pack (flowered grass, path borders, pond edges/lilies, farm soil, plaza cobble)",
+      "Cute cottage building facades for Commons hubs with amber lanterns and cyan rift-glass accents",
+      "Pixel prop set (fences, barrels, benches, stalls, trees, stumps) plus ambient village Riftlings",
+      "Chibi Keeper + companion Riftling overworld actors sized for readable top-down play",
+    ],
+    changed: [
+      "Commons day lighting is brighter and friendlier; rift cyan stays an accent, not gloom",
+      "Phaser Live World uses crisp pixelArt rendering and a closer default camera zoom",
+      "Village prop scatter is denser along paths, yards, and farm hubs",
+    ],
+    knownIssues: [
+      "Procedural pixel pack approximates a hand-authored cute RPG tileset — further art passes will deepen cottage variety and walk cycles",
+    ],
+  },
+  {
     id: "2026-07-18-coloring-pages-batch-2",
     date: "2026-07-18",
     title: "20 more kids coloring pages",

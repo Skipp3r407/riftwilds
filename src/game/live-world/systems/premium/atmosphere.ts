@@ -1,6 +1,6 @@
 /**
  * Day/night lighting, weather particles, fog, fireflies, cloud shadows.
- * Art direction: warm Ultima day, Diablo torch night, Zelda readability.
+ * Art direction: bright cozy pixel day (Commons), soft hearth night, Zelda readability.
  * Ambient-first — light gameplay impact only (visibility tint).
  */
 
@@ -32,8 +32,10 @@ function weatherForRegion(regionSlug: string, dayFactor: number): WeatherKind {
   // Deterministic soft weather windows
   const slot = Math.floor(Date.now() / (3 * 60 * 1000)) % 7;
   if (regionSlug === "riftwild-commons") {
+    // Cozy village bias: mostly clear; brief soft wind; rare rain; almost no fog day
     if (slot === 2) return "rain";
-    if (slot === 4) return dayFactor < 0.35 ? "fog" : "wind";
+    if (slot === 5) return "wind";
+    if (slot === 4 && dayFactor < 0.28) return "fog";
     return "clear";
   }
   if (regionSlug.includes("ember") || regionSlug.includes("void")) {
@@ -49,7 +51,7 @@ export function createAtmosphere(
   mapH: number,
 ): AtmosphereHandles {
   const overlay = scene.add
-    .rectangle(mapW / 2, mapH / 2, mapW * 1.2, mapH * 1.2, 0x1a1410, 0)
+    .rectangle(mapW / 2, mapH / 2, mapW * 1.2, mapH * 1.2, 0x2a2418, 0)
     .setDepth(40)
     .setScrollFactor(1);
 
@@ -166,13 +168,13 @@ export function createAtmosphere(
     ];
     for (let i = 0; i < pondSpots.length; i++) {
       const p = pondSpots[i]!;
-      const e = scene.add.ellipse(p.x, p.y, 70 + i * 12, 36 + i * 6, 0x7ad4ff, 0.07);
+      const e = scene.add.ellipse(p.x, p.y, 70 + i * 12, 36 + i * 6, 0x9ae8ff, 0.1);
       e.setDepth(1.2);
       e.setBlendMode(Phaser.BlendModes.ADD);
       waterShimmer.push(e);
       scene.tweens.add({
         targets: e,
-        alpha: { from: 0.04, to: 0.12 },
+        alpha: { from: 0.06, to: 0.16 },
         scaleX: { from: 0.92, to: 1.08 },
         scaleY: { from: 1.05, to: 0.9 },
         duration: 1600 + i * 280,
@@ -183,43 +185,46 @@ export function createAtmosphere(
     }
   }
 
+  const cozyCommons = regionSlug === "riftwild-commons";
+
   const update = (time: number, _camera: Phaser.Cameras.Scene2D.Camera): AtmosphereState => {
     const cycle = (time % DAY_CYCLE_MS) / DAY_CYCLE_MS;
-    // Smooth day curve: bright midday, soft night
-    const dayFactor = 0.35 + 0.65 * Math.sin(cycle * Math.PI);
+    // Smooth day curve: bright midday, soft night (Commons stays cheerier longer)
+    const dayFloor = cozyCommons ? 0.48 : 0.35;
+    const dayFactor = dayFloor + (1 - dayFloor) * Math.sin(cycle * Math.PI);
     const weather = weatherForRegion(regionSlug, dayFactor);
 
-    // Night + dusk recipe (warm Ultima day → cool navy night + hearth)
-    const nightAlpha = (1 - dayFactor) * 0.42;
-    let tint = 0x121a28;
+    // Night + dusk recipe — cozy day stays light; night is soft navy + hearth, not oppressive
+    const nightAlpha = (1 - dayFactor) * (cozyCommons ? 0.28 : 0.42);
+    let tint = cozyCommons ? 0x1a2430 : 0x121a28;
     let extra = 0;
     if (dayFactor > 0.75) {
-      // Midday: slight golden wash, not grey
-      tint = 0x2a2418;
-      extra = 0.04;
+      // Midday: soft golden-green wash (cute fantasy outdoors)
+      tint = cozyCommons ? 0x3a3420 : 0x2a2418;
+      extra = cozyCommons ? 0.02 : 0.04;
     } else if (dayFactor > 0.55) {
       // Late afternoon gold
       tint = 0x3a2820;
-      extra = 0.06;
+      extra = cozyCommons ? 0.035 : 0.06;
     }
     if (weather === "rain") {
       tint = 0x152030;
-      extra += 0.12;
+      extra += cozyCommons ? 0.08 : 0.12;
     } else if (weather === "fog") {
       tint = 0x304050;
-      extra += 0.16;
+      extra += cozyCommons ? 0.1 : 0.16;
     } else if (weather === "ash") {
       tint = 0x281810;
       extra += 0.1;
     } else if (weather === "wind") {
       tint = dayFactor < 0.5 ? 0x1a2018 : 0x2a2818;
-      extra += 0.04;
+      extra += cozyCommons ? 0.02 : 0.04;
     }
-    overlay.setFillStyle(tint, Math.min(0.58, nightAlpha + extra));
+    overlay.setFillStyle(tint, Math.min(cozyCommons ? 0.42 : 0.58, nightAlpha + extra));
 
     // Torch intensity at dusk/night
     for (const g of torchLights) {
-      g.setVisible(dayFactor < 0.58);
+      g.setVisible(dayFactor < (cozyCommons ? 0.5 : 0.58));
     }
 
     // Hide caustics in heavy fog (tween owns alpha otherwise)
@@ -244,7 +249,7 @@ export function createAtmosphere(
     for (let i = 0; i < cloudShadows.length; i++) {
       const c = cloudShadows[i]!;
       c.x = ((time * 0.012 + i * 380) % (mapW + 240)) - 120;
-      c.setAlpha(weather === "clear" ? 0.08 : 0.03);
+      c.setAlpha(weather === "clear" ? (cozyCommons ? 0.045 : 0.08) : 0.03);
     }
 
     return { dayFactor, weather };

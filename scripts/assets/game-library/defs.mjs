@@ -4,7 +4,7 @@
  */
 
 export const STYLE_SUFFIX =
-  "Original Riftwilds IP only. Painterly soft-isometric game sprite, warm earth greens browns sandstone, cyan rift and amber hearth accents only, clean silhouette, transparent background, no text no watermark no logos, not anime not pixel art.";
+  "Original Riftwilds IP only. Cozy readable top-down game sprite with chunky silhouette and soft dark outline, lush warm greens browns sandstone, cyan rift and amber hearth accents only, transparent background, no text no watermark no logos, cute fantasy RPG village feel, not anime not third-party asset clones.";
 
 /** @typedef {'ground'|'prop'|'entity'|'structure'|'overhead'|'fx'} Layer */
 /** @typedef {'commons'|'elderwood'|'ember'|'coast'|'frost'|'storm'|'stone'|'spirit'|'void'|'alloy'|'radiant'|'any'} Biome */

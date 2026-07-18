@@ -141,7 +141,7 @@ export function terrainColor(
     case "settlement":
       return palette.accent;
     case "water":
-      return palette.water ?? 0x1a3a5c;
+      return palette.water ?? 0x46aad8;
     case "lava":
       return palette.hazard ?? 0xff5a1f;
     case "cliff":

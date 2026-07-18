@@ -54,6 +54,8 @@ function propWorldScale(key: PropKey): number {
   if (key === "tree-rift") return 0.5;
   if (isTreeProp(key) || key === "market-stall" || key === "banner-pole") return 0.48;
   if (key === "rift-crystal" || key === "riftstone-monument") return 0.5;
+  if (key.startsWith("ambient-riftling-")) return 0.55;
+  if (key === "stump") return 0.4;
   if (
     key === "flowers" ||
     key === "rock-moss" ||
@@ -63,7 +65,7 @@ function propWorldScale(key: PropKey): number {
     key.startsWith("lw-grass-") ||
     key.startsWith("lw-rock-")
   ) {
-    return 0.36;
+    return 0.42;
   }
   if (
     key === "barrel" ||
@@ -74,7 +76,7 @@ function propWorldScale(key: PropKey): number {
     key.startsWith("lw-goods-") ||
     key.startsWith("lw-furniture-")
   ) {
-    return 0.38;
+    return 0.44;
   }
   if (
     key.startsWith("lw-fence-") ||
@@ -82,7 +84,7 @@ function propWorldScale(key: PropKey): number {
     key.startsWith("lw-sign-") ||
     key.startsWith("lib-")
   ) {
-    return 0.4;
+    return 0.46;
   }
   if (key.startsWith("lw-animal-") || key.startsWith("lw-riftling-")) return 0.4;
   if (key.startsWith("lw-npc-") || key.startsWith("lw-keeper-")) return 0.45;
@@ -236,33 +238,22 @@ export function trySpawnBuildingSprite(
   const footX = o.x + w / 2;
   const footY = o.y + h;
 
-  // Foundation / plinth footprint
+  // Warm stone plinth — cozy cottage footing (not grimdark massing)
   const foundation = scene.add.rectangle(
     footX,
     footY - 3,
-    w * 0.96,
-    Math.max(8, h * 0.12),
-    0x3a342c,
-    0.55,
+    w * 0.92,
+    Math.max(6, h * 0.1),
+    0x8a7a68,
+    0.35,
   );
   foundation.setDepth(depthAt(DEPTH.buildingFoundation, footY));
 
-  // Side wall massing (left face) for height read
-  const wallFace = scene.add.rectangle(
-    o.x + 4,
-    footY - h * 0.35,
-    Math.max(6, w * 0.08),
-    h * 0.55,
-    0x5a5044,
-    0.42,
-  );
-  wallFace.setDepth(depthAt(DEPTH.buildingWall, footY - 2));
-
-  // Slight south bias + taller facade so neighboring roofs overlap (2.5D)
-  const img = scene.add.image(footX, o.y + h * 0.94, tex);
+  // Cute cottage facade — readable 3⁄4 cottage sprite
+  const img = scene.add.image(footX, o.y + h * 0.96, tex);
   img.setOrigin(0.5, 1);
-  const targetW = w * 1.18;
-  const maxH = h * 1.7;
+  const targetW = w * 1.12;
+  const maxH = h * 1.45;
   let scale = targetW / Math.max(1, img.width);
   if (img.height * scale > maxH) {
     scale = maxH / Math.max(1, img.height);
@@ -270,26 +261,7 @@ export function trySpawnBuildingSprite(
   img.setScale(scale);
   img.setDepth(depthAt(DEPTH.building, footY));
 
-  addContactShadow(scene, footX + 4, footY - 4, w * 0.95, h * 0.24, 0.28);
-
-  // Soft roof/canopy silhouette — fades when the player walks under
-  const roof = scene.add.ellipse(
-    footX,
-    footY - img.displayHeight * 0.72,
-    img.displayWidth * 0.92,
-    Math.max(18, img.displayHeight * 0.22),
-    0x2a241c,
-    0.22,
-  );
-  roof.setDepth(depthAt(DEPTH.buildingRoof, footY, 0.05));
-  roof.setData("occluder", true);
-  roof.setData("occluderKind", "roof");
-  roof.setData("occluderId", `${o.id}-roof`);
-  roof.setData("footX", footX);
-  roof.setData("footY", footY);
-  roof.setData("halfW", w * 0.5);
-  roof.setData("heightPx", Math.max(110, h * 1.55));
-  roof.setData("baseAlpha", 0.22);
+  addContactShadow(scene, footX + 3, footY - 3, w * 0.85, h * 0.18, 0.2);
 
   img.setData("buildingFacade", true);
   img.setData("occluder", true);

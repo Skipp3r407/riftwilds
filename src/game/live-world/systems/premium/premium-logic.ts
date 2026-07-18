@@ -4,11 +4,23 @@
 
 import type { MapBlueprint } from "@/game/world-maps/types";
 import type { TerrainCellKind } from "@/game/live-world/systems/terrain-paint";
+import { LIBRARY_WORLD_KEYS } from "@/content/assets/library-world-keys";
 import {
   type PropKey,
   type TerrainKey,
-  type TreePropKey,
 } from "@/game/live-world/systems/premium/asset-keys";
+
+/** Library world keys matching any of the given id prefixes (after `lw-`). */
+function libKeys(...prefixes: string[]): PropKey[] {
+  return LIBRARY_WORLD_KEYS.filter((k) =>
+    prefixes.some((p) => k.startsWith(`lw-${p}`)),
+  ) as PropKey[];
+}
+
+function pickLib(keys: PropKey[], i: number, salt: number): PropKey {
+  if (!keys.length) return "barrel";
+  return keys[Math.floor(hash2(i, salt, 1) * keys.length) % keys.length]!;
+}
 
 export function isPremiumRegion(slug: string): boolean {
   return slug === "riftwild-commons";
@@ -22,12 +34,12 @@ export function hash2(col: number, row: number, salt = 0): number {
 
 function pickGrass(col: number, row: number): TerrainKey {
   const h = hash2(col, row, 3);
-  // Bias toward lush / flowered meadow (RuneScape readability + Ultima greens)
-  if (h < 0.14) return "grass-flowers-blue";
-  if (h < 0.28) return "grass-flowers-white";
-  if (h < 0.4) return "grass-fern";
+  // Bias toward lush / flowered meadow (cozy pixel RPG outdoors)
+  if (h < 0.16) return "grass-flowers-blue";
+  if (h < 0.32) return "grass-flowers-white";
+  if (h < 0.42) return "grass-fern";
   if (h < 0.58) return "grass-dense";
-  if (h < 0.82) return "grass-lush";
+  if (h < 0.88) return "grass-lush";
   return "grass-master";
 }
 
@@ -88,8 +100,14 @@ export function resolveTerrainTexture(
   switch (kind) {
     case "path":
       return pickPath(col, row);
-    case "water":
-      return hash2(col, row, 2) < 0.5 ? "water-stream" : "water-master";
+    case "water": {
+      // Shore / lily variety for cozy pond read
+      const hw = hash2(col, row, 2);
+      if (hw < 0.22) return "water-edge";
+      if (hw < 0.45) return "water-lily";
+      if (hw < 0.7) return "water-stream";
+      return "water-master";
+    }
     case "cliff":
       return "cliff-edge";
     case "lava":
@@ -169,57 +187,162 @@ type DistrictScatter = {
   salt: number;
 };
 
-/** District-anchored clutter — every empty pocket gets purpose props. */
+/** District-anchored clutter — classic props + dense library world pack. */
 function districtAnchors(T: number): DistrictScatter[] {
+  const trees = libKeys("tree-");
+  const bushes = libKeys("bush-");
+  const flowers = libKeys("flower-", "mushroom-", "grass-");
+  const market = libKeys("crate-", "barrel-", "stall-", "goods-", "sign-");
+  const lights = libKeys("lantern-");
+  const hardscape = libKeys("fence-", "gate-", "rock-", "furniture-");
+  const fauna = libKeys("animal-", "riftling-", "npc-", "keeper-");
+  const dockKit = libKeys("dock-", "bridge-", "barrel-", "crate-");
+
   return [
-    // Central plaza — benches, lanterns, flower beds around fountain
-    { cx: 31 * T, cy: 22 * T, keys: ["bench", "lantern-post", "flowers", "banner-pole"], count: 10, radius: 95, salt: 1 },
-    // Market — stalls, crates, barrels, packing alley clutter
-    { cx: 9 * T, cy: 36 * T, keys: ["market-stall", "barrel", "crate", "banner-pole"], count: 12, radius: 78, salt: 2 },
-    { cx: 12 * T, cy: 39 * T, keys: ["barrel", "crate", "flowers", "signpost"], count: 6, radius: 42, salt: 22 },
-    // Residential — laundry-adjacent benches, lanterns, gardens + street trees
+    // Central plaza
+    {
+      cx: 31 * T,
+      cy: 22 * T,
+      keys: ["bench", "lantern-post", "flowers", "banner-pole", ...lights.slice(0, 6), ...flowers.slice(0, 8), ...fauna.slice(0, 6), ...hardscape.slice(0, 4)],
+      count: 24,
+      radius: 95,
+      salt: 1,
+    },
+    // Market
+    {
+      cx: 9 * T,
+      cy: 36 * T,
+      keys: ["market-stall", "barrel", "crate", "banner-pole", ...market, ...lights.slice(0, 4)],
+      count: 26,
+      radius: 78,
+      salt: 2,
+    },
+    {
+      cx: 12 * T,
+      cy: 39 * T,
+      keys: ["barrel", "crate", "flowers", "signpost", ...market.slice(0, 10), ...hardscape.slice(0, 6)],
+      count: 16,
+      radius: 42,
+      salt: 22,
+    },
+    // Residential
     {
       cx: 7 * T,
       cy: 16 * T,
-      keys: ["bench", "lantern-post", "flowers", "bush-berry", "tree-flowering", "tree-birch"],
-      count: 10,
+      keys: [
+        "bench",
+        "lantern-post",
+        "flowers",
+        "bush-berry",
+        "tree-flowering",
+        "tree-birch",
+        ...trees.slice(0, 8),
+        ...bushes.slice(0, 6),
+        ...hardscape.slice(0, 8),
+        ...libKeys("fence-", "furniture-").slice(0, 10),
+      ],
+      count: 22,
       radius: 52,
       salt: 9,
     },
-    // Crafting — forge props + smoke campfire
-    { cx: 8 * T, cy: 25 * T, keys: ["anvil-forge", "barrel", "crate", "lantern-post"], count: 7, radius: 55, salt: 3 },
-    // Entertainment / tavern patio
-    { cx: 17 * T, cy: 24 * T, keys: ["bench", "barrel", "lantern-post", "banner-pole", "flowers"], count: 8, radius: 48, salt: 30 },
-    // Hatchery nest soft greens — flowering + birch canopy
+    // Crafting
+    {
+      cx: 8 * T,
+      cy: 25 * T,
+      keys: ["anvil-forge", "barrel", "crate", "lantern-post", ...libKeys("tool-", "barrel-", "crate-"), ...lights.slice(0, 3)],
+      count: 16,
+      radius: 55,
+      salt: 3,
+    },
+    // Tavern patio
+    {
+      cx: 17 * T,
+      cy: 24 * T,
+      keys: ["bench", "barrel", "lantern-post", "banner-pole", "flowers", ...libKeys("furniture-", "barrel-", "lantern-"), ...fauna.slice(0, 4)],
+      count: 18,
+      radius: 48,
+      salt: 30,
+    },
+    // Hatchery greens
     {
       cx: 9 * T,
       cy: 7 * T,
-      keys: ["tree-flowering", "tree-birch", "tree-small", "flowers", "bush-berry", "lantern-post"],
-      count: 11,
+      keys: [
+        "tree-flowering",
+        "tree-birch",
+        "tree-small",
+        "flowers",
+        "bush-berry",
+        "lantern-post",
+        ...trees.filter((k) => k.includes("flowering") || k.includes("birch") || k.includes("orchard")),
+        ...flowers.slice(0, 8),
+        ...libKeys("riftling-").slice(0, 4),
+      ],
+      count: 20,
       radius: 64,
       salt: 4,
     },
-    // Guild banners
-    { cx: 52 * T, cy: 37 * T, keys: ["banner-pole", "bench", "lantern-post", "crate"], count: 7, radius: 58, salt: 5 },
-    // Military / training
-    { cx: 43 * T, cy: 13 * T, keys: ["signpost", "barrel", "rock-moss", "banner-pole"], count: 6, radius: 48, salt: 6 },
-    // Noble terrace / archive approach — ornamental trees
+    // Guild
+    {
+      cx: 52 * T,
+      cy: 37 * T,
+      keys: ["banner-pole", "bench", "lantern-post", "crate", ...lights.slice(0, 4), ...hardscape.slice(0, 4), ...libKeys("sign-").slice(0, 4)],
+      count: 16,
+      radius: 58,
+      salt: 5,
+    },
+    // Training
+    {
+      cx: 43 * T,
+      cy: 13 * T,
+      keys: ["signpost", "barrel", "rock-moss", "banner-pole", ...libKeys("rock-", "sign-", "barrel-"), ...hardscape.slice(0, 3)],
+      count: 14,
+      radius: 48,
+      salt: 6,
+    },
+    // Noble / archive
     {
       cx: 42 * T,
       cy: 20 * T,
-      keys: ["lantern-post", "bench", "banner-pole", "flowers", "tree-birch", "tree-flowering"],
-      count: 8,
+      keys: [
+        "lantern-post",
+        "bench",
+        "banner-pole",
+        "flowers",
+        "tree-birch",
+        "tree-flowering",
+        ...trees.filter((k) => k.includes("birch") || k.includes("maple") || k.includes("willow")),
+        ...flowers.slice(0, 6),
+      ],
+      count: 18,
       radius: 44,
       salt: 11,
     },
-    // Dock / pier
-    { cx: 27 * T, cy: 39 * T, keys: ["barrel", "crate", "signpost", "flowers"], count: 6, radius: 40, salt: 31 },
-    // Farmland hedgerows — orchard fruit trees
+    // Dock
+    {
+      cx: 27 * T,
+      cy: 39 * T,
+      keys: ["barrel", "crate", "signpost", "flowers", ...dockKit, ...libKeys("animal-").slice(0, 4)],
+      count: 16,
+      radius: 40,
+      salt: 31,
+    },
+    // Farm
     {
       cx: 17 * T,
       cy: 41 * T,
-      keys: ["tree-orchard", "bush-berry", "flowers", "rock-moss", "signpost"],
-      count: 9,
+      keys: [
+        "tree-orchard",
+        "bush-berry",
+        "flowers",
+        "rock-moss",
+        "signpost",
+        ...trees.filter((k) => k.includes("orchard") || k.includes("oak")),
+        ...bushes,
+        ...hardscape.filter((k) => k.includes("fence")),
+        ...libKeys("fence-", "goods-").slice(0, 8),
+      ],
+      count: 22,
       radius: 42,
       salt: 32,
     },
@@ -227,61 +350,83 @@ function districtAnchors(T: number): DistrictScatter[] {
     {
       cx: 42 * T,
       cy: 41 * T,
-      keys: ["bench", "flowers", "lantern-post", "bush-berry", "tree-birch", "tree-flowering"],
-      count: 8,
+      keys: ["bench", "flowers", "lantern-post", "bush-berry", "tree-birch", "tree-flowering", ...flowers, ...bushes.slice(0, 6)],
+      count: 18,
       radius: 40,
       salt: 10,
     },
-    // Lantern grove park — mixed canopy
+    // Lantern grove park — dense canopy showcase
     {
       cx: 54 * T,
       cy: 19 * T,
-      keys: ["tree-oak", "tree-pine", "tree-birch", "tree-flowering", "bush-berry", "rock-moss", "flowers", "lantern-post"],
-      count: 14,
+      keys: [
+        "tree-oak",
+        "tree-pine",
+        "tree-birch",
+        "tree-flowering",
+        "bush-berry",
+        "rock-moss",
+        "flowers",
+        "lantern-post",
+        ...trees,
+        ...bushes,
+        ...flowers.slice(0, 10),
+        ...lights,
+      ],
+      count: 30,
       radius: 72,
       salt: 7,
     },
-    // Forest gate thicket — pines + oak + rift fringe
+    // Forest gate
     {
       cx: 56 * T,
       cy: 12 * T,
-      keys: ["tree-pine", "tree-oak", "tree-rift", "rock-moss", "bush-berry"],
-      count: 11,
+      keys: ["tree-pine", "tree-oak", "tree-rift", "rock-moss", "bush-berry", ...trees, ...libKeys("rock-", "mushroom-")],
+      count: 22,
       radius: 55,
       salt: 24,
     },
-    // Outer woods fringe — dense mixed forest
+    // Outer woods
     {
       cx: 4 * T,
       cy: 4 * T,
-      keys: ["tree-pine", "tree-oak", "tree-rift", "tree-birch", "rock-moss", "ruin-arch", "bush-berry"],
-      count: 14,
+      keys: ["tree-pine", "tree-oak", "tree-rift", "tree-birch", "rock-moss", "ruin-arch", "bush-berry", ...trees, ...bushes],
+      count: 26,
       radius: 70,
       salt: 8,
     },
-    // Portal sanctum — rift-touched sentinels
+    // Portal sanctum
     {
       cx: 32 * T,
       cy: 7 * T,
-      keys: ["lantern-post", "rift-crystal", "flowers", "tree-rift", "tree-birch"],
-      count: 9,
+      keys: [
+        "lantern-post",
+        "rift-crystal",
+        "flowers",
+        "tree-rift",
+        "tree-birch",
+        ...trees.filter((k) => k.includes("rift") || k.includes("spirit") || k.includes("elder")),
+        ...lights.filter((k) => k.includes("rift")),
+        ...libKeys("mushroom-").slice(0, 4),
+      ],
+      count: 18,
       radius: 68,
       salt: 12,
     },
-    // Secret garden — flowering orchard pocket
+    // Secret garden
     {
       cx: 57 * T,
       cy: 28 * T,
-      keys: ["tree-flowering", "tree-orchard", "tree-birch", "bush-berry", "flowers"],
-      count: 8,
+      keys: ["tree-flowering", "tree-orchard", "tree-birch", "bush-berry", "flowers", ...trees.slice(0, 10), ...flowers, ...fauna.slice(0, 5)],
+      count: 18,
       radius: 40,
       salt: 23,
     },
   ];
 }
 
-function pickPathTree(i: number, ax: number, ay: number): TreePropKey {
-  const pool: TreePropKey[] = [
+function pickPathTree(i: number, ax: number, ay: number): PropKey {
+  const classic: PropKey[] = [
     "tree-oak",
     "tree-pine",
     "tree-birch",
@@ -289,7 +434,9 @@ function pickPathTree(i: number, ax: number, ay: number): TreePropKey {
     "tree-orchard",
     "tree-small",
   ];
-  const idx = Math.floor(hash2(i, ax, ay) * pool.length) % pool.length;
+  const libTrees = libKeys("tree-");
+  const pool = hash2(i, ax, ay) < 0.55 && libTrees.length ? libTrees : classic;
+  const idx = Math.floor(hash2(i, ax, ay + 3) * pool.length) % pool.length;
   return pool[idx]!;
 }
 
@@ -331,44 +478,126 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
   out.push({ key: "bench", x: 30 * T, y: 37 * T, scale: 0.9 });
   out.push({ key: "flowers", x: 28 * T, y: 38 * T, scale: 0.75 });
   out.push({ key: "bush-berry", x: 24 * T, y: 40 * T, scale: 0.85 });
+  out.push({ key: "lib-lantern-rift", x: 29 * T, y: 23 * T, scale: 0.9 });
+  out.push({ key: "lib-mushroom-amber", x: 50 * T, y: 18 * T, scale: 0.8 });
+  out.push({ key: "lib-fence-post", x: 16 * T, y: 40 * T, scale: 0.85 });
 
-  // Alley clutter along pathways — lived-in street details
+  // Cozy village clutter — fences, barrels, benches, flower patches, ambient Riftlings
+  const cozyKeys: PropKey[] = [
+    "bench",
+    "barrel",
+    "crate",
+    "flowers",
+    "bush-berry",
+    "lantern-post",
+    "signpost",
+    "lib-fence-post",
+    "stump",
+    "ambient-riftling-sparklet",
+    "ambient-riftling-mossbun",
+    "ambient-riftling-emberpup",
+    "ambient-riftling-frostnip",
+    "ambient-riftling-tideling",
+    "ambient-riftling-stoneling",
+    ...libKeys("fence-", "barrel-", "crate-", "flower-", "furniture-", "goods-").slice(0, 24),
+  ];
+  const cozyHubs = [
+    { x: 8 * T, y: 18 * T, r: 36, n: 14 },
+    { x: 14 * T, y: 38 * T, r: 34, n: 14 },
+    { x: 18 * T, y: 42 * T, r: 30, n: 12 },
+    { x: 28 * T, y: 26 * T, r: 40, n: 14 },
+    { x: 48 * T, y: 36 * T, r: 32, n: 12 },
+    { x: 10 * T, y: 10 * T, r: 28, n: 12 },
+    { x: 22 * T, y: 20 * T, r: 26, n: 10 },
+    { x: 36 * T, y: 30 * T, r: 28, n: 10 },
+  ];
+  for (const hub of cozyHubs) {
+    for (let i = 0; i < hub.n; i++) {
+      const a = (i / hub.n) * Math.PI * 2 + hash2(hub.x, hub.y, 70 + i) * 0.5;
+      const rad = hub.r * (0.4 + hash2(i, hub.x, 71) * 0.6);
+      out.push({
+        key: cozyKeys[(i + Math.floor(hub.x)) % cozyKeys.length]!,
+        x: hub.x + Math.cos(a) * rad,
+        y: hub.y + Math.sin(a) * rad,
+        scale: 0.72 + hash2(i, hub.y, 72) * 0.28,
+      });
+    }
+  }
+
+  // Spread unique library variety across Commons so many pack keys appear in-world
+  const variety = LIBRARY_WORLD_KEYS as unknown as PropKey[];
+  const hubs = [
+    { x: 31 * T, y: 22 * T, r: 110 },
+    { x: 9 * T, y: 36 * T, r: 70 },
+    { x: 54 * T, y: 19 * T, r: 80 },
+    { x: 17 * T, y: 41 * T, r: 50 },
+    { x: 7 * T, y: 16 * T, r: 48 },
+    { x: 27 * T, y: 39 * T, r: 45 },
+  ];
+  for (let i = 0; i < variety.length; i++) {
+    const hub = hubs[i % hubs.length]!;
+    const a = hash2(i, hub.x, 40) * Math.PI * 2;
+    const rad = hub.r * (0.35 + hash2(i, hub.y, 41) * 0.65);
+    out.push({
+      key: variety[i]!,
+      x: hub.x + Math.cos(a) * rad,
+      y: hub.y + Math.sin(a) * rad,
+      scale: 0.75 + hash2(i, 42) * 0.4,
+    });
+  }
+
+  const pathFlowers = libKeys("flower-", "mushroom-", "bush-");
+  const pathGoods = libKeys("barrel-", "crate-", "goods-", "lantern-");
+
+  const pathFences = libKeys("fence-");
+
+  // Alley clutter along pathways — denser lived-in street details
   for (const path of blueprint.pathways) {
     for (let i = 0; i < path.waypoints.length - 1; i++) {
       const a = path.waypoints[i]!;
       const b = path.waypoints[i + 1]!;
-      if (hash2(a.x, a.y, i) < 0.62) {
+      if (hash2(a.x, a.y, i) < 0.88) {
         out.push({
           key:
             hash2(b.x, b.y, i) < 0.35
-              ? "flowers"
-              : hash2(i, a.y, 3) < 0.45
-                ? "rock-moss"
+              ? pickLib(pathFlowers, i, 3)
+              : hash2(i, a.y, 3) < 0.3
+                ? pickLib(libKeys("rock-"), i, 5)
                 : hash2(i, b.x, 4) < 0.5
-                  ? "barrel"
-                  : "bush-berry",
+                  ? pickLib(pathGoods, i, 6)
+                  : hash2(i, a.x, 5) < 0.35
+                    ? pickLib(pathFences, i, 7) || "lib-fence-post"
+                    : "bush-berry",
           x: (a.x + b.x) / 2 + (hash2(i, a.x) - 0.5) * 28,
           y: (a.y + b.y) / 2 + (hash2(i, a.y) - 0.5) * 28,
           scale: 0.7,
         });
       }
-      if (hash2(a.x, b.y, 99) < 0.2) {
+      if (hash2(a.x, b.y, 99) < 0.38) {
         out.push({
-          key: "signpost",
+          key: pickLib(libKeys("sign-"), i, 8) || "signpost",
           x: (a.x + b.x) / 2,
           y: (a.y + b.y) / 2 - 18,
           scale: 0.85,
         });
       }
-      if (hash2(b.x, a.y, 17) < 0.16) {
+      if (hash2(b.x, a.y, 17) < 0.32) {
         out.push({
-          key: "lantern-post",
+          key: pickLib(libKeys("lantern-"), i, 9) || "lantern-post",
           x: (a.x + b.x) / 2 + (hash2(i, 8) - 0.5) * 24,
           y: (a.y + b.y) / 2 + (hash2(i, 9) - 0.5) * 24,
           scale: 0.8,
         });
       }
-      if (hash2(b.x, a.y, 17) < 0.18) {
+      if (hash2(b.x, a.y, 18) < 0.2) {
+        out.push({
+          key: "bench",
+          x: (a.x + b.x) / 2 + (hash2(i, 11) - 0.5) * 20,
+          y: (a.y + b.y) / 2 + (hash2(i, 12) - 0.5) * 20,
+          scale: 0.78,
+        });
+      }
+      if (hash2(b.x, a.y, 17) < 0.28) {
         out.push({
           key: pickPathTree(i, a.x, a.y),
           x: (a.x + b.x) / 2 + (hash2(i, 5) - 0.5) * 40,
@@ -382,21 +611,27 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
   return out;
 }
 
-/** Soft LOD: drop far scatter when performance mode requests fewer props. */
+function isLandmarkKey(key: string): boolean {
+  return (
+    key === "watchtower" ||
+    key === "bridge" ||
+    key === "rift-crystal" ||
+    key === "campfire" ||
+    key === "lantern-post" ||
+    key.startsWith("lw-lantern-") ||
+    key.startsWith("lw-gate-") ||
+    key.startsWith("lw-bridge-")
+  );
+}
+
+/** Soft LOD: drop scatter when performance mode requests fewer props. */
 export function filterScatterForBudget(
   specs: ScatterSpec[],
   budget: "full" | "medium" | "low",
 ): ScatterSpec[] {
   if (budget === "full") return specs;
   if (budget === "medium") {
-    return specs.filter((_, i) => i % 2 === 0 || specs[i]!.key === "lantern-post" || specs[i]!.key === "watchtower");
+    return specs.filter((s, i) => i % 2 === 0 || isLandmarkKey(s.key));
   }
-  return specs.filter(
-    (s, i) =>
-      i % 3 === 0 ||
-      s.key === "watchtower" ||
-      s.key === "bridge" ||
-      s.key === "rift-crystal" ||
-      s.key === "campfire",
-  );
+  return specs.filter((s, i) => i % 4 === 0 || isLandmarkKey(s.key));
 }

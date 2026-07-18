@@ -39,6 +39,8 @@ export const TERRAIN_KEYS = [
   "path-master",
   "water-master",
   "water-stream",
+  "water-edge",
+  "water-lily",
   "cliff-edge",
   "settlement-soil",
   "farm-soil",
@@ -67,6 +69,17 @@ export const LIBRARY_PROP_KEYS = [
   "lib-lantern-rift",
 ] as const;
 
+/** Ambient village Riftlings + stump clutter (cozy pixel pack). */
+export const COZY_AMBIENT_PROP_KEYS = [
+  "stump",
+  "ambient-riftling-sparklet",
+  "ambient-riftling-mossbun",
+  "ambient-riftling-emberpup",
+  "ambient-riftling-frostnip",
+  "ambient-riftling-tideling",
+  "ambient-riftling-stoneling",
+] as const;
+
 export const PROP_KEYS = [
   "barrel",
   "crate",
@@ -90,6 +103,7 @@ export const PROP_KEYS = [
   "resource-berry",
   "resource-herb",
   "resource-fish",
+  ...COZY_AMBIENT_PROP_KEYS,
   ...LIBRARY_PROP_KEYS,
   ...LIBRARY_WORLD_KEYS,
 ] as const;
@@ -104,7 +118,16 @@ export function isTreeProp(key: string): key is TreePropKey {
   );
 }
 
-export const ACTOR_KEYS = ["player-keeper", "pet-riftling"] as const;
+export const ACTOR_KEYS = [
+  "player-keeper",
+  "pet-riftling",
+  "riftling-sparklet",
+  "riftling-mossbun",
+  "riftling-emberpup",
+  "riftling-frostnip",
+  "riftling-tideling",
+  "riftling-stoneling",
+] as const;
 
 export function actorTex(key: (typeof ACTOR_KEYS)[number] | string): string {
   return `pw-actor-${key}`;
