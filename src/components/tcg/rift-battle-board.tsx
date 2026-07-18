@@ -1,6 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { getTcgCardDef } from "@/game/tcg/card-catalog";
@@ -72,7 +79,7 @@ function CardFace({
     return (
       <div
         className={cn(
-          "flex items-center justify-center rounded-xl bg-black/30 text-xs text-white/50",
+          "flex items-center justify-center rounded-md bg-black/40 text-xs text-white/50",
           sizeClass,
         )}
       >
@@ -90,9 +97,9 @@ function CardFace({
       onClick={onClick}
       aria-label={`Inspect ${def.name}`}
       className={cn(
-        "relative overflow-hidden rounded-xl border border-amber-500/40 bg-black/40 transition focus-ring",
+        "relative overflow-hidden rounded-md border border-amber-500/45 bg-black/45 transition focus-ring",
         sizeClass,
-        selected && "ring-2 ring-amber-300 scale-[1.03]",
+        selected && "ring-2 ring-amber-300 scale-[1.03] shadow-[0_0_18px_rgba(255,184,77,0.35)]",
         disabled && "opacity-40",
       )}
     >
@@ -114,6 +121,20 @@ function CardFace({
   );
 }
 
+function ConsoleShell({ children }: { children: ReactNode }) {
+  return (
+    <div className="battle-console">
+      <div className="battle-console__corners" aria-hidden>
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="battle-console__inner">{children}</div>
+    </div>
+  );
+}
+
 export function RiftBattleBoard({
   encounterEnemyId,
   regionSlug,
@@ -131,6 +152,10 @@ export function RiftBattleBoard({
   const [inspectFromHand, setInspectFromHand] = useState(false);
 
   const backHref = returnTo || snap?.encounter?.returnTo || "/tcg/collection";
+  const deskTitle = encounterEnemyId
+    ? encounterEnemyId.replace(/-/g, " ")
+    : "Practice Board";
+  const deskMode = encounterEnemyId ? "Battle Desk" : "Practice Board";
 
   const start = useCallback(async () => {
     setBusy(true);
@@ -229,6 +254,8 @@ export function RiftBattleBoard({
 
   const selectedCard = player?.hand.find((c) => c.instanceId === selectedHand);
   const selectedDef = selectedCard ? getTcgCardDef(selectedCard.defId) : null;
+  const isPlayerTurn =
+    !!snap && !!player && snap.status === "ACTIVE" && snap.activeSideId === player.id;
   const canPlaySelected =
     !!snap &&
     !!player &&
@@ -251,198 +278,334 @@ export function RiftBattleBoard({
             ? "Busy…"
             : null;
 
+  const outcomeLabel =
+    snap?.status === "COMPLETED"
+      ? snap.winnerId === player?.id
+        ? "Victory"
+        : snap.winnerId
+          ? "Defeat"
+          : "Draw"
+      : null;
+
   return (
-    <div className="mx-auto flex min-h-[70vh] max-w-5xl flex-col gap-4 px-2 py-4 sm:px-4 sm:py-6">
-      <header className="flex flex-wrap items-end justify-between gap-3 rounded-xl border border-white/10 bg-[rgba(8,12,20,0.42)] px-4 py-3 backdrop-blur-[2px]">
-        <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-amber-200/70">
-            Rift Energy Battle
-          </p>
-          <h1 className="font-[family-name:var(--font-display)] text-3xl text-[var(--text-primary,#f4efe6)]">
-            {encounterEnemyId
-              ? encounterEnemyId.replace(/-/g, " ")
-              : "Practice Board"}
-          </h1>
-          <p className="mt-1 max-w-xl text-sm text-[var(--text-muted,#b7aea0)]">
-            Tap a card to inspect it. Play from the detail view or the Play button.
-            SOL is never required.
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <Link
-            href="/tcg/collection"
-            className="rounded-md border border-amber-300/30 px-3 py-2 text-sm text-amber-100/90 hover:bg-amber-400/10"
-          >
-            Card Binder
-          </Link>
-          <Link
-            href={backHref}
-            className="rounded-md border border-white/15 px-3 py-2 text-sm text-white/90 hover:bg-white/5"
-          >
-            {backHref.includes("live-world") ? "Return to habitat" : "Back"}
-          </Link>
-        </div>
-      </header>
-
-      {error && (
-        <div className="flex flex-wrap items-center justify-between gap-3 rounded-md border border-red-400/40 bg-red-950/55 px-3 py-2 text-sm text-red-100 backdrop-blur-sm">
-          <p>{error}</p>
-          <button
-            type="button"
-            disabled={busy}
-            onClick={() => void start()}
-            className="rounded-md border border-amber-300/40 px-3 py-1.5 text-amber-100 hover:bg-amber-400/10 disabled:opacity-40"
-          >
-            Retry
-          </button>
-        </div>
-      )}
-
-      {!snap && (
-        <section className="rounded-xl border border-white/10 bg-[rgba(8,12,20,0.38)] p-6 backdrop-blur-[2px]">
-          <div className="space-y-4">
-            <div className="flex h-28 items-center justify-center rounded-lg border border-dashed border-cyan-300/25 text-xs text-cyan-100/50">
-              Challenger lane
-            </div>
-            <p className="text-center text-sm text-white/70">
-              {busy
-                ? "Opening the rift board…"
-                : error
-                  ? "Board ready when the rift reconnects."
-                  : "Preparing match…"}
+    <div className="mx-auto w-full max-w-6xl px-0 py-2 sm:py-3">
+      <ConsoleShell>
+        <header className="battle-console__header">
+          <div>
+            <p className="battle-console__brand">RIFTWILDS</p>
+            <p className="battle-console__brand-sub">
+              {deskMode}
+              {encounterEnemyId ? ` · ${deskTitle}` : ""}
             </p>
-            <div className="flex h-28 items-center justify-center rounded-lg border border-dashed border-amber-300/25 text-xs text-amber-100/50">
-              Your lane
-            </div>
-            {!busy && (
-              <div className="flex justify-center">
-                <button
-                  type="button"
-                  onClick={() => void start()}
-                  className="rounded-md bg-amber-500/90 px-4 py-2 text-sm font-medium text-stone-950"
-                >
-                  Open practice board
-                </button>
-              </div>
-            )}
+            <p className="battle-console__lede">
+              Tap a card to inspect. Spend Rift Energy to play units and spells, then end
+              your turn. SOL is never required.
+            </p>
           </div>
-        </section>
-      )}
+          <div className="battle-console__utils">
+            <Link href="/tcg/collection" className="battle-console__util focus-ring">
+              Card Binder
+            </Link>
+            <Link href={backHref} className="battle-console__util focus-ring">
+              {backHref.includes("live-world") ? "Return" : "Back"}
+            </Link>
+          </div>
+        </header>
 
-      {snap && player && foe && (
-        <>
-          <section className="grid gap-3 rounded-xl border border-white/10 bg-[rgba(10,16,24,0.45)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[2px] md:grid-cols-[1fr_220px]">
-            <div className="space-y-4">
-              <SideHeader side={foe} label="Challenger" />
-              <BoardRow
-                units={foe.board}
-                emptyLabel="Empty rift lane"
-                onInspect={(defId) => {
-                  setInspectFromHand(false);
-                  setInspectDefId(defId);
-                }}
-              />
-              <div className="flex items-center justify-center gap-3 py-2 text-sm text-amber-100/80">
-                <span>
-                  Turn {snap.turn} · {snap.phase}
-                </span>
-                {snap.status === "COMPLETED" && (
-                  <span className="rounded bg-amber-400/20 px-2 py-0.5 text-amber-100">
-                    {snap.winnerId === player.id
-                      ? "Victory"
-                      : snap.winnerId
-                        ? "Defeat"
-                        : "Draw"}
-                  </span>
-                )}
+        {error && (
+          <div className="battle-console__alert" role="alert">
+            <p>{error}</p>
+            <button
+              type="button"
+              disabled={busy}
+              onClick={() => void start()}
+              className="battle-console__action battle-console__action--primary !min-w-0 !px-3 !py-1.5 !text-[0.62rem]"
+            >
+              Retry
+            </button>
+          </div>
+        )}
+
+        {!snap && (
+          <div className="battle-console__body">
+            <aside className="battle-console__panel hidden md:flex">
+              <p className="battle-console__panel-title">Board Intel</p>
+              <div className="battle-console__panel-body">
+                <p className="text-xs text-[var(--text-dim)]">
+                  {busy ? "Calibrating rift lanes…" : "Awaiting match sync."}
+                </p>
               </div>
-              <BoardRow
-                units={player.board}
-                emptyLabel="Your units appear here"
-                onInspect={(defId) => {
-                  setInspectFromHand(false);
-                  setInspectDefId(defId);
-                }}
-              />
-              <SideHeader side={player} label="You" emphasizeEnergy />
-            </div>
-            <aside className="max-h-72 overflow-auto rounded-lg border border-white/10 bg-black/30 p-2 text-[11px] text-white/70">
-              <p className="mb-1 font-semibold uppercase tracking-wide text-white/50">
-                Battle log
-              </p>
-              {log.map((e, i) => (
-                <div key={`${e.type}-${i}`} className="border-b border-white/5 py-1">
-                  {e.type}
-                  {typeof e.payload.damage === "number"
-                    ? ` · ${e.payload.damage} dmg`
-                    : ""}
-                </div>
-              ))}
             </aside>
-          </section>
+            <section className="battle-console__stage">
+              <div className="battle-console__lane">
+                <div className="battle-console__lane-empty">Challenger lane</div>
+              </div>
+              <div className="battle-console__phase">
+                {busy
+                  ? "Opening the rift board…"
+                  : error
+                    ? "Board ready when the rift reconnects"
+                    : "Preparing match…"}
+              </div>
+              <div className="battle-console__lane battle-console__lane--you">
+                <div className="battle-console__lane-empty">Your lane</div>
+              </div>
+              {!busy && (
+                <div className="flex justify-center pt-1">
+                  <button
+                    type="button"
+                    onClick={() => void start()}
+                    className="battle-console__action battle-console__action--primary"
+                  >
+                    Open board
+                    <small>Start practice</small>
+                  </button>
+                </div>
+              )}
+            </section>
+            <aside className="battle-console__panel hidden md:flex">
+              <p className="battle-console__panel-title">Command Feed</p>
+              <div className="battle-console__panel-body">
+                <p className="battle-console__feed-item">STANDBY · waiting for sync</p>
+              </div>
+            </aside>
+          </div>
+        )}
 
-          <section className="rounded-xl border border-white/10 bg-[rgba(8,12,20,0.38)] p-4 backdrop-blur-[2px]">
-            <p className="mb-2 text-xs uppercase tracking-wider text-white/50">
-              Hand · tap a card to inspect
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {player.hand.map((c) => (
-                <CardFace
-                  key={c.instanceId}
-                  defId={c.defId}
-                  size="hand"
-                  selected={selectedHand === c.instanceId}
-                  onClick={() => {
-                    setSelectedHand(c.instanceId);
-                    setInspectFromHand(true);
-                    setInspectDefId(c.defId);
+        {snap && player && foe && (
+          <>
+            <div className="battle-console__body">
+              <aside className="battle-console__panel order-2 lg:order-none max-lg:max-h-48">
+                <p className="battle-console__panel-title">Board Intel</p>
+                <div className="battle-console__panel-body">
+                  <div className="battle-console__intel-block">
+                    <p className="battle-console__intel-label">Match readout</p>
+                    <div className="battle-console__intel-row">
+                      <span>Turn</span>
+                      <strong>{snap.turn}</strong>
+                    </div>
+                    <div className="battle-console__intel-row">
+                      <span>Phase</span>
+                      <strong>{snap.phase}</strong>
+                    </div>
+                    <div className="battle-console__intel-row">
+                      <span>Active</span>
+                      <strong>
+                        {snap.activeSideId === player.id ? "You" : "Challenger"}
+                      </strong>
+                    </div>
+                    <div className="battle-console__intel-row">
+                      <span>Status</span>
+                      <strong>
+                        {snap.status === "ACTIVE" ? "LIVE" : outcomeLabel ?? "DONE"}
+                      </strong>
+                    </div>
+                  </div>
+                  <div className="battle-console__intel-block">
+                    <p className="battle-console__intel-label">Field pressure</p>
+                    <div className="battle-console__intel-row">
+                      <span>Your units</span>
+                      <strong>{player.board.length}</strong>
+                    </div>
+                    <div className="battle-console__intel-row">
+                      <span>Foe units</span>
+                      <strong>{foe.board.length}</strong>
+                    </div>
+                    <div className="battle-console__intel-row">
+                      <span>Hand</span>
+                      <strong>{player.hand.length}</strong>
+                    </div>
+                  </div>
+                  <div className="battle-console__intel-block">
+                    <p className="battle-console__intel-label">Legend</p>
+                    <div className="battle-console__legend">
+                      <div className="battle-console__legend-item">
+                        <span
+                          className="battle-console__legend-swatch"
+                          style={{ background: "var(--amber)" }}
+                        />
+                        Rift Energy — play cost
+                      </div>
+                      <div className="battle-console__legend-item">
+                        <span
+                          className="battle-console__legend-swatch"
+                          style={{ background: "#ff5c7a" }}
+                        />
+                        Keeper HP — lose at 0
+                      </div>
+                      <div className="battle-console__legend-item">
+                        <span
+                          className="battle-console__legend-swatch"
+                          style={{ background: "var(--cyan)" }}
+                        />
+                        Units — board attackers
+                      </div>
+                      <div className="battle-console__legend-item">
+                        <span
+                          className="battle-console__legend-swatch"
+                          style={{
+                            background: "transparent",
+                            border: "1px solid rgba(255,255,255,0.35)",
+                          }}
+                        />
+                        Exhausted — already acted
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+
+              <section
+                className="battle-console__stage order-1 lg:order-none"
+                aria-label="Battle lanes"
+              >
+                <StatusStrip side={foe} role="Challenger" />
+                <BoardRow
+                  units={foe.board}
+                  emptyLabel="Empty rift lane"
+                  onInspect={(defId) => {
+                    setInspectFromHand(false);
+                    setInspectDefId(defId);
                   }}
                 />
-              ))}
+                <div
+                  className={cn(
+                    "battle-console__phase",
+                    isPlayerTurn && "battle-console__phase--active",
+                  )}
+                >
+                  <span>
+                    Turn {snap.turn} · {snap.phase}
+                  </span>
+                  {outcomeLabel && (
+                    <span className="battle-console__phase-badge">{outcomeLabel}</span>
+                  )}
+                  {!outcomeLabel && isPlayerTurn && (
+                    <span className="battle-console__phase-badge">Your move</span>
+                  )}
+                </div>
+                <BoardRow
+                  units={player.board}
+                  emptyLabel="Your units appear here"
+                  yours
+                  onInspect={(defId) => {
+                    setInspectFromHand(false);
+                    setInspectDefId(defId);
+                  }}
+                />
+                <StatusStrip side={player} role="You" emphasizeEnergy />
+              </section>
+
+              <aside className="battle-console__panel order-3 lg:order-none max-lg:max-h-48">
+                <p className="battle-console__panel-title">Command Feed</p>
+                <div className="battle-console__panel-body">
+                  <div className="battle-console__feed">
+                    {log.length === 0 && (
+                      <div className="battle-console__feed-item">FEED · quiet channel</div>
+                    )}
+                    {log.map((e, i) => (
+                      <div
+                        key={`${e.type}-${i}`}
+                        className="battle-console__feed-item"
+                        style={{ animationDelay: `${Math.min(i, 8) * 30}ms` }}
+                      >
+                        {e.type}
+                        {typeof e.payload.damage === "number"
+                          ? ` · ${e.payload.damage} dmg`
+                          : ""}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </aside>
             </div>
-            <div className="mt-4 flex flex-wrap gap-2">
-              <motion.button
-                type="button"
-                whileTap={{ scale: 0.98 }}
-                disabled={!canPlaySelected}
-                onClick={() =>
-                  selectedHand &&
-                  void act({ kind: "PLAY_CARD", handInstanceId: selectedHand })
-                }
-                className="rounded-md bg-amber-500/90 px-4 py-2 text-sm font-medium text-stone-950 disabled:opacity-40"
-              >
-                Play card
-              </motion.button>
-              <button
-                type="button"
-                disabled={busy || snap.status !== "ACTIVE"}
-                onClick={() => void act({ kind: "END_TURN" })}
-                className="rounded-md border border-teal-300/40 px-4 py-2 text-sm text-teal-100 disabled:opacity-40"
-              >
-                End turn
-              </button>
-              <button
-                type="button"
-                disabled={busy || snap.status !== "ACTIVE"}
-                onClick={() => void act({ kind: "SURRENDER" })}
-                className="rounded-md border border-white/15 px-4 py-2 text-sm text-white/70 disabled:opacity-40"
-              >
-                Surrender
-              </button>
-              {snap.status === "COMPLETED" && (
+
+            <section className="battle-console__hand-dock" aria-label="Hand">
+              <p className="battle-console__hand-label">
+                Hand · tap a card to inspect
+              </p>
+              <div className="battle-console__hand-row">
+                {player.hand.map((c) => (
+                  <CardFace
+                    key={c.instanceId}
+                    defId={c.defId}
+                    size="hand"
+                    selected={selectedHand === c.instanceId}
+                    onClick={() => {
+                      setSelectedHand(c.instanceId);
+                      setInspectFromHand(true);
+                      setInspectDefId(c.defId);
+                    }}
+                  />
+                ))}
+                {player.hand.length === 0 && (
+                  <p className="text-xs text-[var(--text-dim)]">No cards in hand.</p>
+                )}
+              </div>
+            </section>
+
+            <footer className="battle-console__command-bar">
+              <div className="battle-console__command-meta">
+                <strong>DESK</strong> · {deskMode}
+                <br />
+                {selectedDef
+                  ? `Selected: ${selectedDef.name} · cost ${selectedDef.riftCost}`
+                  : "Select a card from hand"}
+              </div>
+              <div className="battle-console__actions">
+                <motion.button
+                  type="button"
+                  whileTap={{ scale: 0.98 }}
+                  disabled={!canPlaySelected}
+                  onClick={() =>
+                    selectedHand &&
+                    void act({ kind: "PLAY_CARD", handInstanceId: selectedHand })
+                  }
+                  className="battle-console__action battle-console__action--primary focus-ring"
+                  title={playDisabledReason ?? "Play selected card"}
+                >
+                  Play card
+                  <small>{playDisabledReason ?? "Deploy to board"}</small>
+                </motion.button>
                 <button
                   type="button"
-                  disabled={busy}
-                  onClick={() => void start()}
-                  className="rounded-md border border-amber-300/30 px-4 py-2 text-sm text-amber-100"
+                  disabled={busy || snap.status !== "ACTIVE"}
+                  onClick={() => void act({ kind: "END_TURN" })}
+                  className="battle-console__action focus-ring"
                 >
-                  Rematch
+                  End turn
+                  <small>Pass initiative</small>
                 </button>
-              )}
-            </div>
-          </section>
-        </>
-      )}
+                <button
+                  type="button"
+                  disabled={busy || snap.status !== "ACTIVE"}
+                  onClick={() => void act({ kind: "SURRENDER" })}
+                  className="battle-console__action battle-console__action--danger focus-ring"
+                >
+                  Surrender
+                  <small>Abort match</small>
+                </button>
+                {snap.status === "COMPLETED" && (
+                  <button
+                    type="button"
+                    disabled={busy}
+                    onClick={() => void start()}
+                    className="battle-console__action battle-console__action--primary focus-ring"
+                  >
+                    Rematch
+                    <small>Open new board</small>
+                  </button>
+                )}
+              </div>
+              <div className="battle-console__command-meta text-right max-md:text-left">
+                <strong>ENERGY</strong> {player.riftEnergy}/{player.riftEnergyMax}
+                <br />
+                HP {player.keeperHp}/{player.maxKeeperHp} · Deck {player.deckCount}
+              </div>
+            </footer>
+          </>
+        )}
+      </ConsoleShell>
 
       <TcgCardDetailModal
         open={!!inspectDefId}
@@ -472,34 +635,65 @@ export function RiftBattleBoard({
   );
 }
 
-function SideHeader({
+function StatusStrip({
   side,
-  label,
+  role,
   emphasizeEnergy,
 }: {
   side: ClientSide;
-  label: string;
+  role: string;
   emphasizeEnergy?: boolean;
 }) {
+  const hpPct = Math.max(
+    0,
+    Math.min(100, (side.keeperHp / Math.max(1, side.maxKeeperHp)) * 100),
+  );
+  const energyPct = Math.max(
+    0,
+    Math.min(100, (side.riftEnergy / Math.max(1, side.riftEnergyMax)) * 100),
+  );
+
   return (
-    <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
-      <div>
-        <span className="text-white/50">{label}</span>{" "}
-        <span className="font-medium text-white">{side.name}</span>
+    <div
+      className={cn(
+        "battle-console__status",
+        emphasizeEnergy && "battle-console__status--you",
+      )}
+    >
+      <div className="battle-console__status-name">
+        <span className="battle-console__status-role">{role}</span>
+        <span className="battle-console__status-keeper">{side.name}</span>
       </div>
-      <div className="flex gap-3 text-xs uppercase tracking-wide">
-        <span className="text-rose-200/90">
-          HP {side.keeperHp}/{side.maxKeeperHp}
-        </span>
-        <span
-          className={cn(
-            "text-amber-200",
-            emphasizeEnergy && "rounded bg-amber-400/15 px-1.5 py-0.5",
-          )}
-        >
-          Rift Energy {side.riftEnergy}/{side.riftEnergyMax}
-        </span>
-        <span className="text-white/45">Deck {side.deckCount}</span>
+      <div className="battle-console__meters">
+        <div className="battle-console__meter">
+          <span className="battle-console__meter-label">Keeper HP</span>
+          <span className="battle-console__meter-value battle-console__meter-value--hp">
+            {side.keeperHp}/{side.maxKeeperHp}
+          </span>
+          <div className="battle-console__bar battle-console__bar--hp" aria-hidden>
+            <i style={{ width: `${hpPct}%` }} />
+          </div>
+        </div>
+        <div className="battle-console__meter">
+          <span className="battle-console__meter-label">Rift Energy</span>
+          <span
+            className={cn(
+              "battle-console__meter-value battle-console__meter-value--energy",
+              emphasizeEnergy && "rounded px-1 bg-amber-400/15",
+            )}
+          >
+            {side.riftEnergy}/{side.riftEnergyMax}
+          </span>
+          <div className="battle-console__bar battle-console__bar--energy" aria-hidden>
+            <i style={{ width: `${energyPct}%` }} />
+          </div>
+        </div>
+        <div className="battle-console__meter">
+          <span className="battle-console__meter-label">Deck</span>
+          <span className="battle-console__meter-value battle-console__meter-value--deck">
+            {side.deckCount}
+          </span>
+        </div>
       </div>
     </div>
   );
@@ -508,23 +702,35 @@ function SideHeader({
 function BoardRow({
   units,
   emptyLabel,
+  yours,
   onInspect,
 }: {
   units: ClientUnit[];
   emptyLabel: string;
+  yours?: boolean;
   onInspect: (defId: string) => void;
 }) {
   if (units.length === 0) {
     return (
-      <div className="flex h-32 items-center justify-center rounded-lg border border-dashed border-white/15 text-xs text-white/35">
-        {emptyLabel}
+      <div
+        className={cn(
+          "battle-console__lane",
+          yours && "battle-console__lane--you",
+        )}
+      >
+        <div className="battle-console__lane-empty">{emptyLabel}</div>
       </div>
     );
   }
   return (
-    <div className="flex min-h-32 flex-wrap items-end gap-3">
+    <div
+      className={cn(
+        "battle-console__lane",
+        yours && "battle-console__lane--you",
+      )}
+    >
       {units.map((u) => (
-        <div key={u.instanceId} className={cn(u.exhausted && "opacity-60")}>
+        <div key={u.instanceId} className={cn(u.exhausted && "opacity-55")}>
           <CardFace
             defId={u.defId}
             size="board"

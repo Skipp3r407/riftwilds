@@ -36,6 +36,19 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-battle-desk-console",
+    date: "2026-07-18",
+    title: "Practice Board battle desk console",
+    summary:
+      "Rift Battle’s Practice Board now sits inside a framed command console — Board Intel, Command Feed, and a bold action bar — while keeping the same Rift Energy rules.",
+    changed: [
+      "Practice Board / Battle Desk UI rebuilt as a metallic rift-console shell with corner accents and atmospheric stage",
+      "Opponent and Keeper status strips show HP and Rift Energy bars alongside deck count",
+      "Battle Log becomes Command Feed; left Board Intel panel adds match readout, field pressure, and a keywords legend",
+      "Play card / End turn / Surrender promoted to console command actions under an integrated hand dock",
+    ],
+  },
+  {
     id: "2026-07-18-tcg-card-market",
     date: "2026-07-18",
     title: "Card shop & trade desk redesign",
