@@ -76,9 +76,16 @@ const REGION_PLATES = {
   "void-hollow": "public/assets/maps/regions/void-hollow.png",
   "alloy-ruins": "public/assets/maps/regions/alloy-ruins.png",
   "spirit-marsh": "public/assets/maps/regions/spirit-marsh.png",
+  "spirit-realm": "public/assets/wallpapers/cosmic-aurora.png",
   "celestial-rift": "public/assets/maps/regions/celestial-rift.png",
   "riftwild-commons": "public/assets/maps/regions/riftwild-commons.png",
 };
+
+/** Living-world building tiles are crude placeholders — never use as card face art. */
+function isPlaceholderBuildingArt(assetPath) {
+  if (!assetPath) return true;
+  return /\/assets\/game\/library\/buildings\//i.test(assetPath);
+}
 
 const ELEMENT_TO_REGION = {
   fire: "ember-crater",
@@ -317,8 +324,255 @@ function publicPathToDisk(rel) {
   return path.join(ROOT, "public", clean);
 }
 
-/** Prefer full pet masters over thumbs when available. */
-function resolveSourceArt(assetPath, riftlingSlug) {
+function firstExistingPublic(rels) {
+  for (const rel of rels) {
+    if (!rel) continue;
+    // Accept "public/assets/..." or "/assets/..."
+    const disk = rel.startsWith("public/")
+      ? path.join(ROOT, rel)
+      : publicPathToDisk(rel.startsWith("/") ? rel : `/${rel}`);
+    if (!disk || !fs.existsSync(disk)) continue;
+    const publicRel = rel.startsWith("public/")
+      ? `/${rel.slice("public/".length)}`
+      : rel.startsWith("/")
+        ? rel
+        : `/${rel}`;
+    return { rel: publicRel, disk };
+  }
+  return null;
+}
+
+/** Region scenic plates / overviews / wallpapers for location aura faces. */
+function resolveRegionScenicArt(card) {
+  const region = card.regionId || ELEMENT_TO_REGION[card.element] || "riftwild-commons";
+  const candidates = [];
+  if (REGION_PLATES[region]) {
+    candidates.push(REGION_PLATES[region]);
+  }
+  candidates.push(
+    `public/assets/maps/regions/${region}.png`,
+    `public/assets/maps/${region}-overview.png`,
+    `public/assets/maps/world-${region}-overview.png`,
+  );
+  if (region === "spirit-realm") {
+    candidates.push(
+      "public/assets/wallpapers/cosmic-aurora.png",
+      "public/assets/wallpapers/rift-sky.png",
+      "public/assets/maps/regions/spirit-marsh.png",
+    );
+  }
+  const wall = WALLPAPER_FALLBACKS[card.element] || WALLPAPER_FALLBACKS.neutral;
+  if (wall) candidates.push(wall);
+  return firstExistingPublic(candidates);
+}
+
+function stallKindFromCard(card) {
+  const m = String(card.id).match(/rotr-prop-stall-([a-z0-9-]+)/i);
+  return m?.[1] || null;
+}
+
+function propKindFromCard(card) {
+  const id = String(card.id);
+  if (id.includes("-prop-stall-")) return "stall";
+  if (id.includes("-prop-gate-")) return "gate";
+  if (id.includes("-prop-bridge-")) return "bridge";
+  if (id.includes("-prop-dock-")) return "dock";
+  return null;
+}
+
+/** Distinct scenic wallpapers per stall trade (not shared house icons). */
+const STALL_SCENIC = {
+  produce: "public/assets/wallpapers/commons-plaza.png",
+  fish: "public/assets/wallpapers/moonwater-harbor.png",
+  cloth: "public/assets/wallpapers/festival-lanterns.png",
+  tools: "public/assets/wallpapers/lantern-street.png",
+  potions: "public/assets/wallpapers/circus-night.png",
+  pets: "public/assets/wallpapers/riftling-meadow.png",
+  books: "public/assets/wallpapers/keeper-academy.png",
+  bakery: "public/assets/wallpapers/homestead-dusk.png",
+};
+
+/**
+ * Soft stall accent overlay drawn atop a unique scenic wallpaper.
+ * Keeps trades visually distinct without crude identical house icons.
+ */
+function stallAccentOverlaySvg(kind, cardId) {
+  const rng = mulberry32(hashStr(`${cardId}|stall-accent|${kind}`));
+  const palettes = {
+    produce: { awning: "#6ecf7a", wood: "#8a5a28", accent: "#ffb84d", goods: ["#ff8a3a", "#6ecf7a", "#ffe080"] },
+    fish: { awning: "#3de7ff", wood: "#4a3824", accent: "#7ec8ff", goods: ["#80e0f0", "#3de7ff", "#c0f0ff"] },
+    cloth: { awning: "#d080c0", wood: "#6a4830", accent: "#f0a0d0", goods: ["#ff80a0", "#80a0ff", "#ffe080"] },
+    tools: { awning: "#c0a060", wood: "#3a3020", accent: "#e0c890", goods: ["#a0a8b0", "#c0a060", "#d0b080"] },
+    potions: { awning: "#a060c0", wood: "#2a1830", accent: "#d0a0e0", goods: ["#80e0f0", "#c080ff", "#6ecf7a"] },
+    pets: { awning: "#ffb84d", wood: "#5a4030", accent: "#ffe9b0", goods: ["#f0c0a0", "#80d0c0", "#ffb0c0"] },
+    books: { awning: "#8090c0", wood: "#4a3828", accent: "#c0d0ff", goods: ["#8a4a30", "#3a5080", "#c04040"] },
+    bakery: { awning: "#ffc070", wood: "#6a4020", accent: "#ffe9b0", goods: ["#e8c090", "#d0a060", "#fff0c0"] },
+  };
+  const p = palettes[kind] || palettes.produce;
+  const goods = [];
+  for (let i = 0; i < 5; i++) {
+    const x = 110 + i * 60 + rng() * 6;
+    const y = 330 + rng() * 12;
+    const color = p.goods[i % p.goods.length];
+    if (kind === "fish") {
+      goods.push(`<ellipse cx="${x}" cy="${y}" rx="20" ry="9" fill="${color}" opacity="0.92"/>`);
+    } else if (kind === "cloth") {
+      goods.push(`<path d="M ${x - 8} 210 Q ${x + 4} 280 ${x} 340" fill="none" stroke="${color}" stroke-width="12" opacity="0.8"/>`);
+    } else if (kind === "tools") {
+      goods.push(`<rect x="${x - 3}" y="${y - 34}" width="7" height="36" rx="2" fill="${color}"/>`);
+    } else if (kind === "potions") {
+      goods.push(`<rect x="${x - 7}" y="${y - 26}" width="14" height="26" rx="4" fill="${color}" opacity="0.88"/>`);
+    } else if (kind === "books") {
+      goods.push(`<rect x="${x - 10}" y="${y - 28}" width="20" height="30" rx="2" fill="${color}" opacity="0.9"/>`);
+    } else if (kind === "bakery") {
+      goods.push(`<ellipse cx="${x}" cy="${y}" rx="16" ry="11" fill="${color}"/>`);
+    } else if (kind === "pets") {
+      goods.push(`<circle cx="${x}" cy="${y - 6}" r="12" fill="${color}" opacity="0.85"/>`);
+    } else {
+      goods.push(`<rect x="${x - 14}" y="${y - 16}" width="28" height="22" rx="3" fill="${p.wood}" opacity="0.8"/>`);
+      goods.push(`<circle cx="${x}" cy="${y - 6}" r="7" fill="${color}"/>`);
+    }
+  }
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stallFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#061018" stop-opacity="0.15"/>
+      <stop offset="55%" stop-color="#061018" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#061018" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#stallFade)"/>
+  <ellipse cx="250" cy="400" rx="190" ry="36" fill="#000" opacity="0.28"/>
+  <rect x="88" y="210" width="14" height="170" fill="${p.wood}" opacity="0.88"/>
+  <rect x="398" y="210" width="14" height="170" fill="${p.wood}" opacity="0.88"/>
+  <path d="M 70 220 L 250 140 L 430 220 Z" fill="${p.awning}" opacity="0.82"/>
+  <path d="M 70 220 L 250 140 L 430 220" fill="none" stroke="${p.accent}" stroke-width="2.5" opacity="0.55"/>
+  <rect x="100" y="300" width="300" height="58" rx="8" fill="${p.wood}" opacity="0.86"/>
+  ${goods.join("\n")}
+  <circle cx="${130 + rng() * 20}" cy="175" r="7" fill="${p.accent}" opacity="0.65"/>
+  <circle cx="${360 + rng() * 20}" cy="170" r="7" fill="${p.accent}" opacity="0.6"/>
+</svg>`;
+}
+
+/** Gate / bridge / dock vignettes — distinct silhouettes per prop family. */
+function propVignetteSvg(kind, card) {
+  const rng = mulberry32(hashStr(`${card.id}|prop|${kind}`));
+  const accent = RARITY_ACCENT[card.rarity] || RARITY_ACCENT.common;
+  const scene = SCENES[card.element] || SCENES.neutral;
+  let motif = "";
+  if (kind === "gate") {
+    const archW = 160 + rng() * 40;
+    const cx = W / 2;
+    motif = `
+      <rect x="${cx - archW / 2}" y="160" width="${archW}" height="220" rx="8" fill="${scene.mid}" opacity="0.85"/>
+      <path d="M ${cx - archW / 2 + 20} 280 Q ${cx} 160 ${cx + archW / 2 - 20} 280 L ${cx + archW / 2 - 20} 380 L ${cx - archW / 2 + 20} 380 Z" fill="#0a1220" opacity="0.55"/>
+      <rect x="${cx - 14}" y="300" width="28" height="80" fill="${accent}" opacity="0.5"/>
+      <circle cx="${cx}" cy="200" r="16" fill="${scene.glow}" opacity="0.45"/>
+    `;
+  } else if (kind === "bridge") {
+    motif = `
+      <path d="M 40 340 Q 250 220 460 340" fill="none" stroke="${scene.mid}" stroke-width="28" opacity="0.9"/>
+      <path d="M 40 340 Q 250 220 460 340" fill="none" stroke="${accent}" stroke-width="4" opacity="0.55"/>
+      <rect x="60" y="280" width="12" height="100" fill="${scene.ground}" opacity="0.7"/>
+      <rect x="428" y="280" width="12" height="100" fill="${scene.ground}" opacity="0.7"/>
+      <ellipse cx="250" cy="400" rx="180" ry="24" fill="${scene.accent}" opacity="0.15"/>
+    `;
+  } else {
+    // dock
+    motif = `
+      <rect x="40" y="300" width="420" height="36" rx="4" fill="${scene.mid}" opacity="0.9"/>
+      <rect x="80" y="336" width="14" height="80" fill="${scene.ground}"/>
+      <rect x="200" y="336" width="14" height="90" fill="${scene.ground}"/>
+      <rect x="320" y="336" width="14" height="70" fill="${scene.ground}"/>
+      <rect x="400" y="336" width="14" height="85" fill="${scene.ground}"/>
+      <path d="M 0 420 Q 120 390 240 410 T 500 400" fill="none" stroke="${scene.accent}" stroke-width="3" opacity="0.4"/>
+      <circle cx="${140 + rng() * 40}" cy="280" r="10" fill="${accent}" opacity="0.5"/>
+    `;
+  }
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="propSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${scene.sky[0]}"/>
+      <stop offset="100%" stop-color="${scene.sky[2]}"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#propSky)"/>
+  <ellipse cx="250" cy="120" rx="90" ry="50" fill="${scene.glow}" opacity="0.25"/>
+  ${motif}
+</svg>`;
+}
+
+/**
+ * Prefer full pet masters over thumbs when available.
+ * Location/prop cards skip crude building tiles and use region scenic art
+ * or unique stall/prop vignettes instead.
+ */
+function resolveSourceArt(assetPath, riftlingSlug, card) {
+  if (card) {
+    const propKind = propKindFromCard(card);
+    if (propKind === "stall") {
+      const kind = stallKindFromCard(card) || "produce";
+      const scenic =
+        firstExistingPublic([
+          STALL_SCENIC[kind],
+          "public/assets/wallpapers/commons-plaza.png",
+          "public/assets/maps/regions/riftwild-commons.png",
+        ]) || null;
+      // Unique scenic wallpaper per trade — no crude shared house-icon overlay.
+      if (scenic?.disk) {
+        return { ...scenic, fit: "cover" };
+      }
+      return {
+        rel: `generated:stall:${kind}`,
+        disk: null,
+        svg: stallAccentOverlaySvg(kind, card.id),
+        fit: "cover",
+      };
+    }
+    if (propKind === "gate" || propKind === "bridge" || propKind === "dock") {
+      const scenicPrefs =
+        propKind === "dock"
+          ? [
+              "public/assets/wallpapers/moonwater-harbor.png",
+              "public/assets/maps/regions/moonwater-coast.png",
+            ]
+          : propKind === "bridge"
+            ? [
+                "public/assets/wallpapers/fountain-square.png",
+                "public/assets/maps/regions/riftwild-commons.png",
+              ]
+            : [
+                "public/assets/wallpapers/commons-plaza.png",
+                "public/assets/maps/regions/riftwild-commons.png",
+              ];
+      const scenic = firstExistingPublic([
+        ...scenicPrefs,
+        REGION_PLATES[card.regionId] || null,
+        "public/assets/wallpapers/commons-plaza.png",
+      ]);
+      // Prefer full scenic plates; fall back to silhouette vignette only if missing.
+      if (scenic?.disk) {
+        return { ...scenic, fit: "cover" };
+      }
+      return {
+        rel: `generated:prop:${propKind}`,
+        disk: null,
+        svg: propVignetteSvg(propKind, card),
+        fit: "cover",
+      };
+    }
+    if (
+      card.type === "location" ||
+      card.type === "weather" ||
+      String(card.id).includes("-l-")
+    ) {
+      const scenic = resolveRegionScenicArt(card);
+      if (scenic) return { ...scenic, fit: "cover" };
+    }
+  }
+
   const candidates = [];
   if (riftlingSlug) {
     candidates.push(
@@ -328,7 +582,7 @@ function resolveSourceArt(assetPath, riftlingSlug) {
       `/assets/pets/thumbs/${riftlingSlug}.png`,
     );
   }
-  if (assetPath) {
+  if (assetPath && !isPlaceholderBuildingArt(assetPath)) {
     const m = assetPath.match(/\/assets\/pets\/thumbs\/([a-z0-9-]+)\.(webp|png|svg)$/i);
     if (m) {
       const slug = m[1];
@@ -343,7 +597,13 @@ function resolveSourceArt(assetPath, riftlingSlug) {
   }
   for (const rel of candidates) {
     const disk = publicPathToDisk(rel);
-    if (disk && fs.existsSync(disk)) return { rel, disk };
+    if (disk && fs.existsSync(disk)) return { rel, disk, fit: "contain" };
+  }
+
+  // Location/weather with no pets: scenic fallback even if type missed above
+  if (card && (card.type === "location" || card.type === "weather")) {
+    const scenic = resolveRegionScenicArt(card);
+    if (scenic) return { ...scenic, fit: "cover" };
   }
   return null;
 }
@@ -715,10 +975,20 @@ function scenicEmblemSvg(card, role) {
 </svg>`;
 }
 
-async function compositeCard(card, sourceDisk, outPath) {
+async function compositeCard(card, source, outPath) {
   const accent = RARITY_ACCENT[card.rarity] || RARITY_ACCENT.common;
   const role = cardRole(card);
   const rng = mulberry32(hashStr(`${card.id}|layout`));
+  const sourceDisk = source?.disk || null;
+  const sourceSvg = source?.svg || null;
+  const artOverlaySvg = source?.overlaySvg || null;
+  const artFit = source?.fit === "cover" ? "cover" : "contain";
+  const isScenicSubject =
+    artFit === "cover" ||
+    card.type === "location" ||
+    card.type === "weather" ||
+    Boolean(sourceSvg) ||
+    Boolean(artOverlaySvg);
 
   // 1) Region/wallpaper plate as textured base (hashed crop)
   // 2) Procedural scenic SVG on top for clear element motifs
@@ -728,7 +998,7 @@ async function compositeCard(card, sourceDisk, outPath) {
   const layers = [];
   if (plate) {
     const plateDim = await sharp(plate)
-      .modulate({ brightness: 0.72, saturation: 0.95 })
+      .modulate({ brightness: isScenicSubject ? 0.55 : 0.72, saturation: 0.95 })
       .png()
       .toBuffer();
     layers.push({ input: plateDim, top: 0, left: 0 });
@@ -738,7 +1008,7 @@ async function compositeCard(card, sourceDisk, outPath) {
       .composite([
         {
           input: Buffer.from(
-            `<?xml version="1.0"?><svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg"><rect width="${W}" height="${H}" fill="#fff" fill-opacity="0.72"/></svg>`,
+            `<?xml version="1.0"?><svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg"><rect width="${W}" height="${H}" fill="#fff" fill-opacity="${isScenicSubject ? 0.45 : 0.72}"/></svg>`,
           ),
           blend: "dest-in",
         },
@@ -750,33 +1020,62 @@ async function compositeCard(card, sourceDisk, outPath) {
     layers.push({ input: scenic, top: 0, left: 0 });
   }
 
-  // 3) Creature / item art — or scenic emblem when source art is missing
-  if (sourceDisk) {
-    const artScale =
-      role === "companion" ? 0.92 : role === "ascendant" ? 0.88 : 0.84;
-    const artH = Math.floor(H * artScale * (0.72 + rng() * 0.08));
-    const artW = Math.floor(W * (0.88 + rng() * 0.08));
-    const artBuf = await sharp(sourceDisk)
-      .resize(artW, artH, {
-        fit: "contain",
-        position: "centre",
-        background: { r: 0, g: 0, b: 0, alpha: 0 },
-      })
-      .png()
-      .toBuffer();
+  // 3) Creature / scenic / vignette art — or emblem when source art is missing
+  let subjectInput = null;
+  if (sourceSvg) {
+    subjectInput = await sharp(Buffer.from(sourceSvg)).png().toBuffer();
+  } else if (sourceDisk) {
+    subjectInput = sourceDisk;
+  }
 
-    const artTop =
-      role === "companion"
+  if (subjectInput) {
+    const artScale = isScenicSubject
+      ? 0.98
+      : role === "companion"
+        ? 0.92
+        : role === "ascendant"
+          ? 0.88
+          : 0.84;
+    const artH = Math.floor(
+      H * artScale * (isScenicSubject ? 0.58 : 0.72 + rng() * 0.08),
+    );
+    const artW = Math.floor(W * (isScenicSubject ? 0.94 : 0.88 + rng() * 0.08));
+    const artTop = isScenicSubject
+      ? Math.floor(H * 0.08)
+      : role === "companion"
         ? Math.floor(H * 0.14)
         : role === "ascendant"
           ? Math.floor(H * 0.08)
           : Math.floor(H * 0.1);
     const artLeft = Math.floor((W - artW) / 2);
 
+    let artPipeline = sharp(subjectInput).resize(artW, artH, {
+      fit: artFit,
+      position: "centre",
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    });
+    if (isScenicSubject) {
+      // Soft rounded frame so scenic plates read as card art windows
+      const frameMask = Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${artW}" height="${artH}" xmlns="http://www.w3.org/2000/svg">
+  <rect width="${artW}" height="${artH}" rx="18" ry="18" fill="#fff"/>
+</svg>`);
+      const framed = await artPipeline.png().toBuffer();
+      artPipeline = sharp(framed).composite([
+        { input: await sharp(frameMask).png().toBuffer(), blend: "dest-in" },
+      ]);
+    }
+    const artBuf = await artPipeline.png().toBuffer();
+
     const shadow = await sharp(
       Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="${W / 2}" cy="${Math.min(H - 180, artTop + artH - 20)}" rx="${Math.floor(artW * 0.32)}" ry="28" fill="#000" opacity="0.35"/>
+  ${
+    isScenicSubject
+      ? `<rect x="${artLeft}" y="${artTop}" width="${artW}" height="${artH}" rx="18" fill="none" stroke="${accent}" stroke-width="2" opacity="0.45"/>`
+      : ""
+  }
 </svg>`),
     )
       .png()
@@ -784,6 +1083,30 @@ async function compositeCard(card, sourceDisk, outPath) {
 
     layers.push({ input: shadow, top: 0, left: 0 });
     layers.push({ input: artBuf, top: artTop, left: artLeft });
+
+    if (artOverlaySvg) {
+      const overlayBuf = await sharp(Buffer.from(artOverlaySvg))
+        .resize(artW, artH, { fit: "cover", position: "centre" })
+        .png()
+        .toBuffer();
+      const overlayMasked = await sharp(overlayBuf)
+        .composite([
+          {
+            input: await sharp(
+              Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${artW}" height="${artH}" xmlns="http://www.w3.org/2000/svg">
+  <rect width="${artW}" height="${artH}" rx="18" ry="18" fill="#fff"/>
+</svg>`),
+            )
+              .png()
+              .toBuffer(),
+            blend: "dest-in",
+          },
+        ])
+        .png()
+        .toBuffer();
+      layers.push({ input: overlayMasked, top: artTop, left: artLeft });
+    }
   } else {
     const emblem = await sharp(Buffer.from(scenicEmblemSvg(card, role))).png().toBuffer();
     layers.push({ input: emblem, top: 0, left: 0 });
@@ -875,12 +1198,22 @@ async function main() {
       return;
     }
 
-    const source = resolveSourceArt(card.art?.assetPath, card.riftlingSlug);
+    const source = resolveSourceArt(card.art?.assetPath, card.riftlingSlug, card);
     if (!source) scenicOnly++;
 
     try {
-      await compositeCard(card, source?.disk ?? null, outPath);
-      card.art = { ...(card.art || {}), cardImagePath: outRel };
+      await compositeCard(card, source, outPath);
+      const nextArt = { ...(card.art || {}), cardImagePath: outRel };
+      // Persist scenic asset paths for locations (replace crude building tiles).
+      if (
+        source?.rel &&
+        source.rel.startsWith("/assets/") &&
+        (card.type === "location" || card.type === "weather") &&
+        (isPlaceholderBuildingArt(card.art?.assetPath) || !card.art?.assetPath)
+      ) {
+        nextArt.assetPath = source.rel;
+      }
+      card.art = nextArt;
       manifest.cards[card.id] = outRel;
       generated++;
     } catch (e) {

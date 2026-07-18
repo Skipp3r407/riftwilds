@@ -48798,7 +48798,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "cardImagePath": "/assets/tcg/cards/rotr-l-riftwild-plaza.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-l-riftwild-plaza.webp",
+      "assetPath": "/assets/maps/regions/riftwild-commons.png"
     },
     "animation": {
       "idle": "anim/rotr-l-riftwild-plaza/idle",
@@ -48880,7 +48881,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "ember-crater atmosphere, soft bokeh",
-      "cardImagePath": "/assets/tcg/cards/rotr-l-ember-hearthline.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-l-ember-hearthline.webp",
+      "assetPath": "/assets/maps/regions/ember-crater.png"
     },
     "animation": {
       "idle": "anim/rotr-l-ember-hearthline/idle",
@@ -48962,7 +48964,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "moonwater-coast atmosphere, soft bokeh",
-      "cardImagePath": "/assets/tcg/cards/rotr-l-moonwater-pier.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-l-moonwater-pier.webp",
+      "assetPath": "/assets/maps/regions/moonwater-coast.png"
     },
     "animation": {
       "idle": "anim/rotr-l-moonwater-pier/idle",
@@ -49044,7 +49047,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "elderwood-forest atmosphere, soft bokeh",
-      "cardImagePath": "/assets/tcg/cards/rotr-l-elderwood-path.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-l-elderwood-path.webp",
+      "assetPath": "/assets/maps/regions/elderwood-forest.png"
     },
     "animation": {
       "idle": "anim/rotr-l-elderwood-path/idle",
@@ -49126,7 +49130,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "stormspire-peaks atmosphere, soft bokeh",
-      "cardImagePath": "/assets/tcg/cards/rotr-l-stormspire-landing.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-l-stormspire-landing.webp",
+      "assetPath": "/assets/maps/regions/stormspire-peaks.png"
     },
     "animation": {
       "idle": "anim/rotr-l-stormspire-landing/idle",
@@ -49208,7 +49213,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "stoneheart-canyon atmosphere, soft bokeh",
-      "cardImagePath": "/assets/tcg/cards/rotr-l-stoneheart-gate.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-l-stoneheart-gate.webp",
+      "assetPath": "/assets/maps/regions/stoneheart-canyon.png"
     },
     "animation": {
       "idle": "anim/rotr-l-stoneheart-gate/idle",
@@ -49290,7 +49296,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "radiant-citadel atmosphere, soft bokeh",
-      "cardImagePath": "/assets/tcg/cards/rotr-l-citadel-choir.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-l-citadel-choir.webp",
+      "assetPath": "/assets/maps/regions/radiant-citadel.png"
     },
     "animation": {
       "idle": "anim/rotr-l-citadel-choir/idle",
@@ -49372,7 +49379,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "void-hollow atmosphere, soft bokeh",
-      "cardImagePath": "/assets/tcg/cards/rotr-l-void-threshold.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-l-void-threshold.webp",
+      "assetPath": "/assets/maps/regions/void-hollow.png"
     },
     "animation": {
       "idle": "anim/rotr-l-void-threshold/idle",
@@ -49453,7 +49461,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "alloy-ruins atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-timber-side.webp",
+      "assetPath": "/assets/maps/regions/alloy-ruins.png",
       "libraryAssetId": "wall-timber-side",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-alloy-ruins.webp"
     },
@@ -49537,7 +49545,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "celestial-rift atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-timber-corner.webp",
+      "assetPath": "/assets/maps/regions/celestial-rift.png",
       "libraryAssetId": "wall-timber-corner",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-celestial-rift.webp"
     },
@@ -49621,7 +49629,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-mixed-corner.webp",
+      "assetPath": "/assets/maps/regions/riftwild-commons.png",
       "libraryAssetId": "wall-mixed-corner",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-riftwild-commons.webp"
     },
@@ -49705,7 +49713,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "elderwood-forest atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-timber-side.webp",
+      "assetPath": "/assets/maps/regions/elderwood-forest.png",
       "libraryAssetId": "wall-timber-side",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-elderwood-forest.webp"
     },
@@ -49789,7 +49797,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "ember-crater atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-mixed-damaged.webp",
+      "assetPath": "/assets/maps/regions/ember-crater.png",
       "libraryAssetId": "wall-mixed-damaged",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-ember-crater.webp"
     },
@@ -49873,7 +49881,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "frostveil-basin atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-mixed-corner.webp",
+      "assetPath": "/assets/maps/regions/frostveil-basin.png",
       "libraryAssetId": "wall-mixed-corner",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-frostveil-basin.webp"
     },
@@ -49957,7 +49965,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "moonwater-coast atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-timber-side.webp",
+      "assetPath": "/assets/maps/regions/moonwater-coast.png",
       "libraryAssetId": "wall-timber-side",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-moonwater-coast.webp"
     },
@@ -50041,7 +50049,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "radiant-citadel atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-adobe-corner.webp",
+      "assetPath": "/assets/maps/regions/radiant-citadel.png",
       "libraryAssetId": "wall-adobe-corner",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-radiant-citadel.webp"
     },
@@ -50125,7 +50133,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "spirit-marsh atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-timber-side.webp",
+      "assetPath": "/assets/maps/regions/spirit-marsh.png",
       "libraryAssetId": "wall-timber-side",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-spirit-marsh.webp"
     },
@@ -50209,7 +50217,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "spirit-realm atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-timber-side.webp",
+      "assetPath": "/assets/wallpapers/cosmic-aurora.png",
       "libraryAssetId": "wall-timber-side",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-spirit-realm.webp"
     },
@@ -50293,7 +50301,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "stoneheart-canyon atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-rift-inlaid-front.webp",
+      "assetPath": "/assets/maps/regions/stoneheart-canyon.png",
       "libraryAssetId": "wall-rift-inlaid-front",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-stoneheart-canyon.webp"
     },
@@ -50377,7 +50385,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "stormspire-peaks atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-timber-side.webp",
+      "assetPath": "/assets/maps/regions/stormspire-peaks.png",
       "libraryAssetId": "wall-timber-side",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-stormspire-peaks.webp"
     },
@@ -50461,7 +50469,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "void-hollow atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/wall-mixed-front.webp",
+      "assetPath": "/assets/maps/regions/void-hollow.png",
       "libraryAssetId": "wall-mixed-front",
       "cardImagePath": "/assets/tcg/cards/rotr-l-region-void-hollow.webp"
     },
@@ -50525,9 +50533,9 @@
     "localization": {
       "name": "Produce Market Stall",
       "typeLine": "uncommon location — neutral",
-      "rulesText": "Place: Produce Market Stall — allied units gain a minor board bonus.",
-      "flavorText": "Living World stalls remembered as a card.",
-      "loreBlurb": ""
+      "rulesText": "Place: Produce Market Stall — allied units gain a minor board bonus shaped by this stall's trade.",
+      "flavorText": "Orchard crates and dewleaf bunches under a sun-warm awning.",
+      "loreBlurb": "Commons produce stall — first stop for cooks and hungry Riftlings."
     },
     "art": {
       "promptId": "art-produce-market-stall",
@@ -50545,7 +50553,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/stall-produce.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "stall-produce",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-stall-produce.webp"
     },
@@ -50608,9 +50616,9 @@
     "localization": {
       "name": "Fish Market Stall",
       "typeLine": "uncommon location — neutral",
-      "rulesText": "Place: Fish Market Stall — allied units gain a minor board bonus.",
-      "flavorText": "Living World stalls remembered as a card.",
-      "loreBlurb": ""
+      "rulesText": "Place: Fish Market Stall — allied units gain a minor board bonus shaped by this stall's trade.",
+      "flavorText": "Salt-bright boards where the tide's catch is called by name before noon.",
+      "loreBlurb": "Harbor-side fish stall — silvers, kelp wraps, and smoked reef strips."
     },
     "art": {
       "promptId": "art-fish-market-stall",
@@ -50628,7 +50636,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/stall-fish.webp",
+      "assetPath": "/assets/wallpapers/moonwater-harbor.png",
       "libraryAssetId": "stall-fish",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-stall-fish.webp"
     },
@@ -50691,9 +50699,9 @@
     "localization": {
       "name": "Cloth Market Stall",
       "typeLine": "uncommon location — neutral",
-      "rulesText": "Place: Cloth Market Stall — allied units gain a minor board bonus.",
-      "flavorText": "Living World stalls remembered as a card.",
-      "loreBlurb": ""
+      "rulesText": "Place: Cloth Market Stall — allied units gain a minor board bonus shaped by this stall's trade.",
+      "flavorText": "Bolts of wind-silk and canyon wool spill like soft parade banners.",
+      "loreBlurb": "Dye-rich cloth stall between the fountain and the tailor's alley."
     },
     "art": {
       "promptId": "art-cloth-market-stall",
@@ -50711,7 +50719,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/stall-cloth.webp",
+      "assetPath": "/assets/wallpapers/festival-lanterns.png",
       "libraryAssetId": "stall-cloth",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-stall-cloth.webp"
     },
@@ -50774,9 +50782,9 @@
     "localization": {
       "name": "Tools Market Stall",
       "typeLine": "uncommon location — neutral",
-      "rulesText": "Place: Tools Market Stall — allied units gain a minor board bonus.",
-      "flavorText": "Living World stalls remembered as a card.",
-      "loreBlurb": ""
+      "rulesText": "Place: Tools Market Stall — allied units gain a minor board bonus shaped by this stall's trade.",
+      "flavorText": "Pegboard steel — hammers, chisels, and coil-spanners smelling of oil.",
+      "loreBlurb": "Tools stall near the smithy where apprentices buy their first wrench."
     },
     "art": {
       "promptId": "art-tools-market-stall",
@@ -50794,7 +50802,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/stall-tools.webp",
+      "assetPath": "/assets/wallpapers/lantern-street.png",
       "libraryAssetId": "stall-tools",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-stall-tools.webp"
     },
@@ -50857,9 +50865,9 @@
     "localization": {
       "name": "Potions Market Stall",
       "typeLine": "uncommon location — neutral",
-      "rulesText": "Place: Potions Market Stall — allied units gain a minor board bonus.",
-      "flavorText": "Living World stalls remembered as a card.",
-      "loreBlurb": ""
+      "rulesText": "Place: Potions Market Stall — allied units gain a minor board bonus shaped by this stall's trade.",
+      "flavorText": "Glass stoppers wink under a violet awning; labels slightly smudged.",
+      "loreBlurb": "Potion stall kept clear of the bakery — heat and oils make poor neighbors."
     },
     "art": {
       "promptId": "art-potions-market-stall",
@@ -50877,7 +50885,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/stall-potions.webp",
+      "assetPath": "/assets/wallpapers/circus-night.png",
       "libraryAssetId": "stall-potions",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-stall-potions.webp"
     },
@@ -50940,9 +50948,9 @@
     "localization": {
       "name": "Pets Market Stall",
       "typeLine": "uncommon location — neutral",
-      "rulesText": "Place: Pets Market Stall — allied units gain a minor board bonus.",
-      "flavorText": "Living World stalls remembered as a card.",
-      "loreBlurb": ""
+      "rulesText": "Place: Pets Market Stall — allied units gain a minor board bonus shaped by this stall's trade.",
+      "flavorText": "Cushion nests and brass bells — collars, treats, and gentle gear.",
+      "loreBlurb": "Pet-goods stall beside the hatchery notice board."
     },
     "art": {
       "promptId": "art-pets-market-stall",
@@ -50960,7 +50968,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/stall-pets.webp",
+      "assetPath": "/assets/wallpapers/riftling-meadow.png",
       "libraryAssetId": "stall-pets",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-stall-pets.webp"
     },
@@ -51023,9 +51031,9 @@
     "localization": {
       "name": "Books Market Stall",
       "typeLine": "uncommon location — neutral",
-      "rulesText": "Place: Books Market Stall — allied units gain a minor board bonus.",
-      "flavorText": "Living World stalls remembered as a card.",
-      "loreBlurb": ""
+      "rulesText": "Place: Books Market Stall — allied units gain a minor board bonus shaped by this stall's trade.",
+      "flavorText": "Field guides and scrap maps lean in a tower that somehow never falls.",
+      "loreBlurb": "Book stall in the academy overhang shade."
     },
     "art": {
       "promptId": "art-books-market-stall",
@@ -51043,7 +51051,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/stall-books.webp",
+      "assetPath": "/assets/wallpapers/keeper-academy.png",
       "libraryAssetId": "stall-books",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-stall-books.webp"
     },
@@ -51106,9 +51114,9 @@
     "localization": {
       "name": "Bakery Market Stall",
       "typeLine": "uncommon location — neutral",
-      "rulesText": "Place: Bakery Market Stall — allied units gain a minor board bonus.",
-      "flavorText": "Living World stalls remembered as a card.",
-      "loreBlurb": ""
+      "rulesText": "Place: Bakery Market Stall — allied units gain a minor board bonus shaped by this stall's trade.",
+      "flavorText": "Warm sugar and hearth smoke from a stall that never quite closes.",
+      "loreBlurb": "Bakery corner where dawn queues form before the plaza wakes."
     },
     "art": {
       "promptId": "art-bakery-market-stall",
@@ -51126,7 +51134,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/stall-bakery.webp",
+      "assetPath": "/assets/wallpapers/homestead-dusk.png",
       "libraryAssetId": "stall-bakery",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-stall-bakery.webp"
     },
@@ -51209,7 +51217,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/gate-timber.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "gate-timber",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-gate-timber.webp"
     },
@@ -51292,7 +51300,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/gate-stone-arch.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "gate-stone-arch",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-gate-stone-arch.webp"
     },
@@ -51375,7 +51383,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/gate-iron.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "gate-iron",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-gate-iron.webp"
     },
@@ -51458,7 +51466,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/gate-portcullis-stub.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "gate-portcullis-stub",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-gate-portcullis-stub.webp"
     },
@@ -51541,7 +51549,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/gate-garden.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "gate-garden",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-gate-garden.webp"
     },
@@ -51624,7 +51632,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/gate-market.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "gate-market",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-gate-market.webp"
     },
@@ -51707,7 +51715,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/gate-plaza.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "gate-plaza",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-gate-plaza.webp"
     },
@@ -51790,7 +51798,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/gate-rift-seal.webp",
+      "assetPath": "/assets/wallpapers/commons-plaza.png",
       "libraryAssetId": "gate-rift-seal",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-gate-rift-seal.webp"
     },
@@ -51873,7 +51881,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/bridge-wood-short.webp",
+      "assetPath": "/assets/wallpapers/fountain-square.png",
       "libraryAssetId": "bridge-wood-short",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-bridge-wood-short.webp"
     },
@@ -51956,7 +51964,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/bridge-wood-long.webp",
+      "assetPath": "/assets/wallpapers/fountain-square.png",
       "libraryAssetId": "bridge-wood-long",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-bridge-wood-long.webp"
     },
@@ -52039,7 +52047,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/bridge-stone-arch.webp",
+      "assetPath": "/assets/wallpapers/fountain-square.png",
       "libraryAssetId": "bridge-stone-arch",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-bridge-stone-arch.webp"
     },
@@ -52122,7 +52130,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/bridge-rope.webp",
+      "assetPath": "/assets/wallpapers/fountain-square.png",
       "libraryAssetId": "bridge-rope",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-bridge-rope.webp"
     },
@@ -52205,7 +52213,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/bridge-dock-plank.webp",
+      "assetPath": "/assets/wallpapers/fountain-square.png",
       "libraryAssetId": "bridge-dock-plank",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-bridge-dock-plank.webp"
     },
@@ -52288,7 +52296,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/bridge-ruin.webp",
+      "assetPath": "/assets/wallpapers/fountain-square.png",
       "libraryAssetId": "bridge-ruin",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-bridge-ruin.webp"
     },
@@ -52371,7 +52379,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/bridge-rift-span.webp",
+      "assetPath": "/assets/wallpapers/fountain-square.png",
       "libraryAssetId": "bridge-rift-span",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-bridge-rift-span.webp"
     },
@@ -52454,7 +52462,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/bridge-covered.webp",
+      "assetPath": "/assets/wallpapers/fountain-square.png",
       "libraryAssetId": "bridge-covered",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-bridge-covered.webp"
     },
@@ -52537,7 +52545,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/dock-plank.webp",
+      "assetPath": "/assets/wallpapers/moonwater-harbor.png",
       "libraryAssetId": "dock-plank",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-dock-plank.webp"
     },
@@ -52620,7 +52628,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/dock-pile.webp",
+      "assetPath": "/assets/wallpapers/moonwater-harbor.png",
       "libraryAssetId": "dock-pile",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-dock-pile.webp"
     },
@@ -52703,7 +52711,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/dock-crate-edge.webp",
+      "assetPath": "/assets/wallpapers/moonwater-harbor.png",
       "libraryAssetId": "dock-crate-edge",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-dock-crate-edge.webp"
     },
@@ -52786,7 +52794,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/dock-ladder.webp",
+      "assetPath": "/assets/wallpapers/moonwater-harbor.png",
       "libraryAssetId": "dock-ladder",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-dock-ladder.webp"
     },
@@ -52869,7 +52877,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/dock-bollard.webp",
+      "assetPath": "/assets/wallpapers/moonwater-harbor.png",
       "libraryAssetId": "dock-bollard",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-dock-bollard.webp"
     },
@@ -52952,7 +52960,7 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "riftwild-commons atmosphere, soft bokeh",
-      "assetPath": "/assets/game/library/buildings/dock-net-rack.webp",
+      "assetPath": "/assets/wallpapers/moonwater-harbor.png",
       "libraryAssetId": "dock-net-rack",
       "cardImagePath": "/assets/tcg/cards/rotr-prop-dock-net-rack.webp"
     },
@@ -59235,7 +59243,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "rift-lit fantasy haze",
-      "cardImagePath": "/assets/tcg/cards/rotr-x-ashfall-sky.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-x-ashfall-sky.webp",
+      "assetPath": "/assets/maps/regions/ember-crater.png"
     },
     "animation": {
       "idle": "anim/rotr-x-ashfall-sky/idle",
@@ -59314,7 +59323,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "rift-lit fantasy haze",
-      "cardImagePath": "/assets/tcg/cards/rotr-x-harbor-squall.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-x-harbor-squall.webp",
+      "assetPath": "/assets/maps/regions/moonwater-coast.png"
     },
     "animation": {
       "idle": "anim/rotr-x-harbor-squall/idle",
@@ -59393,7 +59403,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "rift-lit fantasy haze",
-      "cardImagePath": "/assets/tcg/cards/rotr-x-canopy-drip.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-x-canopy-drip.webp",
+      "assetPath": "/assets/maps/regions/elderwood-forest.png"
     },
     "animation": {
       "idle": "anim/rotr-x-canopy-drip/idle",
@@ -59472,7 +59483,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "rift-lit fantasy haze",
-      "cardImagePath": "/assets/tcg/cards/rotr-x-dust-devil.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-x-dust-devil.webp",
+      "assetPath": "/assets/maps/regions/stoneheart-canyon.png"
     },
     "animation": {
       "idle": "anim/rotr-x-dust-devil/idle",
@@ -59551,7 +59563,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "rift-lit fantasy haze",
-      "cardImagePath": "/assets/tcg/cards/rotr-x-static-veil.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-x-static-veil.webp",
+      "assetPath": "/assets/maps/regions/stormspire-peaks.png"
     },
     "animation": {
       "idle": "anim/rotr-x-static-veil/idle",
@@ -59630,7 +59643,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "rift-lit fantasy haze",
-      "cardImagePath": "/assets/tcg/cards/rotr-x-prism-noon.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-x-prism-noon.webp",
+      "assetPath": "/assets/maps/regions/frostveil-basin.png"
     },
     "animation": {
       "idle": "anim/rotr-x-prism-noon/idle",
@@ -59709,7 +59723,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "rift-lit fantasy haze",
-      "cardImagePath": "/assets/tcg/cards/rotr-x-false-dusk.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-x-false-dusk.webp",
+      "assetPath": "/assets/maps/regions/void-hollow.png"
     },
     "animation": {
       "idle": "anim/rotr-x-false-dusk/idle",
@@ -59788,7 +59803,8 @@
       "mood": "adventurous wonder",
       "pose": "iconic still-life of power",
       "background": "rift-lit fantasy haze",
-      "cardImagePath": "/assets/tcg/cards/rotr-x-choir-dawn.webp"
+      "cardImagePath": "/assets/tcg/cards/rotr-x-choir-dawn.webp",
+      "assetPath": "/assets/maps/regions/radiant-citadel.png"
     },
     "animation": {
       "idle": "anim/rotr-x-choir-dawn/idle",

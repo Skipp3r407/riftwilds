@@ -59,7 +59,10 @@ export const REGION_CONTENT_PACKS: RegionContentPack[] = [
 ];
 
 export function contentPackForRegion(regionId: string): RegionContentPack | undefined {
-  return REGION_CONTENT_PACKS.find((p) => p.regionId === regionId);
+  return (
+    REGION_CONTENT_PACKS.find((p) => p.regionId === regionId) ??
+    INSTANCE_CONTENT_PACKS.find((p) => p.regionId === regionId)
+  );
 }
 
 export function assertRegionPackCoverage(regionIds: string[]): {

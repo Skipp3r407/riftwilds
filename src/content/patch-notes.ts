@@ -36,6 +36,44 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-riftling-avatar-unlocks",
+    date: "2026-07-18",
+    title: "More Riftling avatars with unlock paths",
+    summary:
+      "Social avatar picker now offers the full launch Riftling roster as cosmetics — free starters, task unlocks, Credits buys, and optional SOL (coming soon).",
+    added: [
+      "100 launch Riftling species portraits in the Avatar & safety picker (was 12 starters)",
+      "Unlock paths: free starters, hatchery ownership, quest/achievement tasks, Credits purchase",
+      "Optional SOL price shown as coming soon while SOL purchases stay disabled",
+    ],
+    changed: [
+      "Locked avatars show task progress and Buy with Credits; Show all expands the large grid",
+      "Clear cosmetics-only copy — avatars never grant pets or gameplay power",
+    ],
+    knownIssues: [
+      "SOL avatar checkout remains off (SOL_PURCHASES_ENABLED=false) by design",
+    ],
+  },
+  {
+    id: "2026-07-18-tcg-location-place-bios",
+    date: "2026-07-18",
+    title: "TCG location faces and place bios finished",
+    summary:
+      "Region aura and market-stall cards no longer show crude building-tile placeholders; inspect opens illustrated region and place lore beside creature bios.",
+    added: [
+      "Region bio sections on location aura cards (overview, climate, landmarks, gateway) from region content packs",
+      "Place lore sections on market stalls, gates, bridges, and docks with scenic images",
+    ],
+    changed: [
+      "Location and prop card faces regenerate from region maps / trade wallpapers instead of library wall and stall tiles",
+      "Market stall flavor and rules text are unique per trade",
+    ],
+    fixed: [
+      "Spirit Realm, Stoneheart Canyon, Stormspire Peaks, Void Hollow, and other region auras showed brown/gray rectangle art in the binder",
+      "Market stall cards all shared the same crude house icon",
+    ],
+  },
+  {
     id: "2026-07-18-ambience-playlist-cutoff",
     date: "2026-07-18",
     title: "Ambience playlist no longer cuts out early",

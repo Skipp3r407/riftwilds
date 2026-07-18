@@ -67,28 +67,29 @@ function BioSectionImage({ section }: { section: TcgBioSection }) {
   );
 }
 
-function CreatureBioPanel({
+function IllustratedBioPanel({
   bio,
 }: {
-  bio: NonNullable<TcgCardDetailView["creatureBio"]>;
+  bio: NonNullable<TcgCardDetailView["illustratedBio"]>;
 }) {
+  const eyebrow =
+    bio.kind === "creature"
+      ? "Creature bio"
+      : bio.kind === "region"
+        ? "Region bio"
+        : "Place lore";
+
   return (
     <section className="rounded-xl border border-amber-300/20 bg-amber-400/5 p-3">
       <p className="text-[10px] uppercase tracking-[0.2em] text-amber-200/80">
-        Creature bio
+        {eyebrow}
       </p>
       <h3 className="mt-1 font-[family-name:var(--font-display)] text-lg text-amber-50">
-        {bio.name}
-        {bio.title ? (
-          <span className="text-sm font-normal text-amber-100/70">
-            {" "}
-            · {bio.title}
-          </span>
-        ) : null}
+        {bio.title}
       </h3>
-      <p className="mt-1 text-xs text-white/50">
-        {bio.nativeRegion} · {bio.affinity}
-      </p>
+      {bio.subtitle ? (
+        <p className="mt-1 text-xs text-white/50">{bio.subtitle}</p>
+      ) : null}
 
       <div className="mt-3 max-h-[min(52vh,28rem)] space-y-3 overflow-y-auto pr-0.5">
         {bio.sections.map((section) => (
@@ -283,7 +284,7 @@ export function TcgCardDetailModal({ defId, open, onClose, battlePlay }: Props) 
                 </div>
               ) : null}
 
-              {detail.loreBlurb && !detail.creatureBio ? (
+              {detail.loreBlurb && !detail.illustratedBio ? (
                 <div>
                   <p className="mb-1 text-[10px] uppercase tracking-wider text-white/45">
                     Notes
@@ -292,8 +293,8 @@ export function TcgCardDetailModal({ defId, open, onClose, battlePlay }: Props) 
                 </div>
               ) : null}
 
-              {detail.creatureBio ? (
-                <CreatureBioPanel bio={detail.creatureBio} />
+              {detail.illustratedBio ? (
+                <IllustratedBioPanel bio={detail.illustratedBio} />
               ) : null}
 
               {battlePlay ? (
