@@ -134,6 +134,10 @@ export function LiveWorldShell({ playable }: Props) {
     [updateSettings, reveal],
   );
 
+  const revealHudMessage = useCallback(() => {
+    reveal("message");
+  }, [reveal]);
+
   const fullscreen = useLiveWorldFullscreen({
     targetRef: hostRef,
     preference: settings.windowModePreference,
@@ -376,7 +380,14 @@ export function LiveWorldShell({ playable }: Props) {
       bridge.status.subscribe(setStatus),
       bridge.dialogue.subscribe((d) => {
         setDialogue(d);
-        if (d) reveal("quest");
+        if (d) {
+          // Dialogue freezes scene movement — never leave chat input stealing keys.
+          getInputManager().setTypingFocused(false);
+          if (document.activeElement instanceof HTMLElement) {
+            document.activeElement.blur();
+          }
+          reveal("quest");
+        }
       }),
       bridge.interactPrompt.subscribe(setPrompt),
       bridge.navigateRequest.subscribe((path) => {
@@ -707,7 +718,7 @@ export function LiveWorldShell({ playable }: Props) {
                     <LiveWorldChatPanel
                       bridge={bridge}
                       chatMode={settings.chatMode}
-                      onRevealHud={() => reveal("message")}
+                      onRevealHud={revealHudMessage}
                       stacked
                       panelLayout={settings.hudPanelLayout}
                       onPanelPositionChange={(pos) => setPanelPosition("chat", pos)}
@@ -841,7 +852,7 @@ export function LiveWorldShell({ playable }: Props) {
                     <LiveWorldChatPanel
                       bridge={bridge}
                       chatMode={settings.chatMode}
-                      onRevealHud={() => reveal("message")}
+                      onRevealHud={revealHudMessage}
                       panelLayout={settings.hudPanelLayout}
                       onPanelPositionChange={(pos) => setPanelPosition("chat", pos)}
                     />

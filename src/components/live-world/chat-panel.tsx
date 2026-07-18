@@ -45,6 +45,9 @@ export function LiveWorldChatPanel({
   const [rev, setRev] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const [floatExpanded, setFloatExpanded] = useState(false);
+  const onRevealHudRef = useRef(onRevealHud);
+  onRevealHudRef.current = onRevealHud;
+  const lastChatRevRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (chatMode === "collapsed") setOpen(false);
@@ -54,37 +57,42 @@ export function LiveWorldChatPanel({
   useEffect(() => {
     const unsubBridge = bridge.chatRevision.subscribe((r) => {
       setRev(r);
-      onRevealHud?.();
+      // Skip the immediate sync from createChannel.subscribe — only toast on new messages.
+      if (lastChatRevRef.current === null) {
+        lastChatRevRef.current = r;
+        return;
+      }
+      if (r === lastChatRevRef.current) return;
+      lastChatRevRef.current = r;
+      onRevealHudRef.current?.();
       if (chatMode === "auto-hide") {
         setOpen(true);
       }
     });
     const unsubInput = getInputManager().subscribe(() => {
-      const panel = getInputManager().getActivePanel();
-      if (panel === "chat") {
-        setOpen((was) => {
-          if (!was) playSfx("ui.chat_open");
-          return true;
-        });
-        onRevealHud?.();
-        queueMicrotask(() => inputRef.current?.focus());
-      }
+      const input = getInputManager();
+      // Only react to the openChat edge — not every emit while panel stays "chat".
+      if (!input.wasJustPressed("openChat")) return;
+      setOpen((was) => {
+        if (!was) playSfx("ui.chat_open");
+        return true;
+      });
+      onRevealHudRef.current?.();
+      input.setActivePanel("chat");
+      queueMicrotask(() => inputRef.current?.focus());
     });
     return () => {
       unsubBridge();
       unsubInput();
     };
-  }, [bridge, chatMode, onRevealHud]);
+  }, [bridge, chatMode]);
 
+  // Visible chat must NOT mark typing-focused — that zeroes WASD. Only the
+  // actual <input> focus (below) blocks movement while composing a message.
   useEffect(() => {
-    const input = getInputManager();
     if (!open) {
-      input.setTypingFocused(false);
-      return;
+      getInputManager().setTypingFocused(false);
     }
-    input.setTypingFocused(true);
-    input.setActivePanel("chat");
-    return () => input.setTypingFocused(false);
   }, [open]);
 
   if (!featureFlagDefaults.LIVE_WORLD_CHAT_ENABLED) return null;

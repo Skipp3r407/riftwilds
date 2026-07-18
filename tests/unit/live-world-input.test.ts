@@ -89,4 +89,31 @@ describe("LiveWorldInputManager", () => {
     mgr.setActivePanel("map");
     expect(mgr.getMovementDesire().up).toBe(false);
   });
+
+  it("allows movement with chat panel open when not typing in the input", () => {
+    const mgr = new LiveWorldInputManager(defaultKeybinds());
+    mgr.setActivePanel("chat");
+    mgr.setTypingFocused(false);
+    // Chat panel is not a modal — movement desire is not zeroed by panel alone.
+    expect(mgr.isModalOpen()).toBe(false);
+    expect(mgr.getMovementDesire()).toEqual({
+      up: false,
+      down: false,
+      left: false,
+      right: false,
+      run: false,
+    });
+  });
+
+  it("does not re-emit when setActivePanel is a no-op", () => {
+    const mgr = new LiveWorldInputManager(defaultKeybinds());
+    let n = 0;
+    mgr.subscribe(() => {
+      n += 1;
+    });
+    mgr.setActivePanel("chat");
+    const afterFirst = n;
+    mgr.setActivePanel("chat");
+    expect(n).toBe(afterFirst);
+  });
 });

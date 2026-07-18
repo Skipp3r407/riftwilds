@@ -106,6 +106,7 @@ export class LiveWorldInputManager {
   }
 
   setTypingFocused(focused: boolean): void {
+    if (this.typingFocused === focused) return;
     this.typingFocused = focused;
     if (focused) this.held.clear();
     this.emit();
@@ -116,6 +117,7 @@ export class LiveWorldInputManager {
   }
 
   setModalOpen(open: boolean): void {
+    if (this.modalOpen === open) return;
     this.modalOpen = open;
     if (open) this.held.clear();
     this.emit();
@@ -130,6 +132,10 @@ export class LiveWorldInputManager {
   }
 
   setActivePanel(panel: UiPanelId): void {
+    if (this.activePanel === panel) {
+      this.modalOpen = panel !== null && panel !== "chat";
+      return;
+    }
     this.activePanel = panel;
     this.modalOpen = panel !== null && panel !== "chat";
     this.emit();

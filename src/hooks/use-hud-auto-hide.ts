@@ -22,7 +22,19 @@ export function useHudAutoHide(settings: ImmersiveSettings) {
 
   useEffect(() => {
     const id = window.setInterval(() => {
-      setState((prev) => tickHudVisibility(prev, settingsRef.current));
+      setState((prev) => {
+        const next = tickHudVisibility(prev, settingsRef.current);
+        // Bail out when idle tick is a no-op — avoids re-render storms.
+        if (
+          next.visible === prev.visible &&
+          next.opacity === prev.opacity &&
+          next.lastRevealAt === prev.lastRevealAt &&
+          next.lastReason === prev.lastReason
+        ) {
+          return prev;
+        }
+        return next;
+      });
     }, 200);
     return () => window.clearInterval(id);
   }, []);
