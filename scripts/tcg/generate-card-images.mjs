@@ -1,7 +1,9 @@
 /**
- * Composite Riftwilds TCG card faces from existing creature/item art.
+ * Composite Riftwilds TCG full-art card faces from existing creature/item art.
  *
  * Local only (sharp) — no Grok/XAI.
+ * Layout: full-bleed source art + translucent overlays (name, RE cost, type line,
+ * rules, ATK/HP). Original Riftwilds navy/cyan/amber styling — not third-party TCG IP.
  *
  * Usage:
  *   npm run tcg:generate:card-images
@@ -23,13 +25,13 @@ const CARDS_PATH = path.join(ROOT, "src/content/tcg/data/cards.json");
 const OUT_DIR = path.join(ROOT, "public/assets/tcg/cards");
 const MANIFEST_PATH = path.join(ROOT, "src/content/tcg/data/cardImages.json");
 
-const W = 480;
-const H = 672;
-const ART = { x: 36, y: 72, w: 408, h: 320 };
+/** Portrait card ratio ~2.5×3.5 */
+const W = 500;
+const H = 700;
 const CONCURRENCY = 6;
 
 const RARITY_ACCENT = {
-  common: "#8b5a3c",
+  common: "#a07850",
   uncommon: "#3de7ff",
   rare: "#3de7ff",
   epic: "#ffb84d",
@@ -44,22 +46,22 @@ const RARITY_ACCENT = {
   collector: "#ffb84d",
 };
 
-const ELEMENT_BG = {
-  fire: ["#2a1210", "#4a2218"],
-  water: ["#0c1a2a", "#16344a"],
-  nature: ["#0e1c12", "#1a3420"],
-  earth: ["#1a1610", "#32281c"],
-  storm: ["#101828", "#1c2840"],
-  crystal: ["#141828", "#243048"],
-  shadow: ["#100818", "#241028"],
-  light: ["#1c1810", "#3a3020"],
-  spirit: ["#121820", "#243038"],
-  arcane: ["#181028", "#2c1840"],
-  poison: ["#101810", "#223018"],
-  metal: ["#141618", "#2a3034"],
-  celestial: ["#101428", "#1c2448"],
-  void: ["#0a0814", "#1a1028"],
-  neutral: ["#12161c", "#222830"],
+const ELEMENT_WASH = {
+  fire: "#3a1810",
+  water: "#0c2440",
+  nature: "#102818",
+  earth: "#241c10",
+  storm: "#141e38",
+  crystal: "#182438",
+  shadow: "#180c24",
+  light: "#2a2414",
+  spirit: "#142028",
+  arcane: "#1c1030",
+  poison: "#142018",
+  metal: "#1a2024",
+  celestial: "#101830",
+  void: "#0c0818",
+  neutral: "#121820",
 };
 
 const ELEMENT_LABEL = {
@@ -169,16 +171,30 @@ function resolveSourceArt(assetPath, riftlingSlug) {
 }
 
 function typeLabel(type) {
-  if (type === "creature" || type === "companion" || type === "legendary" || type === "token" || type === "hero") {
+  if (
+    type === "creature" ||
+    type === "companion" ||
+    type === "legendary" ||
+    type === "token" ||
+    type === "hero"
+  ) {
     return "UNIT";
   }
   if (type === "weather" || type === "location") return "AURA";
   return "SPELL";
 }
 
-function frameSvg(card, accent) {
+/**
+ * Semi-transparent HUD over full-bleed art (Riftwilds navy/cyan/amber).
+ * Art shows through every panel — no opaque frames.
+ */
+function overlaySvg(card, accent) {
   const name = escapeXml(card.localization?.name || card.id);
-  const rules = wrapText(card.localization?.rulesText || card.localization?.flavorText || "", 34, 4);
+  const rules = wrapText(
+    card.localization?.rulesText || card.localization?.flavorText || "",
+    36,
+    4,
+  );
   const type = typeLabel(card.type);
   const element = ELEMENT_LABEL[card.element] || String(card.element || "").toUpperCase();
   const rarity = String(card.rarity || "common").toUpperCase();
@@ -186,135 +202,143 @@ function frameSvg(card, accent) {
   const atk = card.attack == null ? "—" : String(card.attack);
   const hp = card.health == null ? "—" : String(card.health);
   const showCombat = card.attack != null || card.health != null;
-  const [c0, c1] = ELEMENT_BG[card.element] || ELEMENT_BG.neutral;
-  const rulesY = 470;
+  const power = String(card.attack ?? card.energyCost ?? 1);
+
+  const typeY = 430;
+  const rulesTop = 462;
+  const rulesH = 148;
   const ruleLines = rules
     .map(
       (line, i) =>
-        `<text x="48" y="${rulesY + i * 22}" fill="#e8e0d4" font-family="Georgia, 'Times New Roman', serif" font-size="15">${escapeXml(line)}</text>`,
+        `<text x="28" y="${rulesTop + 28 + i * 22}" fill="#f4efe6" font-family="Georgia, 'Times New Roman', serif" font-size="15">${escapeXml(line)}</text>`,
     )
     .join("\n");
 
-  // Frame chrome only — art window stays transparent so creature art shows through.
-  const ax = ART.x;
-  const ay = ART.y;
-  const aw = ART.w;
-  const ah = ART.h;
+  const statsBlock = showCombat
+    ? `<g>
+        <rect x="352" y="618" width="124" height="44" rx="10" fill="#0a1220" fill-opacity="0.78" stroke="${accent}" stroke-width="1.5"/>
+        <text x="414" y="647" text-anchor="middle" fill="#f4efe6" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">${escapeXml(atk)}/${escapeXml(hp)}</text>
+      </g>`
+    : `<g>
+        <rect x="352" y="618" width="124" height="44" rx="10" fill="#0a1220" fill-opacity="0.78" stroke="${accent}" stroke-width="1.5"/>
+        <text x="414" y="636" text-anchor="middle" fill="${accent}" font-family="Georgia, 'Times New Roman', serif" font-size="10" letter-spacing="1">POWER</text>
+        <text x="414" y="654" text-anchor="middle" fill="#f4efe6" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700">${escapeXml(power)}</text>
+      </g>`;
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="plate" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1a1410" stop-opacity="0.92"/>
-      <stop offset="100%" stop-color="#0e1218" stop-opacity="0.92"/>
+    <linearGradient id="topFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#061018" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#061018" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="gem" cx="50%" cy="40%" r="60%">
+    <linearGradient id="botFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#061018" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#061018" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#061018" stop-opacity="0.78"/>
+    </linearGradient>
+    <radialGradient id="reGem" cx="50%" cy="38%" r="62%">
       <stop offset="0%" stop-color="#ffe9b0"/>
       <stop offset="55%" stop-color="#ffb84d"/>
       <stop offset="100%" stop-color="#8a5a18"/>
     </radialGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${c0}" stop-opacity="0.96"/>
-      <stop offset="100%" stop-color="${c1}" stop-opacity="0.98"/>
-    </linearGradient>
   </defs>
 
-  <!-- body panels around the art cutout (even-odd) -->
-  <path fill="url(#panel)" fill-rule="evenodd" d="
-    M 22 22
-    h ${W - 44}
-    a 16 16 0 0 1 16 16
-    v ${H - 76}
-    a 16 16 0 0 1 -16 16
-    h -${W - 44}
-    a 16 16 0 0 1 -16 -16
-    v -${H - 76}
-    a 16 16 0 0 1 16 -16
-    Z
-    M ${ax} ${ay}
-    h ${aw}
-    v ${ah}
-    h -${aw}
-    Z
-  "/>
+  <!-- readability washes (art still visible) -->
+  <rect width="${W}" height="110" fill="url(#topFade)"/>
+  <rect y="360" width="${W}" height="340" fill="url(#botFade)"/>
 
-  <rect x="10" y="10" width="${W - 20}" height="${H - 20}" rx="16" fill="none" stroke="${accent}" stroke-width="3" opacity="0.95"/>
-  <rect x="18" y="18" width="${W - 36}" height="${H - 36}" rx="12" fill="none" stroke="${accent}" stroke-width="1" opacity="0.35"/>
+  <!-- subtle rarity edge -->
+  <rect x="3" y="3" width="${W - 6}" height="${H - 6}" rx="18" fill="none" stroke="${accent}" stroke-width="2.5" opacity="0.55"/>
+  <rect x="8" y="8" width="${W - 16}" height="${H - 16}" rx="14" fill="none" stroke="#ffb84d" stroke-width="0.75" opacity="0.22"/>
 
-  <!-- art window chrome (stroke only) -->
-  <rect x="${ax - 4}" y="${ay - 4}" width="${aw + 8}" height="${ah + 8}" rx="10" fill="none" stroke="${accent}" stroke-width="2" opacity="0.95"/>
+  <!-- name (left) -->
+  <text x="22" y="42" fill="#f4efe6" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700">${name}</text>
 
-  <!-- name plate -->
-  <rect x="28" y="28" width="360" height="36" rx="8" fill="url(#plate)" stroke="${accent}" stroke-width="1.2" opacity="0.95"/>
-  <text x="40" y="52" fill="#f4efe6" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700">${name}</text>
+  <!-- Rift Energy cost (right) -->
+  <circle cx="458" cy="36" r="24" fill="url(#reGem)" stroke="#3a2810" stroke-width="2"/>
+  <circle cx="458" cy="36" r="24" fill="none" stroke="#3de7ff" stroke-width="1" opacity="0.35"/>
+  <text x="458" y="44" text-anchor="middle" fill="#1a1208" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">${cost}</text>
 
-  <!-- energy cost gem -->
-  <circle cx="430" cy="46" r="22" fill="url(#gem)" stroke="#3a2810" stroke-width="2"/>
-  <text x="430" y="53" text-anchor="middle" fill="#1a1208" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700">${cost}</text>
+  <!-- type line + rarity pip -->
+  <rect x="16" y="${typeY}" width="${W - 32}" height="28" rx="4" fill="#0a1220" fill-opacity="0.55" stroke="${accent}" stroke-width="1" stroke-opacity="0.65"/>
+  <line x1="16" y1="${typeY}" x2="${W - 16}" y2="${typeY}" stroke="#ffb84d" stroke-width="1.2" opacity="0.55"/>
+  <line x1="16" y1="${typeY + 28}" x2="${W - 16}" y2="${typeY + 28}" stroke="#ffb84d" stroke-width="1.2" opacity="0.55"/>
+  <text x="28" y="${typeY + 19}" fill="#e8f7ff" font-family="Georgia, 'Times New Roman', serif" font-size="13" letter-spacing="0.8">${escapeXml(`${type} · ${element}`)}</text>
+  <circle cx="${W - 34}" cy="${typeY + 14}" r="7" fill="${accent}" stroke="#0a1220" stroke-width="1.5"/>
+  <title>${escapeXml(rarity)}</title>
+  <text x="${W - 34}" y="${typeY + 18}" text-anchor="middle" fill="#0a1220" font-family="Georgia, 'Times New Roman', serif" font-size="8" font-weight="700">${escapeXml(rarity.slice(0, 1))}</text>
 
-  <!-- meta strip -->
-  <rect x="28" y="404" width="424" height="28" rx="6" fill="#0c1018" opacity="0.88"/>
-  <text x="40" y="423" fill="${accent}" font-family="Georgia, 'Times New Roman', serif" font-size="12" letter-spacing="1.2">${escapeXml(`${type} · ${element} · ${rarity}`)}</text>
-
-  <!-- rules panel -->
-  <rect x="28" y="442" width="424" height="120" rx="10" fill="#0a1018" opacity="0.82" stroke="${accent}" stroke-width="1" stroke-opacity="0.35"/>
+  <!-- rules box -->
+  <rect x="16" y="${rulesTop}" width="${W - 32}" height="${rulesH}" rx="8" fill="#0a1220" fill-opacity="0.58" stroke="${accent}" stroke-width="1" stroke-opacity="0.4"/>
   ${ruleLines}
 
-  ${
-    showCombat
-      ? `<g>
-    <rect x="36" y="580" width="88" height="52" rx="10" fill="#1a1010" stroke="#e07050" stroke-width="1.5"/>
-    <text x="80" y="602" text-anchor="middle" fill="#ffb8a0" font-family="Georgia, 'Times New Roman', serif" font-size="11">ATK</text>
-    <text x="80" y="622" text-anchor="middle" fill="#fff4ec" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">${escapeXml(atk)}</text>
-    <rect x="356" y="580" width="88" height="52" rx="10" fill="#101a14" stroke="#50c888" stroke-width="1.5"/>
-    <text x="400" y="602" text-anchor="middle" fill="#a8f0c8" font-family="Georgia, 'Times New Roman', serif" font-size="11">HP</text>
-    <text x="400" y="622" text-anchor="middle" fill="#f0fff6" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">${escapeXml(hp)}</text>
-  </g>`
-      : `<g>
-    <rect x="36" y="580" width="140" height="52" rx="10" fill="#101820" stroke="${accent}" stroke-width="1.5"/>
-    <text x="106" y="602" text-anchor="middle" fill="${accent}" font-family="Georgia, 'Times New Roman', serif" font-size="11">POWER</text>
-    <text x="106" y="622" text-anchor="middle" fill="#f4efe6" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700">${escapeXml(String(card.attack ?? card.energyCost ?? 1))}</text>
-  </g>`
-  }
+  ${statsBlock}
 
-  <text x="240" y="650" text-anchor="middle" fill="#b7aea0" font-family="Georgia, 'Times New Roman', serif" font-size="11" opacity="0.75">Riftwilds · ${escapeXml(card.setId || "rise-of-the-rift")}</text>
+  <text x="22" y="${H - 14}" fill="#c8d0d8" font-family="Georgia, 'Times New Roman', serif" font-size="10" opacity="0.7">${escapeXml(rarity)} · Riftwilds</text>
 </svg>`;
+}
+
+async function roundedCornerMask() {
+  const r = 22;
+  const svg = Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+  <rect width="${W}" height="${H}" rx="${r}" ry="${r}" fill="#fff"/>
+</svg>`);
+  return sharp(svg).png().toBuffer();
 }
 
 async function compositeCard(card, sourceDisk, outPath) {
   const accent = RARITY_ACCENT[card.rarity] || RARITY_ACCENT.common;
-  const [c0, c1] = ELEMENT_BG[card.element] || ELEMENT_BG.neutral;
+  const wash = ELEMENT_WASH[card.element] || ELEMENT_WASH.neutral;
 
-  // Soft elemental wash (visible through art cutout + behind transparent PNG pets)
-  const wash = Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
-<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${c0}"/>
-      <stop offset="100%" stop-color="${c1}"/>
-    </linearGradient>
-  </defs>
-  <rect width="${W}" height="${H}" rx="22" fill="url(#g)"/>
-</svg>`);
-
+  // Full-bleed art: cover the whole card face (same approach as other game composites).
   const artBuf = await sharp(sourceDisk)
-    .resize(ART.w, ART.h, {
-      fit: "contain",
+    .resize(W, H, {
+      fit: "cover",
       position: "centre",
-      background: { r: 0, g: 0, b: 0, alpha: 0 },
     })
     .png()
     .toBuffer();
 
-  const overlay = Buffer.from(frameSvg(card, accent));
-
-  await sharp(wash)
+  // Soft elemental tint under transparent PNGs / sparse icons
+  const base = await sharp({
+    create: {
+      width: W,
+      height: H,
+      channels: 4,
+      background: hexToRgba(wash, 1),
+    },
+  })
     .png()
+    .toBuffer();
+
+  // Name, cost, type, rules, stats are rasterized into pixels here — not DOM overlays.
+  const overlay = await sharp(Buffer.from(overlaySvg(card, accent))).png().toBuffer();
+  const mask = await roundedCornerMask();
+
+  const flat = await sharp(base)
     .composite([
-      { input: artBuf, top: ART.y, left: ART.x },
-      { input: await sharp(overlay).png().toBuffer(), top: 0, left: 0 },
+      { input: artBuf, top: 0, left: 0 },
+      { input: overlay, top: 0, left: 0 },
     ])
-    .webp({ quality: 86, alphaQuality: 90 })
+    .png()
+    .toBuffer();
+
+  await sharp(flat)
+    .composite([{ input: mask, blend: "dest-in" }])
+    .webp({ quality: 88, alphaQuality: 90 })
     .toFile(outPath);
+}
+
+function hexToRgba(hex, alpha) {
+  const h = hex.replace("#", "");
+  return {
+    r: parseInt(h.slice(0, 2), 16),
+    g: parseInt(h.slice(2, 4), 16),
+    b: parseInt(h.slice(4, 6), 16),
+    alpha,
+  };
 }
 
 async function mapPool(items, concurrency, fn) {
@@ -335,7 +359,15 @@ async function main() {
   const cards = JSON.parse(fs.readFileSync(CARDS_PATH, "utf8"));
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
-  let eligible = cards.filter((c) => c.art?.assetPath || c.riftlingSlug);
+  const typePriority = (t) => {
+    if (t === "creature" || t === "legendary" || t === "companion") return 0;
+    if (t === "hero" || t === "token") return 1;
+    if (t === "spell" || t === "equipment") return 2;
+    return 3;
+  };
+  let eligible = cards
+    .filter((c) => c.art?.assetPath || c.riftlingSlug)
+    .sort((a, b) => typePriority(a.type) - typePriority(b.type) || a.collectorNumber - b.collectorNumber);
   if (args.only) eligible = eligible.filter((c) => args.only.has(c.id));
   if (args.limit > 0) eligible = eligible.slice(0, args.limit);
 
@@ -375,13 +407,13 @@ async function main() {
     }
   });
 
-  manifest.version = 1;
+  manifest.version = 2;
+  manifest.layout = "full-art";
   manifest.generatedAt = new Date().toISOString();
   manifest.count = Object.keys(manifest.cards).length;
   manifest.outputDir = "public/assets/tcg/cards";
   fs.writeFileSync(MANIFEST_PATH, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
 
-  // Persist cardImagePath onto cards that have composites (keeps UI/data in sync).
   let patched = 0;
   for (const card of cards) {
     const p = manifest.cards[card.id];
@@ -397,6 +429,7 @@ async function main() {
   fs.writeFileSync(CARDS_PATH, `${JSON.stringify(cards, null, 2)}\n`, "utf8");
 
   const summary = {
+    layout: "full-art",
     eligible: eligible.length,
     generated,
     skippedExisting: skipped,
@@ -405,6 +438,11 @@ async function main() {
     patchedCardImagePath: patched,
     totalWithCardImage: Object.keys(manifest.cards).length,
     out: "public/assets/tcg/cards/{cardId}.webp",
+    samples: [
+      "/assets/tcg/cards/rotr-c-ashwing.webp",
+      "/assets/tcg/cards/rotr-c-cindercub.webp",
+      "/assets/tcg/cards/rotr-s-item-emberheart-elixir.webp",
+    ],
     manifest: "src/content/tcg/data/cardImages.json",
     errors: errors.slice(0, 12),
   };

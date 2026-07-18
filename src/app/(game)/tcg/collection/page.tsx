@@ -21,56 +21,38 @@ type CardRow = {
   } | null;
 };
 
+/**
+ * Binder tile = complete card face bitmap only.
+ * Quantity badge sits outside the face chrome; no name/rules HTML overlays.
+ */
 function BinderCardFace({ row }: { row: CardRow }) {
   const [imgFailed, setImgFailed] = useState(false);
   const face = row.def?.cardImagePath;
-  const thumb = row.def?.artPath;
   const showFace = Boolean(face && !imgFailed);
+  const label = row.def?.name ?? row.defId;
 
   return (
-    <li className="group relative overflow-hidden rounded-xl border border-[rgba(61,231,255,0.22)] bg-[linear-gradient(160deg,rgba(26,36,48,0.92)_0%,rgba(12,18,28,0.92)_100%)] shadow-[0_0_24px_rgba(61,231,255,0.06)]">
-      <div className="absolute right-2 top-2 z-10 rounded-md bg-black/55 px-1.5 py-0.5 text-xs font-medium text-[var(--amber)] backdrop-blur-sm">
+    <li className="group relative">
+      <div className="absolute -right-1 -top-1 z-10 rounded-md bg-black/70 px-1.5 py-0.5 text-xs font-medium text-[var(--amber)] shadow-md backdrop-blur-sm">
         ×{row.count}
       </div>
 
       {showFace ? (
-        <div className="relative aspect-[480/672] w-full overflow-hidden bg-[#0a0e14]">
+        <div className="relative aspect-[500/700] w-full overflow-hidden rounded-xl shadow-[0_0_24px_rgba(61,231,255,0.08)] transition duration-300 group-hover:scale-[1.02]">
           <Image
             src={face!}
-            alt={row.def?.name ?? row.defId}
+            alt={label}
             fill
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
-            className="object-cover transition duration-300 group-hover:scale-[1.02]"
+            className="object-contain"
             onError={() => setImgFailed(true)}
             unoptimized
           />
         </div>
       ) : (
-        <div className="relative flex aspect-[480/672] flex-col p-3 text-[var(--text-primary,#f4efe6)]">
-          {thumb ? (
-            <div className="relative mb-3 aspect-square w-full overflow-hidden rounded-lg border border-white/10 bg-black/30">
-              <Image
-                src={thumb}
-                alt=""
-                fill
-                sizes="200px"
-                className="object-contain p-2"
-                unoptimized
-              />
-            </div>
-          ) : null}
-          <div className="flex justify-between text-sm font-medium">
-            <span className="font-display tracking-wide">{row.def?.name ?? row.defId}</span>
-          </div>
-          {row.def && (
-            <p className="mt-1 text-xs uppercase tracking-wide text-[var(--text-muted,#b7aea0)]">
-              {row.def.type} · {row.def.affinity} · {row.def.riftCost} RE · power{" "}
-              {row.def.power} · {row.def.rarity}
-            </p>
-          )}
-          {row.def?.description && (
-            <p className="mt-2 line-clamp-4 text-sm text-white/80">{row.def.description}</p>
-          )}
+        <div className="flex aspect-[500/700] items-center justify-center rounded-xl border border-[rgba(61,231,255,0.22)] bg-[rgba(12,18,28,0.9)] p-4 text-center text-sm text-[var(--text-muted,#b7aea0)]">
+          {label}
+          <span className="sr-only">Card image unavailable</span>
         </div>
       )}
     </li>
@@ -146,7 +128,7 @@ export default function TcgCollectionPage() {
       )}
       {error && <p className="text-sm text-red-300">{error}</p>}
 
-      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((row) => (
           <BinderCardFace key={row.defId} row={row} />
         ))}

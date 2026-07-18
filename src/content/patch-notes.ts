@@ -36,6 +36,19 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-tcg-flat-card-faces",
+    date: "2026-07-18",
+    title: "Flattened Rift Battles card faces",
+    summary:
+      "Binder and battle UIs now show complete flattened card face images instead of HTML overlays on crop art.",
+    added: [
+      "Full flattened WebP card faces for the foundational set (645 cards) via tcg:generate:card-images",
+    ],
+    changed: [
+      "Card Binder and Rift Battle boards render img-only card faces",
+    ],
+  },
+  {
     id: "2026-07-18-tcg-25d-ship",
     date: "2026-07-18",
     title: "Rift Battles set, Help, and Live World depth",

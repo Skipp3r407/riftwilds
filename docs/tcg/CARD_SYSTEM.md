@@ -48,12 +48,12 @@ npm run tcg:generate:card-images
 npm run tcg:validate
 ```
 
-Card faces composite existing pet/item art onto rarity frames via sharp (local only):
+Card faces are complete **full-art bitmaps** (art + name/cost/type/rules/stats rasterized in-image; binder/battle use `<img>` only):
 
-- Script: `scripts/tcg/generate-card-images.mjs`
+- Script: `scripts/tcg/generate-card-images.mjs` (`--force` to rebuild)
 - Output: `public/assets/tcg/cards/{cardId}.webp`
 - Manifest: `src/content/tcg/data/cardImages.json`
-- Prefer `art.cardImagePath` in binder / battle UI
+- Prefer `art.cardImagePath` — no DOM text overlays on the card face
 
 ## Balance
 

@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "generatedAt": "2026-07-18T20:49:14.527Z",
+  "version": 2,
+  "generatedAt": "2026-07-18T20:53:10.952Z",
   "count": 645,
   "outputDir": "public/assets/tcg/cards",
   "cards": {
@@ -649,5 +649,6 @@
     "rotr-w-fx-weather-leaf-02": "/assets/tcg/cards/rotr-w-fx-weather-leaf-02.webp",
     "rotr-w-fx-weather-ember-ash-01": "/assets/tcg/cards/rotr-w-fx-weather-ember-ash-01.webp",
     "rotr-w-fx-weather-ember-ash-02": "/assets/tcg/cards/rotr-w-fx-weather-ember-ash-02.webp"
-  }
+  },
+  "layout": "full-art"
 }

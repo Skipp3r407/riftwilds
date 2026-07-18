@@ -73,44 +73,26 @@ function CardFace({
       type="button"
       disabled={disabled}
       onClick={onClick}
+      aria-label={def.name}
       className={cn(
-        "relative flex h-28 w-20 flex-col overflow-hidden rounded-lg border text-left transition",
-        "border-amber-500/35 text-[var(--text-primary,#f4efe6)]",
-        face
-          ? "bg-black/40"
-          : "bg-[linear-gradient(160deg,#1a2430_0%,#0f161c_100%)] px-1.5 py-1",
+        "relative h-28 w-20 overflow-hidden rounded-lg border border-amber-500/35 bg-black/40 transition",
         selected && "ring-2 ring-amber-300",
         disabled && "opacity-40",
       )}
     >
       {face ? (
-        <>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={face}
-            alt={def.name}
-            className="absolute inset-0 h-full w-full object-cover"
-            onError={() => setImgFailed(true)}
-          />
-          <div className="relative z-10 mt-auto bg-gradient-to-t from-black/80 via-black/40 to-transparent px-1 pb-1 pt-4">
-            <div className="line-clamp-2 text-[10px] font-semibold leading-tight drop-shadow">
-              {def.name}
-            </div>
-          </div>
-        </>
+        // Complete card face bitmap (name/cost/rules baked in) — no DOM text overlays.
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={face}
+          alt={def.name}
+          className="h-full w-full object-cover"
+          onError={() => setImgFailed(true)}
+        />
       ) : (
-        <>
-          <div className="flex justify-between text-[10px] uppercase tracking-wide text-amber-200/90">
-            <span>{def.riftCost} RE</span>
-            <span>{def.power}</span>
-          </div>
-          <div className="mt-1 line-clamp-2 text-[11px] font-semibold leading-tight">
-            {def.name}
-          </div>
-          <div className="mt-auto text-[9px] uppercase text-teal-200/80">
-            {def.affinity}
-          </div>
-        </>
+        <span className="flex h-full items-center justify-center px-1 text-center text-[10px] text-white/50">
+          {def.name}
+        </span>
       )}
     </button>
   );
@@ -459,20 +441,29 @@ function BoardRow({
   }
   return (
     <div className="flex flex-wrap gap-2">
-      {units.map((u) => (
-        <div
-          key={u.instanceId}
-          className={cn(
-            "flex h-20 w-16 flex-col rounded-md border border-teal-400/30 bg-teal-950/40 px-1 py-1",
-            u.exhausted && "opacity-60",
-          )}
-        >
-          <span className="text-[10px] text-teal-100/80">{u.power}</span>
-          <span className="line-clamp-2 text-[10px] text-white/90">
-            {getTcgCardDef(u.defId)?.name ?? u.defId}
-          </span>
-        </div>
-      ))}
+      {units.map((u) => {
+        const def = getTcgCardDef(u.defId);
+        const face = def?.cardImagePath;
+        return (
+          <div
+            key={u.instanceId}
+            className={cn(
+              "relative h-20 w-16 overflow-hidden rounded-md border border-teal-400/30 bg-black/40",
+              u.exhausted && "opacity-60",
+            )}
+            title={def?.name ?? u.defId}
+          >
+            {face ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={face} alt={def?.name ?? u.defId} className="h-full w-full object-cover" />
+            ) : (
+              <span className="flex h-full items-center justify-center px-0.5 text-center text-[9px] text-white/70">
+                {def?.name ?? u.defId}
+              </span>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
