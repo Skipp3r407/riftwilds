@@ -73,7 +73,7 @@ export function WallpaperDownloads({
     <section
       id="wallpapers"
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-[var(--stroke)] bg-[radial-gradient(ellipse_at_80%_0%,rgba(61,231,255,0.14),transparent_50%),radial-gradient(ellipse_at_10%_40%,rgba(123,92,255,0.1),transparent_45%),linear-gradient(165deg,#0a1228_0%,#121a28_55%,#1a1510_100%)] p-6 md:p-8",
+        "relative overflow-hidden rounded-2xl border border-[var(--stroke)] bg-[radial-gradient(ellipse_at_80%_0%,rgba(61,231,255,0.14),transparent_50%),radial-gradient(ellipse_at_10%_40%,rgba(255,184,77,0.1),transparent_45%),linear-gradient(165deg,#0a1228_0%,#121a28_55%,#1a1510_100%)] p-6 md:p-8",
         className,
       )}
       aria-labelledby="wallpapers-heading"

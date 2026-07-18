@@ -60,6 +60,16 @@ export function SiteFooter() {
               Token mint publishes when the launch checklist is complete.
             </p>
           )}
+          <p className="mt-3 text-xs text-[var(--text-dim)]">
+            Downloads &amp; shareables:{" "}
+            <Link href="/fan-kit" className="footer-link text-[var(--cyan)]">
+              Fan Kit
+            </Link>
+            {" · "}
+            <Link href="/press" className="footer-link text-[var(--cyan)]">
+              Press
+            </Link>
+          </p>
         </div>
 
         <div>
