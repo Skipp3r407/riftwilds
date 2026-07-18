@@ -20,6 +20,10 @@ const bodySchema = z.discriminatedUnion("kind", [
     petPublicId: z.string().min(1).max(80),
   }),
   z.object({
+    kind: z.literal("species"),
+    speciesSlug: z.string().min(1).max(80),
+  }),
+  z.object({
     kind: z.literal("npc"),
     npcSlug: z.string().min(1).max(80),
   }),
@@ -112,11 +116,13 @@ export async function POST(request: Request) {
       ? parseAvatarKey(body.key)
       : body.kind === "pet"
         ? { kind: "pet" as const, petPublicId: body.petPublicId }
-        : body.kind === "npc"
-          ? { kind: "npc" as const, npcSlug: body.npcSlug }
-          : body.kind === "lore"
-            ? { kind: "lore" as const, characterId: body.characterId }
-            : { kind: "brand" as const, brandId: body.brandId };
+        : body.kind === "species"
+          ? { kind: "species" as const, speciesSlug: body.speciesSlug }
+          : body.kind === "npc"
+            ? { kind: "npc" as const, npcSlug: body.npcSlug }
+            : body.kind === "lore"
+              ? { kind: "lore" as const, characterId: body.characterId }
+              : { kind: "brand" as const, brandId: body.brandId };
 
   if (!input) {
     return jsonError("Unrecognized avatar key.", 400, "validation_error", guard.requestId);

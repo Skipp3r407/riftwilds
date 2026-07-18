@@ -11,12 +11,15 @@ import {
   ensureSystemKeepersSeeded,
   getAvatarCatalog,
   listCharacterAvatarOptions,
+  listSpeciesAvatarOptions,
   loreAvatarKey,
   npcAvatarKey,
   parseAvatarKey,
   petAvatarKey,
   resetSocialStoreForTests,
   setAvatar,
+  speciesAvatarKey,
+  STARTER_RIFTLING_AVATAR_SLUGS,
 } from "@/lib/social";
 
 describe("social avatars", () => {
@@ -35,7 +38,25 @@ describe("social avatars", () => {
     expect(characters.some((c) => c.src.includes("/assets/npcs/"))).toBe(true);
   });
 
-  it("includes owned pets in the catalog with portrait paths", () => {
+  it("offers starter Riftling species avatars when the player owns no pets", () => {
+    const owner = "guest_avatar_no_pets";
+    ensureSocialProfile(owner);
+
+    const catalog = getAvatarCatalog(owner);
+    const petsSection = catalog.sections.find((s) => s.id === "pets");
+    const riftlings = catalog.sections.find((s) => s.id === "riftlings");
+
+    expect(petsSection).toBeUndefined();
+    expect(riftlings?.title).toBe("Riftling avatars");
+    expect(riftlings?.options.length).toBe(STARTER_RIFTLING_AVATAR_SLUGS.length);
+    expect(riftlings?.options.every((o) => o.unlocked && o.kind === "species")).toBe(true);
+    expect(riftlings?.options[0]?.src).toBe(
+      creaturePortraitPath(STARTER_RIFTLING_AVATAR_SLUGS[0]!),
+    );
+    expect(riftlings?.options[0]?.thumbSrc).toContain("/assets/pets/thumbs/");
+  });
+
+  it("lists owned pets under Your Riftlings and keeps species cosmetics", () => {
     const owner = "guest_avatar_owner";
     ensureSocialProfile(owner);
     const pet = createPet({
@@ -48,10 +69,14 @@ describe("social avatars", () => {
 
     const catalog = getAvatarCatalog(owner);
     const pets = catalog.sections.find((s) => s.id === "pets")?.options ?? [];
+    const riftlings = catalog.sections.find((s) => s.id === "riftlings")?.options ?? [];
+
+    expect(catalog.sections.find((s) => s.id === "pets")?.title).toBe("Your Riftlings");
     expect(pets).toHaveLength(1);
     expect(pets[0]?.key).toBe(petAvatarKey(pet.publicId));
     expect(pets[0]?.src).toBe(creaturePortraitPath("cindercub"));
     expect(pets[0]?.label).toBe("Ember Buddy");
+    expect(riftlings.length).toBe(STARTER_RIFTLING_AVATAR_SLUGS.length);
   });
 
   it("sets a pet avatar only when the player owns the pet", () => {
@@ -83,6 +108,35 @@ describe("social avatars", () => {
     const denied = setAvatar(owner, { kind: "pet", petPublicId: theirs.publicId });
     expect(denied.ok).toBe(false);
     if (!denied.ok) expect(denied.error).toBe("not_owned");
+  });
+
+  it("sets a starter Riftling species avatar without owning that pet", () => {
+    const owner = "guest_avatar_species";
+    ensureSocialProfile(owner);
+
+    const speciesOptions = listSpeciesAvatarOptions();
+    expect(speciesOptions.some((o) => o.key === speciesAvatarKey("mossprig"))).toBe(true);
+
+    const ok = setAvatar(owner, { kind: "species", speciesSlug: "mossprig" });
+    expect(ok.ok).toBe(true);
+    if (!ok.ok) return;
+    expect(ok.key).toBe(speciesAvatarKey("mossprig"));
+    expect(ok.src).toBe(creaturePortraitPath("mossprig"));
+    expect(ok.profile.avatarKey).toBe(speciesAvatarKey("mossprig"));
+    expect(ok.profile.avatarSrc).toBe(creaturePortraitPath("mossprig"));
+
+    const catalog = getAvatarCatalog(owner);
+    expect(catalog.selectedKey).toBe(speciesAvatarKey("mossprig"));
+    expect(catalog.selectedSrc).toBe(creaturePortraitPath("mossprig"));
+  });
+
+  it("rejects non-starter species avatars", () => {
+    const owner = "guest_avatar_bad_species";
+    ensureSocialProfile(owner);
+
+    const denied = setAvatar(owner, { kind: "species", speciesSlug: "not-a-riftling" });
+    expect(denied.ok).toBe(false);
+    if (!denied.ok) expect(denied.error).toBe("not_found");
   });
 
   it("allows NPC and brand avatars without ownership checks", () => {
@@ -119,6 +173,10 @@ describe("social avatars", () => {
     expect(parseAvatarKey("pet:pet_abc")).toEqual({
       kind: "pet",
       petPublicId: "pet_abc",
+    });
+    expect(parseAvatarKey("species:cindercub")).toEqual({
+      kind: "species",
+      speciesSlug: "cindercub",
     });
     expect(parseAvatarKey("npc:elara-venn")).toEqual({
       kind: "npc",

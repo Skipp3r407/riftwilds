@@ -115,10 +115,10 @@ export function AvatarPicker({ onSelected, className }: Props) {
   return (
     <div className={cn("space-y-4", className)}>
       <div>
-        <h3 className="font-display text-lg text-white">Avatar</h3>
+        <h3 className="font-display text-lg text-white">Riftling avatars</h3>
         <p className="mt-1 text-xs text-[var(--text-dim)]">
-          Pick a portrait from your Riftlings or in-game keepers. Shown on friends, PMs, and
-          requests.
+          Use your owned Riftlings or a starter species portrait. Also shown on friends, PMs, and
+          profile.
         </p>
       </div>
 

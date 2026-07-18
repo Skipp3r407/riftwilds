@@ -24,7 +24,7 @@ const TABS: { id: TabId; label: string }[] = [
   { id: "friends", label: "Friends" },
   { id: "requests", label: "Requests" },
   { id: "messages", label: "Messages" },
-  { id: "safety", label: "Safety" },
+  { id: "safety", label: "Avatar & safety" },
 ];
 
 function Avatar({ src, size = 40 }: { src: string; size?: number }) {
@@ -589,7 +589,8 @@ export function SocialHub() {
             <div>
               <h2 className="font-display text-xl text-white">Your identity</h2>
               <p className="mt-1 text-xs text-[var(--text-dim)]">
-                Handle is how keepers find you. Wallet optional — Credits ≠ SOL.
+                Pick a Riftling avatar below, then set how keepers find you. Wallet optional —
+                Credits ≠ SOL.
               </p>
               <div className="mt-3 space-y-3">
                 <label className="block text-xs text-[var(--text-muted)]">

@@ -52,10 +52,11 @@ const bodySchema = z.object({
   details: z.string().max(400).optional(),
   displayName: z.string().min(2).max(32).optional(),
   messagePrivacy: z.enum(["friends_only", "anyone"]).optional(),
-  /** Avatar selection — prefer `avatarKey` (`pet:…` / `npc:…` / …). */
+  /** Avatar selection — prefer `avatarKey` (`pet:…` / `species:…` / `npc:…` / …). */
   avatarKey: z.string().min(3).max(120).optional(),
-  avatarKind: z.enum(["pet", "npc", "lore", "brand"]).optional(),
+  avatarKind: z.enum(["pet", "species", "npc", "lore", "brand"]).optional(),
   petPublicId: z.string().min(1).max(80).optional(),
+  speciesSlug: z.string().min(1).max(80).optional(),
   npcSlug: z.string().min(1).max(80).optional(),
   characterId: z.string().min(1).max(80).optional(),
   brandId: z.string().min(1).max(40).optional(),
@@ -258,13 +259,15 @@ export async function POST(request: Request) {
         fromKey ??
         (body.avatarKind === "pet" && body.petPublicId
           ? { kind: "pet" as const, petPublicId: body.petPublicId }
-          : body.avatarKind === "npc" && body.npcSlug
-            ? { kind: "npc" as const, npcSlug: body.npcSlug }
-            : body.avatarKind === "lore" && body.characterId
-              ? { kind: "lore" as const, characterId: body.characterId }
-              : body.avatarKind === "brand"
-                ? { kind: "brand" as const, brandId: body.brandId }
-                : null);
+          : body.avatarKind === "species" && body.speciesSlug
+            ? { kind: "species" as const, speciesSlug: body.speciesSlug }
+            : body.avatarKind === "npc" && body.npcSlug
+              ? { kind: "npc" as const, npcSlug: body.npcSlug }
+              : body.avatarKind === "lore" && body.characterId
+                ? { kind: "lore" as const, characterId: body.characterId }
+                : body.avatarKind === "brand"
+                  ? { kind: "brand" as const, brandId: body.brandId }
+                  : null);
       if (!input) {
         return jsonError(
           "avatarKey or avatarKind + id required.",

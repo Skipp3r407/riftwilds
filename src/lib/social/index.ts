@@ -4,14 +4,18 @@ export * from "@/lib/social/sanitize";
 export {
   listAvailableAvatars,
   listPetAvatarOptions,
+  listSpeciesAvatarOptions,
   listCharacterAvatarOptions,
   listBrandAvatarOptions,
   setSocialAvatar,
   parseAvatarKey,
   petAvatarKey,
+  speciesAvatarKey,
   npcAvatarKey,
   loreAvatarKey,
   brandAvatarKey,
+  STARTER_RIFTLING_AVATAR_SLUGS,
+  isStarterRiftlingAvatarSlug,
 } from "@/lib/social/avatars";
 export type {
   SocialAvatarCatalog,

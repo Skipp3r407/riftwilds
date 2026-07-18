@@ -16,6 +16,7 @@ import {
   Swords,
 } from "lucide-react";
 import { AffinityChip } from "@/components/leaderboards/affinity-chip";
+import { AvatarPicker } from "@/components/social/avatar-picker";
 import { EmptyState, StatusChip } from "@/components/shared/page-header";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { useActiveWallet } from "@/hooks/use-active-wallet";
@@ -270,12 +271,13 @@ export function ProfileDashboard() {
                   priority
                 />
               </div>
-              <Link
-                href="/social?tab=safety"
-                className="mt-1.5 block text-center text-[11px] text-[var(--cyan)] underline focus-ring"
+              <button
+                type="button"
+                className="mt-1.5 block w-full text-center text-[11px] text-[var(--cyan)] underline focus-ring"
+                onClick={() => setTab("settings")}
               >
                 Change avatar
-              </Link>
+              </button>
             </div>
             <div className="min-w-0">
               <p className="font-display text-[10px] uppercase tracking-[0.28em] text-[var(--cyan)]">
@@ -487,6 +489,7 @@ export function ProfileDashboard() {
               connected={connected}
               viewOnly={viewOnly}
               walletShort={walletShort}
+              onAvatarSelected={(src) => setSocialAvatarSrc(src)}
             />
           ) : null}
         </div>
@@ -899,6 +902,7 @@ function SettingsPanel({
   connected,
   viewOnly,
   walletShort,
+  onAvatarSelected,
 }: {
   nameDraft: string;
   setNameDraft: (v: string) => void;
@@ -908,9 +912,12 @@ function SettingsPanel({
   connected: boolean;
   viewOnly: boolean;
   walletShort: string | null;
+  onAvatarSelected?: (src: string, key: string) => void;
 }) {
   return (
-    <div className="mx-auto max-w-xl space-y-5">
+    <div className="mx-auto max-w-2xl space-y-5">
+      <AvatarPicker onSelected={onAvatarSelected} />
+
       <div>
         <h4 className="font-display text-sm uppercase tracking-[0.18em] text-[var(--cyan)]">
           Display name

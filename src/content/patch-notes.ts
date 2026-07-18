@@ -36,6 +36,20 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-riftling-avatars",
+    date: "2026-07-18",
+    title: "Riftling avatars for profiles and social",
+    summary:
+      "Players can pick owned Riftlings or starter species portraits as avatars on Social and Profile.",
+    added: [
+      "Riftling avatars section with starter species portraits when hatchery ownership is empty",
+      "Avatar picker on Profile settings (Your Riftlings when owned pets exist)",
+    ],
+    changed: [
+      "Social tab relabeled Avatar & safety; owned pet avatars still require ownership",
+    ],
+  },
+  {
     id: "2026-07-18-tcg-flat-card-faces",
     date: "2026-07-18",
     title: "Flattened Rift Battles card faces",

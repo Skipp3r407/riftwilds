@@ -1,9 +1,10 @@
 /**
- * Social profile avatars — auto-built from owned pets + in-game characters.
+ * Social profile avatars — owned pets, starter Riftling species, characters.
  * Persists as SocialProfile.avatarSrc (+ avatarKey) on the in-memory social store.
  */
 
 import { getPet, listPetsForOwner } from "@/game/eggs/hatchery-store";
+import { getSpeciesBySlug } from "@/game/creatures/species-catalog";
 import { NAMED_NPCS } from "@/content/npcs";
 import {
   brandMarkPath,
@@ -22,7 +23,7 @@ function requireProfile(ownerKey: string): SocialProfile {
   return profile;
 }
 
-export type SocialAvatarKind = "pet" | "npc" | "lore" | "brand";
+export type SocialAvatarKind = "pet" | "species" | "npc" | "lore" | "brand";
 
 export type SocialAvatarOption = {
   key: string;
@@ -38,7 +39,7 @@ export type SocialAvatarOption = {
 };
 
 export type SocialAvatarSection = {
-  id: "pets" | "characters" | "brand";
+  id: "pets" | "riftlings" | "characters" | "brand";
   title: string;
   description: string;
   options: SocialAvatarOption[];
@@ -52,9 +53,30 @@ export type SocialAvatarCatalog = {
 
 export type SetAvatarInput =
   | { kind: "pet"; petPublicId: string }
+  | { kind: "species"; speciesSlug: string }
   | { kind: "npc"; npcSlug: string }
   | { kind: "lore"; characterId: string }
   | { kind: "brand"; brandId?: string };
+
+/**
+ * Unlocked starter-friendly Riftling species portraits.
+ * Always selectable as cosmetics so the Riftling avatar option is visible
+ * even when hatchery ownership is empty (local/demo). Does not grant pets.
+ */
+export const STARTER_RIFTLING_AVATAR_SLUGS = [
+  "cindercub",
+  "mossprig",
+  "bubbloon",
+  "voltkit",
+  "pebblit",
+  "wisplet",
+  "frostnip",
+  "commonspark",
+  "emberfox",
+  "tideotter",
+  "snowpuff",
+  "dreamhare",
+] as const;
 
 /** Curated lore / hero portraits (avoid importing the full About module). */
 const LORE_AVATARS: Array<{
@@ -95,6 +117,10 @@ export function petAvatarKey(petPublicId: string): string {
   return `pet:${petPublicId}`;
 }
 
+export function speciesAvatarKey(speciesSlug: string): string {
+  return `species:${speciesSlug}`;
+}
+
 export function npcAvatarKey(slug: string): string {
   return `npc:${slug}`;
 }
@@ -109,6 +135,10 @@ export function brandAvatarKey(id: string): string {
 
 function stripQuery(src: string): string {
   return src.split("?")[0] ?? src;
+}
+
+export function isStarterRiftlingAvatarSlug(slug: string): boolean {
+  return (STARTER_RIFTLING_AVATAR_SLUGS as readonly string[]).includes(slug);
 }
 
 /** Named active NPCs unlocked by default as cosmetic avatars. */
@@ -148,6 +178,7 @@ export function listBrandAvatarOptions(): SocialAvatarOption[] {
   }));
 }
 
+/** Owned hatchery pets — personal Riftling avatars. */
 export function listPetAvatarOptions(ownerKey: string): SocialAvatarOption[] {
   return listPetsForOwner(ownerKey).map((pet) => ({
     key: petAvatarKey(pet.publicId),
@@ -160,38 +191,71 @@ export function listPetAvatarOptions(ownerKey: string): SocialAvatarOption[] {
   }));
 }
 
+/**
+ * Starter species portraits (cosmetic). Always unlocked — not ownership of a pet.
+ */
+export function listSpeciesAvatarOptions(): SocialAvatarOption[] {
+  return STARTER_RIFTLING_AVATAR_SLUGS.map((slug) => {
+    const species = getSpeciesBySlug(slug);
+    return {
+      key: speciesAvatarKey(slug),
+      kind: "species" as const,
+      label: species?.name ?? slug,
+      subtitle: species ? `${species.affinity} · starter` : "Starter Riftling",
+      src: creaturePortraitPath(slug),
+      thumbSrc: creatureThumbPath(slug),
+      unlocked: true,
+    };
+  });
+}
+
 export function listAvailableAvatars(ownerKey: string): SocialAvatarCatalog {
   const profile = requireProfile(ownerKey);
   const pets = listPetAvatarOptions(ownerKey);
+  const riftlings = listSpeciesAvatarOptions();
   const characters = listCharacterAvatarOptions();
   const brand = listBrandAvatarOptions();
+
+  const sections: SocialAvatarSection[] = [];
+
+  if (pets.length > 0) {
+    sections.push({
+      id: "pets",
+      title: "Your Riftlings",
+      description: "Portraits from Riftlings you hatched and own.",
+      options: pets,
+    });
+  }
+
+  sections.push({
+    id: "riftlings",
+    title: "Riftling avatars",
+    description:
+      pets.length > 0
+        ? "Starter species portraits — always available as cosmetics."
+        : "Starter Riftling portraits you can use anytime. Hatch your own for personal pet avatars above.",
+    options: riftlings,
+  });
+
+  sections.push(
+    {
+      id: "characters",
+      title: "Keepers & characters",
+      description: "Named town keepers, heroes, and lore figures.",
+      options: characters,
+    },
+    {
+      id: "brand",
+      title: "Emblems",
+      description: "Simple brand marks when you want a clean look.",
+      options: brand,
+    },
+  );
 
   return {
     selectedKey: profile.avatarKey ?? null,
     selectedSrc: profile.avatarSrc,
-    sections: [
-      {
-        id: "pets",
-        title: "Your Riftlings",
-        description:
-          pets.length > 0
-            ? "Portraits from pets you hatched and own."
-            : "Hatch a Riftling to unlock pet avatars — characters below are ready now.",
-        options: pets,
-      },
-      {
-        id: "characters",
-        title: "Keepers & characters",
-        description: "Named town keepers, heroes, and lore figures.",
-        options: characters,
-      },
-      {
-        id: "brand",
-        title: "Emblems",
-        description: "Simple brand marks when you want a clean look.",
-        options: brand,
-      },
-    ],
+    sections,
   };
 }
 
@@ -215,6 +279,23 @@ function resolveAvatarSelection(
       kind: "pet",
       key: petAvatarKey(pet.publicId),
       src: creaturePortraitPath(pet.speciesSlug),
+    };
+  }
+
+  if (input.kind === "species") {
+    const slug = input.speciesSlug.trim().toLowerCase();
+    if (!isStarterRiftlingAvatarSlug(slug) || !getSpeciesBySlug(slug)) {
+      return {
+        ok: false,
+        error: "not_found",
+        message: "That Riftling species avatar is not available.",
+      };
+    }
+    return {
+      ok: true,
+      kind: "species",
+      key: speciesAvatarKey(slug),
+      src: creaturePortraitPath(slug),
     };
   }
 
@@ -270,8 +351,8 @@ function resolveAvatarSelection(
 }
 
 /**
- * Set the player's social avatar. Pet avatars require ownership;
- * NPC / lore / brand options are unlocked cosmetics.
+ * Set the player's social avatar.
+ * Pet avatars require ownership; starter species / NPC / lore / brand are cosmetics.
  */
 export function setSocialAvatar(
   ownerKey: string,
@@ -296,15 +377,14 @@ export function setSocialAvatar(
 }
 
 /** Parse a stored avatar key back into a set input (for API convenience). */
-export function parseAvatarKey(
-  key: string,
-): SetAvatarInput | null {
+export function parseAvatarKey(key: string): SetAvatarInput | null {
   const colon = key.indexOf(":");
   if (colon < 1) return null;
   const kind = key.slice(0, colon);
   const id = key.slice(colon + 1);
   if (!id) return null;
   if (kind === "pet") return { kind: "pet", petPublicId: id };
+  if (kind === "species") return { kind: "species", speciesSlug: id };
   if (kind === "npc") return { kind: "npc", npcSlug: id };
   if (kind === "lore") return { kind: "lore", characterId: id };
   if (kind === "brand") return { kind: "brand", brandId: id };
