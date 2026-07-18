@@ -67,6 +67,7 @@
     "assets:mask:npc-black": "node scripts/assets/mask-npc-black.mjs",
     "assets:generate:cozy-terrain": "node scripts/assets/generate-cozy-pixel-terrain.mjs",
     "assets:generate:cozy-world": "node scripts/assets/generate-cozy-pixel-world.mjs",
+    "assets:generate:economy-wallpapers": "node scripts/assets/generate-economy-page-wallpapers.mjs",
     "assets:install:premium-world": "node scripts/assets/install-premium-world-art.mjs",
     "assets:install:showcase": "node scripts/assets/install-live-world-showcase-art.mjs",
     "assets:install:named-fullbodies": "node scripts/assets/install-commons-named-fullbodies.mjs",

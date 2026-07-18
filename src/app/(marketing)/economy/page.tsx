@@ -79,15 +79,15 @@ export default function EconomyPage() {
       <section className="relative overflow-hidden px-4 pb-12 pt-10 md:px-6 md:pt-16">
         <div className="pointer-events-none absolute inset-0">
           <Image
-            src="/assets/economy/purchase-flow-banner.png?v=ec2"
+            src="/assets/economy/purchase-flow-banner.png?v=ec3"
             alt=""
             fill
             sizes="100vw"
-            className="object-cover object-center opacity-40"
+            className="object-cover object-center opacity-70"
             unoptimized
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8,10,18,0.55)] via-[rgba(8,10,18,0.75)] to-[rgba(8,10,18,0.95)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8,10,18,0.35)] via-[rgba(8,10,18,0.45)] to-[rgba(8,10,18,0.78)]" />
           <div className="portal-glow absolute left-1/2 top-8 h-48 w-48 -translate-x-1/2 rounded-full opacity-50" />
         </div>
         <div className="relative mx-auto max-w-7xl">
@@ -383,50 +383,68 @@ export default function EconomyPage() {
           </details>
         </section>
 
-        <section id="pet-rewards">
-          <h2 className="font-display text-2xl text-white">Community Reward Treasury</h2>
-          <p className="mt-2 text-sm text-[var(--text-muted)]">
-            Own a Riftling to unlock the Pet Reward system. Eligible living pets may share in
-            Community Reward Treasury distributions during scheduled epochs. Buying the Pump.fun
-            coin does not automatically generate SOL for pet owners.
-          </p>
-          <ol className="mt-6 grid gap-3 md:grid-cols-3 lg:grid-cols-6">
-            {[
-              "Verified project-controlled deposit",
-              "Active treasury allocation is applied",
-              "Community Reward Treasury pool funded",
-              "Eligible pets identified at snapshot",
-              "Pool divided by published formula",
-              "Rewards claimable after finalization",
-            ].map((step, i) => (
-              <li key={step} className="panel p-4 text-sm text-[var(--text-muted)]">
-                <span className="font-display text-[var(--cyan)]">0{i + 1}</span>
-                <p className="mt-2">{step}</p>
+        <section
+          id="pet-rewards"
+          className="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--stroke)] px-4 py-8 sm:px-6 md:px-8"
+        >
+          <Image
+            src="/assets/economy/section-treasury-bg.png"
+            alt=""
+            fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover object-center opacity-55"
+            aria-hidden
+            unoptimized
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(6,12,24,0.55)] via-[rgba(6,12,24,0.62)] to-[rgba(6,12,24,0.82)]"
+            aria-hidden
+          />
+          <div className="relative z-10">
+            <h2 className="font-display text-2xl text-white">Community Reward Treasury</h2>
+            <p className="mt-2 text-sm text-[var(--text-muted)]">
+              Own a Riftling to unlock the Pet Reward system. Eligible living pets may share in
+              Community Reward Treasury distributions during scheduled epochs. Buying the Pump.fun
+              coin does not automatically generate SOL for pet owners.
+            </p>
+            <ol className="mt-6 grid gap-3 md:grid-cols-3 lg:grid-cols-6">
+              {[
+                "Verified project-controlled deposit",
+                "Active treasury allocation is applied",
+                "Community Reward Treasury pool funded",
+                "Eligible pets identified at snapshot",
+                "Pool divided by published formula",
+                "Rewards claimable after finalization",
+              ].map((step, i) => (
+                <li key={step} className="panel p-4 text-sm text-[var(--text-muted)]">
+                  <span className="font-display text-[var(--cyan)]">0{i + 1}</span>
+                  <p className="mt-2">{step}</p>
+                </li>
+              ))}
+            </ol>
+            <div className="panel mt-6 p-5 font-mono text-sm text-[var(--cyan)]">
+              {policy.rewardRules.formulaLines.map((line) => (
+                <p key={line} className="py-1">
+                  {line}
+                </p>
+              ))}
+            </div>
+            <ul className="mt-4 space-y-2 text-sm text-[var(--text-muted)]">
+              <li>• Equal weight for qualified pets at launch (rarity does not auto-boost payouts).</li>
+              <li>• Marketplace price does not increase reward weight.</li>
+              <li>
+                • Max {policy.rewardRules.maxRewardActivePets} reward-active pets per wallet
+                (configurable).
               </li>
-            ))}
-          </ol>
-          <div className="panel mt-6 p-5 font-mono text-sm text-[var(--cyan)]">
-            {policy.rewardRules.formulaLines.map((line) => (
-              <p key={line} className="py-1">
-                {line}
-              </p>
-            ))}
+              <li>• No revenue means no new allocation for that epoch; small balances may carry forward.</li>
+              <li>• Feature can be paused for security, legal, or treasury reasons.</li>
+              <li>
+                · Soft epoch rewards: {featureFlagDefaults.EPOCH_REWARDS_ENABLED ? "on" : "off"} ·
+                Real-money: {featureFlagDefaults.REAL_MONEY_REWARDS_ENABLED ? "on" : "off"}
+              </li>
+            </ul>
+            <RewardDisclaimer className="mt-4" />
           </div>
-          <ul className="mt-4 space-y-2 text-sm text-[var(--text-muted)]">
-            <li>• Equal weight for qualified pets at launch (rarity does not auto-boost payouts).</li>
-            <li>• Marketplace price does not increase reward weight.</li>
-            <li>
-              • Max {policy.rewardRules.maxRewardActivePets} reward-active pets per wallet
-              (configurable).
-            </li>
-            <li>• No revenue means no new allocation for that epoch; small balances may carry forward.</li>
-            <li>• Feature can be paused for security, legal, or treasury reasons.</li>
-            <li>
-              · Soft epoch rewards: {featureFlagDefaults.EPOCH_REWARDS_ENABLED ? "on" : "off"} ·
-              Real-money: {featureFlagDefaults.REAL_MONEY_REWARDS_ENABLED ? "on" : "off"}
-            </li>
-          </ul>
-          <RewardDisclaimer className="mt-4" />
         </section>
 
         <section id="pet-eligibility">
@@ -439,19 +457,37 @@ export default function EconomyPage() {
           </div>
         </section>
 
-        <section id="survival">
-          <h2 className="font-display text-2xl text-white">Keep Your Riftling Healthy</h2>
-          <p className="mt-2 text-sm text-[var(--text-muted)]">
-            Riftlings need food, care, rest, and attention. Neglect reduces eligibility and features.
-            Decay uses server time — never the device clock.
-          </p>
-          <div className="mt-6">
-            <SurvivalTimeline />
+        <section
+          id="survival"
+          className="relative overflow-hidden rounded-[var(--radius-xl)] border border-[var(--stroke)] px-4 py-8 sm:px-6 md:px-8"
+        >
+          <Image
+            src="/assets/economy/section-care-bg.png"
+            alt=""
+            fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="object-cover object-center opacity-55"
+            aria-hidden
+            unoptimized
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[rgba(6,12,24,0.52)] via-[rgba(6,12,24,0.6)] to-[rgba(6,12,24,0.8)]"
+            aria-hidden
+          />
+          <div className="relative z-10">
+            <h2 className="font-display text-2xl text-white">Keep Your Riftling Healthy</h2>
+            <p className="mt-2 text-sm text-[var(--text-muted)]">
+              Riftlings need food, care, rest, and attention. Neglect reduces eligibility and features.
+              Decay uses server time — never the device clock.
+            </p>
+            <div className="mt-6">
+              <SurvivalTimeline />
+            </div>
+            <p className="panel mt-4 p-4 text-sm text-[var(--amber)]">
+              Permanent pet death is disabled by default during the initial release (
+              PERMANENT_DEATH_ENABLED = {String(featureFlagDefaults.PERMANENT_DEATH_ENABLED)}).
+            </p>
           </div>
-          <p className="panel mt-4 p-4 text-sm text-[var(--amber)]">
-            Permanent pet death is disabled by default during the initial release (
-            PERMANENT_DEATH_ENABLED = {String(featureFlagDefaults.PERMANENT_DEATH_ENABLED)}).
-          </p>
         </section>
 
         <section id="items">

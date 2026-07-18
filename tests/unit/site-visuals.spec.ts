@@ -25,10 +25,24 @@ describe("site visuals", () => {
       "leaderboards",
       "pets",
       "battle",
+      "economy",
+      "rewards",
+      "token",
+      "transparency",
+      "fairness",
+      "care",
     ];
     for (const slug of wallpapers) {
       const full = path.join(ROOT, "public/assets/ui/wallpapers", `${slug}.png`);
       expect(fs.existsSync(full), slug).toBe(true);
+      expect(fs.statSync(full).size).toBeGreaterThan(20_000);
+    }
+    const treasuryHero = path.join(ROOT, "public/assets/treasury/hero.png");
+    expect(fs.existsSync(treasuryHero)).toBe(true);
+    expect(fs.statSync(treasuryHero).size).toBeGreaterThan(20_000);
+    for (const name of ["section-treasury-bg.png", "section-care-bg.png", "purchase-flow-banner.png"]) {
+      const full = path.join(ROOT, "public/assets/economy", name);
+      expect(fs.existsSync(full), name).toBe(true);
       expect(fs.statSync(full).size).toBeGreaterThan(20_000);
     }
   });

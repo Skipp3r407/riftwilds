@@ -21,6 +21,7 @@ export const WALLPAPERS = {
   treasury: "/assets/treasury/hero.png",
   token: "/assets/ui/wallpapers/token.png",
   rewards: "/assets/ui/wallpapers/rewards.png",
+  care: "/assets/ui/wallpapers/care.png",
   loyalty: "/assets/loyalty/rift-storm-banner.png",
   ecosystem: "/assets/ui/ecosystem/living-world-cta.png",
   transparency: "/assets/ui/wallpapers/transparency.png",
@@ -43,7 +44,7 @@ export type WallpaperKey = keyof typeof WALLPAPERS;
 const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }[] = [
   { prefix: "/", name: "hero", opacity: 0.62 },
   { prefix: "/play", name: "play", opacity: 0.4 },
-  { prefix: "/hatchery", name: "hatchery", opacity: 0.35 },
+  { prefix: "/hatchery", name: "hatchery", opacity: 0.48 },
   { prefix: "/world", name: "world", opacity: 0.42 },
   { prefix: "/live-world", name: "live-world", opacity: 0.4 },
   { prefix: "/live", name: "live-world", opacity: 0.4 },
@@ -55,15 +56,15 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/homestead", name: "homestead", opacity: 0.42 },
   { prefix: "/housing", name: "homestead", opacity: 0.42 },
   { prefix: "/neighborhoods", name: "homestead", opacity: 0.4 },
-  { prefix: "/economy", name: "economy", opacity: 0.52 },
-  { prefix: "/treasury", name: "treasury", opacity: 0.5 },
-  { prefix: "/token", name: "token", opacity: 0.42 },
-  { prefix: "/rewards", name: "rewards", opacity: 0.45 },
-  { prefix: "/loyalty", name: "loyalty", opacity: 0.45 },
-  { prefix: "/ecosystem", name: "ecosystem", opacity: 0.42 },
-  { prefix: "/community", name: "token", opacity: 0.42 },
-  { prefix: "/transparency", name: "transparency", opacity: 0.4 },
-  { prefix: "/fairness", name: "fairness", opacity: 0.4 },
+  { prefix: "/economy", name: "economy", opacity: 0.72 },
+  { prefix: "/treasury", name: "treasury", opacity: 0.68 },
+  { prefix: "/token", name: "token", opacity: 0.62 },
+  { prefix: "/rewards", name: "rewards", opacity: 0.65 },
+  { prefix: "/loyalty", name: "loyalty", opacity: 0.55 },
+  { prefix: "/ecosystem", name: "ecosystem", opacity: 0.5 },
+  { prefix: "/community", name: "token", opacity: 0.58 },
+  { prefix: "/transparency", name: "transparency", opacity: 0.6 },
+  { prefix: "/fairness", name: "fairness", opacity: 0.6 },
   { prefix: "/creatures", name: "creatures", opacity: 0.45 },
   { prefix: "/profile", name: "profile", opacity: 0.4 },
   { prefix: "/collection", name: "collection", opacity: 0.4 },
@@ -129,8 +130,8 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
         unoptimized
       />
       {/* Light scrim — wallpaper stays visible; glass panels carry most readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(7,11,22,0.32)] via-[rgba(7,11,22,0.18)] to-[rgba(7,11,22,0.58)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,11,22,0.08)_0%,rgba(7,11,22,0.35)_70%,rgba(7,11,22,0.52)_100%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(7,11,22,0.22)] via-[rgba(7,11,22,0.1)] to-[rgba(7,11,22,0.48)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(7,11,22,0.04)_0%,rgba(7,11,22,0.22)_70%,rgba(7,11,22,0.4)_100%)]" />
     </div>
   );
 }
