@@ -11,6 +11,8 @@ import {
   ensureSocialProfile,
   getAvatarCatalog,
   parseAvatarKey,
+  purchaseSpeciesAvatarWithCredits,
+  purchaseSpeciesAvatarWithSol,
   setAvatar,
 } from "@/lib/social";
 
@@ -38,6 +40,16 @@ const bodySchema = z.discriminatedUnion("kind", [
   z.object({
     kind: z.literal("key"),
     key: z.string().min(3).max(120),
+  }),
+  z.object({
+    kind: z.literal("purchase_credits"),
+    speciesSlug: z.string().min(1).max(80),
+    requestId: z.string().min(4).max(120).optional(),
+  }),
+  z.object({
+    kind: z.literal("purchase_sol"),
+    speciesSlug: z.string().min(1).max(80),
+    requestId: z.string().min(4).max(120).optional(),
   }),
 ]);
 
@@ -111,6 +123,73 @@ export async function POST(request: Request) {
   ensureSocialProfile(owner.ownerKey);
 
   const body = parsed.data;
+
+  if (body.kind === "purchase_credits") {
+    const result = purchaseSpeciesAvatarWithCredits({
+      ownerKey: owner.ownerKey,
+      speciesSlug: body.speciesSlug,
+      requestId: body.requestId ?? `avatar-credits:${owner.ownerKey}:${body.speciesSlug}:${guard.requestId}`,
+    });
+    if (!result.ok) {
+      const status =
+        result.error === "insufficient_credits"
+          ? 402
+          : result.error === "already_unlocked"
+            ? 409
+            : result.error === "not_found"
+              ? 404
+              : 400;
+      return jsonError(result.message, status, result.error, guard.requestId);
+    }
+    const res = jsonOk(
+      {
+        purchased: true,
+        method: "credits",
+        key: result.key,
+        balance: result.balance,
+        profile: result.profile,
+        catalog: getAvatarCatalog(owner.ownerKey),
+        ...guestIdentityFields(owner.isGuest, owner.guestToken),
+      },
+      guard.requestId,
+    );
+    if (owner.isGuest) attachGuestCookie(res, owner.guestToken);
+    return res;
+  }
+
+  if (body.kind === "purchase_sol") {
+    const result = purchaseSpeciesAvatarWithSol({
+      ownerKey: owner.ownerKey,
+      speciesSlug: body.speciesSlug,
+      requestId: body.requestId ?? `avatar-sol:${owner.ownerKey}:${body.speciesSlug}:${guard.requestId}`,
+    });
+    if (!result.ok) {
+      const status =
+        result.error === "sol_coming_soon"
+          ? 503
+          : result.error === "already_unlocked"
+            ? 409
+            : result.error === "not_found"
+              ? 404
+              : 400;
+      return jsonError(result.message, status, result.error, guard.requestId);
+    }
+    const res = jsonOk(
+      {
+        purchased: true,
+        method: "sol",
+        key: result.key,
+        note: result.note,
+        profile: result.profile,
+        catalog: getAvatarCatalog(owner.ownerKey),
+        ...guestIdentityFields(owner.isGuest, owner.guestToken),
+      },
+      guard.requestId,
+    );
+    if (owner.isGuest) attachGuestCookie(res, owner.guestToken);
+    return res;
+  }
+
   const input =
     body.kind === "key"
       ? parseAvatarKey(body.key)
@@ -130,7 +209,8 @@ export async function POST(request: Request) {
 
   const result = setAvatar(owner.ownerKey, input);
   if (!result.ok) {
-    const status = result.error === "not_owned" ? 403 : 404;
+    const status =
+      result.error === "not_owned" ? 403 : result.error === "locked" ? 403 : 404;
     return jsonError(result.message, status, result.error, guard.requestId);
   }
 

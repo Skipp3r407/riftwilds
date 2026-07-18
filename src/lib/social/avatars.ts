@@ -1,6 +1,7 @@
 /**
- * Social profile avatars — owned pets, starter Riftling species, characters.
+ * Social profile avatars — owned pets, Riftling species cosmetics, characters.
  * Persists as SocialProfile.avatarSrc (+ avatarKey) on the in-memory social store.
+ * Species unlocks: free starters · owned pet · tasks · Credits · optional SOL.
  */
 
 import { getPet, listPetsForOwner } from "@/game/eggs/hatchery-store";
@@ -11,8 +12,33 @@ import {
   creaturePortraitPath,
   creatureThumbPath,
 } from "@/lib/assets/paths";
+import {
+  brandAvatarKey,
+  isStarterRiftlingAvatarSlug,
+  loreAvatarKey,
+  npcAvatarKey,
+  petAvatarKey,
+  speciesAvatarKey,
+  STARTER_RIFTLING_AVATAR_SLUGS,
+} from "@/lib/social/avatar-keys";
+import {
+  evaluateSpeciesAvatarUnlock,
+  isRiftlingAvatarSlug,
+  listRiftlingAvatarSlugs,
+  type AvatarUnlockPaths,
+} from "@/lib/social/avatar-unlocks";
 import { getSocialStore } from "@/lib/social/store";
 import type { SocialProfile } from "@/lib/social/types";
+
+export {
+  brandAvatarKey,
+  isStarterRiftlingAvatarSlug,
+  loreAvatarKey,
+  npcAvatarKey,
+  petAvatarKey,
+  speciesAvatarKey,
+  STARTER_RIFTLING_AVATAR_SLUGS,
+} from "@/lib/social/avatar-keys";
 
 /** Caller must `ensureSocialProfile` first. */
 function requireProfile(ownerKey: string): SocialProfile {
@@ -36,6 +62,8 @@ export type SocialAvatarOption = {
   thumbSrc: string;
   unlocked: boolean;
   lockedReason?: string;
+  /** Species cosmetics — unlock / purchase paths. */
+  unlockPaths?: AvatarUnlockPaths;
 };
 
 export type SocialAvatarSection = {
@@ -49,6 +77,14 @@ export type SocialAvatarCatalog = {
   selectedKey: string | null;
   selectedSrc: string;
   sections: SocialAvatarSection[];
+  /** Cosmetics disclaimer for UI. */
+  cosmeticsNote: string;
+  unlockSummary: {
+    total: number;
+    freeStarters: number;
+    unlocked: number;
+    locked: number;
+  };
 };
 
 export type SetAvatarInput =
@@ -57,26 +93,6 @@ export type SetAvatarInput =
   | { kind: "npc"; npcSlug: string }
   | { kind: "lore"; characterId: string }
   | { kind: "brand"; brandId?: string };
-
-/**
- * Unlocked starter-friendly Riftling species portraits.
- * Always selectable as cosmetics so the Riftling avatar option is visible
- * even when hatchery ownership is empty (local/demo). Does not grant pets.
- */
-export const STARTER_RIFTLING_AVATAR_SLUGS = [
-  "cindercub",
-  "mossprig",
-  "bubbloon",
-  "voltkit",
-  "pebblit",
-  "wisplet",
-  "frostnip",
-  "commonspark",
-  "emberfox",
-  "tideotter",
-  "snowpuff",
-  "dreamhare",
-] as const;
 
 /** Curated lore / hero portraits (avoid importing the full About module). */
 const LORE_AVATARS: Array<{
@@ -113,32 +129,8 @@ const BRAND_AVATARS: Array<{
   },
 ];
 
-export function petAvatarKey(petPublicId: string): string {
-  return `pet:${petPublicId}`;
-}
-
-export function speciesAvatarKey(speciesSlug: string): string {
-  return `species:${speciesSlug}`;
-}
-
-export function npcAvatarKey(slug: string): string {
-  return `npc:${slug}`;
-}
-
-export function loreAvatarKey(id: string): string {
-  return `lore:${id}`;
-}
-
-export function brandAvatarKey(id: string): string {
-  return `brand:${id}`;
-}
-
 function stripQuery(src: string): string {
   return src.split("?")[0] ?? src;
-}
-
-export function isStarterRiftlingAvatarSlug(slug: string): boolean {
-  return (STARTER_RIFTLING_AVATAR_SLUGS as readonly string[]).includes(slug);
 }
 
 /** Named active NPCs unlocked by default as cosmetic avatars. */
@@ -192,19 +184,38 @@ export function listPetAvatarOptions(ownerKey: string): SocialAvatarOption[] {
 }
 
 /**
- * Starter species portraits (cosmetic). Always unlocked — not ownership of a pet.
+ * Launch species portraits (cosmetic). Starters free; others via task / Credits / optional SOL.
+ * Owning a hatchery pet of that species unlocks it for free.
  */
-export function listSpeciesAvatarOptions(): SocialAvatarOption[] {
-  return STARTER_RIFTLING_AVATAR_SLUGS.map((slug) => {
+export function listSpeciesAvatarOptions(ownerKey?: string): SocialAvatarOption[] {
+  const slugs = listRiftlingAvatarSlugs();
+  return slugs.map((slug) => {
     const species = getSpeciesBySlug(slug);
+    const evald = ownerKey ? evaluateSpeciesAvatarUnlock(ownerKey, slug) : null;
+    const unlocked = evald?.unlocked ?? isStarterRiftlingAvatarSlug(slug);
+    const rarity = species?.rarityBias ?? "COMMON";
+    const affinity = species?.affinity ?? "RIFT";
+    let subtitle = `${affinity} · ${rarity.toLowerCase()}`;
+    if (evald?.paths.freeStarter) subtitle = `${affinity} · free starter`;
+    else if (evald?.paths.ownedPet) subtitle = `${affinity} · owned`;
+    else if (!unlocked && evald?.paths.task) {
+      subtitle = `Locked · ${evald.paths.creditsPrice} Credits`;
+    } else if (unlocked && evald?.paths.purchased) {
+      subtitle = `${affinity} · unlocked`;
+    } else if (unlocked && evald?.paths.task?.met) {
+      subtitle = `${affinity} · task unlock`;
+    }
+
     return {
       key: speciesAvatarKey(slug),
       kind: "species" as const,
       label: species?.name ?? slug,
-      subtitle: species ? `${species.affinity} · starter` : "Starter Riftling",
+      subtitle,
       src: creaturePortraitPath(slug),
       thumbSrc: creatureThumbPath(slug),
-      unlocked: true,
+      unlocked,
+      lockedReason: evald?.lockedReason,
+      unlockPaths: evald?.paths,
     };
   });
 }
@@ -212,9 +223,12 @@ export function listSpeciesAvatarOptions(): SocialAvatarOption[] {
 export function listAvailableAvatars(ownerKey: string): SocialAvatarCatalog {
   const profile = requireProfile(ownerKey);
   const pets = listPetAvatarOptions(ownerKey);
-  const riftlings = listSpeciesAvatarOptions();
+  const riftlings = listSpeciesAvatarOptions(ownerKey);
   const characters = listCharacterAvatarOptions();
   const brand = listBrandAvatarOptions();
+
+  const unlocked = riftlings.filter((o) => o.unlocked).length;
+  const locked = riftlings.length - unlocked;
 
   const sections: SocialAvatarSection[] = [];
 
@@ -232,8 +246,8 @@ export function listAvailableAvatars(ownerKey: string): SocialAvatarCatalog {
     title: "Riftling avatars",
     description:
       pets.length > 0
-        ? "Starter species portraits — always available as cosmetics."
-        : "Starter Riftling portraits you can use anytime. Hatch your own for personal pet avatars above.",
+        ? "Species portraits — free starters, task unlocks, or buy with Credits. Cosmetics only."
+        : "Species portraits you can use anytime once unlocked. Hatch your own for personal pet avatars above.",
     options: riftlings,
   });
 
@@ -256,6 +270,14 @@ export function listAvailableAvatars(ownerKey: string): SocialAvatarCatalog {
     selectedKey: profile.avatarKey ?? null,
     selectedSrc: profile.avatarSrc,
     sections,
+    cosmeticsNote:
+      "Avatar cosmetics change how you appear to keepers — they never grant pets, cards, or gameplay power. SOL is optional and never required.",
+    unlockSummary: {
+      total: riftlings.length,
+      freeStarters: STARTER_RIFTLING_AVATAR_SLUGS.length,
+      unlocked,
+      locked,
+    },
   };
 }
 
@@ -284,11 +306,21 @@ function resolveAvatarSelection(
 
   if (input.kind === "species") {
     const slug = input.speciesSlug.trim().toLowerCase();
-    if (!isStarterRiftlingAvatarSlug(slug) || !getSpeciesBySlug(slug)) {
+    if (!isRiftlingAvatarSlug(slug) || !getSpeciesBySlug(slug)) {
       return {
         ok: false,
         error: "not_found",
         message: "That Riftling species avatar is not available.",
+      };
+    }
+    const unlock = evaluateSpeciesAvatarUnlock(ownerKey, slug);
+    if (!unlock?.unlocked) {
+      return {
+        ok: false,
+        error: "locked",
+        message:
+          unlock?.lockedReason ??
+          "That Riftling avatar is locked. Complete its task or buy with Credits.",
       };
     }
     return {
@@ -352,7 +384,7 @@ function resolveAvatarSelection(
 
 /**
  * Set the player's social avatar.
- * Pet avatars require ownership; starter species / NPC / lore / brand are cosmetics.
+ * Pet avatars require ownership; species require unlock; NPC / lore / brand are cosmetics.
  */
 export function setSocialAvatar(
   ownerKey: string,

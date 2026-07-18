@@ -6,16 +6,25 @@ import {
 } from "@/game/eggs/hatchery-store";
 import { creaturePortraitPath } from "@/lib/assets/paths";
 import {
+  creditCredits,
+  resetCreditLedgerForTests,
+} from "@/lib/credits/ledger";
+import { resetEntitlementsForTests } from "@/lib/economy/sol/entitlements";
+import {
   brandAvatarKey,
   ensureSocialProfile,
   ensureSystemKeepersSeeded,
+  evaluateSpeciesAvatarUnlock,
   getAvatarCatalog,
   listCharacterAvatarOptions,
+  listRiftlingAvatarSlugs,
   listSpeciesAvatarOptions,
   loreAvatarKey,
   npcAvatarKey,
   parseAvatarKey,
   petAvatarKey,
+  purchaseSpeciesAvatarWithCredits,
+  purchaseSpeciesAvatarWithSol,
   resetSocialStoreForTests,
   setAvatar,
   speciesAvatarKey,
@@ -26,6 +35,8 @@ describe("social avatars", () => {
   beforeEach(() => {
     resetSocialStoreForTests();
     resetHatcheryStoreForTests();
+    resetCreditLedgerForTests();
+    resetEntitlementsForTests();
     ensureSystemKeepersSeeded();
   });
 
@@ -38,21 +49,31 @@ describe("social avatars", () => {
     expect(characters.some((c) => c.src.includes("/assets/npcs/"))).toBe(true);
   });
 
-  it("offers starter Riftling species avatars when the player owns no pets", () => {
+  it("expands Riftling cosmetics beyond free starters and keeps starters unlocked", () => {
     const owner = "guest_avatar_no_pets";
     ensureSocialProfile(owner);
 
     const catalog = getAvatarCatalog(owner);
     const petsSection = catalog.sections.find((s) => s.id === "pets");
     const riftlings = catalog.sections.find((s) => s.id === "riftlings");
+    const allSlugs = listRiftlingAvatarSlugs();
 
     expect(petsSection).toBeUndefined();
     expect(riftlings?.title).toBe("Riftling avatars");
-    expect(riftlings?.options.length).toBe(STARTER_RIFTLING_AVATAR_SLUGS.length);
-    expect(riftlings?.options.every((o) => o.unlocked && o.kind === "species")).toBe(true);
-    expect(riftlings?.options[0]?.src).toBe(
-      creaturePortraitPath(STARTER_RIFTLING_AVATAR_SLUGS[0]!),
+    expect(allSlugs.length).toBeGreaterThanOrEqual(40);
+    expect(riftlings?.options.length).toBe(allSlugs.length);
+    expect(catalog.unlockSummary.freeStarters).toBe(STARTER_RIFTLING_AVATAR_SLUGS.length);
+    expect(catalog.unlockSummary.total).toBe(allSlugs.length);
+    expect(catalog.cosmeticsNote.toLowerCase()).toContain("cosmetic");
+
+    const free = riftlings?.options.filter((o) =>
+      STARTER_RIFTLING_AVATAR_SLUGS.includes(
+        o.key.replace("species:", "") as (typeof STARTER_RIFTLING_AVATAR_SLUGS)[number],
+      ),
     );
+    expect(free?.every((o) => o.unlocked && o.kind === "species")).toBe(true);
+    expect(riftlings?.options.some((o) => !o.unlocked)).toBe(true);
+    expect(riftlings?.options[0]?.src).toBe(creaturePortraitPath(allSlugs[0]!));
     expect(riftlings?.options[0]?.thumbSrc).toContain("/assets/pets/thumbs/");
   });
 
@@ -76,7 +97,26 @@ describe("social avatars", () => {
     expect(pets[0]?.key).toBe(petAvatarKey(pet.publicId));
     expect(pets[0]?.src).toBe(creaturePortraitPath("cindercub"));
     expect(pets[0]?.label).toBe("Ember Buddy");
-    expect(riftlings.length).toBe(STARTER_RIFTLING_AVATAR_SLUGS.length);
+    expect(riftlings.length).toBe(listRiftlingAvatarSlugs().length);
+  });
+
+  it("unlocks a non-starter species avatar for free when the player owns that pet", () => {
+    const owner = "guest_avatar_owned_species";
+    ensureSocialProfile(owner);
+    const pet = createPet({
+      ownerKey: owner,
+      speciesSlug: "ashwing",
+      seed: "avatar-ashwing",
+      name: "Ash Buddy",
+    });
+    savePet(pet);
+
+    const evald = evaluateSpeciesAvatarUnlock(owner, "ashwing");
+    expect(evald?.unlocked).toBe(true);
+    expect(evald?.paths.ownedPet).toBe(true);
+
+    const ok = setAvatar(owner, { kind: "species", speciesSlug: "ashwing" });
+    expect(ok.ok).toBe(true);
   });
 
   it("sets a pet avatar only when the player owns the pet", () => {
@@ -114,7 +154,7 @@ describe("social avatars", () => {
     const owner = "guest_avatar_species";
     ensureSocialProfile(owner);
 
-    const speciesOptions = listSpeciesAvatarOptions();
+    const speciesOptions = listSpeciesAvatarOptions(owner);
     expect(speciesOptions.some((o) => o.key === speciesAvatarKey("mossprig"))).toBe(true);
 
     const ok = setAvatar(owner, { kind: "species", speciesSlug: "mossprig" });
@@ -130,13 +170,87 @@ describe("social avatars", () => {
     expect(catalog.selectedSrc).toBe(creaturePortraitPath("mossprig"));
   });
 
-  it("rejects non-starter species avatars", () => {
+  it("rejects locked species avatars until purchased or unlocked", () => {
+    const owner = "guest_avatar_locked";
+    ensureSocialProfile(owner);
+
+    const locked = evaluateSpeciesAvatarUnlock(owner, "celestora");
+    expect(locked?.unlocked).toBe(false);
+
+    const denied = setAvatar(owner, { kind: "species", speciesSlug: "celestora" });
+    expect(denied.ok).toBe(false);
+    if (!denied.ok) expect(denied.error).toBe("locked");
+  });
+
+  it("rejects unknown species avatars", () => {
     const owner = "guest_avatar_bad_species";
     ensureSocialProfile(owner);
 
     const denied = setAvatar(owner, { kind: "species", speciesSlug: "not-a-riftling" });
     expect(denied.ok).toBe(false);
     if (!denied.ok) expect(denied.error).toBe("not_found");
+  });
+
+  it("purchases a locked avatar with Credits and persists unlock", () => {
+    const owner = "guest_avatar_credits";
+    ensureSocialProfile(owner);
+
+    const before = evaluateSpeciesAvatarUnlock(owner, "ashwing");
+    expect(before?.unlocked).toBe(false);
+    const price = before!.paths.creditsPrice;
+
+    creditCredits({
+      userId: owner,
+      amount: price + 50,
+      reason: "ADMIN_ADJUST",
+      requestId: "avatar-test-fund",
+    });
+
+    const bought = purchaseSpeciesAvatarWithCredits({
+      ownerKey: owner,
+      speciesSlug: "ashwing",
+      requestId: "avatar-buy-ashwing-1",
+    });
+    expect(bought.ok).toBe(true);
+    if (!bought.ok) return;
+    expect(bought.key).toBe(speciesAvatarKey("ashwing"));
+    expect(bought.profile.unlockedAvatarKeys).toContain(speciesAvatarKey("ashwing"));
+
+    const after = evaluateSpeciesAvatarUnlock(owner, "ashwing");
+    expect(after?.unlocked).toBe(true);
+    expect(after?.paths.purchased).toBe(true);
+
+    const set = setAvatar(owner, { kind: "species", speciesSlug: "ashwing" });
+    expect(set.ok).toBe(true);
+
+    const replay = purchaseSpeciesAvatarWithCredits({
+      ownerKey: owner,
+      speciesSlug: "ashwing",
+      requestId: "avatar-buy-ashwing-2",
+    });
+    expect(replay.ok).toBe(false);
+    if (!replay.ok) expect(replay.error).toBe("already_unlocked");
+  });
+
+  it("blocks SOL avatar purchase while SOL_PURCHASES_ENABLED is off", () => {
+    const owner = "guest_avatar_sol";
+    ensureSocialProfile(owner);
+
+    const result = purchaseSpeciesAvatarWithSol({
+      ownerKey: owner,
+      speciesSlug: "ashwing",
+      requestId: "avatar-sol-ashwing-1",
+    });
+    expect(result.ok).toBe(false);
+    if (!result.ok) {
+      expect(result.error).toBe("sol_coming_soon");
+      expect(result.solPrice).toBeTruthy();
+      expect(result.message.toLowerCase()).toContain("coming soon");
+    }
+
+    const stillLocked = evaluateSpeciesAvatarUnlock(owner, "ashwing");
+    expect(stillLocked?.unlocked).toBe(false);
+    expect(stillLocked?.paths.solPurchaseEnabled).toBe(false);
   });
 
   it("allows NPC and brand avatars without ownership checks", () => {

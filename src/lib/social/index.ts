@@ -25,6 +25,25 @@ export type {
   SetAvatarInput,
 } from "@/lib/social/avatars";
 export {
+  listRiftlingAvatarSlugs,
+  isRiftlingAvatarSlug,
+  isFreeStarterAvatarSlug,
+  evaluateSpeciesAvatarUnlock,
+  purchaseSpeciesAvatarWithCredits,
+  purchaseSpeciesAvatarWithSol,
+  grantSpeciesAvatarUnlock,
+  avatarUnlockSummary,
+  creditsPriceForSpecies,
+  solPriceForSpecies,
+  AVATAR_CREDITS_BY_RARITY,
+  AVATAR_SOL_BY_RARITY,
+} from "@/lib/social/avatar-unlocks";
+export type {
+  AvatarTaskProgress,
+  AvatarUnlockPaths,
+  AvatarUnlockEval,
+} from "@/lib/social/avatar-unlocks";
+export {
   resetSocialStoreForTests,
   ensureSystemKeepersSeeded,
   getSocialStore,

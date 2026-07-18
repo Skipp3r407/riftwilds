@@ -15,8 +15,13 @@ export type SocialProfile = {
   displayName: string;
   rankTitle: string;
   avatarSrc: string;
-  /** Stable selection id: `pet:…` | `npc:…` | `lore:…` | `brand:…`. */
+  /** Stable selection id: `pet:…` | `species:…` | `npc:…` | `lore:…` | `brand:…`. */
   avatarKey?: string | null;
+  /**
+   * Purchased / granted species avatar keys (`species:slug`).
+   * Task unlocks and ownership are re-evaluated; this persists Credits/SOL buys.
+   */
+  unlockedAvatarKeys?: string[];
   /** ISO */
   createdAt: string;
   lastSeenAt: string;

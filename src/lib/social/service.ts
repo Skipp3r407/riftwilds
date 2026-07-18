@@ -98,6 +98,7 @@ export function ensureSocialProfile(
     displayName: opts?.displayName?.trim().slice(0, 32) || `Keeper ${suffix.slice(0, 4)}`,
     rankTitle: "Hatchling Keeper",
     avatarSrc: defaultAvatarFor(ownerKey),
+    unlockedAvatarKeys: [],
     createdAt: nowIso(),
     lastSeenAt: nowIso(),
     messagePrivacy: "friends_only",
