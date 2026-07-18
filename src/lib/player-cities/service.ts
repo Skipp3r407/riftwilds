@@ -207,4 +207,6 @@ export function playerCitiesAdminSnapshot() {
   return {
     cities: listPlayerCities(),
     availableParcels: listAvailableCitySeedParcels(),
-    note: "City
+    note: "City instances / nav-mesh ownership zones remain multiplayer backlog.",
+  };
+}

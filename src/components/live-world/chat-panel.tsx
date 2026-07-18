@@ -21,6 +21,8 @@ type Props = {
   bridge: LiveWorldBridge;
   chatMode?: ChatDisplayMode;
   onRevealHud?: () => void;
+  /** When true, parent owns placement (bottom-left HUD stack). */
+  stacked?: boolean;
   panelLayout?: HudPanelLayout;
   onPanelPositionChange?: (position: HudPanelPosition) => void;
 };
@@ -31,6 +33,7 @@ export function LiveWorldChatPanel({
   bridge,
   chatMode = "pinned",
   onRevealHud,
+  stacked = false,
   panelLayout,
   onPanelPositionChange,
 }: Props) {
@@ -125,7 +128,9 @@ export function LiveWorldChatPanel({
   const panelBg =
     chatMode === "transparent" ? "bg-[#0a101c]/55" : "bg-[#0a101c]/95";
   const width = floatExpanded ? "w-[min(100%-1.5rem,480px)]" : "w-[min(100%-1.5rem,360px)]";
-  const defaultClass = `pointer-events-auto absolute bottom-3 left-3 z-30 ${width}`;
+  const defaultClass = stacked
+    ? `pointer-events-auto relative z-30 ${width}`
+    : `pointer-events-auto absolute bottom-3 left-3 z-30 ${width}`;
   const canDrag = typeof onPanelPositionChange === "function";
 
   const content = (dragHandleProps?: HudDragHandleProps) =>

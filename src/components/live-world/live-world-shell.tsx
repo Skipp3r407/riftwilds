@@ -49,9 +49,14 @@ import { SocialPresenceHud } from "@/components/live-world/social-presence-hud";
 import { TownActivityPanel } from "@/components/live-world/town-activity-panel";
 import { FeaturedPlayerBanner } from "@/components/live-world/featured-player-banner";
 import {
+  bottomLeftHudStackClass,
+  chatUsesBottomLeftStack,
+  interactPromptDockClass,
   minimapUsesTopRightStack,
+  presenceUsesBottomLeftStack,
   topRightHudStackClass,
   townActivityUsesTopRightStack,
+  worldClockDockClass,
 } from "@/components/live-world/hud-slots";
 import { getInputManager } from "@/game/live-world/input/input-manager";
 import { cycleHudMode } from "@/game/live-world/systems/immersive/settings";

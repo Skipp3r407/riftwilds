@@ -30,7 +30,7 @@ Defaults in `src/lib/config/feature-flags.ts`:
 | `LIVE_WORLD_CHAT_ENABLED` | `true` | Stub only until Phase 2 |
 | `LIVE_WORLD_PVE_ENABLED` | `true` | Stub until Phase 4 |
 | `LIVE_WORLD_GATHERING_ENABLED` | `true` | Stub until Phase 3 |
-| `LIVE_WORLD_EVENTS_ENABLED` | `true` | Stub until Phase 4 |
+| `LIVE_WORLD_EVENTS_ENABLED` | `true` | Dynamic World Events engine live (see `docs/world/DYNAMIC_WORLD_EVENTS.md`) |
 | `LIVE_WORLD_WORLD_BOSSES_ENABLED` | `true` | Stub until Phase 4 |
 | `LIVE_WORLD_HOMESTEADS_ENABLED` | `false` | Phase 5 |
 | `LIVE_WORLD_GUILDS_ENABLED` | `false` | Phase 5 |
@@ -100,7 +100,7 @@ See also: `docs/EQUIPMENT_AND_LOADOUTS.md` (ownership, presets, anchor backlog).
 ### Phase 4 — PvE & spectacle
 
 - Wild encounters (server authoritative)
-- World events + bosses
+- World events + bosses — **Dynamic World Events + open-world boss stubs landed** (`docs/world/DYNAMIC_WORLD_EVENTS.md`, retention roadmap)
 - Pet traversal abilities
 - Additional regions
 - Weather / day-night (optional)

@@ -78,4 +78,8 @@ describe("hud panel layout", () => {
     expect(townActivityUsesTopRightStack({ hudPanelLayout: {} })).toBe(true);
     expect(
       townActivityUsesTopRightStack({
-        hudPanelLayout: { townActivity:
+        hudPanelLayout: { townActivity: { x: 1, y: 2 } },
+      }),
+    ).toBe(false);
+  });
+});

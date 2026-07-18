@@ -114,4 +114,6 @@ export async function POST(request: Request) {
     ok: true,
     instance,
     requestId: guard.requestId,
-    note: "Rewards are soft Credits only. Full 100-player boss sync rem
+    note: "Rewards are soft Credits only. Full 100-player boss sync remains backlog.",
+  });
+}

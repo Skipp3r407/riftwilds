@@ -12,6 +12,8 @@ type Props = {
   onQuickAction?: (kind: string) => void;
   collapsed?: boolean;
   onCollapsedChange?: (collapsed: boolean) => void;
+  /** When true, parent owns placement (bottom-left HUD stack). */
+  stacked?: boolean;
   panelLayout?: HudPanelLayout;
   onPanelPositionChange?: (position: HudPanelPosition) => void;
 };
@@ -23,6 +25,7 @@ export function SocialPresenceHud({
   onQuickAction,
   collapsed = false,
   onCollapsedChange,
+  stacked = false,
   panelLayout,
   onPanelPositionChange,
 }: Props) {
@@ -100,8 +103,9 @@ export function SocialPresenceHud({
     </>
   );
 
-  const defaultClass =
-    "pointer-events-none absolute bottom-3 left-3 z-30 flex max-w-[20rem] flex-col gap-2 md:bottom-4 md:left-4";
+  const defaultClass = stacked
+    ? "pointer-events-none relative z-30 flex max-w-[20rem] flex-col gap-2"
+    : "pointer-events-none absolute bottom-3 left-3 z-30 flex max-w-[20rem] flex-col gap-2 md:bottom-4 md:left-4";
 
   const panel = canCollapse ? (
     <CollapsibleHudPanel
@@ -117,6 +121,7 @@ export function SocialPresenceHud({
       }
       testId="social-presence-hud"
       panelClassName="max-w-[20rem]"
+      edge={stacked ? "bottom" : "side"}
     >
       {body}
     </CollapsibleHudPanel>
@@ -164,6 +169,7 @@ export function SocialPresenceHud({
             }
             testId="social-presence-hud"
             panelClassName="max-w-[20rem]"
+            edge={stacked ? "bottom" : "side"}
             dragHandleProps={dragHandleProps}
           >
             {body}

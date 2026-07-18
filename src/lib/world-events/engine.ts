@@ -600,4 +600,36 @@ export function getWorldEventPlayerView(params: {
             x: active.markerX,
             y: active.markerY,
             label: active.name,
-            subtitl
+            subtitle: `${active.phase} · ${active.tier}`,
+            eventKey: active.key,
+            phase: active.phase,
+          },
+        ]
+      : [],
+    participant,
+    worldChanges: active?.worldChanges ?? [],
+    tempQuests: active?.tempQuests ?? [],
+    npcReactions: active?.npcReactions ?? [],
+    note: WORLD_EVENT_PUBLIC_NOTE,
+    multiplayerBacklog: [...WORLD_EVENT_MULTIPLAYER_BACKLOG],
+  };
+}
+
+export function listWorldEventAdminSnapshot(now = Date.now()) {
+  tickWorldEventScheduler(now);
+  return {
+    scheduler: getSchedulerState(),
+    active: getActiveWorldEventInstance(),
+    recent: listRecentWorldEvents(8),
+    catalog: listWorldEventCatalog().map((d) => ({
+      key: d.key,
+      name: d.name,
+      tier: d.tier,
+      qualifyScore: d.qualifyScore,
+    })),
+    audit: listWorldEventAudit(20),
+    multiplayerBacklog: WORLD_EVENT_MULTIPLAYER_BACKLOG,
+  };
+}
+
+export { listWorldEventAudit, getActiveWorldEventInstance };

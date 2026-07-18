@@ -25,6 +25,8 @@ type Props = {
   prompt: InteractPrompt;
   onAdvance: () => void;
   bridge?: LiveWorldBridge | null;
+  /** Placement for the interact prompt (above toolbar / world clock). */
+  promptClassName?: string;
 };
 
 export function LiveWorldDialogueOverlay({
@@ -32,6 +34,7 @@ export function LiveWorldDialogueOverlay({
   prompt,
   onAdvance,
   bridge,
+  promptClassName,
 }: Props) {
   const [shopId, setShopId] = useState<string | null>(null);
   const [shopMsg, setShopMsg] = useState<string | null>(null);
@@ -254,7 +257,13 @@ export function LiveWorldDialogueOverlay({
   if (!prompt.visible) return null;
 
   return (
-    <div className="pointer-events-none absolute inset-x-0 bottom-28 z-20 flex justify-center px-4 md:bottom-8">
+    <div
+      className={
+        promptClassName ??
+        "pointer-events-none absolute inset-x-0 bottom-28 z-25 flex justify-center px-4 md:bottom-16"
+      }
+      data-testid="live-world-interact-prompt"
+    >
       <div className="rounded-full border border-[var(--stroke-bronze)] bg-[rgba(20,16,12,0.8)] px-4 py-2 text-xs text-[var(--text-muted)] backdrop-blur-md">
         {prompt.label}
       </div>

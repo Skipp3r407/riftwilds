@@ -59,9 +59,10 @@ export function LiveWorldToolbar({
 }: Props) {
   const fade = Math.max(opacity, 0.35);
   const canDrag = typeof onPanelPositionChange === "function";
+  // Docked bottom-center; world clock + interact prompt reserve space above via hud-slots.
   const defaultClass = collapsed
-    ? "pointer-events-auto absolute bottom-0 left-1/2 z-40 -translate-x-1/2"
-    : `pointer-events-auto absolute bottom-3 left-1/2 z-40 flex -translate-x-1/2 flex-wrap items-center justify-center gap-1 ${LW_HUD_GLASS} px-2 py-1.5`;
+    ? "pointer-events-auto absolute bottom-0 left-1/2 z-40 -translate-x-1/2 pb-[max(0px,var(--safe-bottom))]"
+    : `pointer-events-auto absolute bottom-3 left-1/2 z-40 flex -translate-x-1/2 flex-wrap items-center justify-center gap-1 pb-[max(0px,var(--safe-bottom))] ${LW_HUD_GLASS} px-2 py-1.5`;
 
   const expandedControls = (
     <>

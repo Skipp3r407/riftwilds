@@ -9,11 +9,17 @@ import {
 import { resolveActiveDisaster } from "@/game/living-world/disasters";
 import { syncWorldClockAudio } from "@/lib/audio/weather";
 
+type Props = {
+  regionSlug?: string;
+  /** Placement classes from hud-slots (reserves space above docked toolbar). */
+  className?: string;
+};
+
 /**
  * Lightweight Live World HUD hook — shows season / day phase / weather.
  * Pure client clock (no fetch) so Phaser session stays snappy.
  */
-export function WorldClockChip({ regionSlug }: { regionSlug?: string }) {
+export function WorldClockChip({ regionSlug, className }: Props) {
   const enabled = featureFlagDefaults.LIVING_WORLD_CLOCK_ENABLED;
   const [clock, setClock] = useState<LivingWorldClock | null>(null);
   const [disasterName, setDisasterName] = useState<string | null>(null);
@@ -38,8 +44,14 @@ export function WorldClockChip({ regionSlug }: { regionSlug?: string }) {
   if (!enabled || !clock) return null;
 
   return (
-    <div className="pointer-events-none absolute inset-x-0 bottom-3 z-20 flex justify-center px-3 md:bottom-4">
-      <div className="rounded-xl border border-[var(--stroke)] bg-[rgba(8,12,22,0.78)] px-3 py-2 text-center backdrop-blur-md">
+    <div
+      className={
+        className ??
+        "pointer-events-none absolute inset-x-0 bottom-3 z-20 flex justify-center px-3 md:bottom-4"
+      }
+      data-testid="live-world-clock-chip"
+    >
+      <div className="rounded-xl border border-[var(--stroke-bronze)] bg-[rgba(20,18,14,0.78)] px-3 py-2 text-center shadow-[0_8px_28px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(232,213,176,0.1)] backdrop-blur-md">
         <p className="text-[11px] text-[var(--cyan)]">
           {clock.labels.season} · {clock.labels.dayPhase} · {clock.labels.weather}
         </p>

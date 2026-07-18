@@ -33,6 +33,25 @@ export function isHudPanelPosition(value: unknown): value is HudPanelPosition {
   return Number.isFinite(v.x) && Number.isFinite(v.y);
 }
 
+/** Drop legacy free-form pairs that land on top of each other (same dock corner). */
+const OVERLAP_PX = { x: 96, y: 64 };
+
+function sanitizeOverlappingHudPanels(layout: HudPanelLayout): HudPanelLayout {
+  const out: HudPanelLayout = { ...layout };
+  const chat = out.chat;
+  const presence = out.presence;
+  if (
+    chat &&
+    presence &&
+    Math.abs(chat.x - presence.x) < OVERLAP_PX.x &&
+    Math.abs(chat.y - presence.y) < OVERLAP_PX.y
+  ) {
+    delete out.chat;
+    delete out.presence;
+  }
+  return out;
+}
+
 export function normalizeHudPanelLayout(
   partial: HudPanelLayout | null | undefined,
 ): HudPanelLayout {
@@ -44,7 +63,7 @@ export function normalizeHudPanelLayout(
       out[id] = { x: Math.round(pos.x), y: Math.round(pos.y) };
     }
   }
-  return out;
+  return sanitizeOverlappingHudPanels(out);
 }
 
 export function clampHudPanelPosition(
