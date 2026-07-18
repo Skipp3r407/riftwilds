@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
+import { PresenceChip } from "@/components/ecosystem/presence-chip";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
 import { SocialHub } from "@/components/social/social-hub";
 import { SocialNavBadge } from "@/components/social/social-nav-badge";
+import { ImageButton } from "@/components/ui/image-button";
 import { getSocialHubSnapshot } from "@/game/social/stubs";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
-import { PresenceChip } from "@/components/ecosystem/presence-chip";
 import { getTownFeaturedSnapshot } from "@/lib/social-presence";
 
 export const metadata = { title: "Social" };
@@ -72,15 +73,18 @@ export default function SocialHubPage() {
           <>
             <SocialNavBadge />
             <PresenceChip />
-            <Link href="/live-world" className="btn-secondary focus-ring text-sm">
-              Live World
-            </Link>
-            <Link href="/creators" className="btn-secondary focus-ring text-sm">
-              Creators
-            </Link>
-            <Link href="/guilds" className="btn-primary focus-ring text-sm">
+            <ImageButton href="/social" variant="tab" size="sm" selected>
+              Social
+            </ImageButton>
+            <ImageButton href="/guilds" variant="tab" size="sm">
               Guilds
-            </Link>
+            </ImageButton>
+            <ImageButton href="/live-world" variant="tab" size="sm">
+              Live World
+            </ImageButton>
+            <ImageButton href="/creators" variant="tab" size="sm">
+              Creators
+            </ImageButton>
           </>
         }
       />

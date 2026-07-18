@@ -65,6 +65,20 @@
       <stop offset="0%" stop-color="rgba(34,40,70,0.97)"/>
       <stop offset="100%" stop-color="rgba(16,20,40,0.99)"/>
     </linearGradient>
+    <linearGradient id="tabFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(22,28,48,0.96)"/>
+      <stop offset="45%" stop-color="rgba(12,16,32,0.98)"/>
+      <stop offset="100%" stop-color="rgba(6,8,18,0.99)"/>
+    </linearGradient>
+    <linearGradient id="tabHoverFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30,40,64,0.97)"/>
+      <stop offset="100%" stop-color="rgba(12,18,36,0.99)"/>
+    </linearGradient>
+    <linearGradient id="tabActiveFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3de7ff"/>
+      <stop offset="48%" stop-color="#2a7dff"/>
+      <stop offset="100%" stop-color="#ffb84d"/>
+    </linearGradient>
     <filter id="softGlow" x="-40%" y="-80%" width="180%" height="260%">
       <feGaussianBlur stdDeviation="8" result="blur"/>
       <feMerge>

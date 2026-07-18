@@ -161,7 +161,36 @@ const skins: Skin[] = [
     highlight: "rgba(255,255,255,0.22)",
     shade: "rgba(0,0,0,0.22)",
   },
-];
+  // Compact hub / section tabs — idle dark glass, active cyan→amber Riftwilds glow
+  {
+    id: "tab",
+    fill: "url(#tabFill)",
+    stroke: "rgba(61,231,255,0.28)",
+    strokeWidth: 2,
+    glow: "rgba(61,231,255,0.1)",
+    highlight: "rgba(255,255,255,0.22)",
+    shade: "rgba(0,0,0,0.42)",
+  },
+  {
+    id: "tab-hover",
+    fill: "url(#tabHoverFill)",
+    stroke: "rgba(61,231,255,0.48)",
+    strokeWidth: 2.25,
+    glow: "rgba(61,231,255,0.22)",
+    highlight: "rgba(255,255,255,0.3)",
+    shade: "rgba(0,0,0,0.32)",
+  },
+  {
+    id: "tab-active",
+    fill: "url(#tabActiveFill)",
+    stroke: "rgba(255,255,255,0.42)",
+    strokeWidth: 2.25,
+    glow: "rgba(61,231,255,0.72)",
+    highlight: "rgba(255,255,255,0.5)",
+    shade: "rgba(8,20,40,0.22)",
+    innerGlow: "rgba(255,184,77,0.4)",
+  },
+]
 
 function defs(): string {
   return `
@@ -228,6 +257,20 @@ function defs(): string {
     <linearGradient id="iconHoverFill" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="rgba(34,40,70,0.97)"/>
       <stop offset="100%" stop-color="rgba(16,20,40,0.99)"/>
+    </linearGradient>
+    <linearGradient id="tabFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(22,28,48,0.96)"/>
+      <stop offset="45%" stop-color="rgba(12,16,32,0.98)"/>
+      <stop offset="100%" stop-color="rgba(6,8,18,0.99)"/>
+    </linearGradient>
+    <linearGradient id="tabHoverFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(30,40,64,0.97)"/>
+      <stop offset="100%" stop-color="rgba(12,18,36,0.99)"/>
+    </linearGradient>
+    <linearGradient id="tabActiveFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3de7ff"/>
+      <stop offset="48%" stop-color="#2a7dff"/>
+      <stop offset="100%" stop-color="#ffb84d"/>
     </linearGradient>
     <filter id="softGlow" x="-40%" y="-80%" width="180%" height="260%">
       <feGaussianBlur stdDeviation="8" result="blur"/>
@@ -343,9 +386,10 @@ Reusable Riftwilds UI button backgrounds — **no baked text**.
 | \`ghost\` / \`ghost-hover\` | Low-emphasis |
 | \`amber\` / \`amber-hover\` | Warning / reward accents |
 | \`icon\` / \`icon-hover\` | Square icon-only controls |
+| \`tab\` / \`tab-hover\` / \`tab-active\` | Hub / section pills (Social Hub) |
 | \`primary-sm\` / \`secondary-sm\` | Compact header sizes |
 
-Wire via \`.btn-primary\`, \`.btn-secondary\`, etc. in \`globals.css\` or \`ImageButton\`.
+Wire via \`.btn-primary\`, \`.btn-secondary\`, \`.btn-tab\`, etc. in \`globals.css\` or \`ImageButton\`.
 `,
   );
 

@@ -36,6 +36,20 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-social-hub-chrome",
+    date: "2026-07-18",
+    title: "Social Hub image tabs and plaza wallpaper",
+    summary:
+      "Social Hub gets glossy image tab buttons and a Commons plaza atmospheric background for clearer community chrome.",
+    added: [
+      "Image-skinned hub tab buttons (idle glass + cyan/amber active glow) for Social Hub sections and route pills",
+      "Full-bleed Social Hub wallpaper (Commons plaza / rift lanterns) on /social",
+    ],
+    changed: [
+      "Social Hub Friends / Requests / Messages / Avatar & safety tabs use reusable ImageButton tab skins",
+    ],
+  },
+  {
     id: "2026-07-18-riftling-avatars",
     date: "2026-07-18",
     title: "Riftling avatars for profiles and social",

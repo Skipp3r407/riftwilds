@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
 import { StatusChip } from "@/components/shared/page-header";
 import { AvatarPicker } from "@/components/social/avatar-picker";
+import { ImageButton } from "@/components/ui/image-button";
 import { brandMarkPath } from "@/lib/assets/paths";
 import type {
   DmMessageView,
@@ -236,10 +237,7 @@ export function SocialHub() {
         <section className="panel p-5 text-sm text-[var(--text-muted)]">Loading social graph…</section>
       )}
 
-      <nav
-        className="flex gap-1 overflow-x-auto border-b border-[var(--stroke)] pb-px"
-        aria-label="Social sections"
-      >
+      <nav className="flex flex-wrap gap-2" aria-label="Social sections">
         {TABS.map((t) => {
           const badge =
             t.id === "requests"
@@ -247,26 +245,25 @@ export function SocialHub() {
               : t.id === "messages"
                 ? summary?.unreadMessages
                 : 0;
+          const active = tab === t.id;
           return (
-            <button
+            <ImageButton
               key={t.id}
               type="button"
+              variant="tab"
+              size="sm"
+              selected={active}
               onClick={() => setTab(t.id)}
-              className={cn(
-                "focus-ring relative shrink-0 px-3 py-2 text-sm transition",
-                tab === t.id
-                  ? "border-b-2 border-[var(--cyan)] text-white"
-                  : "text-[var(--text-muted)] hover:text-white",
-              )}
-              aria-current={tab === t.id ? "page" : undefined}
+              className="relative shrink-0"
+              aria-current={active ? "page" : undefined}
             >
               {t.label}
               {badge && badge > 0 ? (
-                <span className="ml-1.5 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--amber)] px-1 text-[10px] font-medium text-black">
+                <span className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-[var(--amber)] px-1 text-[10px] font-medium text-black">
                   {badge > 9 ? "9+" : badge}
                 </span>
               ) : null}
-            </button>
+            </ImageButton>
           );
         })}
       </nav>

@@ -10,7 +10,8 @@ export type ImageButtonVariant =
   | "danger"
   | "success"
   | "amber"
-  | "icon";
+  | "icon"
+  | "tab";
 
 const variantClass: Record<ImageButtonVariant, string> = {
   primary: "btn-primary",
@@ -20,6 +21,7 @@ const variantClass: Record<ImageButtonVariant, string> = {
   success: "btn-success",
   amber: "btn-amber",
   icon: "btn-icon",
+  tab: "btn-tab",
 };
 
 type CommonProps = {
@@ -29,6 +31,11 @@ type CommonProps = {
   children: ReactNode;
   /** Optional: force a specific skin asset (defaults follow variant). */
   skin?: ButtonSkinVariant;
+  /**
+   * Selected / active tab state. Sets `aria-current="page"` unless overridden,
+   * and swaps tab skins to the glowing active art.
+   */
+  selected?: boolean;
 };
 
 type AsButton = CommonProps &
@@ -44,8 +51,17 @@ type AsLink = CommonProps &
 
 export type ImageButtonProps = AsButton | AsLink;
 
-function skinStyle(skin: ButtonSkinVariant | undefined): CSSProperties | undefined {
+function skinStyle(skin: ButtonSkinVariant | undefined, selected: boolean): CSSProperties | undefined {
   if (!skin) return undefined;
+
+  if (skin === "tab") {
+    return {
+      ["--btn-skin" as string]: `url("${buttonSkinPath(selected ? "tab-active" : "tab")}")`,
+      ["--btn-skin-hover" as string]: `url("${buttonSkinPath(selected ? "tab-active" : "tab-hover")}")`,
+      ["--btn-skin-active" as string]: `url("${buttonSkinPath(selected ? "tab-active" : "tab-hover")}")`,
+    };
+  }
+
   return {
     ["--btn-skin" as string]: `url("${buttonSkinPath(skin)}")`,
     ["--btn-skin-hover" as string]: `url("${buttonSkinPath(`${skin}-hover`)}")`,
@@ -63,30 +79,54 @@ function skinStyle(skin: ButtonSkinVariant | undefined): CSSProperties | undefin
  * Site-wide click SFX is handled by HudInteraction.
  */
 export function ImageButton(props: ImageButtonProps) {
-  const { variant = "primary", size = "md", className, children, skin, ...rest } = props;
+  const {
+    variant = "primary",
+    size = "md",
+    className,
+    children,
+    skin,
+    selected = false,
+    ...rest
+  } = props;
 
-  const classes = cn(variantClass[variant], "focus-ring", size === "sm" && "btn-sm", className);
-  const style = skinStyle(skin);
+  const classes = cn(
+    variantClass[variant],
+    "focus-ring",
+    size === "sm" && "btn-sm",
+    selected && "is-selected",
+    className,
+  );
+  const style = skinStyle(skin ?? (variant === "tab" ? "tab" : undefined), selected);
 
   if ("href" in props && props.href != null) {
     const { href, disabled, ...linkRest } = rest as AsLink;
+    const { ["aria-current"]: ariaCurrentProp, ...linkAttrs } = linkRest;
+    const ariaCurrent = ariaCurrentProp ?? (selected ? ("page" as const) : undefined);
     if (disabled) {
       return (
-        <span className={classes} style={style} aria-disabled="true" role="link">
+        <span
+          className={classes}
+          style={style}
+          aria-disabled="true"
+          role="link"
+          aria-current={ariaCurrent}
+        >
           {children}
         </span>
       );
     }
     return (
-      <Link href={href} className={classes} style={style} {...linkRest}>
+      <Link href={href} className={classes} style={style} {...linkAttrs} aria-current={ariaCurrent}>
         {children}
       </Link>
     );
   }
 
   const { type = "button", ...buttonRest } = rest as AsButton;
+  const { ["aria-current"]: ariaCurrentProp, ...buttonAttrs } = buttonRest;
+  const ariaCurrent = ariaCurrentProp ?? (selected ? ("page" as const) : undefined);
   return (
-    <button type={type} className={classes} style={style} {...buttonRest}>
+    <button type={type} className={classes} style={style} {...buttonAttrs} aria-current={ariaCurrent}>
       {children}
     </button>
   );

@@ -68,6 +68,7 @@
     "assets:generate:cozy-terrain": "node scripts/assets/generate-cozy-pixel-terrain.mjs",
     "assets:generate:cozy-world": "node scripts/assets/generate-cozy-pixel-world.mjs",
     "assets:generate:economy-wallpapers": "node scripts/assets/generate-economy-page-wallpapers.mjs",
+    "assets:generate:social-wallpaper": "node scripts/assets/generate-social-wallpaper.mjs",
     "tcg:generate": "node scripts/tcg/generate-foundational-set.mjs",
     "tcg:generate:card-images": "node scripts/tcg/generate-card-images.mjs",
     "tcg:validate": "vitest run tests/unit/tcg-content.test.ts",
