@@ -1,34 +1,69 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ImageButton } from "@/components/ui/image-button";
-import { mysteryRiftEggPath } from "@/lib/assets/paths";
+import { creaturePortraitPath, mysteryRiftEggPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
+import {
+  HERO_RIFTLING_POOL,
+  type HeroRiftlingPreview,
+} from "@/lib/marketing/hero-riftling-pool";
 import { cn } from "@/lib/utils/cn";
 
 const HERO_EGG_SRC = mysteryRiftEggPath();
 
-const COMPANIONS = [
-  {
-    src: "/assets/pets/cindercub.png?v=mask3",
-    label: "Ember",
-    accent: "var(--ember)",
-    delay: 0,
-  },
-  {
-    src: "/assets/pets/mossprig.png?v=mask3",
-    label: "Grove",
-    accent: "var(--grove)",
-    delay: 0.35,
-  },
-  {
-    src: "/assets/pets/bubbloon.png?v=mask3",
-    label: "Tide",
-    accent: "var(--tide)",
-    delay: 0.7,
-  },
-] as const;
+type HeroCompanion = {
+  slug: string;
+  name: string;
+  affinityLabel: string;
+  src: string;
+  accent: string;
+  delay: number;
+};
+
+const AFFINITY_ACCENT: Record<string, string> = {
+  EMBER: "var(--ember)",
+  TIDE: "var(--tide)",
+  GROVE: "var(--grove)",
+  STORM: "var(--storm)",
+  STONE: "var(--stone)",
+  FROST: "var(--frost)",
+  RADIANT: "var(--radiant)",
+  VOID: "var(--void)",
+  ALLOY: "var(--alloy)",
+  SPIRIT: "var(--spirit)",
+};
+
+function affinityAccent(affinity: string): string {
+  return AFFINITY_ACCENT[affinity] ?? "var(--cyan)";
+}
+
+function pickRandomCompanions(
+  count: number,
+  pool: readonly HeroRiftlingPreview[],
+): HeroCompanion[] {
+  const n = Math.min(count, pool.length);
+  const indices = Array.from({ length: pool.length }, (_, i) => i);
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = indices[i]!;
+    indices[i] = indices[j]!;
+    indices[j] = tmp;
+  }
+  return indices.slice(0, n).map((idx, order) => {
+    const sp = pool[idx]!;
+    return {
+      slug: sp.slug,
+      name: sp.name,
+      affinityLabel: sp.affinity.charAt(0) + sp.affinity.slice(1).toLowerCase(),
+      src: `${creaturePortraitPath(sp.slug)}?v=mask3`,
+      accent: affinityAccent(sp.affinity),
+      delay: order * 0.35,
+    };
+  });
+}
 
 const PARTICLES = [
   { left: "12%", top: "18%", size: 3, delay: 0 },
@@ -43,9 +78,11 @@ const PARTICLES = [
 
 function HeroShowcase({
   reduceMotion,
+  companions,
   compact = false,
 }: {
   reduceMotion: boolean;
+  companions: HeroCompanion[] | null;
   compact?: boolean;
 }) {
   return (
@@ -91,36 +128,57 @@ function HeroShowcase({
             "mt-2.5 flex items-end justify-center",
             compact ? "gap-3" : "mt-4 gap-7",
           )}
+          aria-busy={!companions}
         >
-          {COMPANIONS.map((c) => (
-            <li key={c.label} className="text-center">
+          {(companions ?? [null, null, null]).map((c, i) => (
+            <li key={c?.slug ?? `slot-${i}`} className="text-center">
               <motion.div
                 className={cn(
                   "relative mx-auto",
                   compact ? "h-11 w-11" : "h-20 w-20",
                 )}
-                style={{ ["--pet-accent" as string]: c.accent }}
-                animate={reduceMotion ? undefined : { y: [0, -6, 0] }}
-                transition={{
-                  duration: 2.8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: c.delay,
-                }}
+                style={c ? { ["--pet-accent" as string]: c.accent } : undefined}
+                animate={
+                  reduceMotion || !c ? undefined : { y: [0, -6, 0] }
+                }
+                transition={
+                  c
+                    ? {
+                        duration: 2.8,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: c.delay,
+                      }
+                    : undefined
+                }
               >
-                <span className="home-hero__pet-glow" aria-hidden />
-                <Image
-                  src={c.src}
-                  alt=""
-                  width={80}
-                  height={80}
-                  className="relative z-[1] h-full w-full object-contain opacity-100"
-                  unoptimized
-                />
+                {c ? (
+                  <>
+                    <span className="home-hero__pet-glow" aria-hidden />
+                    <Image
+                      src={c.src}
+                      alt=""
+                      width={80}
+                      height={80}
+                      className="relative z-[1] h-full w-full object-contain opacity-100"
+                      unoptimized
+                    />
+                  </>
+                ) : (
+                  <span
+                    className="block h-full w-full rounded-full bg-[rgba(61,231,255,0.08)]"
+                    aria-hidden
+                  />
+                )}
               </motion.div>
               <p className="mt-1 font-display text-[9px] uppercase tracking-[0.2em] text-[var(--text)]/80">
-                {c.label}
+                {c?.name ?? "\u00a0"}
               </p>
+              {c ? (
+                <p className="font-display text-[8px] uppercase tracking-[0.18em] text-[var(--text-dim)]">
+                  {c.affinityLabel}
+                </p>
+              ) : null}
             </li>
           ))}
         </ul>
@@ -136,6 +194,11 @@ function HeroShowcase({
  */
 export function Hero() {
   const reduceMotion = useReducedMotion();
+  const [companions, setCompanions] = useState<HeroCompanion[] | null>(null);
+
+  useEffect(() => {
+    setCompanions(pickRandomCompanions(3, HERO_RIFTLING_POOL));
+  }, []);
 
   return (
     <section className="home-hero relative min-h-[min(100svh,920px)] overflow-hidden">
@@ -207,7 +270,11 @@ export function Hero() {
 
             {/* Mobile: egg showcase sits between copy and CTAs so pets stay on-screen */}
             <div className="mt-5 lg:hidden">
-              <HeroShowcase reduceMotion={Boolean(reduceMotion)} compact />
+              <HeroShowcase
+                reduceMotion={Boolean(reduceMotion)}
+                companions={companions}
+                compact
+              />
             </div>
 
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
@@ -234,7 +301,10 @@ export function Hero() {
           </div>
 
           <div className="hidden lg:block">
-            <HeroShowcase reduceMotion={Boolean(reduceMotion)} />
+            <HeroShowcase
+              reduceMotion={Boolean(reduceMotion)}
+              companions={companions}
+            />
           </div>
         </div>
       </div>

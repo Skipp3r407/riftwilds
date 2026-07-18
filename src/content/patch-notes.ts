@@ -36,6 +36,16 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-hero-random-riftlings",
+    date: "2026-07-18",
+    title: "Home hero Mystery Egg previews randomize",
+    summary:
+      "The three Riftling previews under the Mystery Rift Egg now shuffle from the full launch roster on each page load.",
+    changed: [
+      "Home hero Mystery Rift Egg companions randomize three distinct launch Riftlings (name, portrait, affinity) on each client page load instead of fixed Ember / Grove / Tide",
+    ],
+  },
+  {
     id: "2026-07-18-product-economy-roadmap",
     date: "2026-07-18",
     title: "Public product & economy roadmap",
