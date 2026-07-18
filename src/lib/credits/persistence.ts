@@ -5,6 +5,7 @@
  * Demo users (no User row) stay memory-only — never invent DB users here.
  */
 
+import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import { CREDITS_CURRENCY, type CreditLedgerEntry } from "@/lib/credits/types";
 import { isFeatureEnabled } from "@/lib/config/feature-flags";
@@ -93,7 +94,7 @@ export async function persistCreditEntry(params: {
           balanceAfter: params.entry.balanceAfter,
           reason: params.entry.reason,
           requestId: params.entry.requestId,
-          metadata: params.entry.metadata ?? undefined,
+          metadata: (params.entry.metadata as Prisma.InputJsonValue | undefined) ?? undefined,
         },
         update: {},
       });

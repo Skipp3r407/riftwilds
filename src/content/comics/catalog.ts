@@ -7,6 +7,7 @@ import { COVER, PAGE_ART, SPLASH, WALLPAPERS } from "@/content/comics/art";
 import {
   buildEndPages,
   caption,
+  ensureIssueArt,
   expandBeatsToPages,
   narrate,
   sfx,
@@ -112,16 +113,21 @@ function buildIssue(seed: IssueSeed): ComicIssue {
     wallpaperSrcs: seed.wallpaperSrcs,
   };
 
+  const coverArt = coversList.find((c) => c.kind === "standard")?.src ?? COVER[seed.coverKey];
   const storyPages = expandBeatsToPages(seed.slug, seed.beats, {
     minPages: seed.minPages ?? 22,
     maxPages: 34,
+    fallbackArt: coverArt,
   });
   const endPages = buildEndPages(meta, storyPages.length + 1);
-  const pages = [...storyPages, ...endPages].map((p, i) => ({
-    ...p,
-    pageNumber: i + 1,
-    id: `${seed.slug}-p${String(i + 1).padStart(2, "0")}`,
-  }));
+  const pages = ensureIssueArt(
+    [...storyPages, ...endPages].map((p, i) => ({
+      ...p,
+      pageNumber: i + 1,
+      id: `${seed.slug}-p${String(i + 1).padStart(2, "0")}`,
+    })),
+    coverArt,
+  );
 
   return {
     ...meta,
@@ -199,16 +205,32 @@ const SEEDS: IssueSeed[] = [
           {
             caption: "Nine days before the Commons had a name",
             bubbles: [
-              narrate("Roads crossed deserts that had never met forests."),
-              speech("Elara Venn", "The egg is warm. That is enough to keep walking."),
-              sfx("rift-crack…"),
+              narrate("Roads crossed deserts that had never met forests.", { x: 50, y: 10 }),
+              speech("Elara Venn", "The egg is warm. That is enough to keep walking.", {
+                x: 28,
+                y: 34,
+                tail: "down",
+              }),
+              sfx("rift-crack…", { x: 62, y: 58 }),
             ],
           },
           {
             bubbles: [
-              thought("Elara Venn", "If I name myself hero, I will fail the small thing in my arms."),
-              speech("Stranger", "Take the crown road — safer."),
-              speech("Elara Venn", "Safer for whom?"),
+              thought("Elara Venn", "If I name myself hero, I will fail the small thing in my arms.", {
+                x: 24,
+                y: 62,
+                tail: "up-right",
+              }),
+              speech("Stranger", "Take the crown road — safer.", {
+                x: 74,
+                y: 30,
+                tail: "down-left",
+              }),
+              speech("Elara Venn", "Safer for whom?", {
+                x: 32,
+                y: 74,
+                tail: "up",
+              }),
             ],
           },
         ],

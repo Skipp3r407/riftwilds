@@ -10,8 +10,8 @@ import { getNpcShop } from "@/game/npcs/shops";
 import {
   ensureStarterCredits,
   getCreditBalance,
-  type CreditMutationResult,
 } from "@/lib/credits/ledger";
+import type { CreditMutationResult } from "@/lib/credits/types";
 import {
   grantDailyGoalCredits,
   grantEventCredits,

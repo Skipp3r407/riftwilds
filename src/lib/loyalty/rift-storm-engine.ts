@@ -337,7 +337,7 @@ export function maybeRandomActivate(params?: {
   force?: boolean;
   rng?: () => number;
 }): RiftStormState | null {
-  const now = params.now ?? Date.now();
+  const now = params?.now ?? Date.now();
   const current = ensureStormState();
   if (current.phase === "WARNING" || current.phase === "ACTIVE") return null;
 
@@ -851,7 +851,7 @@ export function getStormPlayerView(userId: string, now = Date.now()): StormPlaye
 
   return {
     storm: live,
-    participant,
+    participant: participant ?? null,
     tierBoostPercent: Math.round(STORM_TIER_WEIGHT_BOOST[tier] * 100),
     loyaltyTier: tier,
     canParticipate: live?.phase === "ACTIVE",

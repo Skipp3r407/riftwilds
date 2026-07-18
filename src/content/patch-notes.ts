@@ -36,6 +36,26 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-build-comics-music",
+    date: "2026-07-18",
+    title: "Deploy fix, comics reader, and music player",
+    summary:
+      "Production build unblocked, comics book reader fits speech bubbles in the viewport, and the floating music player mute/play controls restyle to match Riftwilds chrome.",
+    fixed: [
+      "Live World production build no longer fails on the missing graphics-quality immersive module",
+      "TypeScript blockers across credits, shop scrolls, storm participation, and hatchery HMR migration that would fail Vercel after webpack",
+      "Music player mute/play stays in sync with the audio engine and can unmute from the floating bar",
+    ],
+    changed: [
+      "Comics reader uses a book-stage viewport with speech-bubble layout that stays readable on page art",
+      "Music player chrome uses warm Riftwilds glass instead of cold sci-fi violet",
+      "Live World immersive settings expose graphics quality presets (Low default; Ultra opt-in)",
+    ],
+    added: [
+      "Open-book matte frame and comic speech-bubble layout helpers for issue pages",
+    ],
+  },
+  {
     id: "2026-07-18-live-world-hatched-companion",
     date: "2026-07-18",
     title: "Live World companion matches your hatch",

@@ -9,4 +9,5 @@ export * from "@/game/live-world/systems/immersive/site-nav-autohide";
 export * from "@/game/live-world/systems/immersive/photo-mode";
 export * from "@/game/live-world/systems/immersive/camera-enhancements";
 export * from "@/game/live-world/systems/immersive/performance";
+export * from "@/game/live-world/systems/immersive/graphics-quality";
 export * from "@/game/live-world/systems/immersive/controller-stubs";

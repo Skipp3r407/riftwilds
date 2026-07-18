@@ -22,6 +22,7 @@ const PLAYLIST = [
 ] as const;
 
 type MusicMode = "idle" | "menu" | "region" | "manual";
+type MusicListener = () => void;
 
 class MusicEngine {
   private a: HTMLAudioElement | null = null;
@@ -33,6 +34,7 @@ class MusicEngine {
   private playing = false;
   private unsub: (() => void) | null = null;
   private dayNightMul = 1;
+  private listeners = new Set<MusicListener>();
 
   init() {
     if (typeof window === "undefined") return;
@@ -49,6 +51,16 @@ class MusicEngine {
     if (!this.unsub) {
       this.unsub = audioManager.subscribe(() => this.applyVolume());
     }
+  }
+
+  /** UI sync — fires when play state or track index changes. */
+  subscribe(listener: MusicListener): () => void {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  }
+
+  private emit() {
+    for (const listener of this.listeners) listener();
   }
 
   getPlaylist() {
@@ -77,6 +89,7 @@ class MusicEngine {
     this.mode = "manual";
     this.trackIndex = ((index % PLAYLIST.length) + PLAYLIST.length) % PLAYLIST.length;
     const track = PLAYLIST[this.trackIndex]!;
+    this.emit();
     await this.crossfadeTo(track.src, fadeMs);
   }
 
@@ -92,6 +105,7 @@ class MusicEngine {
     if (!theme) return;
     const idx = PLAYLIST.findIndex((t) => t.src === theme.src);
     if (idx >= 0) this.trackIndex = idx;
+    this.emit();
     await this.crossfadeTo(theme.src, fadeMs);
   }
 
@@ -112,8 +126,10 @@ class MusicEngine {
     try {
       await el.play();
       this.playing = true;
+      this.emit();
     } catch {
       this.playing = false;
+      this.emit();
     }
   }
 
@@ -121,6 +137,7 @@ class MusicEngine {
     this.current()?.pause();
     this.other()?.pause();
     this.playing = false;
+    this.emit();
   }
 
   async next(fadeMs = 600) {
@@ -153,8 +170,14 @@ class MusicEngine {
       await to.play();
     } catch {
       this.playing = false;
+      this.emit();
       return;
     }
+
+    // Mark playing as soon as audio is audible — do not wait for fade end
+    // (UI reads isPlaying() right after playTrack / crossfadeTo resolves).
+    this.playing = true;
+    this.emit();
 
     const targetVol = this.targetVolume();
     const t0 = performance.now();
@@ -173,6 +196,7 @@ class MusicEngine {
         this.active = this.active === "a" ? "b" : "a";
         this.playing = true;
         this.applyVolume();
+        this.emit();
       }
     };
     requestAnimationFrame(tick);

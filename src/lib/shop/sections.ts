@@ -2,6 +2,7 @@ import {
   ABILITY_CATALOG,
   getShopItemsByCategory,
 } from "@/lib/items/catalog";
+import { lamportsToCreditsPrice } from "@/lib/economy/core/credits-pricing";
 import { quoteDirectPurchase } from "@/lib/items/pricing";
 import { toShopCards, type ShopCardData } from "@/lib/items/shop-serialize";
 import type { AnyCatalogItem } from "@/lib/items/types";
@@ -103,6 +104,7 @@ function abilityScrollsToCards(solUsdRate: number): ShopCardData[] {
         estimatedUsd: quote.estimatedUsd,
         usdDisclaimer: quote.usdDisclaimer,
         lamports: quote.priceLamports.toString(),
+        credits: lamportsToCreditsPrice(quote.priceLamports),
       },
       effect: `${a.category} · Power ${a.power} · Energy ${a.energyCost}`,
     };

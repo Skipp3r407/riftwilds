@@ -58,7 +58,7 @@ export function ComicBookStage({
   return (
     <div
       className={cn(
-        "comic-book-lamp relative mx-auto w-full max-w-4xl",
+        "comic-book-lamp relative mx-auto w-full",
         darkMode ? "comic-book-lamp--night" : "comic-book-lamp--day",
       )}
     >
@@ -70,6 +70,8 @@ export function ComicBookStage({
           coverOpen ? "comic-book--open" : "comic-book--closed",
         )}
       >
+        {/* Decorative leather book frame */}
+        <div className="comic-book-frame" aria-hidden />
         <div className="comic-book-spine" aria-hidden />
 
         <div
@@ -84,7 +86,7 @@ export function ComicBookStage({
         />
 
         <div
-          className="comic-book-pages relative z-[3] grid"
+          className="comic-book-pages relative z-[3] grid h-full"
           style={{ perspective: reduceMotion ? undefined : 1600 }}
         >
           <AnimatePresence initial={false}>
@@ -92,7 +94,7 @@ export function ComicBookStage({
               <motion.button
                 key="cover"
                 type="button"
-                className="comic-book-cover focus-ring group relative z-[5] col-start-1 row-start-1 w-full overflow-hidden text-left"
+                className="comic-book-cover focus-ring group relative z-[5] col-start-1 row-start-1 h-full w-full overflow-hidden text-left"
                 onClick={onOpenCover}
                 aria-label={`Open cover: ${coverLabel ?? issueTitle}`}
                 style={{
@@ -107,19 +109,19 @@ export function ComicBookStage({
                 }
                 transition={{ duration: reduceMotion ? 0.22 : 0.7, ease }}
               >
-                <div className="relative aspect-[3/4] w-full sm:aspect-[4/5]">
+                <div className="relative h-full w-full">
                   <Image
                     src={coverSrc!}
                     alt={coverLabel ?? `${issueTitle} cover`}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 768px"
+                    sizes="(max-width: 768px) 100vw, min(640px, 70vh)"
                     unoptimized
                     priority
                   />
                   <div className="comic-book-cover-sheen absolute inset-0" aria-hidden />
                 </div>
-                <span className="comic-book-cover-cta absolute inset-x-0 bottom-0 px-4 py-5 text-center font-display text-sm tracking-wide text-[#e8d5b0]">
+                <span className="comic-book-cover-cta absolute inset-x-0 bottom-0 px-4 py-4 text-center font-display text-sm tracking-wide text-[#e8d5b0]">
                   Tap to open · or press Next
                 </span>
               </motion.button>
@@ -128,7 +130,7 @@ export function ComicBookStage({
                 <motion.div
                   key={`page-${current.pageNumber}`}
                   custom={dir}
-                  className="comic-book-leaf col-start-1 row-start-1 w-full"
+                  className="comic-book-leaf col-start-1 row-start-1 h-full w-full"
                   style={{
                     transformOrigin: dir > 0 ? "left center" : "right center",
                     transformStyle: reduceMotion ? undefined : "preserve-3d",
@@ -207,7 +209,7 @@ export function ComicBookStage({
         </div>
       </div>
 
-      <p className="mt-3 text-center text-[11px] tracking-wide text-[rgba(232,213,176,0.55)]">
+      <p className="comic-book-leaf-label mt-1.5 text-center text-[11px] tracking-wide text-[rgba(232,213,176,0.55)]">
         {coverOpen ? `Leaf ${page} of ${totalPages}` : "Cover closed — open to begin"}
       </p>
     </div>

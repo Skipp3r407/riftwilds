@@ -25,12 +25,32 @@ export type ComicPanelLayout =
 
 export type ComicBubbleKind = "speech" | "thought" | "narration" | "sfx" | "caption";
 
+/** Tail points from the bubble toward the speaker's mouth. */
+export type ComicBubbleTail =
+  | "down"
+  | "up"
+  | "left"
+  | "right"
+  | "down-left"
+  | "down-right"
+  | "up-left"
+  | "up-right";
+
 export type ComicBubble = {
   kind: ComicBubbleKind;
   speaker?: string;
   text: string;
-  /** CSS position hints for overlay bubbles on illustrated pages */
+  /**
+   * Coarse preset (mapped to x/y if explicit coords omitted).
+   * Prefer `x` / `y` / `tail` for mouth-aimed placement.
+   */
   anchor?: "tl" | "tr" | "bl" | "br" | "center" | "top" | "bottom";
+  /** Bubble center X as % of the art box (0–100). */
+  x?: number;
+  /** Bubble center Y as % of the art box (0–100). */
+  y?: number;
+  /** Direction the tail aims (toward character mouth). */
+  tail?: ComicBubbleTail;
 };
 
 export type ComicHotspot = {

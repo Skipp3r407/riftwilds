@@ -241,14 +241,14 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
         fullscreen && "p-0",
       )}
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-3 py-4 md:px-6">
-        <header className="flex flex-wrap items-center justify-between gap-3">
-          <div>
+      <div className="comic-reader-stage mx-auto flex max-w-6xl flex-col gap-2 px-3 py-2 md:gap-3 md:px-6 md:py-3">
+        <header className="flex flex-wrap items-center justify-between gap-2">
+          <div className="min-w-0">
             <p className="page-kicker">Issue #{issue.issueNumber}</p>
-            <h1 className="font-display text-2xl text-[var(--parchment,#e8d5b0)] md:text-3xl">
+            <h1 className="font-display truncate text-xl text-[var(--parchment,#e8d5b0)] md:text-2xl">
               {issue.title}
             </h1>
-            <p className="text-sm text-[rgba(232,213,176,0.65)]">{issue.subtitle}</p>
+            <p className="hidden text-sm text-[rgba(232,213,176,0.65)] sm:block">{issue.subtitle}</p>
           </div>
           <div className="flex flex-wrap gap-2">
             <Link href="/comics" className="btn-secondary focus-ring text-sm">
@@ -271,7 +271,7 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
         </header>
 
         <div
-          className="flex flex-wrap items-center gap-2 rounded-lg border border-[rgba(196,168,130,0.35)] bg-[rgba(20,14,10,0.55)] p-2"
+          className="flex flex-wrap items-center gap-1.5 rounded-lg border border-[rgba(196,168,130,0.35)] bg-[rgba(20,14,10,0.55)] p-1.5"
           role="toolbar"
           aria-label="Reader controls"
         >
@@ -444,6 +444,7 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
         )}
 
         <div
+          className="comic-reader-book-slot min-h-0 flex-1"
           onTouchStart={(e) => {
             touchX.current = e.changedTouches[0]?.clientX ?? null;
           }}
@@ -464,7 +465,7 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
             direction={flipDir}
             darkMode={settings.darkMode}
             highContrast={settings.highContrast}
-            zoom={settings.zoom}
+            zoom={Math.min(settings.zoom || 1, 1.15)}
             foundHotspots={issueProgress?.foundHotspots ?? []}
             onHotspot={onHotspot}
             coverOpen={coverOpen || !cover}

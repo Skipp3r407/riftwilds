@@ -74,14 +74,15 @@ class AudioManager {
 
   setVolume(group: AudioVolumeGroup, volume: number) {
     const v = clamp01(volume);
+    let mutedAll = this.prefs.mutedAll;
+    if (group === "master" && v === 0) mutedAll = true;
+    // Raising any bus implies the user wants sound again (floating player / SFX).
+    if (v > 0) mutedAll = false;
     this.prefs = {
       ...this.prefs,
-      mutedAll: group === "master" && v === 0 ? true : this.prefs.mutedAll,
+      mutedAll,
       volumes: { ...this.prefs.volumes, [group]: v },
     };
-    if (group === "master" && v > 0 && this.prefs.mutedAll) {
-      this.prefs = { ...this.prefs, mutedAll: false };
-    }
     this.persist();
     this.applyMasterGain();
   }

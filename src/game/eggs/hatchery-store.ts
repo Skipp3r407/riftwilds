@@ -115,10 +115,13 @@ function hatcheryMaps(): HatcheryMaps {
       freePoolCapOverride: null,
     };
   } else {
-    const maps = globalForHatchery.__riftwildsHatchery;
-    // HMR / older shape — keep existing Maps, add pool fields.
+    // HMR may still hold a pre-pool shape; loosen the type for migration checks.
+    const maps = globalForHatchery.__riftwildsHatchery as HatcheryMaps & {
+      freeStarterReleased?: number;
+      freePoolCapOverride?: number | null;
+    };
     if (typeof maps.freeStarterReleased !== "number") maps.freeStarterReleased = 0;
-    if (!("freePoolCapOverride" in maps)) maps.freePoolCapOverride = null;
+    if (maps.freePoolCapOverride === undefined) maps.freePoolCapOverride = null;
   }
   return globalForHatchery.__riftwildsHatchery;
 }

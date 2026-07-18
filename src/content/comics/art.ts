@@ -1,4 +1,4 @@
-/** Shared art paths for Legends of the Rift. */
+/** Shared art paths for Legends of the Rift — every path must exist under public/. */
 
 export const COVER = {
   "the-first-rift": "/assets/comics/covers/01-the-first-rift.png",
@@ -26,23 +26,47 @@ export const SPLASH = {
   shadow: "/assets/comics/splashes/shadow-beyond.png",
 } as const;
 
+/**
+ * Page / scene art. Region + story keys intentionally remap onto comic library
+ * assets (the old /assets/regions/*.png and /assets/story/* paths were missing
+ * or were tiny cyan-diamond stubs).
+ */
 export const PAGE_ART = {
   commons: "/assets/comics/pages/key-commons.png",
   forest: "/assets/comics/pages/key-forest.png",
   festival: "/assets/comics/pages/key-festival.png",
   rift: "/assets/comics/pages/key-rift.png",
-  regionCommons: "/assets/regions/riftwild-commons.png",
-  regionElderwood: "/assets/regions/elderwood-forest.png",
-  regionStorm: "/assets/regions/stormspire-peaks.png",
-  regionVoid: "/assets/regions/void-hollow.png",
-  regionEmber: "/assets/regions/ember-crater.png",
-  storyFirstLight: "/assets/story/first-rift-light.png",
-  storyBloom: "/assets/story/bloomtide-gathering.png",
-  timelineGateways: "/assets/story/timeline/age-of-gateways.png",
-  timelineAwakening: "/assets/story/timeline/present-awakening.png",
+  regionCommons: "/assets/comics/pages/key-commons.png",
+  regionElderwood: "/assets/comics/pages/key-forest.png",
+  regionStorm: "/assets/comics/splashes/storm-king.png",
+  regionVoid: "/assets/comics/splashes/shadow-beyond.png",
+  regionEmber: "/assets/comics/splashes/great-hunt.png",
+  storyFirstLight: "/assets/comics/splashes/rift-dawn.png",
+  storyBloom: "/assets/comics/splashes/festival.png",
+  timelineGateways: "/assets/comics/pages/key-rift.png",
+  timelineAwakening: "/assets/comics/splashes/shadow-beyond.png",
 } as const;
 
 export const WALLPAPERS = {
   commons: "/assets/comics/bonus/wallpaper-commons.png",
   rift: "/assets/comics/bonus/wallpaper-rift.png",
 } as const;
+
+/** Atmosphere → fallback page art when a beat omits artSrc. */
+export const ART_BY_ATMOSPHERE: Record<string, string> = {
+  dawn: PAGE_ART.forest,
+  day: PAGE_ART.commons,
+  dusk: PAGE_ART.regionCommons,
+  night: SPLASH.merchant,
+  rift: PAGE_ART.rift,
+  festival: PAGE_ART.festival,
+  storm: SPLASH.stormKing,
+  ruin: SPLASH.guardian,
+};
+
+export function artForAtmosphere(atmosphere?: string | null): string {
+  if (atmosphere && ART_BY_ATMOSPHERE[atmosphere]) {
+    return ART_BY_ATMOSPHERE[atmosphere]!;
+  }
+  return PAGE_ART.commons;
+}

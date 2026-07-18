@@ -51,6 +51,7 @@ export function emptyParticipant(
     fraudRisk: 0,
     disconnectGraceUntil: null,
     regionId: null,
+    pityBonusApplied: false,
   };
 }
 

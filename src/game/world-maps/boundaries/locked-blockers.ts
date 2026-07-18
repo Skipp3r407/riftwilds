@@ -13,16 +13,17 @@ import { isSolidCollider } from "@/game/world-maps/boundaries/collider-semantics
 
 const TILE = 32;
 
+type BarrierStyle = NonNullable<
+  NonNullable<CollisionRect["metadata"]>["barrierStyle"]
+>;
+
 export type LockedBlockerMessage = {
   speaker: string;
   lines: string[];
-  barrierStyle: NonNullable<CollisionRect["metadata"]>["barrierStyle"];
+  barrierStyle: BarrierStyle;
 };
 
-const STYLE_BY_DEST: Record<
-  string,
-  NonNullable<CollisionRect["metadata"]>["barrierStyle"]
-> = {
+const STYLE_BY_DEST: Record<string, BarrierStyle> = {
   "ember-crater": "collapsed_bridge",
   "moonwater-coast": "gate",
   "elderwood-forest": "forest",
@@ -36,10 +37,7 @@ const STYLE_BY_DEST: Record<
   "celestial-rift": "seal",
 };
 
-const STYLE_LINES: Record<
-  NonNullable<CollisionRect["metadata"]>["barrierStyle"] & string,
-  (label: string) => string[]
-> = {
+const STYLE_LINES: Record<BarrierStyle, (label: string) => string[]> = {
   collapsed_bridge: (label) => [
     `The bridge toward ${label} has collapsed into the rift.`,
     "Repair crews wait on a later chapter — the path is not gone, only unfinished.",
@@ -66,9 +64,7 @@ const STYLE_LINES: Record<
   ],
 };
 
-export function barrierStyleForDestination(
-  toRegionId: string,
-): NonNullable<CollisionRect["metadata"]>["barrierStyle"] {
+export function barrierStyleForDestination(toRegionId: string): BarrierStyle {
   return STYLE_BY_DEST[toRegionId] ?? "seal";
 }
 

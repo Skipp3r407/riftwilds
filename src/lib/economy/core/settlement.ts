@@ -85,8 +85,10 @@ export function settleCredit(params: SettleCreditsParams): SettlementResult {
     amount: params.amount,
     reason: params.reason,
     requestId: params.requestId,
-    metadata: params.metadata,
-    fromAi: params.fromAi,
+    // AI-originated grants are rejected by the ledger via metadata.source.
+    metadata: params.fromAi
+      ? { ...params.metadata, source: "ai_npc" }
+      : params.metadata,
   });
   if (!r.ok) {
     return { ok: false, error: r.error, message: r.message, balance: r.balance };

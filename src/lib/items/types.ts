@@ -138,11 +138,13 @@ export type PotionCatalogItem = CatalogItemBase & {
   statusRemoved?: string;
   careEffects?: Partial<{
     hunger: number;
+    thirst: number;
     happiness: number;
     hygiene: number;
     energy: number;
     health: number;
     bond: number;
+    stress: number;
   }>;
 };
 

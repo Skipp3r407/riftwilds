@@ -17,6 +17,9 @@ export type CameraFocusTarget = "player" | "riftling" | "free";
 
 export type { HudPanelId, HudPanelPosition, HudPanelLayout } from "@/game/live-world/systems/immersive/hud-panel-layout";
 
+/** Graphics fidelity preset — Low is default-friendly; Ultra is opt-in. */
+export type GraphicsQualityPreset = "low" | "medium" | "high" | "ultra";
+
 export type ImmersiveSettings = {
   hudMode: HudUiMode;
   hudOpacity: number;
@@ -32,6 +35,8 @@ export type ImmersiveSettings = {
   townActivityCollapsed: boolean;
   /** Map name / keeper status chips (top) */
   statusChromeCollapsed: boolean;
+  /** Nearby keepers drawer under minimap (collapsed = badge only). */
+  nearbyDrawerOpen: boolean;
   minimapHidden: boolean;
   minimapCollapsed: boolean;
   minimapOpacity: number;
@@ -46,6 +51,10 @@ export type ImmersiveSettings = {
   highContrast: boolean;
   performanceCull: boolean;
   particleBudget: "full" | "reduced" | "minimal";
+  /** Terrain/prop/atmosphere fidelity. Ultra never default. */
+  graphicsQuality: GraphicsQualityPreset;
+  /** Dev/admin: show depth band / occluder debug overlay. */
+  debugDepthLayers: boolean;
 };
 
 export const IMMERSIVE_SETTINGS_STORAGE_KEY = "riftwilds-live-world-immersive-v1";
@@ -56,15 +65,18 @@ export const DEFAULT_IMMERSIVE_SETTINGS: ImmersiveSettings = {
   autoHideHud: false,
   autoHideDelayMs: 2500,
   windowModePreference: "windowed",
-  chatMode: "pinned",
-  toolbarCollapsed: false,
-  presenceHudCollapsed: false,
-  townActivityCollapsed: false,
+  /** Peek until Enter — keeps play space clear; pin in Display settings. */
+  chatMode: "auto-hide",
+  toolbarCollapsed: true,
+  presenceHudCollapsed: true,
+  /** Level-2 panels collapsed by default so the world owns the center. */
+  townActivityCollapsed: true,
   statusChromeCollapsed: false,
+  nearbyDrawerOpen: false,
   minimapHidden: false,
   minimapCollapsed: false,
   minimapOpacity: 0.92,
-  minimapSize: 148,
+  minimapSize: 132,
   minimapCorner: "top-right",
   minimapLocked: false,
   hudPanelLayout: {},
@@ -73,7 +85,9 @@ export const DEFAULT_IMMERSIVE_SETTINGS: ImmersiveSettings = {
   largeUi: false,
   highContrast: false,
   performanceCull: false,
-  particleBudget: "full",
+  particleBudget: "reduced",
+  graphicsQuality: "low",
+  debugDepthLayers: false,
 };
 
 export type HudRevealReason =

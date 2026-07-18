@@ -350,6 +350,31 @@ export function ImmersiveSettingsPanel({
 
           <div>
             <p className="mb-1 text-[10px] uppercase tracking-wider text-[var(--text-dim)]">
+              Graphics quality
+            </p>
+            <select
+              className="w-full rounded border border-[var(--border)] bg-black/40 px-2 py-1.5 text-xs text-white"
+              data-testid="settings-graphics-quality"
+              value={settings.graphicsQuality}
+              onChange={(e) =>
+                onChange({
+                  graphicsQuality: e.target
+                    .value as ImmersiveSettings["graphicsQuality"],
+                })
+              }
+            >
+              <option value="low">Low (default-friendly)</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+              <option value="ultra">Ultra (heaviest — not default)</option>
+            </select>
+            <p className="mt-1 text-[10px] text-[var(--text-dim)]">
+              Controls prop density, terrain blend, and atmosphere budget. Ultra is opt-in.
+            </p>
+          </div>
+
+          <div>
+            <p className="mb-1 text-[10px] uppercase tracking-wider text-[var(--text-dim)]">
               Performance
             </p>
             <label className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
@@ -358,7 +383,7 @@ export function ImmersiveSettingsPanel({
                 checked={settings.performanceCull}
                 onChange={(e) => onChange({ performanceCull: e.target.checked })}
               />
-              Cull distant FX (stub)
+              Cull distant FX
             </label>
             <select
               className="mt-2 w-full rounded border border-[var(--border)] bg-black/40 px-2 py-1.5 text-xs text-white"
@@ -373,6 +398,17 @@ export function ImmersiveSettingsPanel({
               <option value="reduced">Particles: reduced</option>
               <option value="minimal">Particles: minimal</option>
             </select>
+            {process.env.NODE_ENV !== "production" ? (
+              <label className="mt-2 flex items-center gap-2 text-xs text-[var(--text-muted)]">
+                <input
+                  type="checkbox"
+                  checked={settings.debugDepthLayers}
+                  onChange={(e) => onChange({ debugDepthLayers: e.target.checked })}
+                  data-testid="settings-debug-depth"
+                />
+                Debug depth layers (dev)
+              </label>
+            ) : null}
           </div>
 
           <details className="rounded border border-[var(--border)]/60 p-2 text-[10px] text-[var(--text-dim)]">

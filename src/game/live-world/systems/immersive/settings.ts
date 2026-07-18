@@ -6,6 +6,7 @@ import {
   type WindowModePreference,
   type ChatDisplayMode,
   type MinimapCorner,
+  type GraphicsQualityPreset,
 } from "@/game/live-world/systems/immersive/types";
 import {
   clearHudPanelLayout,
@@ -36,6 +37,7 @@ const CORNERS: MinimapCorner[] = [
   "bottom-left",
 ];
 const PARTICLE: ImmersiveSettings["particleBudget"][] = ["full", "reduced", "minimal"];
+const QUALITY: GraphicsQualityPreset[] = ["low", "medium", "high", "ultra"];
 
 export function normalizeImmersiveSettings(
   partial: Partial<ImmersiveSettings> | null | undefined,
@@ -49,11 +51,12 @@ export function normalizeImmersiveSettings(
     windowModePreference: WINDOW_MODES.includes(base.windowModePreference)
       ? base.windowModePreference
       : "windowed",
-    chatMode: CHAT_MODES.includes(base.chatMode) ? base.chatMode : "pinned",
+    chatMode: CHAT_MODES.includes(base.chatMode) ? base.chatMode : "auto-hide",
     toolbarCollapsed: !!base.toolbarCollapsed,
     presenceHudCollapsed: !!base.presenceHudCollapsed,
     townActivityCollapsed: !!base.townActivityCollapsed,
     statusChromeCollapsed: !!base.statusChromeCollapsed,
+    nearbyDrawerOpen: !!base.nearbyDrawerOpen,
     minimapHidden: !!base.minimapHidden,
     minimapCollapsed: !!base.minimapCollapsed,
     minimapOpacity: clamp01(base.minimapOpacity),
@@ -66,7 +69,13 @@ export function normalizeImmersiveSettings(
     largeUi: !!base.largeUi,
     highContrast: !!base.highContrast,
     performanceCull: !!base.performanceCull,
-    particleBudget: PARTICLE.includes(base.particleBudget) ? base.particleBudget : "full",
+    particleBudget: PARTICLE.includes(base.particleBudget)
+      ? base.particleBudget
+      : "reduced",
+    graphicsQuality: QUALITY.includes(base.graphicsQuality)
+      ? base.graphicsQuality
+      : "low",
+    debugDepthLayers: !!base.debugDepthLayers,
   };
 }
 
@@ -138,16 +147,17 @@ export function suggestedChromeCollapseForHudMode(
   }
   if (mode === "minimal") {
     return {
-      toolbarCollapsed: false,
+      toolbarCollapsed: true,
       presenceHudCollapsed: true,
       townActivityCollapsed: true,
       statusChromeCollapsed: false,
     };
   }
+  // Standard: Level-2 chrome collapsed so the world owns the center.
   return {
-    toolbarCollapsed: false,
-    presenceHudCollapsed: false,
-    townActivityCollapsed: false,
+    toolbarCollapsed: true,
+    presenceHudCollapsed: true,
+    townActivityCollapsed: true,
     statusChromeCollapsed: false,
   };
 }

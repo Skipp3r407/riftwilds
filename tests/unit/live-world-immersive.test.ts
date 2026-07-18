@@ -117,7 +117,16 @@ describe("Immersive settings", () => {
 
   it("suggests peek-tab chrome for immersive modes", () => {
     expect(suggestedChromeCollapseForHudMode("immersive").toolbarCollapsed).toBe(true);
-    expect(suggestedChromeCollapseForHudMode("standard").toolbarCollapsed).toBe(false);
+    expect(suggestedChromeCollapseForHudMode("standard").toolbarCollapsed).toBe(true);
+    expect(suggestedChromeCollapseForHudMode("standard").townActivityCollapsed).toBe(true);
+  });
+
+  it("defaults to world-first HUD (Level-2 collapsed, Low graphics)", () => {
+    expect(DEFAULT_IMMERSIVE_SETTINGS.chatMode).toBe("auto-hide");
+    expect(DEFAULT_IMMERSIVE_SETTINGS.townActivityCollapsed).toBe(true);
+    expect(DEFAULT_IMMERSIVE_SETTINGS.nearbyDrawerOpen).toBe(false);
+    expect(DEFAULT_IMMERSIVE_SETTINGS.graphicsQuality).toBe("low");
+    expect(DEFAULT_IMMERSIVE_SETTINGS.debugDepthLayers).toBe(false);
   });
 
   it("forces auto-hide for immersive/cinematic", () => {
