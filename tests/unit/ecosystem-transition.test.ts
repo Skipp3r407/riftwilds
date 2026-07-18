@@ -67,6 +67,14 @@ describe("ecosystem transition foundations", () => {
 
     const creators = getCreatorHubSnapshot();
     expect(creators.creators.length).toBeGreaterThan(0);
+    const themes = new Set([
+      ...creators.creators.map((c) => c.bgTheme),
+      ...creators.offers.map((o) => o.bgTheme),
+    ]);
+    expect(themes.size).toBe(creators.creators.length + creators.offers.length);
+    for (const card of [...creators.creators, ...creators.offers]) {
+      expect(card.bgSrc).toContain(`/assets/creators/backgrounds/${card.bgTheme}.svg`);
+    }
   });
 
   it("scaffolds marketplace browse categories beyond listings", () => {

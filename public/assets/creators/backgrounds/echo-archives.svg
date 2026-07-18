@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <radialGradient id="vault" cx="50%" cy="42%" r="68%">
+      <stop offset="0%" stop-color="#2a3a48"/>
+      <stop offset="55%" stop-color="#1a221c"/>
+      <stop offset="100%" stop-color="#0e1210"/>
+    </radialGradient>
+    <linearGradient id="parchmentWash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8d5b0" stop-opacity="0.22"/>
+      <stop offset="45%" stop-color="#c4a882" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#3de7ff" stop-opacity="0.08"/>
+    </linearGradient>
+    <pattern id="shelfLines" width="64" height="96" patternUnits="userSpaceOnUse">
+      <path d="M0 90h64" stroke="#c4a882" stroke-opacity="0.12" stroke-width="2"/>
+      <path d="M8 18h48M8 34h40M8 50h44" stroke="#e8d5b0" stroke-opacity="0.08" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#vault)"/>
+  <rect width="1024" height="1024" fill="url(#parchmentWash)"/>
+  <rect width="1024" height="1024" fill="url(#shelfLines)"/>
+  <circle cx="720" cy="260" r="180" fill="#3de7ff" fill-opacity="0.1"/>
+  <circle cx="280" cy="780" r="220" fill="#e8d5b0" fill-opacity="0.08"/>
+  <path d="M120 160c80 40 140 20 200-20M700 820c60 30 120 10 180-30" stroke="#3de7ff" stroke-opacity="0.12" stroke-width="2" stroke-linecap="round"/>
+</svg>

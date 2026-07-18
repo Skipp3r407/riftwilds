@@ -3,6 +3,12 @@
  * Token utility purchases are entertainment; no investment language.
  */
 
+export type CreatorHubBgTheme =
+  | "echo-archives"
+  | "ember-atelier"
+  | "groveheart-field-notes"
+  | "lantern-homestead";
+
 export type CreatorProfileStub = {
   id: string;
   handle: string;
@@ -13,6 +19,10 @@ export type CreatorProfileStub = {
   packCount: number;
   /** Transparent cutout under public/assets/creators/ */
   artSrc: string;
+  /** Unique thematic well behind the cutout */
+  bgTheme: CreatorHubBgTheme;
+  /** Optional texture under public/assets/creators/backgrounds/ */
+  bgSrc: string;
 };
 
 export type CreatorOfferStub = {
@@ -24,10 +34,18 @@ export type CreatorOfferStub = {
   status: "stub" | "preview";
   /** Transparent cutout under public/assets/creators/offers/ */
   artSrc: string;
+  /** Unique thematic well behind the cutout */
+  bgTheme: CreatorHubBgTheme;
+  /** Optional texture under public/assets/creators/backgrounds/ */
+  bgSrc: string;
 };
 
-/** Bump when Creator Hub cutouts are regenerated. */
-export const CREATOR_HUB_ART_V = "ch1";
+/** Bump when Creator Hub cutouts or backgrounds are regenerated. */
+export const CREATOR_HUB_ART_V = "ch2";
+
+function creatorBg(theme: CreatorHubBgTheme): string {
+  return `/assets/creators/backgrounds/${theme}.svg?v=${CREATOR_HUB_ART_V}`;
+}
 
 export type CreatorHubSnapshot = {
   title: string;
@@ -49,6 +67,8 @@ export function getCreatorHubSnapshot(): CreatorHubSnapshot {
       tipEnabled: false,
       packCount: 2,
       artSrc: `/assets/creators/echo-archives.png?v=${CREATOR_HUB_ART_V}`,
+      bgTheme: "echo-archives",
+      bgSrc: creatorBg("echo-archives"),
     },
     {
       id: "creator_forge",
@@ -59,6 +79,8 @@ export function getCreatorHubSnapshot(): CreatorHubSnapshot {
       tipEnabled: false,
       packCount: 1,
       artSrc: `/assets/creators/ember-atelier.png?v=${CREATOR_HUB_ART_V}`,
+      bgTheme: "ember-atelier",
+      bgSrc: creatorBg("ember-atelier"),
     },
   ];
 
@@ -75,6 +97,8 @@ export function getCreatorHubSnapshot(): CreatorHubSnapshot {
         priceLabel: "Token utility (stub)",
         status: "stub",
         artSrc: `/assets/creators/offers/groveheart-field-notes.png?v=${CREATOR_HUB_ART_V}`,
+        bgTheme: "groveheart-field-notes",
+        bgSrc: creatorBg("groveheart-field-notes"),
       },
       {
         id: "offer_cosmo_1",
@@ -84,6 +108,8 @@ export function getCreatorHubSnapshot(): CreatorHubSnapshot {
         priceLabel: "Token utility (stub)",
         status: "preview",
         artSrc: `/assets/creators/offers/lantern-homestead-kit.png?v=${CREATOR_HUB_ART_V}`,
+        bgTheme: "lantern-homestead",
+        bgSrc: creatorBg("lantern-homestead"),
       },
     ],
     guidelines: [

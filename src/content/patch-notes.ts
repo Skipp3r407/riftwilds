@@ -36,6 +36,16 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-creator-hub-card-backgrounds",
+    date: "2026-07-18",
+    title: "Creator Hub unique card backgrounds",
+    summary:
+      "Every Creator Hub creator and offer card now has its own thematic atmosphere behind the cutout art.",
+    changed: [
+      "Creator Hub cards on /creators no longer share one plain charcoal well — Echo Archives, Ember Atelier, Groveheart Field Notes, and Lantern Homestead Kit each get a distinct parchment, ember, grove, or lantern background",
+    ],
+  },
+  {
     id: "2026-07-18-homepage-hero-cta",
     date: "2026-07-18",
     title: "Homepage hero egg and CTA contrast",

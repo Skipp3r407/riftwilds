@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <radialGradient id="sewingRoom" cx="48%" cy="40%" r="72%">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="50%" stop-color="#1c1412"/>
+      <stop offset="100%" stop-color="#0c0a0c"/>
+    </radialGradient>
+    <radialGradient id="emberGlow" cx="55%" cy="55%" r="45%">
+      <stop offset="0%" stop-color="#ff7a3d" stop-opacity="0.28"/>
+      <stop offset="55%" stop-color="#ffb84d" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffb84d" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="cloth" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M0 24h48M24 0v48" stroke="#ffb84d" stroke-opacity="0.06" stroke-width="1"/>
+      <circle cx="12" cy="12" r="1.2" fill="#ffe566" fill-opacity="0.35"/>
+      <circle cx="36" cy="30" r="0.9" fill="#ffb84d" fill-opacity="0.28"/>
+    </pattern>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#sewingRoom)"/>
+  <rect width="1024" height="1024" fill="url(#emberGlow)"/>
+  <rect width="1024" height="1024" fill="url(#cloth)"/>
+  <circle cx="200" cy="180" r="3" fill="#ffe566" fill-opacity="0.55"/>
+  <circle cx="860" cy="220" r="2.2" fill="#ffb84d" fill-opacity="0.5"/>
+  <circle cx="780" cy="120" r="1.6" fill="#ffe566" fill-opacity="0.45"/>
+  <circle cx="140" cy="720" r="2" fill="#ff7a3d" fill-opacity="0.4"/>
+  <path d="M640 180c40 60 20 120-30 180" stroke="#ffb84d" stroke-opacity="0.18" stroke-width="2" stroke-linecap="round"/>
+</svg>

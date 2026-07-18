@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <radialGradient id="hearth" cx="50%" cy="55%" r="68%">
+      <stop offset="0%" stop-color="#3a2a18"/>
+      <stop offset="45%" stop-color="#1e1812"/>
+      <stop offset="100%" stop-color="#0e0c0a"/>
+    </radialGradient>
+    <radialGradient id="lanternBloom" cx="50%" cy="42%" r="40%">
+      <stop offset="0%" stop-color="#ffb84d" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#ff7a3d" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ffb84d" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="planks" width="128" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 38h128" stroke="#c4a882" stroke-opacity="0.1" stroke-width="2"/>
+      <path d="M20 8h40M78 18h36" stroke="#ffb84d" stroke-opacity="0.06" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#hearth)"/>
+  <rect width="1024" height="1024" fill="url(#lanternBloom)"/>
+  <rect width="1024" height="1024" fill="url(#planks)"/>
+  <circle cx="512" cy="360" r="90" fill="#ffe566" fill-opacity="0.12"/>
+  <circle cx="180" cy="220" r="2.5" fill="#ffe566" fill-opacity="0.45"/>
+  <circle cx="860" cy="280" r="2" fill="#ffb84d" fill-opacity="0.4"/>
+  <path d="M300 820c80-30 160-30 240 0M420 160c40 30 60 70 50 120" stroke="#ffb84d" stroke-opacity="0.16" stroke-width="2" stroke-linecap="round"/>
+</svg>

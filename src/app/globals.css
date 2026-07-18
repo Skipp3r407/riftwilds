@@ -307,6 +307,55 @@ button.panel:focus-visible {
   transition: transform 300ms ease;
 }
 
+/* Creator Hub — unique atmosphere per creator / offer cutout well */
+.creator-hub-thumb {
+  --creator-hub-bg: none;
+  isolation: isolate;
+}
+
+.creator-hub-thumb__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--creator-hub-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.creator-hub-thumb .section-card-thumb__img {
+  z-index: 1;
+}
+
+.creator-hub-thumb--echo-archives {
+  background:
+    radial-gradient(ellipse at 55% 35%, rgba(61, 231, 255, 0.2), transparent 55%),
+    radial-gradient(ellipse at 30% 80%, rgba(232, 213, 176, 0.16), transparent 50%),
+    linear-gradient(165deg, #1c2620 0%, #121816 48%, #0e1210 100%);
+}
+
+.creator-hub-thumb--ember-atelier {
+  background:
+    radial-gradient(ellipse at 52% 48%, rgba(255, 122, 61, 0.28), transparent 52%),
+    radial-gradient(ellipse at 70% 20%, rgba(255, 184, 77, 0.18), transparent 45%),
+    linear-gradient(160deg, #2a1a14 0%, #161012 50%, #0c0a0c 100%);
+}
+
+.creator-hub-thumb--groveheart-field-notes {
+  background:
+    radial-gradient(ellipse at 48% 40%, rgba(90, 173, 98, 0.26), transparent 55%),
+    radial-gradient(ellipse at 75% 75%, rgba(232, 213, 176, 0.12), transparent 48%),
+    linear-gradient(165deg, #1a2a1e 0%, #121a14 52%, #0c120e 100%);
+}
+
+.creator-hub-thumb--lantern-homestead {
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(255, 184, 77, 0.32), transparent 48%),
+    radial-gradient(ellipse at 40% 80%, rgba(255, 122, 61, 0.14), transparent 50%),
+    linear-gradient(170deg, #2a2014 0%, #181410 50%, #0e0c0a 100%);
+}
+
 .group:hover .section-card-thumb__img {
   transform: scale(1.06);
 }
