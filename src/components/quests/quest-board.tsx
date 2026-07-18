@@ -71,6 +71,35 @@ const CAT_ACCENT: Record<string, string> = {
   EVENT: "var(--amber)",
 };
 
+/** Subtle body wash by region (falls back to category accent). Keep low opacity for readability. */
+const REGION_TINT: Record<string, string> = {
+  "riftwild-commons": "var(--cyan)",
+  "sproutfall-grove": "var(--grove)",
+  "elderwood-forest": "var(--grove)",
+  "cindercrag-basin": "var(--ember)",
+  "ember-crater": "var(--ember)",
+  "moonwater-coast": "var(--tide)",
+  "stormspire-peaks": "var(--storm)",
+  "stoneheart-canyon": "var(--amber)",
+  "frostveil-basin": "var(--tide)",
+  "radiant-citadel": "var(--radiant)",
+  "void-hollow": "var(--violet)",
+  "alloy-ruins": "var(--alloy)",
+  "spirit-marsh": "var(--spirit)",
+  "celestial-rift": "var(--violet)",
+};
+
+function questBodyTint(quest: QuestDef): string {
+  const accent = CAT_ACCENT[quest.category] ?? "var(--cyan)";
+  const region = quest.regionKey ? REGION_TINT[quest.regionKey] : undefined;
+  const wash = region ?? accent;
+  return [
+    `linear-gradient(180deg, color-mix(in srgb, ${wash} 7%, transparent) 0%, transparent 42%)`,
+    `radial-gradient(ellipse 90% 55% at 80% 0%, color-mix(in srgb, ${accent} 12%, transparent), transparent 70%)`,
+    `linear-gradient(165deg, color-mix(in srgb, ${wash} 5%, rgba(8,8,14,0.55)) 0%, rgba(8,8,14,0.2) 100%)`,
+  ].join(", ");
+}
+
 export function QuestBoard() {
   const [state, setState] = useState<QuestDemoState | null>(null);
   const [tab, setTab] = useState<QuestBoardTab>("all");
@@ -267,9 +296,9 @@ export function QuestBoard() {
           No quests match these filters.
         </div>
       ) : (
-        <ul className="grid gap-3 lg:grid-cols-2">
+        <ul className="grid items-start gap-3 lg:grid-cols-2">
           {filtered.map((quest) => (
-            <li key={quest.key}>
+            <li key={quest.key} className="h-auto self-start">
               <QuestCard
                 quest={quest}
                 entry={state[quest.key]!}
@@ -325,16 +354,14 @@ function QuestCard({
     <article
       className={cn(
         QUEST_PANEL,
-        "relative overflow-hidden transition duration-300",
+        // Content-sized column — never stretch to row height or space-between mid-card voids.
+        "relative flex h-auto flex-col justify-start overflow-hidden transition duration-300",
         (entry.status === "active" || entry.tracked) && QUEST_PANEL_ACTIVE,
         locked && "opacity-75",
       )}
-      style={{
-        backgroundImage: `linear-gradient(180deg, transparent 0%, color-mix(in srgb, ${accent} 10%, transparent) 55%, color-mix(in srgb, ${accent} 14%, transparent) 100%)`,
-      }}
     >
       {/* Bleed art under the card border so rounded top corners stay flush (no hairline gap). */}
-      <div className="relative z-[1] -mx-px -mt-px aspect-[16/9] w-[calc(100%+2px)] overflow-hidden border-b border-[var(--stroke)] bg-[rgba(8,8,14,0.72)]">
+      <div className="relative z-[1] -mx-px -mt-px aspect-[16/9] w-[calc(100%+2px)] shrink-0 overflow-hidden border-b border-[var(--stroke)] bg-[rgba(8,8,14,0.72)]">
         {!artFailed ? (
           <Image
             src={questArtPath(quest.key)}
@@ -359,43 +386,44 @@ function QuestCard({
         </div>
       </div>
 
-      <div className="relative z-[1] p-4">
-        <div className="flex flex-wrap items-start justify-between gap-2">
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <span
-                className="rounded-[var(--radius-sm)] border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
-                style={{
-                  color: accent,
-                  borderColor: `color-mix(in srgb, ${accent} 45%, transparent)`,
-                  background: `color-mix(in srgb, ${accent} 12%, transparent)`,
-                }}
-              >
-                {QUEST_CATEGORY_LABELS[quest.category]}
-              </span>
-              <span
-                className={cn(
-                  "rounded-[var(--radius-sm)] border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
-                  DIFF_COLOR[quest.difficulty],
-                )}
-              >
-                {QUEST_DIFFICULTY_LABELS[quest.difficulty]}
-              </span>
-              {quest.repeatable ? (
-                <span className="text-[10px] text-[var(--text-dim)]">Repeatable</span>
-              ) : null}
-            </div>
-            <h3 className="mt-2 font-display text-base text-white md:text-lg">{quest.name}</h3>
-            <p className="mt-1 text-sm text-[var(--text-muted)]">{quest.description}</p>
-            {quest.regionName ? (
-              <p className="mt-1.5 text-[11px] text-[var(--text-dim)]">
-                Region · {quest.regionName}
-              </p>
+      <div
+        className="relative z-[1] flex flex-col justify-start gap-4 p-4"
+        style={{ backgroundImage: questBodyTint(quest) }}
+      >
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
+            <span
+              className="rounded-[var(--radius-sm)] border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider"
+              style={{
+                color: accent,
+                borderColor: `color-mix(in srgb, ${accent} 45%, transparent)`,
+                background: `color-mix(in srgb, ${accent} 12%, transparent)`,
+              }}
+            >
+              {QUEST_CATEGORY_LABELS[quest.category]}
+            </span>
+            <span
+              className={cn(
+                "rounded-[var(--radius-sm)] border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider",
+                DIFF_COLOR[quest.difficulty],
+              )}
+            >
+              {QUEST_DIFFICULTY_LABELS[quest.difficulty]}
+            </span>
+            {quest.repeatable ? (
+              <span className="text-[10px] text-[var(--text-dim)]">Repeatable</span>
             ) : null}
           </div>
+          <h3 className="mt-2 font-display text-base text-white md:text-lg">{quest.name}</h3>
+          <p className="mt-1 text-sm text-[var(--text-muted)]">{quest.description}</p>
+          {quest.regionName ? (
+            <p className="mt-1.5 text-[11px] text-[var(--text-dim)]">
+              Region · {quest.regionName}
+            </p>
+          ) : null}
         </div>
 
-        <div className="mt-4 space-y-2">
+        <div className="space-y-2">
           <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
             Objectives
           </p>
@@ -419,10 +447,10 @@ function QuestCard({
                   >
                     ✓
                   </span>
-                  <span className={cn("flex-1", done && "text-[var(--text-muted)] line-through")}>
+                  <span className={cn("min-w-0 flex-1", done && "text-[var(--text-muted)] line-through")}>
                     {obj.description}
                   </span>
-                  <span className="tabular-nums text-[var(--text-dim)]">
+                  <span className="shrink-0 tabular-nums text-[var(--text-dim)]">
                     {current}/{obj.target}
                   </span>
                 </li>
@@ -432,7 +460,7 @@ function QuestCard({
         </div>
 
         {entry.status === "active" || entry.status === "completed" ? (
-          <div className="mt-3">
+          <div>
             <div className="mb-1 flex items-center justify-between text-[10px] text-[var(--text-dim)]">
               <span>Progress</span>
               <span className="tabular-nums text-[var(--cyan)]">{pct}%</span>
@@ -446,7 +474,7 @@ function QuestCard({
           </div>
         ) : null}
 
-        <div className="mt-4">
+        <div>
           <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]">
             Rewards
           </p>
@@ -463,7 +491,7 @@ function QuestCard({
         </div>
 
         {locked && quest.requires?.length ? (
-          <p className="mt-3 text-[11px] text-[var(--amber)]">
+          <p className="text-[11px] text-[var(--amber)]">
             Locked — complete{" "}
             {quest.requires
               .map((k) => QUEST_CATALOG.find((q) => q.key === k)?.name ?? k)
@@ -472,7 +500,7 @@ function QuestCard({
           </p>
         ) : null}
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2">
           {entry.status === "available" ? (
             <button type="button" className="btn-primary focus-ring text-xs" onClick={onAccept}>
               Accept

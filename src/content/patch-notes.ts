@@ -36,6 +36,19 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-quest-card-gaps",
+    date: "2026-07-18",
+    title: "Quest cards pack tight again",
+    summary:
+      "Short-objective quests on /quests no longer leave a huge empty gap above Rewards; cards stay dense with light region tints.",
+    fixed: [
+      "Quest board cards no longer stretch to equal row height with empty space between Objectives and Rewards",
+    ],
+    changed: [
+      "Each quest card gets a subtle category/region body tint without hurting text contrast",
+    ],
+  },
+  {
     id: "2026-07-18-printables-riftwilds-theme",
     date: "2026-07-18",
     title: "Printables match Riftwilds theme",
