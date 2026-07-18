@@ -3,6 +3,8 @@ export * from "@/game/live-world/systems/immersive/settings";
 export * from "@/game/live-world/systems/immersive/hud-panel-layout";
 export * from "@/game/live-world/systems/immersive/fullscreen";
 export * from "@/game/live-world/systems/immersive/hud-visibility";
+export * from "@/game/live-world/systems/immersive/floating-chip-fade";
+export * from "@/game/live-world/systems/immersive/site-nav-autohide";
 export * from "@/game/live-world/systems/immersive/photo-mode";
 export * from "@/game/live-world/systems/immersive/camera-enhancements";
 export * from "@/game/live-world/systems/immersive/performance";

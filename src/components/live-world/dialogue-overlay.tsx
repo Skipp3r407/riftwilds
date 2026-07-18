@@ -19,6 +19,7 @@ import {
 } from "@/lib/credits/client";
 import { flushPendingQuestCredits } from "@/lib/credits/sync-pending";
 import { emitCreditsUpdated } from "@/components/credits/credits-balance-chip";
+import { FloatingHudChip } from "@/components/live-world/floating-hud-chip";
 
 type Props = {
   dialogue: DialoguePayload | null;
@@ -264,9 +265,14 @@ export function LiveWorldDialogueOverlay({
       }
       data-testid="live-world-interact-prompt"
     >
-      <div className="rounded-full border border-[var(--stroke-bronze)] bg-[rgba(20,16,12,0.8)] px-4 py-2 text-xs text-[var(--text-muted)] backdrop-blur-md">
-        {prompt.label}
-      </div>
+      <FloatingHudChip
+        activityKey={prompt.label}
+        testId="live-world-interact-prompt-fade"
+      >
+        <div className="rounded-full border border-[var(--stroke-bronze)] bg-[rgba(20,16,12,0.8)] px-4 py-2 text-xs text-[var(--text-muted)] backdrop-blur-md">
+          {prompt.label}
+        </div>
+      </FloatingHudChip>
     </div>
   );
 }

@@ -520,19 +520,6 @@ export function LiveWorldShell({ playable }: Props) {
                   }}
                   reserveTopRight
                 />
-                <WorldClockChip
-                  regionSlug={(status ?? statusFallback).mapName
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}
-                  className={worldClockDockClass(settings)}
-                />
-                <HappeningNowBanner
-                  view={worldEvents.view}
-                  onParticipate={(action) => {
-                    void worldEvents.participate(action, ["MOVE", "INTERACT"]);
-                    reveal("manual");
-                  }}
-                />
                 {worldEvents.toast ? (
                   <p className="pointer-events-none absolute left-1/2 top-36 z-30 -translate-x-1/2 rounded-md bg-black/70 px-2 py-1 text-[10px] text-white">
                     {worldEvents.toast}
@@ -541,6 +528,21 @@ export function LiveWorldShell({ playable }: Props) {
                 <FeaturedPlayerBanner featured={socialPresence.featured} />
               </HudLayer>
             ) : null}
+
+            {/* Floating center chips idle-fade on their own (stay hoverable when chrome hides). */}
+            <WorldClockChip
+              regionSlug={(status ?? statusFallback).mapName
+                .toLowerCase()
+                .replace(/\s+/g, "-")}
+              className={worldClockDockClass(settings)}
+            />
+            <HappeningNowBanner
+              view={worldEvents.view}
+              onParticipate={(action) => {
+                void worldEvents.participate(action, ["MOVE", "INTERACT"]);
+                reveal("manual");
+              }}
+            />
 
             {/* Bottom-left column: presence peek + chat — no overlap */}
             {(showLayer("status") && presenceUsesBottomLeftStack(settings)) ||

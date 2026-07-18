@@ -25,6 +25,21 @@ import {
   toggleRiftlingFocus,
   createCameraEnhanceState,
   listImmersiveControllerStubs,
+  createFloatingChipFadeState,
+  revealFloatingChip,
+  setFloatingChipHeld,
+  tickFloatingChipFade,
+  floatingChipOpacity,
+  resolveFloatingChipFadeEnabled,
+  resolveFloatingChipFadedOpacity,
+  isLiveWorldPath,
+  createSiteNavAutohideState,
+  bumpSiteNavActivity,
+  setSiteNavHovering,
+  setSiteNavPinned,
+  tickSiteNavAutohide,
+  siteNavChromeVisible,
+  LIVE_WORLD_SITE_NAV_HIDE_MS,
 } from "@/game/live-world/systems/immersive";
 
 function stubStorage() {
@@ -132,6 +147,63 @@ describe("HUD visibility", () => {
     expect(shouldShowChromeLayer("status", settings, state)).toBe(true);
     expect(shouldShowChromeLayer("minimap", settings, state)).toBe(false);
     expect(shouldShowChromeLayer("chat", settings, state)).toBe(true);
+  });
+});
+
+describe("Floating HUD chip fade", () => {
+  it("forces fade in immersive and stays readable on hover hold", () => {
+    const settings = {
+      ...DEFAULT_IMMERSIVE_SETTINGS,
+      hudMode: "immersive" as const,
+      autoHideDelayMs: 1000,
+    };
+    expect(resolveFloatingChipFadeEnabled(settings)).toBe(true);
+    let state = createFloatingChipFadeState(0);
+    state = revealFloatingChip(state, 0);
+    expect(floatingChipOpacity(state, settings)).toBe(1);
+    state = tickFloatingChipFade(state, settings, 1500);
+    expect(state.awake).toBe(false);
+    expect(floatingChipOpacity(state, settings)).toBe(resolveFloatingChipFadedOpacity(settings));
+    expect(floatingChipOpacity(state, settings)).toBeLessThanOrEqual(0.15);
+
+    state = setFloatingChipHeld(state, true, 1600);
+    expect(floatingChipOpacity(state, settings)).toBe(1);
+  });
+
+  it("leaves standard chips opaque unless auto-hide HUD is on", () => {
+    const off = { ...DEFAULT_IMMERSIVE_SETTINGS, hudMode: "standard" as const };
+    expect(resolveFloatingChipFadeEnabled(off)).toBe(false);
+    expect(floatingChipOpacity(createFloatingChipFadeState(), off)).toBe(1);
+
+    const on = { ...off, autoHideHud: true, autoHideDelayMs: 1000 };
+    expect(resolveFloatingChipFadeEnabled(on)).toBe(true);
+    let state = revealFloatingChip(createFloatingChipFadeState(0), 0);
+    // Standard uses a gentler floor delay (≥3500ms).
+    state = tickFloatingChipFade(state, on, 4000);
+    expect(floatingChipOpacity(state, on)).toBe(0.15);
+  });
+});
+
+describe("Live World site nav autohide", () => {
+  it("detects live-world routes", () => {
+    expect(isLiveWorldPath("/live-world")).toBe(true);
+    expect(isLiveWorldPath("/live-world/spectate")).toBe(true);
+    expect(isLiveWorldPath("/world")).toBe(false);
+  });
+
+  it("hides after idle and stays open while pinned or hovering", () => {
+    let state = createSiteNavAutohideState(0);
+    state = bumpSiteNavActivity(state, 0);
+    expect(siteNavChromeVisible(state, true)).toBe(true);
+    state = tickSiteNavAutohide(state, true, LIVE_WORLD_SITE_NAV_HIDE_MS + 100);
+    expect(siteNavChromeVisible(state, true)).toBe(false);
+
+    state = setSiteNavHovering(state, true, LIVE_WORLD_SITE_NAV_HIDE_MS + 200);
+    expect(siteNavChromeVisible(state, true)).toBe(true);
+    state = setSiteNavHovering(state, false, LIVE_WORLD_SITE_NAV_HIDE_MS + 300);
+    state = setSiteNavPinned(state, true, LIVE_WORLD_SITE_NAV_HIDE_MS + 400);
+    state = tickSiteNavAutohide(state, true, LIVE_WORLD_SITE_NAV_HIDE_MS + 5000);
+    expect(siteNavChromeVisible(state, true)).toBe(true);
   });
 });
 

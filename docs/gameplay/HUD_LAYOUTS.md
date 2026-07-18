@@ -19,6 +19,20 @@ Implemented in `hud-visibility.ts` + `useHudAutoHide`:
 - Delay from settings (`autoHideDelayMs`, min 4s when reduced motion)
 - Fade transition skipped when reduced motion is on
 
+### Floating center chips
+
+World clock, interact prompt, and Happening Now use `floating-chip-fade.ts` + `FloatingHudChip`:
+
+- Idle-fade to ~5–15% opacity (mode-dependent) while staying hoverable via hit-slop
+- Hover / focus / tap restores full opacity and resets the timer
+- Content changes (new interact target, weather/region, event phase) flash fully visible
+- Forced in Immersive / Cinematic; Standard only when Auto-hide HUD is enabled
+- Bottom HUD peek stays more persistent (`max(opacity, 0.45)` when collapsed)
+
+### Site nav on `/live-world`
+
+`site-nav-autohide.ts` + `SiteHeader`: after ~2.8s idle the command bar slides up / fades; a thin top hot-zone (or hover near the top) reveals it again. Dropdowns and the mobile drawer pin the nav open while in use.
+
 ## Chat modes
 
 | Mode | Behavior |

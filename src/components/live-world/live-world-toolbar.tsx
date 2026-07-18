@@ -57,7 +57,8 @@ export function LiveWorldToolbar({
   panelLayout,
   onPanelPositionChange,
 }: Props) {
-  const fade = Math.max(opacity, 0.35);
+  // Peek / toolbar stay more persistent than floating center chips.
+  const fade = Math.max(opacity, collapsed ? 0.45 : 0.35);
   const canDrag = typeof onPanelPositionChange === "function";
   // Docked bottom-center; world clock + interact prompt reserve space above via hud-slots.
   const defaultClass = collapsed

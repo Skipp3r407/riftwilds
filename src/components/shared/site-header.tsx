@@ -23,6 +23,16 @@ import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { markOriginStorySeen } from "@/lib/origin-story";
 import { playSfx } from "@/hooks/use-sfx";
 import { cn } from "@/lib/utils/cn";
+import {
+  bumpSiteNavActivity,
+  createSiteNavAutohideState,
+  isLiveWorldPath,
+  setSiteNavHovering,
+  setSiteNavPinned,
+  siteNavChromeVisible,
+  tickSiteNavAutohide,
+  type SiteNavAutohideState,
+} from "@/game/live-world/systems/immersive/site-nav-autohide";
 
 type Props = {
   variant?: "marketing" | "game";
@@ -165,13 +175,21 @@ function NavDropdown({ group, pathname, openId, setOpenId }: NavDropdownProps) {
 
 export function SiteHeader(_props: Props = {}) {
   const [openId, setOpenId] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [navState, setNavState] = useState<SiteNavAutohideState>(() =>
+    createSiteNavAutohideState(),
+  );
   const mobileToggleRef = useRef<HTMLInputElement>(null);
   const pathname = usePathname();
   const homeActive = linkActive(pathname, "/");
+  const liveWorldRoute = isLiveWorldPath(pathname);
+  const navVisible = siteNavChromeVisible(navState, liveWorldRoute);
 
   useEffect(() => {
     if (mobileToggleRef.current) mobileToggleRef.current.checked = false;
+    setMobileOpen(false);
     setOpenId(null);
+    setNavState(createSiteNavAutohideState());
   }, [pathname]);
 
   useEffect(() => {
@@ -179,6 +197,7 @@ export function SiteHeader(_props: Props = {}) {
       if (event.key !== "Escape") return;
       setOpenId(null);
       if (mobileToggleRef.current) mobileToggleRef.current.checked = false;
+      setMobileOpen(false);
     };
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
@@ -198,12 +217,76 @@ export function SiteHeader(_props: Props = {}) {
     return () => document.removeEventListener("mousedown", onPointerDown);
   }, [openId]);
 
+  // Keep nav pinned while a desktop dropdown or mobile drawer is open.
+  useEffect(() => {
+    const pinned = !!openId || mobileOpen;
+    setNavState((prev) => setSiteNavPinned(prev, pinned));
+  }, [openId, mobileOpen]);
+
+  // Idle auto-hide on Live World routes.
+  useEffect(() => {
+    if (!liveWorldRoute) return;
+    const id = window.setInterval(() => {
+      setNavState((prev) => tickSiteNavAutohide(prev, true));
+    }, 200);
+    return () => window.clearInterval(id);
+  }, [liveWorldRoute]);
+
+  // Body flag so layout can reclaim top space under the overlay nav.
+  useEffect(() => {
+    document.documentElement.dataset.liveWorldNav = liveWorldRoute ? "1" : "0";
+    document.documentElement.dataset.liveWorldNavHidden =
+      liveWorldRoute && !navVisible ? "1" : "0";
+    return () => {
+      delete document.documentElement.dataset.liveWorldNav;
+      delete document.documentElement.dataset.liveWorldNavHidden;
+    };
+  }, [liveWorldRoute, navVisible]);
+
   const closeMobile = () => {
     if (mobileToggleRef.current) mobileToggleRef.current.checked = false;
+    setMobileOpen(false);
+  };
+
+  const onNavPointerEnter = () => {
+    if (!liveWorldRoute) return;
+    setNavState((prev) => setSiteNavHovering(prev, true));
+  };
+
+  const onNavPointerLeave = () => {
+    if (!liveWorldRoute) return;
+    setNavState((prev) => setSiteNavHovering(prev, false));
   };
 
   return (
-    <header className="shell-topbar hud-nav sticky top-0 z-50">
+    <>
+      {liveWorldRoute && !navVisible ? (
+        <button
+          type="button"
+          className="hud-nav__hotzone"
+          aria-label="Show site navigation"
+          title="Show navigation"
+          data-testid="site-nav-hotzone"
+          onPointerEnter={() => setNavState((prev) => bumpSiteNavActivity(prev))}
+          onFocus={() => setNavState((prev) => bumpSiteNavActivity(prev))}
+          onClick={() => setNavState((prev) => bumpSiteNavActivity(prev))}
+        />
+      ) : null}
+      <header
+        className={cn(
+          "shell-topbar hud-nav z-50",
+          liveWorldRoute ? "hud-nav--live-world fixed inset-x-0 top-0" : "sticky top-0",
+          liveWorldRoute && !navVisible && "hud-nav--autohide-hidden",
+        )}
+        data-testid="site-header"
+        data-live-world-nav={liveWorldRoute ? "1" : "0"}
+        data-nav-visible={navVisible ? "1" : "0"}
+        onPointerEnter={onNavPointerEnter}
+        onPointerLeave={onNavPointerLeave}
+        onFocusCapture={() => {
+          if (liveWorldRoute) setNavState((prev) => bumpSiteNavActivity(prev));
+        }}
+      >
       {/* Checkbox toggle keeps the mobile drawer working without React state. */}
       <input
         ref={mobileToggleRef}
@@ -211,6 +294,7 @@ export function SiteHeader(_props: Props = {}) {
         type="checkbox"
         className="hud-nav__mobile-toggle"
         aria-controls="mobile-nav"
+        onChange={(e) => setMobileOpen(e.target.checked)}
       />
 
       <div className="hud-nav__bar">
@@ -379,5 +463,6 @@ export function SiteHeader(_props: Props = {}) {
         </nav>
       </div>
     </header>
+    </>
   );
 }
