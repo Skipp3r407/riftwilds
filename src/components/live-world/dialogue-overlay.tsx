@@ -260,7 +260,7 @@ export function LiveWorldDialogueOverlay({
     <div
       className={
         promptClassName ??
-        "pointer-events-none absolute inset-x-0 bottom-28 z-25 flex justify-center px-4 md:bottom-16"
+        "pointer-events-none absolute inset-x-0 bottom-28 z-30 flex justify-center px-4 md:bottom-16"
       }
       data-testid="live-world-interact-prompt"
     >
