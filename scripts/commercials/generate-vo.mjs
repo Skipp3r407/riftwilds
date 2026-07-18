@@ -16,6 +16,11 @@ import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  getElevenLabsConfig,
+  loadDotEnv as loadElevenLabsDotEnv,
+  writeElevenLabsMp3,
+} from "../audio/elevenlabs-client.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "../..");
@@ -24,24 +29,7 @@ const tmp = path.join(root, "artifacts/commercials/tmp/vo");
 fs.mkdirSync(audioOut, { recursive: true });
 fs.mkdirSync(tmp, { recursive: true });
 
-function loadDotEnv() {
-  const envPath = path.join(root, ".env");
-  if (!fs.existsSync(envPath)) return;
-  for (const line of fs.readFileSync(envPath, "utf8").split(/\r?\n/)) {
-    const m = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/);
-    if (!m) continue;
-    const key = m[1];
-    let val = m[2].trim();
-    if (
-      (val.startsWith('"') && val.endsWith('"')) ||
-      (val.startsWith("'") && val.endsWith("'"))
-    ) {
-      val = val.slice(1, -1);
-    }
-    if (process.env[key] === undefined) process.env[key] = val;
-  }
-}
-loadDotEnv();
+loadElevenLabsDotEnv(root);
 
 function resolveBin(name, envKey, fallbacks) {
   if (process.env[envKey] && fs.existsSync(process.env[envKey])) return process.env[envKey];
@@ -137,45 +125,17 @@ function speakOpenAI(text, wavPath) {
   toWav(mp3, wavPath);
 }
 
-function speakElevenLabs(text, wavPath) {
-  const key = process.env.ELEVENLABS_API_KEY?.trim();
-  if (!key) throw new Error("ELEVENLABS_API_KEY missing");
-  // Warm storytelling default (Rachel). Override with ELEVENLABS_VOICE_ID.
-  // Shared defaults live in scripts/audio/elevenlabs-client.mjs
-  const voiceId = process.env.ELEVENLABS_VOICE_ID || "21m00Tcm4TlvDq8ikWAM";
+async function speakElevenLabs(text, wavPath) {
+  const cfg = getElevenLabsConfig();
+  if (!cfg.hasKey) throw new Error("ELEVENLABS_API_KEY missing");
   const mp3 = wavPath.replace(/\.wav$/i, ".mp3");
-  const body = JSON.stringify({
-    text,
-    model_id: process.env.ELEVENLABS_MODEL_ID || "eleven_multilingual_v2",
-    voice_settings: {
-      stability: 0.45,
-      similarity_boost: 0.75,
-      style: 0.35,
-      use_speaker_boost: true,
-    },
+  // Prefer shared fetch client (UTF-8 safe on Windows; no curl JSON encoding issues).
+  await writeElevenLabsMp3(text, mp3, {
+    voiceId: cfg.voiceId,
+    modelId: cfg.modelId,
   });
-  const r = spawnSync(
-    "curl",
-    [
-      "-sS",
-      "-X",
-      "POST",
-      `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
-      "-H",
-      `xi-api-key: ${key}`,
-      "-H",
-      "Content-Type: application/json",
-      "-H",
-      "Accept: audio/mpeg",
-      "-d",
-      body,
-      "-o",
-      mp3,
-    ],
-    { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 },
-  );
-  if (r.status !== 0 || !fs.existsSync(mp3) || fs.statSync(mp3).size < 200) {
-    throw new Error(`ElevenLabs TTS failed: ${r.stderr || r.stdout || "empty"}`);
+  if (!fs.existsSync(mp3) || fs.statSync(mp3).size < 200) {
+    throw new Error("ElevenLabs TTS returned empty audio");
   }
   toWav(mp3, wavPath);
 }
@@ -249,32 +209,33 @@ function pickEngine() {
   return "sapi";
 }
 
-function speakLine(engine, text, wavPath) {
+async function speakLine(engine, text, wavPath) {
   if (engine === "openai") return speakOpenAI(text, wavPath);
   if (engine === "elevenlabs") return speakElevenLabs(text, wavPath);
   if (engine === "edge") return speakEdge(text, wavPath);
   return speakSapi(text, wavPath);
 }
 
+// Spoken lines must match VO_SCRIPT_*.txt + captions/*.vtt (same words & punctuation).
 const scripts = {
   "60s": {
     file: "riftwilds-commercial-60s-16x9-vo",
     duration: 60,
     lines: [
-      { t: 0, d: 7, text: "Across floating islands... a world still breathing." },
+      { t: 0, d: 7, text: "Across floating islands… a world still breathing." },
       { t: 7, d: 5, text: "In the Hatchery, a Rift egg waits for a Keeper." },
       { t: 12, d: 6, text: "Crack the shell. Meet your Riftling." },
       {
         t: 18,
         d: 6,
-        text: "Step into the Live World - explore regions, meet others, find your path.",
+        text: "Step into the Live World — explore regions, meet others, find your path.",
       },
       { t: 24, d: 5, text: "Talk to NPCs. Accept quests. Follow the trail." },
       { t: 29, d: 5, text: "Train in battles. Test your bond." },
       { t: 34, d: 4, text: "Craft gear. Shape what you need." },
       { t: 38, d: 4, text: "Make a home. Rest with your companion." },
       { t: 42, d: 5, text: "Join guilds. Celebrate events together." },
-      { t: 47, d: 5, text: "Trade in the player economy - build your own loop." },
+      { t: 47, d: 5, text: "Trade in the player economy — build your own loop." },
       {
         t: 52,
         d: 8,
@@ -291,7 +252,7 @@ const scripts = {
       { t: 10, d: 5, text: "Explore the Live World." },
       { t: 15, d: 5, text: "Battle. Craft. Belong." },
       { t: 20, d: 5, text: "Guilds. Events. Your story." },
-      { t: 25, d: 5, text: "Riftwilds - play the alpha. Enter the Live World." },
+      { t: 25, d: 5, text: "Riftwilds — play the alpha. Enter the Live World." },
     ],
   },
   "15s": {
@@ -301,7 +262,7 @@ const scripts = {
       { t: 0, d: 4, text: "The Riftwilds are waking." },
       { t: 4, d: 4, text: "Hatch a Riftling." },
       { t: 8, d: 3.5, text: "Enter the Live World." },
-      { t: 11.5, d: 3.5, text: "Play the alpha - in your browser." },
+      { t: 11.5, d: 3.5, text: "Play the alpha — in your browser." },
     ],
   },
   "25s": {
@@ -312,118 +273,129 @@ const scripts = {
       { t: 5, d: 5, text: "Hatch. Bond. Begin." },
       { t: 10, d: 5, text: "Battle with heart." },
       { t: 15, d: 5, text: "Explore the Live World." },
-      { t: 20, d: 5, text: "Riftwilds - play the closed alpha." },
+      { t: 20, d: 5, text: "Riftwilds — play the closed alpha." },
     ],
   },
 };
 
-const engine = pickEngine();
-const engineDetail =
-  engine === "edge"
-    ? `${engine} (${process.env.EDGE_TTS_VOICE || "en-US-ChristopherNeural"} @ ${process.env.EDGE_TTS_RATE || "-12%"})`
-    : engine === "openai"
-      ? `${engine} (${process.env.OPENAI_TTS_VOICE || "onyx"})`
-      : engine === "elevenlabs"
-        ? `${engine} (${process.env.ELEVENLABS_VOICE_ID || "default"})`
-        : `${engine} (Microsoft David / male, rate -3)`;
+async function main() {
+  const engine = pickEngine();
+  const elevenCfg = getElevenLabsConfig();
+  const engineDetail =
+    engine === "edge"
+      ? `${engine} (${process.env.EDGE_TTS_VOICE || "en-US-ChristopherNeural"} @ ${process.env.EDGE_TTS_RATE || "-12%"})`
+      : engine === "openai"
+        ? `${engine} (${process.env.OPENAI_TTS_VOICE || "onyx"})`
+        : engine === "elevenlabs"
+          ? `${engine} (Rachel / ${elevenCfg.voiceId})`
+          : `${engine} (Microsoft David / male, rate -3)`;
 
-console.log(`VO engine: ${engineDetail}`);
-fs.writeFileSync(
-  path.join(audioOut, "VO_ENGINE.json"),
-  JSON.stringify(
-    {
-      engine,
-      detail: engineDetail,
-      generatedAt: new Date().toISOString(),
-      tip: "Set OPENAI_API_KEY or ELEVENLABS_API_KEY for premium cloud TTS, then re-run npm run commercials:vo",
-    },
-    null,
-    2,
-  ),
-  "utf8",
-);
-
-for (const [key, spec] of Object.entries(scripts)) {
-  console.log(`Generating VO for ${key}...`);
-  const parts = [];
-  let cursor = 0;
-  let i = 0;
-
-  for (const line of spec.lines) {
-    if (line.t > cursor + 0.05) {
-      const sil = path.join(tmp, `${key}-sil-${String(i).padStart(2, "0")}.wav`);
-      silence(sil, line.t - cursor);
-      parts.push(sil);
-      cursor = line.t;
-    }
-    const wav = path.join(tmp, `${key}-line-${String(i).padStart(2, "0")}.wav`);
-    speakLine(engine, line.text, wav);
-    // Light polish: gentle high-pass (kill rumble) + soft limiter for trailer clarity
-    const polished = path.join(tmp, `${key}-line-${String(i).padStart(2, "0")}-fx.wav`);
-    ff(
-      "-i",
-      wav,
-      "-af",
-      "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=20:release=200:makeup=2,alimiter=limit=0.95",
-      "-c:a",
-      "pcm_s16le",
-      polished,
-    );
-    parts.push(polished);
-    const spoken = probeDuration(polished);
-    cursor += spoken;
-    const windowEnd = line.t + line.d;
-    if (cursor < windowEnd - 0.08) {
-      const pad = path.join(tmp, `${key}-pad-${String(i).padStart(2, "0")}.wav`);
-      silence(pad, windowEnd - cursor);
-      parts.push(pad);
-      cursor = windowEnd;
-    } else if (cursor > windowEnd + 0.35) {
-      // Line overran caption window — gently speed just enough to fit (max 8%)
-      const target = Math.max(0.5, line.d - 0.15);
-      if (spoken > target) {
-        const ratio = Math.min(1.08, spoken / target);
-        const fitted = path.join(tmp, `${key}-line-${String(i).padStart(2, "0")}-fit.wav`);
-        ff(
-          "-i",
-          polished,
-          "-af",
-          `atempo=${ratio.toFixed(4)}`,
-          "-c:a",
-          "pcm_s16le",
-          fitted,
-        );
-        parts[parts.length - 1] = fitted;
-        cursor = line.t + probeDuration(fitted);
-        if (cursor < windowEnd - 0.08) {
-          const pad = path.join(tmp, `${key}-pad-${String(i).padStart(2, "0")}.wav`);
-          silence(pad, windowEnd - cursor);
-          parts.push(pad);
-          cursor = windowEnd;
-        }
-      }
-    }
-    i++;
-  }
-
-  if (cursor < spec.duration) {
-    const end = path.join(tmp, `${key}-end.wav`);
-    silence(end, spec.duration - cursor);
-    parts.push(end);
-  }
-
-  const listPath = path.join(tmp, `concat-${key}.txt`);
+  console.log(`VO engine: ${engineDetail}`);
   fs.writeFileSync(
-    listPath,
-    parts.map((f) => `file '${f.replace(/\\/g, "/")}'`).join("\n"),
+    path.join(audioOut, "VO_ENGINE.json"),
+    JSON.stringify(
+      {
+        engine,
+        detail: engineDetail,
+        voiceId: engine === "elevenlabs" ? elevenCfg.voiceId : null,
+        voiceName: engine === "elevenlabs" ? "Rachel" : null,
+        modelId: engine === "elevenlabs" ? elevenCfg.modelId : null,
+        generatedAt: new Date().toISOString(),
+        tip: "Set OPENAI_API_KEY or ELEVENLABS_API_KEY for premium cloud TTS, then re-run npm run commercials:vo",
+      },
+      null,
+      2,
+    ),
     "utf8",
   );
 
-  const wavOut = path.join(audioOut, `${spec.file}.wav`);
-  const m4aOut = path.join(audioOut, `${spec.file}.m4a`);
-  ff("-f", "concat", "-safe", "0", "-i", listPath, "-c:a", "pcm_s16le", wavOut);
-  ff("-i", wavOut, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "1", m4aOut);
-  console.log(`  -> ${m4aOut} (${probeDuration(m4aOut).toFixed(1)}s)`);
+  for (const [key, spec] of Object.entries(scripts)) {
+    console.log(`Generating VO for ${key}...`);
+    const parts = [];
+    let cursor = 0;
+    let i = 0;
+
+    for (const line of spec.lines) {
+      if (line.t > cursor + 0.05) {
+        const sil = path.join(tmp, `${key}-sil-${String(i).padStart(2, "0")}.wav`);
+        silence(sil, line.t - cursor);
+        parts.push(sil);
+        cursor = line.t;
+      }
+      const wav = path.join(tmp, `${key}-line-${String(i).padStart(2, "0")}.wav`);
+      await speakLine(engine, line.text, wav);
+      // Light polish: gentle high-pass (kill rumble) + soft limiter for trailer clarity
+      const polished = path.join(tmp, `${key}-line-${String(i).padStart(2, "0")}-fx.wav`);
+      ff(
+        "-i",
+        wav,
+        "-af",
+        "highpass=f=80,acompressor=threshold=-18dB:ratio=2.5:attack=20:release=200:makeup=2,alimiter=limit=0.95",
+        "-c:a",
+        "pcm_s16le",
+        polished,
+      );
+      parts.push(polished);
+      const spoken = probeDuration(polished);
+      cursor += spoken;
+      const windowEnd = line.t + line.d;
+      if (cursor < windowEnd - 0.08) {
+        const pad = path.join(tmp, `${key}-pad-${String(i).padStart(2, "0")}.wav`);
+        silence(pad, windowEnd - cursor);
+        parts.push(pad);
+        cursor = windowEnd;
+      } else if (cursor > windowEnd + 0.35) {
+        // Line overran caption window — gently speed just enough to fit (max 8%)
+        const target = Math.max(0.5, line.d - 0.15);
+        if (spoken > target) {
+          const ratio = Math.min(1.08, spoken / target);
+          const fitted = path.join(tmp, `${key}-line-${String(i).padStart(2, "0")}-fit.wav`);
+          ff(
+            "-i",
+            polished,
+            "-af",
+            `atempo=${ratio.toFixed(4)}`,
+            "-c:a",
+            "pcm_s16le",
+            fitted,
+          );
+          parts[parts.length - 1] = fitted;
+          cursor = line.t + probeDuration(fitted);
+          if (cursor < windowEnd - 0.08) {
+            const pad = path.join(tmp, `${key}-pad-${String(i).padStart(2, "0")}.wav`);
+            silence(pad, windowEnd - cursor);
+            parts.push(pad);
+            cursor = windowEnd;
+          }
+        }
+      }
+      i++;
+    }
+
+    if (cursor < spec.duration) {
+      const end = path.join(tmp, `${key}-end.wav`);
+      silence(end, spec.duration - cursor);
+      parts.push(end);
+    }
+
+    const listPath = path.join(tmp, `concat-${key}.txt`);
+    fs.writeFileSync(
+      listPath,
+      parts.map((f) => `file '${f.replace(/\\/g, "/")}'`).join("\n"),
+      "utf8",
+    );
+
+    const wavOut = path.join(audioOut, `${spec.file}.wav`);
+    const m4aOut = path.join(audioOut, `${spec.file}.m4a`);
+    ff("-f", "concat", "-safe", "0", "-i", listPath, "-c:a", "pcm_s16le", wavOut);
+    ff("-i", wavOut, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "1", m4aOut);
+    console.log(`  -> ${m4aOut} (${probeDuration(m4aOut).toFixed(1)}s)`);
+  }
+
+  console.log(`VO generation complete (engine=${engine}).`);
 }
 
-console.log(`VO generation complete (engine=${engine}).`);
+main().catch((err) => {
+  console.error(err.message || err);
+  process.exit(1);
+});

@@ -1,6 +1,9 @@
 {
-  "engine": "edge",
-  "detail": "edge (en-US-ChristopherNeural @ -12%)",
-  "generatedAt": "2026-07-18T05:55:50.503Z",
+  "engine": "elevenlabs",
+  "detail": "elevenlabs (Rachel / 21m00Tcm4TlvDq8ikWAM)",
+  "voiceId": "21m00Tcm4TlvDq8ikWAM",
+  "voiceName": "Rachel",
+  "modelId": "eleven_multilingual_v2",
+  "generatedAt": "2026-07-18T21:41:51.465Z",
   "tip": "Set OPENAI_API_KEY or ELEVENLABS_API_KEY for premium cloud TTS, then re-run npm run commercials:vo"
 }
