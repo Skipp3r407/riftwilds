@@ -76,9 +76,9 @@ export function interactPromptDockClass(
   settings: Pick<ImmersiveSettings, "hudPanelLayout" | "toolbarCollapsed">,
 ): string {
   if (!toolbarUsesBottomCenterDock(settings)) {
-    return "pointer-events-none absolute inset-x-0 bottom-28 z-25 flex justify-center px-4 md:bottom-16";
+    return "pointer-events-none absolute inset-x-0 bottom-28 z-30 flex justify-center px-4 md:bottom-16";
   }
   return settings.toolbarCollapsed
-    ? "pointer-events-none absolute inset-x-0 bottom-36 z-25 flex justify-center px-4 md:bottom-32"
-    : "pointer-events-none absolute inset-x-0 bottom-44 z-25 flex justify-center px-4 md:bottom-40";
+    ? "pointer-events-none absolute inset-x-0 bottom-36 z-30 flex justify-center px-4 md:bottom-32"
+    : "pointer-events-none absolute inset-x-0 bottom-44 z-30 flex justify-center px-4 md:bottom-40";
 }

@@ -524,6 +524,7 @@ export function LiveWorldShell({ playable }: Props) {
                   regionSlug={(status ?? statusFallback).mapName
                     .toLowerCase()
                     .replace(/\s+/g, "-")}
+                  className={worldClockDockClass(settings)}
                 />
                 <HappeningNowBanner
                   view={worldEvents.view}
@@ -538,6 +539,58 @@ export function LiveWorldShell({ playable }: Props) {
                   </p>
                 ) : null}
                 <FeaturedPlayerBanner featured={socialPresence.featured} />
+              </HudLayer>
+            ) : null}
+
+            {/* Bottom-left column: presence peek + chat — no overlap */}
+            {(showLayer("status") && presenceUsesBottomLeftStack(settings)) ||
+            (bridge && showLayer("chat") && chatUsesBottomLeftStack(settings)) ? (
+              <div
+                className={bottomLeftHudStackClass()}
+                data-testid="live-world-bottom-left-stack"
+              >
+                {showLayer("status") && presenceUsesBottomLeftStack(settings) ? (
+                  <HudLayer opacity={hudOpacity} settings={settings}>
+                    <SocialPresenceHud
+                      snapshot={socialPresence.snapshot}
+                      toast={socialPresence.toast}
+                      onClaimIdle={() => void socialPresence.claimIdle()}
+                      onQuickAction={(kind) => {
+                        const signal =
+                          kind === "WAVE" || kind === "DANCE" || kind === "SIT"
+                            ? "EMOTE"
+                            : "INTERACT";
+                        void socialPresence.recordAction(kind, signal);
+                        reveal("manual");
+                      }}
+                      collapsed={settings.presenceHudCollapsed}
+                      onCollapsedChange={(presenceHudCollapsed) => {
+                        updateSettings({ presenceHudCollapsed });
+                        reveal("manual");
+                      }}
+                      stacked
+                      panelLayout={settings.hudPanelLayout}
+                      onPanelPositionChange={(pos) => setPanelPosition("presence", pos)}
+                    />
+                  </HudLayer>
+                ) : null}
+                {bridge && showLayer("chat") && chatUsesBottomLeftStack(settings) ? (
+                  <HudLayer opacity={hudOpacity} settings={settings}>
+                    <LiveWorldChatPanel
+                      bridge={bridge}
+                      chatMode={settings.chatMode}
+                      onRevealHud={() => reveal("message")}
+                      stacked
+                      panelLayout={settings.hudPanelLayout}
+                      onPanelPositionChange={(pos) => setPanelPosition("chat", pos)}
+                    />
+                  </HudLayer>
+                ) : null}
+              </div>
+            ) : null}
+
+            {showLayer("status") && !presenceUsesBottomLeftStack(settings) ? (
+              <HudLayer opacity={hudOpacity} settings={settings}>
                 <SocialPresenceHud
                   snapshot={socialPresence.snapshot}
                   toast={socialPresence.toast}
@@ -635,7 +688,7 @@ export function LiveWorldShell({ playable }: Props) {
                   </HudLayer>
                 ) : null}
                 <LiveWorldMapOverlay bridge={bridge} />
-                {showLayer("chat") ? (
+                {showLayer("chat") && !chatUsesBottomLeftStack(settings) ? (
                   <HudLayer opacity={hudOpacity} settings={settings}>
                     <LiveWorldChatPanel
                       bridge={bridge}
@@ -662,6 +715,7 @@ export function LiveWorldShell({ playable }: Props) {
                   prompt={prompt}
                   bridge={bridge}
                   onAdvance={() => bridge.advanceDialogue()}
+                  promptClassName={interactPromptDockClass(settings)}
                 />
               </>
             ) : null}
