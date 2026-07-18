@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { recordQuestMetric } from "@/game/quests/quest-demo-store";
+import { TcgCardDetailModal } from "@/components/tcg/tcg-card-detail-modal";
 
 type CardRow = {
   defId: string;
@@ -25,9 +26,16 @@ type CardRow = {
  * Binder tile = complete card face bitmap only.
  * Quantity badge sits outside the face chrome; no name/rules HTML overlays.
  */
-function BinderCardFace({ row }: { row: CardRow }) {
+function BinderCardFace({
+  row,
+  onInspect,
+}: {
+  row: CardRow;
+  onInspect: () => void;
+}) {
   const [imgFailed, setImgFailed] = useState(false);
-  const face = row.def?.cardImagePath;
+  const face =
+    row.def?.cardImagePath || `/assets/tcg/cards/${row.defId}.webp`;
   const showFace = Boolean(face && !imgFailed);
   const label = row.def?.name ?? row.defId;
 
@@ -37,24 +45,31 @@ function BinderCardFace({ row }: { row: CardRow }) {
         ×{row.count}
       </div>
 
-      {showFace ? (
-        <div className="relative aspect-[500/700] w-full overflow-hidden rounded-xl shadow-[0_0_24px_rgba(61,231,255,0.08)] transition duration-300 group-hover:scale-[1.02]">
-          <Image
-            src={face!}
-            alt={label}
-            fill
-            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
-            className="object-contain"
-            onError={() => setImgFailed(true)}
-            unoptimized
-          />
-        </div>
-      ) : (
-        <div className="flex aspect-[500/700] items-center justify-center rounded-xl border border-[rgba(61,231,255,0.22)] bg-[rgba(12,18,28,0.9)] p-4 text-center text-sm text-[var(--text-muted,#b7aea0)]">
-          {label}
-          <span className="sr-only">Card image unavailable</span>
-        </div>
-      )}
+      <button
+        type="button"
+        onClick={onInspect}
+        aria-label={`Inspect ${label}`}
+        className="block w-full text-left focus-ring rounded-xl"
+      >
+        {showFace ? (
+          <div className="relative aspect-[500/700] w-full overflow-hidden rounded-xl shadow-[0_0_24px_rgba(61,231,255,0.08)] transition duration-300 group-hover:scale-[1.02]">
+            <Image
+              src={face}
+              alt={label}
+              fill
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+              className="object-contain"
+              onError={() => setImgFailed(true)}
+              unoptimized
+            />
+          </div>
+        ) : (
+          <div className="flex aspect-[500/700] items-center justify-center rounded-xl border border-[rgba(61,231,255,0.22)] bg-[rgba(12,18,28,0.9)] p-4 text-center text-sm text-[var(--text-muted,#b7aea0)]">
+            {label}
+            <span className="sr-only">Card image unavailable</span>
+          </div>
+        )}
+      </button>
     </li>
   );
 }
@@ -63,6 +78,7 @@ export default function TcgCollectionPage() {
   const [cards, setCards] = useState<CardRow[]>([]);
   const [note, setNote] = useState("");
   const [error, setError] = useState<string | null>(null);
+  const [inspectDefId, setInspectDefId] = useState<string | null>(null);
 
   useEffect(() => {
     recordQuestMetric("binder_open", 1);
@@ -95,7 +111,7 @@ export default function TcgCollectionPage() {
         aria-hidden
       />
 
-      <div className="mb-6 flex flex-wrap items-end justify-between gap-3 rounded-xl border border-[rgba(255,184,77,0.28)] bg-[rgba(8,12,20,0.62)] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[2px]">
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-3 rounded-xl border border-[rgba(255,184,77,0.28)] bg-[rgba(8,12,20,0.55)] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[2px]">
         <div>
           <p className="font-display text-[10px] uppercase tracking-[0.28em] text-[var(--amber)]">
             Card Binder
@@ -104,8 +120,8 @@ export default function TcgCollectionPage() {
             Collection
           </h1>
           <p className="mt-1 max-w-xl text-sm text-[var(--text-muted,#b7aea0)]">
-            Shape a Rift Energy deck from your binder — primary combat for launch. Credits buy packs
-            in the shop; SOL is never required.
+            Tap any card for stats and creature bio. Shape a Rift Energy deck from your
+            binder — SOL is never required.
           </p>
         </div>
         <div className="flex flex-wrap gap-2 text-sm">
@@ -130,7 +146,11 @@ export default function TcgCollectionPage() {
 
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((row) => (
-          <BinderCardFace key={row.defId} row={row} />
+          <BinderCardFace
+            key={row.defId}
+            row={row}
+            onInspect={() => setInspectDefId(row.defId)}
+          />
         ))}
       </ul>
 
@@ -139,6 +159,12 @@ export default function TcgCollectionPage() {
           Binder empty — hatch a Riftling or open a pack from the shop to seed your collection.
         </p>
       ) : null}
+
+      <TcgCardDetailModal
+        open={!!inspectDefId}
+        defId={inspectDefId}
+        onClose={() => setInspectDefId(null)}
+      />
     </main>
   );
 }

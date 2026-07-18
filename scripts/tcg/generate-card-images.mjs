@@ -682,6 +682,39 @@ async function buildPlateLayer(card, role) {
   return pipeline.blur(role === "companion" ? 1.2 : 0.6).png().toBuffer();
 }
 
+/** Central emblem when no creature/item source art exists (spells, tokens, etc.). */
+function scenicEmblemSvg(card, role) {
+  const scene = SCENES[card.element] || SCENES.neutral;
+  const accent = RARITY_ACCENT[card.rarity] || RARITY_ACCENT.common;
+  const rng = mulberry32(hashStr(`${card.id}|emblem`));
+  const cx = W / 2;
+  const cy = role === "utility" ? 250 : 220;
+  const r = 88 + Math.floor(rng() * 24);
+  const spokes = 6 + Math.floor(rng() * 4);
+  let rays = "";
+  for (let i = 0; i < spokes; i++) {
+    const a = (i / spokes) * Math.PI * 2 + rng() * 0.2;
+    const x2 = cx + Math.cos(a) * (r + 36);
+    const y2 = cy + Math.sin(a) * (r + 36);
+    rays += `<line x1="${cx}" y1="${cy}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${scene.glow}" stroke-width="2" opacity="0.35"/>`;
+  }
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="emGlow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="${scene.glow}" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="${scene.accent}" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="${cx}" cy="${cy}" rx="${r + 50}" ry="${r + 36}" fill="url(#emGlow)"/>
+  ${rays}
+  <circle cx="${cx}" cy="${cy}" r="${r}" fill="#0a1220" fill-opacity="0.45" stroke="${accent}" stroke-width="3" opacity="0.85"/>
+  <circle cx="${cx}" cy="${cy}" r="${r - 18}" fill="none" stroke="${scene.glow}" stroke-width="1.5" opacity="0.55"/>
+  <circle cx="${cx}" cy="${cy}" r="14" fill="${scene.accent}" opacity="0.8"/>
+</svg>`;
+}
+
 async function compositeCard(card, sourceDisk, outPath) {
   const accent = RARITY_ACCENT[card.rarity] || RARITY_ACCENT.common;
   const role = cardRole(card);
@@ -717,41 +750,44 @@ async function compositeCard(card, sourceDisk, outPath) {
     layers.push({ input: scenic, top: 0, left: 0 });
   }
 
-  // 3) Creature / item art — contain so scenic BG shows around silhouette
-  const artScale =
-    role === "companion" ? 0.92 : role === "ascendant" ? 0.88 : 0.84;
-  const artH = Math.floor(H * artScale * (0.72 + rng() * 0.08));
-  const artW = Math.floor(W * (0.88 + rng() * 0.08));
-  const artBuf = await sharp(sourceDisk)
-    .resize(artW, artH, {
-      fit: "contain",
-      position: "centre",
-      background: { r: 0, g: 0, b: 0, alpha: 0 },
-    })
-    .png()
-    .toBuffer();
+  // 3) Creature / item art — or scenic emblem when source art is missing
+  if (sourceDisk) {
+    const artScale =
+      role === "companion" ? 0.92 : role === "ascendant" ? 0.88 : 0.84;
+    const artH = Math.floor(H * artScale * (0.72 + rng() * 0.08));
+    const artW = Math.floor(W * (0.88 + rng() * 0.08));
+    const artBuf = await sharp(sourceDisk)
+      .resize(artW, artH, {
+        fit: "contain",
+        position: "centre",
+        background: { r: 0, g: 0, b: 0, alpha: 0 },
+      })
+      .png()
+      .toBuffer();
 
-  // Vertical placement: companions sit lower/cozier; ascendants slightly higher/heroic
-  const artTop =
-    role === "companion"
-      ? Math.floor(H * 0.14)
-      : role === "ascendant"
-        ? Math.floor(H * 0.08)
-        : Math.floor(H * 0.1);
-  const artLeft = Math.floor((W - artW) / 2);
+    const artTop =
+      role === "companion"
+        ? Math.floor(H * 0.14)
+        : role === "ascendant"
+          ? Math.floor(H * 0.08)
+          : Math.floor(H * 0.1);
+    const artLeft = Math.floor((W - artW) / 2);
 
-  // Soft ground shadow under creature
-  const shadow = await sharp(
-    Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
+    const shadow = await sharp(
+      Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
   <ellipse cx="${W / 2}" cy="${Math.min(H - 180, artTop + artH - 20)}" rx="${Math.floor(artW * 0.32)}" ry="28" fill="#000" opacity="0.35"/>
 </svg>`),
-  )
-    .png()
-    .toBuffer();
+    )
+      .png()
+      .toBuffer();
 
-  layers.push({ input: shadow, top: 0, left: 0 });
-  layers.push({ input: artBuf, top: artTop, left: artLeft });
+    layers.push({ input: shadow, top: 0, left: 0 });
+    layers.push({ input: artBuf, top: artTop, left: artLeft });
+  } else {
+    const emblem = await sharp(Buffer.from(scenicEmblemSvg(card, role))).png().toBuffer();
+    layers.push({ input: emblem, top: 0, left: 0 });
+  }
 
   // Role edge glow ring (ascendant cyan, companion amber soft)
   if (role === "ascendant" || role === "companion") {
@@ -810,8 +846,9 @@ async function main() {
     if (t === "spell" || t === "equipment") return 2;
     return 3;
   };
+  // Every card gets a face — with pet/item art when available, scenic emblem otherwise.
   let eligible = cards
-    .filter((c) => c.art?.assetPath || c.riftlingSlug)
+    .slice()
     .sort(
       (a, b) =>
         typePriority(a.type) - typePriority(b.type) || a.collectorNumber - b.collectorNumber,
@@ -825,7 +862,7 @@ async function main() {
 
   let generated = 0;
   let skipped = 0;
-  let missingSource = 0;
+  let scenicOnly = 0;
   let failed = 0;
   const errors = [];
 
@@ -839,14 +876,11 @@ async function main() {
     }
 
     const source = resolveSourceArt(card.art?.assetPath, card.riftlingSlug);
-    if (!source) {
-      missingSource++;
-      return;
-    }
+    if (!source) scenicOnly++;
 
     try {
-      await compositeCard(card, source.disk, outPath);
-      card.art = { ...card.art, cardImagePath: outRel };
+      await compositeCard(card, source?.disk ?? null, outPath);
+      card.art = { ...(card.art || {}), cardImagePath: outRel };
       manifest.cards[card.id] = outRel;
       generated++;
     } catch (e) {
@@ -882,16 +916,16 @@ async function main() {
     eligible: eligible.length,
     generated,
     skippedExisting: skipped,
-    missingSource,
+    scenicOnlyEmblem: scenicOnly,
     failed,
     patchedCardImagePath: patched,
     totalWithCardImage: Object.keys(manifest.cards).length,
     out: "public/assets/tcg/cards/{cardId}.webp",
     samples: [
       "/assets/tcg/cards/rotr-c-brinepaw.webp",
-      "/assets/tcg/cards/rotr-comp-brinepaw.webp",
-      "/assets/tcg/cards/rotr-evo-brinepaw.webp",
-      "/assets/tcg/cards/rotr-c-bramblefox.webp",
+      "/assets/tcg/cards/rotr-c-ash-urchin.webp",
+      "/assets/tcg/cards/rotr-s-forge-temper.webp",
+      "/assets/tcg/cards/rotr-s-ember-spark.webp",
     ],
     manifest: "src/content/tcg/data/cardImages.json",
     errors: errors.slice(0, 12),

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { getTcgCardDef } from "@/game/tcg/card-catalog";
 import { recordQuestMetric } from "@/game/quests/quest-demo-store";
+import { TcgCardDetailModal } from "@/components/tcg/tcg-card-detail-modal";
 import { cn } from "@/lib/utils/cn";
 
 type ClientCard = { instanceId: string; defId: string };
@@ -51,32 +52,47 @@ function CardFace({
   defId,
   selected,
   disabled,
+  size = "hand",
   onClick,
 }: {
   defId: string;
   selected?: boolean;
   disabled?: boolean;
+  size?: "hand" | "board";
   onClick?: () => void;
 }) {
   const def = getTcgCardDef(defId);
   const [imgFailed, setImgFailed] = useState(false);
+  const sizeClass =
+    size === "hand"
+      ? "aspect-[500/700] w-[7.25rem] sm:w-[8.5rem] md:w-[9.5rem]"
+      : "aspect-[500/700] w-[5.25rem] sm:w-[6.25rem] md:w-[7rem]";
+
   if (!def) {
     return (
-      <div className="flex h-28 w-20 items-center justify-center rounded-lg bg-black/30 text-xs text-white/50">
+      <div
+        className={cn(
+          "flex items-center justify-center rounded-xl bg-black/30 text-xs text-white/50",
+          sizeClass,
+        )}
+      >
         ?
       </div>
     );
   }
+
   const face = def.cardImagePath && !imgFailed ? def.cardImagePath : null;
+
   return (
     <button
       type="button"
       disabled={disabled}
       onClick={onClick}
-      aria-label={def.name}
+      aria-label={`Inspect ${def.name}`}
       className={cn(
-        "relative h-28 w-20 overflow-hidden rounded-lg border border-amber-500/35 bg-black/40 transition",
-        selected && "ring-2 ring-amber-300",
+        "relative overflow-hidden rounded-xl border border-amber-500/40 bg-black/40 transition focus-ring",
+        sizeClass,
+        selected && "ring-2 ring-amber-300 scale-[1.03]",
         disabled && "opacity-40",
       )}
     >
@@ -111,6 +127,8 @@ export function RiftBattleBoard({
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [selectedHand, setSelectedHand] = useState<string | null>(null);
+  const [inspectDefId, setInspectDefId] = useState<string | null>(null);
+  const [inspectFromHand, setInspectFromHand] = useState(false);
 
   const backHref = returnTo || snap?.encounter?.returnTo || "/tcg/collection";
 
@@ -190,6 +208,7 @@ export function RiftBattleBoard({
         if (!res.ok) throw new Error(data.error || "TURN_FAILED");
         setSnap(data);
         setSelectedHand(null);
+        setInspectDefId(null);
         if (action.kind === "PLAY_CARD") {
           recordQuestMetric("tcg_card_play", 1);
           recordQuestMetric("tcg_energy_spend", 1);
@@ -208,9 +227,33 @@ export function RiftBattleBoard({
 
   const log = useMemo(() => snap?.events.slice().reverse() ?? [], [snap]);
 
+  const selectedCard = player?.hand.find((c) => c.instanceId === selectedHand);
+  const selectedDef = selectedCard ? getTcgCardDef(selectedCard.defId) : null;
+  const canPlaySelected =
+    !!snap &&
+    !!player &&
+    !!selectedHand &&
+    !!selectedDef &&
+    snap.status === "ACTIVE" &&
+    snap.activeSideId === player.id &&
+    !busy &&
+    player.riftEnergy >= selectedDef.riftCost;
+
+  const playDisabledReason = !selectedHand
+    ? null
+    : snap?.status !== "ACTIVE"
+      ? "Match finished"
+      : snap && player && snap.activeSideId !== player.id
+        ? "Not your turn"
+        : selectedDef && player && player.riftEnergy < selectedDef.riftCost
+          ? `Needs ${selectedDef.riftCost} Rift Energy`
+          : busy
+            ? "Busy…"
+            : null;
+
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-5xl flex-col gap-4 px-2 py-4 sm:px-4 sm:py-6">
-      <header className="flex flex-wrap items-end justify-between gap-3 rounded-xl border border-white/10 bg-[rgba(8,12,20,0.55)] px-4 py-3 backdrop-blur-[2px]">
+      <header className="flex flex-wrap items-end justify-between gap-3 rounded-xl border border-white/10 bg-[rgba(8,12,20,0.42)] px-4 py-3 backdrop-blur-[2px]">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-amber-200/70">
             Rift Energy Battle
@@ -221,8 +264,8 @@ export function RiftBattleBoard({
               : "Practice Board"}
           </h1>
           <p className="mt-1 max-w-xl text-sm text-[var(--text-muted,#b7aea0)]">
-            Spend Rift Energy to play units and spells. End turn to strike with
-            your board. SOL is never required.
+            Tap a card to inspect it. Play from the detail view or the Play button.
+            SOL is never required.
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
@@ -256,15 +299,19 @@ export function RiftBattleBoard({
       )}
 
       {!snap && (
-        <section className="rounded-xl border border-white/10 bg-[rgba(8,12,20,0.48)] p-6 backdrop-blur-[2px]">
+        <section className="rounded-xl border border-white/10 bg-[rgba(8,12,20,0.38)] p-6 backdrop-blur-[2px]">
           <div className="space-y-4">
-            <div className="flex h-24 items-center justify-center rounded-lg border border-dashed border-cyan-300/25 text-xs text-cyan-100/50">
+            <div className="flex h-28 items-center justify-center rounded-lg border border-dashed border-cyan-300/25 text-xs text-cyan-100/50">
               Challenger lane
             </div>
             <p className="text-center text-sm text-white/70">
-              {busy ? "Opening the rift board…" : error ? "Board ready when the rift reconnects." : "Preparing match…"}
+              {busy
+                ? "Opening the rift board…"
+                : error
+                  ? "Board ready when the rift reconnects."
+                  : "Preparing match…"}
             </p>
-            <div className="flex h-24 items-center justify-center rounded-lg border border-dashed border-amber-300/25 text-xs text-amber-100/50">
+            <div className="flex h-28 items-center justify-center rounded-lg border border-dashed border-amber-300/25 text-xs text-amber-100/50">
               Your lane
             </div>
             {!busy && (
@@ -284,10 +331,17 @@ export function RiftBattleBoard({
 
       {snap && player && foe && (
         <>
-          <section className="grid gap-3 rounded-xl border border-white/10 bg-[rgba(10,16,24,0.62)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[3px] md:grid-cols-[1fr_220px]">
+          <section className="grid gap-3 rounded-xl border border-white/10 bg-[rgba(10,16,24,0.45)] p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[2px] md:grid-cols-[1fr_220px]">
             <div className="space-y-4">
               <SideHeader side={foe} label="Challenger" />
-              <BoardRow units={foe.board} emptyLabel="Empty rift lane" />
+              <BoardRow
+                units={foe.board}
+                emptyLabel="Empty rift lane"
+                onInspect={(defId) => {
+                  setInspectFromHand(false);
+                  setInspectDefId(defId);
+                }}
+              />
               <div className="flex items-center justify-center gap-3 py-2 text-sm text-amber-100/80">
                 <span>
                   Turn {snap.turn} · {snap.phase}
@@ -302,10 +356,17 @@ export function RiftBattleBoard({
                   </span>
                 )}
               </div>
-              <BoardRow units={player.board} emptyLabel="Your units appear here" />
+              <BoardRow
+                units={player.board}
+                emptyLabel="Your units appear here"
+                onInspect={(defId) => {
+                  setInspectFromHand(false);
+                  setInspectDefId(defId);
+                }}
+              />
               <SideHeader side={player} label="You" emphasizeEnergy />
             </div>
-            <aside className="max-h-72 overflow-auto rounded-lg border border-white/10 bg-black/35 p-2 text-[11px] text-white/70">
+            <aside className="max-h-72 overflow-auto rounded-lg border border-white/10 bg-black/30 p-2 text-[11px] text-white/70">
               <p className="mb-1 font-semibold uppercase tracking-wide text-white/50">
                 Battle log
               </p>
@@ -320,36 +381,30 @@ export function RiftBattleBoard({
             </aside>
           </section>
 
-          <section className="rounded-xl border border-white/10 bg-[rgba(8,12,20,0.5)] p-4 backdrop-blur-[2px]">
+          <section className="rounded-xl border border-white/10 bg-[rgba(8,12,20,0.38)] p-4 backdrop-blur-[2px]">
             <p className="mb-2 text-xs uppercase tracking-wider text-white/50">
-              Hand
+              Hand · tap a card to inspect
             </p>
-            <div className="flex flex-wrap gap-2">
-              {player.hand.map((c) => {
-                const def = getTcgCardDef(c.defId);
-                const tooExpensive =
-                  !!def && player.riftEnergy < def.riftCost;
-                return (
-                  <CardFace
-                    key={c.instanceId}
-                    defId={c.defId}
-                    selected={selectedHand === c.instanceId}
-                    disabled={
-                      busy ||
-                      snap.status !== "ACTIVE" ||
-                      snap.activeSideId !== player.id ||
-                      tooExpensive
-                    }
-                    onClick={() => setSelectedHand(c.instanceId)}
-                  />
-                );
-              })}
+            <div className="flex flex-wrap gap-3">
+              {player.hand.map((c) => (
+                <CardFace
+                  key={c.instanceId}
+                  defId={c.defId}
+                  size="hand"
+                  selected={selectedHand === c.instanceId}
+                  onClick={() => {
+                    setSelectedHand(c.instanceId);
+                    setInspectFromHand(true);
+                    setInspectDefId(c.defId);
+                  }}
+                />
+              ))}
             </div>
             <div className="mt-4 flex flex-wrap gap-2">
               <motion.button
                 type="button"
                 whileTap={{ scale: 0.98 }}
-                disabled={!selectedHand || busy || snap.status !== "ACTIVE"}
+                disabled={!canPlaySelected}
                 onClick={() =>
                   selectedHand &&
                   void act({ kind: "PLAY_CARD", handInstanceId: selectedHand })
@@ -388,6 +443,31 @@ export function RiftBattleBoard({
           </section>
         </>
       )}
+
+      <TcgCardDetailModal
+        open={!!inspectDefId}
+        defId={inspectDefId}
+        onClose={() => {
+          setInspectDefId(null);
+          setInspectFromHand(false);
+        }}
+        battlePlay={
+          inspectFromHand && selectedHand
+            ? {
+                canPlay: canPlaySelected,
+                playDisabledReason,
+                onPlay: () => {
+                  if (selectedHand) {
+                    void act({
+                      kind: "PLAY_CARD",
+                      handInstanceId: selectedHand,
+                    });
+                  }
+                },
+              }
+            : null
+        }
+      />
     </div>
   );
 }
@@ -428,42 +508,30 @@ function SideHeader({
 function BoardRow({
   units,
   emptyLabel,
+  onInspect,
 }: {
   units: ClientUnit[];
   emptyLabel: string;
+  onInspect: (defId: string) => void;
 }) {
   if (units.length === 0) {
     return (
-      <div className="flex h-24 items-center justify-center rounded-lg border border-dashed border-white/15 text-xs text-white/35">
+      <div className="flex h-32 items-center justify-center rounded-lg border border-dashed border-white/15 text-xs text-white/35">
         {emptyLabel}
       </div>
     );
   }
   return (
-    <div className="flex flex-wrap gap-2">
-      {units.map((u) => {
-        const def = getTcgCardDef(u.defId);
-        const face = def?.cardImagePath;
-        return (
-          <div
-            key={u.instanceId}
-            className={cn(
-              "relative h-20 w-16 overflow-hidden rounded-md border border-teal-400/30 bg-black/40",
-              u.exhausted && "opacity-60",
-            )}
-            title={def?.name ?? u.defId}
-          >
-            {face ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={face} alt={def?.name ?? u.defId} className="h-full w-full object-cover" />
-            ) : (
-              <span className="flex h-full items-center justify-center px-0.5 text-center text-[9px] text-white/70">
-                {def?.name ?? u.defId}
-              </span>
-            )}
-          </div>
-        );
-      })}
+    <div className="flex min-h-32 flex-wrap items-end gap-3">
+      {units.map((u) => (
+        <div key={u.instanceId} className={cn(u.exhausted && "opacity-60")}>
+          <CardFace
+            defId={u.defId}
+            size="board"
+            onClick={() => onInspect(u.defId)}
+          />
+        </div>
+      ))}
     </div>
   );
 }

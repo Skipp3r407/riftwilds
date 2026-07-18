@@ -1,7 +1,7 @@
 import type { AffinityName } from "@prisma/client";
 import {
   getCardById,
-  TCG_CARD_IMAGES,
+  resolveCardImagePath,
   TCG_CARDS,
   type TcgCard,
   type TcgElement,
@@ -70,8 +70,8 @@ export function contentCardToEngineDef(card: TcgCard): TcgCardDef {
     type === "UNIT"
       ? Math.max(1, card.attack ?? 1)
       : spellPower(card);
-  const cardImagePath =
-    card.art.cardImagePath || TCG_CARD_IMAGES.cards[card.id] || undefined;
+  const resolved = resolveCardImagePath(card);
+  const cardImagePath = resolved || `/assets/tcg/cards/${card.id}.webp`;
   return {
     id: card.id,
     name: card.localization.name,
@@ -80,7 +80,7 @@ export function contentCardToEngineDef(card: TcgCard): TcgCardDef {
     riftCost: Math.max(0, card.energyCost),
     power,
     rarity,
-    speciesSlug: card.riftlingSlug,
+    speciesSlug: card.riftlingSlug || card.relatedRiftlings?.[0],
     description: card.localization.rulesText || card.localization.flavorText,
     maxCopies:
       rarity === "LEGENDARY" || rarity === "EPIC" ? 1 : rarity === "RARE" ? 2 : 3,

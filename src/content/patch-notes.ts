@@ -36,6 +36,25 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-tcg-card-detail-faces",
+    date: "2026-07-18",
+    title: "Full TCG card faces and inspect detail",
+    summary:
+      "Every foundational card now has a flattened WebP face; binder and battle open an inspect modal with stats and Riftling bios, and practice hand cards are larger.",
+    added: [
+      "Card inspect modal on Card Binder and Practice Board with stats, rules, flavor, and creature bio from species lore",
+      "Scenic emblem card faces for the remaining 90 cards that lacked pet/item source art (spells, tokens, commons like Ash Urchin)",
+    ],
+    changed: [
+      "Practice Board hand and board cards scaled up for clearer art",
+      "Battle: tap a card to inspect; Play lives in the detail view and toolbar",
+      "Card image resolution always prefers /assets/tcg/cards/{id}.webp",
+    ],
+    fixed: [
+      "Binder/battle no longer show text-only placeholders for Ember Spark, Forge Temper, Ash Urchin, and other missing faces",
+    ],
+  },
+  {
     id: "2026-07-18-social-hub-chrome",
     date: "2026-07-18",
     title: "Social Hub image tabs and plaza wallpaper",
