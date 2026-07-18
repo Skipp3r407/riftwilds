@@ -3,7 +3,10 @@
  */
 
 import type { MapBlueprint } from "@/game/world-maps/types";
-import type { TerrainCellKind } from "@/game/live-world/systems/terrain-paint";
+import type {
+  TerrainCellKind,
+  TerrainGrid,
+} from "@/game/live-world/systems/terrain-paint";
 import { LIBRARY_WORLD_KEYS } from "@/content/assets/library-world-keys";
 import {
   type PropKey,
@@ -89,23 +92,96 @@ function zoneAt(blueprint: MapBlueprint, x: number, y: number): string | undefin
   )?.id;
 }
 
+function cellAt(
+  grid: TerrainGrid | undefined,
+  col: number,
+  row: number,
+): TerrainCellKind | undefined {
+  if (!grid) return undefined;
+  if (row < 0 || col < 0 || row >= grid.rows || col >= grid.cols) return undefined;
+  return grid.cells[row]![col];
+}
+
+function isWaterish(k: TerrainCellKind | undefined): boolean {
+  return k === "water";
+}
+
+function isPathish(k: TerrainCellKind | undefined): boolean {
+  return k === "path" || k === "safe" || k === "settlement" || k === "accent";
+}
+
+function isLand(k: TerrainCellKind | undefined): boolean {
+  return k !== undefined && !isWaterish(k);
+}
+
+/** Neighbor-aware path / pond seams (cute RPG autotile feel). */
+function pickPathAutotile(
+  col: number,
+  row: number,
+  grid: TerrainGrid | undefined,
+): TerrainKey | null {
+  if (!grid) return null;
+  const n = !isPathish(cellAt(grid, col, row - 1));
+  const s = !isPathish(cellAt(grid, col, row + 1));
+  const e = !isPathish(cellAt(grid, col + 1, row));
+  const w = !isPathish(cellAt(grid, col - 1, row));
+  const edges = (n ? 1 : 0) + (s ? 1 : 0) + (e ? 1 : 0) + (w ? 1 : 0);
+  if (edges === 0) return null;
+  if (n && e && !s && !w) return "path-corner-ne";
+  if (n && w && !s && !e) return "path-corner-nw";
+  if (s && e && !n && !w) return "path-corner-se";
+  if (s && w && !n && !e) return "path-corner-sw";
+  if (n && !s) return "path-edge-n";
+  if (s && !n) return "path-edge-s";
+  if (e && !w) return "path-edge-e";
+  if (w && !e) return "path-edge-w";
+  return "path-bloom";
+}
+
+function pickWaterAutotile(
+  col: number,
+  row: number,
+  grid: TerrainGrid | undefined,
+): TerrainKey | null {
+  if (!grid) return null;
+  const n = isLand(cellAt(grid, col, row - 1));
+  const s = isLand(cellAt(grid, col, row + 1));
+  const e = isLand(cellAt(grid, col + 1, row));
+  const w = isLand(cellAt(grid, col - 1, row));
+  const shores = (n ? 1 : 0) + (s ? 1 : 0) + (e ? 1 : 0) + (w ? 1 : 0);
+  if (shores === 0) return null;
+  if (n && e && !s && !w) return "water-corner-ne";
+  if (n && w && !s && !e) return "water-corner-nw";
+  if (s && e && !n && !w) return "water-corner-se";
+  if (s && w && !n && !e) return "water-corner-sw";
+  if (n && !s) return "water-edge-n";
+  if (s && !n) return "water-edge-s";
+  if (e && !w) return "water-edge-e";
+  if (w && !e) return "water-edge-w";
+  return "water-edge";
+}
+
 export function resolveTerrainTexture(
   kind: TerrainCellKind,
   col: number,
   row: number,
   blueprint: MapBlueprint,
+  grid?: TerrainGrid,
 ): TerrainKey {
   const T = blueprint.tileSize;
   const zoneId = zoneAt(blueprint, col * T + T / 2, row * T + T / 2);
   switch (kind) {
-    case "path":
+    case "path": {
+      const auto = pickPathAutotile(col, row, grid);
+      if (auto) return auto;
       return pickPath(col, row);
+    }
     case "water": {
-      // Shore / lily variety for cozy pond read
+      const auto = pickWaterAutotile(col, row, grid);
+      if (auto) return auto;
       const hw = hash2(col, row, 2);
-      if (hw < 0.22) return "water-edge";
-      if (hw < 0.45) return "water-lily";
-      if (hw < 0.7) return "water-stream";
+      if (hw < 0.35) return "water-lily";
+      if (hw < 0.65) return "water-stream";
       return "water-master";
     }
     case "cliff":
@@ -482,6 +558,55 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
   out.push({ key: "lib-mushroom-amber", x: 50 * T, y: 18 * T, scale: 0.8 });
   out.push({ key: "lib-fence-post", x: 16 * T, y: 40 * T, scale: 0.85 });
 
+  // Picket yards — residential croft + farm plots (reference-style enclosed yards)
+  const yardRects: { x0: number; y0: number; x1: number; y1: number; gate?: boolean }[] = [
+    { x0: 5 * T, y0: 15 * T, x1: 12 * T, y1: 20 * T, gate: true },
+    { x0: 14 * T, y0: 39 * T, x1: 21 * T, y1: 44 * T, gate: true },
+    { x0: 3 * T, y0: 34 * T, x1: 9 * T, y1: 39 * T },
+  ];
+  for (const yard of yardRects) {
+    const step = T * 0.55;
+    for (let x = yard.x0; x <= yard.x1; x += step) {
+      out.push({ key: "picket-fence", x, y: yard.y0, scale: 0.82 });
+      out.push({ key: "picket-fence", x, y: yard.y1, scale: 0.82 });
+    }
+    for (let y = yard.y0 + step; y < yard.y1; y += step) {
+      out.push({ key: "picket-fence", x: yard.x0, y, scale: 0.82 });
+      out.push({ key: "picket-fence", x: yard.x1, y, scale: 0.82 });
+    }
+    out.push({ key: "yard-fence-corner", x: yard.x0, y: yard.y0, scale: 0.85 });
+    out.push({ key: "yard-fence-corner", x: yard.x1, y: yard.y0, scale: 0.85 });
+    out.push({ key: "yard-fence-corner", x: yard.x0, y: yard.y1, scale: 0.85 });
+    out.push({ key: "yard-fence-corner", x: yard.x1, y: yard.y1, scale: 0.85 });
+    if (yard.gate) {
+      out.push({
+        key: "picket-fence-gate",
+        x: (yard.x0 + yard.x1) / 2,
+        y: yard.y1,
+        scale: 0.9,
+      });
+    }
+  }
+
+  // Yard critters (original IP — sparkmoths / mossbun kits, not farm animals)
+  const critters: PropKey[] = ["critter-sparkmoth", "critter-mossbun-kit"];
+  for (let i = 0; i < 10; i++) {
+    out.push({
+      key: critters[i % critters.length]!,
+      x: 15 * T + hash2(i, 1, 80) * 6 * T,
+      y: 40 * T + hash2(i, 2, 81) * 4 * T,
+      scale: 0.7 + hash2(i, 3, 82) * 0.25,
+    });
+  }
+  for (let i = 0; i < 6; i++) {
+    out.push({
+      key: critters[i % critters.length]!,
+      x: 6 * T + hash2(i, 4, 83) * 5 * T,
+      y: 16 * T + hash2(i, 5, 84) * 3 * T,
+      scale: 0.72,
+    });
+  }
+
   // Cozy village clutter — fences, barrels, benches, flower patches, ambient Riftlings
   const cozyKeys: PropKey[] = [
     "bench",
@@ -492,6 +617,7 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
     "lantern-post",
     "signpost",
     "lib-fence-post",
+    "picket-fence",
     "stump",
     "ambient-riftling-sparklet",
     "ambient-riftling-mossbun",
@@ -499,6 +625,8 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
     "ambient-riftling-frostnip",
     "ambient-riftling-tideling",
     "ambient-riftling-stoneling",
+    "critter-sparkmoth",
+    "critter-mossbun-kit",
     ...libKeys("fence-", "barrel-", "crate-", "flower-", "furniture-", "goods-").slice(0, 24),
   ];
   const cozyHubs = [
@@ -510,6 +638,7 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
     { x: 10 * T, y: 10 * T, r: 28, n: 12 },
     { x: 22 * T, y: 20 * T, r: 26, n: 10 },
     { x: 36 * T, y: 30 * T, r: 28, n: 10 },
+    { x: 8 * T, y: 36 * T, r: 28, n: 12 },
   ];
   for (const hub of cozyHubs) {
     for (let i = 0; i < hub.n; i++) {
@@ -522,6 +651,16 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
         scale: 0.72 + hash2(i, hub.y, 72) * 0.28,
       });
     }
+  }
+
+  // Market stall cluster — striped awning feel near exchange
+  for (let i = 0; i < 6; i++) {
+    out.push({
+      key: "market-stall",
+      x: 6 * T + (i % 3) * 2.2 * T,
+      y: 36 * T + Math.floor(i / 3) * 2.4 * T,
+      scale: 0.95,
+    });
   }
 
   // Spread unique library variety across Commons so many pack keys appear in-world

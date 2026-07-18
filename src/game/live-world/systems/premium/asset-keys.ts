@@ -34,12 +34,28 @@ export const TERRAIN_KEYS = [
   "path-bloom",
   "path-to-stone",
   "path-corner",
+  "path-edge-n",
+  "path-edge-s",
+  "path-edge-e",
+  "path-edge-w",
+  "path-corner-ne",
+  "path-corner-nw",
+  "path-corner-se",
+  "path-corner-sw",
   "path-ruined",
   "path-worn",
   "path-master",
   "water-master",
   "water-stream",
   "water-edge",
+  "water-edge-n",
+  "water-edge-s",
+  "water-edge-e",
+  "water-edge-w",
+  "water-corner-ne",
+  "water-corner-nw",
+  "water-corner-se",
+  "water-corner-sw",
   "water-lily",
   "cliff-edge",
   "settlement-soil",
@@ -78,6 +94,11 @@ export const COZY_AMBIENT_PROP_KEYS = [
   "ambient-riftling-frostnip",
   "ambient-riftling-tideling",
   "ambient-riftling-stoneling",
+  "picket-fence",
+  "picket-fence-gate",
+  "yard-fence-corner",
+  "critter-sparkmoth",
+  "critter-mossbun-kit",
 ] as const;
 
 export const PROP_KEYS = [
@@ -129,7 +150,26 @@ export const ACTOR_KEYS = [
   "riftling-stoneling",
 ] as const;
 
+/** 4-frame walk/idle sheets (frame size after ×3 upscale from generator). */
+export const ACTOR_SHEET_KEYS = [
+  "player-keeper-sheet",
+  "pet-riftling-sheet",
+  "riftling-sparklet-sheet",
+  "riftling-mossbun-sheet",
+  "riftling-emberpup-sheet",
+  "riftling-frostnip-sheet",
+  "riftling-tideling-sheet",
+  "riftling-stoneling-sheet",
+] as const;
+
+export const KEEPER_SHEET_FRAME = 96;
+export const PET_SHEET_FRAME = 72;
+
 export function actorTex(key: (typeof ACTOR_KEYS)[number] | string): string {
+  return `pw-actor-${key}`;
+}
+
+export function actorSheetTex(key: (typeof ACTOR_SHEET_KEYS)[number] | string): string {
   return `pw-actor-${key}`;
 }
 
@@ -143,6 +183,12 @@ export const BUILDING_KEYS = [
   "academy",
   "recovery-center",
   "homestead-path",
+  "cottage-north",
+  "cottage-south",
+  "cottage-timber",
+  "farm-shed",
+  "tavern-tankard",
+  "cottage-peek",
   "portal-circle",
 ] as const;
 
@@ -169,7 +215,6 @@ export function buildingKeyFromObjectId(id: string): BuildingKey | null {
     hatchery: "hatchery",
     arena: "arena",
     market: "market",
-    "market-annex": "market",
     guild: "guild",
     workshop: "workshop",
     "crafting-workshop": "workshop",
@@ -178,9 +223,13 @@ export function buildingKeyFromObjectId(id: string): BuildingKey | null {
     "player-academy": "academy",
     "recovery-center": "recovery-center",
     "homestead-path": "homestead-path",
-    "cottage-north": "homestead-path",
-    "cottage-south": "homestead-path",
-    "tavern-tankard": "homestead-path",
+    "cottage-north": "cottage-north",
+    "cottage-south": "cottage-south",
+    "cottage-timber": "cottage-timber",
+    "farm-shed": "farm-shed",
+    "cottage-peek": "cottage-peek",
+    "tavern-tankard": "tavern-tankard",
+    "market-annex": "farm-shed",
     forge: "workshop",
   };
   return aliases[slug] ?? (BUILDING_KEYS.includes(slug as BuildingKey) ? (slug as BuildingKey) : null);

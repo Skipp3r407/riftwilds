@@ -95,6 +95,8 @@ import {
   KEEPER_DISPLAY,
   PET_DISPLAY,
   actorContactShadow,
+  ensureCozyActorAnims,
+  playCozyActorAnim,
   type Occluder,
   trySpawnDecorationSprite,
   trySpawnResourceSprite,
@@ -104,7 +106,10 @@ import {
 import { loadImmersiveSettings } from "@/game/live-world/systems/immersive/settings";
 import { resolveGraphicsQuality } from "@/game/live-world/systems/immersive/graphics-quality";
 import { ZOOM_STEP } from "@/game/live-world/systems/premium/camera-zoom";
-import { actorTex } from "@/game/live-world/systems/premium/asset-keys";
+import {
+  actorSheetTex,
+  actorTex,
+} from "@/game/live-world/systems/premium/asset-keys";
 import {
   playEmoteVisual,
   type EmoteVisualHandle,
@@ -334,12 +339,19 @@ export class BlueprintRegionScene extends Phaser.Scene {
     }
 
     const spawn = this.resolveSpawn();
-    const playerTex = this.textures.exists(actorTex("player-keeper"))
-      ? actorTex("player-keeper")
-      : "player-avatar";
-    const petTex = this.textures.exists(actorTex("pet-riftling"))
-      ? actorTex("pet-riftling")
-      : "pet-companion";
+    ensureCozyActorAnims(this);
+    const keeperSheet = actorSheetTex("player-keeper-sheet");
+    const petSheet = actorSheetTex("pet-riftling-sheet");
+    const playerTex = this.textures.exists(keeperSheet)
+      ? keeperSheet
+      : this.textures.exists(actorTex("player-keeper"))
+        ? actorTex("player-keeper")
+        : "player-avatar";
+    const petTex = this.textures.exists(petSheet)
+      ? petSheet
+      : this.textures.exists(actorTex("pet-riftling"))
+        ? actorTex("pet-riftling")
+        : "pet-companion";
     this.player = this.physics.add.sprite(spawn.x, spawn.y, playerTex);
     this.player.setCollideWorldBounds(true);
     this.player.setDepth(depthAt(DEPTH.actor, spawn.y));
@@ -603,19 +615,30 @@ export class BlueprintRegionScene extends Phaser.Scene {
     // Idle breathing / bob for Keeper + companion when standing still
     const body = this.player.body as Phaser.Physics.Arcade.Body | undefined;
     const moving = !!body && (Math.abs(body.velocity.x) + Math.abs(body.velocity.y) > 8);
+    const petBody = this.pet.body as Phaser.Physics.Arcade.Body | undefined;
+    const petMoving =
+      !!petBody && (Math.abs(petBody.velocity.x) + Math.abs(petBody.velocity.y) > 8);
     if (this.player.texture.key.startsWith("pw-actor-")) {
+      playCozyActorAnim(this.player, moving, "keeper");
       const breath = moving ? 1 : 1 + Math.sin(time / 480) * 0.03;
       this.player.setDisplaySize(
         KEEPER_DISPLAY.w * breath,
         KEEPER_DISPLAY.h * (moving ? 1 : breath),
       );
+      if (body && Math.abs(body.velocity.x) > 6) {
+        this.player.setFlipX(body.velocity.x < 0);
+      }
     }
     if (this.pet.texture.key.startsWith("pw-actor-")) {
+      playCozyActorAnim(this.pet, petMoving, "pet");
       const petBreath = 1 + Math.sin(time / 420 + 1.2) * 0.045;
       this.pet.setDisplaySize(
         PET_DISPLAY.w * petBreath,
-        PET_DISPLAY.h * (moving ? 1 : petBreath),
+        PET_DISPLAY.h * (petMoving ? 1 : petBreath),
       );
+      if (petBody && Math.abs(petBody.velocity.x) > 6) {
+        this.pet.setFlipX(petBody.velocity.x < 0);
+      }
     }
     // Ground-anchor shadows follow feet (directional afternoon bias)
     if (this.playerShadow) {
@@ -2022,17 +2045,31 @@ export class BlueprintRegionScene extends Phaser.Scene {
   }
 
   protected updatePetFollow(): void {
-    const dx = this.player.x - this.pet.x;
-    const dy = this.player.y - this.pet.y;
+    const pBody = this.player.body as Phaser.Physics.Arcade.Body | undefined;
+    const vx = pBody?.velocity.x ?? 0;
+    const vy = pBody?.velocity.y ?? 0;
+    const moving = Math.abs(vx) + Math.abs(vy) > 8;
+    // Trail behind player facing — cleans up orbiting / side-lag
+    let ox = -28;
+    let oy = 10;
+    if (moving) {
+      const len = Math.hypot(vx, vy) || 1;
+      ox = -(vx / len) * 34;
+      oy = -(vy / len) * 26 + 8;
+    }
+    const tx = this.player.x + ox;
+    const ty = this.player.y + oy;
+    const dx = tx - this.pet.x;
+    const dy = ty - this.pet.y;
     const dist = Math.hypot(dx, dy);
     if (dist > PET_TELEPORT_DISTANCE) {
-      this.pet.setPosition(this.player.x - 28, this.player.y + 10);
+      this.pet.setPosition(tx, ty);
       this.pet.setVelocity(0, 0);
       this.petEquipmentLayers?.syncPositions();
       return;
     }
-    if (dist > PET_FOLLOW_DISTANCE) {
-      const speed = Math.min(RUN_SPEED * 0.95, 80 + dist * 1.4);
+    if (dist > PET_FOLLOW_DISTANCE * 0.55) {
+      const speed = Math.min(RUN_SPEED * 0.92, 70 + dist * 1.55);
       this.pet.setVelocity((dx / dist) * speed, (dy / dist) * speed);
     } else {
       this.pet.setVelocity(0, 0);

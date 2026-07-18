@@ -9,9 +9,13 @@ import {
 } from "@/game/live-world/npcs/overworld-npcs";
 import {
   ACTOR_KEYS,
+  ACTOR_SHEET_KEYS,
   BUILDING_KEYS,
+  KEEPER_SHEET_FRAME,
+  PET_SHEET_FRAME,
   PROP_KEYS,
   TERRAIN_KEYS,
+  actorSheetTex,
   actorTex,
   buildingTex,
   propTex,
@@ -96,6 +100,14 @@ export class BootScene extends Phaser.Scene {
     }
     for (const key of ACTOR_KEYS) {
       this.load.image(actorTex(key), `/assets/game/actors/${key}.png`);
+    }
+    for (const key of ACTOR_SHEET_KEYS) {
+      const frame =
+        key.startsWith("player-keeper") ? KEEPER_SHEET_FRAME : PET_SHEET_FRAME;
+      this.load.spritesheet(actorSheetTex(key), `/assets/game/actors/${key}.png`, {
+        frameWidth: frame,
+        frameHeight: frame,
+      });
     }
 
     // Commons named + ambient NPCs — prefer 4-frame overworld sheets (masked RGBA).

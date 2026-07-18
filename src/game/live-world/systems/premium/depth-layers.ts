@@ -14,12 +14,20 @@ import * as Phaser from "phaser";
 export const DEPTH = {
   water: 0.1,
   ground: 0.5,
+  /** Soft edge decals / grass bloom over tile seams. */
+  groundDecal: 0.62,
   elevFace: 0.55,
   pathPaint: 0.7,
   groundShadow: 1.0,
+  /** Building foundation / plinth under facade. */
+  buildingFoundation: 1.35,
   wallBase: 1.5,
+  /** Side wall faces for 2.5D massing. */
+  buildingWall: 4.2,
   lowProp: 3.0,
   building: 5.0,
+  /** Roof / canopy silhouette — fades when occluding the player. */
+  buildingRoof: 5.4,
   /** Street props that sit in front of building plinths but behind actors. */
   streetProp: 6.0,
   actor: 10.0,
@@ -31,6 +39,7 @@ export const DEPTH = {
   nameplate: 14.0,
   overheadFx: 16.0,
   uiWorld: 40.0,
+  debug: 45.0,
 } as const;
 
 /** Y-sort within a band so southern sprites paint above northern ones. */
@@ -38,7 +47,13 @@ export function depthAt(band: number, worldY: number, bias = 0): number {
   return band + worldY * 0.001 + bias;
 }
 
-export type OccluderKind = "building" | "tree" | "canopy" | "dock" | "wall";
+export type OccluderKind =
+  | "building"
+  | "roof"
+  | "tree"
+  | "canopy"
+  | "dock"
+  | "wall";
 
 export type Occluder = {
   id: string;
@@ -83,7 +98,13 @@ export function updateOccluderFades(
     }
     const behind = isBehindOccluder(playerX, playerY, o);
     const minAlpha =
-      o.kind === "building" ? 0.38 : o.kind === "dock" ? 0.55 : 0.62;
+      o.kind === "roof"
+        ? 0.28
+        : o.kind === "building"
+          ? 0.38
+          : o.kind === "dock"
+            ? 0.55
+            : 0.62;
     const target = behind ? Math.min(minAlpha, o.baseAlpha) : o.baseAlpha;
     const cur = "alpha" in o.sprite ? o.sprite.alpha : 1;
     if ("setAlpha" in o.sprite) {
@@ -92,7 +113,11 @@ export function updateOccluderFades(
     // Behind tall props: tiny +bias so the silhouette wins near-equal footY ties.
     // Never use a large negative bias — that pulled trees under the Keeper.
     const bias =
-      behind && (o.kind === "tree" || o.kind === "canopy" || o.kind === "dock")
+      behind &&
+      (o.kind === "tree" ||
+        o.kind === "canopy" ||
+        o.kind === "dock" ||
+        o.kind === "roof")
         ? 0.12
         : 0;
     o.sprite.setDepth(depthAt(band, o.footY, bias));
@@ -103,6 +128,8 @@ function bandFor(kind: OccluderKind): number {
   switch (kind) {
     case "building":
       return DEPTH.building;
+    case "roof":
+      return DEPTH.buildingRoof;
     case "tree":
     case "canopy":
       return DEPTH.canopy;

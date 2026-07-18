@@ -85,6 +85,10 @@ describe("Live World premium Commons", () => {
       "path-worn",
       "water-stream",
       "water-edge",
+      "water-edge-n",
+      "water-corner-se",
+      "path-edge-n",
+      "path-corner-nw",
       "water-lily",
     ]) {
       expect(
@@ -97,6 +101,9 @@ describe("Live World premium Commons", () => {
       "lantern-post",
       "campfire",
       "stump",
+      "picket-fence",
+      "picket-fence-gate",
+      "critter-sparkmoth",
       "ambient-riftling-sparklet",
       ...TREE_PROP_KEYS,
     ]) {
@@ -104,19 +111,34 @@ describe("Live World premium Commons", () => {
         fs.existsSync(path.join(root, "public/assets/game/props", `${key}.png`)),
       ).toBe(true);
     }
-    for (const key of ["hatchery", "market", "workshop", "library"]) {
+    for (const key of [
+      "hatchery",
+      "market",
+      "workshop",
+      "library",
+      "cottage-north",
+      "cottage-timber",
+      "farm-shed",
+      "tavern-tankard",
+    ]) {
       expect(
         fs.existsSync(path.join(root, "public/assets/game/buildings", `${key}.png`)),
       ).toBe(true);
     }
-    for (const key of ["player-keeper", "pet-riftling", "riftling-mossbun"]) {
+    for (const key of [
+      "player-keeper",
+      "pet-riftling",
+      "riftling-mossbun",
+      "player-keeper-sheet",
+      "pet-riftling-sheet",
+    ]) {
       expect(
         fs.existsSync(path.join(root, "public/assets/game/actors", `${key}.png`)),
       ).toBe(true);
     }
-    expect(TERRAIN_KEYS.length).toBeGreaterThan(10);
+    expect(TERRAIN_KEYS.length).toBeGreaterThan(20);
     expect(PROP_KEYS.length).toBeGreaterThan(8);
-    expect(BUILDING_KEYS.length).toBeGreaterThan(5);
+    expect(BUILDING_KEYS.length).toBeGreaterThan(12);
   });
 
   it("Commons blueprint includes showcase districts", () => {
@@ -134,10 +156,45 @@ describe("Live World premium Commons", () => {
       "recovery",
       "portal-circle",
       "forest-entrance",
+      "public-farm",
+      "fishing-pond",
     ]) {
       expect(zoneIds.has(id)).toBe(true);
     }
     expect(bp.objects.some((o) => o.id === "library")).toBe(true);
-    expect(bp.pathways.length).toBeGreaterThanOrEqual(8);
+    expect(bp.objects.some((o) => o.id.includes("cottage-timber"))).toBe(true);
+    expect(bp.objects.some((o) => o.id.includes("farm-shed"))).toBe(true);
+    expect(bp.pathways.length).toBeGreaterThanOrEqual(11);
+    expect(bp.pathways.some((p) => p.id === "keeper-row-lane")).toBe(true);
+    expect(bp.pathways.some((p) => p.id === "market-stall-loop")).toBe(true);
+  });
+
+  it("uses neighbor-aware path and water autotiles near seams", () => {
+    const bp = getBlueprint("riftwild-commons");
+    const grid = paintTerrainGrid(bp);
+    const keys = new Set<string>();
+    for (let r = 0; r < grid.rows; r++) {
+      for (let c = 0; c < grid.cols; c++) {
+        keys.add(resolveTerrainTexture(grid.cells[r]![c]!, c, r, bp, grid));
+      }
+    }
+    expect([...keys].some((k) => k.startsWith("path-edge") || k.startsWith("path-corner"))).toBe(
+      true,
+    );
+    expect([...keys].some((k) => k.startsWith("water-edge") || k.startsWith("water-corner"))).toBe(
+      true,
+    );
+    expect(keys.has("farm-soil")).toBe(true);
+  });
+
+  it("scatters picket yards and original-IP yard critters", () => {
+    const bp = getBlueprint("riftwild-commons");
+    const props = commonsPropScatter(bp);
+    const kinds = new Set(props.map((p) => p.key));
+    expect(kinds.has("picket-fence")).toBe(true);
+    expect(kinds.has("picket-fence-gate")).toBe(true);
+    expect(kinds.has("critter-sparkmoth")).toBe(true);
+    expect(kinds.has("critter-mossbun-kit")).toBe(true);
+    expect(kinds.has("market-stall")).toBe(true);
   });
 });

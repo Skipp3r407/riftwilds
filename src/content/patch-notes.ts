@@ -36,6 +36,39 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-economy-page-backgrounds",
+    date: "2026-07-18",
+    title: "Cinematic economy & care backgrounds",
+    summary:
+      "Community Reward Treasury, Care & survival, and sibling economy pages get stronger full-bleed Riftwilds cavern/vault art behind the glass panels.",
+    added: [
+      "Dedicated care cavern wallpaper plus economy section backgrounds for Community Reward Treasury and Care & survival stages",
+    ],
+    changed: [
+      "/economy, /treasury, /rewards, /token, /transparency, and /fairness show richer cinematic wallpapers with lighter scrims so the art reads through translucent panels",
+    ],
+  },
+  {
+    id: "2026-07-18-cozy-depth-pass-2",
+    date: "2026-07-18",
+    title: "Commons depth pass — shores, cottages, walks",
+    summary:
+      "Live World Commons gets richer path/pond autotiles, unique cottage variants, picket yards with original-IP critters, and Keeper/Riftling walk cycles.",
+    added: [
+      "Neighbor-aware path border and pond shore autotiles (edges + corners) for seamless village transitions",
+      "Unique cottage facades (timber, row houses, tavern, farm shed, interior peek) with chimney and flower-box variety",
+      "Picket fence yards, market stall cluster, and Sparkmoth / Mossbun-kit yard critters (original IP)",
+      "4-frame Keeper + companion Riftling walk/idle sheets with cleaner follow trailing",
+    ],
+    changed: [
+      "Keeper Row paths connect cottage doors; pond shore expands with a small plaza reflect pool",
+      "Tree/bush contact shadows and layering read more grounded in the meadow",
+    ],
+    knownIssues: [
+      "Still procedural pixel art vs hand-painted Kenmi-quality tiles — more frame polish and unique props remain on the backlog",
+    ],
+  },
+  {
     id: "2026-07-18-cozy-pixel-commons",
     date: "2026-07-18",
     title: "Commons goes cozy pixel village",

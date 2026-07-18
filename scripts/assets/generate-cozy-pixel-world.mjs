@@ -181,6 +181,55 @@ function paintPathBorder(c, seed) {
   }
 }
 
+/** Directional path↔grass seam. dir: n|s|e|w — grass on that side, dirt on the other. */
+function paintPathEdgeDir(c, seed, dir) {
+  paintGrass(c, seed, true);
+  for (let y = 0; y < c.h; y++) {
+    for (let x = 0; x < c.w; x++) {
+      const n = (hash2(x, y, seed) - 0.5) * 3.2;
+      let onPath = false;
+      if (dir === "n") onPath = y > c.h * 0.42 + n;
+      else if (dir === "s") onPath = y < c.h * 0.58 + n;
+      else if (dir === "e") onPath = x < c.w * 0.58 + n;
+      else if (dir === "w") onPath = x > c.w * 0.42 + n;
+      if (!onPath) continue;
+      const edge =
+        (dir === "n" && y < c.h * 0.42 + n + 2.2) ||
+        (dir === "s" && y > c.h * 0.58 + n - 2.2) ||
+        (dir === "e" && x > c.w * 0.58 + n - 2.2) ||
+        (dir === "w" && x < c.w * 0.42 + n + 2.2);
+      if (edge) set(c, x, y, C.pathEdge);
+      else {
+        const h = hash2(x, y, seed + 2);
+        set(c, x, y, h < 0.28 ? C.path2 : h > 0.78 ? C.path3 : C.path1);
+      }
+    }
+  }
+}
+
+/** Path corner: dirt fills the opposite quadrant from grass (dir like "ne" = grass NE). */
+function paintPathCorner(c, seed, dir) {
+  paintGrass(c, seed, true);
+  const grassN = dir.includes("n");
+  const grassE = dir.includes("e");
+  for (let y = 0; y < c.h; y++) {
+    for (let x = 0; x < c.w; x++) {
+      const nx = (hash2(x, y, seed) - 0.5) * 2.8;
+      const ny = (hash2(x, y, seed + 1) - 0.5) * 2.8;
+      const midX = c.w * 0.5 + nx;
+      const midY = c.h * 0.5 + ny;
+      const inGrassX = grassE ? x > midX : x < midX;
+      const inGrassY = grassN ? y < midY : y > midY;
+      if (inGrassX && inGrassY) continue;
+      const near =
+        Math.abs(x - midX) < 2.4 || Math.abs(y - midY) < 2.4 || (inGrassX !== inGrassY);
+      const h = hash2(x, y, seed + 2);
+      if (near && !(inGrassX && inGrassY)) set(c, x, y, C.pathEdge);
+      else set(c, x, y, h < 0.28 ? C.path2 : h > 0.78 ? C.path3 : C.path1);
+    }
+  }
+}
+
 function paintWater(c, seed, lily = false) {
   fill(c, C.water1);
   for (let y = 0; y < c.h; y++) {
@@ -212,6 +261,63 @@ function paintWaterEdge(c, seed) {
     }
   }
   fillEllipse(c, 8, 22, 2, 1, C.lily);
+}
+
+/** Directional pond shore — grass on `dir` side, water opposite, pebbled seam. */
+function paintWaterEdgeDir(c, seed, dir) {
+  paintGrass(c, seed, true);
+  for (let y = 0; y < c.h; y++) {
+    for (let x = 0; x < c.w; x++) {
+      const n = (hash2(x, y, seed) - 0.5) * 2.6;
+      let onWater = false;
+      if (dir === "n") onWater = y > c.h * 0.48 + n;
+      else if (dir === "s") onWater = y < c.h * 0.52 + n;
+      else if (dir === "e") onWater = x < c.w * 0.52 + n;
+      else if (dir === "w") onWater = x > c.w * 0.48 + n;
+      if (!onWater) continue;
+      const shoreBand =
+        (dir === "n" && y < c.h * 0.48 + n + 2.5) ||
+        (dir === "s" && y > c.h * 0.52 + n - 2.5) ||
+        (dir === "e" && x > c.w * 0.52 + n - 2.5) ||
+        (dir === "w" && x < c.w * 0.48 + n + 2.5);
+      if (shoreBand) {
+        set(c, x, y, hash2(x, y, seed + 4) > 0.55 ? C.stoneDk : C.stone);
+      } else {
+        const h = hash2(x, y, seed + 3);
+        set(c, x, y, h < 0.2 ? C.waterDeep : h > 0.82 ? C.water3 : C.water1);
+        if ((x + y + seed) % 13 === 0) set(c, x, y, C.water3);
+      }
+    }
+  }
+  if (dir === "s" || dir === "n") fillEllipse(c, 10, dir === "s" ? 10 : 22, 2, 1, C.lily);
+}
+
+function paintWaterCorner(c, seed, dir) {
+  paintGrass(c, seed, true);
+  for (let y = 0; y < c.h; y++) {
+    for (let x = 0; x < c.w; x++) {
+      const nx = (hash2(x, y, seed) - 0.5) * 2.4;
+      const ny = (hash2(x, y, seed + 1) - 0.5) * 2.4;
+      const midX = c.w * 0.5 + nx;
+      const midY = c.h * 0.5 + ny;
+      // grass occupies the named corner; water fills the rest
+      const onWater =
+        dir === "ne"
+          ? x < midX || y > midY
+          : dir === "nw"
+            ? x > midX || y > midY
+            : dir === "se"
+              ? x < midX || y < midY
+              : x > midX || y < midY;
+      if (!onWater) continue;
+      const shore = Math.abs(x - midX) < 2.2 || Math.abs(y - midY) < 2.2;
+      if (shore) set(c, x, y, C.stoneDk);
+      else {
+        const h = hash2(x, y, seed + 3);
+        set(c, x, y, h < 0.22 ? C.waterDeep : C.water1);
+      }
+    }
+  }
 }
 
 function paintPlaza(c, seed, medallion = false) {
@@ -292,6 +398,14 @@ async function genTerrain() {
         for (let x = 10; x < 22; x++) set(c, x, y, hash2(x, y, 14) > 0.5 ? C.path1 : C.path2);
     }],
     ["path-corner", (c) => paintPathBorder(c, 15)],
+    ["path-edge-n", (c) => paintPathEdgeDir(c, 50, "n")],
+    ["path-edge-s", (c) => paintPathEdgeDir(c, 51, "s")],
+    ["path-edge-e", (c) => paintPathEdgeDir(c, 52, "e")],
+    ["path-edge-w", (c) => paintPathEdgeDir(c, 53, "w")],
+    ["path-corner-ne", (c) => paintPathCorner(c, 54, "ne")],
+    ["path-corner-nw", (c) => paintPathCorner(c, 55, "nw")],
+    ["path-corner-se", (c) => paintPathCorner(c, 56, "se")],
+    ["path-corner-sw", (c) => paintPathCorner(c, 57, "sw")],
     ["path-roots", (c) => {
       paintPath(c, 16, true);
       for (let i = 0; i < 8; i++) {
@@ -324,6 +438,14 @@ async function genTerrain() {
     ["water-master", (c) => paintWater(c, 30, false)],
     ["water-stream", (c) => paintWater(c, 31, true)],
     ["water-edge", (c) => paintWaterEdge(c, 32)],
+    ["water-edge-n", (c) => paintWaterEdgeDir(c, 60, "n")],
+    ["water-edge-s", (c) => paintWaterEdgeDir(c, 61, "s")],
+    ["water-edge-e", (c) => paintWaterEdgeDir(c, 62, "e")],
+    ["water-edge-w", (c) => paintWaterEdgeDir(c, 63, "w")],
+    ["water-corner-ne", (c) => paintWaterCorner(c, 64, "ne")],
+    ["water-corner-nw", (c) => paintWaterCorner(c, 65, "nw")],
+    ["water-corner-se", (c) => paintWaterCorner(c, 66, "se")],
+    ["water-corner-sw", (c) => paintWaterCorner(c, 67, "sw")],
     ["water-lily", (c) => paintWater(c, 33, true)],
     ["farm-soil", (c) => paintFarm(c, 40)],
     ["cliff-edge", (c) => {
@@ -355,23 +477,46 @@ function drawCottage(c, opts = {}) {
     accent = C.amber,
     cyanGlass = false,
     wide = false,
+    timber = false,
+    shed = false,
+    peek = false,
+    chimney = "stone", // stone | brick | none | twin
+    flowerBoxes = true,
+    doorOffset = 0,
   } = opts;
-  // clear transparent
   for (let i = 0; i < c.data.length; i++) c.data[i] = 0;
 
   const footY = c.h - 4;
-  const bodyW = wide ? 52 : 40;
-  const bodyH = 28;
+  const bodyW = shed ? 34 : wide ? 52 : 40;
+  const bodyH = shed ? 22 : peek ? 30 : 28;
   const bx = Math.floor((c.w - bodyW) / 2);
   const by = footY - bodyH;
 
-  // shadow
-  fillEllipse(c, c.w / 2, footY + 1, bodyW / 2 + 2, 3, C.shadow);
+  // soft contact shadow
+  fillEllipse(c, c.w / 2 + 1, footY + 1, bodyW / 2 + 3, 3.5, C.shadow);
 
-  // walls — horizontal plank look
+  if (peek) {
+    // interior floor peek under open cutaway
+    fillRect(c, bx + 4, by + 10, bodyW - 8, bodyH - 10, [210, 170, 120]);
+    for (let y = by + 12; y < footY - 2; y += 3)
+      for (let x = bx + 5; x < bx + bodyW - 5; x++)
+        if (y % 6 === 0) set(c, x, y, C.woodDk);
+    // bed + chest
+    fillRect(c, bx + 6, by + 16, 10, 6, C.roof);
+    fillRect(c, bx + bodyW - 14, by + 18, 6, 5, C.wood);
+  }
+
+  // walls — plank or plaster/timber
   fillRect(c, bx, by, bodyW, bodyH, wall);
-  for (let y = by; y < by + bodyH; y += 3) {
-    for (let x = bx; x < bx + bodyW; x++) if (hash2(x, y, 1) > 0.4) set(c, x, y, wallDk);
+  if (timber) {
+    fillRect(c, bx, by, 3, bodyH, wallDk);
+    fillRect(c, bx + bodyW - 3, by, 3, bodyH, wallDk);
+    fillRect(c, bx, by + Math.floor(bodyH / 2), bodyW, 2, wallDk);
+    fillRect(c, bx + Math.floor(bodyW / 2) - 1, by, 2, bodyH, wallDk);
+  } else {
+    for (let y = by; y < by + bodyH; y += 3) {
+      for (let x = bx; x < bx + bodyW; x++) if (hash2(x, y, 1) > 0.4) set(c, x, y, wallDk);
+    }
   }
 
   // stone foundation
@@ -379,59 +524,82 @@ function drawCottage(c, opts = {}) {
   for (let x = bx; x < bx + bodyW; x += 4) set(c, x, footY - 2, C.stone);
 
   // roof
-  const roofH = 18;
+  const roofH = shed ? 12 : 18;
   for (let row = 0; row < roofH; row++) {
-    const half = Math.floor((bodyW / 2 + 6) * (1 - row / roofH)) + 2;
+    const half = Math.floor((bodyW / 2 + (shed ? 3 : 6)) * (1 - row / roofH)) + 2;
     const y = by - roofH + row;
     for (let x = c.w / 2 - half; x <= c.w / 2 + half; x++) {
       set(c, Math.floor(x), y, row < 3 ? roofLt : row > roofH - 3 ? C.roofDk : roof);
     }
   }
 
-  // chimney
-  fillRect(c, bx + bodyW - 10, by - roofH - 4, 6, 12, C.stone);
-  fillRect(c, bx + bodyW - 11, by - roofH - 5, 8, 3, C.stoneDk);
-  set(c, bx + bodyW - 8, by - roofH - 7, [200, 200, 200]);
+  // chimney variety
+  if (chimney === "stone" || chimney === "brick") {
+    const chx = chimney === "brick" ? bx + 4 : bx + bodyW - 10;
+    const brick = chimney === "brick";
+    fillRect(c, chx, by - roofH - 4, 6, 12, brick ? C.roof : C.stone);
+    fillRect(c, chx - 1, by - roofH - 5, 8, 3, brick ? C.roofDk : C.stoneDk);
+    set(c, chx + 2, by - roofH - 7, [200, 200, 200]);
+  } else if (chimney === "twin") {
+    fillRect(c, bx + 3, by - roofH - 3, 5, 10, C.stone);
+    fillRect(c, bx + bodyW - 8, by - roofH - 4, 5, 11, C.stoneDk);
+    set(c, bx + 5, by - roofH - 5, [210, 210, 210]);
+  }
 
   // door
-  const dx = bx + Math.floor(bodyW / 2) - 4;
-  fillRect(c, dx, by + 12, 8, 16, wallDk);
-  fillRect(c, dx + 1, by + 13, 6, 14, C.woodLt);
-  set(c, dx + 6, by + 20, accent);
+  const dx = bx + Math.floor(bodyW / 2) - 4 + doorOffset;
+  fillRect(c, dx, by + (shed ? 8 : 12), shed ? 7 : 8, shed ? 14 : 16, wallDk);
+  fillRect(c, dx + 1, by + (shed ? 9 : 13), shed ? 5 : 6, shed ? 12 : 14, C.woodLt);
+  set(c, dx + (shed ? 5 : 6), by + (shed ? 14 : 20), accent);
 
   // windows
   const win = cyanGlass ? C.cyan : C.cream;
-  fillRect(c, bx + 6, by + 8, 7, 7, C.ink);
-  fillRect(c, bx + 7, by + 9, 5, 5, win);
-  fillRect(c, bx + bodyW - 13, by + 8, 7, 7, C.ink);
-  fillRect(c, bx + bodyW - 12, by + 9, 5, 5, win);
-  // flower boxes
-  fillRect(c, bx + 5, by + 15, 9, 3, wallDk);
-  set(c, bx + 7, by + 14, C.flowerP);
-  set(c, bx + 9, by + 14, C.flowerW);
-  fillRect(c, bx + bodyW - 14, by + 15, 9, 3, wallDk);
-  set(c, bx + bodyW - 12, by + 14, C.flowerA);
-  set(c, bx + bodyW - 10, by + 14, C.leaf3);
+  if (!shed) {
+    fillRect(c, bx + 6, by + 8, 7, 7, C.ink);
+    fillRect(c, bx + 7, by + 9, 5, 5, win);
+    fillRect(c, bx + bodyW - 13, by + 8, 7, 7, C.ink);
+    fillRect(c, bx + bodyW - 12, by + 9, 5, 5, win);
+  } else {
+    fillRect(c, bx + bodyW - 12, by + 6, 6, 5, C.ink);
+    fillRect(c, bx + bodyW - 11, by + 7, 4, 3, win);
+  }
 
-  // lantern
-  fillRect(c, bx + bodyW + 1, by + 10, 2, 8, wallDk);
-  fillRect(c, bx + bodyW, by + 8, 4, 4, accent);
+  if (flowerBoxes && !shed) {
+    fillRect(c, bx + 5, by + 15, 9, 3, wallDk);
+    set(c, bx + 7, by + 14, C.flowerP);
+    set(c, bx + 9, by + 14, C.flowerW);
+    fillRect(c, bx + bodyW - 14, by + 15, 9, 3, wallDk);
+    set(c, bx + bodyW - 12, by + 14, C.flowerA);
+    set(c, bx + bodyW - 10, by + 14, C.leaf3);
+  }
+
+  // porch lantern
+  if (!shed) {
+    fillRect(c, bx + bodyW + 1, by + 10, 2, 8, wallDk);
+    fillRect(c, bx + bodyW, by + 8, 4, 4, accent);
+  }
 
   outlineOpaque(c);
 }
 
 async function genBuildings() {
   const specs = {
-    hatchery: { wall: C.plaster, roof: C.roof, cyanGlass: true, accent: C.cyan },
-    arena: { wall: C.stone, wallDk: C.stoneDk, roof: C.roofDk, wide: true },
-    market: { wall: C.woodLt, roof: [200, 90, 70], accent: C.amber, wide: true },
-    guild: { wall: C.plaster, roof: [90, 110, 160], accent: C.amber },
-    workshop: { wall: C.wood, roof: C.roofDk, accent: C.amber },
-    library: { wall: C.plaster, roof: [120, 80, 60], cyanGlass: true },
-    academy: { wall: C.plaster, roof: [140, 90, 50], wide: true, accent: C.cyan },
-    "recovery-center": { wall: C.cream, roof: [100, 160, 120], cyanGlass: true },
-    "homestead-path": { wall: C.wood, roof: C.roof, accent: C.amber },
-    "portal-circle": { wall: C.stone, roof: C.cyanDk, cyanGlass: true, accent: C.cyan },
+    hatchery: { wall: C.plaster, roof: C.roof, cyanGlass: true, accent: C.cyan, chimney: "twin" },
+    arena: { wall: C.stone, wallDk: C.stoneDk, roof: C.roofDk, wide: true, chimney: "none", flowerBoxes: false },
+    market: { wall: C.woodLt, roof: [200, 90, 70], accent: C.amber, wide: true, chimney: "none" },
+    guild: { wall: C.plaster, roof: [90, 110, 160], accent: C.amber, timber: true, chimney: "brick" },
+    workshop: { wall: C.wood, roof: C.roofDk, accent: C.amber, chimney: "brick" },
+    library: { wall: C.plaster, roof: [120, 80, 60], cyanGlass: true, timber: true },
+    academy: { wall: C.plaster, roof: [140, 90, 50], wide: true, accent: C.cyan, timber: true, chimney: "twin" },
+    "recovery-center": { wall: C.cream, roof: [100, 160, 120], cyanGlass: true, chimney: "stone" },
+    "homestead-path": { wall: C.wood, roof: C.roof, accent: C.amber, chimney: "stone" },
+    "cottage-north": { wall: C.plaster, roof: [180, 70, 55], timber: true, chimney: "brick", accent: C.amber },
+    "cottage-south": { wall: C.woodLt, roof: C.roof, chimney: "stone", doorOffset: -2, accent: C.cyan },
+    "cottage-timber": { wall: C.cream, roof: [160, 85, 50], timber: true, chimney: "twin", cyanGlass: true },
+    "farm-shed": { wall: C.wood, wallDk: C.woodDk, roof: C.roofDk, shed: true, chimney: "none", flowerBoxes: false },
+    "tavern-tankard": { wall: C.wood, roof: [190, 80, 50], wide: true, chimney: "brick", accent: C.amber },
+    "cottage-peek": { wall: C.woodLt, roof: C.roof, peek: true, chimney: "stone", accent: C.amber },
+    "portal-circle": { wall: C.stone, roof: C.cyanDk, cyanGlass: true, accent: C.cyan, chimney: "none", flowerBoxes: false },
   };
 
   for (const [name, opts] of Object.entries(specs)) {
@@ -445,6 +613,8 @@ function drawTree(c, kind = "oak") {
   for (let i = 0; i < c.data.length; i++) c.data[i] = 0;
   const cx = Math.floor(c.w / 2);
   const foot = c.h - 3;
+  // layered ground shadow (afternoon bias)
+  fillEllipse(c, cx + 2, foot, 11, 3.5, [40, 50, 30, 110]);
   fillEllipse(c, cx, foot, 8, 2, C.shadow);
   const pine = kind === "pine";
   const birch = kind === "birch";
@@ -466,11 +636,14 @@ function drawTree(c, kind = "oak") {
       }
     }
   } else {
-    fillEllipse(c, cx, foot - 26, 14, 12, C.leaf2);
-    fillEllipse(c, cx - 8, foot - 22, 9, 8, C.leaf1);
+    // stacked canopy lobes for readable depth
+    fillEllipse(c, cx + 1, foot - 24, 15, 13, C.leaf2);
+    fillEllipse(c, cx, foot - 26, 14, 12, C.leaf1);
+    fillEllipse(c, cx - 8, foot - 22, 9, 8, C.leaf2);
     fillEllipse(c, cx + 8, foot - 22, 9, 8, C.leaf1);
     fillEllipse(c, cx, foot - 32, 10, 8, C.leaf3);
-    fillEllipse(c, cx - 4, foot - 34, 4, 2, [255, 255, 255, 60]);
+    fillEllipse(c, cx - 4, foot - 34, 4, 2, [255, 255, 255, 70]);
+    fillEllipse(c, cx + 3, foot - 20, 5, 3, C.leaf2); // underside shade
   }
   if (flowering) {
     for (const [x, y] of [
@@ -494,10 +667,12 @@ function drawBush(c) {
   for (let i = 0; i < c.data.length; i++) c.data[i] = 0;
   const cx = c.w / 2;
   const foot = c.h - 2;
+  fillEllipse(c, cx + 1, foot, 9, 2.5, [40, 50, 30, 100]);
   fillEllipse(c, cx, foot, 8, 2, C.shadow);
   fillEllipse(c, cx, foot - 8, 10, 8, C.leaf1);
   fillEllipse(c, cx - 5, foot - 6, 6, 5, C.leaf2);
   fillEllipse(c, cx + 5, foot - 6, 6, 5, C.leaf2);
+  fillEllipse(c, cx, foot - 11, 6, 4, C.leaf3);
   set(c, cx - 3, foot - 9, C.flowerP);
   set(c, cx + 2, foot - 8, C.flowerW);
   outlineOpaque(c);
@@ -527,6 +702,41 @@ function drawProp(c, kind) {
     fillRect(c, cx + 8, foot - 14, 3, 14, C.cream);
     fillRect(c, cx - 10, foot - 10, 21, 2, C.wood);
     fillRect(c, cx - 10, foot - 5, 21, 2, C.wood);
+  } else if (kind === "picket-fence") {
+    for (let i = -12; i <= 12; i += 4) {
+      fillRect(c, cx + i, foot - 14, 2, 14, C.cream);
+      set(c, cx + i, foot - 15, C.cream);
+      set(c, cx + i + 1, foot - 15, C.cream);
+    }
+    fillRect(c, cx - 12, foot - 10, 26, 2, C.woodLt);
+    fillRect(c, cx - 12, foot - 5, 26, 2, C.woodLt);
+  } else if (kind === "picket-fence-gate") {
+    fillRect(c, cx - 12, foot - 14, 2, 14, C.cream);
+    fillRect(c, cx + 10, foot - 14, 2, 14, C.cream);
+    fillRect(c, cx - 8, foot - 12, 16, 10, C.cream);
+    fillRect(c, cx - 7, foot - 11, 14, 2, C.wood);
+    fillRect(c, cx - 7, foot - 6, 14, 2, C.wood);
+    set(c, cx + 5, foot - 8, C.amber);
+  } else if (kind === "yard-fence-corner") {
+    fillRect(c, cx - 2, foot - 14, 3, 14, C.cream);
+    fillRect(c, cx - 2, foot - 14, 14, 2, C.cream);
+    fillRect(c, cx - 10, foot - 10, 12, 2, C.woodLt);
+    fillRect(c, cx, foot - 10, 2, 10, C.woodLt);
+  } else if (kind === "critter-sparkmoth") {
+    // Original-IP yard critter (not a chicken) — tiny rift moth
+    fillEllipse(c, cx, foot - 6, 4, 3, [255, 230, 140]);
+    set(c, cx - 2, foot - 7, C.ink);
+    set(c, cx + 1, foot - 7, C.ink);
+    set(c, cx - 5, foot - 8, [...C.cyan, 180]);
+    set(c, cx + 4, foot - 8, [...C.cyan, 180]);
+    set(c, cx, foot - 4, C.amber);
+  } else if (kind === "critter-mossbun-kit") {
+    fillEllipse(c, cx, foot - 5, 5, 4, [110, 180, 100]);
+    fillEllipse(c, cx, foot - 4, 3, 2, [240, 230, 200]);
+    set(c, cx - 2, foot - 6, C.ink);
+    set(c, cx + 1, foot - 6, C.ink);
+    fillRect(c, cx - 3, foot - 9, 2, 3, [90, 150, 80]);
+    fillRect(c, cx + 2, foot - 9, 2, 3, [90, 150, 80]);
   } else if (kind === "signpost") {
     fillRect(c, cx - 1, foot - 20, 2, 20, C.woodDk);
     fillRect(c, cx - 8, foot - 20, 16, 8, C.woodLt);
@@ -588,37 +798,35 @@ function drawProp(c, kind) {
   outlineOpaque(c);
 }
 
-function drawKeeper(c) {
+function drawKeeper(c, frame = 0) {
   for (let i = 0; i < c.data.length; i++) c.data[i] = 0;
   const cx = 16;
   const foot = 30;
+  // walk cycle: 0 idle, 1–3 stride
+  const stride = frame === 0 ? 0 : frame === 1 ? -2 : frame === 2 ? 0 : 2;
+  const bob = frame === 2 ? -1 : 0;
   fillEllipse(c, cx + 1, foot, 7, 2, C.shadow);
-  // boots (3⁄4 — front foot lower)
-  fillRect(c, cx - 4, foot - 4, 3, 4, C.woodDk);
-  fillRect(c, cx + 2, foot - 3, 3, 3, C.woodDk);
-  // legs
-  fillRect(c, cx - 3, foot - 9, 2, 5, C.tunicDk);
-  fillRect(c, cx + 2, foot - 8, 2, 5, C.tunicDk);
-  // tunic body
-  fillRect(c, cx - 5, foot - 16, 10, 8, C.tunic);
-  fillRect(c, cx - 5, foot - 16, 10, 2, C.amber);
-  fillRect(c, cx - 6, foot - 14, 2, 5, C.tunic); // sleeve
-  fillRect(c, cx + 4, foot - 14, 2, 5, C.tunic);
-  // head (large chibi)
-  fillEllipse(c, cx, foot - 20, 6, 6, C.skin);
-  fillRect(c, cx - 5, foot - 25, 10, 5, C.hair);
-  fillRect(c, cx - 6, foot - 23, 2, 4, C.hair); // side hair
-  fillRect(c, cx + 4, foot - 23, 2, 4, C.hair);
-  set(c, cx - 2, foot - 20, C.ink);
-  set(c, cx + 2, foot - 20, C.ink);
-  set(c, cx, foot - 18, [220, 120, 100]); // blush
-  // rift badge + satchel
-  set(c, cx, foot - 12, C.cyan);
-  fillRect(c, cx + 3, foot - 13, 3, 4, C.wood);
+  fillRect(c, cx - 4 + stride, foot - 4, 3, 4, C.woodDk);
+  fillRect(c, cx + 2 - stride, foot - 3, 3, 3, C.woodDk);
+  fillRect(c, cx - 3 + Math.floor(stride / 2), foot - 9 + bob, 2, 5, C.tunicDk);
+  fillRect(c, cx + 2 - Math.floor(stride / 2), foot - 8 + bob, 2, 5, C.tunicDk);
+  fillRect(c, cx - 5, foot - 16 + bob, 10, 8, C.tunic);
+  fillRect(c, cx - 5, foot - 16 + bob, 10, 2, C.amber);
+  fillRect(c, cx - 6, foot - 14 + bob, 2, 5, C.tunic);
+  fillRect(c, cx + 4, foot - 14 + bob, 2, 5, C.tunic);
+  fillEllipse(c, cx, foot - 20 + bob, 6, 6, C.skin);
+  fillRect(c, cx - 5, foot - 25 + bob, 10, 5, C.hair);
+  fillRect(c, cx - 6, foot - 23 + bob, 2, 4, C.hair);
+  fillRect(c, cx + 4, foot - 23 + bob, 2, 4, C.hair);
+  set(c, cx - 2, foot - 20 + bob, C.ink);
+  set(c, cx + 2, foot - 20 + bob, C.ink);
+  set(c, cx, foot - 18 + bob, [220, 120, 100]);
+  set(c, cx, foot - 12 + bob, C.cyan);
+  fillRect(c, cx + 3, foot - 13 + bob, 3, 4, C.wood);
   outlineOpaque(c);
 }
 
-function drawRiftling(c, palette = "spark") {
+function drawRiftling(c, palette = "spark", frame = 0) {
   for (let i = 0; i < c.data.length; i++) c.data[i] = 0;
   const cx = 12;
   const foot = 22;
@@ -633,29 +841,45 @@ function drawRiftling(c, palette = "spark") {
             ? [70, 150, 210]
             : palette === "stone"
               ? [150, 140, 130]
-              : [255, 210, 90]; // spark
+              : [255, 210, 90];
   const belly = [255, 240, 210];
   const accent = palette === "moss" || palette === "spark" ? C.cyan : C.amber;
+  const hop = frame === 0 ? 0 : frame === 1 ? -1 : frame === 2 ? 0 : -2;
+  const paw = frame === 1 ? 1 : frame === 3 ? -1 : 0;
   fillEllipse(c, cx + 1, foot, 6, 2, C.shadow);
-  // body + big head (chibi pet)
-  fillEllipse(c, cx, foot - 7, 7, 6, body);
-  fillEllipse(c, cx, foot - 13, 8, 7, body);
-  fillEllipse(c, cx, foot - 6, 4, 3, belly);
-  // ears
-  fillRect(c, cx - 6, foot - 18, 3, 5, body);
-  fillRect(c, cx + 4, foot - 18, 3, 5, body);
-  set(c, cx - 5, foot - 18, accent);
-  set(c, cx + 5, foot - 18, accent);
-  // face
-  set(c, cx - 2, foot - 13, C.ink);
-  set(c, cx + 2, foot - 13, C.ink);
-  set(c, cx, foot - 11, accent);
-  // paws
-  fillRect(c, cx - 4, foot - 3, 2, 2, body);
-  fillRect(c, cx + 2, foot - 3, 2, 2, body);
-  // tiny rift sparkle
-  set(c, cx + 6, foot - 16, C.cyan);
+  fillEllipse(c, cx, foot - 7 + hop, 7, 6, body);
+  fillEllipse(c, cx, foot - 13 + hop, 8, 7, body);
+  fillEllipse(c, cx, foot - 6 + hop, 4, 3, belly);
+  fillRect(c, cx - 6, foot - 18 + hop, 3, 5, body);
+  fillRect(c, cx + 4, foot - 18 + hop, 3, 5, body);
+  set(c, cx - 5, foot - 18 + hop, accent);
+  set(c, cx + 5, foot - 18 + hop, accent);
+  set(c, cx - 2, foot - 13 + hop, C.ink);
+  set(c, cx + 2, foot - 13 + hop, C.ink);
+  set(c, cx, foot - 11 + hop, accent);
+  fillRect(c, cx - 4 + paw, foot - 3, 2, 2, body);
+  fillRect(c, cx + 2 - paw, foot - 3, 2, 2, body);
+  set(c, cx + 6, foot - 16 + hop, C.cyan);
   outlineOpaque(c);
+}
+
+async function writeActorSheet(drawFrame, dest, frameW, frameH, frames, scale = 3) {
+  const sheet = makeCanvas(frameW * frames, frameH);
+  for (let f = 0; f < frames; f++) {
+    const cell = makeCanvas(frameW, frameH);
+    drawFrame(cell, f);
+    for (let y = 0; y < frameH; y++) {
+      for (let x = 0; x < frameW; x++) {
+        const si = (y * frameW + x) * 4;
+        const di = (y * sheet.w + f * frameW + x) * 4;
+        sheet.data[di] = cell.data[si];
+        sheet.data[di + 1] = cell.data[si + 1];
+        sheet.data[di + 2] = cell.data[si + 2];
+        sheet.data[di + 3] = cell.data[si + 3];
+      }
+    }
+  }
+  await writeUpscaled(sheet, dest, scale);
 }
 
 async function genProps() {
@@ -677,6 +901,11 @@ async function genProps() {
     "anvil-forge",
     "bush-berry",
     "lib-fence-post",
+    "picket-fence",
+    "picket-fence-gate",
+    "yard-fence-corner",
+    "critter-sparkmoth",
+    "critter-mossbun-kit",
     "lib-lantern-rift",
     "lib-crate-market",
     "lib-flower-riftlily",
@@ -743,14 +972,30 @@ async function genProps() {
 async function genActors() {
   {
     const c = makeCanvas(32, 32);
-    drawKeeper(c);
+    drawKeeper(c, 0);
     await writeUpscaled(c, path.join(OUT_ACTORS, "player-keeper.png"), 3);
   }
+  await writeActorSheet(
+    (cell, f) => drawKeeper(cell, f),
+    path.join(OUT_ACTORS, "player-keeper-sheet.png"),
+    32,
+    32,
+    4,
+    3,
+  );
   {
     const c = makeCanvas(24, 24);
-    drawRiftling(c, "spark");
+    drawRiftling(c, "spark", 0);
     await writeUpscaled(c, path.join(OUT_ACTORS, "pet-riftling.png"), 3);
   }
+  await writeActorSheet(
+    (cell, f) => drawRiftling(cell, "spark", f),
+    path.join(OUT_ACTORS, "pet-riftling-sheet.png"),
+    24,
+    24,
+    4,
+    3,
+  );
   const pals = [
     ["riftling-sparklet", "spark"],
     ["riftling-mossbun", "moss"],
@@ -761,10 +1006,17 @@ async function genActors() {
   ];
   for (const [name, pal] of pals) {
     const c = makeCanvas(24, 24);
-    drawRiftling(c, pal);
+    drawRiftling(c, pal, 0);
     await writeUpscaled(c, path.join(OUT_ACTORS, `${name}.png`), 3);
-    // also as world prop for ambient scatter
     await writeUpscaled(c, path.join(OUT_PROPS, `ambient-${name}.png`), 3);
+    await writeActorSheet(
+      (cell, f) => drawRiftling(cell, pal, f),
+      path.join(OUT_ACTORS, `${name}-sheet.png`),
+      24,
+      24,
+      4,
+      3,
+    );
   }
 }
 

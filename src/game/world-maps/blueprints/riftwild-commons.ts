@@ -438,23 +438,64 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
         { x: 52 * T, y: 32 * T },
       ],
     },
+    // Cottage lane — paths hug house doors (reference village fabric)
+    {
+      id: "keeper-row-lane",
+      from: "residential",
+      to: "craft-zone",
+      waypoints: [
+        { x: 5 * T, y: 15 * T },
+        { x: 8 * T, y: 16 * T },
+        { x: 10 * T, y: 18 * T },
+        { x: 8 * T, y: 21 * T },
+        { x: 6 * T, y: 23 * T },
+      ],
+    },
+    // Market square loop — stall cluster around trade square
+    {
+      id: "market-stall-loop",
+      from: "market-zone",
+      to: "market-zone",
+      waypoints: [
+        { x: 6 * T, y: 36 * T },
+        { x: 9 * T, y: 37 * T },
+        { x: 12 * T, y: 38 * T },
+        { x: 10 * T, y: 40 * T },
+        { x: 7 * T, y: 39 * T },
+        { x: 6 * T, y: 36 * T },
+      ],
+    },
+    // Farm croft path to pond shore
+    {
+      id: "croft-to-shore",
+      from: "public-farm",
+      to: "fishing-pond",
+      waypoints: [
+        { x: 17 * T, y: 41 * T },
+        { x: 20 * T, y: 40 * T },
+        { x: 23 * T, y: 39 * T },
+      ],
+    },
   ];
 
   // ── Buildings — each belongs to a district; placement defines street edges ─
   const buildings = [
     // Hatchery Nest
     building(region, "hatchery", "Hatchery", 4 * T, 3 * T, 10 * T, 7 * T, 0x3a8fd4),
-    // Keeper Row — nested footprints so roofs overlap (city fabric, not lonely boxes)
+    // Keeper Row — unique cottage variants (timber / plaster / peek) along the lane
     building(region, "homestead-path", "Keeper Cottage", 3 * T, 13 * T, 5 * T, 5 * T, 0xc4a06a),
     building(region, "cottage-north", "Row House North", 7 * T, 12 * T, 5 * T, 5 * T, 0xb89060),
     building(region, "cottage-south", "Row House South", 3 * T, 17 * T, 5 * T, 5 * T, 0xa87850),
+    building(region, "cottage-timber", "Timber Croft", 9 * T, 15 * T, 5 * T, 5 * T, 0xd0b890),
+    building(region, "cottage-peek", "Open Hearth Cottage", 11 * T, 18 * T, 5 * T, 5 * T, 0xc4a070),
     // Ember Craft — butts against residential lane
     building(region, "workshop", "Ember Forge", 3 * T, 22 * T, 8 * T, 6 * T, 0xc07040),
     // Festival Lane tavern — edge of plaza street wall
     building(region, "tavern-tankard", "The Golden Tankard", 14 * T, 20 * T, 7 * T, 7 * T, 0xd4a05a),
-    // Market block — annex shares wall with exchange
+    // Market block — exchange + farm shed annex + stall yard
     building(region, "market", "Rift Exchange", 3 * T, 32 * T, 11 * T, 7 * T, 0x4adf7a),
     building(region, "market-annex", "Stall Master's Shed", 11 * T, 34 * T, 6 * T, 5 * T, 0x3aaa68),
+    building(region, "farm-shed", "Croft Tool Shed", 15 * T, 36 * T, 4 * T, 4 * T, 0xa87850),
     // Military
     building(region, "arena", "Arena Gate", 49 * T, 3 * T, 10 * T, 6 * T, 0xd48a3a),
     // Noble terrace
@@ -626,6 +667,45 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
       label: "Trade Square",
       color: 0xc9a227,
       metadata: { district: "market", purpose: "square" },
+    },
+    {
+      id: "market-stall-a",
+      type: "decoration",
+      regionId: region.id,
+      sceneId: region.sceneKey,
+      x: 6 * T,
+      y: 36 * T,
+      width: 2 * T,
+      height: 2 * T,
+      label: "Produce Stall",
+      color: 0xe07060,
+      metadata: { district: "market", purpose: "stall" },
+    },
+    {
+      id: "market-stall-b",
+      type: "decoration",
+      regionId: region.id,
+      sceneId: region.sceneKey,
+      x: 9 * T,
+      y: 36 * T,
+      width: 2 * T,
+      height: 2 * T,
+      label: "Cloth Stall",
+      color: 0x6090e0,
+      metadata: { district: "market", purpose: "stall" },
+    },
+    {
+      id: "market-stall-c",
+      type: "decoration",
+      regionId: region.id,
+      sceneId: region.sceneKey,
+      x: 12 * T,
+      y: 37 * T,
+      width: 2 * T,
+      height: 2 * T,
+      label: "Rift Trinkets",
+      color: 0x50c8a0,
+      metadata: { district: "market", purpose: "stall" },
     },
     // ── Terrace stairs (verticality) ──
     {
@@ -956,6 +1036,7 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
     { id: "shrine-col", x: 36 * T, y: 5 * T, width: 3 * T, height: 3 * T, kind: "building" },
     { id: "dummy-a-col", x: 41 * T, y: 12 * T, width: 2 * T, height: 2 * T, kind: "building" },
     { id: "dummy-b-col", x: 45 * T, y: 13 * T, width: 2 * T, height: 2 * T, kind: "building" },
+    // Pond basins — stepped rectangles read as a soft organic shore with autotiles
     {
       id: "pond-water",
       x: 23 * T,
@@ -963,6 +1044,30 @@ export function buildRiftwildCommonsBlueprint(): MapBlueprint {
       width: 10 * T,
       height: 5 * T,
       kind: "deep_water",
+    },
+    {
+      id: "pond-water-north",
+      x: 25 * T,
+      y: 37 * T,
+      width: 6 * T,
+      height: 2 * T,
+      kind: "shallow_water",
+    },
+    {
+      id: "pond-water-east",
+      x: 32 * T,
+      y: 39 * T,
+      width: 3 * T,
+      height: 3 * T,
+      kind: "shallow_water",
+    },
+    {
+      id: "plaza-reflect-pool",
+      x: 29 * T,
+      y: 22 * T,
+      width: 3 * T,
+      height: 2 * T,
+      kind: "shallow_water",
     },
     {
       id: "forest-gate-thicket",

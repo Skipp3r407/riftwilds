@@ -137,23 +137,40 @@ export function spawnPremiumProps(
     img.setDepth(depthAt(band, p.y));
 
     // Contact shadow — grounds props so they don't float on flat green
-    if (
+    const needsShadow =
       isTreeProp(p.key) ||
       p.key === "market-stall" ||
       p.key === "barrel" ||
       p.key === "crate" ||
       p.key === "watchtower" ||
       p.key === "bridge" ||
-      isLibraryWorldKey(p.key)
-    ) {
+      p.key === "bush-berry" ||
+      p.key === "stump" ||
+      p.key.startsWith("picket-") ||
+      p.key === "yard-fence-corner" ||
+      p.key.startsWith("critter-") ||
+      p.key.startsWith("ambient-riftling-") ||
+      isLibraryBushKey(p.key) ||
+      isLibraryWorldKey(p.key);
+    if (needsShadow) {
+      const shadowW = canopy
+        ? 34 + scale * 28
+        : p.key.startsWith("picket-") || p.key === "yard-fence-corner"
+          ? 22 + scale * 10
+          : 26 + scale * 18;
       addContactShadow(
         scene,
-        p.x + 2,
+        p.x + (canopy ? 3 : 2),
         p.y - 2,
-        28 + scale * 20,
-        10 + scale * 4,
-        canopy ? 0.2 : 0.16,
+        shadowW,
+        canopy ? 12 + scale * 5 : 9 + scale * 3,
+        canopy ? 0.24 : p.key.startsWith("critter-") ? 0.14 : 0.18,
       );
+    }
+
+    // Bushes sit in low-prop band but still occlude slightly when dense
+    if (p.key === "bush-berry" || isLibraryBushKey(p.key)) {
+      img.setDepth(depthAt(DEPTH.lowProp, p.y, 0.05));
     }
 
     if (

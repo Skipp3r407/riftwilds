@@ -65,14 +65,17 @@ export function drawPremiumTerrain(
     for (let col = 0; col < grid.cols; col++) {
       const kind = grid.cells[row]![col]!;
       const elev = elevation.heights[row]![col]!;
-      const texKey = terrainTex(resolveTerrainTexture(kind, col, row, blueprint));
+      const texKey = terrainTex(resolveTerrainTexture(kind, col, row, blueprint, grid));
       const key = scene.textures.exists(texKey) ? texKey : fallbackKey(kind);
       // Sub-pixel jitter + slight oversize softens hard tile seams.
-      const jx = (hash2(col, row, 7) - 0.5) * 1.6;
-      const jy = (hash2(col, row, 11) - 0.5) * 1.6;
+      // Autotile edge/corner tiles stay aligned (less jitter) so shores read seamless.
+      const isSeam =
+        key.includes("edge") || key.includes("corner") || key.includes("bloom");
+      const jx = isSeam ? 0 : (hash2(col, row, 7) - 0.5) * 1.6;
+      const jy = isSeam ? 0 : (hash2(col, row, 11) - 0.5) * 1.6;
       const x = col * T + T / 2 + jx;
       const y = row * T + T / 2 - elev * ELEV_PX + jy;
-      const oversize = blendEdges ? 2.4 : 1;
+      const oversize = blendEdges ? (isSeam ? 1.2 : 2.4) : 1;
 
       if (elev >= 2) {
         const face = scene.add.rectangle(
@@ -101,9 +104,10 @@ export function drawPremiumTerrain(
       );
       group.add(img);
 
-      // Edge bloom where path/settlement meets ground — soft sandy shoulders.
+      // Edge bloom only when no dedicated autotile seam texture is in use.
       if (
         blendEdges &&
+        !isSeam &&
         (kind === "path" || kind === "safe" || kind === "settlement" || kind === "accent") &&
         neighborDiffers(grid, row, col, kind)
       ) {
@@ -117,6 +121,20 @@ export function drawPremiumTerrain(
         );
         bloom.setDepth(depthAt(DEPTH.groundDecal, y));
         group.add(bloom);
+      }
+
+      // Soft foam / lily sparkle on water shores
+      if (blendEdges && kind === "water" && isSeam && hash2(col, row, 41) > 0.55) {
+        const foam = scene.add.ellipse(
+          x + (hash2(col, row, 42) - 0.5) * 8,
+          y + (hash2(col, row, 43) - 0.5) * 6,
+          4 + hash2(col, row, 44) * 5,
+          2 + hash2(col, row, 45) * 3,
+          0xe8f8ff,
+          0.35,
+        );
+        foam.setDepth(depthAt(DEPTH.groundDecal, y, 0.03));
+        group.add(foam);
       }
 
       // Lived-in meadow clutter — grass tufts + tiny flower dots on open ground.

@@ -50,7 +50,17 @@ export {
   PET_DISPLAY,
   actorContactShadow,
   scaleNpcDisplayHeight,
+  ensureCozyActorAnims,
+  playCozyActorAnim,
+  KEEPER_WALK_ANIM,
+  PET_WALK_ANIM,
 } from "@/game/live-world/systems/premium/actor-presentation";
+export {
+  ACTOR_SHEET_KEYS,
+  actorSheetTex,
+  KEEPER_SHEET_FRAME,
+  PET_SHEET_FRAME,
+} from "@/game/live-world/systems/premium/asset-keys";
 export {
   createAtmosphere,
   type AtmosphereHandles,
