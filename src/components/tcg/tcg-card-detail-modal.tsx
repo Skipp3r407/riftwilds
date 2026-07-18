@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { getTcgCardDetail, type TcgCardDetailView } from "@/lib/tcg/card-detail";
+import type { TcgBioSection } from "@/lib/tcg/bio-sections";
 import { cn } from "@/lib/utils/cn";
 
 type BattlePlayProps = {
@@ -24,6 +25,95 @@ function StatChip({ label, value }: { label: string; value: string | number }) {
       <p className="text-[10px] uppercase tracking-wider text-white/45">{label}</p>
       <p className="text-sm font-medium text-[var(--text-primary,#f4efe6)]">{value}</p>
     </div>
+  );
+}
+
+function BioSectionImage({ section }: { section: TcgBioSection }) {
+  const [src, setSrc] = useState(section.imageSrc);
+
+  useEffect(() => {
+    setSrc(section.imageSrc);
+  }, [section.imageSrc]);
+
+  const frame =
+    section.imageLayout === "hero"
+      ? "aspect-square max-h-36 w-full sm:max-h-40"
+      : section.imageLayout === "scenic"
+        ? "aspect-[16/9] max-h-32 w-full sm:max-h-36"
+        : "aspect-[16/9] max-h-28 w-full sm:max-h-32";
+
+  return (
+    <div
+      className={cn(
+        "relative overflow-hidden rounded-lg border border-white/10 bg-black/40",
+        frame,
+      )}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={section.imageAlt}
+        className={cn(
+          "h-full w-full",
+          section.imageLayout === "plate" ? "object-cover" : "object-cover object-center",
+        )}
+        onError={() => {
+          if (section.imageFallback && src !== section.imageFallback) {
+            setSrc(section.imageFallback);
+          }
+        }}
+      />
+    </div>
+  );
+}
+
+function CreatureBioPanel({
+  bio,
+}: {
+  bio: NonNullable<TcgCardDetailView["creatureBio"]>;
+}) {
+  return (
+    <section className="rounded-xl border border-amber-300/20 bg-amber-400/5 p-3">
+      <p className="text-[10px] uppercase tracking-[0.2em] text-amber-200/80">
+        Creature bio
+      </p>
+      <h3 className="mt-1 font-[family-name:var(--font-display)] text-lg text-amber-50">
+        {bio.name}
+        {bio.title ? (
+          <span className="text-sm font-normal text-amber-100/70">
+            {" "}
+            · {bio.title}
+          </span>
+        ) : null}
+      </h3>
+      <p className="mt-1 text-xs text-white/50">
+        {bio.nativeRegion} · {bio.affinity}
+      </p>
+
+      <div className="mt-3 max-h-[min(52vh,28rem)] space-y-3 overflow-y-auto pr-0.5">
+        {bio.sections.map((section) => (
+          <article
+            key={section.id}
+            className="rounded-lg border border-white/10 bg-black/20 p-2.5"
+          >
+            <p className="mb-1.5 text-[10px] uppercase tracking-wider text-amber-200/70">
+              {section.label}
+            </p>
+            <BioSectionImage section={section} />
+            <p className="mt-2 text-xs leading-relaxed text-white/70">{section.body}</p>
+          </article>
+        ))}
+
+        {bio.standardBio ? (
+          <article className="rounded-lg border border-white/10 bg-black/15 p-2.5">
+            <p className="mb-1 text-[10px] uppercase tracking-wider text-white/45">
+              Keeper notes
+            </p>
+            <p className="text-xs leading-relaxed text-white/55">{bio.standardBio}</p>
+          </article>
+        ) : null}
+      </div>
+    </section>
   );
 }
 
@@ -203,36 +293,7 @@ export function TcgCardDetailModal({ defId, open, onClose, battlePlay }: Props) 
               ) : null}
 
               {detail.creatureBio ? (
-                <section className="rounded-xl border border-amber-300/20 bg-amber-400/5 p-3">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-amber-200/80">
-                    Creature bio
-                  </p>
-                  <h3 className="mt-1 font-[family-name:var(--font-display)] text-lg text-amber-50">
-                    {detail.creatureBio.name}
-                    {detail.creatureBio.title ? (
-                      <span className="text-sm font-normal text-amber-100/70">
-                        {" "}
-                        · {detail.creatureBio.title}
-                      </span>
-                    ) : null}
-                  </h3>
-                  <p className="mt-1 text-xs text-white/50">
-                    {detail.creatureBio.nativeRegion} · {detail.creatureBio.affinity}
-                  </p>
-                  <p className="mt-2 leading-relaxed text-white/80">
-                    {detail.creatureBio.shortBio}
-                  </p>
-                  {detail.creatureBio.standardBio ? (
-                    <p className="mt-2 max-h-40 overflow-y-auto text-xs leading-relaxed text-white/60">
-                      {detail.creatureBio.standardBio}
-                    </p>
-                  ) : null}
-                  {detail.creatureBio.favoriteFoods.length > 0 ? (
-                    <p className="mt-2 text-xs text-amber-100/75">
-                      Favorite foods: {detail.creatureBio.favoriteFoods.join(", ")}
-                    </p>
-                  ) : null}
-                </section>
+                <CreatureBioPanel bio={detail.creatureBio} />
               ) : null}
 
               {battlePlay ? (

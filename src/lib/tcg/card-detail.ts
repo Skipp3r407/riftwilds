@@ -1,6 +1,10 @@
 import { getCardById, resolveCardImagePath, type TcgCard } from "@/content/tcg";
 import { getSpeciesLore } from "@/content/pets/lore";
 import type { SpeciesLore } from "@/lib/pets/lore-types";
+import {
+  buildCreatureBioSections,
+  type TcgBioSection,
+} from "@/lib/tcg/bio-sections";
 
 export type TcgCardDetailView = {
   id: string;
@@ -28,6 +32,8 @@ export type TcgCardDetailView = {
     favoriteFoods: string[];
     nativeRegion: string;
     affinity: string;
+    /** Illustrated bio sections (portrait, habitat, behavior, diet, affinity). */
+    sections: TcgBioSection[];
   } | null;
 };
 
@@ -49,6 +55,7 @@ function pickCreatureBio(card: TcgCard): TcgCardDetailView["creatureBio"] {
       favoriteFoods: lore.favoriteFoods ?? [],
       nativeRegion: lore.nativeRegion,
       affinity: lore.affinity,
+      sections: buildCreatureBioSections(lore),
     };
   }
   return null;

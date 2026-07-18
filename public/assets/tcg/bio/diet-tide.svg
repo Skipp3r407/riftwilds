@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-label="tide diet">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#102838"/>
+      <stop offset="100%" stop-color="#070b10"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="55%" r="50%">
+      <stop offset="0%" stop-color="#3aa0d8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3aa0d8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#sky)"/>
+  <ellipse cx="160" cy="110" rx="120" ry="50" fill="url(#glow)"/>
+  <ellipse cx="160" cy="128" rx="78" ry="18" fill="#3aa0d8" opacity="0.18" stroke="#8ad4ff" stroke-width="1.5"/>
+  <path d="M112 118 C112 96 130 82 160 82 C190 82 208 96 208 118 C208 136 186 148 160 148 C134 148 112 136 112 118 Z" fill="#3aa0d8" opacity="0.35" stroke="#8ad4ff" stroke-width="2"/>
+  <circle cx="148" cy="108" r="7" fill="#8ad4ff" opacity="0.7"/>
+  <circle cx="172" cy="112" r="5.5" fill="#8ad4ff" opacity="0.55"/>
+  <circle cx="160" cy="124" r="4.5" fill="#8ad4ff" opacity="0.45"/>
+  <path d="M160 70 C164 58 176 54 182 62" fill="none" stroke="#8ad4ff" stroke-width="2" stroke-linecap="round" opacity="0.65"/>
+  <path d="M96 150 C130 140 190 140 224 150" fill="none" stroke="#3aa0d8" stroke-width="2" opacity="0.35" stroke-linecap="round"/>
+</svg>

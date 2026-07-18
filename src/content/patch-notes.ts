@@ -36,6 +36,19 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-tcg-creature-bio-images",
+    date: "2026-07-18",
+    title: "Illustrated Creature Bio sections",
+    summary:
+      "Card inspect Creature Bio breaks into Species, Habitat, Behavior, Diet, and Affinity sections, each with its own image.",
+    added: [
+      "Illustrated Creature Bio sections on card inspect (portrait, region scenic, affinity vignettes) for every Riftling with species lore",
+    ],
+    changed: [
+      "Creature Bio layout scrolls by section so images stay readable next to short lore on mobile",
+    ],
+  },
+  {
     id: "2026-07-18-tcg-card-detail-faces",
     date: "2026-07-18",
     title: "Full TCG card faces and inspect detail",
