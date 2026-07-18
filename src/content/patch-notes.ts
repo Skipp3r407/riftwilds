@@ -36,6 +36,19 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-printables-riftwilds-theme",
+    date: "2026-07-18",
+    title: "Printables match Riftwilds theme",
+    version: "printables-v3",
+    summary:
+      "/printables art and chrome retuned to epic warm fantasy — Keepers, rift storms, bronze/amber/cyan CTAs (no purple pills).",
+    changed: [
+      "All 12 × 300 DPI printables regenerated with richer warfront scenes: damaged Commons timber, lanterns, storm debris, athletic Glowpup stance",
+      "Download buttons use bronze/amber PDF and cyan-outline PNG styles instead of purple crypto primary skins",
+      "Each printable card gets a unique subtle atmosphere well (spark storm, plaza, hatchery aurora, circus ember, and more)",
+    ],
+  },
+  {
     id: "2026-07-18-creator-hub-card-backgrounds",
     date: "2026-07-18",
     title: "Creator Hub unique card backgrounds",

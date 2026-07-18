@@ -81,7 +81,7 @@ export default function PrintablesPage() {
           <Link href="/coloring" className="btn-secondary focus-ring text-sm">
             Coloring pages
           </Link>
-          <Link href="/comics" className="btn-primary focus-ring text-sm">
+          <Link href="/comics" className="btn-amber focus-ring text-sm">
             Comics
           </Link>
         </div>
@@ -106,7 +106,9 @@ export default function PrintablesPage() {
             key={item.id}
             className="panel flex flex-col overflow-hidden border-[var(--stroke-bronze)] transition-[border-color,box-shadow] hover:border-[var(--stroke-amber)] hover:shadow-[0_0_28px_rgba(255,184,77,0.12)]"
           >
-            <div className="relative aspect-[3/4] bg-[linear-gradient(180deg,#1a1510_0%,#12161c_100%)] ring-1 ring-inset ring-[rgba(196,168,130,0.22)]">
+            <div
+              className={`printable-thumb printable-thumb--${item.atmosphere} relative aspect-[3/4] ring-1 ring-inset ring-[rgba(196,168,130,0.28)]`}
+            >
               <Image
                 src={item.pngSrc}
                 alt={`${item.title} preview`}
@@ -117,7 +119,7 @@ export default function PrintablesPage() {
               />
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[rgba(18,16,12,0.55)] to-transparent"
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[rgba(18,16,12,0.65)] to-transparent"
               />
             </div>
             <div className="flex flex-1 flex-col gap-2 p-4">
@@ -131,14 +133,14 @@ export default function PrintablesPage() {
                 <a
                   href={item.pdfSrc}
                   download={`${item.slug}.pdf`}
-                  className="btn-primary focus-ring text-sm"
+                  className="btn-print-pdf focus-ring text-sm"
                 >
                   PDF · 300 DPI
                 </a>
                 <a
                   href={item.pngSrc}
                   download={`${item.slug}.png`}
-                  className="btn-secondary focus-ring text-sm"
+                  className="btn-print-png focus-ring text-sm"
                 >
                   PNG · 300 DPI
                 </a>
@@ -158,7 +160,7 @@ export default function PrintablesPage() {
             full-color adventure printables.
           </p>
         </div>
-        <Link href="/coloring" className="btn-primary focus-ring shrink-0 text-sm">
+        <Link href="/coloring" className="btn-print-pdf focus-ring shrink-0 text-sm">
           Open coloring
         </Link>
       </section>

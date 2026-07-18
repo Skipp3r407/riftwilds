@@ -12,7 +12,13 @@
     <stop stop-color="#e8c878"/><stop offset="0.4" stop-color="#c4a882"/><stop offset="1" stop-color="#8b6914"/>
   </linearGradient>
   <linearGradient id="rift" x1="0" y1="0" x2="0" y2="1">
-    <stop stop-color="#66e0ff"/><stop offset="0.5" stop-color="#3de7ff"/><stop offset="1" stop-color="#1a8fb8"/>
+    <stop stop-color="#a8f4ff"/><stop offset="0.35" stop-color="#3de7ff"/><stop offset="0.7" stop-color="#1a8fb8"/><stop offset="1" stop-color="#0a4a68"/>
+  </linearGradient>
+  <linearGradient id="warmSky" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#0a1018"/><stop offset="0.35" stop-color="#1a2438"/><stop offset="0.65" stop-color="#3a3028"/><stop offset="1" stop-color="#5a4030"/>
+  </linearGradient>
+  <linearGradient id="earth" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#3d6a42"/><stop offset="0.45" stop-color="#2f5a3a"/><stop offset="1" stop-color="#1a3020"/>
   </linearGradient>
   <radialGradient id="amberGlow" cx="50%" cy="40%" r="50%">
     <stop stop-color="#ffe566" stop-opacity="0.55"/><stop offset="0.55" stop-color="#ffb84d" stop-opacity="0.2"/><stop offset="1" stop-color="#ffb84d" stop-opacity="0"/>
@@ -20,16 +26,45 @@
   <radialGradient id="cyanGlow" cx="50%" cy="35%" r="55%">
     <stop stop-color="#3de7ff" stop-opacity="0.45"/><stop offset="0.6" stop-color="#3de7ff" stop-opacity="0.12"/><stop offset="1" stop-color="#3de7ff" stop-opacity="0"/>
   </radialGradient>
+  <radialGradient id="emberBloom" cx="70%" cy="30%" r="45%">
+    <stop stop-color="#ff7a3d" stop-opacity="0.35"/><stop offset="0.5" stop-color="#ffb84d" stop-opacity="0.12"/><stop offset="1" stop-color="#ffb84d" stop-opacity="0"/>
+  </radialGradient>
   <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
     <feGaussianBlur stdDeviation="6"/>
   </filter>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#121018"/><stop offset="0.5" stop-color="#2a2018"/><stop offset="1" stop-color="#5a3020"/>
+      <stop stop-color="#0a0810"/><stop offset="0.45" stop-color="#2a2018"/><stop offset="1" stop-color="#5a3020"/>
     </linearGradient>
   </defs>
   <rect width="850" height="1100" fill="url(#sky)"/>
-  <rect width="850" height="1100" fill="url(#amberGlow)" opacity="0.45"/>
-  <g transform="translate(425,380) scale(1.15)">
+  <rect width="850" height="1100" fill="url(#amberGlow)" opacity="0.5"/>
+  <rect width="850" height="1100" fill="url(#emberBloom)" opacity="0.55"/>
+  <ellipse cx="200" cy="120" rx="160" ry="50" fill="#06080e" opacity="0.6"/>
+  <ellipse cx="650" cy="100" rx="180" ry="55" fill="#0c0a14" opacity="0.55"/>
+  <g transform="translate(40,420) scale(0.7)">
+    <rect x="0" y="40" width="110" height="70" fill="#6a4530"/>
+    <path d="M-10 40 L55 -20 L120 40 Z" fill="#4a3020"/>
+    <path d="M-10 40 L55 -20 L120 40 Z" fill="none" stroke="#c4a882" stroke-width="2" opacity="0.5"/>
+    <rect x="38" y="62" width="28" height="48" fill="#1a1510" opacity="0.65"/>
+    <rect x="12" y="55" width="18" height="16" fill="#3de7ff" opacity="0.25"/>
+    <rect x="80" y="55" width="18" height="16" fill="#ffb84d" opacity="0.2"/>
+    <path d="M70 -5 L105 42" stroke="#2a2118" stroke-width="4"/><path d="M90 30 L130 80" fill="#4a3020" opacity="0.85"/><circle cx="95" cy="20" r="6" fill="#ff7a3d" opacity="0.55"/>
+    <circle cx="55" cy="28" r="4" fill="#ffb84d" opacity="0.7"/>
+  </g>
+  <g transform="translate(720,440) scale(0.6)">
+    <rect x="0" y="40" width="110" height="70" fill="#6a4530"/>
+    <path d="M-10 40 L55 -20 L120 40 Z" fill="#4a3020"/>
+    <path d="M-10 40 L55 -20 L120 40 Z" fill="none" stroke="#c4a882" stroke-width="2" opacity="0.5"/>
+    <rect x="38" y="62" width="28" height="48" fill="#1a1510" opacity="0.65"/>
+    <rect x="12" y="55" width="18" height="16" fill="#3de7ff" opacity="0.25"/>
+    <rect x="80" y="55" width="18" height="16" fill="#ffb84d" opacity="0.2"/>
+    <path d="M70 -5 L105 42" stroke="#2a2118" stroke-width="4"/><path d="M90 30 L130 80" fill="#4a3020" opacity="0.85"/><circle cx="95" cy="20" r="6" fill="#ff7a3d" opacity="0.55"/>
+    <circle cx="55" cy="28" r="4" fill="#ffb84d" opacity="0.7"/>
+  </g>
+  <g transform="translate(425,360) scale(1.2)">
     <path d="M-140 180 L0 -120 L140 180 Z" fill="#c44840"/>
     <path d="M-140 180 L0 -120 L140 180 Z" fill="none" stroke="#8b2018" stroke-width="4"/>
     <path d="M0 -120 L0 180" stroke="#ffe566" stroke-width="6"/>
@@ -44,91 +79,159 @@
     <path d="M-30 180 Q0 120 30 180" fill="#1a1510"/>
   </g>
   
-  <ellipse cx="680" cy="280" rx="48.400000000000006" ry="121.00000000000001" fill="#3de7ff" opacity="0.12" filter="url(#soft)"/>
-  <path d="M680 170 Q658 280 680 390 Q702 280 680 170 Z" fill="url(#rift)" opacity="0.85"/>
-  <path d="M680 190 Q670.1 280 680 370 Q689.9 280 680 190 Z" fill="#a8f4ff" opacity="0.55"/>
-  <circle cx="640" cy="240" r="4" fill="#3de7ff" opacity="0.8"/>
-  <circle cx="730" cy="300" r="3" fill="#ffe566" opacity="0.7"/>
-  <circle cx="660" cy="340" r="2.5" fill="#fff" opacity="0.6"/>
-  <ellipse cx="140" cy="340" rx="22" ry="28" fill="#3de7ff" opacity="0.75"/>
-  <ellipse cx="720" cy="300" rx="20" ry="26" fill="#ffe566" opacity="0.8"/>
-  <g transform="translate(300,720) scale(0.65)">
-    <ellipse cx="100" cy="182" rx="48" ry="9" fill="#2a2118" opacity="0.3"/>
-    <!-- leaner body -->
-    <ellipse cx="100" cy="132" rx="40" ry="38" fill="#e8a838"/>
-    <ellipse cx="100" cy="124" rx="30" ry="28" fill="#ffc84a"/>
-    <ellipse cx="90" cy="112" rx="10" ry="8" fill="#fff0a8" opacity="0.45"/>
-    <!-- hind legs -->
-    <path d="M70 150 Q62 168 68 178 Q78 176 80 160 Z" fill="#d4922a"/>
-    <path d="M130 150 Q138 168 132 178 Q122 176 120 160 Z" fill="#d4922a"/>
-    <ellipse cx="68" cy="178" rx="10" ry="5" fill="#b87820"/>
-    <ellipse cx="132" cy="178" rx="10" ry="5" fill="#b87820"/>
-    <!-- forelegs -->
-    <path d="M62 128 Q48 145 52 160 Q64 158 70 140 Z" fill="#ffb84d"/>
-    <path d="M138 128 Q152 145 148 160 Q136 158 130 140 Z" fill="#ffb84d"/>
-    <!-- head (smaller vs body) -->
-    <ellipse cx="100" cy="72" rx="34" ry="32" fill="#ffe566"/>
-    <ellipse cx="100" cy="68" rx="24" ry="20" fill="#fff2a0"/>
-    <!-- pointed ears -->
-    <path d="M72 58 L60 18 L84 50 Z" fill="#ff9a2a"/>
-    <path d="M72 52 L64 28 L80 48 Z" fill="#ffc84a"/>
-    <path d="M128 58 L140 18 L116 50 Z" fill="#ff9a2a"/>
-    <path d="M128 52 L136 28 L120 48 Z" fill="#ffc84a"/>
-    <!-- flame mane crest -->
-    <path d="M82 42c-10-20 0-34 16-38 0 12 6 20 12 26-10-2-18 2-28 12Z" fill="#ff5a20"/>
-    <path d="M118 42c10-20 0-34-16-38 0 12-6 20-12 26 10-2 18 2 28 12Z" fill="#ff5a20"/>
-    <path d="M100 12c5 8 7 16 3 26 9-5 12-14 9-26-3 3-7 3-12 0Z" fill="#ffb84d"/>
-    <!-- determined face — smaller eyes -->
-    <ellipse cx="88" cy="70" rx="4.5" ry="5.5" fill="#1a1510"/>
-    <ellipse cx="112" cy="70" rx="4.5" ry="5.5" fill="#1a1510"/>
-    <circle cx="89.5" cy="68.5" r="1.4" fill="#fff" opacity="0.85"/>
-    <circle cx="113.5" cy="68.5" r="1.4" fill="#fff" opacity="0.85"/>
-    <ellipse cx="100" cy="80" rx="4" ry="3" fill="#e85a28"/>
-    <path d="M92 90c5 5 11 5 16 0" stroke="#1a1510" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-    <!-- cyan rift crystal brow -->
-    <path d="M100 36 L110 54 L100 62 L90 54 Z" fill="#3de7ff"/>
-    <path d="M100 40 L106 52 L100 58 L94 52 Z" fill="#a8f4ff" opacity="0.8"/>
-    <!-- flame tail -->
-    <path d="M142 120c22-2 32 12 24 32-12-8-18-4-24 8 4-14 2-26 0-40Z" fill="#ff7a3d"/>
-    <path d="M148 128c12 0 18 8 14 18-7-4-11-2-14 4 2-8 0-14 0-22Z" fill="#ffe566"/>
-    <circle cx="46" cy="48" r="2.5" fill="#3de7ff" opacity="0.9"/>
-    <circle cx="162" cy="64" r="2" fill="#ffb84d" opacity="0.85"/>
+  <ellipse cx="700" cy="260" rx="72" ry="144" fill="#3de7ff" opacity="0.14" filter="url(#soft)"/>
+  <ellipse cx="700" cy="260" rx="38.400000000000006" ry="115.19999999999999" fill="#1a8fb8" opacity="0.2" filter="url(#soft)"/>
+  <path d="M700 140 Q676 260 700 380 Q724 260 700 140 Z" fill="url(#rift)" opacity="0.92"/>
+  <path d="M700 156 Q690.4 260 700 364 Q709.6 260 700 156 Z" fill="#a8f4ff" opacity="0.65"/>
+  <!-- lightning forks -->
+  <path d="M680.8 224 L661.6 260 L678.4 268 L656.8 308" stroke="#a8f4ff" stroke-width="2.5" fill="none" opacity="0.75"/>
+  <path d="M716.8 236 L743.2 280 L726.4 288" stroke="#ffe566" stroke-width="2" fill="none" opacity="0.55"/>
+  <circle cx="652" cy="210" r="5" fill="#3de7ff" opacity="0.9"/>
+  <circle cx="756" cy="270" r="3.5" fill="#ffe566" opacity="0.8"/>
+  <circle cx="676" cy="330" r="2.5" fill="#fff" opacity="0.7"/>
+  <circle cx="730" cy="180" r="2" fill="#a8f4ff" opacity="0.85"/>
+  <circle cx="690" cy="280" r="1.5" fill="#ffb84d" opacity="0.7"/>
+  
+  <g opacity="0.75">
+    <rect x="240" y="240" width="18" height="10" rx="1" fill="#8b5a3c" transform="rotate(-18 250 245)"/>
+    <rect x="300" y="210" width="14" height="8" rx="1" fill="#c4a882" transform="rotate(22 307 214)"/>
+    <path d="M280 190 L292 202 L278 206 Z" fill="#5c3d2e"/>
+    <circle cx="330" cy="230" r="4" fill="#3de7ff" opacity="0.6"/>
+    <circle cx="225" cy="215" r="3" fill="#ffb84d" opacity="0.55"/>
   </g>
-  <g transform="translate(160,700) scale(0.85)">
-    <ellipse cx="40" cy="122" rx="26" ry="7" fill="#2a2118" opacity="0.35"/>
-    <!-- cloak -->
-    <path d="M18 112 L24 58 L32 48 L40 44 L48 48 L56 58 L62 112 L50 118 L40 114 L30 118 Z" fill="#3a5068"/>
-    <path d="M28 70 L40 90 L52 70" fill="#2a2118" opacity="0.25"/>
-    <!-- hood -->
-    <path d="M26 48 Q40 28 54 48 L48 58 Q40 52 32 58 Z" fill="#2a2118"/>
-    <ellipse cx="40" cy="52" rx="10" ry="11" fill="#e8d5b0"/>
-    <!-- staff -->
-    <rect x="58" y="40" width="4" height="72" rx="1" fill="#8b6914"/>
-    <path d="M54 38 L66 38 L60 28 Z" fill="#3de7ff" opacity="0.9"/>
-    <circle cx="60" cy="34" r="5" fill="#66e0ff" opacity="0.55"/>
-    <!-- belt amber -->
-    <rect x="30" y="78" width="20" height="5" rx="1" fill="#c4a882"/>
+  <g transform="translate(100,560) scale(1)">
+    <rect x="8" y="0" width="4" height="14" fill="#8b6914"/>
+    <rect x="2" y="14" width="16" height="18" rx="2" fill="#c4a882"/>
+    <rect x="5" y="17" width="10" height="12" rx="1" fill="#ffb84d" opacity="0.85"/>
+    <ellipse cx="10" cy="40" rx="14" ry="8" fill="#ffb84d" opacity="0.25" filter="url(#soft)"/>
   </g>
-  <g transform="translate(620,710) scale(0.8)">
-    <ellipse cx="40" cy="122" rx="26" ry="7" fill="#2a2118" opacity="0.35"/>
-    <!-- cloak -->
-    <path d="M18 112 L24 58 L32 48 L40 44 L48 48 L56 58 L62 112 L50 118 L40 114 L30 118 Z" fill="#4a3028"/>
-    <path d="M28 70 L40 90 L52 70" fill="#2a2118" opacity="0.25"/>
-    <!-- hood -->
-    <path d="M26 48 Q40 28 54 48 L48 58 Q40 52 32 58 Z" fill="#2a2118"/>
-    <ellipse cx="40" cy="52" rx="10" ry="11" fill="#e8d5b0"/>
-    <!-- staff -->
-    <rect x="58" y="40" width="4" height="72" rx="1" fill="#8b6914"/>
-    <path d="M54 38 L66 38 L60 28 Z" fill="#3de7ff" opacity="0.9"/>
-    <circle cx="60" cy="34" r="5" fill="#66e0ff" opacity="0.55"/>
-    <!-- belt amber -->
-    <rect x="30" y="78" width="20" height="5" rx="1" fill="#c4a882"/>
+  <g transform="translate(730,550) scale(0.95)">
+    <rect x="8" y="0" width="4" height="14" fill="#8b6914"/>
+    <rect x="2" y="14" width="16" height="18" rx="2" fill="#c4a882"/>
+    <rect x="5" y="17" width="10" height="12" rx="1" fill="#ffb84d" opacity="0.85"/>
+    <ellipse cx="10" cy="40" rx="14" ry="8" fill="#ffb84d" opacity="0.25" filter="url(#soft)"/>
   </g>
-  <text x="425" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#ffb84d" letter-spacing="6">YOU'RE INVITED</text>
-  <text x="425" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="38" fill="#f3efe6" font-weight="700">Traveling Circus</text>
-  <text x="425" y="158" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#e8d5b0">Celebrate under the big top — Keepers welcome</text>
-  <rect x="160" y="900" width="530" height="110" rx="10" fill="rgba(18,16,12,0.75)" stroke="#c4a882" stroke-width="2"/>
-  <text x="425" y="942" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#e8d5b0">Date: ____________________</text>
+  <ellipse cx="140" cy="320" rx="22" ry="28" fill="#3de7ff" opacity="0.75"/>
+  <ellipse cx="740" cy="280" rx="20" ry="26" fill="#ffe566" opacity="0.8"/>
+  <g transform="translate(280,700) scale(0.7)">
+    <ellipse cx="100" cy="186" rx="42" ry="8" fill="#2a2118" opacity="0.35"/>
+    <!-- athletic torso — longer, less balloon -->
+    <ellipse cx="100" cy="138" rx="34" ry="36" fill="#d4922a"/>
+    <ellipse cx="100" cy="128" rx="26" ry="28" fill="#e8a838"/>
+    <ellipse cx="92" cy="116" rx="8" ry="7" fill="#fff0a8" opacity="0.4"/>
+    <!-- braced hind legs -->
+    <path d="M72 152 Q58 172 64 184 Q78 180 82 162 Z" fill="#b87820"/>
+    <path d="M128 152 Q142 172 136 184 Q122 180 118 162 Z" fill="#b87820"/>
+    <ellipse cx="64" cy="184" rx="11" ry="5" fill="#8b5a18"/>
+    <ellipse cx="136" cy="184" rx="11" ry="5" fill="#8b5a18"/>
+    <!-- forward-planted forelegs -->
+    <path d="M58 130 Q40 148 46 168 Q62 164 70 142 Z" fill="#ffb84d"/>
+    <path d="M142 130 Q160 148 154 168 Q138 164 130 142 Z" fill="#ffb84d"/>
+    <ellipse cx="46" cy="168" rx="9" ry="4" fill="#d4922a"/>
+    <ellipse cx="154" cy="168" rx="9" ry="4" fill="#d4922a"/>
+    <!-- compact head (game-true proportions) -->
+    <ellipse cx="100" cy="68" rx="28" ry="26" fill="#ffe566"/>
+    <ellipse cx="100" cy="64" rx="20" ry="16" fill="#fff2a0"/>
+    <!-- tall pointed ears -->
+    <path d="M76 54 L62 8 L88 46 Z" fill="#ff7a3d"/>
+    <path d="M76 48 L66 20 L84 44 Z" fill="#ffc84a"/>
+    <path d="M124 54 L138 8 L112 46 Z" fill="#ff7a3d"/>
+    <path d="M124 48 L134 20 L116 44 Z" fill="#ffc84a"/>
+    <!-- fierce flame mane -->
+    <path d="M80 38c-14-24-2-42 18-48 2 14 8 24 14 32-12-4-22 2-32 16Z" fill="#ff3a10"/>
+    <path d="M120 38c14-24 2-42-18-48-2 14-8 24-14 32 12-4 22 2 32 16Z" fill="#ff3a10"/>
+    <path d="M100 4c6 10 8 20 2 32 12-6 16-18 12-34-4 4-8 4-14 2Z" fill="#ffb84d"/>
+    <path d="M100 0c4 8 5 14 1 22 8-4 10-12 8-22-2 2-5 2-9 0Z" fill="#ffe566"/>
+    <!-- determined narrowed eyes -->
+    <path d="M82 64 L94 62" stroke="#1a1510" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M118 64 L106 62" stroke="#1a1510" stroke-width="2.2" stroke-linecap="round"/>
+    <ellipse cx="88" cy="70" rx="3.5" ry="4.5" fill="#1a1510"/>
+    <ellipse cx="112" cy="70" rx="3.5" ry="4.5" fill="#1a1510"/>
+    <circle cx="89" cy="68.5" r="1.1" fill="#3de7ff" opacity="0.95"/>
+    <circle cx="113" cy="68.5" r="1.1" fill="#3de7ff" opacity="0.95"/>
+    <ellipse cx="100" cy="80" rx="3.5" ry="2.5" fill="#c44820"/>
+    <path d="M90 88c4 2 12 2 16 0" stroke="#1a1510" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- cyan rift crystal brow — bright focus -->
+    <path d="M100 30 L112 50 L100 60 L88 50 Z" fill="#3de7ff"/>
+    <path d="M100 34 L108 48 L100 56 L92 48 Z" fill="#a8f4ff" opacity="0.9"/>
+    <circle cx="100" cy="44" r="3" fill="#fff" opacity="0.55"/>
+    <!-- sweeping flame tail -->
+    <path d="M138 118c28-8 42 14 30 38-16-10-24-4-30 12 6-18 2-32 0-50Z" fill="#ff5a20"/>
+    <path d="M146 126c16-2 24 10 18 22-10-6-14-2-18 6 4-10 2-18 0-28Z" fill="#ffe566"/>
+    <circle cx="40" cy="42" r="2.5" fill="#3de7ff" opacity="0.95"/>
+    <circle cx="168" cy="58" r="2" fill="#ffb84d" opacity="0.9"/>
+    <circle cx="52" cy="96" r="1.5" fill="#a8f4ff" opacity="0.7"/>
+  </g>
+  <g transform="translate(480,730) scale(0.45)">
+    <ellipse cx="100" cy="178" rx="50" ry="10" fill="#2a2118" opacity="0.28"/>
+    <ellipse cx="100" cy="132" rx="52" ry="40" fill="#e85a28"/>
+    <ellipse cx="100" cy="124" rx="38" ry="30" fill="#ff8a4a"/>
+    <ellipse cx="86" cy="112" rx="12" ry="9" fill="#ffc090" opacity="0.5"/>
+    <ellipse cx="68" cy="164" rx="13" ry="15" fill="#c44820"/>
+    <ellipse cx="132" cy="164" rx="13" ry="15" fill="#c44820"/>
+    <ellipse cx="66" cy="176" rx="11" ry="6" fill="#a03818"/>
+    <ellipse cx="134" cy="176" rx="11" ry="6" fill="#a03818"/>
+    <ellipse cx="54" cy="138" rx="11" ry="15" fill="#ff7a3d" transform="rotate(-20 54 138)"/>
+    <ellipse cx="146" cy="138" rx="11" ry="15" fill="#ff7a3d" transform="rotate(20 146 138)"/>
+    <ellipse cx="100" cy="82" rx="42" ry="38" fill="#ff7a3d"/>
+    <ellipse cx="100" cy="76" rx="30" ry="26" fill="#ffb084"/>
+    <path d="M66 62 L52 28 L78 56 Z" fill="#ffb84d"/>
+    <path d="M134 62 L148 28 L122 56 Z" fill="#ffb84d"/>
+    <path d="M66 56 L56 36 L74 54 Z" fill="#ffe566"/>
+    <path d="M134 56 L144 36 L126 54 Z" fill="#ffe566"/>
+    <ellipse cx="86" cy="80" rx="6.5" ry="7.5" fill="#2a2118"/>
+    <ellipse cx="114" cy="80" rx="6.5" ry="7.5" fill="#2a2118"/>
+    <circle cx="88" cy="78" r="2" fill="#fff" opacity="0.85"/>
+    <circle cx="116" cy="78" r="2" fill="#fff" opacity="0.85"/>
+    <ellipse cx="100" cy="94" rx="8" ry="5" fill="#ff5c7a" opacity="0.7"/>
+    <path d="M90 106c6 7 14 7 20 0" stroke="#2a2118" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M100 48 L108 64 L100 72 L92 64 Z" fill="#ffe566"/>
+    <path d="M78 48c-6-16 4-26 16-28 0 10 4 18 10 22-10 0-18 2-26 6Z" fill="#ffb84d" opacity="0.85"/>
+    <path d="M150 120c14 2 20 14 12 26-8-6-12-4-16 2 2-10 2-18 4-28Z" fill="#ff9a5c"/>
+    <circle cx="44" cy="90" r="3" fill="#ffb84d" opacity="0.7"/>
+  </g>
+  <g transform="translate(140,680) scale(0.9)">
+    <ellipse cx="40" cy="128" rx="28" ry="7" fill="#2a2118" opacity="0.4"/>
+    <!-- layered cloak -->
+    <path d="M14 118 L22 52 L32 40 L40 36 L48 40 L58 52 L66 118 L52 126 L40 120 L28 126 Z" fill="#3a5068"/>
+    <path d="M20 118 L26 70 L40 95 L54 70 L60 118 L50 122 L40 116 L30 122 Z" fill="#2a2118" opacity="0.28"/>
+    <!-- hood + face -->
+    <path d="M24 46 Q40 22 56 46 L50 58 Q40 50 30 58 Z" fill="#1a1510"/>
+    <ellipse cx="40" cy="50" rx="9" ry="10" fill="#e8d5b0"/>
+    <ellipse cx="37" cy="48" rx="1.5" ry="2" fill="#1a1510"/>
+    <ellipse cx="43" cy="48" rx="1.5" ry="2" fill="#1a1510"/>
+    <!-- bronze staff + cyan crystal -->
+    <rect x="60" y="28" width="5" height="90" rx="1.5" fill="#8b6914"/>
+    <path d="M54 30 L72 30 L63 14 Z" fill="#3de7ff" opacity="0.95"/>
+    <circle cx="63" cy="24" r="7" fill="#66e0ff" opacity="0.45" filter="url(#soft)"/>
+    <!-- amber belt + pouch -->
+    <rect x="28" y="82" width="24" height="6" rx="1" fill="#c4a882"/>
+    <ellipse cx="48" cy="92" rx="5" ry="6" fill="#8b5a3c"/>
+  </g>
+  <g transform="translate(640,690) scale(0.85)">
+    <ellipse cx="40" cy="128" rx="28" ry="7" fill="#2a2118" opacity="0.4"/>
+    <!-- layered cloak -->
+    <path d="M14 118 L22 52 L32 40 L40 36 L48 40 L58 52 L66 118 L52 126 L40 120 L28 126 Z" fill="#4a3028"/>
+    <path d="M20 118 L26 70 L40 95 L54 70 L60 118 L50 122 L40 116 L30 122 Z" fill="#2a2118" opacity="0.28"/>
+    <!-- hood + face -->
+    <path d="M24 46 Q40 22 56 46 L50 58 Q40 50 30 58 Z" fill="#1a1510"/>
+    <ellipse cx="40" cy="50" rx="9" ry="10" fill="#e8d5b0"/>
+    <ellipse cx="37" cy="48" rx="1.5" ry="2" fill="#1a1510"/>
+    <ellipse cx="43" cy="48" rx="1.5" ry="2" fill="#1a1510"/>
+    <!-- bronze staff + cyan crystal -->
+    <rect x="60" y="28" width="5" height="90" rx="1.5" fill="#8b6914"/>
+    <path d="M54 30 L72 30 L63 14 Z" fill="#3de7ff" opacity="0.95"/>
+    <circle cx="63" cy="24" r="7" fill="#66e0ff" opacity="0.45" filter="url(#soft)"/>
+    <!-- amber belt + pouch -->
+    <rect x="28" y="82" width="24" height="6" rx="1" fill="#c4a882"/>
+    <ellipse cx="48" cy="92" rx="5" ry="6" fill="#8b5a3c"/>
+  </g>
+  <text x="425" y="68" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#ffb84d" letter-spacing="6">YOU'RE INVITED</text>
+  <text x="425" y="118" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#f3efe6" font-weight="700">Traveling Circus</text>
+  <text x="425" y="156" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#e8d5b0">Celebrate under the big top — Keepers welcome</text>
+  <rect x="150" y="890" width="550" height="120" rx="12" fill="rgba(18,16,12,0.82)" stroke="#c4a882" stroke-width="2.5"/>
+  <rect x="165" y="902" width="520" height="96" rx="8" fill="none" stroke="#ffb84d" stroke-width="1" opacity="0.35"/>
+  <text x="425" y="940" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#e8d5b0">Date: ____________________</text>
   <text x="425" y="980" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#e8d5b0">Place: ____________________</text>
   <text x="425" y="1055" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#c4a882">300 DPI · US Letter · Personal / party use · Not for resale · riftwilds.com</text>
 </svg>

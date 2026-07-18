@@ -113,7 +113,9 @@ export function PrintablesDownloads({
         {items.map((item) => (
           <li key={item.id}>
             <article className="panel overflow-hidden border-[var(--stroke-bronze)] p-3">
-              <div className="relative aspect-[850/1100] overflow-hidden rounded-lg bg-[linear-gradient(180deg,#1a1510,#12161c)] ring-1 ring-[rgba(196,168,130,0.28)]">
+              <div
+                className={`printable-thumb printable-thumb--${item.atmosphere} relative aspect-[850/1100] overflow-hidden rounded-lg ring-1 ring-[rgba(196,168,130,0.28)]`}
+              >
                 <Image
                   src={item.pngSrc}
                   alt={`${item.title} preview`}
@@ -137,7 +139,7 @@ export function PrintablesDownloads({
                 <a
                   href={item.pdfSrc}
                   download={filenameFromSrc(item.pdfSrc)}
-                  className="btn-primary focus-ring inline-flex items-center gap-1.5 text-xs"
+                  className="btn-print-pdf focus-ring text-xs"
                 >
                   <Download size={14} aria-hidden />
                   PDF · 300 DPI
@@ -145,7 +147,7 @@ export function PrintablesDownloads({
                 <a
                   href={item.pngSrc}
                   download={filenameFromSrc(item.pngSrc)}
-                  className="btn-secondary focus-ring inline-flex items-center gap-1.5 text-xs"
+                  className="btn-print-png focus-ring text-xs"
                 >
                   PNG · 300 DPI
                 </a>

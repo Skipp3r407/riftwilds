@@ -15,6 +15,18 @@ export type PrintableKind =
 
 export type PrintablePaper = "letter" | "a4" | "5x7";
 
+/** Subtle card-well atmosphere keyed for CSS (bronze / cyan / ember / grove). */
+export type PrintableAtmosphere =
+  | "spark-storm"
+  | "commons-plaza"
+  | "hatchery-aurora"
+  | "trading-bronze"
+  | "bookmark-ink"
+  | "sticker-parchment"
+  | "crest-seal"
+  | "circus-ember"
+  | "standee-hearth";
+
 export type PrintableItem = {
   id: string;
   slug: string;
@@ -28,6 +40,8 @@ export type PrintableItem = {
   pngSrc: string;
   pdfSrc: string;
   tags: string[];
+  /** Unique card atmosphere behind the preview art */
+  atmosphere: PrintableAtmosphere;
 };
 
 export const PRINTABLES_CREDIT =
@@ -50,6 +64,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/poster-spark.png",
     pdfSrc: "/assets/printables/poster-spark.pdf",
     tags: ["poster", "spark", "battle"],
+    atmosphere: "spark-storm",
   },
   {
     id: "poster-spark-a4",
@@ -63,6 +78,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/poster-spark-a4.png",
     pdfSrc: "/assets/printables/poster-spark-a4.pdf",
     tags: ["poster", "spark", "a4"],
+    atmosphere: "spark-storm",
   },
   {
     id: "poster-commons",
@@ -77,6 +93,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/poster-commons.png",
     pdfSrc: "/assets/printables/poster-commons.pdf",
     tags: ["poster", "commons", "battle"],
+    atmosphere: "commons-plaza",
   },
   {
     id: "poster-hatchery",
@@ -91,6 +108,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/poster-hatchery.png",
     pdfSrc: "/assets/printables/poster-hatchery.pdf",
     tags: ["poster", "hatchery"],
+    atmosphere: "hatchery-aurora",
   },
   {
     id: "trading-cards-sheet",
@@ -105,6 +123,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/trading-cards-sheet.png",
     pdfSrc: "/assets/printables/trading-cards-sheet.pdf",
     tags: ["trading-card", "riftling"],
+    atmosphere: "trading-bronze",
   },
   {
     id: "bookmarks-sheet",
@@ -118,6 +137,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/bookmarks-sheet.png",
     pdfSrc: "/assets/printables/bookmarks-sheet.pdf",
     tags: ["bookmark"],
+    atmosphere: "bookmark-ink",
   },
   {
     id: "sticker-sheet-riftlings",
@@ -132,6 +152,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/sticker-sheet-riftlings.png",
     pdfSrc: "/assets/printables/sticker-sheet-riftlings.pdf",
     tags: ["stickers", "riftling"],
+    atmosphere: "sticker-parchment",
   },
   {
     id: "sticker-sheet-crests",
@@ -145,6 +166,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/sticker-sheet-crests.png",
     pdfSrc: "/assets/printables/sticker-sheet-crests.pdf",
     tags: ["stickers", "commons"],
+    atmosphere: "crest-seal",
   },
   {
     id: "card-spark-5x7",
@@ -158,6 +180,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/card-spark-5x7.png",
     pdfSrc: "/assets/printables/card-spark-5x7.pdf",
     tags: ["card", "spark"],
+    atmosphere: "spark-storm",
   },
   {
     id: "card-circus-5x7",
@@ -171,6 +194,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/card-circus-5x7.png",
     pdfSrc: "/assets/printables/card-circus-5x7.pdf",
     tags: ["card", "circus"],
+    atmosphere: "circus-ember",
   },
   {
     id: "circus-party-invite",
@@ -185,6 +209,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/circus-party-invite.png",
     pdfSrc: "/assets/printables/circus-party-invite.pdf",
     tags: ["invite", "circus"],
+    atmosphere: "circus-ember",
   },
   {
     id: "standee-spark",
@@ -198,6 +223,7 @@ export const PRINTABLES: PrintableItem[] = [
     pngSrc: "/assets/printables/standee-spark.png",
     pdfSrc: "/assets/printables/standee-spark.pdf",
     tags: ["standee", "craft", "spark"],
+    atmosphere: "standee-hearth",
   },
 ];
 

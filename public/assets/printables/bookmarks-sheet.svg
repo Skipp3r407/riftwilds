@@ -11,7 +11,13 @@
     <stop stop-color="#e8c878"/><stop offset="0.4" stop-color="#c4a882"/><stop offset="1" stop-color="#8b6914"/>
   </linearGradient>
   <linearGradient id="rift" x1="0" y1="0" x2="0" y2="1">
-    <stop stop-color="#66e0ff"/><stop offset="0.5" stop-color="#3de7ff"/><stop offset="1" stop-color="#1a8fb8"/>
+    <stop stop-color="#a8f4ff"/><stop offset="0.35" stop-color="#3de7ff"/><stop offset="0.7" stop-color="#1a8fb8"/><stop offset="1" stop-color="#0a4a68"/>
+  </linearGradient>
+  <linearGradient id="warmSky" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#0a1018"/><stop offset="0.35" stop-color="#1a2438"/><stop offset="0.65" stop-color="#3a3028"/><stop offset="1" stop-color="#5a4030"/>
+  </linearGradient>
+  <linearGradient id="earth" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#3d6a42"/><stop offset="0.45" stop-color="#2f5a3a"/><stop offset="1" stop-color="#1a3020"/>
   </linearGradient>
   <radialGradient id="amberGlow" cx="50%" cy="40%" r="50%">
     <stop stop-color="#ffe566" stop-opacity="0.55"/><stop offset="0.55" stop-color="#ffb84d" stop-opacity="0.2"/><stop offset="1" stop-color="#ffb84d" stop-opacity="0"/>
@@ -19,8 +25,14 @@
   <radialGradient id="cyanGlow" cx="50%" cy="35%" r="55%">
     <stop stop-color="#3de7ff" stop-opacity="0.45"/><stop offset="0.6" stop-color="#3de7ff" stop-opacity="0.12"/><stop offset="1" stop-color="#3de7ff" stop-opacity="0"/>
   </radialGradient>
+  <radialGradient id="emberBloom" cx="70%" cy="30%" r="45%">
+    <stop stop-color="#ff7a3d" stop-opacity="0.35"/><stop offset="0.5" stop-color="#ffb84d" stop-opacity="0.12"/><stop offset="1" stop-color="#ffb84d" stop-opacity="0"/>
+  </radialGradient>
   <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
     <feGaussianBlur stdDeviation="6"/>
+  </filter>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter></defs>
   <rect width="850" height="1100" fill="url(#parchment)"/>
   <rect x="24" y="24" width="802" height="1052" fill="none" stroke="#8b6914" stroke-width="3" rx="12"/>
@@ -34,46 +46,53 @@
     <rect x="80" y="195" width="200" height="770" rx="6" fill="none" stroke="#c4a882" stroke-opacity="0.4" stroke-width="1.5"/>
     <text x="180" y="245" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#ffb84d" letter-spacing="3">RIFTWILDS</text>
     <g transform="translate(80, 270)"><g transform="translate(15,20) scale(0.9)">
-    <ellipse cx="100" cy="182" rx="48" ry="9" fill="#2a2118" opacity="0.3"/>
-    <!-- leaner body -->
-    <ellipse cx="100" cy="132" rx="40" ry="38" fill="#e8a838"/>
-    <ellipse cx="100" cy="124" rx="30" ry="28" fill="#ffc84a"/>
-    <ellipse cx="90" cy="112" rx="10" ry="8" fill="#fff0a8" opacity="0.45"/>
-    <!-- hind legs -->
-    <path d="M70 150 Q62 168 68 178 Q78 176 80 160 Z" fill="#d4922a"/>
-    <path d="M130 150 Q138 168 132 178 Q122 176 120 160 Z" fill="#d4922a"/>
-    <ellipse cx="68" cy="178" rx="10" ry="5" fill="#b87820"/>
-    <ellipse cx="132" cy="178" rx="10" ry="5" fill="#b87820"/>
-    <!-- forelegs -->
-    <path d="M62 128 Q48 145 52 160 Q64 158 70 140 Z" fill="#ffb84d"/>
-    <path d="M138 128 Q152 145 148 160 Q136 158 130 140 Z" fill="#ffb84d"/>
-    <!-- head (smaller vs body) -->
-    <ellipse cx="100" cy="72" rx="34" ry="32" fill="#ffe566"/>
-    <ellipse cx="100" cy="68" rx="24" ry="20" fill="#fff2a0"/>
-    <!-- pointed ears -->
-    <path d="M72 58 L60 18 L84 50 Z" fill="#ff9a2a"/>
-    <path d="M72 52 L64 28 L80 48 Z" fill="#ffc84a"/>
-    <path d="M128 58 L140 18 L116 50 Z" fill="#ff9a2a"/>
-    <path d="M128 52 L136 28 L120 48 Z" fill="#ffc84a"/>
-    <!-- flame mane crest -->
-    <path d="M82 42c-10-20 0-34 16-38 0 12 6 20 12 26-10-2-18 2-28 12Z" fill="#ff5a20"/>
-    <path d="M118 42c10-20 0-34-16-38 0 12-6 20-12 26 10-2 18 2 28 12Z" fill="#ff5a20"/>
-    <path d="M100 12c5 8 7 16 3 26 9-5 12-14 9-26-3 3-7 3-12 0Z" fill="#ffb84d"/>
-    <!-- determined face — smaller eyes -->
-    <ellipse cx="88" cy="70" rx="4.5" ry="5.5" fill="#1a1510"/>
-    <ellipse cx="112" cy="70" rx="4.5" ry="5.5" fill="#1a1510"/>
-    <circle cx="89.5" cy="68.5" r="1.4" fill="#fff" opacity="0.85"/>
-    <circle cx="113.5" cy="68.5" r="1.4" fill="#fff" opacity="0.85"/>
-    <ellipse cx="100" cy="80" rx="4" ry="3" fill="#e85a28"/>
-    <path d="M92 90c5 5 11 5 16 0" stroke="#1a1510" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-    <!-- cyan rift crystal brow -->
-    <path d="M100 36 L110 54 L100 62 L90 54 Z" fill="#3de7ff"/>
-    <path d="M100 40 L106 52 L100 58 L94 52 Z" fill="#a8f4ff" opacity="0.8"/>
-    <!-- flame tail -->
-    <path d="M142 120c22-2 32 12 24 32-12-8-18-4-24 8 4-14 2-26 0-40Z" fill="#ff7a3d"/>
-    <path d="M148 128c12 0 18 8 14 18-7-4-11-2-14 4 2-8 0-14 0-22Z" fill="#ffe566"/>
-    <circle cx="46" cy="48" r="2.5" fill="#3de7ff" opacity="0.9"/>
-    <circle cx="162" cy="64" r="2" fill="#ffb84d" opacity="0.85"/>
+    <ellipse cx="100" cy="186" rx="42" ry="8" fill="#2a2118" opacity="0.35"/>
+    <!-- athletic torso — longer, less balloon -->
+    <ellipse cx="100" cy="138" rx="34" ry="36" fill="#d4922a"/>
+    <ellipse cx="100" cy="128" rx="26" ry="28" fill="#e8a838"/>
+    <ellipse cx="92" cy="116" rx="8" ry="7" fill="#fff0a8" opacity="0.4"/>
+    <!-- braced hind legs -->
+    <path d="M72 152 Q58 172 64 184 Q78 180 82 162 Z" fill="#b87820"/>
+    <path d="M128 152 Q142 172 136 184 Q122 180 118 162 Z" fill="#b87820"/>
+    <ellipse cx="64" cy="184" rx="11" ry="5" fill="#8b5a18"/>
+    <ellipse cx="136" cy="184" rx="11" ry="5" fill="#8b5a18"/>
+    <!-- forward-planted forelegs -->
+    <path d="M58 130 Q40 148 46 168 Q62 164 70 142 Z" fill="#ffb84d"/>
+    <path d="M142 130 Q160 148 154 168 Q138 164 130 142 Z" fill="#ffb84d"/>
+    <ellipse cx="46" cy="168" rx="9" ry="4" fill="#d4922a"/>
+    <ellipse cx="154" cy="168" rx="9" ry="4" fill="#d4922a"/>
+    <!-- compact head (game-true proportions) -->
+    <ellipse cx="100" cy="68" rx="28" ry="26" fill="#ffe566"/>
+    <ellipse cx="100" cy="64" rx="20" ry="16" fill="#fff2a0"/>
+    <!-- tall pointed ears -->
+    <path d="M76 54 L62 8 L88 46 Z" fill="#ff7a3d"/>
+    <path d="M76 48 L66 20 L84 44 Z" fill="#ffc84a"/>
+    <path d="M124 54 L138 8 L112 46 Z" fill="#ff7a3d"/>
+    <path d="M124 48 L134 20 L116 44 Z" fill="#ffc84a"/>
+    <!-- fierce flame mane -->
+    <path d="M80 38c-14-24-2-42 18-48 2 14 8 24 14 32-12-4-22 2-32 16Z" fill="#ff3a10"/>
+    <path d="M120 38c14-24 2-42-18-48-2 14-8 24-14 32 12-4 22 2 32 16Z" fill="#ff3a10"/>
+    <path d="M100 4c6 10 8 20 2 32 12-6 16-18 12-34-4 4-8 4-14 2Z" fill="#ffb84d"/>
+    <path d="M100 0c4 8 5 14 1 22 8-4 10-12 8-22-2 2-5 2-9 0Z" fill="#ffe566"/>
+    <!-- determined narrowed eyes -->
+    <path d="M82 64 L94 62" stroke="#1a1510" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M118 64 L106 62" stroke="#1a1510" stroke-width="2.2" stroke-linecap="round"/>
+    <ellipse cx="88" cy="70" rx="3.5" ry="4.5" fill="#1a1510"/>
+    <ellipse cx="112" cy="70" rx="3.5" ry="4.5" fill="#1a1510"/>
+    <circle cx="89" cy="68.5" r="1.1" fill="#3de7ff" opacity="0.95"/>
+    <circle cx="113" cy="68.5" r="1.1" fill="#3de7ff" opacity="0.95"/>
+    <ellipse cx="100" cy="80" rx="3.5" ry="2.5" fill="#c44820"/>
+    <path d="M90 88c4 2 12 2 16 0" stroke="#1a1510" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- cyan rift crystal brow — bright focus -->
+    <path d="M100 30 L112 50 L100 60 L88 50 Z" fill="#3de7ff"/>
+    <path d="M100 34 L108 48 L100 56 L92 48 Z" fill="#a8f4ff" opacity="0.9"/>
+    <circle cx="100" cy="44" r="3" fill="#fff" opacity="0.55"/>
+    <!-- sweeping flame tail -->
+    <path d="M138 118c28-8 42 14 30 38-16-10-24-4-30 12 6-18 2-32 0-50Z" fill="#ff5a20"/>
+    <path d="M146 126c16-2 24 10 18 22-10-6-14-2-18 6 4-10 2-18 0-28Z" fill="#ffe566"/>
+    <circle cx="40" cy="42" r="2.5" fill="#3de7ff" opacity="0.95"/>
+    <circle cx="168" cy="58" r="2" fill="#ffb84d" opacity="0.9"/>
+    <circle cx="52" cy="96" r="1.5" fill="#a8f4ff" opacity="0.7"/>
   </g></g>
     <text x="180" y="780" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#f3efe6">Spark</text>
     <text x="180" y="820" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#e8d5b0">Stand with the light</text>
