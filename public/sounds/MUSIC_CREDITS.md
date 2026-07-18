@@ -18,13 +18,13 @@ Tracks under `public/sounds/music/` are free for commercial use. Used as looping
 - **File:** `magic-space.mp3`
 - **Notes:** Uplifting sci-fi ambience pad.
 
-## Space Graveyard
+## Icy Realm
 
-- **Source:** [Space Graveyard - Ambient Track](https://opengameart.org/content/space-graveyard-ambient-track) on OpenGameArt
-- **Author:** TinyWorlds
+- **Source:** [Icy Realm - (Seven and Eight)](https://opengameart.org/content/icy-realm-seven-and-eight) on OpenGameArt
+- **Author:** The Cynic Project (cynicmusic) / [pixelsphere.org](http://pixelsphere.org/) / [cynicmusic.com](https://cynicmusic.com)
 - **License:** [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
-- **File:** `space-graveyard.mp3`
-- **Notes:** Tense, loopable sci-fi ambient bed.
+- **File:** `icy-realm.mp3`
+- **Notes:** Continuous ethereal frost bed (replaces the prior Space Graveyard cue, which had long early silence gaps that sounded like tracks cutting out). Attribution appreciated (not required under CC0).
 
 ## Menacing Otherworld
 
@@ -62,7 +62,7 @@ Tracks under `public/sounds/music/` are free for commercial use. Used as looping
 | 4 | Pulse | `pulse.mp3` |
 | 5 | Urgent | `urgent.mp3` |
 | 6 | Transmission | `transmission.mp3` |
-| 7 | Space Graveyard | `space-graveyard.mp3` |
+| 7 | Icy Realm | `icy-realm.mp3` |
 | 8 | Menacing Otherworld | `menacing-otherworld.mp3` |
 | 9 | Dark Things | `dark-things.mp3` |
 | 10 | Sirens in Darkness | `sirens-in-darkness.mp3` |

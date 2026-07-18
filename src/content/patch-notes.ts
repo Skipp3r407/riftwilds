@@ -36,6 +36,20 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-18-ambience-playlist-cutoff",
+    date: "2026-07-18",
+    title: "Ambience playlist no longer cuts out early",
+    summary:
+      "Frostveil’s bed and a few quiet sci-fi loops were going silent after a few seconds; the playlist and crossfade engine now keep ambience playing through.",
+    changed: [
+      "Frostveil / playlist track “Space Graveyard” replaced with continuous CC0 “Icy Realm”",
+      "Quiet Dark Sci-Fi beds (Sector, Airy, Pulse, Urgent) get a gentle playback gain so they stay audible at normal Music volume",
+    ],
+    fixed: [
+      "Ambience player tracks no longer cut off after a few seconds (sparse source + overlapping crossfade race)",
+    ],
+  },
+  {
     id: "2026-07-18-restoration-wallpaper",
     date: "2026-07-18",
     title: "World Restoration atmospheric wallpaper",

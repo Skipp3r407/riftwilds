@@ -8,7 +8,7 @@ export const REGION_MUSIC: Record<string, { src: string; label: string }> = {
   "elderwood-forest": { src: "/sounds/music/magic-space.mp3", label: "Elderwood — Magic Space" },
   "stormspire-peaks": { src: "/sounds/music/pulse.mp3", label: "Stormspire — Pulse" },
   "stoneheart-canyon": { src: "/sounds/music/transmission.mp3", label: "Stoneheart — Transmission" },
-  "frostveil-basin": { src: "/sounds/music/space-graveyard.mp3", label: "Frostveil — Space Graveyard" },
+  "frostveil-basin": { src: "/sounds/music/icy-realm.mp3", label: "Frostveil — Icy Realm" },
   "radiant-citadel": { src: "/sounds/music/sirens-in-darkness.mp3", label: "Radiant — Sirens" },
   "void-hollow": { src: "/sounds/music/dark-things.mp3", label: "Void — Dark Things" },
   "alloy-ruins": { src: "/sounds/music/menacing-otherworld.mp3", label: "Alloy — Menacing Otherworld" },

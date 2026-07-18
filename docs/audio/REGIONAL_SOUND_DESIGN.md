@@ -12,7 +12,7 @@ Each Live World region has a unique ambience recipe (procedural Web Audio) plus 
 | Elderwood Forest | Leaf canopy hush | Magic Space | Triangle canopy + pad |
 | Stormspire Peaks | Wind + thunder | Pulse | Wind noise + bright LFO |
 | Stoneheart Canyon | Stone echo hollow | Transmission | Deep sine hollow |
-| Frostveil Basin | Crystalline cold | Space Graveyard | High sine + air noise |
+| Frostveil Basin | Crystalline cold | Icy Realm | High sine + air noise |
 | Radiant Citadel | Temple light choir | Sirens in Darkness | Bright stacked sines |
 | Void Hollow | Uneasy void pulse | Dark Things | Low saw + dark noise |
 | Alloy Ruins | Machine hum | Menacing Otherworld | Square hum + sparks |
