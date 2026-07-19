@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="mlBg" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162038"/>
+      <stop offset="1" stop-color="#0a0e18"/>
+    </linearGradient>
+    <linearGradient id="mlCrystal" x1="32" y1="12" x2="32" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7af0ff"/>
+      <stop offset="0.45" stop-color="#3de7ff"/>
+      <stop offset="1" stop-color="#1a5f6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#mlBg)"/>
+  <ellipse cx="32" cy="48" rx="14" ry="4" fill="#3de7ff" opacity="0.18"/>
+  <path d="M32 12l10 16-10 24L22 28 32 12z" fill="url(#mlCrystal)" opacity="0.95"/>
+  <path d="M32 12l10 16-10 8V12z" fill="#b8f7ff" opacity="0.35"/>
+  <path d="M32 12L22 28l10 8V12z" fill="#0c3a44" opacity="0.35"/>
+  <path d="M18 40h28" stroke="#ffb84d" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="18" cy="40" r="1.8" fill="#ffb84d"/>
+  <circle cx="46" cy="40" r="1.8" fill="#ffb84d"/>
+  <circle cx="48" cy="18" r="1.2" fill="#3de7ff" opacity="0.8"/>
+</svg>

@@ -1,7 +1,6 @@
 /**
- * Procedural comic page / splash art (sharp SVG → PNG).
- * Complements AI covers. Draws character silhouettes + scenery so pages
- * never read as a lone cyan diamond placeholder.
+ * Procedural comic splash / key page / bonus art (sharp SVG → PNG).
+ * Complements AI covers. Ensures every path in src/content/comics/art.ts exists.
  *
  * Usage:
  *   node scripts/comics/generate-comic-art.mjs
@@ -50,11 +49,22 @@ function egg(cx, cy, scale, shell, glow) {
   `;
 }
 
+function pup(cx, cy, scale, fill, glow) {
+  const s = scale;
+  return `
+    <ellipse cx="${cx}" cy="${cy + 10 * s}" rx="${16 * s}" ry="${10 * s}" fill="${fill}"/>
+    <ellipse cx="${cx + 10 * s}" cy="${cy + 2 * s}" rx="${8 * s}" ry="${7 * s}" fill="${fill}"/>
+    <circle cx="${cx + 12 * s}" cy="${cy}" r="${2 * s}" fill="${glow}"/>
+    <ellipse cx="${cx}" cy="${cy + 18 * s}" rx="${14 * s}" ry="${3 * s}" fill="#0a0806" opacity="0.25"/>
+  `;
+}
+
 function svgArt(w, h, colors, motif = "rift") {
   const { a, b, c, d, ground } = colors;
   const left = figure(w * 0.32, h * 0.58, w / 900, "#e8d5b0", c);
   const right = figure(w * 0.68, h * 0.56, w / 950, "#c4a882", d);
   const heldEgg = egg(w * 0.38, h * 0.62, w / 900, "#f5ead2", c);
+  const glowPup = pup(w * 0.55, h * 0.64, w / 900, "#e8c070", c);
 
   let motifExtra = "";
   if (motif === "circus") {
@@ -62,15 +72,40 @@ function svgArt(w, h, colors, motif = "rift") {
       <ellipse cx="${w * 0.5}" cy="${h * 0.72}" rx="${w * 0.28}" ry="${h * 0.08}" fill="${d}" opacity="0.35"/>
       <rect x="${w * 0.42}" y="${h * 0.28}" width="${w * 0.16}" height="${h * 0.22}" rx="6" fill="${c}" opacity="0.35"/>
       <path d="M${w * 0.35} ${h * 0.28} L${w * 0.5} ${h * 0.18} L${w * 0.65} ${h * 0.28}" fill="${d}" opacity="0.5"/>
+      <circle cx="${w * 0.25}" cy="${h * 0.35}" r="${w * 0.03}" fill="${d}" opacity="0.55"/>
+      <circle cx="${w * 0.75}" cy="${h * 0.32}" r="${w * 0.025}" fill="${c}" opacity="0.5"/>
     `;
   } else if (motif === "forest") {
     motifExtra = `
       <path d="M${w * 0.12} ${h * 0.7} L${w * 0.18} ${h * 0.35} L${w * 0.24} ${h * 0.7} Z" fill="#1a3020" opacity="0.7"/>
       <path d="M${w * 0.78} ${h * 0.72} L${w * 0.86} ${h * 0.3} L${w * 0.94} ${h * 0.72} Z" fill="#243828" opacity="0.65"/>
+      <path d="M${w * 0.4} ${h * 0.7} L${w * 0.46} ${h * 0.4} L${w * 0.52} ${h * 0.7} Z" fill="#1f3828" opacity="0.55"/>
       <circle cx="${w * 0.55}" cy="${h * 0.42}" r="${Math.min(w, h) * 0.04}" fill="${c}" opacity="0.35"/>
+      ${glowPup}
+    `;
+  } else if (motif === "lantern") {
+    motifExtra = `
+      <circle cx="${w * 0.3}" cy="${h * 0.28}" r="${w * 0.04}" fill="${d}" opacity="0.65"/>
+      <circle cx="${w * 0.5}" cy="${h * 0.22}" r="${w * 0.05}" fill="${d}" opacity="0.7"/>
+      <circle cx="${w * 0.7}" cy="${h * 0.3}" r="${w * 0.035}" fill="${c}" opacity="0.55"/>
+      <circle cx="${w * 0.42}" cy="${h * 0.38}" r="${w * 0.025}" fill="${d}" opacity="0.5"/>
+      <path d="M${w * 0.2} ${h * 0.55} Q ${w * 0.5} ${h * 0.45} ${w * 0.8} ${h * 0.55}" fill="none" stroke="${d}" stroke-opacity="0.35" stroke-width="4"/>
+    `;
+  } else if (motif === "city") {
+    motifExtra = `
+      <rect x="${w * 0.18}" y="${h * 0.32}" width="${w * 0.14}" height="${h * 0.3}" fill="#3a3228" opacity="0.7"/>
+      <rect x="${w * 0.36}" y="${h * 0.26}" width="${w * 0.12}" height="${h * 0.36}" fill="#4a3a2a" opacity="0.65"/>
+      <rect x="${w * 0.52}" y="${h * 0.3}" width="${w * 0.16}" height="${h * 0.32}" fill="#2a3838" opacity="0.6"/>
+      <rect x="${w * 0.72}" y="${h * 0.34}" width="${w * 0.1}" height="${h * 0.28}" fill="#3a2820" opacity="0.65"/>
+      <ellipse cx="${w * 0.5}" cy="${h * 0.48}" rx="${w * 0.08}" ry="${h * 0.05}" fill="${c}" opacity="0.45"/>
+    `;
+  } else if (motif === "storm") {
+    motifExtra = `
+      <path d="M${w * 0.55} ${h * 0.18} L${w * 0.48} ${h * 0.4} L${w * 0.58} ${h * 0.38} L${w * 0.45} ${h * 0.62}"
+            fill="none" stroke="${c}" stroke-width="6" opacity="0.7"/>
+      <ellipse cx="${w * 0.5}" cy="${h * 0.28}" rx="${w * 0.28}" ry="${h * 0.1}" fill="#2a3040" opacity="0.55"/>
     `;
   } else {
-    // Soft rift glow — not a giant diamond dominating the page
     motifExtra = `
       <ellipse cx="${w * 0.5}" cy="${h * 0.36}" rx="${w * 0.16}" ry="${h * 0.22}" fill="${c}" opacity="0.18"/>
       <path d="M${w * 0.5} ${h * 0.22} Q ${w * 0.54} ${h * 0.4} ${w * 0.5} ${h * 0.55}
@@ -101,22 +136,29 @@ function svgArt(w, h, colors, motif = "rift") {
   ${right}
   <circle cx="${w * 0.18}" cy="${h * 0.18}" r="${Math.min(w, h) * 0.018}" fill="${d}" opacity="0.75"/>
   <circle cx="${w * 0.84}" cy="${h * 0.15}" r="${Math.min(w, h) * 0.012}" fill="${c}" opacity="0.7"/>
-  <!-- Panel border like a printed comic page -->
   <rect x="18" y="18" width="${w - 36}" height="${h - 36}" fill="none" stroke="${d}" stroke-opacity="0.35" stroke-width="4" rx="8"/>
 </svg>`;
 }
 
+/** Every path referenced by src/content/comics/art.ts (+ book frame). */
 const jobs = [
+  { file: "splashes/rift-dawn.png", w: 1200, h: 1600, atm: "rift", motif: "rift" },
+  { file: "splashes/circus-arrival.png", w: 1200, h: 1600, atm: "festival", motif: "circus" },
+  { file: "splashes/lost-city.png", w: 1200, h: 1600, atm: "ruin", motif: "city" },
+  { file: "splashes/festival.png", w: 1200, h: 1600, atm: "festival", motif: "lantern" },
   { file: "splashes/spark-path.png", w: 1200, h: 1600, atm: "day", motif: "forest" },
-  { file: "splashes/storm-king.png", w: 1200, h: 1600, atm: "storm", motif: "rift" },
+  { file: "splashes/storm-king.png", w: 1200, h: 1600, atm: "storm", motif: "storm" },
   { file: "splashes/merchant-night.png", w: 1200, h: 1600, atm: "night", motif: "rift" },
   { file: "splashes/great-hunt.png", w: 1200, h: 1600, atm: "dawn", motif: "forest" },
-  { file: "splashes/last-guardian.png", w: 1200, h: 1600, atm: "ruin", motif: "rift" },
+  { file: "splashes/last-guardian.png", w: 1200, h: 1600, atm: "ruin", motif: "city" },
   { file: "splashes/shadow-beyond.png", w: 1200, h: 1600, atm: "rift", motif: "rift" },
   { file: "pages/key-commons.png", w: 1200, h: 1600, atm: "dusk", motif: "rift" },
   { file: "pages/key-forest.png", w: 1200, h: 1600, atm: "dawn", motif: "forest" },
   { file: "pages/key-festival.png", w: 1200, h: 1600, atm: "festival", motif: "circus" },
   { file: "pages/key-rift.png", w: 1200, h: 1600, atm: "rift", motif: "rift" },
+  { file: "pages/page-commons-dusk.png", w: 1200, h: 1600, atm: "dusk", motif: "rift" },
+  { file: "pages/page-layered-ruin.png", w: 1200, h: 1600, atm: "ruin", motif: "city" },
+  { file: "pages/page-lantern-sky.png", w: 1200, h: 1600, atm: "festival", motif: "lantern" },
   { file: "bonus/wallpaper-commons.png", w: 1920, h: 1080, atm: "festival", motif: "circus" },
   { file: "bonus/wallpaper-rift.png", w: 1920, h: 1080, atm: "rift", motif: "rift" },
   { file: "frames/open-book-matte.png", w: 1600, h: 1100, atm: "dusk", motif: "rift", bookMatte: true },
@@ -142,11 +184,14 @@ function bookMatteSvg(w, h, colors) {
 }
 
 async function main() {
+  let wrote = 0;
+  let skipped = 0;
   for (const job of jobs) {
     const out = path.join(root, job.file);
     mkdirSync(path.dirname(out), { recursive: true });
     if (existsSync(out) && !force) {
       console.log("skip", job.file);
+      skipped += 1;
       continue;
     }
     const colors = ATMOS[job.atm];
@@ -155,13 +200,26 @@ async function main() {
       : svgArt(job.w, job.h, colors, job.motif);
     await sharp(Buffer.from(svg)).png().toFile(out);
     console.log("wrote", job.file);
+    wrote += 1;
   }
 
-  // Tiny manifest for audits
   writeFileSync(
     path.join(root, "GENERATION_NOTES.md"),
-    `# Comics art\n\n- Covers: AI GenerateImage (original IP)\n- Extra splashes/pages: procedural sharp SVG→PNG (this script)\n- Run with \`--force\` to regenerate procedural pages (character silhouettes + scenery)\n- All PAGE_ART / SPLASH paths in src/content/comics/art.ts must exist under public/\n`,
+    `# Comics art
+
+- Covers: AI GenerateImage (original IP) — 10 issue covers in \`covers/\`
+- Key splashes + scenic pages: procedural sharp SVG→PNG (this script) unless replaced by AI
+- Per-issue page plates: \`node scripts/comics/generate-page-art.mjs\`
+- Run with \`--force\` to regenerate procedural key art
+- All PAGE_ART / SPLASH paths in \`src/content/comics/art.ts\` must exist under \`public/\`
+
+## Completeness
+
+- Key art jobs: ${jobs.length} (wrote ${wrote}, skipped ${skipped} this run)
+- Generated: ${new Date().toISOString().slice(0, 10)}
+`,
   );
+  console.log(`done — wrote ${wrote}, skipped ${skipped}`);
 }
 
 main().catch((e) => {

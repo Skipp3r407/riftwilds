@@ -174,6 +174,12 @@ const QUEST_CATALOG_SEED: QuestDef[] = [
     rewards: [
       { kind: "care_item", itemKey: "demo-snack-pack", label: "Demo Snack Pack", quantity: 1 },
       { kind: "xp", amount: 120 },
+      {
+        kind: "egg",
+        label: "Common Rift Egg",
+        eggType: "COMMON_RIFT",
+        earnPath: "QUEST",
+      },
     ],
     sortOrder: 70,
   },
@@ -469,6 +475,9 @@ export function formatQuestReward(reward: QuestReward): string {
   if (reward.kind === "arena_points") return `${reward.amount} Rift Points`;
   if (reward.kind === "soft_currency") {
     return `${reward.amount} ${reward.label ?? "Credits"}`;
+  }
+  if (reward.kind === "egg") {
+    return `Egg: ${reward.label}`;
   }
   return `${reward.label} ×${reward.quantity}`;
 }

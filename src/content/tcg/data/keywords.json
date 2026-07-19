@@ -211,5 +211,62 @@
       "Deny setup"
     ],
     "animationHint": "Stone glyph ignition"
+  },
+  {
+    "id": "flying",
+    "name": "Flying",
+    "shortText": "Ignores non-Flying Guardians when striking the Keeper.",
+    "rules": "A Flying unit may attack the opposing Keeper while only grounded Guardians are present. Flying Guardians still intercept Flying attackers.",
+    "interactions": [
+      "Charge + Flying for same-turn face pressure",
+      "Guardian with Flying holds the sky line"
+    ],
+    "counterplay": [
+      "Field Flying Guardians",
+      "Removal spells"
+    ],
+    "animationHint": "Wing-shadow glide over the lane"
+  },
+  {
+    "id": "poison",
+    "name": "Poison",
+    "shortText": "On strike, apply Poison (1 damage at dawn).",
+    "rules": "When a Poison unit deals combat damage to another unit, that unit gains a Poison status. At the start of its controller's turn, it takes 1 damage per Poison stack.",
+    "interactions": [
+      "Bloom can outpace light Poison",
+      "Ward does not block combat Poison"
+    ],
+    "counterplay": [
+      "Kill before dawn",
+      "Silence (planned)"
+    ],
+    "animationHint": "Viridian drip on the wound"
+  },
+  {
+    "id": "taunt",
+    "name": "Taunt",
+    "shortText": "Alias of Guardian — must be attacked first.",
+    "rules": "Canonical engine id is Guardian. Taunt is accepted as an alias in card data and UI.",
+    "interactions": ["See Guardian"],
+    "counterplay": ["See Guardian"],
+    "animationHint": "Shield stance, amber rim"
+  },
+  {
+    "id": "guard",
+    "name": "Guard",
+    "shortText": "Alias of Guardian — must be attacked first.",
+    "rules": "Canonical engine id is Guardian. Guard is accepted as an alias in card data and UI.",
+    "interactions": ["See Guardian"],
+    "counterplay": ["See Guardian"],
+    "animationHint": "Shield stance, amber rim"
+  },
+  {
+    "id": "heal",
+    "name": "Heal",
+    "shortText": "Restores Keeper or unit HP.",
+    "rules": "Heal effects restore hit points up to maximum. Excess may Overflow when that keyword is also present.",
+    "interactions": ["Overflow", "Bloom"],
+    "counterplay": ["Race before the heal turn", "Corrupt"],
+    "animationHint": "Soft green mend pulse"
   }
 ]

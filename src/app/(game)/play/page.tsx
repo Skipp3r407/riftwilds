@@ -12,6 +12,8 @@ import { EconomySummary } from "@/components/economy";
 import { AcademyOnboardingBanner } from "@/components/academy";
 import { PageHeader } from "@/components/shared/page-header";
 import { ImageButton, type ImageButtonVariant } from "@/components/ui/image-button";
+import { RiftPageShell } from "@/components/ui/rift-page-shell";
+import { RiftPanel } from "@/components/ui/rift-panel";
 
 export const metadata = { title: "Play" };
 
@@ -72,9 +74,9 @@ const featureCards = [
     glow: "rgba(255,184,77,0.18)",
   },
   {
-    title: "Starter claim",
+    title: "Starter Egg",
     body: featureFlagDefaults.STARTER_EGG_CLAIMS_ENABLED
-      ? "Enabled for eligible Keepers."
+      ? "Guaranteed free Starter Egg — no wallet or SOL."
       : "Paused",
     href: "/hatchery",
     thumb: sectionUiThumbPath("features", "starter-claim"),
@@ -103,82 +105,86 @@ const featureCards = [
 
 export default function PlayDashboardPage() {
   return (
-    <div className="space-y-6">
-      <PageHeader
-        kicker="Keeper Dashboard"
-        titleSlug="play"
-        title={`Welcome to ${projectConfig.UNIVERSE_NAME}`}
-        description={
-          <>
-            Launch loop: collect cards, build a deck, duel in Rift Battles, then trade packs on the
-            marketplace. Hatch and care for your {projectConfig.CREATURE_NAME}. Live World habitat
-            stays enterable for development.
-          </>
-        }
-        status="TCG live"
-        statusTone="live"
-        actions={
-          <>
-            {quickActions.map((action) => (
-              <ImageButton
-                key={action.href}
-                href={action.href}
-                variant={action.variant}
-                className="gap-2.5 px-4 py-2.5 sm:gap-3 sm:px-5 sm:py-3.5"
+    <RiftPageShell mood="hearth" className="!max-w-7xl">
+      <div className="space-y-6">
+        <PageHeader
+          kicker="Keeper Dashboard"
+          titleSlug="play"
+          title={`Welcome to ${projectConfig.UNIVERSE_NAME}`}
+          description={
+            <>
+              Free to play — no wallet needed. Hatch companions, collect cards, duel in Rift Battles,
+              and care for your {projectConfig.CREATURE_NAME}. Optional{" "}
+              {projectConfig.TOKEN_SYMBOL} perks are cosmetics only.
+            </>
+          }
+          status="Free to play"
+          statusTone="live"
+          actions={
+            <>
+              {quickActions.map((action) => (
+                <ImageButton
+                  key={action.href}
+                  href={action.href}
+                  variant={action.variant}
+                  className="gap-2 px-3.5 py-2 sm:gap-2.5 sm:px-4 sm:py-2.5"
+                >
+                  <Image
+                    src={dashboardActionIconPath(action.slug)}
+                    alt=""
+                    width={32}
+                    height={32}
+                    className="h-7 w-7 shrink-0 bg-transparent object-contain sm:h-8 sm:w-8"
+                    unoptimized
+                    aria-hidden
+                  />
+                  <span>{action.label}</span>
+                </ImageButton>
+              ))}
+            </>
+          }
+        />
+
+        <AcademyOnboardingBanner />
+
+        <DashboardEconomyWidget />
+
+        <EconomySummary variant="compact" />
+
+        <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {featureCards.map((card) => (
+            <Link key={card.title} href={card.href} className="focus-ring">
+              <RiftPanel
+                material="obsidian"
+                interactive
+                className="group relative h-full overflow-hidden"
               >
-                <Image
-                  src={dashboardActionIconPath(action.slug)}
-                  alt=""
-                  width={56}
-                  height={56}
-                  className="h-12 w-12 shrink-0 bg-transparent object-contain sm:h-14 sm:w-14"
-                  unoptimized
+                <span
                   aria-hidden
+                  className="pointer-events-none absolute -right-8 -top-10 h-36 w-36 rounded-full opacity-70 blur-2xl transition group-hover:opacity-100"
+                  style={{ background: card.glow }}
                 />
-                <span>{action.label}</span>
-              </ImageButton>
-            ))}
-          </>
-        }
-      />
-
-      <AcademyOnboardingBanner />
-
-      <DashboardEconomyWidget />
-
-      <EconomySummary variant="compact" />
-
-      <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {featureCards.map((card) => (
-          <Link
-            key={card.title}
-            href={card.href}
-            className="panel panel-interactive group relative block overflow-hidden p-5 focus-ring"
-          >
-            <span
-              aria-hidden
-              className="pointer-events-none absolute -right-8 -top-10 h-36 w-36 rounded-full opacity-70 blur-2xl transition group-hover:opacity-100"
-              style={{ background: card.glow }}
-            />
-            <div className="relative flex items-start gap-4">
-              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-[rgba(61,231,255,0.18)] bg-[radial-gradient(ellipse_at_center,rgba(61,231,255,0.12),rgba(10,14,26,0.4)_70%)] shadow-[inset_0_0_20px_rgba(61,231,255,0.08)]">
-                <Image
-                  src={card.thumb}
-                  alt=""
-                  width={128}
-                  height={128}
-                  className="h-full w-full object-contain p-1"
-                  unoptimized
-                />
-              </div>
-              <div className="min-w-0">
-                <h2 className="font-display text-lg text-white">{card.title}</h2>
-                <p className="mt-2 text-sm text-[var(--text-muted)]">{card.body}</p>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </section>
-    </div>
+                <div className="relative flex items-start gap-4">
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-[rgba(61,231,255,0.18)] bg-[radial-gradient(ellipse_at_center,rgba(61,231,255,0.12),rgba(10,14,26,0.4)_70%)] shadow-[inset_0_0_20px_rgba(61,231,255,0.08)]">
+                    <Image
+                      src={card.thumb}
+                      alt=""
+                      width={128}
+                      height={128}
+                      className="h-full w-full object-contain p-1"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="min-w-0">
+                    <h2 className="font-display text-lg text-white">{card.title}</h2>
+                    <p className="mt-2 text-sm text-[var(--text-muted)]">{card.body}</p>
+                  </div>
+                </div>
+              </RiftPanel>
+            </Link>
+          ))}
+        </section>
+      </div>
+    </RiftPageShell>
   );
 }

@@ -14,6 +14,7 @@ export type MetricAvailability = "live" | "partial" | "awaiting_mint" | "unavail
 export type TokenMarketMetrics = {
   mint: string | null;
   marketCapUsd: number | null;
+  fdvUsd: number | null;
   priceUsd: number | null;
   liquidityUsd: number | null;
   volume24hUsd: number | null;
@@ -73,6 +74,7 @@ type GameMetricInput = {
 
 async function fetchDexScreener(mint: string): Promise<{
   marketCapUsd: number | null;
+  fdvUsd: number | null;
   priceUsd: number | null;
   liquidityUsd: number | null;
   volume24hUsd: number | null;
@@ -100,7 +102,8 @@ async function fetchDexScreener(mint: string): Promise<{
     const pair = json.pairs?.[0];
     if (!pair) return emptyDex("dexscreener_no_pairs");
     return {
-      marketCapUsd: pair.marketCap ?? pair.fdv ?? null,
+      marketCapUsd: pair.marketCap ?? null,
+      fdvUsd: pair.fdv ?? null,
       priceUsd: pair.priceUsd ? Number(pair.priceUsd) : null,
       liquidityUsd: pair.liquidity?.usd ?? null,
       volume24hUsd: pair.volume?.h24 ?? null,
@@ -115,6 +118,7 @@ async function fetchDexScreener(mint: string): Promise<{
 function emptyDex(source: string) {
   return {
     marketCapUsd: null,
+    fdvUsd: null,
     priceUsd: null,
     liquidityUsd: null,
     volume24hUsd: null,
@@ -133,6 +137,7 @@ export async function getTokenMarketMetrics(): Promise<TokenMarketMetrics> {
     return {
       mint: null,
       marketCapUsd: null,
+      fdvUsd: null,
       priceUsd: null,
       liquidityUsd: null,
       volume24hUsd: null,
@@ -155,6 +160,7 @@ export async function getTokenMarketMetrics(): Promise<TokenMarketMetrics> {
   return {
     mint: config.mint,
     marketCapUsd: dex.marketCapUsd,
+    fdvUsd: dex.fdvUsd,
     priceUsd: dex.priceUsd,
     liquidityUsd: dex.liquidityUsd,
     volume24hUsd: dex.volume24hUsd,

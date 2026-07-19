@@ -24,6 +24,7 @@ type ActiveLoop = {
   osc: OscillatorNode | null;
   noise: AudioBufferSourceNode | null;
   gain: GainNode;
+  panner: StereoPannerNode | null;
 };
 
 const KIND_TONE: Record<
@@ -81,7 +82,15 @@ class PositionalAudio {
 
     const bus = ctx.createGain();
     bus.gain.value = 0.0001;
-    bus.connect(dest);
+    // Stereo pan from listener-relative X — HRTF/PannerNode mesh is Phase 2.
+    const panner =
+      typeof ctx.createStereoPanner === "function" ? ctx.createStereoPanner() : null;
+    if (panner) {
+      bus.connect(panner);
+      panner.connect(dest);
+    } else {
+      bus.connect(dest);
+    }
 
     const tone = KIND_TONE[source.kind];
     let osc: OscillatorNode | null = null;
@@ -112,7 +121,7 @@ class PositionalAudio {
       noise.start();
     }
 
-    this.loops.set(source.id, { source, osc, noise, gain: bus });
+    this.loops.set(source.id, { source, osc, noise, gain: bus, panner });
     this.updateGains();
   }
 
@@ -136,13 +145,14 @@ class PositionalAudio {
   private updateGains() {
     const ambient = audioManager.gainFor("ambient");
     for (const loop of this.loops.values()) {
-      const g = distanceGain(
-        this.listener.x - loop.source.x,
-        this.listener.y - loop.source.y,
-        loop.source.radius,
-        loop.source.peak ?? 1,
-      );
+      const dx = this.listener.x - loop.source.x;
+      const dy = this.listener.y - loop.source.y;
+      const g = distanceGain(dx, dy, loop.source.radius, loop.source.peak ?? 1);
       loop.gain.gain.value = Math.max(0.0001, g * ambient * 0.7);
+      if (loop.panner) {
+        const pan = clamp01(Math.abs(dx) / Math.max(1, loop.source.radius)) * Math.sign(-dx || 1);
+        loop.panner.pan.value = Math.max(-1, Math.min(1, pan * 0.85));
+      }
     }
   }
 }

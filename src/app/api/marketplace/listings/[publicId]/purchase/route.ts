@@ -115,6 +115,34 @@ export async function POST(req: Request, { params }: Params) {
       : serializeAllocation(saleAllocationForPetsAndEggs(price));
   const itemSplit = listing.kind === "ITEM" ? saleAllocationForItems(price) : null;
 
+  // Soft-hook: record platform fee share into Project Treasury Ops (demo ledger).
+  // Does not move player SOL or enable escrow/P2W.
+  let treasuryOpsIngest: { incomingId?: string; duplicate?: boolean } | null = null;
+  if (featureFlagDefaults.TREASURY_OPS_ENABLED && featureFlagDefaults.MARKETPLACE_REVENUE_SPLIT_ENABLED) {
+    try {
+      const { ingestMarketplaceFeeHook } = await import("@/lib/treasury-ops");
+      const feeLamports =
+        itemSplit?.projectReserve?.toString() ??
+        allocation?.lines?.find((l) => l.destination === "GROWTH_RESERVE")
+          ?.allocatedAmountLamports ??
+        null;
+      if (feeLamports && BigInt(feeLamports) > 0n) {
+        const hooked = await ingestMarketplaceFeeHook({
+          amountLamports: String(feeLamports),
+          listingId: publicId,
+          settlementId: parsed.data.requestId,
+          actorId: buyerUserId,
+        });
+        treasuryOpsIngest = {
+          incomingId: hooked.incoming.id,
+          duplicate: hooked.duplicate,
+        };
+      }
+    } catch {
+      treasuryOpsIngest = null;
+    }
+  }
+
   return NextResponse.json({
     ok: true,
     mode: "credits",
@@ -132,6 +160,7 @@ export async function POST(req: Request, { params }: Params) {
           communityEvents: itemSplit.communityEvents.toString(),
         }
       : null,
+    treasuryOpsIngest,
     note: "Credits settlement applied. No SOL transferred. SOL never required for marketplace play.",
   });
 }

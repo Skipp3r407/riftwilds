@@ -10,10 +10,21 @@ export type AudioVolumeGroup =
   | "sfx"
   | "pet"
   | "combat"
-  | "weather";
+  | "weather"
+  | "voice"
+  | "notifications";
 
 /** Playback bus used for ducking / priority. */
-export type AudioBus = "music" | "ambient" | "ui" | "sfx" | "pet" | "combat" | "weather";
+export type AudioBus =
+  | "music"
+  | "ambient"
+  | "ui"
+  | "sfx"
+  | "pet"
+  | "combat"
+  | "weather"
+  | "voice"
+  | "notifications";
 
 export type AudioPriority = "low" | "normal" | "high" | "critical";
 
@@ -43,6 +54,8 @@ export const AUDIO_VOLUME_GROUPS: AudioVolumeGroup[] = [
   "pet",
   "combat",
   "weather",
+  "voice",
+  "notifications",
 ];
 
 export const DEFAULT_AUDIO_PREFS: AudioPrefs = {
@@ -56,6 +69,8 @@ export const DEFAULT_AUDIO_PREFS: AudioPrefs = {
     pet: 0.5,
     combat: 0.55,
     weather: 0.35,
+    voice: 0.65,
+    notifications: 0.5,
   },
 };
 

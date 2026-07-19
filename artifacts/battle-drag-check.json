@@ -1,0 +1,66 @@
+{
+  "title": "Rift Battle · Riftwilds",
+  "buttons": [
+    "PLAY",
+    "RIFT BATTLES",
+    "WORLD",
+    "MARKET",
+    "ECONOMY",
+    "COMMUNITY",
+    "Connect Wallet",
+    "FULLSCREEN",
+    "PLAY CARD NO CARD SELECTED",
+    "END TURN PASS INITIATIVE",
+    "SURRENDER ABORT MATCH",
+    "Needs 5 Rift Energy",
+    "",
+    "Needs 2 Rift Energy",
+    "",
+    "Needs 3 Rift Energy",
+    "",
+    "Needs 2 Rift Energy",
+    "",
+    "PLAY CARD NO CARD SELECTED",
+    "END TURN PASS INITIATIVE",
+    "SURRENDER ABORT MATCH",
+    "",
+    "",
+    "AMBIENCE 01/10 Sector",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "dragResult": {
+    "handCount": 4,
+    "handAfter": 4,
+    "boardUnits": 0,
+    "phaseText": "TURN 1 · MAIN\nYOUR MOVE",
+    "started": false,
+    "draggable": "true",
+    "pointerEvents": "auto",
+    "paddingTop": "0px",
+    "dragStartFired": {
+      "fired": true,
+      "draggableAttr": "true"
+    },
+    "cardBox": {
+      "x": 323.390625,
+      "y": 953.5,
+      "width": 152,
+      "height": 212.796875
+    },
+    "fieldBox": {
+      "x": 513.796875,
+      "y": 643.90625,
+      "width": 486.40625,
+      "height": 132.375
+    },
+    "ok": true,
+    "detail": "face is draggable; padding overlay cleared"
+  },
+  "logs": [
+    "CONSOLE Loading the stylesheet 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap' violates the following Content Security Policy directive: \"style-src 'self' 'unsafe-inline'\". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback. The action has been blocked."
+  ]
+}

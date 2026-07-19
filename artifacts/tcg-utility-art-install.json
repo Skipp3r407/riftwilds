@@ -1,0 +1,2553 @@
+{
+  "installed": [
+    {
+      "id": "rotr-s-item-small-healing-salve",
+      "name": "Small Healing Salve",
+      "slug": "small-healing-salve",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\small-healing-salve.png",
+      "rel": "/assets/tcg/subjects/small-healing-salve.png"
+    },
+    {
+      "id": "rotr-s-item-riftberry-tonic",
+      "name": "Riftberry Tonic",
+      "slug": "riftberry-tonic",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\riftberry-tonic.png",
+      "rel": "/assets/tcg/subjects/riftberry-tonic.png"
+    },
+    {
+      "id": "rotr-s-item-moonwater-flask",
+      "name": "Moonwater Flask",
+      "slug": "moonwater-flask",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moonwater-flask.png",
+      "rel": "/assets/tcg/subjects/moonwater-flask.png"
+    },
+    {
+      "id": "rotr-s-item-grove-restoration-brew",
+      "name": "Grove Restoration Brew",
+      "slug": "grove-restoration-brew",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\grove-restoration-brew.png",
+      "rel": "/assets/tcg/subjects/grove-restoration-brew.png"
+    },
+    {
+      "id": "rotr-s-item-emberheart-elixir",
+      "name": "Emberheart Elixir",
+      "slug": "emberheart-elixir",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\emberheart-elixir.png",
+      "rel": "/assets/tcg/subjects/emberheart-elixir.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-renewal-potion",
+      "name": "Spirit Renewal Potion",
+      "slug": "spirit-renewal-potion",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spirit-renewal-potion.png",
+      "rel": "/assets/tcg/subjects/spirit-renewal-potion.png"
+    },
+    {
+      "id": "rotr-s-item-radiant-recovery-flask",
+      "name": "Radiant Recovery Flask",
+      "slug": "radiant-recovery-flask",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\radiant-recovery-flask.png",
+      "rel": "/assets/tcg/subjects/radiant-recovery-flask.png"
+    },
+    {
+      "id": "rotr-s-item-celestial-renewal",
+      "name": "Celestial Renewal",
+      "slug": "celestial-renewal",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\celestial-renewal.png",
+      "rel": "/assets/tcg/subjects/celestial-renewal.png"
+    },
+    {
+      "id": "rotr-s-item-sparkfruit-juice",
+      "name": "Sparkfruit Juice",
+      "slug": "sparkfruit-juice",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sparkfruit-juice.png",
+      "rel": "/assets/tcg/subjects/sparkfruit-juice.png"
+    },
+    {
+      "id": "rotr-s-item-focus-tonic",
+      "name": "Focus Tonic",
+      "slug": "focus-tonic",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\focus-tonic.png",
+      "rel": "/assets/tcg/subjects/focus-tonic.png"
+    },
+    {
+      "id": "rotr-s-item-storm-energy-flask",
+      "name": "Storm Energy Flask",
+      "slug": "storm-energy-flask",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\storm-energy-flask.png",
+      "rel": "/assets/tcg/subjects/storm-energy-flask.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-charge",
+      "name": "Spirit Charge",
+      "slug": "spirit-charge",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spirit-charge.png",
+      "rel": "/assets/tcg/subjects/spirit-charge.png"
+    },
+    {
+      "id": "rotr-s-item-astral-energy-elixir",
+      "name": "Astral Energy Elixir",
+      "slug": "astral-energy-elixir",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\astral-energy-elixir.png",
+      "rel": "/assets/tcg/subjects/astral-energy-elixir.png"
+    },
+    {
+      "id": "rotr-s-item-basic-pet-meal",
+      "name": "Basic Pet Meal",
+      "slug": "basic-pet-meal",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\basic-pet-meal.png",
+      "rel": "/assets/tcg/subjects/basic-pet-meal.png"
+    },
+    {
+      "id": "rotr-s-item-premium-pet-meal",
+      "name": "Premium Pet Meal",
+      "slug": "premium-pet-meal",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\premium-pet-meal.png",
+      "rel": "/assets/tcg/subjects/premium-pet-meal.png"
+    },
+    {
+      "id": "rotr-s-item-fresh-water-flask",
+      "name": "Fresh Water Flask",
+      "slug": "fresh-water-flask",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fresh-water-flask.png",
+      "rel": "/assets/tcg/subjects/fresh-water-flask.png"
+    },
+    {
+      "id": "rotr-s-item-cleaning-kit",
+      "name": "Cleaning Kit",
+      "slug": "cleaning-kit",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\cleaning-kit.png",
+      "rel": "/assets/tcg/subjects/cleaning-kit.png"
+    },
+    {
+      "id": "rotr-s-item-rift-toy",
+      "name": "Rift Toy",
+      "slug": "rift-toy",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\rift-toy.png",
+      "rel": "/assets/tcg/subjects/rift-toy.png"
+    },
+    {
+      "id": "rotr-s-item-comfortable-nest",
+      "name": "Comfortable Nest",
+      "slug": "comfortable-nest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\comfortable-nest.png",
+      "rel": "/assets/tcg/subjects/comfortable-nest.png"
+    },
+    {
+      "id": "rotr-s-item-medicine-pack",
+      "name": "Medicine Pack",
+      "slug": "medicine-pack",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\medicine-pack.png",
+      "rel": "/assets/tcg/subjects/medicine-pack.png"
+    },
+    {
+      "id": "rotr-s-item-happiness-treat",
+      "name": "Happiness Treat",
+      "slug": "happiness-treat",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\happiness-treat.png",
+      "rel": "/assets/tcg/subjects/happiness-treat.png"
+    },
+    {
+      "id": "rotr-s-item-bonding-charm",
+      "name": "Bonding Charm",
+      "slug": "bonding-charm",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bonding-charm.png",
+      "rel": "/assets/tcg/subjects/bonding-charm.png"
+    },
+    {
+      "id": "rotr-s-item-recovery-blanket",
+      "name": "Recovery Blanket",
+      "slug": "recovery-blanket",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\recovery-blanket.png",
+      "rel": "/assets/tcg/subjects/recovery-blanket.png"
+    },
+    {
+      "id": "rotr-s-item-dormancy-revival-bloom",
+      "name": "Dormancy Revival Bloom",
+      "slug": "dormancy-revival-bloom",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dormancy-revival-bloom.png",
+      "rel": "/assets/tcg/subjects/dormancy-revival-bloom.png"
+    },
+    {
+      "id": "rotr-s-item-spark-healing-draught",
+      "name": "Spark Healing Draught",
+      "slug": "spark-healing-draught",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spark-healing-draught.png",
+      "rel": "/assets/tcg/subjects/spark-healing-draught.png"
+    },
+    {
+      "id": "rotr-s-item-tide-mend-vial",
+      "name": "Tide Mend Vial",
+      "slug": "tide-mend-vial",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tide-mend-vial.png",
+      "rel": "/assets/tcg/subjects/tide-mend-vial.png"
+    },
+    {
+      "id": "rotr-s-item-storm-surge-sip",
+      "name": "Storm Surge Sip",
+      "slug": "storm-surge-sip",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\storm-surge-sip.png",
+      "rel": "/assets/tcg/subjects/storm-surge-sip.png"
+    },
+    {
+      "id": "rotr-s-item-frost-focus-brew",
+      "name": "Frost Focus Brew",
+      "slug": "frost-focus-brew",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\frost-focus-brew.png",
+      "rel": "/assets/tcg/subjects/frost-focus-brew.png"
+    },
+    {
+      "id": "rotr-s-item-ember-soothe-balm",
+      "name": "Ember Soothe Balm",
+      "slug": "ember-soothe-balm",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ember-soothe-balm.png",
+      "rel": "/assets/tcg/subjects/ember-soothe-balm.png"
+    },
+    {
+      "id": "rotr-s-item-stone-steady-draught",
+      "name": "Stone Steady Draught",
+      "slug": "stone-steady-draught",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stone-steady-draught.png",
+      "rel": "/assets/tcg/subjects/stone-steady-draught.png"
+    },
+    {
+      "id": "rotr-s-item-crystal-berry-snack",
+      "name": "Crystal Berry Snack",
+      "slug": "crystal-berry-snack",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\crystal-berry-snack.png",
+      "rel": "/assets/tcg/subjects/crystal-berry-snack.png"
+    },
+    {
+      "id": "rotr-s-item-glowmoss-chew",
+      "name": "Glowmoss Chew",
+      "slug": "glowmoss-chew",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\glowmoss-chew.png",
+      "rel": "/assets/tcg/subjects/glowmoss-chew.png"
+    },
+    {
+      "id": "rotr-s-item-ripple-ball-toy",
+      "name": "Ripple Ball Toy",
+      "slug": "ripple-ball-toy",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ripple-ball-toy.png",
+      "rel": "/assets/tcg/subjects/ripple-ball-toy.png"
+    },
+    {
+      "id": "rotr-s-item-whisper-bell-toy",
+      "name": "Whisper Bell Toy",
+      "slug": "whisper-bell-toy",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\whisper-bell-toy.png",
+      "rel": "/assets/tcg/subjects/whisper-bell-toy.png"
+    },
+    {
+      "id": "rotr-s-item-nest-fluff-pillow",
+      "name": "Nest Fluff Pillow",
+      "slug": "nest-fluff-pillow",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\nest-fluff-pillow.png",
+      "rel": "/assets/tcg/subjects/nest-fluff-pillow.png"
+    },
+    {
+      "id": "rotr-s-item-grooming-comb-set",
+      "name": "Grooming Comb Set",
+      "slug": "grooming-comb-set",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\grooming-comb-set.png",
+      "rel": "/assets/tcg/subjects/grooming-comb-set.png"
+    },
+    {
+      "id": "rotr-s-item-bond-ribbon",
+      "name": "Bond Ribbon",
+      "slug": "bond-ribbon",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bond-ribbon.png",
+      "rel": "/assets/tcg/subjects/bond-ribbon.png"
+    },
+    {
+      "id": "rotr-s-item-aurora-treat",
+      "name": "Aurora Treat",
+      "slug": "aurora-treat",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\aurora-treat.png",
+      "rel": "/assets/tcg/subjects/aurora-treat.png"
+    },
+    {
+      "id": "rotr-s-item-moonpetal-bath-salts",
+      "name": "Moonpetal Bath Salts",
+      "slug": "moonpetal-bath-salts",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moonpetal-bath-salts.png",
+      "rel": "/assets/tcg/subjects/moonpetal-bath-salts.png"
+    },
+    {
+      "id": "rotr-s-item-vitality-petal-tea",
+      "name": "Vitality Petal Tea",
+      "slug": "vitality-petal-tea",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\vitality-petal-tea.png",
+      "rel": "/assets/tcg/subjects/vitality-petal-tea.png"
+    },
+    {
+      "id": "rotr-s-item-rift-salve-kit",
+      "name": "Rift Salve Kit",
+      "slug": "rift-salve-kit",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\rift-salve-kit.png",
+      "rel": "/assets/tcg/subjects/rift-salve-kit.png"
+    },
+    {
+      "id": "rotr-s-item-starlit-lullaby-charm",
+      "name": "Starlit Lullaby Charm",
+      "slug": "starlit-lullaby-charm",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\starlit-lullaby-charm.png",
+      "rel": "/assets/tcg/subjects/starlit-lullaby-charm.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-crystal",
+      "name": "Spirit Crystal",
+      "slug": "spirit-crystal",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spirit-crystal.png",
+      "rel": "/assets/tcg/subjects/spirit-crystal.png"
+    },
+    {
+      "id": "rotr-s-item-phoenix-feather",
+      "name": "Phoenix Feather",
+      "slug": "phoenix-feather",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\phoenix-feather.png",
+      "rel": "/assets/tcg/subjects/phoenix-feather.png"
+    },
+    {
+      "id": "rotr-s-item-ancient-heart",
+      "name": "Ancient Heart",
+      "slug": "ancient-heart",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ancient-heart.png",
+      "rel": "/assets/tcg/subjects/ancient-heart.png"
+    },
+    {
+      "id": "rotr-s-item-revival-herb",
+      "name": "Revival Herb",
+      "slug": "revival-herb",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\revival-herb.png",
+      "rel": "/assets/tcg/subjects/revival-herb.png"
+    },
+    {
+      "id": "rotr-s-item-healing-stone",
+      "name": "Healing Stone",
+      "slug": "healing-stone",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\healing-stone.png",
+      "rel": "/assets/tcg/subjects/healing-stone.png"
+    },
+    {
+      "id": "rotr-s-item-soul-bloom",
+      "name": "Soul Bloom",
+      "slug": "soul-bloom",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\soul-bloom.png",
+      "rel": "/assets/tcg/subjects/soul-bloom.png"
+    },
+    {
+      "id": "rotr-s-item-moon-tear",
+      "name": "Moon Tear",
+      "slug": "moon-tear",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moon-tear.png",
+      "rel": "/assets/tcg/subjects/moon-tear.png"
+    },
+    {
+      "id": "rotr-s-item-heart-flame",
+      "name": "Heart Flame",
+      "slug": "heart-flame",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\heart-flame.png",
+      "rel": "/assets/tcg/subjects/heart-flame.png"
+    },
+    {
+      "id": "rotr-s-item-sacred-feather",
+      "name": "Sacred Feather",
+      "slug": "sacred-feather",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sacred-feather.png",
+      "rel": "/assets/tcg/subjects/sacred-feather.png"
+    },
+    {
+      "id": "rotr-s-item-ancestor-stone",
+      "name": "Ancestor Stone",
+      "slug": "ancestor-stone",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ancestor-stone.png",
+      "rel": "/assets/tcg/subjects/ancestor-stone.png"
+    },
+    {
+      "id": "rotr-s-item-ancient-bell",
+      "name": "Ancient Bell",
+      "slug": "ancient-bell",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ancient-bell.png",
+      "rel": "/assets/tcg/subjects/ancient-bell.png"
+    },
+    {
+      "id": "rotr-s-item-revival-water",
+      "name": "Revival Water",
+      "slug": "revival-water",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\revival-water.png",
+      "rel": "/assets/tcg/subjects/revival-water.png"
+    },
+    {
+      "id": "rotr-s-item-healing-rune",
+      "name": "Healing Rune",
+      "slug": "healing-rune",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\healing-rune.png",
+      "rel": "/assets/tcg/subjects/healing-rune.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-lantern-charm",
+      "name": "Spirit Lantern Charm",
+      "slug": "spirit-lantern-charm",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spirit-lantern-charm.png",
+      "rel": "/assets/tcg/subjects/spirit-lantern-charm.png"
+    },
+    {
+      "id": "rotr-s-item-ember-bolt",
+      "name": "Ember Bolt",
+      "slug": "ember-bolt",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ember-bolt.png",
+      "rel": "/assets/tcg/subjects/ember-bolt.png"
+    },
+    {
+      "id": "rotr-s-item-tide-spiral",
+      "name": "Tide Spiral",
+      "slug": "tide-spiral",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tide-spiral.png",
+      "rel": "/assets/tcg/subjects/tide-spiral.png"
+    },
+    {
+      "id": "rotr-s-item-thorn-burst",
+      "name": "Thorn Burst",
+      "slug": "thorn-burst",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\thorn-burst.png",
+      "rel": "/assets/tcg/subjects/thorn-burst.png"
+    },
+    {
+      "id": "rotr-s-item-lightning-arc",
+      "name": "Lightning Arc",
+      "slug": "lightning-arc",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lightning-arc.png",
+      "rel": "/assets/tcg/subjects/lightning-arc.png"
+    },
+    {
+      "id": "rotr-s-item-stone-crash",
+      "name": "Stone Crash",
+      "slug": "stone-crash",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stone-crash.png",
+      "rel": "/assets/tcg/subjects/stone-crash.png"
+    },
+    {
+      "id": "rotr-s-item-frost-shard",
+      "name": "Frost Shard",
+      "slug": "frost-shard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\frost-shard.png",
+      "rel": "/assets/tcg/subjects/frost-shard.png"
+    },
+    {
+      "id": "rotr-s-item-radiant-beam",
+      "name": "Radiant Beam",
+      "slug": "radiant-beam",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\radiant-beam.png",
+      "rel": "/assets/tcg/subjects/radiant-beam.png"
+    },
+    {
+      "id": "rotr-s-item-void-pulse",
+      "name": "Void Pulse",
+      "slug": "void-pulse",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\void-pulse.png",
+      "rel": "/assets/tcg/subjects/void-pulse.png"
+    },
+    {
+      "id": "rotr-s-item-alloy-wave",
+      "name": "Alloy Wave",
+      "slug": "alloy-wave",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\alloy-wave.png",
+      "rel": "/assets/tcg/subjects/alloy-wave.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-flame",
+      "name": "Spirit Flame",
+      "slug": "spirit-flame",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spirit-flame.png",
+      "rel": "/assets/tcg/subjects/spirit-flame.png"
+    },
+    {
+      "id": "rotr-s-item-ember-shield",
+      "name": "Ember Shield",
+      "slug": "ember-shield",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ember-shield.png",
+      "rel": "/assets/tcg/subjects/ember-shield.png"
+    },
+    {
+      "id": "rotr-s-item-tide-barrier",
+      "name": "Tide Barrier",
+      "slug": "tide-barrier",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tide-barrier.png",
+      "rel": "/assets/tcg/subjects/tide-barrier.png"
+    },
+    {
+      "id": "rotr-s-item-bark-wall",
+      "name": "Bark Wall",
+      "slug": "bark-wall",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bark-wall.png",
+      "rel": "/assets/tcg/subjects/bark-wall.png"
+    },
+    {
+      "id": "rotr-s-item-storm-veil",
+      "name": "Storm Veil",
+      "slug": "storm-veil",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\storm-veil.png",
+      "rel": "/assets/tcg/subjects/storm-veil.png"
+    },
+    {
+      "id": "rotr-s-item-stone-guard",
+      "name": "Stone Guard",
+      "slug": "stone-guard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stone-guard.png",
+      "rel": "/assets/tcg/subjects/stone-guard.png"
+    },
+    {
+      "id": "rotr-s-item-frost-shell",
+      "name": "Frost Shell",
+      "slug": "frost-shell",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\frost-shell.png",
+      "rel": "/assets/tcg/subjects/frost-shell.png"
+    },
+    {
+      "id": "rotr-s-item-radiant-ward",
+      "name": "Radiant Ward",
+      "slug": "radiant-ward",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\radiant-ward.png",
+      "rel": "/assets/tcg/subjects/radiant-ward.png"
+    },
+    {
+      "id": "rotr-s-item-void-cloak",
+      "name": "Void Cloak",
+      "slug": "void-cloak",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\void-cloak.png",
+      "rel": "/assets/tcg/subjects/void-cloak.png"
+    },
+    {
+      "id": "rotr-s-item-alloy-barrier",
+      "name": "Alloy Barrier",
+      "slug": "alloy-barrier",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\alloy-barrier.png",
+      "rel": "/assets/tcg/subjects/alloy-barrier.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-protection",
+      "name": "Spirit Protection",
+      "slug": "spirit-protection",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spirit-protection.png",
+      "rel": "/assets/tcg/subjects/spirit-protection.png"
+    },
+    {
+      "id": "rotr-s-item-grove-mend",
+      "name": "Grove Mend",
+      "slug": "grove-mend",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\grove-mend.png",
+      "rel": "/assets/tcg/subjects/grove-mend.png"
+    },
+    {
+      "id": "rotr-s-item-moonwater-healing",
+      "name": "Moonwater Healing",
+      "slug": "moonwater-healing",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moonwater-healing.png",
+      "rel": "/assets/tcg/subjects/moonwater-healing.png"
+    },
+    {
+      "id": "rotr-s-item-root-bind",
+      "name": "Root Bind",
+      "slug": "root-bind",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\root-bind.png",
+      "rel": "/assets/tcg/subjects/root-bind.png"
+    },
+    {
+      "id": "rotr-s-item-frost-slow",
+      "name": "Frost Slow",
+      "slug": "frost-slow",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\frost-slow.png",
+      "rel": "/assets/tcg/subjects/frost-slow.png"
+    },
+    {
+      "id": "rotr-s-item-battle-focus",
+      "name": "Battle Focus",
+      "slug": "battle-focus",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\battle-focus.png",
+      "rel": "/assets/tcg/subjects/battle-focus.png"
+    },
+    {
+      "id": "rotr-s-item-speed-wind",
+      "name": "Speed Wind",
+      "slug": "speed-wind",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\speed-wind.png",
+      "rel": "/assets/tcg/subjects/speed-wind.png"
+    },
+    {
+      "id": "rotr-s-item-volcanic-heartburst",
+      "name": "Volcanic Heartburst",
+      "slug": "volcanic-heartburst",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\volcanic-heartburst.png",
+      "rel": "/assets/tcg/subjects/volcanic-heartburst.png"
+    },
+    {
+      "id": "rotr-s-item-moon-tide-collapse",
+      "name": "Moon-Tide Collapse",
+      "slug": "moon-tide-collapse",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moon-tide-collapse.png",
+      "rel": "/assets/tcg/subjects/moon-tide-collapse.png"
+    },
+    {
+      "id": "rotr-s-item-worldroot-awakening",
+      "name": "Worldroot Awakening",
+      "slug": "worldroot-awakening",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\worldroot-awakening.png",
+      "rel": "/assets/tcg/subjects/worldroot-awakening.png"
+    },
+    {
+      "id": "rotr-s-item-sky-rift-tempest",
+      "name": "Sky Rift Tempest",
+      "slug": "sky-rift-tempest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sky-rift-tempest.png",
+      "rel": "/assets/tcg/subjects/sky-rift-tempest.png"
+    },
+    {
+      "id": "rotr-s-item-ancient-mountain-guard",
+      "name": "Ancient Mountain Guard",
+      "slug": "ancient-mountain-guard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ancient-mountain-guard.png",
+      "rel": "/assets/tcg/subjects/ancient-mountain-guard.png"
+    },
+    {
+      "id": "rotr-s-item-eternal-winter-ring",
+      "name": "Eternal Winter Ring",
+      "slug": "eternal-winter-ring",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\eternal-winter-ring.png",
+      "rel": "/assets/tcg/subjects/eternal-winter-ring.png"
+    },
+    {
+      "id": "rotr-s-item-dawnstar-ascension",
+      "name": "Dawnstar Ascension",
+      "slug": "dawnstar-ascension",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dawnstar-ascension.png",
+      "rel": "/assets/tcg/subjects/dawnstar-ascension.png"
+    },
+    {
+      "id": "rotr-s-item-eclipse-singularity",
+      "name": "Eclipse Singularity",
+      "slug": "eclipse-singularity",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\eclipse-singularity.png",
+      "rel": "/assets/tcg/subjects/eclipse-singularity.png"
+    },
+    {
+      "id": "rotr-s-item-titan-core-overdrive",
+      "name": "Titan Core Overdrive",
+      "slug": "titan-core-overdrive",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\titan-core-overdrive.png",
+      "rel": "/assets/tcg/subjects/titan-core-overdrive.png"
+    },
+    {
+      "id": "rotr-s-item-ancestral-lantern-parade",
+      "name": "Ancestral Lantern Parade",
+      "slug": "ancestral-lantern-parade",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ancestral-lantern-parade.png",
+      "rel": "/assets/tcg/subjects/ancestral-lantern-parade.png"
+    },
+    {
+      "id": "rotr-e-keeper-s-satchel",
+      "name": "Keeper's Satchel",
+      "slug": "keeper-s-satchel",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\keeper-s-satchel.png",
+      "rel": "/assets/tcg/subjects/keeper-s-satchel.png"
+    },
+    {
+      "id": "rotr-e-tide-charm",
+      "name": "Tide Charm",
+      "slug": "tide-charm",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tide-charm.png",
+      "rel": "/assets/tcg/subjects/tide-charm.png"
+    },
+    {
+      "id": "rotr-e-moss-cloak",
+      "name": "Moss Cloak",
+      "slug": "moss-cloak",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moss-cloak.png",
+      "rel": "/assets/tcg/subjects/moss-cloak.png"
+    },
+    {
+      "id": "rotr-e-storm-whistle",
+      "name": "Storm Whistle",
+      "slug": "storm-whistle",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\storm-whistle.png",
+      "rel": "/assets/tcg/subjects/storm-whistle.png"
+    },
+    {
+      "id": "rotr-e-crystal-lens",
+      "name": "Crystal Lens",
+      "slug": "crystal-lens",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\crystal-lens.png",
+      "rel": "/assets/tcg/subjects/crystal-lens.png"
+    },
+    {
+      "id": "rotr-e-shade-mantle",
+      "name": "Shade Mantle",
+      "slug": "shade-mantle",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\shade-mantle.png",
+      "rel": "/assets/tcg/subjects/shade-mantle.png"
+    },
+    {
+      "id": "rotr-e-lantern-badge",
+      "name": "Lantern Badge",
+      "slug": "lantern-badge",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-badge.png",
+      "rel": "/assets/tcg/subjects/lantern-badge.png"
+    },
+    {
+      "id": "rotr-e-item-wooden-paw-guard",
+      "name": "Wooden Paw Guard",
+      "slug": "wooden-paw-guard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\wooden-paw-guard.png",
+      "rel": "/assets/tcg/subjects/wooden-paw-guard.png"
+    },
+    {
+      "id": "rotr-e-item-smooth-stone-claw",
+      "name": "Smooth Stone Claw",
+      "slug": "smooth-stone-claw",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\smooth-stone-claw.png",
+      "rel": "/assets/tcg/subjects/smooth-stone-claw.png"
+    },
+    {
+      "id": "rotr-e-item-training-tail-ring",
+      "name": "Training Tail Ring",
+      "slug": "training-tail-ring",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\training-tail-ring.png",
+      "rel": "/assets/tcg/subjects/training-tail-ring.png"
+    },
+    {
+      "id": "rotr-e-item-basic-focus-orb",
+      "name": "Basic Focus Orb",
+      "slug": "basic-focus-orb",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\basic-focus-orb.png",
+      "rel": "/assets/tcg/subjects/basic-focus-orb.png"
+    },
+    {
+      "id": "rotr-e-item-cloth-battle-harness",
+      "name": "Cloth Battle Harness",
+      "slug": "cloth-battle-harness",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\cloth-battle-harness.png",
+      "rel": "/assets/tcg/subjects/cloth-battle-harness.png"
+    },
+    {
+      "id": "rotr-e-item-grove-twig-wand",
+      "name": "Grove Twig Wand",
+      "slug": "grove-twig-wand",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\grove-twig-wand.png",
+      "rel": "/assets/tcg/subjects/grove-twig-wand.png"
+    },
+    {
+      "id": "rotr-e-item-simple-horncap",
+      "name": "Simple Horncap",
+      "slug": "simple-horncap",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\simple-horncap.png",
+      "rel": "/assets/tcg/subjects/simple-horncap.png"
+    },
+    {
+      "id": "rotr-e-item-ember-talons",
+      "name": "Ember Talons",
+      "slug": "ember-talons",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ember-talons.png",
+      "rel": "/assets/tcg/subjects/ember-talons.png"
+    },
+    {
+      "id": "rotr-e-item-tideglass-claws",
+      "name": "Tideglass Claws",
+      "slug": "tideglass-claws",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tideglass-claws.png",
+      "rel": "/assets/tcg/subjects/tideglass-claws.png"
+    },
+    {
+      "id": "rotr-e-item-mossvine-grips",
+      "name": "Mossvine Grips",
+      "slug": "mossvine-grips",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mossvine-grips.png",
+      "rel": "/assets/tcg/subjects/mossvine-grips.png"
+    },
+    {
+      "id": "rotr-e-item-spark-tail-ring",
+      "name": "Spark Tail Ring",
+      "slug": "spark-tail-ring",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spark-tail-ring.png",
+      "rel": "/assets/tcg/subjects/spark-tail-ring.png"
+    },
+    {
+      "id": "rotr-e-item-frost-crystal-tip",
+      "name": "Frost Crystal Tip",
+      "slug": "frost-crystal-tip",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\frost-crystal-tip.png",
+      "rel": "/assets/tcg/subjects/frost-crystal-tip.png"
+    },
+    {
+      "id": "rotr-e-item-spirit-glow-orb",
+      "name": "Spirit Glow Orb",
+      "slug": "spirit-glow-orb",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spirit-glow-orb.png",
+      "rel": "/assets/tcg/subjects/spirit-glow-orb.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-training-blade",
+      "name": "Alloy Training Blade",
+      "slug": "alloy-training-blade",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\alloy-training-blade.png",
+      "rel": "/assets/tcg/subjects/alloy-training-blade.png"
+    },
+    {
+      "id": "rotr-e-item-ashfang-talons",
+      "name": "Ashfang Talons",
+      "slug": "ashfang-talons",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ashfang-talons.png",
+      "rel": "/assets/tcg/subjects/ashfang-talons.png"
+    },
+    {
+      "id": "rotr-e-item-moonwater-pearl",
+      "name": "Moonwater Pearl",
+      "slug": "moonwater-pearl",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moonwater-pearl.png",
+      "rel": "/assets/tcg/subjects/moonwater-pearl.png"
+    },
+    {
+      "id": "rotr-e-item-thornroot-crusher",
+      "name": "Thornroot Crusher",
+      "slug": "thornroot-crusher",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\thornroot-crusher.png",
+      "rel": "/assets/tcg/subjects/thornroot-crusher.png"
+    },
+    {
+      "id": "rotr-e-item-stormcoil-harness",
+      "name": "Stormcoil Harness",
+      "slug": "stormcoil-harness",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stormcoil-harness.png",
+      "rel": "/assets/tcg/subjects/stormcoil-harness.png"
+    },
+    {
+      "id": "rotr-e-item-obsidian-tailblade",
+      "name": "Obsidian Tailblade",
+      "slug": "obsidian-tailblade",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\obsidian-tailblade.png",
+      "rel": "/assets/tcg/subjects/obsidian-tailblade.png"
+    },
+    {
+      "id": "rotr-e-item-radiant-sun-disk",
+      "name": "Radiant Sun Disk",
+      "slug": "radiant-sun-disk",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\radiant-sun-disk.png",
+      "rel": "/assets/tcg/subjects/radiant-sun-disk.png"
+    },
+    {
+      "id": "rotr-e-item-voidshade-claws",
+      "name": "Voidshade Claws",
+      "slug": "voidshade-claws",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\voidshade-claws.png",
+      "rel": "/assets/tcg/subjects/voidshade-claws.png"
+    },
+    {
+      "id": "rotr-e-item-cinderstorm-gauntlets",
+      "name": "Cinderstorm Gauntlets",
+      "slug": "cinderstorm-gauntlets",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\cinderstorm-gauntlets.png",
+      "rel": "/assets/tcg/subjects/cinderstorm-gauntlets.png"
+    },
+    {
+      "id": "rotr-e-item-tidal-crescent-blade",
+      "name": "Tidal Crescent Blade",
+      "slug": "tidal-crescent-blade",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tidal-crescent-blade.png",
+      "rel": "/assets/tcg/subjects/tidal-crescent-blade.png"
+    },
+    {
+      "id": "rotr-e-item-ancient-grove-antlers",
+      "name": "Ancient Grove Antlers",
+      "slug": "ancient-grove-antlers",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ancient-grove-antlers.png",
+      "rel": "/assets/tcg/subjects/ancient-grove-antlers.png"
+    },
+    {
+      "id": "rotr-e-item-thunder-rift-coil",
+      "name": "Thunder Rift Coil",
+      "slug": "thunder-rift-coil",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\thunder-rift-coil.png",
+      "rel": "/assets/tcg/subjects/thunder-rift-coil.png"
+    },
+    {
+      "id": "rotr-e-item-glacial-moon-crest",
+      "name": "Glacial Moon Crest",
+      "slug": "glacial-moon-crest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\glacial-moon-crest.png",
+      "rel": "/assets/tcg/subjects/glacial-moon-crest.png"
+    },
+    {
+      "id": "rotr-e-item-spiritfire-lantern",
+      "name": "Spiritfire Lantern",
+      "slug": "spiritfire-lantern",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spiritfire-lantern.png",
+      "rel": "/assets/tcg/subjects/spiritfire-lantern.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-pulse-cannon",
+      "name": "Alloy Pulse Cannon",
+      "slug": "alloy-pulse-cannon",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\alloy-pulse-cannon.png",
+      "rel": "/assets/tcg/subjects/alloy-pulse-cannon.png"
+    },
+    {
+      "id": "rotr-e-item-heart-of-the-volcano",
+      "name": "Heart of the Volcano",
+      "slug": "heart-of-the-volcano",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\heart-of-the-volcano.png",
+      "rel": "/assets/tcg/subjects/heart-of-the-volcano.png"
+    },
+    {
+      "id": "rotr-e-item-crown-of-the-deep-tide",
+      "name": "Crown of the Deep Tide",
+      "slug": "crown-of-the-deep-tide",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\crown-of-the-deep-tide.png",
+      "rel": "/assets/tcg/subjects/crown-of-the-deep-tide.png"
+    },
+    {
+      "id": "rotr-e-item-elderwood-battle-crest",
+      "name": "Elderwood Battle Crest",
+      "slug": "elderwood-battle-crest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\elderwood-battle-crest.png",
+      "rel": "/assets/tcg/subjects/elderwood-battle-crest.png"
+    },
+    {
+      "id": "rotr-e-item-skybreaker-storm-harness",
+      "name": "Skybreaker Storm Harness",
+      "slug": "skybreaker-storm-harness",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\skybreaker-storm-harness.png",
+      "rel": "/assets/tcg/subjects/skybreaker-storm-harness.png"
+    },
+    {
+      "id": "rotr-e-item-radiant-dawn-halo",
+      "name": "Radiant Dawn Halo",
+      "slug": "radiant-dawn-halo",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\radiant-dawn-halo.png",
+      "rel": "/assets/tcg/subjects/radiant-dawn-halo.png"
+    },
+    {
+      "id": "rotr-e-item-void-eclipse-blade",
+      "name": "Void Eclipse Blade",
+      "slug": "void-eclipse-blade",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\void-eclipse-blade.png",
+      "rel": "/assets/tcg/subjects/void-eclipse-blade.png"
+    },
+    {
+      "id": "rotr-e-item-riftmaker-prism",
+      "name": "Riftmaker Prism",
+      "slug": "riftmaker-prism",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\riftmaker-prism.png",
+      "rel": "/assets/tcg/subjects/riftmaker-prism.png"
+    },
+    {
+      "id": "rotr-e-item-worldroot-relic",
+      "name": "Worldroot Relic",
+      "slug": "worldroot-relic",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\worldroot-relic.png",
+      "rel": "/assets/tcg/subjects/worldroot-relic.png"
+    },
+    {
+      "id": "rotr-e-item-astral-tempest-core",
+      "name": "Astral Tempest Core",
+      "slug": "astral-tempest-core",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\astral-tempest-core.png",
+      "rel": "/assets/tcg/subjects/astral-tempest-core.png"
+    },
+    {
+      "id": "rotr-e-item-starforged-halo",
+      "name": "Starforged Halo",
+      "slug": "starforged-halo",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\starforged-halo.png",
+      "rel": "/assets/tcg/subjects/starforged-halo.png"
+    },
+    {
+      "id": "rotr-e-item-celestial-riftblade",
+      "name": "Celestial Riftblade",
+      "slug": "celestial-riftblade",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\celestial-riftblade.png",
+      "rel": "/assets/tcg/subjects/celestial-riftblade.png"
+    },
+    {
+      "id": "rotr-e-item-crown-of-ten-affinities",
+      "name": "Crown of Ten Affinities",
+      "slug": "crown-of-ten-affinities",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\crown-of-ten-affinities.png",
+      "rel": "/assets/tcg/subjects/crown-of-ten-affinities.png"
+    },
+    {
+      "id": "rotr-e-item-ember-spark-claws",
+      "name": "Ember Spark Claws",
+      "slug": "ember-spark-claws",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ember-spark-claws.png",
+      "rel": "/assets/tcg/subjects/ember-spark-claws.png"
+    },
+    {
+      "id": "rotr-e-item-tide-fin-blade",
+      "name": "Tide Fin Blade",
+      "slug": "tide-fin-blade",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tide-fin-blade.png",
+      "rel": "/assets/tcg/subjects/tide-fin-blade.png"
+    },
+    {
+      "id": "rotr-e-item-pebble-horn-cap",
+      "name": "Pebble Horn Cap",
+      "slug": "pebble-horn-cap",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\pebble-horn-cap.png",
+      "rel": "/assets/tcg/subjects/pebble-horn-cap.png"
+    },
+    {
+      "id": "rotr-e-item-breeze-focus-seed",
+      "name": "Breeze Focus Seed",
+      "slug": "breeze-focus-seed",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\breeze-focus-seed.png",
+      "rel": "/assets/tcg/subjects/breeze-focus-seed.png"
+    },
+    {
+      "id": "rotr-e-item-reed-training-harness",
+      "name": "Reed Training Harness",
+      "slug": "reed-training-harness",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\reed-training-harness.png",
+      "rel": "/assets/tcg/subjects/reed-training-harness.png"
+    },
+    {
+      "id": "rotr-e-item-frostbite-paw-spikes",
+      "name": "Frostbite Paw Spikes",
+      "slug": "frostbite-paw-spikes",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\frostbite-paw-spikes.png",
+      "rel": "/assets/tcg/subjects/frostbite-paw-spikes.png"
+    },
+    {
+      "id": "rotr-e-item-kelp-lash-coil",
+      "name": "Kelp Lash Coil",
+      "slug": "kelp-lash-coil",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\kelp-lash-coil.png",
+      "rel": "/assets/tcg/subjects/kelp-lash-coil.png"
+    },
+    {
+      "id": "rotr-e-item-thunder-tine-crest",
+      "name": "Thunder Tine Crest",
+      "slug": "thunder-tine-crest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\thunder-tine-crest.png",
+      "rel": "/assets/tcg/subjects/thunder-tine-crest.png"
+    },
+    {
+      "id": "rotr-e-item-spirit-lantern-orb",
+      "name": "Spirit Lantern Orb",
+      "slug": "spirit-lantern-orb",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spirit-lantern-orb.png",
+      "rel": "/assets/tcg/subjects/spirit-lantern-orb.png"
+    },
+    {
+      "id": "rotr-e-item-dune-sand-harness",
+      "name": "Dune Sand Harness",
+      "slug": "dune-sand-harness",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dune-sand-harness.png",
+      "rel": "/assets/tcg/subjects/dune-sand-harness.png"
+    },
+    {
+      "id": "rotr-e-item-magma-rake-claws",
+      "name": "Magma Rake Claws",
+      "slug": "magma-rake-claws",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\magma-rake-claws.png",
+      "rel": "/assets/tcg/subjects/magma-rake-claws.png"
+    },
+    {
+      "id": "rotr-e-item-glacier-tail-scythe",
+      "name": "Glacier Tail Scythe",
+      "slug": "glacier-tail-scythe",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\glacier-tail-scythe.png",
+      "rel": "/assets/tcg/subjects/glacier-tail-scythe.png"
+    },
+    {
+      "id": "rotr-e-item-radiant-horn-lance",
+      "name": "Radiant Horn Lance",
+      "slug": "radiant-horn-lance",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\radiant-horn-lance.png",
+      "rel": "/assets/tcg/subjects/radiant-horn-lance.png"
+    },
+    {
+      "id": "rotr-e-item-void-whisper-orb",
+      "name": "Void Whisper Orb",
+      "slug": "void-whisper-orb",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\void-whisper-orb.png",
+      "rel": "/assets/tcg/subjects/void-whisper-orb.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-brace-harness",
+      "name": "Alloy Brace Harness",
+      "slug": "alloy-brace-harness",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\alloy-brace-harness.png",
+      "rel": "/assets/tcg/subjects/alloy-brace-harness.png"
+    },
+    {
+      "id": "rotr-e-item-stormfang-gauntlets",
+      "name": "Stormfang Gauntlets",
+      "slug": "stormfang-gauntlets",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stormfang-gauntlets.png",
+      "rel": "/assets/tcg/subjects/stormfang-gauntlets.png"
+    },
+    {
+      "id": "rotr-e-item-worldvine-tail-flail",
+      "name": "Worldvine Tail Flail",
+      "slug": "worldvine-tail-flail",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\worldvine-tail-flail.png",
+      "rel": "/assets/tcg/subjects/worldvine-tail-flail.png"
+    },
+    {
+      "id": "rotr-e-item-eclipse-horn-crown",
+      "name": "Eclipse Horn Crown",
+      "slug": "eclipse-horn-crown",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\eclipse-horn-crown.png",
+      "rel": "/assets/tcg/subjects/eclipse-horn-crown.png"
+    },
+    {
+      "id": "rotr-e-item-aurora-focus-prism",
+      "name": "Aurora Focus Prism",
+      "slug": "aurora-focus-prism",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\aurora-focus-prism.png",
+      "rel": "/assets/tcg/subjects/aurora-focus-prism.png"
+    },
+    {
+      "id": "rotr-e-item-rift-singer-harness",
+      "name": "Rift Singer Harness",
+      "slug": "rift-singer-harness",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\rift-singer-harness.png",
+      "rel": "/assets/tcg/subjects/rift-singer-harness.png"
+    },
+    {
+      "id": "rotr-e-item-starlit-paw-crescents",
+      "name": "Starlit Paw Crescents",
+      "slug": "starlit-paw-crescents",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\starlit-paw-crescents.png",
+      "rel": "/assets/tcg/subjects/starlit-paw-crescents.png"
+    },
+    {
+      "id": "rotr-e-item-cloth-pet-vest",
+      "name": "Cloth Pet Vest",
+      "slug": "cloth-pet-vest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\cloth-pet-vest.png",
+      "rel": "/assets/tcg/subjects/cloth-pet-vest.png"
+    },
+    {
+      "id": "rotr-e-item-wooden-barkguard",
+      "name": "Wooden Barkguard",
+      "slug": "wooden-barkguard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\wooden-barkguard.png",
+      "rel": "/assets/tcg/subjects/wooden-barkguard.png"
+    },
+    {
+      "id": "rotr-e-item-simple-headband",
+      "name": "Simple Headband",
+      "slug": "simple-headband",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\simple-headband.png",
+      "rel": "/assets/tcg/subjects/simple-headband.png"
+    },
+    {
+      "id": "rotr-e-item-training-paw-wraps",
+      "name": "Training Paw Wraps",
+      "slug": "training-paw-wraps",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\training-paw-wraps.png",
+      "rel": "/assets/tcg/subjects/training-paw-wraps.png"
+    },
+    {
+      "id": "rotr-e-item-mossguard-vest",
+      "name": "Mossguard Vest",
+      "slug": "mossguard-vest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mossguard-vest.png",
+      "rel": "/assets/tcg/subjects/mossguard-vest.png"
+    },
+    {
+      "id": "rotr-e-item-emberhide-wrap",
+      "name": "Emberhide Wrap",
+      "slug": "emberhide-wrap",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\emberhide-wrap.png",
+      "rel": "/assets/tcg/subjects/emberhide-wrap.png"
+    },
+    {
+      "id": "rotr-e-item-tide-scale-guard",
+      "name": "Tide Scale Guard",
+      "slug": "tide-scale-guard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tide-scale-guard.png",
+      "rel": "/assets/tcg/subjects/tide-scale-guard.png"
+    },
+    {
+      "id": "rotr-e-item-stoneplate-collar",
+      "name": "Stoneplate Collar",
+      "slug": "stoneplate-collar",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stoneplate-collar.png",
+      "rel": "/assets/tcg/subjects/stoneplate-collar.png"
+    },
+    {
+      "id": "rotr-e-item-stormweave-armor",
+      "name": "Stormweave Armor",
+      "slug": "stormweave-armor",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stormweave-armor.png",
+      "rel": "/assets/tcg/subjects/stormweave-armor.png"
+    },
+    {
+      "id": "rotr-e-item-frostshell-vest",
+      "name": "Frostshell Vest",
+      "slug": "frostshell-vest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\frostshell-vest.png",
+      "rel": "/assets/tcg/subjects/frostshell-vest.png"
+    },
+    {
+      "id": "rotr-e-item-spiritveil-cloak",
+      "name": "Spiritveil Cloak",
+      "slug": "spiritveil-cloak",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spiritveil-cloak.png",
+      "rel": "/assets/tcg/subjects/spiritveil-cloak.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-chestplate",
+      "name": "Alloy Chestplate",
+      "slug": "alloy-chestplate",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\alloy-chestplate.png",
+      "rel": "/assets/tcg/subjects/alloy-chestplate.png"
+    },
+    {
+      "id": "rotr-e-item-volcanic-guardian-plate",
+      "name": "Volcanic Guardian Plate",
+      "slug": "volcanic-guardian-plate",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\volcanic-guardian-plate.png",
+      "rel": "/assets/tcg/subjects/volcanic-guardian-plate.png"
+    },
+    {
+      "id": "rotr-e-item-moonwater-battle-robe",
+      "name": "Moonwater Battle Robe",
+      "slug": "moonwater-battle-robe",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moonwater-battle-robe.png",
+      "rel": "/assets/tcg/subjects/moonwater-battle-robe.png"
+    },
+    {
+      "id": "rotr-e-item-elder-grove-armor",
+      "name": "Elder Grove Armor",
+      "slug": "elder-grove-armor",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\elder-grove-armor.png",
+      "rel": "/assets/tcg/subjects/elder-grove-armor.png"
+    },
+    {
+      "id": "rotr-e-item-voidwalker-mantle",
+      "name": "Voidwalker Mantle",
+      "slug": "voidwalker-mantle",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\voidwalker-mantle.png",
+      "rel": "/assets/tcg/subjects/voidwalker-mantle.png"
+    },
+    {
+      "id": "rotr-e-item-sunforged-aegis",
+      "name": "Sunforged Aegis",
+      "slug": "sunforged-aegis",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sunforged-aegis.png",
+      "rel": "/assets/tcg/subjects/sunforged-aegis.png"
+    },
+    {
+      "id": "rotr-e-item-deep-rift-plate",
+      "name": "Deep Rift Plate",
+      "slug": "deep-rift-plate",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\deep-rift-plate.png",
+      "rel": "/assets/tcg/subjects/deep-rift-plate.png"
+    },
+    {
+      "id": "rotr-e-item-armor-of-the-rift-guardian",
+      "name": "Armor of the Rift Guardian",
+      "slug": "armor-of-the-rift-guardian",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\armor-of-the-rift-guardian.png",
+      "rel": "/assets/tcg/subjects/armor-of-the-rift-guardian.png"
+    },
+    {
+      "id": "rotr-e-item-constellation-armor",
+      "name": "Constellation Armor",
+      "slug": "constellation-armor",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\constellation-armor.png",
+      "rel": "/assets/tcg/subjects/constellation-armor.png"
+    },
+    {
+      "id": "rotr-e-item-linen-ear-hood",
+      "name": "Linen Ear Hood",
+      "slug": "linen-ear-hood",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\linen-ear-hood.png",
+      "rel": "/assets/tcg/subjects/linen-ear-hood.png"
+    },
+    {
+      "id": "rotr-e-item-reed-chest-wrap",
+      "name": "Reed Chest Wrap",
+      "slug": "reed-chest-wrap",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\reed-chest-wrap.png",
+      "rel": "/assets/tcg/subjects/reed-chest-wrap.png"
+    },
+    {
+      "id": "rotr-e-item-mossy-back-cape",
+      "name": "Mossy Back Cape",
+      "slug": "mossy-back-cape",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mossy-back-cape.png",
+      "rel": "/assets/tcg/subjects/mossy-back-cape.png"
+    },
+    {
+      "id": "rotr-e-item-pebble-paw-boots",
+      "name": "Pebble Paw Boots",
+      "slug": "pebble-paw-boots",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\pebble-paw-boots.png",
+      "rel": "/assets/tcg/subjects/pebble-paw-boots.png"
+    },
+    {
+      "id": "rotr-e-item-soft-tail-sleeve",
+      "name": "Soft Tail Sleeve",
+      "slug": "soft-tail-sleeve",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\soft-tail-sleeve.png",
+      "rel": "/assets/tcg/subjects/soft-tail-sleeve.png"
+    },
+    {
+      "id": "rotr-e-item-breeze-wing-bands",
+      "name": "Breeze Wing Bands",
+      "slug": "breeze-wing-bands",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\breeze-wing-bands.png",
+      "rel": "/assets/tcg/subjects/breeze-wing-bands.png"
+    },
+    {
+      "id": "rotr-e-item-tidefoam-collar",
+      "name": "Tidefoam Collar",
+      "slug": "tidefoam-collar",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tidefoam-collar.png",
+      "rel": "/assets/tcg/subjects/tidefoam-collar.png"
+    },
+    {
+      "id": "rotr-e-item-ember-scale-vest",
+      "name": "Ember Scale Vest",
+      "slug": "ember-scale-vest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ember-scale-vest.png",
+      "rel": "/assets/tcg/subjects/ember-scale-vest.png"
+    },
+    {
+      "id": "rotr-e-item-frost-pelt-cloak",
+      "name": "Frost Pelt Cloak",
+      "slug": "frost-pelt-cloak",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\frost-pelt-cloak.png",
+      "rel": "/assets/tcg/subjects/frost-pelt-cloak.png"
+    },
+    {
+      "id": "rotr-e-item-storm-grip-wraps",
+      "name": "Storm Grip Wraps",
+      "slug": "storm-grip-wraps",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\storm-grip-wraps.png",
+      "rel": "/assets/tcg/subjects/storm-grip-wraps.png"
+    },
+    {
+      "id": "rotr-e-item-grove-tail-guard",
+      "name": "Grove Tail Guard",
+      "slug": "grove-tail-guard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\grove-tail-guard.png",
+      "rel": "/assets/tcg/subjects/grove-tail-guard.png"
+    },
+    {
+      "id": "rotr-e-item-radiant-wing-veils",
+      "name": "Radiant Wing Veils",
+      "slug": "radiant-wing-veils",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\radiant-wing-veils.png",
+      "rel": "/assets/tcg/subjects/radiant-wing-veils.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-rib-cuirass",
+      "name": "Alloy Rib Cuirass",
+      "slug": "alloy-rib-cuirass",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\alloy-rib-cuirass.png",
+      "rel": "/assets/tcg/subjects/alloy-rib-cuirass.png"
+    },
+    {
+      "id": "rotr-e-item-voidmist-hood",
+      "name": "Voidmist Hood",
+      "slug": "voidmist-hood",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\voidmist-hood.png",
+      "rel": "/assets/tcg/subjects/voidmist-hood.png"
+    },
+    {
+      "id": "rotr-e-item-spiritweave-sash",
+      "name": "Spiritweave Sash",
+      "slug": "spiritweave-sash",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spiritweave-sash.png",
+      "rel": "/assets/tcg/subjects/spiritweave-sash.png"
+    },
+    {
+      "id": "rotr-e-item-glacial-barrier-shell",
+      "name": "Glacial Barrier Shell",
+      "slug": "glacial-barrier-shell",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\glacial-barrier-shell.png",
+      "rel": "/assets/tcg/subjects/glacial-barrier-shell.png"
+    },
+    {
+      "id": "rotr-e-item-constellation-paw-slippers",
+      "name": "Constellation Paw Slippers",
+      "slug": "constellation-paw-slippers",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\constellation-paw-slippers.png",
+      "rel": "/assets/tcg/subjects/constellation-paw-slippers.png"
+    },
+    {
+      "id": "rotr-e-item-dawnstar-plume-mantle",
+      "name": "Dawnstar Plume Mantle",
+      "slug": "dawnstar-plume-mantle",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dawnstar-plume-mantle.png",
+      "rel": "/assets/tcg/subjects/dawnstar-plume-mantle.png"
+    },
+    {
+      "id": "rotr-r-mat-wood-fiber",
+      "name": "Wood Fiber",
+      "slug": "mat-wood-fiber",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-wood-fiber.png",
+      "rel": "/assets/tcg/subjects/mat-wood-fiber.png"
+    },
+    {
+      "id": "rotr-r-mat-smooth-stone",
+      "name": "Smooth Stone",
+      "slug": "mat-smooth-stone",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-smooth-stone.png",
+      "rel": "/assets/tcg/subjects/mat-smooth-stone.png"
+    },
+    {
+      "id": "rotr-r-mat-basic-cloth",
+      "name": "Basic Cloth",
+      "slug": "mat-basic-cloth",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-basic-cloth.png",
+      "rel": "/assets/tcg/subjects/mat-basic-cloth.png"
+    },
+    {
+      "id": "rotr-r-mat-clear-water",
+      "name": "Clear Water",
+      "slug": "mat-clear-water",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-clear-water.png",
+      "rel": "/assets/tcg/subjects/mat-clear-water.png"
+    },
+    {
+      "id": "rotr-r-mat-wild-herbs",
+      "name": "Wild Herbs",
+      "slug": "mat-wild-herbs",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-wild-herbs.png",
+      "rel": "/assets/tcg/subjects/mat-wild-herbs.png"
+    },
+    {
+      "id": "rotr-r-mat-ember-dust",
+      "name": "Ember Dust",
+      "slug": "mat-ember-dust",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-ember-dust.png",
+      "rel": "/assets/tcg/subjects/mat-ember-dust.png"
+    },
+    {
+      "id": "rotr-r-mat-tideglass",
+      "name": "Tideglass",
+      "slug": "mat-tideglass",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-tideglass.png",
+      "rel": "/assets/tcg/subjects/mat-tideglass.png"
+    },
+    {
+      "id": "rotr-r-mat-grove-fiber",
+      "name": "Grove Fiber",
+      "slug": "mat-grove-fiber",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-grove-fiber.png",
+      "rel": "/assets/tcg/subjects/mat-grove-fiber.png"
+    },
+    {
+      "id": "rotr-r-mat-storm-wire",
+      "name": "Storm Wire",
+      "slug": "mat-storm-wire",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-storm-wire.png",
+      "rel": "/assets/tcg/subjects/mat-storm-wire.png"
+    },
+    {
+      "id": "rotr-r-mat-frost-powder",
+      "name": "Frost Powder",
+      "slug": "mat-frost-powder",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-frost-powder.png",
+      "rel": "/assets/tcg/subjects/mat-frost-powder.png"
+    },
+    {
+      "id": "rotr-r-mat-obsidian-shard",
+      "name": "Obsidian Shard",
+      "slug": "mat-obsidian-shard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-obsidian-shard.png",
+      "rel": "/assets/tcg/subjects/mat-obsidian-shard.png"
+    },
+    {
+      "id": "rotr-r-mat-moonwater-pearl-mat",
+      "name": "Moonwater Pearl",
+      "slug": "mat-moonwater-pearl-mat",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-moonwater-pearl-mat.png",
+      "rel": "/assets/tcg/subjects/mat-moonwater-pearl-mat.png"
+    },
+    {
+      "id": "rotr-r-mat-spirit-thread",
+      "name": "Spirit Thread",
+      "slug": "mat-spirit-thread",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-spirit-thread.png",
+      "rel": "/assets/tcg/subjects/mat-spirit-thread.png"
+    },
+    {
+      "id": "rotr-r-mat-alloy-plate",
+      "name": "Alloy Plate",
+      "slug": "mat-alloy-plate",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-alloy-plate.png",
+      "rel": "/assets/tcg/subjects/mat-alloy-plate.png"
+    },
+    {
+      "id": "rotr-r-mat-radiant-dust",
+      "name": "Radiant Dust",
+      "slug": "mat-radiant-dust",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-radiant-dust.png",
+      "rel": "/assets/tcg/subjects/mat-radiant-dust.png"
+    },
+    {
+      "id": "rotr-r-mat-void-fragment",
+      "name": "Void Fragment",
+      "slug": "mat-void-fragment",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-void-fragment.png",
+      "rel": "/assets/tcg/subjects/mat-void-fragment.png"
+    },
+    {
+      "id": "rotr-r-mat-ancient-root",
+      "name": "Ancient Root",
+      "slug": "mat-ancient-root",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-ancient-root.png",
+      "rel": "/assets/tcg/subjects/mat-ancient-root.png"
+    },
+    {
+      "id": "rotr-r-mat-storm-core",
+      "name": "Storm Core",
+      "slug": "mat-storm-core",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-storm-core.png",
+      "rel": "/assets/tcg/subjects/mat-storm-core.png"
+    },
+    {
+      "id": "rotr-r-mat-glacial-heart",
+      "name": "Glacial Heart",
+      "slug": "mat-glacial-heart",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-glacial-heart.png",
+      "rel": "/assets/tcg/subjects/mat-glacial-heart.png"
+    },
+    {
+      "id": "rotr-r-mat-spirit-flame-mat",
+      "name": "Spirit Flame",
+      "slug": "mat-spirit-flame-mat",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-spirit-flame-mat.png",
+      "rel": "/assets/tcg/subjects/mat-spirit-flame-mat.png"
+    },
+    {
+      "id": "rotr-r-mat-volcano-heart",
+      "name": "Volcano Heart",
+      "slug": "mat-volcano-heart",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-volcano-heart.png",
+      "rel": "/assets/tcg/subjects/mat-volcano-heart.png"
+    },
+    {
+      "id": "rotr-r-mat-ocean-crown-pearl",
+      "name": "Ocean Crown Pearl",
+      "slug": "mat-ocean-crown-pearl",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-ocean-crown-pearl.png",
+      "rel": "/assets/tcg/subjects/mat-ocean-crown-pearl.png"
+    },
+    {
+      "id": "rotr-r-mat-worldroot-core",
+      "name": "Worldroot Core",
+      "slug": "mat-worldroot-core",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-worldroot-core.png",
+      "rel": "/assets/tcg/subjects/mat-worldroot-core.png"
+    },
+    {
+      "id": "rotr-r-mat-sky-rift-crystal",
+      "name": "Sky Rift Crystal",
+      "slug": "mat-sky-rift-crystal",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-sky-rift-crystal.png",
+      "rel": "/assets/tcg/subjects/mat-sky-rift-crystal.png"
+    },
+    {
+      "id": "rotr-r-mat-dawnstar-fragment",
+      "name": "Dawnstar Fragment",
+      "slug": "mat-dawnstar-fragment",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-dawnstar-fragment.png",
+      "rel": "/assets/tcg/subjects/mat-dawnstar-fragment.png"
+    },
+    {
+      "id": "rotr-r-mat-riftmaker-shard",
+      "name": "Riftmaker Shard",
+      "slug": "mat-riftmaker-shard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-riftmaker-shard.png",
+      "rel": "/assets/tcg/subjects/mat-riftmaker-shard.png"
+    },
+    {
+      "id": "rotr-r-mat-astral-thread",
+      "name": "Astral Thread",
+      "slug": "mat-astral-thread",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-astral-thread.png",
+      "rel": "/assets/tcg/subjects/mat-astral-thread.png"
+    },
+    {
+      "id": "rotr-r-mat-eternal-alloy-core",
+      "name": "Eternal Alloy Core",
+      "slug": "mat-eternal-alloy-core",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-eternal-alloy-core.png",
+      "rel": "/assets/tcg/subjects/mat-eternal-alloy-core.png"
+    },
+    {
+      "id": "rotr-r-mat-celestial-star-fragment",
+      "name": "Celestial Star Fragment",
+      "slug": "mat-celestial-star-fragment",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-celestial-star-fragment.png",
+      "rel": "/assets/tcg/subjects/mat-celestial-star-fragment.png"
+    },
+    {
+      "id": "rotr-r-mat-harmony-crystal",
+      "name": "Harmony Crystal",
+      "slug": "mat-harmony-crystal",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-harmony-crystal.png",
+      "rel": "/assets/tcg/subjects/mat-harmony-crystal.png"
+    },
+    {
+      "id": "rotr-r-mat-constellation-core",
+      "name": "Constellation Core",
+      "slug": "mat-constellation-core",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-constellation-core.png",
+      "rel": "/assets/tcg/subjects/mat-constellation-core.png"
+    },
+    {
+      "id": "rotr-r-mat-reed-strand",
+      "name": "Reed Strand",
+      "slug": "mat-reed-strand",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-reed-strand.png",
+      "rel": "/assets/tcg/subjects/mat-reed-strand.png"
+    },
+    {
+      "id": "rotr-r-mat-dune-glass",
+      "name": "Dune Glass",
+      "slug": "mat-dune-glass",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-dune-glass.png",
+      "rel": "/assets/tcg/subjects/mat-dune-glass.png"
+    },
+    {
+      "id": "rotr-r-mat-spark-flint",
+      "name": "Spark Flint",
+      "slug": "mat-spark-flint",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-spark-flint.png",
+      "rel": "/assets/tcg/subjects/mat-spark-flint.png"
+    },
+    {
+      "id": "rotr-r-mat-kelp-silk",
+      "name": "Kelp Silk",
+      "slug": "mat-kelp-silk",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-kelp-silk.png",
+      "rel": "/assets/tcg/subjects/mat-kelp-silk.png"
+    },
+    {
+      "id": "rotr-r-mat-frost-needle",
+      "name": "Frost Needle",
+      "slug": "mat-frost-needle",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-frost-needle.png",
+      "rel": "/assets/tcg/subjects/mat-frost-needle.png"
+    },
+    {
+      "id": "rotr-r-mat-void-silk",
+      "name": "Void Silk",
+      "slug": "mat-void-silk",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-void-silk.png",
+      "rel": "/assets/tcg/subjects/mat-void-silk.png"
+    },
+    {
+      "id": "rotr-r-mat-dawn-pollen",
+      "name": "Dawn Pollen",
+      "slug": "mat-dawn-pollen",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-dawn-pollen.png",
+      "rel": "/assets/tcg/subjects/mat-dawn-pollen.png"
+    },
+    {
+      "id": "rotr-r-mat-rift-resin",
+      "name": "Rift Resin",
+      "slug": "mat-rift-resin",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\mat-rift-resin.png",
+      "rel": "/assets/tcg/subjects/mat-rift-resin.png"
+    },
+    {
+      "id": "rotr-l-riftwild-plaza",
+      "name": "Riftwild Plaza",
+      "slug": "riftwild-plaza",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\riftwild-plaza.png",
+      "rel": "/assets/tcg/subjects/riftwild-plaza.png"
+    },
+    {
+      "id": "rotr-l-ember-hearthline",
+      "name": "Ember Hearthline",
+      "slug": "ember-hearthline",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ember-hearthline.png",
+      "rel": "/assets/tcg/subjects/ember-hearthline.png"
+    },
+    {
+      "id": "rotr-l-moonwater-pier",
+      "name": "Moonwater Pier",
+      "slug": "moonwater-pier",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moonwater-pier.png",
+      "rel": "/assets/tcg/subjects/moonwater-pier.png"
+    },
+    {
+      "id": "rotr-l-elderwood-path",
+      "name": "Elderwood Path",
+      "slug": "elderwood-path",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\elderwood-path.png",
+      "rel": "/assets/tcg/subjects/elderwood-path.png"
+    },
+    {
+      "id": "rotr-l-stormspire-landing",
+      "name": "Stormspire Landing",
+      "slug": "stormspire-landing",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stormspire-landing.png",
+      "rel": "/assets/tcg/subjects/stormspire-landing.png"
+    },
+    {
+      "id": "rotr-l-stoneheart-gate",
+      "name": "Stoneheart Gate",
+      "slug": "stoneheart-gate",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stoneheart-gate.png",
+      "rel": "/assets/tcg/subjects/stoneheart-gate.png"
+    },
+    {
+      "id": "rotr-l-citadel-choir",
+      "name": "Citadel Choir",
+      "slug": "citadel-choir",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\citadel-choir.png",
+      "rel": "/assets/tcg/subjects/citadel-choir.png"
+    },
+    {
+      "id": "rotr-l-void-threshold",
+      "name": "Void Threshold",
+      "slug": "void-threshold",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\void-threshold.png",
+      "rel": "/assets/tcg/subjects/void-threshold.png"
+    },
+    {
+      "id": "rotr-l-region-alloy-ruins",
+      "name": "Alloy Ruins",
+      "slug": "region-alloy-ruins",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-alloy-ruins.png",
+      "rel": "/assets/tcg/subjects/region-alloy-ruins.png"
+    },
+    {
+      "id": "rotr-l-region-celestial-rift",
+      "name": "Celestial Rift",
+      "slug": "region-celestial-rift",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-celestial-rift.png",
+      "rel": "/assets/tcg/subjects/region-celestial-rift.png"
+    },
+    {
+      "id": "rotr-l-region-riftwild-commons",
+      "name": "Riftwild Commons",
+      "slug": "region-riftwild-commons",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-riftwild-commons.png",
+      "rel": "/assets/tcg/subjects/region-riftwild-commons.png"
+    },
+    {
+      "id": "rotr-l-region-elderwood-forest",
+      "name": "Elderwood Forest",
+      "slug": "region-elderwood-forest",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-elderwood-forest.png",
+      "rel": "/assets/tcg/subjects/region-elderwood-forest.png"
+    },
+    {
+      "id": "rotr-l-region-ember-crater",
+      "name": "Ember Crater",
+      "slug": "region-ember-crater",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-ember-crater.png",
+      "rel": "/assets/tcg/subjects/region-ember-crater.png"
+    },
+    {
+      "id": "rotr-l-region-frostveil-basin",
+      "name": "Frostveil Basin",
+      "slug": "region-frostveil-basin",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-frostveil-basin.png",
+      "rel": "/assets/tcg/subjects/region-frostveil-basin.png"
+    },
+    {
+      "id": "rotr-l-region-moonwater-coast",
+      "name": "Moonwater Coast",
+      "slug": "region-moonwater-coast",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-moonwater-coast.png",
+      "rel": "/assets/tcg/subjects/region-moonwater-coast.png"
+    },
+    {
+      "id": "rotr-l-region-radiant-citadel",
+      "name": "Radiant Citadel",
+      "slug": "region-radiant-citadel",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-radiant-citadel.png",
+      "rel": "/assets/tcg/subjects/region-radiant-citadel.png"
+    },
+    {
+      "id": "rotr-l-region-spirit-marsh",
+      "name": "Spirit Marsh",
+      "slug": "region-spirit-marsh",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-spirit-marsh.png",
+      "rel": "/assets/tcg/subjects/region-spirit-marsh.png"
+    },
+    {
+      "id": "rotr-l-region-spirit-realm",
+      "name": "Spirit Realm",
+      "slug": "region-spirit-realm",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-spirit-realm.png",
+      "rel": "/assets/tcg/subjects/region-spirit-realm.png"
+    },
+    {
+      "id": "rotr-l-region-stoneheart-canyon",
+      "name": "Stoneheart Canyon",
+      "slug": "region-stoneheart-canyon",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-stoneheart-canyon.png",
+      "rel": "/assets/tcg/subjects/region-stoneheart-canyon.png"
+    },
+    {
+      "id": "rotr-l-region-stormspire-peaks",
+      "name": "Stormspire Peaks",
+      "slug": "region-stormspire-peaks",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-stormspire-peaks.png",
+      "rel": "/assets/tcg/subjects/region-stormspire-peaks.png"
+    },
+    {
+      "id": "rotr-l-region-void-hollow",
+      "name": "Void Hollow",
+      "slug": "region-void-hollow",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\region-void-hollow.png",
+      "rel": "/assets/tcg/subjects/region-void-hollow.png"
+    },
+    {
+      "id": "rotr-prop-stall-produce",
+      "name": "Produce Market Stall",
+      "slug": "stall-produce",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stall-produce.png",
+      "rel": "/assets/tcg/subjects/stall-produce.png"
+    },
+    {
+      "id": "rotr-prop-stall-fish",
+      "name": "Fish Market Stall",
+      "slug": "stall-fish",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stall-fish.png",
+      "rel": "/assets/tcg/subjects/stall-fish.png"
+    },
+    {
+      "id": "rotr-prop-stall-cloth",
+      "name": "Cloth Market Stall",
+      "slug": "stall-cloth",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stall-cloth.png",
+      "rel": "/assets/tcg/subjects/stall-cloth.png"
+    },
+    {
+      "id": "rotr-prop-stall-tools",
+      "name": "Tools Market Stall",
+      "slug": "stall-tools",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stall-tools.png",
+      "rel": "/assets/tcg/subjects/stall-tools.png"
+    },
+    {
+      "id": "rotr-prop-stall-potions",
+      "name": "Potions Market Stall",
+      "slug": "stall-potions",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stall-potions.png",
+      "rel": "/assets/tcg/subjects/stall-potions.png"
+    },
+    {
+      "id": "rotr-prop-stall-pets",
+      "name": "Pets Market Stall",
+      "slug": "stall-pets",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stall-pets.png",
+      "rel": "/assets/tcg/subjects/stall-pets.png"
+    },
+    {
+      "id": "rotr-prop-stall-books",
+      "name": "Books Market Stall",
+      "slug": "stall-books",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stall-books.png",
+      "rel": "/assets/tcg/subjects/stall-books.png"
+    },
+    {
+      "id": "rotr-prop-stall-bakery",
+      "name": "Bakery Market Stall",
+      "slug": "stall-bakery",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\stall-bakery.png",
+      "rel": "/assets/tcg/subjects/stall-bakery.png"
+    },
+    {
+      "id": "rotr-prop-gate-timber",
+      "name": "Timber Gate",
+      "slug": "gate-timber",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-timber.png",
+      "rel": "/assets/tcg/subjects/gate-timber.png"
+    },
+    {
+      "id": "rotr-prop-gate-stone-arch",
+      "name": "Stone Arch Gate",
+      "slug": "gate-stone-arch",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-stone-arch.png",
+      "rel": "/assets/tcg/subjects/gate-stone-arch.png"
+    },
+    {
+      "id": "rotr-prop-gate-iron",
+      "name": "Iron Gate",
+      "slug": "gate-iron",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-iron.png",
+      "rel": "/assets/tcg/subjects/gate-iron.png"
+    },
+    {
+      "id": "rotr-prop-gate-portcullis-stub",
+      "name": "Portcullis Stub Gate",
+      "slug": "gate-portcullis-stub",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-portcullis-stub.png",
+      "rel": "/assets/tcg/subjects/gate-portcullis-stub.png"
+    },
+    {
+      "id": "rotr-prop-gate-garden",
+      "name": "Garden Gate",
+      "slug": "gate-garden",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-garden.png",
+      "rel": "/assets/tcg/subjects/gate-garden.png"
+    },
+    {
+      "id": "rotr-prop-gate-market",
+      "name": "Market Gate",
+      "slug": "gate-market",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-market.png",
+      "rel": "/assets/tcg/subjects/gate-market.png"
+    },
+    {
+      "id": "rotr-prop-gate-plaza",
+      "name": "Plaza Gate",
+      "slug": "gate-plaza",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-plaza.png",
+      "rel": "/assets/tcg/subjects/gate-plaza.png"
+    },
+    {
+      "id": "rotr-prop-gate-rift-seal",
+      "name": "Rift Seal Gate",
+      "slug": "gate-rift-seal",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-rift-seal.png",
+      "rel": "/assets/tcg/subjects/gate-rift-seal.png"
+    },
+    {
+      "id": "rotr-prop-bridge-wood-short",
+      "name": "Wood Short Bridge",
+      "slug": "bridge-wood-short",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bridge-wood-short.png",
+      "rel": "/assets/tcg/subjects/bridge-wood-short.png"
+    },
+    {
+      "id": "rotr-prop-bridge-wood-long",
+      "name": "Wood Long Bridge",
+      "slug": "bridge-wood-long",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bridge-wood-long.png",
+      "rel": "/assets/tcg/subjects/bridge-wood-long.png"
+    },
+    {
+      "id": "rotr-prop-bridge-stone-arch",
+      "name": "Stone Arch Bridge",
+      "slug": "bridge-stone-arch",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bridge-stone-arch.png",
+      "rel": "/assets/tcg/subjects/bridge-stone-arch.png"
+    },
+    {
+      "id": "rotr-prop-bridge-rope",
+      "name": "Rope Bridge",
+      "slug": "bridge-rope",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bridge-rope.png",
+      "rel": "/assets/tcg/subjects/bridge-rope.png"
+    },
+    {
+      "id": "rotr-prop-bridge-dock-plank",
+      "name": "Dock Plank Bridge",
+      "slug": "bridge-dock-plank",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bridge-dock-plank.png",
+      "rel": "/assets/tcg/subjects/bridge-dock-plank.png"
+    },
+    {
+      "id": "rotr-prop-bridge-ruin",
+      "name": "Ruin Bridge",
+      "slug": "bridge-ruin",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bridge-ruin.png",
+      "rel": "/assets/tcg/subjects/bridge-ruin.png"
+    },
+    {
+      "id": "rotr-prop-bridge-rift-span",
+      "name": "Rift Span Bridge",
+      "slug": "bridge-rift-span",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bridge-rift-span.png",
+      "rel": "/assets/tcg/subjects/bridge-rift-span.png"
+    },
+    {
+      "id": "rotr-prop-bridge-covered",
+      "name": "Covered Bridge",
+      "slug": "bridge-covered",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\bridge-covered.png",
+      "rel": "/assets/tcg/subjects/bridge-covered.png"
+    },
+    {
+      "id": "rotr-prop-dock-plank",
+      "name": "Plank Dock Piece",
+      "slug": "dock-plank",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dock-plank.png",
+      "rel": "/assets/tcg/subjects/dock-plank.png"
+    },
+    {
+      "id": "rotr-prop-dock-pile",
+      "name": "Pile Dock Piece",
+      "slug": "dock-pile",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dock-pile.png",
+      "rel": "/assets/tcg/subjects/dock-pile.png"
+    },
+    {
+      "id": "rotr-prop-dock-crate-edge",
+      "name": "Crate Edge Dock Piece",
+      "slug": "dock-crate-edge",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dock-crate-edge.png",
+      "rel": "/assets/tcg/subjects/dock-crate-edge.png"
+    },
+    {
+      "id": "rotr-prop-dock-ladder",
+      "name": "Ladder Dock Piece",
+      "slug": "dock-ladder",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dock-ladder.png",
+      "rel": "/assets/tcg/subjects/dock-ladder.png"
+    },
+    {
+      "id": "rotr-prop-dock-bollard",
+      "name": "Bollard Dock Piece",
+      "slug": "dock-bollard",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dock-bollard.png",
+      "rel": "/assets/tcg/subjects/dock-bollard.png"
+    },
+    {
+      "id": "rotr-prop-dock-net-rack",
+      "name": "Net Rack Dock Piece",
+      "slug": "dock-net-rack",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dock-net-rack.png",
+      "rel": "/assets/tcg/subjects/dock-net-rack.png"
+    },
+    {
+      "id": "rotr-prop-lantern-post",
+      "name": "Post Lantern",
+      "slug": "lantern-post",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-post.png",
+      "rel": "/assets/tcg/subjects/lantern-post.png"
+    },
+    {
+      "id": "rotr-prop-lantern-hanging",
+      "name": "Hanging Lantern",
+      "slug": "lantern-hanging",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-hanging.png",
+      "rel": "/assets/tcg/subjects/lantern-hanging.png"
+    },
+    {
+      "id": "rotr-prop-lantern-table",
+      "name": "Table Lantern",
+      "slug": "lantern-table",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-table.png",
+      "rel": "/assets/tcg/subjects/lantern-table.png"
+    },
+    {
+      "id": "rotr-prop-lantern-rift-glow",
+      "name": "Rift Glow Lantern",
+      "slug": "lantern-rift-glow",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-rift-glow.png",
+      "rel": "/assets/tcg/subjects/lantern-rift-glow.png"
+    },
+    {
+      "id": "rotr-prop-lantern-ember",
+      "name": "Ember Lantern",
+      "slug": "lantern-ember",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-ember.png",
+      "rel": "/assets/tcg/subjects/lantern-ember.png"
+    },
+    {
+      "id": "rotr-prop-lantern-frost",
+      "name": "Frost Lantern",
+      "slug": "lantern-frost",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-frost.png",
+      "rel": "/assets/tcg/subjects/lantern-frost.png"
+    },
+    {
+      "id": "rotr-prop-lantern-paper",
+      "name": "Paper Lantern",
+      "slug": "lantern-paper",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-paper.png",
+      "rel": "/assets/tcg/subjects/lantern-paper.png"
+    },
+    {
+      "id": "rotr-prop-lantern-cage",
+      "name": "Cage Lantern",
+      "slug": "lantern-cage",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-cage.png",
+      "rel": "/assets/tcg/subjects/lantern-cage.png"
+    },
+    {
+      "id": "rotr-prop-sign-wood-blank",
+      "name": "Wood Blank Sign",
+      "slug": "sign-wood-blank",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sign-wood-blank.png",
+      "rel": "/assets/tcg/subjects/sign-wood-blank.png"
+    },
+    {
+      "id": "rotr-prop-sign-arrow-left",
+      "name": "Arrow Left Sign",
+      "slug": "sign-arrow-left",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sign-arrow-left.png",
+      "rel": "/assets/tcg/subjects/sign-arrow-left.png"
+    },
+    {
+      "id": "rotr-prop-sign-arrow-right",
+      "name": "Arrow Right Sign",
+      "slug": "sign-arrow-right",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sign-arrow-right.png",
+      "rel": "/assets/tcg/subjects/sign-arrow-right.png"
+    },
+    {
+      "id": "rotr-prop-sign-market",
+      "name": "Market Sign",
+      "slug": "sign-market",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sign-market.png",
+      "rel": "/assets/tcg/subjects/sign-market.png"
+    },
+    {
+      "id": "rotr-prop-sign-inn",
+      "name": "Inn Sign",
+      "slug": "sign-inn",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sign-inn.png",
+      "rel": "/assets/tcg/subjects/sign-inn.png"
+    },
+    {
+      "id": "rotr-prop-sign-danger",
+      "name": "Danger Sign",
+      "slug": "sign-danger",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sign-danger.png",
+      "rel": "/assets/tcg/subjects/sign-danger.png"
+    },
+    {
+      "id": "rotr-prop-sign-portal",
+      "name": "Portal Sign",
+      "slug": "sign-portal",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sign-portal.png",
+      "rel": "/assets/tcg/subjects/sign-portal.png"
+    },
+    {
+      "id": "rotr-prop-sign-guild",
+      "name": "Guild Sign",
+      "slug": "sign-guild",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\sign-guild.png",
+      "rel": "/assets/tcg/subjects/sign-guild.png"
+    },
+    {
+      "id": "rotr-prop-tool-hammer",
+      "name": "Hammer",
+      "slug": "tool-hammer",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tool-hammer.png",
+      "rel": "/assets/tcg/subjects/tool-hammer.png"
+    },
+    {
+      "id": "rotr-prop-tool-axe",
+      "name": "Axe",
+      "slug": "tool-axe",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tool-axe.png",
+      "rel": "/assets/tcg/subjects/tool-axe.png"
+    },
+    {
+      "id": "rotr-prop-tool-pick",
+      "name": "Pick",
+      "slug": "tool-pick",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tool-pick.png",
+      "rel": "/assets/tcg/subjects/tool-pick.png"
+    },
+    {
+      "id": "rotr-prop-tool-hoe",
+      "name": "Hoe",
+      "slug": "tool-hoe",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tool-hoe.png",
+      "rel": "/assets/tcg/subjects/tool-hoe.png"
+    },
+    {
+      "id": "rotr-prop-tool-fishing-rod",
+      "name": "Fishing Rod",
+      "slug": "tool-fishing-rod",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tool-fishing-rod.png",
+      "rel": "/assets/tcg/subjects/tool-fishing-rod.png"
+    },
+    {
+      "id": "rotr-prop-tool-saw",
+      "name": "Saw",
+      "slug": "tool-saw",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tool-saw.png",
+      "rel": "/assets/tcg/subjects/tool-saw.png"
+    },
+    {
+      "id": "rotr-prop-tool-tongs",
+      "name": "Tongs",
+      "slug": "tool-tongs",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tool-tongs.png",
+      "rel": "/assets/tcg/subjects/tool-tongs.png"
+    },
+    {
+      "id": "rotr-prop-tool-ladle",
+      "name": "Ladle",
+      "slug": "tool-ladle",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tool-ladle.png",
+      "rel": "/assets/tcg/subjects/tool-ladle.png"
+    },
+    {
+      "id": "rotr-t-spark-fragment",
+      "name": "Spark Fragment",
+      "slug": "spark-fragment",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\spark-fragment.png",
+      "rel": "/assets/tcg/subjects/spark-fragment.png"
+    },
+    {
+      "id": "rotr-x-ashfall-sky",
+      "name": "Ashfall Sky",
+      "slug": "ashfall-sky",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ashfall-sky.png",
+      "rel": "/assets/tcg/subjects/ashfall-sky.png"
+    },
+    {
+      "id": "rotr-x-harbor-squall",
+      "name": "Harbor Squall",
+      "slug": "harbor-squall",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\harbor-squall.png",
+      "rel": "/assets/tcg/subjects/harbor-squall.png"
+    },
+    {
+      "id": "rotr-x-canopy-drip",
+      "name": "Canopy Drip",
+      "slug": "canopy-drip",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\canopy-drip.png",
+      "rel": "/assets/tcg/subjects/canopy-drip.png"
+    },
+    {
+      "id": "rotr-x-dust-devil",
+      "name": "Dust Devil",
+      "slug": "dust-devil",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\dust-devil.png",
+      "rel": "/assets/tcg/subjects/dust-devil.png"
+    },
+    {
+      "id": "rotr-x-static-veil",
+      "name": "Static Veil",
+      "slug": "static-veil",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\static-veil.png",
+      "rel": "/assets/tcg/subjects/static-veil.png"
+    },
+    {
+      "id": "rotr-x-prism-noon",
+      "name": "Prism Noon",
+      "slug": "prism-noon",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\prism-noon.png",
+      "rel": "/assets/tcg/subjects/prism-noon.png"
+    },
+    {
+      "id": "rotr-x-false-dusk",
+      "name": "False Dusk",
+      "slug": "false-dusk",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\false-dusk.png",
+      "rel": "/assets/tcg/subjects/false-dusk.png"
+    },
+    {
+      "id": "rotr-x-choir-dawn",
+      "name": "Choir Dawn",
+      "slug": "choir-dawn",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\choir-dawn.png",
+      "rel": "/assets/tcg/subjects/choir-dawn.png"
+    },
+    {
+      "id": "rotr-x-lantern-night",
+      "name": "Lantern Night",
+      "slug": "lantern-night",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-night.png",
+      "rel": "/assets/tcg/subjects/lantern-night.png"
+    },
+    {
+      "id": "rotr-x-market-panic",
+      "name": "Market Panic",
+      "slug": "market-panic",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\market-panic.png",
+      "rel": "/assets/tcg/subjects/market-panic.png"
+    },
+    {
+      "id": "rotr-x-pack-opening",
+      "name": "Pack Opening",
+      "slug": "pack-opening",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\pack-opening.png",
+      "rel": "/assets/tcg/subjects/pack-opening.png"
+    },
+    {
+      "id": "rotr-x-guild-horn",
+      "name": "Guild Horn",
+      "slug": "guild-horn",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\guild-horn.png",
+      "rel": "/assets/tcg/subjects/guild-horn.png"
+    },
+    {
+      "id": "rotr-x-hidden-snare",
+      "name": "Hidden Snare",
+      "slug": "hidden-snare",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\hidden-snare.png",
+      "rel": "/assets/tcg/subjects/hidden-snare.png"
+    },
+    {
+      "id": "rotr-x-void-latch",
+      "name": "Void Latch",
+      "slug": "void-latch",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\void-latch.png",
+      "rel": "/assets/tcg/subjects/void-latch.png"
+    },
+    {
+      "id": "rotr-x-tripwire-coil",
+      "name": "Tripwire Coil",
+      "slug": "tripwire-coil",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tripwire-coil.png",
+      "rel": "/assets/tcg/subjects/tripwire-coil.png"
+    },
+    {
+      "id": "rotr-x-tideglass",
+      "name": "Tideglass",
+      "slug": "tideglass",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tideglass.png",
+      "rel": "/assets/tcg/subjects/tideglass.png"
+    },
+    {
+      "id": "rotr-x-heart-relic",
+      "name": "Heart Relic",
+      "slug": "heart-relic",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\heart-relic.png",
+      "rel": "/assets/tcg/subjects/heart-relic.png"
+    },
+    {
+      "id": "rotr-x-forge-relic",
+      "name": "Forge Relic",
+      "slug": "forge-relic",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\forge-relic.png",
+      "rel": "/assets/tcg/subjects/forge-relic.png"
+    },
+    {
+      "id": "rotr-x-moss-relic",
+      "name": "Moss Relic",
+      "slug": "moss-relic",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moss-relic.png",
+      "rel": "/assets/tcg/subjects/moss-relic.png"
+    },
+    {
+      "id": "rotr-x-storm-relic",
+      "name": "Storm Relic",
+      "slug": "storm-relic",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\storm-relic.png",
+      "rel": "/assets/tcg/subjects/storm-relic.png"
+    },
+    {
+      "id": "rotr-x-quest-first-bond",
+      "name": "Quest: First Bond",
+      "slug": "first-bond",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\first-bond.png",
+      "rel": "/assets/tcg/subjects/first-bond.png"
+    },
+    {
+      "id": "rotr-x-quest-plaza-sweep",
+      "name": "Quest: Plaza Sweep",
+      "slug": "plaza-sweep",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\plaza-sweep.png",
+      "rel": "/assets/tcg/subjects/plaza-sweep.png"
+    },
+    {
+      "id": "rotr-x-quest-ember-trial",
+      "name": "Quest: Ember Trial",
+      "slug": "ember-trial",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\ember-trial.png",
+      "rel": "/assets/tcg/subjects/ember-trial.png"
+    },
+    {
+      "id": "rotr-x-quest-quiet-study",
+      "name": "Quest: Quiet Study",
+      "slug": "quiet-study",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\quiet-study.png",
+      "rel": "/assets/tcg/subjects/quiet-study.png"
+    },
+    {
+      "id": "rotr-x-artifact-gate-key",
+      "name": "Artifact: Gate Key",
+      "slug": "gate-key",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gate-key.png",
+      "rel": "/assets/tcg/subjects/gate-key.png"
+    },
+    {
+      "id": "rotr-x-artifact-moss-codex",
+      "name": "Artifact: Moss Codex",
+      "slug": "moss-codex",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\moss-codex.png",
+      "rel": "/assets/tcg/subjects/moss-codex.png"
+    },
+    {
+      "id": "rotr-x-artifact-tide-sextant",
+      "name": "Artifact: Tide Sextant",
+      "slug": "tide-sextant",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\tide-sextant.png",
+      "rel": "/assets/tcg/subjects/tide-sextant.png"
+    },
+    {
+      "id": "rotr-x-artifact-void-ledger",
+      "name": "Artifact: Void Ledger",
+      "slug": "void-ledger",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\void-ledger.png",
+      "rel": "/assets/tcg/subjects/void-ledger.png"
+    },
+    {
+      "id": "rotr-x-legendary-heart-witness",
+      "name": "Legendary: Heart Witness",
+      "slug": "heart-witness",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\heart-witness.png",
+      "rel": "/assets/tcg/subjects/heart-witness.png"
+    },
+    {
+      "id": "rotr-x-legendary-crater-tyrant",
+      "name": "Legendary: Crater Tyrant",
+      "slug": "crater-tyrant",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\crater-tyrant.png",
+      "rel": "/assets/tcg/subjects/crater-tyrant.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-rain-01",
+      "name": "Weather Rain 01",
+      "slug": "fx-weather-rain-01",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-rain-01.png",
+      "rel": "/assets/tcg/subjects/fx-weather-rain-01.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-rain-02",
+      "name": "Weather Rain 02",
+      "slug": "fx-weather-rain-02",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-rain-02.png",
+      "rel": "/assets/tcg/subjects/fx-weather-rain-02.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-rain-03",
+      "name": "Weather Rain 03",
+      "slug": "fx-weather-rain-03",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-rain-03.png",
+      "rel": "/assets/tcg/subjects/fx-weather-rain-03.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-rain-04",
+      "name": "Weather Rain 04",
+      "slug": "fx-weather-rain-04",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-rain-04.png",
+      "rel": "/assets/tcg/subjects/fx-weather-rain-04.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-snow-01",
+      "name": "Weather Snow 01",
+      "slug": "fx-weather-snow-01",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-snow-01.png",
+      "rel": "/assets/tcg/subjects/fx-weather-snow-01.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-snow-02",
+      "name": "Weather Snow 02",
+      "slug": "fx-weather-snow-02",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-snow-02.png",
+      "rel": "/assets/tcg/subjects/fx-weather-snow-02.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-snow-03",
+      "name": "Weather Snow 03",
+      "slug": "fx-weather-snow-03",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-snow-03.png",
+      "rel": "/assets/tcg/subjects/fx-weather-snow-03.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-snow-04",
+      "name": "Weather Snow 04",
+      "slug": "fx-weather-snow-04",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-snow-04.png",
+      "rel": "/assets/tcg/subjects/fx-weather-snow-04.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-leaf-01",
+      "name": "Weather Leaf 01",
+      "slug": "fx-weather-leaf-01",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-leaf-01.png",
+      "rel": "/assets/tcg/subjects/fx-weather-leaf-01.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-leaf-02",
+      "name": "Weather Leaf 02",
+      "slug": "fx-weather-leaf-02",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-leaf-02.png",
+      "rel": "/assets/tcg/subjects/fx-weather-leaf-02.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-ember-ash-01",
+      "name": "Weather Ember Ash 01",
+      "slug": "fx-weather-ember-ash-01",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-ember-ash-01.png",
+      "rel": "/assets/tcg/subjects/fx-weather-ember-ash-01.png"
+    },
+    {
+      "id": "rotr-w-fx-weather-ember-ash-02",
+      "name": "Weather Ember Ash 02",
+      "slug": "fx-weather-ember-ash-02",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\fx-weather-ember-ash-02.png",
+      "rel": "/assets/tcg/subjects/fx-weather-ember-ash-02.png"
+    },
+    {
+      "id": "rotr-c-plaza-scout",
+      "name": "Plaza Scout",
+      "slug": "plaza-scout",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\plaza-scout.png",
+      "rel": "/assets/tcg/subjects/plaza-scout.png"
+    },
+    {
+      "id": "rotr-c-market-runner",
+      "name": "Market Runner",
+      "slug": "market-runner",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\market-runner.png",
+      "rel": "/assets/tcg/subjects/market-runner.png"
+    },
+    {
+      "id": "rotr-c-lantern-acolyte",
+      "name": "Lantern Acolyte",
+      "slug": "lantern-acolyte",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\lantern-acolyte.png",
+      "rel": "/assets/tcg/subjects/lantern-acolyte.png"
+    },
+    {
+      "id": "rotr-c-shard-bit",
+      "name": "Shard Bit",
+      "slug": "shard-bit",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\shard-bit.png",
+      "rel": "/assets/tcg/subjects/shard-bit.png"
+    },
+    {
+      "id": "rotr-c-gear-tick",
+      "name": "Gear Tick",
+      "slug": "gear-tick",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\gear-tick.png",
+      "rel": "/assets/tcg/subjects/gear-tick.png"
+    },
+    {
+      "id": "rotr-c-star-midge",
+      "name": "Star Midge",
+      "slug": "star-midge",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\star-midge.png",
+      "rel": "/assets/tcg/subjects/star-midge.png"
+    },
+    {
+      "id": "rotr-c-null-gnat",
+      "name": "Null Gnat",
+      "slug": "null-gnat",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\null-gnat.png",
+      "rel": "/assets/tcg/subjects/null-gnat.png"
+    },
+    {
+      "id": "rotr-c-poison-spore",
+      "name": "Poison Spore",
+      "slug": "poison-spore",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\poison-spore.png",
+      "rel": "/assets/tcg/subjects/poison-spore.png"
+    },
+    {
+      "id": "rotr-c-arc-scribe",
+      "name": "Arc Scribe",
+      "slug": "arc-scribe",
+      "out": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\tcg\\subjects\\arc-scribe.png",
+      "rel": "/assets/tcg/subjects/arc-scribe.png"
+    }
+  ],
+  "count": 364
+}

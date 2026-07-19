@@ -14,7 +14,20 @@ export type RoadmapPhase = {
   lede: string;
   bullets: string[];
   links: { href: string; label: string }[];
+  /** Thematic scene art from public/assets (existing wallpapers). */
+  imageSrc: string;
 };
+
+export type RoadmapPillar = {
+  title: string;
+  body: string;
+  imageSrc: string;
+};
+
+/** Full-bleed page atmosphere — Rift Battles arena. */
+export const ROADMAP_PAGE_ART = {
+  background: "/assets/ui/wallpapers/tcg-battle.png",
+} as const;
 
 export const ROADMAP_META = {
   title: "Roadmap",
@@ -49,6 +62,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       { href: "/quests", label: "Quests" },
       { href: "/help", label: "Help" },
     ],
+    imageSrc: "/assets/ui/wallpapers/collection.png",
   },
   {
     id: "coin",
@@ -71,6 +85,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       { href: "/fairness", label: "Fairness" },
       { href: "/shop", label: "Shop" },
     ],
+    imageSrc: "/assets/ui/wallpapers/economy.png",
   },
   {
     id: "world",
@@ -93,24 +108,29 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       { href: "/homestead", label: "Homestead" },
       { href: "/social", label: "Social Hub" },
     ],
+    imageSrc: "/assets/ui/wallpapers/live-world.png",
   },
 ];
 
-export const ROADMAP_PILLARS = [
+export const ROADMAP_PILLARS: RoadmapPillar[] = [
   {
     title: "TCG first",
     body: "Rift Battles is the launch product. Living World opens when it is ready to feel like a habitat — not a hollow shell.",
+    imageSrc: "/assets/ui/wallpapers/battle.png",
   },
   {
     title: "Credits required · SOL optional",
     body: "Everyday play runs on Gold (Credits). A wallet is never a gate for decks, matches, or quests.",
+    imageSrc: "/assets/ui/wallpapers/token.png",
   },
   {
     title: "No pay-to-win",
     body: "Essential competitive cards stay earnable. Optional spends are cosmetics and convenience only.",
+    imageSrc: "/assets/ui/wallpapers/fairness.png",
   },
   {
     title: "Build, don’t scrap",
     body: "Live World, housing, and social systems stay. We soft-gate or preview — we do not rip them out for the TCG launch.",
+    imageSrc: "/assets/ui/wallpapers/world-restoration.png",
   },
-] as const;
+];

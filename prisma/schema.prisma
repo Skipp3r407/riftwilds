@@ -3723,3 +3723,192 @@ model SocialReportRow {
   @@index([status, createdAt])
   @@index([reporterOwnerKey])
 }
+
+// ─── Project Treasury Ops (Pump.fun → single treasury → distribution) ────────
+// Local demo persists to `.data/treasury-ops/state.json`. These models are the
+// production-ready Prisma proposal; migrate when ops persistence is approved.
+// Never models player P2W escrow or holder dividend autopay.
+
+model ProjectTreasuryWallet {
+  id                   String   @id @default(cuid())
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  role                 String
+  name                 String
+  description          String
+  address              String
+  network              String   @default("devnet")
+  asset                String   @default("SOL")
+  isActive             Boolean  @default(true)
+  isDistributionTarget Boolean  @default(false)
+  percentBps           Int      @default(0)
+
+  balances ProjectWalletBalance[]
+
+  @@unique([address, network, asset])
+  @@index([role, isActive])
+}
+
+model ProjectWalletBalance {
+  id         String   @id @default(cuid())
+  updatedAt  DateTime @updatedAt
+  walletId   String
+  asset      String   @default("SOL")
+  balanceRaw String   @default("0")
+  verified   Boolean  @default(false)
+  isDemo     Boolean  @default(true)
+
+  wallet ProjectTreasuryWallet @relation(fields: [walletId], references: [id], onDelete: Cascade)
+
+  @@unique([walletId, asset])
+}
+
+model ProjectDistributionRules {
+  id                             String   @id @default(cuid())
+  createdAt                      DateTime @default(now())
+  updatedAt                      DateTime @updatedAt
+  version                        Int      @unique
+  label                          String
+  active                         Boolean  @default(true)
+  /// JSON map walletId → bps (must sum 10000)
+  splitsJson                     Json
+  minDistributionLamports        String   @default("10000000")
+  distributionDelayMs            Int      @default(5000)
+  autoApprovalThresholdLamports  String   @default("1000000000")
+}
+
+model ProjectIncomingTransaction {
+  id                String   @id @default(cuid())
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  sourceKey         String
+  category          String
+  asset             String   @default("SOL")
+  amountLamports    String
+  senderAddress     String
+  recipientAddress  String
+  txSignature       String?
+  idempotencyKey    String   @unique
+  confirmations     Int      @default(0)
+  status            String   @default("PENDING_VERIFY")
+  verifiedAt        DateTime?
+  metadata          Json?
+
+  processed ProjectProcessedTransaction?
+
+  @@index([status, createdAt])
+  @@index([txSignature])
+  @@index([sourceKey, createdAt])
+}
+
+model ProjectProcessedTransaction {
+  id              String   @id @default(cuid())
+  processedAt     DateTime @default(now())
+  incomingId      String   @unique
+  idempotencyKey  String   @unique
+  distributionId  String?
+  note            String
+
+  incoming ProjectIncomingTransaction @relation(fields: [incomingId], references: [id], onDelete: Cascade)
+}
+
+model ProjectDistributionHistory {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  incomingId       String?
+  ruleVersion      Int
+  status           String
+  grossLamports    String
+  asset            String   @default("SOL")
+  linesJson        Json
+  requiresApproval Boolean  @default(false)
+  approvedBy       String?
+  approvedAt       DateTime?
+  idempotencyKey   String   @unique
+  previewOnly      Boolean  @default(false)
+  simulated        Boolean  @default(false)
+  error            String?
+  executedAt       DateTime?
+
+  pending  ProjectPendingDistribution?
+  failed   ProjectFailedDistribution?
+  approval ProjectManualApproval?
+
+  @@index([status, createdAt])
+}
+
+model ProjectPendingDistribution {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  distributionId String   @unique
+  queuedAt       DateTime @default(now())
+
+  distribution ProjectDistributionHistory @relation(fields: [distributionId], references: [id], onDelete: Cascade)
+}
+
+model ProjectFailedDistribution {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  distributionId String   @unique
+  reason         String
+  retryCount     Int      @default(0)
+  lastError      String
+  nextRetryAt    DateTime?
+
+  distribution ProjectDistributionHistory @relation(fields: [distributionId], references: [id], onDelete: Cascade)
+
+  @@index([nextRetryAt])
+}
+
+model ProjectManualApproval {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  distributionId String   @unique
+  requestedAt    DateTime @default(now())
+  requestedBy    String?
+  status         String   @default("PENDING")
+  decidedBy      String?
+  decidedAt      DateTime?
+  note           String?
+
+  distribution ProjectDistributionHistory @relation(fields: [distributionId], references: [id], onDelete: Cascade)
+
+  @@index([status, createdAt])
+}
+
+model ProjectTreasuryAuditLog {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  actorId    String?
+  action     String
+  entityType String
+  entityId   String?
+  requestId  String?
+  metadata   Json?
+
+  @@index([createdAt])
+  @@index([action, createdAt])
+}
+
+model ProjectTreasurySystemSettings {
+  id            String   @id @default("singleton")
+  updatedAt     DateTime @updatedAt
+  settingsJson  Json
+}
+
+model ProjectTreasuryReport {
+  id               String   @id @default(cuid())
+  generatedAt      DateTime @default(now())
+  period           String
+  periodStart      DateTime
+  periodEnd        DateTime
+  totalInLamports  String
+  totalOutLamports String
+  bySourceJson     Json
+  byWalletJson     Json
+  healthScore      Int
+
+  @@index([period, generatedAt])
+}

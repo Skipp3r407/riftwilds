@@ -11,7 +11,7 @@ export function SiteFooter() {
   const [copied, setCopied] = useState(false);
 
   return (
-    <footer className="site-footer-hud mt-auto border-t border-[var(--stroke)] bg-[rgba(10,10,15,0.92)]">
+    <footer className="site-footer-hud mt-auto">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4 md:px-6">
         <div className="md:col-span-2">
           <Link

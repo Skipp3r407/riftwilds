@@ -16,3 +16,11 @@
 ## Treatments
 
 Alternate art, foil, animated, signed, founder, seasonal, holiday — **never** gameplay power.
+
+## Browser UI
+
+- Page: `/collectibles`
+- Helper: `listCollectibleEditionBrowser()` — joins TCG `resolveCardImagePath` (`/assets/tcg/cards/…`)
+- API: `GET /api/economy/sol/collectibles`
+- Detail panel: gameplay card link, supply, prices, trade/mint flags, deck note (use gameplay copy)
+- Mint requests stay `BLOCKED` while mint flags are off

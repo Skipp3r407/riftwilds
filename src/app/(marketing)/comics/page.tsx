@@ -3,9 +3,9 @@ import { ComicsLibrary } from "@/components/comics/comics-library";
 import { COMIC_SERIES, listPublishedComics } from "@/content/comics";
 
 export const metadata: Metadata = {
-  title: "Legends of the Rift | Comics",
+  title: "Lore Library | Legends of the Rift",
   description:
-    "Official Riftwilds comic series — Legends of the Rift. Ten issues of original graphic novel lore across Aeryndra.",
+    "Riftwilds Lore Library — Legends of the Rift. Ten illustrated comic issues with Codex unlocks and cosmetic rewards (never P2W).",
 };
 
 export default function ComicsLibraryPage() {

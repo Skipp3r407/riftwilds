@@ -9,6 +9,7 @@ export type AuthProviderId =
   | "discord"
   | "twitter"
   | "wallet_siws"
+  | "nakama_guest"
   | "clerk_stub"
   | "nextauth_stub";
 
@@ -71,6 +72,16 @@ export const AUTH_PROVIDERS: AuthProviderDef[] = [
     priority: "secondary",
     implemented: true,
     featureFlag: "AUTH_WALLET_SIWS_ENABLED",
+  },
+  {
+    id: "nakama_guest",
+    kind: "bridge",
+    label: "Nakama guest",
+    description:
+      "Bridge rift_guest device auth to Nakama for multiplayer — does not replace SIWS or demo owner keys.",
+    priority: "secondary",
+    implemented: true,
+    featureFlag: "NAKAMA_AUTH_BRIDGE_ENABLED",
   },
   {
     id: "nextauth_stub",

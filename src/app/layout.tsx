@@ -1,9 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Orbitron } from "next/font/google";
 import { WalletProviderDynamic } from "@/components/wallet/wallet-provider-dynamic";
+import { NakamaProvider } from "@/components/nakama/nakama-provider";
 import { QueryProvider } from "@/components/shared/query-provider";
 import { MusicPlayer } from "@/components/shared/music-player";
 import { HudInteraction } from "@/components/shared/hud-interaction";
+import { MagicalDust } from "@/components/shared/magical-dust";
+import { RiftCursor } from "@/components/shared/rift-cursor";
 import { projectConfig } from "@/lib/config/project";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import "./globals.css";
@@ -77,9 +80,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${manrope.variable} ${orbitron.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <QueryProvider>
-          <WalletProviderDynamic>{children}</WalletProviderDynamic>
+          <NakamaProvider>
+            <WalletProviderDynamic>{children}</WalletProviderDynamic>
+          </NakamaProvider>
         </QueryProvider>
         <HudInteraction />
+        <MagicalDust />
+        <RiftCursor />
         <MusicPlayer />
       </body>
     </html>

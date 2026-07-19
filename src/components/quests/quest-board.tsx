@@ -34,7 +34,28 @@ import {
 } from "@/components/quests/quest-surface";
 import { StatusChip } from "@/components/shared/page-header";
 import { playSfx } from "@/hooks/use-sfx";
+import { guestFetch } from "@/lib/auth/guest-client";
 import { cn } from "@/lib/utils/cn";
+
+/** Claim egg rewards via hatchery earn API (free, no wallet). */
+async function claimQuestEggRewards(quest: QuestDef) {
+  for (const r of quest.rewards) {
+    if (r.kind !== "egg") continue;
+    try {
+      await guestFetch("/api/hatchery/earn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          path: r.earnPath ?? "QUEST",
+          questKey: quest.key,
+          requestId: `quest-egg:${quest.key}`,
+        }),
+      });
+    } catch {
+      /* demo board — soft-fail; egg still listed as reward copy */
+    }
+  }
+}
 
 const TABS: QuestBoardTab[] = ["all", "story", "daily", "exploration"];
 const STATUSES: Array<QuestStatus | "all"> = [
@@ -317,6 +338,7 @@ export function QuestBoard() {
                     const after = next[quest.key]?.status;
                     if (after === "completed" && before !== "completed") {
                       playSfx("quests.complete");
+                      void claimQuestEggRewards(quest);
                     } else if (after === "active") {
                       playSfx("quests.objective");
                     }

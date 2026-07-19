@@ -40,13 +40,20 @@ export function ShopBrowser({ title, items }: Props) {
   }, [selected]);
 
   return (
-    <div className="space-y-4">
-      <header className="panel p-5 md:p-6">
-        <p className="page-kicker">Riftwilds Shop</p>
+    <div className="shop-browser space-y-4">
+      <header className="shop-merchant-frame panel relative overflow-hidden p-5 md:p-6">
+        <div
+          className="shop-merchant-frame__art pointer-events-none absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/assets/ui/wallpapers/shop.png)" }}
+          aria-hidden
+        />
+        <div className="shop-merchant-frame__scrim pointer-events-none absolute inset-0" aria-hidden />
+        <div className="relative z-[1]">
+        <p className="page-kicker">Merchant Hall · Card Shop</p>
         <h1 className="page-title mt-2">{title}</h1>
         <p className="page-lede">
-          Direct purchases of named items only. No paid mystery boxes or random rarity rolls. Pay
-          with Wallet SOL or In-game SOL.
+          Named Credits items only — no paid mystery boxes or random power rolls. Credits settle
+          the desk; Wallet SOL and In-game SOL stay optional.
         </p>
         <p className="mt-3 text-xs text-[var(--amber)]">{itemDisclosures.shop}</p>
         <p className="mt-1 text-xs text-[var(--text-muted)]">{itemDisclosures.combat}</p>
@@ -71,11 +78,12 @@ export function ShopBrowser({ title, items }: Props) {
             ? "shell enabled"
             : "gated (SOL_ITEM_PURCHASES_ENABLED / SOL_PURCHASES_ENABLED)"}
           {" · "}
-          In-game SOL purchases active
+          In-game SOL purchases active · never buys power
         </p>
+        </div>
       </header>
 
-      <div className="grid gap-4 lg:grid-cols-[1fr_300px]">
+      <div className="grid gap-5 lg:grid-cols-[1fr_300px]">
         <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {items.map((item) => (
             <li key={item.id}>
@@ -95,7 +103,12 @@ export function ShopBrowser({ title, items }: Props) {
         <aside className="space-y-3 lg:sticky lg:top-20 lg:self-start">
           {quote && selected ? (
             <>
-              <div className="panel p-4">
+              <div className="shop-browser__aside-panel panel relative overflow-hidden p-4">
+                <div
+                  className="shop-browser__aside-wash pointer-events-none absolute inset-0"
+                  aria-hidden
+                />
+                <div className="relative z-[1]">
                 <h2 className="font-display text-lg text-white">{selected.name}</h2>
                 <p className="mt-2 text-xs text-[var(--text-muted)]">{selected.description}</p>
                 {selected.compatibleAnatomy?.length ? (
@@ -103,13 +116,22 @@ export function ShopBrowser({ title, items }: Props) {
                     Compatible: {selected.compatibleAnatomy.join(", ")}
                   </p>
                 ) : null}
+                <div className="shop-browser__price-box mt-3 rounded-md border border-[rgba(61,231,255,0.25)] px-3 py-2">
+                  <p className="font-display text-xl text-[var(--cyan)]">
+                    {selected.price.credits.toLocaleString()} Credits
+                  </p>
+                  <p className="text-[10px] text-[var(--text-dim)]">
+                    Optional · {lamportsToSolString(BigInt(selected.price.lamports))} SOL
+                  </p>
+                </div>
                 <button
                   type="button"
                   className="btn-primary focus-ring mt-3 w-full text-xs"
                   onClick={() => setPurchaseItem(selected)}
                 >
-                  Choose payment · {lamportsToSolString(BigInt(selected.price.lamports))} SOL
+                  Choose payment
                 </button>
+                </div>
               </div>
               <PriceBreakdown quote={quote} />
               {featureFlagDefaults.SHOP_REVENUE_SPLIT_ENABLED ? (

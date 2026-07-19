@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SoundscapeMount } from "@/components/audio/soundscape-mount";
 import { HousingHub } from "@/components/housing/housing-hub";
 import { PageHeader } from "@/components/shared/page-header";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
@@ -8,6 +9,7 @@ export const metadata = { title: "Housing" };
 export default function HousingPage() {
   return (
     <div className="space-y-6">
+      <SoundscapeMount mode="housing" fadeMs={850} />
       <PageHeader
         kicker="Private instances"
         titleSlug="homestead"

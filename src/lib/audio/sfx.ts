@@ -10,6 +10,8 @@ import type { TerrainFootstep } from "@/lib/audio/types";
 
 export type SfxEventId =
   | "ui.click"
+  | "ui.hover"
+  | "ui.success"
   | "ui.modal_open"
   | "ui.modal_close"
   | "ui.nav"
@@ -20,9 +22,21 @@ export type SfxEventId =
   | "ui.chat_open"
   | "ui.chat_close"
   | "ui.chat_send"
+  | "ui.notify"
+  | "login.enter"
+  | "login.success"
+  | "cinematic.stinger"
+  | "cinematic.whoosh"
   | "hatchery.claim"
   | "hatchery.incubate_tick"
   | "hatchery.hatch_reveal"
+  | "hatchery.idle"
+  | "hatchery.crack"
+  | "hatchery.rarity_common"
+  | "hatchery.rarity_uncommon"
+  | "hatchery.rarity_rare"
+  | "hatchery.rarity_epic"
+  | "hatchery.rarity_legendary"
   | "pets.care"
   | "pets.feed"
   | "pets.water"
@@ -33,6 +47,11 @@ export type SfxEventId =
   | "pets.need_low"
   | "pets.equip"
   | "pets.evolve"
+  | "companion.idle"
+  | "companion.happy"
+  | "companion.angry"
+  | "companion.attack"
+  | "companion.hurt"
   | "quests.accept"
   | "quests.objective"
   | "quests.complete"
@@ -42,9 +61,61 @@ export type SfxEventId =
   | "combat.lose"
   | "combat.stinger"
   | "event.stinger"
+  | "boss.enter"
+  | "boss.phase"
+  | "boss.taunt"
+  | "boss.defeat"
   | "arena.start"
+  | "arena.queue"
+  | "arena.match_found"
+  | "arena.crowd"
+  | "tournament.start"
+  | "tournament.round"
+  | "tournament.victory"
+  | "tcg.card_select"
+  | "tcg.card_play"
+  | "tcg.card_draw"
+  | "tcg.energy_gain"
+  | "tcg.summon"
+  | "tcg.end_turn"
+  | "tcg.attack"
+  | "tcg.damage"
+  | "tcg.match_start"
+  | "tcg.element_fire"
+  | "tcg.element_water"
+  | "tcg.element_nature"
+  | "tcg.element_storm"
+  | "tcg.element_void"
+  | "tcg.element_light"
+  | "deck.add"
+  | "deck.remove"
+  | "deck.save"
+  | "deck.error"
+  | "codex.page_turn"
+  | "codex.discover"
+  | "codex.inspect"
+  | "codex.reward"
+  | "codex.locked"
+  | "collection.open"
+  | "collection.select"
+  | "shop.open"
   | "shop.purchase_ok"
   | "shop.purchase_fail"
+  | "marketplace.list"
+  | "marketplace.bid"
+  | "marketplace.sol_transfer"
+  | "guild.open"
+  | "guild.invite"
+  | "guild.join"
+  | "housing.enter"
+  | "housing.place"
+  | "housing.pickup"
+  | "notify.toast"
+  | "notify.achievement"
+  | "notify.friend"
+  | "voice.narrator_line"
+  | "voice.announcer_ready"
+  | "voice.announcer_victory"
   | "world.footstep"
   | "world.npc_talk"
   | "world.npc_greet"
@@ -112,6 +183,72 @@ const RECIPES: Record<SfxEventId, SfxRecipe> = {
     gain: 0.35,
     tones: [{ freq: 880, dur: 0.035, type: "sine", gain: 0.4 }],
     file: "/sounds/sfx/ui-click.wav",
+  },
+  "ui.hover": {
+    cooldownMs: 90,
+    gain: 0.18,
+    tones: [{ freq: 1200, dur: 0.02, type: "sine", gain: 0.22 }],
+    file: "/sounds/sfx/ui-hover.wav",
+  },
+  "ui.success": {
+    cooldownMs: 180,
+    gain: 0.5,
+    tones: [
+      { freq: 523, dur: 0.05, type: "sine", gain: 0.28 },
+      { freq: 784, dur: 0.08, type: "triangle", gain: 0.24, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/ui-success.wav",
+  },
+  "ui.notify": {
+    cooldownMs: 200,
+    gain: 0.42,
+    tones: [
+      { freq: 880, dur: 0.04, type: "sine", gain: 0.26 },
+      { freq: 1175, dur: 0.06, type: "triangle", gain: 0.2, delay: 0.04 },
+    ],
+    file: "/sounds/sfx/ui-notify.wav",
+  },
+  "login.enter": {
+    cooldownMs: 800,
+    gain: 0.5,
+    duck: true,
+    tones: [
+      { freq: 196, dur: 0.18, type: "sine", gain: 0.2 },
+      { freq: 294, dur: 0.2, type: "triangle", gain: 0.22, delay: 0.12 },
+      { freq: 392, dur: 0.28, type: "sine", gain: 0.2, delay: 0.28 },
+    ],
+    file: "/sounds/sfx/login-enter.wav",
+  },
+  "login.success": {
+    cooldownMs: 400,
+    gain: 0.55,
+    tones: [
+      { freq: 523, dur: 0.08, type: "sine", gain: 0.28 },
+      { freq: 659, dur: 0.1, type: "triangle", gain: 0.26, delay: 0.07 },
+      { freq: 784, dur: 0.14, type: "sine", gain: 0.22, delay: 0.16 },
+    ],
+    file: "/sounds/sfx/login-success.wav",
+  },
+  "cinematic.stinger": {
+    cooldownMs: 1200,
+    gain: 0.7,
+    duck: true,
+    tones: [
+      { freq: 110, dur: 0.2, type: "sine", gain: 0.28 },
+      { freq: 220, dur: 0.22, type: "triangle", gain: 0.24, delay: 0.12 },
+      { freq: 440, dur: 0.3, type: "sine", gain: 0.22, delay: 0.28 },
+      { freq: 880, dur: 0.35, type: "sine", gain: 0.18, delay: 0.5 },
+    ],
+    file: "/sounds/sfx/cinematic-stinger.wav",
+  },
+  "cinematic.whoosh": {
+    cooldownMs: 350,
+    gain: 0.5,
+    tones: [
+      { freq: 180, dur: 0.12, type: "triangle", gain: 0.2 },
+      { freq: 520, dur: 0.18, type: "sine", gain: 0.22, delay: 0.08 },
+    ],
+    file: "/sounds/sfx/cinematic-whoosh.wav",
   },
   "ui.modal_open": {
     cooldownMs: 120,
@@ -219,6 +356,78 @@ const RECIPES: Record<SfxEventId, SfxRecipe> = {
     ],
     file: "/sounds/sfx/hatchery-reveal.wav",
   },
+  "hatchery.idle": {
+    cooldownMs: 3200,
+    gain: 0.18,
+    ambient: true,
+    tones: [{ freq: 480, dur: 0.06, type: "sine", gain: 0.16 }],
+    file: "/sounds/sfx/hatchery-idle.wav",
+  },
+  "hatchery.crack": {
+    cooldownMs: 220,
+    gain: 0.5,
+    tones: [
+      { freq: 240, dur: 0.04, type: "square", gain: 0.14 },
+      { freq: 180, dur: 0.06, type: "triangle", gain: 0.16, delay: 0.03 },
+      { freq: 90, dur: 0.08, type: "sine", gain: 0.12, delay: 0.06 },
+    ],
+    file: "/sounds/sfx/hatchery-crack.wav",
+  },
+  "hatchery.rarity_common": {
+    cooldownMs: 500,
+    gain: 0.5,
+    tones: [
+      { freq: 392, dur: 0.08, type: "sine", gain: 0.26 },
+      { freq: 523, dur: 0.1, type: "triangle", gain: 0.22, delay: 0.07 },
+    ],
+    file: "/sounds/sfx/hatchery-rarity-common.wav",
+  },
+  "hatchery.rarity_uncommon": {
+    cooldownMs: 500,
+    gain: 0.55,
+    tones: [
+      { freq: 440, dur: 0.08, type: "sine", gain: 0.26 },
+      { freq: 554, dur: 0.1, type: "triangle", gain: 0.24, delay: 0.07 },
+      { freq: 659, dur: 0.12, type: "sine", gain: 0.2, delay: 0.15 },
+    ],
+    file: "/sounds/sfx/hatchery-rarity-uncommon.wav",
+  },
+  "hatchery.rarity_rare": {
+    cooldownMs: 550,
+    gain: 0.6,
+    duck: true,
+    tones: [
+      { freq: 494, dur: 0.09, type: "sine", gain: 0.28 },
+      { freq: 659, dur: 0.11, type: "triangle", gain: 0.26, delay: 0.08 },
+      { freq: 784, dur: 0.14, type: "sine", gain: 0.24, delay: 0.18 },
+    ],
+    file: "/sounds/sfx/hatchery-rarity-rare.wav",
+  },
+  "hatchery.rarity_epic": {
+    cooldownMs: 600,
+    gain: 0.65,
+    duck: true,
+    tones: [
+      { freq: 523, dur: 0.1, type: "sine", gain: 0.28 },
+      { freq: 698, dur: 0.12, type: "triangle", gain: 0.26, delay: 0.09 },
+      { freq: 880, dur: 0.14, type: "sine", gain: 0.24, delay: 0.2 },
+      { freq: 1046, dur: 0.18, type: "sine", gain: 0.2, delay: 0.32 },
+    ],
+    file: "/sounds/sfx/hatchery-rarity-epic.wav",
+  },
+  "hatchery.rarity_legendary": {
+    cooldownMs: 700,
+    gain: 0.72,
+    duck: true,
+    tones: [
+      { freq: 196, dur: 0.14, type: "sine", gain: 0.24 },
+      { freq: 392, dur: 0.14, type: "triangle", gain: 0.26, delay: 0.1 },
+      { freq: 587, dur: 0.16, type: "sine", gain: 0.26, delay: 0.22 },
+      { freq: 784, dur: 0.18, type: "sine", gain: 0.24, delay: 0.36 },
+      { freq: 1175, dur: 0.28, type: "triangle", gain: 0.22, delay: 0.52 },
+    ],
+    file: "/sounds/sfx/hatchery-rarity-legendary.wav",
+  },
   "pets.care": {
     cooldownMs: 160,
     gain: 0.45,
@@ -311,6 +520,7 @@ const RECIPES: Record<SfxEventId, SfxRecipe> = {
       { freq: 660, dur: 0.12, type: "triangle", gain: 0.28, delay: 0.1 },
       { freq: 880, dur: 0.18, type: "sine", gain: 0.3, delay: 0.22 },
     ],
+    file: "/sounds/sfx/pets-evolve.wav",
   },
   "quests.accept": {
     cooldownMs: 200,
@@ -412,6 +622,401 @@ const RECIPES: Record<SfxEventId, SfxRecipe> = {
     ],
     file: "/sounds/sfx/arena-start.wav",
   },
+  "arena.queue": {
+    cooldownMs: 200,
+    gain: 0.38,
+    tones: [
+      { freq: 640, dur: 0.04, type: "sine", gain: 0.22 },
+      { freq: 800, dur: 0.05, type: "triangle", gain: 0.18, delay: 0.04 },
+    ],
+    file: "/sounds/sfx/arena-queue.wav",
+  },
+  "arena.match_found": {
+    cooldownMs: 500,
+    gain: 0.6,
+    duck: true,
+    tones: [
+      { freq: 392, dur: 0.08, type: "sine", gain: 0.28 },
+      { freq: 523, dur: 0.1, type: "triangle", gain: 0.26, delay: 0.07 },
+      { freq: 784, dur: 0.14, type: "sine", gain: 0.24, delay: 0.16 },
+    ],
+    file: "/sounds/sfx/arena-match-found.wav",
+  },
+  "arena.crowd": {
+    cooldownMs: 4000,
+    gain: 0.22,
+    ambient: true,
+    tones: [{ freq: 140, dur: 0.35, type: "triangle", gain: 0.1 }],
+    file: "/sounds/sfx/arena-crowd.wav",
+  },
+  "tournament.start": {
+    cooldownMs: 700,
+    gain: 0.62,
+    duck: true,
+    tones: [
+      { freq: 262, dur: 0.12, type: "triangle", gain: 0.28 },
+      { freq: 330, dur: 0.12, type: "sine", gain: 0.26, delay: 0.1 },
+      { freq: 392, dur: 0.18, type: "sine", gain: 0.24, delay: 0.22 },
+    ],
+    file: "/sounds/sfx/tournament-start.wav",
+  },
+  "tournament.round": {
+    cooldownMs: 400,
+    gain: 0.5,
+    tones: [
+      { freq: 440, dur: 0.07, type: "sine", gain: 0.26 },
+      { freq: 554, dur: 0.1, type: "triangle", gain: 0.22, delay: 0.06 },
+    ],
+    file: "/sounds/sfx/tournament-round.wav",
+  },
+  "tournament.victory": {
+    cooldownMs: 800,
+    gain: 0.68,
+    duck: true,
+    tones: [
+      { freq: 523, dur: 0.1, type: "sine", gain: 0.28 },
+      { freq: 659, dur: 0.12, type: "triangle", gain: 0.26, delay: 0.09 },
+      { freq: 784, dur: 0.14, type: "sine", gain: 0.24, delay: 0.2 },
+      { freq: 1046, dur: 0.22, type: "sine", gain: 0.22, delay: 0.34 },
+    ],
+    file: "/sounds/sfx/tournament-victory.wav",
+  },
+  "boss.enter": {
+    cooldownMs: 1200,
+    gain: 0.72,
+    duck: true,
+    tones: [
+      { freq: 70, dur: 0.25, type: "sine", gain: 0.3 },
+      { freq: 140, dur: 0.28, type: "triangle", gain: 0.22, delay: 0.15 },
+      { freq: 210, dur: 0.35, type: "sine", gain: 0.2, delay: 0.35 },
+    ],
+    file: "/sounds/sfx/boss-enter.wav",
+  },
+  "boss.phase": {
+    cooldownMs: 700,
+    gain: 0.62,
+    duck: true,
+    tones: [
+      { freq: 100, dur: 0.14, type: "sawtooth", gain: 0.12 },
+      { freq: 200, dur: 0.16, type: "triangle", gain: 0.22, delay: 0.1 },
+      { freq: 400, dur: 0.2, type: "sine", gain: 0.2, delay: 0.22 },
+    ],
+    file: "/sounds/sfx/boss-phase.wav",
+  },
+  "boss.taunt": {
+    cooldownMs: 600,
+    gain: 0.55,
+    tones: [
+      { freq: 160, dur: 0.12, type: "triangle", gain: 0.22 },
+      { freq: 120, dur: 0.16, type: "sine", gain: 0.18, delay: 0.1 },
+    ],
+    file: "/sounds/sfx/boss-taunt.wav",
+  },
+  "boss.defeat": {
+    cooldownMs: 900,
+    gain: 0.7,
+    duck: true,
+    tones: [
+      { freq: 330, dur: 0.12, type: "sine", gain: 0.26 },
+      { freq: 440, dur: 0.14, type: "triangle", gain: 0.24, delay: 0.1 },
+      { freq: 554, dur: 0.18, type: "sine", gain: 0.22, delay: 0.24 },
+      { freq: 740, dur: 0.28, type: "sine", gain: 0.2, delay: 0.4 },
+    ],
+    file: "/sounds/sfx/boss-defeat.wav",
+  },
+  "companion.idle": {
+    cooldownMs: 900,
+    gain: 0.32,
+    tones: [{ freq: 720, dur: 0.05, type: "sine", gain: 0.2 }],
+    file: "/sounds/sfx/companion-idle.wav",
+  },
+  "companion.happy": {
+    cooldownMs: 280,
+    gain: 0.48,
+    tones: [
+      { freq: 660, dur: 0.05, type: "sine", gain: 0.26 },
+      { freq: 990, dur: 0.07, type: "triangle", gain: 0.22, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/companion-happy.wav",
+  },
+  "companion.angry": {
+    cooldownMs: 280,
+    gain: 0.48,
+    tones: [
+      { freq: 220, dur: 0.06, type: "sawtooth", gain: 0.12 },
+      { freq: 160, dur: 0.08, type: "triangle", gain: 0.18, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/companion-angry.wav",
+  },
+  "companion.attack": {
+    cooldownMs: 200,
+    gain: 0.52,
+    tones: [
+      { freq: 300, dur: 0.05, type: "triangle", gain: 0.22 },
+      { freq: 180, dur: 0.07, type: "sine", gain: 0.18, delay: 0.03 },
+    ],
+    file: "/sounds/sfx/companion-attack.wav",
+  },
+  "companion.hurt": {
+    cooldownMs: 200,
+    gain: 0.45,
+    tones: [
+      { freq: 400, dur: 0.04, type: "sine", gain: 0.2 },
+      { freq: 260, dur: 0.08, type: "triangle", gain: 0.16, delay: 0.04 },
+    ],
+    file: "/sounds/sfx/companion-hurt.wav",
+  },
+  "tcg.card_select": {
+    cooldownMs: 70,
+    gain: 0.32,
+    tones: [
+      { freq: 740, dur: 0.028, type: "sine", gain: 0.28 },
+      { freq: 1110, dur: 0.04, type: "triangle", gain: 0.16, delay: 0.02 },
+    ],
+    file: "/sounds/sfx/tcg-card-select.wav",
+  },
+  "tcg.card_play": {
+    cooldownMs: 120,
+    gain: 0.55,
+    duck: true,
+    tones: [
+      { freq: 220, dur: 0.05, type: "triangle", gain: 0.22 },
+      { freq: 440, dur: 0.07, type: "sine", gain: 0.28, delay: 0.04 },
+      { freq: 880, dur: 0.1, type: "triangle", gain: 0.22, delay: 0.1 },
+    ],
+    file: "/sounds/sfx/tcg-card-play.wav",
+  },
+  "tcg.card_draw": {
+    cooldownMs: 100,
+    gain: 0.38,
+    tones: [
+      { freq: 520, dur: 0.04, type: "triangle", gain: 0.22 },
+      { freq: 780, dur: 0.06, type: "sine", gain: 0.2, delay: 0.03 },
+    ],
+    file: "/sounds/sfx/tcg-card-draw.wav",
+  },
+  "tcg.energy_gain": {
+    cooldownMs: 120,
+    gain: 0.42,
+    tones: [
+      { freq: 740, dur: 0.05, type: "sine", gain: 0.24 },
+      { freq: 1110, dur: 0.08, type: "triangle", gain: 0.2, delay: 0.04 },
+    ],
+    file: "/sounds/sfx/tcg-energy-gain.wav",
+  },
+  "tcg.summon": {
+    cooldownMs: 220,
+    gain: 0.58,
+    duck: true,
+    tones: [
+      { freq: 220, dur: 0.08, type: "triangle", gain: 0.22 },
+      { freq: 440, dur: 0.1, type: "sine", gain: 0.26, delay: 0.06 },
+      { freq: 660, dur: 0.14, type: "sine", gain: 0.22, delay: 0.14 },
+    ],
+    file: "/sounds/sfx/tcg-summon.wav",
+  },
+  "tcg.element_fire": {
+    cooldownMs: 140,
+    gain: 0.52,
+    tones: [
+      { freq: 180, dur: 0.08, type: "sawtooth", gain: 0.12 },
+      { freq: 360, dur: 0.1, type: "triangle", gain: 0.22, delay: 0.04 },
+    ],
+    file: "/sounds/sfx/tcg-element-fire.wav",
+  },
+  "tcg.element_water": {
+    cooldownMs: 140,
+    gain: 0.5,
+    tones: [
+      { freq: 280, dur: 0.1, type: "sine", gain: 0.22 },
+      { freq: 420, dur: 0.12, type: "triangle", gain: 0.18, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/tcg-element-water.wav",
+  },
+  "tcg.element_nature": {
+    cooldownMs: 140,
+    gain: 0.48,
+    tones: [
+      { freq: 330, dur: 0.08, type: "triangle", gain: 0.22 },
+      { freq: 495, dur: 0.1, type: "sine", gain: 0.2, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/tcg-element-nature.wav",
+  },
+  "tcg.element_storm": {
+    cooldownMs: 140,
+    gain: 0.52,
+    tones: [
+      { freq: 900, dur: 0.05, type: "square", gain: 0.1 },
+      { freq: 200, dur: 0.12, type: "triangle", gain: 0.2, delay: 0.03 },
+    ],
+    file: "/sounds/sfx/tcg-element-storm.wav",
+  },
+  "tcg.element_void": {
+    cooldownMs: 140,
+    gain: 0.5,
+    tones: [
+      { freq: 70, dur: 0.14, type: "sine", gain: 0.22 },
+      { freq: 105, dur: 0.16, type: "triangle", gain: 0.16, delay: 0.06 },
+    ],
+    file: "/sounds/sfx/tcg-element-void.wav",
+  },
+  "tcg.element_light": {
+    cooldownMs: 140,
+    gain: 0.52,
+    tones: [
+      { freq: 880, dur: 0.08, type: "sine", gain: 0.24 },
+      { freq: 1320, dur: 0.12, type: "triangle", gain: 0.2, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/tcg-element-light.wav",
+  },
+  "tcg.end_turn": {
+    cooldownMs: 200,
+    gain: 0.42,
+    tones: [
+      { freq: 360, dur: 0.05, type: "sine", gain: 0.24 },
+      { freq: 240, dur: 0.08, type: "triangle", gain: 0.2, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/tcg-end-turn.wav",
+  },
+  "tcg.attack": {
+    cooldownMs: 90,
+    gain: 0.55,
+    tones: [
+      { freq: 160, dur: 0.045, type: "sawtooth", gain: 0.16 },
+      { freq: 320, dur: 0.07, type: "triangle", gain: 0.26, delay: 0.025 },
+    ],
+    file: "/sounds/sfx/tcg-attack.wav",
+  },
+  "tcg.damage": {
+    cooldownMs: 80,
+    gain: 0.5,
+    tones: [
+      { freq: 140, dur: 0.06, type: "square", gain: 0.16 },
+      { freq: 70, dur: 0.1, type: "sine", gain: 0.14, delay: 0.03 },
+    ],
+    file: "/sounds/sfx/tcg-damage.wav",
+  },
+  "tcg.match_start": {
+    cooldownMs: 600,
+    gain: 0.6,
+    duck: true,
+    tones: [
+      { freq: 196, dur: 0.1, type: "triangle", gain: 0.28 },
+      { freq: 294, dur: 0.1, type: "triangle", gain: 0.26, delay: 0.09 },
+      { freq: 392, dur: 0.16, type: "sine", gain: 0.24, delay: 0.18 },
+    ],
+    file: "/sounds/sfx/tcg-match-start.wav",
+  },
+  "deck.add": {
+    cooldownMs: 60,
+    gain: 0.36,
+    tones: [
+      { freq: 660, dur: 0.03, type: "sine", gain: 0.26 },
+      { freq: 990, dur: 0.045, type: "triangle", gain: 0.18, delay: 0.025 },
+    ],
+    file: "/sounds/sfx/deck-add.wav",
+  },
+  "deck.remove": {
+    cooldownMs: 60,
+    gain: 0.32,
+    tones: [
+      { freq: 520, dur: 0.03, type: "triangle", gain: 0.22 },
+      { freq: 360, dur: 0.04, type: "sine", gain: 0.18, delay: 0.025 },
+    ],
+    file: "/sounds/sfx/deck-remove.wav",
+  },
+  "deck.save": {
+    cooldownMs: 250,
+    gain: 0.5,
+    tones: [
+      { freq: 523, dur: 0.06, type: "sine", gain: 0.28 },
+      { freq: 659, dur: 0.08, type: "triangle", gain: 0.24, delay: 0.05 },
+      { freq: 784, dur: 0.1, type: "sine", gain: 0.2, delay: 0.12 },
+    ],
+    file: "/sounds/sfx/deck-save.wav",
+  },
+  "deck.error": {
+    cooldownMs: 180,
+    gain: 0.42,
+    tones: [
+      { freq: 220, dur: 0.07, type: "square", gain: 0.16 },
+      { freq: 170, dur: 0.09, type: "triangle", gain: 0.14, delay: 0.06 },
+    ],
+    file: "/sounds/sfx/deck-error.wav",
+  },
+  "codex.page_turn": {
+    cooldownMs: 100,
+    gain: 0.4,
+    tones: [
+      { freq: 280, dur: 0.04, type: "triangle", gain: 0.18 },
+      { freq: 420, dur: 0.06, type: "sine", gain: 0.16, delay: 0.03 },
+    ],
+    file: "/sounds/sfx/codex-page-turn.wav",
+  },
+  "codex.discover": {
+    cooldownMs: 400,
+    gain: 0.6,
+    duck: true,
+    tones: [
+      { freq: 392, dur: 0.08, type: "sine", gain: 0.28 },
+      { freq: 523, dur: 0.1, type: "triangle", gain: 0.26, delay: 0.07 },
+      { freq: 784, dur: 0.16, type: "sine", gain: 0.24, delay: 0.16 },
+    ],
+    file: "/sounds/sfx/codex-discover.wav",
+  },
+  "codex.inspect": {
+    cooldownMs: 120,
+    gain: 0.35,
+    tones: [
+      { freq: 640, dur: 0.035, type: "sine", gain: 0.24 },
+      { freq: 960, dur: 0.05, type: "triangle", gain: 0.16, delay: 0.03 },
+    ],
+    file: "/sounds/sfx/codex-inspect.wav",
+  },
+  "codex.reward": {
+    cooldownMs: 350,
+    gain: 0.58,
+    duck: true,
+    tones: [
+      { freq: 587, dur: 0.07, type: "sine", gain: 0.28 },
+      { freq: 740, dur: 0.09, type: "triangle", gain: 0.26, delay: 0.06 },
+      { freq: 987, dur: 0.14, type: "sine", gain: 0.22, delay: 0.14 },
+    ],
+    file: "/sounds/sfx/codex-reward.wav",
+  },
+  "codex.locked": {
+    cooldownMs: 160,
+    gain: 0.3,
+    tones: [
+      { freq: 180, dur: 0.05, type: "triangle", gain: 0.18 },
+      { freq: 140, dur: 0.07, type: "sine", gain: 0.14, delay: 0.04 },
+    ],
+    file: "/sounds/sfx/codex-locked.wav",
+  },
+  "collection.open": {
+    cooldownMs: 400,
+    gain: 0.42,
+    tones: [
+      { freq: 300, dur: 0.06, type: "triangle", gain: 0.2 },
+      { freq: 450, dur: 0.1, type: "sine", gain: 0.22, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/collection-open.wav",
+  },
+  "collection.select": {
+    cooldownMs: 70,
+    gain: 0.3,
+    tones: [{ freq: 700, dur: 0.03, type: "sine", gain: 0.24 }],
+    file: "/sounds/sfx/collection-select.wav",
+  },
+  "shop.open": {
+    cooldownMs: 400,
+    gain: 0.4,
+    tones: [
+      { freq: 360, dur: 0.07, type: "triangle", gain: 0.22 },
+      { freq: 540, dur: 0.1, type: "sine", gain: 0.2, delay: 0.06 },
+    ],
+    file: "/sounds/sfx/shop-open.wav",
+  },
   "shop.purchase_ok": {
     cooldownMs: 250,
     gain: 0.55,
@@ -430,6 +1035,145 @@ const RECIPES: Record<SfxEventId, SfxRecipe> = {
       { freq: 180, dur: 0.1, type: "square", gain: 0.14, delay: 0.07 },
     ],
     file: "/sounds/sfx/shop-fail.wav",
+  },
+  "marketplace.list": {
+    cooldownMs: 220,
+    gain: 0.45,
+    tones: [
+      { freq: 520, dur: 0.05, type: "sine", gain: 0.24 },
+      { freq: 780, dur: 0.07, type: "triangle", gain: 0.2, delay: 0.04 },
+    ],
+    file: "/sounds/sfx/marketplace-list.wav",
+  },
+  "marketplace.bid": {
+    cooldownMs: 180,
+    gain: 0.42,
+    tones: [
+      { freq: 600, dur: 0.04, type: "sine", gain: 0.24 },
+      { freq: 900, dur: 0.06, type: "triangle", gain: 0.18, delay: 0.035 },
+    ],
+    file: "/sounds/sfx/marketplace-bid.wav",
+  },
+  "marketplace.sol_transfer": {
+    cooldownMs: 280,
+    gain: 0.48,
+    tones: [
+      { freq: 440, dur: 0.06, type: "sine", gain: 0.24 },
+      { freq: 660, dur: 0.08, type: "triangle", gain: 0.22, delay: 0.05 },
+      { freq: 880, dur: 0.1, type: "sine", gain: 0.18, delay: 0.12 },
+    ],
+    file: "/sounds/sfx/marketplace-sol-transfer.wav",
+  },
+  "guild.open": {
+    cooldownMs: 500,
+    gain: 0.45,
+    tones: [
+      { freq: 196, dur: 0.12, type: "sine", gain: 0.22 },
+      { freq: 294, dur: 0.14, type: "triangle", gain: 0.22, delay: 0.1 },
+    ],
+    file: "/sounds/sfx/guild-open.wav",
+  },
+  "guild.invite": {
+    cooldownMs: 300,
+    gain: 0.48,
+    tones: [
+      { freq: 700, dur: 0.05, type: "sine", gain: 0.24 },
+      { freq: 1050, dur: 0.08, type: "triangle", gain: 0.2, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/guild-invite.wav",
+  },
+  "guild.join": {
+    cooldownMs: 400,
+    gain: 0.55,
+    duck: true,
+    tones: [
+      { freq: 392, dur: 0.08, type: "sine", gain: 0.26 },
+      { freq: 523, dur: 0.1, type: "triangle", gain: 0.24, delay: 0.07 },
+      { freq: 659, dur: 0.14, type: "sine", gain: 0.22, delay: 0.16 },
+    ],
+    file: "/sounds/sfx/guild-join.wav",
+  },
+  "housing.enter": {
+    cooldownMs: 500,
+    gain: 0.45,
+    tones: [
+      { freq: 220, dur: 0.1, type: "sine", gain: 0.2 },
+      { freq: 330, dur: 0.14, type: "triangle", gain: 0.22, delay: 0.08 },
+    ],
+    file: "/sounds/sfx/housing-enter.wav",
+  },
+  "housing.place": {
+    cooldownMs: 120,
+    gain: 0.4,
+    tones: [
+      { freq: 280, dur: 0.04, type: "triangle", gain: 0.2 },
+      { freq: 200, dur: 0.05, type: "sine", gain: 0.16, delay: 0.03 },
+    ],
+    file: "/sounds/sfx/housing-place.wav",
+  },
+  "housing.pickup": {
+    cooldownMs: 120,
+    gain: 0.36,
+    tones: [
+      { freq: 360, dur: 0.035, type: "sine", gain: 0.2 },
+      { freq: 480, dur: 0.05, type: "triangle", gain: 0.16, delay: 0.03 },
+    ],
+    file: "/sounds/sfx/housing-pickup.wav",
+  },
+  "notify.toast": {
+    cooldownMs: 180,
+    gain: 0.4,
+    tones: [{ freq: 980, dur: 0.05, type: "sine", gain: 0.24 }],
+    file: "/sounds/sfx/notify-toast.wav",
+  },
+  "notify.achievement": {
+    cooldownMs: 500,
+    gain: 0.58,
+    duck: true,
+    tones: [
+      { freq: 523, dur: 0.08, type: "sine", gain: 0.28 },
+      { freq: 659, dur: 0.1, type: "triangle", gain: 0.26, delay: 0.07 },
+      { freq: 784, dur: 0.14, type: "sine", gain: 0.22, delay: 0.16 },
+    ],
+    file: "/sounds/sfx/notify-achievement.wav",
+  },
+  "notify.friend": {
+    cooldownMs: 350,
+    gain: 0.48,
+    tones: [
+      { freq: 640, dur: 0.05, type: "sine", gain: 0.24 },
+      { freq: 860, dur: 0.08, type: "triangle", gain: 0.2, delay: 0.05 },
+    ],
+    file: "/sounds/sfx/notify-friend.wav",
+  },
+  "voice.narrator_line": {
+    cooldownMs: 400,
+    gain: 0.55,
+    tones: [
+      { freq: 180, dur: 0.2, type: "sine", gain: 0.18 },
+      { freq: 220, dur: 0.22, type: "triangle", gain: 0.14, delay: 0.12 },
+    ],
+    file: "/sounds/sfx/voice-narrator.wav",
+  },
+  "voice.announcer_ready": {
+    cooldownMs: 500,
+    gain: 0.55,
+    tones: [
+      { freq: 200, dur: 0.1, type: "triangle", gain: 0.22 },
+      { freq: 300, dur: 0.14, type: "sine", gain: 0.2, delay: 0.08 },
+    ],
+    file: "/sounds/sfx/voice-announcer-ready.wav",
+  },
+  "voice.announcer_victory": {
+    cooldownMs: 600,
+    gain: 0.6,
+    duck: true,
+    tones: [
+      { freq: 262, dur: 0.1, type: "sine", gain: 0.24 },
+      { freq: 392, dur: 0.12, type: "triangle", gain: 0.22, delay: 0.09 },
+      { freq: 523, dur: 0.16, type: "sine", gain: 0.2, delay: 0.2 },
+    ],
+    file: "/sounds/sfx/voice-announcer-victory.wav",
   },
   "world.footstep": {
     cooldownMs: 220,
@@ -740,21 +1484,75 @@ class SfxEngine {
 
   private playProcedural(ctx: AudioContext, tones: ToneStep[], master: number) {
     const t0 = ctx.currentTime;
+    const dest = ctx.destination;
+
+    // Soft bandpassed noise tick under the first tone — magical click, not a raw beep.
+    if (tones.length > 0 && master > 0.05) {
+      const first = tones[0]!;
+      const start = t0 + (first.delay ?? 0);
+      const dur = Math.min(0.09, first.dur + 0.04);
+      const len = Math.floor(ctx.sampleRate * dur);
+      const buf = ctx.createBuffer(1, Math.max(1, len), ctx.sampleRate);
+      const data = buf.getChannelData(0);
+      let y = 0;
+      for (let i = 0; i < data.length; i++) {
+        const x = Math.random() * 2 - 1;
+        y = y * 0.97 + x * 0.03;
+        data[i] = y;
+      }
+      const src = ctx.createBufferSource();
+      src.buffer = buf;
+      const bp = ctx.createBiquadFilter();
+      bp.type = "bandpass";
+      bp.frequency.value = Math.min(4200, first.freq * 2.4);
+      bp.Q.value = 0.9;
+      const ng = ctx.createGain();
+      const peak = clamp01(master * 0.12);
+      ng.gain.setValueAtTime(0.0001, start);
+      ng.gain.exponentialRampToValueAtTime(Math.max(0.0001, peak), start + 0.008);
+      ng.gain.exponentialRampToValueAtTime(0.0001, start + dur);
+      src.connect(bp);
+      bp.connect(ng);
+      ng.connect(dest);
+      src.start(start);
+      src.stop(start + dur + 0.02);
+    }
+
     for (const step of tones) {
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
+      const lp = ctx.createBiquadFilter();
+      lp.type = "lowpass";
+      lp.frequency.value = Math.min(6400, step.freq * 4.5);
       osc.type = step.type ?? "sine";
       osc.frequency.value = step.freq;
       const peak = clamp01(master * (step.gain ?? 0.3));
       const start = t0 + (step.delay ?? 0);
       const end = start + step.dur;
       gain.gain.setValueAtTime(0.0001, start);
-      gain.gain.exponentialRampToValueAtTime(Math.max(0.0001, peak), start + 0.01);
+      gain.gain.exponentialRampToValueAtTime(Math.max(0.0001, peak), start + 0.012);
       gain.gain.exponentialRampToValueAtTime(0.0001, end);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
+      osc.connect(lp);
+      lp.connect(gain);
+      gain.connect(dest);
       osc.start(start);
       osc.stop(end + 0.02);
+
+      // Quiet octave shimmer for premium UI feel.
+      if ((step.type ?? "sine") === "sine" && step.freq >= 300) {
+        const harm = ctx.createOscillator();
+        const hg = ctx.createGain();
+        harm.type = "sine";
+        harm.frequency.value = step.freq * 2;
+        const hPeak = peak * 0.22;
+        hg.gain.setValueAtTime(0.0001, start);
+        hg.gain.exponentialRampToValueAtTime(Math.max(0.0001, hPeak), start + 0.01);
+        hg.gain.exponentialRampToValueAtTime(0.0001, end);
+        harm.connect(hg);
+        hg.connect(dest);
+        harm.start(start);
+        harm.stop(end + 0.02);
+      }
     }
   }
 }
@@ -775,6 +1573,41 @@ export function playCareSfx(action: string) {
 
 export function unlockSfx() {
   sfx.unlock();
+}
+
+/** Map hatch rarity string → fanfare cue (after reveal stinger). */
+export function playHatchRaritySfx(rarity: string | null | undefined) {
+  const key = (rarity ?? "common").toLowerCase();
+  const map: Record<string, SfxEventId> = {
+    common: "hatchery.rarity_common",
+    uncommon: "hatchery.rarity_uncommon",
+    rare: "hatchery.rarity_rare",
+    epic: "hatchery.rarity_epic",
+    legendary: "hatchery.rarity_legendary",
+    mythic: "hatchery.rarity_legendary",
+  };
+  playSfx(map[key] ?? "hatchery.rarity_common");
+}
+
+/** Affinity → elemental combat cue. */
+export function playElementSfx(affinity: string | null | undefined) {
+  const key = (affinity ?? "").toLowerCase();
+  const map: Record<string, SfxEventId> = {
+    fire: "tcg.element_fire",
+    ember: "tcg.element_fire",
+    water: "tcg.element_water",
+    tide: "tcg.element_water",
+    nature: "tcg.element_nature",
+    flora: "tcg.element_nature",
+    storm: "tcg.element_storm",
+    thunder: "tcg.element_storm",
+    void: "tcg.element_void",
+    shadow: "tcg.element_void",
+    light: "tcg.element_light",
+    radiant: "tcg.element_light",
+  };
+  const id = map[key];
+  if (id) playSfx(id);
 }
 
 export const SFX_EVENTS = Object.keys(RECIPES) as SfxEventId[];

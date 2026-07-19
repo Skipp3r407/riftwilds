@@ -1,0 +1,51 @@
+# Local Nakama config for Riftwilds (mounted at /nakama/data/local.yml)
+# Defaults are intentional for LOCAL DEV ONLY — rotate keys before any shared deploy.
+
+name: riftwilds-nakama1
+data_dir: "./data/"
+
+logger:
+  level: "DEBUG"
+  stdout: true
+
+database:
+  address:
+    - "postgres:localdb@nakama-postgres:5432/nakama"
+  max_open_conns: 25
+  max_idle_conns: 25
+
+runtime:
+  path: "/nakama/data/modules"
+  http_key: "defaulthttpkey"
+
+socket:
+  server_key: "defaultkey"
+  port: 7350
+  address: ""
+  max_message_size_bytes: 4096
+  # Windows Docker Desktop: listen on all interfaces inside the container
+  protocol: "tcp"
+
+session:
+  encryption_key: "defaultencryptionkey"
+  token_expiry_sec: 7200
+  refresh_encryption_key: "defaultrefreshencryptionkey"
+  refresh_token_expiry_sec: 86400
+
+console:
+  port: 7351
+  username: "admin"
+  password: "localdev"
+  signing_key: "defaultsigningkey"
+
+metrics:
+  reporting_freq_sec: 60
+
+matchmaker:
+  max_tickets: 3
+  interval_sec: 1
+  max_intervals: 10
+
+social:
+  # Local email auth does not require SMTP for authenticateEmail create flows
+  # (Nakama stores credentials; no magic-link mailer wired in this stack).

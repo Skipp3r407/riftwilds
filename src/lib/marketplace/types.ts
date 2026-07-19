@@ -3,6 +3,7 @@ import type {
   ListingBundleMode,
   MarketplaceAssetCategory,
 } from "@/lib/marketplace/listing-rules";
+import type { MarketplaceListingType } from "@/lib/marketplace/listing-kinds";
 
 export type MarketplaceListingKind = "EGG" | "PET" | "ITEM";
 
@@ -73,6 +74,21 @@ export type MarketplaceListingView = {
   /** DEMO_CREDITS is a legacy alias for CREDITS. */
   currency: "CREDITS" | "DEMO_CREDITS" | "SOL";
   status: "ACTIVE" | "SOLD" | "CANCELLED" | "EXPIRED";
+  /** Phase 1–2 listing style; defaults to FIXED_PRICE for legacy rows. */
+  listingType?: MarketplaceListingType;
+  /** Auction / offer metadata (demo). */
+  auction?: {
+    startingCredits: number;
+    highBidCredits: number | null;
+    bidCount: number;
+    endsAt: string;
+    reserveCredits: number | null;
+  } | null;
+  bestOffer?: {
+    minOfferCredits: number;
+    topOfferCredits: number | null;
+    offerCount: number;
+  } | null;
   createdAt: string;
   expiresAt: string;
   bundleMode: ListingBundleMode | null;

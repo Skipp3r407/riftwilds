@@ -5,6 +5,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { GameImage } from "@/components/assets/game-image";
 import { StatusChip } from "@/components/shared/page-header";
 import { playSfx } from "@/hooks/use-sfx";
+import { enterSoundscape } from "@/lib/audio/adaptive-engine";
+import { playHatchRaritySfx } from "@/lib/audio/sfx";
 import { playRiftlingCry, setCompanionSpeciesSlug } from "@/lib/audio/riftling-cries";
 import { guestFetch, rememberGuestTokenFromPayload } from "@/lib/auth/guest-client";
 import {
@@ -13,11 +15,14 @@ import {
   eggFullPath,
   eggTypeAssetClass,
   hatcheryClaimEggPath,
+  hatcheryClaimPlatePath,
   hatcheryEmptyEggsPath,
   hatcheryEmptyRiftlingsPath,
   hatcheryRarityIconPath,
 } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
+import { recordQuestMetric } from "@/game/quests/quest-demo-store";
+import { markFamilyOpened } from "@/game/tcg/codex-progress";
 
 type EggRow = {
   publicId: string;
@@ -154,7 +159,9 @@ export function HatcheryDashboard() {
   }, []);
 
   useEffect(() => {
+    void enterSoundscape("hatchery", { fadeMs: 800 });
     void refresh();
+    recordQuestMetric("hatchery_visit", 1);
   }, [refresh]);
 
   useEffect(() => {
@@ -220,6 +227,7 @@ export function HatcheryDashboard() {
         );
       } else {
         playSfx("hatchery.claim");
+        recordQuestMetric("egg_inspect", 1);
         pushEggFromResponse(data.egg);
       }
       await refresh();
@@ -287,12 +295,26 @@ export function HatcheryDashboard() {
           typeof data.error === "string" ? data.error : `Hatch failed (${res.status})`,
         );
       } else {
+        playSfx("hatchery.crack");
         playSfx("hatchery.hatch_reveal");
+        const rarity =
+          typeof data.reveal?.rarity === "string" ? data.reveal.rarity : null;
+        playHatchRaritySfx(rarity);
+        recordQuestMetric("hatch_count", 1);
+        recordQuestMetric("egg_inspect", 1);
         const slug =
           typeof data.reveal?.speciesSlug === "string" ? data.reveal.speciesSlug : null;
         if (slug) {
           playRiftlingCry(slug, { mood: "happy", force: true });
           setCompanionSpeciesSlug(slug);
+        }
+        const familyId =
+          typeof data.companionCard?.familyId === "string" ? data.companionCard.familyId : null;
+        if (familyId) {
+          markFamilyOpened(familyId, { cinematic: true });
+        }
+        if (data.companionCard?.grantedCardIds?.length) {
+          recordQuestMetric("tcg_card_collect", 1);
         }
         setReveal(data.reveal);
         claimedIdsRef.current.delete(eggPublicId);
@@ -317,25 +339,25 @@ export function HatcheryDashboard() {
   return (
     <div className="space-y-6">
       <section className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        <div className="panel panel-glow relative flex flex-col items-center overflow-hidden p-5 sm:p-8">
+        <div className="panel panel-glow hatchery-claim-plate relative flex flex-col items-center p-5 sm:p-8">
           <div
-            className="pointer-events-none absolute inset-0 surface-grid opacity-30"
+            className="hatchery-claim-plate__scene"
+            style={{ backgroundImage: `url(${hatcheryClaimPlatePath()})` }}
             aria-hidden
           />
-          <div
-            className="pointer-events-none absolute -top-16 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full bg-[rgba(61,231,255,0.16)] blur-3xl"
-            aria-hidden
-          />
-          <div className="egg-wobble relative h-44 w-36 sm:h-52 sm:w-40">
+          <div className="hatchery-claim-plate__scene-scrim" aria-hidden />
+          <div className="hatchery-claim-plate__glow" aria-hidden />
+          <p className="page-kicker relative z-[2]">Featured Starter Egg</p>
+          <div className="egg-wobble hatchery-claim-egg mt-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={hatcheryClaimEggPath()}
               alt="Common Rift starter egg"
-              className="h-full w-full object-contain drop-shadow-[0_0_40px_rgba(61,231,255,0.5)]"
+              className="h-full w-full object-contain drop-shadow-[0_0_52px_rgba(61,231,255,0.58)]"
             />
           </div>
           {offer ? (
-            <div className="relative mt-4 flex flex-wrap items-center justify-center gap-2">
+            <div className="relative z-[2] mt-4 flex flex-wrap items-center justify-center gap-2">
               {offer.exhausted ? (
                 <StatusChip tone="warn">Free eggs sold out</StatusChip>
               ) : (
@@ -350,19 +372,20 @@ export function HatcheryDashboard() {
               ) : null}
             </div>
           ) : null}
-          <p className="relative mt-5 max-w-sm text-center text-sm text-[var(--text-muted)] sm:mt-6">
+          <p className="relative z-[2] mt-5 max-w-sm text-center text-sm text-[var(--text-muted)] sm:mt-6">
             {offer?.canClaimFree
-              ? "Claim a free starter Common Rift Egg while the early pool lasts. Demo incubation is ~30 seconds. Hatch reveals are server-rolled — no near-miss theater."
-              : offer?.exhausted
-                ? "Free starter eggs are gone. Late keepers can still buy a Common Rift Egg for a steep Credits price — soft currency only, never SOL."
-                : offer?.alreadyClaimedFree
-                  ? "You already claimed your free starter. Need another egg? Buy one with Credits at a premium late-game price."
-                  : "Claim a starter Common Rift Egg. Demo incubation is ~30 seconds. Hatch reveals are server-rolled — no near-miss theater."}
+              ? "Your guaranteed free Starter Egg — no wallet, SOL, or token required. Demo incubation ~30s. Hatch reveals are server-rolled."
+              : offer?.alreadyClaimedFree
+                ? "Starter claimed. Earn more eggs from quests and events, or optionally buy one with Credits (never SOL)."
+                : "Guaranteed free Starter Egg for every new keeper. No wallet needed."}
+          </p>
+          <p className="relative z-[2] mt-2 max-w-sm text-center text-[11px] text-[var(--cyan)]/80">
+            Free to play · No wallet needed · {projectConfig.TOKEN_SYMBOL} perks are cosmetics only
           </p>
           {offer?.canClaimFree || !offer ? (
             <button
               type="button"
-              className="btn-primary focus-ring relative mt-5 min-h-12 w-full max-w-sm touch-manipulation text-base sm:w-auto sm:min-h-0 sm:text-sm"
+              className="btn-primary focus-ring relative z-[2] mt-5 min-h-12 w-full max-w-sm touch-manipulation text-base sm:w-auto sm:min-h-0 sm:text-sm"
               disabled={busy === "claim" || busy === "purchase"}
               onClick={() => void claim()}
             >
@@ -371,7 +394,7 @@ export function HatcheryDashboard() {
           ) : (
             <button
               type="button"
-              className="btn-primary focus-ring relative mt-5 min-h-12 w-full max-w-sm touch-manipulation text-base sm:w-auto sm:min-h-0 sm:text-sm"
+              className="btn-primary focus-ring relative z-[2] mt-5 min-h-12 w-full max-w-sm touch-manipulation text-base sm:w-auto sm:min-h-0 sm:text-sm"
               disabled={busy === "claim" || busy === "purchase"}
               onClick={() => void purchase()}
             >
@@ -381,7 +404,7 @@ export function HatcheryDashboard() {
             </button>
           )}
           {error ? (
-            <p className="relative mt-3 max-w-sm text-center text-sm text-[var(--coral)]">{error}</p>
+            <p className="relative z-[2] mt-3 max-w-sm text-center text-sm text-[var(--coral)]">{error}</p>
           ) : null}
         </div>
 
@@ -393,14 +416,14 @@ export function HatcheryDashboard() {
           {loading ? (
             <p className="mt-4 text-sm text-[var(--text-muted)]">Loading…</p>
           ) : eggs.length === 0 ? (
-            <div className="empty-state mt-4 min-h-[12rem] gap-3 px-4 py-6">
+            <div className="hatchery-empty-plate hatchery-empty-plate--eggs mt-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={hatcheryEmptyEggsPath()}
                 alt=""
-                className="relative z-[1] h-28 w-auto max-w-[14rem] object-contain drop-shadow-[0_0_24px_rgba(61,231,255,0.28)] sm:h-32"
+                className="hatchery-empty-plate__art"
               />
-              <p className="relative z-[1] text-sm text-[var(--text-muted)]">
+              <p className="hatchery-empty-plate__copy text-sm text-[var(--text-muted)]">
                 {offer?.canBuyPremium && !offer.canClaimFree
                   ? "None yet — buy a premium egg above, or wait if free stock returns."
                   : "None yet — claim a free starter above."}
@@ -523,6 +546,18 @@ export function HatcheryDashboard() {
               <p className="mt-2 text-xs text-[var(--text-muted)]">
                 Evolution paths: {reveal.evolutionPaths.join(" → ")}
               </p>
+              <p className="mt-3 text-xs text-[var(--cyan)]">
+                Companion card linked to your binder
+                {reveal.speciesSlug ? ` · open Codex for ${reveal.species}` : ""}.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <Link href="/tcg/collection" className="btn-secondary focus-ring text-xs">
+                  Open binder
+                </Link>
+                <Link href="/tcg/codex" className="btn-secondary focus-ring text-xs">
+                  Rift Codex
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -536,14 +571,14 @@ export function HatcheryDashboard() {
           <StatusChip tone="default">{pets.length} active</StatusChip>
         </div>
         {pets.length === 0 ? (
-          <div className="empty-state mt-4 min-h-[12rem] gap-3 px-4 py-6">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={hatcheryEmptyRiftlingsPath()}
-              alt=""
-              className="relative z-[1] h-28 w-auto max-w-[14rem] object-contain drop-shadow-[0_0_24px_rgba(61,231,255,0.28)] sm:h-32"
+          <div className="hatchery-empty-plate hatchery-empty-plate--riftlings mt-4">
+            <div
+              className="hatchery-empty-plate__scene"
+              style={{ backgroundImage: `url(${hatcheryEmptyRiftlingsPath()})` }}
+              aria-hidden
             />
-            <p className="relative z-[1] text-sm text-[var(--text-muted)]">
+            <div className="hatchery-empty-plate__scrim" aria-hidden />
+            <p className="hatchery-empty-plate__copy text-sm text-[var(--text-muted)]">
               None yet — hatch an egg to begin care.
             </p>
           </div>

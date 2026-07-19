@@ -1,0 +1,124 @@
+// PROPOSAL ONLY — do NOT run migrate deploy against production.
+// Player Marketplace + Rift Exchange persistence sketch.
+// Prefer extending existing MarketplaceListing / MarketplaceSale when approved.
+
+/*
+enum MarketplaceListingType {
+  FIXED_PRICE
+  AUCTION
+  BEST_OFFER
+  TRADE
+  RENTAL
+  SHOWCASE
+  COMMISSION
+  MUSEUM_EXHIBIT
+}
+
+model PlayerShop {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  slug        String   @unique
+  name        String
+  bannerPath  String?
+  motto       String?
+  ownerUserId String
+  specialties String[]
+
+  owner User @relation(fields: [ownerUserId], references: [id], onDelete: Cascade)
+
+  @@index([ownerUserId])
+}
+
+model MarketplaceWishlist {
+  id               String   @id @default(cuid())
+  createdAt        DateTime @default(now())
+  userId           String
+  listingPublicId  String
+  kind             String   // wishlist | watchlist
+  note             String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, listingPublicId, kind])
+  @@index([userId, kind])
+}
+
+model TradeRequest {
+  id                    String   @id @default(cuid())
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  publicId              String   @unique
+  initiatorUserId       String
+  counterpartyUserId    String
+  offerJson             Json
+  askJson               Json
+  status                String
+  initiatorConfirmed    Boolean  @default(false)
+  counterpartyConfirmed Boolean  @default(false)
+
+  @@index([initiatorUserId, status])
+  @@index([counterpartyUserId, status])
+}
+
+model MarketplaceOffer {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  listingId       String
+  bidderUserId    String
+  creditsAmount   Int
+  status          String
+
+  @@index([listingId, status])
+}
+
+model MarketplaceAuctionBid {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  listingId       String
+  bidderUserId    String
+  creditsAmount   Int
+
+  @@index([listingId, createdAt])
+}
+
+model ExchangeEarningEvent {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  userId      String?
+  methodId    String
+  label       String
+  amountLabel String
+  status      String
+  requestId   String?  @unique
+  metadata    Json?
+
+  @@index([userId, createdAt])
+  @@index([methodId, createdAt])
+}
+
+model MarketplaceAbuseSignal {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  code      String
+  severity  String
+  enforced  Boolean  @default(false)
+  actorKey  String?
+  detail    String?
+  metadata  Json?
+
+  @@index([code, createdAt])
+  @@index([actorKey, createdAt])
+}
+
+model MarketplaceTxLog {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  type       String
+  actorLabel String
+  detail     String
+  metadata   Json?
+
+  @@index([type, createdAt])
+}
+*/

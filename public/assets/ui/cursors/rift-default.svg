@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Classic OS-style arrow. Tip at (1,1) → hotspot 1 1. Amber body, cyan tip edge. -->
+  <!-- Soft tip glow -->
+  <path d="M1 1 L1 22 L6.5 16.8 L10.2 26.5 L13.6 25 L9.6 15.6 L18.2 15.6 Z" fill="#3de7ff" opacity="0.12"/>
+  <!-- Dark dual-outline for light + dark UI -->
+  <path d="M1 1 L1 22 L6.5 16.8 L10.2 26.5 L13.6 25 L9.6 15.6 L18.2 15.6 Z" fill="#0a0c10" stroke="#0a0c10" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Amber fill -->
+  <path d="M1 1 L1 22 L6.5 16.8 L10.2 26.5 L13.6 25 L9.6 15.6 L18.2 15.6 Z" fill="url(#riftDefGrad)" stroke="#ffb84d" stroke-width="0.95" stroke-linejoin="round"/>
+  <!-- Cyan tip edge accent (reads as crystal tip, not a blob) -->
+  <path d="M1 1 L1 9.5" stroke="#3de7ff" stroke-width="1.35" stroke-linecap="round"/>
+  <path d="M1 1 L8.8 8.2" stroke="#3de7ff" stroke-width="1.15" stroke-linecap="round" opacity="0.9"/>
+  <!-- Shaft highlight -->
+  <path d="M2.6 4.2 L2.6 15.2 L6.4 12.4" stroke="#ffe7a8" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+  <defs>
+    <linearGradient id="riftDefGrad" x1="1" y1="1" x2="12" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffe7a8"/>
+      <stop offset="0.5" stop-color="#ffb84d"/>
+      <stop offset="1" stop-color="#c47a22"/>
+    </linearGradient>
+  </defs>
+</svg>

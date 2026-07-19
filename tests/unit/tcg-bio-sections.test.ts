@@ -29,9 +29,42 @@ describe("tcg bio sections", () => {
     ]);
     expect(sections[0]?.imageSrc).toBe("/assets/pets/ashwing.png");
     expect(sections[1]?.imageSrc).toBe("/assets/maps/regions/ember-crater.png");
-    expect(sections[2]?.imageSrc).toBe("/assets/tcg/bio/behavior-ember.svg");
-    expect(sections[3]?.imageSrc).toBe("/assets/tcg/bio/diet-ember.svg");
-    expect(sections[4]?.imageSrc).toBe("/assets/battle/elements/ember.svg");
+    expect(sections[2]?.imageSrc).toBe("/assets/tcg/bio/behavior-ember.png");
+    expect(sections[2]?.imageFallback).toBe("/assets/tcg/bio/behavior-ember.svg");
+    expect(sections[3]?.imageSrc).toBe("/assets/tcg/bio/diet-ember.png");
+    expect(sections[3]?.imageFallback).toBe("/assets/tcg/bio/diet-ember.svg");
+    expect(sections[4]?.imageSrc).toBe(
+      "/assets/affinities/affinity-ember-icon.png",
+    );
+    expect(sections[4]?.imageFallback).toBe(
+      "/assets/placeholders/affinity-ember.svg",
+    );
+  });
+
+  it("uses painted affinity medallions for every affinity key", () => {
+    const samples: Array<{ slug: string; affinity: string }> = [
+      { slug: "cindercub", affinity: "ember" },
+      { slug: "brinepaw", affinity: "tide" },
+      { slug: "mossprig", affinity: "grove" },
+      { slug: "galekit", affinity: "storm" },
+      { slug: "gritling", affinity: "stone" },
+      { slug: "frostfin", affinity: "frost" },
+      { slug: "radiantkit", affinity: "radiant" },
+      { slug: "duskling", affinity: "void" },
+      { slug: "gearling", affinity: "alloy" },
+      { slug: "marshloom", affinity: "spirit" },
+    ];
+    for (const { slug, affinity } of samples) {
+      const lore = getSpeciesLore(slug);
+      expect(lore, slug).toBeTruthy();
+      const affinitySection = buildCreatureBioSections(lore!).find(
+        (s) => s.id === "affinity",
+      );
+      expect(affinitySection?.imageSrc).toBe(
+        `/assets/affinities/affinity-${affinity}-icon.png`,
+      );
+      expect(affinitySection?.imageSrc).not.toContain("/battle/elements/");
+    }
   });
 
   it("attaches sections on creature card detail", () => {

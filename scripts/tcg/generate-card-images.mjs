@@ -81,10 +81,20 @@ const REGION_PLATES = {
   "riftwild-commons": "public/assets/maps/regions/riftwild-commons.png",
 };
 
-/** Living-world building tiles are crude placeholders — never use as card face art. */
+/** Living-world building tiles + tiny library NPC pawns — never use as card face art. */
 function isPlaceholderBuildingArt(assetPath) {
   if (!assetPath) return true;
-  return /\/assets\/game\/library\/buildings\//i.test(assetPath);
+  return /\/assets\/game\/library\/(?:buildings|npcs)\//i.test(assetPath);
+}
+
+/** Tiny geometric library sprites (circle-head pawns) are useless as subjects. */
+function isTinyPlaceholderAsset(diskPath) {
+  try {
+    if (!diskPath || !fs.existsSync(diskPath)) return true;
+    return fs.statSync(diskPath).size < 8_000;
+  } catch {
+    return true;
+  }
 }
 
 const ELEMENT_TO_REGION = {
@@ -596,8 +606,11 @@ function resolveSourceArt(assetPath, riftlingSlug, card) {
     }
   }
   for (const rel of candidates) {
+    if (isPlaceholderBuildingArt(rel)) continue;
     const disk = publicPathToDisk(rel);
-    if (disk && fs.existsSync(disk)) return { rel, disk, fit: "contain" };
+    if (disk && fs.existsSync(disk) && !isTinyPlaceholderAsset(disk)) {
+      return { rel, disk, fit: "contain" };
+    }
   }
 
   // Location/weather with no pets: scenic fallback even if type missed above
@@ -605,7 +618,64 @@ function resolveSourceArt(assetPath, riftlingSlug, card) {
     const scenic = resolveRegionScenicArt(card);
     if (scenic) return { ...scenic, fit: "cover" };
   }
+
+  // Prefer curated subject plates under /assets/tcg/subjects/{slug}.png
+  if (card) {
+    const subjectSlug = subjectSlugFromCard(card);
+    const subjectRel = `/assets/tcg/subjects/${subjectSlug}.png`;
+    const subjectDisk = publicPathToDisk(subjectRel);
+    if (subjectDisk && fs.existsSync(subjectDisk) && !isTinyPlaceholderAsset(subjectDisk)) {
+      return { rel: subjectRel, disk: subjectDisk, fit: "contain" };
+    }
+    // Hero cards: painted NPC portraits (full-res) when subject plate missing
+    // Use contain (not cover) so wallpaper flares don't read as "scenic subject" overlays.
+    if (card.type === "hero") {
+      const artPath = card.art?.assetPath || card.art?.subjectPath;
+      if (artPath && !isPlaceholderBuildingArt(artPath)) {
+        const artDisk = publicPathToDisk(artPath);
+        if (artDisk && fs.existsSync(artDisk) && !isTinyPlaceholderAsset(artDisk)) {
+          return { rel: artPath, disk: artDisk, fit: "contain" };
+        }
+      }
+      const npcHits = [
+        `/assets/npcs/${subjectSlug}/portrait.png`,
+        `/assets/npcs/${subjectSlug}/portrait.webp`,
+        `/assets/npcs/riftwild-commons/${subjectSlug}/portrait.png`,
+        `/assets/npcs/riftwild-commons/${subjectSlug}/portrait.webp`,
+      ];
+      for (const rel of npcHits) {
+        const disk = publicPathToDisk(rel);
+        if (disk && fs.existsSync(disk) && !isTinyPlaceholderAsset(disk)) {
+          return { rel, disk, fit: "contain" };
+        }
+      }
+    }
+  }
+
+  // Illustrated vignette (not geometric emblem) when no disk subject exists
+  if (card) {
+    return {
+      rel: `generated:subject:${card.id}`,
+      disk: null,
+      svg: illustratedSubjectSvg(card, cardRole(card)),
+      fit: "cover",
+    };
+  }
   return null;
+}
+
+/** Filename slug for curated subject art: pocket-spark, corrupt-whisper, … */
+function subjectSlugFromCard(card) {
+  const id = String(card.id || "");
+  const trimmed = id
+    .replace(/^rotr-(?:s|e|c|t|h|x|l|w|r|prop)-/, "")
+    .replace(/^companion-/, "")
+    .replace(/^legendary-/, "")
+    .replace(/^artifact-/, "")
+    .replace(/^quest-/, "")
+    .replace(/^item-/, "")
+    .replace(/^npc-/, "");
+  return trimmed || id;
 }
 
 /** base | companion | ascendant | utility */
@@ -942,37 +1012,200 @@ async function buildPlateLayer(card, role) {
   return pipeline.blur(role === "companion" ? 1.2 : 0.6).png().toBuffer();
 }
 
-/** Central emblem when no creature/item source art exists (spells, tokens, etc.). */
-function scenicEmblemSvg(card, role) {
+/**
+ * Illustrated subject vignette when no disk pet/item/subject art exists.
+ * Replaces the old geometric crosshair emblem with element-themed fantasy scenes.
+ */
+function illustratedSubjectSvg(card, role) {
   const scene = SCENES[card.element] || SCENES.neutral;
   const accent = RARITY_ACCENT[card.rarity] || RARITY_ACCENT.common;
-  const rng = mulberry32(hashStr(`${card.id}|emblem`));
+  const rng = mulberry32(hashStr(`${card.id}|subject-art`));
+  const name = String(card.localization?.name || card.id || "").toLowerCase();
+  const type = String(card.type || "spell");
   const cx = W / 2;
-  const cy = role === "utility" ? 250 : 220;
-  const r = 88 + Math.floor(rng() * 24);
-  const spokes = 6 + Math.floor(rng() * 4);
-  let rays = "";
-  for (let i = 0; i < spokes; i++) {
-    const a = (i / spokes) * Math.PI * 2 + rng() * 0.2;
-    const x2 = cx + Math.cos(a) * (r + 36);
-    const y2 = cy + Math.sin(a) * (r + 36);
-    rays += `<line x1="${cx}" y1="${cy}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${scene.glow}" stroke-width="2" opacity="0.35"/>`;
+  const cy = role === "utility" ? 255 : 230;
+  const [sky0, sky1, sky2] = scene.sky;
+
+  const motes = [];
+  for (let i = 0; i < 18; i++) {
+    const x = 40 + rng() * (W - 80);
+    const y = 60 + rng() * 320;
+    motes.push(
+      `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.2 + rng() * 2.4).toFixed(1)}" fill="${scene.glow}" opacity="${(0.2 + rng() * 0.45).toFixed(2)}"/>`,
+    );
   }
+
+  let subject = "";
+  const motif = scene.motif;
+
+  if (type === "companion" || type === "token" || /spark|buddy|fragment/i.test(name)) {
+    // Soft floating companion spirit
+    subject = `
+      <ellipse cx="${cx}" cy="${cy + 70}" rx="90" ry="22" fill="#000" opacity="0.28"/>
+      <ellipse cx="${cx}" cy="${cy}" rx="70" ry="58" fill="${scene.mid}" opacity="0.85"/>
+      <ellipse cx="${cx - 8}" cy="${cy - 10}" rx="52" ry="42" fill="${scene.glow}" opacity="0.55"/>
+      <circle cx="${cx - 14}" cy="${cy - 8}" r="7" fill="#f4efe6" opacity="0.9"/>
+      <circle cx="${cx + 16}" cy="${cy - 6}" r="6" fill="#f4efe6" opacity="0.85"/>
+      <circle cx="${cx - 14}" cy="${cy - 8}" r="3" fill="#0a1220"/>
+      <circle cx="${cx + 16}" cy="${cy - 6}" r="2.5" fill="#0a1220"/>
+      <path d="M ${cx - 40} ${cy + 10} Q ${cx - 70} ${cy - 30} ${cx - 30} ${cy - 50}" fill="none" stroke="${accent}" stroke-width="6" opacity="0.55"/>
+      <path d="M ${cx + 36} ${cy + 8} Q ${cx + 68} ${cy - 28} ${cx + 28} ${cy - 48}" fill="none" stroke="${scene.glow}" stroke-width="5" opacity="0.5"/>
+      <ellipse cx="${cx}" cy="${cy - 48}" rx="18" ry="22" fill="${accent}" opacity="0.65"/>
+    `;
+  } else if (type === "creature" || type === "legendary" || type === "hero") {
+    // Creature / keeper silhouette with element body
+    const bodyW = 55 + rng() * 20;
+    const ear = /moth|mite|gnat|midge|spore/i.test(name);
+    subject = `
+      <ellipse cx="${cx}" cy="${cy + 78}" rx="100" ry="24" fill="#000" opacity="0.3"/>
+      <ellipse cx="${cx}" cy="${cy + 20}" rx="${bodyW}" ry="${bodyW * 0.85}" fill="${scene.mid}" opacity="0.92"/>
+      <ellipse cx="${cx - 6}" cy="${cy + 8}" rx="${bodyW * 0.72}" ry="${bodyW * 0.62}" fill="${scene.accent}" opacity="0.35"/>
+      <circle cx="${cx}" cy="${cy - 40}" r="${28 + rng() * 8}" fill="${scene.mid}" opacity="0.95"/>
+      <circle cx="${cx - 10}" cy="${cy - 44}" r="5" fill="#f4efe6"/>
+      <circle cx="${cx + 12}" cy="${cy - 42}" r="4.5" fill="#f4efe6"/>
+      <circle cx="${cx - 10}" cy="${cy - 44}" r="2" fill="#0a1220"/>
+      <circle cx="${cx + 12}" cy="${cy - 42}" r="2" fill="#0a1220"/>
+      ${
+        ear
+          ? `<ellipse cx="${cx - 34}" cy="${cy - 58}" rx="22" ry="14" fill="${scene.glow}" opacity="0.45" transform="rotate(-28 ${cx - 34} ${cy - 58})"/>
+             <ellipse cx="${cx + 34}" cy="${cy - 56}" rx="22" ry="14" fill="${scene.glow}" opacity="0.4" transform="rotate(28 ${cx + 34} ${cy - 56})"/>`
+          : `<path d="M ${cx - 18} ${cy - 62} L ${cx - 8} ${cy - 88} L ${cx + 2} ${cy - 62}" fill="${accent}" opacity="0.55"/>
+             <path d="M ${cx + 8} ${cy - 60} L ${cx + 20} ${cy - 86} L ${cx + 28} ${cy - 58}" fill="${scene.glow}" opacity="0.45"/>`
+      }
+      <ellipse cx="${cx}" cy="${cy + 48}" rx="34" ry="12" fill="${scene.glow}" opacity="0.25"/>
+    `;
+  } else if (type === "equipment" || type === "relic" || type === "artifact") {
+    // Relic / gear still-life
+    subject = `
+      <ellipse cx="${cx}" cy="${cy + 70}" rx="110" ry="26" fill="#000" opacity="0.28"/>
+      <rect x="${cx - 70}" y="${cy + 20}" width="140" height="28" rx="8" fill="${scene.mid}" opacity="0.9"/>
+      <path d="M ${cx - 40} ${cy + 20} L ${cx} ${cy - 70} L ${cx + 40} ${cy + 20} Z" fill="${scene.accent}" opacity="0.55"/>
+      <circle cx="${cx}" cy="${cy - 20}" r="34" fill="#0a1220" opacity="0.55" stroke="${accent}" stroke-width="4"/>
+      <circle cx="${cx}" cy="${cy - 20}" r="16" fill="${scene.glow}" opacity="0.75"/>
+      <rect x="${cx - 8}" y="${cy + 48}" width="16" height="40" rx="3" fill="${accent}" opacity="0.65"/>
+      <path d="M ${cx - 55} ${cy - 10} Q ${cx - 80} ${cy - 50} ${cx - 30} ${cy - 60}" fill="none" stroke="${scene.glow}" stroke-width="3" opacity="0.4"/>
+      <path d="M ${cx + 55} ${cy - 8} Q ${cx + 80} ${cy - 48} ${cx + 28} ${cy - 58}" fill="none" stroke="${scene.glow}" stroke-width="3" opacity="0.35"/>
+    `;
+  } else {
+    // Spells / events / traps / quests — magical effect burst (element-themed)
+    if (motif === "ember") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 80}" rx="100" ry="22" fill="#000" opacity="0.25"/>
+        <path d="M ${cx} ${cy + 50} Q ${cx - 40} ${cy} ${cx - 10} ${cy - 70} Q ${cx} ${cy - 20} ${cx + 18} ${cy - 80} Q ${cx + 50} ${cy} ${cx} ${cy + 50} Z" fill="${scene.accent}" opacity="0.85"/>
+        <path d="M ${cx} ${cy + 30} Q ${cx - 18} ${cy - 10} ${cx} ${cy - 55} Q ${cx + 16} ${cy - 10} ${cx} ${cy + 30} Z" fill="${scene.glow}" opacity="0.8"/>
+        <circle cx="${cx - 50}" cy="${cy - 20}" r="8" fill="${scene.glow}" opacity="0.7"/>
+        <circle cx="${cx + 56}" cy="${cy - 8}" r="6" fill="${accent}" opacity="0.65"/>
+        <circle cx="${cx + 30}" cy="${cy - 50}" r="5" fill="${scene.glow}" opacity="0.7"/>
+      `;
+    } else if (motif === "tide") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 70}" rx="120" ry="24" fill="#000" opacity="0.22"/>
+        <path d="M ${cx - 90} ${cy + 20} Q ${cx - 40} ${cy - 40} ${cx} ${cy} T ${cx + 90} ${cy + 10}" fill="none" stroke="${scene.accent}" stroke-width="14" opacity="0.7"/>
+        <path d="M ${cx - 80} ${cy + 40} Q ${cx - 20} ${cy - 10} ${cx + 20} ${cy + 20} T ${cx + 85} ${cy + 30}" fill="none" stroke="${scene.glow}" stroke-width="10" opacity="0.55"/>
+        <circle cx="${cx + 10}" cy="${cy - 50}" r="28" fill="${scene.glow}" opacity="0.35"/>
+        <circle cx="${cx - 40}" cy="${cy - 20}" r="10" fill="#e8f4ff" opacity="0.45"/>
+        <circle cx="${cx + 50}" cy="${cy}" r="7" fill="#e8f4ff" opacity="0.4"/>
+      `;
+    } else if (motif === "grove") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 75}" rx="110" ry="22" fill="#000" opacity="0.25"/>
+        <path d="M ${cx} ${cy + 50} C ${cx - 60} ${cy + 10} ${cx - 70} ${cy - 60} ${cx - 20} ${cy - 40} C ${cx - 50} ${cy - 90} ${cx + 10} ${cy - 80} ${cx} ${cy - 30} C ${cx + 40} ${cy - 90} ${cx + 70} ${cy - 40} ${cx + 30} ${cy - 20} C ${cx + 80} ${cy - 10} ${cx + 50} ${cy + 40} ${cx} ${cy + 50} Z" fill="${scene.mid}" opacity="0.9"/>
+        <ellipse cx="${cx - 10}" cy="${cy - 20}" rx="40" ry="36" fill="${scene.accent}" opacity="0.45"/>
+        <rect x="${cx - 6}" y="${cy + 10}" width="12" height="50" rx="3" fill="#142818" opacity="0.8"/>
+        <circle cx="${cx + 24}" cy="${cy - 48}" r="6" fill="${scene.glow}" opacity="0.65"/>
+      `;
+    } else if (motif === "void") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 70}" rx="100" ry="22" fill="#000" opacity="0.3"/>
+        <circle cx="${cx}" cy="${cy - 10}" r="70" fill="#000" opacity="0.55"/>
+        <path d="M ${cx - 60} ${cy + 20} Q ${cx - 20} ${cy - 80} ${cx + 10} ${cy - 20} Q ${cx + 50} ${cy - 90} ${cx + 70} ${cy}" fill="none" stroke="${scene.accent}" stroke-width="8" opacity="0.65"/>
+        <path d="M ${cx - 40} ${cy + 30} Q ${cx} ${cy - 50} ${cx + 45} ${cy + 10}" fill="none" stroke="${scene.glow}" stroke-width="5" opacity="0.45"/>
+        <circle cx="${cx - 8}" cy="${cy - 18}" r="8" fill="${scene.glow}" opacity="0.55"/>
+        <circle cx="${cx + 18}" cy="${cy - 12}" r="6" fill="${accent}" opacity="0.5"/>
+        <ellipse cx="${cx}" cy="${cy + 35}" rx="50" ry="16" fill="${scene.accent}" opacity="0.2"/>
+      `;
+    } else if (motif === "storm") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 70}" rx="100" ry="20" fill="#000" opacity="0.25"/>
+        <polyline points="${cx - 20},${cy - 70} ${cx + 8},${cy - 20} ${cx - 16},${cy - 12} ${cx + 30},${cy + 50}" fill="none" stroke="${scene.glow}" stroke-width="10" opacity="0.85"/>
+        <polyline points="${cx + 10},${cy - 60} ${cx + 28},${cy - 10} ${cx + 6},${cy}" fill="none" stroke="${accent}" stroke-width="5" opacity="0.55"/>
+        <circle cx="${cx - 40}" cy="${cy - 40}" r="16" fill="${scene.mid}" opacity="0.6"/>
+        <circle cx="${cx + 50}" cy="${cy - 30}" r="12" fill="${scene.mid}" opacity="0.5"/>
+      `;
+    } else if (motif === "crystal" || motif === "radiant") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 72}" rx="100" ry="20" fill="#000" opacity="0.22"/>
+        <polygon points="${cx},${cy - 80} ${cx + 34},${cy + 10} ${cx},${cy + 50} ${cx - 34},${cy + 10}" fill="${scene.accent}" opacity="0.7"/>
+        <polygon points="${cx},${cy - 50} ${cx + 18},${cy + 5} ${cx},${cy + 30} ${cx - 18},${cy + 5}" fill="${scene.glow}" opacity="0.75"/>
+        <polygon points="${cx - 50},${cy + 20} ${cx - 28},${cy - 30} ${cx - 10},${cy + 30}" fill="${scene.mid}" opacity="0.55"/>
+        <polygon points="${cx + 50},${cy + 18} ${cx + 30},${cy - 28} ${cx + 12},${cy + 28}" fill="${scene.mid}" opacity="0.5"/>
+        <circle cx="${cx}" cy="${cy - 10}" r="8" fill="#f4efe6" opacity="0.7"/>
+      `;
+    } else if (motif === "alloy") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 70}" rx="100" ry="20" fill="#000" opacity="0.25"/>
+        <circle cx="${cx}" cy="${cy - 10}" r="56" fill="none" stroke="${scene.accent}" stroke-width="10" opacity="0.7"/>
+        <circle cx="${cx}" cy="${cy - 10}" r="28" fill="${scene.mid}" opacity="0.85"/>
+        <rect x="${cx - 8}" y="${cy - 70}" width="16" height="40" fill="${accent}" opacity="0.65"/>
+        <rect x="${cx - 8}" y="${cy + 20}" width="16" height="40" fill="${accent}" opacity="0.55"/>
+        <rect x="${cx - 70}" y="${cy - 18}" width="40" height="16" fill="${scene.glow}" opacity="0.45"/>
+        <rect x="${cx + 30}" y="${cy - 18}" width="40" height="16" fill="${scene.glow}" opacity="0.4"/>
+      `;
+    } else if (motif === "celestial" || motif === "spirit") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 70}" rx="100" ry="20" fill="#000" opacity="0.22"/>
+        <circle cx="${cx}" cy="${cy - 20}" r="48" fill="${scene.glow}" opacity="0.35"/>
+        <path d="M ${cx} ${cy - 70} L ${cx + 14} ${cy - 24} L ${cx + 52} ${cy - 24} L ${cx + 20} ${cy} L ${cx + 32} ${cy + 40} L ${cx} ${cy + 16} L ${cx - 32} ${cy + 40} L ${cx - 20} ${cy} L ${cx - 52} ${cy - 24} L ${cx - 14} ${cy - 24} Z" fill="${accent}" opacity="0.75"/>
+        <circle cx="${cx}" cy="${cy - 10}" r="10" fill="#f4efe6" opacity="0.8"/>
+        <path d="M ${cx - 60} ${cy + 20} Q ${cx} ${cy - 40} ${cx + 60} ${cy + 24}" fill="none" stroke="${scene.glow}" stroke-width="3" opacity="0.4"/>
+      `;
+    } else if (motif === "canyon") {
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 72}" rx="110" ry="20" fill="#000" opacity="0.25"/>
+        <rect x="${cx - 70}" y="${cy - 20}" width="50" height="90" rx="6" fill="${scene.mid}" opacity="0.85"/>
+        <rect x="${cx + 20}" y="${cy - 40}" width="55" height="110" rx="6" fill="${scene.mid}" opacity="0.8"/>
+        <path d="M ${cx - 20} ${cy + 50} L ${cx} ${cy - 60} L ${cx + 22} ${cy + 50}" fill="${scene.accent}" opacity="0.55"/>
+        <circle cx="${cx}" cy="${cy - 20}" r="14" fill="${scene.glow}" opacity="0.55"/>
+      `;
+    } else {
+      // commons / neutral spell burst
+      subject = `
+        <ellipse cx="${cx}" cy="${cy + 70}" rx="100" ry="22" fill="#000" opacity="0.25"/>
+        <circle cx="${cx}" cy="${cy - 10}" r="54" fill="${scene.mid}" opacity="0.75"/>
+        <circle cx="${cx}" cy="${cy - 10}" r="34" fill="${scene.glow}" opacity="0.45"/>
+        <path d="M ${cx} ${cy - 70} Q ${cx + 40} ${cy - 20} ${cx} ${cy + 40} Q ${cx - 40} ${cy - 20} ${cx} ${cy - 70} Z" fill="${accent}" opacity="0.55"/>
+        <circle cx="${cx}" cy="${cy - 14}" r="12" fill="#f4efe6" opacity="0.75"/>
+        <circle cx="${cx - 48}" cy="${cy + 10}" r="7" fill="${scene.glow}" opacity="0.55"/>
+        <circle cx="${cx + 50}" cy="${cy + 6}" r="6" fill="${accent}" opacity="0.5"/>
+      `;
+    }
+  }
+
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="emGlow" cx="50%" cy="45%" r="55%">
-      <stop offset="0%" stop-color="${scene.glow}" stop-opacity="0.55"/>
-      <stop offset="70%" stop-color="${scene.accent}" stop-opacity="0.2"/>
+    <linearGradient id="subjSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${sky0}"/>
+      <stop offset="55%" stop-color="${sky1}"/>
+      <stop offset="100%" stop-color="${sky2}"/>
+    </linearGradient>
+    <radialGradient id="subjGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="${scene.glow}" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="${scene.accent}" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#000" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <ellipse cx="${cx}" cy="${cy}" rx="${r + 50}" ry="${r + 36}" fill="url(#emGlow)"/>
-  ${rays}
-  <circle cx="${cx}" cy="${cy}" r="${r}" fill="#0a1220" fill-opacity="0.45" stroke="${accent}" stroke-width="3" opacity="0.85"/>
-  <circle cx="${cx}" cy="${cy}" r="${r - 18}" fill="none" stroke="${scene.glow}" stroke-width="1.5" opacity="0.55"/>
-  <circle cx="${cx}" cy="${cy}" r="14" fill="${scene.accent}" opacity="0.8"/>
+  <rect width="${W}" height="${H}" fill="url(#subjSky)"/>
+  <ellipse cx="${cx}" cy="${cy}" rx="180" ry="140" fill="url(#subjGlow)"/>
+  ${motes.join("\n")}
+  ${subject}
+  <rect width="${W}" height="${H}" fill="#000" opacity="0.12"/>
 </svg>`;
+}
+
+/** Legacy name kept for any leftover references — delegates to illustrated subject. */
+function scenicEmblemSvg(card, role) {
+  return illustratedSubjectSvg(card, role);
 }
 
 async function compositeCard(card, source, outPath) {
@@ -1029,29 +1262,51 @@ async function compositeCard(card, source, outPath) {
   }
 
   if (subjectInput) {
+    // Stage-distinct framing so Base / Companion / Ascendant never read as the same crop.
     const artScale = isScenicSubject
       ? 0.98
       : role === "companion"
-        ? 0.92
+        ? 0.78
         : role === "ascendant"
-          ? 0.88
-          : 0.84;
+          ? 0.96
+          : 0.86;
     const artH = Math.floor(
-      H * artScale * (isScenicSubject ? 0.58 : 0.72 + rng() * 0.08),
+      H * artScale * (isScenicSubject ? 0.58 : 0.68 + (role === "ascendant" ? 0.1 : 0.04)),
     );
-    const artW = Math.floor(W * (isScenicSubject ? 0.94 : 0.88 + rng() * 0.08));
+    const artW = Math.floor(
+      W *
+        (isScenicSubject
+          ? 0.94
+          : role === "companion"
+            ? 0.72
+            : role === "ascendant"
+              ? 0.94
+              : 0.84),
+    );
     const artTop = isScenicSubject
       ? Math.floor(H * 0.08)
       : role === "companion"
-        ? Math.floor(H * 0.14)
+        ? Math.floor(H * 0.18)
         : role === "ascendant"
-          ? Math.floor(H * 0.08)
-          : Math.floor(H * 0.1);
-    const artLeft = Math.floor((W - artW) / 2);
+          ? Math.floor(H * 0.05)
+          : Math.floor(H * 0.11);
+    const artLeft = Math.floor((W - artW) / 2) + (role === "companion" ? Math.floor((rng() - 0.5) * 18) : 0);
 
-    let artPipeline = sharp(subjectInput).resize(artW, artH, {
+    let artPipeline = sharp(subjectInput);
+    // Mirror companion subjects so twins don't share the same silhouette direction.
+    if (!isScenicSubject && role === "companion") {
+      artPipeline = artPipeline.flop();
+    }
+    if (!isScenicSubject && role === "ascendant") {
+      artPipeline = artPipeline.modulate({ brightness: 1.08, saturation: 1.18 });
+    } else if (!isScenicSubject && role === "companion") {
+      artPipeline = artPipeline.modulate({ brightness: 1.04, saturation: 0.92 });
+    } else if (!isScenicSubject) {
+      artPipeline = artPipeline.modulate({ brightness: 0.98, saturation: 1.0 });
+    }
+    artPipeline = artPipeline.resize(artW, artH, {
       fit: artFit,
-      position: "centre",
+      position: role === "ascendant" ? "centre" : role === "companion" ? "south" : "centre",
       background: { r: 0, g: 0, b: 0, alpha: 0 },
     });
     if (isScenicSubject) {
@@ -1065,7 +1320,37 @@ async function compositeCard(card, source, outPath) {
         { input: await sharp(frameMask).png().toBuffer(), blend: "dest-in" },
       ]);
     }
-    const artBuf = await artPipeline.png().toBuffer();
+    let artBuf = await artPipeline.png().toBuffer();
+
+    // Stage aura plate behind the creature (companion soft amber / ascendant rift cyan).
+    if (!isScenicSubject && (role === "companion" || role === "ascendant")) {
+      const auraColor = role === "ascendant" ? "#66e0ff" : "#ffb84d";
+      const auraOp = role === "ascendant" ? 0.28 : 0.2;
+      const aura = await sharp(
+        Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${artW}" height="${artH}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="a" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="${auraColor}" stop-opacity="${auraOp}"/>
+      <stop offset="70%" stop-color="${auraColor}" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="${auraColor}" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="${artW / 2}" cy="${artH * 0.55}" rx="${artW * 0.48}" ry="${artH * 0.42}" fill="url(#a)"/>
+  ${
+    role === "ascendant"
+      ? `<path d="M ${artW * 0.5} ${artH * 0.08} L ${artW * 0.54} ${artH * 0.55} L ${artW * 0.48} ${artH * 0.92}" fill="none" stroke="${auraColor}" stroke-width="3" opacity="0.35"/>`
+      : ""
+  }
+</svg>`),
+      )
+        .png()
+        .toBuffer();
+      artBuf = await sharp(aura)
+        .composite([{ input: artBuf, top: 0, left: 0 }])
+        .png()
+        .toBuffer();
+    }
 
     const shadow = await sharp(
       Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>

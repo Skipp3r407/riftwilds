@@ -64,6 +64,7 @@ Master index for narrative design. **Canon source of truth for About-page origin
 | Surface | Path |
 |---|---|
 | Codex world entries | `src/content/codex/world-lore.ts` |
+| World Codex UI | `/codex/world` + `/codex/world/[entryId]` |
 | Academy lore lessons | `src/game/academy/lessons/lore-path.ts` |
 | This index | Linked from Academy / docs when wired |
 

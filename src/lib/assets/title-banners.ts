@@ -10,7 +10,7 @@ import { sectionTitleFromLabel, type SectionTitleSlug } from "@/lib/assets/secti
 const TITLE_BANNER_DIR = "/assets/ui/title-banners";
 const WALLPAPER_DIR = "/assets/ui/wallpapers";
 /** Bump when atmosphere wallpapers change. */
-const ATMOSPHERE_V = "atm2";
+const ATMOSPHERE_V = "atm5";
 
 /**
  * Optional dedicated banner strips (wide crops). When a file is added under
@@ -38,7 +38,8 @@ const TITLE_ATMOSPHERE: Record<string, string> = {
   token: `${WALLPAPER_DIR}/token.png`,
   transparency: `${WALLPAPER_DIR}/transparency.png`,
   creatures: `${WALLPAPER_DIR}/creatures.png`,
-  riftlings: `${WALLPAPER_DIR}/creatures.png`,
+  riftlings: `${WALLPAPER_DIR}/codex.png`,
+  codex: `${WALLPAPER_DIR}/codex.png`,
   fairness: `${WALLPAPER_DIR}/fairness.png`,
   profile: `${WALLPAPER_DIR}/profile.png`,
   collection: `${WALLPAPER_DIR}/collection.png`,

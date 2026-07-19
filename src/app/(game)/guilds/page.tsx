@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SoundscapeMount } from "@/components/audio/soundscape-mount";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 import { sectionUiThumbPath } from "@/lib/assets/paths";
 import { PageHeader } from "@/components/shared/page-header";
@@ -14,6 +15,7 @@ const FEATURES = [
 export default function GuildsPage() {
   return (
     <div className="space-y-6">
+      <SoundscapeMount mode="guild" fadeMs={850} />
       <PageHeader
         kicker="Social ops"
         titleSlug="guilds"

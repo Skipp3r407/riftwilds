@@ -1,0 +1,62 @@
+[
+  {
+    "id": "standard",
+    "name": "Rift Standard",
+    "description": "Current + previous two major expansions. Primary ranked ladder.",
+    "deckSize": 30,
+    "requireCommander": true,
+    "legalExpansionIds": ["rise-of-the-rift"],
+    "rotatedOutExpansionIds": [],
+    "ranked": true,
+    "f2pCompetitive": true,
+    "status": "live"
+  },
+  {
+    "id": "wild",
+    "name": "Rift Wild",
+    "description": "All non-retired expansions. Broader archetypes.",
+    "deckSize": 30,
+    "requireCommander": true,
+    "legalExpansionIds": [],
+    "rotatedOutExpansionIds": [],
+    "ranked": true,
+    "f2pCompetitive": true,
+    "status": "live"
+  },
+  {
+    "id": "eternal",
+    "name": "Eternal Codex",
+    "description": "Every released gameplay card — museum + exhibition ladder.",
+    "deckSize": 30,
+    "requireCommander": true,
+    "legalExpansionIds": [],
+    "rotatedOutExpansionIds": [],
+    "ranked": false,
+    "f2pCompetitive": true,
+    "status": "live"
+  },
+  {
+    "id": "draft",
+    "name": "Rift Draft",
+    "description": "Pick-and-play from sealed packs. Temporary deck lists.",
+    "deckSize": 30,
+    "requireCommander": true,
+    "legalExpansionIds": ["rise-of-the-rift"],
+    "rotatedOutExpansionIds": [],
+    "ranked": false,
+    "f2pCompetitive": true,
+    "status": "planned"
+  },
+  {
+    "id": "practice",
+    "name": "Practice Board",
+    "description": "Local / AI. Teaching pools may be sliced to 30 on load.",
+    "deckSize": 30,
+    "requireCommander": true,
+    "legalExpansionIds": [],
+    "rotatedOutExpansionIds": [],
+    "ranked": false,
+    "f2pCompetitive": true,
+    "status": "live"
+  }
+]

@@ -26,8 +26,12 @@ function itemListing(opts: {
   rarity: string;
   itemCategory: string;
   ageMs?: number;
+  listingType?: MarketplaceListingView["listingType"];
+  auction?: MarketplaceListingView["auction"];
+  bestOffer?: MarketplaceListingView["bestOffer"];
 }): MarketplaceListingView {
   const lamports = solToLamports(opts.priceSol);
+  const priceCredits = lamportsToCreditsPrice(lamports);
   return {
     publicId: opts.publicId,
     kind: "ITEM",
@@ -37,9 +41,12 @@ function itemListing(opts: {
     sellerLabel: opts.sellerLabel,
     priceLamports: lamports.toString(),
     priceSol: opts.priceSol,
-    priceCredits: lamportsToCreditsPrice(lamports),
+    priceCredits,
     currency: "CREDITS",
     status: "ACTIVE",
+    listingType: opts.listingType ?? "FIXED_PRICE",
+    auction: opts.auction ?? null,
+    bestOffer: opts.bestOffer ?? null,
     createdAt: new Date(Date.now() - (opts.ageMs ?? 1800_000)).toISOString(),
     expiresAt: new Date(
       Date.now() + LISTING_RULES.maxListingDurationDays * 86400_000,
@@ -120,6 +127,7 @@ function eggView(
   },
 ): MarketplaceListingView {
   const disc = eggListingDisclosure(sourceKind);
+  const lamports = solToLamports(opts.priceSol);
   return {
     publicId,
     kind: "EGG",
@@ -127,9 +135,10 @@ function eggView(
     subfilter: opts.subfilter,
     title: opts.title,
     sellerLabel: opts.sellerLabel,
-    priceLamports: solToLamports(opts.priceSol).toString(),
+    priceLamports: lamports.toString(),
     priceSol: opts.priceSol,
-    currency: "DEMO_CREDITS",
+    priceCredits: lamportsToCreditsPrice(lamports),
+    currency: "CREDITS",
     status: "ACTIVE",
     createdAt: new Date(Date.now() - 3600_000).toISOString(),
     expiresAt: new Date(Date.now() + LISTING_RULES.maxListingDurationDays * 86400_000).toISOString(),
@@ -174,6 +183,7 @@ function petView(opts: {
   bundledItems: { key: string; name: string; slot?: string }[];
   pet: NonNullable<MarketplaceListingView["pet"]>;
 }): MarketplaceListingView {
+  const lamports = solToLamports(opts.priceSol);
   return {
     publicId: opts.publicId,
     kind: "PET",
@@ -181,9 +191,10 @@ function petView(opts: {
     subfilter: opts.subfilter,
     title: opts.title,
     sellerLabel: opts.sellerLabel,
-    priceLamports: solToLamports(opts.priceSol).toString(),
+    priceLamports: lamports.toString(),
     priceSol: opts.priceSol,
-    currency: "DEMO_CREDITS",
+    priceCredits: lamportsToCreditsPrice(lamports),
+    currency: "CREDITS",
     status: "ACTIVE",
     createdAt: new Date(Date.now() - 7200_000).toISOString(),
     expiresAt: new Date(Date.now() + LISTING_RULES.maxListingDurationDays * 86400_000).toISOString(),
@@ -290,6 +301,14 @@ export function getDemoMarketplaceListings(): MarketplaceListingView[] {
       rarity: "UNCOMMON",
       itemCategory: "TCG_COSMETIC",
       ageMs: 1_500_000,
+      listingType: "AUCTION",
+      auction: {
+        startingCredits: 320,
+        highBidCredits: 410,
+        bidCount: 5,
+        endsAt: new Date(Date.now() + 36 * 3600_000).toISOString(),
+        reserveCredits: 480,
+      },
     }),
     itemListing({
       publicId: "item_demo_ember_talons",
@@ -303,6 +322,118 @@ export function getDemoMarketplaceListings(): MarketplaceListingView[] {
       rarity: "UNCOMMON",
       itemCategory: "WEAPON",
       ageMs: 1_800_000,
+    }),
+    itemListing({
+      publicId: "item_demo_ember_board",
+      category: "EQUIPMENT",
+      subfilter: "board",
+      title: "Ember Felt Board Skin",
+      sellerLabel: "wallet…Board1",
+      priceSol: "0.06",
+      key: "ember-felt-board",
+      name: "Ember Felt Board",
+      listingType: "BEST_OFFER",
+      bestOffer: {
+        minOfferCredits: 400,
+        topOfferCredits: 520,
+        offerCount: 3,
+      },
+      rarity: "RARE",
+      itemCategory: "TCG_COSMETIC",
+      ageMs: 1_600_000,
+    }),
+    itemListing({
+      publicId: "item_demo_amber_sleeve",
+      category: "EQUIPMENT",
+      subfilter: "sleeve",
+      title: "Amber Hearth Sleeve",
+      sellerLabel: "wallet…Cos2",
+      priceSol: "0.045",
+      key: "amber-hearth-sleeve",
+      name: "Amber Hearth Sleeve",
+      rarity: "UNCOMMON",
+      itemCategory: "TCG_COSMETIC",
+      ageMs: 1_700_000,
+    }),
+    // Collectible editions — prestige / display only, not gameplay power.
+    itemListing({
+      publicId: "collect_demo_keeper_folio",
+      category: "COLLECTIBLES",
+      subfilter: "founder",
+      title: "Keeper Folio · Founder Edition",
+      sellerLabel: "wallet…Coll1",
+      priceSol: "0.15",
+      key: "foil-keeper-folio",
+      name: "Keeper Folio",
+      rarity: "EPIC",
+      itemCategory: "TCG_COLLECTIBLE",
+      ageMs: 2_000_000,
+    }),
+    itemListing({
+      publicId: "collect_demo_alt_storm",
+      category: "COLLECTIBLES",
+      subfilter: "alt-art",
+      title: "Storm Sleeve · Alt Art",
+      sellerLabel: "wallet…Coll2",
+      priceSol: "0.08",
+      key: "alt-art-storm-sleeve",
+      name: "Storm Sleeve Alt Art",
+      rarity: "RARE",
+      itemCategory: "TCG_COLLECTIBLE",
+      ageMs: 2_200_000,
+    }),
+    itemListing({
+      publicId: "collect_demo_grove_pack",
+      category: "COLLECTIBLES",
+      subfilter: "foil",
+      title: "Grove Moss Pack · Foil Wrapper",
+      sellerLabel: "wallet…Coll3",
+      priceSol: "0.055",
+      key: "grove-moss-pack",
+      name: "Grove Moss Pack Foil",
+      rarity: "RARE",
+      itemCategory: "TCG_COLLECTIBLE",
+      ageMs: 2_500_000,
+    }),
+    // Companion care consumables (secondary desk).
+    itemListing({
+      publicId: "consumable_demo_emberheart",
+      category: "CONSUMABLES",
+      subfilter: "potion",
+      title: "Emberheart Elixir ×3",
+      sellerLabel: "wallet…Care1",
+      priceSol: "0.012",
+      key: "emberheart-elixir",
+      name: "Emberheart Elixir",
+      rarity: "COMMON",
+      itemCategory: "POTION",
+      ageMs: 800_000,
+    }),
+    itemListing({
+      publicId: "consumable_demo_focus",
+      category: "CONSUMABLES",
+      subfilter: "potion",
+      title: "Focus Tonic ×5",
+      sellerLabel: "wallet…Care2",
+      priceSol: "0.01",
+      key: "focus-tonic",
+      name: "Focus Tonic",
+      rarity: "COMMON",
+      itemCategory: "POTION",
+      ageMs: 950_000,
+    }),
+    itemListing({
+      publicId: "consumable_demo_salve",
+      category: "CONSUMABLES",
+      subfilter: "care",
+      title: "Small Healing Salve ×4",
+      sellerLabel: "wallet…Care3",
+      priceSol: "0.008",
+      key: "small-healing-salve",
+      name: "Small Healing Salve",
+      rarity: "COMMON",
+      itemCategory: "POTION",
+      ageMs: 1_050_000,
     }),
     // Companion secondary market (eggs / pets).
     eggView("egg_demo_seasonal_01", "OFFICIAL_SEASONAL", {

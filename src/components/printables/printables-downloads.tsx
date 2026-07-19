@@ -82,12 +82,25 @@ export function PrintablesDownloads({
   return (
     <section
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-[var(--stroke-bronze)] bg-[radial-gradient(ellipse_at_15%_0%,rgba(255,184,77,0.14),transparent_50%),radial-gradient(ellipse_at_85%_30%,rgba(61,231,255,0.1),transparent_45%),linear-gradient(165deg,#1f1810_0%,#141820_55%,#12161c_100%)] p-6 md:p-8",
+        "relative overflow-hidden rounded-2xl border border-[var(--stroke-bronze)] p-6 md:p-8",
         className,
       )}
       aria-labelledby="printables-heading"
     >
-      <div className="flex flex-wrap items-end justify-between gap-3">
+      <Image
+        src="/assets/ui/wallpapers/docs.png"
+        alt=""
+        fill
+        unoptimized
+        sizes="100vw"
+        className="pointer-events-none object-cover opacity-35"
+        aria-hidden
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_0%,rgba(255,184,77,0.14),transparent_50%),radial-gradient(ellipse_at_85%_30%,rgba(61,231,255,0.1),transparent_45%),linear-gradient(165deg,rgba(31,24,16,0.82)_0%,rgba(20,24,32,0.78)_55%,rgba(18,22,28,0.88)_100%)]"
+      />
+      <div className="relative flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="page-kicker">300 DPI print</p>
           <h2
@@ -109,18 +122,18 @@ export function PrintablesDownloads({
         ) : null}
       </div>
 
-      <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <ul className="relative mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {items.map((item) => (
           <li key={item.id}>
-            <article className="panel overflow-hidden border-[var(--stroke-bronze)] p-3">
+            <article className="panel overflow-hidden border-[var(--stroke-bronze)] bg-[rgba(14,12,10,0.72)] p-3">
               <div
-                className={`printable-thumb printable-thumb--${item.atmosphere} relative aspect-[850/1100] overflow-hidden rounded-lg ring-1 ring-[rgba(196,168,130,0.28)]`}
+                className={`printable-thumb printable-thumb--${item.atmosphere} relative aspect-[850/1100] overflow-hidden rounded-lg bg-[rgba(248,242,230,0.96)] ring-1 ring-[rgba(196,168,130,0.28)]`}
               >
                 <Image
                   src={item.pngSrc}
                   alt={`${item.title} preview`}
                   fill
-                  className="object-cover object-top"
+                  className="object-contain object-top p-1.5"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   unoptimized
                 />
@@ -157,7 +170,7 @@ export function PrintablesDownloads({
         ))}
       </ul>
 
-      <p className="mt-5 text-xs text-[var(--text-muted)]">{PRINTABLES_CREDIT}</p>
+      <p className="relative mt-5 text-xs text-[var(--text-muted)]">{PRINTABLES_CREDIT}</p>
     </section>
   );
 }

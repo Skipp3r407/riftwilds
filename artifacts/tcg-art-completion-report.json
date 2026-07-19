@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-07-19T05:15:00.000Z",
+  "before": {
+    "visiblePlaceholders": "All 41 hero/NPC cards used geometric pawn art (circle head + trapezoid) from ~1KB game-library sprites; Builder NPC also showed wallpaper flare",
+    "heroCardFaceBytesExample": {
+      "rotr-h-npc-npc-builder": 22036,
+      "rotr-h-elara-venn": 18336
+    }
+  },
+  "after": {
+    "heroesWiredFromPaintedPortraits": 41,
+    "heroesMissing": 0,
+    "utilitySubjectsPolished": 270,
+    "subjectsOnDisk": 435,
+    "cardFacesRegenerated": 735,
+    "cardImagesManifestCount": 735,
+    "pageAtmosphere": {
+      "deckBuilder": "commons-plaza wallpaper wash + hero plate",
+      "collection": "keeper-academy wallpaper wash + hero plate"
+    }
+  },
+  "assetPaths": {
+    "cardFaces": "public/assets/tcg/cards/{cardId}.webp",
+    "subjects": "public/assets/tcg/subjects/{slug}.png",
+    "npcPortraitSources": "public/assets/npcs/**/portrait.png|webp",
+    "pageWallpapers": [
+      "public/assets/wallpapers/commons-plaza.png",
+      "public/assets/wallpapers/keeper-academy.png"
+    ]
+  },
+  "filesUpdated": [
+    "scripts/tcg/install-hero-card-art.mjs",
+    "scripts/tcg/install-utility-card-art.mjs",
+    "scripts/tcg/polish-utility-subjects.mjs",
+    "scripts/tcg/audit-placeholder-art.mjs",
+    "scripts/tcg/generate-card-images.mjs",
+    "src/content/tcg/data/cards.json",
+    "src/content/tcg/data/cardImages.json",
+    "src/components/tcg/deck-builder.tsx",
+    "src/app/(game)/tcg/collection/page.tsx",
+    "src/app/globals.css",
+    "public/assets/tcg/subjects/*",
+    "public/assets/tcg/cards/*.webp"
+  ],
+  "previewUrls": [
+    "http://localhost:3000/tcg/deck-builder",
+    "http://localhost:3000/tcg/collection"
+  ],
+  "leftovers": {
+    "pawnPlaceholdersRemaining": 0,
+    "note": "Generic utility/equipment cards use scenic wallpaper plates (not unique AAA character paintings). Pet species still use existing pet masters. True painted portrait quality is on all 41 heroes/NPCs.",
+    "optionalFutureAaa": [
+      "rotr-c-plaza-scout",
+      "rotr-c-market-runner",
+      "rotr-c-lantern-acolyte",
+      "rotr-c-shard-bit",
+      "rotr-c-gear-tick",
+      "rotr-c-star-midge",
+      "rotr-c-null-gnat",
+      "rotr-c-poison-spore",
+      "rotr-c-arc-scribe"
+    ]
+  },
+  "commitPush": "none — local only"
+}

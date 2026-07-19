@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "seasonId": "season-rift-dawn",
+  "seasonName": "Season of Rift Dawn",
+  "featuredCards": [
+    {
+      "cardId": "rotr-c-ashwing",
+      "reason": "Foundational Riftbond showcase",
+      "weight": 10
+    },
+    {
+      "cardId": "rotr-c-bramblefox",
+      "reason": "Grove midrange pillar",
+      "weight": 8
+    },
+    {
+      "cardId": "rotr-c-galekit",
+      "reason": "Spire tempo opener",
+      "weight": 7
+    }
+  ],
+  "bannerMessage": "Competitive decks craft with Gold, Rift Shards, and Ancient Fragments — never SOL.",
+  "f2pGrants": {
+    "gold": 2500,
+    "riftShards": 400,
+    "ancientFragments": 3,
+    "note": "Season login track — enough to finish a Standard ladder deck without spending."
+  },
+  "rotationNotice": null
+}

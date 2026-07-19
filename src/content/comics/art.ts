@@ -36,7 +36,10 @@ export const PAGE_ART = {
   forest: "/assets/comics/pages/key-forest.png",
   festival: "/assets/comics/pages/key-festival.png",
   rift: "/assets/comics/pages/key-rift.png",
-  regionCommons: "/assets/comics/pages/key-commons.png",
+  commonsDusk: "/assets/comics/pages/page-commons-dusk.png",
+  layeredRuin: "/assets/comics/pages/page-layered-ruin.png",
+  lanternSky: "/assets/comics/pages/page-lantern-sky.png",
+  regionCommons: "/assets/comics/pages/page-commons-dusk.png",
   regionElderwood: "/assets/comics/pages/key-forest.png",
   regionStorm: "/assets/comics/splashes/storm-king.png",
   regionVoid: "/assets/comics/splashes/shadow-beyond.png",
@@ -55,13 +58,13 @@ export const WALLPAPERS = {
 /** Atmosphere → fallback page art when a beat omits artSrc. */
 export const ART_BY_ATMOSPHERE: Record<string, string> = {
   dawn: PAGE_ART.forest,
-  day: PAGE_ART.commons,
-  dusk: PAGE_ART.regionCommons,
+  day: PAGE_ART.commonsDusk,
+  dusk: PAGE_ART.commonsDusk,
   night: SPLASH.merchant,
   rift: PAGE_ART.rift,
-  festival: PAGE_ART.festival,
+  festival: PAGE_ART.lanternSky,
   storm: SPLASH.stormKing,
-  ruin: SPLASH.guardian,
+  ruin: PAGE_ART.layeredRuin,
 };
 
 export function artForAtmosphere(atmosphere?: string | null): string {

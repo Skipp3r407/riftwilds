@@ -3,7 +3,7 @@
  * Editions NEVER equal gameplay power. Match/deck uses GameplayCard copies only.
  */
 
-import { getCardById, TCG_CARDS } from "@/content/tcg";
+import { getCardById, resolveCardImagePath, TCG_CARDS } from "@/content/tcg";
 import { grantEntitlement } from "@/lib/economy/sol/entitlements";
 import { isSolMintingLive } from "@/lib/economy/sol/flags";
 
@@ -189,4 +189,37 @@ export function listOwnedCollectibleEditions(userId: string): OwnedCollectibleEd
 /** Gameplay card copies are unrelated to cosmetic edition ownership. */
 export function gameplayCardEqualsCollectibleEdition(): false {
   return false;
+}
+
+export type CollectibleEditionBrowserItem = CollectibleEditionDef & {
+  gameplayCardName: string;
+  /** Existing TCG card face under public/assets/tcg/cards/ when present. */
+  imagePath: string | null;
+  owned: boolean;
+  grantsGameplayPower: false;
+  deckNote: string;
+};
+
+/** Browser rows for collectible UI — cosmetics only, linked to TCG gameplay cards. */
+export function listCollectibleEditionBrowser(params?: {
+  userId?: string;
+}): CollectibleEditionBrowserItem[] {
+  const ownedIds = new Set(
+    params?.userId
+      ? listOwnedCollectibleEditions(params.userId).map((o) => o.editionId)
+      : [],
+  );
+  return COLLECTIBLE_EDITION_CATALOG.map((edition) => {
+    const card = getCardById(edition.gameplayCardId);
+    const imagePath = card ? resolveCardImagePath(card) ?? null : null;
+    return {
+      ...edition,
+      gameplayCardName: card?.localization?.name ?? edition.gameplayCardId,
+      imagePath,
+      owned: ownedIds.has(edition.editionId),
+      grantsGameplayPower: false as const,
+      deckNote:
+        "Cosmetic edition only. Use-in-deck uses the gameplay card copy — never this artwork variant’s power.",
+    };
+  });
 }

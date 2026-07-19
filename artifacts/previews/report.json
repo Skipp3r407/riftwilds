@@ -1,0 +1,42 @@
+﻿[
+  {
+    "slug": "live-world",
+    "url": "http://localhost:3000/live-world",
+    "status": 200,
+    "title": "Live World · Riftwilds",
+    "is404": false,
+    "screenshot": "artifacts/previews/live-world.png"
+  },
+  {
+    "slug": "comics",
+    "url": "http://localhost:3000/comics",
+    "status": 200,
+    "title": "Legends of the Rift | Comics · Riftwilds",
+    "is404": false,
+    "screenshot": "artifacts/previews/comics.png"
+  },
+  {
+    "slug": "housing",
+    "url": "http://localhost:3000/housing",
+    "status": 200,
+    "title": "Housing · Riftwilds",
+    "is404": false,
+    "screenshot": "artifacts/previews/housing.png"
+  },
+  {
+    "slug": "neighborhoods",
+    "url": "http://localhost:3000/neighborhoods",
+    "status": 200,
+    "title": "Neighborhoods · Riftwilds",
+    "is404": false,
+    "screenshot": "artifacts/previews/neighborhoods.png"
+  },
+  {
+    "slug": "creators",
+    "url": "http://localhost:3000/creators",
+    "status": 200,
+    "title": "Creator Hub · Riftwilds",
+    "is404": false,
+    "screenshot": "artifacts/previews/creators.png"
+  }
+]

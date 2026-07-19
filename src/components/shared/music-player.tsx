@@ -15,6 +15,7 @@ import {
 import { useAudio } from "@/hooks/use-audio";
 import { useSfx } from "@/hooks/use-sfx";
 import { stopAmbient } from "@/lib/audio/ambient";
+import { audioManager } from "@/lib/audio/manager";
 import { MUSIC_PLAYLIST, musicEngine } from "@/lib/audio/music";
 import { cn } from "@/lib/utils/cn";
 
@@ -32,11 +33,14 @@ const RANGE_CLASS =
 type UiPrefs = {
   hidden: boolean;
   trackIndex: number;
+  /** Explicit user pause — when true, skip site autoplay until they hit play. */
+  paused: boolean;
 };
 
 const DEFAULT_UI: UiPrefs = {
   hidden: false,
   trackIndex: 0,
+  paused: false,
 };
 
 /** Marketing shell has no MobileGameNav — keep the dock low. */
@@ -106,6 +110,7 @@ function readUi(): UiPrefs {
             p.trackIndex < MUSIC_PLAYLIST.length
               ? p.trackIndex
               : 0,
+          paused: Boolean(p.paused),
         };
       }
       return DEFAULT_UI;
@@ -119,10 +124,21 @@ function readUi(): UiPrefs {
         parsed.trackIndex < MUSIC_PLAYLIST.length
           ? parsed.trackIndex
           : 0,
+      // Missing key ⇒ autoplay on (new installs / older prefs without `paused`).
+      paused: Boolean(parsed.paused),
     };
   } catch {
     return DEFAULT_UI;
   }
+}
+
+/** Mute-all, zero music/master, or reduced-sound prefs — do not force audible autoplay. */
+function shouldSkipAutoplay(): boolean {
+  if (audioManager.prefersReduced()) return true;
+  const prefs = audioManager.getPrefs();
+  if (prefs.mutedAll) return true;
+  if (prefs.volumes.master <= 0 || prefs.volumes.music <= 0) return true;
+  return false;
 }
 
 function writeUi(prefs: UiPrefs) {
@@ -200,9 +216,12 @@ export function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
   const [hidden, setHidden] = useState(DEFAULT_UI.hidden);
   const [trackIndex, setTrackIndex] = useState(DEFAULT_UI.trackIndex);
+  const [pausedPref, setPausedPref] = useState(DEFAULT_UI.paused);
   const [playlistOpen, setPlaylistOpen] = useState(false);
   const interactingRef = useRef(false);
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const trackIndexRef = useRef(DEFAULT_UI.trackIndex);
+  const pausedPrefRef = useRef(DEFAULT_UI.paused);
   const { volumes, setVolume, mutedAll, setMutedAll, unlock } = useAudio();
   const {
     muted: sfxMuted,
@@ -214,6 +233,9 @@ export function MusicPlayer() {
 
   const musicVolume = volumes.music;
   const musicMuted = mutedAll || musicVolume <= 0;
+
+  trackIndexRef.current = trackIndex;
+  pausedPrefRef.current = pausedPref;
 
   function clearHideTimer() {
     if (hideTimerRef.current != null) {
@@ -246,6 +268,7 @@ export function MusicPlayer() {
   useEffect(() => {
     const prefs = readUi();
     setHidden(prefs.hidden);
+    setPausedPref(prefs.paused);
     musicEngine.init();
     const enginePlaying = musicEngine.isPlaying();
     setPlaying(enginePlaying);
@@ -265,8 +288,59 @@ export function MusicPlayer() {
 
   useEffect(() => {
     if (!ready) return;
-    writeUi({ hidden, trackIndex });
-  }, [ready, hidden, trackIndex]);
+    writeUi({ hidden, trackIndex, paused: pausedPref });
+  }, [ready, hidden, trackIndex, pausedPref]);
+
+  // Autoplay on mount; if the browser blocks it, start on the first user gesture.
+  useEffect(() => {
+    if (!ready) return;
+    if (musicEngine.isPlaying()) return;
+    if (pausedPrefRef.current || shouldSkipAutoplay()) return;
+
+    let cancelled = false;
+    let gestureCleanup: (() => void) | null = null;
+
+    const wantsAutoplay = () =>
+      !cancelled && !pausedPrefRef.current && !shouldSkipAutoplay() && !musicEngine.isPlaying();
+
+    const start = async () => {
+      if (!wantsAutoplay()) return false;
+      unlock();
+      await musicEngine.playTrack(trackIndexRef.current, 500);
+      if (cancelled) return musicEngine.isPlaying();
+      const ok = musicEngine.isPlaying();
+      setPlaying(ok);
+      return ok;
+    };
+
+    const armGestureUnlock = () => {
+      if (gestureCleanup || cancelled) return;
+      const onGesture = () => {
+        gestureCleanup?.();
+        gestureCleanup = null;
+        void start();
+      };
+      window.addEventListener("pointerdown", onGesture, { passive: true });
+      window.addEventListener("keydown", onGesture);
+      window.addEventListener("touchstart", onGesture, { passive: true });
+      gestureCleanup = () => {
+        window.removeEventListener("pointerdown", onGesture);
+        window.removeEventListener("keydown", onGesture);
+        window.removeEventListener("touchstart", onGesture);
+      };
+    };
+
+    void (async () => {
+      const ok = await start();
+      if (!ok && wantsAutoplay()) armGestureUnlock();
+    })();
+
+    return () => {
+      cancelled = true;
+      gestureCleanup?.();
+      gestureCleanup = null;
+    };
+  }, [ready, unlock]);
 
   // Start / clear the 30s idle timer when the bar is shown or collapsed.
   useEffect(() => {
@@ -306,8 +380,10 @@ export function MusicPlayer() {
     if (playing) {
       musicEngine.pause();
       setPlaying(false);
+      setPausedPref(true);
       return;
     }
+    setPausedPref(false);
     await musicEngine.playTrack(trackIndex, 500);
     setPlaying(musicEngine.isPlaying());
   }
@@ -324,6 +400,7 @@ export function MusicPlayer() {
 
   async function selectTrack(index: number) {
     unlock();
+    setPausedPref(false);
     setTrackIndex(index);
     await musicEngine.playTrack(index, 600);
     setPlaying(musicEngine.isPlaying());

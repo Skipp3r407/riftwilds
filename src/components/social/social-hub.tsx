@@ -7,6 +7,7 @@ import { useEffect, useState, useTransition } from "react";
 import { StatusChip } from "@/components/shared/page-header";
 import { AvatarPicker } from "@/components/social/avatar-picker";
 import { ImageButton } from "@/components/ui/image-button";
+import { RiftPanel } from "@/components/ui/rift-panel";
 import { brandMarkPath } from "@/lib/assets/paths";
 import type {
   DmMessageView,
@@ -581,19 +582,22 @@ export function SocialHub() {
       ) : null}
 
       {tab === "safety" ? (
-        <section className="grid gap-4 lg:grid-cols-2">
-          <article className="panel space-y-6 p-5">
-            <div>
-              <h2 className="font-display text-xl text-white">Your identity</h2>
-              <p className="mt-1 text-xs text-[var(--text-dim)]">
+        <section className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_minmax(16rem,22rem)]">
+          <div className="space-y-4">
+            <RiftPanel material="obsidian" filigree padding="md">
+              <p className="font-display text-[10px] uppercase tracking-[0.28em] text-[var(--cyan)]">
+                Settings
+              </p>
+              <h2 className="font-display mt-1 text-xl text-white md:text-2xl">Your identity</h2>
+              <p className="mt-1.5 text-xs leading-relaxed text-[var(--text-dim)]">
                 Pick a Riftling avatar below, then set how keepers find you. Wallet optional —
                 Credits ≠ SOL.
               </p>
-              <div className="mt-3 space-y-3">
-                <label className="block text-xs text-[var(--text-muted)]">
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                <label className="block text-xs text-[var(--text-muted)] sm:col-span-2">
                   Display name
                   <input
-                    className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
+                    className="focus-ring mt-1 w-full rounded-lg border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
                     value={displayName}
                     onChange={(e) => setDisplayName(e.target.value)}
                     maxLength={32}
@@ -601,7 +605,7 @@ export function SocialHub() {
                 </label>
                 <button
                   type="button"
-                  className="btn-secondary focus-ring text-sm"
+                  className="btn-secondary focus-ring text-sm sm:col-span-2 sm:w-fit"
                   disabled={pending}
                   onClick={() =>
                     void postFriends({ action: "set_display_name", displayName })
@@ -612,24 +616,16 @@ export function SocialHub() {
                 <label className="block text-xs text-[var(--text-muted)]">
                   Handle
                   <input
-                    className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
+                    className="focus-ring mt-1 w-full rounded-lg border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
                     value={handleDraft}
                     onChange={(e) => setHandleDraft(e.target.value)}
                     maxLength={24}
                   />
                 </label>
-                <button
-                  type="button"
-                  className="btn-secondary focus-ring text-sm"
-                  disabled={pending}
-                  onClick={() => void postFriends({ action: "set_handle", handle: handleDraft })}
-                >
-                  Save handle
-                </button>
                 <label className="block text-xs text-[var(--text-muted)]">
                   Who can message you
                   <select
-                    className="focus-ring mt-1 w-full rounded border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
+                    className="focus-ring mt-1 w-full rounded-lg border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] px-3 py-2 text-sm text-white"
                     value={hub?.messagePrivacy ?? "friends_only"}
                     onChange={(e) =>
                       void postFriends({
@@ -642,8 +638,16 @@ export function SocialHub() {
                     <option value="anyone">Anyone (not blocked)</option>
                   </select>
                 </label>
+                <button
+                  type="button"
+                  className="btn-secondary focus-ring text-sm sm:w-fit"
+                  disabled={pending}
+                  onClick={() => void postFriends({ action: "set_handle", handle: handleDraft })}
+                >
+                  Save handle
+                </button>
               </div>
-            </div>
+            </RiftPanel>
 
             <AvatarPicker
               onSelected={(src, key) => {
@@ -654,10 +658,13 @@ export function SocialHub() {
                 });
               }}
             />
-          </article>
+          </div>
 
-          <article className="panel p-5">
-            <h2 className="font-display text-xl text-white">Block list</h2>
+          <RiftPanel material="marble" filigree padding="md" className="h-fit">
+            <p className="font-display text-[10px] uppercase tracking-[0.28em] text-[var(--cyan)]">
+              Safety
+            </p>
+            <h2 className="font-display mt-1 text-xl text-white">Block list</h2>
             {!hub?.blocks.length ? (
               <p className="mt-3 text-sm text-[var(--text-muted)]">No blocked keepers.</p>
             ) : (
@@ -740,7 +747,7 @@ export function SocialHub() {
                 </button>
               </p>
             </div>
-          </article>
+          </RiftPanel>
         </section>
       ) : null}
 

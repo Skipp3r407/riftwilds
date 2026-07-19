@@ -17,8 +17,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { brandMarkPath, brandWordmarkPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import { headerNavGroups, type NavGroup } from "@/lib/config/nav";
-import { SolPriceChip } from "@/components/shared/sol-price-chip";
-import { TokenPriceChip } from "@/components/shared/token-price-chip";
+import { HeaderBalanceCluster } from "@/components/shared/header-wallet-balances";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { markOriginStorySeen } from "@/lib/origin-story";
 import { playSfx } from "@/hooks/use-sfx";
@@ -388,10 +387,7 @@ export function SiteHeader(_props: Props = {}) {
           </nav>
 
           <div className="hud-nav__actions flex shrink-0 items-center justify-end">
-            <div className="hud-nav__tickers" aria-label="Market tickers">
-              <SolPriceChip className="hud-nav__sol" />
-              <TokenPriceChip className="hud-nav__token" />
-            </div>
+            <HeaderBalanceCluster />
             <WalletConnectButton />
             <label
               htmlFor="hud-nav-mobile-toggle"

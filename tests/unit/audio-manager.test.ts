@@ -40,6 +40,7 @@ describe("audio prefs / volume math", () => {
     expect(p.mutedAll).toBe(true);
     expect(p.volumes.music).toBeCloseTo(0.2);
     expect(p.volumes.ambient).toBe(DEFAULT_AUDIO_PREFS.volumes.ambient);
+    expect(p.volumes.notifications).toBe(DEFAULT_AUDIO_PREFS.volumes.notifications);
   });
 });
 
@@ -60,6 +61,10 @@ describe("audio catalog", () => {
     expect(busForEvent("combat.stinger")).toBe("combat");
     expect(busForEvent("weather.rain")).toBe("weather");
     expect(busForEvent("world.footstep")).toBe("sfx");
+    expect(busForEvent("notify.toast")).toBe("notifications");
+    expect(busForEvent("boss.enter")).toBe("combat");
+    expect(busForEvent("voice.announcer_ready")).toBe("voice");
+    expect(busForEvent("marketplace.sol_transfer")).toBe("ui");
   });
 });
 

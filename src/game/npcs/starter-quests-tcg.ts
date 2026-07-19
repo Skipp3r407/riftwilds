@@ -115,6 +115,12 @@ export const STARTER_QUEST_CHAIN_TCG: QuestDef[] = [
       { kind: "xp", amount: 150 },
       { kind: "soft_currency", amount: 60, label: "Credits" },
       { kind: "arena_points", amount: 40 },
+      {
+        kind: "egg",
+        label: "Ember Egg",
+        eggType: "EMBER",
+        earnPath: "QUEST",
+      },
     ],
     sortOrder: 5,
   },

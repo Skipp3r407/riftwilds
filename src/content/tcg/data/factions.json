@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ember-forge",
+    "name": "Ember Forge League",
+    "shortName": "Ember",
+    "affinity": "EMBER",
+    "primaryElement": "fire",
+    "secondaryElements": ["metal", "earth"],
+    "storyFactionHook": "Ember Forge League",
+    "lore": "Forge-keepers temper Rift heat into honest steel. Tempo and Charge pressure define their desk.",
+    "playstyle": "Aggro / Empower finishers",
+    "commanderHeroIds": ["hero-volta", "hero-basalt"],
+    "defaultStarterDeckId": "starter-fire",
+    "bannerAccent": "#ff7a3d",
+    "regionHints": ["ember-crags", "forge-district"]
+  },
+  {
+    "id": "tideward-coast",
+    "name": "Tideward Compact",
+    "shortName": "Tide",
+    "affinity": "TIDE",
+    "primaryElement": "water",
+    "secondaryElements": ["crystal", "spirit"],
+    "storyFactionHook": "Merchant Fairway / coastal wardens",
+    "lore": "Coastal Keepers bargain with the moonwater. Ward and attrition keep the Core afloat.",
+    "playstyle": "Control / Ward midrange",
+    "commanderHeroIds": ["hero-brine"],
+    "defaultStarterDeckId": "starter-water",
+    "bannerAccent": "#3d9bff",
+    "regionHints": ["moonwater", "brine-coast"]
+  },
+  {
+    "id": "grove-circle",
+    "name": "Grove Circle",
+    "shortName": "Grove",
+    "affinity": "GROVE",
+    "primaryElement": "nature",
+    "secondaryElements": ["poison", "spirit"],
+    "storyFactionHook": "Commons Keepers Circle / Rootcrown Rangers",
+    "lore": "Elara's road taught the Commons that Bloom is a promise kept. Synergy and Guardian lines thrive here.",
+    "playstyle": "Riftbond midrange / Bloom",
+    "commanderHeroIds": ["hero-elara-venn", "hero-thorn"],
+    "defaultStarterDeckId": "starter-nature",
+    "bannerAccent": "#4adf7a",
+    "regionHints": ["riftwild-commons", "elderwood"]
+  },
+  {
+    "id": "stormspire",
+    "name": "Spirewind League",
+    "shortName": "Storm",
+    "affinity": "STORM",
+    "primaryElement": "storm",
+    "secondaryElements": ["arcane", "light"],
+    "storyFactionHook": "Spirewind League",
+    "lore": "Harnessed Keepers race the thermals above Stormspire. Charge openers and tempo swings rule the desk.",
+    "playstyle": "Tempo / Charge skirmish",
+    "commanderHeroIds": ["hero-nyx-hollow"],
+    "defaultStarterDeckId": "starter-storm",
+    "bannerAccent": "#b8d4ff",
+    "regionHints": ["stormspire", "aerie"]
+  }
+]

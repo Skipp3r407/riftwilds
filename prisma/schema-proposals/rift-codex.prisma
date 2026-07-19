@@ -1,0 +1,44 @@
+// Rift Codex persistence — PROPOSAL ONLY.
+// Do NOT apply to production. Use after explicit approval via prisma migrate.
+// Local discovery currently uses localStorage (`src/game/tcg/codex-progress.ts`).
+
+/// Per-player Codex progress (cosmetic / lore only — no competitive power).
+model TcgCodexProgress {
+  id              String   @id @default(cuid())
+  userId          String
+  familyId        String
+  firstSeenAt     DateTime @default(now())
+  lastOpenedAt    DateTime @default(now())
+  cinematicShown  Boolean  @default(false)
+  rewardClaimed   Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId, familyId])
+  @@index([userId])
+  @@map("tcg_codex_progress")
+}
+
+/// Cosmetic titles / lore seals earned from completing released bond-lines.
+model TcgCodexTitle {
+  id        String   @id @default(cuid())
+  userId    String
+  titleId   String
+  familyId  String?
+  claimedAt DateTime @default(now())
+
+  @@unique([userId, titleId])
+  @@index([userId])
+  @@map("tcg_codex_titles")
+}
+
+/// Museum Mode visit counters (analytics / soft retention — not P2W).
+model TcgMuseumVisit {
+  id        String   @id @default(cuid())
+  userId    String
+  visitedAt DateTime @default(now())
+  section   String? // hall-origins | wing-affinity | …
+
+  @@index([userId, visitedAt])
+  @@map("tcg_museum_visits")
+}

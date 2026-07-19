@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useConnection } from "@solana/wallet-adapter-react";
@@ -103,44 +103,50 @@ export function ShopShell({ sections, catalogSummary }: Props) {
   const browseSections = sections.filter((s) => s.section.id !== "featured");
 
   return (
-    <div className="space-y-5">
+    <div className="shop-shell space-y-5">
       <p className="text-xs text-[var(--text-muted)]">{catalogSummary}</p>
 
-      <div className="panel flex flex-wrap items-center gap-3 px-4 py-3">
-        <BalanceChip
-          label="In-game SOL"
-          value={earned.ready ? `${earned.solLabel} SOL` : "…"}
-          tone="cyan"
+      <div className="panel relative overflow-hidden px-4 py-3">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_10%_0%,rgba(255,184,77,0.12),transparent_45%),radial-gradient(ellipse_at_90%_100%,rgba(61,231,255,0.08),transparent_40%)]"
+          aria-hidden
         />
-        <BalanceChip
-          label="Wallet SOL"
-          value={
-            !connected
-              ? "Not connected"
-              : walletLamports != null
-                ? `${lamportsToSolString(walletLamports)} SOL${viewOnly ? " · view-only" : ""}`
-                : "…"
-          }
-          tone="amber"
-        />
-        {viewOnly && !canSign ? (
-          <span className="text-[10px] text-[var(--amber)]">
-            View-only — connect a wallet to pay with SOL
-          </span>
-        ) : null}
-        <button
-          type="button"
-          className="btn-secondary focus-ring text-xs"
-          onClick={() => {
-            earned.claimPlayReward();
-            playSfx("rewards.claim");
-          }}
-          title="Demo play reward credited to In-game SOL"
-        >
-          Claim +{earned.playRewardSol} play reward
-        </button>
-        <div className="ml-auto">
-          <WalletConnectButton />
+        <div className="relative z-[1] flex flex-wrap items-center gap-3">
+          <BalanceChip
+            label="In-game SOL"
+            value={earned.ready ? `${earned.solLabel} SOL` : "…"}
+            tone="cyan"
+          />
+          <BalanceChip
+            label="Wallet SOL"
+            value={
+              !connected
+                ? "Not connected"
+                : walletLamports != null
+                  ? `${lamportsToSolString(walletLamports)} SOL${viewOnly ? " · view-only" : ""}`
+                  : "…"
+            }
+            tone="amber"
+          />
+          {viewOnly && !canSign ? (
+            <span className="text-[10px] text-[var(--amber)]">
+              View-only — connect a wallet to pay with SOL
+            </span>
+          ) : null}
+          <button
+            type="button"
+            className="btn-secondary focus-ring text-xs"
+            onClick={() => {
+              earned.claimPlayReward();
+              playSfx("rewards.claim");
+            }}
+            title="Demo play reward credited to In-game SOL"
+          >
+            Claim +{earned.playRewardSol} play reward
+          </button>
+          <div className="ml-auto">
+            <WalletConnectButton />
+          </div>
         </div>
       </div>
 
@@ -160,19 +166,18 @@ export function ShopShell({ sections, catalogSummary }: Props) {
               setTab(id);
             }}
             className={cn(
-              "focus-ring rounded-md px-4 py-2 text-sm",
+              "focus-ring rounded-md px-4 py-2 text-sm font-medium transition",
               tab === id
-                ? "bg-[var(--cyan)] text-black"
-                : "bg-[var(--bg-elevated)] text-[var(--text-muted)]",
+                ? "bg-[var(--cyan)] text-black shadow-[0_0_20px_rgba(61,231,255,0.35)]"
+                : "bg-[var(--bg-elevated)] text-[var(--text-muted)] hover:text-white",
             )}
           >
             {label}
           </button>
         ))}
         <span className="self-center text-[10px] text-[var(--text-muted)]">
-          Wallet SOL settlement{" "}
-          {purchasesFlag && solPurchasesFlag ? "shell on" : "gated off"} · In-game
-          SOL live
+          Credits settle the hall · Wallet SOL{" "}
+          {purchasesFlag && solPurchasesFlag ? "shell on" : "gated off"} · never buys power
         </span>
       </div>
 
@@ -187,63 +192,78 @@ export function ShopShell({ sections, catalogSummary }: Props) {
       ) : null}
 
       {tab === "featured" && featuredSection ? (
-        <ShopSectionBlock
-          section={featuredSection.section}
-          items={featuredSection.items}
-          selectedId={selectedId}
-          onSelect={setSelectedId}
-          onPurchase={openPurchase}
-          purchasesEnabled
-        />
+        <MerchantHallFrame>
+          <ShopSectionBlock
+            section={featuredSection.section}
+            items={featuredSection.items}
+            selectedId={selectedId}
+            onSelect={setSelectedId}
+            onPurchase={openPurchase}
+            purchasesEnabled
+            featured
+          />
+        </MerchantHallFrame>
       ) : null}
 
       {tab === "shop" ? (
-        <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
-          <div className="space-y-8">
-            <nav className="panel sticky top-16 z-10 flex flex-wrap gap-1.5 px-3 py-2">
-              {SHOP_SECTIONS.filter((s) => !s.demoted).map((s) => (
-                <a
-                  key={s.id}
-                  href={`#shop-${s.id}`}
-                  onClick={() => setActiveSection(s.id)}
-                  className={cn(
-                    "focus-ring rounded-md px-2.5 py-1 text-[11px] uppercase tracking-wide",
-                    activeSection === s.id
-                      ? "bg-[rgba(61,231,255,0.2)] text-[var(--cyan)]"
-                      : "text-[var(--text-muted)] hover:text-white",
-                  )}
-                >
-                  {s.label}
-                </a>
-              ))}
-              <span className="self-center px-1 text-[10px] text-[var(--text-dim)]">·</span>
-              {SHOP_SECTIONS.filter((s) => s.demoted).map((s) => (
-                <a
-                  key={s.id}
-                  href={`#shop-${s.id}`}
-                  onClick={() => setActiveSection(s.id)}
-                  className={cn(
-                    "focus-ring rounded-md px-2 py-1 text-[10px] uppercase tracking-wide",
-                    activeSection === s.id
-                      ? "bg-[rgba(61,231,255,0.12)] text-[var(--cyan)]"
-                      : "text-[var(--text-dim)] hover:text-[var(--text-muted)]",
-                  )}
-                  title="Live World / companion goods — secondary to Rift Battles"
-                >
-                  {s.label}
-                </a>
-              ))}
+        <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_300px]">
+          <div className="space-y-7">
+            <nav className="panel sticky top-16 z-10 overflow-hidden px-3 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.35)]">
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[rgba(255,140,60,0.1)] via-transparent to-[rgba(61,231,255,0.08)]"
+                aria-hidden
+              />
+              <p className="relative z-[1] mb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--amber)]">
+                Hall categories
+              </p>
+              <div className="relative z-[1] flex flex-wrap gap-1.5">
+                {SHOP_SECTIONS.filter((s) => !s.demoted).map((s) => (
+                  <a
+                    key={s.id}
+                    href={`#shop-${s.id}`}
+                    onClick={() => setActiveSection(s.id)}
+                    className={cn(
+                      "focus-ring rounded-md border px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-wide transition",
+                      activeSection === s.id
+                        ? "border-[rgba(61,231,255,0.55)] bg-[rgba(61,231,255,0.18)] text-[var(--cyan)] shadow-[0_0_16px_rgba(61,231,255,0.2)]"
+                        : "border-transparent text-[var(--text-muted)] hover:border-[rgba(255,255,255,0.08)] hover:bg-[rgba(255,255,255,0.04)] hover:text-white",
+                    )}
+                  >
+                    {s.label}
+                  </a>
+                ))}
+                <span className="self-center px-1 text-[10px] text-[var(--text-dim)]">·</span>
+                {SHOP_SECTIONS.filter((s) => s.demoted).map((s) => (
+                  <a
+                    key={s.id}
+                    href={`#shop-${s.id}`}
+                    onClick={() => setActiveSection(s.id)}
+                    className={cn(
+                      "focus-ring rounded-md border px-2 py-1 text-[10px] uppercase tracking-wide transition",
+                      activeSection === s.id
+                        ? "border-[rgba(61,231,255,0.35)] bg-[rgba(61,231,255,0.1)] text-[var(--cyan)]"
+                        : "border-transparent text-[var(--text-dim)] hover:text-[var(--text-muted)]",
+                    )}
+                    title="Live World / companion goods — secondary to Rift Battles"
+                  >
+                    {s.label}
+                  </a>
+                ))}
+              </div>
             </nav>
 
             {featuredSection ? (
-              <ShopSectionBlock
-                section={featuredSection.section}
-                items={featuredSection.items}
-                selectedId={selectedId}
-                onSelect={setSelectedId}
-                onPurchase={openPurchase}
-                purchasesEnabled
-              />
+              <MerchantHallFrame>
+                <ShopSectionBlock
+                  section={featuredSection.section}
+                  items={featuredSection.items}
+                  selectedId={selectedId}
+                  onSelect={setSelectedId}
+                  onPurchase={openPurchase}
+                  purchasesEnabled
+                  featured
+                />
+              </MerchantHallFrame>
             ) : null}
 
             {browseSections
@@ -289,18 +309,35 @@ export function ShopShell({ sections, catalogSummary }: Props) {
           <aside className="space-y-3 lg:sticky lg:top-20 lg:self-start">
             {quote && selected ? (
               <>
-                <div className="panel p-4">
-                  <h2 className="font-display text-lg text-white">{selected.name}</h2>
-                  <p className="mt-2 text-xs text-[var(--text-muted)]">
-                    {selected.description}
-                  </p>
-                  <button
-                    type="button"
-                    className="btn-primary focus-ring mt-3 w-full text-xs"
-                    onClick={() => openPurchase(selected.id)}
-                  >
-                    Choose payment
-                  </button>
+                <div className="shop-shell__aside-panel panel relative overflow-hidden p-4">
+                  <div
+                    className="shop-shell__aside-wash pointer-events-none absolute inset-0"
+                    aria-hidden
+                  />
+                  <div className="relative z-[1]">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--amber)]">
+                      Selected
+                    </p>
+                    <h2 className="font-display mt-1 text-lg text-white">{selected.name}</h2>
+                    <p className="mt-2 text-xs leading-relaxed text-[var(--text-muted)]">
+                      {selected.description}
+                    </p>
+                    <div className="shop-shell__price-box mt-3 rounded-md border border-[rgba(61,231,255,0.25)] px-3 py-2">
+                      <p className="font-display text-xl text-[var(--cyan)]">
+                        {selected.price.credits.toLocaleString()} Credits
+                      </p>
+                      <p className="text-[10px] text-[var(--text-dim)]">
+                        Optional · {selected.price.sol} SOL
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      className="btn-primary focus-ring mt-3 w-full text-xs"
+                      onClick={() => openPurchase(selected.id)}
+                    >
+                      Choose payment
+                    </button>
+                  </div>
                 </div>
                 <PriceBreakdown quote={quote} />
                 {featureFlagDefaults.SHOP_REVENUE_SPLIT_ENABLED ? (
@@ -353,6 +390,24 @@ export function ShopShell({ sections, catalogSummary }: Props) {
   );
 }
 
+function MerchantHallFrame({ children }: { children: ReactNode }) {
+  return (
+    <div className="shop-merchant-frame panel relative overflow-hidden border-[rgba(255,184,77,0.22)] p-4 shadow-[0_0_48px_rgba(255,140,60,0.08)] md:p-5">
+      <div
+        className="shop-merchant-frame__art pointer-events-none absolute inset-0 bg-cover bg-[center_30%]"
+        style={{ backgroundImage: "url(/assets/ui/wallpapers/shop.png)" }}
+        aria-hidden
+      />
+      <div className="shop-merchant-frame__scrim pointer-events-none absolute inset-0" aria-hidden />
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_25%_15%,rgba(255,150,70,0.14),transparent_48%),radial-gradient(ellipse_at_85%_70%,rgba(61,231,255,0.1),transparent_42%)]"
+        aria-hidden
+      />
+      <div className="relative z-[1]">{children}</div>
+    </div>
+  );
+}
+
 function BalanceChip(props: {
   label: string;
   value: string;
@@ -382,14 +437,27 @@ function ShopSectionBlock(props: {
   onSelect: (id: string) => void;
   onPurchase: (id: string) => void;
   purchasesEnabled: boolean;
+  featured?: boolean;
 }) {
-  const { section, items } = props;
+  const { section, items, featured } = props;
   return (
     <section id={`shop-${section.id}`} className="scroll-mt-28 space-y-3">
       <div className="flex flex-wrap items-end justify-between gap-2">
         <div>
-          <h2 className="font-display text-2xl text-white">{section.label}</h2>
-          <p className="mt-1 max-w-xl text-xs text-[var(--text-muted)]">
+          {featured ? (
+            <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--amber)]">
+              Merchant picks
+            </p>
+          ) : null}
+          <h2
+            className={cn(
+              "font-display text-white",
+              featured ? "text-3xl" : "text-2xl",
+            )}
+          >
+            {section.label}
+          </h2>
+          <p className="mt-1 max-w-xl text-xs leading-relaxed text-[var(--text-muted)]">
             {section.description}
           </p>
         </div>

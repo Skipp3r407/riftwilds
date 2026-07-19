@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-07-18T06:08:48.406Z",
+  "builtAt": "2026-07-18T21:43:53.756Z",
   "style": "comic-cinematic-colorful",
   "speciesFeatured": [
     "Glowpup",
@@ -12,7 +12,7 @@
     "Gearling",
     "Wisplet"
   ],
-  "ffmpeg": "C:\\Program Files\\Jellyfin\\Server\\ffmpeg.exe",
+  "ffmpeg": "C:\\Users\\Skipp3r407\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-8.1.2-full_build\\bin\\ffmpeg.exe",
   "results": [
     {
       "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-commercial-60s-16x9.mp4",
@@ -21,17 +21,17 @@
     },
     {
       "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-commercial-30s-9x16.mp4",
-      "duration": 30,
+      "duration": 29.994,
       "hasVo": true
     },
     {
       "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-commercial-15s-9x16-teaser.mp4",
-      "duration": 14.848,
+      "duration": 15,
       "hasVo": true
     },
     {
       "path": "C:\\Users\\Skipp3r407\\Desktop\\Websites\\egg meme project\\public\\assets\\commercials\\video\\riftwilds-commercial-25s-1x1.mp4",
-      "duration": 24.853,
+      "duration": 25,
       "hasVo": true
     },
     {

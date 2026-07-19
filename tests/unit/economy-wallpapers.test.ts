@@ -28,8 +28,22 @@ describe("economy page wallpapers", () => {
     expect(resolveWallpaperForPath("/token")).toMatchObject({ name: "token" });
     expect(resolveWallpaperForPath("/transparency")).toMatchObject({ name: "transparency" });
     expect(resolveWallpaperForPath("/fairness")).toMatchObject({ name: "fairness" });
+    expect(resolveWallpaperForPath("/codex/riftlings")).toMatchObject({
+      name: "codex",
+      opacity: 0.58,
+    });
+    expect(resolveWallpaperForPath("/codex/riftlings/ashwing")).toMatchObject({ name: "codex" });
+    expect(resolveWallpaperForPath("/academy")).toMatchObject({
+      name: "academy",
+      opacity: 0.58,
+    });
+    expect(resolveWallpaperForPath("/academy?lesson=b01-welcome")).toMatchObject({
+      name: "academy",
+    });
     expect(WALLPAPERS.care).toBe("/assets/ui/wallpapers/care.png");
     expect(WALLPAPERS.economy).toBe("/assets/ui/wallpapers/economy.png");
     expect(WALLPAPERS.treasury).toBe("/assets/treasury/hero.png");
+    expect(WALLPAPERS.codex).toContain("/assets/ui/wallpapers/codex.png");
+    expect(WALLPAPERS.academy).toContain("/assets/ui/wallpapers/academy.png");
   });
 });

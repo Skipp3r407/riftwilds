@@ -7,7 +7,22 @@
  */
 
 export const featureFlagDefaults = {
-  TOKEN_GATE_ENABLED: true,
+  /**
+   * Legacy seed flag for optional $RIFT cosmetic tier scaffolding.
+   * Default OFF — never gate hatchery, TCG, quests, or starter package.
+   * See `src/lib/economy/token-cosmetic-perks.ts` (cosmetics only, no P2W).
+   */
+  TOKEN_GATE_ENABLED: false,
+  /** Optional holder cosmetic tiers (Explorer→Mythic Keeper). Default OFF. */
+  TOKEN_COSMETIC_PERKS_ENABLED: false,
+  /** Real holder payout / claim rails — always OFF unless explicitly enabled. */
+  TOKEN_COSMETIC_PAYOUTS_ENABLED: false,
+  /** Explicit anti-P2W product stance (copy + validators). */
+  ANTI_PAY_TO_WIN_ENFORCED: true,
+  /** Free-to-play core loop — hatch / battle / quests without wallet. */
+  FREE_TO_PLAY_CORE_ENABLED: true,
+  /** Auto-grant first-login starter package (Credits + starter egg path). */
+  STARTER_PACKAGE_AUTO_GRANT_ENABLED: true,
   STARTER_EGG_CLAIMS_ENABLED: true,
   HATCHING_ENABLED: true,
   CARE_ENABLED: true,
@@ -121,6 +136,18 @@ export const featureFlagDefaults = {
    */
   LIVE_WORLD_LEGACY_INSTANT_COMBAT_ENABLED: false,
 
+  // ─── Rift Arena (skill TCG hub — default free play) ────────────────────────
+  /** Hub UI at /arena — browse, train, invite, ladder scaffolds. */
+  RIFT_ARENA_HUB_ENABLED: true,
+  /** Local free matchmaking queue (pairs into private lobby codes). */
+  RIFT_ARENA_FREE_MATCHMAKING_ENABLED: true,
+  /** Ranked ladder scaffolding visible; live rated queues stay soft. */
+  RIFT_ARENA_RANKED_SCAFFOLD_ENABLED: true,
+  /** Phase 2 — optional SOL stake matches. DEFAULT OFF. Never enable casually. */
+  RIFT_ARENA_SOL_STAKES_ENABLED: false,
+  /** Phase 2 — escrow write path. DEFAULT OFF. Requires stakes + wallet + compliance. */
+  RIFT_ARENA_SOL_ESCROW_ENABLED: false,
+
   // ─── Riftwilds Arena (legacy pet battler — soft-secondary) ─────────────────
   ARENA_ENABLED: true,
   CASUAL_DUELS_ENABLED: false,
@@ -224,6 +251,15 @@ export const featureFlagDefaults = {
   ECOSYSTEM_TOKEN_ANALYTICS_ENABLED: true,
   /** Community treasury page (/treasury). */
   ECOSYSTEM_TREASURY_ENABLED: true,
+  /**
+   * Project Treasury Ops — Pump.fun → single Project Treasury → distribution engine.
+   * Demo-simulated by default; never enables player P2W or holder dividend autopay.
+   */
+  TREASURY_OPS_ENABLED: true,
+  /** Live Solana payout broadcasts (requires encrypted server signer). Default OFF. */
+  TREASURY_OPS_REAL_TRANSFERS: false,
+  /** Monitoring worker / poll tick surface. */
+  TREASURY_OPS_MONITOR_ENABLED: true,
   /** Reward Center (/rewards) — community treasury framing. */
   ECOSYSTEM_REWARD_CENTER_ENABLED: true,
   /** Global activity feed component + API. */
@@ -274,6 +310,27 @@ export const featureFlagDefaults = {
   AUTH_CLERK_BRIDGE_ENABLED: false,
   /** Login / account page with modular providers. */
   AUTH_MODULAR_LOGIN_UI_ENABLED: true,
+
+  // ─── Nakama (additive multiplayer backend — never replaces local systems) ─
+  /**
+   * Master switch for Nakama client + bridges. Default OFF so local demo paths
+   * keep working without Docker. Flip on after `docker compose up`.
+   */
+  NAKAMA_ENABLED: false,
+  /** Bridge guest/`rift_guest` + email auth to Nakama sessions (keeps SIWS). */
+  NAKAMA_AUTH_BRIDGE_ENABLED: true,
+  /** Augment TCG invite / arena matchmaking with Nakama matchmaker tickets. */
+  NAKAMA_MATCHMAKING_BRIDGE_ENABLED: true,
+  /** Optional Nakama chat channels alongside in-memory friends/PM. */
+  NAKAMA_CHAT_BRIDGE_ENABLED: true,
+  /** Optional Nakama groups bridge for /guilds shell. */
+  NAKAMA_GUILDS_BRIDGE_ENABLED: true,
+  /** Optional Nakama leaderboards alongside demo leaderboard HUD. */
+  NAKAMA_LEADERBOARDS_BRIDGE_ENABLED: true,
+  /** Optional Nakama tournaments alongside Credits tournament economy. */
+  NAKAMA_TOURNAMENTS_BRIDGE_ENABLED: true,
+  /** Optional Nakama storage engine for soft player prefs (not Credits/SOL). */
+  NAKAMA_STORAGE_BRIDGE_ENABLED: true,
 
   // ─── Loyalty / streaks / airdrops / Rift Storm ──────────────────────────────
   /** Account loyalty streaks, weighted airdrops, milestones, Loyalty Shop. */

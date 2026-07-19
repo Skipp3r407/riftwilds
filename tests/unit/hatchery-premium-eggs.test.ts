@@ -48,14 +48,17 @@ describe("hatchery free pool + premium Credits eggs", () => {
     expect(after.exhausted).toBe(false);
   });
 
-  it("blocks free claim when global pool is exhausted", () => {
+  it("still grants guaranteed free starter when launch-wave pool is exhausted", () => {
     setFreeStarterReleasedForTests(3);
     const owner = `owner_late_${Math.random().toString(16).slice(2)}`;
     expect(getFreeStarterPoolStatus().exhausted).toBe(true);
-    expect(() => claimStarterEgg(owner)).toThrow("FREE_POOL_EXHAUSTED");
+    // F2P hard rule: every new keeper gets one account-bound starter.
+    const egg = claimStarterEgg(owner);
+    expect(egg.creationSource).toBe("STARTER_CLAIM");
 
     const offer = getHatcheryOfferStatus(owner);
     expect(offer.canClaimFree).toBe(false);
+    expect(offer.alreadyClaimedFree).toBe(true);
     expect(offer.canBuyPremium).toBe(true);
     expect(offer.premiumPriceCredits).toBe(PREMIUM_EGG_CREDITS_PRICE);
   });
@@ -70,9 +73,10 @@ describe("hatchery free pool + premium Credits eggs", () => {
     expect(offer.canBuyPremium).toBe(true);
   });
 
-  it("purchases a premium egg with Credits when free is unavailable", () => {
-    setFreeStarterReleasedForTests(3);
+  it("purchases a premium egg with Credits after free starter is claimed", () => {
     const owner = `owner_buy_${Math.random().toString(16).slice(2)}`;
+    claimStarterEgg(owner);
+    const releasedAfterStarter = getFreeStarterPoolStatus().released;
     fundOwner(owner, PREMIUM_EGG_CREDITS_PRICE);
 
     const result = purchasePremiumEgg(owner, { requestId: `buy-${owner}` });
@@ -86,19 +90,19 @@ describe("hatchery free pool + premium Credits eggs", () => {
     expect(getCreditBalance(owner)).toBe(0);
     expect(listEggsForOwner(owner).map((e) => e.publicId)).toContain(result.egg.publicId);
     // Premium purchase does not consume free pool counter.
-    expect(getFreeStarterPoolStatus().released).toBe(3);
+    expect(getFreeStarterPoolStatus().released).toBe(releasedAfterStarter);
   });
 
   it("fails premium purchase when Credits are insufficient", () => {
-    setFreeStarterReleasedForTests(3);
     const owner = `owner_poor_${Math.random().toString(16).slice(2)}`;
+    claimStarterEgg(owner);
     fundOwner(owner, 100);
 
     const result = purchasePremiumEgg(owner, { requestId: `poor-${owner}` });
     expect(result.ok).toBe(false);
     if (result.ok) return;
     expect(result.error).toBe("insufficient_credits");
-    expect(listEggsForOwner(owner)).toHaveLength(0);
+    expect(listEggsForOwner(owner)).toHaveLength(1);
     expect(getCreditBalance(owner)).toBe(100);
   });
 

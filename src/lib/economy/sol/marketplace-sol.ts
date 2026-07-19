@@ -85,6 +85,33 @@ export function serializeFeePreview(breakdown: SolFeeBreakdown) {
     platformPercent: breakdown.feeConfig.platformBps / 100,
     creatorPercent: breakdown.feeConfig.creatorRoyaltyBps / 100,
     communityPercent: breakdown.feeConfig.communityFundBps / 100,
+    listingFeeLamports: breakdown.feeConfig.listingFeeLamports.toString(),
+  };
+}
+
+/**
+ * Player-facing SOL fee stub for marketplace UI.
+ * Settlement remains blocked while marketplace SOL flags are off.
+ */
+export function getSolMarketplaceFeeDisplayStub(grossLamports: bigint = 1_000_000_000n) {
+  const breakdown = calculateSolMarketplaceFees(grossLamports);
+  const preview = serializeFeePreview(breakdown);
+  const live = isSolMarketplaceLive();
+  return {
+    live,
+    blockedReason: live
+      ? null
+      : "SOL marketplace path blocked (SOL_MARKETPLACE_ENABLED / REAL_SOL_MARKETPLACE_ENABLED / SOL_PURCHASES_ENABLED).",
+    disclosures: [
+      "Blockchain purchases may be irreversible when live.",
+      "Verify item details before confirming.",
+      "Prices fluctuate; fiat estimates are informational only.",
+      "Network fees may apply on-chain.",
+      "Digital collectibles do not guarantee future value.",
+      "Credits marketplace remains the soft play path.",
+    ],
+    preview,
+    listingFeeNote: `Listing fee ${preview.listingFeeLamports} lamports (non-refundable when live).`,
   };
 }
 

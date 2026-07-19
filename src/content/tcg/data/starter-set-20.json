@@ -1,0 +1,51 @@
+{
+  "id": "starter-showcase-20",
+  "name": "Riftwilds Showcase Twenty",
+  "version": 1,
+  "purpose": "Curated teaching set from ROTR for deck-builder onboarding and faction affinity demos. Not a parallel catalog.",
+  "deckSize": 30,
+  "recommendedCommanderId": "hero-elara-venn",
+  "factionMix": [
+    "ember-forge",
+    "tideward-coast",
+    "grove-circle",
+    "stormspire"
+  ],
+  "cardIds": [
+    "rotr-c-cinderquill",
+    "rotr-c-emberfox",
+    "rotr-c-ashwing",
+    "rotr-c-craterhorn",
+    "rotr-c-coralurge",
+    "rotr-c-bubbloon",
+    "rotr-c-brinepaw",
+    "rotr-c-groveowl",
+    "rotr-c-bramblefox",
+    "rotr-c-elderfern",
+    "rotr-c-mossprig",
+    "rotr-c-galekit",
+    "rotr-c-cloudleaper",
+    "rotr-c-stormmoth",
+    "rotr-c-peakibex",
+    "rotr-s-ember-spark",
+    "rotr-s-root-snare",
+    "rotr-s-bloom-draft",
+    "rotr-comp-cindercub",
+    "rotr-comp-bramblefox",
+    "rotr-c-basaltpup",
+    "rotr-c-canyonbeetle",
+    "rotr-c-gearling",
+    "rotr-c-ghostbloom",
+    "rotr-c-gritling",
+    "rotr-c-hollowmoth",
+    "rotr-c-lanternjay",
+    "rotr-c-luminara",
+    "rotr-c-moonray",
+    "rotr-c-rubblefin"
+  ],
+  "notes": [
+    "All IDs resolve in cards.json (ROTR foundational set).",
+    "Constructed showcase: exactly 30 cards + separate Commander.",
+    "F2P competitive — craft path never requires crypto/SOL."
+  ]
+}

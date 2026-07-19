@@ -16,12 +16,20 @@ export default async function TcgBattlePage({
   };
 
   return (
-    <main className="relative min-h-[70vh]">
-      <RiftBattleBoard
-        encounterEnemyId={pick("encounter") ?? null}
-        regionSlug={pick("region") ?? null}
-        returnTo={pick("returnTo") ?? "/tcg/collection"}
-      />
+    <main className="rift-page rift-page--battle relative min-h-[70vh]">
+      <div className="rift-page__atmosphere" aria-hidden>
+        <div className="rift-page__wash" />
+        <div className="rift-page__motes" />
+        <div className="rift-page__vignette" />
+      </div>
+      <div className="relative z-[1]">
+        <RiftBattleBoard
+          encounterEnemyId={pick("encounter") ?? null}
+          regionSlug={pick("region") ?? null}
+          returnTo={pick("returnTo") ?? "/arena"}
+          inviteCode={pick("invite") ?? null}
+        />
+      </div>
     </main>
   );
 }

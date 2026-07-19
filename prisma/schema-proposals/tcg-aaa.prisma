@@ -1,0 +1,76 @@
+// Riftwilds TCG AAA persistence — PROPOSAL ONLY.
+// Do NOT apply without explicit migrate approval.
+// Content cards remain JSON; these tables store ownership, decks, economy, telemetry.
+
+model TcgBinderCard {
+  id         String   @id @default(cuid())
+  userId     String
+  cardId     String
+  baseCardId String
+  finish     String   @default("standard")
+  count      Int      @default(0)
+  updatedAt  DateTime @updatedAt
+
+  @@unique([userId, cardId])
+  @@index([userId, baseCardId])
+  @@map("tcg_binder_cards")
+}
+
+model TcgDeckList {
+  id              String   @id @default(cuid())
+  userId          String
+  name            String
+  formatId        String   @default("standard")
+  commanderHeroId String
+  cardIds         String[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId, formatId])
+  @@map("tcg_deck_lists")
+}
+
+model TcgCraftWallet {
+  userId           String   @id
+  gold             Int      @default(0)
+  riftShards       Int      @default(0)
+  ancientFragments Int      @default(0)
+  updatedAt        DateTime @updatedAt
+
+  @@map("tcg_craft_wallets")
+}
+
+model TcgCraftLedger {
+  id               String   @id @default(cuid())
+  userId           String
+  cardId           String
+  path             String
+  gold             Int
+  riftShards       Int
+  ancientFragments Int
+  createdAt        DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@map("tcg_craft_ledger")
+}
+
+model TcgCardStatsDaily {
+  id       String   @id @default(cuid())
+  cardId   String
+  formatId String
+  day      DateTime @db.Date
+  plays    Int      @default(0)
+  wins     Int      @default(0)
+
+  @@unique([cardId, formatId, day])
+  @@map("tcg_card_stats_daily")
+}
+
+model TcgLiveOpsOverride {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  payload   Json
+  updatedAt DateTime @updatedAt
+
+  @@map("tcg_live_ops_overrides")
+}

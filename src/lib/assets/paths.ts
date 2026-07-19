@@ -1,7 +1,7 @@
 import type { StarterSpecies } from "@/lib/assets/manifest";
 
 /** Bump when pet list thumbs are regenerated. */
-export const PET_THUMB_V = "petthumb1";
+export const PET_THUMB_V = "petthumb2";
 
 /** Painted Riftling portraits (AI-generated masters, 1024px). */
 export function creaturePortraitPath(slug: string): string {
@@ -56,6 +56,22 @@ export function itemIconFallback(
   id: string,
 ): string {
   return `/assets/items/${category}/icons/${id}.svg`;
+}
+
+/** Bump when Codex habitat environment plates are regenerated. */
+export const HABITAT_ART_V = "hab1";
+
+/**
+ * Painted habitat / region plate for Codex creature cards.
+ * Prefer dedicated card plates; fall back via GameImage to scenic map art.
+ */
+export function habitatBackgroundPath(regionSlug: string): string {
+  return `/assets/habitats/${regionSlug}.webp?v=${HABITAT_ART_V}`;
+}
+
+/** Scenic map plate used when a dedicated habitat card asset is missing. */
+export function habitatBackgroundFallback(regionSlug: string): string {
+  return `/assets/maps/regions/${regionSlug}.png`;
 }
 
 /** Preferred world-selection card (new structure). */
@@ -123,7 +139,7 @@ export { SECTION_TITLES, sectionTitlePath, sectionTitleFromLabel } from "@/lib/a
 export { titleAtmospherePath, resolveTitleSlug } from "@/lib/assets/title-banners";
 
 /** Bump when section UI thumbs are remasked / regenerated. */
-export const SECTION_UI_THUMB_V = "arena7";
+export const SECTION_UI_THUMB_V = "arena8";
 
 /** Bump when quest panel art is regenerated. */
 export const QUEST_ART_V = "quest2";
@@ -142,7 +158,7 @@ export function sectionUiThumbPath(folder: string, slug: string): string {
 export const DASHBOARD_PANEL_ART_V = "dash1";
 
 /** Bump when Keeper Dashboard action icons are regenerated. */
-export const DASHBOARD_ACTION_ART_V = "act3";
+export const DASHBOARD_ACTION_ART_V = "act4";
 
 /** Panel illustration under public/assets/dashboard/{panelId}.png */
 export function dashboardPanelArtPath(panelId: string): string {
@@ -163,7 +179,7 @@ export function rewardSourceArtPath(slug: string): string {
 }
 
 /** Bump when Hatchery premium art is regenerated. */
-export const HATCHERY_ART_V = "hatch3";
+export const HATCHERY_ART_V = "hatch6";
 
 /** Bump when home / marketing hero egg art changes. */
 export const HERO_EGG_V = "heroegg2";
@@ -171,6 +187,11 @@ export const HERO_EGG_V = "heroegg2";
 /** Claim-card hero egg under public/assets/hatchery/claim-starter-egg.png */
 export function hatcheryClaimEggPath(): string {
   return `/assets/hatchery/claim-starter-egg.png?v=${HATCHERY_ART_V}`;
+}
+
+/** Featured starter section plate (pedestal / altar) under claim-section-plate.png */
+export function hatcheryClaimPlatePath(): string {
+  return `/assets/hatchery/claim-section-plate.png?v=${HATCHERY_ART_V}`;
 }
 
 /**

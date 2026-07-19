@@ -213,7 +213,12 @@ async function main() {
 
   // ─── Feature Flags ─────────────────────────────────────────────────────────
   const featureFlags: { key: string; enabled: boolean; note?: string }[] = [
-    { key: "TOKEN_GATE_ENABLED", enabled: true },
+    { key: "TOKEN_GATE_ENABLED", enabled: false },
+    { key: "TOKEN_COSMETIC_PERKS_ENABLED", enabled: false },
+    { key: "TOKEN_COSMETIC_PAYOUTS_ENABLED", enabled: false },
+    { key: "ANTI_PAY_TO_WIN_ENFORCED", enabled: true },
+    { key: "FREE_TO_PLAY_CORE_ENABLED", enabled: true },
+    { key: "STARTER_PACKAGE_AUTO_GRANT_ENABLED", enabled: true },
     { key: "STARTER_EGG_CLAIMS_ENABLED", enabled: true },
     { key: "HATCHING_ENABLED", enabled: true },
     { key: "CARE_ENABLED", enabled: true },

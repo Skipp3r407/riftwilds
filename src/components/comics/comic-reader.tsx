@@ -601,8 +601,9 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
         <p className="sr-only">
           Keyboard: Left/Right or A/D to turn pages, F for fullscreen, Home/End for first/last page.
           Swipe on touch devices. Gamepad D-pad supported as best-effort stub. Page-turn sound toggle
-          plays a soft paper rustle. Narration toggle plays pre-generated storybook voiceover when
-          clips exist. Prefer reduced motion for a simple crossfade instead of a 3D flip.
+          plays a soft paper rustle. Narration toggle plays storybook voiceover — pre-generated clips
+          when present, otherwise your browser's speech voice. Prefer reduced motion for a simple
+          crossfade instead of a 3D flip.
         </p>
       </div>
     </div>

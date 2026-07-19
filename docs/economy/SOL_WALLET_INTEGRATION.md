@@ -14,6 +14,15 @@
 - Reuses SIWS message + ed25519 verify
 - Never trust client-provided address alone
 
+## Wallet Center UI
+
+- Page: `/wallet` (`WalletCenter` + soft purchase simulation panel)
+- Snapshot API: `GET /api/economy/sol/wallet`
+- History stub: `src/lib/economy/sol/wallet-history.ts`
+- Shows: connection status, address, **network badge** (devnet/localnet), collectible count, pending/recent stubs, spending limits, marketplace/minting status
+- When `SOL_WALLET_ENABLED=false`: UI shows **disabled / coming soon**; SIWS challenge still available via identity flag for soft verify demos
+- Never asks for seed phrases
+
 ## Flags
 
 - `SOL_WALLET_ENABLED` — SOL spend UX (default false)

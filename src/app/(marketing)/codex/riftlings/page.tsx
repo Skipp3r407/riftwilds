@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { GameImage } from "@/components/assets/game-image";
+import { CreatureHabitatPortrait } from "@/components/assets/creature-habitat-portrait";
 import { SectionTitleBand } from "@/components/shared/page-header";
 import { listSpeciesLore } from "@/content/pets/lore";
-import { creatureIconPath, creatureProfilePath } from "@/lib/assets/paths";
 
 export const metadata = { title: "Riftling Codex" };
 
@@ -11,7 +10,7 @@ export default function RiftlingCodexPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
-      <SectionTitleBand slug="creatures" label="Riftling Codex" kicker="Encyclopedia" />
+      <SectionTitleBand slug="codex" label="Riftling Codex" kicker="Encyclopedia" />
       <p className="mt-3 max-w-2xl text-sm text-[var(--text-muted)]">
         {loreList.length} launch species with short, standard, and full lore entries. Personal pet
         biographies are generated at hatch and live on each companion’s profile. World history and
@@ -29,18 +28,14 @@ export default function RiftlingCodexPage() {
             href={`/codex/riftlings/${lore.slug}`}
             className="panel group overflow-hidden p-4 transition hover:border-[var(--cyan)]/50"
           >
-            <div className="relative z-[1] mb-3 aspect-[4/3] overflow-hidden rounded-xl bg-[radial-gradient(circle_at_50%_42%,rgba(90,110,150,0.38),rgba(14,18,32,0.92)_72%)] ring-1 ring-[rgba(148,197,255,0.14)]">
-              <GameImage
-                src={creatureProfilePath(lore.slug)}
-                alt={`${lore.name} artwork`}
-                width={384}
-                height={288}
-                fill
-                loading="eager"
-                fallbackSrc={creatureIconPath(lore.slug, true)}
-                showDevBadge={false}
-              />
-            </div>
+            <CreatureHabitatPortrait
+              speciesSlug={lore.slug}
+              speciesName={lore.name}
+              nativeRegion={lore.nativeRegion}
+              aspect="card"
+              className="relative z-[1] mb-3"
+              loading="eager"
+            />
             <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--mint)]">
               {lore.affinity} · {lore.nativeRegion}
             </p>

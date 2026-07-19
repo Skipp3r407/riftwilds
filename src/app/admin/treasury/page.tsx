@@ -1,21 +1,12 @@
-import Link from "next/link";
+import { TreasuryOpsAdminDashboard } from "@/components/treasury-ops/admin-dashboard";
 
-export const metadata = { title: "Admin · Treasury" };
+export const metadata = { title: "Admin · Treasury Ops" };
+export const dynamic = "force-dynamic";
 
 export default function AdminTreasuryPage() {
   return (
-    <main className="mx-auto max-w-4xl px-4 py-10 md:px-6">
-      <p className="page-kicker">Ops</p>
-      <h1 className="page-title mt-2">Treasury</h1>
-      <p className="page-lede mt-2">
-        Shell for bucket balances, grant approvals, and vote schedules. Public view at /treasury.
-      </p>
-      <Link href="/treasury" className="btn-secondary focus-ring mt-4 inline-flex text-sm">
-        Public treasury
-      </Link>
-      <Link href="/admin" className="btn-secondary focus-ring mt-6 inline-flex text-sm">
-        Back to admin
-      </Link>
+    <main className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+      <TreasuryOpsAdminDashboard />
     </main>
   );
 }

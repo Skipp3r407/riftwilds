@@ -7,8 +7,17 @@ export {
   unlockAudio,
 } from "@/lib/audio/manager";
 export {
+  adaptiveAudio,
+  enterSoundscape,
+  setSoundscapeIntensity,
+  playAdaptiveCue,
+  type SoundscapeMode,
+} from "@/lib/audio/adaptive-engine";
+export {
   playSfx,
   playCareSfx,
+  playHatchRaritySfx,
+  playElementSfx,
   unlockSfx,
   sfx,
   SFX_EVENTS,
@@ -40,6 +49,25 @@ export {
   crossfadeMusic,
   MUSIC_PLAYLIST,
 } from "@/lib/audio/music";
+export { musicStems } from "@/lib/audio/music-stems";
+export { reverbEngine, type ReverbZoneId } from "@/lib/audio/reverb";
+export {
+  voiceBus,
+  speakVoice,
+  VO_MATRIX_DEFERRED,
+  type VoiceSlotId,
+  type VoiceEvent,
+} from "@/lib/audio/voice-bus";
+export {
+  registerCue,
+  registerCues,
+  getCue,
+  listCues,
+  cueCount,
+  CORE_CUE_SEED,
+  type AudioCueDef,
+  type AudioCueCategory,
+} from "@/lib/audio/registry";
 export { playFootstep, resolveFootstepSurface } from "@/lib/audio/footsteps";
 export { positionalAudio, distanceGain } from "@/lib/audio/positional";
 export {
@@ -51,6 +79,7 @@ export {
   REGION_MUSIC,
   REGION_AMBIENT,
   REGION_FOOTSTEP_BIAS,
+  BIOME_AMBIENT_ALIASES,
 } from "@/lib/audio/catalog";
 export {
   effectiveVolume,

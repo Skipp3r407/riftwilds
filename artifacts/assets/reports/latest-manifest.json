@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-07-18T05:26:51.045Z",
+  "generatedAt": "2026-07-19T03:34:20.677Z",
   "provider": "cursor-local",
   "counts": {
     "worlds": 24,
@@ -8,9 +8,9 @@
     "pets": 111,
     "eggs": 14,
     "affinities": 10,
-    "items": 224,
+    "items": 238,
     "npcs": 112,
-    "enemies": 19,
+    "enemies": 34,
     "bosses": 11,
     "buildings": 5,
     "ui": 8,
@@ -19,7 +19,7 @@
   "byStatus": {
     "pending": 0,
     "planned": 0,
-    "generated": 546,
+    "generated": 575,
     "failed": 0,
     "legacy": 12,
     "not_applicable": 0
@@ -2660,6 +2660,118 @@
       "priority": 2
     },
     {
+      "id": "item-spirit-crystal",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/spirit-crystal.png",
+      "label": "Spirit Crystal",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-phoenix-feather",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/phoenix-feather.png",
+      "label": "Phoenix Feather",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancient-heart",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/ancient-heart.png",
+      "label": "Ancient Heart",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-revival-herb",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/revival-herb.png",
+      "label": "Revival Herb",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-healing-stone",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/healing-stone.png",
+      "label": "Healing Stone",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-soul-bloom",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/soul-bloom.png",
+      "label": "Soul Bloom",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moon-tear",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/moon-tear.png",
+      "label": "Moon Tear",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-heart-flame",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/heart-flame.png",
+      "label": "Heart Flame",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-sacred-feather",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/sacred-feather.png",
+      "label": "Sacred Feather",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancestor-stone",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/ancestor-stone.png",
+      "label": "Ancestor Stone",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancient-bell",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/ancient-bell.png",
+      "label": "Ancient Bell",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-revival-water",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/revival-water.png",
+      "label": "Revival Water",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-healing-rune",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/healing-rune.png",
+      "label": "Healing Rune",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-lantern-charm",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/spirit-lantern-charm.png",
+      "label": "Spirit Lantern Charm",
+      "status": "generated",
+      "priority": 2
+    },
+    {
       "id": "item-wood-fiber",
       "category": "items",
       "publicPath": "/assets/items/materials/icons/wood-fiber.png",
@@ -4403,6 +4515,24 @@
       "promptHint": "Enemy portrait of Storm Raptor. No text."
     },
     {
+      "id": "enemy-spark-wisp",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/spark-wisp/portrait.png",
+      "label": "Spark Wisp",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Spark Wisp. No text."
+    },
+    {
+      "id": "enemy-gale-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/gale-mite/portrait.png",
+      "label": "Gale Mite",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Gale Mite. No text."
+    },
+    {
       "id": "boss-stormspire-titan",
       "category": "bosses",
       "publicPath": "/assets/bosses/stormspire-titan/key-art.png",
@@ -4419,6 +4549,24 @@
       "status": "generated",
       "priority": 5,
       "promptHint": "Enemy portrait of Rock Crawler. No text."
+    },
+    {
+      "id": "enemy-dust-scorpion",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/dust-scorpion/portrait.png",
+      "label": "Dust Scorpion",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Dust Scorpion. No text."
+    },
+    {
+      "id": "enemy-slate-bat",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/slate-bat/portrait.png",
+      "label": "Slate Bat",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Slate Bat. No text."
     },
     {
       "id": "boss-stoneheart-behemoth",
@@ -4439,6 +4587,24 @@
       "promptHint": "Enemy portrait of Frost Wolf. No text."
     },
     {
+      "id": "enemy-ice-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/ice-mite/portrait.png",
+      "label": "Ice Mite",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Ice Mite. No text."
+    },
+    {
+      "id": "enemy-snow-lurker",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/snow-lurker/portrait.png",
+      "label": "Snow Lurker",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Snow Lurker. No text."
+    },
+    {
       "id": "boss-frostveil-warden",
       "category": "bosses",
       "publicPath": "/assets/bosses/frostveil-warden/key-art.png",
@@ -4455,6 +4621,24 @@
       "status": "generated",
       "priority": 5,
       "promptHint": "Enemy portrait of Radiant Construct. No text."
+    },
+    {
+      "id": "enemy-light-mote",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/light-mote/portrait.png",
+      "label": "Light Mote",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Light Mote. No text."
+    },
+    {
+      "id": "enemy-gilded-ward",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/gilded-ward/portrait.png",
+      "label": "Gilded Ward",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Gilded Ward. No text."
     },
     {
       "id": "boss-radiant-sentinel",
@@ -4475,6 +4659,24 @@
       "promptHint": "Enemy portrait of Rift Stalker. No text."
     },
     {
+      "id": "enemy-void-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/void-mite/portrait.png",
+      "label": "Void Mite",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Void Mite. No text."
+    },
+    {
+      "id": "enemy-echo-shade",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/echo-shade/portrait.png",
+      "label": "Echo Shade",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Echo Shade. No text."
+    },
+    {
       "id": "boss-void-riftborn",
       "category": "bosses",
       "publicPath": "/assets/bosses/void-riftborn/key-art.png",
@@ -4491,6 +4693,24 @@
       "status": "generated",
       "priority": 5,
       "promptHint": "Enemy portrait of Security Drone. No text."
+    },
+    {
+      "id": "enemy-scrap-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/scrap-mite/portrait.png",
+      "label": "Scrap Mite",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Scrap Mite. No text."
+    },
+    {
+      "id": "enemy-arc-spider",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/arc-spider/portrait.png",
+      "label": "Arc Spider",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Arc Spider. No text."
     },
     {
       "id": "boss-alloy-warframe",
@@ -4511,6 +4731,15 @@
       "promptHint": "Enemy portrait of Marsh Spirit. No text."
     },
     {
+      "id": "enemy-bog-wisp",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/bog-wisp/portrait.png",
+      "label": "Bog Wisp",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Bog Wisp. No text."
+    },
+    {
       "id": "boss-spirit-lantern-king",
       "category": "bosses",
       "publicPath": "/assets/bosses/spirit-lantern-king/key-art.png",
@@ -4527,6 +4756,24 @@
       "status": "generated",
       "priority": 5,
       "promptHint": "Enemy portrait of Starborn Guardian. No text."
+    },
+    {
+      "id": "enemy-comet-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/comet-mite/portrait.png",
+      "label": "Comet Mite",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Comet Mite. No text."
+    },
+    {
+      "id": "enemy-astral-wisp",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/astral-wisp/portrait.png",
+      "label": "Astral Wisp",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Astral Wisp. No text."
     },
     {
       "id": "boss-celestial-rift-entity",

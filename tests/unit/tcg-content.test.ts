@@ -36,6 +36,18 @@ describe("TCG foundational content", () => {
     }
   });
 
+  it("creature flavor text is complete (not mid-sentence truncated)", () => {
+    const truncated = TCG_CARDS.filter((c) => {
+      if (c.type !== "creature") return false;
+      const f = c.localization.flavorText.trim();
+      return f.includes("…") || f.endsWith("...") || !/[.!?]"?$/.test(f);
+    });
+    expect(
+      truncated.map((c) => c.id),
+      `truncated flavor on: ${truncated.map((c) => c.id).join(", ")}`,
+    ).toEqual([]);
+  });
+
   it("covers every lore species with at least one creature card", () => {
     expect(SPECIES_LORE_SLUGS.length).toBeGreaterThanOrEqual(100);
     const creatureSlugs = new Set(

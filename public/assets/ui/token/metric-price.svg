@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="mpBg" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162038"/>
+      <stop offset="1" stop-color="#0a0e18"/>
+    </linearGradient>
+    <radialGradient id="mpGlow" cx="50%" cy="42%" r="48%">
+      <stop stop-color="#3de7ff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#3de7ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#mpBg)"/>
+  <circle cx="32" cy="32" r="26" fill="url(#mpGlow)"/>
+  <circle cx="32" cy="32" r="18" fill="#0c1220" stroke="#3de7ff" stroke-width="1.6"/>
+  <circle cx="32" cy="32" r="13.5" fill="#121a2e" stroke="rgba(61,231,255,0.4)" stroke-width="0.9"/>
+  <path d="M32 18.5c-2.6 2.9-4.2 6.2-4.2 9.8 0 3.6 1.6 6.9 4.2 9.8 2.6-2.9 4.2-6.2 4.2-9.8 0-3.6-1.6-6.9-4.2-9.8z" fill="#ffb84d"/>
+  <path d="M24.5 29.2c4.2-1.5 8.8-1.5 13 0M24.5 34.8c4.2 1.5 8.8 1.5 13 0" stroke="#3de7ff" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="48" cy="16" r="1.4" fill="#ffb84d" opacity="0.85"/>
+  <circle cx="16" cy="46" r="1" fill="#3de7ff" opacity="0.7"/>
+</svg>

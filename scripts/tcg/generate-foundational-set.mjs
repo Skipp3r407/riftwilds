@@ -575,8 +575,9 @@ function buildCards() {
             effects: [{ op: "riftbond_link", keyword: "riftbond", aiHint: "play when companion matches" }],
           },
         ],
+        // Full shortBio for inspect/journal; card-face art truncates visually at render time.
         flavorText: sp.shortBio
-          ? sp.shortBio.slice(0, 160) + (sp.shortBio.length > 160 ? "…" : "")
+          ? sp.shortBio
           : `${sp.name} chose a keeper once — the duel remembers that choice.`,
         loreBlurb: sp.title
           ? `${sp.name}, “${sp.title}”, native to ${sp.nativeRegion || sp.regionId}.`
@@ -647,7 +648,8 @@ function buildCards() {
               effects: [{ op: "awaken_transform", keyword: "awaken" }],
             },
           ],
-          flavorText: sp.evolvedStageBehavior.slice(0, 160) + (sp.evolvedStageBehavior.length > 160 ? "…" : ""),
+          flavorText: sp.evolvedStageBehavior ||
+            "Instincts sharpen; childhood habits remain as signature quirks rather than vanishing.",
           loreBlurb: `Evolution stub for ${sp.name}.`,
           riftlingSlug: sp.slug,
           relatedRiftlings: [sp.slug],

@@ -1,0 +1,334 @@
+{
+  "installed": [
+    {
+      "id": "rotr-h-elara-venn",
+      "slug": "elara-venn",
+      "name": "Elara Venn",
+      "portrait": "/assets/npcs/riftwild-commons/elara-venn/portrait.png",
+      "subject": "/assets/tcg/subjects/elara-venn.png",
+      "portraitBytes": 2212959
+    },
+    {
+      "id": "rotr-h-mira-of-care",
+      "slug": "mira-of-care",
+      "name": "Mira of Care",
+      "portrait": "/assets/npcs/mira/portrait.png",
+      "subject": "/assets/tcg/subjects/mira-of-care.png",
+      "portraitBytes": 1570039
+    },
+    {
+      "id": "rotr-h-captain-brine",
+      "slug": "captain-brine",
+      "name": "Captain Brine",
+      "portrait": "/assets/npcs/riftwild-commons/captain-orren/portrait.png",
+      "subject": "/assets/tcg/subjects/captain-brine.png",
+      "portraitBytes": 2256331
+    },
+    {
+      "id": "rotr-h-forge-warden-kael",
+      "slug": "forge-warden-kael",
+      "name": "Forge-Warden Kael",
+      "portrait": "/assets/npcs/forgekeeper-vessa/portrait.png",
+      "subject": "/assets/tcg/subjects/forge-warden-kael.png",
+      "portraitBytes": 1549719
+    },
+    {
+      "id": "rotr-h-archivist-solen",
+      "slug": "archivist-solen",
+      "name": "Archivist Solen",
+      "portrait": "/assets/npcs/riftwild-commons/archivist-solen/portrait.png",
+      "subject": "/assets/tcg/subjects/archivist-solen.png",
+      "portraitBytes": 2009579
+    },
+    {
+      "id": "rotr-h-npc-keeper-travel-cloak",
+      "slug": "keeper-travel-cloak",
+      "name": "(Travel-Cloak)",
+      "portrait": "/assets/npcs/riftwild-commons/tessa-windmere/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-travel-cloak.png",
+      "portraitBytes": 2421447
+    },
+    {
+      "id": "rotr-h-npc-keeper-plaza-coat",
+      "slug": "keeper-plaza-coat",
+      "name": "(Plaza-Coat)",
+      "portrait": "/assets/npcs/riftwild-commons/bram-ironroot/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-plaza-coat.png",
+      "portraitBytes": 2079090
+    },
+    {
+      "id": "rotr-h-npc-keeper-grove-vest",
+      "slug": "keeper-grove-vest",
+      "name": "(Grove-Vest)",
+      "portrait": "/assets/npcs/mosskeeper-elden/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-grove-vest.png",
+      "portraitBytes": 1929911
+    },
+    {
+      "id": "rotr-h-npc-keeper-ember-apron",
+      "slug": "keeper-ember-apron",
+      "name": "(Ember-Apron)",
+      "portrait": "/assets/npcs/warden-pyra/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-ember-apron.png",
+      "portraitBytes": 1407962
+    },
+    {
+      "id": "rotr-h-npc-keeper-tide-slicker",
+      "slug": "keeper-tide-slicker",
+      "name": "(Tide-Slicker)",
+      "portrait": "/assets/npcs/luma-tidecrest/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-tide-slicker.png",
+      "portraitBytes": 1623115
+    },
+    {
+      "id": "rotr-h-npc-keeper-frost-parka",
+      "slug": "keeper-frost-parka",
+      "name": "(Frost-Parka)",
+      "portrait": "/assets/npcs/jori-icebloom/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-frost-parka.png",
+      "portraitBytes": 1697113
+    },
+    {
+      "id": "rotr-h-npc-keeper-storm-cape",
+      "slug": "keeper-storm-cape",
+      "name": "(Storm-Cape)",
+      "portrait": "/assets/npcs/skywarden-ilya/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-storm-cape.png",
+      "portraitBytes": 1922143
+    },
+    {
+      "id": "rotr-h-npc-keeper-stone-tabard",
+      "slug": "keeper-stone-tabard",
+      "name": "(Stone-Tabard)",
+      "portrait": "/assets/npcs/petra-stoneveil/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-stone-tabard.png",
+      "portraitBytes": 1808352
+    },
+    {
+      "id": "rotr-h-npc-keeper-spirit-shawl",
+      "slug": "keeper-spirit-shawl",
+      "name": "(Spirit-Shawl)",
+      "portrait": "/assets/npcs/spirit-marsh/medium-amara/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-spirit-shawl.png",
+      "portraitBytes": 276071
+    },
+    {
+      "id": "rotr-h-npc-keeper-void-hood",
+      "slug": "keeper-void-hood",
+      "name": "(Void-Hood)",
+      "portrait": "/assets/npcs/void-hollow/veya-dusk/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-void-hood.png",
+      "portraitBytes": 271780
+    },
+    {
+      "id": "rotr-h-npc-keeper-alloy-harness",
+      "slug": "keeper-alloy-harness",
+      "name": "(Alloy-Harness)",
+      "portrait": "/assets/npcs/alloy-ruins/professor-ferrum/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-alloy-harness.png",
+      "portraitBytes": 262645
+    },
+    {
+      "id": "rotr-h-npc-keeper-radiant-robe",
+      "slug": "keeper-radiant-robe",
+      "name": "(Radiant-Robe)",
+      "portrait": "/assets/npcs/chancellor-aurex/portrait.png",
+      "subject": "/assets/tcg/subjects/keeper-radiant-robe.png",
+      "portraitBytes": 1817376
+    },
+    {
+      "id": "rotr-h-npc-npc-merchant",
+      "slug": "npc-merchant",
+      "name": "Merchant NPC",
+      "portrait": "/assets/npcs/alloy-ruins/salvager-knox/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-merchant.png",
+      "portraitBytes": 274892
+    },
+    {
+      "id": "rotr-h-npc-npc-guard",
+      "slug": "npc-guard",
+      "name": "Guard NPC",
+      "portrait": "/assets/npcs/riftwild-commons/guard-portal-hex/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-guard.png",
+      "portraitBytes": 846940
+    },
+    {
+      "id": "rotr-h-npc-npc-gardener",
+      "slug": "npc-gardener",
+      "name": "Gardener NPC",
+      "portrait": "/assets/npcs/riftwild-commons/gardener-sip/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-gardener.png",
+      "portraitBytes": 706493
+    },
+    {
+      "id": "rotr-h-npc-npc-courier",
+      "slug": "npc-courier",
+      "name": "Courier NPC",
+      "portrait": "/assets/npcs/alloy-runner-bit/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-courier.png",
+      "portraitBytes": 1541414
+    },
+    {
+      "id": "rotr-h-npc-npc-fisher",
+      "slug": "npc-fisher",
+      "name": "Fisher NPC",
+      "portrait": "/assets/npcs/finn-coralhand/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-fisher.png",
+      "portraitBytes": 1866963
+    },
+    {
+      "id": "rotr-h-npc-npc-smith",
+      "slug": "npc-smith",
+      "name": "Smith NPC",
+      "portrait": "/assets/npcs/doran-flint/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-smith.png",
+      "portraitBytes": 1522122
+    },
+    {
+      "id": "rotr-h-npc-npc-scholar",
+      "slug": "npc-scholar",
+      "name": "Scholar NPC",
+      "portrait": "/assets/npcs/scholar-lyra/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-scholar.png",
+      "portraitBytes": 1557178
+    },
+    {
+      "id": "rotr-h-npc-npc-cook",
+      "slug": "npc-cook",
+      "name": "Cook NPC",
+      "portrait": "/assets/npcs/riftwild-commons/cook-pot-uma/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-cook.png",
+      "portraitBytes": 829937
+    },
+    {
+      "id": "rotr-h-npc-npc-child",
+      "slug": "npc-child",
+      "name": "Child NPC",
+      "portrait": "/assets/npcs/spirit-marsh/echo-child-nimi/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-child.png",
+      "portraitBytes": 275668
+    },
+    {
+      "id": "rotr-h-npc-npc-elder",
+      "slug": "npc-elder",
+      "name": "Elder NPC",
+      "portrait": "/assets/npcs/grandmother-willowmere/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-elder.png",
+      "portraitBytes": 1745548
+    },
+    {
+      "id": "rotr-h-npc-npc-bard",
+      "slug": "npc-bard",
+      "name": "Bard NPC",
+      "portrait": "/assets/npcs/riftwild-commons/plaza-musician-reo/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-bard.png",
+      "portraitBytes": 674445
+    },
+    {
+      "id": "rotr-h-npc-npc-healer",
+      "slug": "npc-healer",
+      "name": "Healer NPC",
+      "portrait": "/assets/npcs/spirit-marsh/marsh-herbal-mist/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-healer.png",
+      "portraitBytes": 232948
+    },
+    {
+      "id": "rotr-h-npc-npc-farmer",
+      "slug": "npc-farmer",
+      "name": "Farmer NPC",
+      "portrait": "/assets/npcs/elderwood-forest/elder-forager-nim/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-farmer.png",
+      "portraitBytes": 248336
+    },
+    {
+      "id": "rotr-h-npc-npc-builder",
+      "slug": "npc-builder",
+      "name": "Builder NPC",
+      "portrait": "/assets/npcs/stoneheart-canyon/stone-hauler-mog/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-builder.png",
+      "portraitBytes": 242629
+    },
+    {
+      "id": "rotr-h-npc-npc-stablehand",
+      "slug": "npc-stablehand",
+      "name": "Stablehand NPC",
+      "portrait": "/assets/npcs/stormspire-peaks/storm-porter-zee/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-stablehand.png",
+      "portraitBytes": 225616
+    },
+    {
+      "id": "rotr-h-npc-npc-scribe",
+      "slug": "npc-scribe",
+      "name": "Scribe NPC",
+      "portrait": "/assets/npcs/radiant-citadel/citadel-scribe-omi/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-scribe.png",
+      "portraitBytes": 225565
+    },
+    {
+      "id": "rotr-h-npc-npc-hunter",
+      "slug": "npc-hunter",
+      "name": "Hunter NPC",
+      "portrait": "/assets/npcs/hunter-varek/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-hunter.png",
+      "portraitBytes": 1580730
+    },
+    {
+      "id": "rotr-h-npc-npc-tailor",
+      "slug": "npc-tailor",
+      "name": "Tailor NPC",
+      "portrait": "/assets/npcs/aurora-linn/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-tailor.png",
+      "portraitBytes": 1472395
+    },
+    {
+      "id": "rotr-h-npc-npc-potter",
+      "slug": "npc-potter",
+      "name": "Potter NPC",
+      "portrait": "/assets/npcs/gemwright-opal/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-potter.png",
+      "portraitBytes": 1510826
+    },
+    {
+      "id": "rotr-h-npc-npc-miller",
+      "slug": "npc-miller",
+      "name": "Miller NPC",
+      "portrait": "/assets/npcs/stoneheart-canyon/stone-survey-lin/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-miller.png",
+      "portraitBytes": 239626
+    },
+    {
+      "id": "rotr-h-npc-npc-innkeeper",
+      "slug": "npc-innkeeper",
+      "name": "InnNPC",
+      "portrait": "/assets/npcs/moonwater-coast/coast-innkeep-dor/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-innkeeper.png",
+      "portraitBytes": 254027
+    },
+    {
+      "id": "rotr-h-npc-npc-dockhand",
+      "slug": "npc-dockhand",
+      "name": "Dockhand NPC",
+      "portrait": "/assets/npcs/spirit-marsh/marsh-porter-reed/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-dockhand.png",
+      "portraitBytes": 170418
+    },
+    {
+      "id": "rotr-h-npc-npc-acolyte",
+      "slug": "npc-acolyte",
+      "name": "Acolyte NPC",
+      "portrait": "/assets/npcs/celestial-acolyte-nova/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-acolyte.png",
+      "portraitBytes": 1560066
+    },
+    {
+      "id": "rotr-h-npc-npc-ranger",
+      "slug": "npc-ranger",
+      "name": "Ranger NPC",
+      "portrait": "/assets/npcs/fenn-quickbranch/portrait.png",
+      "subject": "/assets/tcg/subjects/npc-ranger.png",
+      "portraitBytes": 1578644
+    }
+  ],
+  "missing": [],
+  "skipped": []
+}

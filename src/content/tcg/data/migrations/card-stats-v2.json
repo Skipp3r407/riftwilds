@@ -1,0 +1,6497 @@
+{
+  "version": 2,
+  "schema": "riftwilds.tcg.card-stats.v2",
+  "generatedAt": "2026-07-19T16:49:30.613Z",
+  "description": "Versioned combat stats for all units + combat spells. Merged at load; cards.json untouched.",
+  "competitiveMode": "base_stats_only",
+  "overlayCount": 697,
+  "unitOverlays": 362,
+  "cardsBackup": "src/content/tcg/data/migrations/backups/cards.json.2026-07-19T16-49-30-601Z.bak",
+  "overlays": {
+    "rotr-c-ashwing": {
+      "attack": 4,
+      "health": 3,
+      "defense": 1,
+      "speed": 7,
+      "role": "bruiser",
+      "keywords": [
+        "flying"
+      ],
+      "notes": "Ember flyer — bypasses grounded Guardians."
+    },
+    "rotr-comp-ashwing": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-ashwing": {
+      "attack": 6,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "finisher",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-auralynx": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-auralynx": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-auralynx": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-basaltpup": {
+      "attack": 1,
+      "health": 2,
+      "defense": 3,
+      "speed": 6,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-basaltpup": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-basaltpup": {
+      "attack": 3,
+      "health": 4,
+      "defense": 4,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-boltgear": {
+      "attack": 2,
+      "health": 3,
+      "defense": 3,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-boltgear": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-boltgear": {
+      "attack": 4,
+      "health": 5,
+      "defense": 4,
+      "speed": 2,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-bramblefox": {
+      "attack": 3,
+      "health": 5,
+      "defense": 1,
+      "speed": 7,
+      "role": "bruiser",
+      "keywords": [
+        "bloom"
+      ],
+      "notes": "Brief Bramblefox — Nature skirmisher / Forest Bond."
+    },
+    "rotr-comp-bramblefox": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-bramblefox": {
+      "attack": 4,
+      "health": 6,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-brinepaw": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-brinepaw": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-brinepaw": {
+      "attack": 6,
+      "health": 7,
+      "defense": 3,
+      "speed": 1,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-bubbloon": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-bubbloon": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-bubbloon": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-canyonbeetle": {
+      "attack": 1,
+      "health": 2,
+      "defense": 3,
+      "speed": 6,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-canyonbeetle": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-canyonbeetle": {
+      "attack": 3,
+      "health": 4,
+      "defense": 4,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-celestora": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-celestora": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-celestora": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-chronobeetle": {
+      "attack": 3,
+      "health": 4,
+      "defense": 4,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-chronobeetle": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-chronobeetle": {
+      "attack": 5,
+      "health": 6,
+      "defense": 4,
+      "speed": 1,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-cindercub": {
+      "attack": 4,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-comp-cindercub": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-cindercub": {
+      "attack": 6,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "finisher",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-cinderquill": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 9,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ],
+      "notes": "Ember 1-drop Charge assassin."
+    },
+    "rotr-comp-cinderquill": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-cinderquill": {
+      "attack": 3,
+      "health": 3,
+      "defense": 0,
+      "speed": 9,
+      "role": "assassin",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "charge"
+      ]
+    },
+    "rotr-c-citadelmoth": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-citadelmoth": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-citadelmoth": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-cloudleaper": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-comp-cloudleaper": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-cloudleaper": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-cogpup": {
+      "attack": 2,
+      "health": 3,
+      "defense": 3,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-cogpup": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-cogpup": {
+      "attack": 4,
+      "health": 5,
+      "defense": 4,
+      "speed": 2,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-commonspark": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-comp-commonspark": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-commonspark": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "riftbond"
+      ]
+    },
+    "rotr-c-copperfin": {
+      "attack": 2,
+      "health": 3,
+      "defense": 3,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-copperfin": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-copperfin": {
+      "attack": 4,
+      "health": 5,
+      "defense": 4,
+      "speed": 2,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-coralurge": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-coralurge": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-coralurge": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-craterhorn": {
+      "attack": 5,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-comp-craterhorn": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-craterhorn": {
+      "attack": 7,
+      "health": 7,
+      "defense": 3,
+      "speed": 1,
+      "role": "finisher",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-crystowl": {
+      "attack": 1,
+      "health": 3,
+      "defense": 3,
+      "speed": 5,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-crystowl": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-crystowl": {
+      "attack": 3,
+      "health": 5,
+      "defense": 4,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-dawnkit": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-dawnkit": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-dawnkit": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-dreamhare": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "echo"
+      ]
+    },
+    "rotr-comp-dreamhare": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-dreamhare": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo"
+      ]
+    },
+    "rotr-c-duskling": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-duskling": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-duskling": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-echofig": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-echofig": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-echofig": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-elderfern": {
+      "attack": 4,
+      "health": 6,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "bloom"
+      ]
+    },
+    "rotr-comp-elderfern": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-elderfern": {
+      "attack": 6,
+      "health": 8,
+      "defense": 3,
+      "speed": 1,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-emberfox": {
+      "attack": 2,
+      "health": 2,
+      "defense": 1,
+      "speed": 8,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ],
+      "notes": "Ember tempo Charge."
+    },
+    "rotr-comp-emberfox": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-emberfox": {
+      "attack": 4,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-embernewt": {
+      "attack": 3,
+      "health": 3,
+      "defense": 0,
+      "speed": 9,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-embernewt": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-embernewt": {
+      "attack": 5,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-fernfox": {
+      "attack": 2,
+      "health": 4,
+      "defense": 2,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "bloom"
+      ]
+    },
+    "rotr-comp-fernfox": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-fernfox": {
+      "attack": 4,
+      "health": 6,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-fossilhound": {
+      "attack": 1,
+      "health": 3,
+      "defense": 3,
+      "speed": 5,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-fossilhound": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-fossilhound": {
+      "attack": 3,
+      "health": 5,
+      "defense": 4,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-frostbloom": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-frostbloom": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-frostbloom": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-frostfin": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-frostfin": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-frostfin": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-frostnip": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-frostnip": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-frostnip": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-furnacebeetle": {
+      "attack": 3,
+      "health": 3,
+      "defense": 0,
+      "speed": 9,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-furnacebeetle": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-furnacebeetle": {
+      "attack": 5,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-galekit": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 10,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-galekit": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-galekit": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-gearling": {
+      "attack": 1,
+      "health": 1,
+      "defense": 2,
+      "speed": 6,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-gearling": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-gearling": {
+      "attack": 3,
+      "health": 3,
+      "defense": 3,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-ghostbloom": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "echo"
+      ]
+    },
+    "rotr-comp-ghostbloom": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-ghostbloom": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo"
+      ]
+    },
+    "rotr-c-glazehare": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-glazehare": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-glazehare": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-gleamhare": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-gleamhare": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-gleamhare": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-glimmerp": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-glimmerp": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-glimmerp": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-gritling": {
+      "attack": 1,
+      "health": 2,
+      "defense": 3,
+      "speed": 6,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-gritling": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-gritling": {
+      "attack": 3,
+      "health": 4,
+      "defense": 4,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-groveowl": {
+      "attack": 1,
+      "health": 3,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "bloom"
+      ]
+    },
+    "rotr-comp-groveowl": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-groveowl": {
+      "attack": 3,
+      "health": 5,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-hearthstone": {
+      "attack": 1,
+      "health": 3,
+      "defense": 3,
+      "speed": 5,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-hearthstone": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-hearthstone": {
+      "attack": 3,
+      "health": 5,
+      "defense": 4,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-hollowmoth": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-hollowmoth": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-hollowmoth": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-hollowshade": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-hollowshade": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-hollowshade": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-iciclepup": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-iciclepup": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-iciclepup": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-ironbloom": {
+      "attack": 3,
+      "health": 4,
+      "defense": 4,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-ironbloom": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-ironbloom": {
+      "attack": 5,
+      "health": 6,
+      "defense": 4,
+      "speed": 1,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-kelpwisp": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-kelpwisp": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-kelpwisp": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-lanternjay": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "echo"
+      ]
+    },
+    "rotr-comp-lanternjay": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-lanternjay": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo"
+      ]
+    },
+    "rotr-c-lavaling": {
+      "attack": 3,
+      "health": 3,
+      "defense": 0,
+      "speed": 9,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-lavaling": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-lavaling": {
+      "attack": 5,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-lightspire": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-lightspire": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-lightspire": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-luminara": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-luminara": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-luminara": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-marshloom": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "echo"
+      ]
+    },
+    "rotr-comp-marshloom": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-marshloom": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo"
+      ]
+    },
+    "rotr-c-mistwraith": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-mistwraith": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-mistwraith": {
+      "attack": 6,
+      "health": 7,
+      "defense": 3,
+      "speed": 1,
+      "role": "finisher",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-moonray": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-moonray": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-moonray": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-mossdrake": {
+      "attack": 2,
+      "health": 4,
+      "defense": 2,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "bloom"
+      ]
+    },
+    "rotr-comp-mossdrake": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-mossdrake": {
+      "attack": 4,
+      "health": 6,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-mossprig": {
+      "attack": 2,
+      "health": 8,
+      "defense": 3,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "bloom",
+        "guardian"
+      ],
+      "notes": "Brief Mossprig — Tank / Living Bulwark."
+    },
+    "rotr-comp-mossprig": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-mossprig": {
+      "attack": 5,
+      "health": 7,
+      "defense": 3,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-nullpaw": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-nullpaw": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-nullpaw": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-peakibex": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-comp-peakibex": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-peakibex": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-pearlurk": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-pearlurk": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-pearlurk": {
+      "attack": 6,
+      "health": 7,
+      "defense": 3,
+      "speed": 1,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-pebblit": {
+      "attack": 1,
+      "health": 3,
+      "defense": 3,
+      "speed": 5,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-pebblit": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-pebblit": {
+      "attack": 3,
+      "health": 5,
+      "defense": 4,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-prismoth": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-prismoth": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-prismoth": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-pyrespore": {
+      "attack": 2,
+      "health": 2,
+      "defense": 0,
+      "speed": 10,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-pyrespore": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-pyrespore": {
+      "attack": 4,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-quartzhorn": {
+      "attack": 1,
+      "health": 3,
+      "defense": 3,
+      "speed": 5,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-quartzhorn": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-quartzhorn": {
+      "attack": 3,
+      "health": 5,
+      "defense": 4,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-radiantkit": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-radiantkit": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-radiantkit": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-riftpup": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "echo",
+        "riftbond"
+      ]
+    },
+    "rotr-comp-riftpup": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-riftpup": {
+      "attack": 6,
+      "health": 7,
+      "defense": 3,
+      "speed": 1,
+      "role": "finisher",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo",
+        "riftbond"
+      ]
+    },
+    "rotr-c-riftslug": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-riftslug": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-riftslug": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-rimewing": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-rimewing": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-rimewing": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-rootling": {
+      "attack": 1,
+      "health": 3,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "bloom"
+      ]
+    },
+    "rotr-comp-rootling": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-rootling": {
+      "attack": 3,
+      "health": 5,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-rubblefin": {
+      "attack": 1,
+      "health": 2,
+      "defense": 3,
+      "speed": 6,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-rubblefin": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-rubblefin": {
+      "attack": 3,
+      "health": 4,
+      "defense": 4,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-saplingo": {
+      "attack": 4,
+      "health": 6,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "bloom"
+      ]
+    },
+    "rotr-comp-saplingo": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-saplingo": {
+      "attack": 6,
+      "health": 8,
+      "defense": 3,
+      "speed": 1,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-scrapfinch": {
+      "attack": 2,
+      "health": 3,
+      "defense": 3,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-scrapfinch": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-scrapfinch": {
+      "attack": 4,
+      "health": 5,
+      "defense": 4,
+      "speed": 2,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-scrapowl": {
+      "attack": 3,
+      "health": 4,
+      "defense": 4,
+      "speed": 3,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-scrapowl": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-scrapowl": {
+      "attack": 5,
+      "health": 6,
+      "defense": 4,
+      "speed": 1,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-shadowmire": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-shadowmire": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-shadowmire": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-shalehorn": {
+      "attack": 1,
+      "health": 2,
+      "defense": 3,
+      "speed": 6,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-shalehorn": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-shalehorn": {
+      "attack": 3,
+      "health": 4,
+      "defense": 4,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-slagpup": {
+      "attack": 2,
+      "health": 2,
+      "defense": 0,
+      "speed": 10,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-slagpup": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-slagpup": {
+      "attack": 4,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-snowglyph": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-snowglyph": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-snowglyph": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-snowpuff": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-snowpuff": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-snowpuff": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-solfinch": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-solfinch": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-solfinch": {
+      "attack": 6,
+      "health": 7,
+      "defense": 3,
+      "speed": 1,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-soulmoth": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": [
+        "echo"
+      ]
+    },
+    "rotr-comp-soulmoth": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-soulmoth": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo"
+      ]
+    },
+    "rotr-c-sparkmoth": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 10,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-sparkmoth": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-sparkmoth": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-spirekite": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 8,
+      "role": "bruiser",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-spirekite": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-spirekite": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-sprayfin": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-sprayfin": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-sprayfin": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-starveil": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "echo"
+      ]
+    },
+    "rotr-comp-starveil": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-starveil": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo"
+      ]
+    },
+    "rotr-c-staticat": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 10,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-staticat": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-staticat": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-stonegrub": {
+      "attack": 2,
+      "health": 4,
+      "defense": 4,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-stonegrub": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-stonegrub": {
+      "attack": 4,
+      "health": 6,
+      "defense": 4,
+      "speed": 2,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-stormmoth": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-comp-stormmoth": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-stormmoth": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-thornling": {
+      "attack": 1,
+      "health": 3,
+      "defense": 0,
+      "speed": 6,
+      "role": "swarm",
+      "keywords": [
+        "bloom"
+      ],
+      "notes": "Brief Thornling — Sprouting Energy / Bloom."
+    },
+    "rotr-comp-thornling": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-thornling": {
+      "attack": 3,
+      "health": 5,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-thunderpaw": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 8,
+      "role": "bruiser",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-thunderpaw": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-thunderpaw": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-tideotter": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-tideotter": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-tideotter": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-tidequill": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-tidequill": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-tidequill": {
+      "attack": 6,
+      "health": 7,
+      "defense": 3,
+      "speed": 1,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-tidewisp": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-tidewisp": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-tidewisp": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-umbralisk": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-umbralisk": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-umbralisk": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-veilhare": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-comp-veilhare": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-veilhare": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "ward"
+      ]
+    },
+    "rotr-c-vinepup": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "support",
+      "keywords": [
+        "bloom"
+      ]
+    },
+    "rotr-comp-vinepup": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-vinepup": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 5,
+      "role": "support",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "bloom"
+      ]
+    },
+    "rotr-c-voidling": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-comp-voidling": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-voidling": {
+      "attack": 3,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "corrupt"
+      ]
+    },
+    "rotr-c-voltkit": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 8,
+      "role": "bruiser",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-comp-voltkit": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-voltkit": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-windrift": {
+      "attack": 4,
+      "health": 5,
+      "defense": 2,
+      "speed": 3,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-comp-windrift": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-windrift": {
+      "attack": 6,
+      "health": 7,
+      "defense": 3,
+      "speed": 1,
+      "role": "finisher",
+      "keywords": [
+        "awaken",
+        "ancient"
+      ]
+    },
+    "rotr-c-wirefox": {
+      "attack": 2,
+      "health": 3,
+      "defense": 3,
+      "speed": 4,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-comp-wirefox": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-wirefox": {
+      "attack": 4,
+      "health": 5,
+      "defense": 4,
+      "speed": 2,
+      "role": "tank",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "guardian"
+      ]
+    },
+    "rotr-c-wispdeer": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "echo"
+      ]
+    },
+    "rotr-comp-wispdeer": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-wispdeer": {
+      "attack": 5,
+      "health": 6,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo"
+      ]
+    },
+    "rotr-c-wisplet": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": [
+        "echo"
+      ]
+    },
+    "rotr-comp-wisplet": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-evo-wisplet": {
+      "attack": 3,
+      "health": 4,
+      "defense": 2,
+      "speed": 4,
+      "role": "bruiser",
+      "keywords": [
+        "awaken",
+        "ancient",
+        "echo"
+      ]
+    },
+    "rotr-s-ember-spark": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-tide-mend": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-lantern-lift": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-rust-bite": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-quake-tap": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-rift-pulse": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-festival-cheer": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-small-healing-salve": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-riftberry-tonic": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-moonwater-flask": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-grove-restoration-brew": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-emberheart-elixir": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-spirit-renewal-potion": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-radiant-recovery-flask": {
+      "role": "healer",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-celestial-renewal": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-sparkfruit-juice": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-focus-tonic": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-storm-energy-flask": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-spirit-charge": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-astral-energy-elixir": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-basic-pet-meal": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-premium-pet-meal": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-cleaning-kit": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-rift-toy": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-medicine-pack": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-happiness-treat": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-bonding-charm": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-recovery-blanket": {
+      "role": "healer",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-dormancy-revival-bloom": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-spark-healing-draught": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-tide-mend-vial": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-storm-surge-sip": {
+      "role": "healer",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-frost-focus-brew": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-ember-soothe-balm": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-stone-steady-draught": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-crystal-berry-snack": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-glowmoss-chew": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-ripple-ball-toy": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-whisper-bell-toy": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-grooming-comb-set": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-bond-ribbon": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-aurora-treat": {
+      "role": "healer",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-moonpetal-bath-salts": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-vitality-petal-tea": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-rift-salve-kit": {
+      "role": "healer",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-ancient-heart": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-healing-stone": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-soul-bloom": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-sacred-feather": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-ancestor-stone": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-healing-rune": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-ember-bolt": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-tide-spiral": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-thorn-burst": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-lightning-arc": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-stone-crash": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-frost-shard": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-radiant-beam": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-spirit-flame": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-ember-shield": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-tide-barrier": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-bark-wall": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-storm-veil": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-frost-shell": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-radiant-ward": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-void-cloak": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-alloy-barrier": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-grove-mend": {
+      "role": "healer",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-moonwater-healing": {
+      "role": "healer",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-root-bind": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-frost-slow": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-battle-focus": {
+      "role": "controller",
+      "speed": 4,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-speed-wind": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-volcanic-heartburst": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-moon-tide-collapse": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-worldroot-awakening": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-sky-rift-tempest": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-ancient-mountain-guard": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-eternal-winter-ring": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-dawnstar-ascension": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-titan-core-overdrive": {
+      "role": "controller",
+      "speed": 5,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-s-item-ancestral-lantern-parade": {
+      "role": "controller",
+      "speed": 6,
+      "defense": 0,
+      "keywords": []
+    },
+    "rotr-e-keeper-s-satchel": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-ember-collar": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-tide-charm": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-moss-cloak": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-storm-whistle": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-crystal-lens": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-shade-mantle": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-lantern-badge": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-wooden-paw-guard": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-smooth-stone-claw": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-training-tail-ring": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-basic-focus-orb": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-cloth-battle-harness": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-grove-twig-wand": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-simple-horncap": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-ember-talons": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "empower"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-tideglass-claws": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-mossvine-grips": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-spark-tail-ring": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-frost-crystal-tip": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-spirit-glow-orb": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-alloy-training-blade": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-ashfang-talons": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "empower"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-moonwater-pearl": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-thornroot-crusher": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-stormcoil-harness": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-obsidian-tailblade": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-radiant-sun-disk": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-voidshade-claws": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-cinderstorm-gauntlets": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "empower"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-tidal-crescent-blade": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-ancient-grove-antlers": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-thunder-rift-coil": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-glacial-moon-crest": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-spiritfire-lantern": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-alloy-pulse-cannon": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-heart-of-the-volcano": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "empower"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-crown-of-the-deep-tide": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-elderwood-battle-crest": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-skybreaker-storm-harness": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-radiant-dawn-halo": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-void-eclipse-blade": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-riftmaker-prism": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-worldroot-relic": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-astral-tempest-core": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-starforged-halo": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-celestial-riftblade": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-crown-of-ten-affinities": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-ember-spark-claws": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "empower"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-tide-fin-blade": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-pebble-horn-cap": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-breeze-focus-seed": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-reed-training-harness": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-frostbite-paw-spikes": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-kelp-lash-coil": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-thunder-tine-crest": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-spirit-lantern-orb": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-dune-sand-harness": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-magma-rake-claws": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "empower"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-glacier-tail-scythe": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-radiant-horn-lance": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-void-whisper-orb": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-alloy-brace-harness": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-stormfang-gauntlets": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-worldvine-tail-flail": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-eclipse-horn-crown": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-aurora-focus-prism": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-rift-singer-harness": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-starlit-paw-crescents": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-cloth-pet-vest": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-wooden-barkguard": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-simple-headband": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-training-paw-wraps": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-mossguard-vest": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-emberhide-wrap": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-tide-scale-guard": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-stoneplate-collar": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-stormweave-armor": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-frostshell-vest": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-spiritveil-cloak": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-alloy-chestplate": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-volcanic-guardian-plate": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-moonwater-battle-robe": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-elder-grove-armor": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-voidwalker-mantle": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-sunforged-aegis": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-deep-rift-plate": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-armor-of-the-rift-guardian": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-constellation-armor": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-linen-ear-hood": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-reed-chest-wrap": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-mossy-back-cape": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-pebble-paw-boots": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-soft-tail-sleeve": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-breeze-wing-bands": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-tidefoam-collar": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-ember-scale-vest": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-frost-pelt-cloak": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-storm-grip-wraps": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-grove-tail-guard": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-radiant-wing-veils": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-alloy-rib-cuirass": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-voidmist-hood": {
+      "attack": 1,
+      "defense": 0,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-spiritweave-sash": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-glacial-barrier-shell": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-constellation-paw-slippers": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-e-item-dawnstar-plume-mantle": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [
+        "guardian"
+      ],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-wood-fiber": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-smooth-stone": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-basic-cloth": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-clear-water": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-wild-herbs": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-ember-dust": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-tideglass": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-grove-fiber": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-storm-wire": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-frost-powder": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-obsidian-shard": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-moonwater-pearl-mat": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-spirit-thread": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-alloy-plate": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-radiant-dust": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-void-fragment": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-ancient-root": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-storm-core": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-glacial-heart": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-spirit-flame-mat": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-volcano-heart": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-ocean-crown-pearl": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-worldroot-core": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-sky-rift-crystal": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-dawnstar-fragment": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-riftmaker-shard": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-astral-thread": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-eternal-alloy-core": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-celestial-star-fragment": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-harmony-crystal": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-constellation-core": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-reed-strand": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-dune-glass": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-spark-flint": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-kelp-silk": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-frost-needle": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-void-silk": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-dawn-pollen": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-r-mat-rift-resin": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-l-riftwild-plaza": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-ember-hearthline": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-moonwater-pier": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-elderwood-path": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-stormspire-landing": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-stoneheart-gate": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-citadel-choir": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-void-threshold": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-alloy-ruins": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-celestial-rift": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-riftwild-commons": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-elderwood-forest": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-ember-crater": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-frostveil-basin": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-moonwater-coast": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-radiant-citadel": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-spirit-marsh": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-spirit-realm": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-stoneheart-canyon": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-stormspire-peaks": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-l-region-void-hollow": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-stall-produce": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-stall-fish": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-stall-cloth": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-stall-tools": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-stall-potions": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-stall-pets": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-stall-books": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-stall-bakery": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-gate-timber": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-gate-stone-arch": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-gate-iron": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-gate-portcullis-stub": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-gate-garden": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-gate-market": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-gate-plaza": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-gate-rift-seal": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-bridge-wood-short": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-bridge-wood-long": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-bridge-stone-arch": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-bridge-rope": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-bridge-dock-plank": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-bridge-ruin": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-bridge-rift-span": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-bridge-covered": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-dock-plank": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-dock-pile": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-dock-crate-edge": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-dock-ladder": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-dock-bollard": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-dock-net-rack": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-prop-lantern-post": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-lantern-hanging": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-lantern-table": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-lantern-rift-glow": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-lantern-ember": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-lantern-frost": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-lantern-paper": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-lantern-cage": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-sign-wood-blank": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-sign-arrow-left": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-sign-arrow-right": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-sign-market": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-sign-inn": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-sign-danger": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-sign-portal": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-sign-guild": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-tool-hammer": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-tool-axe": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-tool-pick": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-tool-hoe": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-tool-fishing-rod": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-tool-saw": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-tool-tongs": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-prop-tool-ladle": {
+      "attack": 1,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-h-npc-keeper-travel-cloak": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-plaza-coat": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-grove-vest": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-ember-apron": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-tide-slicker": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-frost-parka": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-storm-cape": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-stone-tabard": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-spirit-shawl": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-void-hood": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-alloy-harness": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-keeper-radiant-robe": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-merchant": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-guard": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-gardener": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-courier": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-fisher": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-smith": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-scholar": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-cook": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-child": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-elder": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-bard": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-healer": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-farmer": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-builder": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-stablehand": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-scribe": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-hunter": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-tailor": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-potter": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-miller": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-innkeeper": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-dockhand": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-acolyte": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-npc-npc-ranger": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-elara-venn": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-mira-of-care": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-captain-brine": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-forge-warden-kael": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-h-archivist-solen": {
+      "attack": 1,
+      "health": 29,
+      "defense": 10,
+      "speed": 7,
+      "role": "defender",
+      "keywords": [
+        "ancient"
+      ]
+    },
+    "rotr-t-spark-fragment": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 10,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-x-ashfall-sky": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-x-harbor-squall": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-x-canopy-drip": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-x-dust-devil": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-x-static-veil": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-x-prism-noon": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-x-false-dusk": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-x-choir-dawn": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-x-hidden-snare": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Trap layout metadata."
+    },
+    "rotr-x-void-latch": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Trap layout metadata."
+    },
+    "rotr-x-tripwire-coil": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Trap layout metadata."
+    },
+    "rotr-x-tideglass": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Trap layout metadata."
+    },
+    "rotr-x-heart-relic": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-x-forge-relic": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-x-moss-relic": {
+      "attack": 2,
+      "defense": 1,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-x-storm-relic": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-x-artifact-gate-key": {
+      "attack": 3,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-x-artifact-moss-codex": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-x-artifact-tide-sextant": {
+      "attack": 2,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-x-artifact-void-ledger": {
+      "attack": 3,
+      "defense": 2,
+      "health": 0,
+      "speed": 0,
+      "role": "support",
+      "keywords": [],
+      "notes": "Equipment attach mods (ATK/DEF) — not unit body stats."
+    },
+    "rotr-x-companion-pocket-spark": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-x-companion-moss-buddy": {
+      "attack": 1,
+      "health": 3,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": [
+        "riftbond"
+      ]
+    },
+    "rotr-x-legendary-heart-witness": {
+      "attack": 6,
+      "health": 5,
+      "defense": 2,
+      "speed": 2,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-x-legendary-crater-tyrant": {
+      "attack": 6,
+      "health": 5,
+      "defense": 1,
+      "speed": 5,
+      "role": "assassin",
+      "keywords": [
+        "charge",
+        "empower",
+        "ancient"
+      ]
+    },
+    "rotr-w-fx-weather-rain-01": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-rain-02": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-rain-03": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-rain-04": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-snow-01": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-snow-02": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-snow-03": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-snow-04": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-leaf-01": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-leaf-02": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-ember-ash-01": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-w-fx-weather-ember-ash-02": {
+      "role": "utility",
+      "speed": 4,
+      "defense": 0,
+      "keywords": [],
+      "notes": "Terrain global effect metadata."
+    },
+    "rotr-c-plaza-scout": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 10,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-c-market-runner": {
+      "attack": 2,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-c-lantern-acolyte": {
+      "attack": 1,
+      "health": 3,
+      "defense": 1,
+      "speed": 6,
+      "role": "support",
+      "keywords": [
+        "ward"
+      ]
+    },
+    "rotr-c-ash-urchin": {
+      "attack": 2,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": []
+    },
+    "rotr-c-puddle-imp": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": []
+    },
+    "rotr-c-twig-sprite": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "support",
+      "keywords": [
+        "bloom"
+      ]
+    },
+    "rotr-c-pebble-guard": {
+      "attack": 1,
+      "health": 4,
+      "defense": 4,
+      "speed": 5,
+      "role": "tank",
+      "keywords": [
+        "guardian"
+      ]
+    },
+    "rotr-c-static-mite": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 10,
+      "role": "assassin",
+      "keywords": [
+        "charge"
+      ]
+    },
+    "rotr-c-shard-bit": {
+      "attack": 2,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-c-dusk-mote": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": [
+        "corrupt"
+      ]
+    },
+    "rotr-c-gear-tick": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-c-star-midge": {
+      "attack": 1,
+      "health": 2,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-c-null-gnat": {
+      "attack": 1,
+      "health": 1,
+      "defense": 0,
+      "speed": 7,
+      "role": "energy_generator",
+      "keywords": []
+    },
+    "rotr-c-spirit-moth": {
+      "attack": 1,
+      "health": 3,
+      "defense": 1,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-c-poison-spore": {
+      "attack": 2,
+      "health": 1,
+      "defense": 0,
+      "speed": 6,
+      "role": "bruiser",
+      "keywords": []
+    },
+    "rotr-c-arc-scribe": {
+      "attack": 2,
+      "health": 3,
+      "defense": 1,
+      "speed": 5,
+      "role": "bruiser",
+      "keywords": []
+    }
+  }
+}

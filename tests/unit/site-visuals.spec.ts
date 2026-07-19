@@ -19,6 +19,8 @@ describe("site visuals", () => {
       "guilds",
       "homestead",
       "creatures",
+      "codex",
+      "academy",
       "profile",
       "collection",
       "quests",

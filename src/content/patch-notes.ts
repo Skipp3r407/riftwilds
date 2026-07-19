@@ -36,6 +36,29 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-19-riftwilds-systems",
+    date: "2026-07-19",
+    title: "Premium cards, battle UX, and multiplayer scaffolding",
+    summary:
+      "A large Riftwilds systems pass: premium TCG card framework and art, richer battle/codex/hatchery/arena surfaces, treasury and marketplace scaffolding, plus local Nakama multiplayer stack setup.",
+    added: [
+      "Premium card template, deck builder, Rift Codex, museum, and pack-opening surfaces for the TCG loop",
+      "Arena hub modes, collectibles/wallet/exchange routes, and treasury-ops admin tooling",
+      "Expanded audio SFX catalog, page wallpapers, and companion/card art across codex and battle",
+      "Local Nakama + Docker Compose scaffolding for realtime multiplayer experiments (off by default)",
+    ],
+    changed: [
+      "Battle match engine, practice loadout, and Rift Battle UX polish with stronger status/intel feedback",
+      "Hatchery earn paths and marketplace/shop purchase flows aligned with the credits-first economy",
+      "Codex world lore, comics library, quests, and social hubs refreshed with new art and navigation",
+    ],
+    knownIssues: [
+      "Nakama multiplayer remains gated behind feature flags and local Docker setup — not a live production matchmaker yet",
+      "Some marketplace sub-desks (auctions, rentals, commissions) are scaffolded stubs pending full economy wiring",
+    ],
+  },
+
+  {
     id: "2026-07-18-battle-desk-console",
     date: "2026-07-18",
     title: "Practice Board battle desk console",

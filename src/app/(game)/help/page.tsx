@@ -12,7 +12,7 @@ export default function HelpPage() {
     <div className="space-y-6">
       <PageHeader
         kicker="Keeper Guide"
-        titleSlug="academy"
+        titleSlug="docs"
         title="Help"
         description={
           <>

@@ -1,3 +1,15 @@
+/**
+ * Writes lightweight SVG fallbacks for Creature Journal diet/behavior plates.
+ * Painted PNG masters (preferred by bio-sections.ts) live alongside as
+ * diet-{affinity}.png / behavior-{affinity}.png — regenerate those via
+ * Cursor GenerateImage; do not overwrite existing PNGs from this script.
+ *
+ * Affinity plates use painted medallions at
+ * public/assets/affinities/affinity-{affinity}-icon.png (not battle/elements
+ * letter badges).
+ *
+ * Usage: node scripts/tcg/generate-bio-vignettes.mjs
+ */
 import fs from "node:fs";
 import path from "node:path";
 

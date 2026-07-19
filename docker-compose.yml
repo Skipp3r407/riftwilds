@@ -1,0 +1,90 @@
+# Riftwilds local multiplayer stack (Nakama + Postgres + Redis)
+# Requires Docker Desktop for Windows: https://docs.docker.com/desktop/setup/install/windows-install/
+#
+# Start:  docker compose up -d
+# Stop:   docker compose down
+# Logs:   docker compose logs -f nakama
+#
+# Console: http://localhost:7351  (admin / localdev — change in prod)
+# API:     http://127.0.0.1:7350
+#
+# Redis is optional for Nakama core (Postgres is required). We include Redis for
+# local app caching / rate-limit experiments and future Nakama runtime modules.
+
+name: riftwilds-nakama
+
+services:
+  nakama-postgres:
+    image: postgres:16.8-alpine
+    container_name: riftwilds-nakama-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${NAKAMA_DB_NAME:-nakama}
+      POSTGRES_USER: ${NAKAMA_DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${NAKAMA_DB_PASSWORD:-localdb}
+    volumes:
+      - nakama_pg_data:/var/lib/postgresql/data
+      - ./docker/postgres/init:/docker-entrypoint-initdb.d:ro
+    # Host 5433 avoids clashing with a local Postgres or other stacks on 5432
+    ports:
+      - "${NAKAMA_DB_HOST_PORT:-5433}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  redis:
+    image: redis:7.4-alpine
+    container_name: riftwilds-redis
+    restart: unless-stopped
+    command: ["redis-server", "--save", "60", "1", "--loglevel", "warning"]
+    volumes:
+      - redis_data:/data
+    ports:
+      - "${REDIS_HOST_PORT:-6379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  nakama:
+    image: heroiclabs/nakama:3.22.0
+    container_name: riftwilds-nakama
+    restart: unless-stopped
+    entrypoint:
+      - /bin/sh
+      - -ecx
+      - >
+        /nakama/nakama migrate up
+        --database.address
+        ${NAKAMA_DB_USER:-postgres}:${NAKAMA_DB_PASSWORD:-localdb}@nakama-postgres:5432/${NAKAMA_DB_NAME:-nakama}
+        &&
+        exec /nakama/nakama
+        --config /nakama/data/local.yml
+        --database.address
+        ${NAKAMA_DB_USER:-postgres}:${NAKAMA_DB_PASSWORD:-localdb}@nakama-postgres:5432/${NAKAMA_DB_NAME:-nakama}
+    depends_on:
+      nakama-postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      # Read-write: Nakama may write runtime state under data_dir
+      - ./nakama:/nakama/data
+    ports:
+      - "${NAKAMA_GRPC_PORT:-7349}:7349"
+      - "${NAKAMA_HTTP_PORT:-7350}:7350"
+      - "${NAKAMA_CONSOLE_PORT:-7351}:7351"
+    healthcheck:
+      test: ["CMD", "/nakama/nakama", "healthcheck"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+      start_period: 20s
+
+volumes:
+  nakama_pg_data:
+  redis_data:

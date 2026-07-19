@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ImageButton } from "@/components/ui/image-button";
-import { creaturePortraitPath, mysteryRiftEggPath } from "@/lib/assets/paths";
+import { creatureThumbPath, mysteryRiftEggPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import {
   HERO_RIFTLING_POOL,
@@ -40,6 +41,18 @@ function affinityAccent(affinity: string): string {
   return AFFINITY_ACCENT[affinity] ?? "var(--cyan)";
 }
 
+function toCompanion(sp: HeroRiftlingPreview, order: number): HeroCompanion {
+  return {
+    slug: sp.slug,
+    name: sp.name,
+    affinityLabel: sp.affinity.charAt(0) + sp.affinity.slice(1).toLowerCase(),
+    /** Lightweight webp thumbs under public/assets/pets/thumbs/ */
+    src: creatureThumbPath(sp.slug),
+    accent: affinityAccent(sp.affinity),
+    delay: order * 0.35,
+  };
+}
+
 function pickRandomCompanions(
   count: number,
   pool: readonly HeroRiftlingPreview[],
@@ -52,18 +65,13 @@ function pickRandomCompanions(
     indices[i] = indices[j]!;
     indices[j] = tmp;
   }
-  return indices.slice(0, n).map((idx, order) => {
-    const sp = pool[idx]!;
-    return {
-      slug: sp.slug,
-      name: sp.name,
-      affinityLabel: sp.affinity.charAt(0) + sp.affinity.slice(1).toLowerCase(),
-      src: `${creaturePortraitPath(sp.slug)}?v=mask3`,
-      accent: affinityAccent(sp.affinity),
-      delay: order * 0.35,
-    };
-  });
+  return indices.slice(0, n).map((idx, order) => toCompanion(pool[idx]!, order));
 }
+
+/** Full launch roster for the flock band under the hero. */
+const HERO_FLOCK: HeroCompanion[] = HERO_RIFTLING_POOL.map((sp, i) =>
+  toCompanion(sp, i),
+);
 
 const PARTICLES = [
   { left: "12%", top: "18%", size: 3, delay: 0 },
@@ -129,31 +137,30 @@ function HeroShowcase({
             compact ? "gap-3" : "mt-4 gap-7",
           )}
           aria-busy={!companions}
+          aria-label="Featured Riftlings"
         >
           {(companions ?? [null, null, null]).map((c, i) => (
             <li key={c?.slug ?? `slot-${i}`} className="text-center">
-              <motion.div
-                className={cn(
-                  "relative mx-auto",
-                  compact ? "h-11 w-11" : "h-20 w-20",
-                )}
-                style={c ? { ["--pet-accent" as string]: c.accent } : undefined}
-                animate={
-                  reduceMotion || !c ? undefined : { y: [0, -6, 0] }
-                }
-                transition={
-                  c
-                    ? {
-                        duration: 2.8,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: c.delay,
-                      }
-                    : undefined
-                }
-              >
-                {c ? (
-                  <>
+              {c ? (
+                <div
+                  className="home-hero__feature-pet"
+                  style={{ ["--pet-accent" as string]: c.accent }}
+                >
+                  <motion.div
+                    className={cn(
+                      "relative mx-auto",
+                      compact ? "h-11 w-11" : "h-20 w-20",
+                    )}
+                    animate={
+                      reduceMotion ? undefined : { y: [0, -6, 0] }
+                    }
+                    transition={{
+                      duration: 2.8,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: c.delay,
+                    }}
+                  >
                     <span className="home-hero__pet-glow" aria-hidden />
                     <Image
                       src={c.src}
@@ -163,22 +170,28 @@ function HeroShowcase({
                       className="relative z-[1] h-full w-full object-contain opacity-100"
                       unoptimized
                     />
-                  </>
-                ) : (
+                  </motion.div>
+                  <p className="mt-1 font-display text-[9px] uppercase tracking-[0.2em] text-[var(--text)]/80">
+                    {c.name}
+                  </p>
+                  <p className="font-display text-[8px] uppercase tracking-[0.18em] text-[var(--text-dim)]">
+                    {c.affinityLabel}
+                  </p>
+                </div>
+              ) : (
+                <>
                   <span
-                    className="block h-full w-full rounded-full bg-[rgba(61,231,255,0.08)]"
+                    className={cn(
+                      "mx-auto block rounded-full bg-[rgba(61,231,255,0.08)]",
+                      compact ? "h-11 w-11" : "h-20 w-20",
+                    )}
                     aria-hidden
                   />
-                )}
-              </motion.div>
-              <p className="mt-1 font-display text-[9px] uppercase tracking-[0.2em] text-[var(--text)]/80">
-                {c?.name ?? "\u00a0"}
-              </p>
-              {c ? (
-                <p className="font-display text-[8px] uppercase tracking-[0.18em] text-[var(--text-dim)]">
-                  {c.affinityLabel}
-                </p>
-              ) : null}
+                  <p className="mt-1 font-display text-[9px] uppercase tracking-[0.2em] text-[var(--text)]/80">
+                    {"\u00a0"}
+                  </p>
+                </>
+              )}
             </li>
           ))}
         </ul>
@@ -187,10 +200,61 @@ function HeroShowcase({
   );
 }
 
+function HeroRiftlingFlock() {
+  return (
+    <div className="home-hero__flock-band relative z-[1] mx-auto w-full max-w-7xl px-4 pb-16 pt-2 md:px-6 md:pb-20">
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <p className="font-display text-[10px] font-semibold uppercase tracking-[0.28em] text-[var(--amber)] md:text-xs">
+            Launch roster
+          </p>
+          <h2 className="font-display mt-1 text-2xl text-white md:text-3xl">Meet the Riftlings</h2>
+          <p className="mt-1.5 max-w-xl text-sm text-[var(--text-muted)]">
+            All {HERO_FLOCK.length} companions that can emerge from a Mystery Rift Egg — one
+            flock, every species.
+          </p>
+        </div>
+        <Link href="/codex/riftlings" className="btn-secondary focus-ring text-sm">
+          Open Codex
+        </Link>
+      </div>
+
+      <ul
+        className="home-hero__flock mt-6"
+        aria-label={`${HERO_FLOCK.length} launch Riftlings`}
+      >
+        {HERO_FLOCK.map((c) => (
+          <li key={c.slug}>
+            <Link
+              href={`/codex/riftlings/${c.slug}`}
+              className="home-hero__flock-thumb focus-ring"
+              style={{ ["--pet-accent" as string]: c.accent }}
+              title={`${c.name} · ${c.affinityLabel}`}
+              aria-label={`${c.name}, ${c.affinityLabel} Riftling`}
+            >
+              <span className="home-hero__flock-glow" aria-hidden />
+              <Image
+                src={c.src}
+                alt={c.name}
+                width={64}
+                height={64}
+                className="relative z-[1] h-full w-full object-contain"
+                loading="lazy"
+                decoding="async"
+                unoptimized
+              />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 /**
  * Conversion-first home hero — one cinematic composition.
  * Atmosphere wallpaper comes from RouteWallpaper; this layer adds
- * local glow, particles, and the egg showcase.
+ * local glow, particles, the egg showcase, and the full Riftling flock.
  */
 export function Hero() {
   const reduceMotion = useReducedMotion();
@@ -201,7 +265,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="home-hero relative min-h-[min(100svh,920px)] overflow-hidden">
+    <section className="home-hero relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="home-hero__veil" />
         <motion.div
@@ -242,7 +306,7 @@ export function Hero() {
           : null}
       </div>
 
-      <div className="relative z-[1] mx-auto flex min-h-[min(100svh,920px)] max-w-7xl flex-col justify-center px-4 pb-24 pt-24 md:px-6 md:pb-16 lg:pb-20">
+      <div className="relative z-[1] mx-auto flex min-h-[min(100svh,920px)] max-w-7xl flex-col justify-center px-4 pb-10 pt-24 md:px-6 md:pb-12 lg:pb-14">
         <div className="grid items-center gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6">
           <div className="max-w-xl">
             <div>
@@ -254,8 +318,6 @@ export function Hero() {
                   {projectConfig.PROJECT_NAME.toUpperCase()}
                 </span>
                 <span className="font-display mt-3 block text-[clamp(1.45rem,3.6vw,2.45rem)] font-bold leading-[1.08] tracking-tight text-white md:mt-4">
-                  HATCH IT.
-                  <br />
                   BUILD A DECK.
                   <br />
                   <span className="text-[var(--cyan)]">WIN THE RIFT.</span>
@@ -264,11 +326,10 @@ export function Hero() {
             </div>
 
             <p className="mt-4 max-w-md text-base leading-relaxed text-[var(--text-muted)] md:mt-5 md:text-lg">
-              Claim a Rift egg. Hatch a {projectConfig.CREATURE_NAME}. Collect cards, spend Rift
-              Energy, and duel on the board — Living World habitat ships in a future update.
+              Assemble your cards, spend Rift Energy, and duel on the board — Rift Battle is the
+              fight for now.
             </p>
 
-            {/* Mobile: egg showcase sits between copy and CTAs so pets stay on-screen */}
             <div className="mt-5 lg:hidden">
               <HeroShowcase
                 reduceMotion={Boolean(reduceMotion)}
@@ -308,6 +369,8 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      <HeroRiftlingFlock />
     </section>
   );
 }

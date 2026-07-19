@@ -28,7 +28,7 @@ export function GameSidebar() {
           {projectConfig.UNIVERSE_NAME}
         </p>
       </div>
-      <p className="relative z-[1] mt-1 px-1 text-[11px] text-[var(--text-dim)]">Keeper ops console</p>
+      <p className="relative z-[1] mt-1 px-1 text-[11px] text-[var(--text-dim)]">Riftwilds keep</p>
 
       <nav className="relative z-[1] mt-5 flex flex-col gap-0.5" aria-label="Game sidebar">
         {sidebarNav.map((link) => {

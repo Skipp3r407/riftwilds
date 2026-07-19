@@ -15,6 +15,7 @@ import {
   thought,
   type Beat,
 } from "@/content/comics/page-builder";
+import { BRIDGE_POOLS, STORY_EXPANSIONS } from "@/content/comics/story-expansions";
 import type { ComicIssue, ComicIssueMeta } from "@/content/comics/types";
 import { estimateReadingTimeMinutes } from "@/lib/comics/navigation";
 
@@ -114,10 +115,13 @@ function buildIssue(seed: IssueSeed): ComicIssue {
   };
 
   const coverArt = coversList.find((c) => c.kind === "standard")?.src ?? COVER[seed.coverKey];
-  const storyPages = expandBeatsToPages(seed.slug, seed.beats, {
-    minPages: seed.minPages ?? 22,
-    maxPages: 34,
+  const beats = [...seed.beats, ...(STORY_EXPANSIONS[seed.slug] ?? [])];
+  const minPages = seed.minPages ?? 24;
+  const storyPages = expandBeatsToPages(seed.slug, beats, {
+    minPages,
+    maxPages: Math.max(40, minPages + 8),
     fallbackArt: coverArt,
+    bridgePool: BRIDGE_POOLS[seed.slug],
   });
   const endPages = buildEndPages(meta, storyPages.length + 1);
   const pages = ensureIssueArt(
@@ -147,6 +151,7 @@ const SEEDS: IssueSeed[] = [
       "Elara Venn carries a damaged egg through the Fracture's first nights and names the path of keeping at the Riftstone.",
     publishedAt: "2026-01-12",
     status: "published",
+    minPages: 32,
     tags: ["origin", "elara", "fracture", "commons"],
     playChapterHref: "/live-world",
     playChapterLabel: "Enter Live World — Commons",
@@ -747,6 +752,7 @@ const SEEDS: IssueSeed[] = [
       {
         kind: "dialogue",
         atmosphere: "dusk",
+        artSrc: SPLASH.merchant,
         lines: [
           speech("Serae Ledger", "Mark the ledger true. Or I mark you public."),
           caption("Secret: LEDGER-TRUE"),
@@ -758,6 +764,7 @@ const SEEDS: IssueSeed[] = [
         title: "Economy ethics",
         body: "Website + game economy: cosmetics and Credits — never sell story consent for SOL.",
         atmosphere: "night",
+        artSrc: SPLASH.merchant,
       },
     ],
   },
@@ -901,6 +908,7 @@ const SEEDS: IssueSeed[] = [
       {
         kind: "dialogue",
         atmosphere: "dusk",
+        artSrc: SPLASH.guardian,
         lines: [
           speech("Last Guardian", "Then listen when the Celestial call returns."),
           caption("Present Awakening foreshadow"),
@@ -912,6 +920,7 @@ const SEEDS: IssueSeed[] = [
         title: "Present Awakening",
         body: "Hearts stir; ancient machines restart. The next chapter is unwritten — help, or unfinished Activation.",
         atmosphere: "rift",
+        artSrc: PAGE_ART.rift,
       },
     ],
   },
@@ -1100,7 +1109,8 @@ export const COMIC_ISSUES: ComicIssue[] = SEEDS.map(buildIssue);
 
 export const COMIC_SERIES = {
   title: "Legends of the Rift",
-  subtitle: "Official Riftwilds comic series — original IP graphic novels of Aeryndra.",
+  subtitle:
+    "Lore Library — ten illustrated issues of Aeryndra. Read to unlock Codex ties and cosmetics; never pay-to-win.",
   issueCount: COMIC_ISSUES.length,
 } as const;
 

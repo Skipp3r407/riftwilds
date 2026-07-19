@@ -31,8 +31,18 @@ Legacy gates remain: `REAL_SOL_MARKETPLACE_ENABLED`, `NFT_MINTING_ENABLED`, etc.
 |------------|--------|
 | Gold via Credits | Live soft path |
 | Rift Shards ledger | In-memory scaffold |
-| Collectible editions | Types + grants (off-chain) |
-| SOL marketplace settle | Blocked |
+| Collectible editions | Types + grants + `/collectibles` browser |
+| Wallet Center | `/wallet` soft UI; `SOL_WALLET_ENABLED=false` |
+| SOL purchase | Soft/devnet simulation only; production blocked |
+| SOL marketplace settle | Blocked (fee display stub visible) |
 | SOL minting | Blocked / opt-in pipeline |
-| Free tournaments | Config present |
+| Free tournaments | Config + UI; SOL entry disabled |
 | Dev network | `devnet` (never mainnet default) |
+
+## Player surfaces (scaffolded)
+
+- `/wallet` — Wallet Center + purchase sim
+- `/collectibles` — edition browser (TCG art)
+- `/marketplace` — Credits desk + SOL fee stub
+- `/arena/tournaments` — free vs SOL-disabled cups
+- `/admin/economy/sol` — admin flags / fee preview

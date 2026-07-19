@@ -1,4 +1,10 @@
 import { describe, expect, it } from "vitest";
+import {
+  TCG_FACTIONS,
+  TCG_STARTER_SET_20,
+  getCardById,
+  getCommanderById,
+} from "@/content/tcg";
 import { getTcgCardCatalog } from "@/game/tcg/card-catalog";
 import { buildStarterDeckList, validateDeckList } from "@/game/tcg/deck";
 import {
@@ -12,6 +18,23 @@ describe("tcg rift energy", () => {
     expect(riftEnergyMaxForTurn(1)).toBe(1);
     expect(riftEnergyMaxForTurn(5)).toBe(5);
     expect(riftEnergyMaxForTurn(99)).toBe(10);
+  });
+});
+
+describe("tcg factions + showcase twenty", () => {
+  it("resolves four battle factions and showcase card ids", () => {
+    expect(TCG_FACTIONS).toHaveLength(4);
+    for (const f of TCG_FACTIONS) {
+      expect(f.commanderHeroIds.length).toBeGreaterThan(0);
+      expect(getCommanderById(f.commanderHeroIds[0]!)).toBeTruthy();
+    }
+    // Showcase set tracks constructed size (30); filename is historical.
+    expect(TCG_STARTER_SET_20.cardIds.length).toBeGreaterThanOrEqual(20);
+    expect(TCG_STARTER_SET_20.cardIds.length).toBeLessThanOrEqual(30);
+    for (const id of TCG_STARTER_SET_20.cardIds) {
+      expect(getCardById(id)).toBeTruthy();
+    }
+    expect(validateDeckList(TCG_STARTER_SET_20.cardIds).ok).toBe(true);
   });
 });
 
@@ -32,7 +55,10 @@ describe("tcg match engine", () => {
   it("creates a match and plays until end turn advances", () => {
     const state = createTcgMatch({ publicId: "tcg_test_1" });
     expect(state.status).toBe("ACTIVE");
-    expect(state.players[0].hand.length).toBe(3);
+    expect(state.players[0].hand.length).toBe(4);
+    expect(state.players[0].commander?.heroId).toBe("hero-elara-venn");
+    expect(state.mode).toBe("practice");
+    expect(state.turnTimerSeconds).toBe(90);
     expect(state.players[0].riftEnergy).toBe(1);
 
     const affordable = state.players[0].hand.find((c) => {

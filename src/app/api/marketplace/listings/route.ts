@@ -9,10 +9,13 @@ import {
 } from "@/lib/marketplace/demo-listings";
 import { validateListingCreate } from "@/lib/marketplace/listing-rules";
 import { resolveSettlementGate } from "@/lib/marketplace/integrity";
+import { runListingSecurityGates, appendMarketplaceTxLog } from "@/lib/marketplace/security";
 import { solToLamports, lamportsToSolString } from "@/lib/items/lamports";
 import { LISTING_RULES } from "@/lib/marketplace/listing-rules";
 import type { MarketplaceListingView } from "@/lib/marketplace/types";
 import { eggListingDisclosure } from "@/lib/economy/egg-supply";
+import { lamportsToCreditsPrice } from "@/lib/economy/core/credits-pricing";
+import { resolveMarketplaceProductIcon } from "@/lib/marketplace/product-icons";
 
 const createSchema = z.object({
   kind: z.enum(["EGG", "PET", "ITEM"]),
@@ -21,6 +24,7 @@ const createSchema = z.object({
     "PETS",
     "CARDS",
     "PACKS",
+    "COLLECTIBLES",
     "EQUIPMENT",
     "CONSUMABLES",
     "PROPERTY",
@@ -157,6 +161,18 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: validation.reason }, { status: 400 });
   }
 
+  const security = runListingSecurityGates({
+    sellerId: data.sellerLabel,
+    assetOwnerId: data.sellerLabel,
+    accountBound: eggAccountBound,
+    category: data.category,
+    priceLamports,
+    affectsGameplay: false,
+  });
+  if (!security.ok) {
+    return NextResponse.json({ error: security.reason }, { status: 400 });
+  }
+
   const publicId = `listing_${randomUUID().slice(0, 8)}`;
   const now = new Date();
   const expiresAt = new Date(now.getTime() + data.durationDays * 86400_000);
@@ -215,11 +231,13 @@ export async function POST(req: Request) {
       achievements: [],
     };
   } else if (data.kind === "ITEM") {
+    const key = data.title.toLowerCase().replace(/\s+/g, "-");
     item = {
-      key: data.title.toLowerCase().replace(/\s+/g, "-"),
+      key,
       name: data.title,
       rarity: "COMMON",
       category: data.category,
+      iconPath: resolveMarketplaceProductIcon(key),
     };
   }
 
@@ -232,8 +250,12 @@ export async function POST(req: Request) {
     sellerLabel: data.sellerLabel,
     priceLamports: priceLamports.toString(),
     priceSol: lamportsToSolString(priceLamports),
-    currency: "DEMO_CREDITS",
+    priceCredits: lamportsToCreditsPrice(priceLamports),
+    currency: "CREDITS",
     status: "ACTIVE",
+    listingType: "FIXED_PRICE",
+    auction: null,
+    bestOffer: null,
     createdAt: now.toISOString(),
     expiresAt: expiresAt.toISOString(),
     bundleMode: data.bundleMode ?? (data.kind === "PET" ? "PET_ONLY" : null),
@@ -252,11 +274,16 @@ export async function POST(req: Request) {
   };
 
   addRuntimeListing(listing);
+  appendMarketplaceTxLog({
+    type: "LISTING_CREATE",
+    actorLabel: data.sellerLabel,
+    detail: `${publicId} ${data.category} ${data.title}`,
+  });
 
   return NextResponse.json({
     ok: true,
     listing,
     listingFeeLamports: LISTING_RULES.listingFeeLamports.toString(),
-    note: "Demo listing stored in-memory. SOL settlement remains flag-gated.",
+    note: "Demo listing stored in-memory. SOL settlement remains flag-gated. Not production escrow.",
   });
 }

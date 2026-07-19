@@ -1,10 +1,10 @@
 {
-  "scannedAt": "2026-07-18T05:26:51.057Z",
+  "scannedAt": "2026-07-19T03:34:20.688Z",
   "category": "all",
   "totals": {
     "pending": 0,
     "planned": 0,
-    "generated": 546,
+    "generated": 575,
     "failed": 0,
     "legacy": 12,
     "not_applicable": 0
@@ -15,9 +15,9 @@
     "pets": 111,
     "eggs": 14,
     "affinities": 10,
-    "items": 224,
+    "items": 238,
     "npcs": 112,
-    "enemies": 19,
+    "enemies": 34,
     "bosses": 11,
     "buildings": 5,
     "ui": 8,

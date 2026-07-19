@@ -22,6 +22,10 @@ import {
   STARTER_RIFTLING_AVATAR_SLUGS,
 } from "@/lib/social/avatar-keys";
 import {
+  avatarBackgroundFallback,
+  avatarBackgroundForSpecies,
+} from "@/lib/social/avatar-backgrounds";
+import {
   evaluateSpeciesAvatarUnlock,
   isRiftlingAvatarSlug,
   listRiftlingAvatarSlugs,
@@ -29,6 +33,24 @@ import {
 } from "@/lib/social/avatar-unlocks";
 import { getSocialStore } from "@/lib/social/store";
 import type { SocialProfile } from "@/lib/social/types";
+import type { ItemRarity } from "@/lib/items/types";
+
+const AVATAR_RARITIES: readonly ItemRarity[] = [
+  "COMMON",
+  "UNCOMMON",
+  "RARE",
+  "EPIC",
+  "LEGENDARY",
+  "MYTHIC",
+  "CELESTIAL",
+];
+
+/** Normalize species rarityBias → ItemRarity for badges / borders. */
+export function normalizeAvatarRarity(raw: string | undefined | null): ItemRarity {
+  const key = (raw ?? "COMMON").trim().toUpperCase();
+  if ((AVATAR_RARITIES as readonly string[]).includes(key)) return key as ItemRarity;
+  return "COMMON";
+}
 
 export {
   brandAvatarKey,
@@ -64,6 +86,17 @@ export type SocialAvatarOption = {
   lockedReason?: string;
   /** Species cosmetics — unlock / purchase paths. */
   unlockPaths?: AvatarUnlockPaths;
+  /**
+   * Collection rarity for purchasable / non-starter Riftlings.
+   * Cosmetic only — maps to Credits/SOL price bands.
+   */
+  rarity?: ItemRarity;
+  /** Affinity key (EMBER, GROVE, …) for species cards. */
+  affinity?: string;
+  /** Scenic plate behind the portrait (affinity-themed). */
+  bgSrc?: string;
+  /** True when this cosmetic can be bought with Credits / optional SOL. */
+  purchasable?: boolean;
 };
 
 export type SocialAvatarSection = {
@@ -94,19 +127,16 @@ export type SetAvatarInput =
   | { kind: "lore"; characterId: string }
   | { kind: "brand"; brandId?: string };
 
-/** Curated lore / hero portraits (avoid importing the full About module). */
+/**
+ * Curated lore / hero portraits (avoid importing the full About module).
+ * Elara Venn lives in NAMED_NPCS — do not duplicate her here.
+ */
 const LORE_AVATARS: Array<{
   id: string;
   label: string;
   subtitle: string;
   src: string;
 }> = [
-  {
-    id: "elara-venn",
-    label: "Elara Venn",
-    subtitle: "First Riftkeeper",
-    src: "/assets/about/comic/comic-elara-portrait.png",
-  },
   {
     id: "first-riftling",
     label: "The First Riftling",
@@ -143,6 +173,8 @@ export function listCharacterAvatarOptions(): SocialAvatarOption[] {
     src: n.portraitAsset,
     thumbSrc: n.thumbnailAsset || n.portraitAsset,
     unlocked: true,
+    // Distinct commons/rift plates so keeper cards don't share one flat back.
+    bgSrc: avatarBackgroundForSpecies(n.slug, "RIFT"),
   }));
 
   const lore: SocialAvatarOption[] = LORE_AVATARS.map((c) => ({
@@ -153,6 +185,7 @@ export function listCharacterAvatarOptions(): SocialAvatarOption[] {
     src: c.src,
     thumbSrc: c.src,
     unlocked: true,
+    bgSrc: avatarBackgroundForSpecies(c.id, "SPIRIT"),
   }));
 
   return [...npcs, ...lore].sort((a, b) => a.label.localeCompare(b.label));
@@ -167,20 +200,28 @@ export function listBrandAvatarOptions(): SocialAvatarOption[] {
     src: b.src,
     thumbSrc: stripQuery(b.src),
     unlocked: true,
+    bgSrc: avatarBackgroundFallback(),
   }));
 }
 
 /** Owned hatchery pets — personal Riftling avatars. */
 export function listPetAvatarOptions(ownerKey: string): SocialAvatarOption[] {
-  return listPetsForOwner(ownerKey).map((pet) => ({
-    key: petAvatarKey(pet.publicId),
-    kind: "pet" as const,
-    label: pet.name,
-    subtitle: pet.speciesName,
-    src: creaturePortraitPath(pet.speciesSlug),
-    thumbSrc: creatureThumbPath(pet.speciesSlug),
-    unlocked: true,
-  }));
+  return listPetsForOwner(ownerKey).map((pet) => {
+    const species = getSpeciesBySlug(pet.speciesSlug);
+    const affinity = species?.affinity ?? "RIFT";
+    return {
+      key: petAvatarKey(pet.publicId),
+      kind: "pet" as const,
+      label: pet.name,
+      subtitle: pet.speciesName,
+      src: creaturePortraitPath(pet.speciesSlug),
+      thumbSrc: creatureThumbPath(pet.speciesSlug),
+      unlocked: true,
+      affinity,
+      rarity: normalizeAvatarRarity(species?.rarityBias),
+      bgSrc: avatarBackgroundForSpecies(pet.speciesSlug, affinity),
+    };
+  });
 }
 
 /**
@@ -193,17 +234,23 @@ export function listSpeciesAvatarOptions(ownerKey?: string): SocialAvatarOption[
     const species = getSpeciesBySlug(slug);
     const evald = ownerKey ? evaluateSpeciesAvatarUnlock(ownerKey, slug) : null;
     const unlocked = evald?.unlocked ?? isStarterRiftlingAvatarSlug(slug);
-    const rarity = species?.rarityBias ?? "COMMON";
+    const rarity = normalizeAvatarRarity(species?.rarityBias);
     const affinity = species?.affinity ?? "RIFT";
+    const freeStarter = evald?.paths.freeStarter ?? isStarterRiftlingAvatarSlug(slug);
+    const purchasable = !freeStarter;
     let subtitle = `${affinity} · ${rarity.toLowerCase()}`;
-    if (evald?.paths.freeStarter) subtitle = `${affinity} · free starter`;
-    else if (evald?.paths.ownedPet) subtitle = `${affinity} · owned`;
-    else if (!unlocked && evald?.paths.task) {
-      subtitle = `Locked · ${evald.paths.creditsPrice} Credits`;
+    if (freeStarter) subtitle = `${affinity} · free starter`;
+    else if (evald?.paths.ownedPet) subtitle = `${affinity} · ${rarity.toLowerCase()} · owned`;
+    else if (!unlocked) {
+      const price = evald?.paths.creditsPrice;
+      subtitle =
+        price != null
+          ? `${rarity} · Locked · ${price} Credits`
+          : `${rarity} · Locked`;
     } else if (unlocked && evald?.paths.purchased) {
-      subtitle = `${affinity} · unlocked`;
+      subtitle = `${affinity} · ${rarity.toLowerCase()} · unlocked`;
     } else if (unlocked && evald?.paths.task?.met) {
-      subtitle = `${affinity} · task unlock`;
+      subtitle = `${affinity} · ${rarity.toLowerCase()} · task unlock`;
     }
 
     return {
@@ -216,6 +263,10 @@ export function listSpeciesAvatarOptions(ownerKey?: string): SocialAvatarOption[
       unlocked,
       lockedReason: evald?.lockedReason,
       unlockPaths: evald?.paths,
+      rarity,
+      affinity,
+      purchasable,
+      bgSrc: avatarBackgroundForSpecies(slug, affinity),
     };
   });
 }

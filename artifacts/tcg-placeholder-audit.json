@@ -1,0 +1,461 @@
+{
+  "total": 735,
+  "withArt": 691,
+  "placeholders": [
+    {
+      "id": "rotr-e-keeper-s-satchel",
+      "name": "Keeper's Satchel",
+      "type": "equipment",
+      "element": "neutral",
+      "regionId": null,
+      "slug": "keeper-s-satchel",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-e-tide-charm",
+      "name": "Tide Charm",
+      "type": "equipment",
+      "element": "water",
+      "regionId": null,
+      "slug": "tide-charm",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-e-moss-cloak",
+      "name": "Moss Cloak",
+      "type": "equipment",
+      "element": "nature",
+      "regionId": null,
+      "slug": "moss-cloak",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-e-storm-whistle",
+      "name": "Storm Whistle",
+      "type": "equipment",
+      "element": "storm",
+      "regionId": null,
+      "slug": "storm-whistle",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-e-crystal-lens",
+      "name": "Crystal Lens",
+      "type": "equipment",
+      "element": "crystal",
+      "regionId": null,
+      "slug": "crystal-lens",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-e-shade-mantle",
+      "name": "Shade Mantle",
+      "type": "equipment",
+      "element": "shadow",
+      "regionId": null,
+      "slug": "shade-mantle",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-e-lantern-badge",
+      "name": "Lantern Badge",
+      "type": "equipment",
+      "element": "light",
+      "regionId": null,
+      "slug": "lantern-badge",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-h-elara-venn",
+      "name": "Elara Venn",
+      "type": "hero",
+      "element": "nature",
+      "regionId": "riftwild-commons",
+      "slug": "elara-venn",
+      "rarity": "legendary"
+    },
+    {
+      "id": "rotr-h-mira-of-care",
+      "name": "Mira of Care",
+      "type": "hero",
+      "element": "light",
+      "regionId": "riftwild-commons",
+      "slug": "mira-of-care",
+      "rarity": "legendary"
+    },
+    {
+      "id": "rotr-h-captain-brine",
+      "name": "Captain Brine",
+      "type": "hero",
+      "element": "water",
+      "regionId": "moonwater-coast",
+      "slug": "captain-brine",
+      "rarity": "legendary"
+    },
+    {
+      "id": "rotr-h-forge-warden-kael",
+      "name": "Forge-Warden Kael",
+      "type": "hero",
+      "element": "fire",
+      "regionId": "ember-crater",
+      "slug": "forge-warden-kael",
+      "rarity": "legendary"
+    },
+    {
+      "id": "rotr-h-archivist-solen",
+      "name": "Archivist Solen",
+      "type": "hero",
+      "element": "arcane",
+      "regionId": "radiant-citadel",
+      "slug": "archivist-solen",
+      "rarity": "legendary"
+    },
+    {
+      "id": "rotr-t-spark-fragment",
+      "name": "Spark Fragment",
+      "type": "token",
+      "element": "neutral",
+      "regionId": null,
+      "slug": "spark-fragment",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-x-lantern-night",
+      "name": "Lantern Night",
+      "type": "event",
+      "element": "light",
+      "regionId": null,
+      "slug": "lantern-night",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-market-panic",
+      "name": "Market Panic",
+      "type": "event",
+      "element": "neutral",
+      "regionId": null,
+      "slug": "market-panic",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-pack-opening",
+      "name": "Pack Opening",
+      "type": "event",
+      "element": "arcane",
+      "regionId": null,
+      "slug": "pack-opening",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-guild-horn",
+      "name": "Guild Horn",
+      "type": "event",
+      "element": "neutral",
+      "regionId": null,
+      "slug": "guild-horn",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-hidden-snare",
+      "name": "Hidden Snare",
+      "type": "trap",
+      "element": "nature",
+      "regionId": null,
+      "slug": "hidden-snare",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-void-latch",
+      "name": "Void Latch",
+      "type": "trap",
+      "element": "void",
+      "regionId": null,
+      "slug": "void-latch",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-tripwire-coil",
+      "name": "Tripwire Coil",
+      "type": "trap",
+      "element": "metal",
+      "regionId": null,
+      "slug": "tripwire-coil",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-tideglass",
+      "name": "Tideglass",
+      "type": "trap",
+      "element": "water",
+      "regionId": null,
+      "slug": "tideglass",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-heart-relic",
+      "name": "Heart Relic",
+      "type": "relic",
+      "element": "arcane",
+      "regionId": null,
+      "slug": "heart-relic",
+      "rarity": "epic"
+    },
+    {
+      "id": "rotr-x-forge-relic",
+      "name": "Forge Relic",
+      "type": "relic",
+      "element": "metal",
+      "regionId": null,
+      "slug": "forge-relic",
+      "rarity": "epic"
+    },
+    {
+      "id": "rotr-x-moss-relic",
+      "name": "Moss Relic",
+      "type": "relic",
+      "element": "nature",
+      "regionId": null,
+      "slug": "moss-relic",
+      "rarity": "epic"
+    },
+    {
+      "id": "rotr-x-storm-relic",
+      "name": "Storm Relic",
+      "type": "relic",
+      "element": "storm",
+      "regionId": null,
+      "slug": "storm-relic",
+      "rarity": "epic"
+    },
+    {
+      "id": "rotr-x-quest-first-bond",
+      "name": "Quest: First Bond",
+      "type": "quest",
+      "element": "neutral",
+      "regionId": null,
+      "slug": "first-bond",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-quest-plaza-sweep",
+      "name": "Quest: Plaza Sweep",
+      "type": "quest",
+      "element": "neutral",
+      "regionId": null,
+      "slug": "plaza-sweep",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-quest-ember-trial",
+      "name": "Quest: Ember Trial",
+      "type": "quest",
+      "element": "fire",
+      "regionId": null,
+      "slug": "ember-trial",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-quest-quiet-study",
+      "name": "Quest: Quiet Study",
+      "type": "quest",
+      "element": "arcane",
+      "regionId": null,
+      "slug": "quiet-study",
+      "rarity": "uncommon"
+    },
+    {
+      "id": "rotr-x-artifact-gate-key",
+      "name": "Artifact: Gate Key",
+      "type": "artifact",
+      "element": "celestial",
+      "regionId": null,
+      "slug": "gate-key",
+      "rarity": "epic"
+    },
+    {
+      "id": "rotr-x-artifact-moss-codex",
+      "name": "Artifact: Moss Codex",
+      "type": "artifact",
+      "element": "nature",
+      "regionId": null,
+      "slug": "moss-codex",
+      "rarity": "epic"
+    },
+    {
+      "id": "rotr-x-artifact-tide-sextant",
+      "name": "Artifact: Tide Sextant",
+      "type": "artifact",
+      "element": "water",
+      "regionId": null,
+      "slug": "tide-sextant",
+      "rarity": "epic"
+    },
+    {
+      "id": "rotr-x-artifact-void-ledger",
+      "name": "Artifact: Void Ledger",
+      "type": "artifact",
+      "element": "void",
+      "regionId": null,
+      "slug": "void-ledger",
+      "rarity": "epic"
+    },
+    {
+      "id": "rotr-x-legendary-heart-witness",
+      "name": "Legendary: Heart Witness",
+      "type": "legendary",
+      "element": "arcane",
+      "regionId": null,
+      "slug": "heart-witness",
+      "rarity": "legendary"
+    },
+    {
+      "id": "rotr-x-legendary-crater-tyrant",
+      "name": "Legendary: Crater Tyrant",
+      "type": "legendary",
+      "element": "fire",
+      "regionId": null,
+      "slug": "crater-tyrant",
+      "rarity": "legendary"
+    },
+    {
+      "id": "rotr-c-plaza-scout",
+      "name": "Plaza Scout",
+      "type": "creature",
+      "element": "neutral",
+      "regionId": null,
+      "slug": "plaza-scout",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-c-market-runner",
+      "name": "Market Runner",
+      "type": "creature",
+      "element": "neutral",
+      "regionId": null,
+      "slug": "market-runner",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-c-lantern-acolyte",
+      "name": "Lantern Acolyte",
+      "type": "creature",
+      "element": "light",
+      "regionId": null,
+      "slug": "lantern-acolyte",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-c-shard-bit",
+      "name": "Shard Bit",
+      "type": "creature",
+      "element": "crystal",
+      "regionId": null,
+      "slug": "shard-bit",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-c-gear-tick",
+      "name": "Gear Tick",
+      "type": "creature",
+      "element": "metal",
+      "regionId": null,
+      "slug": "gear-tick",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-c-star-midge",
+      "name": "Star Midge",
+      "type": "creature",
+      "element": "celestial",
+      "regionId": null,
+      "slug": "star-midge",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-c-null-gnat",
+      "name": "Null Gnat",
+      "type": "creature",
+      "element": "void",
+      "regionId": null,
+      "slug": "null-gnat",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-c-poison-spore",
+      "name": "Poison Spore",
+      "type": "creature",
+      "element": "poison",
+      "regionId": null,
+      "slug": "poison-spore",
+      "rarity": "common"
+    },
+    {
+      "id": "rotr-c-arc-scribe",
+      "name": "Arc Scribe",
+      "type": "creature",
+      "element": "arcane",
+      "regionId": null,
+      "slug": "arc-scribe",
+      "rarity": "common"
+    }
+  ],
+  "placeholderByType": {
+    "equipment": 7,
+    "hero": 5,
+    "token": 1,
+    "event": 4,
+    "trap": 4,
+    "relic": 4,
+    "quest": 4,
+    "artifact": 4,
+    "legendary": 2,
+    "creature": 9
+  },
+  "subjectsOnDisk": 30,
+  "placeholderIds": [
+    "rotr-e-keeper-s-satchel",
+    "rotr-e-tide-charm",
+    "rotr-e-moss-cloak",
+    "rotr-e-storm-whistle",
+    "rotr-e-crystal-lens",
+    "rotr-e-shade-mantle",
+    "rotr-e-lantern-badge",
+    "rotr-h-elara-venn",
+    "rotr-h-mira-of-care",
+    "rotr-h-captain-brine",
+    "rotr-h-forge-warden-kael",
+    "rotr-h-archivist-solen",
+    "rotr-t-spark-fragment",
+    "rotr-x-lantern-night",
+    "rotr-x-market-panic",
+    "rotr-x-pack-opening",
+    "rotr-x-guild-horn",
+    "rotr-x-hidden-snare",
+    "rotr-x-void-latch",
+    "rotr-x-tripwire-coil",
+    "rotr-x-tideglass",
+    "rotr-x-heart-relic",
+    "rotr-x-forge-relic",
+    "rotr-x-moss-relic",
+    "rotr-x-storm-relic",
+    "rotr-x-quest-first-bond",
+    "rotr-x-quest-plaza-sweep",
+    "rotr-x-quest-ember-trial",
+    "rotr-x-quest-quiet-study",
+    "rotr-x-artifact-gate-key",
+    "rotr-x-artifact-moss-codex",
+    "rotr-x-artifact-tide-sextant",
+    "rotr-x-artifact-void-ledger",
+    "rotr-x-legendary-heart-witness",
+    "rotr-x-legendary-crater-tyrant",
+    "rotr-c-plaza-scout",
+    "rotr-c-market-runner",
+    "rotr-c-lantern-acolyte",
+    "rotr-c-shard-bit",
+    "rotr-c-gear-tick",
+    "rotr-c-star-midge",
+    "rotr-c-null-gnat",
+    "rotr-c-poison-spore",
+    "rotr-c-arc-scribe"
+  ]
+}

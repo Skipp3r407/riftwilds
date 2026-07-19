@@ -8,18 +8,19 @@ import {
 export function HelpCenter() {
   return (
     <div className="help-center relative space-y-8">
+      {/* Local readability wash over RouteWallpaper docs hall — keeps Jump to + cards legible */}
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-50"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse at 15% 0%, rgba(61,231,255,0.14), transparent 42%), radial-gradient(ellipse at 90% 20%, rgba(255,184,77,0.10), transparent 38%), radial-gradient(ellipse at 50% 100%, rgba(20,40,72,0.55), transparent 50%)",
+            "linear-gradient(180deg, rgba(7,11,22,0.28) 0%, rgba(7,11,22,0.12) 40%, rgba(7,11,22,0.35) 100%), radial-gradient(ellipse at 15% 0%, rgba(61,231,255,0.14), transparent 42%), radial-gradient(ellipse at 90% 20%, rgba(255,184,77,0.10), transparent 38%), radial-gradient(ellipse at 50% 100%, rgba(20,40,72,0.55), transparent 50%)",
         }}
         aria-hidden
       />
 
       <nav
         aria-label="Help topics"
-        className="rounded-xl border border-[rgba(61,231,255,0.22)] bg-[rgba(8,12,20,0.72)] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[2px]"
+        className="rounded-xl border border-[rgba(61,231,255,0.22)] bg-[rgba(8,12,20,0.82)] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[3px]"
       >
         <p className="font-display text-[10px] uppercase tracking-[0.28em] text-[var(--cyan)]">
           Jump to
@@ -50,7 +51,7 @@ export function HelpCenter() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="focus-ring group flex h-full flex-col rounded-xl border border-[rgba(61,231,255,0.2)] bg-[rgba(8,12,20,0.62)] px-4 py-4 transition hover:border-[rgba(61,231,255,0.45)] hover:bg-[rgba(12,20,34,0.85)]"
+                className="focus-ring group flex h-full flex-col rounded-xl border border-[rgba(61,231,255,0.2)] bg-[rgba(8,12,20,0.78)] px-4 py-4 backdrop-blur-[2px] transition hover:border-[rgba(61,231,255,0.45)] hover:bg-[rgba(12,20,34,0.9)]"
               >
                 <span className="font-display text-sm text-[var(--cyan)] group-hover:text-[var(--amber)]">
                   {link.label}
@@ -68,7 +69,7 @@ export function HelpCenter() {
             key={section.id}
             id={section.id}
             aria-labelledby={`${section.id}-title`}
-            className="scroll-mt-24 rounded-xl border border-white/10 bg-[rgba(8,12,20,0.58)] px-5 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] backdrop-blur-[2px]"
+            className="scroll-mt-24 rounded-xl border border-white/10 bg-[rgba(8,12,20,0.76)] px-5 py-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] backdrop-blur-[3px]"
           >
             <h2
               id={`${section.id}-title`}

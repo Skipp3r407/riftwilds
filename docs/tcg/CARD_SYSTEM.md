@@ -1,7 +1,10 @@
 # Riftwilds TCG — Card System
 
-**Status:** Foundational content pipeline (data-first). Not committed until approved.  
-**Principle:** Cards are **JSON game objects**. Art is metadata (prompts) until original/licensed assets land.
+**Status:** AAA framework Phase 1–2 (data + registry + deck rules + Codex/atelier).  
+**Principle:** Cards are **JSON game objects**. Art is metadata (prompts) until original/licensed assets land.  
+**Never require crypto/SOL for competitive craft.**
+
+**AAA docs:** [Card Design](./CARD_DESIGN_DOCUMENT.md) · [Roadmap](./EXPANSION_ROADMAP.md) · [Balance](./BALANCE_GUIDE.md) · [DB Schema](./DATABASE_SCHEMA.md) · [API](./API_DESIGN.md)
 
 ## Rift Energy
 

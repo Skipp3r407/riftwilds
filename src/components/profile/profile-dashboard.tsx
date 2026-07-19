@@ -915,10 +915,10 @@ function SettingsPanel({
   onAvatarSelected?: (src: string, key: string) => void;
 }) {
   return (
-    <div className="mx-auto max-w-2xl space-y-5">
+    <div className="mx-auto max-w-5xl space-y-5">
       <AvatarPicker onSelected={onAvatarSelected} />
 
-      <div>
+      <div className="rounded-xl border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] p-4 md:p-5">
         <h4 className="font-display text-sm uppercase tracking-[0.18em] text-[var(--cyan)]">
           Display name
         </h4>

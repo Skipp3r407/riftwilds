@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useTransition } from "react";
+import { playSfx } from "@/hooks/use-sfx";
+import { enterSoundscape } from "@/lib/audio/adaptive-engine";
 
 type Property = {
   tier: string;
@@ -61,17 +63,30 @@ export function HousingHub() {
   }
 
   useEffect(() => {
+    void enterSoundscape("housing", { fadeMs: 800 });
     refresh();
   }, []);
 
   async function post(body: Record<string, unknown>) {
     setMessage(null);
+    playSfx("ui.click");
     const res = await fetch("/api/housing", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(body),
     });
     const data = await res.json();
+    if (data.ok) {
+      if (body.action === "place_furniture" || body.action === "decorate") {
+        playSfx("housing.place");
+      } else if (body.action === "pickup_furniture" || body.action === "remove_furniture") {
+        playSfx("housing.pickup");
+      } else {
+        playSfx("ui.success");
+      }
+    } else {
+      playSfx("ui.error");
+    }
     setMessage(data.ok ? "Done." : data.message ?? data.error ?? "Failed");
     refresh();
     return data;

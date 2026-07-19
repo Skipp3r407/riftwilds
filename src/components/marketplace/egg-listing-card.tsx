@@ -1,4 +1,6 @@
+import { GameImage } from "@/components/assets/game-image";
 import type { MarketplaceListingView } from "@/lib/marketplace/types";
+import { resolveMarketplaceEggArt } from "@/lib/marketplace/product-icons";
 import { cn } from "@/lib/utils/cn";
 
 type Props = {
@@ -8,31 +10,66 @@ type Props = {
   className?: string;
 };
 
+function listingCredits(listing: MarketplaceListingView): number {
+  return (
+    listing.priceCredits ??
+    Math.round(Number.parseFloat(listing.priceSol) * 10_000)
+  );
+}
+
 export function EggListingCard({ listing, selected, onSelect, className }: Props) {
   const egg = listing.egg;
   if (!egg) return null;
+
+  const art = resolveMarketplaceEggArt(egg.sourceKind);
+  const credits = listingCredits(listing);
 
   return (
     <button
       type="button"
       onClick={onSelect}
       className={cn(
-        "panel w-full p-4 text-left transition hover:border-[var(--cyan)]/50",
+        "group panel relative w-full overflow-hidden p-3 text-left transition duration-200",
+        "hover:-translate-y-0.5 hover:border-[var(--cyan)]/55 hover:shadow-[0_12px_28px_rgba(0,0,0,0.35)]",
         selected && "border-[var(--cyan)] ring-1 ring-[var(--cyan)]/40",
         className,
       )}
     >
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--cyan)]">
-            Unopened egg · Gen {egg.generation}
-          </p>
-          <h3 className="mt-1 font-display text-lg text-white">{listing.title}</h3>
-          <p className="mt-1 text-xs text-[var(--text-muted)]">{egg.eggType}</p>
+      <div className="flex gap-3">
+        <div className="panel-inset relative flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden">
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[rgba(61,231,255,0.12)] to-transparent opacity-80"
+            aria-hidden
+          />
+          <GameImage
+            src={art}
+            alt=""
+            width={72}
+            height={72}
+            className="relative z-[1] object-contain transition duration-200 group-hover:scale-105"
+            showDevBadge={false}
+            unoptimized
+          />
         </div>
-        <div className="text-right">
-          <p className="font-display text-xl text-white">{listing.priceSol} SOL</p>
-          <p className="text-[10px] text-[var(--amber)]">{listing.currency}</p>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-2">
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--cyan)]">
+                Unopened egg · Gen {egg.generation}
+              </p>
+              <h3 className="mt-1 font-display text-base text-white">{listing.title}</h3>
+              <p className="mt-0.5 text-xs text-[var(--text-muted)]">{egg.eggType}</p>
+            </div>
+            <div className="shrink-0 text-right">
+              <p className="font-display text-lg text-[var(--cyan)]">
+                {credits.toLocaleString()}
+              </p>
+              <p className="text-[10px] text-[var(--text-muted)]">Credits</p>
+              <p className="mt-0.5 text-[10px] text-[var(--text-dim)]">
+                optional {listing.priceSol} SOL
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

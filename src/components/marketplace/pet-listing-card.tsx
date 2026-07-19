@@ -1,4 +1,6 @@
+import { GameImage } from "@/components/assets/game-image";
 import type { MarketplaceListingView } from "@/lib/marketplace/types";
+import { resolveMarketplacePetArt } from "@/lib/marketplace/product-icons";
 import { cn } from "@/lib/utils/cn";
 
 type Props = {
@@ -8,34 +10,70 @@ type Props = {
   className?: string;
 };
 
+function listingCredits(listing: MarketplaceListingView): number {
+  return (
+    listing.priceCredits ??
+    Math.round(Number.parseFloat(listing.priceSol) * 10_000)
+  );
+}
+
 export function PetListingCard({ listing, selected, onSelect, className }: Props) {
   const pet = listing.pet;
   if (!pet) return null;
+
+  const art = resolveMarketplacePetArt(pet.speciesSlug);
+  const credits = listingCredits(listing);
 
   return (
     <button
       type="button"
       onClick={onSelect}
       className={cn(
-        "panel w-full p-4 text-left transition hover:border-[var(--cyan)]/50",
-        selected && "border-[var(--cyan)] ring-1 ring-[var(--cyan)]/40",
+        "group panel relative w-full overflow-hidden p-3 text-left transition duration-200",
+        "hover:-translate-y-0.5 hover:border-[var(--mint)]/50 hover:shadow-[0_12px_28px_rgba(0,0,0,0.35)]",
+        selected && "border-[var(--mint)] ring-1 ring-[var(--mint)]/40",
         className,
       )}
     >
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--mint)]">
-            Hatched pet · Gen {pet.generation}
-            {pet.founderStatus ? " · Founder" : ""}
-          </p>
-          <h3 className="mt-1 font-display text-lg text-white">{listing.title}</h3>
-          <p className="mt-1 text-xs text-[var(--text-muted)]">
-            {pet.speciesName} · {pet.affinity} · {pet.rarity}
-          </p>
+      <div className="flex gap-3">
+        <div className="panel-inset relative flex h-20 w-20 shrink-0 items-center justify-center overflow-hidden">
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[rgba(110,231,183,0.14)] to-transparent"
+            aria-hidden
+          />
+          <GameImage
+            src={art}
+            alt=""
+            width={72}
+            height={72}
+            className="relative z-[1] object-contain transition duration-200 group-hover:scale-105"
+            fallbackSrc={`/assets/pets/${pet.speciesSlug}.png`}
+            showDevBadge={false}
+            unoptimized
+          />
         </div>
-        <div className="text-right">
-          <p className="font-display text-xl text-white">{listing.priceSol} SOL</p>
-          <p className="text-[10px] text-[var(--amber)]">{listing.currency}</p>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-2">
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--mint)]">
+                Hatched pet · Gen {pet.generation}
+                {pet.founderStatus ? " · Founder" : ""}
+              </p>
+              <h3 className="mt-1 font-display text-base text-white">{listing.title}</h3>
+              <p className="mt-0.5 text-xs text-[var(--text-muted)]">
+                {pet.speciesName} · {pet.affinity} · {pet.rarity}
+              </p>
+            </div>
+            <div className="shrink-0 text-right">
+              <p className="font-display text-lg text-[var(--cyan)]">
+                {credits.toLocaleString()}
+              </p>
+              <p className="text-[10px] text-[var(--text-muted)]">Credits</p>
+              <p className="mt-0.5 text-[10px] text-[var(--text-dim)]">
+                optional {listing.priceSol} SOL
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -97,7 +135,7 @@ export function PetListingCard({ listing, selected, onSelect, className }: Props
         </div>
       </dl>
 
-      <div className="mt-3 rounded-md border border-[var(--stroke)] bg-[rgba(7,11,22,0.35)] p-3">
+      <div className="mt-3 rounded-md border border-[var(--stroke)] bg-[rgba(7,11,22,0.45)] p-3">
         <p className="text-[10px] uppercase tracking-[0.16em] text-[var(--text-muted)]">
           Bundle mode
         </p>

@@ -185,6 +185,12 @@ export function listEconomyLedger(limit = 100): EconomyLedgerEntry[] {
   return store().entries.slice(-limit);
 }
 
+export function listEconomyLedgerForUser(userId: string, limit = 100): EconomyLedgerEntry[] {
+  return store()
+    .entries.filter((e) => e.userId === userId)
+    .slice(-limit);
+}
+
 export function getEconomyLedgerByRequestId(requestId: string): EconomyLedgerEntry | null {
   return store().byRequestId.get(requestId) ?? null;
 }

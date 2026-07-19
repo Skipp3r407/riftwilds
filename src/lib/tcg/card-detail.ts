@@ -1,4 +1,10 @@
-import { getCardById, resolveCardImagePath, type TcgCard } from "@/content/tcg";
+import {
+  getCardById,
+  getNormalizedCardById,
+  resolveCardImagePath,
+  type TcgCard,
+} from "@/content/tcg";
+import { ROLE_DISPLAY } from "@/content/tcg/framework/roles";
 import { contentPackForRegion } from "@/content/regions";
 import { getSpeciesLore } from "@/content/pets/lore";
 import type { SpeciesLore } from "@/lib/pets/lore-types";
@@ -26,14 +32,23 @@ export type TcgCardDetailView = {
   rarity: string;
   energyCost: number;
   attack: number | null;
+  defense: number | null;
   health: number | null;
+  speed: number | null;
+  role: string | null;
+  roleLabel: string | null;
   keywords: string[];
+  passive: string | null;
+  activeSummary: string | null;
+  ultimateSummary: string | null;
   rulesText: string;
   flavorText: string;
   loreBlurb: string;
   cardImagePath: string;
+  cleanArtPath: string | null;
   riftlingSlug: string | null;
   relatedRiftlings: string[];
+  competitiveEligible: boolean;
   /** Present only when a real species lore entry exists. */
   creatureBio: {
     slug: string;
@@ -119,7 +134,6 @@ function pickIllustratedBio(
     }
   }
 
-  // Named landmark locations (plaza, pier, etc.) still use region packs when available
   if (card.type === "location" && regionId && !String(card.id).includes("-prop-")) {
     const pack = contentPackForRegion(regionId);
     if (pack) {
@@ -153,24 +167,41 @@ export function getTcgCardDetail(defId: string): TcgCardDetailView | null {
   const card = getCardById(defId);
   if (!card) return null;
 
+  const normalized = getNormalizedCardById(defId);
   const resolved = resolveCardImagePath(card);
   const creatureBio = pickCreatureBio(card);
+  const active = normalized?.abilities.find(
+    (a) => a.timing === "activated" || a.timing === "battlecry",
+  );
+  const ultimate = normalized?.abilities.find((a) => a.timing === "ultimate");
+
   return {
     id: card.id,
     name: card.localization.name,
     type: card.type,
     element: card.element,
     rarity: card.rarity,
-    energyCost: card.energyCost,
-    attack: card.attack ?? null,
-    health: card.health ?? null,
-    keywords: card.keywords ?? [],
+    energyCost: normalized?.energyCost ?? card.energyCost,
+    attack: normalized?.attack ?? card.attack ?? null,
+    defense: normalized?.defense ?? null,
+    health: normalized?.health ?? card.health ?? null,
+    speed: normalized?.speed ?? null,
+    role: normalized?.role ?? null,
+    roleLabel: normalized?.role
+      ? ROLE_DISPLAY[normalized.role] ?? normalized.role
+      : null,
+    keywords: normalized?.keywords ?? card.keywords ?? [],
+    passive: normalized?.passive ?? null,
+    activeSummary: active?.text ?? null,
+    ultimateSummary: ultimate?.text ?? null,
     rulesText: card.localization.rulesText || "",
     flavorText: card.localization.flavorText || "",
     loreBlurb: card.localization.loreBlurb || "",
     cardImagePath: resolved || `/assets/tcg/cards/${card.id}.webp`,
+    cleanArtPath: normalized?.cleanArtPath ?? card.art.assetPath ?? null,
     riftlingSlug: card.riftlingSlug ?? null,
     relatedRiftlings: card.relatedRiftlings ?? [],
+    competitiveEligible: normalized?.competitiveEligible ?? true,
     creatureBio,
     illustratedBio: pickIllustratedBio(card, creatureBio),
   };

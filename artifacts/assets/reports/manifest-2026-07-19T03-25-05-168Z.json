@@ -1,0 +1,4977 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-07-19T03:25:05.168Z",
+  "provider": "cursor-local",
+  "counts": {
+    "worlds": 24,
+    "regions": 12,
+    "pets": 111,
+    "eggs": 14,
+    "affinities": 10,
+    "items": 238,
+    "npcs": 112,
+    "enemies": 34,
+    "bosses": 11,
+    "buildings": 5,
+    "ui": 8,
+    "animations": 8
+  },
+  "byStatus": {
+    "pending": 15,
+    "planned": 0,
+    "generated": 560,
+    "failed": 0,
+    "legacy": 12,
+    "not_applicable": 0
+  },
+  "assets": [
+    {
+      "id": "world-card-riftwild-commons",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/riftwild-commons/card.png",
+      "label": "Riftwild Commons world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Riftwild Commons: Central social region — habitat, plaza, training yard. No text."
+    },
+    {
+      "id": "world-overview-riftwild-commons",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/riftwild-commons/overview.png",
+      "label": "Riftwild Commons loading / overview",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Riftwild Commons. No text."
+    },
+    {
+      "id": "region-legacy-riftwild-commons",
+      "category": "regions",
+      "publicPath": "/assets/regions/riftwild-commons.png",
+      "label": "Riftwild Commons legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-ember-crater",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/ember-crater/card.png",
+      "label": "Ember Crater world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Ember Crater: Volcanic caves, ember materials, lava bridges. No text."
+    },
+    {
+      "id": "world-overview-ember-crater",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/ember-crater/overview.png",
+      "label": "Ember Crater loading / overview",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Ember Crater. No text."
+    },
+    {
+      "id": "region-legacy-ember-crater",
+      "category": "regions",
+      "publicPath": "/assets/regions/ember-crater.png",
+      "label": "Ember Crater legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-moonwater-coast",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/moonwater-coast/card.png",
+      "label": "Moonwater Coast world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Moonwater Coast: Beaches, tide pools, fishing, underwater ruins. No text."
+    },
+    {
+      "id": "world-overview-moonwater-coast",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/moonwater-coast/overview.png",
+      "label": "Moonwater Coast loading / overview",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Moonwater Coast. No text."
+    },
+    {
+      "id": "region-legacy-moonwater-coast",
+      "category": "regions",
+      "publicPath": "/assets/regions/moonwater-coast.png",
+      "label": "Moonwater Coast legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-elderwood-forest",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/elderwood-forest/card.png",
+      "label": "Elderwood Forest world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Elderwood Forest: Farming, herb gathering, ancient tree dungeon. No text."
+    },
+    {
+      "id": "world-overview-elderwood-forest",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/elderwood-forest/overview.png",
+      "label": "Elderwood Forest loading / overview",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Elderwood Forest. No text."
+    },
+    {
+      "id": "region-legacy-elderwood-forest",
+      "category": "regions",
+      "publicPath": "/assets/regions/elderwood-forest.png",
+      "label": "Elderwood Forest legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-stormspire-peaks",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/stormspire-peaks/card.png",
+      "label": "Stormspire Peaks world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Stormspire Peaks: Climbing, lightning crystals, wind trials. No text."
+    },
+    {
+      "id": "world-overview-stormspire-peaks",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/stormspire-peaks/overview.png",
+      "label": "Stormspire Peaks loading / overview",
+      "status": "generated",
+      "priority": 3,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Stormspire Peaks. No text."
+    },
+    {
+      "id": "region-legacy-stormspire-peaks",
+      "category": "regions",
+      "publicPath": "/assets/regions/stormspire-peaks.png",
+      "label": "Stormspire Peaks legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-stoneheart-canyon",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/stoneheart-canyon/card.png",
+      "label": "Stoneheart Canyon world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Stoneheart Canyon: Mining, ruins, fossil excavation. No text."
+    },
+    {
+      "id": "world-overview-stoneheart-canyon",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/stoneheart-canyon/overview.png",
+      "label": "Stoneheart Canyon loading / overview",
+      "status": "generated",
+      "priority": 3,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Stoneheart Canyon. No text."
+    },
+    {
+      "id": "region-legacy-stoneheart-canyon",
+      "category": "regions",
+      "publicPath": "/assets/regions/stoneheart-canyon.png",
+      "label": "Stoneheart Canyon legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-frostveil-basin",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/frostveil-basin/card.png",
+      "label": "Frostveil Basin world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Frostveil Basin: Snow, ice caves, winter events. No text."
+    },
+    {
+      "id": "world-overview-frostveil-basin",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/frostveil-basin/overview.png",
+      "label": "Frostveil Basin loading / overview",
+      "status": "generated",
+      "priority": 3,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Frostveil Basin. No text."
+    },
+    {
+      "id": "region-legacy-frostveil-basin",
+      "category": "regions",
+      "publicPath": "/assets/regions/frostveil-basin.png",
+      "label": "Frostveil Basin legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-radiant-citadel",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/radiant-citadel/card.png",
+      "label": "Radiant Citadel world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Radiant Citadel: Light temples, healing quests, celestial lore. No text."
+    },
+    {
+      "id": "world-overview-radiant-citadel",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/radiant-citadel/overview.png",
+      "label": "Radiant Citadel loading / overview",
+      "status": "generated",
+      "priority": 3,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Radiant Citadel. No text."
+    },
+    {
+      "id": "region-legacy-radiant-citadel",
+      "category": "regions",
+      "publicPath": "/assets/regions/radiant-citadel.png",
+      "label": "Radiant Citadel legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-void-hollow",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/void-hollow/card.png",
+      "label": "Void Hollow world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Void Hollow: Puzzle portals, void materials, high-level quests. No text."
+    },
+    {
+      "id": "world-overview-void-hollow",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/void-hollow/overview.png",
+      "label": "Void Hollow loading / overview",
+      "status": "generated",
+      "priority": 3,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Void Hollow. No text."
+    },
+    {
+      "id": "region-legacy-void-hollow",
+      "category": "regions",
+      "publicPath": "/assets/regions/void-hollow.png",
+      "label": "Void Hollow legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-alloy-ruins",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/alloy-ruins/card.png",
+      "label": "Alloy Ruins world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Alloy Ruins: Mechanical structures, crafting technology. No text."
+    },
+    {
+      "id": "world-overview-alloy-ruins",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/alloy-ruins/overview.png",
+      "label": "Alloy Ruins loading / overview",
+      "status": "generated",
+      "priority": 3,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Alloy Ruins. No text."
+    },
+    {
+      "id": "region-legacy-alloy-ruins",
+      "category": "regions",
+      "publicPath": "/assets/regions/alloy-ruins.png",
+      "label": "Alloy Ruins legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-spirit-marsh",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/spirit-marsh/card.png",
+      "label": "Spirit Marsh world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Spirit Marsh: Lanterns, spirit quests, memory shrines. No text."
+    },
+    {
+      "id": "world-overview-spirit-marsh",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/spirit-marsh/overview.png",
+      "label": "Spirit Marsh loading / overview",
+      "status": "generated",
+      "priority": 3,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Spirit Marsh. No text."
+    },
+    {
+      "id": "region-legacy-spirit-marsh",
+      "category": "regions",
+      "publicPath": "/assets/regions/spirit-marsh.png",
+      "label": "Spirit Marsh legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "world-card-celestial-rift",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/celestial-rift/card.png",
+      "label": "Celestial Rift world card",
+      "status": "generated",
+      "priority": 1,
+      "minWidth": 512,
+      "promptHint": "Scenic wide establishing shot of Celestial Rift: Endgame cosmic region — World Rifts. No text."
+    },
+    {
+      "id": "world-overview-celestial-rift",
+      "category": "worlds",
+      "publicPath": "/assets/worlds/celestial-rift/overview.png",
+      "label": "Celestial Rift loading / overview",
+      "status": "generated",
+      "priority": 3,
+      "minWidth": 1024,
+      "promptHint": "Cinematic loading-screen vista of Celestial Rift. No text."
+    },
+    {
+      "id": "region-legacy-celestial-rift",
+      "category": "regions",
+      "publicPath": "/assets/regions/celestial-rift.png",
+      "label": "Celestial Rift legacy region banner",
+      "status": "legacy",
+      "priority": 5,
+      "notes": "Legacy World page banner; prefer worlds/*/card.png when present"
+    },
+    {
+      "id": "pet-portrait-alloyfin",
+      "category": "pets",
+      "publicPath": "/assets/pets/alloyfin.png",
+      "label": "alloyfin portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-ashwing",
+      "category": "pets",
+      "publicPath": "/assets/pets/ashwing.png",
+      "label": "ashwing portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-astralynx",
+      "category": "pets",
+      "publicPath": "/assets/pets/astralynx.png",
+      "label": "astralynx portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-auralynx",
+      "category": "pets",
+      "publicPath": "/assets/pets/auralynx.png",
+      "label": "auralynx portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-basaltpup",
+      "category": "pets",
+      "publicPath": "/assets/pets/basaltpup.png",
+      "label": "basaltpup portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-bloomble",
+      "category": "pets",
+      "publicPath": "/assets/pets/bloomble.png",
+      "label": "bloomble portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-boltgear",
+      "category": "pets",
+      "publicPath": "/assets/pets/boltgear.png",
+      "label": "boltgear portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-brambleback",
+      "category": "pets",
+      "publicPath": "/assets/pets/brambleback.png",
+      "label": "brambleback portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-bramblefox",
+      "category": "pets",
+      "publicPath": "/assets/pets/bramblefox.png",
+      "label": "bramblefox portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-brinepaw",
+      "category": "pets",
+      "publicPath": "/assets/pets/brinepaw.png",
+      "label": "brinepaw portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-bubbloon",
+      "category": "pets",
+      "publicPath": "/assets/pets/bubbloon.png",
+      "label": "bubbloon portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-canyonbeetle",
+      "category": "pets",
+      "publicPath": "/assets/pets/canyonbeetle.png",
+      "label": "canyonbeetle portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-celestora",
+      "category": "pets",
+      "publicPath": "/assets/pets/celestora.png",
+      "label": "celestora portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-chronobeetle",
+      "category": "pets",
+      "publicPath": "/assets/pets/chronobeetle.png",
+      "label": "chronobeetle portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-cindercub",
+      "category": "pets",
+      "publicPath": "/assets/pets/cindercub.png",
+      "label": "cindercub portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-cinderquill",
+      "category": "pets",
+      "publicPath": "/assets/pets/cinderquill.png",
+      "label": "cinderquill portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-citadelmoth",
+      "category": "pets",
+      "publicPath": "/assets/pets/citadelmoth.png",
+      "label": "citadelmoth portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-cloudleaper",
+      "category": "pets",
+      "publicPath": "/assets/pets/cloudleaper.png",
+      "label": "cloudleaper portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-cogpup",
+      "category": "pets",
+      "publicPath": "/assets/pets/cogpup.png",
+      "label": "cogpup portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-commonspark",
+      "category": "pets",
+      "publicPath": "/assets/pets/commonspark.png",
+      "label": "commonspark portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-copperfin",
+      "category": "pets",
+      "publicPath": "/assets/pets/copperfin.png",
+      "label": "copperfin portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-coralurge",
+      "category": "pets",
+      "publicPath": "/assets/pets/coralurge.png",
+      "label": "coralurge portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-craterhorn",
+      "category": "pets",
+      "publicPath": "/assets/pets/craterhorn.png",
+      "label": "craterhorn portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-crystowl",
+      "category": "pets",
+      "publicPath": "/assets/pets/crystowl.png",
+      "label": "crystowl portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-dawnkit",
+      "category": "pets",
+      "publicPath": "/assets/pets/dawnkit.png",
+      "label": "dawnkit portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-dreamhare",
+      "category": "pets",
+      "publicPath": "/assets/pets/dreamhare.png",
+      "label": "dreamhare portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-duskling",
+      "category": "pets",
+      "publicPath": "/assets/pets/duskling.png",
+      "label": "duskling portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-echofig",
+      "category": "pets",
+      "publicPath": "/assets/pets/echofig.png",
+      "label": "echofig portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-elderfern",
+      "category": "pets",
+      "publicPath": "/assets/pets/elderfern.png",
+      "label": "elderfern portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-emberfox",
+      "category": "pets",
+      "publicPath": "/assets/pets/emberfox.png",
+      "label": "emberfox portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-embernewt",
+      "category": "pets",
+      "publicPath": "/assets/pets/embernewt.png",
+      "label": "embernewt portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-fernfox",
+      "category": "pets",
+      "publicPath": "/assets/pets/fernfox.png",
+      "label": "fernfox portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-fossilhound",
+      "category": "pets",
+      "publicPath": "/assets/pets/fossilhound.png",
+      "label": "fossilhound portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-frostbloom",
+      "category": "pets",
+      "publicPath": "/assets/pets/frostbloom.png",
+      "label": "frostbloom portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-frostfin",
+      "category": "pets",
+      "publicPath": "/assets/pets/frostfin.png",
+      "label": "frostfin portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-frostnip",
+      "category": "pets",
+      "publicPath": "/assets/pets/frostnip.png",
+      "label": "frostnip portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-frostuft",
+      "category": "pets",
+      "publicPath": "/assets/pets/frostuft.png",
+      "label": "frostuft portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-furnacebeetle",
+      "category": "pets",
+      "publicPath": "/assets/pets/furnacebeetle.png",
+      "label": "furnacebeetle portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-galekit",
+      "category": "pets",
+      "publicPath": "/assets/pets/galekit.png",
+      "label": "galekit portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-gearling",
+      "category": "pets",
+      "publicPath": "/assets/pets/gearling.png",
+      "label": "gearling portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-ghostbloom",
+      "category": "pets",
+      "publicPath": "/assets/pets/ghostbloom.png",
+      "label": "ghostbloom portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-glazehare",
+      "category": "pets",
+      "publicPath": "/assets/pets/glazehare.png",
+      "label": "glazehare portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-gleamhare",
+      "category": "pets",
+      "publicPath": "/assets/pets/gleamhare.png",
+      "label": "gleamhare portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-glimmermoth",
+      "category": "pets",
+      "publicPath": "/assets/pets/glimmermoth.png",
+      "label": "glimmermoth portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-glimmerp",
+      "category": "pets",
+      "publicPath": "/assets/pets/glimmerp.png",
+      "label": "glimmerp portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-gritling",
+      "category": "pets",
+      "publicPath": "/assets/pets/gritling.png",
+      "label": "gritling portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-groveowl",
+      "category": "pets",
+      "publicPath": "/assets/pets/groveowl.png",
+      "label": "groveowl portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-hearthstone",
+      "category": "pets",
+      "publicPath": "/assets/pets/hearthstone.png",
+      "label": "hearthstone portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-hollowmoth",
+      "category": "pets",
+      "publicPath": "/assets/pets/hollowmoth.png",
+      "label": "hollowmoth portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-hollowshade",
+      "category": "pets",
+      "publicPath": "/assets/pets/hollowshade.png",
+      "label": "hollowshade portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-iciclepup",
+      "category": "pets",
+      "publicPath": "/assets/pets/iciclepup.png",
+      "label": "iciclepup portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-ironbloom",
+      "category": "pets",
+      "publicPath": "/assets/pets/ironbloom.png",
+      "label": "ironbloom portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-kelpwisp",
+      "category": "pets",
+      "publicPath": "/assets/pets/kelpwisp.png",
+      "label": "kelpwisp portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-lanternjay",
+      "category": "pets",
+      "publicPath": "/assets/pets/lanternjay.png",
+      "label": "lanternjay portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-lavaling",
+      "category": "pets",
+      "publicPath": "/assets/pets/lavaling.png",
+      "label": "lavaling portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-lightspire",
+      "category": "pets",
+      "publicPath": "/assets/pets/lightspire.png",
+      "label": "lightspire portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-luminara",
+      "category": "pets",
+      "publicPath": "/assets/pets/luminara.png",
+      "label": "luminara portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-magmole",
+      "category": "pets",
+      "publicPath": "/assets/pets/magmole.png",
+      "label": "magmole portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-marshloom",
+      "category": "pets",
+      "publicPath": "/assets/pets/marshloom.png",
+      "label": "marshloom portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-mistwraith",
+      "category": "pets",
+      "publicPath": "/assets/pets/mistwraith.png",
+      "label": "mistwraith portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-moonray",
+      "category": "pets",
+      "publicPath": "/assets/pets/moonray.png",
+      "label": "moonray portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-mossdrake",
+      "category": "pets",
+      "publicPath": "/assets/pets/mossdrake.png",
+      "label": "mossdrake portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-mossprig",
+      "category": "pets",
+      "publicPath": "/assets/pets/mossprig.png",
+      "label": "mossprig portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-noxling",
+      "category": "pets",
+      "publicPath": "/assets/pets/noxling.png",
+      "label": "noxling portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-nullpaw",
+      "category": "pets",
+      "publicPath": "/assets/pets/nullpaw.png",
+      "label": "nullpaw portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-peakibex",
+      "category": "pets",
+      "publicPath": "/assets/pets/peakibex.png",
+      "label": "peakibex portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-pearlurk",
+      "category": "pets",
+      "publicPath": "/assets/pets/pearlurk.png",
+      "label": "pearlurk portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-pebblit",
+      "category": "pets",
+      "publicPath": "/assets/pets/pebblit.png",
+      "label": "pebblit portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-prismoth",
+      "category": "pets",
+      "publicPath": "/assets/pets/prismoth.png",
+      "label": "prismoth portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-pyrespore",
+      "category": "pets",
+      "publicPath": "/assets/pets/pyrespore.png",
+      "label": "pyrespore portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-quartzhorn",
+      "category": "pets",
+      "publicPath": "/assets/pets/quartzhorn.png",
+      "label": "quartzhorn portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-radiantkit",
+      "category": "pets",
+      "publicPath": "/assets/pets/radiantkit.png",
+      "label": "radiantkit portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-riftpup",
+      "category": "pets",
+      "publicPath": "/assets/pets/riftpup.png",
+      "label": "riftpup portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-riftslug",
+      "category": "pets",
+      "publicPath": "/assets/pets/riftslug.png",
+      "label": "riftslug portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-rimewing",
+      "category": "pets",
+      "publicPath": "/assets/pets/rimewing.png",
+      "label": "rimewing portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-rootling",
+      "category": "pets",
+      "publicPath": "/assets/pets/rootling.png",
+      "label": "rootling portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-rubblefin",
+      "category": "pets",
+      "publicPath": "/assets/pets/rubblefin.png",
+      "label": "rubblefin portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-saplingo",
+      "category": "pets",
+      "publicPath": "/assets/pets/saplingo.png",
+      "label": "saplingo portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-scrapfinch",
+      "category": "pets",
+      "publicPath": "/assets/pets/scrapfinch.png",
+      "label": "scrapfinch portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-scrapowl",
+      "category": "pets",
+      "publicPath": "/assets/pets/scrapowl.png",
+      "label": "scrapowl portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-shadowmire",
+      "category": "pets",
+      "publicPath": "/assets/pets/shadowmire.png",
+      "label": "shadowmire portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-shalehorn",
+      "category": "pets",
+      "publicPath": "/assets/pets/shalehorn.png",
+      "label": "shalehorn portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-slagpup",
+      "category": "pets",
+      "publicPath": "/assets/pets/slagpup.png",
+      "label": "slagpup portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-snowglyph",
+      "category": "pets",
+      "publicPath": "/assets/pets/snowglyph.png",
+      "label": "snowglyph portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-snowpuff",
+      "category": "pets",
+      "publicPath": "/assets/pets/snowpuff.png",
+      "label": "snowpuff portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-solfinch",
+      "category": "pets",
+      "publicPath": "/assets/pets/solfinch.png",
+      "label": "solfinch portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-soulmoth",
+      "category": "pets",
+      "publicPath": "/assets/pets/soulmoth.png",
+      "label": "soulmoth portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-sparkmoth",
+      "category": "pets",
+      "publicPath": "/assets/pets/sparkmoth.png",
+      "label": "sparkmoth portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-spirekite",
+      "category": "pets",
+      "publicPath": "/assets/pets/spirekite.png",
+      "label": "spirekite portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-sprayfin",
+      "category": "pets",
+      "publicPath": "/assets/pets/sprayfin.png",
+      "label": "sprayfin portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-starveil",
+      "category": "pets",
+      "publicPath": "/assets/pets/starveil.png",
+      "label": "starveil portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-staticat",
+      "category": "pets",
+      "publicPath": "/assets/pets/staticat.png",
+      "label": "staticat portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-stonegrub",
+      "category": "pets",
+      "publicPath": "/assets/pets/stonegrub.png",
+      "label": "stonegrub portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-stormmoth",
+      "category": "pets",
+      "publicPath": "/assets/pets/stormmoth.png",
+      "label": "stormmoth portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-sunmote",
+      "category": "pets",
+      "publicPath": "/assets/pets/sunmote.png",
+      "label": "sunmote portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-thornling",
+      "category": "pets",
+      "publicPath": "/assets/pets/thornling.png",
+      "label": "thornling portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-thunderpaw",
+      "category": "pets",
+      "publicPath": "/assets/pets/thunderpaw.png",
+      "label": "thunderpaw portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-tideotter",
+      "category": "pets",
+      "publicPath": "/assets/pets/tideotter.png",
+      "label": "tideotter portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-tidequill",
+      "category": "pets",
+      "publicPath": "/assets/pets/tidequill.png",
+      "label": "tidequill portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-tiderune",
+      "category": "pets",
+      "publicPath": "/assets/pets/tiderune.png",
+      "label": "tiderune portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-tidewisp",
+      "category": "pets",
+      "publicPath": "/assets/pets/tidewisp.png",
+      "label": "tidewisp portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-umbralisk",
+      "category": "pets",
+      "publicPath": "/assets/pets/umbralisk.png",
+      "label": "umbralisk portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-veilhare",
+      "category": "pets",
+      "publicPath": "/assets/pets/veilhare.png",
+      "label": "veilhare portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-vinepup",
+      "category": "pets",
+      "publicPath": "/assets/pets/vinepup.png",
+      "label": "vinepup portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-voidling",
+      "category": "pets",
+      "publicPath": "/assets/pets/voidling.png",
+      "label": "voidling portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-voltkit",
+      "category": "pets",
+      "publicPath": "/assets/pets/voltkit.png",
+      "label": "voltkit portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-windrift",
+      "category": "pets",
+      "publicPath": "/assets/pets/windrift.png",
+      "label": "windrift portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-wirefox",
+      "category": "pets",
+      "publicPath": "/assets/pets/wirefox.png",
+      "label": "wirefox portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-wispdeer",
+      "category": "pets",
+      "publicPath": "/assets/pets/wispdeer.png",
+      "label": "wispdeer portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-wisplet",
+      "category": "pets",
+      "publicPath": "/assets/pets/wisplet.png",
+      "label": "wisplet portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "pet-portrait-zephyroo",
+      "category": "pets",
+      "publicPath": "/assets/pets/zephyroo.png",
+      "label": "zephyroo portrait",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "egg-wild",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-wild.png",
+      "label": "wild egg",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Single ornate fantasy creature egg, wild affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-ember",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-ember.png",
+      "label": "ember egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, ember affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-tide",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-tide.png",
+      "label": "tide egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, tide affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-grove",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-grove.png",
+      "label": "grove egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, grove affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-storm",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-storm.png",
+      "label": "storm egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, storm affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-stone",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-stone.png",
+      "label": "stone egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, stone affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-frost",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-frost.png",
+      "label": "frost egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, frost affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-radiant",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-radiant.png",
+      "label": "radiant egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, radiant affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-void",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-void.png",
+      "label": "void egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, void affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-alloy",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-alloy.png",
+      "label": "alloy egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, alloy affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-spirit",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-spirit.png",
+      "label": "spirit egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, spirit affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-ancient",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-ancient.png",
+      "label": "ancient egg",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Single ornate fantasy creature egg, ancient affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-celestial",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-celestial.png",
+      "label": "celestial egg",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Single ornate fantasy creature egg, celestial affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "egg-event",
+      "category": "eggs",
+      "publicPath": "/assets/eggs/egg-event.png",
+      "label": "event egg",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Single ornate fantasy creature egg, event affinity theme, centered on transparent/dark void, no text."
+    },
+    {
+      "id": "affinity-ember",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-ember-icon.png",
+      "label": "ember affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-tide",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-tide-icon.png",
+      "label": "tide affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-grove",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-grove-icon.png",
+      "label": "grove affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-storm",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-storm-icon.png",
+      "label": "storm affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-stone",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-stone-icon.png",
+      "label": "stone affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-frost",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-frost-icon.png",
+      "label": "frost affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-radiant",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-radiant-icon.png",
+      "label": "radiant affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-void",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-void-icon.png",
+      "label": "void affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-alloy",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-alloy-icon.png",
+      "label": "alloy affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "affinity-spirit",
+      "category": "affinities",
+      "publicPath": "/assets/affinities/affinity-spirit-icon.png",
+      "label": "spirit affinity icon",
+      "status": "generated",
+      "priority": 4
+    },
+    {
+      "id": "item-wooden-paw-guard",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/wooden-paw-guard.png",
+      "label": "Wooden Paw Guard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-smooth-stone-claw",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/smooth-stone-claw.png",
+      "label": "Smooth Stone Claw",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-training-tail-ring",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/training-tail-ring.png",
+      "label": "Training Tail Ring",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-basic-focus-orb",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/basic-focus-orb.png",
+      "label": "Basic Focus Orb",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-cloth-battle-harness",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/cloth-battle-harness.png",
+      "label": "Cloth Battle Harness",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-grove-twig-wand",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/grove-twig-wand.png",
+      "label": "Grove Twig Wand",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-simple-horncap",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/simple-horncap.png",
+      "label": "Simple Horncap",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ember-talons",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/ember-talons.png",
+      "label": "Ember Talons",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tideglass-claws",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/tideglass-claws.png",
+      "label": "Tideglass Claws",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-mossvine-grips",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/mossvine-grips.png",
+      "label": "Mossvine Grips",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spark-tail-ring",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/spark-tail-ring.png",
+      "label": "Spark Tail Ring",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-crystal-tip",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/frost-crystal-tip.png",
+      "label": "Frost Crystal Tip",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-glow-orb",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/spirit-glow-orb.png",
+      "label": "Spirit Glow Orb",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-training-blade",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/alloy-training-blade.png",
+      "label": "Alloy Training Blade",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ashfang-talons",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/ashfang-talons.png",
+      "label": "Ashfang Talons",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moonwater-pearl",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/moonwater-pearl.png",
+      "label": "Moonwater Pearl",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-thornroot-crusher",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/thornroot-crusher.png",
+      "label": "Thornroot Crusher",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-stormcoil-harness",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/stormcoil-harness.png",
+      "label": "Stormcoil Harness",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-obsidian-tailblade",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/obsidian-tailblade.png",
+      "label": "Obsidian Tailblade",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-sun-disk",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/radiant-sun-disk.png",
+      "label": "Radiant Sun Disk",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-voidshade-claws",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/voidshade-claws.png",
+      "label": "Voidshade Claws",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-cinderstorm-gauntlets",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/cinderstorm-gauntlets.png",
+      "label": "Cinderstorm Gauntlets",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tidal-crescent-blade",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/tidal-crescent-blade.png",
+      "label": "Tidal Crescent Blade",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancient-grove-antlers",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/ancient-grove-antlers.png",
+      "label": "Ancient Grove Antlers",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-thunder-rift-coil",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/thunder-rift-coil.png",
+      "label": "Thunder Rift Coil",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-glacial-moon-crest",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/glacial-moon-crest.png",
+      "label": "Glacial Moon Crest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spiritfire-lantern",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/spiritfire-lantern.png",
+      "label": "Spiritfire Lantern",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-pulse-cannon",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/alloy-pulse-cannon.png",
+      "label": "Alloy Pulse Cannon",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-heart-of-the-volcano",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/heart-of-the-volcano.png",
+      "label": "Heart of the Volcano",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-crown-of-the-deep-tide",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/crown-of-the-deep-tide.png",
+      "label": "Crown of the Deep Tide",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-elderwood-battle-crest",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/elderwood-battle-crest.png",
+      "label": "Elderwood Battle Crest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-skybreaker-storm-harness",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/skybreaker-storm-harness.png",
+      "label": "Skybreaker Storm Harness",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-dawn-halo",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/radiant-dawn-halo.png",
+      "label": "Radiant Dawn Halo",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-void-eclipse-blade",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/void-eclipse-blade.png",
+      "label": "Void Eclipse Blade",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-riftmaker-prism",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/riftmaker-prism.png",
+      "label": "Riftmaker Prism",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-worldroot-relic",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/worldroot-relic.png",
+      "label": "Worldroot Relic",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-astral-tempest-core",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/astral-tempest-core.png",
+      "label": "Astral Tempest Core",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-starforged-halo",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/starforged-halo.png",
+      "label": "Starforged Halo",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-celestial-riftblade",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/celestial-riftblade.png",
+      "label": "Celestial Riftblade",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-crown-of-ten-affinities",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/crown-of-ten-affinities.png",
+      "label": "Crown of Ten Affinities",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ember-spark-claws",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/ember-spark-claws.png",
+      "label": "Ember Spark Claws",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tide-fin-blade",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/tide-fin-blade.png",
+      "label": "Tide Fin Blade",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-pebble-horn-cap",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/pebble-horn-cap.png",
+      "label": "Pebble Horn Cap",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-breeze-focus-seed",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/breeze-focus-seed.png",
+      "label": "Breeze Focus Seed",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-reed-training-harness",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/reed-training-harness.png",
+      "label": "Reed Training Harness",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frostbite-paw-spikes",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/frostbite-paw-spikes.png",
+      "label": "Frostbite Paw Spikes",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-kelp-lash-coil",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/kelp-lash-coil.png",
+      "label": "Kelp Lash Coil",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-thunder-tine-crest",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/thunder-tine-crest.png",
+      "label": "Thunder Tine Crest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-lantern-orb",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/spirit-lantern-orb.png",
+      "label": "Spirit Lantern Orb",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-dune-sand-harness",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/dune-sand-harness.png",
+      "label": "Dune Sand Harness",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-magma-rake-claws",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/magma-rake-claws.png",
+      "label": "Magma Rake Claws",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-glacier-tail-scythe",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/glacier-tail-scythe.png",
+      "label": "Glacier Tail Scythe",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-horn-lance",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/radiant-horn-lance.png",
+      "label": "Radiant Horn Lance",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-void-whisper-orb",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/void-whisper-orb.png",
+      "label": "Void Whisper Orb",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-brace-harness",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/alloy-brace-harness.png",
+      "label": "Alloy Brace Harness",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-stormfang-gauntlets",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/stormfang-gauntlets.png",
+      "label": "Stormfang Gauntlets",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-worldvine-tail-flail",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/worldvine-tail-flail.png",
+      "label": "Worldvine Tail Flail",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-eclipse-horn-crown",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/eclipse-horn-crown.png",
+      "label": "Eclipse Horn Crown",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-aurora-focus-prism",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/aurora-focus-prism.png",
+      "label": "Aurora Focus Prism",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-rift-singer-harness",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/rift-singer-harness.png",
+      "label": "Rift Singer Harness",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-starlit-paw-crescents",
+      "category": "items",
+      "publicPath": "/assets/items/weapons/icons/starlit-paw-crescents.png",
+      "label": "Starlit Paw Crescents",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-cloth-pet-vest",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/cloth-pet-vest.png",
+      "label": "Cloth Pet Vest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-wooden-barkguard",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/wooden-barkguard.png",
+      "label": "Wooden Barkguard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-simple-headband",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/simple-headband.png",
+      "label": "Simple Headband",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-training-paw-wraps",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/training-paw-wraps.png",
+      "label": "Training Paw Wraps",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-mossguard-vest",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/mossguard-vest.png",
+      "label": "Mossguard Vest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-emberhide-wrap",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/emberhide-wrap.png",
+      "label": "Emberhide Wrap",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tide-scale-guard",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/tide-scale-guard.png",
+      "label": "Tide Scale Guard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-stoneplate-collar",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/stoneplate-collar.png",
+      "label": "Stoneplate Collar",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-stormweave-armor",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/stormweave-armor.png",
+      "label": "Stormweave Armor",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frostshell-vest",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/frostshell-vest.png",
+      "label": "Frostshell Vest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spiritveil-cloak",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/spiritveil-cloak.png",
+      "label": "Spiritveil Cloak",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-chestplate",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/alloy-chestplate.png",
+      "label": "Alloy Chestplate",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-volcanic-guardian-plate",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/volcanic-guardian-plate.png",
+      "label": "Volcanic Guardian Plate",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moonwater-battle-robe",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/moonwater-battle-robe.png",
+      "label": "Moonwater Battle Robe",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-elder-grove-armor",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/elder-grove-armor.png",
+      "label": "Elder Grove Armor",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-voidwalker-mantle",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/voidwalker-mantle.png",
+      "label": "Voidwalker Mantle",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-sunforged-aegis",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/sunforged-aegis.png",
+      "label": "Sunforged Aegis",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-deep-rift-plate",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/deep-rift-plate.png",
+      "label": "Deep Rift Plate",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-armor-of-the-rift-guardian",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/armor-of-the-rift-guardian.png",
+      "label": "Armor of the Rift Guardian",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-constellation-armor",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/constellation-armor.png",
+      "label": "Constellation Armor",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-linen-ear-hood",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/linen-ear-hood.png",
+      "label": "Linen Ear Hood",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-reed-chest-wrap",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/reed-chest-wrap.png",
+      "label": "Reed Chest Wrap",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-mossy-back-cape",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/mossy-back-cape.png",
+      "label": "Mossy Back Cape",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-pebble-paw-boots",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/pebble-paw-boots.png",
+      "label": "Pebble Paw Boots",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-soft-tail-sleeve",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/soft-tail-sleeve.png",
+      "label": "Soft Tail Sleeve",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-breeze-wing-bands",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/breeze-wing-bands.png",
+      "label": "Breeze Wing Bands",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tidefoam-collar",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/tidefoam-collar.png",
+      "label": "Tidefoam Collar",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ember-scale-vest",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/ember-scale-vest.png",
+      "label": "Ember Scale Vest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-pelt-cloak",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/frost-pelt-cloak.png",
+      "label": "Frost Pelt Cloak",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-storm-grip-wraps",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/storm-grip-wraps.png",
+      "label": "Storm Grip Wraps",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-grove-tail-guard",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/grove-tail-guard.png",
+      "label": "Grove Tail Guard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-wing-veils",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/radiant-wing-veils.png",
+      "label": "Radiant Wing Veils",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-rib-cuirass",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/alloy-rib-cuirass.png",
+      "label": "Alloy Rib Cuirass",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-voidmist-hood",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/voidmist-hood.png",
+      "label": "Voidmist Hood",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spiritweave-sash",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/spiritweave-sash.png",
+      "label": "Spiritweave Sash",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-glacial-barrier-shell",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/glacial-barrier-shell.png",
+      "label": "Glacial Barrier Shell",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-constellation-paw-slippers",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/constellation-paw-slippers.png",
+      "label": "Constellation Paw Slippers",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-dawnstar-plume-mantle",
+      "category": "items",
+      "publicPath": "/assets/items/armor/icons/dawnstar-plume-mantle.png",
+      "label": "Dawnstar Plume Mantle",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-small-healing-salve",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/small-healing-salve.png",
+      "label": "Small Healing Salve",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-riftberry-tonic",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/riftberry-tonic.png",
+      "label": "Riftberry Tonic",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moonwater-flask",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/moonwater-flask.png",
+      "label": "Moonwater Flask",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-grove-restoration-brew",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/grove-restoration-brew.png",
+      "label": "Grove Restoration Brew",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-emberheart-elixir",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/emberheart-elixir.png",
+      "label": "Emberheart Elixir",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-renewal-potion",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/spirit-renewal-potion.png",
+      "label": "Spirit Renewal Potion",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-recovery-flask",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/radiant-recovery-flask.png",
+      "label": "Radiant Recovery Flask",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-celestial-renewal",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/celestial-renewal.png",
+      "label": "Celestial Renewal",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-sparkfruit-juice",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/sparkfruit-juice.png",
+      "label": "Sparkfruit Juice",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-focus-tonic",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/focus-tonic.png",
+      "label": "Focus Tonic",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-storm-energy-flask",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/storm-energy-flask.png",
+      "label": "Storm Energy Flask",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-charge",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/spirit-charge.png",
+      "label": "Spirit Charge",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-astral-energy-elixir",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/astral-energy-elixir.png",
+      "label": "Astral Energy Elixir",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-burn-relief-salve",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/burn-relief-salve.png",
+      "label": "Burn Relief Salve",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-thaw-brew",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/frost-thaw-brew.png",
+      "label": "Frost Thaw Brew",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-rootbreak-tonic",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/rootbreak-tonic.png",
+      "label": "Rootbreak Tonic",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-static-cleanser",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/static-cleanser.png",
+      "label": "Static Cleanser",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-void-purification-flask",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/void-purification-flask.png",
+      "label": "Void Purification Flask",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-calm-tea",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/spirit-calm-tea.png",
+      "label": "Spirit Calm Tea",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-cleanse-potion",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/radiant-cleanse-potion.png",
+      "label": "Radiant Cleanse Potion",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-repair-oil",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/alloy-repair-oil.png",
+      "label": "Alloy Repair Oil",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-basic-pet-meal",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/basic-pet-meal.png",
+      "label": "Basic Pet Meal",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-premium-pet-meal",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/premium-pet-meal.png",
+      "label": "Premium Pet Meal",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-fresh-water-flask",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/fresh-water-flask.png",
+      "label": "Fresh Water Flask",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-cleaning-kit",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/cleaning-kit.png",
+      "label": "Cleaning Kit",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-rift-toy",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/rift-toy.png",
+      "label": "Rift Toy",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-comfortable-nest",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/comfortable-nest.png",
+      "label": "Comfortable Nest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-medicine-pack",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/medicine-pack.png",
+      "label": "Medicine Pack",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-happiness-treat",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/happiness-treat.png",
+      "label": "Happiness Treat",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-bonding-charm",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/bonding-charm.png",
+      "label": "Bonding Charm",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-recovery-blanket",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/recovery-blanket.png",
+      "label": "Recovery Blanket",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-dormancy-revival-bloom",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/dormancy-revival-bloom.png",
+      "label": "Dormancy Revival Bloom",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spark-healing-draught",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/spark-healing-draught.png",
+      "label": "Spark Healing Draught",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tide-mend-vial",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/tide-mend-vial.png",
+      "label": "Tide Mend Vial",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-storm-surge-sip",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/storm-surge-sip.png",
+      "label": "Storm Surge Sip",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-focus-brew",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/frost-focus-brew.png",
+      "label": "Frost Focus Brew",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ember-soothe-balm",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/ember-soothe-balm.png",
+      "label": "Ember Soothe Balm",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-stone-steady-draught",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/stone-steady-draught.png",
+      "label": "Stone Steady Draught",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-crystal-berry-snack",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/crystal-berry-snack.png",
+      "label": "Crystal Berry Snack",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-glowmoss-chew",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/glowmoss-chew.png",
+      "label": "Glowmoss Chew",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ripple-ball-toy",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/ripple-ball-toy.png",
+      "label": "Ripple Ball Toy",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-whisper-bell-toy",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/whisper-bell-toy.png",
+      "label": "Whisper Bell Toy",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-nest-fluff-pillow",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/nest-fluff-pillow.png",
+      "label": "Nest Fluff Pillow",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-grooming-comb-set",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/grooming-comb-set.png",
+      "label": "Grooming Comb Set",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-bond-ribbon",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/bond-ribbon.png",
+      "label": "Bond Ribbon",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-aurora-treat",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/aurora-treat.png",
+      "label": "Aurora Treat",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moonpetal-bath-salts",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/moonpetal-bath-salts.png",
+      "label": "Moonpetal Bath Salts",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-vitality-petal-tea",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/vitality-petal-tea.png",
+      "label": "Vitality Petal Tea",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-rift-salve-kit",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/rift-salve-kit.png",
+      "label": "Rift Salve Kit",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-starlit-lullaby-charm",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/starlit-lullaby-charm.png",
+      "label": "Starlit Lullaby Charm",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-crystal",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/spirit-crystal.png",
+      "label": "Spirit Crystal",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-phoenix-feather",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/phoenix-feather.png",
+      "label": "Phoenix Feather",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancient-heart",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/ancient-heart.png",
+      "label": "Ancient Heart",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-revival-herb",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/revival-herb.png",
+      "label": "Revival Herb",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-healing-stone",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/healing-stone.png",
+      "label": "Healing Stone",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-soul-bloom",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/soul-bloom.png",
+      "label": "Soul Bloom",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moon-tear",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/moon-tear.png",
+      "label": "Moon Tear",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-heart-flame",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/heart-flame.png",
+      "label": "Heart Flame",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-sacred-feather",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/sacred-feather.png",
+      "label": "Sacred Feather",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancestor-stone",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/ancestor-stone.png",
+      "label": "Ancestor Stone",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancient-bell",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/ancient-bell.png",
+      "label": "Ancient Bell",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-revival-water",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/revival-water.png",
+      "label": "Revival Water",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-healing-rune",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/healing-rune.png",
+      "label": "Healing Rune",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-lantern-charm",
+      "category": "items",
+      "publicPath": "/assets/items/potions/icons/spirit-lantern-charm.png",
+      "label": "Spirit Lantern Charm",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-wood-fiber",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/wood-fiber.png",
+      "label": "Wood Fiber",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-smooth-stone",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/smooth-stone.png",
+      "label": "Smooth Stone",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-basic-cloth",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/basic-cloth.png",
+      "label": "Basic Cloth",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-clear-water",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/clear-water.png",
+      "label": "Clear Water",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-wild-herbs",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/wild-herbs.png",
+      "label": "Wild Herbs",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ember-dust",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/ember-dust.png",
+      "label": "Ember Dust",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tideglass",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/tideglass.png",
+      "label": "Tideglass",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-grove-fiber",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/grove-fiber.png",
+      "label": "Grove Fiber",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-storm-wire",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/storm-wire.png",
+      "label": "Storm Wire",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-powder",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/frost-powder.png",
+      "label": "Frost Powder",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-obsidian-shard",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/obsidian-shard.png",
+      "label": "Obsidian Shard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moonwater-pearl-mat",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/moonwater-pearl-mat.png",
+      "label": "Moonwater Pearl",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-thread",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/spirit-thread.png",
+      "label": "Spirit Thread",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-plate",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/alloy-plate.png",
+      "label": "Alloy Plate",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-dust",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/radiant-dust.png",
+      "label": "Radiant Dust",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-void-fragment",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/void-fragment.png",
+      "label": "Void Fragment",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancient-root",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/ancient-root.png",
+      "label": "Ancient Root",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-storm-core",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/storm-core.png",
+      "label": "Storm Core",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-glacial-heart",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/glacial-heart.png",
+      "label": "Glacial Heart",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-flame-mat",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/spirit-flame-mat.png",
+      "label": "Spirit Flame",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-volcano-heart",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/volcano-heart.png",
+      "label": "Volcano Heart",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ocean-crown-pearl",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/ocean-crown-pearl.png",
+      "label": "Ocean Crown Pearl",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-worldroot-core",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/worldroot-core.png",
+      "label": "Worldroot Core",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-sky-rift-crystal",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/sky-rift-crystal.png",
+      "label": "Sky Rift Crystal",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-dawnstar-fragment",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/dawnstar-fragment.png",
+      "label": "Dawnstar Fragment",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-riftmaker-shard",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/riftmaker-shard.png",
+      "label": "Riftmaker Shard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-astral-thread",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/astral-thread.png",
+      "label": "Astral Thread",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-eternal-alloy-core",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/eternal-alloy-core.png",
+      "label": "Eternal Alloy Core",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-celestial-star-fragment",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/celestial-star-fragment.png",
+      "label": "Celestial Star Fragment",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-harmony-crystal",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/harmony-crystal.png",
+      "label": "Harmony Crystal",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-constellation-core",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/constellation-core.png",
+      "label": "Constellation Core",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-reed-strand",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/reed-strand.png",
+      "label": "Reed Strand",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-dune-glass",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/dune-glass.png",
+      "label": "Dune Glass",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spark-flint",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/spark-flint.png",
+      "label": "Spark Flint",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-kelp-silk",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/kelp-silk.png",
+      "label": "Kelp Silk",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-needle",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/frost-needle.png",
+      "label": "Frost Needle",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-void-silk",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/void-silk.png",
+      "label": "Void Silk",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-dawn-pollen",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/dawn-pollen.png",
+      "label": "Dawn Pollen",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-rift-resin",
+      "category": "items",
+      "publicPath": "/assets/items/materials/icons/rift-resin.png",
+      "label": "Rift Resin",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ember-bolt",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/ember-bolt.png",
+      "label": "Ember Bolt",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tide-spiral",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/tide-spiral.png",
+      "label": "Tide Spiral",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-thorn-burst",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/thorn-burst.png",
+      "label": "Thorn Burst",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-lightning-arc",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/lightning-arc.png",
+      "label": "Lightning Arc",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-stone-crash",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/stone-crash.png",
+      "label": "Stone Crash",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-shard",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/frost-shard.png",
+      "label": "Frost Shard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-beam",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/radiant-beam.png",
+      "label": "Radiant Beam",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-void-pulse",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/void-pulse.png",
+      "label": "Void Pulse",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-wave",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/alloy-wave.png",
+      "label": "Alloy Wave",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-flame",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/spirit-flame.png",
+      "label": "Spirit Flame",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ember-shield",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/ember-shield.png",
+      "label": "Ember Shield",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-tide-barrier",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/tide-barrier.png",
+      "label": "Tide Barrier",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-bark-wall",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/bark-wall.png",
+      "label": "Bark Wall",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-storm-veil",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/storm-veil.png",
+      "label": "Storm Veil",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-stone-guard",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/stone-guard.png",
+      "label": "Stone Guard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-shell",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/frost-shell.png",
+      "label": "Frost Shell",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-radiant-ward",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/radiant-ward.png",
+      "label": "Radiant Ward",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-void-cloak",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/void-cloak.png",
+      "label": "Void Cloak",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-alloy-barrier",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/alloy-barrier.png",
+      "label": "Alloy Barrier",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-spirit-protection",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/spirit-protection.png",
+      "label": "Spirit Protection",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-grove-mend",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/grove-mend.png",
+      "label": "Grove Mend",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moonwater-healing",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/moonwater-healing.png",
+      "label": "Moonwater Healing",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-root-bind",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/root-bind.png",
+      "label": "Root Bind",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-frost-slow",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/frost-slow.png",
+      "label": "Frost Slow",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-battle-focus",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/battle-focus.png",
+      "label": "Battle Focus",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-speed-wind",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/speed-wind.png",
+      "label": "Speed Wind",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-volcanic-heartburst",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/volcanic-heartburst.png",
+      "label": "Volcanic Heartburst",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-moon-tide-collapse",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/moon-tide-collapse.png",
+      "label": "Moon-Tide Collapse",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-worldroot-awakening",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/worldroot-awakening.png",
+      "label": "Worldroot Awakening",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-sky-rift-tempest",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/sky-rift-tempest.png",
+      "label": "Sky Rift Tempest",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancient-mountain-guard",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/ancient-mountain-guard.png",
+      "label": "Ancient Mountain Guard",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-eternal-winter-ring",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/eternal-winter-ring.png",
+      "label": "Eternal Winter Ring",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-dawnstar-ascension",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/dawnstar-ascension.png",
+      "label": "Dawnstar Ascension",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-eclipse-singularity",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/eclipse-singularity.png",
+      "label": "Eclipse Singularity",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-titan-core-overdrive",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/titan-core-overdrive.png",
+      "label": "Titan Core Overdrive",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "item-ancestral-lantern-parade",
+      "category": "items",
+      "publicPath": "/assets/items/abilities/icons/ancestral-lantern-parade.png",
+      "label": "Ancestral Lantern Parade",
+      "status": "generated",
+      "priority": 2
+    },
+    {
+      "id": "npc-elara-venn",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/elara-venn/portrait.png",
+      "label": "Elara Venn portrait",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Character portrait of Elara Venn, role Founder historian and guardian of early Riftling records, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-rowan-vale",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/rowan-vale/portrait.png",
+      "label": "Keeper Rowan Vale portrait",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Character portrait of Keeper Rowan Vale, role Orientation guide for new Riftkeepers, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-mira-shellbright",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/mira-shellbright/portrait.png",
+      "label": "Mira Shellbright portrait",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Character portrait of Mira Shellbright, role Egg incubation and early Riftling care, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-bram-ironroot",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/bram-ironroot/portrait.png",
+      "label": "Bram Ironroot portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Bram Ironroot, role Blacksmith and beginner tool crafter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-tessa-windmere",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/tessa-windmere/portrait.png",
+      "label": "Tessa Windmere portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Tessa Windmere, role Merchant and marketplace tutor, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-archivist-solen",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/archivist-solen/portrait.png",
+      "label": "Archivist Solen portrait",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Character portrait of Archivist Solen, role Riftling Codex archivist, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-captain-orren",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/captain-orren/portrait.png",
+      "label": "Captain Orren portrait",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Character portrait of Captain Orren, role Guard captain and combat trainer, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-nyla-brook",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/nyla-brook/portrait.png",
+      "label": "Nyla Brook portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Nyla Brook, role Healer and Recovery Center attendant, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-pip-gearwhistle",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/pip-gearwhistle/portrait.png",
+      "label": "Pip Gearwhistle portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Pip Gearwhistle, role Gateway machinery inventor and repair tech, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-rook-emberfall",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/rook-emberfall/portrait.png",
+      "label": "Rook Emberfall portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Rook Emberfall, role Training battles and beginner tournaments, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-kael-ashwalker",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/ember-crater/kael-ashwalker/portrait.png",
+      "label": "Kael Ashwalker portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Kael Ashwalker, role Volcano scout and crater guide, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-forgekeeper-vessa",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/ember-crater/forgekeeper-vessa/portrait.png",
+      "label": "Forgekeeper Vessa portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Forgekeeper Vessa, role Ember-region weapon specialist, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-cinder-sage-malrec",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/ember-crater/cinder-sage-malrec/portrait.png",
+      "label": "Cinder Sage Malrec portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Cinder Sage Malrec, role Scholar of volcanic Riftlings, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-warden-pyra",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/ember-crater/warden-pyra/portrait.png",
+      "label": "Warden Pyra portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Warden Pyra, role Protects settlements from lava creatures, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-luma-tidecrest",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/moonwater-coast/luma-tidecrest/portrait.png",
+      "label": "Captain Luma Tidecrest portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Captain Luma Tidecrest, role Harbor captain and sea-route guide, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-finn-coralhand",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/moonwater-coast/finn-coralhand/portrait.png",
+      "label": "Finn Coralhand portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Finn Coralhand, role Fisher and gathering trainer, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-oracle-selene",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/moonwater-coast/oracle-selene/portrait.png",
+      "label": "Oracle Selene portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Oracle Selene, role Studies ocean memories and Tide Riftlings, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-marina-drift",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/moonwater-coast/marina-drift/portrait.png",
+      "label": "Marina Drift portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Marina Drift, role Boat-builder and coastal merchant, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-warden-sylvi",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/elderwood-forest/warden-sylvi/portrait.png",
+      "label": "Warden Sylvi portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Warden Sylvi, role Forest guardian, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-mosskeeper-elden",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/elderwood-forest/mosskeeper-elden/portrait.png",
+      "label": "Mosskeeper Elden portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Mosskeeper Elden, role Herbalist and naturalist, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-fenn-quickbranch",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/elderwood-forest/fenn-quickbranch/portrait.png",
+      "label": "Fenn Quickbranch portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Fenn Quickbranch, role Scout and hidden-path guide, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-grandmother-willowmere",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/elderwood-forest/grandmother-willowmere/portrait.png",
+      "label": "Grandmother Willowmere portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Grandmother Willowmere, role Lore keeper and spiritual elder, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-aeron-cloudstep",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stormspire-peaks/aeron-cloudstep/portrait.png",
+      "label": "Aeron Cloudstep portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Aeron Cloudstep, role Mountain pathfinder, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-engineer-volt",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stormspire-peaks/engineer-volt/portrait.png",
+      "label": "Engineer Volt portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Engineer Volt, role Storm-energy researcher, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-skywarden-ilya",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stormspire-peaks/skywarden-ilya/portrait.png",
+      "label": "Skywarden Ilya portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Skywarden Ilya, role Protects air routes, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-hermit-thane",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stormspire-peaks/hermit-thane/portrait.png",
+      "label": "Hermit Thane portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Hermit Thane, role Ancient weather scholar, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-doran-flint",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stoneheart-canyon/doran-flint/portrait.png",
+      "label": "Doran Flint portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Doran Flint, role Miner and cave guide, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-petra-stoneveil",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stoneheart-canyon/petra-stoneveil/portrait.png",
+      "label": "Petra Stoneveil portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Petra Stoneveil, role Relic archaeologist, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-marshal-korr",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stoneheart-canyon/marshal-korr/portrait.png",
+      "label": "Marshal Korr portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Marshal Korr, role Canyon security leader, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-gemwright-opal",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stoneheart-canyon/gemwright-opal/portrait.png",
+      "label": "Gemwright Opal portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Gemwright Opal, role Jeweler and upgrade specialist, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-freya-snowmark",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/frostveil-basin/freya-snowmark/portrait.png",
+      "label": "Freya Snowmark portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Freya Snowmark, role Cold-region survival guide, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-jori-icebloom",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/frostveil-basin/jori-icebloom/portrait.png",
+      "label": "Jori Icebloom portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Jori Icebloom, role Alchemist and frost-herb specialist, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-hunter-varek",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/frostveil-basin/hunter-varek/portrait.png",
+      "label": "Hunter Varek portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Hunter Varek, role Tracks dangerous frozen creatures, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-aurora-linn",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/frostveil-basin/aurora-linn/portrait.png",
+      "label": "Aurora Linn portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Aurora Linn, role Studies northern lights and Celestial energy, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-chancellor-aurex",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/radiant-citadel/chancellor-aurex/portrait.png",
+      "label": "Chancellor Aurex portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Chancellor Aurex, role Political and historical leader, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-scholar-lyra",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/radiant-citadel/scholar-lyra/portrait.png",
+      "label": "Scholar Lyra portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Scholar Lyra, role Gateway Heart researcher, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-sentinel-cassian",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/radiant-citadel/sentinel-cassian/portrait.png",
+      "label": "Sentinel Cassian portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Sentinel Cassian, role Citadel defender, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-curator-verin",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/radiant-citadel/curator-verin/portrait.png",
+      "label": "Curator Verin portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Curator Verin, role Manages recovered artifacts, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-shadecaller-neris",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/void-hollow/shadecaller-neris/portrait.png",
+      "label": "Shadecaller Neris portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Shadecaller Neris, role Guide through unstable Void areas, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-watcher-omen",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/void-hollow/watcher-omen/portrait.png",
+      "label": "Watcher Omen portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Watcher Omen, role Monitors corruption, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-veya-dusk",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/void-hollow/veya-dusk/portrait.png",
+      "label": "Veya Dusk portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Veya Dusk, role Void researcher, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-keeper-null",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/void-hollow/keeper-null/portrait.png",
+      "label": "Keeper Null portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Keeper Null, role Mysterious custodian of sealed ruins, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-tinker-pax",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/alloy-ruins/tinker-pax/portrait.png",
+      "label": "Tinker Pax portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Tinker Pax, role Ancient-machine expert, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-unit-ari-7",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/alloy-ruins/unit-ari-7/portrait.png",
+      "label": "Unit ARI-7 portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Unit ARI-7, role Original Riftwilds mechanical NPC, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-salvager-knox",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/alloy-ruins/salvager-knox/portrait.png",
+      "label": "Salvager Knox portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Salvager Knox, role Resource collector and merchant, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-professor-ferrum",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/alloy-ruins/professor-ferrum/portrait.png",
+      "label": "Professor Ferrum portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Professor Ferrum, role Researches technology preserved by Alloy Riftlings, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-medium-amara",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/spirit-marsh/medium-amara/portrait.png",
+      "label": "Medium Amara portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Medium Amara, role Communicates with memories, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-ferryman-grey",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/spirit-marsh/ferryman-grey/portrait.png",
+      "label": "Ferryman Grey portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Ferryman Grey, role Transports players through the marsh, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-lantern-keeper-sio",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/spirit-marsh/lantern-keeper-sio/portrait.png",
+      "label": "Lantern Keeper Sio portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Lantern Keeper Sio, role Protects travelers from lost spirits, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-echo-child-nimi",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/spirit-marsh/echo-child-nimi/portrait.png",
+      "label": "Echo Child Nimi portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Echo Child Nimi, role Mysterious story presence tied to forgotten memories, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-astronomer-caelis",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/celestial-rift/astronomer-caelis/portrait.png",
+      "label": "Astronomer Caelis portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Astronomer Caelis, role Studies cosmic Rift activity, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-guardian-seraphine",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/celestial-rift/guardian-seraphine/portrait.png",
+      "label": "Guardian Seraphine portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Guardian Seraphine, role Protects the Celestial Gateway, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-starforger-orion",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/celestial-rift/starforger-orion/portrait.png",
+      "label": "Starforger Orion portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of Starforger Orion, role Crafts advanced Celestial equipment, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-nameless-witness",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/celestial-rift/nameless-witness/portrait.png",
+      "label": "The Nameless Witness portrait",
+      "status": "generated",
+      "priority": 3,
+      "promptHint": "Character portrait of The Nameless Witness, role Story NPC whose identity is revealed later, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-plaza-vendor-cal",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/plaza-vendor-cal/portrait.png",
+      "label": "Cal Reed portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Cal Reed, role Fruit cart vendor, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-plaza-musician-reo",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/plaza-musician-reo/portrait.png",
+      "label": "Reo Lark portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Reo Lark, role Street musician, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-plaza-child-mim",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/plaza-child-mim/portrait.png",
+      "label": "Mim Vale portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Mim Vale, role Curious child, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-farm-hand-jot",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/farm-hand-jot/portrait.png",
+      "label": "Jot Pell portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Jot Pell, role Farm hand, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-dock-sweeper-ana",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/dock-sweeper-ana/portrait.png",
+      "label": "Ana Quill portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Ana Quill, role Dock sweeper, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-scribe-runner-kel",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/scribe-runner-kel/portrait.png",
+      "label": "Kel Ink portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Kel Ink, role Message runner, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-cook-pot-uma",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/cook-pot-uma/portrait.png",
+      "label": "Uma Broth portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Uma Broth, role Plaza cook, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-gardener-sip",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/gardener-sip/portrait.png",
+      "label": "Sip Moss portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Sip Moss, role Gardener, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-guard-east-ryn",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/guard-east-ryn/portrait.png",
+      "label": "Guard Ryn portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Ryn, role Commons Guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-guard-west-dao",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/guard-west-dao/portrait.png",
+      "label": "Guard Dao portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Dao, role Commons Guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-guard-portal-hex",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/guard-portal-hex/portrait.png",
+      "label": "Guard Hex portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Hex, role Commons Guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-riftling-plaza-emberkit",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/riftling-plaza-emberkit/portrait.png",
+      "label": "Emberkit (ambient) portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Emberkit (ambient), role Ambient companion Riftling, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-riftling-hatchery-glowpup",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/riftling-hatchery-glowpup/portrait.png",
+      "label": "Glowpup (ambient) portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Glowpup (ambient), role Ambient companion Riftling, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-riftling-market-pouchling",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/riftwild-commons/riftling-market-pouchling/portrait.png",
+      "label": "Pouchling (ambient) portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Pouchling (ambient), role Ambient companion Riftling, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-ember-porter-ash",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/ember-crater/ember-porter-ash/portrait.png",
+      "label": "Ash Porter portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Ash Porter, role Supply porter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-ember-cook-cind",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/ember-crater/ember-cook-cind/portrait.png",
+      "label": "Cind Cook portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Cind Cook, role Camp cook, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-ember-miner-bas",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/ember-crater/ember-miner-bas/portrait.png",
+      "label": "Bas Coal portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Bas Coal, role Crystal hauler, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-ember-guard-lox",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/ember-crater/ember-guard-lox/portrait.png",
+      "label": "Guard Lox portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Lox, role Camp guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-coast-netmender-pli",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/moonwater-coast/coast-netmender-pli/portrait.png",
+      "label": "Pli Net portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Pli Net, role Net mender, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-coast-child-shell",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/moonwater-coast/coast-child-shell/portrait.png",
+      "label": "Shell portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Shell, role Beach child, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-coast-innkeep-dor",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/moonwater-coast/coast-innkeep-dor/portrait.png",
+      "label": "Dor Tide portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Dor Tide, role Inn helper, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-coast-guard-brine",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/moonwater-coast/coast-guard-brine/portrait.png",
+      "label": "Guard Brine portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Brine, role Harbor guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-elder-forager-nim",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/elderwood-forest/elder-forager-nim/portrait.png",
+      "label": "Nim Leaf portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Nim Leaf, role Forager, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-elder-carver-tor",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/elderwood-forest/elder-carver-tor/portrait.png",
+      "label": "Tor Bark portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Tor Bark, role Woodcarver, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-elder-singer-luma",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/elderwood-forest/elder-singer-luma/portrait.png",
+      "label": "Luma Soft portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Luma Soft, role Trail singer, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-elder-guard-briar",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/elderwood-forest/elder-guard-briar/portrait.png",
+      "label": "Guard Briar portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Briar, role Grove guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-storm-porter-zee",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stormspire-peaks/storm-porter-zee/portrait.png",
+      "label": "Zee Pack portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Zee Pack, role Ridge porter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-storm-cook-pip2",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stormspire-peaks/storm-cook-pip2/portrait.png",
+      "label": "Pip Steam portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Pip Steam, role Camp cook, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-storm-climber-aro",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stormspire-peaks/storm-climber-aro/portrait.png",
+      "label": "Aro Grip portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Aro Grip, role Climber, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-storm-guard-nimbus",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stormspire-peaks/storm-guard-nimbus/portrait.png",
+      "label": "Guard Nimbus portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Nimbus, role Sky guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-stone-hauler-mog",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stoneheart-canyon/stone-hauler-mog/portrait.png",
+      "label": "Mog Dust portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Mog Dust, role Ore hauler, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-stone-cook-peb",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stoneheart-canyon/stone-cook-peb/portrait.png",
+      "label": "Peb Stew portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Peb Stew, role Camp cook, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-stone-survey-lin",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stoneheart-canyon/stone-survey-lin/portrait.png",
+      "label": "Lin Measure portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Lin Measure, role Surveyor, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-stone-guard-slab",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/stoneheart-canyon/stone-guard-slab/portrait.png",
+      "label": "Guard Slab portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Slab, role Checkpoint guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-frost-porter-yul",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/frostveil-basin/frost-porter-yul/portrait.png",
+      "label": "Yul Pack portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Yul Pack, role Supply porter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-frost-knitter-esa",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/frostveil-basin/frost-knitter-esa/portrait.png",
+      "label": "Esa Wool portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Esa Wool, role Knitter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-frost-scout-rin",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/frostveil-basin/frost-scout-rin/portrait.png",
+      "label": "Rin Trail portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Rin Trail, role Trail scout, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-frost-guard-ice",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/frostveil-basin/frost-guard-ice/portrait.png",
+      "label": "Guard Ice portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Ice, role Camp guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-citadel-scribe-omi",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/radiant-citadel/citadel-scribe-omi/portrait.png",
+      "label": "Omi Page portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Omi Page, role Scribe, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-citadel-vendor-lux",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/radiant-citadel/citadel-vendor-lux/portrait.png",
+      "label": "Lux Ware portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Lux Ware, role Vendor, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-citadel-acolyte-ven",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/radiant-citadel/citadel-acolyte-ven/portrait.png",
+      "label": "Ven Light portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Ven Light, role Acolyte, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-citadel-guard-halo",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/radiant-citadel/citadel-guard-halo/portrait.png",
+      "label": "Guard Halo portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Halo, role Gate guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-void-porter-dim",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/void-hollow/void-porter-dim/portrait.png",
+      "label": "Dim Carry portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Dim Carry, role Supply porter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-void-scribe-umbra",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/void-hollow/void-scribe-umbra/portrait.png",
+      "label": "Umbra Note portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Umbra Note, role Field scribe, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-void-scout-gloom",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/void-hollow/void-scout-gloom/portrait.png",
+      "label": "Gloom Step portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Gloom Step, role Edge scout, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-void-guard-veil",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/void-hollow/void-guard-veil/portrait.png",
+      "label": "Guard Veil portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Veil, role Threshold guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-alloy-porter-cog",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/alloy-ruins/alloy-porter-cog/portrait.png",
+      "label": "Cog Haul portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Cog Haul, role Parts porter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-alloy-welder-spark",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/alloy-ruins/alloy-welder-spark/portrait.png",
+      "label": "Spark Weld portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Spark Weld, role Welder, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-alloy-runner-bit",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/alloy-ruins/alloy-runner-bit/portrait.png",
+      "label": "Bit Run portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Bit Run, role Message runner, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-alloy-guard-bolt",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/alloy-ruins/alloy-guard-bolt/portrait.png",
+      "label": "Guard Bolt portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Bolt, role Yard guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-marsh-porter-reed",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/spirit-marsh/marsh-porter-reed/portrait.png",
+      "label": "Reed Pack portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Reed Pack, role Pier porter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-marsh-singer-fog",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/spirit-marsh/marsh-singer-fog/portrait.png",
+      "label": "Fog Song portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Fog Song, role Lantern singer, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-marsh-herbal-mist",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/spirit-marsh/marsh-herbal-mist/portrait.png",
+      "label": "Mist Leaf portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Mist Leaf, role Herbal gatherer, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-marsh-guard-wick",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/spirit-marsh/marsh-guard-wick/portrait.png",
+      "label": "Guard Wick portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Wick, role Pier guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-celestial-acolyte-nova",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/celestial-rift/celestial-acolyte-nova/portrait.png",
+      "label": "Nova Soft portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Nova Soft, role Observatory aide, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-celestial-scribe-astro",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/celestial-rift/celestial-scribe-astro/portrait.png",
+      "label": "Astro Quill portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Astro Quill, role Sky scribe, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-celestial-porter-orbit",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/celestial-rift/celestial-porter-orbit/portrait.png",
+      "label": "Orbit Pack portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Orbit Pack, role Supply porter, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "npc-celestial-guard-lumen",
+      "category": "npcs",
+      "publicPath": "/assets/npcs/celestial-rift/celestial-guard-lumen/portrait.png",
+      "label": "Guard Lumen portrait",
+      "status": "generated",
+      "priority": 4,
+      "promptHint": "Character portrait of Guard Lumen, role Gateway guard, Riftwilds fantasy NPC, bust/shoulders, no text."
+    },
+    {
+      "id": "enemy-rift-slime",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/rift-slime/portrait.png",
+      "label": "Rift Slime",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Rift Slime. No text."
+    },
+    {
+      "id": "enemy-spirit-spark",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/spirit-spark/portrait.png",
+      "label": "Lost Spirit Spark",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Lost Spirit Spark. No text."
+    },
+    {
+      "id": "enemy-vine-sprout",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/vine-sprout/portrait.png",
+      "label": "Wild Vine Sprout",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Wild Vine Sprout. No text."
+    },
+    {
+      "id": "enemy-cinder-crawler",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/cinder-crawler/portrait.png",
+      "label": "Cinder Crawler",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Cinder Crawler. No text."
+    },
+    {
+      "id": "enemy-magma-beetle",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/magma-beetle/portrait.png",
+      "label": "Magma Beetle",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Magma Beetle. No text."
+    },
+    {
+      "id": "enemy-ash-hound",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/ash-hound/portrait.png",
+      "label": "Ash Hound",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Ash Hound. No text."
+    },
+    {
+      "id": "enemy-ember-wisp",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/ember-wisp/portrait.png",
+      "label": "Ember Wisp",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Ember Wisp. No text."
+    },
+    {
+      "id": "boss-ashmaw-colossus",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/ashmaw-colossus/key-art.png",
+      "label": "Ashmaw Colossus",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Ashmaw Colossus. No text."
+    },
+    {
+      "id": "enemy-tide-crab",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/tide-crab/portrait.png",
+      "label": "Tide Crab",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Tide Crab. No text."
+    },
+    {
+      "id": "enemy-reef-stalker",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/reef-stalker/portrait.png",
+      "label": "Reef Stalker",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Reef Stalker. No text."
+    },
+    {
+      "id": "boss-moonwater-leviathan",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/moonwater-leviathan/key-art.png",
+      "label": "Moonwater Leviathan",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Moonwater Leviathan. No text."
+    },
+    {
+      "id": "enemy-grove-sprite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/grove-sprite/portrait.png",
+      "label": "Grove Sprite",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Grove Sprite. No text."
+    },
+    {
+      "id": "enemy-bark-guardian",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/bark-guardian/portrait.png",
+      "label": "Bark Guardian",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Bark Guardian. No text."
+    },
+    {
+      "id": "boss-elderwood-heartwood",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/elderwood-heartwood/key-art.png",
+      "label": "Elderwood Heartwood",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Elderwood Heartwood. No text."
+    },
+    {
+      "id": "enemy-storm-raptor",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/storm-raptor/portrait.png",
+      "label": "Storm Raptor",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Storm Raptor. No text."
+    },
+    {
+      "id": "enemy-spark-wisp",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/spark-wisp/portrait.png",
+      "label": "Spark Wisp",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Spark Wisp. No text."
+    },
+    {
+      "id": "enemy-gale-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/gale-mite/portrait.png",
+      "label": "Gale Mite",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Gale Mite. No text."
+    },
+    {
+      "id": "boss-stormspire-titan",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/stormspire-titan/key-art.png",
+      "label": "Stormspire Titan",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Stormspire Titan. No text."
+    },
+    {
+      "id": "enemy-rock-crawler",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/rock-crawler/portrait.png",
+      "label": "Rock Crawler",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Rock Crawler. No text."
+    },
+    {
+      "id": "enemy-dust-scorpion",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/dust-scorpion/portrait.png",
+      "label": "Dust Scorpion",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Dust Scorpion. No text."
+    },
+    {
+      "id": "enemy-slate-bat",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/slate-bat/portrait.png",
+      "label": "Slate Bat",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Slate Bat. No text."
+    },
+    {
+      "id": "boss-stoneheart-behemoth",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/stoneheart-behemoth/key-art.png",
+      "label": "Stoneheart Behemoth",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Stoneheart Behemoth. No text."
+    },
+    {
+      "id": "enemy-frost-wolf",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/frost-wolf/portrait.png",
+      "label": "Frost Wolf",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Frost Wolf. No text."
+    },
+    {
+      "id": "enemy-ice-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/ice-mite/portrait.png",
+      "label": "Ice Mite",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Ice Mite. No text."
+    },
+    {
+      "id": "enemy-snow-lurker",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/snow-lurker/portrait.png",
+      "label": "Snow Lurker",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Snow Lurker. No text."
+    },
+    {
+      "id": "boss-frostveil-warden",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/frostveil-warden/key-art.png",
+      "label": "Frostveil Warden",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Frostveil Warden. No text."
+    },
+    {
+      "id": "enemy-radiant-construct",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/radiant-construct/portrait.png",
+      "label": "Radiant Construct",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Radiant Construct. No text."
+    },
+    {
+      "id": "enemy-light-mote",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/light-mote/portrait.png",
+      "label": "Light Mote",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Light Mote. No text."
+    },
+    {
+      "id": "enemy-gilded-ward",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/gilded-ward/portrait.png",
+      "label": "Gilded Ward",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Gilded Ward. No text."
+    },
+    {
+      "id": "boss-radiant-sentinel",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/radiant-sentinel/key-art.png",
+      "label": "Radiant Sentinel",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Radiant Sentinel. No text."
+    },
+    {
+      "id": "enemy-rift-stalker",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/rift-stalker/portrait.png",
+      "label": "Rift Stalker",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Rift Stalker. No text."
+    },
+    {
+      "id": "enemy-void-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/void-mite/portrait.png",
+      "label": "Void Mite",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Void Mite. No text."
+    },
+    {
+      "id": "enemy-echo-shade",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/echo-shade/portrait.png",
+      "label": "Echo Shade",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Echo Shade. No text."
+    },
+    {
+      "id": "boss-void-riftborn",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/void-riftborn/key-art.png",
+      "label": "Void Riftborn",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Void Riftborn. No text."
+    },
+    {
+      "id": "enemy-security-drone",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/security-drone/portrait.png",
+      "label": "Security Drone",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Security Drone. No text."
+    },
+    {
+      "id": "enemy-scrap-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/scrap-mite/portrait.png",
+      "label": "Scrap Mite",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Scrap Mite. No text."
+    },
+    {
+      "id": "enemy-arc-spider",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/arc-spider/portrait.png",
+      "label": "Arc Spider",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Arc Spider. No text."
+    },
+    {
+      "id": "boss-alloy-warframe",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/alloy-warframe/key-art.png",
+      "label": "Alloy Warframe",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Alloy Warframe. No text."
+    },
+    {
+      "id": "enemy-marsh-spirit",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/marsh-spirit/portrait.png",
+      "label": "Marsh Spirit",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Marsh Spirit. No text."
+    },
+    {
+      "id": "enemy-bog-wisp",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/bog-wisp/portrait.png",
+      "label": "Bog Wisp",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Bog Wisp. No text."
+    },
+    {
+      "id": "boss-spirit-lantern-king",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/spirit-lantern-king/key-art.png",
+      "label": "Spirit Lantern King",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Spirit Lantern King. No text."
+    },
+    {
+      "id": "enemy-starborn-guardian",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/starborn-guardian/portrait.png",
+      "label": "Starborn Guardian",
+      "status": "generated",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Starborn Guardian. No text."
+    },
+    {
+      "id": "enemy-comet-mite",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/comet-mite/portrait.png",
+      "label": "Comet Mite",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Comet Mite. No text."
+    },
+    {
+      "id": "enemy-astral-wisp",
+      "category": "enemies",
+      "publicPath": "/assets/enemies/astral-wisp/portrait.png",
+      "label": "Astral Wisp",
+      "status": "pending",
+      "priority": 5,
+      "promptHint": "Enemy portrait of Astral Wisp. No text."
+    },
+    {
+      "id": "boss-celestial-rift-entity",
+      "category": "bosses",
+      "publicPath": "/assets/bosses/celestial-rift-entity/key-art.png",
+      "label": "Celestial Rift Entity",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Boss key art of Celestial Rift Entity. No text."
+    },
+    {
+      "id": "building-commons-hatchery",
+      "category": "buildings",
+      "publicPath": "/assets/buildings/commons/hatchery.png",
+      "label": "Hatchery exterior",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Exterior of Hatchery exterior in Riftwild Commons plaza, fantasy village architecture, no text."
+    },
+    {
+      "id": "building-commons-marketplace",
+      "category": "buildings",
+      "publicPath": "/assets/buildings/commons/marketplace.png",
+      "label": "Rift Exchange exterior",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Exterior of Rift Exchange exterior in Riftwild Commons plaza, fantasy village architecture, no text."
+    },
+    {
+      "id": "building-commons-arena",
+      "category": "buildings",
+      "publicPath": "/assets/buildings/commons/arena.png",
+      "label": "Training Arena exterior",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Exterior of Training Arena exterior in Riftwild Commons plaza, fantasy village architecture, no text."
+    },
+    {
+      "id": "building-commons-guild-hall",
+      "category": "buildings",
+      "publicPath": "/assets/buildings/commons/guild-hall.png",
+      "label": "Guild Hall exterior",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Exterior of Guild Hall exterior in Riftwild Commons plaza, fantasy village architecture, no text."
+    },
+    {
+      "id": "building-commons-portal-circle",
+      "category": "buildings",
+      "publicPath": "/assets/buildings/commons/portal-circle.png",
+      "label": "Portal Circle",
+      "status": "generated",
+      "priority": 2,
+      "promptHint": "Exterior of Portal Circle in Riftwild Commons plaza, fantasy village architecture, no text."
+    },
+    {
+      "id": "ui-map-marker",
+      "category": "ui",
+      "publicPath": "/assets/ui/map/marker.png",
+      "label": "Map marker",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Simple game UI icon: Map marker, clean silhouette, centered, transparent background feel, no text."
+    },
+    {
+      "id": "ui-map-waypoint",
+      "category": "ui",
+      "publicPath": "/assets/ui/map/waypoint.png",
+      "label": "Waypoint",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Simple game UI icon: Waypoint, clean silhouette, centered, transparent background feel, no text."
+    },
+    {
+      "id": "ui-map-portal",
+      "category": "ui",
+      "publicPath": "/assets/ui/map/portal.png",
+      "label": "Portal icon",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Simple game UI icon: Portal icon, clean silhouette, centered, transparent background feel, no text."
+    },
+    {
+      "id": "ui-map-quest-available",
+      "category": "ui",
+      "publicPath": "/assets/ui/map/quest-available.png",
+      "label": "Quest available",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Simple game UI icon: Quest available, clean silhouette, centered, transparent background feel, no text."
+    },
+    {
+      "id": "ui-map-quest-active",
+      "category": "ui",
+      "publicPath": "/assets/ui/map/quest-active.png",
+      "label": "Quest active",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Simple game UI icon: Quest active, clean silhouette, centered, transparent background feel, no text."
+    },
+    {
+      "id": "ui-map-quest-complete",
+      "category": "ui",
+      "publicPath": "/assets/ui/map/quest-complete.png",
+      "label": "Quest complete",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Simple game UI icon: Quest complete, clean silhouette, centered, transparent background feel, no text."
+    },
+    {
+      "id": "ui-map-danger",
+      "category": "ui",
+      "publicPath": "/assets/ui/map/danger.png",
+      "label": "Danger marker",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Simple game UI icon: Danger marker, clean silhouette, centered, transparent background feel, no text."
+    },
+    {
+      "id": "ui-map-safe-zone",
+      "category": "ui",
+      "publicPath": "/assets/ui/map/safe-zone.png",
+      "label": "Safe zone",
+      "status": "generated",
+      "priority": 1,
+      "promptHint": "Simple game UI icon: Safe zone, clean silhouette, centered, transparent background feel, no text."
+    },
+    {
+      "id": "anim-battle-cindercub",
+      "category": "animations",
+      "publicPath": "/assets/creatures/sheets/creature-cindercub-battle-sheet.png",
+      "label": "cindercub battle sheet",
+      "status": "generated",
+      "priority": 9,
+      "notes": "Full animation sheets deferred — masters first"
+    },
+    {
+      "id": "anim-battle-mossprig",
+      "category": "animations",
+      "publicPath": "/assets/creatures/sheets/creature-mossprig-battle-sheet.png",
+      "label": "mossprig battle sheet",
+      "status": "generated",
+      "priority": 9,
+      "notes": "Full animation sheets deferred — masters first"
+    },
+    {
+      "id": "anim-battle-bubbloon",
+      "category": "animations",
+      "publicPath": "/assets/creatures/sheets/creature-bubbloon-battle-sheet.png",
+      "label": "bubbloon battle sheet",
+      "status": "generated",
+      "priority": 9,
+      "notes": "Full animation sheets deferred — masters first"
+    },
+    {
+      "id": "anim-battle-voltkit",
+      "category": "animations",
+      "publicPath": "/assets/creatures/sheets/creature-voltkit-battle-sheet.png",
+      "label": "voltkit battle sheet",
+      "status": "generated",
+      "priority": 9,
+      "notes": "Full animation sheets deferred — masters first"
+    },
+    {
+      "id": "anim-battle-pebblit",
+      "category": "animations",
+      "publicPath": "/assets/creatures/sheets/creature-pebblit-battle-sheet.png",
+      "label": "pebblit battle sheet",
+      "status": "generated",
+      "priority": 9,
+      "notes": "Full animation sheets deferred — masters first"
+    },
+    {
+      "id": "anim-battle-wisplet",
+      "category": "animations",
+      "publicPath": "/assets/creatures/sheets/creature-wisplet-battle-sheet.png",
+      "label": "wisplet battle sheet",
+      "status": "generated",
+      "priority": 9,
+      "notes": "Full animation sheets deferred — masters first"
+    },
+    {
+      "id": "anim-battle-frostuft",
+      "category": "animations",
+      "publicPath": "/assets/creatures/sheets/creature-frostuft-battle-sheet.png",
+      "label": "frostuft battle sheet",
+      "status": "generated",
+      "priority": 9,
+      "notes": "Full animation sheets deferred — masters first"
+    },
+    {
+      "id": "anim-battle-alloyfin",
+      "category": "animations",
+      "publicPath": "/assets/creatures/sheets/creature-alloyfin-battle-sheet.png",
+      "label": "alloyfin battle sheet",
+      "status": "generated",
+      "priority": 9,
+      "notes": "Full animation sheets deferred — masters first"
+    }
+  ]
+}

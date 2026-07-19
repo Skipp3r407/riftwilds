@@ -154,6 +154,76 @@ export type TcgSoundRef = {
   ambient?: string;
 };
 
+/** Competitive / board role — orthogonal to card type. */
+export const TCG_ROLES = [
+  "tank",
+  "bruiser",
+  "assassin",
+  "support",
+  "healer",
+  "controller",
+  "summoner",
+  "swarm",
+  "defender",
+  "energy_generator",
+  "disruptor",
+  "finisher",
+  "utility",
+  /** @deprecated legacy aliases — canonicalize via roles.ts */
+  "striker",
+  "skirmisher",
+  "wall",
+  "ramp",
+] as const;
+export type TcgRole = (typeof TCG_ROLES)[number];
+
+/** How a gameplay card enters a binder (never crypto-gated for competitive). */
+export const TCG_UNLOCK_METHODS = [
+  "starter",
+  "pack",
+  "quest",
+  "craft",
+  "season_reward",
+  "event",
+  "codex",
+  "hatch_companion",
+  "npc_gift",
+  "placeholder",
+] as const;
+export type TcgUnlockMethod = (typeof TCG_UNLOCK_METHODS)[number];
+
+/** Soft currencies for crafting — NEVER SOL / crypto. */
+export type TcgCraftCost = {
+  /** Soft Gold (Credits / Gold ledger alias in UI). */
+  gold: number;
+  /** Rift Shards from packs / duels / dusting. */
+  riftShards: number;
+  /** Ancient Fragments for mythic / legendary lines. */
+  ancientFragments: number;
+  /** Duplicate copies consumed (same card id). */
+  duplicateCopies: number;
+};
+
+export type TcgVoiceLines = {
+  play?: string;
+  attack?: string;
+  death?: string;
+  ultimate?: string;
+  idle?: string;
+};
+
+export type TcgBalanceMetrics = {
+  /** Designer / auto score 0–100 (higher = stronger). */
+  powerScore: number;
+  /** Win-rate proxy target band midpoint (0–1). */
+  targetWinRate: number;
+  /** Play-rate watch flag. */
+  watchlist: boolean;
+  /** Last balance pass id (e.g. ROTR-B3). */
+  patchTag?: string;
+  notes?: string;
+};
+
 export type TcgCard = {
   id: string;
   setId: string;
@@ -164,18 +234,37 @@ export type TcgCard = {
   energyCost: number;
   attack?: number | null;
   health?: number | null;
+  /** Optional AAA combat axis — derived when absent. */
+  defense?: number | null;
+  /** Optional AAA tempo axis — derived when absent. */
+  speed?: number | null;
+  /** Board / deck role — derived when absent. */
+  role?: TcgRole | null;
+  /** Creature family id (`family-{slug}`) when bonded to a line. */
+  familyId?: string | null;
+  evolutionStage?: string | null;
   keywords: string[];
   abilities: TcgAbility[];
   passive?: string | null;
+  /** Structured ability hooks (optional; abilities[] remains canonical). */
+  activeAbilityId?: string | null;
+  ultimateAbilityId?: string | null;
+  strengths?: string[];
+  weaknesses?: string[];
+  factionId?: string | null;
   localization: TcgLocalization;
   art: TcgArtMeta;
   animation: TcgAnimationRef;
   sound: TcgSoundRef;
   particles?: string[];
   voiceDirection?: string;
+  voiceLines?: TcgVoiceLines;
   upgradePath?: string[];
+  /** Legacy scalar craft cost (Gold). Prefer `craftCosts`. */
   craftCost: number;
+  craftCosts?: TcgCraftCost;
   sellValue: number;
+  unlockMethod?: TcgUnlockMethod;
   collectionTags: string[];
   expansionId: string;
   relatedNpcs: string[];
@@ -186,7 +275,16 @@ export type TcgCard = {
   regionId?: string;
   tokenOf?: string;
   isToken?: boolean;
+  /** True when auto-generated for pool scale tests (replaceable). */
+  isPlaceholder?: boolean;
+  /** Competitive constructed eligibility (false = lore/prop only). */
+  competitiveEligible?: boolean;
   balanceNotes?: string;
+  balance?: TcgBalanceMetrics;
+  /** Base gameplay card id when this row is a cosmetic variant shell. */
+  baseCardId?: string | null;
+  /** Cosmetic finish — never changes competitive stats. */
+  finish?: TcgCardFinish | null;
 };
 
 export type TcgKeyword = {
@@ -216,6 +314,123 @@ export type TcgHero = {
   portraitPromptId: string;
   relatedRegion?: string;
   relatedNpc?: string;
+};
+
+/** Playable battle faction (affinity-aligned). Complements narrative factions. */
+export type TcgFaction = {
+  id: string;
+  name: string;
+  shortName: string;
+  /** Arena / engine affinity name string (e.g. EMBER). */
+  affinity: string;
+  primaryElement: TcgElement;
+  secondaryElements: TcgElement[];
+  storyFactionHook: string;
+  lore: string;
+  playstyle: string;
+  commanderHeroIds: string[];
+  defaultStarterDeckId: string;
+  bannerAccent: string;
+  regionHints: string[];
+};
+
+/** Curated teaching / showcase list (ids only). */
+export type TcgStarterSet = {
+  id: string;
+  name: string;
+  version: number;
+  purpose: string;
+  deckSize: number;
+  recommendedCommanderId: string;
+  factionMix: string[];
+  cardIds: string[];
+  notes: string[];
+};
+
+/** Bond-line stage along a species Card Family (original Riftwilds terms). */
+export const TCG_EVOLUTION_STAGES = [
+  "shellseed",
+  "softling",
+  "companion",
+  "keeper",
+  "riftmarked",
+  "awaken",
+  "ascendant",
+] as const;
+export type TcgEvolutionStageId = (typeof TCG_EVOLUTION_STAGES)[number];
+
+/** Cosmetic finishes only — never competitive power. */
+export const TCG_CARD_FINISHES = [
+  "standard",
+  "foil",
+  "gold",
+  "crystal",
+  "animated",
+] as const;
+export type TcgCardFinish = (typeof TCG_CARD_FINISHES)[number];
+
+export type TcgEvolutionStage = {
+  stageId: TcgEvolutionStageId | string;
+  label: string;
+  order: number;
+  status: "released" | "planned";
+  cardId: string | null;
+  displayName: string;
+  rarityHint: string;
+  animationHook: string;
+  loreUnlock: string;
+  flavorText: string;
+  /** Branch ids available from this stage (usually awaken). */
+  branchIds: string[];
+};
+
+export type TcgEvolutionBranch = {
+  id: string;
+  name: string;
+  fromStageId: string;
+  description: string;
+  status: "released" | "planned";
+  tipCardIds: string[];
+  /** If true, branch is cosmetic-only (no PvP power). */
+  cosmeticOnly: boolean;
+};
+
+export type TcgFamilyLoreChapter = {
+  id: string;
+  title: string;
+  unlockStageId: string;
+  body: string;
+};
+
+export type TcgCardFamily = {
+  id: string;
+  speciesSlug: string;
+  name: string;
+  title: string;
+  factionId: string;
+  affinity: string;
+  identity: string;
+  strengths: string[];
+  weaknesses: string[];
+  signatureMechanic: string;
+  portraitArtPath: string;
+  stages: TcgEvolutionStage[];
+  branches: TcgEvolutionBranch[];
+  finishesSupported: TcgCardFinish[];
+  completionReward: {
+    id: string;
+    label: string;
+    kind: "cosmetic" | "credits" | "title";
+    notes: string;
+  };
+  loreChapters: TcgFamilyLoreChapter[];
+};
+
+export type TcgCardFamilyBundle = {
+  version: number;
+  stageLabels: { id: string; label: string; order: number }[];
+  finishes: { id: TcgCardFinish | string; label: string; cosmetic: boolean }[];
+  families: TcgCardFamily[];
 };
 
 export type TcgDeck = {

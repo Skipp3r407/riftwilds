@@ -29,23 +29,22 @@ import { generatePetBiography } from "@/lib/pets/backstory-generator";
 import type { PetBiography } from "@/lib/pets/lore-types";
 import { assertOwnership } from "@/lib/security/authorization";
 import type { Rarity } from "@prisma/client";
+import type { EggTypeKey } from "@/game/eggs/egg-types";
+import { getEggTypeDefinition } from "@/game/eggs/egg-types";
 
-export type EggTypeKey =
-  | "COMMON_RIFT"
-  | "EMBER"
-  | "TIDE"
-  | "GROVE"
-  | "STORM"
-  | "STONE"
-  | "FROST"
-  | "RADIANT"
-  | "VOID"
-  | "ALLOY"
-  | "SPIRIT"
-  | "CELESTIAL"
-  | "SEASONAL"
+export type { EggTypeKey } from "@/game/eggs/egg-types";
+
+export type HatcheryEggCreationSource =
+  | "STARTER_CLAIM"
+  | "BREEDING"
   | "EVENT"
-  | "FOUNDER";
+  | "SHOP"
+  | "QUEST"
+  | "ACHIEVEMENT"
+  | "LOGIN"
+  | "GUILD"
+  | "BATTLE_PASS"
+  | "EXPLORATION";
 
 export type HatcheryEgg = {
   publicId: string;
@@ -61,7 +60,7 @@ export type HatcheryEgg = {
   cosmeticSeed: string;
   generation: number;
   createdAt: string;
-  creationSource: "STARTER_CLAIM" | "BREEDING" | "EVENT" | "SHOP";
+  creationSource: HatcheryEggCreationSource;
 };
 
 export type HatcheryPet = {
@@ -237,11 +236,15 @@ export function getFreeStarterPoolStatus(): FreeStarterPoolStatus {
   };
 }
 
-/** Offer state for hatchery UI — free claim vs premium Credits buy. */
+/**
+ * Offer state for hatchery UI — free claim vs premium Credits buy.
+ * Every new keeper can claim one account-bound starter egg (F2P hard rule).
+ * Launch-wave pool stats remain informational; they do not block the guaranteed starter.
+ */
 export function getHatcheryOfferStatus(ownerKey: string): HatcheryOfferStatus {
   const pool = getFreeStarterPoolStatus();
   const alreadyClaimedFree = ownerHasStarterClaim(ownerKey);
-  const canClaimFree = !alreadyClaimedFree && !pool.exhausted;
+  const canClaimFree = !alreadyClaimedFree;
   return {
     ...pool,
     canClaimFree,
@@ -255,16 +258,18 @@ export function getHatcheryOfferStatus(ownerKey: string): HatcheryOfferStatus {
 function createIncubatingEgg(
   ownerKey: string,
   creationSource: HatcheryEgg["creationSource"],
+  eggType: EggTypeKey = "COMMON_RIFT",
 ): HatcheryEgg {
   const hatchMs = 30_000; // 30s demo incubation
   const started = new Date();
   const ends = new Date(started.getTime() + hatchMs);
   const publicId = `egg_${randomUUID().replace(/-/g, "").slice(0, 12)}`;
+  const def = getEggTypeDefinition(eggType);
   const egg: HatcheryEgg = {
     publicId,
     ownerKey,
-    eggType: "COMMON_RIFT",
-    rarityPoolHint: "Published hatchery odds",
+    eggType,
+    rarityPoolHint: def.disclosedRarityRange.join(" · "),
     hatchStatus: "INCUBATING",
     incubationStartedAt: started.toISOString(),
     incubationEndsAt: ends.toISOString(),
@@ -293,15 +298,28 @@ export function claimStarterEgg(ownerKey: string): HatcheryEgg {
     claimsByOwner.set(ownerKey, 0);
   }
 
-  const pool = getFreeStarterPoolStatus();
-  if (pool.exhausted) {
-    throw new Error("FREE_POOL_EXHAUSTED");
-  }
-
-  const egg = createIncubatingEgg(ownerKey, "STARTER_CLAIM");
+  // Guaranteed F2P starter — never blocked by launch-wave pool exhaustion.
+  const egg = createIncubatingEgg(ownerKey, "STARTER_CLAIM", "COMMON_RIFT");
   claimsByOwner.set(ownerKey, (claimsByOwner.get(ownerKey) ?? 0) + 1);
   hatcheryMaps().freeStarterReleased += 1;
   return egg;
+}
+
+/**
+ * Grant an egg from gameplay earn paths (quests, login, events, etc.).
+ * Soft currency / progression only — never wallet/SOL/$RIFT gated.
+ */
+export function grantGameplayEgg(
+  ownerKey: string,
+  opts: {
+    creationSource: Exclude<HatcheryEggCreationSource, "STARTER_CLAIM" | "SHOP">;
+    eggType?: EggTypeKey;
+  },
+): HatcheryEgg {
+  if (!isFeatureEnabled("EGG_SYSTEM_ENABLED")) {
+    throw new Error("EGG_SYSTEM_DISABLED");
+  }
+  return createIncubatingEgg(ownerKey, opts.creationSource, opts.eggType ?? "COMMON_RIFT");
 }
 
 export type PremiumEggPurchaseResult =
@@ -475,11 +493,11 @@ export function hatchEgg(
   const eggOriginSource =
     egg.creationSource === "BREEDING"
       ? "BREEDING"
-      : egg.creationSource === "EVENT"
-        ? "EVENT"
-        : egg.creationSource === "SHOP"
-          ? "SHOP"
-          : "STARTER_CLAIM";
+      : egg.creationSource === "SHOP"
+        ? "SHOP"
+        : egg.creationSource === "STARTER_CLAIM"
+          ? "STARTER_CLAIM"
+          : "EVENT";
 
   let biography: PetBiography | null = null;
   if (isFeatureEnabled("PET_LORE_ENABLED")) {

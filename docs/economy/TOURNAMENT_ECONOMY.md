@@ -4,6 +4,7 @@
 
 - **Free Rift Open** config (`FREE_TOURNAMENT_CONFIG`) — no entry fee
 - Credits/Gold Training Cup via `src/lib/economy/tournament.ts`
+- UI: `/arena/tournaments` — free cup visually available; SOL cup labeled disabled
 
 ## SOL entry
 

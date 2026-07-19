@@ -199,6 +199,7 @@ export function EmptyState({
   className,
   imageSrc,
   imageAlt,
+  imageSize = "default",
 }: {
   title: string;
   description?: string;
@@ -207,27 +208,47 @@ export function EmptyState({
   /** Optional illustrated empty-state art under /assets/ui/empty-states/ */
   imageSrc?: string;
   imageAlt?: string;
+  /** `hero` enlarges art with a soft glow for premium empty panels */
+  imageSize?: "default" | "hero";
 }) {
+  const hero = imageSize === "hero";
+
   return (
-    <div className={cn("empty-state", className)}>
+    <div className={cn("empty-state", hero && "empty-state--hero", className)}>
       {imageSrc ? (
-        // eslint-disable-next-line @next/next/no-img-element -- small decorative empty-state art
-        <img
-          src={imageSrc}
-          alt={imageAlt ?? ""}
-          width={160}
-          height={160}
-          className="mb-3 h-28 w-28 object-cover opacity-90"
-        />
+        <div
+          className={cn(
+            "relative z-[1] mb-3",
+            hero && "empty-state__hero-frame",
+          )}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element -- decorative empty-state art */}
+          <img
+            src={imageSrc}
+            alt={imageAlt ?? ""}
+            width={hero ? 288 : 160}
+            height={hero ? 288 : 160}
+            className={cn(
+              "relative z-[1] object-cover",
+              hero
+                ? "h-44 w-44 rounded-2xl opacity-100 shadow-[0_0_48px_rgba(255,184,77,0.35)] sm:h-52 sm:w-52"
+                : "h-28 w-28 opacity-90",
+            )}
+          />
+        </div>
       ) : (
         <div
           className="mb-3 h-1 w-16 rounded-full bg-gradient-to-r from-transparent via-[var(--cyan)] to-transparent opacity-70"
           aria-hidden
         />
       )}
-      <p className="font-display text-xl text-white">{title}</p>
-      {description ? <p className="mt-2 max-w-md text-sm text-[var(--text-muted)]">{description}</p> : null}
-      {action ? <div className="relative z-[1] mt-4">{action}</div> : null}
+      <p className={cn("relative z-[1] font-display text-white", hero ? "text-2xl" : "text-xl")}>
+        {title}
+      </p>
+      {description ? (
+        <p className="relative z-[1] mt-2 max-w-md text-sm text-[var(--text-muted)]">{description}</p>
+      ) : null}
+      {action ? <div className="relative z-[1] mt-5">{action}</div> : null}
     </div>
   );
 }

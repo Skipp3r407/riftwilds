@@ -16,7 +16,16 @@ function AcademyFallback() {
 
 export default function AcademyPage() {
   return (
-    <div className="space-y-4">
+    <div className="relative space-y-4">
+      {/* Local readability wash over academy courtyard wallpaper */}
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          backgroundImage:
+            "linear-gradient(180deg, rgba(7,11,22,0.22) 0%, rgba(7,11,22,0.08) 42%, rgba(7,11,22,0.32) 100%), radial-gradient(ellipse at 70% 20%, rgba(255,150,70,0.08), transparent 40%), radial-gradient(ellipse at 40% 55%, rgba(61,231,255,0.07), transparent 45%)",
+        }}
+        aria-hidden
+      />
       <PageHeader
         kicker="Learn"
         titleSlug="academy"

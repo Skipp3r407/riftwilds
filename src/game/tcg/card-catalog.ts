@@ -1,35 +1,20 @@
-import type { AffinityName } from "@prisma/client";
 import {
   getCardById,
+  getNormalizedCardById,
   resolveCardImagePath,
   TCG_CARDS,
   type TcgCard,
-  type TcgElement,
 } from "@/content/tcg";
+import { ELEMENT_TO_AFFINITY } from "@/content/tcg/framework/element-map";
+import { CONSTRUCTED_RULES } from "@/content/tcg/framework/deck-rules";
+import { normalizeCard } from "@/content/tcg/framework/normalize-card";
+import { summarizeAbilities } from "@/game/tcg/combat/abilities";
 import type { TcgCardDef, TcgCardType, TcgRarity } from "@/game/tcg/types";
 
 /**
  * Adapter: foundational JSON content (`@/content/tcg`) → engine card defs.
- * Do not maintain a parallel species-generated catalog.
+ * Competitive defs always use migrated base stats (never cosmetic finishes).
  */
-
-const ELEMENT_TO_AFFINITY: Record<TcgElement, AffinityName> = {
-  fire: "EMBER",
-  water: "TIDE",
-  nature: "GROVE",
-  earth: "STONE",
-  storm: "STORM",
-  crystal: "FROST",
-  shadow: "VOID",
-  light: "RADIANT",
-  spirit: "SPIRIT",
-  arcane: "SPIRIT",
-  poison: "GROVE",
-  metal: "ALLOY",
-  celestial: "RADIANT",
-  void: "VOID",
-  neutral: "SPIRIT",
-};
 
 const UNIT_TYPES = new Set([
   "creature",
@@ -58,34 +43,55 @@ function spellPower(card: TcgCard): number {
   for (const ab of card.abilities) {
     for (const fx of ab.effects) {
       if (fx.op === "deal_damage" && typeof fx.value === "number") return fx.value;
+      if (fx.op === "heal" && typeof fx.value === "number") return fx.value;
     }
   }
   return Math.max(1, card.energyCost);
 }
 
 export function contentCardToEngineDef(card: TcgCard): TcgCardDef {
+  const normalized = normalizeCard(card);
   const rarity = mapRarity(card.rarity);
   const type = mapType(card.type);
-  const power =
+  const attack =
     type === "UNIT"
-      ? Math.max(1, card.attack ?? 1)
-      : spellPower(card);
+      ? Math.max(0, normalized.attack ?? 1)
+      : spellPower(normalized);
+  const health = type === "UNIT" ? Math.max(1, normalized.health ?? 1) : 0;
   const resolved = resolveCardImagePath(card);
   const cardImagePath = resolved || `/assets/tcg/cards/${card.id}.webp`;
+  const maxCopies = CONSTRUCTED_RULES.copyLimits[card.rarity] ?? 3;
+  const abilitySummary = summarizeAbilities(normalized.abilities);
+
   return {
     id: card.id,
-    name: card.localization.name,
+    name: normalized.localization.name,
     type,
-    affinity: ELEMENT_TO_AFFINITY[card.element] ?? "SPIRIT",
-    riftCost: Math.max(0, card.energyCost),
-    power,
+    affinity: ELEMENT_TO_AFFINITY[normalized.element] ?? "SPIRIT",
+    riftCost: Math.max(0, normalized.energyCost),
+    power: attack,
+    attack,
+    health,
+    defense: type === "UNIT" ? normalized.defense : 0,
+    speed: normalized.speed,
     rarity,
-    speciesSlug: card.riftlingSlug || card.relatedRiftlings?.[0],
-    description: card.localization.rulesText || card.localization.flavorText,
-    maxCopies:
-      rarity === "LEGENDARY" || rarity === "EPIC" ? 1 : rarity === "RARE" ? 2 : 3,
+    speciesSlug: normalized.riftlingSlug || normalized.relatedRiftlings?.[0],
+    description:
+      normalized.localization.rulesText || normalized.localization.flavorText,
+    maxCopies,
     cardImagePath,
-    artPath: card.art.assetPath,
+    artPath: normalized.art.assetPath,
+    cleanArtPath: normalized.cleanArtPath ?? normalized.art.assetPath,
+    role: normalized.role,
+    element: normalized.element,
+    familyId: normalized.familyId ?? undefined,
+    competitiveEligible: normalized.competitiveEligible,
+    keywords: normalized.keywords,
+    passive: normalized.passive ?? abilitySummary.passive,
+    activeSummary: abilitySummary.active,
+    ultimateSummary: abilitySummary.ultimate,
+    contentType: normalized.type,
+    templateLayout: normalized.templateLayout,
   };
 }
 
@@ -97,11 +103,20 @@ export function getTcgCardCatalog(): TcgCardDef[] {
   return cached;
 }
 
+/** Invalidate after hot-reload / admin edits (tests). */
+export function clearTcgCardCatalogCache(): void {
+  cached = null;
+}
+
 export function getTcgCardDef(id: string): TcgCardDef | undefined {
   const fromCache = getTcgCardCatalog().find((c) => c.id === id);
   if (fromCache) return fromCache;
   const raw = getCardById(id);
   return raw ? contentCardToEngineDef(raw) : undefined;
+}
+
+export function getNormalizedEngineCard(id: string) {
+  return getNormalizedCardById(id);
 }
 
 export function listUnitCards(): TcgCardDef[] {

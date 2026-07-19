@@ -18,14 +18,17 @@ export default function HatcheryPage() {
         title="Hatchery"
         description={
           <>
-            Incubate eggs, track countdowns, and reveal new {projectConfig.CREATURE_NAME_PLURAL}.
-            Hatch outcomes are determined server-side — no simulated near-misses.
+            Free to play — no wallet, SOL, or {projectConfig.TOKEN_SYMBOL} required. Incubate eggs,
+            hatch companions, and unlock matching collectible cards. Outcomes are server-rolled —
+            never a guaranteed earnings promise.
           </>
         }
         status={featureFlagDefaults.HATCHING_ENABLED ? "Online" : "Paused"}
         statusTone={featureFlagDefaults.HATCHING_ENABLED ? "live" : "warn"}
       >
         <div className="mt-4 flex flex-wrap gap-2">
+          <StatusChip tone="live">Free to play</StatusChip>
+          <StatusChip tone="live">No wallet needed</StatusChip>
           <StatusChip tone={featureFlagDefaults.STARTER_EGG_CLAIMS_ENABLED ? "live" : "warn"}>
             Starter claims {featureFlagDefaults.STARTER_EGG_CLAIMS_ENABLED ? "open" : "paused"}
           </StatusChip>
@@ -36,17 +39,26 @@ export default function HatcheryPage() {
       <HatcheryDashboard />
 
       <section className="panel p-5 text-sm text-[var(--text-muted)]">
-        <h2 className="font-display text-lg text-white">Supply & breeding</h2>
+        <h2 className="font-display text-lg text-white">Free play & supply</h2>
         <p className="mt-2">
-          Free starter eggs are limited (first-come global pool) and account-bound — never sellable.
-          When free stock is gone, keepers can still buy eggs with Credits at a premium late-game
-          price (soft currency sink, never SOL). Breeding uses rising fees, cooldowns, and weekly
-          global caps — rarity is never guaranteed. See marketplace breeding rules and{" "}
-          <code className="text-[var(--cyan)]">docs/MARKETPLACE_ECONOMY.md</code>.
+          Every new keeper gets one account-bound Starter Egg — guaranteed, no wallet. Earn more eggs
+          through quests, bosses, login calendars, guild goals, battle pass free track, exploration,
+          events, and achievements. Optional Credits eggs are a soft sink (never SOL). Optional{" "}
+          {projectConfig.TOKEN_SYMBOL} holder perks are cosmetics only — never competitive power. See{" "}
+          <code className="text-[var(--cyan)]">docs/economy/HATCHERY_ECONOMY.md</code> and{" "}
+          <code className="text-[var(--cyan)]">docs/economy/FREE_TO_PLAY.md</code>.
         </p>
-        <Link href="/marketplace" className="btn-secondary focus-ring mt-4 inline-flex text-sm">
-          Marketplace & breeding rules
-        </Link>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link href="/play" className="btn-secondary focus-ring inline-flex text-sm">
+            Play hub / onboarding
+          </Link>
+          <Link href="/quests" className="btn-secondary focus-ring inline-flex text-sm">
+            Earn eggs via quests
+          </Link>
+          <Link href="/marketplace" className="btn-secondary focus-ring inline-flex text-sm">
+            Marketplace & breeding
+          </Link>
+        </div>
       </section>
 
       <section className="panel p-6">

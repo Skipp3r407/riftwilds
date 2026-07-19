@@ -6,7 +6,8 @@ Official ten-issue Riftwilds comic series (original IP).
 
 ## Routes
 
-- `/comics` — library
+- `/comics` — Lore Library (archive shelves)
+- `/lore` — alias redirect → `/comics`
 - `/comics/[issueSlug]` — reader
 - `/admin/comics` — ops stubs
 

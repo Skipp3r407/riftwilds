@@ -1,0 +1,1354 @@
+{
+  "polished": [
+    {
+      "id": "rotr-s-item-small-healing-salve",
+      "slug": "small-healing-salve",
+      "rel": "/assets/tcg/subjects/small-healing-salve.png"
+    },
+    {
+      "id": "rotr-s-item-riftberry-tonic",
+      "slug": "riftberry-tonic",
+      "rel": "/assets/tcg/subjects/riftberry-tonic.png"
+    },
+    {
+      "id": "rotr-s-item-moonwater-flask",
+      "slug": "moonwater-flask",
+      "rel": "/assets/tcg/subjects/moonwater-flask.png"
+    },
+    {
+      "id": "rotr-s-item-grove-restoration-brew",
+      "slug": "grove-restoration-brew",
+      "rel": "/assets/tcg/subjects/grove-restoration-brew.png"
+    },
+    {
+      "id": "rotr-s-item-emberheart-elixir",
+      "slug": "emberheart-elixir",
+      "rel": "/assets/tcg/subjects/emberheart-elixir.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-renewal-potion",
+      "slug": "spirit-renewal-potion",
+      "rel": "/assets/tcg/subjects/spirit-renewal-potion.png"
+    },
+    {
+      "id": "rotr-s-item-radiant-recovery-flask",
+      "slug": "radiant-recovery-flask",
+      "rel": "/assets/tcg/subjects/radiant-recovery-flask.png"
+    },
+    {
+      "id": "rotr-s-item-celestial-renewal",
+      "slug": "celestial-renewal",
+      "rel": "/assets/tcg/subjects/celestial-renewal.png"
+    },
+    {
+      "id": "rotr-s-item-sparkfruit-juice",
+      "slug": "sparkfruit-juice",
+      "rel": "/assets/tcg/subjects/sparkfruit-juice.png"
+    },
+    {
+      "id": "rotr-s-item-focus-tonic",
+      "slug": "focus-tonic",
+      "rel": "/assets/tcg/subjects/focus-tonic.png"
+    },
+    {
+      "id": "rotr-s-item-storm-energy-flask",
+      "slug": "storm-energy-flask",
+      "rel": "/assets/tcg/subjects/storm-energy-flask.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-charge",
+      "slug": "spirit-charge",
+      "rel": "/assets/tcg/subjects/spirit-charge.png"
+    },
+    {
+      "id": "rotr-s-item-astral-energy-elixir",
+      "slug": "astral-energy-elixir",
+      "rel": "/assets/tcg/subjects/astral-energy-elixir.png"
+    },
+    {
+      "id": "rotr-s-item-basic-pet-meal",
+      "slug": "basic-pet-meal",
+      "rel": "/assets/tcg/subjects/basic-pet-meal.png"
+    },
+    {
+      "id": "rotr-s-item-premium-pet-meal",
+      "slug": "premium-pet-meal",
+      "rel": "/assets/tcg/subjects/premium-pet-meal.png"
+    },
+    {
+      "id": "rotr-s-item-fresh-water-flask",
+      "slug": "fresh-water-flask",
+      "rel": "/assets/tcg/subjects/fresh-water-flask.png"
+    },
+    {
+      "id": "rotr-s-item-cleaning-kit",
+      "slug": "cleaning-kit",
+      "rel": "/assets/tcg/subjects/cleaning-kit.png"
+    },
+    {
+      "id": "rotr-s-item-rift-toy",
+      "slug": "rift-toy",
+      "rel": "/assets/tcg/subjects/rift-toy.png"
+    },
+    {
+      "id": "rotr-s-item-comfortable-nest",
+      "slug": "comfortable-nest",
+      "rel": "/assets/tcg/subjects/comfortable-nest.png"
+    },
+    {
+      "id": "rotr-s-item-medicine-pack",
+      "slug": "medicine-pack",
+      "rel": "/assets/tcg/subjects/medicine-pack.png"
+    },
+    {
+      "id": "rotr-s-item-happiness-treat",
+      "slug": "happiness-treat",
+      "rel": "/assets/tcg/subjects/happiness-treat.png"
+    },
+    {
+      "id": "rotr-s-item-bonding-charm",
+      "slug": "bonding-charm",
+      "rel": "/assets/tcg/subjects/bonding-charm.png"
+    },
+    {
+      "id": "rotr-s-item-recovery-blanket",
+      "slug": "recovery-blanket",
+      "rel": "/assets/tcg/subjects/recovery-blanket.png"
+    },
+    {
+      "id": "rotr-s-item-dormancy-revival-bloom",
+      "slug": "dormancy-revival-bloom",
+      "rel": "/assets/tcg/subjects/dormancy-revival-bloom.png"
+    },
+    {
+      "id": "rotr-s-item-spark-healing-draught",
+      "slug": "spark-healing-draught",
+      "rel": "/assets/tcg/subjects/spark-healing-draught.png"
+    },
+    {
+      "id": "rotr-s-item-tide-mend-vial",
+      "slug": "tide-mend-vial",
+      "rel": "/assets/tcg/subjects/tide-mend-vial.png"
+    },
+    {
+      "id": "rotr-s-item-storm-surge-sip",
+      "slug": "storm-surge-sip",
+      "rel": "/assets/tcg/subjects/storm-surge-sip.png"
+    },
+    {
+      "id": "rotr-s-item-frost-focus-brew",
+      "slug": "frost-focus-brew",
+      "rel": "/assets/tcg/subjects/frost-focus-brew.png"
+    },
+    {
+      "id": "rotr-s-item-ember-soothe-balm",
+      "slug": "ember-soothe-balm",
+      "rel": "/assets/tcg/subjects/ember-soothe-balm.png"
+    },
+    {
+      "id": "rotr-s-item-stone-steady-draught",
+      "slug": "stone-steady-draught",
+      "rel": "/assets/tcg/subjects/stone-steady-draught.png"
+    },
+    {
+      "id": "rotr-s-item-crystal-berry-snack",
+      "slug": "crystal-berry-snack",
+      "rel": "/assets/tcg/subjects/crystal-berry-snack.png"
+    },
+    {
+      "id": "rotr-s-item-glowmoss-chew",
+      "slug": "glowmoss-chew",
+      "rel": "/assets/tcg/subjects/glowmoss-chew.png"
+    },
+    {
+      "id": "rotr-s-item-ripple-ball-toy",
+      "slug": "ripple-ball-toy",
+      "rel": "/assets/tcg/subjects/ripple-ball-toy.png"
+    },
+    {
+      "id": "rotr-s-item-whisper-bell-toy",
+      "slug": "whisper-bell-toy",
+      "rel": "/assets/tcg/subjects/whisper-bell-toy.png"
+    },
+    {
+      "id": "rotr-s-item-nest-fluff-pillow",
+      "slug": "nest-fluff-pillow",
+      "rel": "/assets/tcg/subjects/nest-fluff-pillow.png"
+    },
+    {
+      "id": "rotr-s-item-grooming-comb-set",
+      "slug": "grooming-comb-set",
+      "rel": "/assets/tcg/subjects/grooming-comb-set.png"
+    },
+    {
+      "id": "rotr-s-item-bond-ribbon",
+      "slug": "bond-ribbon",
+      "rel": "/assets/tcg/subjects/bond-ribbon.png"
+    },
+    {
+      "id": "rotr-s-item-aurora-treat",
+      "slug": "aurora-treat",
+      "rel": "/assets/tcg/subjects/aurora-treat.png"
+    },
+    {
+      "id": "rotr-s-item-moonpetal-bath-salts",
+      "slug": "moonpetal-bath-salts",
+      "rel": "/assets/tcg/subjects/moonpetal-bath-salts.png"
+    },
+    {
+      "id": "rotr-s-item-vitality-petal-tea",
+      "slug": "vitality-petal-tea",
+      "rel": "/assets/tcg/subjects/vitality-petal-tea.png"
+    },
+    {
+      "id": "rotr-s-item-rift-salve-kit",
+      "slug": "rift-salve-kit",
+      "rel": "/assets/tcg/subjects/rift-salve-kit.png"
+    },
+    {
+      "id": "rotr-s-item-starlit-lullaby-charm",
+      "slug": "starlit-lullaby-charm",
+      "rel": "/assets/tcg/subjects/starlit-lullaby-charm.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-crystal",
+      "slug": "spirit-crystal",
+      "rel": "/assets/tcg/subjects/spirit-crystal.png"
+    },
+    {
+      "id": "rotr-s-item-phoenix-feather",
+      "slug": "phoenix-feather",
+      "rel": "/assets/tcg/subjects/phoenix-feather.png"
+    },
+    {
+      "id": "rotr-s-item-ancient-heart",
+      "slug": "ancient-heart",
+      "rel": "/assets/tcg/subjects/ancient-heart.png"
+    },
+    {
+      "id": "rotr-s-item-revival-herb",
+      "slug": "revival-herb",
+      "rel": "/assets/tcg/subjects/revival-herb.png"
+    },
+    {
+      "id": "rotr-s-item-healing-stone",
+      "slug": "healing-stone",
+      "rel": "/assets/tcg/subjects/healing-stone.png"
+    },
+    {
+      "id": "rotr-s-item-soul-bloom",
+      "slug": "soul-bloom",
+      "rel": "/assets/tcg/subjects/soul-bloom.png"
+    },
+    {
+      "id": "rotr-s-item-moon-tear",
+      "slug": "moon-tear",
+      "rel": "/assets/tcg/subjects/moon-tear.png"
+    },
+    {
+      "id": "rotr-s-item-heart-flame",
+      "slug": "heart-flame",
+      "rel": "/assets/tcg/subjects/heart-flame.png"
+    },
+    {
+      "id": "rotr-s-item-sacred-feather",
+      "slug": "sacred-feather",
+      "rel": "/assets/tcg/subjects/sacred-feather.png"
+    },
+    {
+      "id": "rotr-s-item-ancestor-stone",
+      "slug": "ancestor-stone",
+      "rel": "/assets/tcg/subjects/ancestor-stone.png"
+    },
+    {
+      "id": "rotr-s-item-ancient-bell",
+      "slug": "ancient-bell",
+      "rel": "/assets/tcg/subjects/ancient-bell.png"
+    },
+    {
+      "id": "rotr-s-item-revival-water",
+      "slug": "revival-water",
+      "rel": "/assets/tcg/subjects/revival-water.png"
+    },
+    {
+      "id": "rotr-s-item-healing-rune",
+      "slug": "healing-rune",
+      "rel": "/assets/tcg/subjects/healing-rune.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-lantern-charm",
+      "slug": "spirit-lantern-charm",
+      "rel": "/assets/tcg/subjects/spirit-lantern-charm.png"
+    },
+    {
+      "id": "rotr-s-item-ember-bolt",
+      "slug": "ember-bolt",
+      "rel": "/assets/tcg/subjects/ember-bolt.png"
+    },
+    {
+      "id": "rotr-s-item-tide-spiral",
+      "slug": "tide-spiral",
+      "rel": "/assets/tcg/subjects/tide-spiral.png"
+    },
+    {
+      "id": "rotr-s-item-thorn-burst",
+      "slug": "thorn-burst",
+      "rel": "/assets/tcg/subjects/thorn-burst.png"
+    },
+    {
+      "id": "rotr-s-item-lightning-arc",
+      "slug": "lightning-arc",
+      "rel": "/assets/tcg/subjects/lightning-arc.png"
+    },
+    {
+      "id": "rotr-s-item-stone-crash",
+      "slug": "stone-crash",
+      "rel": "/assets/tcg/subjects/stone-crash.png"
+    },
+    {
+      "id": "rotr-s-item-frost-shard",
+      "slug": "frost-shard",
+      "rel": "/assets/tcg/subjects/frost-shard.png"
+    },
+    {
+      "id": "rotr-s-item-radiant-beam",
+      "slug": "radiant-beam",
+      "rel": "/assets/tcg/subjects/radiant-beam.png"
+    },
+    {
+      "id": "rotr-s-item-void-pulse",
+      "slug": "void-pulse",
+      "rel": "/assets/tcg/subjects/void-pulse.png"
+    },
+    {
+      "id": "rotr-s-item-alloy-wave",
+      "slug": "alloy-wave",
+      "rel": "/assets/tcg/subjects/alloy-wave.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-flame",
+      "slug": "spirit-flame",
+      "rel": "/assets/tcg/subjects/spirit-flame.png"
+    },
+    {
+      "id": "rotr-s-item-ember-shield",
+      "slug": "ember-shield",
+      "rel": "/assets/tcg/subjects/ember-shield.png"
+    },
+    {
+      "id": "rotr-s-item-tide-barrier",
+      "slug": "tide-barrier",
+      "rel": "/assets/tcg/subjects/tide-barrier.png"
+    },
+    {
+      "id": "rotr-s-item-bark-wall",
+      "slug": "bark-wall",
+      "rel": "/assets/tcg/subjects/bark-wall.png"
+    },
+    {
+      "id": "rotr-s-item-storm-veil",
+      "slug": "storm-veil",
+      "rel": "/assets/tcg/subjects/storm-veil.png"
+    },
+    {
+      "id": "rotr-s-item-stone-guard",
+      "slug": "stone-guard",
+      "rel": "/assets/tcg/subjects/stone-guard.png"
+    },
+    {
+      "id": "rotr-s-item-frost-shell",
+      "slug": "frost-shell",
+      "rel": "/assets/tcg/subjects/frost-shell.png"
+    },
+    {
+      "id": "rotr-s-item-radiant-ward",
+      "slug": "radiant-ward",
+      "rel": "/assets/tcg/subjects/radiant-ward.png"
+    },
+    {
+      "id": "rotr-s-item-void-cloak",
+      "slug": "void-cloak",
+      "rel": "/assets/tcg/subjects/void-cloak.png"
+    },
+    {
+      "id": "rotr-s-item-alloy-barrier",
+      "slug": "alloy-barrier",
+      "rel": "/assets/tcg/subjects/alloy-barrier.png"
+    },
+    {
+      "id": "rotr-s-item-spirit-protection",
+      "slug": "spirit-protection",
+      "rel": "/assets/tcg/subjects/spirit-protection.png"
+    },
+    {
+      "id": "rotr-s-item-grove-mend",
+      "slug": "grove-mend",
+      "rel": "/assets/tcg/subjects/grove-mend.png"
+    },
+    {
+      "id": "rotr-s-item-moonwater-healing",
+      "slug": "moonwater-healing",
+      "rel": "/assets/tcg/subjects/moonwater-healing.png"
+    },
+    {
+      "id": "rotr-s-item-root-bind",
+      "slug": "root-bind",
+      "rel": "/assets/tcg/subjects/root-bind.png"
+    },
+    {
+      "id": "rotr-s-item-frost-slow",
+      "slug": "frost-slow",
+      "rel": "/assets/tcg/subjects/frost-slow.png"
+    },
+    {
+      "id": "rotr-s-item-battle-focus",
+      "slug": "battle-focus",
+      "rel": "/assets/tcg/subjects/battle-focus.png"
+    },
+    {
+      "id": "rotr-s-item-speed-wind",
+      "slug": "speed-wind",
+      "rel": "/assets/tcg/subjects/speed-wind.png"
+    },
+    {
+      "id": "rotr-s-item-volcanic-heartburst",
+      "slug": "volcanic-heartburst",
+      "rel": "/assets/tcg/subjects/volcanic-heartburst.png"
+    },
+    {
+      "id": "rotr-s-item-moon-tide-collapse",
+      "slug": "moon-tide-collapse",
+      "rel": "/assets/tcg/subjects/moon-tide-collapse.png"
+    },
+    {
+      "id": "rotr-s-item-worldroot-awakening",
+      "slug": "worldroot-awakening",
+      "rel": "/assets/tcg/subjects/worldroot-awakening.png"
+    },
+    {
+      "id": "rotr-s-item-sky-rift-tempest",
+      "slug": "sky-rift-tempest",
+      "rel": "/assets/tcg/subjects/sky-rift-tempest.png"
+    },
+    {
+      "id": "rotr-s-item-ancient-mountain-guard",
+      "slug": "ancient-mountain-guard",
+      "rel": "/assets/tcg/subjects/ancient-mountain-guard.png"
+    },
+    {
+      "id": "rotr-s-item-eternal-winter-ring",
+      "slug": "eternal-winter-ring",
+      "rel": "/assets/tcg/subjects/eternal-winter-ring.png"
+    },
+    {
+      "id": "rotr-s-item-dawnstar-ascension",
+      "slug": "dawnstar-ascension",
+      "rel": "/assets/tcg/subjects/dawnstar-ascension.png"
+    },
+    {
+      "id": "rotr-s-item-eclipse-singularity",
+      "slug": "eclipse-singularity",
+      "rel": "/assets/tcg/subjects/eclipse-singularity.png"
+    },
+    {
+      "id": "rotr-s-item-titan-core-overdrive",
+      "slug": "titan-core-overdrive",
+      "rel": "/assets/tcg/subjects/titan-core-overdrive.png"
+    },
+    {
+      "id": "rotr-s-item-ancestral-lantern-parade",
+      "slug": "ancestral-lantern-parade",
+      "rel": "/assets/tcg/subjects/ancestral-lantern-parade.png"
+    },
+    {
+      "id": "rotr-e-keeper-s-satchel",
+      "slug": "keeper-s-satchel",
+      "rel": "/assets/tcg/subjects/keeper-s-satchel.png"
+    },
+    {
+      "id": "rotr-e-ember-collar",
+      "slug": "ember-collar",
+      "rel": "/assets/tcg/subjects/ember-collar.png"
+    },
+    {
+      "id": "rotr-e-tide-charm",
+      "slug": "tide-charm",
+      "rel": "/assets/tcg/subjects/tide-charm.png"
+    },
+    {
+      "id": "rotr-e-moss-cloak",
+      "slug": "moss-cloak",
+      "rel": "/assets/tcg/subjects/moss-cloak.png"
+    },
+    {
+      "id": "rotr-e-storm-whistle",
+      "slug": "storm-whistle",
+      "rel": "/assets/tcg/subjects/storm-whistle.png"
+    },
+    {
+      "id": "rotr-e-crystal-lens",
+      "slug": "crystal-lens",
+      "rel": "/assets/tcg/subjects/crystal-lens.png"
+    },
+    {
+      "id": "rotr-e-shade-mantle",
+      "slug": "shade-mantle",
+      "rel": "/assets/tcg/subjects/shade-mantle.png"
+    },
+    {
+      "id": "rotr-e-lantern-badge",
+      "slug": "lantern-badge",
+      "rel": "/assets/tcg/subjects/lantern-badge.png"
+    },
+    {
+      "id": "rotr-e-item-wooden-paw-guard",
+      "slug": "wooden-paw-guard",
+      "rel": "/assets/tcg/subjects/wooden-paw-guard.png"
+    },
+    {
+      "id": "rotr-e-item-smooth-stone-claw",
+      "slug": "smooth-stone-claw",
+      "rel": "/assets/tcg/subjects/smooth-stone-claw.png"
+    },
+    {
+      "id": "rotr-e-item-training-tail-ring",
+      "slug": "training-tail-ring",
+      "rel": "/assets/tcg/subjects/training-tail-ring.png"
+    },
+    {
+      "id": "rotr-e-item-basic-focus-orb",
+      "slug": "basic-focus-orb",
+      "rel": "/assets/tcg/subjects/basic-focus-orb.png"
+    },
+    {
+      "id": "rotr-e-item-cloth-battle-harness",
+      "slug": "cloth-battle-harness",
+      "rel": "/assets/tcg/subjects/cloth-battle-harness.png"
+    },
+    {
+      "id": "rotr-e-item-grove-twig-wand",
+      "slug": "grove-twig-wand",
+      "rel": "/assets/tcg/subjects/grove-twig-wand.png"
+    },
+    {
+      "id": "rotr-e-item-simple-horncap",
+      "slug": "simple-horncap",
+      "rel": "/assets/tcg/subjects/simple-horncap.png"
+    },
+    {
+      "id": "rotr-e-item-ember-talons",
+      "slug": "ember-talons",
+      "rel": "/assets/tcg/subjects/ember-talons.png"
+    },
+    {
+      "id": "rotr-e-item-tideglass-claws",
+      "slug": "tideglass-claws",
+      "rel": "/assets/tcg/subjects/tideglass-claws.png"
+    },
+    {
+      "id": "rotr-e-item-mossvine-grips",
+      "slug": "mossvine-grips",
+      "rel": "/assets/tcg/subjects/mossvine-grips.png"
+    },
+    {
+      "id": "rotr-e-item-spark-tail-ring",
+      "slug": "spark-tail-ring",
+      "rel": "/assets/tcg/subjects/spark-tail-ring.png"
+    },
+    {
+      "id": "rotr-e-item-frost-crystal-tip",
+      "slug": "frost-crystal-tip",
+      "rel": "/assets/tcg/subjects/frost-crystal-tip.png"
+    },
+    {
+      "id": "rotr-e-item-spirit-glow-orb",
+      "slug": "spirit-glow-orb",
+      "rel": "/assets/tcg/subjects/spirit-glow-orb.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-training-blade",
+      "slug": "alloy-training-blade",
+      "rel": "/assets/tcg/subjects/alloy-training-blade.png"
+    },
+    {
+      "id": "rotr-e-item-ashfang-talons",
+      "slug": "ashfang-talons",
+      "rel": "/assets/tcg/subjects/ashfang-talons.png"
+    },
+    {
+      "id": "rotr-e-item-moonwater-pearl",
+      "slug": "moonwater-pearl",
+      "rel": "/assets/tcg/subjects/moonwater-pearl.png"
+    },
+    {
+      "id": "rotr-e-item-thornroot-crusher",
+      "slug": "thornroot-crusher",
+      "rel": "/assets/tcg/subjects/thornroot-crusher.png"
+    },
+    {
+      "id": "rotr-e-item-stormcoil-harness",
+      "slug": "stormcoil-harness",
+      "rel": "/assets/tcg/subjects/stormcoil-harness.png"
+    },
+    {
+      "id": "rotr-e-item-obsidian-tailblade",
+      "slug": "obsidian-tailblade",
+      "rel": "/assets/tcg/subjects/obsidian-tailblade.png"
+    },
+    {
+      "id": "rotr-e-item-radiant-sun-disk",
+      "slug": "radiant-sun-disk",
+      "rel": "/assets/tcg/subjects/radiant-sun-disk.png"
+    },
+    {
+      "id": "rotr-e-item-voidshade-claws",
+      "slug": "voidshade-claws",
+      "rel": "/assets/tcg/subjects/voidshade-claws.png"
+    },
+    {
+      "id": "rotr-e-item-cinderstorm-gauntlets",
+      "slug": "cinderstorm-gauntlets",
+      "rel": "/assets/tcg/subjects/cinderstorm-gauntlets.png"
+    },
+    {
+      "id": "rotr-e-item-tidal-crescent-blade",
+      "slug": "tidal-crescent-blade",
+      "rel": "/assets/tcg/subjects/tidal-crescent-blade.png"
+    },
+    {
+      "id": "rotr-e-item-ancient-grove-antlers",
+      "slug": "ancient-grove-antlers",
+      "rel": "/assets/tcg/subjects/ancient-grove-antlers.png"
+    },
+    {
+      "id": "rotr-e-item-thunder-rift-coil",
+      "slug": "thunder-rift-coil",
+      "rel": "/assets/tcg/subjects/thunder-rift-coil.png"
+    },
+    {
+      "id": "rotr-e-item-glacial-moon-crest",
+      "slug": "glacial-moon-crest",
+      "rel": "/assets/tcg/subjects/glacial-moon-crest.png"
+    },
+    {
+      "id": "rotr-e-item-spiritfire-lantern",
+      "slug": "spiritfire-lantern",
+      "rel": "/assets/tcg/subjects/spiritfire-lantern.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-pulse-cannon",
+      "slug": "alloy-pulse-cannon",
+      "rel": "/assets/tcg/subjects/alloy-pulse-cannon.png"
+    },
+    {
+      "id": "rotr-e-item-heart-of-the-volcano",
+      "slug": "heart-of-the-volcano",
+      "rel": "/assets/tcg/subjects/heart-of-the-volcano.png"
+    },
+    {
+      "id": "rotr-e-item-crown-of-the-deep-tide",
+      "slug": "crown-of-the-deep-tide",
+      "rel": "/assets/tcg/subjects/crown-of-the-deep-tide.png"
+    },
+    {
+      "id": "rotr-e-item-elderwood-battle-crest",
+      "slug": "elderwood-battle-crest",
+      "rel": "/assets/tcg/subjects/elderwood-battle-crest.png"
+    },
+    {
+      "id": "rotr-e-item-skybreaker-storm-harness",
+      "slug": "skybreaker-storm-harness",
+      "rel": "/assets/tcg/subjects/skybreaker-storm-harness.png"
+    },
+    {
+      "id": "rotr-e-item-radiant-dawn-halo",
+      "slug": "radiant-dawn-halo",
+      "rel": "/assets/tcg/subjects/radiant-dawn-halo.png"
+    },
+    {
+      "id": "rotr-e-item-void-eclipse-blade",
+      "slug": "void-eclipse-blade",
+      "rel": "/assets/tcg/subjects/void-eclipse-blade.png"
+    },
+    {
+      "id": "rotr-e-item-riftmaker-prism",
+      "slug": "riftmaker-prism",
+      "rel": "/assets/tcg/subjects/riftmaker-prism.png"
+    },
+    {
+      "id": "rotr-e-item-worldroot-relic",
+      "slug": "worldroot-relic",
+      "rel": "/assets/tcg/subjects/worldroot-relic.png"
+    },
+    {
+      "id": "rotr-e-item-astral-tempest-core",
+      "slug": "astral-tempest-core",
+      "rel": "/assets/tcg/subjects/astral-tempest-core.png"
+    },
+    {
+      "id": "rotr-e-item-starforged-halo",
+      "slug": "starforged-halo",
+      "rel": "/assets/tcg/subjects/starforged-halo.png"
+    },
+    {
+      "id": "rotr-e-item-celestial-riftblade",
+      "slug": "celestial-riftblade",
+      "rel": "/assets/tcg/subjects/celestial-riftblade.png"
+    },
+    {
+      "id": "rotr-e-item-crown-of-ten-affinities",
+      "slug": "crown-of-ten-affinities",
+      "rel": "/assets/tcg/subjects/crown-of-ten-affinities.png"
+    },
+    {
+      "id": "rotr-e-item-ember-spark-claws",
+      "slug": "ember-spark-claws",
+      "rel": "/assets/tcg/subjects/ember-spark-claws.png"
+    },
+    {
+      "id": "rotr-e-item-tide-fin-blade",
+      "slug": "tide-fin-blade",
+      "rel": "/assets/tcg/subjects/tide-fin-blade.png"
+    },
+    {
+      "id": "rotr-e-item-pebble-horn-cap",
+      "slug": "pebble-horn-cap",
+      "rel": "/assets/tcg/subjects/pebble-horn-cap.png"
+    },
+    {
+      "id": "rotr-e-item-breeze-focus-seed",
+      "slug": "breeze-focus-seed",
+      "rel": "/assets/tcg/subjects/breeze-focus-seed.png"
+    },
+    {
+      "id": "rotr-e-item-reed-training-harness",
+      "slug": "reed-training-harness",
+      "rel": "/assets/tcg/subjects/reed-training-harness.png"
+    },
+    {
+      "id": "rotr-e-item-frostbite-paw-spikes",
+      "slug": "frostbite-paw-spikes",
+      "rel": "/assets/tcg/subjects/frostbite-paw-spikes.png"
+    },
+    {
+      "id": "rotr-e-item-kelp-lash-coil",
+      "slug": "kelp-lash-coil",
+      "rel": "/assets/tcg/subjects/kelp-lash-coil.png"
+    },
+    {
+      "id": "rotr-e-item-thunder-tine-crest",
+      "slug": "thunder-tine-crest",
+      "rel": "/assets/tcg/subjects/thunder-tine-crest.png"
+    },
+    {
+      "id": "rotr-e-item-spirit-lantern-orb",
+      "slug": "spirit-lantern-orb",
+      "rel": "/assets/tcg/subjects/spirit-lantern-orb.png"
+    },
+    {
+      "id": "rotr-e-item-dune-sand-harness",
+      "slug": "dune-sand-harness",
+      "rel": "/assets/tcg/subjects/dune-sand-harness.png"
+    },
+    {
+      "id": "rotr-e-item-magma-rake-claws",
+      "slug": "magma-rake-claws",
+      "rel": "/assets/tcg/subjects/magma-rake-claws.png"
+    },
+    {
+      "id": "rotr-e-item-glacier-tail-scythe",
+      "slug": "glacier-tail-scythe",
+      "rel": "/assets/tcg/subjects/glacier-tail-scythe.png"
+    },
+    {
+      "id": "rotr-e-item-radiant-horn-lance",
+      "slug": "radiant-horn-lance",
+      "rel": "/assets/tcg/subjects/radiant-horn-lance.png"
+    },
+    {
+      "id": "rotr-e-item-void-whisper-orb",
+      "slug": "void-whisper-orb",
+      "rel": "/assets/tcg/subjects/void-whisper-orb.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-brace-harness",
+      "slug": "alloy-brace-harness",
+      "rel": "/assets/tcg/subjects/alloy-brace-harness.png"
+    },
+    {
+      "id": "rotr-e-item-stormfang-gauntlets",
+      "slug": "stormfang-gauntlets",
+      "rel": "/assets/tcg/subjects/stormfang-gauntlets.png"
+    },
+    {
+      "id": "rotr-e-item-worldvine-tail-flail",
+      "slug": "worldvine-tail-flail",
+      "rel": "/assets/tcg/subjects/worldvine-tail-flail.png"
+    },
+    {
+      "id": "rotr-e-item-eclipse-horn-crown",
+      "slug": "eclipse-horn-crown",
+      "rel": "/assets/tcg/subjects/eclipse-horn-crown.png"
+    },
+    {
+      "id": "rotr-e-item-aurora-focus-prism",
+      "slug": "aurora-focus-prism",
+      "rel": "/assets/tcg/subjects/aurora-focus-prism.png"
+    },
+    {
+      "id": "rotr-e-item-rift-singer-harness",
+      "slug": "rift-singer-harness",
+      "rel": "/assets/tcg/subjects/rift-singer-harness.png"
+    },
+    {
+      "id": "rotr-e-item-starlit-paw-crescents",
+      "slug": "starlit-paw-crescents",
+      "rel": "/assets/tcg/subjects/starlit-paw-crescents.png"
+    },
+    {
+      "id": "rotr-e-item-cloth-pet-vest",
+      "slug": "cloth-pet-vest",
+      "rel": "/assets/tcg/subjects/cloth-pet-vest.png"
+    },
+    {
+      "id": "rotr-e-item-wooden-barkguard",
+      "slug": "wooden-barkguard",
+      "rel": "/assets/tcg/subjects/wooden-barkguard.png"
+    },
+    {
+      "id": "rotr-e-item-simple-headband",
+      "slug": "simple-headband",
+      "rel": "/assets/tcg/subjects/simple-headband.png"
+    },
+    {
+      "id": "rotr-e-item-training-paw-wraps",
+      "slug": "training-paw-wraps",
+      "rel": "/assets/tcg/subjects/training-paw-wraps.png"
+    },
+    {
+      "id": "rotr-e-item-mossguard-vest",
+      "slug": "mossguard-vest",
+      "rel": "/assets/tcg/subjects/mossguard-vest.png"
+    },
+    {
+      "id": "rotr-e-item-emberhide-wrap",
+      "slug": "emberhide-wrap",
+      "rel": "/assets/tcg/subjects/emberhide-wrap.png"
+    },
+    {
+      "id": "rotr-e-item-tide-scale-guard",
+      "slug": "tide-scale-guard",
+      "rel": "/assets/tcg/subjects/tide-scale-guard.png"
+    },
+    {
+      "id": "rotr-e-item-stoneplate-collar",
+      "slug": "stoneplate-collar",
+      "rel": "/assets/tcg/subjects/stoneplate-collar.png"
+    },
+    {
+      "id": "rotr-e-item-stormweave-armor",
+      "slug": "stormweave-armor",
+      "rel": "/assets/tcg/subjects/stormweave-armor.png"
+    },
+    {
+      "id": "rotr-e-item-frostshell-vest",
+      "slug": "frostshell-vest",
+      "rel": "/assets/tcg/subjects/frostshell-vest.png"
+    },
+    {
+      "id": "rotr-e-item-spiritveil-cloak",
+      "slug": "spiritveil-cloak",
+      "rel": "/assets/tcg/subjects/spiritveil-cloak.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-chestplate",
+      "slug": "alloy-chestplate",
+      "rel": "/assets/tcg/subjects/alloy-chestplate.png"
+    },
+    {
+      "id": "rotr-e-item-volcanic-guardian-plate",
+      "slug": "volcanic-guardian-plate",
+      "rel": "/assets/tcg/subjects/volcanic-guardian-plate.png"
+    },
+    {
+      "id": "rotr-e-item-moonwater-battle-robe",
+      "slug": "moonwater-battle-robe",
+      "rel": "/assets/tcg/subjects/moonwater-battle-robe.png"
+    },
+    {
+      "id": "rotr-e-item-elder-grove-armor",
+      "slug": "elder-grove-armor",
+      "rel": "/assets/tcg/subjects/elder-grove-armor.png"
+    },
+    {
+      "id": "rotr-e-item-voidwalker-mantle",
+      "slug": "voidwalker-mantle",
+      "rel": "/assets/tcg/subjects/voidwalker-mantle.png"
+    },
+    {
+      "id": "rotr-e-item-sunforged-aegis",
+      "slug": "sunforged-aegis",
+      "rel": "/assets/tcg/subjects/sunforged-aegis.png"
+    },
+    {
+      "id": "rotr-e-item-deep-rift-plate",
+      "slug": "deep-rift-plate",
+      "rel": "/assets/tcg/subjects/deep-rift-plate.png"
+    },
+    {
+      "id": "rotr-e-item-armor-of-the-rift-guardian",
+      "slug": "armor-of-the-rift-guardian",
+      "rel": "/assets/tcg/subjects/armor-of-the-rift-guardian.png"
+    },
+    {
+      "id": "rotr-e-item-constellation-armor",
+      "slug": "constellation-armor",
+      "rel": "/assets/tcg/subjects/constellation-armor.png"
+    },
+    {
+      "id": "rotr-e-item-linen-ear-hood",
+      "slug": "linen-ear-hood",
+      "rel": "/assets/tcg/subjects/linen-ear-hood.png"
+    },
+    {
+      "id": "rotr-e-item-reed-chest-wrap",
+      "slug": "reed-chest-wrap",
+      "rel": "/assets/tcg/subjects/reed-chest-wrap.png"
+    },
+    {
+      "id": "rotr-e-item-mossy-back-cape",
+      "slug": "mossy-back-cape",
+      "rel": "/assets/tcg/subjects/mossy-back-cape.png"
+    },
+    {
+      "id": "rotr-e-item-pebble-paw-boots",
+      "slug": "pebble-paw-boots",
+      "rel": "/assets/tcg/subjects/pebble-paw-boots.png"
+    },
+    {
+      "id": "rotr-e-item-soft-tail-sleeve",
+      "slug": "soft-tail-sleeve",
+      "rel": "/assets/tcg/subjects/soft-tail-sleeve.png"
+    },
+    {
+      "id": "rotr-e-item-breeze-wing-bands",
+      "slug": "breeze-wing-bands",
+      "rel": "/assets/tcg/subjects/breeze-wing-bands.png"
+    },
+    {
+      "id": "rotr-e-item-tidefoam-collar",
+      "slug": "tidefoam-collar",
+      "rel": "/assets/tcg/subjects/tidefoam-collar.png"
+    },
+    {
+      "id": "rotr-e-item-ember-scale-vest",
+      "slug": "ember-scale-vest",
+      "rel": "/assets/tcg/subjects/ember-scale-vest.png"
+    },
+    {
+      "id": "rotr-e-item-frost-pelt-cloak",
+      "slug": "frost-pelt-cloak",
+      "rel": "/assets/tcg/subjects/frost-pelt-cloak.png"
+    },
+    {
+      "id": "rotr-e-item-storm-grip-wraps",
+      "slug": "storm-grip-wraps",
+      "rel": "/assets/tcg/subjects/storm-grip-wraps.png"
+    },
+    {
+      "id": "rotr-e-item-grove-tail-guard",
+      "slug": "grove-tail-guard",
+      "rel": "/assets/tcg/subjects/grove-tail-guard.png"
+    },
+    {
+      "id": "rotr-e-item-radiant-wing-veils",
+      "slug": "radiant-wing-veils",
+      "rel": "/assets/tcg/subjects/radiant-wing-veils.png"
+    },
+    {
+      "id": "rotr-e-item-alloy-rib-cuirass",
+      "slug": "alloy-rib-cuirass",
+      "rel": "/assets/tcg/subjects/alloy-rib-cuirass.png"
+    },
+    {
+      "id": "rotr-e-item-voidmist-hood",
+      "slug": "voidmist-hood",
+      "rel": "/assets/tcg/subjects/voidmist-hood.png"
+    },
+    {
+      "id": "rotr-e-item-spiritweave-sash",
+      "slug": "spiritweave-sash",
+      "rel": "/assets/tcg/subjects/spiritweave-sash.png"
+    },
+    {
+      "id": "rotr-e-item-glacial-barrier-shell",
+      "slug": "glacial-barrier-shell",
+      "rel": "/assets/tcg/subjects/glacial-barrier-shell.png"
+    },
+    {
+      "id": "rotr-e-item-constellation-paw-slippers",
+      "slug": "constellation-paw-slippers",
+      "rel": "/assets/tcg/subjects/constellation-paw-slippers.png"
+    },
+    {
+      "id": "rotr-e-item-dawnstar-plume-mantle",
+      "slug": "dawnstar-plume-mantle",
+      "rel": "/assets/tcg/subjects/dawnstar-plume-mantle.png"
+    },
+    {
+      "id": "rotr-r-mat-wood-fiber",
+      "slug": "mat-wood-fiber",
+      "rel": "/assets/tcg/subjects/mat-wood-fiber.png"
+    },
+    {
+      "id": "rotr-r-mat-smooth-stone",
+      "slug": "mat-smooth-stone",
+      "rel": "/assets/tcg/subjects/mat-smooth-stone.png"
+    },
+    {
+      "id": "rotr-r-mat-basic-cloth",
+      "slug": "mat-basic-cloth",
+      "rel": "/assets/tcg/subjects/mat-basic-cloth.png"
+    },
+    {
+      "id": "rotr-r-mat-clear-water",
+      "slug": "mat-clear-water",
+      "rel": "/assets/tcg/subjects/mat-clear-water.png"
+    },
+    {
+      "id": "rotr-r-mat-wild-herbs",
+      "slug": "mat-wild-herbs",
+      "rel": "/assets/tcg/subjects/mat-wild-herbs.png"
+    },
+    {
+      "id": "rotr-r-mat-ember-dust",
+      "slug": "mat-ember-dust",
+      "rel": "/assets/tcg/subjects/mat-ember-dust.png"
+    },
+    {
+      "id": "rotr-r-mat-tideglass",
+      "slug": "mat-tideglass",
+      "rel": "/assets/tcg/subjects/mat-tideglass.png"
+    },
+    {
+      "id": "rotr-r-mat-grove-fiber",
+      "slug": "mat-grove-fiber",
+      "rel": "/assets/tcg/subjects/mat-grove-fiber.png"
+    },
+    {
+      "id": "rotr-r-mat-storm-wire",
+      "slug": "mat-storm-wire",
+      "rel": "/assets/tcg/subjects/mat-storm-wire.png"
+    },
+    {
+      "id": "rotr-r-mat-frost-powder",
+      "slug": "mat-frost-powder",
+      "rel": "/assets/tcg/subjects/mat-frost-powder.png"
+    },
+    {
+      "id": "rotr-r-mat-obsidian-shard",
+      "slug": "mat-obsidian-shard",
+      "rel": "/assets/tcg/subjects/mat-obsidian-shard.png"
+    },
+    {
+      "id": "rotr-r-mat-moonwater-pearl-mat",
+      "slug": "mat-moonwater-pearl-mat",
+      "rel": "/assets/tcg/subjects/mat-moonwater-pearl-mat.png"
+    },
+    {
+      "id": "rotr-r-mat-spirit-thread",
+      "slug": "mat-spirit-thread",
+      "rel": "/assets/tcg/subjects/mat-spirit-thread.png"
+    },
+    {
+      "id": "rotr-r-mat-alloy-plate",
+      "slug": "mat-alloy-plate",
+      "rel": "/assets/tcg/subjects/mat-alloy-plate.png"
+    },
+    {
+      "id": "rotr-r-mat-radiant-dust",
+      "slug": "mat-radiant-dust",
+      "rel": "/assets/tcg/subjects/mat-radiant-dust.png"
+    },
+    {
+      "id": "rotr-r-mat-void-fragment",
+      "slug": "mat-void-fragment",
+      "rel": "/assets/tcg/subjects/mat-void-fragment.png"
+    },
+    {
+      "id": "rotr-r-mat-ancient-root",
+      "slug": "mat-ancient-root",
+      "rel": "/assets/tcg/subjects/mat-ancient-root.png"
+    },
+    {
+      "id": "rotr-r-mat-storm-core",
+      "slug": "mat-storm-core",
+      "rel": "/assets/tcg/subjects/mat-storm-core.png"
+    },
+    {
+      "id": "rotr-r-mat-glacial-heart",
+      "slug": "mat-glacial-heart",
+      "rel": "/assets/tcg/subjects/mat-glacial-heart.png"
+    },
+    {
+      "id": "rotr-r-mat-spirit-flame-mat",
+      "slug": "mat-spirit-flame-mat",
+      "rel": "/assets/tcg/subjects/mat-spirit-flame-mat.png"
+    },
+    {
+      "id": "rotr-r-mat-volcano-heart",
+      "slug": "mat-volcano-heart",
+      "rel": "/assets/tcg/subjects/mat-volcano-heart.png"
+    },
+    {
+      "id": "rotr-r-mat-ocean-crown-pearl",
+      "slug": "mat-ocean-crown-pearl",
+      "rel": "/assets/tcg/subjects/mat-ocean-crown-pearl.png"
+    },
+    {
+      "id": "rotr-r-mat-worldroot-core",
+      "slug": "mat-worldroot-core",
+      "rel": "/assets/tcg/subjects/mat-worldroot-core.png"
+    },
+    {
+      "id": "rotr-r-mat-sky-rift-crystal",
+      "slug": "mat-sky-rift-crystal",
+      "rel": "/assets/tcg/subjects/mat-sky-rift-crystal.png"
+    },
+    {
+      "id": "rotr-r-mat-dawnstar-fragment",
+      "slug": "mat-dawnstar-fragment",
+      "rel": "/assets/tcg/subjects/mat-dawnstar-fragment.png"
+    },
+    {
+      "id": "rotr-r-mat-riftmaker-shard",
+      "slug": "mat-riftmaker-shard",
+      "rel": "/assets/tcg/subjects/mat-riftmaker-shard.png"
+    },
+    {
+      "id": "rotr-r-mat-astral-thread",
+      "slug": "mat-astral-thread",
+      "rel": "/assets/tcg/subjects/mat-astral-thread.png"
+    },
+    {
+      "id": "rotr-r-mat-eternal-alloy-core",
+      "slug": "mat-eternal-alloy-core",
+      "rel": "/assets/tcg/subjects/mat-eternal-alloy-core.png"
+    },
+    {
+      "id": "rotr-r-mat-celestial-star-fragment",
+      "slug": "mat-celestial-star-fragment",
+      "rel": "/assets/tcg/subjects/mat-celestial-star-fragment.png"
+    },
+    {
+      "id": "rotr-r-mat-harmony-crystal",
+      "slug": "mat-harmony-crystal",
+      "rel": "/assets/tcg/subjects/mat-harmony-crystal.png"
+    },
+    {
+      "id": "rotr-r-mat-constellation-core",
+      "slug": "mat-constellation-core",
+      "rel": "/assets/tcg/subjects/mat-constellation-core.png"
+    },
+    {
+      "id": "rotr-r-mat-reed-strand",
+      "slug": "mat-reed-strand",
+      "rel": "/assets/tcg/subjects/mat-reed-strand.png"
+    },
+    {
+      "id": "rotr-r-mat-dune-glass",
+      "slug": "mat-dune-glass",
+      "rel": "/assets/tcg/subjects/mat-dune-glass.png"
+    },
+    {
+      "id": "rotr-r-mat-spark-flint",
+      "slug": "mat-spark-flint",
+      "rel": "/assets/tcg/subjects/mat-spark-flint.png"
+    },
+    {
+      "id": "rotr-r-mat-kelp-silk",
+      "slug": "mat-kelp-silk",
+      "rel": "/assets/tcg/subjects/mat-kelp-silk.png"
+    },
+    {
+      "id": "rotr-r-mat-frost-needle",
+      "slug": "mat-frost-needle",
+      "rel": "/assets/tcg/subjects/mat-frost-needle.png"
+    },
+    {
+      "id": "rotr-r-mat-void-silk",
+      "slug": "mat-void-silk",
+      "rel": "/assets/tcg/subjects/mat-void-silk.png"
+    },
+    {
+      "id": "rotr-r-mat-dawn-pollen",
+      "slug": "mat-dawn-pollen",
+      "rel": "/assets/tcg/subjects/mat-dawn-pollen.png"
+    },
+    {
+      "id": "rotr-r-mat-rift-resin",
+      "slug": "mat-rift-resin",
+      "rel": "/assets/tcg/subjects/mat-rift-resin.png"
+    },
+    {
+      "id": "rotr-t-spark-fragment",
+      "slug": "spark-fragment",
+      "rel": "/assets/tcg/subjects/spark-fragment.png"
+    },
+    {
+      "id": "rotr-x-lantern-night",
+      "slug": "lantern-night",
+      "rel": "/assets/tcg/subjects/lantern-night.png"
+    },
+    {
+      "id": "rotr-x-market-panic",
+      "slug": "market-panic",
+      "rel": "/assets/tcg/subjects/market-panic.png"
+    },
+    {
+      "id": "rotr-x-pack-opening",
+      "slug": "pack-opening",
+      "rel": "/assets/tcg/subjects/pack-opening.png"
+    },
+    {
+      "id": "rotr-x-guild-horn",
+      "slug": "guild-horn",
+      "rel": "/assets/tcg/subjects/guild-horn.png"
+    },
+    {
+      "id": "rotr-x-hidden-snare",
+      "slug": "hidden-snare",
+      "rel": "/assets/tcg/subjects/hidden-snare.png"
+    },
+    {
+      "id": "rotr-x-void-latch",
+      "slug": "void-latch",
+      "rel": "/assets/tcg/subjects/void-latch.png"
+    },
+    {
+      "id": "rotr-x-tripwire-coil",
+      "slug": "tripwire-coil",
+      "rel": "/assets/tcg/subjects/tripwire-coil.png"
+    },
+    {
+      "id": "rotr-x-tideglass",
+      "slug": "tideglass",
+      "rel": "/assets/tcg/subjects/tideglass.png"
+    },
+    {
+      "id": "rotr-x-heart-relic",
+      "slug": "heart-relic",
+      "rel": "/assets/tcg/subjects/heart-relic.png"
+    },
+    {
+      "id": "rotr-x-forge-relic",
+      "slug": "forge-relic",
+      "rel": "/assets/tcg/subjects/forge-relic.png"
+    },
+    {
+      "id": "rotr-x-moss-relic",
+      "slug": "moss-relic",
+      "rel": "/assets/tcg/subjects/moss-relic.png"
+    },
+    {
+      "id": "rotr-x-storm-relic",
+      "slug": "storm-relic",
+      "rel": "/assets/tcg/subjects/storm-relic.png"
+    },
+    {
+      "id": "rotr-x-quest-first-bond",
+      "slug": "first-bond",
+      "rel": "/assets/tcg/subjects/first-bond.png"
+    },
+    {
+      "id": "rotr-x-quest-plaza-sweep",
+      "slug": "plaza-sweep",
+      "rel": "/assets/tcg/subjects/plaza-sweep.png"
+    },
+    {
+      "id": "rotr-x-quest-ember-trial",
+      "slug": "ember-trial",
+      "rel": "/assets/tcg/subjects/ember-trial.png"
+    },
+    {
+      "id": "rotr-x-quest-quiet-study",
+      "slug": "quiet-study",
+      "rel": "/assets/tcg/subjects/quiet-study.png"
+    },
+    {
+      "id": "rotr-x-artifact-gate-key",
+      "slug": "gate-key",
+      "rel": "/assets/tcg/subjects/gate-key.png"
+    },
+    {
+      "id": "rotr-x-artifact-moss-codex",
+      "slug": "moss-codex",
+      "rel": "/assets/tcg/subjects/moss-codex.png"
+    },
+    {
+      "id": "rotr-x-artifact-tide-sextant",
+      "slug": "tide-sextant",
+      "rel": "/assets/tcg/subjects/tide-sextant.png"
+    },
+    {
+      "id": "rotr-x-artifact-void-ledger",
+      "slug": "void-ledger",
+      "rel": "/assets/tcg/subjects/void-ledger.png"
+    },
+    {
+      "id": "rotr-x-legendary-heart-witness",
+      "slug": "heart-witness",
+      "rel": "/assets/tcg/subjects/heart-witness.png"
+    },
+    {
+      "id": "rotr-x-legendary-crater-tyrant",
+      "slug": "crater-tyrant",
+      "rel": "/assets/tcg/subjects/crater-tyrant.png"
+    },
+    {
+      "id": "rotr-c-plaza-scout",
+      "slug": "plaza-scout",
+      "rel": "/assets/tcg/subjects/plaza-scout.png"
+    },
+    {
+      "id": "rotr-c-market-runner",
+      "slug": "market-runner",
+      "rel": "/assets/tcg/subjects/market-runner.png"
+    },
+    {
+      "id": "rotr-c-lantern-acolyte",
+      "slug": "lantern-acolyte",
+      "rel": "/assets/tcg/subjects/lantern-acolyte.png"
+    },
+    {
+      "id": "rotr-c-shard-bit",
+      "slug": "shard-bit",
+      "rel": "/assets/tcg/subjects/shard-bit.png"
+    },
+    {
+      "id": "rotr-c-gear-tick",
+      "slug": "gear-tick",
+      "rel": "/assets/tcg/subjects/gear-tick.png"
+    },
+    {
+      "id": "rotr-c-star-midge",
+      "slug": "star-midge",
+      "rel": "/assets/tcg/subjects/star-midge.png"
+    },
+    {
+      "id": "rotr-c-null-gnat",
+      "slug": "null-gnat",
+      "rel": "/assets/tcg/subjects/null-gnat.png"
+    },
+    {
+      "id": "rotr-c-poison-spore",
+      "slug": "poison-spore",
+      "rel": "/assets/tcg/subjects/poison-spore.png"
+    },
+    {
+      "id": "rotr-c-arc-scribe",
+      "slug": "arc-scribe",
+      "rel": "/assets/tcg/subjects/arc-scribe.png"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import { z } from "zod";
 import { attachGuestCookie, guestIdentityFields, resolveOwnerKey } from "@/lib/auth/owner-key";
 import { isFeatureEnabled } from "@/lib/config/feature-flags";
 import { hatchEgg } from "@/game/eggs/hatchery-store";
+import { grantCompanionCardForSpecies } from "@/game/eggs/companion-card-link";
 import { onPetHatched } from "@/game/achievements/hooks";
 import { appendTimelineEvent } from "@/game/timeline/store";
 
@@ -27,15 +28,25 @@ export async function POST(req: Request) {
     const result = hatchEgg(ownerKey, parsed.data.eggPublicId, {
       skipWait: parsed.data.skipWait === true,
     });
+    const companionCard = grantCompanionCardForSpecies(ownerKey, result.reveal.speciesSlug);
     const unlocked = onPetHatched();
     appendTimelineEvent({
       scope: "player",
       title: "Riftling hatched",
       detail: "A companion emerged from its egg into The Riftwilds.",
-      tags: ["hatchery", "pet"],
+      tags: ["hatchery", "pet", "companion-card"],
     });
     const res = NextResponse.json({
       ...result,
+      companionCard,
+      cinematic: {
+        kind: "hatch_reveal",
+        speciesSlug: result.reveal.speciesSlug,
+        rarity: result.reveal.rarity,
+        familyId: companionCard.familyId,
+        /** Client may play SFX / cry / Codex discovery banner. */
+        hooks: ["sfx.hatchery.hatch_reveal", "riftling_cry", "codex_family_hint"],
+      },
       demo: true,
       achievementUnlocks: unlocked.map((a) => a.key),
       ...guestIdentityFields(isGuest, guestToken),

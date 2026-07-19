@@ -40,10 +40,13 @@ export function RarityFrame({
   const v = RARITY_VISUAL[rarity];
   return (
     <div
-      className={cn("rounded-md p-[1px]", className)}
+      className={cn(
+        "rounded-md p-[1px] transition-[box-shadow,filter,transform] duration-300",
+        className,
+      )}
       style={{
-        background: `linear-gradient(135deg, ${v.border}, transparent 60%)`,
-        boxShadow: `0 0 20px ${v.glow}`,
+        background: `linear-gradient(145deg, ${v.border}, transparent 58%)`,
+        boxShadow: `0 0 22px ${v.glow}, 0 0 48px ${v.glow}`,
       }}
     >
       <div className="h-full rounded-[calc(var(--radius-md)-1px)] bg-[var(--bg-glass)] backdrop-blur-xl">

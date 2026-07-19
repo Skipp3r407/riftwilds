@@ -73,7 +73,7 @@ export const HELP_SECTIONS: HelpSection[] = [
     body: [
       "Each side protects a Keeper (20 HP). Reduce the challenger to 0 to win.",
       "On your turn: play affordable cards from hand, then End turn so board units strike.",
-      "Opening hand is 3 cards. Hand max is 7; board holds up to 5 units.",
+      "Opening hand is 4 cards. Hand max is 8; board holds up to 5 units.",
       "Matches time out after 30 turns if neither Keeper falls.",
       "Practice boards need no wallet and award quest progress locally when tracking is on.",
     ],

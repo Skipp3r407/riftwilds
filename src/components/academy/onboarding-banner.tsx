@@ -27,12 +27,15 @@ export function AcademyOnboardingBanner() {
       <div>
         <p className="font-display text-sm text-[var(--cyan)]">New Keeper?</p>
         <p className="text-xs text-[var(--text-muted)]">
-          Start with Help for Rift Battles, binder, and Credits — SOL is never required. Academy
-          drills are optional.
+          Free starter package: Starter Egg, Credits, starter deck, tutorial — no wallet, SOL, or
+          token required. Hatch at the Hatchery, then duel in Rift Battles.
         </p>
       </div>
       <div className="flex gap-2">
-        <Link href="/help" className="btn-primary focus-ring text-xs">
+        <Link href="/hatchery" className="btn-primary focus-ring text-xs">
+          Claim Starter Egg
+        </Link>
+        <Link href="/help" className="btn-secondary focus-ring text-xs">
           Open Help
         </Link>
         <Link href={academyHref("b01-welcome")} className="btn-secondary focus-ring text-xs">

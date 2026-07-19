@@ -23,7 +23,15 @@ export type QuestReward =
   | { kind: "care_item"; itemKey: string; label: string; quantity: number }
   | { kind: "xp"; amount: number }
   | { kind: "arena_points"; amount: number }
-  | { kind: "soft_currency"; amount: number; label?: string };
+  | { kind: "soft_currency"; amount: number; label?: string }
+  /** Claim via POST /api/hatchery/earn — never wallet-gated. */
+  | {
+      kind: "egg";
+      eggType?: string;
+      label: string;
+      /** Maps to QUEST_EGG_REWARD_KEYS / earn path. */
+      earnPath?: "QUEST" | "ACHIEVEMENT" | "EVENT" | "LOGIN";
+    };
 
 export type QuestObjectiveDef = {
   key: string;

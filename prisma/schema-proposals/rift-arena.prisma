@@ -1,0 +1,72 @@
+// Rift Arena — Neon proposal (NOT migrated).
+// Free play does not require these tables. SOL escrow tables stay unused until flags ON.
+
+model RiftArenaSeason {
+  id        String   @id @default(cuid())
+  name      String
+  startsAt  DateTime
+  endsAt    DateTime
+  active    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  ratings   RiftArenaRating[]
+  matches   RiftArenaMatchRecord[]
+}
+
+model RiftArenaRating {
+  id           String @id @default(cuid())
+  seasonId     String
+  ownerKey     String
+  displayName  String
+  rating       Int    @default(1000)
+  wins         Int    @default(0)
+  losses       Int    @default(0)
+  streak       Int    @default(0)
+  season       RiftArenaSeason @relation(fields: [seasonId], references: [id])
+
+  @@unique([seasonId, ownerKey])
+  @@index([seasonId, rating])
+}
+
+model RiftArenaMatchRecord {
+  id            String   @id @default(cuid())
+  publicId      String   @unique
+  seasonId      String?
+  matchType     String
+  status        String
+  hostKey       String
+  guestKey      String?
+  winnerKey     String?
+  replayJson    Json?
+  createdAt     DateTime @default(now())
+  completedAt   DateTime?
+  season        RiftArenaSeason? @relation(fields: [seasonId], references: [id])
+
+  @@index([hostKey, createdAt])
+  @@index([matchType, createdAt])
+}
+
+/// Phase 2 only — never write while RIFT_ARENA_SOL_* flags are false.
+model RiftArenaEscrow {
+  id              String   @id @default(cuid())
+  matchPublicId   String?
+  stakeTierId     String
+  amountLamports  BigInt
+  status          String
+  hostWallet      String?
+  guestWallet     String?
+  idempotencyKey  String   @unique
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([status, createdAt])
+}
+
+model RiftArenaAdminState {
+  id                 Int      @id @default(1)
+  matchmakingPaused  Boolean  @default(false)
+  rankedPaused       Boolean  @default(false)
+  solArenaPaused     Boolean  @default(true)
+  dailyEntrySoftCap  Int      @default(80)
+  pauseReason        String?
+  updatedAt          DateTime @updatedAt
+}

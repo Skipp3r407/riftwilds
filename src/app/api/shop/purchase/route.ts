@@ -55,7 +55,8 @@ export async function POST(request: Request) {
   }
 
   const session = await getSessionContext();
-  const userId = session?.userId ?? parsed.data.demoUser ?? "demo-keeper";
+  // Ignore client-supplied demoUser — arbitrary ids let callers target other ledgers.
+  const userId = session?.userId ?? "demo-keeper";
 
   const item = getCatalogItem(parsed.data.itemId);
   if (!item) {

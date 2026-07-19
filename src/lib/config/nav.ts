@@ -29,6 +29,8 @@ export const primaryNav: NavLink[] = [
   { href: "/", label: "Home", header: true, sidebar: false },
   { href: "/play", label: "Play", header: true, sidebar: true },
   { href: "/tcg/battle", label: "Rift Battle", header: true, sidebar: true },
+  { href: "/tcg/deck-builder", label: "Deck Atelier", header: true, sidebar: true },
+  { href: "/tcg/codex", label: "Rift Codex", header: true, sidebar: true },
   { href: "/tcg/collection", label: "Card Binder", header: true, sidebar: true },
   { href: "/dashboard", label: "Dashboard", header: true, sidebar: true },
   { href: "/hatchery", label: "Hatchery", header: true, sidebar: true },
@@ -37,7 +39,8 @@ export const primaryNav: NavLink[] = [
   { href: "/restoration", label: "Restoration", header: false, sidebar: true },
   { href: "/arena", label: "Arena", header: false, sidebar: true },
   { href: "/shop", label: "Card Shop", header: true, sidebar: true },
-  { href: "/marketplace", label: "Trade Desk", header: true, sidebar: true },
+  { href: "/exchange", label: "Rift Exchange", header: true, sidebar: true },
+  { href: "/marketplace", label: "Marketplace", header: true, sidebar: true },
   { href: "/inventory", label: "Inventory", header: false, sidebar: true },
   { href: "/guilds", label: "Guilds", header: false, sidebar: true },
   { href: "/homestead", label: "Homestead", header: false, sidebar: true },
@@ -64,6 +67,7 @@ export const extraSidebarNav: NavLink[] = [
   { href: "/academy", label: "Academy" },
   { href: "/leaderboards", label: "Leaderboards" },
   { href: "/login", label: "Account" },
+  { href: "/settings/nakama", label: "Nakama" },
 ];
 
 /** Grouped command-bar navigation (desktop dropdowns + mobile sections) */
@@ -75,6 +79,9 @@ export const headerNavGroups: NavGroup[] = [
     items: [
       { href: "/play", label: "Play hub" },
       { href: "/tcg/battle", label: "Rift Battle" },
+      { href: "/tcg/deck-builder", label: "Deck Atelier" },
+      { href: "/tcg/codex", label: "Rift Codex" },
+      { href: "/tcg/museum", label: "Museum Hall" },
       { href: "/tcg/collection", label: "Card Binder" },
       { href: "/hatchery", label: "Hatchery" },
       { href: "/collection", label: "Pet Collection" },
@@ -93,6 +100,9 @@ export const headerNavGroups: NavGroup[] = [
     href: "/tcg/battle",
     items: [
       { href: "/tcg/battle", label: "Rift Battle" },
+      { href: "/tcg/deck-builder", label: "Deck Atelier" },
+      { href: "/tcg/codex", label: "Rift Codex" },
+      { href: "/tcg/museum", label: "Museum Hall" },
       { href: "/tcg/collection", label: "Card Binder" },
       { href: "/arena", label: "Arena (legacy)" },
       { href: "/leaderboards", label: "Leaderboards" },
@@ -108,7 +118,7 @@ export const headerNavGroups: NavGroup[] = [
       { href: "/live-world", label: "Live World", badge: "Preview" },
       { href: "/restoration", label: "World Restoration" },
       { href: "/about", label: "About / Story" },
-      { href: "/comics", label: "Comics" },
+      { href: "/comics", label: "Lore Library" },
       { href: "/fan-kit", label: "Fan Kit" },
       { href: "/coloring", label: "Coloring" },
       { href: "/printables", label: "Printables" },
@@ -127,12 +137,17 @@ export const headerNavGroups: NavGroup[] = [
   {
     id: "market",
     label: "Market",
-    href: "/shop",
+    href: "/exchange",
     items: [
+      { href: "/exchange", label: "Rift Exchange" },
+      { href: "/marketplace", label: "Player Marketplace" },
+      { href: "/marketplace/shops", label: "Player shops" },
+      { href: "/marketplace/auctions", label: "Auction house" },
       { href: "/shop", label: "Card Shop" },
-      { href: "/marketplace", label: "Trade Desk" },
       { href: "/inventory", label: "Inventory" },
       { href: "/creators", label: "Creator Hub" },
+      { href: "/rewards", label: "Reward Center" },
+      { href: "/treasury", label: "Treasury" },
     ],
   },
   {

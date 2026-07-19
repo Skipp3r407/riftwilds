@@ -10,6 +10,10 @@ import {
   type TokenMarketMetrics,
 } from "@/lib/community/metrics";
 import { projectConfig } from "@/lib/config/project";
+import {
+  buildTokenLiveAnalytics,
+  type TokenLiveAnalytics,
+} from "@/lib/ecosystem/token-live-analytics";
 
 export type TokenSupplySnapshot = {
   circulating: number | null;
@@ -56,6 +60,8 @@ export type TokenAnalyticsDashboard = {
     volumeSeriesAvailable: boolean;
     note: string;
   };
+  /** Premium /token live analytics shell (charts, burn ledger, calculator). */
+  live: TokenLiveAnalytics;
   disclaimers: string[];
   refreshedAt: string;
 };
@@ -73,6 +79,7 @@ export async function getTokenAnalyticsDashboard(
   const community = await getCommunityDashboard(game);
   const market = community.market;
   const phase = resolvePhase(market);
+  const live = await buildTokenLiveAnalytics(market);
 
   const buySellLinks: TokenAnalyticsDashboard["buySellLinks"] = [];
   if (projectConfig.PUMP_FUN_URL) {
@@ -99,8 +106,8 @@ export async function getTokenAnalyticsDashboard(
     network: projectConfig.SOLANA_NETWORK,
     market,
     supply: {
-      circulating: null,
-      total: null,
+      circulating: live.metrics.circulating,
+      total: live.metrics.totalSupply,
       burned: market.totalTokensBurned,
       lockedPercent: null,
       note: "Supply / locked % require a verified on-chain indexer — shown as N/A until connected.",
@@ -144,13 +151,11 @@ export async function getTokenAnalyticsDashboard(
     whales: community.whales,
     topHolders: community.topHolders,
     charts: {
-      priceSeriesAvailable: false,
+      priceSeriesAvailable: live.priceChart.available,
       volumeSeriesAvailable: false,
-      note:
-        market.availability === "awaiting_mint"
-          ? "Charts unlock after mint + pair data. No fabricated candles."
-          : "Sparkline series deferred until indexer; live scalars above use DexScreener when available.",
+      note: live.priceChart.note,
     },
+    live,
     disclaimers: community.disclaimers,
     refreshedAt: community.refreshedAt,
   };

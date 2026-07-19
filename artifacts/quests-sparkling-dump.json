@@ -1,0 +1,29 @@
+{
+  "bodyHTML": "<div class=\"flex flex-wrap items-start justify-between gap-2\"><div class=\"min-w-0\"><div class=\"flex flex-wrap items-center gap-2\"><span class=\"rounded-[var(--radius-sm)] border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider\" style=\"color: var(--cyan); border-color: color-mix(in srgb, var(--cyan) 45%, transparent); background: color-mix(in srgb, var(--cyan) 12%, transparent);\">Daily</span><span class=\"rounded-[var(--radius-sm)] border px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-[var(--emerald)] border-[var(--emerald)]/35 bg-[rgba(61,255,176,0.08)]\">Easy</span><span class=\"text-[10px] text-[var(--text-dim)]\">Repeatable</span></div><h3 class=\"mt-2 font-display text-base text-white md:text-lg\">Sparkling Clean</h3><p class=\"mt-1 text-sm text-[var(--text-muted)]\">Perform hygiene care today.</p></div></div><div class=\"mt-4 space-y-2\"><p class=\"text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]\">Objectives</p><ul class=\"space-y-1.5\"><li class=\"panel-inset flex items-start gap-2 px-2.5 py-2 text-xs\"><span class=\"mt-0.5 flex size-3.5 shrink-0 items-center justify-center rounded-sm border text-[9px] border-[var(--stroke)] text-transparent\" aria-hidden=\"true\">✓</span><span class=\"flex-1\">Clean a Riftling</span><span class=\"tabular-nums text-[var(--text-dim)]\">0/1</span></li></ul></div><div class=\"mt-4\"><p class=\"text-[10px] font-semibold uppercase tracking-wider text-[var(--text-dim)]\">Rewards</p><div class=\"mt-1.5 flex flex-wrap gap-1.5\"><span class=\"panel-inset px-2 py-1 text-[11px] text-[var(--text)]\">50 XP</span><span class=\"panel-inset px-2 py-1 text-[11px] text-[var(--text)]\">Spark Ribbon ×1</span></div></div><div class=\"mt-4 flex flex-wrap gap-2\"><button type=\"button\" class=\"btn-primary focus-ring text-xs\">Accept</button><button type=\"button\" class=\"btn-secondary focus-ring text-xs\">Track</button></div>",
+  "childRects": [
+    {
+      "cls": "flex flex-wrap items-start justify-between gap-2",
+      "h": 81,
+      "top": 447,
+      "text": "DAILY\nEASY\nRepeatable\nSparkling Clean\n\nPerform hygiene care "
+    },
+    {
+      "cls": "mt-4 space-y-2",
+      "h": 57,
+      "top": 544,
+      "text": "OBJECTIVES\n\n✓\nClean a Riftling\n0/1"
+    },
+    {
+      "cls": "mt-4",
+      "h": 48,
+      "top": 617,
+      "text": "REWARDS\n\n50 XP\nSpark Ribbon ×1"
+    },
+    {
+      "cls": "mt-4 flex flex-wrap gap-2",
+      "h": 40,
+      "top": 680,
+      "text": "Accept\nTrack"
+    }
+  ]
+}

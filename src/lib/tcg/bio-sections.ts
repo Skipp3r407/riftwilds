@@ -1,6 +1,11 @@
-import { creaturePortraitPath, regionImagePath } from "@/lib/assets/paths";
+import {
+  affinityIconPath,
+  creaturePortraitPath,
+  regionImagePath,
+} from "@/lib/assets/paths";
 import type { RegionContentPack } from "@/content/regions/types";
 import type { SpeciesLore } from "@/lib/pets/lore-types";
+import { regionSlugFromName } from "@/lib/world/region-slugs";
 
 /** Prefer scenic map plates; fall back to legacy region banners. */
 function habitatImageSrc(regionSlug: string): {
@@ -12,23 +17,6 @@ function habitatImageSrc(regionSlug: string): {
     imageFallback: regionImagePath(regionSlug),
   };
 }
-
-/** Display name → asset slug (matches world-map region identities). */
-const REGION_SLUG_BY_NAME: Record<string, string> = {
-  "riftwild commons": "riftwild-commons",
-  "ember crater": "ember-crater",
-  "moonwater coast": "moonwater-coast",
-  "elderwood forest": "elderwood-forest",
-  "stormspire peaks": "stormspire-peaks",
-  "stoneheart canyon": "stoneheart-canyon",
-  "frostveil basin": "frostveil-basin",
-  "radiant citadel": "radiant-citadel",
-  "void hollow": "void-hollow",
-  "alloy ruins": "alloy-ruins",
-  "spirit marsh": "spirit-marsh",
-  "celestial rift": "celestial-rift",
-  "spirit realm": "spirit-marsh",
-};
 
 /** Wallpaper / overview fallbacks when a region plate is missing. */
 const REGION_IMAGE_FALLBACK: Record<string, string> = {
@@ -82,12 +70,7 @@ function affinityKey(affinity: string): string {
   return "spirit";
 }
 
-export function regionSlugFromName(nativeRegion: string): string {
-  const key = nativeRegion.trim().toLowerCase();
-  const direct = REGION_SLUG_BY_NAME[key];
-  if (direct) return direct;
-  return key.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-}
+export { regionSlugFromName } from "@/lib/world/region-slugs";
 
 function regionScenicSrc(regionId: string): {
   imageSrc: string;
@@ -109,13 +92,25 @@ function regionScenicSrc(regionId: string): {
 }
 
 function bioVignette(section: "behavior" | "diet", affinity: string): string {
+  const key = affinityKey(affinity);
+  // Prefer painted PNG masters; SVG remains a lightweight fallback.
+  return `/assets/tcg/bio/${section}-${key}.png`;
+}
+
+function bioVignetteFallback(section: "behavior" | "diet", affinity: string): string {
   return `/assets/tcg/bio/${section}-${affinityKey(affinity)}.svg`;
 }
 
-function elementPlate(affinity: string): string {
+/** Painted affinity medallions (not battle letter badges like EMB/TID). */
+function affinityPlate(affinity: string): {
+  imageSrc: string;
+  imageFallback: string;
+} {
   const key = affinityKey(affinity);
-  if (key === "celestial") return "/assets/battle/elements/radiant.svg";
-  return `/assets/battle/elements/${key}.svg`;
+  return {
+    imageSrc: affinityIconPath(key, false),
+    imageFallback: affinityIconPath(key, true),
+  };
 }
 
 /** Build illustrated Creature Bio sections from species lore. */
@@ -160,6 +155,7 @@ export function buildCreatureBioSections(lore: SpeciesLore): TcgBioSection[] {
         .filter(Boolean)
         .join(" "),
       imageSrc: bioVignette("behavior", affinity),
+      imageFallback: bioVignetteFallback("behavior", affinity),
       imageAlt: `${lore.name} social behavior`,
       imageLayout: "plate",
     },
@@ -170,6 +166,7 @@ export function buildCreatureBioSections(lore: SpeciesLore): TcgBioSection[] {
         .filter(Boolean)
         .join(" "),
       imageSrc: bioVignette("diet", affinity),
+      imageFallback: bioVignetteFallback("diet", affinity),
       imageAlt: `${lore.name} diet`,
       imageLayout: "plate",
     },
@@ -181,7 +178,7 @@ export function buildCreatureBioSections(lore: SpeciesLore): TcgBioSection[] {
           ? `, with secondary ties to ${lore.secondaryAffinities.join(", ")}`
           : ""
       }. ${lore.weatherPreference ? `Prefers ${lore.weatherPreference}.` : ""}`.trim(),
-      imageSrc: elementPlate(affinity),
+      ...affinityPlate(affinity),
       imageAlt: `${affinity} affinity`,
       imageLayout: "plate",
     },

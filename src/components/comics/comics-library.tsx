@@ -28,11 +28,12 @@ export function ComicsLibrary({ issues, seriesTitle, seriesSubtitle }: Props) {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
       <header className="relative overflow-hidden rounded-2xl border border-[var(--stroke)] bg-[radial-gradient(ellipse_at_20%_0%,rgba(61,231,255,0.14),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(255,184,77,0.12),transparent_45%),linear-gradient(160deg,#1a1510_0%,#0a1830_55%,#121a28_100%)] px-6 py-12 md:px-10 md:py-16">
-        <p className="page-kicker">Official Series</p>
+        <p className="page-kicker">Lore Library · Magical Archive</p>
         <h1 className="font-display mt-3 text-4xl text-white md:text-6xl">{seriesTitle}</h1>
         <p className="mt-4 max-w-2xl text-base text-[var(--text-muted)] md:text-lg">{seriesSubtitle}</p>
         <p className="mt-3 text-sm text-[var(--text-muted)]">
-          {issues.length} issues · World Codex unlocks · Credits cosmetics only (never SOL)
+          {issues.length} illustrated issues · resume &amp; favorites · Codex / cosmetic unlocks
+          (never pay-to-win)
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
           <Link href={`/comics/${issues[0]?.slug ?? ""}`} className="btn-primary focus-ring">
@@ -53,8 +54,12 @@ export function ComicsLibrary({ issues, seriesTitle, seriesSubtitle }: Props) {
         </div>
       </header>
 
-      <section className="mt-10" aria-label="Comic issue library">
-        <h2 className="font-display text-2xl text-white">Library</h2>
+      <section className="mt-10" aria-label="Lore Library shelves">
+        <h2 className="font-display text-2xl text-white">Archive shelves</h2>
+        <p className="mt-2 max-w-2xl text-sm text-[var(--text-muted)]">
+          Select a volume to open the reader — page flip, zoom, bookmarks, and reading progress
+          persist locally. Story unlocks cosmetics and Codex ties only.
+        </p>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {issues.map((issue) => (
             <ComicCoverCard

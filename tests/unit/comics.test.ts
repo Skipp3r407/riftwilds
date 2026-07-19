@@ -41,6 +41,22 @@ describe("Legends of the Rift catalog", () => {
     }
   });
 
+  it("keeps recycled generic bridges from dominating each issue", () => {
+    for (const issue of COMIC_ISSUES) {
+      const genericBridges = issue.pages.filter(
+        (p) => p.title === "Quiet between storms" || p.title === "The road remembers",
+      );
+      expect(
+        genericBridges.length,
+        `${issue.slug} still uses generic bridge titles`,
+      ).toBeLessThanOrEqual(4);
+      const withSpeech = issue.pages.filter((p) =>
+        p.panels.some((panel) => panel.bubbles.some((b) => b.kind === "speech" || b.kind === "narration")),
+      );
+      expect(withSpeech.length).toBeGreaterThanOrEqual(12);
+    }
+  });
+
   it("resolves issues and wires circus live event on #3", () => {
     expect(getComicIssue("the-first-rift")?.title).toBe("The First Rift");
     const circus = getComicIssue("the-traveling-circus");

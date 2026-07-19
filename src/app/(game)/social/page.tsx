@@ -85,6 +85,9 @@ export default function SocialHubPage() {
             <ImageButton href="/creators" variant="tab" size="sm">
               Creators
             </ImageButton>
+            <ImageButton href="/settings/nakama" variant="tab" size="sm">
+              Nakama
+            </ImageButton>
           </>
         }
       />

@@ -37,6 +37,13 @@ yarn-error.log*
 .env.production
 .env.development
 
+# Nakama local runtime scratch (compose volume mount may write here)
+/nakama/data/
+!/nakama/modules/.gitkeep
+
+# local treasury ops ledger (demo persistence)
+/.data/
+
 # local scratch / agent temp
 /tmp-*.json
 /artifacts/**/*.log

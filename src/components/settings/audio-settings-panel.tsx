@@ -10,23 +10,27 @@ import { cn } from "@/lib/utils/cn";
 const GROUP_LABELS: Record<AudioVolumeGroup, string> = {
   master: "Master",
   music: "Music",
-  ambient: "Ambient",
+  ambient: "Environment",
   ui: "UI",
-  sfx: "SFX",
-  pet: "Pet",
+  sfx: "Effects",
+  pet: "Companions",
   combat: "Combat",
   weather: "Weather",
+  voice: "Voice",
+  notifications: "Notifications",
 };
 
 const GROUP_HINTS: Partial<Record<AudioVolumeGroup, string>> = {
   master: "Scales every bus",
-  music: "Exploration themes & playlist",
-  ambient: "Regional layers & menu pad",
-  ui: "Clicks, modals, map, chat",
-  sfx: "World footsteps, gather, portals",
-  pet: "Care actions & need cues",
-  combat: "Arena hits & stingers",
+  music: "Themes, playlist & adaptive stems",
+  ambient: "Biome beds, menu pad, reverb wet (Environment)",
+  ui: "Clicks, modals, map, chat, deck, Codex pages",
+  sfx: "World, hatchery, marketplace & discovery effects",
+  pet: "Care actions, companion moods & species cries",
+  combat: "Arena / TCG hits, boss stingers, elemental whooshes",
   weather: "Rain, wind, thunder cues",
+  voice: "Narrator, announcer slots & comic narration",
+  notifications: "Toasts, achievements, guild invites, friend pings",
 };
 
 export function AudioSettingsPanel({ compact }: { compact?: boolean } = {}) {
