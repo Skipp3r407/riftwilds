@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * Production build safeguard — fail if Development Override env is still enabled
- * on true production. Vercel preview may keep NEXT_PUBLIC_AUTH_DEV_BYPASS temporarily.
- * Wired as `prebuild` in package.json.
+ * Production build safeguard — fail if classic Development Override env is still enabled
+ * on true production. AUTH_DEV_BYPASS aliases are runtime-gated and do not hard-fail builds
+ * (preview projects may keep them set). Wired as `prebuild` in package.json.
  */
 
 function flagTrue(value) {
@@ -26,15 +26,14 @@ if (!trueProductionContext) {
   process.exit(0);
 }
 
-const flagged =
+// Only classic DEV_OVERRIDE flags block production builds.
+// AUTH_DEV_BYPASS is refused at runtime when NODE_ENV=production.
+if (
   flagTrue(process.env.DEV_OVERRIDE) ||
-  flagTrue(process.env.NEXT_PUBLIC_DEV_OVERRIDE) ||
-  flagTrue(process.env.AUTH_DEV_BYPASS) ||
-  flagTrue(process.env.NEXT_PUBLIC_AUTH_DEV_BYPASS);
-
-if (flagged) {
+  flagTrue(process.env.NEXT_PUBLIC_DEV_OVERRIDE)
+) {
   console.error(
-    "[DEV_OVERRIDE] Refusing production build: unset DEV_OVERRIDE, NEXT_PUBLIC_DEV_OVERRIDE, AUTH_DEV_BYPASS, and NEXT_PUBLIC_AUTH_DEV_BYPASS.",
+    "[DEV_OVERRIDE] Refusing production build: unset DEV_OVERRIDE and NEXT_PUBLIC_DEV_OVERRIDE (must be false/absent).",
   );
   process.exit(1);
 }
