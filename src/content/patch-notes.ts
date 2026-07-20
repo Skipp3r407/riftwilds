@@ -207,7 +207,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Frostveil's bed and a few quiet sci-fi loops were going silent after a few seconds; the playlist and crossfade engine now keep ambience playing through.",
     changed: [
-      "Frostveil / playlist track "Space Graveyard" replaced with continuous CC0 "Icy Realm"",
+      "Frostveil / playlist track “Space Graveyard” replaced with continuous CC0 “Icy Realm”",
       "Quiet Dark Sci-Fi beds (Sector, Airy, Pulse, Urgent) get a gentle playback gain so they stay audible at normal Music volume",
     ],
     fixed: [
