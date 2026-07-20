@@ -45,8 +45,8 @@ assert(
   "Player dashboard flag should default on",
 );
 assert(
-  featureFlagDefaults.AUTH_WALLET_OPTIONAL_PLAY === true,
-  "Wallet-optional play should default on",
+  featureFlagDefaults.AUTH_WALLET_OPTIONAL_PLAY === false,
+  "Legacy guest/wallet-optional play must stay off (account required)",
 );
 assert(
   featureFlagDefaults.AUTH_WALLET_SIWS_ENABLED === true,

@@ -4,9 +4,23 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { TCG_DECKS, TCG_STARTER_SET_20 } from "@/content/tcg";
+import {
+  getHeroById,
+  TCG_DECKS,
+  TCG_FACTIONS,
+  TCG_STARTER_SET_20,
+} from "@/content/tcg";
 import { expandContentDeck } from "@/game/tcg/deck";
 import { auditDeckMigration } from "@/game/tcg/rules/deck-migration";
+
+const FALLBACK_COMMANDER = "hero-elara-venn";
+
+/** Commanders live on factions (defaultStarterDeckId), not on TcgDeck. */
+function commanderForDeck(deckId: string, fallback = FALLBACK_COMMANDER): string {
+  const faction = TCG_FACTIONS.find((f) => f.defaultStarterDeckId === deckId);
+  const heroId = faction?.commanderHeroIds[0] ?? fallback;
+  return getHeroById(heroId) ? heroId : fallback;
+}
 
 const rows = [];
 
@@ -16,7 +30,7 @@ for (const deck of TCG_DECKS) {
     auditDeckMigration({
       deckId: deck.id,
       cardIds: ids,
-      commanderHeroId: deck.commanderHeroId ?? "hero-elara-venn",
+      commanderHeroId: commanderForDeck(deck.id),
     }),
   );
 }
@@ -25,7 +39,8 @@ rows.push(
   auditDeckMigration({
     deckId: TCG_STARTER_SET_20.id,
     cardIds: TCG_STARTER_SET_20.cardIds,
-    commanderHeroId: TCG_STARTER_SET_20.recommendedCommanderId ?? "hero-elara-venn",
+    commanderHeroId:
+      TCG_STARTER_SET_20.recommendedCommanderId || FALLBACK_COMMANDER,
   }),
 );
 
