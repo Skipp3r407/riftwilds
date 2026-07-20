@@ -33,7 +33,8 @@ export async function POST(request: Request) {
   if (!guard.ok) return guard.response;
 
   // Hard server reject — never trust client-only flags.
-  if (process.env.NODE_ENV === "production" || !isDevOverrideRuntimeAllowed()) {
+  // True production is always locked; preview needs an explicit bypass flag.
+  if (!isDevOverrideRuntimeAllowed()) {
     return NextResponse.json(
       {
         ok: false,

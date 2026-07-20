@@ -1,37 +1,38 @@
 # Development Override (local / DEV only)
 
-Secure auth bypass for local Riftwilds testing. **Production always requires real accounts.**
+Secure auth bypass for local Riftwilds testing. **True production always requires real accounts.**
 
 ## How to enable
 
-Override is allowed only when **all** of these hold:
+Override is allowed when:
 
-1. `NODE_ENV !== "production"` (hard stop)
-2. **and** one of:
-   - `NODE_ENV === "development"` (default `npm run dev`), **or**
-   - `DEV_OVERRIDE=true`, **or**
-   - `NEXT_PUBLIC_DEV_OVERRIDE=true`
+1. `NODE_ENV === "development"` (default `npm run dev`) — always on, **or**
+2. Explicit bypass flag on a non-true-production runtime:
+   - `NEXT_PUBLIC_AUTH_DEV_BYPASS=1` (preferred temporary alias), **or**
+   - `AUTH_DEV_BYPASS=1`, **or**
+   - `DEV_OVERRIDE=true` / `NEXT_PUBLIC_DEV_OVERRIDE=true`
+3. **Never** when `VERCEL_ENV === "production"` (or local `NODE_ENV=production` without Vercel preview)
 
 Suggested local `.env` (also in `.env.example`):
 
 ```bash
 NODE_ENV=development
-# Optional explicit flags (redundant under npm run dev):
-# DEV_OVERRIDE=true
-# NEXT_PUBLIC_DEV_OVERRIDE=true
+# Optional — only needed for Vercel preview (local npm run dev already enables bypass):
+# NEXT_PUBLIC_AUTH_DEV_BYPASS=1
 ```
 
-Never set override flags on production hosts. `npm run build` / production CI runs `scripts/assert-no-dev-override-prod.mjs` and **fails** if those flags are still true.
+Never set override flags on true production. `prebuild` / CI runs `scripts/assert-no-dev-override-prod.mjs` and **fails** if those flags remain on production (preview is allowed).
 
 ## Login UI
 
-On `/login` when override is allowed:
+On `/login` and `/signup` when override is allowed:
 
-- Replaces the **no guest play** chip with **local development**
-- Shows a **Developer Override** panel (“For Local Development Only”)
-- **Sign in / Create account / Forgot password** stay available
+- Chip shows **dev bypass on**
+- Shows a temporary panel: **Dev bypass — remove later**
+- Button: **Dev bypass — enter without login**
+- Real **Sign in / Create account** stay available
 
-Press **Enter as Dev Keeper** → `POST /api/auth/dev-override` issues a signed local `ph_session` and seeds mock state in `localStorage`.
+Press the button → `POST /api/auth/dev-override` issues a signed local `ph_session` and seeds mock state in `localStorage`, then routes to `/play`.
 
 ## Session / mock behavior
 
@@ -72,17 +73,21 @@ Effects:
 ## How to test Play without signup
 
 1. `npm run dev`
-2. Open `/login`
-3. Click **Enter as Dev Keeper**
+2. Open `/login` (or `/signup`)
+3. Click **Dev bypass — enter without login**
 4. Land on `/play` with a valid session
 5. Open `/live-world` and `/restoration` (DEV ACCESS)
 6. Optional: `Ctrl+Shift+D` for tools
 
+## Remove later
+
+Delete or stop rendering `src/components/auth/dev-bypass-login-panel.tsx` usages on `/login` and `/signup`, and unset `NEXT_PUBLIC_AUTH_DEV_BYPASS` / related flags. Core API can stay behind the production hard-stop.
+
 ## Confirm production stays locked
 
-1. Do **not** set `DEV_OVERRIDE` / `NEXT_PUBLIC_DEV_OVERRIDE` in prod
-2. `NODE_ENV=production npm run build` (or CI) fails if those flags are true
-3. Production `/login` shows **no guest play** — no Developer Override button
+1. Do **not** set bypass flags on `VERCEL_ENV=production`
+2. True-production `npm run build` / CI fails if those flags are true
+3. Production `/login` shows **no guest play** — no Dev bypass button
 4. `POST /api/auth/dev-override` returns **403**
 5. Live World / Restoration stay **Coming Soon** until `LIVE_WORLD_PUBLIC_ACCESS_ENABLED=true`
 

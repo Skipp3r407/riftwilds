@@ -3,8 +3,12 @@
 import { FormEvent, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import {
+  DevBypassLoginPanel,
+  DevBypassStatusChip,
+} from "@/components/auth/dev-bypass-login-panel";
 import { SoundscapeMount } from "@/components/audio/soundscape-mount";
-import { SectionTitleBand, StatusChip } from "@/components/shared/page-header";
+import { SectionTitleBand } from "@/components/shared/page-header";
 import { playSfx } from "@/hooks/use-sfx";
 
 export default function SignupPage() {
@@ -65,12 +69,17 @@ export default function SignupPage() {
         atmosphere={false}
       />
       <div className="flex items-center gap-2">
-        <StatusChip tone="info">account required</StatusChip>
-        <StatusChip tone="warn">no guest play</StatusChip>
+        <DevBypassStatusChip />
       </div>
       <p className="text-sm text-[var(--text-muted)]">
         Gameplay unlocks only after a valid account. Marketing pages stay public.
       </p>
+
+      <DevBypassLoginPanel
+        returnUrl="/play"
+        parentBusy={busy}
+        onError={(message) => setError(message || null)}
+      />
 
       <form
         onSubmit={onSubmit}

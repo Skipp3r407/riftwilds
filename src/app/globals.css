@@ -3490,6 +3490,12 @@ a.panel:hover .section-card-thumb__img {
   width: 100%;
   height: 100%;
   display: block;
+  opacity: 1;
+}
+
+/* Auth gateway: slightly brighter canvas pass over cavern wallpaper */
+.magical-dust[data-dust-tier="auth"] {
+  filter: saturate(1.1) brightness(1.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -10182,19 +10188,26 @@ button.battle-console__util {
 .rift-page__motes {
   position: absolute;
   inset: 0;
-  opacity: 0.4;
+  opacity: 0.58;
   background-image:
-    radial-gradient(1.5px 1.5px at 12% 22%, rgba(255, 220, 160, 0.55), transparent),
-    radial-gradient(1px 1px at 68% 18%, rgba(61, 231, 255, 0.5), transparent),
-    radial-gradient(1.5px 1.5px at 42% 70%, rgba(255, 184, 77, 0.4), transparent),
-    radial-gradient(1px 1px at 88% 62%, rgba(61, 231, 255, 0.35), transparent),
-    radial-gradient(1px 1px at 28% 48%, rgba(255, 255, 255, 0.25), transparent);
-  animation: rift-mote-drift 18s linear infinite;
+    radial-gradient(1.6px 1.6px at 12% 22%, rgba(255, 220, 160, 0.65), transparent),
+    radial-gradient(1.2px 1.2px at 68% 18%, rgba(61, 231, 255, 0.58), transparent),
+    radial-gradient(1.5px 1.5px at 42% 70%, rgba(255, 184, 77, 0.5), transparent),
+    radial-gradient(1.2px 1.2px at 88% 62%, rgba(61, 231, 255, 0.42), transparent),
+    radial-gradient(1px 1px at 28% 48%, rgba(255, 255, 255, 0.32), transparent),
+    radial-gradient(1.4px 1.4px at 55% 36%, rgba(255, 184, 77, 0.45), transparent),
+    radial-gradient(1px 1px at 78% 78%, rgba(61, 231, 255, 0.4), transparent),
+    radial-gradient(1.3px 1.3px at 8% 72%, rgba(255, 220, 160, 0.4), transparent),
+    radial-gradient(1px 1px at 34% 12%, rgba(61, 231, 255, 0.38), transparent),
+    radial-gradient(1.2px 1.2px at 92% 40%, rgba(255, 184, 77, 0.36), transparent);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+    140% 140%, 120% 160%, 160% 120%, 130% 150%, 150% 130%;
+  animation: rift-mote-drift 22s linear infinite;
 }
 
 @keyframes rift-mote-drift {
-  from { transform: translateY(0); }
-  to { transform: translateY(-18px); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(6px, -22px, 0); }
 }
 
 @media (prefers-reduced-motion: reduce) {

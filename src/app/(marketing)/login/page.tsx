@@ -5,12 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AuthProviderIcon } from "@/components/auth/auth-provider-icons";
+import {
+  DevBypassLoginPanel,
+  DevBypassStatusChip,
+} from "@/components/auth/dev-bypass-login-panel";
 import { SoundscapeMount } from "@/components/audio/soundscape-mount";
-import { SectionTitleBand, StatusChip } from "@/components/shared/page-header";
+import { SectionTitleBand } from "@/components/shared/page-header";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { playSfx } from "@/hooks/use-sfx";
-import { ensureDevMockState } from "@/lib/auth/dev-mock-store";
-import { isDevOverrideUiEnabled } from "@/lib/auth/dev-override";
 import {
   authLoginHeaderEggPath,
   authSectionThumbPath,
@@ -45,21 +47,6 @@ function LoginForm() {
   const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
-  const [devBusy, setDevBusy] = useState(false);
-  const [devOverrideAllowed, setDevOverrideAllowed] = useState(false);
-
-  useEffect(() => {
-    if (!isDevOverrideUiEnabled()) {
-      setDevOverrideAllowed(false);
-      return;
-    }
-    void fetch("/api/auth/dev-override")
-      .then((r) => r.json())
-      .then((json: { allowed?: boolean }) => {
-        setDevOverrideAllowed(Boolean(json?.allowed) && isDevOverrideUiEnabled());
-      })
-      .catch(() => setDevOverrideAllowed(isDevOverrideUiEnabled()));
-  }, []);
 
   useEffect(() => {
     void fetch("/api/auth/onboarding")
@@ -119,35 +106,6 @@ function LoginForm() {
     return `/api/auth/oauth/${id}?returnUrl=${encodeURIComponent(returnUrl)}`;
   }
 
-  async function onDevOverride() {
-    if (!devOverrideAllowed) return;
-    setDevBusy(true);
-    setError(null);
-    try {
-      const res = await fetch("/api/auth/dev-override", { method: "POST" });
-      const json = await res.json();
-      if (!res.ok || !json.ok) {
-        setError(json?.error?.message ?? "Developer Override unavailable");
-        playSfx("ui.click");
-        return;
-      }
-      ensureDevMockState();
-      playSfx("login.success");
-      const next =
-        typeof json.next === "string" && json.next.startsWith("/")
-          ? json.next
-          : returnUrl.startsWith("/")
-            ? returnUrl
-            : "/play";
-      router.push(next);
-      router.refresh();
-    } catch {
-      setError("Network error — Developer Override failed.");
-    } finally {
-      setDevBusy(false);
-    }
-  }
-
   return (
     <div className="relative mx-auto max-w-3xl space-y-8 px-4 py-10 md:px-6">
       <SoundscapeMount mode="login" fadeMs={900} />
@@ -187,32 +145,14 @@ function LoginForm() {
           <h2 className="font-display text-xl text-white">
             {plan?.copy.headline ?? "Become a Riftkeeper"}
           </h2>
-          {devOverrideAllowed ? (
-            <StatusChip tone="warn">local development</StatusChip>
-          ) : (
-            <StatusChip tone="info">no guest play</StatusChip>
-          )}
+          <DevBypassStatusChip />
         </div>
 
-        {devOverrideAllowed ? (
-          <div className="rounded-lg border border-[rgba(255,160,40,0.35)] bg-[rgba(40,24,6,0.45)] p-4">
-            <p className="font-display text-sm font-semibold text-[rgb(255,184,77)]">
-              Developer Override
-            </p>
-            <p className="mt-1 text-xs text-[var(--text-muted)]">
-              For Local Development Only — skips signup and issues a temporary Dev Keeper
-              session (admin, max currency, unlocks). Never available in production.
-            </p>
-            <button
-              type="button"
-              disabled={devBusy || busy}
-              className="btn-secondary focus-ring mt-3 text-sm"
-              onClick={() => void onDevOverride()}
-            >
-              {devBusy ? "Entering…" : "Enter as Dev Keeper"}
-            </button>
-          </div>
-        ) : null}
+        <DevBypassLoginPanel
+          returnUrl={returnUrl}
+          parentBusy={busy}
+          onError={(message) => setError(message || null)}
+        />
 
         <form className="space-y-3" onSubmit={onSubmit}>
           <label className="block text-sm text-[var(--text-muted)]">

@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function HelpPage() {
   return (
-    <div className="space-y-6">
+    <div className="mx-auto max-w-7xl space-y-6 px-4 py-10 md:px-6">
       <PageHeader
         kicker="Keeper Guide"
         titleSlug="docs"

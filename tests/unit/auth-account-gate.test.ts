@@ -31,9 +31,14 @@ describe("NO ACCOUNT = NO GAMEPLAY routes", () => {
       "/profile",
       "/wallet",
       "/quests",
+      "/academy",
     ]) {
       expect(isProtectedPath(path), path).toBe(true);
     }
+  });
+
+  it("keeps public Keeper Help outside the gameplay cookie gate", () => {
+    expect(isProtectedPath("/help")).toBe(false);
   });
 
   it("gates gameplay APIs", () => {

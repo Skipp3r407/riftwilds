@@ -52,6 +52,7 @@ export const PROTECTED_PATH_PREFIXES = [
   "/spirit-realm",
   "/ecosystem",
   "/memorials",
+  "/academy",
 ] as const;
 
 /** API prefixes that must not serve guest / anonymous gameplay data. */

@@ -54,6 +54,8 @@ export const WALLPAPERS = {
   coloring: "/assets/ui/wallpapers/homestead.png",
   /** Fan Kit hub — soft care atmosphere */
   "fan-kit": "/assets/ui/wallpapers/care.png",
+  /** Auth gateway — rift cavern threshold (dark center for form cards) */
+  auth: "/assets/ui/wallpapers/auth.png?v=authgate1",
 } as const;
 
 export type WallpaperKey = keyof typeof WALLPAPERS;
@@ -121,9 +123,14 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/coloring", name: "coloring", opacity: 0.52 },
   { prefix: "/fan-kit", name: "fan-kit", opacity: 0.48 },
   { prefix: "/comics", name: "live-world", opacity: 0.42 },
-  /** Riftkeeper onboarding — hatchery / keeper hall */
-  { prefix: "/login", name: "hatchery", opacity: 0.58 },
-  { prefix: "/account", name: "hatchery", opacity: 0.58 },
+  /** Riftkeeper auth gateway — dedicated cavern wallpaper (dark center) */
+  { prefix: "/login", name: "auth", opacity: 0.62 },
+  { prefix: "/signup", name: "auth", opacity: 0.62 },
+  { prefix: "/forgot-password", name: "auth", opacity: 0.58 },
+  { prefix: "/reset-password", name: "auth", opacity: 0.58 },
+  { prefix: "/verify-email", name: "auth", opacity: 0.58 },
+  { prefix: "/onboarding", name: "auth", opacity: 0.55 },
+  { prefix: "/account", name: "auth", opacity: 0.58 },
 ];
 
 export function resolveWallpaperForPath(pathname: string): {
@@ -169,10 +176,12 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
       name === "printables" ||
       name === "coloring" ||
       name === "codex" ||
-      name === "academy");
+      name === "academy" ||
+      name === "auth");
 
   const shopHall = name === "shop" || name === "creators";
   const hatcheryHall = name === "hatchery";
+  const authHall = name === "auth";
   const codexHall = name === "codex";
   const academyHall = name === "academy";
   const arenaHall = name === "arena";
@@ -199,6 +208,12 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
           {/* Warmer, lighter wash so lantern/crystal hall reads through */}
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,12,8,0.18)] via-[rgba(8,10,16,0.08)] to-[rgba(6,8,14,0.42)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_35%_30%,rgba(255,150,70,0.12)_0%,transparent_48%),radial-gradient(ellipse_at_75%_55%,rgba(40,180,200,0.08)_0%,transparent_42%),radial-gradient(ellipse_at_center,transparent_0%,rgba(7,11,22,0.18)_70%,rgba(7,11,22,0.38)_100%)]" />
+        </>
+      ) : authHall ? (
+        <>
+          {/* Auth gateway — keep edge crystals/lanterns readable; soft center for form cards */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.28)] via-[rgba(7,11,22,0.06)] to-[rgba(6,8,14,0.5)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_42%,transparent_0%,rgba(7,11,22,0.1)_55%,rgba(7,11,22,0.36)_100%),radial-gradient(ellipse_at_18%_65%,rgba(61,231,255,0.07)_0%,transparent_40%),radial-gradient(ellipse_at_82%_60%,rgba(255,184,77,0.08)_0%,transparent_40%)]" />
         </>
       ) : hatcheryHall ? (
         <>

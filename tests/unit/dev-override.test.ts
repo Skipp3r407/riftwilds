@@ -28,7 +28,38 @@ describe("Development Override policy", () => {
     ).toBe(true);
   });
 
-  it("never allows production even with flags", () => {
+  it("allows Vercel preview when NEXT_PUBLIC_AUTH_DEV_BYPASS is set", () => {
+    expect(
+      isDevOverrideRuntimeAllowed({
+        NODE_ENV: "production",
+        VERCEL_ENV: "preview",
+        NEXT_PUBLIC_AUTH_DEV_BYPASS: "1",
+      } as NodeJS.ProcessEnv),
+    ).toBe(true);
+  });
+
+  it("blocks Vercel preview without an explicit bypass flag", () => {
+    expect(
+      isDevOverrideRuntimeAllowed({
+        NODE_ENV: "production",
+        VERCEL_ENV: "preview",
+      } as NodeJS.ProcessEnv),
+    ).toBe(false);
+  });
+
+  it("never allows true production even with flags", () => {
+    expect(
+      isDevOverrideRuntimeAllowed({
+        NODE_ENV: "production",
+        VERCEL_ENV: "production",
+        DEV_OVERRIDE: "true",
+        NEXT_PUBLIC_DEV_OVERRIDE: "true",
+        NEXT_PUBLIC_AUTH_DEV_BYPASS: "1",
+      } as NodeJS.ProcessEnv),
+    ).toBe(false);
+  });
+
+  it("never allows local production NODE_ENV even with flags", () => {
     expect(
       isDevOverrideRuntimeAllowed({
         NODE_ENV: "production",
@@ -65,6 +96,16 @@ describe("Development Override policy", () => {
         DEV_OVERRIDE: "true",
       } as NodeJS.ProcessEnv),
     ).toThrow(/DEV_OVERRIDE/);
+  });
+
+  it("allows preview build with AUTH_DEV_BYPASS flag", () => {
+    expect(() =>
+      assertNoDevOverrideInProductionBuild({
+        NODE_ENV: "production",
+        VERCEL_ENV: "preview",
+        NEXT_PUBLIC_AUTH_DEV_BYPASS: "1",
+      } as NodeJS.ProcessEnv),
+    ).not.toThrow();
   });
 });
 

@@ -36,6 +36,25 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-20-auth-help-atmosphere",
+    date: "2026-07-20",
+    title: "Auth gateway polish and Help crash fix",
+    summary:
+      "Auth pages get a dedicated cavern wallpaper and denser Magical Dust; local/dev login bypass is clearer on /login and /signup; production /help no longer hits Rift turbulence.",
+    added: [
+      "Dedicated auth gateway wallpaper on /login, /signup, and related account flows",
+      "Dev bypass login panel on /login and /signup for local and preview testing",
+    ],
+    changed: [
+      "Magical Dust is denser with an auth-route boost and rift-page motes",
+    ],
+    fixed: [
+      "/help now renders publicly (moved out of the gameplay auth shell)",
+      "Gameplay layouts no longer mutate cookies during render; session clear goes through /api/auth/logout",
+      "/academy is gated at the edge like other play surfaces, avoiding the same Rift turbulence crash",
+    ],
+  },
+  {
     id: "2026-07-20-practice-exchange",
     date: "2026-07-20",
     title: "Practice Board persistence and Rift Exchange section art",
@@ -157,7 +176,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "A player-facing roadmap for Rift Battles now, Credits/coin expansion next, and Living World as a later release - SOL stays optional and never required for core play.",
     added: [
-      "Public /roadmap page - Now (Rift Battles), Next (Gold ¬∑ Rift Shards ¬∑ optional SOL), Later (Living World)",
+      "Public /roadmap page - Now (Rift Battles), Next (Gold ∑ Rift Shards ∑ optional SOL), Later (Living World)",
       "docs/vision/PRODUCT_ECONOMY_ROADMAP.md aligned with vision and economy docs",
       "Roadmap links from Play / Economy / Community nav, Help destinations, Community page, and Learn footer",
     ],
@@ -207,7 +226,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Frostveil's bed and a few quiet sci-fi loops were going silent after a few seconds; the playlist and crossfade engine now keep ambience playing through.",
     changed: [
-      "Frostveil / playlist track ‚ÄúSpace Graveyard‚Äù replaced with continuous CC0 ‚ÄúIcy Realm‚Äù",
+      "Frostveil / playlist track ìSpace Graveyardî replaced with continuous CC0 ìIcy Realmî",
       "Quiet Dark Sci-Fi beds (Sector, Airy, Pulse, Urgent) get a gentle playback gain so they stay audible at normal Music volume",
     ],
     fixed: [
@@ -448,7 +467,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "/printables art and chrome retuned to epic warm fantasy - Keepers, rift storms, bronze/amber/cyan CTAs (no purple pills).",
     changed: [
-      "All 12 √ó 300 DPI printables regenerated with richer warfront scenes: damaged Commons timber, lanterns, storm debris, athletic Glowpup stance",
+      "All 12 ◊ 300 DPI printables regenerated with richer warfront scenes: damaged Commons timber, lanterns, storm debris, athletic Glowpup stance",
       "Download buttons use bronze/amber PDF and cyan-outline PNG styles instead of purple crypto primary skins",
       "Each printable card gets a unique subtle atmosphere well (spark storm, plaza, hatchery aurora, circus ember, and more)",
     ],
@@ -534,7 +553,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Friends + PM APIs at /api/social/friends, /api/social/messages, /api/social/summary",
       "Social Hub tabs: Friends, Requests, Messages, Safety (block / report / privacy)",
       "Unread badge on sidebar Social + summary poller",
-      "Live World nearby actions: Add friend / Whisper / Invite ‚Üí /social deep-links",
+      "Live World nearby actions: Add friend / Whisper / Invite ? /social deep-links",
       "Town keepers (keeper_mira, captain_reed, archivist_echo) for onboarding",
       "docs/social/FRIENDS_AND_PM.md and unit tests for friend/PM rules",
     ],
@@ -556,8 +575,8 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Downloadable print-ready stickers, posters, bookmarks, trading cards, and a Traveling Circus party invite for viewers.",
     added: [
-      "Printables hub at /printables with 12 √ó 300 DPI assets (PNG + PDF) under /assets/printables/",
-      "Sticker sheets, mini posters (Letter + A4), bookmark trio, trading-card sheet, 5√ó7 cards, Spark standee, circus invite",
+      "Printables hub at /printables with 12 ◊ 300 DPI assets (PNG + PDF) under /assets/printables/",
+      "Sticker sheets, mini posters (Letter + A4), bookmark trio, trading-card sheet, 5◊7 cards, Spark standee, circus invite",
       "Fan Kit and Kids Coloring cross-links plus regenerator script (npm run assets:printables)",
     ],
     changed: [

@@ -4,15 +4,15 @@ import { MobileGameNav } from "@/components/game/mobile-nav";
 import { GameSidebar } from "@/components/game/game-sidebar";
 import { RouteWallpaper } from "@/components/shared/route-wallpaper";
 import { HudAtmosphere } from "@/components/shared/hud-atmosphere";
-import {
-  clearGameplayCookies,
-  resolveGameplayGate,
-} from "@/lib/auth/account-gate";
-import { destroySession } from "@/lib/auth/session";
+import { resolveGameplayGate } from "@/lib/auth/account-gate";
 
 /**
  * Server gate for all (game) routes — NO ACCOUNT = NO GAMEPLAY.
  * Edge middleware checks cookie presence; this validates session + account status.
+ *
+ * Do not call cookies().set() here — Next.js only allows cookie writes in
+ * Server Actions / Route Handlers. Mutating cookies in this layout throws and
+ * surfaces as the "Rift turbulence" error page (see /api/auth/logout?next=).
  */
 export default async function GameLayout({
   children,
@@ -23,8 +23,9 @@ export default async function GameLayout({
 
   if (gate.ok === false) {
     if (gate.decision.clearSession) {
-      await destroySession();
-      await clearGameplayCookies();
+      redirect(
+        `/api/auth/logout?next=${encodeURIComponent(gate.decision.redirectTo)}`,
+      );
     }
     redirect(gate.decision.redirectTo);
   }

@@ -2,17 +2,25 @@ import type { NextConfig } from "next";
 import os from "os";
 import path from "path";
 
-/** Fail production builds if Development Override env flags were left on. */
+/** Fail true-production builds if Development Override env flags were left on. */
 function assertNoDevOverrideInProdConfig(): void {
   const flag = (v: string | undefined) => {
     if (!v) return false;
     const n = v.trim().toLowerCase();
     return n === "true" || n === "1" || n === "yes" || n === "on";
   };
-  if (process.env.NODE_ENV !== "production") return;
-  if (flag(process.env.DEV_OVERRIDE) || flag(process.env.NEXT_PUBLIC_DEV_OVERRIDE)) {
+  const vercelEnv = process.env.VERCEL_ENV;
+  // Preview may temporarily keep NEXT_PUBLIC_AUTH_DEV_BYPASS.
+  if (vercelEnv === "preview" || vercelEnv === "development") return;
+  if (process.env.NODE_ENV !== "production" && vercelEnv !== "production") return;
+  if (
+    flag(process.env.DEV_OVERRIDE) ||
+    flag(process.env.NEXT_PUBLIC_DEV_OVERRIDE) ||
+    flag(process.env.AUTH_DEV_BYPASS) ||
+    flag(process.env.NEXT_PUBLIC_AUTH_DEV_BYPASS)
+  ) {
     throw new Error(
-      "[DEV_OVERRIDE] Refusing production Next config load: clear DEV_OVERRIDE / NEXT_PUBLIC_DEV_OVERRIDE.",
+      "[DEV_OVERRIDE] Refusing production Next config load: clear DEV_OVERRIDE / NEXT_PUBLIC_DEV_OVERRIDE / AUTH_DEV_BYPASS / NEXT_PUBLIC_AUTH_DEV_BYPASS.",
     );
   }
 }

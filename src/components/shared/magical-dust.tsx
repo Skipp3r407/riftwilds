@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
 type Mote = {
@@ -15,16 +16,45 @@ type Mote = {
   cyan: boolean;
 };
 
+type DustTier = "ambient" | "auth";
+
 const AMBER: [number, number, number] = [255, 184, 77];
 const CYAN: [number, number, number] = [61, 231, 255];
+
+/** Auth gateway + account flows — denser gold/cyan rift dust over cavern wallpaper. */
+const AUTH_PREFIXES = [
+  "/login",
+  "/signup",
+  "/forgot-password",
+  "/reset-password",
+  "/verify-email",
+  "/onboarding",
+  "/account",
+] as const;
+
+function dustTierForPath(pathname: string | null): DustTier {
+  const path = (pathname ?? "").split("?")[0] || "/";
+  for (const prefix of AUTH_PREFIXES) {
+    if (path === prefix || path.startsWith(`${prefix}/`)) return "auth";
+  }
+  return "ambient";
+}
+
+function moteBudget(tier: DustTier, fine: boolean): number {
+  if (tier === "auth") return fine ? 96 : 44;
+  return fine ? 68 : 30;
+}
 
 /**
  * Site-wide amber/cyan mote overlay. Ambient drift always;
  * fine pointers get soft mouse parallax + local scatter/attract.
+ * Auth routes get a denser, slightly brighter pass over the gateway wallpaper.
  * pointer-events: none — never blocks UI. Off under prefers-reduced-motion.
  */
 export function MagicalDust() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pathname = usePathname();
+  const tier = dustTierForPath(pathname);
 
   useEffect(() => {
     const motionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -37,7 +67,8 @@ export function MagicalDust() {
 
     const fineMq = window.matchMedia("(pointer: fine)");
     let fine = fineMq.matches;
-    let count = fine ? 46 : 20;
+    let count = moteBudget(tier, fine);
+    const authBoost = tier === "auth";
 
     let w = 0;
     let h = 0;
@@ -51,20 +82,21 @@ export function MagicalDust() {
     let motes: Mote[] = [];
 
     const spawn = (partial = false): Mote => {
-      const z = 0.35 + Math.random() * 0.65;
+      const z = 0.3 + Math.random() * 0.7;
+      const bright = authBoost ? 0.18 + Math.random() * 0.38 : 0.14 + Math.random() * 0.32;
       return {
         x: Math.random() * (w || window.innerWidth),
         y: partial
           ? (h || window.innerHeight) + 8 + Math.random() * 40
           : Math.random() * (h || window.innerHeight),
         z,
-        vx: (Math.random() - 0.5) * 0.12 * z,
-        vy: -(0.08 + Math.random() * 0.22) * z,
-        r: (0.6 + Math.random() * 1.6) * z,
-        baseA: 0.12 + Math.random() * 0.28,
+        vx: (Math.random() - 0.5) * (authBoost ? 0.16 : 0.13) * z,
+        vy: -(0.07 + Math.random() * (authBoost ? 0.28 : 0.24)) * z,
+        r: (0.7 + Math.random() * (authBoost ? 2.1 : 1.8)) * z,
+        baseA: bright,
         phase: Math.random() * Math.PI * 2,
-        speed: 0.6 + Math.random() * 1.2,
-        cyan: Math.random() > 0.55,
+        speed: 0.55 + Math.random() * 1.25,
+        cyan: Math.random() > (authBoost ? 0.48 : 0.55),
       };
     };
 
@@ -124,7 +156,7 @@ export function MagicalDust() {
 
     const syncPointer = () => {
       fine = fineMq.matches;
-      count = fine ? 46 : 20;
+      count = moteBudget(tier, fine);
       rebuild();
     };
 
@@ -142,12 +174,14 @@ export function MagicalDust() {
 
       const cx = w * 0.5;
       const cy = h * 0.5;
-      const influence = fine ? 140 : 0;
+      const influence = fine ? (authBoost ? 160 : 140) : 0;
       const speed = Math.hypot(mouse.vx, mouse.vy);
+      const glowMul = authBoost ? 2.55 : 2.35;
+      const sway = authBoost ? 0.11 : 0.09;
 
       for (const m of motes) {
         m.phase += 0.02 * m.speed * dt;
-        m.x += m.vx * dt + Math.sin(m.phase) * 0.09 * m.z * dt;
+        m.x += m.vx * dt + Math.sin(m.phase) * sway * m.z * dt;
         m.y += m.vy * dt;
 
         if (fine && mouse.active && influence > 0) {
@@ -171,7 +205,7 @@ export function MagicalDust() {
         // Depth parallax toward cursor / screen center
         const px = fine && mouse.active ? soft.x : cx;
         const py = fine && mouse.active ? soft.y : cy;
-        const parallax = (1 - m.z) * 10;
+        const parallax = (1 - m.z) * (authBoost ? 14 : 10);
         const drawX = m.x + ((m.x - px) / Math.max(w, 1)) * parallax;
         const drawY = m.y + ((m.y - py) / Math.max(h, 1)) * parallax;
 
@@ -183,11 +217,11 @@ export function MagicalDust() {
         const twinkle = 0.55 + 0.45 * Math.sin(m.phase * 1.7);
         const a = m.baseA * twinkle;
         const [cr, cg, cb] = m.cyan ? CYAN : AMBER;
-        const glow = m.r * 2.2;
+        const glow = m.r * glowMul;
 
         const g = ctx.createRadialGradient(drawX, drawY, 0, drawX, drawY, glow);
         g.addColorStop(0, `rgba(${cr},${cg},${cb},${a})`);
-        g.addColorStop(0.45, `rgba(${cr},${cg},${cb},${a * 0.35})`);
+        g.addColorStop(0.45, `rgba(${cr},${cg},${cb},${a * 0.38})`);
         g.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
         ctx.fillStyle = g;
         ctx.beginPath();
@@ -224,7 +258,14 @@ export function MagicalDust() {
       fineMq.removeEventListener("change", syncPointer);
       if (raf) cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [tier]);
 
-  return <canvas ref={canvasRef} className="magical-dust" aria-hidden />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="magical-dust"
+      data-dust-tier={tier}
+      aria-hidden
+    />
+  );
 }

@@ -67,29 +67,71 @@ function envFlagTrue(value: string | undefined): boolean {
   return v === "true" || v === "1" || v === "yes" || v === "on";
 }
 
-/**
- * Server + build safeguard: override may never run in production.
- * Allowed when NODE_ENV is development, or when DEV_OVERRIDE /
- * NEXT_PUBLIC_DEV_OVERRIDE is true in a non-production runtime.
- */
-export function isDevOverrideRuntimeAllowed(
-  env: NodeJS.ProcessEnv = process.env,
-): boolean {
-  if (env.NODE_ENV === "production") return false;
-  if (env.NODE_ENV === "development") return true;
+/** Explicit temporary login-bypass flags (alias + legacy). */
+function hasDevBypassFlag(env: NodeJS.ProcessEnv): boolean {
   return (
-    envFlagTrue(env.DEV_OVERRIDE) || envFlagTrue(env.NEXT_PUBLIC_DEV_OVERRIDE)
+    envFlagTrue(env.DEV_OVERRIDE) ||
+    envFlagTrue(env.NEXT_PUBLIC_DEV_OVERRIDE) ||
+    envFlagTrue(env.AUTH_DEV_BYPASS) ||
+    envFlagTrue(env.NEXT_PUBLIC_AUTH_DEV_BYPASS)
   );
 }
 
 /**
- * Client-safe visibility (bundled). Production builds always false.
- * Prefer NEXT_PUBLIC_DEV_OVERRIDE for non-development preview stacks.
+ * True production hosts — override must never run here even with flags.
+ * Vercel preview (`VERCEL_ENV=preview`) is not true production.
+ */
+export function isTrueProductionAuthContext(
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (env.VERCEL_ENV === "preview" || env.VERCEL_ENV === "development") {
+    return false;
+  }
+  return (
+    env.VERCEL_ENV === "production" ||
+    env.NODE_ENV === "production" ||
+    env.NEXT_PHASE === "phase-production-build"
+  );
+}
+
+/**
+ * Server + build safeguard: override may never run on true production.
+ * Allowed when:
+ * - `NODE_ENV === "development"` (local `npm run dev`), or
+ * - explicit bypass flags on non-true-production (incl. Vercel preview), or
+ * - non-production NODE_ENV with those flags (e.g. test).
+ */
+export function isDevOverrideRuntimeAllowed(
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (env.VERCEL_ENV === "production") return false;
+  if (env.NODE_ENV === "development") return true;
+
+  const flagged = hasDevBypassFlag(env);
+
+  // Vercel preview / Vercel development — require explicit flag.
+  if (env.VERCEL_ENV === "preview" || env.VERCEL_ENV === "development") {
+    return flagged;
+  }
+
+  // Local `next start` / unknown production — never (flags ignored).
+  if (env.NODE_ENV === "production") return false;
+
+  return flagged;
+}
+
+/**
+ * Client-safe visibility (bundled).
+ * Local `npm run dev` always shows the button. Preview stacks need
+ * `NEXT_PUBLIC_AUTH_DEV_BYPASS=1` or `NEXT_PUBLIC_DEV_OVERRIDE=true`
+ * (assert scripts block those flags on true production builds).
  */
 export function isDevOverrideUiEnabled(): boolean {
-  if (process.env.NODE_ENV === "production") return false;
   if (process.env.NODE_ENV === "development") return true;
-  return envFlagTrue(process.env.NEXT_PUBLIC_DEV_OVERRIDE);
+  return (
+    envFlagTrue(process.env.NEXT_PUBLIC_DEV_OVERRIDE) ||
+    envFlagTrue(process.env.NEXT_PUBLIC_AUTH_DEV_BYPASS)
+  );
 }
 
 /**
@@ -109,10 +151,13 @@ export function isLiveWorldDevAccessAllowed(
   if (envFlagTrue(env.nextPublicDevOverride ?? process.env.NEXT_PUBLIC_DEV_OVERRIDE)) {
     return true;
   }
+  if (envFlagTrue(process.env.NEXT_PUBLIC_AUTH_DEV_BYPASS)) return true;
   if (envFlagTrue(env.liveWorldDevPreviewEnv ?? process.env.LIVE_WORLD_DEV_PREVIEW_ENABLED)) {
     return true;
   }
-  if (envFlagTrue(process.env.DEV_OVERRIDE)) return true;
+  if (envFlagTrue(process.env.DEV_OVERRIDE) || envFlagTrue(process.env.AUTH_DEV_BYPASS)) {
+    return true;
+  }
   return false;
 }
 
@@ -250,20 +295,15 @@ export function toDevAuthContext(): AuthContext & { developer: true } {
   };
 }
 
-/** Build-time: throw if production build still has override env enabled. */
+/** Build-time: throw if true production build still has override env enabled. */
 export function assertNoDevOverrideInProductionBuild(
   env: NodeJS.ProcessEnv = process.env,
 ): void {
-  const productionContext =
-    env.NODE_ENV === "production" ||
-    env.NEXT_PHASE === "phase-production-build" ||
-    env.VERCEL_ENV === "production";
+  if (!isTrueProductionAuthContext(env)) return;
 
-  if (!productionContext) return;
-
-  if (envFlagTrue(env.DEV_OVERRIDE) || envFlagTrue(env.NEXT_PUBLIC_DEV_OVERRIDE)) {
+  if (hasDevBypassFlag(env)) {
     throw new Error(
-      "[DEV_OVERRIDE] Refusing production build: DEV_OVERRIDE / NEXT_PUBLIC_DEV_OVERRIDE must be unset or false.",
+      "[DEV_OVERRIDE] Refusing production build: unset DEV_OVERRIDE / NEXT_PUBLIC_DEV_OVERRIDE / AUTH_DEV_BYPASS / NEXT_PUBLIC_AUTH_DEV_BYPASS.",
     );
   }
 }
