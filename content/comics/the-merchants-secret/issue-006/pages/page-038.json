@@ -1,0 +1,109 @@
+{
+  "pageNumber": 38,
+  "storyPageNumber": null,
+  "bookRole": "back-cover",
+  "title": "Back Cover — The Traitor's Gate",
+  "storyPurpose": "Back Cover — The Traitor's Gate",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "bc",
+      "description": "Back cover: Gilded Crossroads silhouette shifting through portal; tiny merchant token glow; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Spark with dormant egg wrap; empty blurb zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "THE MERCHANT'S SECRET",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Every door opened. One ally closed the wrong one.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "ISSUE #6 · LEGENDS OF THE RIFT",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "bc",
+      "kind": "caption",
+      "text": "THE MERCHANT'S SECRET",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "bc",
+      "kind": "narration",
+      "text": "Every door opened. One ally closed the wrong one.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    },
+    {
+      "panelId": "bc",
+      "kind": "caption",
+      "text": "ISSUE #6 · LEGENDS OF THE RIFT",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book back-cover page for The Merchant's Secret Issue #6 — Back Cover — The Traitor's Gate. Back cover: Gilded Crossroads silhouette shifting through portal; tiny merchant token glow; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Spark with dormant egg wrap; empty blurb zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Merchant: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Back Cover — The Traitor's Gate",
+  "atmosphere": "night",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: THE MERCHANT'S SECRET",
+    "NARRATION: Every door opened. One ally closed the wrong one.",
+    "CAPTION: ISSUE #6 · LEGENDS OF THE RIFT"
+  ],
+  "a11yTranscript": [
+    "CAPTION: THE MERCHANT'S SECRET",
+    "NARRATION: Every door opened. One ally closed the wrong one.",
+    "CAPTION: ISSUE #6 · LEGENDS OF THE RIFT"
+  ],
+  "id": "the-merchants-secret-issue-006-p038",
+  "cleanArtRel": "generated/raw-art/page-038.webp",
+  "letteredArtRel": "generated/lettered-pages/page-038.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-038.webp"
+}

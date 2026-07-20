@@ -1,0 +1,112 @@
+{
+  "pageNumber": 30,
+  "storyPageNumber": null,
+  "bookRole": "teaser",
+  "title": "Next Issue — The Forge of Rifts",
+  "storyPurpose": "Next Issue — The Forge of Rifts",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "teaser",
+      "description": "Teaser: artificial Rift core, empty containment rows, masked silhouette on gantry; empty title zone.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "NEXT ISSUE",
+          "x": 50,
+          "y": 16,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "They will not steal the world. They will rebuild it wrong.",
+          "x": 50,
+          "y": 48,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "THE FORGE OF RIFTS",
+          "x": 50,
+          "y": 82,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "teaser",
+      "kind": "caption",
+      "text": "NEXT ISSUE",
+      "x": 50,
+      "y": 16,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "teaser",
+      "kind": "narration",
+      "text": "They will not steal the world. They will rebuild it wrong.",
+      "x": 50,
+      "y": 48,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    },
+    {
+      "panelId": "teaser",
+      "kind": "caption",
+      "text": "THE FORGE OF RIFTS",
+      "x": 50,
+      "y": 82,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book teaser page for The Traitor's Gate Issue #7 — Next Issue — The Forge of Rifts. Teaser: artificial Rift core, empty containment rows, masked silhouette on gantry; empty title zone. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Gate: black stone towers, cyan locks. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Matter page captions; large title zones.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Next Issue — The Forge of Rifts",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: NEXT ISSUE",
+    "NARRATION: They will not steal the world. They will rebuild it wrong.",
+    "CAPTION: THE FORGE OF RIFTS"
+  ],
+  "a11yTranscript": [
+    "CAPTION: NEXT ISSUE",
+    "NARRATION: They will not steal the world. They will rebuild it wrong.",
+    "CAPTION: THE FORGE OF RIFTS"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spoilerLevel": "none",
+  "id": "the-traitors-gate-issue-007-p030",
+  "cleanArtRel": "generated/raw-art/page-030.webp",
+  "letteredArtRel": "generated/lettered-pages/page-030.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-030.webp"
+}

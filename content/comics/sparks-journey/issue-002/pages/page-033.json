@@ -1,0 +1,60 @@
+{
+  "pageNumber": 33,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Codex — Riftborn",
+  "storyPurpose": "Codex — Riftborn",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "codex",
+      "description": "Codex lore plate: mural motif of multiple Riftborn linked to world Rifts; ornate crystal frame; empty text box.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "CODEX ENTRY (DRAFT): Riftborn — rare companions whose affinity does not lock to a single element. Linked to threshold Rifts across Aeryndra. Shellward Sanctum catalogs them as kin, not inventory. Status: provisional · Subject One awakened.",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 70
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "codex",
+      "kind": "narration",
+      "text": "CODEX ENTRY (DRAFT): Riftborn — rare companions whose affinity does not lock to a single element. Linked to threshold Rifts across Aeryndra. Shellward Sanctum catalogs them as kin, not inventory. Status: provisional · Subject One awakened.",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 70
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for Spark's Journey Issue #2 — Codex — Riftborn. Codex lore plate: mural motif of multiple Riftborn linked to world Rifts; ornate crystal frame; empty text box. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Codex — Riftborn",
+  "atmosphere": "day",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "NARRATION: CODEX ENTRY (DRAFT): Riftborn — rare companions whose affinity does not lock to a single element. Linked to threshold Rifts across Aeryndra. Shellward Sanctum catalogs them as kin, not inventory. Status: provisional · Subject One awakened."
+  ],
+  "id": "sparks-journey-issue-002-p033",
+  "cleanArtRel": "generated/raw-art/page-033.png",
+  "letteredArtRel": "generated/lettered-pages/page-033.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-033.webp"
+}

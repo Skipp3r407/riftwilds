@@ -15,16 +15,22 @@ Legacy `RiftCardFrame` is a thin adapter — every collection / deck / pack / Co
 
 `thumb` → `hand` → `field` → `collection` → `inspect`
 
-## Type layouts
+## Type layouts (canonical categories)
 
 | Layout | Shows |
 |--------|--------|
-| creature | ATK · DEF · HP · Speed |
+| companion | ATK · DEF · HP · Speed |
+| evolution | ATK · DEF · HP · Speed · evo tag |
 | commander | Commander HP · leader / ultimate chips |
-| spell / trap | Spell speed · target · effect power |
+| spell | Spell speed · target · effect power |
+| item | Consume tag · target · heal/effect (leather/potion frame) |
 | equipment | ATK/DEF modifiers · durability · eligible target |
+| relic | Permanent board artifact tag |
 | terrain | Duration · global effect |
+| trap | Face-down · trigger power |
 | other | Type tag only |
+
+See `docs/card-categories.md` for ecosystem rules.
 
 ## Related
 

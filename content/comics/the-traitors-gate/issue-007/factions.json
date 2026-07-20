@@ -1,0 +1,29 @@
+{
+  "factions": [
+    {
+      "id": "veiled-meridian",
+      "name": "Veiled Meridian",
+      "goal": "Open Gate; seize dual keys; reach Forge"
+    },
+    {
+      "id": "lanternveil-circus",
+      "name": "Lanternveil Traveling Circus",
+      "status": "ally-compromised"
+    },
+    {
+      "id": "gilded-merchant-network",
+      "name": "Gilded Merchant Network",
+      "status": "uneasy-ally"
+    },
+    {
+      "id": "hatchery-compact",
+      "name": "Hatchery Compact",
+      "status": "established"
+    },
+    {
+      "id": "gate-oath",
+      "name": "Oathwarden Authority",
+      "status": "awakened"
+    }
+  ]
+}

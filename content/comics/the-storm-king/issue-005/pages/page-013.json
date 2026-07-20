@@ -1,0 +1,190 @@
+{
+  "pageNumber": 13,
+  "storyPageNumber": 9,
+  "bookRole": "story",
+  "title": "Refuse the Engine",
+  "storyPurpose": "King orders Spark to engine; Mira refuses; tension rises.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p9a",
+      "description": "Royal guards stepping toward Spark; Vaelor's hand raised in command.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Bring the Resonance to the chamber. The kingdom endures.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p9b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes blocking with open palm — Compact stance, not aggression; Spark behind her.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "No. Not until I understand the risk — and he chooses.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        },
+        {
+          "kind": "shout",
+          "text": "Insolence—",
+          "x": 70,
+          "y": 70,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Royal Captain",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p9c",
+      "description": "Tight shot: Vaelor's jaw tight; Thundervane's eye opens weakly; Cael hand on lantern clasp.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Choice is a luxury walls cannot afford.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 3
+        },
+        {
+          "kind": "whisper",
+          "text": "Mira… careful.",
+          "x": 30,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p9a",
+      "kind": "speech",
+      "text": "Bring the Resonance to the chamber. The kingdom endures.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p9b",
+      "kind": "speech",
+      "text": "No. Not until I understand the risk — and he chooses.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p9b",
+      "kind": "shout",
+      "text": "Insolence—",
+      "x": 70,
+      "y": 70,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Royal Captain",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p9c",
+      "kind": "speech",
+      "text": "Choice is a luxury walls cannot afford.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p9c",
+      "kind": "whisper",
+      "text": "Mira… careful.",
+      "x": 30,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "vaelor-tempest",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "throne hall",
+    "conflict": "mira-refuses-engine"
+  },
+  "requiredMoments": [
+    9,
+    10
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 9/25 — Refuse the Engine. Story purpose: King orders Spark to engine; Mira refuses; tension rises. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p9a): Royal guards stepping toward Spark; Vaelor's hand raised in command. Panel 2 (p9b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes blocking with open palm — Compact stance, not aggression; Spark behind her. Panel 3 (p9c): Tight shot: Vaelor's jaw tight; Thundervane's eye opens weakly; Cael hand on lantern clasp. Characters: mira-eggwarden, vaelor-tempest, cael-vesper. Creatures: spark, thundervane. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"throne hall\", \"conflict\": \"mira-refuses-engine\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Thundervane collapses.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Refuse the Engine — The Storm King page 9",
+  "atmosphere": "storm",
+  "transcript": [
+    "SPEECH (King Vaelor Tempest): Bring the Resonance to the chamber. The kingdom endures.",
+    "SPEECH (Mira Eggwarden): No. Not until I understand the risk — and he chooses.",
+    "SHOUT (Royal Captain): Insolence—",
+    "SPEECH (King Vaelor Tempest): Choice is a luxury walls cannot afford.",
+    "WHISPER (Cael Vesper): Mira… careful."
+  ],
+  "a11yTranscript": [
+    "SPEECH (King Vaelor Tempest): Bring the Resonance to the chamber. The kingdom endures.",
+    "SPEECH (Mira Eggwarden): No. Not until I understand the risk — and he chooses.",
+    "SHOUT (Royal Captain): Insolence—",
+    "SPEECH (King Vaelor Tempest): Choice is a luxury walls cannot afford.",
+    "WHISPER (Cael Vesper): Mira… careful."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p013",
+  "cleanArtRel": "generated/raw-art/page-013.webp",
+  "letteredArtRel": "generated/lettered-pages/page-013.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-013.webp"
+}

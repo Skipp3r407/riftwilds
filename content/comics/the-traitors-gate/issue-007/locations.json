@@ -1,0 +1,44 @@
+{
+  "locations": [
+    {
+      "id": "gilded-crossroads",
+      "name": "Gilded Crossroads",
+      "blurb": "Aftermath of portal collapse"
+    },
+    {
+      "id": "fractured-approaches",
+      "name": "Fractured Approaches",
+      "blurb": "Road to the Gate"
+    },
+    {
+      "id": "traitors-gate",
+      "name": "Traitor's Gate",
+      "blurb": "Ancient Rift transit fortress"
+    },
+    {
+      "id": "verification-chamber",
+      "name": "Verification Chamber",
+      "blurb": "Identity and oath trials"
+    },
+    {
+      "id": "memory-mirrors",
+      "name": "Memory Mirrors",
+      "blurb": "Can be fabricated"
+    },
+    {
+      "id": "upper-bridge",
+      "name": "Upper Bridge",
+      "blurb": "Siege battlefield"
+    },
+    {
+      "id": "lower-gate",
+      "name": "Lower Gate",
+      "blurb": "Sealed Meridian route"
+    },
+    {
+      "id": "forge-of-rifts",
+      "name": "Forge of Rifts",
+      "blurb": "Issue #8 teaser"
+    }
+  ]
+}

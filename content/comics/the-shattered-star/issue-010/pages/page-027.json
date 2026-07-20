@@ -1,0 +1,161 @@
+{
+  "pageNumber": 27,
+  "storyPageNumber": 23,
+  "bookRole": "story",
+  "title": "What Remains",
+  "storyPurpose": "Aftermath — sanctuaries secured; curiosity and fear share the quiet.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p23a",
+      "description": "Quiet orbital garden: companions resting; Mossprig tends a damaged crystal vine; Thornling accidentally re-lights a lamp; Wisplet catalogs memory motes.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*soft rustle*",
+          "x": 40,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Even paradise needs ledgers of care.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Aurelia Voss",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p23b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes looks from Spark to the endless bridges — wonder and responsibility.",
+      "bubbles": [
+        {
+          "kind": "thought",
+          "text": "I came to keep one hatchery. Now the sky has a door.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*lean*",
+          "x": 70,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p23a",
+      "kind": "creature",
+      "text": "*soft rustle*",
+      "x": 40,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mossprig",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p23a",
+      "kind": "speech",
+      "text": "Even paradise needs ledgers of care.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Aurelia Voss",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p23b",
+      "kind": "thought",
+      "text": "I came to keep one hatchery. Now the sky has a door.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p23b",
+      "kind": "creature",
+      "text": "*lean*",
+      "x": 70,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "nova"
+  ],
+  "locations": [
+    "Shattered Star"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "aftermath": "quiet"
+  },
+  "requiredMoments": [
+    23
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 23/25 — What Remains. Story purpose: Aftermath — sanctuaries secured; curiosity and fear share the quiet. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p23a): Quiet orbital garden: companions resting; Mossprig tends a damaged crystal vine; Thornling accidentally re-lights a lamp; Wisplet catalogs memory motes. Panel 2 (p23b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes looks from Spark to the endless bridges — wonder and responsibility. Characters: mira-eggwarden, aurelia-voss. Creatures: spark, mossprig, thornling, wisplet, nova. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Shattered Star celestial sanctuary. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"aftermath\": \"quiet\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Turn to continue.",
+  "letteringInstructions": "Standard speech + narration; tails off faces and Spark/Nova/Astra eyes; Lyra speech calm/stern.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "What Remains — The Shattered Star page 23",
+  "atmosphere": "dusk",
+  "transcript": [
+    "CREATURE (Mossprig): *soft rustle*",
+    "SPEECH (Aurelia Voss): Even paradise needs ledgers of care.",
+    "THOUGHT (Mira Eggwarden): I came to keep one hatchery. Now the sky has a door.",
+    "CREATURE (Spark): *lean*"
+  ],
+  "a11yTranscript": [
+    "CREATURE (Mossprig): *soft rustle*",
+    "SPEECH (Aurelia Voss): Even paradise needs ledgers of care.",
+    "THOUGHT (Mira Eggwarden): I came to keep one hatchery. Now the sky has a door.",
+    "CREATURE (Spark): *lean*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-027.webp",
+  "id": "the-shattered-star-issue-010-p027"
+}

@@ -1,0 +1,95 @@
+{
+  "pageNumber": 31,
+  "storyPageNumber": null,
+  "bookRole": "profile",
+  "title": "Character Profile — The Lanternmaster",
+  "storyPurpose": "Character Profile — The Lanternmaster",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "prof-traitor",
+      "description": "Character profile plate: Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif three-quarter portrait with cracked half-mask and dim lantern clasps; Lumenhare silhouette; empty text zones. (Post-issue back-matter.)",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CAEL VESPER",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Lanternmaster. Ally. Traitor under coercion. Accountability is not the same as exile.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "prof-traitor",
+      "kind": "caption",
+      "text": "CAEL VESPER",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "prof-traitor",
+      "kind": "narration",
+      "text": "Lanternmaster. Ally. Traitor under coercion. Accountability is not the same as exile.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "cael-vesper"
+  ],
+  "creatures": [
+    "lumenhare"
+  ],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for The Traitor's Gate Issue #7 — Character Profile — The Lanternmaster. Character profile plate: Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif three-quarter portrait with cracked half-mask and dim lantern clasps; Lumenhare silhouette; empty text zones. (Post-issue back-matter.) Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Gate: black stone towers, cyan locks. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Matter page captions; large title zones.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Character Profile — The Lanternmaster",
+  "atmosphere": "dusk",
+  "transcript": [
+    "CAPTION: CAEL VESPER",
+    "NARRATION: Lanternmaster. Ally. Traitor under coercion. Accountability is not the same as exile."
+  ],
+  "a11yTranscript": [
+    "CAPTION: CAEL VESPER",
+    "NARRATION: Lanternmaster. Ally. Traitor under coercion. Accountability is not the same as exile."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spoilerLevel": "post-completion",
+  "id": "the-traitors-gate-issue-007-p031",
+  "cleanArtRel": "generated/raw-art/page-031.webp",
+  "letteredArtRel": "generated/lettered-pages/page-031.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-031.webp"
+}

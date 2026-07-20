@@ -1,0 +1,236 @@
+{
+  "pageNumber": 26,
+  "storyPageNumber": 22,
+  "bookRole": "story",
+  "title": "Release and Steady",
+  "storyPurpose": "King releases forced bond; storm collapses briefly; team stabilizes engine without coercion.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p22a",
+      "description": "King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade ripping gauntlet crystal free — forced bond conduits snapping; cyan light fracturing.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I release you. Live — even if I fall.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "bond-SNAP",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p22b",
+      "description": "Storm briefly collapsing to strange calm; cloud sea dropping; citizens looking up in shock.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "For one breath, Tempestria had a sky.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "silence…",
+          "x": 50,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p22c",
+      "description": "Voluntary circle: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot, weakened Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion, Mossprig, Thornling, Wisplet, Echoquill, Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade hands open (invite) stabilizing engine glow without ownership chains.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Together — invite, don't own.",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        },
+        {
+          "kind": "creature",
+          "text": "*steady-hum*",
+          "x": 60,
+          "y": 50,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 5
+        },
+        {
+          "kind": "creature",
+          "text": "*free-breath*",
+          "x": 55,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Thundervane",
+          "readOrder": 6
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p22a",
+      "kind": "speech",
+      "text": "I release you. Live — even if I fall.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p22c",
+      "kind": "speech",
+      "text": "Together — invite, don't own.",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p22c",
+      "kind": "creature",
+      "text": "*steady-hum*",
+      "x": 60,
+      "y": 50,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 5
+    },
+    {
+      "panelId": "p22c",
+      "kind": "creature",
+      "text": "*free-breath*",
+      "x": 55,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Thundervane",
+      "readOrder": 6
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p22b",
+      "kind": "narration",
+      "text": "For one breath, Tempestria had a sky.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p22a",
+      "kind": "sfx",
+      "text": "bond-SNAP",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "p22b",
+      "kind": "sfx",
+      "text": "silence…",
+      "x": 50,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "vaelor-tempest"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "echoquill"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "engine chamber",
+    "bond": "released",
+    "engine": "voluntarily-stabilized"
+  },
+  "requiredMoments": [
+    22,
+    23
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 22/25 — Release and Steady. Story purpose: King releases forced bond; storm collapses briefly; team stabilizes engine without coercion. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p22a): King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade ripping gauntlet crystal free — forced bond conduits snapping; cyan light fracturing. Panel 2 (p22b): Storm briefly collapsing to strange calm; cloud sea dropping; citizens looking up in shock. Panel 3 (p22c): Voluntary circle: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot, weakened Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion, Mossprig, Thornling, Wisplet, Echoquill, Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade hands open (invite) stabilizing engine glow without ownership chains. Characters: mira-eggwarden, vaelor-tempest. Creatures: spark, thundervane, mossprig, thornling, wisplet, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"engine chamber\", \"bond\": \"released\", \"engine\": \"voluntarily-stabilized\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Shatter Meridian control.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Release and Steady — The Storm King page 22",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (King Vaelor Tempest): I release you. Live — even if I fall.",
+    "SFX: bond-SNAP",
+    "NARRATION: For one breath, Tempestria had a sky.",
+    "SFX: silence…",
+    "SPEECH (Mira Eggwarden): Together — invite, don't own.",
+    "CREATURE (Spark): *steady-hum*",
+    "CREATURE (Thundervane): *free-breath*"
+  ],
+  "a11yTranscript": [
+    "SPEECH (King Vaelor Tempest): I release you. Live — even if I fall.",
+    "SFX: bond-SNAP",
+    "NARRATION: For one breath, Tempestria had a sky.",
+    "SFX: silence…",
+    "SPEECH (Mira Eggwarden): Together — invite, don't own.",
+    "CREATURE (Spark): *steady-hum*",
+    "CREATURE (Thundervane): *free-breath*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p026",
+  "cleanArtRel": "generated/raw-art/page-026.webp",
+  "letteredArtRel": "generated/lettered-pages/page-026.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-026.webp"
+}

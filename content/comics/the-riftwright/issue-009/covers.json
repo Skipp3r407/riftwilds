@@ -1,0 +1,18 @@
+{
+  "standard": {
+    "label": "Standard",
+    "rel": "generated/covers/front-cover.webp"
+  },
+  "variant-a": {
+    "label": "Variant A — Twin-Key",
+    "note": "Spark + Nova focus"
+  },
+  "variant-b": {
+    "label": "Variant B — Tragic Riftwright",
+    "note": "Elyan focus"
+  },
+  "foil": {
+    "label": "Digital Foil",
+    "note": "Star-crack foil"
+  }
+}

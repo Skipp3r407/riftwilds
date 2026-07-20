@@ -1,0 +1,219 @@
+{
+  "pageNumber": 16,
+  "storyPageNumber": 12,
+  "bookRole": "story",
+  "title": "Fabricated Light",
+  "storyPurpose": "Wisplet finds altered memory; real transmission came from someone nearby.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p12a",
+      "description": "Wisplet phases into mirror surface; cyan ghost-trail; Truthwing Clear Reflection assists.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*phase-in*",
+          "x": 40,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Wisplet",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*clear-reflection*",
+          "x": 65,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Truthwing",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p12b",
+      "description": "Inside mirror: seams of rewritten light; Nira face peeled to reveal composite splice.",
+      "bubbles": [
+        {
+          "kind": "magic",
+          "text": "FAKE JOIN",
+          "x": 50,
+          "y": 30,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Wisplet",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "rip…",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p12c",
+      "description": "Corrected memory silhouette: transmitter held by figure in lantern-clasp coat standing near earlier events.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "It wasn't her hand.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "p12d",
+      "description": "Team stares; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif goes still; Thornling already sniffing packs.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The Gate does not invent guilt. Someone fed it a costume.",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 45,
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p12a",
+      "kind": "creature",
+      "text": "*phase-in*",
+      "x": 40,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Wisplet",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p12a",
+      "kind": "creature",
+      "text": "*clear-reflection*",
+      "x": 65,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Truthwing",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p12b",
+      "kind": "magic",
+      "text": "FAKE JOIN",
+      "x": 50,
+      "y": 30,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Wisplet",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p12c",
+      "kind": "speech",
+      "text": "It wasn't her hand.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p12d",
+      "kind": "narration",
+      "text": "The Gate does not invent guilt. Someone fed it a costume.",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 45,
+      "readOrder": 5
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p12b",
+      "kind": "sfx",
+      "text": "rip…",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "wisplet",
+    "truthwing",
+    "thornling",
+    "spark"
+  ],
+  "locations": [
+    "Traitor's Gate — Memory Mirrors"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "mirrors": "debunked",
+    "suspect": "nearby-ally"
+  },
+  "requiredMoments": [
+    11,
+    12
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 12/25 — Fabricated Light. Story purpose: Wisplet finds altered memory; real transmission came from someone nearby. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p12a): Wisplet phases into mirror surface; cyan ghost-trail; Truthwing Clear Reflection assists. Panel 2 (p12b): Inside mirror: seams of rewritten light; Nira face peeled to reveal composite splice. Panel 3 (p12c): Corrected memory silhouette: transmitter held by figure in lantern-clasp coat standing near earlier events. Panel 4 (p12d): Team stares; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif goes still; Thornling already sniffing packs. Characters: mira-eggwarden, nira-quill, cael-vesper. Creatures: wisplet, truthwing, thornling, spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"mirrors\": \"debunked\", \"suspect\": \"nearby-ally\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "The device.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Fabricated Light — The Traitor's Gate page 12",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Wisplet): *phase-in*",
+    "CREATURE (Truthwing): *clear-reflection*",
+    "MAGIC (Wisplet): FAKE JOIN",
+    "SFX: rip…",
+    "SPEECH (Mira Eggwarden): It wasn't her hand.",
+    "NARRATION: The Gate does not invent guilt. Someone fed it a costume."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Wisplet): *phase-in*",
+    "CREATURE (Truthwing): *clear-reflection*",
+    "MAGIC (Wisplet): FAKE JOIN",
+    "SFX: rip…",
+    "SPEECH (Mira Eggwarden): It wasn't her hand.",
+    "NARRATION: The Gate does not invent guilt. Someone fed it a costume."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p016",
+  "cleanArtRel": "generated/raw-art/page-016.webp",
+  "letteredArtRel": "generated/lettered-pages/page-016.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-016.webp"
+}

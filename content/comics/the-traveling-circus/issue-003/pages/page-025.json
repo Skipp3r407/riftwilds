@@ -1,0 +1,174 @@
+{
+  "pageNumber": 25,
+  "bookRole": "story",
+  "title": "Quiet Betrayal of the Hunt",
+  "storyPurpose": "Nira disables control relay; Bramblefox destroys restraint; Ironmantle freed.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p21a",
+      "description": "Nira Quill in Meridian kit secretly cuts glowing control relay — conflicted face.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "speaker": "Nira Quill",
+          "text": "Not another Subject One. Not like this.",
+          "x": 50,
+          "y": 40,
+          "tail": "up",
+          "readOrder": 0,
+          "maxWidthPct": 40
+        }
+      ]
+    },
+    {
+      "id": "p21b",
+      "description": "Bramblefox Forest Bond vines shatter exposed restraint collar.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "SNAP—VINE",
+          "x": 50,
+          "y": 45,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Bramblefox",
+          "text": "*rrRAH!*",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p21c",
+      "description": "Ironmantle collapses then breathes free — collar dead; eyes clear.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Freed — not defeated.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "readOrder": 3,
+          "maxWidthPct": 40
+        },
+        {
+          "kind": "creature",
+          "speaker": "Ironmantle",
+          "text": "*…safe?*",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 4,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p21a",
+      "kind": "whisper",
+      "speaker": "Nira Quill",
+      "text": "Not another Subject One. Not like this.",
+      "x": 50,
+      "y": 40,
+      "tail": "up",
+      "readOrder": 0,
+      "maxWidthPct": 40
+    },
+    {
+      "panelId": "p21b",
+      "kind": "creature",
+      "speaker": "Bramblefox",
+      "text": "*rrRAH!*",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p21c",
+      "kind": "creature",
+      "speaker": "Ironmantle",
+      "text": "*…safe?*",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 4,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p21c",
+      "kind": "narration",
+      "text": "Freed — not defeated.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "readOrder": 3,
+      "maxWidthPct": 40
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p21b",
+      "kind": "sfx",
+      "text": "SNAP—VINE",
+      "x": 50,
+      "y": 45,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "nira-quill"
+  ],
+  "creatures": [
+    "bramblefox",
+    "ironmantle",
+    "spark"
+  ],
+  "continuity": {
+    "nira": {
+      "helpedSecretly": true
+    },
+    "ironmantle": {
+      "status": "freed"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 21/25 — Quiet Betrayal of the Hunt. Story purpose: Nira disables control relay; Bramblefox destroys restraint; Ironmantle freed. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p21a): Nira Quill in Meridian kit secretly cuts glowing control relay — conflicted face. Panel 2 (p21b): Bramblefox Forest Bond vines shatter exposed restraint collar. Panel 3 (p21c): Ironmantle collapses then breathes free — collar dead; eyes clear. Characters: nira-quill. Creatures: bramblefox, ironmantle, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"nira\":{\"helpedSecretly\":true},\"ironmantle\":{\"status\":\"freed\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Action splash retaliation.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Quiet Betrayal of the Hunt — The Traveling Circus page 21",
+  "atmosphere": "festival",
+  "transcript": [
+    "WHISPER (Nira Quill): Not another Subject One. Not like this.",
+    "SFX: SNAP—VINE",
+    "CREATURE (Bramblefox): *rrRAH!*",
+    "NARRATION: Freed — not defeated.",
+    "CREATURE (Ironmantle): *…safe?*"
+  ],
+  "storyPageNumber": 21,
+  "id": "the-traveling-circus-issue-003-p025",
+  "cleanArtRel": "generated/raw-art/page-025.png",
+  "letteredArtRel": "generated/lettered-pages/page-025.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-025.webp"
+}

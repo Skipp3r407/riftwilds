@@ -1,0 +1,220 @@
+{
+  "pageNumber": 19,
+  "storyPageNumber": 15,
+  "bookRole": "story",
+  "title": "Lockdown",
+  "storyPurpose": "Seris activates transmitter; Meridian forces emerge; Gate seals exits.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p15a",
+      "description": "Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal steps from hidden tunnel, remote-activating Cael's transmitter; three-arc glow.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Thank you for delivering both keys.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Seris Vale",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "PING",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p15b",
+      "description": "Meridian soldiers and controlled creatures pour from maintenance tunnels; Spirit Moth alarms.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "Positions!",
+          "x": 40,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*ALARM*",
+          "x": 65,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spirit Moth",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p15c",
+      "description": "Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors lock rings slam; all exits seal; red warning runes race along bridges.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Exits sealed. Testimony incomplete.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Oathwarden Seraph",
+          "readOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "p15d",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif reaches for device in horror; Seris smiles without warmth.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Finish the opening. Or watch the hare dim.",
+          "x": 50,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Seris Vale",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p15a",
+      "kind": "speech",
+      "text": "Thank you for delivering both keys.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Seris Vale",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p15b",
+      "kind": "shout",
+      "text": "Positions!",
+      "x": 40,
+      "y": 35,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p15b",
+      "kind": "creature",
+      "text": "*ALARM*",
+      "x": 65,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spirit Moth",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p15c",
+      "kind": "speech",
+      "text": "Exits sealed. Testimony incomplete.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Oathwarden Seraph",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p15d",
+      "kind": "speech",
+      "text": "Finish the opening. Or watch the hare dim.",
+      "x": 50,
+      "y": 50,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Seris Vale",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p15a",
+      "kind": "sfx",
+      "text": "PING",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "cael-vesper",
+    "oathwarden-seraph"
+  ],
+  "creatures": [
+    "spirit-moth",
+    "spark",
+    "cindermink"
+  ],
+  "locations": [
+    "Traitor's Gate — Upper Bridge"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "siege": "begun",
+    "exits": "sealed"
+  },
+  "requiredMoments": [
+    15,
+    16
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 15/25 — Lockdown. Story purpose: Seris activates transmitter; Meridian forces emerge; Gate seals exits. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p15a): Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal steps from hidden tunnel, remote-activating Cael's transmitter; three-arc glow. Panel 2 (p15b): Meridian soldiers and controlled creatures pour from maintenance tunnels; Spirit Moth alarms. Panel 3 (p15c): Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors lock rings slam; all exits seal; red warning runes race along bridges. Panel 4 (p15d): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif reaches for device in horror; Seris smiles without warmth. Characters: mira-eggwarden, seris-vale, cael-vesper, oathwarden-seraph. Creatures: spirit-moth, spark, cindermink. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"siege\": \"begun\", \"exits\": \"sealed\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Dual keys.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Lockdown — The Traitor's Gate page 15",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Seris Vale): Thank you for delivering both keys.",
+    "SFX: PING",
+    "SHOUT (Mira Eggwarden): Positions!",
+    "CREATURE (Spirit Moth): *ALARM*",
+    "SPEECH (Oathwarden Seraph): Exits sealed. Testimony incomplete.",
+    "SPEECH (Seris Vale): Finish the opening. Or watch the hare dim."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Seris Vale): Thank you for delivering both keys.",
+    "SFX: PING",
+    "SHOUT (Mira Eggwarden): Positions!",
+    "CREATURE (Spirit Moth): *ALARM*",
+    "SPEECH (Oathwarden Seraph): Exits sealed. Testimony incomplete.",
+    "SPEECH (Seris Vale): Finish the opening. Or watch the hare dim."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p019",
+  "cleanArtRel": "generated/raw-art/page-019.webp",
+  "letteredArtRel": "generated/lettered-pages/page-019.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-019.webp"
+}

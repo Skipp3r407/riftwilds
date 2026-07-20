@@ -1,0 +1,135 @@
+{
+  "pageNumber": 6,
+  "storyPageNumber": 2,
+  "bookRole": "story",
+  "title": "Machine That Makes Tears",
+  "storyPurpose": "Artificial Rift lines + Issue #8 silhouette callback before face reveal.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p2a",
+      "description": "Wide: conveyor systems birth artificial Rift tears into containment rings; failed Riftborn husks behind glass — weaponized after protocol rewrite (heal-intent lost).",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "They're still manufacturing tears.",
+          "x": 30,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "Protocol… rewritten.",
+          "x": 70,
+          "y": 28,
+          "tail": "down-left",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p2b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot at Companion Incubator Beta; further-cracked egg vibrates; Axiom notes protector-line glyphs.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Arkan said they were grown to protect — not obey.",
+          "x": 40,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "…yip.",
+          "x": 72,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p2c",
+      "description": "SILHOUETTE only (face hidden — hood/coat, engineer posture) on catwalk above reactor — Issue #8 cliffhanger continues.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "So… after all this time… someone finally reached my Forge.",
+          "x": 50,
+          "y": 82,
+          "tail": null,
+          "maxWidthPct": 48,
+          "speaker": "Unknown",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill",
+    "elyan-voss"
+  ],
+  "creatures": [
+    "spark",
+    "dormant-riftborn-egg",
+    "axiom"
+  ],
+  "locations": [
+    "Second Forge foundries"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "riftwright": "silhouette-callback-issue-008",
+    "egg": "further-cracked-vibrating",
+    "lore": "protect-not-obey"
+  },
+  "requiredMoments": [
+    2
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 2/25 — Machine That Makes Tears. Story purpose: Artificial Rift lines + Issue #8 silhouette callback before face reveal. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Wide: conveyor systems birth artificial Rift tears into containment rings; failed Riftborn husks behind glass — weaponized after protocol rewrite (heal-intent lost). Panel 2 (p2b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot at Companion Incubator Beta; further-cracked egg vibrates; Axiom notes protector-line glyphs. Panel 3 (p2c): SILHOUETTE only (face hidden — hood/coat, engineer posture) on catwalk above reactor — Issue #8 cliffhanger continues. Characters: mira-eggwarden, nira-quill, elyan-voss. Creatures: spark, dormant-riftborn-egg, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Second Forge foundries. Atmosphere: rift. Continuity: {\"riftwright\": \"silhouette-callback-issue-008\", \"egg\": \"further-cracked-vibrating\", \"lore\": \"protect-not-obey\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Face the voice on the catwalk.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Machine That Makes Tears — The Riftwright page 6",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Nira Quill): They're still manufacturing tears.",
+    "CREATURE (Axiom): Protocol… rewritten.",
+    "SPEECH (Mira Eggwarden): Arkan said they were grown to protect — not obey.",
+    "CREATURE (Spark): …yip.",
+    "SPEECH (Unknown): So… after all this time… someone finally reached my Forge."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Nira Quill): They're still manufacturing tears.",
+    "CREATURE (Axiom): Protocol… rewritten.",
+    "SPEECH (Mira Eggwarden): Arkan said they were grown to protect — not obey.",
+    "CREATURE (Spark): …yip.",
+    "SPEECH (Unknown): So… after all this time… someone finally reached my Forge."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p006",
+  "cleanArtRel": "generated/raw-art/page-006.webp",
+  "letteredArtRel": "generated/lettered-pages/page-006.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-006.webp"
+}

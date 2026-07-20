@@ -1,0 +1,37 @@
+{
+  "characters": [
+    {
+      "id": "mira-eggwarden",
+      "name": "Mira Eggwarden",
+      "role": "Present-day POV · Hatchery mentor",
+      "canon": "established",
+      "notes": "Frame narrator; not First Keeper."
+    },
+    {
+      "id": "elara-venn",
+      "name": "Elara Venn",
+      "role": "First Keeper · vision lead",
+      "canon": "established",
+      "codexId": "wl-elara",
+      "npcId": "elara-venn"
+    },
+    {
+      "id": "first-riftling",
+      "name": "First Riftling",
+      "role": "Soft Exodus archive hatch",
+      "canon": "established-archetype"
+    },
+    {
+      "id": "healer",
+      "name": "Healer",
+      "role": "Commons founder",
+      "canon": "supporting"
+    },
+    {
+      "id": "crown-courier",
+      "name": "Crown courier",
+      "role": "Antagonistic offer",
+      "canon": "supporting"
+    }
+  ]
+}

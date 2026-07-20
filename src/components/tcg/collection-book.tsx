@@ -7,6 +7,12 @@ import type { FamilyProgress } from "@/game/tcg/card-families";
 import type { TcgCollectionCardRow } from "@/game/tcg/types";
 import { RiftCardFrame } from "@/components/tcg/rift-card-frame";
 import { getCardById, resolveCardImagePath } from "@/content/tcg";
+import {
+  CATEGORY_LABELS,
+  TCG_CARD_CATEGORIES,
+  resolveCardCategory,
+  type TcgCardCategory,
+} from "@/content/tcg/framework/card-categories";
 import { cn } from "@/lib/utils/cn";
 
 type Props = {
@@ -16,9 +22,10 @@ type Props = {
   onOpenCodex: (familyId: string) => void;
   /** When embedded in Rift Codex, show flat binder only. */
   forceView?: "book" | "flat";
-}
+};
 
 const AFFINITY_FILTERS = ["ALL", "EMBER", "TIDE", "GROVE", "STORM"] as const;
+type CategoryFilter = "ALL" | TcgCardCategory;
 
 export function CollectionBook({
   families,
@@ -31,6 +38,7 @@ export function CollectionBook({
   const [affinity, setAffinity] = useState<(typeof AFFINITY_FILTERS)[number]>(
     "ALL",
   );
+  const [category, setCategory] = useState<CategoryFilter>("ALL");
   const [query, setQuery] = useState("");
   const activeView = forceView ?? view;
 
@@ -52,13 +60,20 @@ export function CollectionBook({
     return flatCards.filter((row) => {
       if (!row.def) return false;
       if (affinity !== "ALL" && row.def.affinity !== affinity) return false;
+      if (category !== "ALL") {
+        const content = getCardById(row.defId);
+        const cat = content
+          ? resolveCardCategory(content.type, content.id)
+          : resolveCardCategory(row.def.contentType ?? row.def.type, row.defId);
+        if (cat !== category) return false;
+      }
       if (!q) return true;
       return (
         row.def.name.toLowerCase().includes(q) ||
         row.defId.toLowerCase().includes(q)
       );
     });
-  }, [flatCards, affinity, query]);
+  }, [flatCards, affinity, category, query]);
 
   const bookComplete = families.filter((f) => f.rewardReady).length;
 
@@ -124,6 +139,36 @@ export function CollectionBook({
             </button>
           ))}
         </div>
+        {activeView === "flat" || forceView === "flat" ? (
+          <div
+            className="collection-book__chips collection-book__chips--category"
+            role="tablist"
+            aria-label="Card category"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected={category === "ALL"}
+              className={cn(category === "ALL" && "is-active")}
+              onClick={() => setCategory("ALL")}
+            >
+              All types
+            </button>
+            {TCG_CARD_CATEGORIES.map((c) => (
+              <button
+                key={c}
+                type="button"
+                role="tab"
+                aria-selected={category === c}
+                className={cn(category === c && "is-active")}
+                onClick={() => setCategory(c)}
+                title={CATEGORY_LABELS[c]}
+              >
+                {CATEGORY_LABELS[c]}
+              </button>
+            ))}
+          </div>
+        ) : null}
       </div>
 
       {activeView === "book" ? (

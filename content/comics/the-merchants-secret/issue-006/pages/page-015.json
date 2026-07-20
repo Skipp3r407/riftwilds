@@ -1,0 +1,209 @@
+{
+  "pageNumber": 15,
+  "storyPageNumber": 11,
+  "bookRole": "story",
+  "title": "Recruitment File",
+  "storyPurpose": "Nira finds partial childhood Meridian recruitment file.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p11a",
+      "description": "Underground archive antechamber: Echoquill: small owl-fox-bird Rift companion, pale feathers, teal-gold markings, crystal feather tips projecting genealogy plates; Nira frozen before a partial file.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*record-trill*",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Echoquill",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "That's… my recruitment age.",
+          "x": 55,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 36,
+          "speaker": "Nira Quill",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p11b",
+      "description": "File fragment: Meridian youth intake — Subject routing, companion bond training redacted.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "They recruit children the way markets recruit hunger.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "I wasn't saved. I was sorted.",
+          "x": 50,
+          "y": 72,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p11c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes hand on Nira's shoulder — trust incomplete but present.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "You cut their leash at Tempestria. That matters.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        },
+        {
+          "kind": "sfx",
+          "text": "auction-GONG",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p11a",
+      "kind": "creature",
+      "text": "*record-trill*",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Echoquill",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p11a",
+      "kind": "speech",
+      "text": "That's… my recruitment age.",
+      "x": 55,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 36,
+      "speaker": "Nira Quill",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p11b",
+      "kind": "whisper",
+      "text": "I wasn't saved. I was sorted.",
+      "x": 50,
+      "y": 72,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p11c",
+      "kind": "speech",
+      "text": "You cut their leash at Tempestria. That matters.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p11b",
+      "kind": "narration",
+      "text": "They recruit children the way markets recruit hunger.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p11c",
+      "kind": "sfx",
+      "text": "auction-GONG",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 5
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill"
+  ],
+  "creatures": [
+    "echoquill"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "underground archive",
+    "nira": "recruitment-file-partial"
+  },
+  "requiredMoments": [
+    19,
+    20
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 11/25 — Recruitment File. Story purpose: Nira finds partial childhood Meridian recruitment file. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p11a): Underground archive antechamber: Echoquill: small owl-fox-bird Rift companion, pale feathers, teal-gold markings, crystal feather tips projecting genealogy plates; Nira frozen before a partial file. Panel 2 (p11b): File fragment: Meridian youth intake — Subject routing, companion bond training redacted. Panel 3 (p11c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes hand on Nira's shoulder — trust incomplete but present. Characters: mira-eggwarden, nira-quill. Creatures: echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"underground archive\", \"nira\": \"recruitment-file-partial\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "The egg auction.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Recruitment File — The Merchant's Secret page 11",
+  "atmosphere": "market",
+  "transcript": [
+    "CREATURE (Echoquill): *record-trill*",
+    "SPEECH (Nira Quill): That's… my recruitment age.",
+    "NARRATION: They recruit children the way markets recruit hunger.",
+    "WHISPER (Nira Quill): I wasn't saved. I was sorted.",
+    "SPEECH (Mira Eggwarden): You cut their leash at Tempestria. That matters.",
+    "SFX: auction-GONG"
+  ],
+  "a11yTranscript": [
+    "CREATURE (Echoquill): *record-trill*",
+    "SPEECH (Nira Quill): That's… my recruitment age.",
+    "NARRATION: They recruit children the way markets recruit hunger.",
+    "WHISPER (Nira Quill): I wasn't saved. I was sorted.",
+    "SPEECH (Mira Eggwarden): You cut their leash at Tempestria. That matters.",
+    "SFX: auction-GONG"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p015",
+  "cleanArtRel": "generated/raw-art/page-015.webp",
+  "letteredArtRel": "generated/lettered-pages/page-015.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-015.webp"
+}

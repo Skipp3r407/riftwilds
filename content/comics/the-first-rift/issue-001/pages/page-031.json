@@ -1,0 +1,35 @@
+{
+  "pageNumber": 31,
+  "id": "the-first-rift-issue-001-p031",
+  "role": "inside-back",
+  "title": "Inside back",
+  "layout": "narrative",
+  "atmosphere": "dusk",
+  "beat": "Inside back",
+  "artPrompt": "Letters/mail atmosphere, no readable text. Wax seals, egg sketches, Compact pamphlet shapes. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "LETTERS FROM THE COMMONS",
+          "x": 50,
+          "y": 25
+        },
+        {
+          "kind": "narration",
+          "text": "Write the Lore Desk. Keep invitations honest.",
+          "x": 50,
+          "y": 55
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-031.png",
+  "letteredArtRel": "generated/lettered/page-031.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-031.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

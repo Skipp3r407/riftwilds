@@ -1,0 +1,44 @@
+{
+  "featured": [
+    {
+      "id": "spark",
+      "name": "Spark",
+      "note": "Resonance Line / Last Light"
+    },
+    {
+      "id": "echoquill",
+      "name": "Echoquill",
+      "note": "See ECHOQUILL_CANON_PROPOSAL.md"
+    },
+    {
+      "id": "bramblefox",
+      "name": "Bramblefox",
+      "purpose": "Track / Forest Bond"
+    },
+    {
+      "id": "mossprig",
+      "name": "Mossprig",
+      "purpose": "Living Bulwark"
+    },
+    {
+      "id": "thornling",
+      "name": "Thornling",
+      "purpose": "Transit / conduits"
+    },
+    {
+      "id": "wisplet",
+      "name": "Wisplet",
+      "purpose": "Spectral archives"
+    },
+    {
+      "id": "spirit-moth",
+      "name": "Spirit Moth",
+      "purpose": "Signals / invisible messages"
+    },
+    {
+      "id": "lumenhare",
+      "name": "Lumenhare",
+      "purpose": "Circus companion light"
+    }
+  ]
+}

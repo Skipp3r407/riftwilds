@@ -93,8 +93,8 @@ export default function TcgAdminPage() {
             Constructed rules
           </h2>
           <p className="mt-1 text-sm text-[var(--text-muted)]">
-            Deck size {CONSTRUCTED_RULES.deckSize} + Commander ·{" "}
-            {CONSTRUCTED_RULES.f2pCompetitive}
+            Main deck {CONSTRUCTED_RULES.deckSize} + Commander ={" "}
+            {CONSTRUCTED_RULES.totalPieces} · {CONSTRUCTED_RULES.f2pCompetitive}
           </p>
           <p className="mt-2 text-xs text-cyan-200/80">
             Craft policy: crypto={String(CRAFT_POLICY.cryptoRequired)} · SOL=

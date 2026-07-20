@@ -1,0 +1,179 @@
+{
+  "pageNumber": 21,
+  "storyPageNumber": 17,
+  "bookRole": "story",
+  "title": "Star Engine",
+  "storyPurpose": "Spark synchronizes the Star Engine as battle escalates.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p17a",
+      "description": "Star Engine core — colossal rotating crystal-gold heart; Spark and Nova stand on the keystone dais as twin Resonance Keys; Mira shields them; energy reconnects Forge Network beams from below.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Twin keys — now!",
+          "x": 25,
+          "y": 20,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Professor Elyan Voss",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*SYNC—!*",
+          "x": 50,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*—LOCK*",
+          "x": 65,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nova",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "ENGINE-SING",
+          "x": 80,
+          "y": 30,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        },
+        {
+          "kind": "thought",
+          "text": "Not one world… both.",
+          "x": 40,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p17a",
+      "kind": "speech",
+      "text": "Twin keys — now!",
+      "x": 25,
+      "y": 20,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Professor Elyan Voss",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p17a",
+      "kind": "creature",
+      "text": "*SYNC—!*",
+      "x": 50,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p17a",
+      "kind": "creature",
+      "text": "*—LOCK*",
+      "x": 65,
+      "y": 50,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Nova",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p17a",
+      "kind": "thought",
+      "text": "Not one world… both.",
+      "x": 40,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p17a",
+      "kind": "sfx",
+      "text": "ENGINE-SING",
+      "x": 80,
+      "y": 30,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss",
+    "high-keeper-lyra"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "astra",
+    "axiom"
+  ],
+  "locations": [
+    "Star Engine"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "starEngine": "synchronizing"
+  },
+  "requiredMoments": [
+    15
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 17/25 — Star Engine. Story purpose: Spark synchronizes the Star Engine as battle escalates. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p17a): Star Engine core — colossal rotating crystal-gold heart; Spark and Nova stand on the keystone dais as twin Resonance Keys; Mira shields them; energy reconnects Forge Network beams from below. Characters: mira-eggwarden, elyan-voss, high-keeper-lyra. Creatures: spark, nova, astra, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Shattered Star celestial sanctuary. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"starEngine\": \"synchronizing\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Turn to continue.",
+  "letteringInstructions": "Standard speech + narration; tails off faces and Spark/Nova/Astra eyes; Lyra speech calm/stern.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Star Engine — The Shattered Star page 17",
+  "atmosphere": "forge",
+  "transcript": [
+    "SPEECH (Professor Elyan Voss): Twin keys — now!",
+    "CREATURE (Spark): *SYNC—!*",
+    "CREATURE (Nova): *—LOCK*",
+    "SFX: ENGINE-SING",
+    "THOUGHT (Spark): Not one world… both."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Professor Elyan Voss): Twin keys — now!",
+    "CREATURE (Spark): *SYNC—!*",
+    "CREATURE (Nova): *—LOCK*",
+    "SFX: ENGINE-SING",
+    "THOUGHT (Spark): Not one world… both."
+  ],
+  "codexLinks": [
+    "star-engine"
+  ],
+  "cardTeases": [],
+  "spread": null,
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-021.webp",
+  "id": "the-shattered-star-issue-010-p021"
+}

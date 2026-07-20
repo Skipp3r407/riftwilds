@@ -1,0 +1,406 @@
+{
+  "updatedAt": "2026-07-20T15:27:20.432Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "1": {
+      "pageNumber": 1,
+      "role": "front-cover",
+      "title": "The Traitor's Gate — Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-001.webp",
+      "error": null
+    },
+    "2": {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "title": "Inside Front Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-002.webp",
+      "error": null
+    },
+    "3": {
+      "pageNumber": 3,
+      "role": "credits",
+      "title": "Credits",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-003.webp",
+      "error": null
+    },
+    "4": {
+      "pageNumber": 4,
+      "role": "title",
+      "title": "Chapter Seven — The Traitor's Gate",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-004.webp",
+      "error": null
+    },
+    "5": {
+      "pageNumber": 5,
+      "role": "story",
+      "title": "Ash of the Crossroads",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-005.webp",
+      "error": null
+    },
+    "6": {
+      "pageNumber": 6,
+      "role": "story",
+      "title": "Transmission Trail",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-006.webp",
+      "error": null
+    },
+    "7": {
+      "pageNumber": 7,
+      "role": "story",
+      "title": "Incomplete Accusation",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-007.webp",
+      "error": null
+    },
+    "8": {
+      "pageNumber": 8,
+      "role": "story",
+      "title": "Named Gate",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-008.webp",
+      "error": null
+    },
+    "9": {
+      "pageNumber": 9,
+      "role": "story",
+      "title": "Quiet Roads",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-009.webp",
+      "error": null
+    },
+    "10": {
+      "pageNumber": 10,
+      "role": "story",
+      "title": "Fog Scouts",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-010.webp",
+      "error": null
+    },
+    "11": {
+      "pageNumber": 11,
+      "role": "story",
+      "title": "Twin Towers",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-011.webp",
+      "error": null
+    },
+    "12": {
+      "pageNumber": 12,
+      "role": "story",
+      "title": "Declarations",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-012.webp",
+      "error": null
+    },
+    "13": {
+      "pageNumber": 13,
+      "role": "story",
+      "title": "Failed Mask",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-013.webp",
+      "error": null
+    },
+    "14": {
+      "pageNumber": 14,
+      "role": "story",
+      "title": "Withheld Memory",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-014.webp",
+      "error": null
+    },
+    "15": {
+      "pageNumber": 15,
+      "role": "story",
+      "title": "Mirror Case",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-015.webp",
+      "error": null
+    },
+    "16": {
+      "pageNumber": 16,
+      "role": "story",
+      "title": "Fabricated Light",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-016.webp",
+      "error": null
+    },
+    "17": {
+      "pageNumber": 17,
+      "role": "story",
+      "title": "In the Kit",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-017.webp",
+      "error": null
+    },
+    "18": {
+      "pageNumber": 18,
+      "role": "story",
+      "title": "What I Gave Them",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-018.webp",
+      "error": null
+    },
+    "19": {
+      "pageNumber": 19,
+      "role": "story",
+      "title": "Lockdown",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-019.webp",
+      "error": null
+    },
+    "20": {
+      "pageNumber": 20,
+      "role": "story",
+      "title": "Dual Keys",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-020.webp",
+      "error": null
+    },
+    "21": {
+      "pageNumber": 21,
+      "role": "story",
+      "title": "Bulwark Bridge",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-021.webp",
+      "error": null
+    },
+    "22": {
+      "pageNumber": 22,
+      "role": "story",
+      "title": "Gate of Consequence",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-022.webp",
+      "error": null
+    },
+    "23": {
+      "pageNumber": 23,
+      "role": "story",
+      "title": "Beyond the Seal",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-023.webp",
+      "error": null
+    },
+    "24": {
+      "pageNumber": 24,
+      "role": "story",
+      "title": "All Three",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-024.webp",
+      "error": null
+    },
+    "25": {
+      "pageNumber": 25,
+      "role": "story",
+      "title": "Never Release",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-025.webp",
+      "error": null
+    },
+    "26": {
+      "pageNumber": 26,
+      "role": "story",
+      "title": "Break the Key",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-026.webp",
+      "error": null
+    },
+    "27": {
+      "pageNumber": 27,
+      "role": "story",
+      "title": "Voluntary Passage",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-027.webp",
+      "error": null
+    },
+    "28": {
+      "pageNumber": 28,
+      "role": "story",
+      "title": "Road Beneath",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-028.webp",
+      "error": null
+    },
+    "29": {
+      "pageNumber": 29,
+      "role": "story",
+      "title": "Second Creation",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-029.webp",
+      "error": null
+    },
+    "30": {
+      "pageNumber": 30,
+      "role": "teaser",
+      "title": "Next Issue — The Forge of Rifts",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-030.webp",
+      "error": null
+    },
+    "31": {
+      "pageNumber": 31,
+      "role": "profile",
+      "title": "Character Profile — The Lanternmaster",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-031.webp",
+      "error": null
+    },
+    "32": {
+      "pageNumber": 32,
+      "role": "profile",
+      "title": "Companion Profile — Truthwing",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-032.webp",
+      "error": null
+    },
+    "33": {
+      "pageNumber": 33,
+      "role": "lore",
+      "title": "Codex — The Traitor's Gate",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-033.webp",
+      "error": null
+    },
+    "34": {
+      "pageNumber": 34,
+      "role": "lore",
+      "title": "Ability Spotlight — Mirror Verdict",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-034.webp",
+      "error": null
+    },
+    "35": {
+      "pageNumber": 35,
+      "role": "lore",
+      "title": "Evidence File — Transmission Timeline",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-035.webp",
+      "error": null
+    },
+    "36": {
+      "pageNumber": 36,
+      "role": "map",
+      "title": "World Map — Roads to the Gate",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-036.webp",
+      "error": null
+    },
+    "37": {
+      "pageNumber": 37,
+      "role": "letters",
+      "title": "Editor's Note — Trust & Leashes",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-037.webp",
+      "error": null
+    },
+    "38": {
+      "pageNumber": 38,
+      "role": "inside-cover",
+      "title": "Inside Back Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-038.webp",
+      "error": null
+    },
+    "39": {
+      "pageNumber": 39,
+      "role": "back-cover",
+      "title": "Back Cover — Begin the Second Creation",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-traitors-gate/issue-007/pages/page-039.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 39,
+    "letterOk": 39,
+    "grokOk": 0,
+    "proceduralOk": 39,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-007/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-007/generate-and-letter.mjs --force"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "pageNumber": 39,
+  "storyPageNumber": null,
+  "bookRole": "back-cover",
+  "title": "Back Cover — Begin the Second Creation",
+  "storyPurpose": "Back Cover — Begin the Second Creation",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "back",
+      "description": "Back cover: Gate silhouette opening onto artificial Rift glow; Mira and Spark tiny on threshold; egg crack glint; empty blurb zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "THE TRAITOR'S GATE",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Suspicion named the wrong hunter. The Gate named the truth. Beyond it — a forge that wants a second world.",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "ISSUE #7",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "back",
+      "kind": "caption",
+      "text": "THE TRAITOR'S GATE",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "back",
+      "kind": "narration",
+      "text": "Suspicion named the wrong hunter. The Gate named the truth. Beyond it — a forge that wants a second world.",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    },
+    {
+      "panelId": "back",
+      "kind": "caption",
+      "text": "ISSUE #7",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "dormant-egg"
+  ],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book back-cover page for The Traitor's Gate Issue #7 — Back Cover — Begin the Second Creation. Back cover: Gate silhouette opening onto artificial Rift glow; Mira and Spark tiny on threshold; egg crack glint; empty blurb zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Gate: black stone towers, cyan locks. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Matter page captions; large title zones.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Back Cover — Begin the Second Creation",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: THE TRAITOR'S GATE",
+    "NARRATION: Suspicion named the wrong hunter. The Gate named the truth. Beyond it — a forge that wants a second world.",
+    "CAPTION: ISSUE #7"
+  ],
+  "a11yTranscript": [
+    "CAPTION: THE TRAITOR'S GATE",
+    "NARRATION: Suspicion named the wrong hunter. The Gate named the truth. Beyond it — a forge that wants a second world.",
+    "CAPTION: ISSUE #7"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spoilerLevel": "cover-safe",
+  "id": "the-traitors-gate-issue-007-p039",
+  "cleanArtRel": "generated/raw-art/page-039.webp",
+  "letteredArtRel": "generated/lettered-pages/page-039.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-039.webp"
+}

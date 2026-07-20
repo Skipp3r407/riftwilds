@@ -1,0 +1,717 @@
+[
+  {
+    "id": "the-last-guardian-p01",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 1,
+    "role": "front-cover",
+    "layout": "splash",
+    "title": "The Last Guardian",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-01.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 1 of 36. Treat as interior showcase plate matching cover energy (not a second book cover with title text). Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift · Issue #8 | narration: Stone remembers a Heart that asked to be kept. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p02",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 2,
+    "role": "inside-cover",
+    "layout": "narrative",
+    "title": "Inside cover",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-02.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 2 of 36. Quiet inside-cover atmosphere: parchment light, soft Gateway glow, invitation to read. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Riftwilds Comic Publishing — original fantasy. No crypto required to read. | narration: Credits & cosmetics may unlock along the way. The story itself stays free. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p03",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 3,
+    "role": "title",
+    "layout": "narrative",
+    "title": "The Last Guardian",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-03.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 3 of 36. Title-spread energy without painted lettering: cast gathered near the Prime Gateway. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dawn. Story beats to illustrate (do not paint this text): caption: Issue #8 | narration: An ancient guardian awakens at a ruined Gateway Heart. A lone Keeper must choose dialogue over demolition. | Series: Last Guardian · Keeper Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p04",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 4,
+    "role": "credits",
+    "layout": "narrative",
+    "title": "Credits",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-04.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 4 of 36. Workshop / lore-desk scene: quills, rift-ink, maps — no readable credit text. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Story · Riftwilds Lore Desk | caption: Art · Commons Archive (official plates) | caption: Lettering · Publishing Engine | narration: Canon alignment: World Codex · Riftling Codex · Legends of the Rift TCG. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p05",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 5,
+    "role": "recap",
+    "layout": "narrative",
+    "title": "Previously in the Riftwilds…",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-05.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 5 of 36. Recap montage plate: Fracture tear, road, egg, Commons founding — sequential beats in panels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: rift. Story beats to illustrate (do not paint this text): narration: After Issue #7, Keepers still walk Fracture roads. Bonds deepen. Shadows listen. | caption: Age of First Eggs — Keepers' Road. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p06",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 6,
+    "role": "splash",
+    "layout": "splash",
+    "title": "Eyes in stone",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-06.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 6 of 36. Story page titled conceptually: Eyes in stone. Single full-bleed cinematic splash panel filling the page. Scene: Ancient stone guardian awakening at ruined Gateway Heart. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: The statue stood up like a promise remembering its wording. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p07",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 7,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-07.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 7 of 36. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: ruin. Story beats to illustrate (do not paint this text): Last Guardian: WHO KEEPS THE HEART? | Keeper: We do — if you let us ask first. | sfx: STONE GRIND | narration: Restoration is not conquest of ruins. It is conversation with what survived. | Keeper: Credits will not buy this answer. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p08",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 8,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-08.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 8 of 36. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): Last Guardian: Then listen when the Celestial call returns. | caption: Present Awakening foreshadow | sfx: deep silence Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p09",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 9,
+    "role": "story",
+    "layout": "lore",
+    "title": "Present Awakening",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-09.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 9 of 36. Story page titled conceptually: Present Awakening. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: rift. Lore motif: Present Awakening — Hearts stir; ancient machines restart. The next chapter is unwritten — help, or unfinished Activation. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p10",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 10,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-10.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 10 of 36. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: ruin. Story beats to illustrate (do not paint this text): Last Guardian: WHO KEEPS THE HEART? | Keeper: We do — if you let us ask first. | sfx: STONE GRIND | caption: Restoration is conversation Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p11",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 11,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-11.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 11 of 36. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: Moss moved like listening. Cyan veins cooled from alarm to interest. | Keeper: Credits will not buy this answer. | Last Guardian: Then speak when the Celestial call returns. | Keeper: We will — with company, Compact, and care. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p12",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 12,
+    "role": "splash",
+    "layout": "splash",
+    "title": "Eyes close gently",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-12.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 12 of 36. Story page titled conceptually: Eyes close gently. Single full-bleed cinematic splash panel filling the page. Scene: Stone guardian resting again beside Gateway Heart. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: The statue sat down like a promise keeping its wording. Restoration without demolition. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p13",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 13,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-13.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 13 of 36. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Present Awakening foreshadow | Last Guardian: Listen when the call is clean — and when it is not. | narration: Hearts stir; ancient machines restart. Help, or unfinished Activation. | sfx: deep silence Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p14",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 14,
+    "role": "story",
+    "layout": "lore",
+    "title": "Dialogue over demolition",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-14.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 14 of 36. Story page titled conceptually: Dialogue over demolition. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: ruin. Lore motif: Dialogue over demolition — World Restoration is not conquest of ruins. It is patience with what survived the Fracture. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p15",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 15,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-15.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 15 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p16",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 16,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-16.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 16 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p17",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 17,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-17.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 17 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p18",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 18,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-18.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 18 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p19",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 19,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-19.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 19 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p20",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 20,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-20.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 20 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p21",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 21,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-21.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 21 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p22",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 22,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-22.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 22 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p23",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 23,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-23.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 23 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p24",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 24,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-24.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 24 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p25",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 25,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-25.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 25 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p26",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 26,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-26.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 26 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p27",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 27,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-27.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 27 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p28",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 28,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-28.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 28 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p29",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 29,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Stone listens",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-29.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 29 of 36. Story page titled conceptually: Stone listens. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Ruins answer those who ask before they swing. | Elara Venn: We keep the Heart if you let us ask first. | Keeper: Restoration is not a demolition schedule. | sfx: moss drip Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p30",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 30,
+    "role": "end",
+    "layout": "end",
+    "title": "Issue complete",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-30.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 30 of 36. Story page titled conceptually: Issue complete. Closing story plate: warm Commons dusk scene with companions silhouetted, ceremonial feel. Atmosphere: festival. Story beats to illustrate (do not paint this text): caption: You finished Issue #8: The Last Guardian. | narration: An ancient guardian awakens at a ruined Gateway Heart. A lone Keeper must choose dialogue over demolition. | caption: Play this chapter → World Restoration Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p31",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 31,
+    "role": "profile",
+    "layout": "narrative",
+    "title": "Keeper & Companion Profiles",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-31.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 31 of 36. Character profile plate: portraits of Elara, First Riftling, Bramblefox, Mossprig in ornate frames within the page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): Last Guardian: Awakened construct — Moss, stone, cyan veins. | Keeper: You — Lantern in one hand, patience in the other. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p32",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 32,
+    "role": "map",
+    "layout": "narrative",
+    "title": "Map of the Fracture Roads",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-32.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 32 of 36. Hand-painted fantasy map of Riftwilds Commons and Fracture roads — decorative, no tiny unreadable labels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: Paths rewrite overnight. Marked sites: Commons · Hatchery · Gateway shards · Festival lantern ring. | caption: Ruined Heart plaza: Vines over oaths. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p33",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 33,
+    "role": "ad",
+    "layout": "narrative",
+    "title": "Commons Notice Board",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-33.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 33 of 36. In-universe playful poster for Riftwilds TCG / Live World — illustrated scene, no real logos or readable ad copy. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: festival. Story beats to illustrate (do not paint this text): Crier: WAYBREAD FAIR — two loaves, one story! | caption: Fake Riftwilds ad · Visit the Hatchery Compact · Credits welcome, crypto never required for reading. | sfx: THRUMMM Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p34",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 34,
+    "role": "teaser",
+    "layout": "narrative",
+    "title": "Next issue",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-34.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 34 of 36. Next-issue teaser silhouette cliffhanger — mysterious, atmospheric. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Next: festival of lights | narration: Lanterns rise. Shadows learn new names. | Archive Keeper: Tease cards in the Codex. Build the bond in Deck Atelier. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-last-guardian-p35",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 35,
+    "role": "letters",
+    "layout": "narrative",
+    "title": "Letters from the Commons",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-35.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 35 of 36. Letters page atmosphere: Keeper mail, wax seals, egg sketches on a wooden table. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Dear Archive — My Bramblefox used Forest Bond on a scarecrow. Is that allowed? | narration: Archive replies: Bonds are for living hearts. Scarecrows get a polite leaf-pat and a comic reread. | Mossprig: *soft rustle of approval* Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-last-guardian-p36",
+    "issueSlug": "the-last-guardian",
+    "pageNumber": 36,
+    "role": "back-cover",
+    "layout": "splash",
+    "title": "The Last Guardian",
+    "outputRelPath": "assets/comics/pages/the-last-guardian/page-36.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #8 \"The Last Guardian\" (the-last-guardian), page 36 of 36. Back-matter closing vista of the Commons under soft riftlight. Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift #8 | narration: Official Riftwilds comic · Unlock Codex · Tease cards · Never P2W story gates. Feature cast when relevant: Last Guardian: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/08-the-last-guardian.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  }
+]

@@ -1,0 +1,298 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "spark": {
+        "form": "egg",
+        "emotion": "stirring",
+        "glow": "rising cyan-gold",
+        "crackLevel": 2
+      },
+      "keeper": {
+        "name": "Mira Eggwarden",
+        "clothing": "practical hatchery travel coat over Compact robes",
+        "injuries": []
+      },
+      "bramblefox": {
+        "injuries": [
+          "front-leg scrape",
+          "torn ear tip"
+        ],
+        "status": "guarding"
+      },
+      "time": "dawn",
+      "weather": "post-storm clear",
+      "location": "Commons fringe clearing"
+    },
+    {
+      "page": 2,
+      "spark": {
+        "form": "hatching",
+        "emotion": "awakening",
+        "glow": "bright unstable",
+        "crackLevel": 3
+      },
+      "mossprig": {
+        "status": "shielding Thornling"
+      },
+      "thornling": {
+        "status": "startled"
+      }
+    },
+    {
+      "page": 3,
+      "spark": {
+        "form": "hatchling",
+        "emotion": "terrified",
+        "glow": "unstable flare",
+        "position": "behind Bramblefox",
+        "trusts": [
+          "bramblefox"
+        ]
+      },
+      "mira": {
+        "present": true
+      }
+    },
+    {
+      "page": 4,
+      "spark": {
+        "emotion": "anxious",
+        "glow": "flickering multi-thread",
+        "codexStatus": "no-match"
+      },
+      "items": [
+        "codex crystal scanner"
+      ]
+    },
+    {
+      "page": 5,
+      "spark": {
+        "markings": "Shellward nested-arc confirmed",
+        "emotion": "wary-curious"
+      },
+      "mission": "escort-to-shellward-sanctum"
+    },
+    {
+      "page": 6,
+      "hunters": {
+        "status": "observing",
+        "faction": "Veiled Meridian",
+        "tracking": "pending"
+      },
+      "mission": "active",
+      "time": "morning"
+    },
+    {
+      "page": 7,
+      "spark": {
+        "emotion": "listening",
+        "glow": "low steady",
+        "position": "in wrap against Mira"
+      },
+      "location": "road out of Commons",
+      "hunterPositions": "trailing beyond sight"
+    },
+    {
+      "page": 8,
+      "spark": {
+        "emotion": "startled overload",
+        "glow": "flare spike",
+        "destabilization": 1
+      }
+    },
+    {
+      "page": 9,
+      "location": "First-Rift scar wilds",
+      "weather": "warped air shimmer",
+      "spark": {
+        "emotion": "resonant unease",
+        "glow": "answering landscape"
+      }
+    },
+    {
+      "page": 10,
+      "spark": {
+        "emotion": "hurt confusion",
+        "glow": "shrinking"
+      },
+      "social": "public fear"
+    },
+    {
+      "page": 11,
+      "spark": {
+        "emotion": "unwanted / withdrawing",
+        "glow": "dim",
+        "trust": "fragile"
+      },
+      "keeper": {
+        "stance": "public defense"
+      }
+    },
+    {
+      "page": 12,
+      "spark": {
+        "emotion": "flight",
+        "glow": "vanishing",
+        "position": "forest unknown"
+      },
+      "hunters": {
+        "status": "tracking active",
+        "devices": "binding-compass on"
+      },
+      "time": "night"
+    },
+    {
+      "page": 13,
+      "spark": {
+        "position": "ahead toward stone arch",
+        "glow": "intermittent"
+      },
+      "tracking": "companion-led"
+    },
+    {
+      "page": 14,
+      "spark": {
+        "emotion": "wonder amid fear",
+        "glow": "door-keyed",
+        "sanctuaryProgress": "arch-opened"
+      },
+      "path": "Shellward Road revealed"
+    },
+    {
+      "page": 15,
+      "hunters": {
+        "status": "surrounding",
+        "bindingField": "forming"
+      },
+      "spark": {
+        "emotion": "trapped terror",
+        "position": "arch threshold"
+      }
+    },
+    {
+      "page": 16,
+      "battle": "begun",
+      "spark": {
+        "emotion": "terrified center",
+        "glow": "erratic"
+      },
+      "nira": {
+        "doubt": true
+      }
+    },
+    {
+      "page": 17,
+      "mossprig": {
+        "injuries": [
+          "binding burn across shoulder"
+        ],
+        "status": "protecting Spark",
+        "ability": "Living Bulwark used"
+      },
+      "spark": {
+        "emotion": "horror / guilt surge",
+        "glow": "building overload"
+      }
+    },
+    {
+      "page": 18,
+      "spark": {
+        "emotion": "terrified",
+        "glow": "unstable cyan-gold",
+        "position": "behind Mossprig"
+      },
+      "mossprig": {
+        "injuries": [
+          "binding burn across shoulder"
+        ],
+        "status": "protecting Spark"
+      },
+      "battle": "coordinated companions vs Meridian"
+    },
+    {
+      "page": 19,
+      "spark": {
+        "emotion": "overload / listening",
+        "glow": "critical",
+        "resonance": 3
+      },
+      "keeper": {
+        "stance": "refuse-to-weaponize"
+      },
+      "hunters": {
+        "advantage": true
+      }
+    },
+    {
+      "page": 20,
+      "spark": {
+        "emotion": "vision clarity",
+        "glow": "vision-stable",
+        "vision": "ancient Keepers / Riftborn kin"
+      }
+    },
+    {
+      "page": 21,
+      "spark": {
+        "emotion": "chosen courage",
+        "glow": "controlled bright",
+        "bond": "voluntary with Mira",
+        "resonance": 3,
+        "abilityReady": "Prismatic Burst"
+      }
+    },
+    {
+      "page": 22,
+      "spark": {
+        "emotion": "strained resolve",
+        "glow": "burst afterglow",
+        "resonance": 0,
+        "ability": "Prismatic Burst used"
+      },
+      "hunters": {
+        "bindingField": "broken",
+        "status": "staggered"
+      },
+      "battle": "turning"
+    },
+    {
+      "page": 23,
+      "hunters": {
+        "status": "retreated",
+        "nira": "defected-soft"
+      },
+      "sanctuaryProgress": "doors-open-for-Spark",
+      "mossprig": {
+        "injuries": [
+          "binding burn across shoulder"
+        ],
+        "status": "stable"
+      }
+    },
+    {
+      "page": 24,
+      "spark": {
+        "emotion": "identity awakening",
+        "glow": "sanctuary-steady",
+        "classification": "Riftborn"
+      },
+      "location": "Shellward Sanctum interior",
+      "revelation": "multiple Riftborn exist"
+    },
+    {
+      "page": 25,
+      "spark": {
+        "emotion": "uneasy resolve",
+        "glow": "steady with Mira",
+        "bond": "voluntary"
+      },
+      "sanctuaryProgress": "entered; crystal missing",
+      "items": {
+        "pedestalCrystal": "stolen-before-arrival"
+      },
+      "cliffhanger": "collection begins → Traveling Circus",
+      "nextIssue": "the-traveling-circus"
+    }
+  ]
+}

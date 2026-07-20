@@ -1,0 +1,179 @@
+{
+  "pageNumber": 9,
+  "storyPageNumber": 5,
+  "bookRole": "story",
+  "title": "Thornling's Mistake",
+  "storyPurpose": "Thornling activates forgotten transit; team carried deeper.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p5a",
+      "description": "Thornling pokes glowing conduit crystals on broken transit platform; Sparks of teal.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*poke-poke!*",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Thornling",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Thornling— wait—",
+          "x": 70,
+          "y": 55,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p5b",
+      "description": "Platform rings ignite; whole team caught in cyan transit field; Lumenhare ears flat.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "WHOOM-RING",
+          "x": 50,
+          "y": 45,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*fwip!*",
+          "x": 70,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Lumenhare",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p5c",
+      "description": "Blur of suspended streets rushing past — team pulled deeper into Aureth Vale.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The city decides how deep guests go.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p5a",
+      "kind": "creature",
+      "text": "*poke-poke!*",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Thornling",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p5a",
+      "kind": "speech",
+      "text": "Thornling— wait—",
+      "x": 70,
+      "y": 55,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p5b",
+      "kind": "creature",
+      "text": "*fwip!*",
+      "x": 70,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Lumenhare",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p5c",
+      "kind": "narration",
+      "text": "The city decides how deep guests go.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 4
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p5b",
+      "kind": "sfx",
+      "text": "WHOOM-RING",
+      "x": 50,
+      "y": 45,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "tavi-brightline"
+  ],
+  "creatures": [
+    "thornling",
+    "spark",
+    "lumenhare",
+    "mossprig",
+    "bramblefox",
+    "wisplet"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "transit": "activated by Thornling",
+    "depth": "inner districts"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 5/25 — Thornling's Mistake. Story purpose: Thornling activates forgotten transit; team carried deeper. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p5a): Thornling pokes glowing conduit crystals on broken transit platform; Sparks of teal. Panel 2 (p5b): Platform rings ignite; whole team caught in cyan transit field; Lumenhare ears flat. Panel 3 (p5c): Blur of suspended streets rushing past — team pulled deeper into Aureth Vale. Characters: mira-eggwarden, cael-vesper, tavi-brightline. Creatures: thornling, spark, lumenhare, mossprig, bramblefox, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"transit\": \"activated by Thornling\", \"depth\": \"inner districts\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Suspended streets.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Thornling's Mistake — The Lost City page 5",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Thornling): *poke-poke!*",
+    "SPEECH (Mira Eggwarden): Thornling— wait—",
+    "SFX: WHOOM-RING",
+    "CREATURE (Lumenhare): *fwip!*",
+    "NARRATION: The city decides how deep guests go."
+  ],
+  "id": "the-lost-city-issue-004-p009",
+  "cleanArtRel": "generated/raw-art/page-009.webp",
+  "letteredArtRel": "generated/lettered-pages/page-009.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-009.webp"
+}

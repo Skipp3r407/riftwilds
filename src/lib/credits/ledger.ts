@@ -110,6 +110,64 @@ export function seedCreditAccountBalance(
   }
 }
 
+/**
+ * Dev Override mock Credits — one-time top-up to softCurrency when the ledger
+ * is empty or only has a tiny starter grant. Idempotent; does not reset spends.
+ */
+export function ensureDevOverrideMockCredits(
+  userId: string,
+  target: number,
+): void {
+  if (!assertInt(target) || target <= 0) return;
+  seedCreditAccountBalance(userId, target);
+
+  const s = store();
+  const seedId = `dev-override-seed:${userId}`;
+  if (s.byRequestId.has(seedId)) return;
+
+  const acc = ensureAccount(userId);
+  const now = Date.now();
+  const iso = new Date(now).toISOString();
+
+  if (acc.balance >= target) {
+    s.byRequestId.set(seedId, {
+      id: `cle_devov_mark_${userId}`,
+      createdAt: iso,
+      userId,
+      currency: CREDITS_CURRENCY,
+      delta: 0,
+      balanceAfter: acc.balance,
+      reason: "STARTER_GRANT",
+      requestId: seedId,
+      metadata: { kind: "dev_override_mock", alreadyFunded: true },
+    });
+    return;
+  }
+
+  const delta = target - acc.balance;
+  acc.balance = target;
+  acc.version += 1;
+  acc.updatedAt = iso;
+  const entry: CreditLedgerEntry = {
+    id: `cle_devov_${userId}`,
+    createdAt: iso,
+    userId,
+    currency: CREDITS_CURRENCY,
+    delta,
+    balanceAfter: target,
+    reason: "STARTER_GRANT",
+    requestId: seedId,
+    metadata: { kind: "dev_override_mock" },
+  };
+  s.entries.push(entry);
+  s.byRequestId.set(seedId, entry);
+
+  const starterId = `starter:${userId}`;
+  if (!s.byRequestId.has(starterId)) {
+    s.byRequestId.set(starterId, entry);
+  }
+}
+
 function utcDayKey(now = Date.now()): string {
   return new Date(now).toISOString().slice(0, 10);
 }

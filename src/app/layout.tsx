@@ -4,9 +4,12 @@ import { WalletProviderDynamic } from "@/components/wallet/wallet-provider-dynam
 import { NakamaProvider } from "@/components/nakama/nakama-provider";
 import { QueryProvider } from "@/components/shared/query-provider";
 import { MusicPlayer } from "@/components/shared/music-player";
+import { ScrollToTop } from "@/components/shared/scroll-to-top";
 import { HudInteraction } from "@/components/shared/hud-interaction";
 import { MagicalDust } from "@/components/shared/magical-dust";
 import { RiftCursor } from "@/components/shared/rift-cursor";
+import { DevOverrideBadge } from "@/components/dev/dev-override-badge";
+import { DevToolsPanel } from "@/components/dev/dev-tools-panel";
 import { projectConfig } from "@/lib/config/project";
 import "@solana/wallet-adapter-react-ui/styles.css";
 import "./globals.css";
@@ -32,11 +35,11 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   icons: {
     icon: [
-      { url: "/assets/brand/favicon-16.png?v=theme4", sizes: "16x16", type: "image/png" },
-      { url: "/assets/brand/favicon-32.png?v=theme4", sizes: "32x32", type: "image/png" },
-      { url: "/assets/brand/riftwilds-mark.png?v=theme4", sizes: "512x512", type: "image/png" },
+      { url: "/assets/brand/favicon-16.png?v=theme4b", sizes: "16x16", type: "image/png" },
+      { url: "/assets/brand/favicon-32.png?v=theme4b", sizes: "32x32", type: "image/png" },
+      { url: "/assets/brand/riftwilds-mark.png?v=theme4b", sizes: "512x512", type: "image/png" },
     ],
-    apple: [{ url: "/assets/brand/apple-touch-icon.png?v=theme4", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: "/assets/brand/apple-touch-icon.png?v=theme4b", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     title: `${projectConfig.PROJECT_NAME} — Hatch. Explore. Battle. Evolve.`,
@@ -88,6 +91,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <MagicalDust />
         <RiftCursor />
         <MusicPlayer />
+        <ScrollToTop />
+        <DevOverrideBadge />
+        <DevToolsPanel />
       </body>
     </html>
   );

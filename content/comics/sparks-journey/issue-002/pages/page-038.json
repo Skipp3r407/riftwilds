@@ -1,0 +1,80 @@
+{
+  "pageNumber": 38,
+  "storyPageNumber": null,
+  "bookRole": "back-cover",
+  "title": "Back Cover — Traveling Lantern Caravan",
+  "storyPurpose": "Back Cover — Traveling Lantern Caravan",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "bc",
+      "description": "In-universe ad for Traveling Lantern Caravan / Riftwild Traveling Circus: lantern wagons, companion performances, mysterious masked host, one slightly unsettling three-arc charm half-hidden under a wagon. Empty poster text zones. No gambling.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "THE TRAVELING LANTERN CARAVAN",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 70
+        },
+        {
+          "kind": "narration",
+          "text": "Lanterns. Companion acts. Honest cheers — never SOL in the hat. Masked Host invites Keepers who listen. (In-world advertisement · not a real-money offer.)",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 65
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "bc",
+      "kind": "caption",
+      "text": "THE TRAVELING LANTERN CARAVAN",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 70
+    },
+    {
+      "panelId": "bc",
+      "kind": "narration",
+      "text": "Lanterns. Companion acts. Honest cheers — never SOL in the hat. Masked Host invites Keepers who listen. (In-world advertisement · not a real-money offer.)",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 65
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book back-cover page for Spark's Journey Issue #2 — Back Cover — Traveling Lantern Caravan. In-universe ad for Traveling Lantern Caravan / Riftwild Traveling Circus: lantern wagons, companion performances, mysterious masked host, one slightly unsettling three-arc charm half-hidden under a wagon. Empty poster text zones. No gambling. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Back Cover — Traveling Lantern Caravan",
+  "atmosphere": "festival",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: THE TRAVELING LANTERN CARAVAN",
+    "NARRATION: Lanterns. Companion acts. Honest cheers — never SOL in the hat. Masked Host invites Keepers who listen. (In-world advertisement · not a real-money offer.)"
+  ],
+  "id": "sparks-journey-issue-002-p038",
+  "cleanArtRel": "generated/raw-art/page-038.png",
+  "letteredArtRel": "generated/lettered-pages/page-038.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-038.webp"
+}

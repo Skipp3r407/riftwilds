@@ -1,0 +1,262 @@
+{
+  "pageNumber": 22,
+  "storyPageNumber": 18,
+  "bookRole": "story",
+  "title": "Plaza War Map",
+  "storyPurpose": "Multi-front battle: Guardian, companions, Meridian, Keeper directing.",
+  "layout": {
+    "type": "grid-2x3",
+    "panelCount": 6
+  },
+  "panels": [
+    {
+      "id": "p18a",
+      "description": "The Last Guardian: towering stone-and-crystal construct in ancient Keeper armor, cyan energy core, moss and roots over armor, one damaged sensor-eye, massive shield, heavy Rift-powered weapon, emotional traces of former bond crossing plaza, shield up, weapon sweeping.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "STEP-THOOM",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p18b",
+      "description": "Bramblefox climbing broken aqueduct; Forest Bond vines slow a Meridian agent.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*hunt-rrk*",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p18c",
+      "description": "Thornling bites an energy conduit — accidental city lights flicker aiding cover.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*nom!*",
+          "x": 45,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Thornling",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "conduit-zap",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p18d",
+      "description": "Wisplet phases through defense barrier; Spirit Moth reveals hidden rune path.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*phase-chime*",
+          "x": 40,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Wisplet",
+          "readOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "p18e",
+      "description": "Spark dodges capture beams; Echoquill Echo Step copies Mossprig's earlier defensive hop.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*echo-step*",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Echoquill",
+          "readOrder": 5
+        }
+      ]
+    },
+    {
+      "id": "p18f",
+      "description": "Mira directing: point, call, never commanding Spark to attack — only to stay free.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Disable joints — do not break the mind inside!",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 6
+        },
+        {
+          "kind": "speech",
+          "text": "Yield the stabilizer. I will spare your Compact theater.",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 42,
+          "speaker": "Seris Vale",
+          "readOrder": 7
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p18b",
+      "kind": "creature",
+      "text": "*hunt-rrk*",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p18c",
+      "kind": "creature",
+      "text": "*nom!*",
+      "x": 45,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Thornling",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p18d",
+      "kind": "creature",
+      "text": "*phase-chime*",
+      "x": 40,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Wisplet",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p18e",
+      "kind": "creature",
+      "text": "*echo-step*",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Echoquill",
+      "readOrder": 5
+    },
+    {
+      "panelId": "p18f",
+      "kind": "speech",
+      "text": "Disable joints — do not break the mind inside!",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 6
+    },
+    {
+      "panelId": "p18f",
+      "kind": "speech",
+      "text": "Yield the stabilizer. I will spare your Compact theater.",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 42,
+      "speaker": "Seris Vale",
+      "readOrder": 7
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "STEP-THOOM",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p18c",
+      "kind": "sfx",
+      "text": "conduit-zap",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "thornling",
+    "wisplet",
+    "spirit-moth",
+    "echoquill",
+    "mossprig"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "battle": "multi-front plaza",
+    "miraOrder": "disable not destroy"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 18/25 — Plaza War Map. Story purpose: Multi-front battle: Guardian, companions, Meridian, Keeper directing. Layout: grid-2x3. 6 panels with clear inked gutters. Panel 1 (p18a): The Last Guardian: towering stone-and-crystal construct in ancient Keeper armor, cyan energy core, moss and roots over armor, one damaged sensor-eye, massive shield, heavy Rift-powered weapon, emotional traces of former bond crossing plaza, shield up, weapon sweeping. Panel 2 (p18b): Bramblefox climbing broken aqueduct; Forest Bond vines slow a Meridian agent. Panel 3 (p18c): Thornling bites an energy conduit — accidental city lights flicker aiding cover. Panel 4 (p18d): Wisplet phases through defense barrier; Spirit Moth reveals hidden rune path. Panel 5 (p18e): Spark dodges capture beams; Echoquill Echo Step copies Mossprig's earlier defensive hop. Panel 6 (p18f): Mira directing: point, call, never commanding Spark to attack — only to stay free. Characters: mira-eggwarden, seris-vale. Creatures: spark, bramblefox, thornling, wisplet, spirit-moth, echoquill, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"battle\": \"multi-front plaza\", \"miraOrder\": \"disable not destroy\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Weak point found.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Plaza War Map — The Lost City page 18",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: STEP-THOOM",
+    "CREATURE (Bramblefox): *hunt-rrk*",
+    "CREATURE (Thornling): *nom!*",
+    "SFX: conduit-zap",
+    "CREATURE (Wisplet): *phase-chime*",
+    "CREATURE (Echoquill): *echo-step*",
+    "SPEECH (Mira Eggwarden): Disable joints — do not break the mind inside!",
+    "SPEECH (Seris Vale): Yield the stabilizer. I will spare your Compact theater."
+  ],
+  "id": "the-lost-city-issue-004-p022",
+  "cleanArtRel": "generated/raw-art/page-022.webp",
+  "letteredArtRel": "generated/lettered-pages/page-022.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-022.webp"
+}

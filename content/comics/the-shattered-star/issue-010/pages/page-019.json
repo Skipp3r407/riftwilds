@@ -1,0 +1,195 @@
+{
+  "pageNumber": 19,
+  "storyPageNumber": 15,
+  "bookRole": "story",
+  "title": "Celestial Alarms",
+  "storyPurpose": "Celestial alarms activate across sanctuaries.",
+  "layout": {
+    "type": "grid-4",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p15a",
+      "description": "Alarm lattices flare gold-cyan through Prime Sanctuary ceilings.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "ALARM-RING",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p15b",
+      "description": "Orbital gardens retract behind crystal shields; companions herd toward safe spans.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Get the sleeping ones covered!",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p15c",
+      "description": "Guardian Cities far below fire support beams upward toward the Star.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "GUARDIAN CITIES — SUPPORT FIRE",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p15d",
+      "description": "Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence fully materializes beside Lyra — massive celestial wolf ready for war.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*starlight-ROAR*",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Astra",
+          "readOrder": 3
+        },
+        {
+          "kind": "speech",
+          "text": "Astra — with me.",
+          "x": 70,
+          "y": 70,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "High Keeper Lyra",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p15b",
+      "kind": "speech",
+      "text": "Get the sleeping ones covered!",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p15d",
+      "kind": "creature",
+      "text": "*starlight-ROAR*",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Astra",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p15d",
+      "kind": "speech",
+      "text": "Astra — with me.",
+      "x": 70,
+      "y": 70,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "High Keeper Lyra",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p15c",
+      "kind": "caption",
+      "text": "GUARDIAN CITIES — SUPPORT FIRE",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p15a",
+      "kind": "sfx",
+      "text": "ALARM-RING",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "high-keeper-lyra"
+  ],
+  "creatures": [
+    "astra",
+    "spark",
+    "nova",
+    "axiom"
+  ],
+  "locations": [
+    "Shattered Star"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "alarms": true,
+    "astra": "deployed"
+  },
+  "requiredMoments": [
+    12,
+    13
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 15/25 — Celestial Alarms. Story purpose: Celestial alarms activate across sanctuaries. Layout: grid-4. 4 panels with clear inked gutters. Panel 1 (p15a): Alarm lattices flare gold-cyan through Prime Sanctuary ceilings. Panel 2 (p15b): Orbital gardens retract behind crystal shields; companions herd toward safe spans. Panel 3 (p15c): Guardian Cities far below fire support beams upward toward the Star. Panel 4 (p15d): Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence fully materializes beside Lyra — massive celestial wolf ready for war. Characters: mira-eggwarden, high-keeper-lyra. Creatures: astra, spark, nova, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Shattered Star celestial sanctuary. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"alarms\": true, \"astra\": \"deployed\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Turn to continue.",
+  "letteringInstructions": "Standard speech + narration; tails off faces and Spark/Nova/Astra eyes; Lyra speech calm/stern.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Celestial Alarms — The Shattered Star page 15",
+  "atmosphere": "battle",
+  "transcript": [
+    "SFX: ALARM-RING",
+    "SPEECH (Mira Eggwarden): Get the sleeping ones covered!",
+    "CAPTION: GUARDIAN CITIES — SUPPORT FIRE",
+    "CREATURE (Astra): *starlight-ROAR*",
+    "SPEECH (High Keeper Lyra): Astra — with me."
+  ],
+  "a11yTranscript": [
+    "SFX: ALARM-RING",
+    "SPEECH (Mira Eggwarden): Get the sleeping ones covered!",
+    "CAPTION: GUARDIAN CITIES — SUPPORT FIRE",
+    "CREATURE (Astra): *starlight-ROAR*",
+    "SPEECH (High Keeper Lyra): Astra — with me."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-019.webp",
+  "id": "the-shattered-star-issue-010-p019"
+}

@@ -1,0 +1,158 @@
+{
+  "pageNumber": 23,
+  "storyPageNumber": 19,
+  "bookRole": "story",
+  "title": "Break the Auction",
+  "storyPurpose": "Battle splash — rescue captives and egg.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p19a",
+      "description": "Action splash: Bramblefox attacking control devices; Mossprig shielding civilians; Thornling surging conductors; Cindermink mid-leap; Spark and Mira reaching dormant egg; Meridian guards falling; gold and teal glass shattering; empty balloon corners.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "AUCTION-BREAK",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*device-snap*",
+          "x": 30,
+          "y": 45,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*bulwark!*",
+          "x": 55,
+          "y": 55,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 2
+        },
+        {
+          "kind": "shout",
+          "text": "Companions first — always!",
+          "x": 65,
+          "y": 78,
+          "tail": "left",
+          "maxWidthPct": 38,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p19a",
+      "kind": "creature",
+      "text": "*device-snap*",
+      "x": 30,
+      "y": 45,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p19a",
+      "kind": "creature",
+      "text": "*bulwark!*",
+      "x": 55,
+      "y": 55,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mossprig",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p19a",
+      "kind": "shout",
+      "text": "Companions first — always!",
+      "x": 65,
+      "y": 78,
+      "tail": "left",
+      "maxWidthPct": 38,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p19a",
+      "kind": "sfx",
+      "text": "AUCTION-BREAK",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "cindermink"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "auction battle",
+    "rescue": "in-progress"
+  },
+  "requiredMoments": [
+    29,
+    30
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 19/25 — Break the Auction. Story purpose: Battle splash — rescue captives and egg. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p19a): Action splash: Bramblefox attacking control devices; Mossprig shielding civilians; Thornling surging conductors; Cindermink mid-leap; Spark and Mira reaching dormant egg; Meridian guards falling; gold and teal glass shattering; empty balloon corners. Characters: mira-eggwarden, nira-quill. Creatures: spark, bramblefox, mossprig, thornling, cindermink. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"auction battle\", \"rescue\": \"in-progress\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Ledger opens doors.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Break the Auction — The Merchant's Secret page 19",
+  "atmosphere": "market",
+  "transcript": [
+    "SFX: AUCTION-BREAK",
+    "CREATURE (Bramblefox): *device-snap*",
+    "CREATURE (Mossprig): *bulwark!*",
+    "SHOUT (Mira Eggwarden): Companions first — always!"
+  ],
+  "a11yTranscript": [
+    "SFX: AUCTION-BREAK",
+    "CREATURE (Bramblefox): *device-snap*",
+    "CREATURE (Mossprig): *bulwark!*",
+    "SHOUT (Mira Eggwarden): Companions first — always!"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "break-the-chain"
+  ],
+  "id": "the-merchants-secret-issue-006-p023",
+  "cleanArtRel": "generated/raw-art/page-023.webp",
+  "letteredArtRel": "generated/lettered-pages/page-023.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-023.webp"
+}

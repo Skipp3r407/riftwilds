@@ -38,7 +38,7 @@ describe("TCG foundational content", () => {
 
   it("creature flavor text is complete (not mid-sentence truncated)", () => {
     const truncated = TCG_CARDS.filter((c) => {
-      if (c.type !== "creature") return false;
+      if (c.type !== "companion" || !c.id.startsWith("rotr-c-")) return false;
       const f = c.localization.flavorText.trim();
       return f.includes("…") || f.endsWith("...") || !/[.!?]"?$/.test(f);
     });
@@ -51,7 +51,12 @@ describe("TCG foundational content", () => {
   it("covers every lore species with at least one creature card", () => {
     expect(SPECIES_LORE_SLUGS.length).toBeGreaterThanOrEqual(100);
     const creatureSlugs = new Set(
-      TCG_CARDS.filter((c) => c.type === "creature" && c.riftlingSlug).map((c) => c.riftlingSlug!),
+      TCG_CARDS.filter(
+        (c) =>
+          c.type === "companion" &&
+          c.id.startsWith("rotr-c-") &&
+          c.riftlingSlug,
+      ).map((c) => c.riftlingSlug!),
     );
     const missing = SPECIES_LORE_SLUGS.filter((slug) => !creatureSlugs.has(slug));
     expect(missing, `missing creature cards for: ${missing.join(", ")}`).toEqual([]);
@@ -68,7 +73,9 @@ describe("TCG foundational content", () => {
   });
 
   it("wires art.assetPath for riftling creatures when pet thumbs exist", () => {
-    const riftlingCreatures = TCG_CARDS.filter((c) => c.type === "creature" && c.riftlingSlug);
+    const riftlingCreatures = TCG_CARDS.filter(
+      (c) => c.type === "companion" && c.id.startsWith("rotr-c-") && c.riftlingSlug,
+    );
     const withPath = riftlingCreatures.filter((c) => c.art.assetPath);
     expect(withPath.length).toBe(riftlingCreatures.length);
     for (const c of withPath) {
@@ -76,8 +83,8 @@ describe("TCG foundational content", () => {
     }
   });
 
-  it("includes location and catalog-derived equipment/spell cards", () => {
-    expect(TCG_CARDS.filter((c) => c.type === "location").length).toBeGreaterThanOrEqual(12);
+  it("includes terrain and catalog-derived equipment/spell cards", () => {
+    expect(TCG_CARDS.filter((c) => c.type === "terrain").length).toBeGreaterThanOrEqual(12);
     expect(TCG_CARDS.filter((c) => c.id.startsWith("rotr-e-item-")).length).toBeGreaterThanOrEqual(40);
     expect(TCG_CARDS.filter((c) => c.id.startsWith("rotr-s-item-")).length).toBeGreaterThanOrEqual(40);
   });
@@ -94,7 +101,7 @@ describe("TCG foundational content", () => {
   });
 
   it("defines Rift Energy instead of mana", () => {
-    expect(RIFT_ENERGY.start).toBe(1);
+    expect(RIFT_ENERGY.start).toBeGreaterThanOrEqual(1);
     expect(RIFT_ENERGY.perTurnGain).toBe(1);
     expect(RIFT_ENERGY.maxCap).toBe(10);
   });

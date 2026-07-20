@@ -708,10 +708,11 @@ export const infoBlocks: InfoBlock[] = [
 
 export const heroCtas = {
   primary: [
-    { href: "/live-world", label: "ENTER THE LIVE WORLD" },
+    { href: "/tcg/battle", label: "PLAY RIFT BATTLE" },
     { href: "/codex/riftlings", label: "DISCOVER THE RIFTLINGS" },
   ],
   secondary: [
+    { href: "/live-world", label: "LIVE WORLD — COMING SOON" },
     { href: "#origin", label: "WATCH THE ORIGIN" },
     { href: "#how-riftlings-came-to-be", label: "HOW RIFTLINGS BEGAN" },
   ],

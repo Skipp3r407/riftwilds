@@ -1,0 +1,236 @@
+{
+  "pageNumber": 16,
+  "storyPageNumber": 12,
+  "bookRole": "story",
+  "title": "Axiom Awakens",
+  "storyPurpose": "Prototype companion Axiom awakens and bonds restoratively to the group.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p12a",
+      "description": "Side cradle flares: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence floating free — crystalline fox, holographic tail, broken horns, circuitry glow.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "proto-CHIME",
+          "x": 65,
+          "y": 25,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*query-trill*",
+          "x": 50,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p12b",
+      "description": "Axiom Pulse Repair light knitting a cracked platform under Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's boots; Spark nose-to-nose with Axiom.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Axiom. Adaptive Matrix. Built to copy protection — never ownership.",
+          "x": 50,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Arkan",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*welcome-chirp*",
+          "x": 40,
+          "y": 65,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        },
+        {
+          "kind": "creature",
+          "text": "*matrix-hum*",
+          "x": 60,
+          "y": 70,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "p12c",
+      "description": "Party reunited shot: Axiom orbiting Spark and egg; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood; subdued posture — supervised redemption, not fully trusted watching with careful hope.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Invite only. Same rule — even for prototypes.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        },
+        {
+          "kind": "narration",
+          "text": "A companion that remembers repair is already choosing a side.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 6
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p12a",
+      "kind": "creature",
+      "text": "*query-trill*",
+      "x": 50,
+      "y": 50,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Axiom",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p12b",
+      "kind": "speech",
+      "text": "Axiom. Adaptive Matrix. Built to copy protection — never ownership.",
+      "x": 50,
+      "y": 22,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Arkan",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p12b",
+      "kind": "creature",
+      "text": "*welcome-chirp*",
+      "x": 40,
+      "y": 65,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p12b",
+      "kind": "creature",
+      "text": "*matrix-hum*",
+      "x": 60,
+      "y": 70,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Axiom",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p12c",
+      "kind": "speech",
+      "text": "Invite only. Same rule — even for prototypes.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p12c",
+      "kind": "narration",
+      "text": "A companion that remembers repair is already choosing a side.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 6
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p12a",
+      "kind": "sfx",
+      "text": "proto-CHIME",
+      "x": 65,
+      "y": 25,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "arkan",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "axiom"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Incubator Alpha side cradle",
+    "axiom": "awakened"
+  },
+  "requiredMoments": [
+    11
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 12/25 — Axiom Awakens. Story purpose: Prototype companion Axiom awakens and bonds restoratively to the group. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p12a): Side cradle flares: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence floating free — crystalline fox, holographic tail, broken horns, circuitry glow. Panel 2 (p12b): Axiom Pulse Repair light knitting a cracked platform under Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's boots; Spark nose-to-nose with Axiom. Panel 3 (p12c): Party reunited shot: Axiom orbiting Spark and egg; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood; subdued posture — supervised redemption, not fully trusted watching with careful hope. Characters: mira-eggwarden, arkan, cael-vesper. Creatures: spark, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Incubator Alpha side cradle\", \"axiom\": \"awakened\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Meridian arrives.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Axiom Awakens — The Forge of Rifts page 12",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: proto-CHIME",
+    "CREATURE (Axiom): *query-trill*",
+    "SPEECH (Arkan): Axiom. Adaptive Matrix. Built to copy protection — never ownership.",
+    "CREATURE (Spark): *welcome-chirp*",
+    "CREATURE (Axiom): *matrix-hum*",
+    "SPEECH (Mira Eggwarden): Invite only. Same rule — even for prototypes.",
+    "NARRATION: A companion that remembers repair is already choosing a side."
+  ],
+  "a11yTranscript": [
+    "SFX: proto-CHIME",
+    "CREATURE (Axiom): *query-trill*",
+    "SPEECH (Arkan): Axiom. Adaptive Matrix. Built to copy protection — never ownership.",
+    "CREATURE (Spark): *welcome-chirp*",
+    "CREATURE (Axiom): *matrix-hum*",
+    "SPEECH (Mira Eggwarden): Invite only. Same rule — even for prototypes.",
+    "NARRATION: A companion that remembers repair is already choosing a side."
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "axiom"
+  ],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p016",
+  "cleanArtRel": "generated/raw-art/page-016.webp",
+  "letteredArtRel": "generated/lettered-pages/page-016.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-016.webp"
+}

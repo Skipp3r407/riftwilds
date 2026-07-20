@@ -1,0 +1,181 @@
+{
+  "pageNumber": 22,
+  "storyPageNumber": 18,
+  "bookRole": "story",
+  "title": "Crown Against the Host",
+  "storyPurpose": "Large aerial/ground battle spread — Thundervane, towers, Meridian toward engine.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p18a",
+      "description": "Epic battle composition (single page splash standing in for spread energy): Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion clashing with corrupted sky beasts midair; lightning towers firing; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot dodging capture beams; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes coordinating; Meridian agents racing toward engine hatch; bridges collapsing; villagers evacuating; empty balloon-safe corners.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "SKYBREAKER",
+          "x": 30,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "KRACK-BOOM",
+          "x": 75,
+          "y": 25,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "shout",
+          "text": "Spark — left!",
+          "x": 40,
+          "y": 55,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Secure the Resonance. Ignore the king.",
+          "x": 70,
+          "y": 70,
+          "tail": "left",
+          "maxWidthPct": 36,
+          "speaker": "Seris Vale",
+          "readOrder": 3
+        },
+        {
+          "kind": "creature",
+          "text": "*battle-roar*",
+          "x": 55,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Thundervane",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p18a",
+      "kind": "shout",
+      "text": "Spark — left!",
+      "x": 40,
+      "y": 55,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p18a",
+      "kind": "speech",
+      "text": "Secure the Resonance. Ignore the king.",
+      "x": 70,
+      "y": 70,
+      "tail": "left",
+      "maxWidthPct": 36,
+      "speaker": "Seris Vale",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p18a",
+      "kind": "creature",
+      "text": "*battle-roar*",
+      "x": 55,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Thundervane",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "SKYBREAKER",
+      "x": 30,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "KRACK-BOOM",
+      "x": 75,
+      "y": 25,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "vaelor-tempest"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane",
+    "bramblefox",
+    "mossprig"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "citadel skies",
+    "battle": "peak",
+    "meridian": "engine-push"
+  },
+  "requiredMoments": [
+    15,
+    17,
+    19
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 18/25 — Crown Against the Host. Story purpose: Large aerial/ground battle spread — Thundervane, towers, Meridian toward engine. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p18a): Epic battle composition (single page splash standing in for spread energy): Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion clashing with corrupted sky beasts midair; lightning towers firing; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot dodging capture beams; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes coordinating; Meridian agents racing toward engine hatch; bridges collapsing; villagers evacuating; empty balloon-safe corners. Characters: mira-eggwarden, seris-vale, vaelor-tempest. Creatures: spark, thundervane, bramblefox, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"citadel skies\", \"battle\": \"peak\", \"meridian\": \"engine-push\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Engine seizure attempt.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Crown Against the Host — The Storm King page 18",
+  "atmosphere": "storm",
+  "transcript": [
+    "SFX: SKYBREAKER",
+    "SFX: KRACK-BOOM",
+    "SHOUT (Mira Eggwarden): Spark — left!",
+    "SPEECH (Seris Vale): Secure the Resonance. Ignore the king.",
+    "CREATURE (Thundervane): *battle-roar*"
+  ],
+  "a11yTranscript": [
+    "SFX: SKYBREAKER",
+    "SFX: KRACK-BOOM",
+    "SHOUT (Mira Eggwarden): Spark — left!",
+    "SPEECH (Seris Vale): Secure the Resonance. Ignore the king.",
+    "CREATURE (Thundervane): *battle-roar*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "thundervane-skybreaker"
+  ],
+  "id": "the-storm-king-issue-005-p022",
+  "cleanArtRel": "generated/raw-art/page-022.webp",
+  "letteredArtRel": "generated/lettered-pages/page-022.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-022.webp"
+}

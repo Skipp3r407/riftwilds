@@ -1,0 +1,44 @@
+{
+  "pageNumber": 16,
+  "id": "the-first-rift-issue-001-p016",
+  "role": "story",
+  "title": null,
+  "layout": "wide",
+  "atmosphere": "night",
+  "beat": "Wisplet — Lantern Soft",
+  "artPrompt": "Wide night page, no text. Wisplet (small lantern-spirit Riftling) casts Lantern Soft glow through fog around Elara and egg; companions silhouetted. Amber + soft cyan accents. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "caption": "Ability — Lantern Soft",
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Wisplet does not blind the dark. It teaches the dark where feet may land.",
+          "x": 50,
+          "y": 12
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Stay with us, little light. The Compact starts with honesty — even to fog.",
+          "x": 40,
+          "y": 60,
+          "tail": "up"
+        },
+        {
+          "kind": "sfx",
+          "text": "soft lantern whoosh",
+          "x": 70,
+          "y": 40
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-016.png",
+  "letteredArtRel": "generated/lettered/page-016.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-016.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

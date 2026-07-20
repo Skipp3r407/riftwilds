@@ -1,0 +1,105 @@
+{
+  "pageNumber": 34,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Blueprint Gallery — Prototype Riftborn",
+  "storyPurpose": "Blueprint Gallery — Prototype Riftborn",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "bg",
+      "description": "Blueprint gallery: schematic plates of prototype Riftborn, Resonance Keeper cradle, failed husks — empty annotation zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "BLUEPRINT GALLERY",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Riftborn were grown as protectors. Artificial Rifts cut; natural Rifts bleed. Spark and the dormant egg survived because their lines were never finished as weapons.",
+          "x": 50,
+          "y": 48,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "PROTOTYPE RIFTBORN",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "bg",
+      "kind": "caption",
+      "text": "BLUEPRINT GALLERY",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "bg",
+      "kind": "narration",
+      "text": "Riftborn were grown as protectors. Artificial Rifts cut; natural Rifts bleed. Spark and the dormant egg survived because their lines were never finished as weapons.",
+      "x": 50,
+      "y": 48,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    },
+    {
+      "panelId": "bg",
+      "kind": "caption",
+      "text": "PROTOTYPE RIFTBORN",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Forge of Rifts Issue #8 — Blueprint Gallery — Prototype Riftborn. Blueprint gallery: schematic plates of prototype Riftborn, Resonance Keeper cradle, failed husks — empty annotation zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Blueprint Gallery — Prototype Riftborn",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: BLUEPRINT GALLERY",
+    "NARRATION: Riftborn were grown as protectors. Artificial Rifts cut; natural Rifts bleed. Spark and the dormant egg survived because their lines were never finished as weapons.",
+    "CAPTION: PROTOTYPE RIFTBORN"
+  ],
+  "a11yTranscript": [
+    "CAPTION: BLUEPRINT GALLERY",
+    "NARRATION: Riftborn were grown as protectors. Artificial Rifts cut; natural Rifts bleed. Spark and the dormant egg survived because their lines were never finished as weapons.",
+    "CAPTION: PROTOTYPE RIFTBORN"
+  ],
+  "id": "the-forge-of-rifts-issue-008-p034",
+  "cleanArtRel": "generated/raw-art/page-034.webp",
+  "letteredArtRel": "generated/lettered-pages/page-034.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-034.webp"
+}

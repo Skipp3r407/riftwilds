@@ -19,12 +19,14 @@ export function createEmptyComicProgress(): ComicProgressState {
     achievements: [],
     unlockedCodex: [],
     unlockedRewards: [],
+    unlockedCards: [],
     settings: {
       darkMode: true,
       highContrast: false,
       musicEnabled: false,
       sfxEnabled: true,
       narrationEnabled: false,
+      guidedReading: false,
       zoom: 1,
     },
   };
@@ -53,8 +55,9 @@ export function loadComicProgress(): ComicProgressState {
     if (parsed?.version !== 1 || typeof parsed.issues !== "object") {
       return createEmptyComicProgress();
     }
+    const empty = createEmptyComicProgress();
     return {
-      ...createEmptyComicProgress(),
+      ...empty,
       ...parsed,
       issues: parsed.issues ?? {},
       favorites: Array.isArray(parsed.favorites) ? parsed.favorites : [],
@@ -63,8 +66,9 @@ export function loadComicProgress(): ComicProgressState {
       unlockedRewards: Array.isArray(parsed.unlockedRewards)
         ? parsed.unlockedRewards
         : [],
+      unlockedCards: Array.isArray(parsed.unlockedCards) ? parsed.unlockedCards : [],
       settings: {
-        ...createEmptyComicProgress().settings,
+        ...empty.settings,
         ...parsed.settings,
       },
     };
@@ -160,6 +164,7 @@ export function markHotspotFound(
   codexEntryId?: string,
   secretCode?: string,
   rewardId?: string,
+  cardId?: string,
 ): ComicProgressState {
   const prev = getIssueProgress(state, slug);
   if (prev.foundHotspots.includes(hotspotId)) return state;
@@ -173,12 +178,16 @@ export function markHotspotFound(
   const unlockedCodex = codexEntryId
     ? [...new Set([...state.unlockedCodex, codexEntryId])]
     : state.unlockedCodex;
+  const unlockedCards = cardId
+    ? [...new Set([...(state.unlockedCards ?? []), cardId])]
+    : (state.unlockedCards ?? []);
   const globalRewards = rewardId
     ? [...new Set([...state.unlockedRewards, rewardId])]
     : state.unlockedRewards;
   const next: ComicProgressState = {
     ...state,
     unlockedCodex,
+    unlockedCards,
     unlockedRewards: globalRewards,
     issues: {
       ...state.issues,

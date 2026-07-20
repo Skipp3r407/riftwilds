@@ -1,0 +1,156 @@
+{
+  "pageNumber": 22,
+  "bookRole": "story",
+  "title": "Grand Chaos",
+  "storyPurpose": "Battle spread: Pulse Step, flank, Sprouting Energy, Grand Illusion, Wisplet phases cables.",
+  "layout": {
+    "type": "spread",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p18a",
+      "description": "Wide battle spread: Spark Pulse Step blur; Bramblefox vine-flank; Thornling Sprouting Energy; Lumenhare Grand Illusion copies; Wisplet phases binding cables; performers evacuating; Meridian agents attacking from backstage.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "PULSE-STEP",
+          "x": 25,
+          "y": 20,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "sfx",
+          "text": "ILLUSION×3",
+          "x": 55,
+          "y": 25,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "sfx",
+          "text": "phase-chime",
+          "x": 75,
+          "y": 40,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Thornling",
+          "text": "*sprout-POW!*",
+          "x": 40,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "narration",
+          "text": "Consent is a formation. Fear is a stampede.",
+          "x": 50,
+          "y": 90,
+          "tail": null,
+          "readOrder": 4,
+          "maxWidthPct": 55
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p18a",
+      "kind": "creature",
+      "speaker": "Thornling",
+      "text": "*sprout-POW!*",
+      "x": 40,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p18a",
+      "kind": "narration",
+      "text": "Consent is a formation. Fear is a stampede.",
+      "x": 50,
+      "y": 90,
+      "tail": null,
+      "readOrder": 4,
+      "maxWidthPct": 55
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "PULSE-STEP",
+      "x": 25,
+      "y": 20,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "ILLUSION×3",
+      "x": 55,
+      "y": 25,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "phase-chime",
+      "x": 75,
+      "y": 40,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "thornling",
+    "lumenhare",
+    "wisplet",
+    "ironmantle"
+  ],
+  "continuity": {
+    "battle": "coordinated-circus"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 18/25 — Grand Chaos. Story purpose: Battle spread: Pulse Step, flank, Sprouting Energy, Grand Illusion, Wisplet phases cables. Layout: spread. 1 panels with clear inked gutters. Panel 1 (p18a): Wide battle spread: Spark Pulse Step blur; Bramblefox vine-flank; Thornling Sprouting Energy; Lumenhare Grand Illusion copies; Wisplet phases binding cables; performers evacuating; Meridian agents attacking from backstage. Characters: mira-eggwarden. Creatures: spark, bramblefox, thornling, lumenhare, wisplet, ironmantle. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"battle\":\"coordinated-circus\"} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Collar truth.",
+  "letteringInstructions": "Dense SFX; keep faces clear.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Grand Chaos — The Traveling Circus page 18",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: PULSE-STEP",
+    "SFX: ILLUSION×3",
+    "SFX: phase-chime",
+    "CREATURE (Thornling): *sprout-POW!*",
+    "NARRATION: Consent is a formation. Fear is a stampede."
+  ],
+  "storyPageNumber": 18,
+  "id": "the-traveling-circus-issue-003-p022",
+  "cleanArtRel": "generated/raw-art/page-022.png",
+  "letteredArtRel": "generated/lettered-pages/page-022.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-022.webp"
+}

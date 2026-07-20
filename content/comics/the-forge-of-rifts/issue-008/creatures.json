@@ -1,0 +1,59 @@
+{
+  "featured": [
+    {
+      "id": "spark",
+      "name": "Spark",
+      "note": "Missing component \u2014 chooses to stabilize; protect not obey"
+    },
+    {
+      "id": "axiom",
+      "name": "Axiom",
+      "note": "NEW \u2014 Adaptive Matrix / Pulse Repair / System Restore"
+    },
+    {
+      "id": "dormant-riftborn-egg",
+      "name": "Dormant Riftborn Egg",
+      "note": "Glows; cracks further; responds to Spark"
+    },
+    {
+      "id": "bramblefox",
+      "name": "Bramblefox",
+      "purpose": "Finds abandoned companions"
+    },
+    {
+      "id": "mossprig",
+      "name": "Mossprig",
+      "purpose": "Protects damaged prototypes"
+    },
+    {
+      "id": "thornling",
+      "name": "Thornling",
+      "purpose": "Accidentally restores power"
+    },
+    {
+      "id": "wisplet",
+      "name": "Wisplet",
+      "purpose": "Memory crystals"
+    },
+    {
+      "id": "spirit-moth",
+      "name": "Spirit Moth",
+      "purpose": "Hidden blueprints"
+    },
+    {
+      "id": "truthwing",
+      "name": "Truthwing",
+      "purpose": "Escape path reflections"
+    },
+    {
+      "id": "thundervane",
+      "name": "Thundervane",
+      "note": "Off-page recovery"
+    },
+    {
+      "id": "lumenhare",
+      "name": "Lumenhare",
+      "note": "Recovering after #7 rescue"
+    }
+  ]
+}

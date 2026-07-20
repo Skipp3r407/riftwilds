@@ -122,9 +122,34 @@ export default function SocialHubPage() {
                 Merchant, Community Favorite. No combat power. Never SOL.
               </p>
               {town.featured.length === 0 ? (
-                <p className="mt-3 text-sm text-[var(--text-muted)]">
-                  No featured keepers this hour yet — earn Presence XP in towns to compete.
-                </p>
+                <>
+                  <p className="mt-3 text-sm text-[var(--text-muted)]">
+                    No live winners this hour yet — preview keepers below. Earn Presence XP in towns
+                    to compete.
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm text-[var(--text-muted)]">
+                    {hub.townFeaturedPreview.map((f) => (
+                      <li
+                        key={`${f.title}-${f.displayName}`}
+                        className="flex items-center justify-between gap-3 border-b border-[var(--stroke)] py-2"
+                      >
+                        <span className="flex min-w-0 items-center gap-3">
+                          <SocialThumb src={f.scenicThumbSrc} alt="" size={48} />
+                          <SocialAvatar src={f.avatarSrc} size={36} />
+                          <span className="min-w-0">
+                            <span className="text-white">
+                              {f.title} · {f.displayName}
+                            </span>
+                            <span className="mt-0.5 block text-xs text-[var(--text-dim)]">
+                              Preview · {f.regionLabel}
+                            </span>
+                          </span>
+                        </span>
+                        <StatusChip tone="info">{f.regionSlug}</StatusChip>
+                      </li>
+                    ))}
+                  </ul>
+                </>
               ) : (
                 <ul className="mt-3 space-y-2 text-sm text-[var(--text-muted)]">
                   {town.featured.map((f) => (
@@ -132,8 +157,15 @@ export default function SocialHubPage() {
                       key={`${f.title}-${f.userId}`}
                       className="flex items-center justify-between gap-3 border-b border-[var(--stroke)] py-2"
                     >
-                      <span className="text-white">
-                        {f.title} · {f.displayName}
+                      <span className="flex min-w-0 items-center gap-3">
+                        <SocialThumb
+                          src={`/assets/cards/rise-of-the-rift/region-${f.regionSlug}/thumb.png`}
+                          alt=""
+                          size={48}
+                        />
+                        <span className="text-white">
+                          {f.title} · {f.displayName}
+                        </span>
                       </span>
                       <StatusChip tone="info">{f.regionSlug}</StatusChip>
                     </li>
@@ -149,19 +181,27 @@ export default function SocialHubPage() {
               <p className="mt-1 text-xs text-[var(--text-dim)]">
                 Party invites from Friends are stubs until multiplayer Phase 2.
               </p>
-              <div className="mt-3 flex gap-3">
-                <SocialThumb src={hub.party.objectiveThumbSrc} alt="" size={72} />
-                <div className="min-w-0 flex-1">
-                  <p className="text-sm text-white">{hub.party.objective}</p>
-                  <div className="mt-2 flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                    <SocialAvatar src={hub.party.leaderAvatarSrc} size={28} />
-                    <span>
-                      Leader {hub.party.leaderLabel} · {hub.party.memberLabels.length}/
-                      {hub.party.maxSize} members
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <ul className="mt-3 space-y-3">
+                {hub.parties.map((p) => (
+                  <li key={p.id} className="flex gap-3 border-b border-[var(--stroke)] pb-3 last:border-0 last:pb-0">
+                    <SocialThumb src={p.objectiveThumbSrc} alt="" size={72} />
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <p className="text-sm text-white">{p.objective}</p>
+                        <StatusChip tone={p.kind === "active" ? "info" : "default"}>
+                          {p.kind === "active" ? "Your party" : "Invite"}
+                        </StatusChip>
+                      </div>
+                      <div className="mt-2 flex items-center gap-2 text-xs text-[var(--text-muted)]">
+                        <SocialAvatar src={p.leaderAvatarSrc} size={28} />
+                        <span>
+                          Leader {p.leaderLabel} · {p.memberLabels.length}/{p.maxSize} members
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </article>
 
             <article className="panel p-5">
@@ -169,7 +209,11 @@ export default function SocialHubPage() {
               <ul className="mt-3 space-y-2 text-xs text-[var(--text-muted)]">
                 {hub.mail.map((m) => (
                   <li key={m.id} className="flex items-start gap-3">
-                    {m.avatarSrc ? <SocialAvatar src={m.avatarSrc} /> : null}
+                    {m.avatarSrc ? (
+                      <SocialAvatar src={m.avatarSrc} />
+                    ) : (
+                      <SocialAvatar src="/assets/brand/riftwilds-mark.png" />
+                    )}
                     <span>
                       <span className="text-white">{m.subject}</span> — {m.fromLabel}
                     </span>
@@ -177,8 +221,8 @@ export default function SocialHubPage() {
                 ))}
               </ul>
               <ul className="mt-4 space-y-3 text-sm">
-                {hub.posts.slice(0, 2).map((p) => (
-                  <li key={p.id} className="flex gap-3 border-b border-[var(--stroke)] pb-3">
+                {hub.posts.map((p) => (
+                  <li key={p.id} className="flex gap-3 border-b border-[var(--stroke)] pb-3 last:border-0 last:pb-0">
                     <SocialThumb src={p.thumbSrc} alt="" size={56} />
                     <div className="min-w-0 flex-1">
                       <p className="text-white">{p.title}</p>

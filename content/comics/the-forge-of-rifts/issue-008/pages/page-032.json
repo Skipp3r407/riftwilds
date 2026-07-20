@@ -1,0 +1,107 @@
+{
+  "pageNumber": 32,
+  "storyPageNumber": null,
+  "bookRole": "profile",
+  "title": "Companion Profile — Axiom",
+  "storyPurpose": "Companion Profile — Axiom",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "cp",
+      "description": "Companion profile: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence floating with ability icons as abstract shapes (no text in art).",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "AXIOM — PROTOTYPE COMPANION",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Passive: Adaptive Matrix — copy one ally passive briefly. Active: Pulse Repair — restore durability. Ultimate: System Restore — dampen corrupted Rift effects.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "ROLE: Support / Utility / Resonance",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "cp",
+      "kind": "caption",
+      "text": "AXIOM — PROTOTYPE COMPANION",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "cp",
+      "kind": "narration",
+      "text": "Passive: Adaptive Matrix — copy one ally passive briefly. Active: Pulse Repair — restore durability. Ultimate: System Restore — dampen corrupted Rift effects.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    },
+    {
+      "panelId": "cp",
+      "kind": "caption",
+      "text": "ROLE: Support / Utility / Resonance",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [
+    "axiom"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for The Forge of Rifts Issue #8 — Companion Profile — Axiom. Companion profile: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence floating with ability icons as abstract shapes (no text in art). Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Companion Profile — Axiom",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: AXIOM — PROTOTYPE COMPANION",
+    "NARRATION: Passive: Adaptive Matrix — copy one ally passive briefly. Active: Pulse Repair — restore durability. Ultimate: System Restore — dampen corrupted Rift effects.",
+    "CAPTION: ROLE: Support / Utility / Resonance"
+  ],
+  "a11yTranscript": [
+    "CAPTION: AXIOM — PROTOTYPE COMPANION",
+    "NARRATION: Passive: Adaptive Matrix — copy one ally passive briefly. Active: Pulse Repair — restore durability. Ultimate: System Restore — dampen corrupted Rift effects.",
+    "CAPTION: ROLE: Support / Utility / Resonance"
+  ],
+  "id": "the-forge-of-rifts-issue-008-p032",
+  "cleanArtRel": "generated/raw-art/page-032.webp",
+  "letteredArtRel": "generated/lettered-pages/page-032.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-032.webp"
+}

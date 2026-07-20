@@ -1,0 +1,183 @@
+{
+  "pageNumber": 25,
+  "storyPageNumber": 21,
+  "bookRole": "story",
+  "title": "Reactor Alpha",
+  "storyPurpose": "Spark stabilizes Rift Engine Alpha long enough for escape; purpose affirmed.",
+  "layout": {
+    "type": "two-stack",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p21a",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot at Reactor Alpha core by invitation — not forced bond; cyan-gold aura knitting containment rings; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes hand open, inviting, never forcing.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Only if you want to. Invite. Wait.",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 38,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*choose-stabilize*",
+          "x": 55,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "reactor-SETTLE",
+          "x": 72,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p21b",
+      "description": "Reactor settles to safe venting; Spark exhausted but proud; egg warm against Mira; Axiom copying Spark's calm passive briefly.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Spark's species was created to protect — not obey.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 52,
+          "readOrder": 3
+        },
+        {
+          "kind": "thought",
+          "text": "Why you survived: you were never finished as a weapon.",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 46,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p21a",
+      "kind": "speech",
+      "text": "Only if you want to. Invite. Wait.",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 38,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p21a",
+      "kind": "creature",
+      "text": "*choose-stabilize*",
+      "x": 55,
+      "y": 50,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p21b",
+      "kind": "thought",
+      "text": "Why you survived: you were never finished as a weapon.",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 46,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p21b",
+      "kind": "narration",
+      "text": "Spark's species was created to protect — not obey.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 52,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p21a",
+      "kind": "sfx",
+      "text": "reactor-SETTLE",
+      "x": 72,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "axiom"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [
+    "rift-engine-alpha"
+  ],
+  "continuity": {
+    "location": "Rift Engine Alpha core",
+    "spark": "stabilized-reactor",
+    "theme": "protect-not-obey"
+  },
+  "requiredMoments": [
+    21
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 21/25 — Reactor Alpha. Story purpose: Spark stabilizes Rift Engine Alpha long enough for escape; purpose affirmed. Layout: two-stack. 2 panels with clear inked gutters. Panel 1 (p21a): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot at Reactor Alpha core by invitation — not forced bond; cyan-gold aura knitting containment rings; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes hand open, inviting, never forcing. Panel 2 (p21b): Reactor settles to safe venting; Spark exhausted but proud; egg warm against Mira; Axiom copying Spark's calm passive briefly. Characters: mira-eggwarden. Creatures: spark, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Rift Engine Alpha core\", \"spark\": \"stabilized-reactor\", \"theme\": \"protect-not-obey\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Run.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Reactor Alpha — The Forge of Rifts page 21",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): Only if you want to. Invite. Wait.",
+    "CREATURE (Spark): *choose-stabilize*",
+    "SFX: reactor-SETTLE",
+    "NARRATION: Spark's species was created to protect — not obey.",
+    "THOUGHT (Mira Eggwarden): Why you survived: you were never finished as a weapon."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Mira Eggwarden): Only if you want to. Invite. Wait.",
+    "CREATURE (Spark): *choose-stabilize*",
+    "SFX: reactor-SETTLE",
+    "NARRATION: Spark's species was created to protect — not obey.",
+    "THOUGHT (Mira Eggwarden): Why you survived: you were never finished as a weapon."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p025",
+  "cleanArtRel": "generated/raw-art/page-025.webp",
+  "letteredArtRel": "generated/lettered-pages/page-025.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-025.webp"
+}

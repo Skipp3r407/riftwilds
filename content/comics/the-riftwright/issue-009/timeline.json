@@ -1,0 +1,54 @@
+{
+  "volumeOne": [
+    {
+      "issue": 1,
+      "title": "The First Rift",
+      "beat": "Deliberate Fracture"
+    },
+    {
+      "issue": 2,
+      "title": "Spark's Journey",
+      "beat": "Spark hatches"
+    },
+    {
+      "issue": 3,
+      "title": "The Traveling Circus",
+      "beat": "Lanternveil wards"
+    },
+    {
+      "issue": 4,
+      "title": "The Lost City",
+      "beat": "Resonance Keepers"
+    },
+    {
+      "issue": 5,
+      "title": "The Storm King",
+      "beat": "Forced bond ends"
+    },
+    {
+      "issue": 6,
+      "title": "The Merchant's Secret",
+      "beat": "Egg rescued; Riftwright named"
+    },
+    {
+      "issue": 7,
+      "title": "The Traitor's Gate",
+      "beat": "Cael coerced; Meridian Road"
+    },
+    {
+      "issue": 8,
+      "title": "The Forge of Rifts",
+      "beat": "Arkan sacrifice; Axiom; Second Forge"
+    },
+    {
+      "issue": 9,
+      "title": "The Riftwright",
+      "beat": "Nova hatches; Engines cradle; Volume One ends"
+    }
+  ],
+  "volumeTwoTease": {
+    "title": "The Shattered Star",
+    "status": "tease-only",
+    "doNotStartIssues": true
+  }
+}

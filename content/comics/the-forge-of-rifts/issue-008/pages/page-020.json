@@ -1,0 +1,218 @@
+{
+  "pageNumber": 20,
+  "storyPageNumber": 16,
+  "bookRole": "story",
+  "title": "Giant Battle",
+  "storyPurpose": "Giant multi-faction Forge battle begins.",
+  "layout": {
+    "type": "montage",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p16a",
+      "description": "Wide battle: Bramblefox vines vs Meridian agents; Mossprig bulwark; Thornling shorting weapons; Wisplet phasing through beams; Spirit Moth light-codes confusing targeting.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "CLASH-BOOM",
+          "x": 70,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*vine-SNAP*",
+          "x": 30,
+          "y": 40,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*short-circuit!*",
+          "x": 55,
+          "y": 55,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Thornling",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p16b",
+      "description": "Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, ancient control core gauntlet, artificial Rift amplifier crystal, Guardian override codes directing Guardians with override codes — half obey, half resist; artificial Rift widening.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "Override! Perfect Riftborn require perfect control!",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Seris Vale",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p16c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Spark at center; Axiom Adaptive Matrix copying Mossprig's bulwark shimmer briefly.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*adaptive-matrix*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 4
+        },
+        {
+          "kind": "speech",
+          "text": "Protect — don't obey a thief!",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 38,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p16a",
+      "kind": "creature",
+      "text": "*vine-SNAP*",
+      "x": 30,
+      "y": 40,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p16a",
+      "kind": "creature",
+      "text": "*short-circuit!*",
+      "x": 55,
+      "y": 55,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Thornling",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p16b",
+      "kind": "shout",
+      "text": "Override! Perfect Riftborn require perfect control!",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Seris Vale",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p16c",
+      "kind": "creature",
+      "text": "*adaptive-matrix*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Axiom",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p16c",
+      "kind": "speech",
+      "text": "Protect — don't obey a thief!",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 38,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p16a",
+      "kind": "sfx",
+      "text": "CLASH-BOOM",
+      "x": 70,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "arkan",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "axiom",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Engine Alpha battle",
+    "battle": "multi-faction"
+  },
+  "requiredMoments": [
+    16
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 16/25 — Giant Battle. Story purpose: Giant multi-faction Forge battle begins. Layout: montage. 3 panels with clear inked gutters. Panel 1 (p16a): Wide battle: Bramblefox vines vs Meridian agents; Mossprig bulwark; Thornling shorting weapons; Wisplet phasing through beams; Spirit Moth light-codes confusing targeting. Panel 2 (p16b): Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, ancient control core gauntlet, artificial Rift amplifier crystal, Guardian override codes directing Guardians with override codes — half obey, half resist; artificial Rift widening. Panel 3 (p16c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Spark at center; Axiom Adaptive Matrix copying Mossprig's bulwark shimmer briefly. Characters: mira-eggwarden, seris-vale, arkan, nira-quill. Creatures: spark, axiom, bramblefox, mossprig, thornling, wisplet, spirit-moth. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Engine Alpha battle\", \"battle\": \"multi-faction\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Spark nearly taken.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Giant Battle — The Forge of Rifts page 16",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: CLASH-BOOM",
+    "CREATURE (Bramblefox): *vine-SNAP*",
+    "CREATURE (Thornling): *short-circuit!*",
+    "SHOUT (Seris Vale): Override! Perfect Riftborn require perfect control!",
+    "CREATURE (Axiom): *adaptive-matrix*",
+    "SPEECH (Mira Eggwarden): Protect — don't obey a thief!"
+  ],
+  "a11yTranscript": [
+    "SFX: CLASH-BOOM",
+    "CREATURE (Bramblefox): *vine-SNAP*",
+    "CREATURE (Thornling): *short-circuit!*",
+    "SHOUT (Seris Vale): Override! Perfect Riftborn require perfect control!",
+    "CREATURE (Axiom): *adaptive-matrix*",
+    "SPEECH (Mira Eggwarden): Protect — don't obey a thief!"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p020",
+  "cleanArtRel": "generated/raw-art/page-020.webp",
+  "letteredArtRel": "generated/lettered-pages/page-020.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-020.webp"
+}

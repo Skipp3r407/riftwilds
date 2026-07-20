@@ -1,0 +1,55 @@
+{
+  "pageNumber": 14,
+  "id": "the-first-rift-issue-001-p014",
+  "role": "story",
+  "title": null,
+  "layout": "two-col",
+  "atmosphere": "day",
+  "beat": "Mossprig — Living Bulwark",
+  "artPrompt": "Two-panel page, no text. Mossprig (cervine-botanical, moss cape, leaf antlers) raises a living moss wall between egg and tumbling Fracture debris. Living Bulwark pose. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "caption": "Ability — Living Bulwark",
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Mossprig does not charge first. It becomes the wall the egg deserves.",
+          "x": 50,
+          "y": 14
+        },
+        {
+          "kind": "sfx",
+          "text": "WHUMP",
+          "x": 60,
+          "y": 55
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Thank you for choosing the cradle over the chase.",
+          "x": 45,
+          "y": 40,
+          "tail": "down"
+        },
+        {
+          "kind": "creature",
+          "speaker": "Mossprig",
+          "text": "*soft moss-settle*",
+          "x": 70,
+          "y": 70
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-014.png",
+  "letteredArtRel": "generated/lettered/page-014.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-014.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

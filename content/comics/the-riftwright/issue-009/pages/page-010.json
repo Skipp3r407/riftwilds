@@ -1,0 +1,140 @@
+{
+  "pageNumber": 10,
+  "storyPageNumber": 6,
+  "bookRole": "story",
+  "title": "History Was a Weapon",
+  "storyPurpose": "Elyan shows how blame was assigned; Aurelia recognizes the Voss name.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p6a",
+      "description": "Triptych of forged documents pinning First Rift on Elyan; true sealed schematics underneath.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "They needed a name. Mine was already on the blueprints.",
+          "x": 40,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Elyan Voss",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p6b",
+      "description": "Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye — uneasy ally; distant kin surname to Elyan, shocked recognition optional arrives via merchant lantern-route (brief); veil trembles at surname Voss.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Voss… I bargained under a name I never fully owned.",
+          "x": 60,
+          "y": 45,
+          "tail": "down-left",
+          "maxWidthPct": 34,
+          "speaker": "Aurelia Voss",
+          "readOrder": 1
+        },
+        {
+          "kind": "speech",
+          "text": "Kin is not guilt. Choose what the name means now.",
+          "x": 55,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Elyan Voss",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p6c",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished confesses residual Meridian debt shame; Mira nods — supervised trust still standing.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I opened one gate under coercion. I won't open another for them.",
+          "x": 35,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p6d",
+      "description": "Blacked-out manipulator mark again — older than Meridian — still unnamed.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "One hand remains unwritten. Older. Patient.",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 48,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss",
+    "aurelia-voss",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "lockjaw-wisp",
+    "dormant-riftborn-egg"
+  ],
+  "locations": [
+    "Second Forge archive hall"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "aurelia": "voss-kin-aware",
+    "mystery": "history-manipulator-unnamed"
+  },
+  "requiredMoments": [
+    6
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 6/25 — History Was a Weapon. Story purpose: Elyan shows how blame was assigned; Aurelia recognizes the Voss name. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p6a): Triptych of forged documents pinning First Rift on Elyan; true sealed schematics underneath. Panel 2 (p6b): Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye — uneasy ally; distant kin surname to Elyan, shocked recognition optional arrives via merchant lantern-route (brief); veil trembles at surname Voss. Panel 3 (p6c): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished confesses residual Meridian debt shame; Mira nods — supervised trust still standing. Panel 4 (p6d): Blacked-out manipulator mark again — older than Meridian — still unnamed. Characters: mira-eggwarden, elyan-voss, aurelia-voss, cael-vesper. Creatures: spark, lockjaw-wisp, dormant-riftborn-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Second Forge archive hall. Atmosphere: ruin. Continuity: {\"aurelia\": \"voss-kin-aware\", \"mystery\": \"history-manipulator-unnamed\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Meet the Prime Companion line.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "History Was a Weapon — The Riftwright page 10",
+  "atmosphere": "ruin",
+  "transcript": [
+    "SPEECH (Elyan Voss): They needed a name. Mine was already on the blueprints.",
+    "SPEECH (Aurelia Voss): Voss… I bargained under a name I never fully owned.",
+    "SPEECH (Elyan Voss): Kin is not guilt. Choose what the name means now.",
+    "SPEECH (Cael Vesper): I opened one gate under coercion. I won't open another for them.",
+    "NARRATION: One hand remains unwritten. Older. Patient."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Elyan Voss): They needed a name. Mine was already on the blueprints.",
+    "SPEECH (Aurelia Voss): Voss… I bargained under a name I never fully owned.",
+    "SPEECH (Elyan Voss): Kin is not guilt. Choose what the name means now.",
+    "SPEECH (Cael Vesper): I opened one gate under coercion. I won't open another for them.",
+    "NARRATION: One hand remains unwritten. Older. Patient."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p010",
+  "cleanArtRel": "generated/raw-art/page-010.webp",
+  "letteredArtRel": "generated/lettered-pages/page-010.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-010.webp"
+}

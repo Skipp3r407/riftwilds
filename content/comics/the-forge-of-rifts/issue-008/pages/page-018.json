@@ -1,0 +1,155 @@
+{
+  "pageNumber": 18,
+  "storyPageNumber": 14,
+  "bookRole": "story",
+  "title": "Artificial Rift",
+  "storyPurpose": "Seris opens an artificial Rift inside the Forge.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p14a",
+      "description": "Cinematic splash: artificial Rift tearing above Rift Engine Alpha — sharper, geometric, cyan-purple edges vs organic First Rift lore; platforms tilt; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, ancient control core gauntlet, artificial Rift amplifier crystal, Guardian override codes amplifier blazing; party small below.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "ARTIFICIAL-TEAR",
+          "x": 70,
+          "y": 28,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Natural Rifts bleed. Artificial Rifts cut.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "shout",
+          "text": "Engine Alpha — answer the Meridian!",
+          "x": 45,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 42,
+          "speaker": "Seris Vale",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*component-pain!*",
+          "x": 35,
+          "y": 55,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p14a",
+      "kind": "shout",
+      "text": "Engine Alpha — answer the Meridian!",
+      "x": 45,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 42,
+      "speaker": "Seris Vale",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p14a",
+      "kind": "creature",
+      "text": "*component-pain!*",
+      "x": 35,
+      "y": 55,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p14a",
+      "kind": "narration",
+      "text": "Natural Rifts bleed. Artificial Rifts cut.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p14a",
+      "kind": "sfx",
+      "text": "ARTIFICIAL-TEAR",
+      "x": 70,
+      "y": 28,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "arkan"
+  ],
+  "creatures": [
+    "spark",
+    "axiom"
+  ],
+  "locations": [
+    "Rift Engine Alpha"
+  ],
+  "artifacts": [
+    "artificial-rift-amplifier"
+  ],
+  "continuity": {
+    "location": "Rift Engine Alpha plaza",
+    "artificialRift": "open"
+  },
+  "requiredMoments": [
+    13
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 14/25 — Artificial Rift. Story purpose: Seris opens an artificial Rift inside the Forge. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p14a): Cinematic splash: artificial Rift tearing above Rift Engine Alpha — sharper, geometric, cyan-purple edges vs organic First Rift lore; platforms tilt; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, ancient control core gauntlet, artificial Rift amplifier crystal, Guardian override codes amplifier blazing; party small below. Characters: mira-eggwarden, seris-vale, arkan. Creatures: spark, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Rift Engine Alpha plaza\", \"artificialRift\": \"open\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Failed experiments break free.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Artificial Rift — The Forge of Rifts page 14",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: ARTIFICIAL-TEAR",
+    "NARRATION: Natural Rifts bleed. Artificial Rifts cut.",
+    "SHOUT (Seris Vale): Engine Alpha — answer the Meridian!",
+    "CREATURE (Spark): *component-pain!*"
+  ],
+  "a11yTranscript": [
+    "SFX: ARTIFICIAL-TEAR",
+    "NARRATION: Natural Rifts bleed. Artificial Rifts cut.",
+    "SHOUT (Seris Vale): Engine Alpha — answer the Meridian!",
+    "CREATURE (Spark): *component-pain!*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p018",
+  "cleanArtRel": "generated/raw-art/page-018.webp",
+  "letteredArtRel": "generated/lettered-pages/page-018.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-018.webp"
+}

@@ -1,0 +1,60 @@
+{
+  "pageNumber": 35,
+  "storyPageNumber": null,
+  "bookRole": "map",
+  "title": "World Map — Commons to Shellward",
+  "storyPurpose": "World Map — Commons to Shellward",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "map",
+      "description": "Stylized in-world map: Riftwild Commons, outbound trail, First-Rift scar wilds, ancient arch, Shellward Sanctum NW. Pin for Traveling Circus foreshadow. Empty legend boxes.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "RIFTWILD COMMONS → SHELLWARD SANCTUM",
+          "x": 50,
+          "y": 85,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 70
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "map",
+      "kind": "caption",
+      "text": "RIFTWILD COMMONS → SHELLWARD SANCTUM",
+      "x": 50,
+      "y": 85,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 70
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book map page for Spark's Journey Issue #2 — World Map — Commons to Shellward. Stylized in-world map: Riftwild Commons, outbound trail, First-Rift scar wilds, ancient arch, Shellward Sanctum NW. Pin for Traveling Circus foreshadow. Empty legend boxes. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "World Map — Commons to Shellward",
+  "atmosphere": "day",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: RIFTWILD COMMONS → SHELLWARD SANCTUM"
+  ],
+  "id": "sparks-journey-issue-002-p035",
+  "cleanArtRel": "generated/raw-art/page-035.png",
+  "letteredArtRel": "generated/lettered-pages/page-035.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-035.webp"
+}

@@ -19,12 +19,19 @@ const BACKUP_DIR = path.join(
 );
 
 const UNIT_TYPES = new Set([
-  "creature",
   "companion",
+  "evolution",
+  "commander",
+  // legacy aliases (pre-migration overlays)
+  "creature",
   "legendary",
   "token",
   "hero",
 ]);
+
+const EQUIP_TYPES = new Set(["equipment"]);
+const TERRAIN_TYPES = new Set(["terrain", "location", "weather"]);
+const ITEM_TYPES = new Set(["item"]);
 
 /** Hand-authored identity templates (brief examples). */
 const IDENTITY_TEMPLATES = {
@@ -74,9 +81,6 @@ const IDENTITY_TEMPLATES = {
     notes: "Ember flyer — bypasses grounded Guardians.",
   },
 };
-
-const EQUIP_TYPES = new Set(["equipment", "relic", "artifact"]);
-const TERRAIN_TYPES = new Set(["location", "weather"]);
 
 function deriveRole(card) {
   const atk = card.attack ?? 0;

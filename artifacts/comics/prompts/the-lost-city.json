@@ -1,0 +1,717 @@
+[
+  {
+    "id": "the-lost-city-p01",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 1,
+    "role": "front-cover",
+    "layout": "splash",
+    "title": "The Lost City",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-01.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 1 of 36. Treat as interior showcase plate matching cover energy (not a second book cover with title text). Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift · Issue #4 | narration: A layered ruin where forests still argue with deserts. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p02",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 2,
+    "role": "inside-cover",
+    "layout": "narrative",
+    "title": "Inside cover",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-02.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 2 of 36. Quiet inside-cover atmosphere: parchment light, soft Gateway glow, invitation to read. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Riftwilds Comic Publishing — original fantasy. No crypto required to read. | narration: Credits & cosmetics may unlock along the way. The story itself stays free. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p03",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 3,
+    "role": "title",
+    "layout": "narrative",
+    "title": "The Lost City",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-03.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 3 of 36. Title-spread energy without painted lettering: cast gathered near the Prime Gateway. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dawn. Story beats to illustrate (do not paint this text): caption: Issue #4 | narration: Keepers follow a Riftstone map into a Fracture-layered city and find a Gateway Heart that is not quite asleep. | Series: Archivist Solen · Pip Courier Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p04",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 4,
+    "role": "credits",
+    "layout": "narrative",
+    "title": "Credits",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-04.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 4 of 36. Workshop / lore-desk scene: quills, rift-ink, maps — no readable credit text. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Story · Riftwilds Lore Desk | caption: Art · Commons Archive (official plates) | caption: Lettering · Publishing Engine | narration: Canon alignment: World Codex · Riftling Codex · Legends of the Rift TCG. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p05",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 5,
+    "role": "recap",
+    "layout": "narrative",
+    "title": "Previously in the Riftwilds…",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-05.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 5 of 36. Recap montage plate: Fracture tear, road, egg, Commons founding — sequential beats in panels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: rift. Story beats to illustrate (do not paint this text): narration: After Issue #3, Keepers still walk Fracture roads. Bonds deepen. Shadows listen. | caption: Age of Exploration. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p06",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 6,
+    "role": "splash",
+    "layout": "splash",
+    "title": "Streets that forget order",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-06.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 6 of 36. Story page titled conceptually: Streets that forget order. Single full-bleed cinematic splash panel filling the page. Scene: Ancient lost city ruins with Gateway Heart crystal. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: The map showed a plaza that existed in three climates at once. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p07",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 7,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-07.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 7 of 36. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: ruin. Story beats to illustrate (do not paint this text): Pip Courier: My satchel says north. My feet say sideways. | Archivist Solen: Both may be correct. Annotate, do not argue. | sfx: stone settle… | narration: Celestora tradition named living cores before crowns did. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p08",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 8,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-08.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 8 of 36. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): Gateway echo: …who keeps the invitation… | Archivist Solen: We do. If we are careful. | sfx: HUMMMMM | caption: Secret: LAYER-CITY Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p09",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 9,
+    "role": "story",
+    "layout": "lore",
+    "title": "Celestora",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-09.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 9 of 36. Story page titled conceptually: Celestora. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: dusk. Lore motif: Celestora — Not another world-name — a Radiant–Celestial scholarly tradition that studied living cores. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p10",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 10,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-10.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 10 of 36. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: ruin. Story beats to illustrate (do not paint this text): Pip Courier: Plaza in sand. Plaza in moss. Same plaza? | Archivist Solen: Same duty. Annotate climate layers separately. | narration: The Heart shard pulsed when they stopped arguing. | Keeper: Listening is also mapping. | sfx: HUM… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p11",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 11,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-11.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 11 of 36. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): Gateway echo: …who keeps the invitation… | Archivist Solen: We do — with footnotes. | Pip Courier: And snacks. | caption: Secret: LAYER-CITY Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p12",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 12,
+    "role": "splash",
+    "layout": "splash",
+    "title": "Three climates, one promise",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-12.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 12 of 36. Story page titled conceptually: Three climates, one promise. Single full-bleed cinematic splash panel filling the page. Scene: Layered city Heart glowing under mixed climates. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: They left a marker, not a claim. Exploration that preserves is still exploration. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p13",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 13,
+    "role": "story",
+    "layout": "three-stack",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-13.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 13 of 36. Story page. Three horizontal stacked panels with gutters between rows. Atmosphere: night. Story beats to illustrate (do not paint this text): Pip Courier: Satchel says home. | sfx: pack cinch | Archivist Solen: Index says return. Heart says soon. | narration: The map gained a margin note: keep listening. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p14",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 14,
+    "role": "story",
+    "layout": "lore",
+    "title": "Gateway Heart etiquette",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-14.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 14 of 36. Story page titled conceptually: Gateway Heart etiquette. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: ruin. Lore motif: Gateway Heart etiquette — Hearts are living cores. Stones are travel shards. Ruins that still hum are not loot tables. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p15",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 15,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-15.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 15 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p16",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 16,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-16.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 16 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p17",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 17,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-17.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 17 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p18",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 18,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-18.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 18 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p19",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 19,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-19.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 19 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p20",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 20,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-20.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 20 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p21",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 21,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-21.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 21 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p22",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 22,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-22.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 22 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p23",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 23,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-23.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 23 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p24",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 24,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-24.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 24 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p25",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 25,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-25.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 25 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p26",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 26,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-26.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 26 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p27",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 27,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-27.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 27 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p28",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 28,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-28.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 28 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p29",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 29,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Margin notes",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-29.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 29 of 36. Story page titled conceptually: Margin notes. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Maps in the Fracture are promises with footnotes. | Elara Venn: Annotate, do not argue with the climate. | Keeper: Hearts. Stones. Riftstone. Three words, one duty. | sfx: stone settle… Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p30",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 30,
+    "role": "end",
+    "layout": "end",
+    "title": "Issue complete",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-30.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 30 of 36. Story page titled conceptually: Issue complete. Closing story plate: warm Commons dusk scene with companions silhouetted, ceremonial feel. Atmosphere: festival. Story beats to illustrate (do not paint this text): caption: You finished Issue #4: The Lost City. | narration: Keepers follow a Riftstone map into a Fracture-layered city and find a Gateway Heart that is not quite asleep. | caption: Play this chapter → Open World Map Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p31",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 31,
+    "role": "profile",
+    "layout": "narrative",
+    "title": "Keeper & Companion Profiles",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-31.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 31 of 36. Character profile plate: portraits of Elara, First Riftling, Bramblefox, Mossprig in ornate frames within the page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): Archivist Solen: Guide — Celestora indexes in a travel satchel. | Pip Courier: Scout — Faster than fear, usually. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p32",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 32,
+    "role": "map",
+    "layout": "narrative",
+    "title": "Map of the Fracture Roads",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-32.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 32 of 36. Hand-painted fantasy map of Riftwilds Commons and Fracture roads — decorative, no tiny unreadable labels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: Paths rewrite overnight. Marked sites: Commons · Hatchery · Gateway shards · Festival lantern ring. | caption: Layered City: Post-Fracture merge of stone, moss, and sand. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p33",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 33,
+    "role": "ad",
+    "layout": "narrative",
+    "title": "Commons Notice Board",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-33.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 33 of 36. In-universe playful poster for Riftwilds TCG / Live World — illustrated scene, no real logos or readable ad copy. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: festival. Story beats to illustrate (do not paint this text): Crier: WAYBREAD FAIR — two loaves, one story! | caption: Fake Riftwilds ad · Visit the Hatchery Compact · Credits welcome, crypto never required for reading. | sfx: THRUMMM Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p34",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 34,
+    "role": "teaser",
+    "layout": "narrative",
+    "title": "Next issue",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-34.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 34 of 36. Next-issue teaser silhouette cliffhanger — mysterious, atmospheric. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Next: the storm king | narration: Thunder wears a crown. Keepers bring lanterns. | Archive Keeper: Tease cards in the Codex. Build the bond in Deck Atelier. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-lost-city-p35",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 35,
+    "role": "letters",
+    "layout": "narrative",
+    "title": "Letters from the Commons",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-35.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 35 of 36. Letters page atmosphere: Keeper mail, wax seals, egg sketches on a wooden table. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Dear Archive — My Bramblefox used Forest Bond on a scarecrow. Is that allowed? | narration: Archive replies: Bonds are for living hearts. Scarecrows get a polite leaf-pat and a comic reread. | Mossprig: *soft rustle of approval* Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-lost-city-p36",
+    "issueSlug": "the-lost-city",
+    "pageNumber": 36,
+    "role": "back-cover",
+    "layout": "splash",
+    "title": "The Lost City",
+    "outputRelPath": "assets/comics/pages/the-lost-city/page-36.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #4 \"The Lost City\" (the-lost-city), page 36 of 36. Back-matter closing vista of the Commons under soft riftlight. Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift #4 | narration: Official Riftwilds comic · Unlock Codex · Tease cards · Never P2W story gates. Feature cast when relevant: Archivist Solen: original Riftwilds fantasy character. Pip Courier: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Gateway echo: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Archive Keeper: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/04-the-lost-city.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  }
+]

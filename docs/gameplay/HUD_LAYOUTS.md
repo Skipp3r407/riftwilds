@@ -58,18 +58,19 @@ Persisted on `riftwilds-live-world-immersive-v1`:
 
 Display settings can apply a mode-matched layout via `suggestedChromeCollapseForHudMode` (Immersive / Cinematic prefer peek tabs). Manual collapse toggles still persist across sessions. Auto-hide fades chrome; the toolbar peek stays faintly available in Immersive mode.
 
-## Reference composition (edge-docked)
+## Reference composition (Reliquary HUD)
+
+See root `UI_AUDIT.md` for the full AAA redesign brief.
 
 | Slot | Content |
 |------|---------|
-| Top-left | Location + connection + weather/season |
+| Top center | **Top command bar** — region, weather/time, credits, notifications, goals, fullscreen, menu |
+| Top under-bar | Happening Now (secondary) |
 | Mid-left | World Pulse (world-events + community stubs) |
-| Bottom-left | Chat + presence peek (`flex-col-reverse` stack) |
-| Top-center | Credits (CR) + Happening Now card |
-| Top-right | Map goals / Fullscreen / Exit world pills |
-| Right column | Minimap → nearby → daily tasks → social status |
-| Bottom-center | Companion Health + Energy orbs + life/social hotbar |
-| Bottom-right | Radial menu (Inventory, Academy, Riftlings, Quests, Map, Market, Guild, Settings) |
+| Bottom-left | Chat (7 tabs) + presence peek (`flex-col-reverse` stack) |
+| Right column | Minimap (compass/coords/weather) → nearby → **quest tracker** → presence |
+| Bottom-center | Player status + vitals orbs + tiered action hotbar |
+| Bottom-right | Radial menu — primary shortcuts + expandable secondary |
 
 Center stays clear for the world. Site nav auto-hide on `/live-world` and floating-chip idle-fade remain coordinated (do not revert).
 

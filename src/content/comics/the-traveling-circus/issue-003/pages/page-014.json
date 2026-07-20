@@ -1,0 +1,143 @@
+{
+  "pageNumber": 14,
+  "bookRole": "story",
+  "title": "Resonance Meeting",
+  "storyPurpose": "Spark meets Lumenhare backstage; nonverbal resonance recognition.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p10a",
+      "description": "Backstage quiet: Spark and Lumenhare face each other; ear-light and cyan-gold pulse exchange; no humans between them.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*question-pulse*",
+          "x": 35,
+          "y": 40,
+          "tail": "up",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Lumenhare",
+          "text": "*answer-glow*",
+          "x": 65,
+          "y": 45,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p10b",
+      "description": "Shared resonance flare — Lumenhare recognizes Spark as kin-route; Mira watches from doorway without interrupting.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "They speak without owning each other.",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 50
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Invite only. Always.",
+          "x": 40,
+          "y": 80,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p10a",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*question-pulse*",
+      "x": 35,
+      "y": 40,
+      "tail": "up",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p10a",
+      "kind": "creature",
+      "speaker": "Lumenhare",
+      "text": "*answer-glow*",
+      "x": 65,
+      "y": 45,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p10b",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Invite only. Always.",
+      "x": 40,
+      "y": 80,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p10b",
+      "kind": "narration",
+      "text": "They speak without owning each other.",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 50
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "lumenhare"
+  ],
+  "continuity": {
+    "sparkLumenhare": {
+      "bond": "resonance-recognition"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 10/25 — Resonance Meeting. Story purpose: Spark meets Lumenhare backstage; nonverbal resonance recognition. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p10a): Backstage quiet: Spark and Lumenhare face each other; ear-light and cyan-gold pulse exchange; no humans between them. Panel 2 (p10b): Shared resonance flare — Lumenhare recognizes Spark as kin-route; Mira watches from doorway without interrupting. Characters: mira-eggwarden. Creatures: spark, lumenhare. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"sparkLumenhare\":{\"bond\":\"resonance-recognition\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Meridian sigil warning.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Resonance Meeting — The Traveling Circus page 10",
+  "atmosphere": "festival",
+  "transcript": [
+    "CREATURE (Spark): *question-pulse*",
+    "CREATURE (Lumenhare): *answer-glow*",
+    "NARRATION: They speak without owning each other.",
+    "SPEECH (Mira Eggwarden): Invite only. Always."
+  ],
+  "storyPageNumber": 10,
+  "id": "the-traveling-circus-issue-003-p014",
+  "cleanArtRel": "generated/raw-art/page-014.png",
+  "letteredArtRel": "generated/lettered-pages/page-014.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-014.webp"
+}

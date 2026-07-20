@@ -1,0 +1,279 @@
+{
+  "slug": "the-lost-city",
+  "issueNumber": 4,
+  "title": "The Lost City",
+  "subtitle": "Chapter Four \u2014 Aureth Vale Remembers",
+  "synopsis": "Mira Eggwarden, Spark, and a Lanternveil expedition enter Aureth Vale \u2014 a Lost City awakening after the First Rift. They discover Resonance Keepers lore, face Meridian commander Seris Vale, and confront the Last Guardian until Spark voluntarily shares memory and proves the war ended long ago. A storm-kingdom Riftborn signal sparks the road to Issue #5.",
+  "publishedAt": "2026-07-20",
+  "status": "published",
+  "storyPageCount": 25,
+  "bookPageCount": 38,
+  "estimatedReadMinutes": 22,
+  "protagonist": "Mira Eggwarden",
+  "featuredCreatures": [
+    "Spark",
+    "Echoquill",
+    "Bramblefox",
+    "Mossprig",
+    "Thornling",
+    "Wisplet",
+    "Lumenhare"
+  ],
+  "locations": [
+    "Aureth Vale",
+    "Companion Sanctuary",
+    "City Core",
+    "Storm Kingdom (teaser)"
+  ],
+  "unlockGates": [
+    {
+      "kind": "prior-issue",
+      "slug": "the-traveling-circus",
+      "label": "Complete Issue #3: The Traveling Circus"
+    },
+    {
+      "kind": "admin-dev",
+      "label": "Admin / COMICS_DEV_UNLOCK override"
+    }
+  ],
+  "nextIssueTeaser": {
+    "slug": "the-storm-king",
+    "hook": "Above the clouds, a king who never surrendered hears the call."
+  },
+  "pipeline": {
+    "artProvider": "grok",
+    "lettering": "programmatic",
+    "bakedLettering": true,
+    "contentRoot": "content/comics/the-lost-city/issue-004"
+  },
+  "bookPages": [
+    {
+      "pageNumber": 1,
+      "storyPageNumber": null,
+      "role": "front-cover",
+      "title": "The Lost City \u2014 Cover"
+    },
+    {
+      "pageNumber": 2,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Front Cover"
+    },
+    {
+      "pageNumber": 3,
+      "storyPageNumber": null,
+      "role": "credits",
+      "title": "Credits"
+    },
+    {
+      "pageNumber": 4,
+      "storyPageNumber": null,
+      "role": "title",
+      "title": "Chapter Four \u2014 The Lost City"
+    },
+    {
+      "pageNumber": 5,
+      "storyPageNumber": 1,
+      "role": "story",
+      "title": "City That Memory Kept"
+    },
+    {
+      "pageNumber": 6,
+      "storyPageNumber": 2,
+      "role": "story",
+      "title": "No Expedition Returned"
+    },
+    {
+      "pageNumber": 7,
+      "storyPageNumber": 3,
+      "role": "story",
+      "title": "The Gate That Knew a Name"
+    },
+    {
+      "pageNumber": 8,
+      "storyPageNumber": 4,
+      "role": "story",
+      "title": "Left Behind Mid-Step"
+    },
+    {
+      "pageNumber": 9,
+      "storyPageNumber": 5,
+      "role": "story",
+      "title": "Thornling's Mistake"
+    },
+    {
+      "pageNumber": 10,
+      "storyPageNumber": 6,
+      "role": "story",
+      "title": "Streets That Float"
+    },
+    {
+      "pageNumber": 11,
+      "storyPageNumber": 7,
+      "role": "story",
+      "title": "Wisplet Opens the Past"
+    },
+    {
+      "pageNumber": 12,
+      "storyPageNumber": 8,
+      "role": "story",
+      "title": "Keepers Before the Tear"
+    },
+    {
+      "pageNumber": 13,
+      "storyPageNumber": 9,
+      "role": "story",
+      "title": "Empty Nest Rows"
+    },
+    {
+      "pageNumber": 14,
+      "storyPageNumber": 10,
+      "role": "story",
+      "title": "Resonance Keepers"
+    },
+    {
+      "pageNumber": 15,
+      "storyPageNumber": 11,
+      "role": "story",
+      "title": "Not a Tool"
+    },
+    {
+      "pageNumber": 16,
+      "storyPageNumber": 12,
+      "role": "story",
+      "title": "Lanterns and Admissions"
+    },
+    {
+      "pageNumber": 17,
+      "storyPageNumber": 13,
+      "role": "story",
+      "title": "Stolen Seals"
+    },
+    {
+      "pageNumber": 18,
+      "storyPageNumber": 14,
+      "role": "story",
+      "title": "The Last Guardian Rises"
+    },
+    {
+      "pageNumber": 19,
+      "storyPageNumber": 15,
+      "role": "story",
+      "title": "Scan: Stolen Stabilizer"
+    },
+    {
+      "pageNumber": 20,
+      "storyPageNumber": 16,
+      "role": "story",
+      "title": "Partial Override"
+    },
+    {
+      "pageNumber": 21,
+      "storyPageNumber": 17,
+      "role": "story",
+      "title": "Living Bulwark"
+    },
+    {
+      "pageNumber": 22,
+      "storyPageNumber": 18,
+      "role": "story",
+      "title": "Plaza War Map"
+    },
+    {
+      "pageNumber": 23,
+      "storyPageNumber": 19,
+      "role": "story",
+      "title": "Joints, Not Heart"
+    },
+    {
+      "pageNumber": 24,
+      "storyPageNumber": 20,
+      "role": "story",
+      "title": "The Hunter Cuts the Wire"
+    },
+    {
+      "pageNumber": 25,
+      "storyPageNumber": 21,
+      "role": "story",
+      "title": "Chosen Contact"
+    },
+    {
+      "pageNumber": 26,
+      "storyPageNumber": 22,
+      "role": "story",
+      "title": "The Day Relief Never Came"
+    },
+    {
+      "pageNumber": 27,
+      "storyPageNumber": 23,
+      "role": "story",
+      "title": "Last Light of the Resonance Line"
+    },
+    {
+      "pageNumber": 28,
+      "storyPageNumber": 24,
+      "role": "story",
+      "title": "Engines Still Sleeping"
+    },
+    {
+      "pageNumber": 29,
+      "storyPageNumber": 25,
+      "role": "story",
+      "title": "A King Who Never Surrendered"
+    },
+    {
+      "pageNumber": 30,
+      "storyPageNumber": null,
+      "role": "teaser",
+      "title": "Next Issue \u2014 The Storm King"
+    },
+    {
+      "pageNumber": 31,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Character Profile \u2014 The Last Guardian"
+    },
+    {
+      "pageNumber": 32,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Companion Profile \u2014 Echoquill"
+    },
+    {
+      "pageNumber": 33,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Codex \u2014 Aureth Vale"
+    },
+    {
+      "pageNumber": 34,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Ability Spotlight \u2014 Memory Trace"
+    },
+    {
+      "pageNumber": 35,
+      "storyPageNumber": null,
+      "role": "map",
+      "title": "World Map \u2014 Commons to Storm Peaks"
+    },
+    {
+      "pageNumber": 36,
+      "storyPageNumber": null,
+      "role": "letters",
+      "title": "Editor's Note \u2014 Memory & Duty"
+    },
+    {
+      "pageNumber": 37,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Back Cover"
+    },
+    {
+      "pageNumber": 38,
+      "storyPageNumber": null,
+      "role": "back-cover",
+      "title": "Back Cover \u2014 Storm Signal"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /**
- * Resolve comic bubble positions for overlay speech / thought / sfx / captions.
+ * Resolve comic bubble positions for the full lettering system.
  * Explicit x/y win; otherwise anchor presets; otherwise speaker-aware auto layout.
  */
 
@@ -47,6 +47,11 @@ const SFX_SLOTS: Array<{ x: number; y: number; tail: ComicBubbleTail }> = [
   { x: 38, y: 64, tail: "up" },
 ];
 
+const BANNER_KINDS = new Set(["narration", "caption"]);
+const SFX_KINDS = new Set(["sfx"]);
+const THOUGHT_LIKE = new Set(["thought", "telepathy", "whisper"]);
+const NO_TAIL = new Set(["narration", "caption", "sfx", "magic"]);
+
 function clamp(n: number, min: number, max: number) {
   return Math.max(min, Math.min(max, n));
 }
@@ -54,25 +59,34 @@ function clamp(n: number, min: number, max: number) {
 function speakerLane(speaker?: string): 0 | 1 {
   if (!speaker) return 0;
   const s = speaker.toLowerCase();
-  // Recurring left-side leads
-  if (s.includes("elara") || s.includes("mira") || s.includes("spark") || s.includes("pip")) {
+  if (
+    s.includes("elara") ||
+    s.includes("mira") ||
+    s.includes("spark") ||
+    s.includes("pip") ||
+    s.includes("mossprig") ||
+    s.includes("bramble")
+  ) {
     return 0;
   }
-  // Guests / antagonists drift right
   if (
     s.includes("stranger") ||
     s.includes("elder") ||
     s.includes("king") ||
     s.includes("crier") ||
     s.includes("kid") ||
-    s.includes("merchant")
+    s.includes("merchant") ||
+    s.includes("ashwing")
   ) {
     return 1;
   }
-  // Stable hash
   let h = 0;
   for (let i = 0; i < s.length; i++) h = (h + s.charCodeAt(i) * (i + 1)) % 2;
   return h as 0 | 1;
+}
+
+export function bubbleHasTail(kind: ComicBubble["kind"]): boolean {
+  return !NO_TAIL.has(kind);
 }
 
 export function resolveBubbleLayout(bubbles: ComicBubble[]): ResolvedBubble[] {
@@ -82,7 +96,7 @@ export function resolveBubbleLayout(bubbles: ComicBubble[]): ResolvedBubble[] {
   let captionBand = 10;
 
   return bubbles.map((b) => {
-    if (b.kind === "narration" || b.kind === "caption") {
+    if (BANNER_KINDS.has(b.kind)) {
       const y = b.y ?? captionBand;
       captionBand = Math.min(36, captionBand + 12);
       return {
@@ -94,7 +108,7 @@ export function resolveBubbleLayout(bubbles: ComicBubble[]): ResolvedBubble[] {
       };
     }
 
-    if (b.kind === "sfx") {
+    if (SFX_KINDS.has(b.kind)) {
       const slot = SFX_SLOTS[sfxIdx % SFX_SLOTS.length]!;
       sfxIdx += 1;
       const fromAnchor = b.anchor ? ANCHOR_MAP[b.anchor] : null;
@@ -107,31 +121,43 @@ export function resolveBubbleLayout(bubbles: ComicBubble[]): ResolvedBubble[] {
       };
     }
 
-    // speech / thought
+    if (b.kind === "magic") {
+      const fromAnchor = b.anchor ? ANCHOR_MAP[b.anchor] : null;
+      return {
+        ...b,
+        x: clamp(b.x ?? fromAnchor?.x ?? 50, 12, 88),
+        y: clamp(b.y ?? fromAnchor?.y ?? 36, 14, 70),
+        tail: b.tail ?? "down",
+        maxWidthPct: 56,
+      };
+    }
+
     const fromAnchor = b.anchor ? ANCHOR_MAP[b.anchor] : null;
     const lane = speakerLane(b.speaker);
-    const pool = b.kind === "thought" ? THOUGHT_SLOTS : SPEECH_SLOTS;
-    const idx = b.kind === "thought" ? thoughtIdx++ : speechIdx++;
+    const thoughtLike = THOUGHT_LIKE.has(b.kind);
+    const pool = thoughtLike ? THOUGHT_SLOTS : SPEECH_SLOTS;
+    const idx = thoughtLike ? thoughtIdx++ : speechIdx++;
     const base = pool[idx % pool.length]!;
-    // Nudge into speaker lane when auto-placing
-    const laneX = b.kind === "thought" ? base.x : lane === 0 ? Math.min(base.x, 36) : Math.max(base.x, 64);
-    const autoTail: ComicBubbleTail =
-      b.kind === "thought"
-        ? base.tail
-        : lane === 0
-          ? idx % 2 === 0
-            ? "down"
-            : "down-right"
-          : idx % 2 === 0
-            ? "down"
-            : "down-left";
+    const laneX = thoughtLike ? base.x : lane === 0 ? Math.min(base.x, 36) : Math.max(base.x, 64);
+    const autoTail: ComicBubbleTail = thoughtLike
+      ? base.tail
+      : lane === 0
+        ? idx % 2 === 0
+          ? "down"
+          : "down-right"
+        : idx % 2 === 0
+          ? "down"
+          : "down-left";
+
+    const width =
+      b.kind === "shout" ? 52 : b.kind === "whisper" ? 38 : b.kind === "creature" ? 40 : thoughtLike ? 42 : 44;
 
     return {
       ...b,
       x: clamp(b.x ?? fromAnchor?.x ?? laneX, 12, 88),
       y: clamp(b.y ?? fromAnchor?.y ?? base.y, 14, 82),
       tail: b.tail ?? fromAnchor?.tail ?? autoTail,
-      maxWidthPct: b.kind === "thought" ? 42 : 44,
+      maxWidthPct: width,
     };
   });
 }

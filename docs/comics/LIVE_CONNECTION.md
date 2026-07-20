@@ -19,3 +19,7 @@ Website-first comics that deep-link into playable surfaces when available.
 ### Do not fight Living Towns
 
 Comics content lives under `src/content/comics/` and `public/assets/comics/`. Do not rewrite world map blueprints or NPC catalogs for comic delivery.
+
+### Codex / TCG deep links
+
+See [PUBLISHING_ENGINE.md](./PUBLISHING_ENGINE.md). Hotspots and cast use `ComicCanonLink` → World Codex, Riftling Codex, `/tcg/codex/[familyId]`, and Deck Atelier. Example: Issue #1 Forest Bond → Bramblefox (`family-bramblefox` / `rotr-c-bramblefox`).

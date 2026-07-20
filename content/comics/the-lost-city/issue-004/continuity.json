@@ -1,0 +1,139 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "location": "ridge above Aureth Vale",
+      "time": "dawn",
+      "spark": {
+        "glow": "drawn to city"
+      }
+    },
+    {
+      "page": 2,
+      "lanternmaster": "warns inner district",
+      "spark": {
+        "hears": "city pulse"
+      }
+    },
+    {
+      "page": 3,
+      "gate": "opened for Spark",
+      "statues": "tracking Spark"
+    },
+    {
+      "page": 4,
+      "meridian": "fresh trail in market",
+      "evacuation": "sudden"
+    },
+    {
+      "page": 5,
+      "transit": "activated by Thornling",
+      "depth": "inner districts"
+    },
+    {
+      "page": 6,
+      "saw": [
+        "companion shelters",
+        "training grounds",
+        "sealed towers"
+      ]
+    },
+    {
+      "page": 7,
+      "memoryEchoes": true,
+      "wisplet": "spectral"
+    },
+    {
+      "page": 8,
+      "loreHint": "Resonance Keepers",
+      "memoryGlitch": true
+    },
+    {
+      "page": 9,
+      "echoquill": "first contact",
+      "sanctuary": "empty nests"
+    },
+    {
+      "page": 10,
+      "term": "Resonance Keepers",
+      "cael": "partial admission beginning"
+    },
+    {
+      "page": 11,
+      "spark": {
+        "emotion": "fear of tool-status"
+      },
+      "cael": "silent guilt"
+    },
+    {
+      "page": 12,
+      "cael": "admits Resonance Keeper transport",
+      "alliance": "uneasy honesty"
+    },
+    {
+      "page": 13,
+      "meridian": "core infiltration",
+      "seris": "restoring power"
+    },
+    {
+      "page": 14,
+      "guardian": "awakened",
+      "scale": "plaza-towering"
+    },
+    {
+      "page": 15,
+      "guardianBelief": "Spark stolen stabilizer",
+      "meridianSeal": "partial ally"
+    },
+    {
+      "page": 16,
+      "override": "partial",
+      "combat": "begun"
+    },
+    {
+      "page": 17,
+      "mossprig": "Living Bulwark cracked but held"
+    },
+    {
+      "page": 18,
+      "battle": "multi-front plaza",
+      "miraOrder": "disable not destroy"
+    },
+    {
+      "page": 19,
+      "plan": "disable joints",
+      "refuseKill": true
+    },
+    {
+      "page": 20,
+      "nira": "disabled override",
+      "guardian": "unstable",
+      "sparkChoice": "pending"
+    },
+    {
+      "page": 21,
+      "spark": "voluntary Guardian link",
+      "seris": "fails to break"
+    },
+    {
+      "page": 22,
+      "truth": "command altered; city sealed with people; Guardian waited"
+    },
+    {
+      "page": 23,
+      "guardian": "accepts war ended",
+      "sparkTitle": "Last Light of the Resonance Line"
+    },
+    {
+      "page": 24,
+      "stormSignal": true,
+      "seris": "escaped with partial records",
+      "guardian": "uneasy ally"
+    },
+    {
+      "page": 25,
+      "teaser": "the-storm-king",
+      "cliffhanger": true
+    }
+  ]
+}

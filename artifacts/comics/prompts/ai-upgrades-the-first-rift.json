@@ -1,0 +1,11 @@
+{
+  "slug": "the-first-rift",
+  "updatedAt": "2026-07-20",
+  "aiShowcasePages": [2, 4, 5, 7, 8, 9, 11, 12, 13, 14],
+  "notes": "Remaining pages use official-art composites. Resume AI upgrades via artifacts/comics/prompts/the-first-rift.json + comics:install-page. Rate-limit GenerateImage (~slow batches).",
+  "preview": [
+    "http://localhost:3000/comics/the-first-rift",
+    "http://localhost:3000/comics/the-first-rift?page=9",
+    "http://localhost:3000/comics/the-first-rift?page=12"
+  ]
+}

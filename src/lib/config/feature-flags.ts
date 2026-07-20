@@ -73,21 +73,24 @@ export const featureFlagDefaults = {
   // ─── Playable Live World (browser multiplayer habitat) ─────────────────────
   /**
    * Phaser systems / shell remain intact. TCG / Rift Battles stay the product
-   * focus in nav/docs, but Live World entry stays open during development.
+   * focus in nav/docs. Soft-gate entry with PUBLIC_ACCESS / DEV_PREVIEW.
    * See `isLiveWorldEntryOpen` / `canEnterLiveWorld`.
    */
   PLAYABLE_LIVE_WORLD_ENABLED: true,
   /**
-   * Soft-gate for `/live-world`. Default ON so Keepers (and local/dev work)
-   * can enter the habitat. Set to `false` before a public release if you want
-   * the Coming Soon gate — systems and routes stay; no deletions.
+   * Soft-gate for `/live-world`, `/restoration`, and World directory labels.
+   * OFF = Coming Soon for everyone (including signed-in) until public launch.
+   * Flip to `true` when Live World is ready for the public. Systems stay in-repo.
    */
-  LIVE_WORLD_PUBLIC_ACCESS_ENABLED: true,
+  LIVE_WORLD_PUBLIC_ACCESS_ENABLED: false,
   /**
    * When PUBLIC_ACCESS is off, still allow Phaser enter outside production
    * (local/dev/internal preview). Ignored when NODE_ENV === "production".
+   * Default OFF — `isLiveWorldEntryOpen` also auto-opens for NODE_ENV=development
+   * / DEV_OVERRIDE / NEXT_PUBLIC_DEV_OVERRIDE (see docs/DEV_OVERRIDE.md).
+   * Set true to force preview in other non-prod runtimes.
    */
-  LIVE_WORLD_DEV_PREVIEW_ENABLED: true,
+  LIVE_WORLD_DEV_PREVIEW_ENABLED: false,
   /** Phase 2+ WebSocket instances — hooks scaffolded; still local in Phase 1. */
   LIVE_WORLD_MULTIPLAYER_ENABLED: true,
   LIVE_WORLD_CHAT_ENABLED: true,
@@ -298,14 +301,25 @@ export const featureFlagDefaults = {
   /** Admin Content Studio shell. */
   ADMIN_CONTENT_STUDIO_ENABLED: true,
 
-  // ─── Modular auth (email/social first, wallet optional) ────────────────────
-  /** Show email/social-first login scaffolding. */
-  AUTH_EMAIL_ENABLED: false,
-  AUTH_SOCIAL_ENABLED: false,
-  /** SIWS wallet auth — production path today. */
+  // ─── Modular auth (account required for gameplay) ─────────────────────────
+  /**
+   * Absolute product rule: NO ACCOUNT = NO GAMEPLAY.
+   * When true, rift_guest minting stops and protected routes/APIs require session.
+   */
+  AUTH_ACCOUNT_REQUIRED_FOR_PLAY: true,
+  /** Email/password register + sign-in. */
+  AUTH_EMAIL_ENABLED: true,
+  /** Require email verification before ACTIVE gameplay (local may skip via env). */
+  AUTH_EMAIL_VERIFICATION_REQUIRED: true,
+  /** Google / Discord / Apple OAuth — scaffolded; live when keys present. */
+  AUTH_SOCIAL_ENABLED: true,
+  /** SIWS wallet auth — link wallet after account; may also create account via SIWS. */
   AUTH_WALLET_SIWS_ENABLED: true,
-  /** Soft play without wallet (recommended onboarding). */
-  AUTH_WALLET_OPTIONAL_PLAY: true,
+  /**
+   * Legacy guest/soft play without account. OFF — guest gameplay removed.
+   * Kept for rollback; AUTH_ACCOUNT_REQUIRED_FOR_PLAY takes precedence when true.
+   */
+  AUTH_WALLET_OPTIONAL_PLAY: false,
   AUTH_NEXTAUTH_BRIDGE_ENABLED: false,
   AUTH_CLERK_BRIDGE_ENABLED: false,
   /** Login / account page with modular providers. */
@@ -423,22 +437,72 @@ export function isFeatureEnabled(
 /**
  * Whether `/live-world` may open for this runtime (public launch or non-prod preview).
  * Does not delete or disable Phaser systems — only the product entry gate.
+ *
+ * Public stays Coming Soon when LIVE_WORLD_PUBLIC_ACCESS_ENABLED is false.
+ * Local/dev (NODE_ENV=development, DEV_OVERRIDE, NEXT_PUBLIC_DEV_OVERRIDE, or
+ * LIVE_WORLD_DEV_PREVIEW_ENABLED) may enter for testing — never in production
+ * unless PUBLIC_ACCESS is on.
  */
 export function isLiveWorldEntryOpen(
   overrides?: FeatureFlagOverrides,
-  env: { nodeEnv?: string | undefined } = {},
+  env: {
+    nodeEnv?: string | undefined;
+    nextPublicDevOverride?: string | undefined;
+    liveWorldDevPreviewEnv?: string | undefined;
+    devOverride?: string | undefined;
+  } = {},
 ): boolean {
   if (isFeatureEnabled("LIVE_WORLD_PUBLIC_ACCESS_ENABLED", overrides)) {
     return true;
   }
   const nodeEnv = env.nodeEnv ?? process.env.NODE_ENV;
+  if (nodeEnv === "production") {
+    return false;
+  }
+
+  // Explicit feature-flag preview (flag default stays false; env may flip it).
+  if (isFeatureEnabled("LIVE_WORLD_DEV_PREVIEW_ENABLED", overrides)) {
+    return true;
+  }
+
+  // Auto-open for local Development Override / NODE_ENV=development.
+  // Keeps public Coming Soon messaging available via isLiveWorldPublicAccess.
+  const flagTrue = (v: string | undefined) => {
+    if (!v) return false;
+    const n = v.trim().toLowerCase();
+    return n === "true" || n === "1" || n === "yes" || n === "on";
+  };
+  if (nodeEnv === "development") return true;
+  if (flagTrue(env.nextPublicDevOverride ?? process.env.NEXT_PUBLIC_DEV_OVERRIDE)) {
+    return true;
+  }
+  if (flagTrue(env.devOverride ?? process.env.DEV_OVERRIDE)) return true;
   if (
-    isFeatureEnabled("LIVE_WORLD_DEV_PREVIEW_ENABLED", overrides) &&
-    nodeEnv !== "production"
+    flagTrue(env.liveWorldDevPreviewEnv ?? process.env.LIVE_WORLD_DEV_PREVIEW_ENABLED)
   ) {
     return true;
   }
   return false;
+}
+
+/** True when the public product gate is open (not merely local/dev preview). */
+export function isLiveWorldPublicAccess(
+  overrides?: FeatureFlagOverrides,
+): boolean {
+  return isFeatureEnabled("LIVE_WORLD_PUBLIC_ACCESS_ENABLED", overrides);
+}
+
+/**
+ * Soft-gate badge label: public Coming Soon, or Coming Soon · DEV ACCESS when
+ * local/dev can enter while public remains closed.
+ */
+export function liveWorldAccessBadge(
+  overrides?: FeatureFlagOverrides,
+  env: { nodeEnv?: string | undefined } = {},
+): string | undefined {
+  if (isLiveWorldPublicAccess(overrides)) return undefined;
+  if (isLiveWorldEntryOpen(overrides, env)) return "COMING SOON · DEV ACCESS";
+  return "Coming Soon";
 }
 
 /** Phaser enter: playable flag AND entry open (public or dev preview). */

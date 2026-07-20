@@ -1,0 +1,34 @@
+{
+  "featured": [
+    {
+      "id": "spark",
+      "name": "Spark",
+      "note": "See SPARK_CANON_PROPOSAL.md"
+    },
+    {
+      "id": "bramblefox",
+      "name": "Bramblefox",
+      "purpose": "Scout and protector"
+    },
+    {
+      "id": "mossprig",
+      "name": "Mossprig",
+      "purpose": "Defender; Living Bulwark"
+    },
+    {
+      "id": "thornling",
+      "name": "Thornling",
+      "purpose": "Comic relief / Sprouting Energy"
+    },
+    {
+      "id": "wisplet",
+      "name": "Wisplet",
+      "purpose": "Spiritual trail"
+    },
+    {
+      "id": "spirit-moth",
+      "name": "Spirit Moth",
+      "purpose": "Omen cameo"
+    }
+  ]
+}

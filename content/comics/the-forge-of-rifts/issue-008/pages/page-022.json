@@ -1,0 +1,164 @@
+{
+  "pageNumber": 22,
+  "storyPageNumber": 18,
+  "bookRole": "story",
+  "title": "Forge War \u2014 Left",
+  "storyPurpose": "Double-page battle left: all companions, Guardians, Artificial Rift, egg cracks further.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p18a",
+      "description": "DOUBLE-PAGE SPREAD LEFT: massive Forge battle \u2014 Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original \u2014 not a franchise mascot, Bramblefox, Mossprig, Thornling, Wisplet, Spirit Moth, Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence, Forge Guardians, Artificial Rift overhead, reactor sparks; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, ancient control core gauntlet, artificial Rift amplifier crystal, Guardian override codes mid-command; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes with cracking dormant Riftborn egg: warm shell with cyan-amber seam markings, protective wrap, pulsing toward Forge machinery (further crack lines glowing). Empty balloon zones upper/lower. Continues visually into page 19.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "REACTOR-ROAR",
+          "x": 70,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*last-light-flare*",
+          "x": 35,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*system-restore!*",
+          "x": 55,
+          "y": 55,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 2
+        },
+        {
+          "kind": "narration",
+          "text": "The Forge shook like a heart deciding whether to keep beating.",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p18a",
+      "kind": "creature",
+      "text": "*last-light-flare*",
+      "x": 35,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p18a",
+      "kind": "creature",
+      "text": "*system-restore!*",
+      "x": 55,
+      "y": 55,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Axiom",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p18a",
+      "kind": "narration",
+      "text": "The Forge shook like a heart deciding whether to keep beating.",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "REACTOR-ROAR",
+      "x": 70,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "arkan"
+  ],
+  "creatures": [
+    "spark",
+    "axiom",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Engine Alpha \u2014 double spread L",
+    "egg": "cracks-further-second-time",
+    "spread": "18-19",
+    "priorCrack": "gate-issue-007"
+  },
+  "requiredMoments": [
+    18,
+    16
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pok\u00e9mon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 18/25 \u2014 Forge War \u2014 Left. Story purpose: Double-page battle left: all companions, Guardians, Artificial Rift, egg cracks further. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p18a): DOUBLE-PAGE SPREAD LEFT: massive Forge battle \u2014 Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original \u2014 not a franchise mascot, Bramblefox, Mossprig, Thornling, Wisplet, Spirit Moth, Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence, Forge Guardians, Artificial Rift overhead, reactor sparks; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, ancient control core gauntlet, artificial Rift amplifier crystal, Guardian override codes mid-command; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes with cracking dormant Riftborn egg: warm shell with cyan-amber seam markings, protective wrap, pulsing toward Forge machinery (further crack lines glowing). Empty balloon zones upper/lower. Continues visually into page 19. Characters: mira-eggwarden, seris-vale, arkan. Creatures: spark, axiom, bramblefox, mossprig, thornling, wisplet, spirit-moth. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original \u2014 not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Engine Alpha \\u2014 double spread L\", \"egg\": \"cracks-further\", \"spread\": \"18-19\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pok\u00e9mon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Arkan's last act.",
+  "letteringInstructions": "Wide cinematic; fewer balloons; SFX dominant.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Forge War \u2014 Left \u2014 The Forge of Rifts page 18",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: REACTOR-ROAR",
+    "CREATURE (Spark): *last-light-flare*",
+    "CREATURE (Axiom): *system-restore!*",
+    "NARRATION: The Forge shook like a heart deciding whether to keep beating."
+  ],
+  "a11yTranscript": [
+    "SFX: REACTOR-ROAR",
+    "CREATURE (Spark): *last-light-flare*",
+    "CREATURE (Axiom): *system-restore!*",
+    "NARRATION: The Forge shook like a heart deciding whether to keep beating."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": {
+    "pair": 19,
+    "side": "left"
+  },
+  "id": "the-forge-of-rifts-issue-008-p022",
+  "cleanArtRel": "generated/raw-art/page-022.webp",
+  "letteredArtRel": "generated/lettered-pages/page-022.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-022.webp"
+}

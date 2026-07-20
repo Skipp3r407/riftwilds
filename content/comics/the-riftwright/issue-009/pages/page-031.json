@@ -1,0 +1,105 @@
+{
+  "pageNumber": 31,
+  "storyPageNumber": null,
+  "bookRole": "profile",
+  "title": "Companion Profiles",
+  "storyPurpose": "Nova debut + Spark twin-key + Axiom + cast.",
+  "layout": {
+    "type": "lore",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "cp1",
+      "description": "Companion profile splash: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot and Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot twin-key center; Axiom; Bramblefox; Mossprig; others in orbit.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "NOVA — Prime Companion",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 42,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "SPARK — Last Light / Twin-Key",
+          "x": 25,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 32,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "AXIOM — Adaptive Matrix",
+          "x": 75,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 32,
+          "readOrder": 2
+        },
+        {
+          "kind": "narration",
+          "text": "Twin-Key Resonance · Pulse Repair · System Restore",
+          "x": 50,
+          "y": 85,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "nova",
+    "spark",
+    "axiom",
+    "bramblefox",
+    "mossprig"
+  ],
+  "locations": [
+    "Companion codex"
+  ],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, Companion Profiles. Story purpose: Nova debut + Spark twin-key + Axiom + cast. Layout: lore. 1 panels with clear inked gutters. Panel 1 (cp1): Companion profile splash: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot and Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot twin-key center; Axiom; Bramblefox; Mossprig; others in orbit. Characters: mira-eggwarden. Creatures: nova, spark, axiom, bramblefox, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Companion codex. Atmosphere: dawn. Continuity: {}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Companion Profiles — The Riftwright page 31",
+  "atmosphere": "dawn",
+  "transcript": [
+    "CAPTION: NOVA — Prime Companion",
+    "CAPTION: SPARK — Last Light / Twin-Key",
+    "CAPTION: AXIOM — Adaptive Matrix",
+    "NARRATION: Twin-Key Resonance · Pulse Repair · System Restore"
+  ],
+  "a11yTranscript": [
+    "CAPTION: NOVA — Prime Companion",
+    "CAPTION: SPARK — Last Light / Twin-Key",
+    "CAPTION: AXIOM — Adaptive Matrix",
+    "NARRATION: Twin-Key Resonance · Pulse Repair · System Restore"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "nova",
+    "spark",
+    "axiom"
+  ],
+  "id": "the-riftwright-issue-009-p031",
+  "cleanArtRel": "generated/raw-art/page-031.webp",
+  "letteredArtRel": "generated/lettered-pages/page-031.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-031.webp"
+}

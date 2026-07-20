@@ -1,0 +1,154 @@
+{
+  "pageNumber": 22,
+  "storyPageNumber": 18,
+  "bookRole": "story",
+  "title": "Spark Revealed",
+  "storyPurpose": "Spark erupts from hiding — Resonance reveal.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p18a",
+      "description": "Dynamic splash: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's cloak thrown open; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot erupting in cyan-gold Resonance flare; restraint field cracking toward egg; Meridian buyers rising; Seris pointing; empty SFX zones.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "RESONANCE!",
+          "x": 50,
+          "y": 14,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "shout",
+          "text": "Subject One — seize!",
+          "x": 70,
+          "y": 40,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Seris Vale",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*protective-roar!*",
+          "x": 35,
+          "y": 50,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "He chooses. You don't.",
+          "x": 50,
+          "y": 82,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p18a",
+      "kind": "shout",
+      "text": "Subject One — seize!",
+      "x": 70,
+      "y": 40,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Seris Vale",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p18a",
+      "kind": "creature",
+      "text": "*protective-roar!*",
+      "x": 35,
+      "y": 50,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p18a",
+      "kind": "speech",
+      "text": "He chooses. You don't.",
+      "x": 50,
+      "y": 82,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "RESONANCE!",
+      "x": 50,
+      "y": 14,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "auction floor",
+    "spark": {
+      "revealed": true
+    }
+  },
+  "requiredMoments": [
+    28,
+    29
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 18/25 — Spark Revealed. Story purpose: Spark erupts from hiding — Resonance reveal. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p18a): Dynamic splash: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's cloak thrown open; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot erupting in cyan-gold Resonance flare; restraint field cracking toward egg; Meridian buyers rising; Seris pointing; empty SFX zones. Characters: mira-eggwarden, seris-vale. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"auction floor\", \"spark\": {\"revealed\": true}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Battle for the captives.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Spark Revealed — The Merchant's Secret page 18",
+  "atmosphere": "market",
+  "transcript": [
+    "SFX: RESONANCE!",
+    "SHOUT (Seris Vale): Subject One — seize!",
+    "CREATURE (Spark): *protective-roar!*",
+    "SPEECH (Mira Eggwarden): He chooses. You don't."
+  ],
+  "a11yTranscript": [
+    "SFX: RESONANCE!",
+    "SHOUT (Seris Vale): Subject One — seize!",
+    "CREATURE (Spark): *protective-roar!*",
+    "SPEECH (Mira Eggwarden): He chooses. You don't."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p022",
+  "cleanArtRel": "generated/raw-art/page-022.webp",
+  "letteredArtRel": "generated/lettered-pages/page-022.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-022.webp"
+}

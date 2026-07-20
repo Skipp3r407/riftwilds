@@ -1,0 +1,37 @@
+{
+  "issueSlug": "the-first-rift",
+  "frame": "Mira Eggwarden present → Elara Venn vision → deliberate-Rift cliffhanger",
+  "mustNotContradict": [
+    "Elara is First Keeper / courier founder (About + Codex)",
+    "Soft Exodus eggs are becoming, not inventory",
+    "Hatchery Compact: invite, wait, honest invitations",
+    "Gateway Hearts ≠ travel stones"
+  ],
+  "newTension": {
+    "claim": "The First Rift was deliberate",
+    "status": "story cliffhanger — pending Codex patch approval"
+  },
+  "creatureAppearances": {
+    "bramblefox": [
+      9
+    ],
+    "mossprig": [
+      10
+    ],
+    "thornling": [
+      11
+    ],
+    "wisplet": [
+      12
+    ],
+    "emberfox": [
+      13
+    ],
+    "ashwing": [
+      13
+    ],
+    "spirit-moth": [
+      24
+    ]
+  }
+}

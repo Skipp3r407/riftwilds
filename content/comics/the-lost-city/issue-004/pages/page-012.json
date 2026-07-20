@@ -1,0 +1,173 @@
+{
+  "pageNumber": 12,
+  "storyPageNumber": 8,
+  "bookRole": "story",
+  "title": "Keepers Before the Tear",
+  "storyPurpose": "Memory: Keepers prepare defenses; child with Spark-like companion; face glitches.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p8a",
+      "description": "Memory vision: armored ancient Keepers sealing Rift conduits; banners with city seal.",
+      "bubbles": [
+        {
+          "kind": "magic",
+          "text": "Hold the network. Hold the cradles.",
+          "x": 50,
+          "y": 25,
+          "tail": null,
+          "maxWidthPct": 45,
+          "speaker": "Memory Echo",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "memory-static",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p8b",
+      "description": "Child in memory carries a Spark-like Glowpup-line companion toward a sanctuary door.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "They called the little lights Resonance Keepers — before crowns renamed everything.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p8c",
+      "description": "Close on child's face beginning to resolve — memory glitches to static before identity clear; Spark flinches.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*afraid chirp*",
+          "x": 40,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        },
+        {
+          "kind": "speech",
+          "text": "You don't have to watch if it hurts.",
+          "x": 65,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 38,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p8a",
+      "kind": "magic",
+      "text": "Hold the network. Hold the cradles.",
+      "x": 50,
+      "y": 25,
+      "tail": null,
+      "maxWidthPct": 45,
+      "speaker": "Memory Echo",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p8c",
+      "kind": "creature",
+      "text": "*afraid chirp*",
+      "x": 40,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p8c",
+      "kind": "speech",
+      "text": "You don't have to watch if it hurts.",
+      "x": 65,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 38,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p8b",
+      "kind": "narration",
+      "text": "They called the little lights Resonance Keepers — before crowns renamed everything.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p8a",
+      "kind": "sfx",
+      "text": "memory-static",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "wisplet"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "loreHint": "Resonance Keepers",
+    "memoryGlitch": true
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 8/25 — Keepers Before the Tear. Story purpose: Memory: Keepers prepare defenses; child with Spark-like companion; face glitches. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p8a): Memory vision: armored ancient Keepers sealing Rift conduits; banners with city seal. Panel 2 (p8b): Child in memory carries a Spark-like Glowpup-line companion toward a sanctuary door. Panel 3 (p8c): Close on child's face beginning to resolve — memory glitches to static before identity clear; Spark flinches. Characters: mira-eggwarden. Creatures: spark, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"loreHint\": \"Resonance Keepers\", \"memoryGlitch\": true} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Sanctuary chambers.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Keepers Before the Tear — The Lost City page 8",
+  "atmosphere": "rift",
+  "transcript": [
+    "MAGIC (Memory Echo): Hold the network. Hold the cradles.",
+    "SFX: memory-static",
+    "NARRATION: They called the little lights Resonance Keepers — before crowns renamed everything.",
+    "CREATURE (Spark): *afraid chirp*",
+    "SPEECH (Mira Eggwarden): You don't have to watch if it hurts."
+  ],
+  "id": "the-lost-city-issue-004-p012",
+  "cleanArtRel": "generated/raw-art/page-012.webp",
+  "letteredArtRel": "generated/lettered-pages/page-012.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-012.webp"
+}

@@ -1,14 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { FormEvent, Suspense, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { AuthProviderIcon } from "@/components/auth/auth-provider-icons";
 import { SoundscapeMount } from "@/components/audio/soundscape-mount";
 import { SectionTitleBand, StatusChip } from "@/components/shared/page-header";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { playSfx } from "@/hooks/use-sfx";
-import type { AuthOnboardingPlan, AuthOnboardingStep } from "@/lib/auth/modular-auth";
+import { ensureDevMockState } from "@/lib/auth/dev-mock-store";
+import { isDevOverrideUiEnabled } from "@/lib/auth/dev-override";
+import {
+  authLoginHeaderEggPath,
+  authSectionThumbPath,
+} from "@/lib/assets/paths";
+import type { AuthOnboardingPlan } from "@/lib/auth/modular-auth";
 import type { AuthProviderDef } from "@/lib/auth/providers";
 
 type OnboardingPayload = {
@@ -17,53 +24,42 @@ type OnboardingPayload = {
   providers?: AuthProviderDef[];
 };
 
-const JOURNEY_VISUALS: Record<
-  AuthOnboardingStep,
-  { src: string; alt: string; blurb: string }
-> = {
-  choose_login: {
-    src: "/assets/auth/journey/01-choose-login.svg",
-    alt: "Login hall doorway",
-    blurb: "Pick how you enter the hall",
-  },
-  email_or_social: {
-    src: "/assets/auth/journey/02-email-social.svg",
-    alt: "Email and social links",
-    blurb: "Email or social — no wallet needed",
-  },
-  create_riftkeeper: {
-    src: "/assets/auth/journey/03-create-riftkeeper.svg",
-    alt: "Rift egg and keeper",
-    blurb: "Your Riftkeeper identity begins",
-  },
-  optional_wallet: {
-    src: "/assets/auth/journey/04-optional-wallet.svg",
-    alt: "Optional wallet",
-    blurb: "Link later for Web3 features",
-  },
-  holdings_recognized: {
-    src: "/assets/auth/journey/05-holdings-recognized.svg",
-    alt: "Eggs and pets synced",
-    blurb: "Eggs, pets, and claims sync",
-  },
-  play: {
-    src: "/assets/auth/journey/06-play.svg",
-    alt: "Play the Riftwilds",
-    blurb: "Step into the Riftwilds",
-  },
+const REASON_COPY: Record<string, string> = {
+  banned: "This account is banned.",
+  suspended: "This account is suspended.",
+  deleted: "This account was deleted.",
+  locked: "Too many failed attempts — try again later.",
+  recovery: "Account recovery is still pending.",
+  "login-required": "Sign in to continue.",
 };
 
-const FALLBACK_STEPS: AuthOnboardingStep[] = [
-  "choose_login",
-  "email_or_social",
-  "create_riftkeeper",
-  "optional_wallet",
-  "holdings_recognized",
-  "play",
-];
+function LoginForm() {
+  const router = useRouter();
+  const search = useSearchParams();
+  const returnUrl = search.get("returnUrl") || "/play";
+  const reason = search.get("reason") || search.get("admin") || "";
 
-export default function LoginPage() {
   const [data, setData] = useState<OnboardingPayload | null>(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [devBusy, setDevBusy] = useState(false);
+  const [devOverrideAllowed, setDevOverrideAllowed] = useState(false);
+
+  useEffect(() => {
+    if (!isDevOverrideUiEnabled()) {
+      setDevOverrideAllowed(false);
+      return;
+    }
+    void fetch("/api/auth/dev-override")
+      .then((r) => r.json())
+      .then((json: { allowed?: boolean }) => {
+        setDevOverrideAllowed(Boolean(json?.allowed) && isDevOverrideUiEnabled());
+      })
+      .catch(() => setDevOverrideAllowed(isDevOverrideUiEnabled()));
+  }, []);
 
   useEffect(() => {
     void fetch("/api/auth/onboarding")
@@ -73,47 +69,114 @@ export default function LoginPage() {
   }, []);
 
   const plan = data?.plan;
-  const steps = plan?.steps?.length ? plan.steps : FALLBACK_STEPS;
   const providers = plan?.providersPrimary?.length
     ? plan.providersPrimary
     : ([
-        { id: "email", label: "Email", description: "Magic-link", implemented: false },
-        { id: "google", label: "Google", description: "Social", implemented: false },
-        { id: "discord", label: "Discord", description: "Social", implemented: false },
-        { id: "twitter", label: "X / Twitter", description: "Social", implemented: false },
+        { id: "email", label: "Email & password", implemented: true },
+        { id: "google", label: "Google", implemented: true },
+        { id: "discord", label: "Discord", implemented: true },
+        { id: "apple", label: "Apple", implemented: true },
       ] as AuthProviderDef[]);
+
+  const reasonMessage = useMemo(
+    () => (reason ? REASON_COPY[reason.toLowerCase()] : null),
+    [reason],
+  );
+
+  async function onSubmit(e: FormEvent) {
+    e.preventDefault();
+    setBusy(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password, rememberMe }),
+      });
+      const json = await res.json();
+      if (!res.ok || !json.ok) {
+        setError(json?.error?.message ?? "Sign-in failed");
+        playSfx("ui.click");
+        return;
+      }
+      playSfx("login.success");
+      const next =
+        json.next === "/onboarding" || json.next?.startsWith("/verify")
+          ? `${json.next}${json.next.includes("?") ? "&" : "?"}returnUrl=${encodeURIComponent(returnUrl)}`
+          : returnUrl.startsWith("/")
+            ? returnUrl
+            : "/play";
+      router.push(next);
+      router.refresh();
+    } catch {
+      setError("Network error — try again.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  function oauthHref(id: string) {
+    return `/api/auth/oauth/${id}?returnUrl=${encodeURIComponent(returnUrl)}`;
+  }
+
+  async function onDevOverride() {
+    if (!devOverrideAllowed) return;
+    setDevBusy(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/auth/dev-override", { method: "POST" });
+      const json = await res.json();
+      if (!res.ok || !json.ok) {
+        setError(json?.error?.message ?? "Developer Override unavailable");
+        playSfx("ui.click");
+        return;
+      }
+      ensureDevMockState();
+      playSfx("login.success");
+      const next =
+        typeof json.next === "string" && json.next.startsWith("/")
+          ? json.next
+          : returnUrl.startsWith("/")
+            ? returnUrl
+            : "/play";
+      router.push(next);
+      router.refresh();
+    } catch {
+      setError("Network error — Developer Override failed.");
+    } finally {
+      setDevBusy(false);
+    }
+  }
 
   return (
     <div className="relative mx-auto max-w-3xl space-y-8 px-4 py-10 md:px-6">
       <SoundscapeMount mode="login" fadeMs={900} />
-      {/* Hero band — hatchery egg accent over RouteWallpaper */}
       <header className="panel relative overflow-hidden bg-[rgba(8,12,20,0.78)] p-0 backdrop-blur-[3px]">
         <div className="grid items-stretch sm:grid-cols-[1fr_11rem]">
           <div className="relative z-[1] space-y-3 p-6 md:p-7">
             <SectionTitleBand
               slug="login"
               label="Account"
-              kicker="Riftkeeper onboarding"
+              kicker="Sign in required"
               atmosphere={false}
             />
             <p className="page-lede max-w-md text-sm md:text-[0.95rem]">
               {plan?.copy.lede ??
-                "Sign in with email or social to play. Connect a Solana wallet later for token utility, claims, and marketplace settlements."}
+                "Create or sign in to a Riftkeeper account before gameplay. Guest play is disabled."}
             </p>
+            {reasonMessage ? (
+              <p className="text-sm text-[var(--amber)]">{reasonMessage}</p>
+            ) : null}
           </div>
           <div className="relative min-h-[9.5rem] border-t border-[var(--stroke)] sm:min-h-0 sm:border-l sm:border-t-0">
             <Image
-              src="/assets/eggs/mystery-rift-egg.png"
+              src={authLoginHeaderEggPath()}
               alt=""
               fill
-              className="object-contain object-center p-4"
-              sizes="176px"
+              className="object-contain object-center p-3"
+              sizes="(max-width: 640px) 100vw, 176px"
               unoptimized
               priority
-            />
-            <div
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(61,231,255,0.14)_0%,transparent_62%)]"
-              aria-hidden
             />
           </div>
         </div>
@@ -124,132 +187,171 @@ export default function LoginPage() {
           <h2 className="font-display text-xl text-white">
             {plan?.copy.headline ?? "Become a Riftkeeper"}
           </h2>
-          <StatusChip tone="info">email / social first</StatusChip>
+          {devOverrideAllowed ? (
+            <StatusChip tone="warn">local development</StatusChip>
+          ) : (
+            <StatusChip tone="info">no guest play</StatusChip>
+          )}
         </div>
 
-        <div className="space-y-2">
-          <p className="text-xs uppercase tracking-wide text-[var(--text-dim)]">Recommended</p>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {providers.map((p) => (
-              <button
-                key={p.id}
-                type="button"
-                disabled={
-                  !p.implemented || !(plan?.flags.emailEnabled || plan?.flags.socialEnabled)
-                }
-                className="btn-secondary focus-ring justify-start gap-3 px-4 py-3 text-left text-sm disabled:opacity-50"
-                title={p.description}
-                onClick={() => {
-                  playSfx("ui.click");
-                  if (p.implemented) playSfx("login.success");
-                }}
-              >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[rgba(61,231,255,0.22)] bg-[rgba(10,14,24,0.65)] text-[var(--cyan)]">
-                  <AuthProviderIcon id={p.id} />
-                </span>
-                <span className="min-w-0">
-                  <span className="block text-white">{p.label}</span>
-                  <span className="mt-0.5 block text-[10px] text-[var(--text-dim)]">
-                    {p.implemented
-                      ? "Ready when credentials configured"
-                      : "Scaffolding — not live yet"}
-                  </span>
-                </span>
-              </button>
-            ))}
+        {devOverrideAllowed ? (
+          <div className="rounded-lg border border-[rgba(255,160,40,0.35)] bg-[rgba(40,24,6,0.45)] p-4">
+            <p className="font-display text-sm font-semibold text-[rgb(255,184,77)]">
+              Developer Override
+            </p>
+            <p className="mt-1 text-xs text-[var(--text-muted)]">
+              For Local Development Only — skips signup and issues a temporary Dev Keeper
+              session (admin, max currency, unlocks). Never available in production.
+            </p>
+            <button
+              type="button"
+              disabled={devBusy || busy}
+              className="btn-secondary focus-ring mt-3 text-sm"
+              onClick={() => void onDevOverride()}
+            >
+              {devBusy ? "Entering…" : "Enter as Dev Keeper"}
+            </button>
           </div>
-          <p className="text-xs text-[var(--amber)]">
-            OAuth / email magic-link providers are scaffolded (NextAuth / Clerk bridges available).
-            Wallet SIWS remains the live auth path today.
-          </p>
-        </div>
+        ) : null}
 
-        <div className="border-t border-[var(--stroke)] pt-4">
-          <div className="flex flex-wrap items-start gap-4">
-            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-[rgba(61,231,255,0.2)] bg-[rgba(6,10,18,0.7)]">
+        <form className="space-y-3" onSubmit={onSubmit}>
+          <label className="block text-sm text-[var(--text-muted)]">
+            Email
+            <input
+              type="email"
+              required
+              autoComplete="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="mt-1 w-full rounded-lg border border-[var(--stroke)] bg-[rgba(6,10,18,0.85)] px-3 py-2 text-white"
+            />
+          </label>
+          <label className="block text-sm text-[var(--text-muted)]">
+            Password
+            <input
+              type="password"
+              required
+              autoComplete="current-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="mt-1 w-full rounded-lg border border-[var(--stroke)] bg-[rgba(6,10,18,0.85)] px-3 py-2 text-white"
+            />
+          </label>
+          <label className="flex items-center gap-2.5 text-sm text-[var(--text-muted)]">
+            <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-md border border-[rgba(61,231,255,0.22)]">
               <Image
-                src="/assets/revenue/holder-stats/wallet.png"
+                src={authSectionThumbPath("remember")}
                 alt=""
                 fill
                 className="object-cover"
-                sizes="64px"
+                sizes="32px"
                 unoptimized
+                aria-hidden
               />
-            </div>
+            </span>
+            <input
+              type="checkbox"
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+            />
+            Remember me on this device
+          </label>
+          {error ? <p className="text-sm text-[var(--ember)]">{error}</p> : null}
+          <div className="flex flex-wrap gap-3">
+            <button type="submit" disabled={busy} className="btn-primary focus-ring text-sm">
+              {busy ? "Signing in…" : "Sign in"}
+            </button>
+            <Link
+              href="/signup"
+              className="btn-secondary focus-ring inline-flex items-center gap-2.5 text-sm"
+            >
+              <span className="relative h-7 w-7 shrink-0 overflow-hidden rounded-md border border-[rgba(61,231,255,0.22)]">
+                <Image
+                  src={authSectionThumbPath("create-account")}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="28px"
+                  unoptimized
+                  aria-hidden
+                />
+              </span>
+              Create account
+            </Link>
+            <Link
+              href="/forgot-password"
+              className="self-center text-sm text-[var(--cyan)] hover:underline"
+            >
+              Forgot password
+            </Link>
+          </div>
+        </form>
+
+        <div className="border-t border-[var(--stroke)] pt-4">
+          <p className="mb-2 text-xs uppercase tracking-wide text-[var(--text-dim)]">
+            Social (scaffold if keys missing)
+          </p>
+          <div className="grid gap-2 sm:grid-cols-3">
+            {providers
+              .filter((p) => p.id === "google" || p.id === "discord" || p.id === "apple")
+              .map((p) => (
+                <a
+                  key={p.id}
+                  href={oauthHref(p.id)}
+                  className="btn-secondary focus-ring justify-start gap-3 px-4 py-3 text-left text-sm"
+                  onClick={() => playSfx("ui.click")}
+                >
+                  <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-lg border border-[rgba(61,231,255,0.22)] bg-[rgba(10,14,24,0.65)]">
+                    <AuthProviderIcon id={p.id} className="h-10 w-10 rounded-lg" />
+                  </span>
+                  <span className="text-white">{p.label}</span>
+                </a>
+              ))}
+          </div>
+        </div>
+
+        <div className="border-t border-[var(--stroke)] pt-4">
+          <div className="flex items-start gap-3">
+            <span className="relative mt-0.5 h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-[rgba(61,231,255,0.22)]">
+              <Image
+                src={authSectionThumbPath("wallet")}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="48px"
+                unoptimized
+                aria-hidden
+              />
+            </span>
             <div className="min-w-0 flex-1">
               <p className="text-xs uppercase tracking-wide text-[var(--text-dim)]">
-                Optional · Web3
+                Optional · link wallet after account
               </p>
               <p className="mt-2 text-sm text-[var(--text-muted)]">
                 {plan?.copy.walletLater ??
-                  "Wallet connect is optional for soft-currency play. Link when you are ready for Web3 features."}
+                  "Wallet connect is for Web3 features only — it does not replace your account."}
               </p>
-              <div className="mt-3 flex flex-wrap items-center gap-3">
+              <div className="mt-3">
                 <WalletConnectButton />
-                <Link href="/dashboard" className="btn-primary focus-ring text-sm">
-                  Continue to Dashboard
-                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="panel relative space-y-4 bg-[rgba(8,12,20,0.82)] p-5 backdrop-blur-[3px] md:p-6">
-        <div className="flex flex-wrap items-end justify-between gap-2">
-          <h2 className="font-display text-lg text-white">Journey</h2>
-          <p className="text-xs text-[var(--text-dim)]">Wallet stays optional until you need it</p>
-        </div>
-        <ol className="grid gap-3 sm:grid-cols-2">
-          {steps.map((step, index) => {
-            const visual = JOURNEY_VISUALS[step] ?? {
-              src: "/assets/auth/journey/06-play.svg",
-              alt: step,
-              blurb: step.replaceAll("_", " "),
-            };
-            return (
-              <li
-                key={step}
-                className="flex gap-3 rounded-xl border border-[rgba(61,231,255,0.14)] bg-[rgba(6,10,18,0.55)] p-3"
-              >
-                <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg border border-[rgba(61,231,255,0.22)] bg-[rgba(10,16,28,0.95)] shadow-[inset_0_0_18px_rgba(61,231,255,0.12)]">
-                  {/* Dedicated journey thumbs — plain img so SVG marks always paint */}
-                  <img
-                    src={visual.src}
-                    alt=""
-                    width={56}
-                    height={56}
-                    className="h-full w-full object-cover"
-                    draggable={false}
-                  />
-                  <span className="absolute left-1 top-1 z-[1] flex h-5 min-w-5 items-center justify-center rounded-md bg-[rgba(7,11,22,0.88)] px-1 text-[10px] font-semibold text-[var(--cyan)] ring-1 ring-[rgba(61,231,255,0.35)]">
-                    {index + 1}
-                  </span>
-                </div>
-                <div className="min-w-0 pt-0.5">
-                  <p className="text-sm font-medium capitalize text-white">
-                    {step.replaceAll("_", " ")}
-                  </p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">{visual.blurb}</p>
-                </div>
-              </li>
-            );
-          })}
-        </ol>
-      </section>
-
       <p className="text-xs text-[var(--text-dim)]">
-        Soft play does not require a wallet. Claims and SOL marketplace need a linked wallet when
-        those flags are enabled.
-      </p>
-
-      <p className="text-xs text-[var(--text-muted)]">
-        Multiplayer backend (Nakama) guest/email bridge lives under{" "}
-        <Link href="/settings/nakama" className="text-[var(--cyan)] hover:underline">
-          Settings → Nakama
-        </Link>
-        . It does not replace wallet SIWS or demo guest cookies.
+        After sign-in you&apos;ll finish onboarding (or return to{" "}
+        <code className="text-[var(--cyan)]">{returnUrl}</code>). Live World, battles, hatchery,
+        and marketplace stay unloaded until your session is valid.
       </p>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="p-10 text-sm text-[var(--text-muted)]">Loading…</div>}>
+      <LoginForm />
+    </Suspense>
   );
 }

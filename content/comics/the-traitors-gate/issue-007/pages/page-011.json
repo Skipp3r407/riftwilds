@@ -1,0 +1,137 @@
+{
+  "pageNumber": 11,
+  "storyPageNumber": 7,
+  "bookRole": "story",
+  "title": "Twin Towers",
+  "storyPurpose": "Full reveal of Traitor's Gate across black chasm; guardian statues awaken.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Epic splash: Traitor's Gate — twin ancient black-stone towers, suspended central portal cyan-violet, companion-shaped guardian statues awakening, Rift bridges, low fog, light under floor. Foreground party tiny: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark, egg, Nira, Cael, Aurelia, companions. Balloon-safe top.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Built to catch infiltrators. Remembered every betrayal.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Passage has a price. Truth is currency.",
+          "x": 35,
+          "y": 80,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Aurelia Voss",
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "STONE-WAKE",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p7a",
+      "kind": "speech",
+      "text": "Passage has a price. Truth is currency.",
+      "x": 35,
+      "y": 80,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Aurelia Voss",
+      "readOrder": 1
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p7a",
+      "kind": "narration",
+      "text": "Built to catch infiltrators. Remembered every betrayal.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p7a",
+      "kind": "sfx",
+      "text": "STONE-WAKE",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "truthwing",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Traitor's Gate"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "traitors-gate-exterior",
+    "statues": "awake"
+  },
+  "requiredMoments": [
+    5,
+    6
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 7/25 — Twin Towers. Story purpose: Full reveal of Traitor's Gate across black chasm; guardian statues awaken. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p7a): Epic splash: Traitor's Gate — twin ancient black-stone towers, suspended central portal cyan-violet, companion-shaped guardian statues awakening, Rift bridges, low fog, light under floor. Foreground party tiny: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark, egg, Nira, Cael, Aurelia, companions. Balloon-safe top. Characters: mira-eggwarden, cael-vesper, nira-quill, aurelia-voss. Creatures: spark, bramblefox, mossprig, truthwing, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor's Gate exterior chasm. Time: day. Lighting: black towers cyan portal glow. Continuity: {\"location\": \"traitors-gate-exterior\", \"statues\": \"awake\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Enter verification.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Twin Towers — The Traitor's Gate page 7",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Built to catch infiltrators. Remembered every betrayal.",
+    "SPEECH (Aurelia Voss): Passage has a price. Truth is currency.",
+    "SFX: STONE-WAKE"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Built to catch infiltrators. Remembered every betrayal.",
+    "SPEECH (Aurelia Voss): Passage has a price. Truth is currency.",
+    "SFX: STONE-WAKE"
+  ],
+  "codexLinks": [
+    "traitors-gate",
+    "oathwarden-seraph"
+  ],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p011",
+  "cleanArtRel": "generated/raw-art/page-011.webp",
+  "letteredArtRel": "generated/lettered-pages/page-011.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-011.webp"
+}

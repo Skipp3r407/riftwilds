@@ -1,0 +1,124 @@
+{
+  "pageNumber": 5,
+  "bookRole": "story",
+  "title": "Roads Beneath Lanterns",
+  "storyPurpose": "Full splash: team sees Lanternveil Circus at twilight; Spark glows.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p1a",
+      "description": "Full-bleed splash: Lanternveil Traveling Circus at twilight — floating lanterns, painted deep-blue ember-gold wagons, crowds, companion performers, grand pavilion, Riftwild hills behind. Mira Eggwarden and companions in foreground; Spark glowing cyan-gold reacting to lanterns. Balloon-safe top.",
+      "camera": "wide establishing low angle",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Some places are built on roads. Others build the road beneath them.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 70
+        },
+        {
+          "kind": "sfx",
+          "text": "lantern-hum…",
+          "x": 62,
+          "y": 40,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*bright pulse!*",
+          "x": 30,
+          "y": 78,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p1a",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*bright pulse!*",
+      "x": 30,
+      "y": 78,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p1a",
+      "kind": "narration",
+      "text": "Some places are built on roads. Others build the road beneath them.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 70
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p1a",
+      "kind": "sfx",
+      "text": "lantern-hum…",
+      "x": 62,
+      "y": 40,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet"
+  ],
+  "continuity": {
+    "location": "Lanternveil approach",
+    "time": "twilight",
+    "spark": {
+      "emotion": "wonder-alert",
+      "glow": "lantern-resonance"
+    },
+    "mira": {
+      "stance": "cautious-curious"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 1/25 — Roads Beneath Lanterns. Story purpose: Full splash: team sees Lanternveil Circus at twilight; Spark glows. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-bleed splash: Lanternveil Traveling Circus at twilight — floating lanterns, painted deep-blue ember-gold wagons, crowds, companion performers, grand pavilion, Riftwild hills behind. Mira Eggwarden and companions in foreground; Spark glowing cyan-gold reacting to lanterns. Balloon-safe top. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling, wisplet. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: circus approach road. Time: twilight. Weather: soft magical fog. Lighting: twilight ember + cyan lanterns. Continuity: {\"location\":\"Lanternveil approach\",\"time\":\"twilight\",\"spark\":{\"emotion\":\"wonder-alert\",\"glow\":\"lantern-resonance\"},\"mira\":{\"stance\":\"cautious-curious\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Enter the circus.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Roads Beneath Lanterns — The Traveling Circus page 1",
+  "atmosphere": "festival",
+  "transcript": [
+    "NARRATION: Some places are built on roads. Others build the road beneath them.",
+    "SFX: lantern-hum…",
+    "CREATURE (Spark): *bright pulse!*"
+  ],
+  "storyPageNumber": 1,
+  "id": "the-traveling-circus-issue-003-p005",
+  "cleanArtRel": "generated/raw-art/page-005.png",
+  "letteredArtRel": "generated/lettered-pages/page-005.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-005.webp"
+}

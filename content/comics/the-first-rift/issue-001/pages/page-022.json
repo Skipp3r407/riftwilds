@@ -1,0 +1,51 @@
+{
+  "pageNumber": 22,
+  "id": "the-first-rift-issue-001-p022",
+  "role": "story",
+  "title": null,
+  "layout": "narrative",
+  "atmosphere": "night",
+  "beat": "Crown-shard refused",
+  "artPrompt": "Night confrontation page, no text. Crown courier offers bright shard; Elara shields egg; wrong gold light vs soft egg cyan. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "A stranger offered a crown-shard for the egg — bright, legal-looking, wrong.",
+          "x": 50,
+          "y": 12
+        },
+        {
+          "kind": "speech",
+          "speaker": "Crown courier",
+          "text": "Name a price. The realm will keep it safer than mud.",
+          "x": 70,
+          "y": 40,
+          "tail": "down-left"
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "If safety needs a price, it is already theft.",
+          "x": 30,
+          "y": 62,
+          "tail": "up"
+        },
+        {
+          "kind": "sfx",
+          "text": "shard reject — clink",
+          "x": 55,
+          "y": 82
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-022.png",
+  "letteredArtRel": "generated/lettered/page-022.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-022.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

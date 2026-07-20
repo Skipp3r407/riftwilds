@@ -1,0 +1,195 @@
+{
+  "pageNumber": 17,
+  "storyPageNumber": 13,
+  "bookRole": "story",
+  "title": "In the Kit",
+  "storyPurpose": "Thornling finds Meridian transmitter in Cael's companion-care kit; Cael breaks.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p13a",
+      "description": "Thornling pulls small Meridian signal device from Cael's lantern-marked companion-care pouch — identical to #6 token tech.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*found!*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Thornling",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "CLICK",
+          "x": 60,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p13b",
+      "description": "Wide: device glowing three-arc Meridian sigil; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif sees it and crumples emotionally; Mira frozen; Nira eyes widen.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Don't— please. Not like this.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 38,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Cael.",
+          "x": 70,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p13c",
+      "description": "Close on Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif tears under half-mask; Spark resonance aching; egg pulsing hard.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "text": "They have Lumenhare.",
+          "x": 50,
+          "y": 45,
+          "tail": null,
+          "maxWidthPct": 36,
+          "speaker": "Cael Vesper",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p13a",
+      "kind": "creature",
+      "text": "*found!*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Thornling",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p13b",
+      "kind": "speech",
+      "text": "Don't— please. Not like this.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 38,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p13b",
+      "kind": "speech",
+      "text": "Cael.",
+      "x": 70,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p13c",
+      "kind": "whisper",
+      "text": "They have Lumenhare.",
+      "x": 50,
+      "y": 45,
+      "tail": null,
+      "maxWidthPct": 36,
+      "speaker": "Cael Vesper",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p13a",
+      "kind": "sfx",
+      "text": "CLICK",
+      "x": 60,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "thornling",
+    "spark",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Traitor's Gate — Verification Chamber"
+  ],
+  "artifacts": [
+    "traitor-transmitter"
+  ],
+  "continuity": {
+    "traitor": "cael-revealed",
+    "captive": "lumenhare",
+    "device": "found"
+  },
+  "requiredMoments": [
+    12,
+    13,
+    14
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 13/25 — In the Kit. Story purpose: Thornling finds Meridian transmitter in Cael's companion-care kit; Cael breaks. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p13a): Thornling pulls small Meridian signal device from Cael's lantern-marked companion-care pouch — identical to #6 token tech. Panel 2 (p13b): Wide: device glowing three-arc Meridian sigil; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif sees it and crumples emotionally; Mira frozen; Nira eyes widen. Panel 3 (p13c): Close on Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif tears under half-mask; Spark resonance aching; egg pulsing hard. Characters: mira-eggwarden, cael-vesper, nira-quill, aurelia-voss. Creatures: thornling, spark, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"traitor\": \"cael-revealed\", \"captive\": \"lumenhare\", \"device\": \"found\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Confession.",
+  "letteringInstructions": "Emotional restraint; short lines; tails clear of tears.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "In the Kit — The Traitor's Gate page 13",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Thornling): *found!*",
+    "SFX: CLICK",
+    "SPEECH (Cael Vesper): Don't— please. Not like this.",
+    "SPEECH (Mira Eggwarden): Cael.",
+    "WHISPER (Cael Vesper): They have Lumenhare."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Thornling): *found!*",
+    "SFX: CLICK",
+    "SPEECH (Cael Vesper): Don't— please. Not like this.",
+    "SPEECH (Mira Eggwarden): Cael.",
+    "WHISPER (Cael Vesper): They have Lumenhare."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p017",
+  "cleanArtRel": "generated/raw-art/page-017.webp",
+  "letteredArtRel": "generated/lettered-pages/page-017.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-017.webp"
+}

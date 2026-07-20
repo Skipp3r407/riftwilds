@@ -1,0 +1,159 @@
+{
+  "pageNumber": 17,
+  "storyPageNumber": 13,
+  "bookRole": "story",
+  "title": "Underground Archive",
+  "storyPurpose": "Team reaches Aurelia's underground archive beneath the bazaar.",
+  "layout": {
+    "type": "two-wide",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p13a",
+      "description": "Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract opening sealed archive door under Aurelia's contract; rows of teal glass genealogy records and route seals.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*keyshift*",
+          "x": 45,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Lockjaw Wisp",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Meridian thinks this auction is theirs. It is mine.",
+          "x": 55,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Aurelia Voss",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p13b",
+      "description": "Mira reading First Rift architect references — Riftwright title redacted; Seris's ledger chained to vault.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Every door had a architect. The name was sealed.",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "vault-CHAIN",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p13a",
+      "kind": "creature",
+      "text": "*keyshift*",
+      "x": 45,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Lockjaw Wisp",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p13a",
+      "kind": "speech",
+      "text": "Meridian thinks this auction is theirs. It is mine.",
+      "x": 55,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Aurelia Voss",
+      "readOrder": 1
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p13b",
+      "kind": "narration",
+      "text": "Every door had a architect. The name was sealed.",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p13b",
+      "kind": "sfx",
+      "text": "vault-CHAIN",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "lockjaw-wisp",
+    "echoquill"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "underground archive",
+    "riftwright": "title-teased"
+  },
+  "requiredMoments": [
+    23
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 13/25 — Underground Archive. Story purpose: Team reaches Aurelia's underground archive beneath the bazaar. Layout: two-wide. 2 panels with clear inked gutters. Panel 1 (p13a): Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract opening sealed archive door under Aurelia's contract; rows of teal glass genealogy records and route seals. Panel 2 (p13b): Mira reading First Rift architect references — Riftwright title redacted; Seris's ledger chained to vault. Characters: mira-eggwarden, aurelia-voss. Creatures: lockjaw-wisp, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"underground archive\", \"riftwright\": \"title-teased\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "The trap springs.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Underground Archive — The Merchant's Secret page 13",
+  "atmosphere": "market",
+  "transcript": [
+    "CREATURE (Lockjaw Wisp): *keyshift*",
+    "SPEECH (Aurelia Voss): Meridian thinks this auction is theirs. It is mine.",
+    "NARRATION: Every door had a architect. The name was sealed.",
+    "SFX: vault-CHAIN"
+  ],
+  "a11yTranscript": [
+    "CREATURE (Lockjaw Wisp): *keyshift*",
+    "SPEECH (Aurelia Voss): Meridian thinks this auction is theirs. It is mine.",
+    "NARRATION: Every door had a architect. The name was sealed.",
+    "SFX: vault-CHAIN"
+  ],
+  "codexLinks": [
+    "riftwright"
+  ],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p017",
+  "cleanArtRel": "generated/raw-art/page-017.webp",
+  "letteredArtRel": "generated/lettered-pages/page-017.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-017.webp"
+}

@@ -1,0 +1,46 @@
+{
+  "updatedAt": "2026-07-20T15:35:31.168Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "7": {
+      "pageNumber": 7,
+      "role": "story",
+      "title": "Not a Moon",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-shattered-star/issue-010/pages/page-007.webp",
+      "error": null
+    },
+    "10": {
+      "pageNumber": 10,
+      "role": "story",
+      "title": "Star Gate",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-shattered-star/issue-010/pages/page-010.webp",
+      "error": null
+    },
+    "25": {
+      "pageNumber": 25,
+      "role": "story",
+      "title": "Celestial Archives",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-shattered-star/issue-010/pages/page-025.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 0,
+    "letterOk": 3,
+    "grokOk": 0,
+    "proceduralOk": 0,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-010/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-010/generate-and-letter.mjs --force"
+  }
+}

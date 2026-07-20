@@ -68,11 +68,19 @@ export function GameImage({
   const fitClass =
     objectFit === "cover"
       ? "object-cover object-center"
-      : "object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]";
+      : "object-contain object-center drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]";
 
   const onError = () => {
     const pathOnly = current.split("?")[0] ?? current;
-    // webp thumb → png thumb → master png → svg → placeholder
+    // plate webp → plate png → legacy webp → legacy png → master png → svg → placeholder
+    if (pathOnly.endsWith(".plate.webp")) {
+      setCurrent(pathOnly.replace(/\.plate\.webp$/i, ".plate.png"));
+      return;
+    }
+    if (pathOnly.endsWith(".plate.png")) {
+      setCurrent(pathOnly.replace(/\.plate\.png$/i, ".webp"));
+      return;
+    }
     if (pathOnly.endsWith(".webp")) {
       setCurrent(pathOnly.replace(/\.webp$/i, ".png"));
       return;

@@ -1,0 +1,67 @@
+{
+  "pageNumber": 15,
+  "id": "the-first-rift-issue-001-p015",
+  "role": "story",
+  "title": null,
+  "layout": "three-stack",
+  "atmosphere": "dusk",
+  "beat": "Thornling — Sprouting Energy",
+  "artPrompt": "Three-stack panels, no text. Thornling (bristly plant Riftling) releases Sprouting Energy — vines burst to tangle shadow-shard scavengers away from the egg without killing. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "caption": "Ability — Sprouting Energy",
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Thornling's answer is growth with teeth — Sprouting Energy to trip cruelty, not crown it.",
+          "x": 50,
+          "y": 18
+        },
+        {
+          "kind": "sfx",
+          "text": "CRACKLE-VASH",
+          "x": 70,
+          "y": 50
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Scavenger",
+          "text": "Just a shell—!",
+          "x": 30,
+          "y": 40,
+          "tail": "down"
+        },
+        {
+          "kind": "shout",
+          "speaker": "Elara Venn",
+          "text": "It is a promise!",
+          "x": 65,
+          "y": 55,
+          "tail": "down-left"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "creature",
+          "speaker": "Thornling",
+          "text": "*root-snap*",
+          "x": 50,
+          "y": 50
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-015.png",
+  "letteredArtRel": "generated/lettered/page-015.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-015.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

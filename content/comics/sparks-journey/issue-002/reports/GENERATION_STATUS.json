@@ -1,0 +1,12 @@
+{
+  "updatedAt": "2026-07-20T15:09:41.625Z",
+  "from": 1,
+  "to": 38,
+  "artReady": 38,
+  "lettered": 38,
+  "blocked": 0,
+  "resume": "npx tsx scripts/comics/run-issue-002-pipeline.mts --from=1 --to=38",
+  "resumeArt": "COMIC_IMAGE_PROVIDER=grok XAI_API_KEY=… npx tsx scripts/comics/run-issue-002-pipeline.mts --from=1 --to=38",
+  "resumePlaceholder": "npx tsx scripts/comics/run-issue-002-pipeline.mts --seed-placeholder --from=1 --to=38",
+  "letteringOnly": "npx tsx scripts/comics/run-issue-002-pipeline.mts --lettering-only --from=1 --to=38"
+}

@@ -1,0 +1,86 @@
+{
+  "pageNumber": 34,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Ability Spotlight — Crown of Thunder",
+  "storyPurpose": "Ability Spotlight — Crown of Thunder",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ability",
+      "description": "Ability spotlight: Thundervane creating storm field that shelters allies and knocks back corrupted flyers; empty rules zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "ABILITY — CROWN OF THUNDER",
+          "x": 50,
+          "y": 14,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Create a storm field that damages enemies, protects allies, and changes movement rules for a limited duration.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ability",
+      "kind": "caption",
+      "text": "ABILITY — CROWN OF THUNDER",
+      "x": 50,
+      "y": 14,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "ability",
+      "kind": "narration",
+      "text": "Create a storm field that damages enemies, protects allies, and changes movement rules for a limited duration.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [
+    "thundervane"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Storm King Issue #5 — Ability Spotlight — Crown of Thunder. Ability spotlight: Thundervane creating storm field that shelters allies and knocks back corrupted flyers; empty rules zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Storm King: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ability Spotlight — Crown of Thunder",
+  "atmosphere": "storm",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: ABILITY — CROWN OF THUNDER",
+    "NARRATION: Create a storm field that damages enemies, protects allies, and changes movement rules for a limited duration."
+  ],
+  "a11yTranscript": [
+    "CAPTION: ABILITY — CROWN OF THUNDER",
+    "NARRATION: Create a storm field that damages enemies, protects allies, and changes movement rules for a limited duration."
+  ],
+  "id": "the-storm-king-issue-005-p034",
+  "cleanArtRel": "generated/raw-art/page-034.webp",
+  "letteredArtRel": "generated/lettered-pages/page-034.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-034.webp"
+}

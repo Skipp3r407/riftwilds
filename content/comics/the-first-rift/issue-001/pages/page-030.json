@@ -1,0 +1,41 @@
+{
+  "pageNumber": 30,
+  "id": "the-first-rift-issue-001-p030",
+  "role": "teaser",
+  "title": "Next: Spark's Journey",
+  "layout": "narrative",
+  "atmosphere": "dusk",
+  "beat": "Next: Spark's Journey",
+  "artPrompt": "Teaser plate, no text. Glowpup Spark on mossy hatchery path; Mira silhouette. Warm curiosity. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "NEXT ISSUE",
+          "x": 50,
+          "y": 20
+        },
+        {
+          "kind": "caption",
+          "text": "SPARK'S JOURNEY",
+          "x": 50,
+          "y": 40
+        },
+        {
+          "kind": "narration",
+          "text": "A Glowpup learns the road between hatchery and heart.",
+          "x": 50,
+          "y": 65
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-030.png",
+  "letteredArtRel": "generated/lettered/page-030.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-030.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

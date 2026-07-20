@@ -1,0 +1,213 @@
+{
+  "pageNumber": 24,
+  "storyPageNumber": 20,
+  "bookRole": "story",
+  "title": "Ledger Doors",
+  "storyPurpose": "Seris weaponizes ledger; Nira destroys one route.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p20a",
+      "description": "Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal and royal trade ledger opening royal trade ledger — teal door maps projecting across auction hall.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Every door Tempestria sealed — now mine.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Seris Vale",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "door-MAP",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p20b",
+      "description": "Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes, Meridian disloyalty exposed slashing one route sigil with quill-knife — map segment burning out.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Not all of them.",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "route-BURN",
+          "x": 65,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p20c",
+      "description": "Seris staggered; Aurelia coldly noting lost leverage.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "She closed a door I wanted shut slower.",
+          "x": 55,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Aurelia Voss",
+          "readOrder": 4
+        },
+        {
+          "kind": "speech",
+          "text": "Close the cages next.",
+          "x": 50,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p20a",
+      "kind": "speech",
+      "text": "Every door Tempestria sealed — now mine.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Seris Vale",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p20b",
+      "kind": "speech",
+      "text": "Not all of them.",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p20c",
+      "kind": "speech",
+      "text": "She closed a door I wanted shut slower.",
+      "x": 55,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Aurelia Voss",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p20c",
+      "kind": "speech",
+      "text": "Close the cages next.",
+      "x": 50,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p20a",
+      "kind": "sfx",
+      "text": "door-MAP",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "p20b",
+      "kind": "sfx",
+      "text": "route-BURN",
+      "x": 65,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "nira-quill",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [
+    "royal-trade-ledger"
+  ],
+  "continuity": {
+    "location": "auction hall",
+    "ledger": "weaponized",
+    "nira": "destroyed-one-route"
+  },
+  "requiredMoments": [
+    30,
+    31
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 20/25 — Ledger Doors. Story purpose: Seris weaponizes ledger; Nira destroys one route. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p20a): Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal and royal trade ledger opening royal trade ledger — teal door maps projecting across auction hall. Panel 2 (p20b): Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes, Meridian disloyalty exposed slashing one route sigil with quill-knife — map segment burning out. Panel 3 (p20c): Seris staggered; Aurelia coldly noting lost leverage. Characters: mira-eggwarden, seris-vale, nira-quill, aurelia-voss. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"auction hall\", \"ledger\": \"weaponized\", \"nira\": \"destroyed-one-route\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Seal the vault.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ledger Doors — The Merchant's Secret page 20",
+  "atmosphere": "market",
+  "transcript": [
+    "SPEECH (Seris Vale): Every door Tempestria sealed — now mine.",
+    "SFX: door-MAP",
+    "SPEECH (Nira Quill): Not all of them.",
+    "SFX: route-BURN",
+    "SPEECH (Aurelia Voss): She closed a door I wanted shut slower.",
+    "SPEECH (Mira Eggwarden): Close the cages next."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Seris Vale): Every door Tempestria sealed — now mine.",
+    "SFX: door-MAP",
+    "SPEECH (Nira Quill): Not all of them.",
+    "SFX: route-BURN",
+    "SPEECH (Aurelia Voss): She closed a door I wanted shut slower.",
+    "SPEECH (Mira Eggwarden): Close the cages next."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p024",
+  "cleanArtRel": "generated/raw-art/page-024.webp",
+  "letteredArtRel": "generated/lettered-pages/page-024.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-024.webp"
+}

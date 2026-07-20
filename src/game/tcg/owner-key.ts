@@ -6,19 +6,21 @@ import {
   isValidGuestToken,
   resolveOwnerKey,
 } from "@/lib/auth/owner-key";
+import { isGuestGameplayAllowed } from "@/lib/auth/account-play-policy";
 import { authDefaults } from "@/lib/config/project";
 
 /** @deprecated Prefer shared `rift_guest` via resolveOwnerKey — kept for legacy cookie reads. */
 export const TCG_GUEST_COOKIE = "tcg_guest";
 
 /**
- * Stable TCG owner identity — same guest key as hatchery / companion grants.
- * Prefer session; then shared `rift_guest`; legacy `tcg_guest` still accepted once.
+ * Stable TCG owner identity.
+ * When account is required, returns unauthorized (no guest mint).
  */
 export async function resolveTcgOwnerKey(): Promise<{
   key: string;
   guestToken: string | null;
   mintedGuest: boolean;
+  authorized: boolean;
 }> {
   const jar = await cookies();
   const session = jar.get(authDefaults.COOKIE_NAME)?.value;
@@ -27,18 +29,27 @@ export async function resolveTcgOwnerKey(): Promise<{
       key: `sess_${session.slice(0, 24)}`,
       guestToken: null,
       mintedGuest: false,
+      authorized: true,
+    };
+  }
+
+  if (!isGuestGameplayAllowed()) {
+    return {
+      key: "",
+      guestToken: null,
+      mintedGuest: false,
+      authorized: false,
     };
   }
 
   const shared = jar.get(GUEST_COOKIE_NAME)?.value;
   if (isValidGuestToken(shared)) {
-    return { key: `guest_${shared}`, guestToken: shared, mintedGuest: false };
+    return { key: `guest_${shared}`, guestToken: shared, mintedGuest: false, authorized: true };
   }
 
-  // Legacy TCG-only cookie — migrate onto shared guest identity.
   const legacy = jar.get(TCG_GUEST_COOKIE)?.value;
   if (isValidGuestToken(legacy)) {
-    return { key: `guest_${legacy}`, guestToken: legacy, mintedGuest: false };
+    return { key: `guest_${legacy}`, guestToken: legacy, mintedGuest: false, authorized: true };
   }
 
   const resolved = await resolveOwnerKey();
@@ -46,6 +57,7 @@ export async function resolveTcgOwnerKey(): Promise<{
     key: resolved.ownerKey,
     guestToken: resolved.guestToken,
     mintedGuest: Boolean(resolved.guestToken),
+    authorized: resolved.authorized,
   };
 }
 
@@ -54,6 +66,7 @@ export async function readTcgOwnerKey(): Promise<string | null> {
   const jar = await cookies();
   const session = jar.get(authDefaults.COOKIE_NAME)?.value;
   if (session) return `sess_${session.slice(0, 24)}`;
+  if (!isGuestGameplayAllowed()) return null;
   const shared = jar.get(GUEST_COOKIE_NAME)?.value;
   if (isValidGuestToken(shared)) return `guest_${shared}`;
   const legacy = jar.get(TCG_GUEST_COOKIE)?.value;
@@ -65,10 +78,9 @@ export function attachTcgGuestCookie(
   res: NextResponse,
   guestToken: string | null,
 ): NextResponse {
+  if (!isGuestGameplayAllowed()) return res;
   if (!isValidGuestToken(guestToken)) return res;
-  // Primary shared cookie (hatchery + TCG binder).
   attachGuestCookie(res, guestToken, GUEST_COOKIE_NAME);
-  // Keep legacy cookie in sync so mid-session clients do not fork identity.
   attachGuestCookie(res, guestToken, TCG_GUEST_COOKIE);
   return res;
 }

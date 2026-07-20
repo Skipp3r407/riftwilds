@@ -1,0 +1,159 @@
+{
+  "pageNumber": 10,
+  "storyPageNumber": 6,
+  "bookRole": "story",
+  "title": "Fog Scouts",
+  "storyPurpose": "Bramblefox detects pursuit; Meridian scout vanishes into Rift fog.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p6a",
+      "description": "Bramblefox frozen, nose to wind, bramble fur raised; Mira signals halt; Thornling on pack.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*track-alert*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "We're not alone.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p6b",
+      "description": "Distant Meridian scout silhouette dissolves into cyan-violet Rift fog; Spirit Moth signals warning flickers.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "FOG-HUSH",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*warn-flash*",
+          "x": 70,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spirit Moth",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p6a",
+      "kind": "creature",
+      "text": "*track-alert*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p6a",
+      "kind": "speech",
+      "text": "We're not alone.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p6b",
+      "kind": "creature",
+      "text": "*warn-flash*",
+      "x": 70,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spirit Moth",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p6b",
+      "kind": "sfx",
+      "text": "FOG-HUSH",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "bramblefox",
+    "spirit-moth",
+    "thornling",
+    "spark"
+  ],
+  "locations": [
+    "Fractured Approaches"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "surveillance": "meridian-scout"
+  },
+  "requiredMoments": [
+    5,
+    6
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 6/25 — Fog Scouts. Story purpose: Bramblefox detects pursuit; Meridian scout vanishes into Rift fog. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p6a): Bramblefox frozen, nose to wind, bramble fur raised; Mira signals halt; Thornling on pack. Panel 2 (p6b): Distant Meridian scout silhouette dissolves into cyan-violet Rift fog; Spirit Moth signals warning flickers. Characters: mira-eggwarden. Creatures: bramblefox, spirit-moth, thornling, spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"surveillance\": \"meridian-scout\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "The Gate appears.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Fog Scouts — The Traitor's Gate page 6",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Bramblefox): *track-alert*",
+    "SPEECH (Mira Eggwarden): We're not alone.",
+    "SFX: FOG-HUSH",
+    "CREATURE (Spirit Moth): *warn-flash*"
+  ],
+  "a11yTranscript": [
+    "CREATURE (Bramblefox): *track-alert*",
+    "SPEECH (Mira Eggwarden): We're not alone.",
+    "SFX: FOG-HUSH",
+    "CREATURE (Spirit Moth): *warn-flash*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p010",
+  "cleanArtRel": "generated/raw-art/page-010.webp",
+  "letteredArtRel": "generated/lettered-pages/page-010.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-010.webp"
+}

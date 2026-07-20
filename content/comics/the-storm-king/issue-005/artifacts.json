@@ -1,0 +1,24 @@
+{
+  "artifacts": [
+    {
+      "id": "storm-engine",
+      "name": "Tempestria Storm Engine",
+      "status": "voluntarily stabilized"
+    },
+    {
+      "id": "lost-city-rift-component",
+      "name": "Lost City Rift Component",
+      "status": "with Seris"
+    },
+    {
+      "id": "royal-trade-ledger",
+      "name": "Royal Trade Ledger",
+      "status": "stolen \u2192 merchant"
+    },
+    {
+      "id": "circus-warded-crystal",
+      "name": "Shellward Crystal",
+      "status": "remains at Lanternveil"
+    }
+  ]
+}

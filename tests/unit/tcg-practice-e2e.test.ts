@@ -96,6 +96,7 @@ describe("practice board end-to-end", () => {
           played += 1;
         }
 
+        if (state.status !== "ACTIVE") break;
         const before = state.events.length;
         applyTcgAction(state, "player", { kind: "END_TURN" });
         for (const ev of state.events.slice(before)) {

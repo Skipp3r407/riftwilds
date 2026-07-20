@@ -33,18 +33,20 @@ export default async function RiftlingCodexSpeciesPage({ params }: Props) {
         ← Riftling Codex
       </Link>
 
-      <header className="panel mt-4 overflow-hidden p-6">
+      <header className="panel mt-4 p-6">
         <div className="relative z-[1] grid gap-6 md:grid-cols-[220px_1fr]">
           <CreatureHabitatPortrait
             speciesSlug={lore.slug}
             speciesName={lore.name}
             nativeRegion={lore.nativeRegion}
+            affinity={lore.affinity}
             aspect="square"
             sizes="220px"
+            className="relative z-[1] w-full shrink-0"
           />
-          <div>
+          <div className="relative z-[1] min-w-0">
             <p className="page-kicker">{lore.affinity}</p>
-            <h1 className="page-title mt-2">{lore.name}</h1>
+            <h1 className="page-title mt-2">{lore.name || lore.slug}</h1>
             <p className="mt-1 text-sm text-[var(--text-muted)]">
               {lore.title} · {lore.pronunciation}
             </p>
@@ -54,7 +56,9 @@ export default async function RiftlingCodexSpeciesPage({ params }: Props) {
                 ? ` · also ${lore.secondaryHabitats.join(", ")}`
                 : ""}
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-white/90">{lore.shortBio}</p>
+            {lore.shortBio ? (
+              <p className="mt-4 text-sm leading-relaxed text-white/90">{lore.shortBio}</p>
+            ) : null}
             <div className="mt-4">
               <HearRiftlingCryButton speciesSlug={lore.slug} label="Hear signature cry" />
             </div>

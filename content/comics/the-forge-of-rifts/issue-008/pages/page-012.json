@@ -1,0 +1,161 @@
+{
+  "pageNumber": 12,
+  "storyPageNumber": 8,
+  "bookRole": "story",
+  "title": "Hidden Blueprints",
+  "storyPurpose": "Spirit Moth discovers hidden blueprint scrolls of Forge original purpose.",
+  "layout": {
+    "type": "two-stack",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p8a",
+      "description": "Spirit Moth lantern-codes unlocking a wall panel; blueprint cylinders roll out — Resonance Keepers, Guardian Constructs, City Engines, Rift Stabilizers illustrated as diagrams (no readable text).",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*code-unlock*",
+          "x": 35,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spirit Moth",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Those aren't weapons.",
+          "x": 60,
+          "y": 55,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p8b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes studying stabilizer diagram; egg glow syncing to blueprint lines; Spark watching with dawning understanding.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "They built this to heal unstable dimensions.",
+          "x": 45,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "narration",
+          "text": "Someone later taught the machine how to wound.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p8a",
+      "kind": "creature",
+      "text": "*code-unlock*",
+      "x": 35,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spirit Moth",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p8a",
+      "kind": "speech",
+      "text": "Those aren't weapons.",
+      "x": 60,
+      "y": 55,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p8b",
+      "kind": "speech",
+      "text": "They built this to heal unstable dimensions.",
+      "x": 45,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p8b",
+      "kind": "narration",
+      "text": "Someone later taught the machine how to wound.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "spirit-moth"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [
+    "forge-blueprints"
+  ],
+  "continuity": {
+    "location": "blueprint alcove",
+    "forgePurpose": "heal-not-weapon"
+  },
+  "requiredMoments": [
+    7
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 8/25 — Hidden Blueprints. Story purpose: Spirit Moth discovers hidden blueprint scrolls of Forge original purpose. Layout: two-stack. 2 panels with clear inked gutters. Panel 1 (p8a): Spirit Moth lantern-codes unlocking a wall panel; blueprint cylinders roll out — Resonance Keepers, Guardian Constructs, City Engines, Rift Stabilizers illustrated as diagrams (no readable text). Panel 2 (p8b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes studying stabilizer diagram; egg glow syncing to blueprint lines; Spark watching with dawning understanding. Characters: mira-eggwarden, cael-vesper. Creatures: spark, spirit-moth. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"blueprint alcove\", \"forgePurpose\": \"heal-not-weapon\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Incubator Alpha.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Hidden Blueprints — The Forge of Rifts page 8",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Spirit Moth): *code-unlock*",
+    "SPEECH (Cael Vesper): Those aren't weapons.",
+    "SPEECH (Mira Eggwarden): They built this to heal unstable dimensions.",
+    "NARRATION: Someone later taught the machine how to wound."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Spirit Moth): *code-unlock*",
+    "SPEECH (Cael Vesper): Those aren't weapons.",
+    "SPEECH (Mira Eggwarden): They built this to heal unstable dimensions.",
+    "NARRATION: Someone later taught the machine how to wound."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p012",
+  "cleanArtRel": "generated/raw-art/page-012.webp",
+  "letteredArtRel": "generated/lettered-pages/page-012.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-012.webp"
+}

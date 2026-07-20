@@ -1,0 +1,39 @@
+{
+  "locations": [
+    {
+      "id": "gilded-crossroads",
+      "name": "Gilded Crossroads",
+      "blurb": "Moving bazaar via portal engine"
+    },
+    {
+      "id": "central-exchange",
+      "name": "Central Exchange",
+      "blurb": "Legal trade floor \u2014 weapons sheathed"
+    },
+    {
+      "id": "rescue-shelter-lane",
+      "name": "Rescue Shelter Lane",
+      "blurb": "Compact-stamped legal care"
+    },
+    {
+      "id": "illegal-holding-pens",
+      "name": "Illegal Holding Pens",
+      "blurb": "Trafficking violation"
+    },
+    {
+      "id": "underground-archive",
+      "name": "Underground Archive",
+      "blurb": "Aurelia's genealogy vault"
+    },
+    {
+      "id": "private-auction-chamber",
+      "name": "Private Auction Chamber",
+      "blurb": "Meridian trap floor"
+    },
+    {
+      "id": "portal-engine-core",
+      "name": "Portal Engine Core",
+      "blurb": "Relocates entire bazaar"
+    }
+  ]
+}

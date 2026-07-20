@@ -3,7 +3,7 @@
   "provider": "none",
   "voiceId": "21m00Tcm4TlvDq8ikWAM",
   "modelId": "eleven_multilingual_v2",
-  "generatedAt": "2026-07-19T16:50:06.069Z",
+  "generatedAt": "2026-07-20T14:09:12.560Z",
   "tip": "Set ELEVENLABS_API_KEY then re-run npm run assets:narrate (see docs/audio/ELEVENLABS_NARRATION.md).",
   "issues": [
     {
@@ -15,147 +15,147 @@
           "pageNumber": 1,
           "file": "page-01.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-01.mp3",
-          "text": "The sky tears\n\nAeryndra's Prime Gateway screamed once — then the world learned how to layer.",
+          "text": "The First Rift\n\nLegends of the Rift · Issue #1\n\nWhen the Prime broke, a courier chose to keep.",
           "status": "skipped"
         },
         {
           "pageNumber": 2,
           "file": "page-02.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-02.mp3",
-          "text": "Nine days before the Commons had a name\n\nRoads crossed deserts that had never met forests.\n\nElara Venn says: The egg is warm. That is enough to keep walking.\n\nElara Venn thinks: If I name myself hero, I will fail the small thing in my arms.\n\nStranger says: Take the crown road — safer.\n\nElara Venn says: Safer for whom?",
+          "text": "Inside cover\n\nRiftwilds Comic Publishing — original fantasy. No crypto required to read.\n\nCredits & cosmetics may unlock along the way. The story itself stays free.",
           "status": "skipped"
         },
         {
           "pageNumber": 3,
           "file": "page-03.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-03.mp3",
-          "text": "She shared waybread with a child who had lost a name.\n\nElara Venn says: Call the creature yours to keep — not yours to own.\n\nCodex echo: Waybread on the First Night",
+          "text": "The First Rift\n\nIssue #1\n\nElara Venn carries a damaged egg through the Fracture's first nights and names the path of keeping at the Riftstone.\n\nSeries says: Elara Venn · First Riftling · Bramblefox · Mossprig",
           "status": "skipped"
         },
         {
           "pageNumber": 4,
           "file": "page-04.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-04.mp3",
-          "text": "Gateway Hearts\n\nCodex fragment — recovered from the margin.\n\nGateway Hearts: Hearts were living cores. Stones are travel shards. The Commons Riftstone is a fragment of the Prime — maps of places not yet found.",
+          "text": "Credits\n\nStory · Riftwilds Lore Desk\n\nArt · Commons Archive (official plates)\n\nLettering · Publishing Engine\n\nCanon alignment: World Codex · Riftling Codex · Legends of the Rift TCG.",
           "status": "skipped"
         },
         {
           "pageNumber": 5,
           "file": "page-05.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-05.mp3",
-          "text": "The Riftstone claims mud\n\nFarmers, healers, and Keepers gathered where stable paths still intersected.",
+          "text": "Previously in the Riftwilds…\n\nAeryndra's Prime Gateway failed. Layered roads learned to rewrite themselves. A courier carried a warm egg toward mud that would become the Commons.\n\nAge of First Eggs → Founding of the Commons.",
           "status": "skipped"
         },
         {
           "pageNumber": 6,
           "file": "page-06.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-06.mp3",
-          "text": "Mira (young) says: Is it… looking at me?\n\nElara Venn says: It is remembering the world. Help it stay gentle.\n\nThe Soft Exodus had closed into eggs. Battle culture would come later.\n\nVillage elder says: What do we call you?\n\nElara Venn says: Courier. Keeper, if the egg agrees.\n\nSecret symbol: FIRST-LIGHT-01\n\nFirst Riftling thinks: …keep…\n\nOriginal IP note: Riftlings are living archives — not weapons-first. Preservation before prowess.",
+          "text": "The sky tears\n\nAeryndra's Prime Gateway screamed once — then the world learned how to layer.",
           "status": "skipped"
         },
         {
           "pageNumber": 7,
           "file": "page-07.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-07.mp3",
-          "text": "Years soft-shifted. Elara's bond slowed her aging — Spirit bleed, not magic vanity.\n\nElara Venn says: New Keepers still arrive with empty hands and full fear.\n\nElara Venn says: Good. Fear means they noticed the egg is becoming.\n\nPlay this chapter in Live World when you are ready.",
+          "text": "Nine days before the Commons had a name\n\nRoads crossed deserts that had never met forests.\n\nElara Venn says: The egg is warm. That is enough to keep walking.\n\nElara Venn thinks: If I name myself hero, I will fail the small thing in my arms.\n\nStranger says: Take the crown road — safer.\n\nElara Venn says: Safer for whom?",
           "status": "skipped"
         },
         {
           "pageNumber": 8,
           "file": "page-08.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-08.mp3",
-          "text": "Mud took bootprints. The Riftstone took names.\n\nHealer says: We can raise walls. Or we can raise Keepers.\n\nElara Venn says: Raise Keepers who know which wall is a cradle.",
+          "text": "She shared waybread with a child who had lost a name.\n\nElara Venn says: Call the creature yours to keep — not yours to own.\n\nCodex echo: Waybread on the First Night",
           "status": "skipped"
         },
         {
           "pageNumber": 9,
           "file": "page-09.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-09.mp3",
-          "text": "Child says: Will the egg leave if I am scared?\n\nElara Venn says: Fear is allowed. Force is not.\n\nThat was the first Compact law — spoken before ink existed.\n\nFirst Riftling thinks: …stay…",
+          "text": "Gateway Hearts\n\nCodex fragment — recovered from the margin.\n\nGateway Hearts: Hearts were living cores. Stones are travel shards. The Commons Riftstone is a fragment of the Prime — maps of places not yet found.",
           "status": "skipped"
         },
         {
           "pageNumber": 10,
           "file": "page-10.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-10.mp3",
-          "text": "On the seventh night the Fracture roads rearranged again.\n\nScout says: East gate is west. West gate is… soup.\n\nElara Venn says: Then we walk by warmth, not by map.\n\nFirst Riftling thinks: …warm…\n\nCodex stub: Fracture roads",
+          "text": "The Riftstone claims mud\n\nFarmers, healers, and Keepers gathered where stable paths still intersected.",
           "status": "skipped"
         },
         {
           "pageNumber": 11,
           "file": "page-11.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-11.mp3",
-          "text": "A stranger offered a crown-shard for the egg — bright, legal-looking, wrong.\n\nCrown courier says: Name a price. The realm will keep it safer than mud.\n\nElara Venn says: The egg is not inventory. Leave.",
+          "text": "Mira (young) says: Is it… looking at me?\n\nElara Venn says: It is remembering the world. Help it stay gentle.\n\nThe Soft Exodus had closed into eggs. Battle culture would come later.\n\nVillage elder says: What do we call you?\n\nElara Venn says: Courier. Keeper, if the egg agrees.\n\nSecret symbol: FIRST-LIGHT-01\n\nFirst Riftling thinks: …keep…\n\nOriginal IP note: Riftlings are living archives — not weapons-first. Preservation before prowess.",
           "status": "skipped"
         },
         {
           "pageNumber": 12,
           "file": "page-12.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-12.mp3",
-          "text": "Soft Exodus fragment\n\nCodex fragment — recovered from the margin.\n\nSoft Exodus fragment: When the Prime tore, living stories fled into shells. First Riftlings are archives that chose caretakers — not weapons that chose masters.",
+          "text": "Forest Bond — living vine-light\n\nAbility tease · Forest Bond\n\nWhen Bramblefox chooses a Keeper, the grove answers with green thread — Forest Bond, not a leash.\n\nElara Venn says: It agreed. That is rarer than glowing.\n\nTease card: Bramblefox · Deck Atelier · Codex family-bramblefox",
           "status": "skipped"
         },
         {
           "pageNumber": 13,
           "file": "page-13.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-13.mp3",
-          "text": "Village elder says: We will call this place Commons — shared ground.\n\nElara Venn says: Shared duty. Shared keeping.\n\nThe Riftstone accepted mud, names, and a courier who refused a throne.\n\nFirst Riftling thinks: …home…",
+          "text": "Years soft-shifted. Elara's bond slowed her aging — Spirit bleed, not magic vanity.\n\nElara Venn says: New Keepers still arrive with empty hands and full fear.\n\nElara Venn says: Good. Fear means they noticed the egg is becoming.\n\nPlay this chapter in Live World when you are ready.",
           "status": "skipped"
         },
         {
           "pageNumber": 14,
           "file": "page-14.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-14.mp3",
-          "text": "Something listens beyond the tear\n\nAs the Commons named itself, a second pulse answered from unmapped dark — not crown, not merchant. Cliffhanger: the Fracture was not finished speaking.",
+          "text": "Mud took bootprints. The Riftstone took names.\n\nHealer says: We can raise walls. Or we can raise Keepers.\n\nElara Venn says: Raise Keepers who know which wall is a cradle.",
           "status": "skipped"
         },
         {
           "pageNumber": 15,
           "file": "page-15.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-15.mp3",
-          "text": "Elara Venn says: We keep what we can see. We prepare for what we cannot.\n\nFirst Riftling thinks: …listen…\n\nIssue #1 closes on a promise — and a pulse that will call Spark, Circus, and every Keeper after.\n\nNext: Spark's Journey — Compact on the open road",
+          "text": "Child says: Will the egg leave if I am scared?\n\nElara Venn says: Fear is allowed. Force is not.\n\nThat was the first Compact law — spoken before ink existed.\n\nFirst Riftling thinks: …stay…",
           "status": "skipped"
         },
         {
           "pageNumber": 16,
           "file": "page-16.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-16.mp3",
-          "text": "Mud and names\n\nBefore walls, the Commons was a promise spoken over warm shells.\n\nElara Venn says: Carry the egg like a future, not a trophy.\n\nKeeper thinks: If I rush the naming, I will miss the becoming.",
+          "text": "On the seventh night the Fracture roads rearranged again.\n\nScout says: East gate is west. West gate is… soup.\n\nElara Venn says: Then we walk by warmth, not by map.\n\nFirst Riftling thinks: …warm…\n\nCodex stub: Fracture roads",
           "status": "skipped"
         },
         {
           "pageNumber": 17,
           "file": "page-17.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-17.mp3",
-          "text": "Crown road refused\n\nSafer roads asked for a price the egg could not pay.\n\nElara Venn says: Safer for whom?\n\nKeeper thinks: A crown that buys consent is still theft.",
+          "text": "A stranger offered a crown-shard for the egg — bright, legal-looking, wrong.\n\nCrown courier says: Name a price. The realm will keep it safer than mud.\n\nElara Venn says: The egg is not inventory. Leave.",
           "status": "skipped"
         },
         {
           "pageNumber": 18,
           "file": "page-18.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-18.mp3",
-          "text": "Second pulse foreshadow\n\nBeyond the first tear, something colder practiced waiting.\n\nElara Venn says: We keep what we can see.\n\nKeeper thinks: The Fracture is not finished speaking.",
+          "text": "Soft Exodus fragment\n\nCodex fragment — recovered from the margin.\n\nSoft Exodus fragment: When the Prime tore, living stories fled into shells. First Riftlings are archives that chose caretakers — not weapons that chose masters.",
           "status": "skipped"
         },
         {
           "pageNumber": 19,
           "file": "page-19.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-19.mp3",
-          "text": "Mud and names\n\nBefore walls, the Commons was a promise spoken over warm shells.\n\nElara Venn says: Carry the egg like a future, not a trophy.\n\nKeeper thinks: If I rush the naming, I will miss the becoming.",
+          "text": "Village elder says: We will call this place Commons — shared ground.\n\nElara Venn says: Shared duty. Shared keeping.\n\nThe Riftstone accepted mud, names, and a courier who refused a throne.\n\nFirst Riftling thinks: …home…",
           "status": "skipped"
         },
         {
           "pageNumber": 20,
           "file": "page-20.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-20.mp3",
-          "text": "Crown road refused\n\nSafer roads asked for a price the egg could not pay.\n\nElara Venn says: Safer for whom?\n\nKeeper thinks: A crown that buys consent is still theft.",
+          "text": "Something listens beyond the tear\n\nAs the Commons named itself, a second pulse answered from unmapped dark — not crown, not merchant. Cliffhanger: the Fracture was not finished speaking.",
           "status": "skipped"
         },
         {
           "pageNumber": 21,
           "file": "page-21.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-21.mp3",
-          "text": "Second pulse foreshadow\n\nBeyond the first tear, something colder practiced waiting.\n\nElara Venn says: We keep what we can see.\n\nKeeper thinks: The Fracture is not finished speaking.",
+          "text": "Elara Venn says: We keep what we can see. We prepare for what we cannot.\n\nFirst Riftling thinks: …listen…\n\nIssue #1 closes on a promise — and a pulse that will call Spark, Circus, and every Keeper after.\n\nNext: Spark's Journey — Compact on the open road",
           "status": "skipped"
         },
         {
@@ -239,14 +239,56 @@
           "pageNumber": 33,
           "file": "page-33.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-33.mp3",
-          "text": "Issue complete\n\nYou finished Issue #1: The First Rift.\n\nElara Venn carries a damaged egg through the Fracture's first nights and names the path of keeping at the Riftstone.\n\nPlay this chapter → Enter Live World — Commons",
+          "text": "Second pulse foreshadow\n\nBeyond the first tear, something colder practiced waiting.\n\nElara Venn says: We keep what we can see.\n\nKeeper thinks: The Fracture is not finished speaking.",
           "status": "skipped"
         },
         {
           "pageNumber": 34,
           "file": "page-34.mp3",
           "src": "/assets/audio/comics/the-first-rift/page-34.mp3",
+          "text": "Mud and names\n\nBefore walls, the Commons was a promise spoken over warm shells.\n\nElara Venn says: Carry the egg like a future, not a trophy.\n\nKeeper thinks: If I rush the naming, I will miss the becoming.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 35,
+          "file": "page-35.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-35.mp3",
+          "text": "Crown road refused\n\nSafer roads asked for a price the egg could not pay.\n\nElara Venn says: Safer for whom?\n\nKeeper thinks: A crown that buys consent is still theft.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 36,
+          "file": "page-36.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-36.mp3",
+          "text": "Second pulse foreshadow\n\nBeyond the first tear, something colder practiced waiting.\n\nElara Venn says: We keep what we can see.\n\nKeeper thinks: The Fracture is not finished speaking.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 37,
+          "file": "page-37.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-37.mp3",
+          "text": "Mud and names\n\nBefore walls, the Commons was a promise spoken over warm shells.\n\nElara Venn says: Carry the egg like a future, not a trophy.\n\nKeeper thinks: If I rush the naming, I will miss the becoming.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 38,
+          "file": "page-38.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-38.mp3",
+          "text": "Issue complete\n\nYou finished Issue #1: The First Rift.\n\nElara Venn carries a damaged egg through the Fracture's first nights and names the path of keeping at the Riftstone.\n\nPlay this chapter → Enter Live World — Commons",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 39,
+          "file": "page-39.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-39.mp3",
           "text": "Shape the side-story\n\nWhat should Elara's next courier route emphasize?\n\nCare first says: More hatchery ethics scenes next arc.\n\nExploration says: Push toward unmapped Gateway paths.",
+          "status": "skipped"
+        },
+        {
+          "pageNumber": 40,
+          "file": "page-40.mp3",
+          "src": "/assets/audio/comics/the-first-rift/page-40.mp3",
+          "text": "Keeper & Companion Profiles\n\nElara Venn says: First Keeper — Courier who refused a crown and kept an egg.\n\nFirst Riftling says: Companion — Living archive born from Soft Exodus fragment.\n\nBramblefox says: Grove companion — Forest Bond shown as living vine-light — game-accurate Nature skirmisher tease.\n\nOpen: /codex/riftlings/bramblefox\n\nMossprig says: Tracker — Grove-affinity pathfinder; soft rustle is dialogue, not noise.\n\nOpen: /codex/riftlings/mossprig",
           "status": "skipped"
         }
       ]

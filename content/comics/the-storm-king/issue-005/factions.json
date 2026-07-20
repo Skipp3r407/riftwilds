@@ -1,0 +1,29 @@
+{
+  "factions": [
+    {
+      "id": "veiled-meridian",
+      "name": "Veiled Meridian",
+      "goal": "Seize storm engine + Spark"
+    },
+    {
+      "id": "tempestria-crown",
+      "name": "Tempestria Crown",
+      "status": "reforming-from-absolute-rule"
+    },
+    {
+      "id": "lanternveil-circus",
+      "name": "Lanternveil Traveling Circus",
+      "status": "ally-uneasy"
+    },
+    {
+      "id": "hatchery-compact",
+      "name": "Hatchery Compact",
+      "status": "established"
+    },
+    {
+      "id": "merchant-network",
+      "name": "Merchant Network",
+      "status": "teaser-issue-006"
+    }
+  ]
+}

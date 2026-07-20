@@ -1,0 +1,67 @@
+{
+  "pageNumber": 18,
+  "id": "the-first-rift-issue-001-p018",
+  "role": "story",
+  "title": null,
+  "layout": "grid-2x2",
+  "atmosphere": "storm",
+  "beat": "Clash — protect the egg",
+  "artPrompt": "Four-panel action page, no text. Companions coordinate: Forest Bond vines, Living Bulwark wall, Sprouting Energy tangle, Kindled Spirit dive — vs angular Fracture scrap-hounds. Egg protected center. No logos. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "sfx",
+          "text": "LEAF-SNAP",
+          "x": 50,
+          "y": 45
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "sfx",
+          "text": "WHUMP",
+          "x": 50,
+          "y": 50
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "sfx",
+          "text": "FWOOOM",
+          "x": 50,
+          "y": 45
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Hold the cradle!",
+          "x": 50,
+          "y": 40,
+          "tail": "down"
+        },
+        {
+          "kind": "narration",
+          "text": "Loyalty is a formation.",
+          "x": 50,
+          "y": 75
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-018.png",
+  "letteredArtRel": "generated/lettered/page-018.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-018.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

@@ -1,0 +1,193 @@
+{
+  "pageNumber": 17,
+  "storyPageNumber": 13,
+  "bookRole": "story",
+  "title": "Meridian Assault",
+  "storyPurpose": "Seris Vale attacks with Meridian strike force to restart the Forge.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p13a",
+      "description": "Blast doors explode: Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, ancient control core gauntlet, artificial Rift amplifier crystal, Guardian override codes with control core gauntlet and amplifier crystal; Meridian agents; override codes projecting toward security rings.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "BLAST-DOORS",
+          "x": 70,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "shout",
+          "text": "The Resonance component is here. Secure the egg.",
+          "x": 45,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Seris Vale",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p13b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes shielding Spark and egg; Nira engaging; Cael lantern-flash stun (supervised help); Axiom barrier flicker.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "You don't get to manufacture living light!",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "I'll hold the lane — don't thank me yet.",
+          "x": 65,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 36,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p13c",
+      "description": "Arkan slamming emergency locks; blue veins flaring; shame and resolve.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "They want to restart what we buried. I will not watch twice.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Arkan",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p13a",
+      "kind": "shout",
+      "text": "The Resonance component is here. Secure the egg.",
+      "x": 45,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Seris Vale",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p13b",
+      "kind": "speech",
+      "text": "You don't get to manufacture living light!",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p13b",
+      "kind": "speech",
+      "text": "I'll hold the lane — don't thank me yet.",
+      "x": 65,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 36,
+      "speaker": "Cael Vesper",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p13c",
+      "kind": "speech",
+      "text": "They want to restart what we buried. I will not watch twice.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Arkan",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p13a",
+      "kind": "sfx",
+      "text": "BLAST-DOORS",
+      "x": 70,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "cael-vesper",
+    "nira-quill",
+    "arkan"
+  ],
+  "creatures": [
+    "spark",
+    "axiom",
+    "bramblefox"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Incubator Alpha approach",
+    "meridian": "assault",
+    "seris": "control-core"
+  },
+  "requiredMoments": [
+    12
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 13/25 — Meridian Assault. Story purpose: Seris Vale attacks with Meridian strike force to restart the Forge. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p13a): Blast doors explode: Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, ancient control core gauntlet, artificial Rift amplifier crystal, Guardian override codes with control core gauntlet and amplifier crystal; Meridian agents; override codes projecting toward security rings. Panel 2 (p13b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes shielding Spark and egg; Nira engaging; Cael lantern-flash stun (supervised help); Axiom barrier flicker. Panel 3 (p13c): Arkan slamming emergency locks; blue veins flaring; shame and resolve. Characters: mira-eggwarden, seris-vale, cael-vesper, nira-quill, arkan. Creatures: spark, axiom, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Incubator Alpha approach\", \"meridian\": \"assault\", \"seris\": \"control-core\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "An artificial Rift tears open.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Meridian Assault — The Forge of Rifts page 13",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: BLAST-DOORS",
+    "SHOUT (Seris Vale): The Resonance component is here. Secure the egg.",
+    "SPEECH (Mira Eggwarden): You don't get to manufacture living light!",
+    "SPEECH (Cael Vesper): I'll hold the lane — don't thank me yet.",
+    "SPEECH (Arkan): They want to restart what we buried. I will not watch twice."
+  ],
+  "a11yTranscript": [
+    "SFX: BLAST-DOORS",
+    "SHOUT (Seris Vale): The Resonance component is here. Secure the egg.",
+    "SPEECH (Mira Eggwarden): You don't get to manufacture living light!",
+    "SPEECH (Cael Vesper): I'll hold the lane — don't thank me yet.",
+    "SPEECH (Arkan): They want to restart what we buried. I will not watch twice."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p017",
+  "cleanArtRel": "generated/raw-art/page-017.webp",
+  "letteredArtRel": "generated/lettered-pages/page-017.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-017.webp"
+}

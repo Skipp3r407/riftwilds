@@ -1,0 +1,210 @@
+{
+  "pageNumber": 11,
+  "storyPageNumber": 7,
+  "bookRole": "story",
+  "title": "Memory Crystals",
+  "storyPurpose": "Wisplet enters memory crystals; First Rift planning glimpsed.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Memory vault: floating crystal shards showing silent visions — Soft Exodus roads, Keepers, Forge blueprints as light.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "MEMORY VAULT",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 36,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*phase-in*",
+          "x": 40,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Wisplet",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p7b",
+      "description": "Wisplet inside a crystal: vision of engineers (faces soft/obscured) rewriting a protocol circle — saboteur hand gloved, identity unclear.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The First Rift was planned. Not by accident. Not by storm.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 52,
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "Someone wrote the fracture like a command.",
+          "x": 55,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p7c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes pulling Wisplet gently free as crystal overheats; Spark shielding her wrist.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Enough. Knowledge that burns still burns.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        },
+        {
+          "kind": "sfx",
+          "text": "crystal-CRACK",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p7a",
+      "kind": "creature",
+      "text": "*phase-in*",
+      "x": 40,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Wisplet",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p7b",
+      "kind": "whisper",
+      "text": "Someone wrote the fracture like a command.",
+      "x": 55,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p7c",
+      "kind": "speech",
+      "text": "Enough. Knowledge that burns still burns.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p7a",
+      "kind": "caption",
+      "text": "MEMORY VAULT",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 36,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p7b",
+      "kind": "narration",
+      "text": "The First Rift was planned. Not by accident. Not by storm.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 52,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p7c",
+      "kind": "sfx",
+      "text": "crystal-CRACK",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 5
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "wisplet"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [
+    "memory-crystal"
+  ],
+  "continuity": {
+    "location": "memory vault",
+    "reveal": "first-rift-planned",
+    "saboteur": "identity-withheld"
+  },
+  "requiredMoments": [
+    6
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 7/25 — Memory Crystals. Story purpose: Wisplet enters memory crystals; First Rift planning glimpsed. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p7a): Memory vault: floating crystal shards showing silent visions — Soft Exodus roads, Keepers, Forge blueprints as light. Panel 2 (p7b): Wisplet inside a crystal: vision of engineers (faces soft/obscured) rewriting a protocol circle — saboteur hand gloved, identity unclear. Panel 3 (p7c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes pulling Wisplet gently free as crystal overheats; Spark shielding her wrist. Characters: mira-eggwarden. Creatures: spark, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"memory vault\", \"reveal\": \"first-rift-planned\", \"saboteur\": \"identity-withheld\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Blueprints in moth-light.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Memory Crystals — The Forge of Rifts page 7",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: MEMORY VAULT",
+    "CREATURE (Wisplet): *phase-in*",
+    "NARRATION: The First Rift was planned. Not by accident. Not by storm.",
+    "WHISPER (Mira Eggwarden): Someone wrote the fracture like a command.",
+    "SPEECH (Mira Eggwarden): Enough. Knowledge that burns still burns.",
+    "SFX: crystal-CRACK"
+  ],
+  "a11yTranscript": [
+    "CAPTION: MEMORY VAULT",
+    "CREATURE (Wisplet): *phase-in*",
+    "NARRATION: The First Rift was planned. Not by accident. Not by storm.",
+    "WHISPER (Mira Eggwarden): Someone wrote the fracture like a command.",
+    "SPEECH (Mira Eggwarden): Enough. Knowledge that burns still burns.",
+    "SFX: crystal-CRACK"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p011",
+  "cleanArtRel": "generated/raw-art/page-011.webp",
+  "letteredArtRel": "generated/lettered-pages/page-011.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-011.webp"
+}

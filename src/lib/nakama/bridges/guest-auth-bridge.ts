@@ -1,8 +1,10 @@
 /**
- * Bridge: Riftwilds guest identity → Nakama device auth.
- * Existing `rift_guest` / owner-key paths remain authoritative for hatchery/Credits.
+ * Bridge: Riftwilds identity → Nakama device auth.
+ * When AUTH_ACCOUNT_REQUIRED_FOR_PLAY is on, anonymous rift_guest login is refused.
+ * App account session remains the source of truth for the gameplay gate.
  */
 
+import { isAccountRequiredForPlay } from "@/lib/auth/account-play-policy";
 import { readStoredGuestToken } from "@/lib/auth/guest-client";
 import { authenticateGuestDevice, restoreOrRefreshSession } from "@/lib/nakama/auth";
 import { isNakamaSliceEnabled } from "@/lib/nakama/config";
@@ -17,6 +19,17 @@ export async function bridgeGuestToNakama(opts?: {
   guestToken?: string | null;
   username?: string;
 }): Promise<NakamaBridgeResult<GuestIdentityLocal>> {
+  if (isAccountRequiredForPlay()) {
+    return {
+      local: { guestToken: null, ownerKeyHint: null },
+      mode: "bridged",
+      nakama: {
+        ok: false,
+        detail: "GUEST_PLAY_DISABLED — sign in with a Riftkeeper account first",
+      },
+    };
+  }
+
   const guestToken = opts?.guestToken ?? readStoredGuestToken();
   const local: GuestIdentityLocal = {
     guestToken,

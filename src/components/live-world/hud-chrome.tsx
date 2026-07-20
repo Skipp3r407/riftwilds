@@ -8,19 +8,19 @@ import {
   type HudDragHandleProps,
 } from "@/components/live-world/draggable-hud-panel";
 
-/** Shared warm glass surface for Live World immersion HUD (fantasy chrome). */
+/** Shared Reliquary glass surface — every Live World panel is the same magical device. */
 export const LW_HUD_GLASS =
-  "lw-hud-glass rounded-xl border border-[var(--stroke-bronze)] backdrop-blur-md";
+  "lw-hud-glass rounded-xl border border-[var(--lw-trim,var(--stroke-bronze))] backdrop-blur-md";
 
 export const LW_HUD_BTN =
-  "lw-hud-btn focus-ring inline-flex min-h-9 items-center gap-1.5 rounded-lg border border-[var(--stroke)] bg-[rgba(20,16,12,0.5)] px-2.5 py-1.5 text-[10px] font-medium tracking-wide text-[var(--text-muted)] transition-[color,background,border-color,box-shadow,transform] duration-150 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.1)] hover:text-[var(--text)] active:scale-[0.98]";
+  "lw-hud-btn focus-ring inline-flex min-h-9 items-center gap-1.5 rounded-lg border border-[var(--stroke)] bg-[rgba(20,16,12,0.55)] px-2.5 py-1.5 text-[10px] font-medium tracking-wide text-[var(--text-muted)] transition-[color,background,border-color,box-shadow,transform] duration-150 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.12)] hover:text-[var(--text)] hover:shadow-[0_0_12px_var(--lw-glow-amber,rgba(255,184,77,0.35))] active:scale-[0.98]";
 
 export const LW_HUD_BTN_ACTIVE =
-  "border-[var(--stroke-amber)] bg-[rgba(255,184,77,0.12)] text-[var(--amber)] shadow-[0_0_0_1px_rgba(184,140,74,0.2),inset_0_1px_0_rgba(232,213,176,0.12)]";
+  "border-[var(--stroke-amber)] bg-[rgba(255,184,77,0.14)] text-[var(--amber)] shadow-[0_0_0_1px_rgba(184,140,74,0.28),0_0_14px_var(--lw-glow-amber,rgba(255,184,77,0.35)),inset_0_1px_0_rgba(232,213,176,0.14)]";
 
 /** Collapsed edge peeks (Chat / Presence / Immersive toolbar). */
 export const LW_HUD_PEEK =
-  "lw-hud-peek inline-flex min-h-9 items-center gap-1.5 rounded-t-xl rounded-b-md border border-[var(--stroke-bronze)] border-b-0 bg-[rgba(18,16,12,0.88)] px-3 py-1.5 shadow-[0_-4px_18px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(232,213,176,0.1)] backdrop-blur-md";
+  "lw-hud-peek inline-flex min-h-9 items-center gap-1.5 rounded-t-xl rounded-b-md border border-[var(--lw-trim,var(--stroke-bronze))] border-b-0 bg-[rgba(18,16,12,0.9)] px-3 py-1.5 shadow-[0_-4px_20px_rgba(0,0,0,0.4),0_0_12px_rgba(255,184,77,0.08),inset_0_1px_0_rgba(232,213,176,0.12)] backdrop-blur-md";
 
 /** Right-column / card section titles. */
 export const LW_HUD_CARD_TITLE =
@@ -28,11 +28,16 @@ export const LW_HUD_CARD_TITLE =
 
 /** Circular utility / radial icon buttons. */
 export const LW_HUD_ICON_BTN =
-  "lw-hud-icon-btn focus-ring flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--stroke-bronze)] bg-[rgba(20,18,14,0.86)] text-[var(--amber)] shadow-[0_4px_14px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(232,213,176,0.14)] backdrop-blur-md transition-[transform,border-color,background,color,box-shadow] duration-150 hover:scale-105 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.1)] hover:text-[var(--radiant)] active:scale-95";
+  "lw-hud-icon-btn focus-ring flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[var(--lw-trim,var(--stroke-bronze))] bg-[rgba(20,18,14,0.88)] text-[var(--amber)] shadow-[0_4px_16px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(232,213,176,0.16)] backdrop-blur-md transition-[transform,border-color,background,color,box-shadow] duration-150 hover:scale-105 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.12)] hover:text-[var(--radiant)] hover:shadow-[0_0_16px_var(--lw-glow-amber,rgba(255,184,77,0.35))] active:scale-95";
 
 /** Hotbar action slots. */
 export const LW_HUD_SLOT =
-  "lw-hud-slot focus-ring group relative flex h-11 w-11 flex-col items-center justify-center rounded-lg border border-[var(--stroke)] bg-[rgba(14,12,10,0.72)] text-[var(--text-muted)] transition-[color,background,border-color,box-shadow,transform] duration-150 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.1)] hover:text-[var(--text)] active:scale-95";
+  "lw-hud-slot focus-ring group relative flex h-11 w-11 flex-col items-center justify-center rounded-lg border border-[var(--stroke)] bg-[rgba(14,12,10,0.78)] text-[var(--text-muted)] transition-[color,background,border-color,box-shadow,transform] duration-150 hover:border-[var(--stroke-amber)] hover:bg-[rgba(255,184,77,0.12)] hover:text-[var(--text)] active:scale-95";
+
+/** Hierarchy helpers for Reliquary panels. */
+export const LW_HUD_TIER_PRIMARY = "lw-hud-glass--primary";
+export const LW_HUD_TIER_SECONDARY = "lw-hud-glass--secondary";
+export const LW_HUD_TIER_TERTIARY = "lw-hud-glass--tertiary";
 
 type CollapseToggleProps = {
   collapsed: boolean;

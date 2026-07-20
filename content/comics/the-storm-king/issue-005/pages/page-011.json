@@ -1,0 +1,136 @@
+{
+  "pageNumber": 11,
+  "storyPageNumber": 7,
+  "bookRole": "story",
+  "title": "Throne Under Conduit",
+  "storyPurpose": "Throne hall; Vaelor beneath living storm conduit; Thundervane weakened behind throne.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Cinematic throne hall: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade seated beneath living storm conduit of electric cyan; Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion sprawled behind throne — armor cracked, breathing heavy; expedition small in foreground; empty balloon zones.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Duty sat the throne so long it forgot how to stand.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Approach. The storm has already named you.",
+          "x": 50,
+          "y": 78,
+          "tail": "up",
+          "maxWidthPct": 45,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "conduit-HUMMMM",
+          "x": 75,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p7a",
+      "kind": "speech",
+      "text": "Approach. The storm has already named you.",
+      "x": 50,
+      "y": 78,
+      "tail": "up",
+      "maxWidthPct": 45,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 1
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p7a",
+      "kind": "narration",
+      "text": "Duty sat the throne so long it forgot how to stand.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p7a",
+      "kind": "sfx",
+      "text": "conduit-HUMMMM",
+      "x": 75,
+      "y": 35,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "vaelor-tempest"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane",
+    "galesprig"
+  ],
+  "locations": [
+    "Tempestria",
+    "Royal Citadel"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "royal citadel throne hall",
+    "thundervane": "weakened",
+    "vaelor": "proud"
+  },
+  "requiredMoments": [
+    7,
+    11
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 7/25 — Throne Under Conduit. Story purpose: Throne hall; Vaelor beneath living storm conduit; Thundervane weakened behind throne. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p7a): Cinematic throne hall: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade seated beneath living storm conduit of electric cyan; Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion sprawled behind throne — armor cracked, breathing heavy; expedition small in foreground; empty balloon zones. Characters: mira-eggwarden, cael-vesper, vaelor-tempest. Creatures: spark, thundervane, galesprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"royal citadel throne hall\", \"thundervane\": \"weakened\", \"vaelor\": \"proud\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "The king names Spark.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Throne Under Conduit — The Storm King page 7",
+  "atmosphere": "storm",
+  "transcript": [
+    "NARRATION: Duty sat the throne so long it forgot how to stand.",
+    "SPEECH (King Vaelor Tempest): Approach. The storm has already named you.",
+    "SFX: conduit-HUMMMM"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Duty sat the throne so long it forgot how to stand.",
+    "SPEECH (King Vaelor Tempest): Approach. The storm has already named you.",
+    "SFX: conduit-HUMMMM"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "thundervane",
+    "vaelor-tempest"
+  ],
+  "id": "the-storm-king-issue-005-p011",
+  "cleanArtRel": "generated/raw-art/page-011.webp",
+  "letteredArtRel": "generated/lettered-pages/page-011.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-011.webp"
+}

@@ -3,10 +3,10 @@
   "generatedAt": "2026-07-18T20:16:49.463Z",
   "expansionId": "rise-of-the-rift",
   "riftEnergy": {
-    "start": 1,
+    "start": 2,
     "maxCap": 10,
     "perTurnGain": 1,
-    "notes": "Replaces mana. Ramp/drain/store supported via effects. Gameplay never requires SOL."
+    "notes": "Turn 1 max 2, then +1/turn to cap 10. Temporary energy expires end of turn. Gameplay never requires SOL."
   },
   "keywords": [
     {

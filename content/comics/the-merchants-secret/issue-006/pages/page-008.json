@@ -1,0 +1,205 @@
+{
+  "pageNumber": 8,
+  "storyPageNumber": 4,
+  "bookRole": "story",
+  "title": "Wonder and Danger",
+  "storyPurpose": "Market montage — exotic wonders alongside predatory trade.",
+  "layout": {
+    "type": "montage",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p4a",
+      "description": "Wide montage strip: registered Rift keys, card plates, potion rows, teal glass curios — citizens marveling.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Legal trade glittered like a promise.",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "whisper",
+          "text": "Credits for cosmetics — not souls.",
+          "x": 30,
+          "y": 55,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Shopper",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p4b",
+      "description": "Counter montage: sealed crates with muffled movement; buyers whispering; auction placards with empty price zones.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Predators wore the same gold.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "muted-chirp",
+          "x": 65,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p4c",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot peeking from cloak, distressed at resonance echo from sealed merchandise.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*distress-chirp*",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 4
+        },
+        {
+          "kind": "speech",
+          "text": "Not here. Not yet.",
+          "x": 60,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p4a",
+      "kind": "whisper",
+      "text": "Credits for cosmetics — not souls.",
+      "x": 30,
+      "y": 55,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Shopper",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p4c",
+      "kind": "creature",
+      "text": "*distress-chirp*",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p4c",
+      "kind": "speech",
+      "text": "Not here. Not yet.",
+      "x": 60,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p4a",
+      "kind": "narration",
+      "text": "Legal trade glittered like a promise.",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p4b",
+      "kind": "narration",
+      "text": "Predators wore the same gold.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p4b",
+      "kind": "sfx",
+      "text": "muted-chirp",
+      "x": 65,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "central exchange floor",
+    "tone": "wonder-and-danger"
+  },
+  "requiredMoments": [
+    7
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 4/25 — Wonder and Danger. Story purpose: Market montage — exotic wonders alongside predatory trade. Layout: montage. 3 panels with clear inked gutters. Panel 1 (p4a): Wide montage strip: registered Rift keys, card plates, potion rows, teal glass curios — citizens marveling. Panel 2 (p4b): Counter montage: sealed crates with muffled movement; buyers whispering; auction placards with empty price zones. Panel 3 (p4c): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot peeking from cloak, distressed at resonance echo from sealed merchandise. Characters: mira-eggwarden. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"central exchange floor\", \"tone\": \"wonder-and-danger\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Find the rescue shelter.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Wonder and Danger — The Merchant's Secret page 4",
+  "atmosphere": "market",
+  "transcript": [
+    "NARRATION: Legal trade glittered like a promise.",
+    "WHISPER (Shopper): Credits for cosmetics — not souls.",
+    "NARRATION: Predators wore the same gold.",
+    "SFX: muted-chirp",
+    "CREATURE (Spark): *distress-chirp*",
+    "SPEECH (Mira Eggwarden): Not here. Not yet."
+  ],
+  "a11yTranscript": [
+    "NARRATION: Legal trade glittered like a promise.",
+    "WHISPER (Shopper): Credits for cosmetics — not souls.",
+    "NARRATION: Predators wore the same gold.",
+    "SFX: muted-chirp",
+    "CREATURE (Spark): *distress-chirp*",
+    "SPEECH (Mira Eggwarden): Not here. Not yet."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p008",
+  "cleanArtRel": "generated/raw-art/page-008.webp",
+  "letteredArtRel": "generated/lettered-pages/page-008.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-008.webp"
+}

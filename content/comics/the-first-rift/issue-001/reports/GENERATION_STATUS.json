@@ -1,0 +1,10 @@
+{
+  "updatedAt": "2026-07-20T15:06:16.962Z",
+  "from": 1,
+  "to": 32,
+  "artReady": 32,
+  "lettered": 32,
+  "blocked": 0,
+  "resume": "npx tsx scripts/comics/run-issue-001-pipeline.mts --from=1 --to=32 --seed-from-legacy",
+  "resumeArt": "COMIC_IMAGE_PROVIDER=grok XAI_API_KEY=… npx tsx scripts/comics/run-issue-001-pipeline.mts --from=1 --to=32"
+}

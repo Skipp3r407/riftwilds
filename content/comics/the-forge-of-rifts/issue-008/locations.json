@@ -1,0 +1,34 @@
+{
+  "locations": [
+    {
+      "id": "forge-of-rifts",
+      "name": "The Forge of Rifts",
+      "blurb": "Underground civilization / artificial Rift factory"
+    },
+    {
+      "id": "meridian-road",
+      "name": "Meridian Road",
+      "blurb": "Sealed route from Traitor's Gate"
+    },
+    {
+      "id": "companion-incubator-alpha",
+      "name": "Companion Incubator Alpha",
+      "blurb": "Origin of Resonance Keepers"
+    },
+    {
+      "id": "rift-engine-alpha",
+      "name": "Rift Engine Alpha",
+      "blurb": "Primary reactor \u2014 Spark-stabilized"
+    },
+    {
+      "id": "memory-vault",
+      "name": "Memory Vault",
+      "blurb": "Crystal records of protocol rewrite"
+    },
+    {
+      "id": "second-forge",
+      "name": "Second Forge",
+      "blurb": "Hidden under another continent \u2014 cliffhanger"
+    }
+  ]
+}

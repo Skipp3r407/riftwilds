@@ -340,20 +340,23 @@ export function Hero() {
 
             <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
               <ImageButton
-                href="/tcg/battle"
+                href="/play"
                 variant="primary"
                 className="home-hero__cta w-full justify-center text-base sm:w-auto sm:min-w-[10.5rem]"
               >
                 Play Rift Battle
               </ImageButton>
               <ImageButton
-                href="/tcg/collection"
+                href="/login?returnUrl=%2Fplay"
                 variant="secondary"
                 className="home-hero__cta w-full justify-center text-base sm:w-auto sm:min-w-[10.5rem]"
               >
-                Card Binder
+                Sign in to play
               </ImageButton>
             </div>
+            <p className="mt-2 max-w-md text-xs text-[var(--text-dim)]">
+              Free account required — guest play is disabled.
+            </p>
 
             <p className="mt-3 max-w-md text-xs leading-relaxed text-[var(--text-dim)] md:mt-4">
               Solana {projectConfig.SOLANA_NETWORK}. Rewards aren&apos;t guaranteed. Neglect can make a{" "}

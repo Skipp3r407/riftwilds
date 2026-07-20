@@ -1,0 +1,335 @@
+{
+  "slug": "the-forge-of-rifts",
+  "issueNumber": 8,
+  "title": "The Forge of Rifts",
+  "subtitle": "Chapter Eight \u2014 Protect. Don't Obey.",
+  "synopsis": "Beyond the Traitor's Gate, Mira Eggwarden, Spark, and the supervised expedition enter the Forge of Rifts \u2014 an underground civilization built around a machine that manufactures artificial Rift energy. Chief Engineer Arkan reveals the Forge was meant to heal dimensions before someone rewrote its protocols; prototype companion Axiom awakens. Seris Vale restarts Engine Alpha to mass-produce Riftborn, nearly capturing Spark. In a double-page battle Arkan sacrifices his preserved body; Spark stabilizes the reactor; the team escapes as Seris steals a Second Forge blueprint. Cliffhanger: another Forge activates \u2014 the Riftwright is alive.",
+  "publishedAt": "2026-07-20",
+  "status": "published",
+  "storyPageCount": 25,
+  "bookPageCount": 39,
+  "estimatedReadMinutes": 20,
+  "protagonist": "Mira Eggwarden",
+  "featuredCreatures": [
+    "Spark",
+    "Axiom",
+    "Bramblefox",
+    "Mossprig",
+    "Thornling",
+    "Wisplet",
+    "Spirit Moth",
+    "Truthwing"
+  ],
+  "locations": [
+    "Forge of Rifts",
+    "Companion Incubator Alpha",
+    "Rift Engine Alpha",
+    "Meridian Road",
+    "Second Forge"
+  ],
+  "loreRel": "lore.json",
+  "unlockGates": [
+    {
+      "kind": "prior-issue",
+      "slug": "the-traitors-gate",
+      "label": "Complete Issue #7: The Traitor's Gate"
+    },
+    {
+      "kind": "admin-dev",
+      "label": "Admin / COMICS_DEV_UNLOCK override"
+    }
+  ],
+  "related": {
+    "cards": [
+      "spark",
+      "axiom",
+      "bramblefox",
+      "mossprig"
+    ],
+    "codex": [
+      "forge-of-rifts",
+      "rift-engine-alpha",
+      "artificial-rift"
+    ],
+    "companions": [
+      "spark",
+      "axiom",
+      "truthwing"
+    ],
+    "locations": [
+      "forge-of-rifts",
+      "second-forge",
+      "meridian-road"
+    ],
+    "artifacts": [
+      "dormant-riftborn-egg",
+      "second-forge-blueprint",
+      "arkan-monocle"
+    ],
+    "hiddenAchievements": [
+      "forge-witness",
+      "arkan-last-light",
+      "axiom-matrix-first"
+    ]
+  },
+  "nextIssueTeaser": {
+    "slug": "the-riftwright",
+    "hook": "So\u2026 after all this time\u2026 someone finally reached my Forge."
+  },
+  "pipeline": {
+    "artProvider": "grok",
+    "lettering": "programmatic",
+    "bakedLettering": true,
+    "contentRoot": "content/comics/the-forge-of-rifts/issue-008"
+  },
+  "bookPages": [
+    {
+      "pageNumber": 1,
+      "storyPageNumber": null,
+      "role": "front-cover",
+      "title": "The Forge of Rifts \u2014 Cover"
+    },
+    {
+      "pageNumber": 2,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Front Cover"
+    },
+    {
+      "pageNumber": 3,
+      "storyPageNumber": null,
+      "role": "credits",
+      "title": "Credits"
+    },
+    {
+      "pageNumber": 4,
+      "storyPageNumber": null,
+      "role": "title",
+      "title": "Chapter Eight \u2014 The Forge of Rifts"
+    },
+    {
+      "pageNumber": 5,
+      "storyPageNumber": 1,
+      "role": "story",
+      "title": "Forge Threshold"
+    },
+    {
+      "pageNumber": 6,
+      "storyPageNumber": 2,
+      "role": "story",
+      "title": "Egg Glow"
+    },
+    {
+      "pageNumber": 7,
+      "storyPageNumber": 3,
+      "role": "story",
+      "title": "Machine City"
+    },
+    {
+      "pageNumber": 8,
+      "storyPageNumber": 4,
+      "role": "story",
+      "title": "Abandoned Companions"
+    },
+    {
+      "pageNumber": 9,
+      "storyPageNumber": 5,
+      "role": "story",
+      "title": "Living Bulwark"
+    },
+    {
+      "pageNumber": 10,
+      "storyPageNumber": 6,
+      "role": "story",
+      "title": "Power Restored"
+    },
+    {
+      "pageNumber": 11,
+      "storyPageNumber": 7,
+      "role": "story",
+      "title": "Memory Crystals"
+    },
+    {
+      "pageNumber": 12,
+      "storyPageNumber": 8,
+      "role": "story",
+      "title": "Hidden Blueprints"
+    },
+    {
+      "pageNumber": 13,
+      "storyPageNumber": 9,
+      "role": "story",
+      "title": "Incubator Alpha"
+    },
+    {
+      "pageNumber": 14,
+      "storyPageNumber": 10,
+      "role": "story",
+      "title": "Chief Engineer"
+    },
+    {
+      "pageNumber": 15,
+      "storyPageNumber": 11,
+      "role": "story",
+      "title": "Forge History"
+    },
+    {
+      "pageNumber": 16,
+      "storyPageNumber": 12,
+      "role": "story",
+      "title": "Axiom Awakens"
+    },
+    {
+      "pageNumber": 17,
+      "storyPageNumber": 13,
+      "role": "story",
+      "title": "Meridian Assault"
+    },
+    {
+      "pageNumber": 18,
+      "storyPageNumber": 14,
+      "role": "story",
+      "title": "Artificial Rift"
+    },
+    {
+      "pageNumber": 19,
+      "storyPageNumber": 15,
+      "role": "story",
+      "title": "Escaped Experiments"
+    },
+    {
+      "pageNumber": 20,
+      "storyPageNumber": 16,
+      "role": "story",
+      "title": "Giant Battle"
+    },
+    {
+      "pageNumber": 21,
+      "storyPageNumber": 17,
+      "role": "story",
+      "title": "Near Capture"
+    },
+    {
+      "pageNumber": 22,
+      "storyPageNumber": 18,
+      "role": "story",
+      "title": "Forge War \u2014 Left"
+    },
+    {
+      "pageNumber": 23,
+      "storyPageNumber": 19,
+      "role": "story",
+      "title": "Forge War \u2014 Sacrifice"
+    },
+    {
+      "pageNumber": 24,
+      "storyPageNumber": 20,
+      "role": "story",
+      "title": "Collapse"
+    },
+    {
+      "pageNumber": 25,
+      "storyPageNumber": 21,
+      "role": "story",
+      "title": "Reactor Alpha"
+    },
+    {
+      "pageNumber": 26,
+      "storyPageNumber": 22,
+      "role": "story",
+      "title": "Escape"
+    },
+    {
+      "pageNumber": 27,
+      "storyPageNumber": 23,
+      "role": "story",
+      "title": "Stolen Blueprint"
+    },
+    {
+      "pageNumber": 28,
+      "storyPageNumber": 24,
+      "role": "story",
+      "title": "Second Forge"
+    },
+    {
+      "pageNumber": 29,
+      "storyPageNumber": 25,
+      "role": "story",
+      "title": "The Riftwright"
+    },
+    {
+      "pageNumber": 30,
+      "storyPageNumber": null,
+      "role": "teaser",
+      "title": "Next Issue \u2014 The Riftwright"
+    },
+    {
+      "pageNumber": 31,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Character Profile \u2014 Chief Engineer Arkan"
+    },
+    {
+      "pageNumber": 32,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Companion Profile \u2014 Axiom"
+    },
+    {
+      "pageNumber": 33,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Codex \u2014 The Forge of Rifts"
+    },
+    {
+      "pageNumber": 34,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Blueprint Gallery \u2014 Prototype Riftborn"
+    },
+    {
+      "pageNumber": 35,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Ability Spotlight \u2014 Rift Engine Alpha"
+    },
+    {
+      "pageNumber": 36,
+      "storyPageNumber": null,
+      "role": "map",
+      "title": "World Map \u2014 Meridian Road to Twin Forges"
+    },
+    {
+      "pageNumber": 37,
+      "storyPageNumber": null,
+      "role": "letters",
+      "title": "Editor's Note \u2014 Responsibility in Creation"
+    },
+    {
+      "pageNumber": 38,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Back Cover"
+    },
+    {
+      "pageNumber": 39,
+      "storyPageNumber": null,
+      "role": "back-cover",
+      "title": "Back Cover \u2014 The Riftwright"
+    }
+  ],
+  "continuesFrom": {
+    "slug": "the-traitors-gate",
+    "issueNumber": 7,
+    "locks": [
+      "Cael Vesper coerced traitor \u2014 turned \u2014 supervised",
+      "Lumenhare freed",
+      "Nira Quill cleared false lead",
+      "egg cracked once at Gate",
+      "Gate open to Meridian Road / artificial Rift",
+      "cliffhanger: Begin the second creation",
+      "Aurelia Voss uneasy ally",
+      "companions loyal"
+    ]
+  }
+}

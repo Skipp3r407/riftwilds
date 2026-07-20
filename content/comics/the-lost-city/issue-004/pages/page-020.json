@@ -1,0 +1,174 @@
+{
+  "pageNumber": 20,
+  "storyPageNumber": 16,
+  "bookRole": "story",
+  "title": "Partial Override",
+  "storyPurpose": "Seris attempts control; partial success; Guardian attacks expedition.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p16a",
+      "description": "Seris speaks ancient command language into seal; Guardian staggers, cyan core flickering.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Priority: secure Resonance asset. Minimize structural loss.",
+          "x": 50,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 48,
+          "speaker": "Seris Vale",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "OVERRIDE-CRACKLE",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p16b",
+      "description": "Guardian weapon swings — capture beams toward Spark; Mira pulls Spark behind Mossprig.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "Move!",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "BEAM-KRACK",
+          "x": 65,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p16c",
+      "description": "Plaza stone shatters; companions scatter; Echoquill Memory Trace shimmer records a Guardian strike.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "A protector with a broken clock still hits like a war.",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p16a",
+      "kind": "speech",
+      "text": "Priority: secure Resonance asset. Minimize structural loss.",
+      "x": 50,
+      "y": 22,
+      "tail": "down",
+      "maxWidthPct": 48,
+      "speaker": "Seris Vale",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p16b",
+      "kind": "shout",
+      "text": "Move!",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p16c",
+      "kind": "narration",
+      "text": "A protector with a broken clock still hits like a war.",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 4
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p16a",
+      "kind": "sfx",
+      "text": "OVERRIDE-CRACKLE",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "p16b",
+      "kind": "sfx",
+      "text": "BEAM-KRACK",
+      "x": 65,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark",
+    "mossprig",
+    "echoquill",
+    "bramblefox"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "override": "partial",
+    "combat": "begun"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 16/25 — Partial Override. Story purpose: Seris attempts control; partial success; Guardian attacks expedition. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p16a): Seris speaks ancient command language into seal; Guardian staggers, cyan core flickering. Panel 2 (p16b): Guardian weapon swings — capture beams toward Spark; Mira pulls Spark behind Mossprig. Panel 3 (p16c): Plaza stone shatters; companions scatter; Echoquill Memory Trace shimmer records a Guardian strike. Characters: mira-eggwarden, seris-vale. Creatures: spark, mossprig, echoquill, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"override\": \"partial\", \"combat\": \"begun\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Living Bulwark.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Partial Override — The Lost City page 16",
+  "atmosphere": "storm",
+  "transcript": [
+    "SPEECH (Seris Vale): Priority: secure Resonance asset. Minimize structural loss.",
+    "SFX: OVERRIDE-CRACKLE",
+    "SHOUT (Mira Eggwarden): Move!",
+    "SFX: BEAM-KRACK",
+    "NARRATION: A protector with a broken clock still hits like a war."
+  ],
+  "id": "the-lost-city-issue-004-p020",
+  "cleanArtRel": "generated/raw-art/page-020.webp",
+  "letteredArtRel": "generated/lettered-pages/page-020.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-020.webp"
+}

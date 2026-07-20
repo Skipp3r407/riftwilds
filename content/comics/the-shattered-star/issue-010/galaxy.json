@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "title": "Celestial Cartography — Volume Two",
+  "nodes": [
+    {
+      "id": "riftwilds",
+      "label": "Riftwilds",
+      "type": "homeworld"
+    },
+    {
+      "id": "forge-network",
+      "label": "Forge Network",
+      "type": "ground-civilization"
+    },
+    {
+      "id": "guardian-cities",
+      "label": "Guardian Cities",
+      "type": "beacon-grid"
+    },
+    {
+      "id": "shattered-star",
+      "label": "Shattered Star",
+      "type": "celestial-sanctuary"
+    },
+    {
+      "id": "hollow-dark",
+      "label": "Hollow Dark",
+      "type": "threat-space",
+      "spoiler": true
+    }
+  ],
+  "routes": [
+    {
+      "from": "guardian-cities",
+      "to": "shattered-star",
+      "via": "star-gate"
+    },
+    {
+      "from": "forge-network",
+      "to": "shattered-star",
+      "via": "star-engine-sync"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "pageNumber": 2,
+  "id": "the-first-rift-issue-001-p002",
+  "role": "inside-cover",
+  "title": "Inside front",
+  "layout": "narrative",
+  "atmosphere": "dusk",
+  "beat": "Inside front",
+  "artPrompt": "Quiet inside-cover atmosphere, no text. Soft Gateway glow through timber arch; invitation to read. Warm parchment light. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "Riftwilds Comic Publishing — original fantasy. No crypto required to read.",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "kind": "narration",
+          "text": "Credits & cosmetics may unlock along the way. The story itself stays free.",
+          "x": 50,
+          "y": 55
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-002.png",
+  "letteredArtRel": "generated/lettered/page-002.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-002.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

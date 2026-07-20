@@ -1,0 +1,194 @@
+{
+  "pageNumber": 24,
+  "storyPageNumber": 20,
+  "bookRole": "story",
+  "title": "All Three",
+  "storyPurpose": "Mira refuses sacrifice logic; chooses rescue + protect eggs + stop Gate abuse via teamwork.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p20a",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes centered, egg in arm, Spark at side — leadership without revenge face.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "We stop the Gate abuse. We protect the eggs. We bring Lumenhare home.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Not one life as payment.",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 36,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p20b",
+      "description": "Companions align: Mossprig, Bramblefox, Wisplet, Thornling, Cindermink, Truthwing — voluntary circle.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*together*",
+          "x": 50,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p20c",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif looks up — expects rejection, receives a mission instead.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Help us. Then answer for the roads you sold.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        },
+        {
+          "kind": "whisper",
+          "text": "…Thank you is the wrong word.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p20a",
+      "kind": "speech",
+      "text": "We stop the Gate abuse. We protect the eggs. We bring Lumenhare home.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p20a",
+      "kind": "speech",
+      "text": "Not one life as payment.",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 36,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p20b",
+      "kind": "creature",
+      "text": "*together*",
+      "x": 50,
+      "y": 50,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p20c",
+      "kind": "speech",
+      "text": "Help us. Then answer for the roads you sold.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p20c",
+      "kind": "whisper",
+      "text": "…Thank you is the wrong word.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "mossprig",
+    "bramblefox",
+    "wisplet",
+    "thornling",
+    "cindermink",
+    "truthwing",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "mira": "rescue-choice",
+    "trust": "conditional"
+  },
+  "requiredMoments": [
+    20
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 20/25 — All Three. Story purpose: Mira refuses sacrifice logic; chooses rescue + protect eggs + stop Gate abuse via teamwork. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p20a): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes centered, egg in arm, Spark at side — leadership without revenge face. Panel 2 (p20b): Companions align: Mossprig, Bramblefox, Wisplet, Thornling, Cindermink, Truthwing — voluntary circle. Panel 3 (p20c): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif looks up — expects rejection, receives a mission instead. Characters: mira-eggwarden, cael-vesper. Creatures: spark, mossprig, bramblefox, wisplet, thornling, cindermink, truthwing, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"mira\": \"rescue-choice\", \"trust\": \"conditional\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Truth in the Gate.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "All Three — The Traitor's Gate page 20",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): We stop the Gate abuse. We protect the eggs. We bring Lumenhare home.",
+    "SPEECH (Mira Eggwarden): Not one life as payment.",
+    "CREATURE (Spark): *together*",
+    "SPEECH (Mira Eggwarden): Help us. Then answer for the roads you sold.",
+    "WHISPER (Cael Vesper): …Thank you is the wrong word."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Mira Eggwarden): We stop the Gate abuse. We protect the eggs. We bring Lumenhare home.",
+    "SPEECH (Mira Eggwarden): Not one life as payment.",
+    "CREATURE (Spark): *together*",
+    "SPEECH (Mira Eggwarden): Help us. Then answer for the roads you sold.",
+    "WHISPER (Cael Vesper): …Thank you is the wrong word."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p024",
+  "cleanArtRel": "generated/raw-art/page-024.webp",
+  "letteredArtRel": "generated/lettered-pages/page-024.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-024.webp"
+}

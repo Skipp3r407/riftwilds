@@ -1,0 +1,405 @@
+{
+  "updatedAt": "2026-07-20T15:18:21.989Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "1": {
+      "pageNumber": 1,
+      "role": "front-cover",
+      "title": "The Storm King \u2014 Cover",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-001.webp",
+      "error": null
+    },
+    "2": {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "title": "Inside Front Cover",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-002.webp",
+      "error": null
+    },
+    "3": {
+      "pageNumber": 3,
+      "role": "credits",
+      "title": "Credits",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-003.webp",
+      "error": null
+    },
+    "4": {
+      "pageNumber": 4,
+      "role": "title",
+      "title": "Chapter Five \u2014 The Storm King",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-004.webp",
+      "error": null
+    },
+    "5": {
+      "pageNumber": 5,
+      "role": "story",
+      "title": "Kingdom Built of Weather",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-005.webp",
+      "error": null
+    },
+    "6": {
+      "pageNumber": 6,
+      "role": "story",
+      "title": "Roots Against the Gale",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-006.webp",
+      "error": null
+    },
+    "7": {
+      "pageNumber": 7,
+      "role": "story",
+      "title": "Updraft Invitation",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-007.webp",
+      "error": null
+    },
+    "8": {
+      "pageNumber": 8,
+      "role": "story",
+      "title": "Village Under Rods",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-008.webp",
+      "error": null
+    },
+    "9": {
+      "pageNumber": 9,
+      "role": "story",
+      "title": "Praise and Prison",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-009.webp",
+      "error": null
+    },
+    "10": {
+      "pageNumber": 10,
+      "role": "story",
+      "title": "Royal Insignia",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-010.webp",
+      "error": null
+    },
+    "11": {
+      "pageNumber": 11,
+      "role": "story",
+      "title": "Throne Under Conduit",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-011.webp",
+      "error": null
+    },
+    "12": {
+      "pageNumber": 12,
+      "role": "story",
+      "title": "Resonance Named",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-012.webp",
+      "error": null
+    },
+    "13": {
+      "pageNumber": 13,
+      "role": "story",
+      "title": "Refuse the Engine",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-013.webp",
+      "error": null
+    },
+    "14": {
+      "pageNumber": 14,
+      "role": "story",
+      "title": "Bond Pain",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-014.webp",
+      "error": null
+    },
+    "15": {
+      "pageNumber": 15,
+      "role": "story",
+      "title": "Engine That Feeds on Bond",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-015.webp",
+      "error": null
+    },
+    "16": {
+      "pageNumber": 16,
+      "role": "story",
+      "title": "Warned Years Ago",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-016.webp",
+      "error": null
+    },
+    "17": {
+      "pageNumber": 17,
+      "role": "story",
+      "title": "Tower Sabotage",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-017.webp",
+      "error": null
+    },
+    "18": {
+      "pageNumber": 18,
+      "role": "story",
+      "title": "Offer of Chains",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-018.webp",
+      "error": null
+    },
+    "19": {
+      "pageNumber": 19,
+      "role": "story",
+      "title": "Sky Tears Open",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-019.webp",
+      "error": null
+    },
+    "20": {
+      "pageNumber": 20,
+      "role": "story",
+      "title": "Neither Can the Kingdom",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-020.webp",
+      "error": null
+    },
+    "21": {
+      "pageNumber": 21,
+      "role": "story",
+      "title": "Bridges of Thunder",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-021.webp",
+      "error": null
+    },
+    "22": {
+      "pageNumber": 22,
+      "role": "story",
+      "title": "Crown Against the Host",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-022.webp",
+      "error": null
+    },
+    "23": {
+      "pageNumber": 23,
+      "role": "story",
+      "title": "Hunter's Cut",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-023.webp",
+      "error": null
+    },
+    "24": {
+      "pageNumber": 24,
+      "role": "story",
+      "title": "Memory of the First Wall",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-024.webp",
+      "error": null
+    },
+    "25": {
+      "pageNumber": 25,
+      "role": "story",
+      "title": "Loyalty Is Not Obligation",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-025.webp",
+      "error": null
+    },
+    "26": {
+      "pageNumber": 26,
+      "role": "story",
+      "title": "Release and Steady",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-026.webp",
+      "error": null
+    },
+    "27": {
+      "pageNumber": 27,
+      "role": "story",
+      "title": "Combined Stormlight",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-027.webp",
+      "error": null
+    },
+    "28": {
+      "pageNumber": 28,
+      "role": "story",
+      "title": "Ledger of Doors",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-028.webp",
+      "error": null
+    },
+    "29": {
+      "pageNumber": 29,
+      "role": "story",
+      "title": "Every Door",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-029.webp",
+      "error": null
+    },
+    "30": {
+      "pageNumber": 30,
+      "role": "teaser",
+      "title": "Next Issue \u2014 The Merchant's Secret",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-030.webp",
+      "error": null
+    },
+    "31": {
+      "pageNumber": 31,
+      "role": "profile",
+      "title": "Character Profile \u2014 King Vaelor Tempest",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-031.webp",
+      "error": null
+    },
+    "32": {
+      "pageNumber": 32,
+      "role": "profile",
+      "title": "Companion Profile \u2014 Thundervane",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-032.webp",
+      "error": null
+    },
+    "33": {
+      "pageNumber": 33,
+      "role": "lore",
+      "title": "Codex \u2014 Tempestria",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-033.webp",
+      "error": null
+    },
+    "34": {
+      "pageNumber": 34,
+      "role": "lore",
+      "title": "Ability Spotlight \u2014 Crown of Thunder",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-034.webp",
+      "error": null
+    },
+    "35": {
+      "pageNumber": 35,
+      "role": "map",
+      "title": "World Map \u2014 Peaks to Market",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-035.webp",
+      "error": null
+    },
+    "36": {
+      "pageNumber": 36,
+      "role": "letters",
+      "title": "Editor's Note \u2014 Walls & Weather",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-036.webp",
+      "error": null
+    },
+    "37": {
+      "pageNumber": 37,
+      "role": "inside-cover",
+      "title": "Inside Back Cover",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-037.webp",
+      "error": null
+    },
+    "38": {
+      "pageNumber": 38,
+      "role": "back-cover",
+      "title": "Back Cover \u2014 Every Door",
+      "artEngine": "cached",
+      "artStatus": "cached",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-storm-king/issue-005/pages/page-038.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 0,
+    "letterOk": 38,
+    "grokOk": 0,
+    "proceduralOk": 0,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-005/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-005/generate-and-letter.mjs --force",
+    "artEngine": "procedural-cached",
+    "letteredPages": 38,
+    "bookPages": 38,
+    "storyPages": 25,
+    "grokConfigured": false,
+    "note": "All 38 pages have procedural raw art + baked lettering. Re-run with XAI_API_KEY for Grok pass.",
+    "letterOnly": "node scripts/comics/issue-005/generate-and-letter.mjs --letter-only",
+    "preview": "http://localhost:3000/comics/the-storm-king",
+    "devUnlock": "NEXT_PUBLIC_COMICS_DEV_UNLOCK=1"
+  }
+}

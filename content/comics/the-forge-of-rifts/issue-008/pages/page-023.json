@@ -1,0 +1,158 @@
+{
+  "pageNumber": 23,
+  "storyPageNumber": 19,
+  "bookRole": "story",
+  "title": "Forge War — Sacrifice",
+  "storyPurpose": "Double-page battle right: reactor explosion threat; Arkan sacrifices preserved body.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p19a",
+      "description": "DOUBLE-PAGE SPREAD RIGHT: continues battle — reactor core going critical; Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes diving into the control lattice, blue veins becoming pure light, prosthetics shattering as he overloads preservation to vent the Artificial Rift and save the party; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes reaching; Spark stabilizing edge; explosion bloom (cyan/orange). Empty zones for final lines.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "Someone can finally fix my mistakes—!",
+          "x": 40,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Arkan",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Protect. Don't obey.",
+          "x": 55,
+          "y": 48,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Arkan",
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "SACRIFICE-BLOOM",
+          "x": 72,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*grief-bright*",
+          "x": 30,
+          "y": 70,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p19a",
+      "kind": "shout",
+      "text": "Someone can finally fix my mistakes—!",
+      "x": 40,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Arkan",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p19a",
+      "kind": "speech",
+      "text": "Protect. Don't obey.",
+      "x": 55,
+      "y": 48,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Arkan",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p19a",
+      "kind": "creature",
+      "text": "*grief-bright*",
+      "x": 30,
+      "y": 70,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p19a",
+      "kind": "sfx",
+      "text": "SACRIFICE-BLOOM",
+      "x": 72,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "arkan",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark",
+    "axiom"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Engine Alpha — double spread R",
+    "arkan": "sacrificed",
+    "spread": "18-19"
+  },
+  "requiredMoments": [
+    19
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 19/25 — Forge War — Sacrifice. Story purpose: Double-page battle right: reactor explosion threat; Arkan sacrifices preserved body. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p19a): DOUBLE-PAGE SPREAD RIGHT: continues battle — reactor core going critical; Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes diving into the control lattice, blue veins becoming pure light, prosthetics shattering as he overloads preservation to vent the Artificial Rift and save the party; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes reaching; Spark stabilizing edge; explosion bloom (cyan/orange). Empty zones for final lines. Characters: mira-eggwarden, arkan, seris-vale. Creatures: spark, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Engine Alpha \\u2014 double spread R\", \"arkan\": \"sacrificed\", \"spread\": \"18-19\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "The Forge collapses.",
+  "letteringInstructions": "Heroic final speech; keep Arkan's last lines readable.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Forge War — Sacrifice — The Forge of Rifts page 19",
+  "atmosphere": "rift",
+  "transcript": [
+    "SHOUT (Arkan): Someone can finally fix my mistakes—!",
+    "SPEECH (Arkan): Protect. Don't obey.",
+    "SFX: SACRIFICE-BLOOM",
+    "CREATURE (Spark): *grief-bright*"
+  ],
+  "a11yTranscript": [
+    "SHOUT (Arkan): Someone can finally fix my mistakes—!",
+    "SPEECH (Arkan): Protect. Don't obey.",
+    "SFX: SACRIFICE-BLOOM",
+    "CREATURE (Spark): *grief-bright*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": {
+    "pair": 18,
+    "side": "right"
+  },
+  "id": "the-forge-of-rifts-issue-008-p023",
+  "cleanArtRel": "generated/raw-art/page-023.webp",
+  "letteredArtRel": "generated/lettered-pages/page-023.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-023.webp"
+}

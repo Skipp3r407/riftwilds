@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { shouldUseSecureCookies } from "@/lib/auth/cookie-options";
+import {
+  buildLoginRedirectPath,
+  isProtectedApiPath,
+  isProtectedPath,
+} from "@/lib/auth/protected-routes";
 import { authDefaults } from "@/lib/config/project";
 import {
   ORIGIN_STORY_COOKIE_MAX_AGE_SECONDS,
@@ -9,6 +14,14 @@ import {
   hasSeenOriginStoryCookie,
 } from "@/lib/origin-story";
 
+/**
+ * Edge middleware (Next 16: prefer `proxy.ts` for Node runtime; keep middleware for edge cookie gates).
+ * - Maintenance rewrite
+ * - NO ACCOUNT = NO GAMEPLAY: protected pages → /login?returnUrl=
+ * - Protected APIs → 401 without ph_session cookie (status checked in layouts/APIs)
+ * - Admin cookie presence
+ * - First-visit origin story
+ */
 function isLikelyBot(userAgent: string | null): boolean {
   if (!userAgent) return false;
   return /bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|linkedinbot|twitterbot|whatsapp|preview/i.test(
@@ -16,16 +29,23 @@ function isLikelyBot(userAgent: string | null): boolean {
   );
 }
 
-/**
- * Edge middleware: maintenance gate + admin session presence check + first-visit story gate.
- * Role verification still happens server-side in admin layouts/APIs.
- *
- * First-visit (not always): `/` → `/about` until `riftwilds-seen-origin-story` is set.
- * Bots skip the gate so `/` stays crawlable for SEO.
- */
+function hasSessionCookie(request: NextRequest): boolean {
+  const value = request.cookies.get(authDefaults.COOKIE_NAME)?.value;
+  return Boolean(value && value.length >= 16);
+}
+
+/** Local-only: skip edge cookie gate when Postgres/auth cannot run (preview demos). */
+function isLocalPreviewBypass(): boolean {
+  return (
+    process.env.NODE_ENV !== "production" &&
+    process.env.AUTH_LOCAL_PREVIEW_BYPASS === "true"
+  );
+}
+
 export function middleware(request: NextRequest) {
+  const path = request.nextUrl.pathname;
+
   if (process.env.MAINTENANCE_MODE === "true") {
-    const path = request.nextUrl.pathname;
     if (
       !path.startsWith("/api/health") &&
       !path.startsWith("/api/ready") &&
@@ -35,11 +55,37 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  if (request.nextUrl.pathname.startsWith("/admin")) {
-    const session = request.cookies.get(authDefaults.COOKIE_NAME)?.value;
-    if (!session) {
+  const previewBypass = isLocalPreviewBypass();
+
+  // Protected gameplay APIs — no cookie ⇒ no data (do not mint guests).
+  if (isProtectedApiPath(path) && !hasSessionCookie(request) && !previewBypass) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: {
+          code: "UNAUTHORIZED",
+          message: "Sign in required — guest gameplay is disabled.",
+          retryable: false,
+        },
+      },
+      { status: 401, headers: { "X-Request-Id": crypto.randomUUID() } },
+    );
+  }
+
+  // Protected pages — cookie presence only at the edge.
+  if (isProtectedPath(path) && !hasSessionCookie(request) && !previewBypass) {
+    const returnUrl = `${path}${request.nextUrl.search}`;
+    return NextResponse.redirect(
+      new URL(buildLoginRedirectPath(returnUrl), request.url),
+    );
+  }
+
+  if (path.startsWith("/admin")) {
+    if (!hasSessionCookie(request) && !previewBypass) {
       const url = request.nextUrl.clone();
-      url.pathname = "/play";
+      url.pathname = "/login";
+      url.search = "";
+      url.searchParams.set("returnUrl", "/admin");
       url.searchParams.set("admin", "login-required");
       return NextResponse.redirect(url);
     }
@@ -47,7 +93,6 @@ export function middleware(request: NextRequest) {
 
   const { pathname, searchParams } = request.nextUrl;
 
-  // Explicit home intent (?home=1) always serves `/` and marks the story seen.
   if (pathname === "/" && searchParams.has("home")) {
     const url = request.nextUrl.clone();
     url.searchParams.delete("home");
@@ -83,6 +128,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     "/admin/:path*",
-    "/((?!_next/static|_next/image|favicon.ico|assets/|api/health|api/ready).*)",
+    "/((?!_next/static|_next/image|favicon.ico|assets/|api/health|api/ready|api/auth).*)",
   ],
 };

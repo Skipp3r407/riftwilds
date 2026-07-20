@@ -1,0 +1,114 @@
+{
+  "pageNumber": 13,
+  "bookRole": "story",
+  "title": "Scar of the First Tear",
+  "storyPurpose": "Rift-scarred region: floating stones, damaged trees, reversed waterfall.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p9a",
+      "description": "Dramatic establishing splash of fractured wilds: floating mossy stones, split trees glowing with old cyan scars, a waterfall running upward into cloud. Party small on path. Spark's glow answers the landscape.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Where the First Tear taught stone to forget gravity.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 65
+        },
+        {
+          "kind": "whisper",
+          "speaker": "Mira Eggwarden",
+          "text": "Stay close. This ground remembers wrong.",
+          "x": 35,
+          "y": 80,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "sfx",
+          "text": "rift-hummm",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p9a",
+      "kind": "whisper",
+      "speaker": "Mira Eggwarden",
+      "text": "Stay close. This ground remembers wrong.",
+      "x": 35,
+      "y": 80,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p9a",
+      "kind": "narration",
+      "text": "Where the First Tear taught stone to forget gravity.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 65
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p9a",
+      "kind": "sfx",
+      "text": "rift-hummm",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "continuity": {
+    "location": "First-Rift scar wilds",
+    "weather": "warped air shimmer",
+    "spark": {
+      "emotion": "resonant unease",
+      "glow": "answering landscape"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 9/25 — Scar of the First Tear. Story purpose: Rift-scarred region: floating stones, damaged trees, reversed waterfall. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p9a): Dramatic establishing splash of fractured wilds: floating mossy stones, split trees glowing with old cyan scars, a waterfall running upward into cloud. Party small on path. Spark's glow answers the landscape. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: fractured wilds. Time: afternoon. Weather: post-storm clear. Lighting: skewed daylight + cyan scar glow. Continuity: {\"location\":\"First-Rift scar wilds\",\"weather\":\"warped air shimmer\",\"spark\":{\"emotion\":\"resonant unease\",\"glow\":\"answering landscape\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Civilians panic.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Scar of the First Tear — Spark's Journey page 9",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Where the First Tear taught stone to forget gravity.",
+    "WHISPER (Mira Eggwarden): Stay close. This ground remembers wrong.",
+    "SFX: rift-hummm"
+  ],
+  "storyPageNumber": 9,
+  "id": "sparks-journey-issue-002-p013",
+  "cleanArtRel": "generated/raw-art/page-013.png",
+  "letteredArtRel": "generated/lettered-pages/page-013.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-013.webp"
+}

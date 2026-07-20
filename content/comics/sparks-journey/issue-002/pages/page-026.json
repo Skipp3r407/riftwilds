@@ -1,0 +1,124 @@
+{
+  "pageNumber": 26,
+  "bookRole": "story",
+  "title": "Prismatic Burst",
+  "storyPurpose": "Spark unleashes controlled Prismatic Burst; group combines powers; binding field breaks — not instant win.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p22a",
+      "description": "Action splash: Spark at center releases Prismatic Burst — structured cyan-gold-amber ribbons (not chaotic nuke). Bramblefox/Mossprig/Thornling/Wisplet abilities sync into the burst. Hunter binding field shatters. Hunters staggered but not vaporized. Mira shields eyes, standing with Spark.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "PRISM—BURST",
+          "x": 50,
+          "y": 22,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 40
+        },
+        {
+          "kind": "sfx",
+          "text": "field-SHATTER",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "shout",
+          "speaker": "Vex Halden",
+          "text": "Dampening— hold the line!",
+          "x": 30,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p22a",
+      "kind": "shout",
+      "speaker": "Vex Halden",
+      "text": "Dampening— hold the line!",
+      "x": 30,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p22a",
+      "kind": "sfx",
+      "text": "PRISM—BURST",
+      "x": 50,
+      "y": 22,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 40
+    },
+    {
+      "panelId": "p22a",
+      "kind": "sfx",
+      "text": "field-SHATTER",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet"
+  ],
+  "continuity": {
+    "spark": {
+      "emotion": "strained resolve",
+      "glow": "burst afterglow",
+      "resonance": 0,
+      "ability": "Prismatic Burst used"
+    },
+    "hunters": {
+      "bindingField": "broken",
+      "status": "staggered"
+    },
+    "battle": "turning"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 22/25 — Prismatic Burst. Story purpose: Spark unleashes controlled Prismatic Burst; group combines powers; binding field breaks — not instant win. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p22a): Action splash: Spark at center releases Prismatic Burst — structured cyan-gold-amber ribbons (not chaotic nuke). Bramblefox/Mossprig/Thornling/Wisplet abilities sync into the burst. Hunter binding field shatters. Hunters staggered but not vaporized. Mira shields eyes, standing with Spark. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: prismatic burst climax. Continuity: {\"spark\":{\"emotion\":\"strained resolve\",\"glow\":\"burst afterglow\",\"resonance\":0,\"ability\":\"Prismatic Burst used\"},\"hunters\":{\"bindingField\":\"broken\",\"status\":\"staggered\"},\"battle\":\"turning\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Retreat / sanctuary opens.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Prismatic Burst — Spark's Journey page 22",
+  "atmosphere": "night",
+  "transcript": [
+    "SFX: PRISM—BURST",
+    "SFX: field-SHATTER",
+    "SHOUT (Vex Halden): Dampening— hold the line!"
+  ],
+  "storyPageNumber": 22,
+  "id": "sparks-journey-issue-002-p026",
+  "cleanArtRel": "generated/raw-art/page-026.png",
+  "letteredArtRel": "generated/lettered-pages/page-026.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-026.webp"
+}

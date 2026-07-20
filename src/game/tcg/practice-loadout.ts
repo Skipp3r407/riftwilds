@@ -3,12 +3,13 @@
  * Ranked / invite / private paths must keep player-built deck lists intact.
  *
  * Teaching practice prefers solo-playable engine cards: units + damage/heal/Echo
- * spells. Equipment / relics / artifacts stay out — they brick empty opening fields
+ * spells. Equipment / relics stay out — they brick empty opening fields
  * (EQUIP_NO_TARGET) and several starters are catalog-item heavy after regen.
- * Terrain/traps stay out of random pools.
+ * Terrain/traps stay out of random pools. Items (consumables) allowed if heal.
  */
 
 import { getCardById, TCG_DECKS, TCG_FACTIONS, getDeckById, getHeroById } from "@/content/tcg";
+import { resolveCardCategory } from "@/content/tcg/framework/card-categories";
 import { CONSTRUCTED_RULES } from "@/content/tcg/framework/deck-rules";
 import { getTcgCardDef } from "@/game/tcg/card-catalog";
 import {
@@ -34,36 +35,50 @@ const EARLY_CURVE_MAX_COST = 2;
 
 /**
  * True when Practice Board should deal this card.
- * Solo-playable only: units / companions and combat spells.
+ * Solo-playable only: companions / evolutions and combat spells / heal items.
  * Equipment needs a friendly unit — excluded from teaching pools entirely.
  */
 export function isPracticeUsefulCard(cardId: string): boolean {
   const card = getCardById(cardId);
   if (!card) return false;
 
+  const category = resolveCardCategory(card.type, card.id);
+
   if (
-    card.type === "creature" ||
-    card.type === "companion" ||
-    card.type === "legendary" ||
-    card.type === "token" ||
-    card.type === "hero"
+    category === "companion" ||
+    category === "evolution" ||
+    category === "commander"
   ) {
     return true;
   }
 
-  // Attach / hold cards brick empty boards — keep them out of practice starters.
+  // Attach / hold / set cards brick empty boards or need reaction windows.
   if (
-    card.type === "equipment" ||
-    card.type === "relic" ||
-    card.type === "artifact" ||
-    card.type === "location" ||
-    card.type === "weather" ||
-    card.type === "trap"
+    category === "equipment" ||
+    category === "relic" ||
+    category === "terrain" ||
+    category === "trap"
   ) {
     return false;
   }
 
-  if (card.type !== "spell") return false;
+  if (category === "item") {
+    // Consumable heals are fine for teaching; care-only toys without effects skip.
+    for (const ab of card.abilities) {
+      for (const fx of ab.effects) {
+        if (fx.op === "heal" && typeof fx.value === "number" && fx.value > 0) {
+          return true;
+        }
+        if (fx.op === "deal_damage" && typeof fx.value === "number" && fx.value > 0) {
+          return true;
+        }
+      }
+    }
+    if (typeof card.attack === "number" && card.attack > 0) return true;
+    return false;
+  }
+
+  if (category !== "spell") return false;
 
   if (typeof card.attack === "number" && card.attack > 0) return true;
 
@@ -251,7 +266,8 @@ export function ensurePracticeOpeningHandPlayable(
   opts?: { openingHand?: number; maxOpenCost?: number },
 ): TcgCardInstance[] {
   const openingHand = opts?.openingHand ?? TCG_DEFAULTS.openingHand;
-  const maxOpenCost = opts?.maxOpenCost ?? 1;
+  /** Turn-1 energy is 2 under Standard rules. */
+  const maxOpenCost = opts?.maxOpenCost ?? TCG_DEFAULTS.riftEnergyStartMax;
   if (deck.length <= openingHand) return [...deck];
 
   const cards = [...deck];

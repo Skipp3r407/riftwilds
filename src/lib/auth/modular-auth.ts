@@ -1,6 +1,5 @@
 /**
- * Wallet-optional identity scaffolding.
- * Does not replace SIWS; provides types + merge rules for email/social → wallet link.
+ * Account-required identity plan — wallet links after sign-in, never replaces account.
  */
 
 import { listAuthProviders, type AuthProviderId } from "@/lib/auth/providers";
@@ -20,16 +19,21 @@ export type SoftIdentity = {
 export type AuthOnboardingStep =
   | "choose_login"
   | "email_or_social"
+  | "verify_email"
   | "create_riftkeeper"
+  | "legal_accept"
   | "optional_wallet"
   | "holdings_recognized"
   | "play";
 
 export type AuthOnboardingPlan = {
   recommendedFirst: "email_or_social";
+  /** Absolute rule: account required before gameplay. */
+  accountRequiredForPlay: true;
   walletRequiredForPlay: false;
   walletRequiredForClaims: true;
   walletRequiredForSolMarketplace: true;
+  guestGameplayAllowed: false;
   steps: AuthOnboardingStep[];
   providersPrimary: ReturnType<typeof listAuthProviders>;
   providersSecondary: ReturnType<typeof listAuthProviders>;
@@ -38,6 +42,7 @@ export type AuthOnboardingPlan = {
     socialEnabled: boolean;
     walletSiwsEnabled: boolean;
     walletOptionalPlay: boolean;
+    accountRequiredForPlay: boolean;
   };
   copy: {
     headline: string;
@@ -46,17 +51,21 @@ export type AuthOnboardingPlan = {
   };
 };
 
-/** Recommended journey: email/social first, wallet later. */
+/** Recommended journey: create account first, wallet later. */
 export function getAuthOnboardingPlan(): AuthOnboardingPlan {
   return {
     recommendedFirst: "email_or_social",
+    accountRequiredForPlay: true,
     walletRequiredForPlay: false,
     walletRequiredForClaims: true,
     walletRequiredForSolMarketplace: true,
+    guestGameplayAllowed: false,
     steps: [
       "choose_login",
       "email_or_social",
+      "verify_email",
       "create_riftkeeper",
+      "legal_accept",
       "optional_wallet",
       "holdings_recognized",
       "play",
@@ -68,20 +77,17 @@ export function getAuthOnboardingPlan(): AuthOnboardingPlan {
       socialEnabled: featureFlagDefaults.AUTH_SOCIAL_ENABLED,
       walletSiwsEnabled: featureFlagDefaults.AUTH_WALLET_SIWS_ENABLED,
       walletOptionalPlay: featureFlagDefaults.AUTH_WALLET_OPTIONAL_PLAY,
+      accountRequiredForPlay: featureFlagDefaults.AUTH_ACCOUNT_REQUIRED_FOR_PLAY,
     },
     copy: {
       headline: "Become a Riftkeeper",
-      lede: "Sign in with email or social to play. Connect a Solana wallet later for token utility, claims, and marketplace settlements.",
+      lede: "Create a free account to play. Guest and anonymous gameplay are disabled — sign in before hatchery, battles, Live World, and marketplace.",
       walletLater:
-        "Wallet connect is optional for soft-currency play. Link when you are ready for Web3 features.",
+        "Connect a Solana wallet after you have an account — wallets never replace your Riftkeeper login.",
     },
   };
 }
 
-/**
- * Identity merge rules (scaffolding) — never silently drop progress.
- * Production merge should run inside a transaction with admin audit.
- */
 export type IdentityMergePlan = {
   keepUserId: string;
   absorbUserId: string;
@@ -112,11 +118,12 @@ export function planWalletLinkMerge(params: {
       "both_sides_have_conflicting_primary_wallet",
       "absorb_user_is_banned",
       "merge_already_in_progress",
+      "no_signed_in_account",
     ],
   };
 }
 
-/** Demo soft identity for UI when OAuth is not live yet. */
+/** @deprecated Demo soft identity — guest play removed. */
 export function createDemoSoftIdentity(displayName = "Riftkeeper"): SoftIdentity {
   return {
     userId: "demo_soft_identity",

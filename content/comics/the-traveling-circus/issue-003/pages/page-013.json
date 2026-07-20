@@ -1,0 +1,178 @@
+{
+  "pageNumber": 13,
+  "bookRole": "story",
+  "title": "Ghosts Under the Boards",
+  "storyPurpose": "Wisplet detects trapped spirits under stage; Spirit Moth pulse; Spark uneasy.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p9a",
+      "description": "Wisplet drifts down toward stage boards; faint ghostly companion silhouettes beneath.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Wisplet",
+          "text": "*warning-chime*",
+          "x": 50,
+          "y": 40,
+          "tail": "up",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p9b",
+      "description": "Spirit Moth reacts to hidden lantern pulse backstage.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "hidden-pulse",
+          "x": 60,
+          "y": 45,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p9c",
+      "description": "Spark unease — glow strobes; Mira notices.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*uneasy hum*",
+          "x": 45,
+          "y": 50,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Something's wrong under the stage.",
+          "x": 55,
+          "y": 75,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 38
+        }
+      ]
+    },
+    {
+      "id": "p9d",
+      "description": "Crowd still cheering above; contrast joy vs under-stage gloom.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Applause can be a lid.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "readOrder": 4,
+          "maxWidthPct": 40
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p9a",
+      "kind": "creature",
+      "speaker": "Wisplet",
+      "text": "*warning-chime*",
+      "x": 50,
+      "y": 40,
+      "tail": "up",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p9c",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*uneasy hum*",
+      "x": 45,
+      "y": 50,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p9c",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Something's wrong under the stage.",
+      "x": 55,
+      "y": 75,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 38
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p9d",
+      "kind": "narration",
+      "text": "Applause can be a lid.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "readOrder": 4,
+      "maxWidthPct": 40
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p9b",
+      "kind": "sfx",
+      "text": "hidden-pulse",
+      "x": 60,
+      "y": 45,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "wisplet",
+    "spirit-moth",
+    "spark"
+  ],
+  "continuity": {
+    "underStage": "trapped-spirits-detected",
+    "spark": {
+      "emotion": "uneasy"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 9/25 — Ghosts Under the Boards. Story purpose: Wisplet detects trapped spirits under stage; Spirit Moth pulse; Spark uneasy. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p9a): Wisplet drifts down toward stage boards; faint ghostly companion silhouettes beneath. Panel 2 (p9b): Spirit Moth reacts to hidden lantern pulse backstage. Panel 3 (p9c): Spark unease — glow strobes; Mira notices. Panel 4 (p9d): Crowd still cheering above; contrast joy vs under-stage gloom. Characters: mira-eggwarden. Creatures: wisplet, spirit-moth, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"underStage\":\"trapped-spirits-detected\",\"spark\":{\"emotion\":\"uneasy\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Spark meets Lumenhare.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ghosts Under the Boards — The Traveling Circus page 9",
+  "atmosphere": "festival",
+  "transcript": [
+    "CREATURE (Wisplet): *warning-chime*",
+    "SFX: hidden-pulse",
+    "CREATURE (Spark): *uneasy hum*",
+    "SPEECH (Mira Eggwarden): Something's wrong under the stage.",
+    "NARRATION: Applause can be a lid."
+  ],
+  "storyPageNumber": 9,
+  "id": "the-traveling-circus-issue-003-p013",
+  "cleanArtRel": "generated/raw-art/page-013.png",
+  "letteredArtRel": "generated/lettered-pages/page-013.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-013.webp"
+}

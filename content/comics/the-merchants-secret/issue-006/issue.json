@@ -1,0 +1,282 @@
+{
+  "slug": "the-merchants-secret",
+  "issueNumber": 6,
+  "title": "The Merchant's Secret",
+  "subtitle": "Chapter Six \u2014 Every Door Has a Price",
+  "synopsis": "Mira Eggwarden, Spark, and the expedition enter the Gilded Crossroads \u2014 a moving bazaar powered by old Rift routes. Aurelia Voss formalizes as the Gilded Merchant; Seris Vale weaponizes the stolen royal trade ledger at a trap auction for a dormant Riftborn egg. The team condemns companion trafficking, frees captives with Cindermink's Break the Chain, and saves the egg \u2014 but Cael Vesper's hidden merchant debt surfaces in a cliffhanger: The Traitor's Gate.",
+  "publishedAt": "2026-07-20",
+  "status": "published",
+  "storyPageCount": 25,
+  "bookPageCount": 38,
+  "estimatedReadMinutes": 22,
+  "protagonist": "Mira Eggwarden",
+  "featuredCreatures": [
+    "Spark",
+    "Lockjaw Wisp",
+    "Cindermink",
+    "Bramblefox",
+    "Mossprig",
+    "Thornling",
+    "Wisplet",
+    "Echoquill"
+  ],
+  "locations": [
+    "Gilded Crossroads",
+    "Central Exchange",
+    "Underground Archive",
+    "Portal Engine Core"
+  ],
+  "marketRulesRel": "market-rules.json",
+  "unlockGates": [
+    {
+      "kind": "prior-issue",
+      "slug": "the-storm-king",
+      "label": "Complete Issue #5: The Storm King"
+    },
+    {
+      "kind": "admin-dev",
+      "label": "Admin / COMICS_DEV_UNLOCK override"
+    }
+  ],
+  "nextIssueTeaser": {
+    "slug": "the-traitors-gate",
+    "hook": "The Keeper has the egg. Proceed to the next gate.",
+    "traitor": "Cael Vesper"
+  },
+  "pipeline": {
+    "artProvider": "grok",
+    "lettering": "programmatic",
+    "bakedLettering": true,
+    "contentRoot": "content/comics/the-merchants-secret/issue-006"
+  },
+  "bookPages": [
+    {
+      "pageNumber": 1,
+      "storyPageNumber": null,
+      "role": "front-cover",
+      "title": "The Merchant's Secret \u2014 Cover"
+    },
+    {
+      "pageNumber": 2,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Front Cover"
+    },
+    {
+      "pageNumber": 3,
+      "storyPageNumber": null,
+      "role": "credits",
+      "title": "Credits"
+    },
+    {
+      "pageNumber": 4,
+      "storyPageNumber": null,
+      "role": "title",
+      "title": "Chapter Six \u2014 The Merchant's Secret"
+    },
+    {
+      "pageNumber": 5,
+      "storyPageNumber": 1,
+      "role": "story",
+      "title": "Crossroads Spark"
+    },
+    {
+      "pageNumber": 6,
+      "storyPageNumber": 2,
+      "role": "story",
+      "title": "Market Rules"
+    },
+    {
+      "pageNumber": 7,
+      "storyPageNumber": 3,
+      "role": "story",
+      "title": "Lantern Entry"
+    },
+    {
+      "pageNumber": 8,
+      "storyPageNumber": 4,
+      "role": "story",
+      "title": "Wonder and Danger"
+    },
+    {
+      "pageNumber": 9,
+      "storyPageNumber": 5,
+      "role": "story",
+      "title": "Shelter and Cry"
+    },
+    {
+      "pageNumber": 10,
+      "storyPageNumber": 6,
+      "role": "story",
+      "title": "Resonance Less Cooperative"
+    },
+    {
+      "pageNumber": 11,
+      "storyPageNumber": 7,
+      "role": "story",
+      "title": "Key for a Buyer"
+    },
+    {
+      "pageNumber": 12,
+      "storyPageNumber": 8,
+      "role": "story",
+      "title": "Profit vs Preservation"
+    },
+    {
+      "pageNumber": 13,
+      "storyPageNumber": 9,
+      "role": "story",
+      "title": "Illegal Cages"
+    },
+    {
+      "pageNumber": 14,
+      "storyPageNumber": 10,
+      "role": "story",
+      "title": "False Walls"
+    },
+    {
+      "pageNumber": 15,
+      "storyPageNumber": 11,
+      "role": "story",
+      "title": "Recruitment File"
+    },
+    {
+      "pageNumber": 16,
+      "storyPageNumber": 12,
+      "role": "story",
+      "title": "Egg Auction Announced"
+    },
+    {
+      "pageNumber": 17,
+      "storyPageNumber": 13,
+      "role": "story",
+      "title": "Underground Archive"
+    },
+    {
+      "pageNumber": 18,
+      "storyPageNumber": 14,
+      "role": "story",
+      "title": "Auction Trap"
+    },
+    {
+      "pageNumber": 19,
+      "storyPageNumber": 15,
+      "role": "story",
+      "title": "Beyond Control"
+    },
+    {
+      "pageNumber": 20,
+      "storyPageNumber": 16,
+      "role": "story",
+      "title": "Private Auction"
+    },
+    {
+      "pageNumber": 21,
+      "storyPageNumber": 17,
+      "role": "story",
+      "title": "Bidding and Cry"
+    },
+    {
+      "pageNumber": 22,
+      "storyPageNumber": 18,
+      "role": "story",
+      "title": "Spark Revealed"
+    },
+    {
+      "pageNumber": 23,
+      "storyPageNumber": 19,
+      "role": "story",
+      "title": "Break the Auction"
+    },
+    {
+      "pageNumber": 24,
+      "storyPageNumber": 20,
+      "role": "story",
+      "title": "Ledger Doors"
+    },
+    {
+      "pageNumber": 25,
+      "storyPageNumber": 21,
+      "role": "story",
+      "title": "Break the Chain"
+    },
+    {
+      "pageNumber": 26,
+      "storyPageNumber": 22,
+      "role": "story",
+      "title": "Bazaar Shifts"
+    },
+    {
+      "pageNumber": 27,
+      "storyPageNumber": 23,
+      "role": "story",
+      "title": "Stabilize the Egg"
+    },
+    {
+      "pageNumber": 28,
+      "storyPageNumber": 24,
+      "role": "story",
+      "title": "The Riftwright"
+    },
+    {
+      "pageNumber": 29,
+      "storyPageNumber": 25,
+      "role": "story",
+      "title": "The Traitor's Gate"
+    },
+    {
+      "pageNumber": 30,
+      "storyPageNumber": null,
+      "role": "teaser",
+      "title": "Next Issue \u2014 The Traitor's Gate"
+    },
+    {
+      "pageNumber": 31,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Character Profile \u2014 Aurelia Voss"
+    },
+    {
+      "pageNumber": 32,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Companion Profile \u2014 Lockjaw Wisp"
+    },
+    {
+      "pageNumber": 33,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Codex \u2014 Gilded Crossroads"
+    },
+    {
+      "pageNumber": 34,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Ability Spotlight \u2014 Break the Chain"
+    },
+    {
+      "pageNumber": 35,
+      "storyPageNumber": null,
+      "role": "map",
+      "title": "World Map \u2014 Tempestria to Crossroads"
+    },
+    {
+      "pageNumber": 36,
+      "storyPageNumber": null,
+      "role": "letters",
+      "title": "Editor's Note \u2014 Doors and Prices"
+    },
+    {
+      "pageNumber": 37,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Back Cover"
+    },
+    {
+      "pageNumber": 38,
+      "storyPageNumber": null,
+      "role": "back-cover",
+      "title": "Back Cover \u2014 The Traitor's Gate"
+    }
+  ]
+}

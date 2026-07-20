@@ -2,6 +2,22 @@ import type { NextConfig } from "next";
 import os from "os";
 import path from "path";
 
+/** Fail production builds if Development Override env flags were left on. */
+function assertNoDevOverrideInProdConfig(): void {
+  const flag = (v: string | undefined) => {
+    if (!v) return false;
+    const n = v.trim().toLowerCase();
+    return n === "true" || n === "1" || n === "yes" || n === "on";
+  };
+  if (process.env.NODE_ENV !== "production") return;
+  if (flag(process.env.DEV_OVERRIDE) || flag(process.env.NEXT_PUBLIC_DEV_OVERRIDE)) {
+    throw new Error(
+      "[DEV_OVERRIDE] Refusing production Next config load: clear DEV_OVERRIDE / NEXT_PUBLIC_DEV_OVERRIDE.",
+    );
+  }
+}
+assertNoDevOverrideInProdConfig();
+
 const r2Public = process.env.R2_PUBLIC_URL;
 const remotePatterns: NonNullable<NextConfig["images"]>["remotePatterns"] = [];
 

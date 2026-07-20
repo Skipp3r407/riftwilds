@@ -1,0 +1,187 @@
+{
+  "pageNumber": 7,
+  "bookRole": "story",
+  "title": "Hatchling",
+  "storyPurpose": "Spark emerges, panics with small pulse, hides behind Bramblefox; Mira kneels.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p3a",
+      "description": "Spark emerges fully — Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Wet fur, trembling.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*chirp—!*",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p3b",
+      "description": "Small uncontrolled cyan-gold energy pulse knocks leaves; Wisplet drifts back.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "PULSE-THUM",
+          "x": 55,
+          "y": 45,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p3c",
+      "description": "Spark presses hard against Bramblefox's flank, refusing everyone else.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Bramblefox",
+          "text": "*soft rrk*",
+          "x": 40,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p3d",
+      "description": "Mira kneels at a respectful distance, open empty hands — not grabbing.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "I'm not going to grab you. Invite only.",
+          "x": 50,
+          "y": 25,
+          "tail": "down",
+          "readOrder": 3,
+          "maxWidthPct": 40
+        },
+        {
+          "kind": "narration",
+          "text": "Compact starts at the first breath.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "readOrder": 4,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p3a",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*chirp—!*",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p3c",
+      "kind": "creature",
+      "speaker": "Bramblefox",
+      "text": "*soft rrk*",
+      "x": 40,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p3d",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "I'm not going to grab you. Invite only.",
+      "x": 50,
+      "y": 25,
+      "tail": "down",
+      "readOrder": 3,
+      "maxWidthPct": 40
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p3d",
+      "kind": "narration",
+      "text": "Compact starts at the first breath.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "readOrder": 4,
+      "maxWidthPct": 34
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p3b",
+      "kind": "sfx",
+      "text": "PULSE-THUM",
+      "x": 55,
+      "y": 45,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "wisplet"
+  ],
+  "continuity": {
+    "spark": {
+      "form": "hatchling",
+      "emotion": "terrified",
+      "glow": "unstable flare",
+      "position": "behind Bramblefox",
+      "trusts": [
+        "bramblefox"
+      ]
+    },
+    "mira": {
+      "present": true
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 3/25 — Hatchling. Story purpose: Spark emerges, panics with small pulse, hides behind Bramblefox; Mira kneels. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p3a): Spark emerges fully — Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Wet fur, trembling. Panel 2 (p3b): Small uncontrolled cyan-gold energy pulse knocks leaves; Wisplet drifts back. Panel 3 (p3c): Spark presses hard against Bramblefox's flank, refusing everyone else. Panel 4 (p3d): Mira kneels at a respectful distance, open empty hands — not grabbing. Characters: mira-eggwarden, mira-eggwarden. Creatures: spark, bramblefox, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"form\":\"hatchling\",\"emotion\":\"terrified\",\"glow\":\"unstable flare\",\"position\":\"behind Bramblefox\",\"trusts\":[\"bramblefox\"]},\"mira\":{\"present\":true}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Codex scan.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Hatchling — Spark's Journey page 3",
+  "atmosphere": "dawn",
+  "transcript": [
+    "CREATURE (Spark): *chirp—!*",
+    "SFX: PULSE-THUM",
+    "CREATURE (Bramblefox): *soft rrk*",
+    "SPEECH (Mira Eggwarden): I'm not going to grab you. Invite only.",
+    "NARRATION: Compact starts at the first breath."
+  ],
+  "storyPageNumber": 3,
+  "id": "sparks-journey-issue-002-p007",
+  "cleanArtRel": "generated/raw-art/page-007.png",
+  "letteredArtRel": "generated/lettered-pages/page-007.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-007.webp"
+}

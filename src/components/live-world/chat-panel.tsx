@@ -30,7 +30,25 @@ type Props = {
   onPanelPositionChange?: (position: HudPanelPosition) => void;
 };
 
-const TABS: ChatChannel[] = ["nearby", "party", "whisper", "system"];
+const TABS: ChatChannel[] = [
+  "nearby",
+  "guild",
+  "party",
+  "trade",
+  "whisper",
+  "system",
+  "combat",
+];
+const TAB_LABEL: Record<ChatChannel, string> = {
+  nearby: "Near",
+  guild: "Guild",
+  party: "Party",
+  trade: "Trade",
+  whisper: "Whisper",
+  system: "System",
+  combat: "Combat",
+  global: "Global",
+};
 /** Idle collapse for auto-hide / transparent (pinned stays open). */
 const CHAT_IDLE_HIDE_MS = 6000;
 
@@ -53,6 +71,8 @@ export function LiveWorldChatPanel({
   const inputRef = useRef<HTMLInputElement>(null);
   const rootRef = useRef<HTMLDivElement>(null);
   const [floatExpanded, setFloatExpanded] = useState(false);
+  const [fontScale, setFontScale] = useState(1);
+  const [panelOpacity, setPanelOpacity] = useState(1);
   const onRevealHudRef = useRef(onRevealHud);
   onRevealHudRef.current = onRevealHud;
   const lastChatRevRef = useRef<number | null>(null);
@@ -187,9 +207,34 @@ export function LiveWorldChatPanel({
   const messages = bridge.chat.list().filter((m) => {
     if (tab === "system") return m.channel === "system" || m.channel === "global";
     if (tab === "nearby") return m.channel === "nearby" || m.channel === "system";
+    if (tab === "combat") return m.channel === "combat" || m.channel === "system";
+    if (tab === "guild" || tab === "trade") {
+      return m.channel === tab || m.channel === "system";
+    }
     return m.channel === tab;
   });
   void rev;
+
+  /** Soft link chrome for item/card/creature/quest mentions in chat bodies. */
+  const renderBody = (body: string) => {
+    const parts = body.split(/(\[[^\]]+\]|\{[^}]+\}|<[^>]+>)/g);
+    return parts.map((part, i) => {
+      if (/^\[.+\]$/.test(part) || /^\{.+\}$/.test(part) || /^<.+>$/.test(part)) {
+        return (
+          <button
+            key={`${part}-${i}`}
+            type="button"
+            className="mx-0.5 rounded border border-[var(--lw-trim)]/50 bg-[rgba(255,184,77,0.1)] px-0.5 text-[var(--amber)] hover:bg-[rgba(255,184,77,0.18)]"
+            title="Linked entry"
+            onClick={() => playSfx("ui.click")}
+          >
+            {part}
+          </button>
+        );
+      }
+      return <span key={i}>{part}</span>;
+    });
+  };
 
   const submit = () => {
     // Emote/ping slash commands only fire from chat submit — never from WASD movement.
@@ -304,7 +349,8 @@ export function LiveWorldChatPanel({
       </div>
     ) : (
       <div
-        className={`${LW_HUD_GLASS} overflow-hidden ${panelBg}`}
+        className={`${LW_HUD_GLASS} lw-hud-glass--secondary lw-hud-enter overflow-hidden ${panelBg}`}
+        style={{ opacity: chatMode === "transparent" ? 0.72 * panelOpacity : panelOpacity }}
         onPointerEnter={() => {
           setHovered(true);
           bumpActivity();
@@ -313,7 +359,7 @@ export function LiveWorldChatPanel({
         onPointerDown={() => bumpActivity()}
       >
         <div
-          className={`flex items-center gap-1 border-b border-[var(--stroke-bronze)]/50 px-1.5 py-1 ${
+          className={`flex flex-wrap items-center gap-0.5 border-b border-[var(--stroke-bronze)]/50 px-1.5 py-1 ${
             dragHandleProps?.className ?? ""
           }`}
           {...(dragHandleProps
@@ -338,7 +384,7 @@ export function LiveWorldChatPanel({
               key={t}
               type="button"
               data-no-drag
-              className={`rounded-md px-1.5 py-0.5 text-[9px] capitalize transition-colors ${
+              className={`rounded-md px-1.5 py-0.5 text-[9px] transition-colors ${
                 tab === t
                   ? "bg-[rgba(255,184,77,0.14)] text-[var(--amber)]"
                   : "text-[var(--text-muted)] hover:text-[var(--text)]"
@@ -348,20 +394,44 @@ export function LiveWorldChatPanel({
                 bumpActivity();
               }}
             >
-              {t}
+              {TAB_LABEL[t]}
             </button>
           ))}
           <button
             type="button"
             data-no-drag
             className="text-[9px] text-[var(--text-muted)] hover:text-[var(--text)]"
-            title="Expand / float resize stub"
+            title="Expand / resize"
             onClick={() => {
               setFloatExpanded((v) => !v);
               bumpActivity();
             }}
           >
             {floatExpanded ? "−" : "+"}
+          </button>
+          <button
+            type="button"
+            data-no-drag
+            className="text-[9px] text-[var(--text-muted)] hover:text-[var(--text)]"
+            title="Font scale"
+            onClick={() => {
+              setFontScale((s) => (s >= 1.25 ? 0.9 : Math.round((s + 0.1) * 10) / 10));
+              bumpActivity();
+            }}
+          >
+            A{fontScale > 1 ? "+" : ""}
+          </button>
+          <button
+            type="button"
+            data-no-drag
+            className="text-[9px] text-[var(--text-muted)] hover:text-[var(--text)]"
+            title="Panel opacity"
+            onClick={() => {
+              setPanelOpacity((o) => (o <= 0.55 ? 1 : Math.round((o - 0.15) * 100) / 100));
+              bumpActivity();
+            }}
+          >
+            ◐
           </button>
           {onChatModeChange ? (
             <button
@@ -399,7 +469,10 @@ export function LiveWorldChatPanel({
           </button>
         </div>
         <ul
-          className="max-h-[4.75rem] space-y-0.5 overflow-y-auto px-2 py-1.5 text-[10px] leading-snug"
+          className={`max-h-[4.75rem] space-y-0.5 overflow-y-auto px-2 py-1.5 leading-snug ${
+            floatExpanded ? "max-h-[9rem]" : ""
+          }`}
+          style={{ fontSize: `${10 * fontScale}px` }}
           data-testid="live-world-chat-log"
         >
           {messages.slice(-24).map((m) => (
@@ -408,7 +481,7 @@ export function LiveWorldChatPanel({
               {m.whisperTo ? (
                 <span className="text-[var(--text-dim)]"> → {m.whisperTo}</span>
               ) : null}
-              <span className="text-[var(--text-muted)]">: {m.body}</span>
+              <span className="text-[var(--text-muted)]">: {renderBody(m.body)}</span>
             </li>
           ))}
         </ul>
@@ -421,6 +494,19 @@ export function LiveWorldChatPanel({
               submit();
             }}
           >
+            <button
+              type="button"
+              className="focus-ring rounded-md border border-[var(--stroke)] px-1.5 text-[12px] text-[var(--amber)]"
+              title="Emoji"
+              aria-label="Insert emoji"
+              onClick={() => {
+                setDraft((d) => `${d}✨`);
+                bumpActivity();
+                playSfx("ui.click");
+              }}
+            >
+              🙂
+            </button>
             <input
               ref={inputRef}
               value={draft}
@@ -441,7 +527,7 @@ export function LiveWorldChatPanel({
                   collapseToPeek();
                 }
               }}
-              placeholder="Message…"
+              placeholder="Message… [item] {card} <quest>"
               className="focus-ring min-w-0 flex-1 rounded-md border border-[var(--stroke)] bg-[rgba(8,10,14,0.55)] px-2 py-1 text-[11px] text-[var(--text)]"
               maxLength={240}
               autoComplete="off"

@@ -15,6 +15,7 @@ import type {
   ComicIssue,
   ComicProgressState,
 } from "@/content/comics/types";
+import { deckBuilderHref, resolveCanonHref } from "@/content/comics/canon-links";
 import { ComicBookStage } from "@/components/comics/comic-book-stage";
 import { ComicEndShare } from "@/components/fan-kit/comic-end-share";
 import { ColoringDownloads } from "@/components/coloring/coloring-downloads";
@@ -37,6 +38,9 @@ import {
   updateComicSettings,
 } from "@/lib/comics";
 import { playCoverOpenSound, playPageTurnSound } from "@/lib/comics/page-turn-sound";
+import { getIssue001Transcript } from "@/content/comics/the-first-rift/issue-001.generated";
+import { getIssue002Transcript } from "@/content/comics/sparks-journey/issue-002.generated";
+import { isIssueUnlocked, issueLockReason } from "@/lib/comics/unlock";
 import { useComicNarration } from "@/hooks/use-comic-narration";
 import { cn } from "@/lib/utils/cn";
 
@@ -60,6 +64,11 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
   const [turning, setTurning] = useState(false);
   const [flipDir, setFlipDir] = useState<1 | -1 | 0>(0);
   const [coverOpen, setCoverOpen] = useState(false);
+  const [focusPanel, setFocusPanel] = useState<number | null>(null);
+  const [focusBubble, setFocusBubble] = useState<number | null>(null);
+  const [canonToastHref, setCanonToastHref] = useState<string | null>(null);
+  const [transcriptOpen, setTranscriptOpen] = useState(false);
+  const [transcriptSize, setTranscriptSize] = useState<"sm" | "md" | "lg">("md");
   const shellRef = useRef<HTMLDivElement>(null);
   const touchX = useRef<number | null>(null);
   const turnLock = useRef(false);
@@ -151,27 +160,6 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
   }, [issue.slug]);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
-      const next = pageFromKeyboard(e.key, page, total);
-      if (next != null) {
-        e.preventDefault();
-        goTo(next);
-      }
-      if (e.key.toLowerCase() === "f") {
-        void shellRef.current?.requestFullscreen?.();
-        setFullscreen(true);
-      }
-      if (e.key === "Escape" && document.fullscreenElement) {
-        void document.exitFullscreen();
-        setFullscreen(false);
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [goTo, page, total]);
-
-  useEffect(() => {
     let raf = 0;
     let lastFire = 0;
     const poll = () => {
@@ -207,6 +195,14 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
 
   const current = issue.pages[page - 1]!;
   const settings = progress.settings;
+  const pageTranscript =
+    issue.slug === "the-first-rift"
+      ? getIssue001Transcript(page)
+      : issue.slug === "sparks-journey"
+        ? getIssue002Transcript(page)
+        : current.panels.flatMap((p) =>
+            p.bubbles.map((b) => (b.speaker ? `${b.speaker}: ${b.text}` : b.text)),
+          );
   const narration = useComicNarration({
     issueSlug: issue.slug,
     pageNumber: page,
@@ -215,21 +211,134 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
     active: coverOpen || !cover,
   });
 
+  useEffect(() => {
+    setFocusPanel(null);
+    setFocusBubble(null);
+    setCanonToastHref(null);
+  }, [page]);
+
+  const advanceGuided = useCallback(() => {
+    if (!settings.guidedReading) return false;
+    const panels = current.panels;
+    if (!panels.length) return false;
+    const pIdx = focusPanel ?? 0;
+    const bubbles = panels[pIdx]?.bubbles ?? [];
+    const bIdx = focusBubble ?? -1;
+    if (bIdx + 1 < bubbles.length) {
+      setFocusPanel(pIdx);
+      setFocusBubble(bIdx + 1);
+      return true;
+    }
+    if (pIdx + 1 < panels.length) {
+      setFocusPanel(pIdx + 1);
+      setFocusBubble(0);
+      return true;
+    }
+    setFocusPanel(null);
+    setFocusBubble(null);
+    return false;
+  }, [current.panels, focusBubble, focusPanel, settings.guidedReading]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (settings.guidedReading && (e.key === " " || e.key === "Enter")) {
+        e.preventDefault();
+        if (!advanceGuided()) goTo(page + 1);
+        return;
+      }
+      if (settings.guidedReading && e.key.toLowerCase() === "g") {
+        e.preventDefault();
+        setFocusPanel(0);
+        setFocusBubble(0);
+        return;
+      }
+      const next = pageFromKeyboard(e.key, page, total);
+      if (next != null) {
+        e.preventDefault();
+        goTo(next);
+      }
+      if (e.key.toLowerCase() === "f") {
+        void shellRef.current?.requestFullscreen?.();
+        setFullscreen(true);
+      }
+      if (e.key === "Escape" && document.fullscreenElement) {
+        void document.exitFullscreen();
+        setFullscreen(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [advanceGuided, goTo, page, settings.guidedReading, total]);
+
   const onHotspot = (h: ComicHotspot) => {
+    const cardId = h.canonLink?.tcgCardId;
     setProgress((p) => {
-      let next = markHotspotFound(p, issue.slug, h.id, h.codexEntryId, h.secretCode, h.rewardId);
+      let next = markHotspotFound(
+        p,
+        issue.slug,
+        h.id,
+        h.codexEntryId ?? h.canonLink?.worldCodexEntryId,
+        h.secretCode,
+        h.rewardId,
+        cardId,
+      );
       next = unlockComicAchievement(next, "ach-hotspot-1");
       if (h.secretCode) next = unlockComicAchievement(next, "ach-secret-code");
       return next;
     });
+    const href =
+      (h.canonLink && resolveCanonHref(h.canonLink)) ||
+      (h.codexEntryId ? `/codex/world/${h.codexEntryId}` : null);
+    setCanonToastHref(href);
     const bits = [
       `Found: ${h.label}`,
-      h.codexEntryId ? `Codex: ${h.codexEntryId}` : null,
+      h.codexEntryId || h.canonLink?.worldCodexEntryId
+        ? `Codex: ${h.codexEntryId ?? h.canonLink?.worldCodexEntryId}`
+        : null,
+      cardId ? `Card tease: ${cardId}` : null,
       h.secretCode ? `Quest stub: ${h.secretCode}` : null,
     ].filter(Boolean);
     setToast(bits.join(" · "));
-    window.setTimeout(() => setToast(null), 3200);
+    window.setTimeout(() => {
+      setToast(null);
+      setCanonToastHref(null);
+    }, 4200);
   };
+
+  const unlocked = isIssueUnlocked(issue, {
+    progress,
+    comicsDevUnlock:
+      typeof process !== "undefined" &&
+      (process.env.NEXT_PUBLIC_COMICS_DEV_UNLOCK === "1" ||
+        process.env.NEXT_PUBLIC_COMICS_DEV_UNLOCK === "true"),
+  });
+  const lockReason = issueLockReason(issue, { progress });
+
+  if (!unlocked) {
+    return (
+      <div className="comic-reader-shell min-h-screen">
+        <div className="mx-auto flex max-w-xl flex-col gap-4 px-4 py-16 text-center">
+          <p className="page-kicker">Issue #{issue.issueNumber}</p>
+          <h1 className="font-display text-3xl text-[var(--parchment,#e8d5b0)]">{issue.title}</h1>
+          <p className="text-[var(--text-muted)]">{lockReason}</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            <Link href="/comics" className="btn-secondary focus-ring">
+              Archive shelves
+            </Link>
+            {prevSlug && (
+              <Link href={`/comics/${prevSlug}`} className="btn-primary focus-ring">
+                Read previous issue
+              </Link>
+            )}
+          </div>
+          <p className="text-xs text-[var(--text-muted)]">
+            Dev override: set <code>NEXT_PUBLIC_COMICS_DEV_UNLOCK=1</code> or finish Issue #1.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -401,6 +510,41 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
           >
             Narration {settings.narrationEnabled ? "On" : "Off"}
           </button>
+          <button
+            type="button"
+            className="btn-secondary focus-ring text-sm"
+            onClick={() => {
+              setProgress((p) =>
+                updateComicSettings(p, { guidedReading: !p.settings.guidedReading }),
+              );
+              setFocusPanel(0);
+              setFocusBubble(0);
+            }}
+            aria-pressed={settings.guidedReading}
+            title="Panel-by-panel guided reading"
+          >
+            Guided {settings.guidedReading ? "On" : "Off"}
+          </button>
+          <button
+            type="button"
+            className="btn-secondary focus-ring text-sm"
+            onClick={() => setTranscriptOpen((v) => !v)}
+            aria-pressed={transcriptOpen}
+            title="Accessible script transcript (not overlaid on art)"
+          >
+            Transcript {transcriptOpen ? "On" : "Off"}
+          </button>
+          {settings.guidedReading && (
+            <button
+              type="button"
+              className="btn-secondary focus-ring text-sm"
+              onClick={() => {
+                if (!advanceGuided()) goTo(page + 1);
+              }}
+            >
+              Next panel
+            </button>
+          )}
           {settings.narrationEnabled && (
             <>
               <button
@@ -435,9 +579,14 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
             role="status"
           >
             {toast}
-            {toast.includes("Codex:") && (
-              <Link href="/codex/world" className="ml-2 underline">
-                Open Codex
+            {canonToastHref && (
+              <Link href={canonToastHref} className="ml-2 underline">
+                Open link
+              </Link>
+            )}
+            {toast.includes("Card tease:") && (
+              <Link href={deckBuilderHref()} className="ml-2 underline">
+                Deck Atelier
               </Link>
             )}
           </div>
@@ -473,8 +622,58 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
             coverLabel={cover?.label}
             onOpenCover={() => openCover(true)}
             onEdgeNav={(d) => goTo(page + d)}
+            focusPanelIndex={settings.guidedReading ? focusPanel : null}
+            focusBubbleIndex={settings.guidedReading ? focusBubble : null}
+            onPanelFocus={(i) => {
+              if (!settings.guidedReading) return;
+              setFocusPanel(i);
+              setFocusBubble(0);
+            }}
           />
         </div>
+
+        {transcriptOpen && (
+          <aside
+            className={cn(
+              "mt-3 max-h-56 overflow-y-auto rounded-md border border-[rgba(139,90,60,0.45)] bg-[rgba(20,14,10,0.88)] px-3 py-2 text-[#f5ead2]",
+              transcriptSize === "sm" && "text-xs",
+              transcriptSize === "md" && "text-sm",
+              transcriptSize === "lg" && "text-base",
+            )}
+            aria-label={`Page ${page} accessible transcript`}
+          >
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <p className="text-[10px] uppercase tracking-[0.16em] text-[var(--amber)]">
+                Transcript · page {page} (accessibility — not overlaid on art)
+              </p>
+              <div className="flex gap-1" role="group" aria-label="Transcript text size">
+                {(["sm", "md", "lg"] as const).map((size) => (
+                  <button
+                    key={size}
+                    type="button"
+                    className={cn(
+                      "btn-secondary focus-ring px-2 py-0.5 text-[10px] uppercase",
+                      transcriptSize === size && "border-[var(--amber)] text-[var(--amber)]",
+                    )}
+                    onClick={() => setTranscriptSize(size)}
+                    aria-pressed={transcriptSize === size}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {pageTranscript.length ? (
+              <ul className="mt-1 space-y-1">
+                {pageTranscript.map((line, i) => (
+                  <li key={`${i}-${line.slice(0, 24)}`}>{line}</li>
+                ))}
+              </ul>
+            ) : (
+              <p className="mt-1 opacity-70">No dialogue on this page.</p>
+            )}
+          </aside>
+        )}
 
         {thumbsOpen && (
           <div
@@ -542,12 +741,42 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
           <div>
             <h2 className="font-display text-lg text-white">Characters</h2>
             <ul className="mt-2 space-y-2 text-sm text-[var(--text-muted)]">
-              {issue.characters.map((c) => (
-                <li key={c.name}>
-                  <span className="text-white">{c.name}</span> — {c.role}: {c.blurb}
-                </li>
-              ))}
+              {issue.characters.map((c) => {
+                const href = c.canonLink ? resolveCanonHref(c.canonLink) : null;
+                const cardHref = c.canonLink?.tcgCardId
+                  ? deckBuilderHref(c.canonLink.tcgCardId)
+                  : null;
+                return (
+                  <li key={c.name}>
+                    <span className="text-white">{c.name}</span> — {c.role}: {c.blurb}
+                    {(href || cardHref) && (
+                      <span className="mt-0.5 flex flex-wrap gap-2 text-xs text-[var(--cyan)]">
+                        {href && (
+                          <Link href={href} className="hover:underline">
+                            Codex
+                          </Link>
+                        )}
+                        {cardHref && (
+                          <Link href={cardHref} className="hover:underline">
+                            Card / deck
+                          </Link>
+                        )}
+                      </span>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
+            {issue.arcId && (
+              <p className="mt-3 text-xs text-[var(--amber)]">
+                Arc: {issue.arcId}
+                {issue.volumeId ? ` · ${issue.volumeId}` : ""}
+              </p>
+            )}
+            <p className="mt-1 text-xs text-[var(--text-muted)]">
+              Covers: {issue.covers.length} variants · Unlock:{" "}
+              {(issue.unlockGates ?? [{ kind: "free" }]).map((g) => g.kind).join(", ")}
+            </p>
           </div>
           <div>
             <h2 className="font-display text-lg text-white">Locations &amp; timeline</h2>

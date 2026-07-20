@@ -1,0 +1,34 @@
+{
+  "artifacts": [
+    {
+      "id": "dormant-riftborn-egg",
+      "name": "Dormant Riftborn Egg",
+      "status": "cracked; eye-hint; with Mira"
+    },
+    {
+      "id": "hidden-token",
+      "name": "Hidden Transmission Token",
+      "status": "evidence"
+    },
+    {
+      "id": "traitor-transmitter",
+      "name": "Traitor Transmitter",
+      "status": "found in Cael kit"
+    },
+    {
+      "id": "meridian-identity-key",
+      "name": "Meridian Identity Key",
+      "status": "destroyed by Cael"
+    },
+    {
+      "id": "lost-city-rift-component",
+      "name": "Lost City Rift Component",
+      "status": "with Seris"
+    },
+    {
+      "id": "transmission-records",
+      "name": "Merchant Transmission Records",
+      "status": "partially misleading"
+    }
+  ]
+}

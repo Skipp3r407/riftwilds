@@ -1,0 +1,215 @@
+{
+  "pageNumber": 6,
+  "storyPageNumber": 2,
+  "bookRole": "story",
+  "title": "Egg Glow",
+  "storyPurpose": "Dormant egg begins glowing in answer to Forge resonance.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p2a",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes kneels, unwrapping the dormant Riftborn egg: warm shell with cyan-amber seam markings, protective wrap, pulsing toward Forge machinery; seam markings blaze cyan-amber; Spark presses muzzle to shell despite pain.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The egg did not wake. It recognized something.",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 52,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*pain-bond-chirp*",
+          "x": 40,
+          "y": 60,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p2b",
+      "description": "Close on glowing egg seams casting light on Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's face and Compact lantern charm.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Steady. You're not alone in there.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "egg-PULSE",
+          "x": 70,
+          "y": 65,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p2c",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood; subdued posture \u2014 supervised redemption, not fully trusted hanging back with supervised distance; Nira Quill: uncertain hunter turned ally, lean, weather cloak, quill-knife kit, steadier eyes after Gate judgment scanning gantries; Truthwing glassy wings reflecting plasma.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "text": "Artificial resonance. Louder than Tempestria's engine.",
+          "x": 35,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Cael Vesper",
+          "readOrder": 4
+        },
+        {
+          "kind": "speech",
+          "text": "Louder means Meridian wants it more.",
+          "x": 65,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p2a",
+      "kind": "creature",
+      "text": "*pain-bond-chirp*",
+      "x": 40,
+      "y": 60,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p2b",
+      "kind": "speech",
+      "text": "Steady. You're not alone in there.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p2c",
+      "kind": "whisper",
+      "text": "Artificial resonance. Louder than Tempestria's engine.",
+      "x": 35,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Cael Vesper",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p2c",
+      "kind": "speech",
+      "text": "Louder means Meridian wants it more.",
+      "x": 65,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 5
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p2a",
+      "kind": "narration",
+      "text": "The egg did not wake. It recognized something.",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 52,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p2b",
+      "kind": "sfx",
+      "text": "egg-PULSE",
+      "x": 70,
+      "y": 65,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "truthwing"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [
+    "dormant-riftborn-egg"
+  ],
+  "continuity": {
+    "location": "Forge threshold plaza",
+    "egg": "glowing-cracked-once",
+    "cael": "supervised-turned",
+    "nira": "cleared-ally"
+  },
+  "requiredMoments": [
+    2
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pok\u00e9mon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 2/25 \u2014 Egg Glow. Story purpose: Dormant egg begins glowing in answer to Forge resonance. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes kneels, unwrapping the dormant Riftborn egg: warm shell with cyan-amber seam markings, protective wrap, pulsing toward Forge machinery; seam markings blaze cyan-amber; Spark presses muzzle to shell despite pain. Panel 2 (p2b): Close on glowing egg seams casting light on Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's face and Compact lantern charm. Panel 3 (p2c): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood; subdued posture \u2014 supervised redemption, not fully trusted hanging back with supervised distance; Nira Quill: uncertain hunter turned ally, lean, weather cloak, quill-knife kit, steadier eyes after Gate judgment scanning gantries; Truthwing glassy wings reflecting plasma. Characters: mira-eggwarden, cael-vesper, nira-quill. Creatures: spark, truthwing. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original \u2014 not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Forge threshold plaza\", \"egg\": \"glowing\", \"cael\": \"supervised\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pok\u00e9mon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Descend into the machine-city.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Egg Glow \u2014 The Forge of Rifts page 2",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: The egg did not wake. It recognized something.",
+    "CREATURE (Spark): *pain-bond-chirp*",
+    "SPEECH (Mira Eggwarden): Steady. You're not alone in there.",
+    "SFX: egg-PULSE",
+    "WHISPER (Cael Vesper): Artificial resonance. Louder than Tempestria's engine.",
+    "SPEECH (Nira Quill): Louder means Meridian wants it more."
+  ],
+  "a11yTranscript": [
+    "NARRATION: The egg did not wake. It recognized something.",
+    "CREATURE (Spark): *pain-bond-chirp*",
+    "SPEECH (Mira Eggwarden): Steady. You're not alone in there.",
+    "SFX: egg-PULSE",
+    "WHISPER (Cael Vesper): Artificial resonance. Louder than Tempestria's engine.",
+    "SPEECH (Nira Quill): Louder means Meridian wants it more."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p006",
+  "cleanArtRel": "generated/raw-art/page-006.webp",
+  "letteredArtRel": "generated/lettered-pages/page-006.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-006.webp"
+}

@@ -1,0 +1,183 @@
+{
+  "pageNumber": 22,
+  "storyPageNumber": 18,
+  "bookRole": "story",
+  "title": "Gate of Consequence",
+  "storyPurpose": "Major siege spread: companions battle; Oathwarden towers; Cael caught between sides.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p18a",
+      "description": "Cinematic battle splash across Gate: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot dodging resonance chains; Bramblefox on walkways; Mossprig shielding; Thornling in circuit guts; Wisplet through mirrors; Spirit Moth revealing hidden soldiers; Cindermink burning restraints; Meridian beasts; Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors towering Gate of Consequence; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif mid-bridge between Mira and Seris; Truthwing: small silver-and-black birdlike companion, glassy wings, cyan eyes, feather patterns like keys, reflections moving across its body Unmasked Sky shimmer. Empty balloon corners.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "Open it!",
+          "x": 20,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Seris Vale",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*refuse-chain*",
+          "x": 55,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        },
+        {
+          "kind": "speech",
+          "text": "Gate of Consequence.",
+          "x": 75,
+          "y": 18,
+          "tail": "down",
+          "maxWidthPct": 30,
+          "speaker": "Oathwarden Seraph",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "CLASH",
+          "x": 40,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        },
+        {
+          "kind": "sfx",
+          "text": "RING-BOOM",
+          "x": 65,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p18a",
+      "kind": "shout",
+      "text": "Open it!",
+      "x": 20,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Seris Vale",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p18a",
+      "kind": "creature",
+      "text": "*refuse-chain*",
+      "x": 55,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p18a",
+      "kind": "speech",
+      "text": "Gate of Consequence.",
+      "x": 75,
+      "y": 18,
+      "tail": "down",
+      "maxWidthPct": 30,
+      "speaker": "Oathwarden Seraph",
+      "readOrder": 2
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "CLASH",
+      "x": 40,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    },
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "RING-BOOM",
+      "x": 65,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "cael-vesper",
+    "oathwarden-seraph",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth",
+    "cindermink",
+    "truthwing",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Traitor's Gate — Battlefield"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "battle": "peak",
+    "cael": "between-sides"
+  },
+  "requiredMoments": [
+    18
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 18/25 — Gate of Consequence. Story purpose: Major siege spread: companions battle; Oathwarden towers; Cael caught between sides. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p18a): Cinematic battle splash across Gate: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot dodging resonance chains; Bramblefox on walkways; Mossprig shielding; Thornling in circuit guts; Wisplet through mirrors; Spirit Moth revealing hidden soldiers; Cindermink burning restraints; Meridian beasts; Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors towering Gate of Consequence; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif mid-bridge between Mira and Seris; Truthwing: small silver-and-black birdlike companion, glassy wings, cyan eyes, feather patterns like keys, reflections moving across its body Unmasked Sky shimmer. Empty balloon corners. Characters: mira-eggwarden, seris-vale, cael-vesper, oathwarden-seraph, nira-quill. Creatures: spark, bramblefox, mossprig, thornling, wisplet, spirit-moth, cindermink, truthwing, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"battle\": \"peak\", \"cael\": \"between-sides\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "The captive shown.",
+  "letteringInstructions": "Sparse balloons; big SFX; leave art readable.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Gate of Consequence — The Traitor's Gate page 18",
+  "atmosphere": "rift",
+  "transcript": [
+    "SHOUT (Seris Vale): Open it!",
+    "CREATURE (Spark): *refuse-chain*",
+    "SPEECH (Oathwarden Seraph): Gate of Consequence.",
+    "SFX: CLASH",
+    "SFX: RING-BOOM"
+  ],
+  "a11yTranscript": [
+    "SHOUT (Seris Vale): Open it!",
+    "CREATURE (Spark): *refuse-chain*",
+    "SPEECH (Oathwarden Seraph): Gate of Consequence.",
+    "SFX: CLASH",
+    "SFX: RING-BOOM"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p022",
+  "cleanArtRel": "generated/raw-art/page-022.webp",
+  "letteredArtRel": "generated/lettered-pages/page-022.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-022.webp"
+}

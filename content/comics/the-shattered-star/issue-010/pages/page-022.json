@@ -1,0 +1,170 @@
+{
+  "pageNumber": 22,
+  "storyPageNumber": 18,
+  "bookRole": "story",
+  "title": "Sky of a Thousand Lights",
+  "storyPurpose": "Double-page battle spread LEFT — full cast vs Hollow Ones.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p18a",
+      "description": "EPIC LEFT HALF of double-page battle: Celestial skies over floating bridges; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot, Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species, Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence center-left casting Sky of a Thousand Lights healing aurora; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics directing; Axiom, Bramblefox, Mossprig, Thornling, Wisplet, Spirit Moth, Truthwing, Lumenhare, Cindermink in action; Prime companions rising; Hollow Ones swarming rightward out of frame; Star Engine glow; Guardian City beams rising from below.",
+      "bubbles": [
+        {
+          "kind": "magic",
+          "text": "SKY OF A THOUSAND LIGHTS",
+          "x": 40,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 0
+        },
+        {
+          "kind": "shout",
+          "text": "Protect the cradles!",
+          "x": 25,
+          "y": 40,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*nebula-HOWL*",
+          "x": 55,
+          "y": 55,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Astra",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "KA-RAAAASH",
+          "x": 70,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p18a",
+      "kind": "magic",
+      "text": "SKY OF A THOUSAND LIGHTS",
+      "x": 40,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p18a",
+      "kind": "shout",
+      "text": "Protect the cradles!",
+      "x": 25,
+      "y": 40,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p18a",
+      "kind": "creature",
+      "text": "*nebula-HOWL*",
+      "x": 55,
+      "y": 55,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Astra",
+      "readOrder": 2
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p18a",
+      "kind": "sfx",
+      "text": "KA-RAAAASH",
+      "x": 70,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "high-keeper-lyra",
+    "cael-vesper",
+    "aurelia-voss",
+    "nira-quill",
+    "elyan-voss"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "axiom",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth",
+    "truthwing",
+    "lumenhare",
+    "cindermink",
+    "astra"
+  ],
+  "locations": [
+    "Celestial Skies",
+    "Guardian Bridges",
+    "Star Engine"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "battle": "climax-left"
+  },
+  "requiredMoments": [
+    16,
+    17,
+    18
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 18/25 — Sky of a Thousand Lights. Story purpose: Double-page battle spread LEFT — full cast vs Hollow Ones. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p18a): EPIC LEFT HALF of double-page battle: Celestial skies over floating bridges; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot, Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species, Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence center-left casting Sky of a Thousand Lights healing aurora; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics directing; Axiom, Bramblefox, Mossprig, Thornling, Wisplet, Spirit Moth, Truthwing, Lumenhare, Cindermink in action; Prime companions rising; Hollow Ones swarming rightward out of frame; Star Engine glow; Guardian City beams rising from below. Characters: mira-eggwarden, high-keeper-lyra, cael-vesper, aurelia-voss, nira-quill, elyan-voss. Creatures: spark, nova, axiom, bramblefox, mossprig, thornling, wisplet, spirit-moth, truthwing, lumenhare, cindermink, astra. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Shattered Star celestial sanctuary. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"battle\": \"climax-left\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Turn to continue.",
+  "letteringInstructions": "Wide-spread lettering; keep center gutter clear for page join.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Sky of a Thousand Lights — The Shattered Star page 18",
+  "atmosphere": "battle",
+  "transcript": [
+    "MAGIC: SKY OF A THOUSAND LIGHTS",
+    "SHOUT (Mira Eggwarden): Protect the cradles!",
+    "CREATURE (Astra): *nebula-HOWL*",
+    "SFX: KA-RAAAASH"
+  ],
+  "a11yTranscript": [
+    "MAGIC: SKY OF A THOUSAND LIGHTS",
+    "SHOUT (Mira Eggwarden): Protect the cradles!",
+    "CREATURE (Astra): *nebula-HOWL*",
+    "SFX: KA-RAAAASH"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": {
+    "role": "left",
+    "pairStoryPage": 19
+  },
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-022.webp",
+  "id": "the-shattered-star-issue-010-p022"
+}

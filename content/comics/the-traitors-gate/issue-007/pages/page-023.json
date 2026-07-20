@@ -1,0 +1,166 @@
+{
+  "pageNumber": 23,
+  "storyPageNumber": 19,
+  "bookRole": "story",
+  "title": "Beyond the Seal",
+  "storyPurpose": "Seris reveals captive Lumenhare; orders Cael to finish opening.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p19a",
+      "description": "Projection / portal glimpse: Lumenhare: circus light companion, soft luminous fur, lantern-mark ears, indigo-gold Grand Illusion weave hints in restraint cradle beyond Gate, dimmed lantern marks, Meridian chains.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*weak-pulse*",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Lumenhare",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "chain-rattle",
+          "x": 70,
+          "y": 65,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p19b",
+      "description": "Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal calm; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif devastated; Mira seeing the leverage clearly.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Finish the opening, Lanternmaster. Or the light goes out.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Seris Vale",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p19c",
+      "description": "Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes understanding coercion firsthand; hand on Cael's shoulder without absolution.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I know that leash. Cut it — or it owns you.",
+          "x": 50,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Nira Quill",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p19a",
+      "kind": "creature",
+      "text": "*weak-pulse*",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Lumenhare",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p19b",
+      "kind": "speech",
+      "text": "Finish the opening, Lanternmaster. Or the light goes out.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Seris Vale",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p19c",
+      "kind": "speech",
+      "text": "I know that leash. Cut it — or it owns you.",
+      "x": 50,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Nira Quill",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p19a",
+      "kind": "sfx",
+      "text": "chain-rattle",
+      "x": 70,
+      "y": 65,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "cael-vesper",
+    "nira-quill"
+  ],
+  "creatures": [
+    "lumenhare",
+    "spark"
+  ],
+  "locations": [
+    "Traitor's Gate — Lower Gate glimpse"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "captive": "shown",
+    "leverage": "active"
+  },
+  "requiredMoments": [
+    19
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 19/25 — Beyond the Seal. Story purpose: Seris reveals captive Lumenhare; orders Cael to finish opening. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p19a): Projection / portal glimpse: Lumenhare: circus light companion, soft luminous fur, lantern-mark ears, indigo-gold Grand Illusion weave hints in restraint cradle beyond Gate, dimmed lantern marks, Meridian chains. Panel 2 (p19b): Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal calm; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif devastated; Mira seeing the leverage clearly. Panel 3 (p19c): Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes understanding coercion firsthand; hand on Cael's shoulder without absolution. Characters: mira-eggwarden, seris-vale, cael-vesper, nira-quill. Creatures: lumenhare, spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"captive\": \"shown\", \"leverage\": \"active\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Mira chooses.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Beyond the Seal — The Traitor's Gate page 19",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Lumenhare): *weak-pulse*",
+    "SFX: chain-rattle",
+    "SPEECH (Seris Vale): Finish the opening, Lanternmaster. Or the light goes out.",
+    "SPEECH (Nira Quill): I know that leash. Cut it — or it owns you."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Lumenhare): *weak-pulse*",
+    "SFX: chain-rattle",
+    "SPEECH (Seris Vale): Finish the opening, Lanternmaster. Or the light goes out.",
+    "SPEECH (Nira Quill): I know that leash. Cut it — or it owns you."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p023",
+  "cleanArtRel": "generated/raw-art/page-023.webp",
+  "letteredArtRel": "generated/lettered-pages/page-023.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-023.webp"
+}

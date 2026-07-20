@@ -1,0 +1,114 @@
+{
+  "pageNumber": 18,
+  "storyPageNumber": 14,
+  "bookRole": "story",
+  "title": "Engine Control",
+  "storyPurpose": "Elyan and Axiom race to Twin Engine controls; Arkan echo guides.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p14a",
+      "description": "Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure at Twin Engine console; Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence — Adaptive Matrix / Pulse Repair / System Restore; awakened at Forge of Rifts Issue #8 Adaptive Matrix sync; Arkan echo points to healing lattice.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "If we stabilize both Engines in cradle mode, the artificial tears collapse.",
+          "x": 35,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Elyan Voss",
+          "readOrder": 0
+        },
+        {
+          "kind": "magic",
+          "text": "Remember the lattice, not the blade.",
+          "x": 55,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 36,
+          "speaker": "Arkan (echo)",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p14b",
+      "description": "Ascendant Commander blasts toward console; Nira Quill: allied hunter (cleared false lead in Issue #7), lean, weather cloak, quill-knife kit, hard-earned trust and Bramblefox intercept.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "Cradle mode dies with you, Professor!",
+          "x": 65,
+          "y": 30,
+          "tail": "down-left",
+          "maxWidthPct": 34,
+          "speaker": "Ascendant Commander",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Not today.",
+          "x": 40,
+          "y": 80,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "elyan-voss",
+    "seris-vale",
+    "nira-quill"
+  ],
+  "creatures": [
+    "axiom",
+    "bramblefox"
+  ],
+  "locations": [
+    "Twin Engine control"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "engines": "contested"
+  },
+  "requiredMoments": [
+    14
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 14/25 — Engine Control. Story purpose: Elyan and Axiom race to Twin Engine controls; Arkan echo guides. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p14a): Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure at Twin Engine console; Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence — Adaptive Matrix / Pulse Repair / System Restore; awakened at Forge of Rifts Issue #8 Adaptive Matrix sync; Arkan echo points to healing lattice. Panel 2 (p14b): Ascendant Commander blasts toward console; Nira Quill: allied hunter (cleared false lead in Issue #7), lean, weather cloak, quill-knife kit, hard-earned trust and Bramblefox intercept. Characters: elyan-voss, seris-vale, nira-quill. Creatures: axiom, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Twin Engine control. Atmosphere: rift. Continuity: {\"engines\": \"contested\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "War expands.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Engine Control — The Riftwright page 18",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Elyan Voss): If we stabilize both Engines in cradle mode, the artificial tears collapse.",
+    "MAGIC (Arkan (echo)): Remember the lattice, not the blade.",
+    "SHOUT (Ascendant Commander): Cradle mode dies with you, Professor!",
+    "SPEECH (Nira Quill): Not today."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Elyan Voss): If we stabilize both Engines in cradle mode, the artificial tears collapse.",
+    "MAGIC (Arkan (echo)): Remember the lattice, not the blade.",
+    "SHOUT (Ascendant Commander): Cradle mode dies with you, Professor!",
+    "SPEECH (Nira Quill): Not today."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p018",
+  "cleanArtRel": "generated/raw-art/page-018.webp",
+  "letteredArtRel": "generated/lettered-pages/page-018.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-018.webp"
+}

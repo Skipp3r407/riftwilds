@@ -1,0 +1,54 @@
+{
+  "spoilerGate": "complete-issue-007",
+  "timeline": [
+    {
+      "window": "post-issue-003",
+      "leak": "circus approach roads",
+      "source": "Cael Vesper"
+    },
+    {
+      "window": "issue-004",
+      "leak": "Lost City corridor hints",
+      "source": "Cael Vesper"
+    },
+    {
+      "window": "issue-005",
+      "leak": "Tempestria approach confirmation",
+      "source": "Cael Vesper"
+    },
+    {
+      "window": "issue-006",
+      "leak": "market customs; egg custody",
+      "source": "Cael Vesper"
+    },
+    {
+      "window": "issue-006-p25",
+      "message": "The Keeper has the egg. Proceed to the next gate.",
+      "recipient": "Cael Vesper"
+    }
+  ],
+  "falseLead": {
+    "suspect": "Nira Quill",
+    "mechanism": "altered memory mirrors"
+  },
+  "leverage": {
+    "captive": "Lumenhare",
+    "holder": "Veiled Meridian"
+  },
+  "issue006Lock": {
+    "bookPage": 29,
+    "storyPage": 25,
+    "recipient": "Cael Vesper",
+    "instrument": "merchant-token",
+    "message": "The Keeper has the egg. Proceed to the next gate.",
+    "priorDebt": true,
+    "routeKnowledge": true,
+    "merchant": "Aurelia Voss"
+  },
+  "retroactiveClues": [
+    "issue-003-lanternveil-moral-gray",
+    "issue-005-prior-tempestria-negotiation-and-routes",
+    "issue-006-merchant-debt-token-and-p25-transmission"
+  ],
+  "publicBlurb": "A transmission trail crosses four regions. The Gate will not accept a costume of guilt."
+}

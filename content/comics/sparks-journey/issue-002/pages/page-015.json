@@ -1,0 +1,152 @@
+{
+  "pageNumber": 15,
+  "bookRole": "story",
+  "title": "Not a Weapon",
+  "storyPurpose": "Mira publicly defends Spark; Spark withdraws emotionally.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p11a",
+      "description": "Mira steps between Spark and the crowd, firm but not aggressive.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "It hatched after we sealed a wound. Blame the hand that opened it — not the pulse that survived.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 48
+        }
+      ]
+    },
+    {
+      "id": "p11b",
+      "description": "Close-up: Spark's ears flatten; glow dims; eyes wet with fear of being unwanted.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*…*",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p11c",
+      "description": "Mira glances back — sees Spark's withdrawal; restrained quiet beat.",
+      "bubbles": [
+        {
+          "kind": "thought",
+          "speaker": "Mira Eggwarden",
+          "text": "They heard a monster. It heard a verdict.",
+          "x": 50,
+          "y": 40,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 42
+        },
+        {
+          "kind": "whisper",
+          "speaker": "Mira Eggwarden",
+          "text": "You're not a weapon. I won't let them write you as one.",
+          "x": 50,
+          "y": 75,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 45
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p11a",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "It hatched after we sealed a wound. Blame the hand that opened it — not the pulse that survived.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 48
+    },
+    {
+      "panelId": "p11b",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*…*",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p11c",
+      "kind": "thought",
+      "speaker": "Mira Eggwarden",
+      "text": "They heard a monster. It heard a verdict.",
+      "x": 50,
+      "y": 40,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 42
+    },
+    {
+      "panelId": "p11c",
+      "kind": "whisper",
+      "speaker": "Mira Eggwarden",
+      "text": "You're not a weapon. I won't let them write you as one.",
+      "x": 50,
+      "y": 75,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 45
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "continuity": {
+    "spark": {
+      "emotion": "unwanted / withdrawing",
+      "glow": "dim",
+      "trust": "fragile"
+    },
+    "keeper": {
+      "stance": "public defense"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 11/25 — Not a Weapon. Story purpose: Mira publicly defends Spark; Spark withdraws emotionally. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p11a): Mira steps between Spark and the crowd, firm but not aggressive. Panel 2 (p11b): Close-up: Spark's ears flatten; glow dims; eyes wet with fear of being unwanted. Panel 3 (p11c): Mira glances back — sees Spark's withdrawal; restrained quiet beat. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"unwanted / withdrawing\",\"glow\":\"dim\",\"trust\":\"fragile\"},\"keeper\":{\"stance\":\"public defense\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Spark runs.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Not a Weapon — Spark's Journey page 11",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): It hatched after we sealed a wound. Blame the hand that opened it — not the pulse that survived.",
+    "CREATURE (Spark): *…*",
+    "THOUGHT (Mira Eggwarden): They heard a monster. It heard a verdict.",
+    "WHISPER (Mira Eggwarden): You're not a weapon. I won't let them write you as one."
+  ],
+  "storyPageNumber": 11,
+  "id": "sparks-journey-issue-002-p015",
+  "cleanArtRel": "generated/raw-art/page-015.png",
+  "letteredArtRel": "generated/lettered-pages/page-015.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-015.webp"
+}

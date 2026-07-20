@@ -1,0 +1,213 @@
+{
+  "pageNumber": 10,
+  "storyPageNumber": 6,
+  "bookRole": "story",
+  "title": "Power Restored",
+  "storyPurpose": "Thornling accidentally restores a local power ring.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p6a",
+      "description": "Thornling poking a thorn into a crystalline lock-ring; sparks of cyan; ancient console wakes.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*curious-prick*",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Thornling",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "click-WHIRRR",
+          "x": 68,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p6b",
+      "description": "Corridor lights cascade on — resonance towers, conveyor belts lurch, hologram schematics bloom (empty text zones).",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "That woke a whole ring!",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Then Meridian just heard us.",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p6c",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot ears flat as Forge systems re-address him as 'missing component' via light patterns (no readable words).",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*alarm-chirp*",
+          "x": 40,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 4
+        },
+        {
+          "kind": "thought",
+          "text": "They built a hunger that looks like a welcome.",
+          "x": 60,
+          "y": 72,
+          "tail": null,
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p6a",
+      "kind": "creature",
+      "text": "*curious-prick*",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Thornling",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p6b",
+      "kind": "shout",
+      "text": "That woke a whole ring!",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p6b",
+      "kind": "speech",
+      "text": "Then Meridian just heard us.",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p6c",
+      "kind": "creature",
+      "text": "*alarm-chirp*",
+      "x": 40,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p6c",
+      "kind": "thought",
+      "text": "They built a hunger that looks like a welcome.",
+      "x": 60,
+      "y": 72,
+      "tail": null,
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p6a",
+      "kind": "sfx",
+      "text": "click-WHIRRR",
+      "x": 68,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "thornling"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "power ring corridor",
+    "power": "partial-restore",
+    "meridian": "alerted"
+  },
+  "requiredMoments": [
+    5
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 6/25 — Power Restored. Story purpose: Thornling accidentally restores a local power ring. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p6a): Thornling poking a thorn into a crystalline lock-ring; sparks of cyan; ancient console wakes. Panel 2 (p6b): Corridor lights cascade on — resonance towers, conveyor belts lurch, hologram schematics bloom (empty text zones). Panel 3 (p6c): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot ears flat as Forge systems re-address him as 'missing component' via light patterns (no readable words). Characters: mira-eggwarden, cael-vesper, nira-quill. Creatures: spark, thornling. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"power ring corridor\", \"power\": \"partial-restore\", \"meridian\": \"alerted\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Into the ancient laboratory.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Power Restored — The Forge of Rifts page 6",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Thornling): *curious-prick*",
+    "SFX: click-WHIRRR",
+    "SHOUT (Cael Vesper): That woke a whole ring!",
+    "SPEECH (Nira Quill): Then Meridian just heard us.",
+    "CREATURE (Spark): *alarm-chirp*",
+    "THOUGHT (Mira Eggwarden): They built a hunger that looks like a welcome."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Thornling): *curious-prick*",
+    "SFX: click-WHIRRR",
+    "SHOUT (Cael Vesper): That woke a whole ring!",
+    "SPEECH (Nira Quill): Then Meridian just heard us.",
+    "CREATURE (Spark): *alarm-chirp*",
+    "THOUGHT (Mira Eggwarden): They built a hunger that looks like a welcome."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p010",
+  "cleanArtRel": "generated/raw-art/page-010.webp",
+  "letteredArtRel": "generated/lettered-pages/page-010.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-010.webp"
+}

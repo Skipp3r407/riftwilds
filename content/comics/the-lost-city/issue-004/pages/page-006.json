@@ -1,0 +1,179 @@
+{
+  "pageNumber": 6,
+  "storyPageNumber": 2,
+  "bookRole": "story",
+  "title": "No Expedition Returned",
+  "storyPurpose": "Descent; Lanternmaster warning; Spark hears faint pulse.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p2a",
+      "description": "Team descending switchback path toward pale outer walls; moss and broken banners.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Roads still argue with themselves.",
+          "x": 40,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Tavi Brightline",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "stone-slide",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p2b",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif half-masked, serious, pointing toward inner district towers.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Outskirts forgive guests. The inner stage never returned its players.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 48,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p2c",
+      "description": "Close on Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot: ears pricked, cyan pulse answering something underground.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*…pulse…?*",
+          "x": 35,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        },
+        {
+          "kind": "whisper",
+          "text": "I hear it too. Soft. Old.",
+          "x": 65,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p2a",
+      "kind": "speech",
+      "text": "Roads still argue with themselves.",
+      "x": 40,
+      "y": 22,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Tavi Brightline",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p2b",
+      "kind": "speech",
+      "text": "Outskirts forgive guests. The inner stage never returned its players.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 48,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p2c",
+      "kind": "creature",
+      "text": "*…pulse…?*",
+      "x": 35,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p2c",
+      "kind": "whisper",
+      "text": "I hear it too. Soft. Old.",
+      "x": 65,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p2a",
+      "kind": "sfx",
+      "text": "stone-slide",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "tavi-brightline"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "lumenhare"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "lanternmaster": "warns inner district",
+    "spark": {
+      "hears": "city pulse"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 2/25 — No Expedition Returned. Story purpose: Descent; Lanternmaster warning; Spark hears faint pulse. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Team descending switchback path toward pale outer walls; moss and broken banners. Panel 2 (p2b): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif half-masked, serious, pointing toward inner district towers. Panel 3 (p2c): Close on Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot: ears pricked, cyan pulse answering something underground. Characters: mira-eggwarden, cael-vesper, tavi-brightline. Creatures: spark, bramblefox, lumenhare. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"lanternmaster\": \"warns inner district\", \"spark\": {\"hears\": \"city pulse\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Gate opens for Spark.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "No Expedition Returned — The Lost City page 2",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SPEECH (Tavi Brightline): Roads still argue with themselves.",
+    "SFX: stone-slide",
+    "SPEECH (Cael Vesper): Outskirts forgive guests. The inner stage never returned its players.",
+    "CREATURE (Spark): *…pulse…?*",
+    "WHISPER (Mira Eggwarden): I hear it too. Soft. Old."
+  ],
+  "id": "the-lost-city-issue-004-p006",
+  "cleanArtRel": "generated/raw-art/page-006.webp",
+  "letteredArtRel": "generated/lettered-pages/page-006.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-006.webp"
+}

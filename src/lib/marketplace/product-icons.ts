@@ -4,10 +4,12 @@
 
 import type { EggSourceKind } from "@/lib/economy/egg-supply";
 import { creatureThumbPath } from "@/lib/assets/paths";
+import type { MarketplaceListingType } from "@/lib/marketplace/listing-kinds";
 import type { MarketplaceAssetCategory } from "@/lib/marketplace/listing-rules";
 
 const SHOP = "/assets/ui/shop";
 const POTIONS = "/assets/items/potions/icons";
+const LISTING_TYPES = "/assets/marketplace/listing-types";
 
 export const MARKETPLACE_PRODUCT_ICONS: Record<string, string> = {
   "ember-spark-pack": `${SHOP}/pack-ember.png`,
@@ -44,6 +46,18 @@ export const MARKETPLACE_CATEGORY_ART: Record<MarketplaceAssetCategory | "ALL", 
   PROPERTY: "/assets/ui/ecosystem/housing-catalog.png",
 };
 
+/** Auction house listing-type thumbs (painted masters). */
+export const MARKETPLACE_LISTING_TYPE_ART: Record<MarketplaceListingType, string> = {
+  FIXED_PRICE: `${LISTING_TYPES}/fixed-price.png`,
+  AUCTION: `${LISTING_TYPES}/auction.png`,
+  BEST_OFFER: `${LISTING_TYPES}/best-offer.png`,
+  TRADE: `${LISTING_TYPES}/trade.png`,
+  RENTAL: `${LISTING_TYPES}/rental.png`,
+  SHOWCASE: `${LISTING_TYPES}/showcase.png`,
+  COMMISSION: `${LISTING_TYPES}/commission.png`,
+  MUSEUM_EXHIBIT: `${LISTING_TYPES}/museum.png`,
+};
+
 const EGG_SOURCE_ART: Record<EggSourceKind, string> = {
   STARTER: "/assets/eggs/common-rift.svg",
   OFFICIAL_SEASONAL: "/assets/eggs/celestial.svg",
@@ -65,6 +79,15 @@ export function resolveMarketplaceCategoryArt(
     return MARKETPLACE_CATEGORY_ART[category as MarketplaceAssetCategory | "ALL"];
   }
   return MARKETPLACE_CATEGORY_ART.ALL;
+}
+
+export function resolveMarketplaceListingTypeArt(
+  listingType: MarketplaceListingType | string | null | undefined,
+): string {
+  if (listingType && listingType in MARKETPLACE_LISTING_TYPE_ART) {
+    return MARKETPLACE_LISTING_TYPE_ART[listingType as MarketplaceListingType];
+  }
+  return MARKETPLACE_LISTING_TYPE_ART.FIXED_PRICE;
 }
 
 export function resolveMarketplaceEggArt(sourceKind: EggSourceKind | string | null | undefined): string {

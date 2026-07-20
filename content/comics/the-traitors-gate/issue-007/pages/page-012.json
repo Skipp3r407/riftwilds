@@ -1,0 +1,222 @@
+{
+  "pageNumber": 12,
+  "storyPageNumber": 8,
+  "bookRole": "story",
+  "title": "Declarations",
+  "storyPurpose": "Verification chamber; Gate demands name, bond, purpose, oath, keys.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p8a",
+      "description": "Identity-verification chamber: rotating lock rings, Keeper oath inscriptions (shapes only), Resonance locks; party inside.",
+      "bubbles": [
+        {
+          "kind": "magic",
+          "text": "NAME. BOND. PURPOSE. OATH. KEYS.",
+          "x": 50,
+          "y": 25,
+          "tail": null,
+          "maxWidthPct": 45,
+          "speaker": "Gate",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p8b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes declares; symbol of Compact lantern forms in air; Spark voluntary glow answers.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Mira Eggwarden. Keeper by Compact.",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*bond-yes*",
+          "x": 65,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p8c",
+      "description": "Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes states purpose: stop Meridian theft — symbol flickers but holds.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Purpose: cut the leash I once wore.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 38,
+          "speaker": "Nira Quill",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p8d",
+      "description": "Truthwing: small silver-and-black birdlike companion, glassy wings, cyan eyes, feather patterns like keys, reflections moving across its body glides from statue alcove, lands near Spark — Clear Reflection shimmer.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*clear-chime*",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Truthwing",
+          "readOrder": 4
+        },
+        {
+          "kind": "narration",
+          "text": "A Gate companion answers honesty with light.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 42,
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p8a",
+      "kind": "magic",
+      "text": "NAME. BOND. PURPOSE. OATH. KEYS.",
+      "x": 50,
+      "y": 25,
+      "tail": null,
+      "maxWidthPct": 45,
+      "speaker": "Gate",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p8b",
+      "kind": "speech",
+      "text": "Mira Eggwarden. Keeper by Compact.",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p8b",
+      "kind": "creature",
+      "text": "*bond-yes*",
+      "x": 65,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p8c",
+      "kind": "speech",
+      "text": "Purpose: cut the leash I once wore.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 38,
+      "speaker": "Nira Quill",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p8d",
+      "kind": "creature",
+      "text": "*clear-chime*",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Truthwing",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p8d",
+      "kind": "narration",
+      "text": "A Gate companion answers honesty with light.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 42,
+      "readOrder": 5
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill",
+    "cael-vesper",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark",
+    "truthwing",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Traitor's Gate — Verification Chamber"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "verification-chamber",
+    "truthwing": "introduced"
+  },
+  "requiredMoments": [
+    6,
+    7
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 8/25 — Declarations. Story purpose: Verification chamber; Gate demands name, bond, purpose, oath, keys. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p8a): Identity-verification chamber: rotating lock rings, Keeper oath inscriptions (shapes only), Resonance locks; party inside. Panel 2 (p8b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes declares; symbol of Compact lantern forms in air; Spark voluntary glow answers. Panel 3 (p8c): Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes states purpose: stop Meridian theft — symbol flickers but holds. Panel 4 (p8d): Truthwing: small silver-and-black birdlike companion, glassy wings, cyan eyes, feather patterns like keys, reflections moving across its body glides from statue alcove, lands near Spark — Clear Reflection shimmer. Characters: mira-eggwarden, nira-quill, cael-vesper, aurelia-voss. Creatures: spark, truthwing, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"location\": \"verification-chamber\", \"truthwing\": \"introduced\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "A declaration fails.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Declarations — The Traitor's Gate page 8",
+  "atmosphere": "rift",
+  "transcript": [
+    "MAGIC (Gate): NAME. BOND. PURPOSE. OATH. KEYS.",
+    "SPEECH (Mira Eggwarden): Mira Eggwarden. Keeper by Compact.",
+    "CREATURE (Spark): *bond-yes*",
+    "SPEECH (Nira Quill): Purpose: cut the leash I once wore.",
+    "CREATURE (Truthwing): *clear-chime*",
+    "NARRATION: A Gate companion answers honesty with light."
+  ],
+  "a11yTranscript": [
+    "MAGIC (Gate): NAME. BOND. PURPOSE. OATH. KEYS.",
+    "SPEECH (Mira Eggwarden): Mira Eggwarden. Keeper by Compact.",
+    "CREATURE (Spark): *bond-yes*",
+    "SPEECH (Nira Quill): Purpose: cut the leash I once wore.",
+    "CREATURE (Truthwing): *clear-chime*",
+    "NARRATION: A Gate companion answers honesty with light."
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "truthwing-clear-reflection"
+  ],
+  "id": "the-traitors-gate-issue-007-p012",
+  "cleanArtRel": "generated/raw-art/page-012.webp",
+  "letteredArtRel": "generated/lettered-pages/page-012.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-012.webp"
+}

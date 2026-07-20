@@ -103,7 +103,8 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
       "Systems stay in the product during development; public launch when ready",
     ],
     links: [
-      { href: "/live-world", label: "Live World preview" },
+      { href: "/live-world", label: "Live World — Coming Soon" },
+      { href: "/restoration", label: "World Restoration — Coming Soon" },
       { href: "/world", label: "World" },
       { href: "/homestead", label: "Homestead" },
       { href: "/social", label: "Social Hub" },

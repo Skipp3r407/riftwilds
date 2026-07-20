@@ -1,0 +1,44 @@
+{
+  "pageNumber": 25,
+  "id": "the-first-rift-issue-001-p025",
+  "role": "story",
+  "title": null,
+  "layout": "narrative",
+  "atmosphere": "night",
+  "beat": "Present — Mira finds carved deliberate mark",
+  "artPrompt": "Narrative page, no text. Mira's lantern reveals an intentional Fracture glyph carved under moss — too clean to be accident. Present-day Commons fringe. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Under the moss: a mark that was not weather.",
+          "x": 50,
+          "y": 12
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Someone opened this on purpose.",
+          "x": 40,
+          "y": 48,
+          "tail": "down"
+        },
+        {
+          "kind": "thought",
+          "speaker": "Mira Eggwarden",
+          "text": "Elara kept an egg. Who kept the knife?",
+          "x": 65,
+          "y": 70
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-025.png",
+  "letteredArtRel": "generated/lettered/page-025.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-025.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

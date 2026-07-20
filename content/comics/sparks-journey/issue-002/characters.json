@@ -1,0 +1,29 @@
+{
+  "cast": [
+    {
+      "id": "mira-eggwarden",
+      "name": "Mira Eggwarden",
+      "role": "Keeper protagonist · Hatchery mentor"
+    },
+    {
+      "id": "keeper-scholar-len",
+      "name": "Keeper Scholar Len",
+      "role": "Recognizes Shellward mark"
+    },
+    {
+      "id": "vex-halden",
+      "name": "Vex Halden",
+      "role": "Veiled Meridian lead hunter"
+    },
+    {
+      "id": "nira-quill",
+      "name": "Nira Quill",
+      "role": "Meridian hunter — doubts mission"
+    },
+    {
+      "id": "frightened-traveler",
+      "name": "Frightened Traveler",
+      "role": "Blames Spark"
+    }
+  ]
+}

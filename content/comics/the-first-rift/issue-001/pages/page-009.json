@@ -1,0 +1,49 @@
+{
+  "pageNumber": 9,
+  "id": "the-first-rift-issue-001-p009",
+  "role": "story",
+  "title": null,
+  "layout": "narrative",
+  "atmosphere": "night",
+  "beat": "Waybread — keep not own",
+  "artPrompt": "Single cinematic comic page, no text. Night camp: Elara shares waybread with a lost child; soft egg glow; amber fire; distant cyan rift hairline. Emotional, warm. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "She shared waybread with a child who had lost a name.",
+          "x": 50,
+          "y": 12
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Call the creature yours to keep — not yours to own.",
+          "x": 40,
+          "y": 48,
+          "tail": "down"
+        },
+        {
+          "kind": "caption",
+          "text": "CODEX ECHO — Waybread on the First Night",
+          "x": 50,
+          "y": 82
+        },
+        {
+          "kind": "sfx",
+          "text": "SHELL-SONG",
+          "x": 75,
+          "y": 65
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-009.png",
+  "letteredArtRel": "generated/lettered/page-009.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-009.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

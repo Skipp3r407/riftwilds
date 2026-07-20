@@ -89,6 +89,9 @@ describe("ecosystem transition foundations", () => {
     expect(hub.friends.length).toBeGreaterThan(0);
     expect(hub.calendar.length).toBeGreaterThan(0);
     expect(hub.posts.length).toBeGreaterThan(0);
+    expect(hub.parties.length).toBeGreaterThan(1);
+    expect(hub.mail.every((m) => Boolean(m.avatarSrc))).toBe(true);
+    expect(hub.townFeaturedPreview.length).toBeGreaterThan(0);
   });
 
   it("enables post-grad nav destinations", () => {

@@ -1,0 +1,180 @@
+{
+  "pageNumber": 9,
+  "storyPageNumber": 5,
+  "bookRole": "story",
+  "title": "Living Bulwark",
+  "storyPurpose": "Mossprig protects damaged prototypes from collapsing debris / residual energy.",
+  "layout": {
+    "type": "two-stack",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p5a",
+      "description": "Ceiling chain snaps; Mossprig Living Bulwark roots explode into a green shield over damaged crystalline fox/owl husks still faintly ticking.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "CHAIN-SNAP",
+          "x": 70,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*root-BRACE*",
+          "x": 40,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 1
+        },
+        {
+          "kind": "shout",
+          "text": "Mossprig!",
+          "x": 60,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p5b",
+      "description": "Aftermath: Mossprig trembling but holding; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes hands on bark; Spark lending soft glow to stabilize husks without claiming them.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "You don't own them. You protect them. That's the difference.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        },
+        {
+          "kind": "narration",
+          "text": "Even failed light deserves a keeper.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 48,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p5a",
+      "kind": "creature",
+      "text": "*root-BRACE*",
+      "x": 40,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mossprig",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p5a",
+      "kind": "shout",
+      "text": "Mossprig!",
+      "x": 60,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p5b",
+      "kind": "speech",
+      "text": "You don't own them. You protect them. That's the difference.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p5b",
+      "kind": "narration",
+      "text": "Even failed light deserves a keeper.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 48,
+      "readOrder": 4
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p5a",
+      "kind": "sfx",
+      "text": "CHAIN-SNAP",
+      "x": 70,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "mossprig"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "assembly hall collapse pocket",
+    "mossprig": "protecting-prototypes"
+  },
+  "requiredMoments": [
+    4
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 5/25 — Living Bulwark. Story purpose: Mossprig protects damaged prototypes from collapsing debris / residual energy. Layout: two-stack. 2 panels with clear inked gutters. Panel 1 (p5a): Ceiling chain snaps; Mossprig Living Bulwark roots explode into a green shield over damaged crystalline fox/owl husks still faintly ticking. Panel 2 (p5b): Aftermath: Mossprig trembling but holding; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes hands on bark; Spark lending soft glow to stabilize husks without claiming them. Characters: mira-eggwarden. Creatures: spark, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"assembly hall collapse pocket\", \"mossprig\": \"protecting-prototypes\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Thornling finds a switch.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Living Bulwark — The Forge of Rifts page 5",
+  "atmosphere": "ruin",
+  "transcript": [
+    "SFX: CHAIN-SNAP",
+    "CREATURE (Mossprig): *root-BRACE*",
+    "SHOUT (Mira Eggwarden): Mossprig!",
+    "SPEECH (Mira Eggwarden): You don't own them. You protect them. That's the difference.",
+    "NARRATION: Even failed light deserves a keeper."
+  ],
+  "a11yTranscript": [
+    "SFX: CHAIN-SNAP",
+    "CREATURE (Mossprig): *root-BRACE*",
+    "SHOUT (Mira Eggwarden): Mossprig!",
+    "SPEECH (Mira Eggwarden): You don't own them. You protect them. That's the difference.",
+    "NARRATION: Even failed light deserves a keeper."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p009",
+  "cleanArtRel": "generated/raw-art/page-009.webp",
+  "letteredArtRel": "generated/lettered-pages/page-009.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-009.webp"
+}

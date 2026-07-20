@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, List } from "lucide-react";
 import { LW_HUD_BTN, LW_HUD_CARD_TITLE, LW_HUD_GLASS } from "@/components/live-world/hud-chrome";
+import { QuestTracker } from "@/components/live-world/quest-tracker";
+import { emitHudFx } from "@/components/live-world/hud-fx-layer";
 import { playSfx } from "@/hooks/use-sfx";
 import type { SocialPresenceSnapshot } from "@/lib/social-presence/types";
 import type { ReactNode } from "react";
@@ -37,7 +39,6 @@ export function RightColumnHud({
     if (nearbyOpenProp === undefined) setNearbyLocal(open);
   };
 
-  const tasks = snapshot?.dailyTasks?.filter((t) => !t.claimed).slice(0, 3) ?? [];
   const nearbyCount = snapshot?.nearbyEstimate ?? 0;
   const status = snapshot?.status ?? "Exploring";
 
@@ -135,34 +136,16 @@ export function RightColumnHud({
         ) : null}
       </div>
 
-      {snapshot?.enabled && tasks.length > 0 ? (
-        <div
-          className={`${LW_HUD_GLASS} w-full overflow-hidden px-2 py-1.5`}
-          data-testid="pinned-objectives-tracker"
-        >
-          <p className={`${LW_HUD_CARD_TITLE} !tracking-wider`}>Objectives</p>
-          <ul className="mt-1 space-y-1">
-            {tasks.map((t) => (
-              <li
-                key={t.id}
-                className="flex min-w-0 items-baseline justify-between gap-2 text-[10px] leading-snug"
-                title={`${t.title} ${t.progress}/${t.requirement}`}
-              >
-                <span className="min-w-0 truncate font-medium text-[var(--text)]">
-                  {t.title}
-                </span>
-                <span className="shrink-0 tabular-nums text-[9px] text-[var(--cyan)]">
-                  {t.progress}/{t.requirement}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
+      <QuestTracker
+        snapshot={snapshot}
+        onCompleteFx={(title) =>
+          emitHudFx({ kind: "quest", text: `✓ ${title}`, x: 78, y: 28 })
+        }
+      />
 
       {snapshot?.enabled ? (
         <div
-          className={`${LW_HUD_GLASS} flex w-full items-center gap-2 px-2 py-1.5`}
+          className={`${LW_HUD_GLASS} lw-hud-glass--secondary flex w-full items-center gap-2 px-2 py-1.5`}
           title={`${status} · ${snapshot.presenceLevelLabel}`}
           data-testid="presence-status-chip"
         >

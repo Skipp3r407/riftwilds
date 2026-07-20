@@ -67,15 +67,15 @@ export function drawPremiumTerrain(
       const elev = elevation.heights[row]![col]!;
       const texKey = terrainTex(resolveTerrainTexture(kind, col, row, blueprint, grid));
       const key = scene.textures.exists(texKey) ? texKey : fallbackKey(kind);
-      // Sub-pixel jitter + slight oversize softens hard tile seams.
-      // Autotile edge/corner tiles stay aligned (less jitter) so shores read seamless.
+      // Soft oversize + tiny jitter — painterly blend over hard pixel grid.
+      // Autotile edge/corner tiles stay aligned so shores read seamless.
       const isSeam =
         key.includes("edge") || key.includes("corner") || key.includes("bloom");
-      const jx = isSeam ? 0 : (hash2(col, row, 7) - 0.5) * 1.6;
-      const jy = isSeam ? 0 : (hash2(col, row, 11) - 0.5) * 1.6;
+      const jx = isSeam ? 0 : (hash2(col, row, 7) - 0.5) * 0.9;
+      const jy = isSeam ? 0 : (hash2(col, row, 11) - 0.5) * 0.9;
       const x = col * T + T / 2 + jx;
       const y = row * T + T / 2 - elev * ELEV_PX + jy;
-      const oversize = blendEdges ? (isSeam ? 1.2 : 2.4) : 1;
+      const oversize = blendEdges ? (isSeam ? 1.6 : 3.6) : 1;
 
       if (elev >= 2) {
         const face = scene.add.rectangle(
@@ -92,14 +92,15 @@ export function drawPremiumTerrain(
 
       const img = scene.add.image(x, y, key).setDisplaySize(T + oversize, T + oversize);
       img.setDepth(depthAt(DEPTH.ground, y, elev * 0.05));
-      // Bright cozy meadow tint — lush greens / warm paths / soft water (not grey tech)
-      const shade = 0.96 + elev * 0.03 + hash2(col, row, 1) * 0.06;
-      const warm = kind === "water" ? 0.95 : 1.04;
+      // Soft regional lighting wash — less per-tile flicker for hand-painted read
+      const patchShade = hash2(Math.floor(col / 5), Math.floor(row / 5), 1);
+      const shade = 0.97 + elev * 0.025 + patchShade * 0.035;
+      const warm = kind === "water" ? 0.95 : 1.03;
       img.setTint(
         Phaser.Display.Color.GetColor(
-          Math.min(255, Math.floor(245 * shade * (kind === "water" ? 0.88 : warm))),
-          Math.min(255, Math.floor(250 * shade)),
-          Math.min(255, Math.floor(220 * shade * (kind === "water" ? 1.14 : 0.9))),
+          Math.min(255, Math.floor(248 * shade * (kind === "water" ? 0.88 : warm))),
+          Math.min(255, Math.floor(252 * shade)),
+          Math.min(255, Math.floor(222 * shade * (kind === "water" ? 1.14 : 0.92))),
         ),
       );
       group.add(img);
@@ -137,49 +138,64 @@ export function drawPremiumTerrain(
         group.add(foam);
       }
 
-      // Lived-in meadow clutter — grass tufts + tiny flower dots on open ground.
+      // Lived-in meadow clutter — fewer, softer tufts (avoid noisy tile sprinkle)
       if (
         blendEdges &&
         kind === "ground" &&
-        hash2(col, row, 13) > 0.62 &&
+        hash2(col, row, 13) > 0.78 &&
         !neighborDiffers(grid, row, col, kind)
       ) {
         const speck = scene.add.ellipse(
           x + (hash2(col, row, 17) - 0.5) * 10,
           y + (hash2(col, row, 19) - 0.5) * 8,
-          5 + hash2(col, row, 21) * 7,
-          3 + hash2(col, row, 23) * 4,
+          6 + hash2(col, row, 21) * 8,
+          3.5 + hash2(col, row, 23) * 4,
           0x3f7a38,
-          0.2,
+          0.16,
         );
         speck.setDepth(depthAt(DEPTH.groundDecal, y, 0.01));
         group.add(speck);
-        if (hash2(col, row, 27) > 0.72) {
+        if (hash2(col, row, 27) > 0.82) {
           const petal = scene.add.circle(
             x + (hash2(col, row, 29) - 0.5) * 12,
             y + (hash2(col, row, 31) - 0.5) * 10,
-            1.6 + hash2(col, row, 33) * 1.4,
+            1.8 + hash2(col, row, 33) * 1.5,
             hash2(col, row, 35) > 0.5 ? 0xe8a0c0 : 0xffe566,
-            0.85,
+            0.8,
           );
           petal.setDepth(depthAt(DEPTH.groundDecal, y, 0.02));
           group.add(petal);
         }
       }
 
-      if (elev >= 2) {
+      // Soft directional ground shadow for rises / tree-adjacent ground
+      if (elev >= 2 || (kind === "ground" && hash2(col, row, 51) > 0.91)) {
         const shadow = scene.add.ellipse(
-          x + 3,
-          y + T * 0.35,
-          T * 0.85,
-          T * 0.35,
+          x + 4,
+          y + T * 0.38,
+          T * (elev >= 2 ? 0.9 : 0.55),
+          T * (elev >= 2 ? 0.38 : 0.22),
           0x000000,
-          0.18,
+          elev >= 2 ? 0.2 : 0.1,
         );
         shadow.setDepth(depthAt(DEPTH.groundShadow, y, -0.05));
         group.add(shadow);
       }
     }
+  }
+
+  // Atmospheric fog wash — soft vignette so the map reads deeper, less tiled
+  if (blendEdges) {
+    const fog = scene.add.rectangle(
+      blueprint.camera.width / 2,
+      blueprint.camera.height / 2,
+      blueprint.camera.width * 1.15,
+      blueprint.camera.height * 1.15,
+      0x1a2430,
+      0.08,
+    );
+    fog.setDepth(depthAt(DEPTH.groundDecal, blueprint.camera.height, 0.5));
+    group.add(fog);
   }
 
   for (const path of blueprint.pathways) {

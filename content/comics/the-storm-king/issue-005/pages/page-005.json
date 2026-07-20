@@ -1,0 +1,139 @@
+{
+  "pageNumber": 5,
+  "storyPageNumber": 1,
+  "bookRole": "story",
+  "title": "Kingdom Built of Weather",
+  "storyPurpose": "Full-page reveal of Tempestria through a break in the storm wall.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p1a",
+      "description": "Full-bleed splash: wall of supernatural deep-indigo storm clouds opens to reveal Tempestria — slate mountain citadel, lightning towers, suspended bridges, cliffside villages, Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion silhouette circling highest tower. Narrow ridge foreground: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot glowing unsteadily, Bramblefox, Mossprig, Thornling, Wisplet, Lumenhare, Echoquill, Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif. Space for top caption.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Some kingdoms built walls. Tempestria built weather.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 72,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "TEMPESTRIA",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "KRACK-BOOM",
+          "x": 72,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "p1a",
+      "kind": "narration",
+      "text": "Some kingdoms built walls. Tempestria built weather.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 72,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p1a",
+      "kind": "caption",
+      "text": "TEMPESTRIA",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p1a",
+      "kind": "sfx",
+      "text": "KRACK-BOOM",
+      "x": 72,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "lumenhare",
+    "echoquill"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "ridge at Tempestria storm wall",
+    "time": "day",
+    "spark": {
+      "glow": "unsteady-storm"
+    }
+  },
+  "requiredMoments": [
+    1,
+    2
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 1/25 — Kingdom Built of Weather. Story purpose: Full-page reveal of Tempestria through a break in the storm wall. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-bleed splash: wall of supernatural deep-indigo storm clouds opens to reveal Tempestria — slate mountain citadel, lightning towers, suspended bridges, cliffside villages, Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion silhouette circling highest tower. Narrow ridge foreground: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot glowing unsteadily, Bramblefox, Mossprig, Thornling, Wisplet, Lumenhare, Echoquill, Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif. Space for top caption. Characters: mira-eggwarden, cael-vesper. Creatures: spark, thundervane, bramblefox, mossprig, thornling, wisplet, lumenhare, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: ridge overlooking Tempestria. Time: day. Weather: permanent supernatural storm. Lighting: break of storm light on slate citadel. Continuity: {\"location\": \"ridge at Tempestria storm wall\", \"time\": \"day\", \"spark\": {\"glow\": \"unsteady-storm\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Cross the mountain path.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Kingdom Built of Weather — The Storm King page 1",
+  "atmosphere": "storm",
+  "transcript": [
+    "NARRATION: Some kingdoms built walls. Tempestria built weather.",
+    "CAPTION: TEMPESTRIA",
+    "SFX: KRACK-BOOM"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Some kingdoms built walls. Tempestria built weather.",
+    "CAPTION: TEMPESTRIA",
+    "SFX: KRACK-BOOM"
+  ],
+  "codexLinks": [
+    "tempestria"
+  ],
+  "cardTeases": [
+    "thundervane"
+  ],
+  "id": "the-storm-king-issue-005-p005",
+  "cleanArtRel": "generated/raw-art/page-005.webp",
+  "letteredArtRel": "generated/lettered-pages/page-005.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-005.webp"
+}

@@ -55,6 +55,18 @@ import {
 
 export type * from "@/content/tcg/types";
 export { CONSTRUCTED_RULES, normalizeCard };
+export {
+  TCG_CARD_CATEGORIES,
+  CATEGORY_LABELS,
+  CATEGORY_PURPOSE,
+  DECK_COMPOSITION_GUIDANCE,
+  DECK_COMPOSITION_RESOLUTION,
+  resolveCardCategory,
+} from "@/content/tcg/framework/card-categories";
+export type {
+  TcgCardCategory,
+  TcgTemplateLayout,
+} from "@/content/tcg/framework/card-categories";
 
 /** Versioned combat-stat overlays (merged in normalizeCard). */
 setStatMigrationBundle(cardStatsV2 as unknown as CardStatMigrationBundle);

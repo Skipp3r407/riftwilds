@@ -1,0 +1,121 @@
+{
+  "pageNumber": 18,
+  "bookRole": "story",
+  "title": "Ember Route",
+  "storyPurpose": "Spark sees self-like image; Resonance Bearer Ember Route; multiple routes.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p14a",
+      "description": "Close: ledger illustration of creature resembling Spark with nested markings.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*recognition-chirp*",
+          "x": 50,
+          "y": 40,
+          "tail": "up",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p14b",
+      "description": "Mira reads note (lettered overlay): Resonance Bearer — Ember Route.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "RESONANCE BEARER: EMBER ROUTE",
+          "x": 50,
+          "y": 22,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 50
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Not one accident. Several roads.",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 38
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p14a",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*recognition-chirp*",
+      "x": 50,
+      "y": 40,
+      "tail": "up",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p14b",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Not one accident. Several roads.",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 38
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p14b",
+      "kind": "caption",
+      "text": "RESONANCE BEARER: EMBER ROUTE",
+      "x": 50,
+      "y": 22,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 50
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {
+    "revelation": "ember-route",
+    "spark": {
+      "identity": "one-of-routes"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 14/25 — Ember Route. Story purpose: Spark sees self-like image; Resonance Bearer Ember Route; multiple routes. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p14a): Close: ledger illustration of creature resembling Spark with nested markings. Panel 2 (p14b): Mira reads note (lettered overlay): Resonance Bearer — Ember Route. Characters: mira-eggwarden. Creatures: spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"revelation\":\"ember-route\",\"spark\":{\"identity\":\"one-of-routes\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Vault crystal.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ember Route — The Traveling Circus page 14",
+  "atmosphere": "festival",
+  "transcript": [
+    "CREATURE (Spark): *recognition-chirp*",
+    "CAPTION: RESONANCE BEARER: EMBER ROUTE",
+    "SPEECH (Mira Eggwarden): Not one accident. Several roads."
+  ],
+  "storyPageNumber": 14,
+  "id": "the-traveling-circus-issue-003-p018",
+  "cleanArtRel": "generated/raw-art/page-018.png",
+  "letteredArtRel": "generated/lettered-pages/page-018.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-018.webp"
+}

@@ -1,0 +1,123 @@
+{
+  "pageNumber": 26,
+  "storyPageNumber": 22,
+  "bookRole": "story",
+  "title": "What We Keep",
+  "storyPurpose": "Aftermath: Seris contained (not executed); Cael supervision continues; Compact justice.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p22a",
+      "description": "Seris in inert crystal restraints — alive, defeated; Mira refuses execution.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "She'll try again.",
+          "x": 30,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Then we keep better doors. We don't become Meridian.",
+          "x": 55,
+          "y": 30,
+          "tail": "down-left",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p22b",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished turns in remaining transmitter shards; Aurelia witnesses.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Supervised travel. I'll earn the unmasked road.",
+          "x": 50,
+          "y": 55,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p22c",
+      "description": "Quiet: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot and Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot asleep against Mira; Axiom stands watch.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Found family is a kind of Engine.",
+          "x": 50,
+          "y": 85,
+          "tail": null,
+          "maxWidthPct": 48,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "cael-vesper",
+    "nira-quill",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "axiom"
+  ],
+  "locations": [
+    "Second Forge holding terrace"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "seris": "contained",
+    "cael": "supervised"
+  },
+  "requiredMoments": [
+    22
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 22/25 — What We Keep. Story purpose: Aftermath: Seris contained (not executed); Cael supervision continues; Compact justice. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p22a): Seris in inert crystal restraints — alive, defeated; Mira refuses execution. Panel 2 (p22b): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished turns in remaining transmitter shards; Aurelia witnesses. Panel 3 (p22c): Quiet: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot and Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot asleep against Mira; Axiom stands watch. Characters: mira-eggwarden, seris-vale, cael-vesper, nira-quill, aurelia-voss. Creatures: spark, nova, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Second Forge holding terrace. Atmosphere: dusk. Continuity: {\"seris\": \"contained\", \"cael\": \"supervised\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Found family quiet beat.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "What We Keep — The Riftwright page 26",
+  "atmosphere": "dusk",
+  "transcript": [
+    "SPEECH (Nira Quill): She'll try again.",
+    "SPEECH (Mira Eggwarden): Then we keep better doors. We don't become Meridian.",
+    "SPEECH (Cael Vesper): Supervised travel. I'll earn the unmasked road.",
+    "NARRATION: Found family is a kind of Engine."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Nira Quill): She'll try again.",
+    "SPEECH (Mira Eggwarden): Then we keep better doors. We don't become Meridian.",
+    "SPEECH (Cael Vesper): Supervised travel. I'll earn the unmasked road.",
+    "NARRATION: Found family is a kind of Engine."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p026",
+  "cleanArtRel": "generated/raw-art/page-026.webp",
+  "letteredArtRel": "generated/lettered-pages/page-026.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-026.webp"
+}

@@ -1,0 +1,268 @@
+{
+  "pageNumber": 21,
+  "storyPageNumber": 17,
+  "bookRole": "story",
+  "title": "Bridges of Thunder",
+  "storyPurpose": "Battle across suspended bridges — companions use real abilities.",
+  "layout": {
+    "type": "four-grid",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p17a",
+      "description": "Bramblefox flanking along bridge rails, Forest Bond vines catching a winged corruptor.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*track-snap*",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "vine-WHIP",
+          "x": 65,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p17b",
+      "description": "Mossprig Living Bulwark shielding evacuating villagers on collapsing span.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*bulwark!*",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p17c",
+      "description": "Thornling plugging into conductor; emergency route lights cyan; comic sparks in fur.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*zzzt-power*",
+          "x": 45,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Thornling",
+          "readOrder": 3
+        },
+        {
+          "kind": "sfx",
+          "text": "conductor-ZAP",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "p17d",
+      "description": "Wisplet phasing through lightning cage; Galesprig Updraft lifting Mira and Spark to safer strut; Spirit Moth signaling engine vector.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*updraft!*",
+          "x": 35,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Galesprig",
+          "readOrder": 5
+        },
+        {
+          "kind": "creature",
+          "text": "*phase-hum*",
+          "x": 65,
+          "y": 55,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Wisplet",
+          "readOrder": 6
+        },
+        {
+          "kind": "speech",
+          "text": "Companions — hold the people first!",
+          "x": 50,
+          "y": 78,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 7
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p17a",
+      "kind": "creature",
+      "text": "*track-snap*",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p17b",
+      "kind": "creature",
+      "text": "*bulwark!*",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mossprig",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p17c",
+      "kind": "creature",
+      "text": "*zzzt-power*",
+      "x": 45,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Thornling",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p17d",
+      "kind": "creature",
+      "text": "*updraft!*",
+      "x": 35,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Galesprig",
+      "readOrder": 5
+    },
+    {
+      "panelId": "p17d",
+      "kind": "creature",
+      "text": "*phase-hum*",
+      "x": 65,
+      "y": 55,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Wisplet",
+      "readOrder": 6
+    },
+    {
+      "panelId": "p17d",
+      "kind": "speech",
+      "text": "Companions — hold the people first!",
+      "x": 50,
+      "y": 78,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 7
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p17a",
+      "kind": "sfx",
+      "text": "vine-WHIP",
+      "x": 65,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "p17c",
+      "kind": "sfx",
+      "text": "conductor-ZAP",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "galesprig",
+    "spirit-moth"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "suspended bridges",
+    "battle": "companions-active"
+  },
+  "requiredMoments": [
+    19
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 17/25 — Bridges of Thunder. Story purpose: Battle across suspended bridges — companions use real abilities. Layout: four-grid. 4 panels with clear inked gutters. Panel 1 (p17a): Bramblefox flanking along bridge rails, Forest Bond vines catching a winged corruptor. Panel 2 (p17b): Mossprig Living Bulwark shielding evacuating villagers on collapsing span. Panel 3 (p17c): Thornling plugging into conductor; emergency route lights cyan; comic sparks in fur. Panel 4 (p17d): Wisplet phasing through lightning cage; Galesprig Updraft lifting Mira and Spark to safer strut; Spirit Moth signaling engine vector. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling, wisplet, galesprig, spirit-moth. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"suspended bridges\", \"battle\": \"companions-active\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Aerial war.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Bridges of Thunder — The Storm King page 17",
+  "atmosphere": "storm",
+  "transcript": [
+    "CREATURE (Bramblefox): *track-snap*",
+    "SFX: vine-WHIP",
+    "CREATURE (Mossprig): *bulwark!*",
+    "CREATURE (Thornling): *zzzt-power*",
+    "SFX: conductor-ZAP",
+    "CREATURE (Galesprig): *updraft!*",
+    "CREATURE (Wisplet): *phase-hum*",
+    "SPEECH (Mira Eggwarden): Companions — hold the people first!"
+  ],
+  "a11yTranscript": [
+    "CREATURE (Bramblefox): *track-snap*",
+    "SFX: vine-WHIP",
+    "CREATURE (Mossprig): *bulwark!*",
+    "CREATURE (Thornling): *zzzt-power*",
+    "SFX: conductor-ZAP",
+    "CREATURE (Galesprig): *updraft!*",
+    "CREATURE (Wisplet): *phase-hum*",
+    "SPEECH (Mira Eggwarden): Companions — hold the people first!"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "bramblefox",
+    "mossprig",
+    "galesprig"
+  ],
+  "id": "the-storm-king-issue-005-p021",
+  "cleanArtRel": "generated/raw-art/page-021.webp",
+  "letteredArtRel": "generated/lettered-pages/page-021.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-021.webp"
+}

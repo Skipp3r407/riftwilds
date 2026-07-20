@@ -1,0 +1,123 @@
+{
+  "pageNumber": 5,
+  "storyPageNumber": 1,
+  "bookRole": "story",
+  "title": "City That Memory Kept",
+  "storyPurpose": "Full-page reveal of Aureth Vale from the ridge at dawn.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p1a",
+      "description": "Full-bleed splash: vast Lost City Aureth Vale at dawn — towering pale stone and teal crystal, broken suspended bridges, gravity-defying waterfalls, forest reclaiming outer walls, floating debris. On high ridge in foreground: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot glowing, Bramblefox, Mossprig, Thornling, Wisplet, Lumenhare, Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif, acrobat Tavi Brightline. Meridian rooftop silhouettes distant/tiny. Space for top caption.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "A city can disappear from maps. It is harder to disappear from memory.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 72,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "AURETH VALE",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "distant-HUMMM",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "p1a",
+      "kind": "narration",
+      "text": "A city can disappear from maps. It is harder to disappear from memory.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 72,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p1a",
+      "kind": "caption",
+      "text": "AURETH VALE",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p1a",
+      "kind": "sfx",
+      "text": "distant-HUMMM",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "tavi-brightline"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "lumenhare"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "ridge above Aureth Vale",
+    "time": "dawn",
+    "spark": {
+      "glow": "drawn to city"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 1/25 — City That Memory Kept. Story purpose: Full-page reveal of Aureth Vale from the ridge at dawn. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-bleed splash: vast Lost City Aureth Vale at dawn — towering pale stone and teal crystal, broken suspended bridges, gravity-defying waterfalls, forest reclaiming outer walls, floating debris. On high ridge in foreground: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot glowing, Bramblefox, Mossprig, Thornling, Wisplet, Lumenhare, Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif, acrobat Tavi Brightline. Meridian rooftop silhouettes distant/tiny. Space for top caption. Characters: mira-eggwarden, cael-vesper, tavi-brightline. Creatures: spark, bramblefox, mossprig, thornling, wisplet, lumenhare. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: ridge overlooking Aureth Vale. Time: day. Weather: clear over ruins. Lighting: dawn gold over teal crystal. Continuity: {\"location\": \"ridge above Aureth Vale\", \"time\": \"dawn\", \"spark\": {\"glow\": \"drawn to city\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Descend toward the gate.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "City That Memory Kept — The Lost City page 1",
+  "atmosphere": "dawn",
+  "transcript": [
+    "NARRATION: A city can disappear from maps. It is harder to disappear from memory.",
+    "CAPTION: AURETH VALE",
+    "SFX: distant-HUMMM"
+  ],
+  "id": "the-lost-city-issue-004-p005",
+  "cleanArtRel": "generated/raw-art/page-005.webp",
+  "letteredArtRel": "generated/lettered-pages/page-005.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-005.webp"
+}

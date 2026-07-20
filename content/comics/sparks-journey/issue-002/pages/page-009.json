@@ -1,0 +1,131 @@
+{
+  "pageNumber": 9,
+  "bookRole": "story",
+  "title": "Shellward Mark",
+  "storyPurpose": "Scholar/Keeper recognizes ancient sanctuary symbol on Spark.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p5a",
+      "description": "Elder Codex aide Solen's colleague or local scholar leans close to Spark's shoulder crystals — an ancient nested-arc sanctuary mark.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Keeper Scholar Len",
+          "text": "That mark… Shellward. Pre-Commons nesting law.",
+          "x": 50,
+          "y": 20,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 45
+        }
+      ]
+    },
+    {
+      "id": "p5b",
+      "description": "Inset: charcoal rubbing of matching sanctuary glyph from a Codex folio.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "A door older than the plaza. A promise older than fear.",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p5c",
+      "description": "Mira and Scholar Len exchange looks; Spark peeks past Bramblefox, curious despite fear.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "If the Compact still means anything, we take it there — not to a cage.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 2,
+          "maxWidthPct": 48
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p5a",
+      "kind": "speech",
+      "speaker": "Keeper Scholar Len",
+      "text": "That mark… Shellward. Pre-Commons nesting law.",
+      "x": 50,
+      "y": 20,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 45
+    },
+    {
+      "panelId": "p5c",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "If the Compact still means anything, we take it there — not to a cage.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 2,
+      "maxWidthPct": 48
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p5b",
+      "kind": "narration",
+      "text": "A door older than the plaza. A promise older than fear.",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "mira-eggwarden",
+    "keeper-scholar-len"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox"
+  ],
+  "continuity": {
+    "spark": {
+      "markings": "Shellward nested-arc confirmed",
+      "emotion": "wary-curious"
+    },
+    "mission": "escort-to-shellward-sanctum"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 5/25 — Shellward Mark. Story purpose: Scholar/Keeper recognizes ancient sanctuary symbol on Spark. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p5a): Elder Codex aide Solen's colleague or local scholar leans close to Spark's shoulder crystals — an ancient nested-arc sanctuary mark. Panel 2 (p5b): Inset: charcoal rubbing of matching sanctuary glyph from a Codex folio. Panel 3 (p5c): Mira and Scholar Len exchange looks; Spark peeks past Bramblefox, curious despite fear. Characters: mira-eggwarden, mira-eggwarden, keeper-scholar-len. Creatures: spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"markings\":\"Shellward nested-arc confirmed\",\"emotion\":\"wary-curious\"},\"mission\":\"escort-to-shellward-sanctum\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Mission accepted; hunter watches.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Shellward Mark — Spark's Journey page 5",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SPEECH (Keeper Scholar Len): That mark… Shellward. Pre-Commons nesting law.",
+    "NARRATION: A door older than the plaza. A promise older than fear.",
+    "SPEECH (Mira Eggwarden): If the Compact still means anything, we take it there — not to a cage."
+  ],
+  "storyPageNumber": 5,
+  "id": "sparks-journey-issue-002-p009",
+  "cleanArtRel": "generated/raw-art/page-009.png",
+  "letteredArtRel": "generated/lettered-pages/page-009.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-009.webp"
+}

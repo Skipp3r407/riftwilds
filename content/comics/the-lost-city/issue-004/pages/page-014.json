@@ -1,0 +1,147 @@
+{
+  "pageNumber": 14,
+  "storyPageNumber": 10,
+  "bookRole": "story",
+  "title": "Resonance Keepers",
+  "storyPurpose": "Records identify Spark's kind as Resonance Keepers for Rift engines.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p10a",
+      "description": "Wall archive crystal projects diagram of companions synchronized to city engines — abstract glyphs, Echoquill tracing light.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CLASS: RESONANCE KEEPERS",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Trained — or born — to steady the engines that held the First Tear's roads.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p10b",
+      "description": "Close: Spark sees itself in a mural of Resonance Line companions; cyan core schematic behind.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "The circus… moved lights like these. Quietly. For longer than I admitted.",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "thought",
+          "text": "History wrote a job description. Spark didn't sign it.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p10b",
+      "kind": "speech",
+      "text": "The circus… moved lights like these. Quietly. For longer than I admitted.",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p10b",
+      "kind": "thought",
+      "text": "History wrote a job description. Spark didn't sign it.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p10a",
+      "kind": "caption",
+      "text": "CLASS: RESONANCE KEEPERS",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p10a",
+      "kind": "narration",
+      "text": "Trained — or born — to steady the engines that held the First Tear's roads.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "echoquill"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [
+    "resonance-keeper-record"
+  ],
+  "continuity": {
+    "term": "Resonance Keepers",
+    "cael": "partial admission beginning"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 10/25 — Resonance Keepers. Story purpose: Records identify Spark's kind as Resonance Keepers for Rift engines. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p10a): Wall archive crystal projects diagram of companions synchronized to city engines — abstract glyphs, Echoquill tracing light. Panel 2 (p10b): Close: Spark sees itself in a mural of Resonance Line companions; cyan core schematic behind. Characters: mira-eggwarden, cael-vesper. Creatures: spark, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"term\": \"Resonance Keepers\", \"cael\": \"partial admission beginning\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Spark's fear.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Resonance Keepers — The Lost City page 10",
+  "atmosphere": "dusk",
+  "transcript": [
+    "CAPTION: CLASS: RESONANCE KEEPERS",
+    "NARRATION: Trained — or born — to steady the engines that held the First Tear's roads.",
+    "SPEECH (Cael Vesper): The circus… moved lights like these. Quietly. For longer than I admitted.",
+    "THOUGHT (Mira Eggwarden): History wrote a job description. Spark didn't sign it."
+  ],
+  "id": "the-lost-city-issue-004-p014",
+  "cleanArtRel": "generated/raw-art/page-014.webp",
+  "letteredArtRel": "generated/lettered-pages/page-014.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-014.webp"
+}

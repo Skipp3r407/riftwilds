@@ -1,0 +1,12 @@
+{
+  "simCount": 3000,
+  "ms": 3483,
+  "completed": 3000,
+  "errors": 0,
+  "p1Wins": 1544,
+  "p2Wins": 1456,
+  "draws": 0,
+  "avgTurns": 12.188666666666666,
+  "firstPlayerWinRate": 0.5146666666666667,
+  "pathTo100k": "TCG_SIM_COUNT=100000 npx tsx scripts/simulations/tcg-battle-rules-sim.ts"
+}

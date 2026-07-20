@@ -1,0 +1,25 @@
+{
+  "locations": [
+    {
+      "id": "lanternveil-circus",
+      "name": "Lanternveil Traveling Circus"
+    },
+    {
+      "id": "grand-pavilion",
+      "name": "Grand Pavilion"
+    },
+    {
+      "id": "artifact-vault",
+      "name": "Artifact Vault"
+    },
+    {
+      "id": "archive-wagon",
+      "name": "Mobile Archive Wagon"
+    },
+    {
+      "id": "lost-city",
+      "name": "The Lost City",
+      "note": "Cliffhanger only"
+    }
+  ]
+}

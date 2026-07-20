@@ -1,0 +1,216 @@
+{
+  "pageNumber": 6,
+  "storyPageNumber": 2,
+  "bookRole": "story",
+  "title": "Transmission Trail",
+  "storyPurpose": "Aurelia presents transmission records; surface evidence implicates Nira.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p2a",
+      "description": "Aurelia Voss the Gilded Merchant: elegant, warm gold and deep-red market robes, ledger-chain jewelry, half-veil, calculating calm eyes unfurls glowing cyan-amber transmission strips on black lacquer table; Lockjaw Wisp Appraiser's Eye active; Mira leaning in.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "The signal followed you through four regions.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Aurelia Voss",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*click-appraise*",
+          "x": 70,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Lockjaw Wisp",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p2b",
+      "description": "Close on strip marks aligning with hunter route seals and Meridian buyer sigils — visual implication without readable text.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "On paper, the hunter's path matches best.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Aurelia Voss",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "strip-SNAP",
+          "x": 75,
+          "y": 65,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p2c",
+      "description": "Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes jaw tight at table edge; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif still in background shadow; Spark ears flat sensing incomplete truth.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I won't run from ink.",
+          "x": 40,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 4
+        },
+        {
+          "kind": "whisper",
+          "text": "…Ink lies too.",
+          "x": 70,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p2a",
+      "kind": "speech",
+      "text": "The signal followed you through four regions.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Aurelia Voss",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p2a",
+      "kind": "creature",
+      "text": "*click-appraise*",
+      "x": 70,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Lockjaw Wisp",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p2b",
+      "kind": "speech",
+      "text": "On paper, the hunter's path matches best.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Aurelia Voss",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p2c",
+      "kind": "speech",
+      "text": "I won't run from ink.",
+      "x": 40,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p2c",
+      "kind": "whisper",
+      "text": "…Ink lies too.",
+      "x": 70,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p2b",
+      "kind": "sfx",
+      "text": "strip-SNAP",
+      "x": 75,
+      "y": 65,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "aurelia-voss",
+    "nira-quill",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "lockjaw-wisp",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [
+    "transmission-records"
+  ],
+  "continuity": {
+    "location": "merchant-evidence-tent",
+    "nira": "implicated-surface"
+  },
+  "requiredMoments": [
+    1,
+    2
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 2/25 — Transmission Trail. Story purpose: Aurelia presents transmission records; surface evidence implicates Nira. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Aurelia Voss the Gilded Merchant: elegant, warm gold and deep-red market robes, ledger-chain jewelry, half-veil, calculating calm eyes unfurls glowing cyan-amber transmission strips on black lacquer table; Lockjaw Wisp Appraiser's Eye active; Mira leaning in. Panel 2 (p2b): Close on strip marks aligning with hunter route seals and Meridian buyer sigils — visual implication without readable text. Panel 3 (p2c): Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes jaw tight at table edge; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif still in background shadow; Spark ears flat sensing incomplete truth. Characters: mira-eggwarden, aurelia-voss, nira-quill, cael-vesper. Creatures: spark, lockjaw-wisp, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"location\": \"merchant-evidence-tent\", \"nira\": \"implicated-surface\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Confrontation.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Transmission Trail — The Traitor's Gate page 2",
+  "atmosphere": "night",
+  "transcript": [
+    "SPEECH (Aurelia Voss): The signal followed you through four regions.",
+    "CREATURE (Lockjaw Wisp): *click-appraise*",
+    "SPEECH (Aurelia Voss): On paper, the hunter's path matches best.",
+    "SFX: strip-SNAP",
+    "SPEECH (Nira Quill): I won't run from ink.",
+    "WHISPER (Cael Vesper): …Ink lies too."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Aurelia Voss): The signal followed you through four regions.",
+    "CREATURE (Lockjaw Wisp): *click-appraise*",
+    "SPEECH (Aurelia Voss): On paper, the hunter's path matches best.",
+    "SFX: strip-SNAP",
+    "SPEECH (Nira Quill): I won't run from ink.",
+    "WHISPER (Cael Vesper): …Ink lies too."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p006",
+  "cleanArtRel": "generated/raw-art/page-006.webp",
+  "letteredArtRel": "generated/lettered-pages/page-006.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-006.webp"
+}

@@ -1,10 +1,34 @@
+import { redirect } from "next/navigation";
 import { SiteHeader } from "@/components/shared/site-header";
 import { MobileGameNav } from "@/components/game/mobile-nav";
 import { GameSidebar } from "@/components/game/game-sidebar";
 import { RouteWallpaper } from "@/components/shared/route-wallpaper";
 import { HudAtmosphere } from "@/components/shared/hud-atmosphere";
+import {
+  clearGameplayCookies,
+  resolveGameplayGate,
+} from "@/lib/auth/account-gate";
+import { destroySession } from "@/lib/auth/session";
 
-export default function GameLayout({ children }: { children: React.ReactNode }) {
+/**
+ * Server gate for all (game) routes — NO ACCOUNT = NO GAMEPLAY.
+ * Edge middleware checks cookie presence; this validates session + account status.
+ */
+export default async function GameLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const gate = await resolveGameplayGate({ returnUrl: "/play" });
+
+  if (gate.ok === false) {
+    if (gate.decision.clearSession) {
+      await destroySession();
+      await clearGameplayCookies();
+    }
+    redirect(gate.decision.redirectTo);
+  }
+
   return (
     <>
       <RouteWallpaper />

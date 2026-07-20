@@ -1,0 +1,214 @@
+{
+  "pageNumber": 13,
+  "storyPageNumber": 9,
+  "bookRole": "story",
+  "title": "Illegal Cages",
+  "storyPurpose": "Thornling finds illegal holding pens; Cindermink glimpsed.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p9a",
+      "description": "Thornling plugging into a rusted lock conduit; sparks revealing hidden door behind spice stall.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*lock-buzz*",
+          "x": 40,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Thornling",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "hidden-CLICK",
+          "x": 65,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p9b",
+      "description": "Illegal holding pens — black iron cages, Compact violation stamps scratched out; Cindermink: small sleek companion, ember-red fur, soot-black paws, bright gold eyes, chain scars around one hind leg, smoke-like tail, nervous but defiant visible in one pen, chain scar on hind leg.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Rescue charters don't use pens.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*defiant-hiss*",
+          "x": 55,
+          "y": 60,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Cindermink",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p9c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes fury contained; Bramblefox growling at Meridian scent on cage locks.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "This is trafficking. Not trade.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        },
+        {
+          "kind": "speech",
+          "text": "Meridian buyers. I know the marks.",
+          "x": 60,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 38,
+          "speaker": "Nira Quill",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p9a",
+      "kind": "creature",
+      "text": "*lock-buzz*",
+      "x": 40,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Thornling",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p9b",
+      "kind": "creature",
+      "text": "*defiant-hiss*",
+      "x": 55,
+      "y": 60,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Cindermink",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p9c",
+      "kind": "speech",
+      "text": "This is trafficking. Not trade.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p9c",
+      "kind": "speech",
+      "text": "Meridian buyers. I know the marks.",
+      "x": 60,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 38,
+      "speaker": "Nira Quill",
+      "readOrder": 5
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p9b",
+      "kind": "narration",
+      "text": "Rescue charters don't use pens.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p9a",
+      "kind": "sfx",
+      "text": "hidden-CLICK",
+      "x": 65,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill"
+  ],
+  "creatures": [
+    "thornling",
+    "cindermink",
+    "bramblefox"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "illegal holding pens",
+    "trafficking": "confirmed",
+    "cindermink": "found"
+  },
+  "requiredMoments": [
+    16,
+    17
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 9/25 — Illegal Cages. Story purpose: Thornling finds illegal holding pens; Cindermink glimpsed. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p9a): Thornling plugging into a rusted lock conduit; sparks revealing hidden door behind spice stall. Panel 2 (p9b): Illegal holding pens — black iron cages, Compact violation stamps scratched out; Cindermink: small sleek companion, ember-red fur, soot-black paws, bright gold eyes, chain scars around one hind leg, smoke-like tail, nervous but defiant visible in one pen, chain scar on hind leg. Panel 3 (p9c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes fury contained; Bramblefox growling at Meridian scent on cage locks. Characters: mira-eggwarden, nira-quill. Creatures: thornling, cindermink, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"illegal holding pens\", \"trafficking\": \"confirmed\", \"cindermink\": \"found\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Reveal the full pens.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Illegal Cages — The Merchant's Secret page 9",
+  "atmosphere": "market",
+  "transcript": [
+    "CREATURE (Thornling): *lock-buzz*",
+    "SFX: hidden-CLICK",
+    "NARRATION: Rescue charters don't use pens.",
+    "CREATURE (Cindermink): *defiant-hiss*",
+    "SPEECH (Mira Eggwarden): This is trafficking. Not trade.",
+    "SPEECH (Nira Quill): Meridian buyers. I know the marks."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Thornling): *lock-buzz*",
+    "SFX: hidden-CLICK",
+    "NARRATION: Rescue charters don't use pens.",
+    "CREATURE (Cindermink): *defiant-hiss*",
+    "SPEECH (Mira Eggwarden): This is trafficking. Not trade.",
+    "SPEECH (Nira Quill): Meridian buyers. I know the marks."
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "cindermink"
+  ],
+  "id": "the-merchants-secret-issue-006-p013",
+  "cleanArtRel": "generated/raw-art/page-013.webp",
+  "letteredArtRel": "generated/lettered-pages/page-013.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-013.webp"
+}

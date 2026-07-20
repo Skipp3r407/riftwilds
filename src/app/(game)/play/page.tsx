@@ -34,10 +34,11 @@ const quickActions: {
 function liveWorldCard() {
   const entryOpen = isLiveWorldEntryOpen();
   const playable = canEnterLiveWorld();
+  const publicAccess = featureFlagDefaults.LIVE_WORLD_PUBLIC_ACCESS_ENABLED;
   if (!entryOpen) {
     return {
       title: "Live World",
-      body: "Coming in a future update — social habitat & exploration. Launch focus is Rift Battles.",
+      body: "Coming Soon — shared habitat, settlements, and World Restoration. Launch focus is Rift Battles.",
       href: "/live-world",
       thumb: sectionUiThumbPath("features", "live-world"),
       glow: "rgba(61,231,255,0.12)",
@@ -46,7 +47,9 @@ function liveWorldCard() {
   return {
     title: "Live World",
     body: playable
-      ? "Habitat preview stays open for development — launch combat is Rift Battles."
+      ? publicAccess
+        ? "Habitat preview stays open — launch combat is Rift Battles."
+        : "COMING SOON · DEV ACCESS — enter locally while public stays gated."
       : "Playable Live World paused by feature flag.",
     href: "/live-world",
     thumb: sectionUiThumbPath("features", "live-world"),
@@ -76,7 +79,7 @@ const featureCards = [
   {
     title: "Starter Egg",
     body: featureFlagDefaults.STARTER_EGG_CLAIMS_ENABLED
-      ? "Guaranteed free Starter Egg — no wallet or SOL."
+      ? "Guaranteed free Starter Egg for signed-in Keepers — no SOL required."
       : "Paused",
     href: "/hatchery",
     thumb: sectionUiThumbPath("features", "starter-claim"),
@@ -113,12 +116,13 @@ export default function PlayDashboardPage() {
           title={`Welcome to ${projectConfig.UNIVERSE_NAME}`}
           description={
             <>
-              Free to play — no wallet needed. Hatch companions, collect cards, duel in Rift Battles,
-              and care for your {projectConfig.CREATURE_NAME}. Optional{" "}
-              {projectConfig.TOKEN_SYMBOL} perks are cosmetics only.
+              Signed-in Keepers only — no guest gameplay. Hatch companions, collect cards, duel in
+              Rift Battles, and care for your {projectConfig.CREATURE_NAME}. Wallet link is optional
+              for Web3; a free account is required. Optional {projectConfig.TOKEN_SYMBOL} perks are
+              cosmetics only.
             </>
           }
-          status="Free to play"
+          status="Account required"
           statusTone="live"
           actions={
             <>

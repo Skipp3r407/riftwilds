@@ -1,0 +1,396 @@
+{
+  "updatedAt": "2026-07-20T15:25:07.232Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "1": {
+      "pageNumber": 1,
+      "role": "front-cover",
+      "title": "The Merchant's Secret — Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-001.webp",
+      "error": null
+    },
+    "2": {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "title": "Inside Front Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-002.webp",
+      "error": null
+    },
+    "3": {
+      "pageNumber": 3,
+      "role": "credits",
+      "title": "Credits",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-003.webp",
+      "error": null
+    },
+    "4": {
+      "pageNumber": 4,
+      "role": "title",
+      "title": "Chapter Six — The Merchant's Secret",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-004.webp",
+      "error": null
+    },
+    "5": {
+      "pageNumber": 5,
+      "role": "story",
+      "title": "Crossroads Spark",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-005.webp",
+      "error": null
+    },
+    "6": {
+      "pageNumber": 6,
+      "role": "story",
+      "title": "Market Rules",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-006.webp",
+      "error": null
+    },
+    "7": {
+      "pageNumber": 7,
+      "role": "story",
+      "title": "Lantern Entry",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-007.webp",
+      "error": null
+    },
+    "8": {
+      "pageNumber": 8,
+      "role": "story",
+      "title": "Wonder and Danger",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-008.webp",
+      "error": null
+    },
+    "9": {
+      "pageNumber": 9,
+      "role": "story",
+      "title": "Shelter and Cry",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-009.webp",
+      "error": null
+    },
+    "10": {
+      "pageNumber": 10,
+      "role": "story",
+      "title": "Resonance Less Cooperative",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-010.webp",
+      "error": null
+    },
+    "11": {
+      "pageNumber": 11,
+      "role": "story",
+      "title": "Key for a Buyer",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-011.webp",
+      "error": null
+    },
+    "12": {
+      "pageNumber": 12,
+      "role": "story",
+      "title": "Profit vs Preservation",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-012.webp",
+      "error": null
+    },
+    "13": {
+      "pageNumber": 13,
+      "role": "story",
+      "title": "Illegal Cages",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-013.webp",
+      "error": null
+    },
+    "14": {
+      "pageNumber": 14,
+      "role": "story",
+      "title": "False Walls",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-014.webp",
+      "error": null
+    },
+    "15": {
+      "pageNumber": 15,
+      "role": "story",
+      "title": "Recruitment File",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-015.webp",
+      "error": null
+    },
+    "16": {
+      "pageNumber": 16,
+      "role": "story",
+      "title": "Egg Auction Announced",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-016.webp",
+      "error": null
+    },
+    "17": {
+      "pageNumber": 17,
+      "role": "story",
+      "title": "Underground Archive",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-017.webp",
+      "error": null
+    },
+    "18": {
+      "pageNumber": 18,
+      "role": "story",
+      "title": "Auction Trap",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-018.webp",
+      "error": null
+    },
+    "19": {
+      "pageNumber": 19,
+      "role": "story",
+      "title": "Beyond Control",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-019.webp",
+      "error": null
+    },
+    "20": {
+      "pageNumber": 20,
+      "role": "story",
+      "title": "Private Auction",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-020.webp",
+      "error": null
+    },
+    "21": {
+      "pageNumber": 21,
+      "role": "story",
+      "title": "Bidding and Cry",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-021.webp",
+      "error": null
+    },
+    "22": {
+      "pageNumber": 22,
+      "role": "story",
+      "title": "Spark Revealed",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-022.webp",
+      "error": null
+    },
+    "23": {
+      "pageNumber": 23,
+      "role": "story",
+      "title": "Break the Auction",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-023.webp",
+      "error": null
+    },
+    "24": {
+      "pageNumber": 24,
+      "role": "story",
+      "title": "Ledger Doors",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-024.webp",
+      "error": null
+    },
+    "25": {
+      "pageNumber": 25,
+      "role": "story",
+      "title": "Break the Chain",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-025.webp",
+      "error": null
+    },
+    "26": {
+      "pageNumber": 26,
+      "role": "story",
+      "title": "Bazaar Shifts",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-026.webp",
+      "error": null
+    },
+    "27": {
+      "pageNumber": 27,
+      "role": "story",
+      "title": "Stabilize the Egg",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-027.webp",
+      "error": null
+    },
+    "28": {
+      "pageNumber": 28,
+      "role": "story",
+      "title": "The Riftwright",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-028.webp",
+      "error": null
+    },
+    "29": {
+      "pageNumber": 29,
+      "role": "story",
+      "title": "The Traitor's Gate",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-029.webp",
+      "error": null
+    },
+    "30": {
+      "pageNumber": 30,
+      "role": "teaser",
+      "title": "Next Issue — The Traitor's Gate",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-030.webp",
+      "error": null
+    },
+    "31": {
+      "pageNumber": 31,
+      "role": "profile",
+      "title": "Character Profile — Aurelia Voss",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-031.webp",
+      "error": null
+    },
+    "32": {
+      "pageNumber": 32,
+      "role": "profile",
+      "title": "Companion Profile — Lockjaw Wisp",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-032.webp",
+      "error": null
+    },
+    "33": {
+      "pageNumber": 33,
+      "role": "lore",
+      "title": "Codex — Gilded Crossroads",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-033.webp",
+      "error": null
+    },
+    "34": {
+      "pageNumber": 34,
+      "role": "lore",
+      "title": "Ability Spotlight — Break the Chain",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-034.webp",
+      "error": null
+    },
+    "35": {
+      "pageNumber": 35,
+      "role": "map",
+      "title": "World Map — Tempestria to Crossroads",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-035.webp",
+      "error": null
+    },
+    "36": {
+      "pageNumber": 36,
+      "role": "letters",
+      "title": "Editor's Note — Doors and Prices",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-036.webp",
+      "error": null
+    },
+    "37": {
+      "pageNumber": 37,
+      "role": "inside-cover",
+      "title": "Inside Back Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-037.webp",
+      "error": null
+    },
+    "38": {
+      "pageNumber": 38,
+      "role": "back-cover",
+      "title": "Back Cover — The Traitor's Gate",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-merchants-secret/issue-006/pages/page-038.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 38,
+    "letterOk": 38,
+    "grokOk": 0,
+    "proceduralOk": 38,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-006/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-006/generate-and-letter.mjs --force"
+  }
+}

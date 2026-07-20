@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { PublicKey } from "@solana/web3.js";
 import { useConnection } from "@solana/wallet-adapter-react";
 import {
@@ -275,10 +276,45 @@ function HeaderCreditsChip({ className }: { className?: string }) {
   );
 }
 
+function useAccountSessionAuthed(): boolean {
+  const pathname = usePathname();
+  const [authed, setAuthed] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    const load = () => {
+      void fetch("/api/auth/session", {
+        credentials: "same-origin",
+        cache: "no-store",
+      })
+        .then((r) => r.json())
+        .then((json: { authenticated?: boolean }) => {
+          if (!cancelled) setAuthed(Boolean(json.authenticated));
+        })
+        .catch(() => {
+          if (!cancelled) setAuthed(false);
+        });
+    };
+    load();
+    const onFocus = () => load();
+    window.addEventListener("focus", onFocus);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("focus", onFocus);
+    };
+  }, [pathname]);
+
+  return authed;
+}
+
 function HeaderBalanceClusterLive() {
   const { connected, address } = useActiveWallet();
+  const accountAuthed = useAccountSessionAuthed();
+  const walletLive = Boolean(connected && address);
+  const showCredits = walletLive || accountAuthed;
 
-  if (!connected || !address) {
+  // Anonymous: public market tickers only — no private Credits.
+  if (!showCredits) {
     return (
       <div className="hud-nav__tickers" aria-label="Market tickers">
         <SolPriceChip className="hud-nav__sol" />
@@ -287,19 +323,31 @@ function HeaderBalanceClusterLive() {
     );
   }
 
+  // Account session without wallet: keep market tickers + in-game Credits.
+  if (!walletLive) {
+    return (
+      <div className="hud-nav__tickers" aria-label="Account balances">
+        <SolPriceChip className="hud-nav__sol" />
+        <TokenPriceChip className="hud-nav__token" />
+        <HeaderCreditsChip className="hud-nav__credits" />
+      </div>
+    );
+  }
+
   return (
     <div className="hud-nav__tickers" aria-label="Wallet balances">
-      <SolWalletBalanceChip address={address} className="hud-nav__sol" />
-      <RiftTokenBalanceChip address={address} className="hud-nav__token" />
+      <SolWalletBalanceChip address={address!} className="hud-nav__sol" />
+      <RiftTokenBalanceChip address={address!} className="hud-nav__token" />
       <HeaderCreditsChip className="hud-nav__credits" />
     </div>
   );
 }
 
 /**
- * Header right-rail balances: market tickers when disconnected;
- * on-chain SOL + RIFT wallet balances + in-game Credits when connected
- * (adapter or view-only paste).
+ * Header right-rail balances:
+ * - Anonymous: public SOL/RIFT market tickers
+ * - Account session (email / Dev Keeper / etc.): tickers + in-game Credits
+ * - Wallet connected: on-chain SOL + RIFT + Credits
  */
 export function HeaderBalanceCluster() {
   const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);

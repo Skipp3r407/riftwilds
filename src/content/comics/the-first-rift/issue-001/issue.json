@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "slug": "the-first-rift",
+  "issueNumber": 1,
+  "issueId": "issue-001",
+  "title": "The First Rift",
+  "storyTitle": "THE PULSE BELOW",
+  "subtitle": "When the Prime broke, a courier chose to keep.",
+  "synopsis": "Present-day Hatchery mentor Mira Eggwarden finds an unstable ancient Rift near Riftwild Commons and is pulled into visions of Elara Venn's First Rift — egg, companions, Compact — until a cliffhanger reveals the opening was deliberate.",
+  "status": "in-production",
+  "pipeline": {
+    "art": "text-free Grok / cursor-local plate",
+    "lettering": "programmatic flatten (no HTML bubbles)"
+  },
+  "structure": {
+    "frontCover": 1,
+    "insideFront": 1,
+    "credits": 1,
+    "title": 1,
+    "story": 25,
+    "teaser": 1,
+    "insideBack": 1,
+    "backCover": 1,
+    "total": 32
+  },
+  "covers": {
+    "standard": "covers/standard.webp",
+    "variantA": "covers/variant-a.webp",
+    "variantB": "covers/variant-b.webp",
+    "foil": "covers/foil.webp"
+  },
+  "pages": [
+    {
+      "pageNumber": 1,
+      "role": "front-cover",
+      "file": "pages/page-001.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-001.webp"
+    },
+    {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "file": "pages/page-002.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-002.webp"
+    },
+    {
+      "pageNumber": 3,
+      "role": "credits",
+      "file": "pages/page-003.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-003.webp"
+    },
+    {
+      "pageNumber": 4,
+      "role": "title",
+      "file": "pages/page-004.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-004.webp"
+    },
+    {
+      "pageNumber": 5,
+      "role": "story",
+      "file": "pages/page-005.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-005.webp"
+    },
+    {
+      "pageNumber": 6,
+      "role": "story",
+      "file": "pages/page-006.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-006.webp"
+    },
+    {
+      "pageNumber": 7,
+      "role": "story",
+      "file": "pages/page-007.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-007.webp"
+    },
+    {
+      "pageNumber": 8,
+      "role": "story",
+      "file": "pages/page-008.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-008.webp"
+    },
+    {
+      "pageNumber": 9,
+      "role": "story",
+      "file": "pages/page-009.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-009.webp"
+    },
+    {
+      "pageNumber": 10,
+      "role": "story",
+      "file": "pages/page-010.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-010.webp"
+    },
+    {
+      "pageNumber": 11,
+      "role": "story",
+      "file": "pages/page-011.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-011.webp"
+    },
+    {
+      "pageNumber": 12,
+      "role": "story",
+      "file": "pages/page-012.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-012.webp"
+    },
+    {
+      "pageNumber": 13,
+      "role": "story",
+      "file": "pages/page-013.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-013.webp"
+    },
+    {
+      "pageNumber": 14,
+      "role": "story",
+      "file": "pages/page-014.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-014.webp"
+    },
+    {
+      "pageNumber": 15,
+      "role": "story",
+      "file": "pages/page-015.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-015.webp"
+    },
+    {
+      "pageNumber": 16,
+      "role": "story",
+      "file": "pages/page-016.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-016.webp"
+    },
+    {
+      "pageNumber": 17,
+      "role": "story",
+      "file": "pages/page-017.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-017.webp"
+    },
+    {
+      "pageNumber": 18,
+      "role": "story",
+      "file": "pages/page-018.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-018.webp"
+    },
+    {
+      "pageNumber": 19,
+      "role": "story",
+      "file": "pages/page-019.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-019.webp"
+    },
+    {
+      "pageNumber": 20,
+      "role": "story",
+      "file": "pages/page-020.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-020.webp"
+    },
+    {
+      "pageNumber": 21,
+      "role": "story",
+      "file": "pages/page-021.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-021.webp"
+    },
+    {
+      "pageNumber": 22,
+      "role": "story",
+      "file": "pages/page-022.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-022.webp"
+    },
+    {
+      "pageNumber": 23,
+      "role": "story",
+      "file": "pages/page-023.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-023.webp"
+    },
+    {
+      "pageNumber": 24,
+      "role": "story",
+      "file": "pages/page-024.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-024.webp"
+    },
+    {
+      "pageNumber": 25,
+      "role": "story",
+      "file": "pages/page-025.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-025.webp"
+    },
+    {
+      "pageNumber": 26,
+      "role": "story",
+      "file": "pages/page-026.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-026.webp"
+    },
+    {
+      "pageNumber": 27,
+      "role": "story",
+      "file": "pages/page-027.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-027.webp"
+    },
+    {
+      "pageNumber": 28,
+      "role": "story",
+      "file": "pages/page-028.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-028.webp"
+    },
+    {
+      "pageNumber": 29,
+      "role": "story",
+      "file": "pages/page-029.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-029.webp"
+    },
+    {
+      "pageNumber": 30,
+      "role": "teaser",
+      "file": "pages/page-030.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-030.webp"
+    },
+    {
+      "pageNumber": 31,
+      "role": "inside-back",
+      "file": "pages/page-031.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-031.webp"
+    },
+    {
+      "pageNumber": 32,
+      "role": "back-cover",
+      "file": "pages/page-032.json",
+      "generationStatus": "seeded-legacy",
+      "letteringStatus": "lettered",
+      "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-032.webp"
+    }
+  ],
+  "reader": {
+    "bakedLettering": true,
+    "hideHtmlBubbles": true,
+    "transcriptDrawer": true
+  }
+}

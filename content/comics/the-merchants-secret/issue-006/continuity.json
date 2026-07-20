@@ -1,0 +1,147 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "location": "Gilded Crossroads portal gate",
+      "spark": {
+        "hidden": true
+      }
+    },
+    {
+      "page": 2,
+      "location": "central exchange rules post",
+      "mira": "distrusts-market",
+      "rules": "market-rules.json"
+    },
+    {
+      "page": 3,
+      "location": "lantern entry lane",
+      "meridian": "scent-detected"
+    },
+    {
+      "page": 4,
+      "location": "central exchange floor",
+      "tone": "wonder-and-danger"
+    },
+    {
+      "page": 5,
+      "location": "rescue shelter lane",
+      "ethics": "rescue-vs-trafficking",
+      "cry": "heard"
+    },
+    {
+      "page": 6,
+      "location": "merchant receiving hall",
+      "aurelia": "formalized",
+      "cael": "debt-hint",
+      "dialogueLock": "map-every-door"
+    },
+    {
+      "page": 7,
+      "location": "private deal chamber",
+      "deal": "key-for-favor"
+    },
+    {
+      "page": 8,
+      "location": "merchant strategy room",
+      "debate": "profit-vs-preservation"
+    },
+    {
+      "page": 9,
+      "location": "illegal holding pens",
+      "trafficking": "confirmed",
+      "cindermink": "found"
+    },
+    {
+      "page": 10,
+      "location": "hidden pen complex",
+      "captives": "many"
+    },
+    {
+      "page": 11,
+      "location": "underground archive",
+      "nira": "recruitment-file-partial"
+    },
+    {
+      "page": 12,
+      "location": "auction plaza",
+      "egg": "announced",
+      "spark": {
+        "reaction": "violent"
+      }
+    },
+    {
+      "page": 13,
+      "location": "underground archive",
+      "riftwright": "title-teased"
+    },
+    {
+      "page": 14,
+      "location": "private auction trap",
+      "buyers": "meridian-unmasked"
+    },
+    {
+      "page": 15,
+      "location": "auction control room",
+      "seris": "beyond-aurelia-control"
+    },
+    {
+      "page": 16,
+      "location": "private auction floor",
+      "egg": "restrained"
+    },
+    {
+      "page": 17,
+      "location": "auction floor / pens below",
+      "bidding": "active",
+      "cry": "captives"
+    },
+    {
+      "page": 18,
+      "location": "auction floor",
+      "spark": {
+        "revealed": true
+      }
+    },
+    {
+      "page": 19,
+      "location": "auction battle",
+      "rescue": "in-progress"
+    },
+    {
+      "page": 20,
+      "location": "auction hall",
+      "ledger": "weaponized",
+      "nira": "destroyed-one-route"
+    },
+    {
+      "page": 21,
+      "location": "vault / pens",
+      "cindermink": "break-the-chain",
+      "lockjaw": "vault-sealed"
+    },
+    {
+      "page": 22,
+      "location": "portal engine core",
+      "bazaar": "shifting"
+    },
+    {
+      "page": 23,
+      "location": "shifting bazaar / engine",
+      "egg": "saved",
+      "aurelia": "cut-meridian-routes"
+    },
+    {
+      "page": 24,
+      "location": "archive vault",
+      "riftwright": "title-revealed-withheld"
+    },
+    {
+      "page": 25,
+      "location": "service corridor",
+      "teaser": "the-traitors-gate",
+      "traitor": "cael-vesper",
+      "transmission": "keeper-has-egg"
+    }
+  ]
+}

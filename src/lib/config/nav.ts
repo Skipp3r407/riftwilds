@@ -1,9 +1,10 @@
 /**
  * Primary Riftwilds navigation — TCG-first launch IA.
- * Living World stays linked and enterable during development; optional Coming Soon
- * soft-gate via `LIVE_WORLD_PUBLIC_ACCESS_ENABLED=false` before a public release.
+ * Live World + World Restoration soft-gated via `LIVE_WORLD_PUBLIC_ACCESS_ENABLED`.
  * Pump.fun chart/milestones live under Community / Token Launch — not homepage identity.
  */
+
+import { liveWorldAccessBadge } from "@/lib/config/feature-flags";
 
 export type NavLink = {
   href: string;
@@ -25,6 +26,12 @@ export type NavGroup = {
   items: { href: string; label: string; badge?: string }[];
 };
 
+/**
+ * Coming Soon until Live World public launch.
+ * Local/dev shows "COMING SOON · DEV ACCESS" when entry is open for developers.
+ */
+const liveWorldNavBadge = liveWorldAccessBadge();
+
 export const primaryNav: NavLink[] = [
   { href: "/", label: "Home", header: true, sidebar: false },
   { href: "/play", label: "Play", header: true, sidebar: true },
@@ -35,8 +42,20 @@ export const primaryNav: NavLink[] = [
   { href: "/dashboard", label: "Dashboard", header: true, sidebar: true },
   { href: "/hatchery", label: "Hatchery", header: true, sidebar: true },
   { href: "/world", label: "World", header: true, sidebar: true },
-  { href: "/live-world", label: "Live World", header: false, sidebar: true, badge: "Preview" },
-  { href: "/restoration", label: "Restoration", header: false, sidebar: true },
+  {
+    href: "/live-world",
+    label: "Live World",
+    header: false,
+    sidebar: true,
+    badge: liveWorldNavBadge,
+  },
+  {
+    href: "/restoration",
+    label: "Restoration",
+    header: false,
+    sidebar: true,
+    badge: liveWorldNavBadge,
+  },
   { href: "/arena", label: "Arena", header: false, sidebar: true },
   { href: "/shop", label: "Card Shop", header: true, sidebar: true },
   { href: "/exchange", label: "Rift Exchange", header: true, sidebar: true },
@@ -115,8 +134,8 @@ export const headerNavGroups: NavGroup[] = [
     href: "/world",
     items: [
       { href: "/world", label: "World" },
-      { href: "/live-world", label: "Live World", badge: "Preview" },
-      { href: "/restoration", label: "World Restoration" },
+      { href: "/live-world", label: "Live World", badge: liveWorldNavBadge },
+      { href: "/restoration", label: "World Restoration", badge: liveWorldNavBadge },
       { href: "/about", label: "About / Story" },
       { href: "/comics", label: "Lore Library" },
       { href: "/fan-kit", label: "Fan Kit" },

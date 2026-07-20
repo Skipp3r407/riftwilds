@@ -1,0 +1,190 @@
+{
+  "pageNumber": 8,
+  "storyPageNumber": 4,
+  "bookRole": "story",
+  "title": "Abandoned Companions",
+  "storyPurpose": "Bramblefox discovers abandoned / failed companion shells in a side hall.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p4a",
+      "description": "Bramblefox Forest Bond vines leading into a broken assembly hall lined with empty companion cradles and inert crystalline husks.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*scent-grief*",
+          "x": 40,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Bramblefox found something.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p4b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Spark before rows of abandoned prototype shells — not weapons, failed protectors; solemn lighting.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "They tried to make Keepers… out of companions.",
+          "x": 50,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*mourn-chirp*",
+          "x": 55,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p4c",
+      "description": "Close: one cradle stamped with faded Resonance Keeper motif (no readable text); orange molten light under floor.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Progress without ethics leaves rooms full of almosts.",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p4a",
+      "kind": "creature",
+      "text": "*scent-grief*",
+      "x": 40,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p4a",
+      "kind": "speech",
+      "text": "Bramblefox found something.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p4b",
+      "kind": "speech",
+      "text": "They tried to make Keepers… out of companions.",
+      "x": 50,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p4b",
+      "kind": "creature",
+      "text": "*mourn-chirp*",
+      "x": 55,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p4c",
+      "kind": "narration",
+      "text": "Progress without ethics leaves rooms full of almosts.",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 4
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "broken assembly hall",
+    "discovery": "abandoned-companions"
+  },
+  "requiredMoments": [
+    3
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 4/25 — Abandoned Companions. Story purpose: Bramblefox discovers abandoned / failed companion shells in a side hall. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p4a): Bramblefox Forest Bond vines leading into a broken assembly hall lined with empty companion cradles and inert crystalline husks. Panel 2 (p4b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Spark before rows of abandoned prototype shells — not weapons, failed protectors; solemn lighting. Panel 3 (p4c): Close: one cradle stamped with faded Resonance Keeper motif (no readable text); orange molten light under floor. Characters: mira-eggwarden, nira-quill. Creatures: spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"broken assembly hall\", \"discovery\": \"abandoned-companions\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Mossprig shields the damaged.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Abandoned Companions — The Forge of Rifts page 4",
+  "atmosphere": "ruin",
+  "transcript": [
+    "CREATURE (Bramblefox): *scent-grief*",
+    "SPEECH (Nira Quill): Bramblefox found something.",
+    "SPEECH (Mira Eggwarden): They tried to make Keepers… out of companions.",
+    "CREATURE (Spark): *mourn-chirp*",
+    "NARRATION: Progress without ethics leaves rooms full of almosts."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Bramblefox): *scent-grief*",
+    "SPEECH (Nira Quill): Bramblefox found something.",
+    "SPEECH (Mira Eggwarden): They tried to make Keepers… out of companions.",
+    "CREATURE (Spark): *mourn-chirp*",
+    "NARRATION: Progress without ethics leaves rooms full of almosts."
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "bramblefox"
+  ],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p008",
+  "cleanArtRel": "generated/raw-art/page-008.webp",
+  "letteredArtRel": "generated/lettered-pages/page-008.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-008.webp"
+}

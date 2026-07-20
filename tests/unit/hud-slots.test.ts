@@ -24,10 +24,10 @@ describe("hud slots", () => {
     ).toBe(false);
   });
 
-  it("keeps right column below expanded status", () => {
-    expect(rightColumnHudStackClass(false)).toContain("top-20");
-    expect(rightColumnHudStackClass(true)).toContain("top-12");
-    expect(topRightHudStackClass(false)).toContain("top-20");
+  it("keeps right column below unified top command bar", () => {
+    expect(rightColumnHudStackClass(false)).toContain("top-[4.75rem]");
+    expect(rightColumnHudStackClass(true)).toContain("top-[4.75rem]");
+    expect(topRightHudStackClass(false)).toContain("top-[4.75rem]");
   });
 
   it("docks world pulse mid-left until free-positioned", () => {

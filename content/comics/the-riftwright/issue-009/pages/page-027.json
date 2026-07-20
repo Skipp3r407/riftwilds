@@ -1,0 +1,119 @@
+{
+  "pageNumber": 27,
+  "storyPageNumber": 23,
+  "bookRole": "story",
+  "title": "Found Family",
+  "storyPurpose": "Quiet celebration; Elara Venn vision-only blessing; Volume One emotional close begins.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p23a",
+      "description": "Warm group: Mira, Spark, Nova, companions, Elyan, Cael, Nira, Aurelia share lantern tea on a quiet platform.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Professor. Keeper. Merchant. Lantern. Hunter. Companions. That's a faculty.",
+          "x": 40,
+          "y": 18,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Elyan Voss",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "That's a home.",
+          "x": 60,
+          "y": 40,
+          "tail": "down-left",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p23b",
+      "description": "Soft vision overlay only: Elara Venn: First Keeper, soft robes, archive light, not physically present nods once and fades — vision only.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "text": "Keep choosing keeping.",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Elara Venn (vision)",
+          "readOrder": 2
+        },
+        {
+          "kind": "narration",
+          "text": "A First Keeper's blessing — echo, not body.",
+          "x": 50,
+          "y": 90,
+          "tail": null,
+          "maxWidthPct": 48,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss",
+    "cael-vesper",
+    "nira-quill",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "axiom",
+    "bramblefox",
+    "lumenhare"
+  ],
+  "locations": [
+    "Second Forge quiet terrace"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "elara": "vision-only",
+    "volumeOne": "closing"
+  },
+  "requiredMoments": [
+    23
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 23/25 — Found Family. Story purpose: Quiet celebration; Elara Venn vision-only blessing; Volume One emotional close begins. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p23a): Warm group: Mira, Spark, Nova, companions, Elyan, Cael, Nira, Aurelia share lantern tea on a quiet platform. Panel 2 (p23b): Soft vision overlay only: Elara Venn: First Keeper, soft robes, archive light, not physically present nods once and fades — vision only. Characters: mira-eggwarden, elyan-voss, cael-vesper, nira-quill, aurelia-voss. Creatures: spark, nova, axiom, bramblefox, lumenhare. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Second Forge quiet terrace. Atmosphere: night. Continuity: {\"elara\": \"vision-only\", \"volumeOne\": \"closing\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Look up — something broken in the sky.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Found Family — The Riftwright page 27",
+  "atmosphere": "night",
+  "transcript": [
+    "SPEECH (Elyan Voss): Professor. Keeper. Merchant. Lantern. Hunter. Companions. That's a faculty.",
+    "SPEECH (Mira Eggwarden): That's a home.",
+    "WHISPER (Elara Venn (vision)): Keep choosing keeping.",
+    "NARRATION: A First Keeper's blessing — echo, not body."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Elyan Voss): Professor. Keeper. Merchant. Lantern. Hunter. Companions. That's a faculty.",
+    "SPEECH (Mira Eggwarden): That's a home.",
+    "WHISPER (Elara Venn (vision)): Keep choosing keeping.",
+    "NARRATION: A First Keeper's blessing — echo, not body."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p027",
+  "cleanArtRel": "generated/raw-art/page-027.webp",
+  "letteredArtRel": "generated/lettered-pages/page-027.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-027.webp"
+}

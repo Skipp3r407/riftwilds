@@ -1,0 +1,16 @@
+{
+  "factions": [
+    {
+      "id": "veiled-meridian",
+      "name": "Veiled Meridian"
+    },
+    {
+      "id": "lanternveil",
+      "name": "Lanternveil Traveling Circus"
+    },
+    {
+      "id": "hatchery-compact",
+      "name": "Hatchery Compact"
+    }
+  ]
+}

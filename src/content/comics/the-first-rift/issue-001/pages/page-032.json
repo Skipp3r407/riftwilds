@@ -1,0 +1,35 @@
+{
+  "pageNumber": 32,
+  "id": "the-first-rift-issue-001-p032",
+  "role": "back-cover",
+  "title": "Back cover",
+  "layout": "splash",
+  "atmosphere": "dusk",
+  "beat": "Back cover",
+  "artPrompt": "Back-cover vista of Riftwild Commons under soft riftlight, no text/logos. Premium comic finish. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "LEGENDS OF THE RIFT",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "kind": "narration",
+          "text": "Play the chapter in Live World when you are ready.",
+          "x": 50,
+          "y": 55
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-032.png",
+  "letteredArtRel": "generated/lettered/page-032.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-032.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

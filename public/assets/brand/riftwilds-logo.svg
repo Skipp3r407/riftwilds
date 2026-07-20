@@ -1,61 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-label="Riftwilds logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-label="Riftwilds logo" class="rw-logo">
   <defs>
-    <radialGradient id="shell" cx="46%" cy="38%" r="62%">
-      <stop offset="0%" stop-color="#2a3142"/>
-      <stop offset="55%" stop-color="#12161f"/>
-      <stop offset="100%" stop-color="#07090e"/>
+    <radialGradient id="rwLShell" cx="42%" cy="34%" r="68%">
+      <stop offset="0%" stop-color="#3a4254"/>
+      <stop offset="45%" stop-color="#1a2030"/>
+      <stop offset="100%" stop-color="#05070c"/>
     </radialGradient>
-    <linearGradient id="vein" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#c9a15a"/>
-      <stop offset="100%" stop-color="#8a6230"/>
+    <linearGradient id="rwLVein" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0d08a"/>
+      <stop offset="100%" stop-color="#7a5424"/>
     </linearGradient>
-    <linearGradient id="rift" x1="50%" y1="8%" x2="50%" y2="92%">
-      <stop offset="0%" stop-color="#7ef7ff" stop-opacity="0.35"/>
+    <linearGradient id="rwLRift" x1="50%" y1="4%" x2="50%" y2="96%">
+      <stop offset="0%" stop-color="#9afbff" stop-opacity="0.3"/>
       <stop offset="40%" stop-color="#3de7ff"/>
-      <stop offset="100%" stop-color="#1aa8c4" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#1288a8" stop-opacity="0.55"/>
     </linearGradient>
-    <radialGradient id="core" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffe2a0"/>
-      <stop offset="45%" stop-color="#ffb84d"/>
-      <stop offset="100%" stop-color="#c46a18"/>
+    <radialGradient id="rwLCore" cx="48%" cy="46%" r="56%">
+      <stop offset="0%" stop-color="#fff6d0"/>
+      <stop offset="40%" stop-color="#ffb84d"/>
+      <stop offset="100%" stop-color="#b04a10"/>
     </radialGradient>
-    <linearGradient id="metal" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#e8f0f8"/>
-      <stop offset="35%" stop-color="#9eb4c9"/>
-      <stop offset="70%" stop-color="#5d738c"/>
-      <stop offset="100%" stop-color="#c5d4e4"/>
+    <linearGradient id="rwLMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2f7fc"/>
+      <stop offset="30%" stop-color="#b8cce0"/>
+      <stop offset="65%" stop-color="#6a829c"/>
+      <stop offset="100%" stop-color="#d4e2f0"/>
     </linearGradient>
-    <filter id="bloom" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
+    <filter id="rwLBloom" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
+
   <g transform="translate(8,10)">
-    <ellipse cx="100" cy="100" rx="78" ry="100" fill="url(#shell)" stroke="#1e2430" stroke-width="2"/>
-    <g stroke="url(#vein)" stroke-width="1.2" fill="none" opacity="0.9">
+    <ellipse cx="100" cy="100" rx="80" ry="102" fill="none" stroke="#3de7ff" stroke-opacity="0.32" stroke-width="2.5"/>
+    <ellipse cx="100" cy="100" rx="78" ry="100" fill="url(#rwLShell)" stroke="#141820" stroke-width="2"/>
+    <g stroke="url(#rwLVein)" stroke-width="1.3" fill="none" opacity="0.95">
       <path d="M62 50 C75 70 78 95 72 120 C66 145 70 165 82 180"/>
       <path d="M138 50 C125 70 122 95 128 120 C134 145 130 165 118 180"/>
-      <circle cx="72" cy="110" r="1.8" fill="#e0b86a" stroke="none"/>
-      <circle cx="128" cy="110" r="1.8" fill="#e0b86a" stroke="none"/>
+      <circle cx="72" cy="110" r="2" fill="#e8c878" stroke="none"/>
+      <circle cx="128" cy="110" r="2" fill="#e8c878" stroke="none"/>
     </g>
-    <path d="M100 18 C94 45 86 70 84 95 C82 120 84 145 88 168 C92 188 97 200 100 205
-             C103 200 108 188 112 168 C116 145 118 120 116 95 C114 70 106 45 100 18 Z"
-          fill="url(#rift)" filter="url(#bloom)"/>
-    <polygon points="100,78 112,100 100,122 88,100" fill="url(#core)" filter="url(#bloom)"/>
-    <polygon points="100,20 108,30 100,40 92,30" fill="#1a1f2a" stroke="#c9a15a" stroke-width="1"/>
-    <polygon points="100,190 108,200 100,210 92,200" fill="#1a1f2a" stroke="#c9a15a" stroke-width="1"/>
+    <path d="M100 16 C94 42 86 68 84 94 C82 120 84 148 88 172 C92 192 97 204 100 210
+             C103 204 108 192 112 172 C116 148 118 120 116 94 C114 68 106 42 100 16 Z"
+          fill="url(#rwLRift)" filter="url(#rwLBloom)" opacity="0.95"/>
+    <path d="M94 55 L86 78 L96 88 L88 112" fill="none" stroke="#b8fbff" stroke-width="1.4" stroke-linecap="round" opacity="0.8"/>
+    <path d="M106 60 L114 82 L104 92 L112 118" fill="none" stroke="#7ef7ff" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/>
+    <g filter="url(#rwLBloom)">
+      <polygon points="100,74 116,100 100,126 84,100" fill="url(#rwLCore)"/>
+      <polygon points="100,84 108,100 100,116 92,100" fill="#fff4c8" opacity="0.7"/>
+    </g>
+    <polygon points="100,18 110,30 100,42 90,30" fill="#12161f" stroke="#e0b86a" stroke-width="1.2"/>
+    <polygon points="100,188 110,200 100,212 90,200" fill="#12161f" stroke="#e0b86a" stroke-width="1.2"/>
   </g>
+
   <g transform="translate(210,40)">
     <text x="310" y="72" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif"
+          font-family="Georgia, 'Times New Roman', 'Palatino Linotype', serif"
           font-size="64" font-weight="700" letter-spacing="8"
-          fill="url(#metal)" stroke="#1a2430" stroke-width="1">RIFTWILDS</text>
-    <line x1="40" y1="96" x2="280" y2="96" stroke="#3de7ff" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-    <line x1="340" y1="96" x2="580" y2="96" stroke="#3de7ff" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
-    <polygon points="310,84 322,96 310,108 298,96" fill="url(#core)"/>
+          fill="url(#rwLMetal)" stroke="#0e1620" stroke-width="1.15">RIFTWILDS</text>
+    <text x="310" y="72" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', 'Palatino Linotype', serif"
+          font-size="64" font-weight="700" letter-spacing="8"
+          fill="none" stroke="#7ef7ff" stroke-width="0.9" opacity="0.5">RIFTWILDS</text>
+    <!-- Amber I spark -->
+    <g transform="translate(118, 28)" filter="url(#rwLBloom)">
+      <polygon points="0,-5 4,0 0,5 -4,0" fill="url(#rwLCore)"/>
+      <polygon points="0,-2 1.8,0 0,2 -1.8,0" fill="#fff6d8" opacity="0.9"/>
+    </g>
+    <line x1="36" y1="96" x2="278" y2="96" stroke="#3de7ff" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    <line x1="342" y1="96" x2="584" y2="96" stroke="#3de7ff" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    <polygon points="310,82 324,96 310,110 296,96" fill="url(#rwLCore)"/>
+    <polygon points="310,88 317,96 310,104 303,96" fill="#fff1c8" opacity="0.85"/>
   </g>
 </svg>

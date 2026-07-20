@@ -29,12 +29,26 @@ const KEYWORD_FROM_TEXT: Array<[RegExp, string]> = [
 
 export function isEquipmentContentType(type: string | undefined): boolean {
   const t = (type ?? "").toLowerCase();
-  return t === "equipment" || t === "relic" || t === "artifact";
+  // Relics are board artifacts — not attach equipment.
+  return t === "equipment";
+}
+
+export function isRelicContentType(type: string | undefined): boolean {
+  const t = (type ?? "").toLowerCase();
+  return t === "relic" || t === "artifact";
 }
 
 export function isTerrainContentType(type: string | undefined): boolean {
   const t = (type ?? "").toLowerCase();
   return t === "location" || t === "weather" || t === "terrain";
+}
+
+export function isItemContentType(type: string | undefined): boolean {
+  return (type ?? "").toLowerCase() === "item";
+}
+
+export function isTrapContentType(type: string | undefined): boolean {
+  return (type ?? "").toLowerCase() === "trap";
 }
 
 /** Derive attach mods from content card (or engine def fields). */

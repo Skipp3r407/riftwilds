@@ -1,0 +1,501 @@
+{
+  "title": "The Riftwright",
+  "issueNumber": 9,
+  "volume": "Volume One Finale",
+  "protagonist": "Mira Eggwarden",
+  "rejected": "Cal Reed",
+  "visionOnly": "Elara Venn",
+  "riftwright": "Professor Elyan Voss",
+  "hatchedCompanion": "Nova",
+  "themes": [
+    "History as weapon",
+    "Progress without ethics",
+    "Consent Compact",
+    "Found family",
+    "Tragic responsibility",
+    "Redemption unfinished"
+  ],
+  "requiredMoments": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "pages": [
+    {
+      "bookPage": 1,
+      "storyPage": null,
+      "title": "The Riftwright — Cover",
+      "purpose": "Volume One Finale cover: Mira, Spark, Nova hatch glow, Elyan tragic, Ascendant silhouette, Second Forge.",
+      "transcript": [
+        "CAPTION: LEGENDS OF THE RIFT",
+        "CAPTION: ISSUE #9 — VOLUME ONE FINALE",
+        "CAPTION: THE RIFTWRIGHT"
+      ]
+    },
+    {
+      "bookPage": 2,
+      "storyPage": null,
+      "title": "Inside Front Cover",
+      "purpose": "Quiet Second Forge parchment map + Compact invitation.",
+      "transcript": [
+        "NARRATION: Legends of the Rift · Volume One · Issue Nine",
+        "CAPTION: Previously: Arkan sacrificed. Axiom awoke. Second Forge activated.",
+        "CAPTION: “Someone finally reached my Forge.”",
+        "CAPTION: VOLUME ONE FINALE"
+      ]
+    },
+    {
+      "bookPage": 3,
+      "storyPage": null,
+      "title": "Credits",
+      "purpose": "Credits plate — atelier tools, no real logos.",
+      "transcript": [
+        "NARRATION: Riftwilds · Legends of the Rift",
+        "CAPTION: Story · Art Direction · Lettering · Continuity",
+        "CAPTION: Keeper: Mira Eggwarden  ·  Cal Reed is not canon",
+        "CAPTION: Volume One Finale"
+      ]
+    },
+    {
+      "bookPage": 4,
+      "storyPage": null,
+      "title": "Chapter Nine — The Riftwright",
+      "purpose": "Title page for Volume One Finale.",
+      "transcript": [
+        "CAPTION: CHAPTER NINE",
+        "CAPTION: THE RIFTWRIGHT",
+        "NARRATION: Volume One Finale — history meets its maker."
+      ]
+    },
+    {
+      "bookPage": 5,
+      "storyPage": 1,
+      "title": "Second Forge Threshold",
+      "purpose": "Bridge from Issue #8: Second Forge already activating; party arrives via Meridian Road; egg further cracked; Axiom leads.",
+      "transcript": [
+        "NARRATION: After Arkan's sacrifice… the second Forge answered the Gate's last whisper.",
+        "WHISPER: Begin the second creation…",
+        "CAPTION: SECOND FORGE — ACTIVE",
+        "SFX: engine-HUMMMM"
+      ]
+    },
+    {
+      "bookPage": 6,
+      "storyPage": 2,
+      "title": "Machine That Makes Tears",
+      "purpose": "Artificial Rift lines + Issue #8 silhouette callback before face reveal.",
+      "transcript": [
+        "SPEECH (Nira Quill): They're still manufacturing tears.",
+        "CREATURE (Axiom): Protocol… rewritten.",
+        "SPEECH (Mira Eggwarden): Arkan said they were grown to protect — not obey.",
+        "CREATURE (Spark): …yip.",
+        "SPEECH (Unknown): So… after all this time… someone finally reached my Forge."
+      ]
+    },
+    {
+      "bookPage": 7,
+      "storyPage": 3,
+      "title": "Archives of Blame",
+      "purpose": "Memory vaults show history blaming the Riftwright; Mira sees the lie's polish.",
+      "transcript": [
+        "CAPTION: OFFICIAL RECORD — FIRST RIFT",
+        "SPEECH (Mira Eggwarden): This record was rewritten.",
+        "SPEECH (Cael Vesper): Meridian stamps. Older than Meridian ink underneath.",
+        "CREATURE (Axiom): Protocol mismatch.",
+        "NARRATION: Someone older than Meridian held the quill."
+      ]
+    },
+    {
+      "bookPage": 8,
+      "storyPage": 4,
+      "title": "The Riftwright Speaks",
+      "purpose": "Elyan Voss steps into light — tragic, not cartoon villain.",
+      "transcript": [
+        "SPEECH (Elyan Voss): I am Professor Elyan Voss. They named me Riftwright so the world would have a monster.",
+        "SPEECH (Mira Eggwarden): If you're the monster… why does the egg answer you like kin?",
+        "SPEECH (Elyan Voss): I disappeared before activation. Someone else pushed the final command. I built cradles."
+      ]
+    },
+    {
+      "bookPage": 9,
+      "storyPage": 5,
+      "title": "Professor Elyan Voss",
+      "purpose": "Elyan recounts healing intent of Forges; weaponization; Arkan's sacrifice at first Forge.",
+      "transcript": [
+        "NARRATION: Riftborn were grown to protect — not obey. Then someone rewrote the protocols.",
+        "SPEECH (Elyan Voss): Arkan stayed at Engine Alpha. He sacrificed himself so Spark's line could choose.",
+        "MAGIC (Arkan (echo)): Finish the cradle, Elyan… not the war.",
+        "CREATURE (Axiom): System Restore… incomplete.",
+        "WHISPER (Arkan (echo)): The rewrite… was never Meridian's first hand.",
+        "SPEECH (Mira Eggwarden): Then help us keep what's left. No more manufactured tears."
+      ]
+    },
+    {
+      "bookPage": 10,
+      "storyPage": 6,
+      "title": "History Was a Weapon",
+      "purpose": "Elyan shows how blame was assigned; Aurelia recognizes the Voss name.",
+      "transcript": [
+        "SPEECH (Elyan Voss): They needed a name. Mine was already on the blueprints.",
+        "SPEECH (Aurelia Voss): Voss… I bargained under a name I never fully owned.",
+        "SPEECH (Elyan Voss): Kin is not guilt. Choose what the name means now.",
+        "SPEECH (Cael Vesper): I opened one gate under coercion. I won't open another for them.",
+        "NARRATION: One hand remains unwritten. Older. Patient."
+      ]
+    },
+    {
+      "bookPage": 11,
+      "storyPage": 7,
+      "title": "Prime Companion",
+      "purpose": "Incubator Beta reveals Nova bloodline — Prime Companion template linked to Spark's Resonance Line.",
+      "transcript": [
+        "NARRATION: The Nova bloodline — Prime Companion. Twin-key to the Last Light.",
+        "SPEECH (Elyan Voss): Spark was never meant to stand alone.",
+        "CREATURE (Spark): …!",
+        "SFX: pulse-SYNC"
+      ]
+    },
+    {
+      "bookPage": 12,
+      "storyPage": 8,
+      "title": "Egg of Twin Keys",
+      "purpose": "Dormant egg reaches critical hatch; Mira chooses consent Compact over force.",
+      "transcript": [
+        "SPEECH (Mira Eggwarden): No force. No Meridian override. You come if you choose.",
+        "CREATURE (Spark): …come.",
+        "SFX: CRACK-kk",
+        "NARRATION: A second heart answers the first."
+      ]
+    },
+    {
+      "bookPage": 13,
+      "storyPage": 9,
+      "title": "Nova Hatches",
+      "purpose": "Egg hatches into Nova — Prime Companion; twin-key with Spark.",
+      "transcript": [
+        "NARRATION: Her name is Nova — Prime Companion. Twin-key to Spark.",
+        "SPEECH (Mira Eggwarden): Welcome home.",
+        "CREATURE (Nova): …mrr.",
+        "CREATURE (Spark): …yip!",
+        "SFX: STARBURST"
+      ]
+    },
+    {
+      "bookPage": 14,
+      "storyPage": 10,
+      "title": "Twin-Key Resonance",
+      "purpose": "Spark and Nova synchronize; Engines respond; Seris detects the spike.",
+      "transcript": [
+        "MAGIC: TWIN-KEY LOCK",
+        "SPEECH (Elyan Voss): That's the cradle protocol. Not the weapon.",
+        "SPEECH (Seris Vale): Subject One… and a Prime. Perfect. Begin Ascendant Protocol.",
+        "SFX: ALARM-ooo"
+      ]
+    },
+    {
+      "bookPage": 15,
+      "storyPage": 11,
+      "title": "Ascendant Protocol",
+      "purpose": "Seris Vale becomes Ascendant Commander — massive threat.",
+      "transcript": [
+        "SHOUT (Ascendant Commander): The Forges answer me now!",
+        "CAPTION: ASCENDANT COMMANDER — SERIS VALE",
+        "SFX: ASCEND-KRRAK"
+      ]
+    },
+    {
+      "bookPage": 16,
+      "storyPage": 12,
+      "title": "Siege of the Cradle",
+      "purpose": "Ascendant forces assault Incubator Beta; party defends Nova and Spark.",
+      "transcript": [
+        "SFX: CLANG",
+        "SPEECH (Nira Quill): Left flank — move!",
+        "CREATURE (Mossprig): …hold.",
+        "SPEECH (Cael Vesper): Lantern line — stay behind the light!",
+        "CREATURE (Axiom): Pulse Repair engaged."
+      ]
+    },
+    {
+      "bookPage": 17,
+      "storyPage": 13,
+      "title": "Companions Rally",
+      "purpose": "Full companion cast shows found-family strength; Cindermink Break the Chain on restraints.",
+      "transcript": [
+        "NARRATION: Not an army. A Compact.",
+        "CREATURE (Cindermink): Break!",
+        "SFX: CHAIN-SNAP",
+        "SPEECH (Mira Eggwarden): We keep each other. That's the whole doctrine."
+      ]
+    },
+    {
+      "bookPage": 18,
+      "storyPage": 14,
+      "title": "Engine Control",
+      "purpose": "Elyan and Axiom race to Twin Engine controls; Arkan echo guides.",
+      "transcript": [
+        "SPEECH (Elyan Voss): If we stabilize both Engines in cradle mode, the artificial tears collapse.",
+        "MAGIC (Arkan (echo)): Remember the lattice, not the blade.",
+        "SHOUT (Ascendant Commander): Cradle mode dies with you, Professor!",
+        "SPEECH (Nira Quill): Not today."
+      ]
+    },
+    {
+      "bookPage": 19,
+      "storyPage": 15,
+      "title": "Roads and Lanterns",
+      "purpose": "Aurelia (uneasy ally) seals routes; Cael supervised ally holds lantern logistics — NOT a traitor reset.",
+      "transcript": [
+        "SPEECH (Aurelia Voss): Closed Contract — no more doors for conquerors.",
+        "SPEECH (Cael Vesper): I don't ask forgiveness. I ask for useful light.",
+        "SPEECH (Mira Eggwarden): Useful light is a start."
+      ]
+    },
+    {
+      "bookPage": 20,
+      "storyPage": 16,
+      "title": "Twin Forge War",
+      "purpose": "Battlefield establishes — Second Forge vs Ascendant host; Engines roar.",
+      "transcript": [
+        "NARRATION: Volume One ends where manufactured skies learn to break.",
+        "SFX: WAR-ROAR",
+        "CAPTION: BATTLE OF THE TWIN FORGES"
+      ]
+    },
+    {
+      "bookPage": 21,
+      "storyPage": 17,
+      "title": "Last Light, First Star",
+      "purpose": "Spark and Nova prepare twin-key surge; Mira anchors Compact consent.",
+      "transcript": [
+        "SPEECH (Mira Eggwarden): Only if you both choose.",
+        "CREATURE (Spark): …choose.",
+        "CREATURE (Nova): …choose.",
+        "SFX: TWIN-KEY SURGE",
+        "SPEECH (Elyan Voss): Now — cradle lattice!"
+      ]
+    },
+    {
+      "bookPage": 22,
+      "storyPage": 18,
+      "title": "Clash — Part One",
+      "purpose": "Massive battle page 18/25 — Ascendant Commander vs Compact + twin-key.",
+      "transcript": [
+        "SFX: KRRAAASH",
+        "SFX: VVVOOM",
+        "SPEECH (Elyan Voss): Heal the tear — don't widen it!",
+        "CREATURE (Axiom): System Restore — 62%.",
+        "SPEECH (Nira Quill): Keep the Keepers standing!"
+      ]
+    },
+    {
+      "bookPage": 23,
+      "storyPage": 19,
+      "title": "Clash — Part Two",
+      "purpose": "Massive battle climax 19/25 — Ascendant armor cracks; Engines tip toward cradle.",
+      "transcript": [
+        "SHOUT (Ascendant Commander): Subjects belong to the sky I make!",
+        "SPEECH (Mira Eggwarden): They belong to themselves!",
+        "SFX: SHATTER-RING",
+        "MAGIC: CRADLE LATTICE LOCK",
+        "SPEECH (Seris Vale): …you… rewrote my victory…",
+        "SPEECH (Elyan Voss): No. We restored a purpose."
+      ]
+    },
+    {
+      "bookPage": 24,
+      "storyPage": 20,
+      "title": "Engines Stabilize",
+      "purpose": "Twin Engines enter cradle mode; artificial Rifts collapse across the Forge.",
+      "transcript": [
+        "NARRATION: The Engines remember they were built to mend.",
+        "MAGIC (Arkan (echo)): Good night, spare heart.",
+        "SFX: hummm… steady",
+        "CAPTION: ENGINES: CRADLE MODE"
+      ]
+    },
+    {
+      "bookPage": 25,
+      "storyPage": 21,
+      "title": "History Restored",
+      "purpose": "Memory vaults rewrite toward truth; Elyan's name cleared in Forge records — public world still healing.",
+      "transcript": [
+        "CAPTION: FORGE RECORD — RESTORED",
+        "SPEECH (Mira Eggwarden): The world outside will take longer. Truth isn't a switch.",
+        "SPEECH (Elyan Voss): Then I will teach. Not hide.",
+        "NARRATION: One signature still refuses the light."
+      ]
+    },
+    {
+      "bookPage": 26,
+      "storyPage": 22,
+      "title": "What We Keep",
+      "purpose": "Aftermath: Seris contained (not executed); Cael supervision continues; Compact justice.",
+      "transcript": [
+        "SPEECH (Nira Quill): She'll try again.",
+        "SPEECH (Mira Eggwarden): Then we keep better doors. We don't become Meridian.",
+        "SPEECH (Cael Vesper): Supervised travel. I'll earn the unmasked road.",
+        "NARRATION: Found family is a kind of Engine."
+      ]
+    },
+    {
+      "bookPage": 27,
+      "storyPage": 23,
+      "title": "Found Family",
+      "purpose": "Quiet celebration; Elara Venn vision-only blessing; Volume One emotional close begins.",
+      "transcript": [
+        "SPEECH (Elyan Voss): Professor. Keeper. Merchant. Lantern. Hunter. Companions. That's a faculty.",
+        "SPEECH (Mira Eggwarden): That's a home.",
+        "WHISPER (Elara Venn (vision)): Keep choosing keeping.",
+        "NARRATION: A First Keeper's blessing — echo, not body."
+      ]
+    },
+    {
+      "bookPage": 28,
+      "storyPage": 24,
+      "title": "A Crack in the Sky",
+      "purpose": "Finale tease begins — night sky above the continent shows a broken star.",
+      "transcript": [
+        "NARRATION: Far above healed Engines… a star forgets how to shine whole.",
+        "SPEECH (Mira Eggwarden): What is that?",
+        "SPEECH (Elyan Voss): Not Meridian work. Older… or farther.",
+        "SFX: distant-chime"
+      ]
+    },
+    {
+      "bookPage": 29,
+      "storyPage": 25,
+      "title": "The Shattered Star",
+      "purpose": "Volume One finale splash — broken star in space with sleeping companions; NEXT Volume Two.",
+      "transcript": [
+        "NARRATION: Volume One ends. Something older than Meridian still dreams in pieces.",
+        "CAPTION: NEXT — VOLUME TWO",
+        "CAPTION: THE SHATTERED STAR"
+      ]
+    },
+    {
+      "bookPage": 30,
+      "storyPage": null,
+      "title": "Character Profiles",
+      "purpose": "Profiles: Mira, Elyan, Seris Ascendant, Cael, Nira, Aurelia.",
+      "transcript": [
+        "CAPTION: MIRA EGGWARDEN — Keeper",
+        "CAPTION: ELYAN VOSS — Riftwright",
+        "CAPTION: SERIS VALE — Ascendant",
+        "CAPTION: CAEL · NIRA · AURELIA",
+        "NARRATION: Tragedy is not the same as villainy."
+      ]
+    },
+    {
+      "bookPage": 31,
+      "storyPage": null,
+      "title": "Companion Profiles",
+      "purpose": "Nova debut + Spark twin-key + Axiom + cast.",
+      "transcript": [
+        "CAPTION: NOVA — Prime Companion",
+        "CAPTION: SPARK — Last Light / Twin-Key",
+        "CAPTION: AXIOM — Adaptive Matrix",
+        "NARRATION: Twin-Key Resonance · Pulse Repair · System Restore"
+      ]
+    },
+    {
+      "bookPage": 32,
+      "storyPage": null,
+      "title": "Technology of the Forges",
+      "purpose": "Back-matter technology plate for Twin Engines / cradle lattice.",
+      "transcript": [
+        "CAPTION: TWIN ENGINES — CRADLE MODE",
+        "NARRATION: Artificial Rift production collapses when healing lattice locks.",
+        "CAPTION: See technology.json"
+      ]
+    },
+    {
+      "bookPage": 33,
+      "storyPage": null,
+      "title": "Volume One Timeline",
+      "purpose": "Timeline of Volume One Fracture Dawn road.",
+      "transcript": [
+        "CAPTION: VOLUME ONE — FRACTURE DAWN",
+        "NARRATION: Nine issues. One Compact. One unfinished signature.",
+        "CAPTION: See timeline.json"
+      ]
+    },
+    {
+      "bookPage": 34,
+      "storyPage": null,
+      "title": "Behind the Lore",
+      "purpose": "Lore essay plate — themes of blame, consent, progress without ethics.",
+      "transcript": [
+        "NARRATION: We restore what we can prove. We leave unmarked what still hunts in older ink.",
+        "CAPTION: MYSTERY RETAINED",
+        "CAPTION: Who rewrote history after the First Rift?"
+      ]
+    },
+    {
+      "bookPage": 35,
+      "storyPage": null,
+      "title": "Ability Spotlight — Twin-Key Resonance",
+      "purpose": "TCG/codex tease for Twin-Key Resonance.",
+      "transcript": [
+        "CAPTION: ABILITY — TWIN-KEY RESONANCE",
+        "NARRATION: When Spark and Nova act together, cradle protocols override weapon protocols.",
+        "CAPTION: Card tease · Codex link"
+      ]
+    },
+    {
+      "bookPage": 36,
+      "storyPage": null,
+      "title": "Next — Volume Two: The Shattered Star",
+      "purpose": "Volume Two teaser only — do not start Volume Two issues.",
+      "transcript": [
+        "CAPTION: NEXT VOLUME",
+        "CAPTION: THE SHATTERED STAR",
+        "NARRATION: Sleeping companions in a broken star. An enemy older than Meridian. Volume Two begins when the sky cracks."
+      ]
+    },
+    {
+      "bookPage": 37,
+      "storyPage": null,
+      "title": "Inside Back Cover",
+      "purpose": "Letters / thanks Volume One.",
+      "transcript": [
+        "NARRATION: Thank you for reading Volume One of Legends of the Rift.",
+        "CAPTION: Keepers · Companions · Compact",
+        "CAPTION: Local Archive copy · Volume One Finale"
+      ]
+    },
+    {
+      "bookPage": 38,
+      "storyPage": null,
+      "title": "Back Cover",
+      "purpose": "Back cover: shattered star silhouette + Volume One complete badge space.",
+      "transcript": [
+        "CAPTION: VOLUME ONE — COMPLETE",
+        "NARRATION: The Riftwright was never the only hand on history.",
+        "CAPTION: Volume Two: The Shattered Star — Coming Next"
+      ]
+    }
+  ]
+}

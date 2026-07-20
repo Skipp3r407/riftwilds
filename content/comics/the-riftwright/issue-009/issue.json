@@ -1,0 +1,303 @@
+{
+  "slug": "the-riftwright",
+  "issueNumber": 9,
+  "title": "The Riftwright",
+  "subtitle": "Chapter Nine — Volume One Finale",
+  "synopsis": "At the Second Forge, Mira Eggwarden meets Professor Elyan Voss — the Riftwright history blamed. The dormant egg hatches into Nova, Prime Companion and twin-key to Spark. Ascendant Commander Seris Vale wages war for the Engines; cradle lattice wins. History is restored in the Forge records, one older-than-Meridian signature left unmarked. Volume One ends on a shattered star — next: The Shattered Star.",
+  "publishedAt": "2026-07-20",
+  "status": "published",
+  "storyPageCount": 25,
+  "bookPageCount": 38,
+  "estimatedReadMinutes": 24,
+  "protagonist": "Mira Eggwarden",
+  "volumeFinale": true,
+  "volumeId": "volume-1",
+  "arcId": "fracture-dawn",
+  "shelfBadge": "Volume One Finale",
+  "hatchedCompanion": "Nova",
+  "riftwrightCanonName": "Professor Elyan Voss",
+  "featuredCreatures": [
+    "Spark",
+    "Nova",
+    "Axiom",
+    "Bramblefox",
+    "Mossprig",
+    "Thornling",
+    "Wisplet",
+    "Spirit Moth",
+    "Truthwing",
+    "Cindermink",
+    "Lumenhare",
+    "Echoquill"
+  ],
+  "locations": [
+    "Second Forge",
+    "Companion Incubator Beta",
+    "Twin Engine Control",
+    "Memory Vaults",
+    "Shattered Star (tease)"
+  ],
+  "unlockGates": [
+    {
+      "kind": "prior-issue",
+      "slug": "the-forge-of-rifts",
+      "label": "Complete Issue #8: The Forge of Rifts"
+    },
+    {
+      "kind": "admin-dev",
+      "label": "Admin / COMICS_DEV_UNLOCK override"
+    }
+  ],
+  "nextIssueTeaser": {
+    "slug": "the-shattered-star",
+    "hook": "A broken star sleeps with companions inside. Volume Two begins.",
+    "volume": 2,
+    "title": "The Shattered Star"
+  },
+  "pipeline": {
+    "artProvider": "grok",
+    "lettering": "programmatic",
+    "bakedLettering": true,
+    "contentRoot": "content/comics/the-riftwright/issue-009"
+  },
+  "bookPages": [
+    {
+      "pageNumber": 1,
+      "storyPageNumber": null,
+      "role": "front-cover",
+      "title": "The Riftwright — Cover"
+    },
+    {
+      "pageNumber": 2,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Front Cover"
+    },
+    {
+      "pageNumber": 3,
+      "storyPageNumber": null,
+      "role": "credits",
+      "title": "Credits"
+    },
+    {
+      "pageNumber": 4,
+      "storyPageNumber": null,
+      "role": "title",
+      "title": "Chapter Nine — The Riftwright"
+    },
+    {
+      "pageNumber": 5,
+      "storyPageNumber": 1,
+      "role": "story",
+      "title": "Second Forge Threshold"
+    },
+    {
+      "pageNumber": 6,
+      "storyPageNumber": 2,
+      "role": "story",
+      "title": "Machine That Makes Tears"
+    },
+    {
+      "pageNumber": 7,
+      "storyPageNumber": 3,
+      "role": "story",
+      "title": "Archives of Blame"
+    },
+    {
+      "pageNumber": 8,
+      "storyPageNumber": 4,
+      "role": "story",
+      "title": "The Riftwright Speaks"
+    },
+    {
+      "pageNumber": 9,
+      "storyPageNumber": 5,
+      "role": "story",
+      "title": "Professor Elyan Voss"
+    },
+    {
+      "pageNumber": 10,
+      "storyPageNumber": 6,
+      "role": "story",
+      "title": "History Was a Weapon"
+    },
+    {
+      "pageNumber": 11,
+      "storyPageNumber": 7,
+      "role": "story",
+      "title": "Prime Companion"
+    },
+    {
+      "pageNumber": 12,
+      "storyPageNumber": 8,
+      "role": "story",
+      "title": "Egg of Twin Keys"
+    },
+    {
+      "pageNumber": 13,
+      "storyPageNumber": 9,
+      "role": "story",
+      "title": "Nova Hatches"
+    },
+    {
+      "pageNumber": 14,
+      "storyPageNumber": 10,
+      "role": "story",
+      "title": "Twin-Key Resonance"
+    },
+    {
+      "pageNumber": 15,
+      "storyPageNumber": 11,
+      "role": "story",
+      "title": "Ascendant Protocol"
+    },
+    {
+      "pageNumber": 16,
+      "storyPageNumber": 12,
+      "role": "story",
+      "title": "Siege of the Cradle"
+    },
+    {
+      "pageNumber": 17,
+      "storyPageNumber": 13,
+      "role": "story",
+      "title": "Companions Rally"
+    },
+    {
+      "pageNumber": 18,
+      "storyPageNumber": 14,
+      "role": "story",
+      "title": "Engine Control"
+    },
+    {
+      "pageNumber": 19,
+      "storyPageNumber": 15,
+      "role": "story",
+      "title": "Roads and Lanterns"
+    },
+    {
+      "pageNumber": 20,
+      "storyPageNumber": 16,
+      "role": "story",
+      "title": "Twin Forge War"
+    },
+    {
+      "pageNumber": 21,
+      "storyPageNumber": 17,
+      "role": "story",
+      "title": "Last Light, First Star"
+    },
+    {
+      "pageNumber": 22,
+      "storyPageNumber": 18,
+      "role": "story",
+      "title": "Clash — Part One"
+    },
+    {
+      "pageNumber": 23,
+      "storyPageNumber": 19,
+      "role": "story",
+      "title": "Clash — Part Two"
+    },
+    {
+      "pageNumber": 24,
+      "storyPageNumber": 20,
+      "role": "story",
+      "title": "Engines Stabilize"
+    },
+    {
+      "pageNumber": 25,
+      "storyPageNumber": 21,
+      "role": "story",
+      "title": "History Restored"
+    },
+    {
+      "pageNumber": 26,
+      "storyPageNumber": 22,
+      "role": "story",
+      "title": "What We Keep"
+    },
+    {
+      "pageNumber": 27,
+      "storyPageNumber": 23,
+      "role": "story",
+      "title": "Found Family"
+    },
+    {
+      "pageNumber": 28,
+      "storyPageNumber": 24,
+      "role": "story",
+      "title": "A Crack in the Sky"
+    },
+    {
+      "pageNumber": 29,
+      "storyPageNumber": 25,
+      "role": "story",
+      "title": "The Shattered Star"
+    },
+    {
+      "pageNumber": 30,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Character Profiles"
+    },
+    {
+      "pageNumber": 31,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Companion Profiles"
+    },
+    {
+      "pageNumber": 32,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Technology of the Forges"
+    },
+    {
+      "pageNumber": 33,
+      "storyPageNumber": null,
+      "role": "map",
+      "title": "Volume One Timeline"
+    },
+    {
+      "pageNumber": 34,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Behind the Lore"
+    },
+    {
+      "pageNumber": 35,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Ability Spotlight — Twin-Key Resonance"
+    },
+    {
+      "pageNumber": 36,
+      "storyPageNumber": null,
+      "role": "teaser",
+      "title": "Next — Volume Two: The Shattered Star"
+    },
+    {
+      "pageNumber": 37,
+      "storyPageNumber": null,
+      "role": "letters",
+      "title": "Inside Back Cover"
+    },
+    {
+      "pageNumber": 38,
+      "storyPageNumber": null,
+      "role": "back-cover",
+      "title": "Back Cover"
+    }
+  ],
+  "continuityLocks": {
+    "keeper": "Mira Eggwarden",
+    "elara": "vision-only",
+    "calReed": "non-canon",
+    "riftwright": "Professor Elyan Voss",
+    "hatchedCompanion": "Nova",
+    "mysteryRetained": "Who manipulated history after the First Rift (older than Meridian)",
+    "arkan": "sacrificed — echo only",
+    "doNotStartVolumeTwoIssues": true
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "pageNumber": 7,
+  "storyPageNumber": 3,
+  "bookRole": "story",
+  "title": "Machine City",
+  "storyPurpose": "Party descends into half-city half-factory; first sight of civilization scale.",
+  "layout": {
+    "type": "two-stack",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p3a",
+      "description": "Wide descent: floating platforms over crystal rivers, endless conveyor systems, overgrown laboratories clinging to white stone, security construct silhouettes dormant on rails.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Half ancient city. Half impossible factory.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "gear-CLANK",
+          "x": 72,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p3b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes leading with Spark and egg; companions fanned; distant resonance towers flickering; abandoned Keeper quarters visible as tiny windows.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Stay close. Nothing here was built for visitors.",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*pattern-search*",
+          "x": 65,
+          "y": 68,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spirit Moth",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p3b",
+      "kind": "speech",
+      "text": "Stay close. Nothing here was built for visitors.",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p3b",
+      "kind": "creature",
+      "text": "*pattern-search*",
+      "x": 65,
+      "y": 68,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spirit Moth",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p3a",
+      "kind": "narration",
+      "text": "Half ancient city. Half impossible factory.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p3a",
+      "kind": "sfx",
+      "text": "gear-CLANK",
+      "x": 72,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "spirit-moth",
+    "bramblefox",
+    "mossprig"
+  ],
+  "locations": [
+    "Forge of Rifts",
+    "Crystal River Platforms"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Forge machine-city descent",
+    "tone": "awe-dread"
+  },
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 3/25 — Machine City. Story purpose: Party descends into half-city half-factory; first sight of civilization scale. Layout: two-stack. 2 panels with clear inked gutters. Panel 1 (p3a): Wide descent: floating platforms over crystal rivers, endless conveyor systems, overgrown laboratories clinging to white stone, security construct silhouettes dormant on rails. Panel 2 (p3b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes leading with Spark and egg; companions fanned; distant resonance towers flickering; abandoned Keeper quarters visible as tiny windows. Characters: mira-eggwarden, cael-vesper, nira-quill. Creatures: spark, spirit-moth, bramblefox, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Forge machine-city descent\", \"tone\": \"awe-dread\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Companions find the abandoned.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Machine City — The Forge of Rifts page 3",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Half ancient city. Half impossible factory.",
+    "SFX: gear-CLANK",
+    "SPEECH (Mira Eggwarden): Stay close. Nothing here was built for visitors.",
+    "CREATURE (Spirit Moth): *pattern-search*"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Half ancient city. Half impossible factory.",
+    "SFX: gear-CLANK",
+    "SPEECH (Mira Eggwarden): Stay close. Nothing here was built for visitors.",
+    "CREATURE (Spirit Moth): *pattern-search*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p007",
+  "cleanArtRel": "generated/raw-art/page-007.webp",
+  "letteredArtRel": "generated/lettered-pages/page-007.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-007.webp"
+}

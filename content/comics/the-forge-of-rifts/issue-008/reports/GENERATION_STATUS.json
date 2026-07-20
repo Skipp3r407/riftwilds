@@ -1,0 +1,36 @@
+{
+  "updatedAt": "2026-07-20T15:29:43.955Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "2": {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "title": "Inside Front Cover",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-forge-of-rifts/issue-008/pages/page-002.webp",
+      "error": null
+    },
+    "5": {
+      "pageNumber": 5,
+      "role": "story",
+      "title": "Forge Threshold",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-forge-of-rifts/issue-008/pages/page-005.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 0,
+    "letterOk": 2,
+    "grokOk": 0,
+    "proceduralOk": 0,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-008/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-008/generate-and-letter.mjs --force"
+  }
+}

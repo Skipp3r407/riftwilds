@@ -1,0 +1,276 @@
+{
+  "slug": "sparks-journey",
+  "issueNumber": 2,
+  "title": "Spark's Journey",
+  "subtitle": "Chapter Two — Hatchling of the Pulse",
+  "synopsis": "The pulse-egg under Mira Eggwarden's Compact care hatches into Spark, an unstable Glowpup-line Riftborn. Mira escorts Spark toward Shellward Sanctum while Veiled Meridian hunters try to capture Subject One. Spark flees fear, returns by choice, unlocks Prismatic Burst, and discovers it is one of several Riftborn — as the Meridian begins the collection at the Traveling Circus.",
+  "publishedAt": "2026-07-20",
+  "status": "published",
+  "storyPageCount": 25,
+  "bookPageCount": 38,
+  "estimatedReadMinutes": 20,
+  "protagonist": "Mira Eggwarden",
+  "featuredCreatures": [
+    "Spark",
+    "Bramblefox",
+    "Mossprig",
+    "Thornling",
+    "Wisplet"
+  ],
+  "locations": [
+    "Riftwild Commons",
+    "First-Rift scar wilds",
+    "Shellward Sanctum"
+  ],
+  "unlockGates": [
+    {
+      "kind": "prior-issue",
+      "slug": "the-first-rift",
+      "label": "Complete Issue #1: The First Rift"
+    },
+    {
+      "kind": "admin-dev",
+      "label": "Admin / COMICS_DEV_UNLOCK override"
+    }
+  ],
+  "nextIssueTeaser": {
+    "slug": "the-traveling-circus",
+    "hook": "Subject One has awakened. Begin the collection."
+  },
+  "pipeline": {
+    "artProvider": "grok",
+    "lettering": "programmatic",
+    "bakedLettering": true,
+    "contentRoot": "content/comics/sparks-journey/issue-002"
+  },
+  "bookPages": [
+    {
+      "pageNumber": 1,
+      "storyPageNumber": null,
+      "role": "front-cover",
+      "title": "Spark's Journey — Cover"
+    },
+    {
+      "pageNumber": 2,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Front Cover"
+    },
+    {
+      "pageNumber": 3,
+      "storyPageNumber": null,
+      "role": "credits",
+      "title": "Credits"
+    },
+    {
+      "pageNumber": 4,
+      "storyPageNumber": null,
+      "role": "title",
+      "title": "Chapter Two — Hatchling of the Pulse"
+    },
+    {
+      "pageNumber": 5,
+      "storyPageNumber": 1,
+      "role": "story",
+      "title": "The Pulse Did Not End"
+    },
+    {
+      "pageNumber": 6,
+      "storyPageNumber": 2,
+      "role": "story",
+      "title": "First Eye"
+    },
+    {
+      "pageNumber": 7,
+      "storyPageNumber": 3,
+      "role": "story",
+      "title": "Hatchling"
+    },
+    {
+      "pageNumber": 8,
+      "storyPageNumber": 4,
+      "role": "story",
+      "title": "Unknown Resonance"
+    },
+    {
+      "pageNumber": 9,
+      "storyPageNumber": 5,
+      "role": "story",
+      "title": "Shellward Mark"
+    },
+    {
+      "pageNumber": 10,
+      "storyPageNumber": 6,
+      "role": "story",
+      "title": "Before Destabilization"
+    },
+    {
+      "pageNumber": 11,
+      "storyPageNumber": 7,
+      "role": "story",
+      "title": "Leaving the Hearth"
+    },
+    {
+      "pageNumber": 12,
+      "storyPageNumber": 8,
+      "role": "story",
+      "title": "Motes and Marks"
+    },
+    {
+      "pageNumber": 13,
+      "storyPageNumber": 9,
+      "role": "story",
+      "title": "Scar of the First Tear"
+    },
+    {
+      "pageNumber": 14,
+      "storyPageNumber": 10,
+      "role": "story",
+      "title": "Fear Has a Finger"
+    },
+    {
+      "pageNumber": 15,
+      "storyPageNumber": 11,
+      "role": "story",
+      "title": "Not a Weapon"
+    },
+    {
+      "pageNumber": 16,
+      "storyPageNumber": 12,
+      "role": "story",
+      "title": "Glow Into Dark"
+    },
+    {
+      "pageNumber": 17,
+      "storyPageNumber": 13,
+      "role": "story",
+      "title": "Scent and Spirit"
+    },
+    {
+      "pageNumber": 18,
+      "storyPageNumber": 14,
+      "role": "story",
+      "title": "The Arch That Waits"
+    },
+    {
+      "pageNumber": 19,
+      "storyPageNumber": 15,
+      "role": "story",
+      "title": "Sigils Ignite"
+    },
+    {
+      "pageNumber": 20,
+      "storyPageNumber": 16,
+      "role": "story",
+      "title": "Refuse the Cage"
+    },
+    {
+      "pageNumber": 21,
+      "storyPageNumber": 17,
+      "role": "story",
+      "title": "Living Bulwark"
+    },
+    {
+      "pageNumber": 22,
+      "storyPageNumber": 18,
+      "role": "story",
+      "title": "Grove Against Veil"
+    },
+    {
+      "pageNumber": 23,
+      "storyPageNumber": 19,
+      "role": "story",
+      "title": "You Do Not Have To"
+    },
+    {
+      "pageNumber": 24,
+      "storyPageNumber": 20,
+      "role": "story",
+      "title": "You Were Never Made to Obey"
+    },
+    {
+      "pageNumber": 25,
+      "storyPageNumber": 21,
+      "role": "story",
+      "title": "Chosen Step"
+    },
+    {
+      "pageNumber": 26,
+      "storyPageNumber": 22,
+      "role": "story",
+      "title": "Prismatic Burst"
+    },
+    {
+      "pageNumber": 27,
+      "storyPageNumber": 23,
+      "role": "story",
+      "title": "Door for One"
+    },
+    {
+      "pageNumber": 28,
+      "storyPageNumber": 24,
+      "role": "story",
+      "title": "Riftborn"
+    },
+    {
+      "pageNumber": 29,
+      "storyPageNumber": 25,
+      "role": "story",
+      "title": "Begin the Collection"
+    },
+    {
+      "pageNumber": 30,
+      "storyPageNumber": null,
+      "role": "teaser",
+      "title": "Next Issue — The Traveling Circus"
+    },
+    {
+      "pageNumber": 31,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Keeper Profile — Mira Eggwarden"
+    },
+    {
+      "pageNumber": 32,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Companion Profile — Spark"
+    },
+    {
+      "pageNumber": 33,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Codex — Riftborn"
+    },
+    {
+      "pageNumber": 34,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Ability Spotlight — Rift Resonance"
+    },
+    {
+      "pageNumber": 35,
+      "storyPageNumber": null,
+      "role": "map",
+      "title": "World Map — Commons to Shellward"
+    },
+    {
+      "pageNumber": 36,
+      "storyPageNumber": null,
+      "role": "letters",
+      "title": "Editor's Note — Trust & Choice"
+    },
+    {
+      "pageNumber": 37,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Back Cover"
+    },
+    {
+      "pageNumber": 38,
+      "storyPageNumber": null,
+      "role": "back-cover",
+      "title": "Back Cover — Traveling Lantern Caravan"
+    }
+  ]
+}

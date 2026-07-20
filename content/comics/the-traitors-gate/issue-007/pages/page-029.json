@@ -1,0 +1,121 @@
+{
+  "pageNumber": 29,
+  "storyPageNumber": 25,
+  "bookRole": "story",
+  "title": "Second Creation",
+  "storyPurpose": "Cliffhanger: subterranean city, empty containment chambers, artificial egg/core; masked figure; Forge of Rifts.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p25a",
+      "description": "Full splash cliffhanger: subterranean city around colossal machine; rows of empty companion containment chambers; growing artificial egg/core at center; masked Riftwright-adjacent figure watches from high gantry; tiny inset of Mira's team on Gate threshold. Empty zones for final lines.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Begin the second creation.",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "NEXT: THE FORGE OF RIFTS",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "core-HUM",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "p25a",
+      "kind": "narration",
+      "text": "Begin the second creation.",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "NEXT: THE FORGE OF RIFTS",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p25a",
+      "kind": "sfx",
+      "text": "core-HUM",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "riftwright-silhouette"
+  ],
+  "creatures": [],
+  "locations": [
+    "Forge of Rifts (teaser)"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "teaser": "the-forge-of-rifts",
+    "cliffhanger": "second-creation"
+  },
+  "requiredMoments": [
+    25
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 25/25 — Second Creation. Story purpose: Cliffhanger: subterranean city, empty containment chambers, artificial egg/core; masked figure; Forge of Rifts. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Full splash cliffhanger: subterranean city around colossal machine; rows of empty companion containment chambers; growing artificial egg/core at center; masked Riftwright-adjacent figure watches from high gantry; tiny inset of Mira's team on Gate threshold. Empty zones for final lines. Characters: riftwright-silhouette. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: artificial rift core cyan-amber. Continuity: {\"teaser\": \"the-forge-of-rifts\", \"cliffhanger\": \"second-creation\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "End Issue #7.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Second Creation — The Traitor's Gate page 25",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Begin the second creation.",
+    "CAPTION: NEXT: THE FORGE OF RIFTS",
+    "SFX: core-HUM"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Begin the second creation.",
+    "CAPTION: NEXT: THE FORGE OF RIFTS",
+    "SFX: core-HUM"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p029",
+  "cleanArtRel": "generated/raw-art/page-029.webp",
+  "letteredArtRel": "generated/lettered-pages/page-029.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-029.webp"
+}

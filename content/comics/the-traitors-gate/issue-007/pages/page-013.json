@@ -1,0 +1,189 @@
+{
+  "pageNumber": 13,
+  "storyPageNumber": 9,
+  "bookRole": "story",
+  "title": "Failed Mask",
+  "storyPurpose": "Cael's declaration fails; admits old Gate transport of forbidden Riftborn records.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p9a",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif's declaration symbol cracks; lock rings reject; half-mask reflects red warning runes.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "REJECT",
+          "x": 50,
+          "y": 30,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "magic",
+          "text": "CONCEALED INTENT.",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 40,
+          "speaker": "Gate",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p9b",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif removes half-mask slightly; shame; Mira and Aurelia watch.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I used this Gate once — to move forbidden Riftborn records.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "I called it protection. The Gate called it theft.",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 44,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p9c",
+      "description": "Suspicion shifts: Nira glances between Mira and Cael; Spark resonance torn.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Secrecy and betrayal aren't the same. Prove which this is.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p9a",
+      "kind": "magic",
+      "text": "CONCEALED INTENT.",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 40,
+      "speaker": "Gate",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p9b",
+      "kind": "speech",
+      "text": "I used this Gate once — to move forbidden Riftborn records.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p9b",
+      "kind": "speech",
+      "text": "I called it protection. The Gate called it theft.",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 44,
+      "speaker": "Cael Vesper",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p9c",
+      "kind": "speech",
+      "text": "Secrecy and betrayal aren't the same. Prove which this is.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p9a",
+      "kind": "sfx",
+      "text": "REJECT",
+      "x": 50,
+      "y": 30,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark",
+    "truthwing"
+  ],
+  "locations": [
+    "Traitor's Gate — Verification Chamber"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "cael": "admits-old-gate-use",
+    "suspicion": "shifts-to-cael"
+  },
+  "requiredMoments": [
+    7
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 9/25 — Failed Mask. Story purpose: Cael's declaration fails; admits old Gate transport of forbidden Riftborn records. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p9a): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif's declaration symbol cracks; lock rings reject; half-mask reflects red warning runes. Panel 2 (p9b): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif removes half-mask slightly; shame; Mira and Aurelia watch. Panel 3 (p9c): Suspicion shifts: Nira glances between Mira and Cael; Spark resonance torn. Characters: mira-eggwarden, cael-vesper, nira-quill, aurelia-voss. Creatures: spark, truthwing. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"cael\": \"admits-old-gate-use\", \"suspicion\": \"shifts-to-cael\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Merchant withholds.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Failed Mask — The Traitor's Gate page 9",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: REJECT",
+    "MAGIC (Gate): CONCEALED INTENT.",
+    "SPEECH (Cael Vesper): I used this Gate once — to move forbidden Riftborn records.",
+    "SPEECH (Cael Vesper): I called it protection. The Gate called it theft.",
+    "SPEECH (Mira Eggwarden): Secrecy and betrayal aren't the same. Prove which this is."
+  ],
+  "a11yTranscript": [
+    "SFX: REJECT",
+    "MAGIC (Gate): CONCEALED INTENT.",
+    "SPEECH (Cael Vesper): I used this Gate once — to move forbidden Riftborn records.",
+    "SPEECH (Cael Vesper): I called it protection. The Gate called it theft.",
+    "SPEECH (Mira Eggwarden): Secrecy and betrayal aren't the same. Prove which this is."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p013",
+  "cleanArtRel": "generated/raw-art/page-013.webp",
+  "letteredArtRel": "generated/lettered-pages/page-013.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-013.webp"
+}

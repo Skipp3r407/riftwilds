@@ -1,0 +1,48 @@
+{
+  "pageNumber": 27,
+  "id": "the-first-rift-issue-001-p027",
+  "role": "story",
+  "title": null,
+  "layout": "wide",
+  "atmosphere": "rift",
+  "beat": "Cliffhanger — First Rift was deliberate",
+  "artPrompt": "Wide cinematic page, no text. Split: ancient Elara with egg / present Mira at glyph. Center: Prime Gateway scream frozen mid-opening with tool-marks in stone. Cliffhanger energy. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "The First Rift was not an accident.",
+          "x": 50,
+          "y": 14
+        },
+        {
+          "kind": "caption",
+          "text": "CLIFFHANGER",
+          "x": 50,
+          "y": 40
+        },
+        {
+          "kind": "telepathy",
+          "speaker": "Beyond",
+          "text": "We opened a door. You only named a town.",
+          "x": 50,
+          "y": 62
+        },
+        {
+          "kind": "sfx",
+          "text": "SECOND-PULSE",
+          "x": 50,
+          "y": 85
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-027.png",
+  "letteredArtRel": "generated/lettered/page-027.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-027.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

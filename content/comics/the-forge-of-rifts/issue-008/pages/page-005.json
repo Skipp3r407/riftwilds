@@ -1,0 +1,187 @@
+{
+  "pageNumber": 5,
+  "storyPageNumber": 1,
+  "bookRole": "story",
+  "title": "Forge Threshold",
+  "storyPurpose": "Meridian Road opens into the Forge; Spark reacts violently to artificial Rift energy.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p1a",
+      "description": "Full-bleed splash: colossal underground Forge of Rifts \u2014 black steel towers, white stone arches, cyan plasma rivers, orange molten channels, giant gears, floating platforms. Meridian Road bridge spills the party in. Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original \u2014 not a franchise mascot recoils in pain-flash cyan; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes bracing him; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood; subdued posture \u2014 supervised redemption, not fully trusted supervised lag; Nira Quill: uncertain hunter turned ally, lean, weather cloak, quill-knife kit, steadier eyes after Gate judgment; companions; wrapped dormant Riftborn egg: warm shell with cyan-amber seam markings, protective wrap, pulsing toward Forge machinery. Empty caption zones.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The Gate had opened. The second creation had already begun. Beyond Meridian Road waited the machine that made the First Rift possible.",
+          "x": 50,
+          "y": 8,
+          "tail": null,
+          "maxWidthPct": 62,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*violent-RECOIL*",
+          "x": 38,
+          "y": 55,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        },
+        {
+          "kind": "shout",
+          "text": "Spark\u2014!",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "FORGE-HUMMMM",
+          "x": 78,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        },
+        {
+          "kind": "caption",
+          "text": "THE FORGE OF RIFTS",
+          "x": 50,
+          "y": 92,
+          "tail": null,
+          "maxWidthPct": 44,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p1a",
+      "kind": "creature",
+      "text": "*violent-RECOIL*",
+      "x": 38,
+      "y": 55,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p1a",
+      "kind": "shout",
+      "text": "Spark\u2014!",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p1a",
+      "kind": "narration",
+      "text": "The Gate had opened. The second creation had already begun. Beyond Meridian Road waited the machine that made the First Rift possible.",
+      "x": 50,
+      "y": 8,
+      "tail": null,
+      "maxWidthPct": 62,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p1a",
+      "kind": "caption",
+      "text": "THE FORGE OF RIFTS",
+      "x": 50,
+      "y": 92,
+      "tail": null,
+      "maxWidthPct": 44,
+      "readOrder": 4
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p1a",
+      "kind": "sfx",
+      "text": "FORGE-HUMMMM",
+      "x": 78,
+      "y": 35,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth",
+    "truthwing"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [
+    "dormant-riftborn-egg"
+  ],
+  "continuity": {
+    "location": "Forge threshold / Meridian Road",
+    "spark": "violent-reaction",
+    "egg": "cracked-once-from-gate",
+    "fromIssue7": "second-creation",
+    "cael": "supervised-turned",
+    "nira": "cleared-ally"
+  },
+  "requiredMoments": [
+    1
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pok\u00e9mon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 1/25 \u2014 Forge Threshold. Story purpose: Meridian Road opens into the Forge; Spark reacts violently to artificial Rift energy. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-bleed splash: colossal underground Forge of Rifts \u2014 black steel towers, white stone arches, cyan plasma rivers, orange molten channels, giant gears, floating platforms. Meridian Road bridge spills the party in. Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original \u2014 not a franchise mascot recoils in pain-flash cyan; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes bracing him; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood; subdued posture \u2014 supervised redemption, not fully trusted supervised lag; Nira Quill: uncertain hunter turned ally, lean, weather cloak, quill-knife kit, steadier eyes after Gate judgment; companions; wrapped dormant Riftborn egg: warm shell with cyan-amber seam markings, protective wrap, pulsing toward Forge machinery. Empty caption zones. Characters: mira-eggwarden, cael-vesper, nira-quill. Creatures: spark, bramblefox, mossprig, thornling, wisplet, spirit-moth, truthwing. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original \u2014 not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts arrival bridge. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma flare on Spark's fur. Continuity: {\"location\": \"Forge threshold / Meridian Road\", \"spark\": \"violent-reaction\", \"egg\": \"carried\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pok\u00e9mon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "The egg answers.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Forge Threshold \u2014 The Forge of Rifts page 1",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: The Gate had opened. The second creation had already begun. Beyond Meridian Road waited the machine that made the First Rift possible.",
+    "CREATURE (Spark): *violent-RECOIL*",
+    "SHOUT (Mira Eggwarden): Spark\u2014!",
+    "SFX: FORGE-HUMMMM",
+    "CAPTION: THE FORGE OF RIFTS"
+  ],
+  "a11yTranscript": [
+    "NARRATION: The Gate had opened. The second creation had already begun. Beyond Meridian Road waited the machine that made the First Rift possible.",
+    "CREATURE (Spark): *violent-RECOIL*",
+    "SHOUT (Mira Eggwarden): Spark\u2014!",
+    "SFX: FORGE-HUMMMM",
+    "CAPTION: THE FORGE OF RIFTS"
+  ],
+  "codexLinks": [
+    "forge-of-rifts"
+  ],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p005",
+  "cleanArtRel": "generated/raw-art/page-005.webp",
+  "letteredArtRel": "generated/lettered-pages/page-005.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-005.webp"
+}

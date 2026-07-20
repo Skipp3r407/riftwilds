@@ -1,0 +1,737 @@
+[
+  {
+    "id": "the-storm-king-p01",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 1,
+    "role": "front-cover",
+    "layout": "splash",
+    "title": "The Storm King",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-01.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 1 of 37. Treat as interior showcase plate matching cover energy (not a second book cover with title text). Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift · Issue #5 | narration: A highland trial where lightning learns manners. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p02",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 2,
+    "role": "inside-cover",
+    "layout": "narrative",
+    "title": "Inside cover",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-02.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 2 of 37. Quiet inside-cover atmosphere: parchment light, soft Gateway glow, invitation to read. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Riftwilds Comic Publishing — original fantasy. No crypto required to read. | narration: Credits & cosmetics may unlock along the way. The story itself stays free. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p03",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 3,
+    "role": "title",
+    "layout": "narrative",
+    "title": "The Storm King",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-03.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 3 of 37. Title-spread energy without painted lettering: cast gathered near the Prime Gateway. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dawn. Story beats to illustrate (do not paint this text): caption: Issue #5 | narration: Stormspire Keepers face a storm-affinity legend — not a cartoon villain, but a rival who believes force preserves better than patience. | Series: Storm King · Voltkit Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p04",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 4,
+    "role": "credits",
+    "layout": "narrative",
+    "title": "Credits",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-04.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 4 of 37. Workshop / lore-desk scene: quills, rift-ink, maps — no readable credit text. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Story · Riftwilds Lore Desk | caption: Art · Commons Archive (official plates) | caption: Lettering · Publishing Engine | narration: Canon alignment: World Codex · Riftling Codex · Legends of the Rift TCG. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p05",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 5,
+    "role": "recap",
+    "layout": "narrative",
+    "title": "Previously in the Riftwilds…",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-05.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 5 of 37. Recap montage plate: Fracture tear, road, egg, Commons founding — sequential beats in panels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: rift. Story beats to illustrate (do not paint this text): narration: After Issue #4, Keepers still walk Fracture roads. Bonds deepen. Shadows listen. | caption: Age of First Eggs — Keepers' Road. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p06",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 6,
+    "role": "splash",
+    "layout": "splash",
+    "title": "The peaks answer",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-06.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 6 of 37. Story page titled conceptually: The peaks answer. Single full-bleed cinematic splash panel filling the page. Scene: Storm over highland cliffs with lightning cyan rim light. Atmosphere: storm. Story beats to illustrate (do not paint this text): narration: Thunder named a king. The Commons refused the coronation. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p07",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 7,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-07.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 7 of 37. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: storm. Story beats to illustrate (do not paint this text): Storm King: Patience loses eggs to weather. | Elara Venn: Force loses the thing inside the egg. | sfx: KRACK-BOOM | narration: Villains in Riftwilds carry reasons — still wrong when they break Compact. | Keeper: I came for a duel. I found a debate with lightning. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p08",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 8,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-08.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 8 of 37. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): Storm King: Meet me when the peaks clear — if your kindness still stands. | Voltkit: zzzt! | caption: Quest unlock stub: STORM-KINDNESS Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p09",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 9,
+    "role": "story",
+    "layout": "lore",
+    "title": "Rival ethics",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-09.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 9 of 37. Story page titled conceptually: Rival ethics. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: storm. Lore motif: Rival ethics — Story bible antagonists carry moral complexity. The Storm King is a foil to Compact law — not a monster mask. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p10",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 10,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-10.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 10 of 37. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: storm. Story beats to illustrate (do not paint this text): Storm King: Weather does not wait for Compact committees. | Elara Venn: Neither does cruelty wait for an excuse. | Voltkit: zzzt—! | sfx: KRACK Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p11",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 11,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-11.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 11 of 37. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: storm. Story beats to illustrate (do not paint this text): narration: They dueled with words first — lightning second. | Keeper: I came for a trophy. I found a mirror. | Storm King: Prove kindness can hold a peak. | Elara Venn: Meet us when the clouds clear — Compact stands. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p12",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 12,
+    "role": "splash",
+    "layout": "splash",
+    "title": "Kindness on the ridge",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-12.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 12 of 37. Story page titled conceptually: Kindness on the ridge. Single full-bleed cinematic splash panel filling the page. Scene: Storm clearing over highland ridge. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Thunder named a king. The Commons answered with patience — and a rematch date. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p13",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 13,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-13.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 13 of 37. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Quest unlock stub: STORM-KINDNESS | Voltkit: zz… | narration: Rival ethics stay complicated. Compact law stays clear. | Elara Venn: Bring water when you return. Storms forget thirst. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p14",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 14,
+    "role": "story",
+    "layout": "lore",
+    "title": "Foil, not monster",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-14.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 14 of 37. Story page titled conceptually: Foil, not monster. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: storm. Lore motif: Foil, not monster — Story bible antagonists carry reasons. Force that breaks Compact is still wrong — even when lightning agrees. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p15",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 15,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-15.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 15 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p16",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 16,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-16.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 16 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p17",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 17,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-17.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 17 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p18",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 18,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-18.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 18 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p19",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 19,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-19.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 19 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p20",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 20,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-20.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 20 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p21",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 21,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-21.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 21 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p22",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 22,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-22.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 22 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p23",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 23,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-23.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 23 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p24",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 24,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-24.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 24 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p25",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 25,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-25.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 25 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p26",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 26,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-26.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 26 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p27",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 27,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-27.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 27 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p28",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 28,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-28.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 28 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p29",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 29,
+    "role": "story",
+    "layout": "narrative",
+    "title": "After thunder",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-29.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 29 of 37. Story page titled conceptually: After thunder. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Peaks keep rivals honest — weather keeps Keepers humble. | Elara Venn: Force loses the thing inside the egg. | Keeper: I came for a duel. I found a debate with lightning. | sfx: distant rumble Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p30",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 30,
+    "role": "end",
+    "layout": "end",
+    "title": "Issue complete",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-30.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 30 of 37. Story page titled conceptually: Issue complete. Closing story plate: warm Commons dusk scene with companions silhouetted, ceremonial feel. Atmosphere: festival. Story beats to illustrate (do not paint this text): caption: You finished Issue #5: The Storm King. | narration: Stormspire Keepers face a storm-affinity legend — not a cartoon villain, but a rival who believes force preserves better than patience. | caption: Play this chapter → Travel toward Stormspire Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p31",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 31,
+    "role": "end",
+    "layout": "end",
+    "title": "Shape the side-story",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-31.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 31 of 37. Story page titled conceptually: Shape the side-story. Closing story plate: warm Commons dusk scene with companions silhouetted, ceremonial feel. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Should the Storm King become ally, rival, or both? | Reluctant ally: Join against a greater shadow. | Ongoing rival: Keep the highland duel thread. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p32",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 32,
+    "role": "profile",
+    "layout": "narrative",
+    "title": "Keeper & Companion Profiles",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-32.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 32 of 37. Character profile plate: portraits of Elara, First Riftling, Bramblefox, Mossprig in ornate frames within the page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): Storm King: Rival Keeper — Moral complexity — preservation by control. | Voltkit: Companion — Storm-affinity spark with opinions. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p33",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 33,
+    "role": "map",
+    "layout": "narrative",
+    "title": "Map of the Fracture Roads",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-33.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 33 of 37. Hand-painted fantasy map of Riftwilds Commons and Fracture roads — decorative, no tiny unreadable labels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: Paths rewrite overnight. Marked sites: Commons · Hatchery · Gateway shards · Festival lantern ring. | caption: Stormspire Peaks: Cyan rim light, amber village hearths below. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p34",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 34,
+    "role": "ad",
+    "layout": "narrative",
+    "title": "Commons Notice Board",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-34.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 34 of 37. In-universe playful poster for Riftwilds TCG / Live World — illustrated scene, no real logos or readable ad copy. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: festival. Story beats to illustrate (do not paint this text): Crier: WAYBREAD FAIR — two loaves, one story! | caption: Fake Riftwilds ad · Visit the Hatchery Compact · Credits welcome, crypto never required for reading. | sfx: THRUMMM Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p35",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 35,
+    "role": "teaser",
+    "layout": "narrative",
+    "title": "Next issue",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-35.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 35 of 37. Next-issue teaser silhouette cliffhanger — mysterious, atmospheric. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Next: the merchants secret | narration: Every fair price hides a quieter ledger. | Archive Keeper: Tease cards in the Codex. Build the bond in Deck Atelier. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-storm-king-p36",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 36,
+    "role": "letters",
+    "layout": "narrative",
+    "title": "Letters from the Commons",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-36.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 36 of 37. Letters page atmosphere: Keeper mail, wax seals, egg sketches on a wooden table. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Dear Archive — My Bramblefox used Forest Bond on a scarecrow. Is that allowed? | narration: Archive replies: Bonds are for living hearts. Scarecrows get a polite leaf-pat and a comic reread. | Mossprig: *soft rustle of approval* Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-storm-king-p37",
+    "issueSlug": "the-storm-king",
+    "pageNumber": 37,
+    "role": "back-cover",
+    "layout": "splash",
+    "title": "The Storm King",
+    "outputRelPath": "assets/comics/pages/the-storm-king/page-37.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #5 \"The Storm King\" (the-storm-king), page 37 of 37. Back-matter closing vista of the Commons under soft riftlight. Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift #5 | narration: Official Riftwilds comic · Unlock Codex · Tease cards · Never P2W story gates. Feature cast when relevant: Storm King: original Riftwilds fantasy character. Voltkit: original Riftwilds fantasy character. Series: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Keeper: original Riftwilds fantasy character. Reluctant ally: original Riftwilds fantasy character. Ongoing rival: original Riftwilds fantasy character. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/05-the-storm-king.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  }
+]

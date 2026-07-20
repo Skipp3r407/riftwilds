@@ -1,0 +1,94 @@
+{
+  "pageNumber": 2,
+  "storyPageNumber": null,
+  "bookRole": "inside-cover",
+  "title": "Inside Front Cover",
+  "storyPurpose": "Inside Front Cover",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ifc",
+      "description": "Quiet Forge corridor atmosphere \u2014 crystal columns, soft plasma, invitation to read; empty recap zones.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Previously: Cael Vesper's coercion broke at the Traitor's Gate \u2014 Lumenhare freed, Nira cleared, egg cracked once. Gate open. Meridian Road lit. A voice from the Forge: Begin the second creation.",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "CONTINUE THE FRACTURE DAWN",
+          "x": 50,
+          "y": 85,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ifc",
+      "kind": "narration",
+      "text": "Previously: Cael Vesper's coercion broke at the Traitor's Gate \u2014 Lumenhare freed, Nira cleared, egg cracked once. Gate open. Meridian Road lit. A voice from the Forge: Begin the second creation.",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 0
+    },
+    {
+      "panelId": "ifc",
+      "kind": "caption",
+      "text": "CONTINUE THE FRACTURE DAWN",
+      "x": 50,
+      "y": 85,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {
+    "fromIssue7": "complete",
+    "traitor": "cael-vesper-supervised-turned",
+    "egg": "cracked-once",
+    "cliffhanger": "begin-the-second-creation",
+    "nira": "cleared",
+    "lumenhare": "freed",
+    "aurelia": "uneasy-ally-offpage",
+    "companions": "loyal",
+    "seris": "retreated-returns-at-forge"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pok\u00e9mon characters or logos. Riftwilds comic book inside-cover page for The Forge of Rifts Issue #8 \u2014 Inside Front Cover. Quiet Forge corridor atmosphere \u2014 crystal columns, soft plasma, invitation to read; empty recap zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original \u2014 not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pok\u00e9mon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Inside Front Cover",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "NARRATION: Previously: Cael Vesper's coercion broke at the Traitor's Gate \u2014 Lumenhare freed, Nira cleared, egg cracked once. Gate open. Meridian Road lit. A voice from the Forge: Begin the second creation.",
+    "CAPTION: CONTINUE THE FRACTURE DAWN"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Previously: Cael Vesper's coercion broke at the Traitor's Gate \u2014 Lumenhare freed, Nira cleared, egg cracked once. Gate open. Meridian Road lit. A voice from the Forge: Begin the second creation.",
+    "CAPTION: CONTINUE THE FRACTURE DAWN"
+  ],
+  "id": "the-forge-of-rifts-issue-008-p002",
+  "cleanArtRel": "generated/raw-art/page-002.webp",
+  "letteredArtRel": "generated/lettered-pages/page-002.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-002.webp"
+}

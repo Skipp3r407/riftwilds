@@ -50,6 +50,7 @@ yarn-error.log*
 /artifacts/prod-server*.log
 /.cursor/
 /.cache/
+/public/assets/brand/_pre_enhance/
 
 # Third-party discovery packs (raw zips / unrestricted mirrors) — never ship in public/
 /private-assets/discovered/*

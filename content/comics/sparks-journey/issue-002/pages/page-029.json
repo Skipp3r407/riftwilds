@@ -1,0 +1,138 @@
+{
+  "pageNumber": 29,
+  "bookRole": "story",
+  "title": "Begin the Collection",
+  "storyPurpose": "Empty pedestal; map marks Traveling Circus; Meridian message; TO BE CONTINUED Issue #3.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p25a",
+      "description": "Cliffhanger splash: empty crystal pedestal with disturbed dust (someone already took the relic). Magical map activates on floor marking Commons → Sanctum path and a glowing pin at Traveling Circus wagons. Tiny three-arc sigil chalked near pedestal. Spark and Mira silhouettes at edge.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Someone reached the heart first.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 55
+        },
+        {
+          "kind": "telepathy",
+          "speaker": "Veiled Meridian Channel",
+          "text": "Subject One has awakened. Begin the collection.",
+          "x": 50,
+          "y": 48,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 55
+        },
+        {
+          "kind": "caption",
+          "text": "TO BE CONTINUED IN ISSUE #3",
+          "x": 50,
+          "y": 72,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 60
+        },
+        {
+          "kind": "caption",
+          "text": "THE TRAVELING CIRCUS",
+          "x": 50,
+          "y": 84,
+          "tail": null,
+          "readOrder": 3,
+          "maxWidthPct": 55
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p25a",
+      "kind": "telepathy",
+      "speaker": "Veiled Meridian Channel",
+      "text": "Subject One has awakened. Begin the collection.",
+      "x": 50,
+      "y": 48,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 55
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p25a",
+      "kind": "narration",
+      "text": "Someone reached the heart first.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 55
+    },
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "TO BE CONTINUED IN ISSUE #3",
+      "x": 50,
+      "y": 72,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 60
+    },
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "THE TRAVELING CIRCUS",
+      "x": 50,
+      "y": 84,
+      "tail": null,
+      "readOrder": 3,
+      "maxWidthPct": 55
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "continuity": {
+    "spark": {
+      "emotion": "uneasy resolve",
+      "glow": "steady with Mira",
+      "bond": "voluntary"
+    },
+    "sanctuaryProgress": "entered; crystal missing",
+    "items": {
+      "pedestalCrystal": "stolen-before-arrival"
+    },
+    "cliffhanger": "collection begins → Traveling Circus",
+    "nextIssue": "the-traveling-circus"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 25/25 — Begin the Collection. Story purpose: Empty pedestal; map marks Traveling Circus; Meridian message; TO BE CONTINUED Issue #3. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Cliffhanger splash: empty crystal pedestal with disturbed dust (someone already took the relic). Magical map activates on floor marking Commons → Sanctum path and a glowing pin at Traveling Circus wagons. Tiny three-arc sigil chalked near pedestal. Spark and Mira silhouettes at edge. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: map glow + empty pedestal gloom. Continuity: {\"spark\":{\"emotion\":\"uneasy resolve\",\"glow\":\"steady with Mira\",\"bond\":\"voluntary\"},\"sanctuaryProgress\":\"entered; crystal missing\",\"items\":{\"pedestalCrystal\":\"stolen-before-arrival\"},\"cliffhanger\":\"collection begins → Traveling Circus\",\"nextIssue\":\"the-traveling-circus\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "End Issue #2.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Begin the Collection — Spark's Journey page 25",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Someone reached the heart first.",
+    "TELEPATHY (Veiled Meridian Channel): Subject One has awakened. Begin the collection.",
+    "CAPTION: TO BE CONTINUED IN ISSUE #3",
+    "CAPTION: THE TRAVELING CIRCUS"
+  ],
+  "storyPageNumber": 25,
+  "id": "sparks-journey-issue-002-p029",
+  "cleanArtRel": "generated/raw-art/page-029.png",
+  "letteredArtRel": "generated/lettered-pages/page-029.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-029.webp"
+}

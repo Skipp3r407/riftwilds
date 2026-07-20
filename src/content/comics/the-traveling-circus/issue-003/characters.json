@@ -1,0 +1,35 @@
+{
+  "cast": [
+    {
+      "id": "mira-eggwarden",
+      "name": "Mira Eggwarden",
+      "role": "Keeper protagonist"
+    },
+    {
+      "id": "lanternmaster",
+      "name": "Cael Vesper",
+      "title": "The Lanternmaster"
+    },
+    {
+      "id": "seris-vale",
+      "name": "Seris Vale",
+      "role": "Meridian infiltrator"
+    },
+    {
+      "id": "nira-quill",
+      "name": "Nira Quill",
+      "role": "Uncertain hunter"
+    },
+    {
+      "id": "elara-venn",
+      "name": "Elara Venn",
+      "role": "Vision/About canon only"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "cal-reed",
+      "note": "Non-canon draft — do not ship"
+    }
+  ]
+}

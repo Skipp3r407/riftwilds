@@ -1,0 +1,87 @@
+{
+  "pageNumber": 35,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Timeline — Age of the Celestial Keepers",
+  "storyPurpose": "Timeline — Age of the Celestial Keepers",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "timeline",
+      "description": "Horizontal timeline art without numbers: Age of Keepers → Hollow flight → Star departure → First Rift → Forge era → Star returns.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "AGE OF THE CELESTIAL KEEPERS",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "They left to save the Primes. They returned because the Hollow found the dark between stars.",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "timeline",
+      "kind": "caption",
+      "text": "AGE OF THE CELESTIAL KEEPERS",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    },
+    {
+      "panelId": "timeline",
+      "kind": "narration",
+      "text": "They left to save the Primes. They returned because the Hollow found the dark between stars.",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Shattered Star Issue #10 Volume Two — Timeline — Age of the Celestial Keepers. Horizontal timeline art without numbers: Age of Keepers → Hollow flight → Star departure → First Rift → Forge era → Star returns. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Lyra: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Continue.",
+  "letteringInstructions": "Matter lettering; clear hierarchy.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Timeline — Age of the Celestial Keepers",
+  "atmosphere": "celestial",
+  "transcript": [
+    "CAPTION: AGE OF THE CELESTIAL KEEPERS",
+    "NARRATION: They left to save the Primes. They returned because the Hollow found the dark between stars."
+  ],
+  "a11yTranscript": [
+    "CAPTION: AGE OF THE CELESTIAL KEEPERS",
+    "NARRATION: They left to save the Primes. They returned because the Hollow found the dark between stars."
+  ],
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-035.webp",
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "id": "the-shattered-star-issue-010-p035"
+}

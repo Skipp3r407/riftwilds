@@ -30,9 +30,9 @@ test.describe("NPC population", () => {
     }
   });
 
-  test("Live World page loads enter CTA", async ({ page }) => {
+  test("Live World page shows Coming Soon gate", async ({ page }) => {
     await page.goto("/live-world");
-    await expect(page.getByRole("button", { name: /ENTER THE LIVE WORLD/i })).toBeVisible({
+    await expect(page.getByText(/Coming Soon/i).first()).toBeVisible({
       timeout: 30_000,
     });
   });

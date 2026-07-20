@@ -1,0 +1,142 @@
+{
+  "pageNumber": 18,
+  "bookRole": "story",
+  "title": "The Arch That Waits",
+  "storyPurpose": "Spark finds ancient stone arch that opens only for Spark; hidden road appears.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p14a",
+      "description": "Ancient stone arch half-swallowed by roots; dead to Mira's approach in inset memory — but as Spark nears alone, nested-arc glyphs ignite cyan-gold.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*…chir*",
+          "x": 45,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "sfx",
+          "text": "stone-awaken",
+          "x": 60,
+          "y": 40,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p14b",
+      "description": "Hidden luminous road unfolds beyond the arch — soft sanctuary path light.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Some doors do not open for keys. They open for kinship.",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 55
+        },
+        {
+          "kind": "caption",
+          "text": "SHELLWARD ROAD",
+          "x": 50,
+          "y": 85,
+          "tail": null,
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p14a",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*…chir*",
+      "x": 45,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p14b",
+      "kind": "narration",
+      "text": "Some doors do not open for keys. They open for kinship.",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 55
+    },
+    {
+      "panelId": "p14b",
+      "kind": "caption",
+      "text": "SHELLWARD ROAD",
+      "x": 50,
+      "y": 85,
+      "tail": null,
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p14a",
+      "kind": "sfx",
+      "text": "stone-awaken",
+      "x": 60,
+      "y": 40,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {
+    "spark": {
+      "emotion": "wonder amid fear",
+      "glow": "door-keyed",
+      "sanctuaryProgress": "arch-opened"
+    },
+    "path": "Shellward Road revealed"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 14/25 — The Arch That Waits. Story purpose: Spark finds ancient stone arch that opens only for Spark; hidden road appears. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p14a): Ancient stone arch half-swallowed by roots; dead to Mira's approach in inset memory — but as Spark nears alone, nested-arc glyphs ignite cyan-gold. Panel 2 (p14b): Hidden luminous road unfolds beyond the arch — soft sanctuary path light. Characters: mira-eggwarden. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: ancient arch / Shellward Road. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"wonder amid fear\",\"glow\":\"door-keyed\",\"sanctuaryProgress\":\"arch-opened\"},\"path\":\"Shellward Road revealed\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Hunters surround.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Arch That Waits — Spark's Journey page 14",
+  "atmosphere": "dawn",
+  "transcript": [
+    "CREATURE (Spark): *…chir*",
+    "SFX: stone-awaken",
+    "NARRATION: Some doors do not open for keys. They open for kinship.",
+    "CAPTION: SHELLWARD ROAD"
+  ],
+  "storyPageNumber": 14,
+  "id": "sparks-journey-issue-002-p018",
+  "cleanArtRel": "generated/raw-art/page-018.png",
+  "letteredArtRel": "generated/lettered-pages/page-018.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-018.webp"
+}

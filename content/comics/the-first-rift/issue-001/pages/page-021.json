@@ -1,0 +1,72 @@
+{
+  "pageNumber": 21,
+  "id": "the-first-rift-issue-001-p021",
+  "role": "story",
+  "title": null,
+  "layout": "three-stack",
+  "atmosphere": "dusk",
+  "beat": "Fracture roads rearrange",
+  "artPrompt": "Three-stack, no text. Roads twist; scout confused; Elara walks by egg-warmth not map; cyan path rewrite. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "On the seventh night the Fracture roads rearranged again.",
+          "x": 50,
+          "y": 18
+        },
+        {
+          "kind": "speech",
+          "speaker": "Scout",
+          "text": "East gate is west. West gate is… soup.",
+          "x": 40,
+          "y": 55,
+          "tail": "down"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Then we walk by warmth, not by map.",
+          "x": 50,
+          "y": 45,
+          "tail": "down"
+        },
+        {
+          "kind": "thought",
+          "speaker": "First Riftling",
+          "text": "…warm…",
+          "x": 70,
+          "y": 65
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "Codex stub — Fracture roads",
+          "x": 50,
+          "y": 40
+        },
+        {
+          "kind": "sfx",
+          "text": "path rewrite… hum",
+          "x": 55,
+          "y": 70
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-021.png",
+  "letteredArtRel": "generated/lettered/page-021.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-021.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

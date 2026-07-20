@@ -1,5 +1,7 @@
 import type { AffinityName } from "@prisma/client";
 import type { TcgStatusInstance } from "@/game/tcg/combat/status";
+import type { FieldLane, SpellSpeed } from "@/game/tcg/rules/battle-rules-config";
+import { STANDARD_BATTLE_RULES } from "@/game/tcg/rules/battle-rules-config";
 
 /** Card / match types for Riftwilds TCG (Rift Energy resource). */
 
@@ -52,6 +54,10 @@ export type TcgCardDef = {
   ultimateSummary?: string | null;
   contentType?: string;
   templateLayout?: string;
+  /** Spell timing — units ignore this (always Slow summons). */
+  spellSpeed?: SpellSpeed;
+  /** Preferred battlefield lane when summoned. */
+  preferredLane?: FieldLane | "any";
 };
 
 /** Binder API row: owned count + catalog def (`/api/tcg/collection`). */
@@ -81,10 +87,14 @@ export type TcgBoardUnit = {
   keywords: string[];
   statuses: TcgStatusInstance[];
   exhausted: boolean;
+  /** Frontline protects Keeper; backline is support. */
+  lane: FieldLane;
   /** Attached equipment def ids (order = attach order). */
   equipmentIds?: string[];
   /** Turn index when summoned — used by Awaken. */
   summonedOnTurn?: number;
+  /** Rush: may act but cannot strike Keeper this turn. */
+  cannotStrikeKeeper?: boolean;
 };
 
 export type TcgCommanderState = {
@@ -92,6 +102,8 @@ export type TcgCommanderState = {
   name: string;
   title?: string;
   factionId?: string;
+  /** Once-per-turn active used flag. */
+  powerUsedThisTurn?: boolean;
 };
 
 export type TcgPlayerSide = {
@@ -103,12 +115,29 @@ export type TcgPlayerSide = {
   riftEnergy: number;
   /** Max Rift Energy this turn. */
   riftEnergyMax: number;
+  /** Temporary energy granted this turn (expires at end). */
+  tempEnergy: number;
   /** Energy spent this turn (Empower). */
   energySpentThisTurn: number;
   deck: TcgCardInstance[];
   hand: TcgCardInstance[];
   board: TcgBoardUnit[];
+  /** Defeated creatures / spent cards. */
+  defeated: TcgCardInstance[];
+  /** Exiled cards (Rift Spark, hard-remove effects). */
+  exile: TcgCardInstance[];
+  /** Hand-full burn / overflow. */
+  riftBurn: TcgCardInstance[];
+  /**
+   * @deprecated Prefer defeated — kept as alias for older snapshots.
+   */
   discard: TcgCardInstance[];
+  /** Active terrain (max 1). */
+  terrain: TcgCardInstance | null;
+  /** Permanent board relics (persist for the match). */
+  relics: TcgCardInstance[];
+  /** Face-down traps awaiting trigger (scaffold). */
+  traps: Array<TcgCardInstance & { faceDown: boolean; armed: boolean }>;
   isAi: boolean;
   /** Content hero used as commander (passives Phase 2). */
   commander?: TcgCommanderState | null;
@@ -116,15 +145,24 @@ export type TcgPlayerSide = {
   echoReady?: boolean;
   /** Prevent echoing an echo resolution. */
   echoResolving?: boolean;
+  /** Empty-deck draw attempts (Rift Collapse escalation). */
+  riftCollapseCount: number;
+  /** Mulligan already used. */
+  mulliganUsed: boolean;
+  /** Seat order: 0 = first player. */
+  seatIndex: number;
 };
 
 export type TcgMatchStatus = "ACTIVE" | "COMPLETED";
 
 export type TcgMatchPhase =
-  | "DRAW"
+  | "MULLIGAN"
+  | "START"
   | "MAIN"
   | "COMBAT"
+  | "SECOND_MAIN"
   | "END"
+  | "REACTION"
   | "OPPONENT"
   | "FINISHED";
 
@@ -134,7 +172,20 @@ export type TcgMatchEvent = {
   payload: Record<string, unknown>;
 };
 
-export type TcgMatchMode = "practice" | "casual" | "ranked" | "private";
+export type TcgMatchMode =
+  | "practice"
+  | "casual"
+  | "ranked"
+  | "private"
+  | "quick"
+  | "pve"
+  | "tutorial"
+  | "draft"
+  | "sealed"
+  | "commander"
+  | "expanded"
+  | "legacy"
+  | "arena";
 
 export type TcgMatchState = {
   publicId: string;
@@ -151,6 +202,10 @@ export type TcgMatchState = {
   turnTimerSeconds: number;
   /** competitive = base stats only; collection may show cosmetic finishes. */
   powerMode: TcgPowerMode;
+  /** Rules version baked at match create. */
+  rulesVersion: string;
+  /** Reaction nest depth (scaffold). */
+  reactionDepth: number;
   /** World encounter metadata (optional). */
   encounter?: {
     enemyId: string;
@@ -160,29 +215,40 @@ export type TcgMatchState = {
 };
 
 export type TcgPlayAction =
-  | { kind: "PLAY_CARD"; handInstanceId: string; targetInstanceId?: string }
+  | {
+      kind: "PLAY_CARD";
+      handInstanceId: string;
+      targetInstanceId?: string;
+      lane?: FieldLane;
+    }
+  | { kind: "MULLIGAN"; replaceInstanceIds: string[] }
+  | { kind: "KEEP_HAND" }
+  | { kind: "DECLARE_COMBAT" }
   | { kind: "END_TURN" }
   | { kind: "SURRENDER" };
 
+const R = STANDARD_BATTLE_RULES;
+
+/** Legacy defaults — values mirror STANDARD_BATTLE_RULES. Prefer getBattleRules(). */
 export const TCG_DEFAULTS = {
-  /** Exact constructed deck size (commander is separate). */
-  starterDeckSize: 30,
-  constructedTargetMax: 30,
-  /** AAA Standard: exactly 30 cards. */
-  maxDeckSize: 30,
-  minDeckSize: 30,
+  /** Exact constructed main-deck size (commander is separate). */
+  starterDeckSize: R.deck.mainDeckSize,
+  constructedTargetMax: R.deck.mainDeckSize,
+  maxDeckSize: R.deck.mainDeckSize,
+  minDeckSize: R.deck.mainDeckSize,
+  totalPieces: R.deck.totalPieces,
   requireCommander: true,
-  maxHandSize: 8,
-  maxBoardUnits: 5,
-  keeperHp: 20,
-  openingHand: 4,
-  riftEnergyStartMax: 1,
-  riftEnergyCap: 10,
-  maxTurns: 30,
-  /** Soft client turn timer (seconds). */
-  turnTimerSeconds: 90,
-  /** Soft-currency competitive path — never crypto. */
+  maxHandSize: R.hand.maxSize,
+  maxBoardUnits: R.field.maxCreatures,
+  frontlineSlots: R.field.frontlineSlots,
+  backlineSlots: R.field.backlineSlots,
+  keeperHp: R.keeper.startingHp,
+  openingHand: R.hand.openingSize,
+  riftEnergyStartMax: R.energy.turn1Max,
+  riftEnergyCap: R.energy.cap,
+  maxTurns: R.turn.maxTurns,
+  turnTimerSeconds: R.turn.timerSeconds,
   f2pCompetitive: true,
-  /** Ranked / practice competitive power ignores cosmetics & companion level. */
   rankedPowerMode: "competitive" as TcgPowerMode,
+  rulesVersion: R.rulesVersion,
 } as const;

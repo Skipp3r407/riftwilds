@@ -1,0 +1,188 @@
+{
+  "pageNumber": 10,
+  "storyPageNumber": 6,
+  "bookRole": "story",
+  "title": "Royal Insignia",
+  "storyPurpose": "Royal escort orders citadel visit; Cael recognizes insignia and turns serious.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p6a",
+      "description": "Storm-armored royal guards with gold-and-cyan insignia surround expedition; lightning spears upright.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Outsiders. The King requires your presence.",
+          "x": 50,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Royal Captain",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "armor-CLACK",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p6b",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif half-mask tilting, eyes hard on royal crest — nested storm crown motif.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "That crest… I negotiated under it once. Years ago.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "He does not forget visitors.",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p6c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes nodding acceptance; Spark pressed close; Galesprig perched on escort spear tip curiously.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "We'll come. Spark stays with me.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p6a",
+      "kind": "speech",
+      "text": "Outsiders. The King requires your presence.",
+      "x": 50,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Royal Captain",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p6b",
+      "kind": "speech",
+      "text": "That crest… I negotiated under it once. Years ago.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p6b",
+      "kind": "whisper",
+      "text": "He does not forget visitors.",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p6c",
+      "kind": "speech",
+      "text": "We'll come. Spark stays with me.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p6a",
+      "kind": "sfx",
+      "text": "armor-CLACK",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "galesprig"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "village square",
+    "escort": "to-citadel",
+    "cael": "recognizes-insignia"
+  },
+  "requiredMoments": [
+    12
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 6/25 — Royal Insignia. Story purpose: Royal escort orders citadel visit; Cael recognizes insignia and turns serious. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p6a): Storm-armored royal guards with gold-and-cyan insignia surround expedition; lightning spears upright. Panel 2 (p6b): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif half-mask tilting, eyes hard on royal crest — nested storm crown motif. Panel 3 (p6c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes nodding acceptance; Spark pressed close; Galesprig perched on escort spear tip curiously. Characters: mira-eggwarden, cael-vesper. Creatures: spark, galesprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"village square\", \"escort\": \"to-citadel\", \"cael\": \"recognizes-insignia\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Enter the throne hall.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Royal Insignia — The Storm King page 6",
+  "atmosphere": "storm",
+  "transcript": [
+    "SPEECH (Royal Captain): Outsiders. The King requires your presence.",
+    "SFX: armor-CLACK",
+    "SPEECH (Cael Vesper): That crest… I negotiated under it once. Years ago.",
+    "WHISPER (Cael Vesper): He does not forget visitors.",
+    "SPEECH (Mira Eggwarden): We'll come. Spark stays with me."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Royal Captain): Outsiders. The King requires your presence.",
+    "SFX: armor-CLACK",
+    "SPEECH (Cael Vesper): That crest… I negotiated under it once. Years ago.",
+    "WHISPER (Cael Vesper): He does not forget visitors.",
+    "SPEECH (Mira Eggwarden): We'll come. Spark stays with me."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p010",
+  "cleanArtRel": "generated/raw-art/page-010.webp",
+  "letteredArtRel": "generated/lettered-pages/page-010.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-010.webp"
+}

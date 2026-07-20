@@ -1,0 +1,41 @@
+{
+  "pageNumber": 4,
+  "id": "the-first-rift-issue-001-p004",
+  "role": "title",
+  "title": "THE PULSE BELOW",
+  "layout": "splash",
+  "atmosphere": "dusk",
+  "beat": "THE PULSE BELOW",
+  "artPrompt": "Story title splash energy WITHOUT painted lettering. Mira at present Rift fringe dissolving into Elara-with-egg vision. Leave clear upper third for title lettering pass. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "LEGENDS OF THE RIFT · ISSUE #001",
+          "x": 50,
+          "y": 22
+        },
+        {
+          "kind": "caption",
+          "text": "THE PULSE BELOW",
+          "x": 50,
+          "y": 42
+        },
+        {
+          "kind": "narration",
+          "text": "A present-day Keeper touches an ancient tear — and the First Rift answers.",
+          "x": 50,
+          "y": 68
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-004.png",
+  "letteredArtRel": "generated/lettered/page-004.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-004.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

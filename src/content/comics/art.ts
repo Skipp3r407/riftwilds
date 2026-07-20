@@ -7,9 +7,12 @@ export const COVER = {
   "the-lost-city": "/assets/comics/covers/04-the-lost-city.png",
   "the-storm-king": "/assets/comics/covers/05-the-storm-king.png",
   "the-merchants-secret": "/assets/comics/covers/06-merchants-secret.png",
+  "the-traitors-gate": "/assets/comics/covers/07-the-traitors-gate.png",
   "the-great-hunt": "/assets/comics/covers/07-the-great-hunt.png",
   "the-last-guardian": "/assets/comics/covers/08-the-last-guardian.png",
+  "the-forge-of-rifts": "/assets/comics/covers/08-the-forge-of-rifts.png",
   "festival-of-lights": "/assets/comics/covers/09-festival-of-lights.png",
+  "the-riftwright": "/assets/comics/covers/09-the-riftwright.png",
   "the-shadow-beyond": "/assets/comics/covers/10-the-shadow-beyond.png",
 } as const;
 

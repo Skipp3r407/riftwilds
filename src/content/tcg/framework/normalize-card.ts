@@ -19,8 +19,16 @@ import {
 } from "@/game/tcg/combat/formulas";
 import { normalizeKeywordList } from "@/game/tcg/combat/keywords";
 import { resolvePublishedCleanArt } from "@/content/tcg/framework/card-asset-paths";
+import {
+  categoryToTemplateLayout,
+  resolveCardCategory,
+  type TcgCardCategory,
+  type TcgTemplateLayout,
+} from "@/content/tcg/framework/card-categories";
 
 export type NormalizedTcgCard = TcgCard & {
+  /** Canonical category (Companion / Spell / Item / …). */
+  category: TcgCardCategory;
   defense: number;
   speed: number;
   role: TcgRole;
@@ -41,8 +49,8 @@ export type NormalizedTcgCard = TcgCard & {
   creatureFamily: string | null;
   /** Clean art path preferred for dynamic template (no baked stats). */
   cleanArtPath: string | null;
-  /** Progressive disclosure size hints. */
-  templateLayout: "creature" | "spell" | "equipment" | "commander" | "terrain" | "trap" | "other";
+  /** Progressive disclosure size hints — one layout per category. */
+  templateLayout: TcgTemplateLayout;
 };
 
 const ELEMENT_STRENGTHS: Record<string, string[]> = {
@@ -81,23 +89,23 @@ const ELEMENT_WEAKNESSES: Record<string, string[]> = {
   neutral: [],
 };
 
-function deriveRole(card: TcgCard): TcgRole {
+function deriveRole(card: TcgCard, category: TcgCardCategory): TcgRole {
   if (card.role) return canonicalizeRole(card.role) as TcgRole;
   const atk = card.attack ?? 0;
   const hp = card.health ?? 0;
   const keywords = new Set(card.keywords.map((k) => k.toLowerCase()));
 
-  if (card.type === "spell" || card.type === "trap" || card.type === "event") {
-    if (keywords.has("heal")) return "healer";
+  if (category === "spell" || category === "trap" || category === "item") {
+    if (keywords.has("heal") || category === "item") return "healer";
     if (keywords.has("draw") || (card.energyCost <= 2 && atk <= 2)) return "utility";
     if (atk >= 5 || card.energyCost >= 6) return "finisher";
     return "controller";
   }
-  if (card.type === "equipment" || card.type === "relic" || card.type === "artifact") {
+  if (category === "equipment" || category === "relic") {
     return "support";
   }
-  if (card.type === "location" || card.type === "weather") return "utility";
-  if (card.type === "hero") return "support";
+  if (category === "terrain") return "utility";
+  if (category === "commander") return "support";
   if (keywords.has("guardian") || keywords.has("taunt") || keywords.has("guard")) {
     return "tank";
   }
@@ -107,7 +115,7 @@ function deriveRole(card: TcgCard): TcgRole {
   if (keywords.has("bloom") || keywords.has("harmony") || keywords.has("ward")) {
     return "support";
   }
-  if (card.type === "token" || keywords.has("summon")) return "swarm";
+  if (card.isToken || keywords.has("summon")) return "swarm";
   if (atk >= 6) return "finisher";
   if (hp >= 7 && atk <= 3) return "defender";
   if (card.energyCost <= 1) return "energy_generator";
@@ -143,12 +151,18 @@ function deriveSpeed(card: TcgCard, role: TcgRole): number {
   return clampStat(base, STAT_RANGES.speed);
 }
 
-function deriveEvolutionStage(card: TcgCard): string | null {
+function deriveEvolutionStage(
+  card: TcgCard,
+  category: TcgCardCategory,
+): string | null {
   if (card.evolutionStage) return card.evolutionStage;
-  if (card.type === "companion") return "companion";
-  if (card.type === "legendary") return "awaken";
-  if (card.type === "creature") return "keeper";
-  if (card.type === "token") return "shellseed";
+  if (category === "companion") {
+    if (card.id.startsWith("rotr-comp-")) return "companion";
+    if (card.id.startsWith("rotr-c-")) return "keeper";
+    if (card.isToken) return "shellseed";
+    return "companion";
+  }
+  if (category === "evolution") return "awaken";
   return null;
 }
 
@@ -175,19 +189,22 @@ function deriveFactionId(card: TcgCard): string | null {
   return map[card.element] ?? null;
 }
 
-function deriveCompetitive(card: TcgCard): boolean {
+function deriveCompetitive(
+  card: TcgCard,
+  category: TcgCardCategory,
+): boolean {
   if (typeof card.competitiveEligible === "boolean") return card.competitiveEligible;
   if (card.isToken) return false;
   if (card.finish && card.finish !== "standard") return false;
   if (
-    card.type === "weather" ||
-    card.type === "quest" ||
-    card.type === "event" ||
     card.id.includes("-prop-") ||
-    card.id.includes("-npc-")
+    card.id.includes("-npc-") ||
+    (category === "commander" && card.id.includes("-npc-"))
   ) {
     return false;
   }
+  // Terrain weather-origin stubs remain non-competitive when tagged.
+  if (card.collectionTags?.includes("weather-prop")) return false;
   return true;
 }
 
@@ -219,37 +236,17 @@ function deriveUnlock(card: TcgCard): TcgUnlockMethod {
   return "pack";
 }
 
-function templateLayoutFor(
-  type: TcgCard["type"],
-): NormalizedTcgCard["templateLayout"] {
-  if (
-    type === "creature" ||
-    type === "companion" ||
-    type === "legendary" ||
-    type === "token"
-  ) {
-    return "creature";
-  }
-  if (type === "hero") return "commander";
-  if (type === "spell") return "spell";
-  if (type === "equipment" || type === "relic" || type === "artifact") {
-    return "equipment";
-  }
-  if (type === "location" || type === "weather") return "terrain";
-  if (type === "trap") return "trap";
-  return "other";
-}
-
 export function normalizeCard(card: TcgCard): NormalizedTcgCard {
   // Versioned overlays first — never mutate the imported JSON object identity chain.
   const migrated = migrateCardStats(card);
+  const category = resolveCardCategory(migrated.type, migrated.id);
   const keywords = normalizeKeywordList(migrated.keywords);
-  const withKw = { ...migrated, keywords };
-  const role = deriveRole(withKw);
+  const withKw = { ...migrated, type: category, keywords };
+  const role = deriveRole(withKw, category);
   const defense = deriveDefense(withKw, role);
   const speed = deriveSpeed(withKw, role);
   const familyId = deriveFamilyId(withKw);
-  const evolutionStage = deriveEvolutionStage(withKw);
+  const evolutionStage = deriveEvolutionStage(withKw, category);
   const strengths = withKw.strengths?.length
     ? withKw.strengths
     : ELEMENT_STRENGTHS[withKw.element] ?? [];
@@ -258,7 +255,7 @@ export function normalizeCard(card: TcgCard): NormalizedTcgCard {
     : ELEMENT_WEAKNESSES[withKw.element] ?? [];
   const craftCosts =
     withKw.craftCosts ?? defaultCraftCost(withKw.rarity, withKw.craftCost);
-  const competitiveEligible = deriveCompetitive(withKw);
+  const competitiveEligible = deriveCompetitive(withKw, category);
   const powerScore = withKw.balance?.powerScore ?? derivePowerScore({
     ...withKw,
     defense,
@@ -284,6 +281,8 @@ export function normalizeCard(card: TcgCard): NormalizedTcgCard {
 
   return {
     ...withKw,
+    type: category,
+    category,
     attack,
     health,
     energyCost,
@@ -322,6 +321,6 @@ export function normalizeCard(card: TcgCard): NormalizedTcgCard {
       resolvePublishedCleanArt(withKw.id) ??
       withKw.art.assetPath ??
       null,
-    templateLayout: templateLayoutFor(withKw.type),
+    templateLayout: categoryToTemplateLayout(category),
   };
 }

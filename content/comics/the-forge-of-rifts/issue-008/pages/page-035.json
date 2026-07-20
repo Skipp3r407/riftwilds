@@ -1,0 +1,84 @@
+{
+  "pageNumber": 35,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Ability Spotlight — Rift Engine Alpha",
+  "storyPurpose": "Ability Spotlight — Rift Engine Alpha",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ab",
+      "description": "Ability/engine spotlight: Rift Engine Alpha core with Spark-sized silhouette for scale; abstract ability rings.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "RIFT ENGINE ALPHA",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Primary Forge reactor. Stabilized by Spark through voluntary invitation — never forced bond. City Engines and Guardian constructs once drew safe power here.",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ab",
+      "kind": "caption",
+      "text": "RIFT ENGINE ALPHA",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "ab",
+      "kind": "narration",
+      "text": "Primary Forge reactor. Stabilized by Spark through voluntary invitation — never forced bond. City Engines and Guardian constructs once drew safe power here.",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Forge of Rifts Issue #8 — Ability Spotlight — Rift Engine Alpha. Ability/engine spotlight: Rift Engine Alpha core with Spark-sized silhouette for scale; abstract ability rings. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ability Spotlight — Rift Engine Alpha",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: RIFT ENGINE ALPHA",
+    "NARRATION: Primary Forge reactor. Stabilized by Spark through voluntary invitation — never forced bond. City Engines and Guardian constructs once drew safe power here."
+  ],
+  "a11yTranscript": [
+    "CAPTION: RIFT ENGINE ALPHA",
+    "NARRATION: Primary Forge reactor. Stabilized by Spark through voluntary invitation — never forced bond. City Engines and Guardian constructs once drew safe power here."
+  ],
+  "id": "the-forge-of-rifts-issue-008-p035",
+  "cleanArtRel": "generated/raw-art/page-035.webp",
+  "letteredArtRel": "generated/lettered-pages/page-035.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-035.webp"
+}

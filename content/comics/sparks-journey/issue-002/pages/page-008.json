@@ -1,0 +1,168 @@
+{
+  "pageNumber": 8,
+  "bookRole": "story",
+  "title": "Unknown Resonance",
+  "storyPurpose": "Codex scan fails; UNKNOWN RESONANCE / NO MATCH FOUND lettered into image.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p4a",
+      "description": "Mira holds a palm Codex crystal toward Spark (still behind Bramblefox). Soft scan light washes markings. scan light washes Spark's markings.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Easy. Just reading the shell-song you kept.",
+          "x": 40,
+          "y": 20,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "sfx",
+          "text": "scan-hummm",
+          "x": 60,
+          "y": 50,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p4b",
+      "description": "Close on Codex readout glyphs (abstract shapes — no readable UI chrome) flashing rejection; Spark's markings flicker mismatched colors.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "UNKNOWN RESONANCE",
+          "x": 50,
+          "y": 30,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 50
+        },
+        {
+          "kind": "caption",
+          "text": "NO MATCH FOUND",
+          "x": 50,
+          "y": 48,
+          "tail": null,
+          "readOrder": 3,
+          "maxWidthPct": 50
+        },
+        {
+          "kind": "thought",
+          "speaker": "Mira Eggwarden",
+          "text": "Not Nature. Not Storm. Not anything we catalogued.",
+          "x": 50,
+          "y": 75,
+          "tail": "up",
+          "readOrder": 4,
+          "maxWidthPct": 42
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p4a",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Easy. Just reading the shell-song you kept.",
+      "x": 40,
+      "y": 20,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p4b",
+      "kind": "thought",
+      "speaker": "Mira Eggwarden",
+      "text": "Not Nature. Not Storm. Not anything we catalogued.",
+      "x": 50,
+      "y": 75,
+      "tail": "up",
+      "readOrder": 4,
+      "maxWidthPct": 42
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p4b",
+      "kind": "caption",
+      "text": "UNKNOWN RESONANCE",
+      "x": 50,
+      "y": 30,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 50
+    },
+    {
+      "panelId": "p4b",
+      "kind": "caption",
+      "text": "NO MATCH FOUND",
+      "x": 50,
+      "y": 48,
+      "tail": null,
+      "readOrder": 3,
+      "maxWidthPct": 50
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p4a",
+      "kind": "sfx",
+      "text": "scan-hummm",
+      "x": 60,
+      "y": 50,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox"
+  ],
+  "continuity": {
+    "spark": {
+      "emotion": "anxious",
+      "glow": "flickering multi-thread",
+      "codexStatus": "no-match"
+    },
+    "items": [
+      "codex crystal scanner"
+    ]
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 4/25 — Unknown Resonance. Story purpose: Codex scan fails; UNKNOWN RESONANCE / NO MATCH FOUND lettered into image. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p4a): Mira holds a palm Codex crystal toward Spark (still behind Bramblefox). Soft scan light washes markings. scan light washes Spark's markings. Panel 2 (p4b): Close on Codex readout glyphs (abstract shapes — no readable UI chrome) flashing rejection; Spark's markings flicker mismatched colors. Characters: mira-eggwarden, mira-eggwarden. Creatures: spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Commons fringe / hatchery path. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"anxious\",\"glow\":\"flickering multi-thread\",\"codexStatus\":\"no-match\"},\"items\":[\"codex crystal scanner\"]} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Ancient markings recognized.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Unknown Resonance — Spark's Journey page 4",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): Easy. Just reading the shell-song you kept.",
+    "SFX: scan-hummm",
+    "CAPTION: UNKNOWN RESONANCE",
+    "CAPTION: NO MATCH FOUND",
+    "THOUGHT (Mira Eggwarden): Not Nature. Not Storm. Not anything we catalogued."
+  ],
+  "storyPageNumber": 4,
+  "id": "sparks-journey-issue-002-p008",
+  "cleanArtRel": "generated/raw-art/page-008.png",
+  "letteredArtRel": "generated/lettered-pages/page-008.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-008.webp"
+}

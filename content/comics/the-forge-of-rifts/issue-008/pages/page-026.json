@@ -1,0 +1,215 @@
+{
+  "pageNumber": 26,
+  "storyPageNumber": 22,
+  "bookRole": "story",
+  "title": "Escape",
+  "storyPurpose": "Team escapes collapsing Forge via Meridian Road reverse path.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p22a",
+      "description": "Sprint across cracking floating platforms; companions leaping; Truthwing guiding reflections of safe path.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*path-gleam*",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Truthwing",
+          "readOrder": 0
+        },
+        {
+          "kind": "shout",
+          "text": "Bridge left — go!",
+          "x": 60,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p22b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes with egg and Spark; Axiom repairing a collapsing step mid-air; Cael covering rear.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I still don't deserve trust. I can still deserve your backs.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Then keep earning. Move!",
+          "x": 55,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p22c",
+      "description": "Party clears into Meridian Road tunnel as Forge mouth collapses behind — white stone dust and cyan sparks.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "GATE-SLAM",
+          "x": 65,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        },
+        {
+          "kind": "narration",
+          "text": "They escaped with light — and with questions heavier than steel.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 52,
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p22a",
+      "kind": "creature",
+      "text": "*path-gleam*",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Truthwing",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p22a",
+      "kind": "shout",
+      "text": "Bridge left — go!",
+      "x": 60,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p22b",
+      "kind": "speech",
+      "text": "I still don't deserve trust. I can still deserve your backs.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p22b",
+      "kind": "speech",
+      "text": "Then keep earning. Move!",
+      "x": 55,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p22c",
+      "kind": "narration",
+      "text": "They escaped with light — and with questions heavier than steel.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 52,
+      "readOrder": 5
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p22c",
+      "kind": "sfx",
+      "text": "GATE-SLAM",
+      "x": 65,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "axiom",
+    "truthwing",
+    "bramblefox",
+    "mossprig"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Meridian Road egress",
+    "forgePrimary": "collapsed-vented",
+    "party": "escaped"
+  },
+  "requiredMoments": [
+    22
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 22/25 — Escape. Story purpose: Team escapes collapsing Forge via Meridian Road reverse path. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p22a): Sprint across cracking floating platforms; companions leaping; Truthwing guiding reflections of safe path. Panel 2 (p22b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes with egg and Spark; Axiom repairing a collapsing step mid-air; Cael covering rear. Panel 3 (p22c): Party clears into Meridian Road tunnel as Forge mouth collapses behind — white stone dust and cyan sparks. Characters: mira-eggwarden, cael-vesper, nira-quill. Creatures: spark, axiom, truthwing, bramblefox, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Meridian Road egress\", \"forgePrimary\": \"collapsed-vented\", \"party\": \"escaped\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Seris still has hands.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Escape — The Forge of Rifts page 22",
+  "atmosphere": "ruin",
+  "transcript": [
+    "CREATURE (Truthwing): *path-gleam*",
+    "SHOUT (Nira Quill): Bridge left — go!",
+    "SPEECH (Cael Vesper): I still don't deserve trust. I can still deserve your backs.",
+    "SPEECH (Mira Eggwarden): Then keep earning. Move!",
+    "SFX: GATE-SLAM",
+    "NARRATION: They escaped with light — and with questions heavier than steel."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Truthwing): *path-gleam*",
+    "SHOUT (Nira Quill): Bridge left — go!",
+    "SPEECH (Cael Vesper): I still don't deserve trust. I can still deserve your backs.",
+    "SPEECH (Mira Eggwarden): Then keep earning. Move!",
+    "SFX: GATE-SLAM",
+    "NARRATION: They escaped with light — and with questions heavier than steel."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p026",
+  "cleanArtRel": "generated/raw-art/page-026.webp",
+  "letteredArtRel": "generated/lettered-pages/page-026.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-026.webp"
+}

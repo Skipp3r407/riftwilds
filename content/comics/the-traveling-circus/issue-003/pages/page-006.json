@@ -1,0 +1,177 @@
+{
+  "pageNumber": 6,
+  "bookRole": "story",
+  "title": "Step Right In",
+  "storyPurpose": "Team enters; Thornling distracted; Bramblefox scans; Spark watches ring leaps.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p2a",
+      "description": "Gate of painted wagons; Mira leads Spark; crowd cheers. Greeter silhouette ahead.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Stay close. Wonder first — answers second.",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 40
+        }
+      ]
+    },
+    {
+      "id": "p2b",
+      "description": "Thornling lunges toward candy-ribbon stall; Mossprig tries to block.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Thornling",
+          "text": "*WANT!*",
+          "x": 70,
+          "y": 40,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Mossprig",
+          "text": "*hold—*",
+          "x": 28,
+          "y": 55,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p2c",
+      "description": "Bramblefox ears sharp scanning masked crowd; Spark watches luminous companion leap rings of light.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Bramblefox",
+          "text": "*rrrk…*",
+          "x": 25,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*chirp awe*",
+          "x": 65,
+          "y": 35,
+          "tail": "down",
+          "readOrder": 4,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p2a",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Stay close. Wonder first — answers second.",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 40
+    },
+    {
+      "panelId": "p2b",
+      "kind": "creature",
+      "speaker": "Thornling",
+      "text": "*WANT!*",
+      "x": 70,
+      "y": 40,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p2b",
+      "kind": "creature",
+      "speaker": "Mossprig",
+      "text": "*hold—*",
+      "x": 28,
+      "y": 55,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p2c",
+      "kind": "creature",
+      "speaker": "Bramblefox",
+      "text": "*rrrk…*",
+      "x": 25,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p2c",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*chirp awe*",
+      "x": 65,
+      "y": 35,
+      "tail": "down",
+      "readOrder": 4,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling"
+  ],
+  "continuity": {
+    "thornling": {
+      "status": "food-distracted"
+    },
+    "bramblefox": {
+      "status": "scanning-masks"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 2/25 — Step Right In. Story purpose: Team enters; Thornling distracted; Bramblefox scans; Spark watches ring leaps. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Gate of painted wagons; Mira leads Spark; crowd cheers. Greeter silhouette ahead. Panel 2 (p2b): Thornling lunges toward candy-ribbon stall; Mossprig tries to block. Panel 3 (p2c): Bramblefox ears sharp scanning masked crowd; Spark watches luminous companion leap rings of light. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"thornling\":{\"status\":\"food-distracted\"},\"bramblefox\":{\"status\":\"scanning-masks\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Greeter notices Spark.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Step Right In — The Traveling Circus page 2",
+  "atmosphere": "festival",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): Stay close. Wonder first — answers second.",
+    "CREATURE (Thornling): *WANT!*",
+    "CREATURE (Mossprig): *hold—*",
+    "CREATURE (Bramblefox): *rrrk…*",
+    "CREATURE (Spark): *chirp awe*"
+  ],
+  "storyPageNumber": 2,
+  "id": "the-traveling-circus-issue-003-p006",
+  "cleanArtRel": "generated/raw-art/page-006.png",
+  "letteredArtRel": "generated/lettered-pages/page-006.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-006.webp"
+}

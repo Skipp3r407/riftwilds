@@ -1,0 +1,736 @@
+[
+  {
+    "id": "the-traveling-circus-p01",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 1,
+    "role": "front-cover",
+    "layout": "splash",
+    "title": "The Traveling Circus",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-01.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 1 of 37. Treat as interior showcase plate matching cover energy (not a second book cover with title text). Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift · Issue #3 | narration: Lantern wagons, honest raffles, and a plaza that remembers applause. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p02",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 2,
+    "role": "inside-cover",
+    "layout": "narrative",
+    "title": "Inside cover",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-02.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 2 of 37. Quiet inside-cover atmosphere: parchment light, soft Gateway glow, invitation to read. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Riftwilds Comic Publishing — original fantasy. No crypto required to read. | narration: Credits & cosmetics may unlock along the way. The story itself stays free. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p03",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 3,
+    "role": "title",
+    "layout": "narrative",
+    "title": "The Traveling Circus",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-03.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 3 of 37. Title-spread energy without painted lettering: cast gathered near the Prime Gateway. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dawn. Story beats to illustrate (do not paint this text): caption: Issue #3 | narration: The Riftling Traveling Circus rolls into Commons — performers, pet tricks, and a live world event waiting for Keepers. | Series: Plaza Crier · Spark Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p04",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 4,
+    "role": "credits",
+    "layout": "narrative",
+    "title": "Credits",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-04.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 4 of 37. Workshop / lore-desk scene: quills, rift-ink, maps — no readable credit text. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Story · Riftwilds Lore Desk | caption: Art · Commons Archive (official plates) | caption: Lettering · Publishing Engine | narration: Canon alignment: World Codex · Riftling Codex · Legends of the Rift TCG. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p05",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 5,
+    "role": "recap",
+    "layout": "narrative",
+    "title": "Previously in the Riftwilds…",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-05.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 5 of 37. Recap montage plate: Fracture tear, road, egg, Commons founding — sequential beats in panels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: rift. Story beats to illustrate (do not paint this text): narration: After Issue #2, Keepers still walk Fracture roads. Bonds deepen. Shadows listen. | caption: Present Awakening — seasonal / local events. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p06",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 6,
+    "role": "splash",
+    "layout": "splash",
+    "title": "Wagons at dusk",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-06.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 6 of 37. Story page titled conceptually: Wagons at dusk. Single full-bleed cinematic splash panel filling the page. Scene: Traveling circus lantern wagons arriving at Commons plaza. Atmosphere: festival. Story beats to illustrate (do not paint this text): narration: Lantern wagons rolled in — and the plaza remembered how to cheer. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p07",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 7,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-07.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 7 of 37. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: festival. Story beats to illustrate (do not paint this text): Plaza Crier: Step right up! No SOL in the hat — only cheers, Credits, and confetti! | sfx: BRASS FANFARE | Performer: If your Riftling wants the stage, ask. Then wait. | Keeper: Compact law even under spotlights. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p08",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 8,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-08.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 8 of 37. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Three acts. One recovered prop. Applause that counted as participation. | Plaza Crier: Play this chapter when the circus world event is live. | caption: World event → traveling_circus | sfx: confetti pop! Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p09",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 9,
+    "role": "story",
+    "layout": "lore",
+    "title": "Festival weather",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-09.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 9 of 37. Story page titled conceptually: Festival weather. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: festival. Lore motif: Festival weather — clear_festival — a Dynamic World Event weather hint. Ambient band beds, denser NPC performers, lost tickets as treasure stubs. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p10",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 10,
+    "role": "story",
+    "layout": "grid-2x2",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-10.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 10 of 37. Story page. Four-panel 2x2 grid with even gutters. Atmosphere: festival. Story beats to illustrate (do not paint this text): Kid: Again! | sfx: laughs | Spark: yip-yip! | narration: A suspiciously honest raffle paid in cosmetics. | caption: Easter egg: CIRCUS-APPLAUSE Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p11",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 11,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-11.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 11 of 37. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: festival. Story beats to illustrate (do not paint this text): Plaza Crier: Act one: ribbons that remember wind! | sfx: BRASS! | Performer: Act two: pets who choose the spotlight. | Spark: maybe… later Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p12",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 12,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-12.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 12 of 37. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: festival. Story beats to illustrate (do not paint this text): narration: Act three recovered a prop that was never for sale — applause counted as participation. | Plaza Crier: Lost tickets return as honest prizes. No SOL in the hat. | Kid: Again! | caption: World event preview: traveling_circus Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p13",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 13,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-13.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 13 of 37. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: night. Story beats to illustrate (do not paint this text): Keeper: Will the wagons stay? | Plaza Crier: While the plaza remembers cheer — and Compact. | narration: Lanterns lowered. The event key stayed warm in the ledger of Happening Now. | sfx: confetti settle… Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p14",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 14,
+    "role": "story",
+    "layout": "lore",
+    "title": "Honest raffle",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-14.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 14 of 37. Story page titled conceptually: Honest raffle. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: festival. Lore motif: Honest raffle — Circus prizes are Credits cosmetics and community cheer. Secret code CIRCUS-APPLAUSE is a local quest stub, not a server grant. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p15",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 15,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-15.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 15 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p16",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 16,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-16.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 16 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p17",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 17,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-17.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 17 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p18",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 18,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-18.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 18 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p19",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 19,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-19.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 19 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p20",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 20,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-20.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 20 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p21",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 21,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-21.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 21 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p22",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 22,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-22.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 22 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p23",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 23,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-23.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 23 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p24",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 24,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-24.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 24 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p25",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 25,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-25.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 25 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p26",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 26,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-26.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 26 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p27",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 27,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-27.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 27 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p28",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 28,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-28.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 28 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p29",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 29,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Between acts",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-29.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 29 of 37. Story page titled conceptually: Between acts. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Wagons creaked like laughter remembering its cue. | Elara Venn: No SOL in the hat — only cheers and Credits. | Keeper: Compact law even under spotlights. | sfx: distant brass Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p30",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 30,
+    "role": "end",
+    "layout": "end",
+    "title": "Issue complete",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-30.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 30 of 37. Story page titled conceptually: Issue complete. Closing story plate: warm Commons dusk scene with companions silhouetted, ceremonial feel. Atmosphere: festival. Story beats to illustrate (do not paint this text): caption: You finished Issue #3: The Traveling Circus. | narration: The Riftling Traveling Circus rolls into Commons — performers, pet tricks, and a live world event waiting for Keepers. | caption: Play this chapter → Join the Circus event Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p31",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 31,
+    "role": "end",
+    "layout": "end",
+    "title": "Shape the side-story",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-31.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 31 of 37. Story page titled conceptually: Shape the side-story. Closing story plate: warm Commons dusk scene with companions silhouetted, ceremonial feel. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Which circus side-act should return next season? | Rift acrobats: More aerial cyan ribbon acts. | Honest raffle: Focus on community prize stubs. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p32",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 32,
+    "role": "profile",
+    "layout": "narrative",
+    "title": "Keeper & Companion Profiles",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-32.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 32 of 37. Character profile plate: portraits of Elara, First Riftling, Bramblefox, Mossprig in ornate frames within the page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): Plaza Crier: Ringmaster stub — No SOL in the hat — only cheers and Credits. | Spark: Guest act — Optional cameo under Compact rules. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p33",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 33,
+    "role": "map",
+    "layout": "narrative",
+    "title": "Map of the Fracture Roads",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-33.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 33 of 37. Hand-painted fantasy map of Riftwilds Commons and Fracture roads — decorative, no tiny unreadable labels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: Paths rewrite overnight. Marked sites: Commons · Hatchery · Gateway shards · Festival lantern ring. | caption: Commons Plaza: Festival weather, lost raffle tickets, confetti. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p34",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 34,
+    "role": "ad",
+    "layout": "narrative",
+    "title": "Commons Notice Board",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-34.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 34 of 37. In-universe playful poster for Riftwilds TCG / Live World — illustrated scene, no real logos or readable ad copy. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: festival. Story beats to illustrate (do not paint this text): Crier: WAYBREAD FAIR — two loaves, one story! | caption: Fake Riftwilds ad · Visit the Hatchery Compact · Credits welcome, crypto never required for reading. | sfx: THRUMMM Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p35",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 35,
+    "role": "teaser",
+    "layout": "narrative",
+    "title": "Next issue",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-35.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 35 of 37. Next-issue teaser silhouette cliffhanger — mysterious, atmospheric. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Next: the lost city | narration: Stone remembers a sky that never learned to forget. | Archive Keeper: Tease cards in the Codex. Build the bond in Deck Atelier. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-traveling-circus-p36",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 36,
+    "role": "letters",
+    "layout": "narrative",
+    "title": "Letters from the Commons",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-36.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 36 of 37. Letters page atmosphere: Keeper mail, wax seals, egg sketches on a wooden table. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Dear Archive — My Bramblefox used Forest Bond on a scarecrow. Is that allowed? | narration: Archive replies: Bonds are for living hearts. Scarecrows get a polite leaf-pat and a comic reread. | Mossprig: *soft rustle of approval* Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-traveling-circus-p37",
+    "issueSlug": "the-traveling-circus",
+    "pageNumber": 37,
+    "role": "back-cover",
+    "layout": "splash",
+    "title": "The Traveling Circus",
+    "outputRelPath": "assets/comics/pages/the-traveling-circus/page-37.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #3 \"The Traveling Circus\" (the-traveling-circus), page 37 of 37. Back-matter closing vista of the Commons under soft riftlight. Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift #3 | narration: Official Riftwilds comic · Unlock Codex · Tease cards · Never P2W story gates. Feature cast when relevant: Plaza Crier: original Riftwilds fantasy character. Spark / Glowpup: small curious pup-like Riftling with cyan-amber glow along fur seams. Series: original Riftwilds fantasy character. Performer: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Kid: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Rift acrobats: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/03-traveling-circus.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  }
+]

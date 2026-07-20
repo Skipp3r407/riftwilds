@@ -1,0 +1,216 @@
+{
+  "pageNumber": 10,
+  "storyPageNumber": 6,
+  "bookRole": "story",
+  "title": "Star Gate",
+  "storyPurpose": "Spark activates the Star Gate; team prepares ascent.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p6a",
+      "description": "Ancient Star Gate ring on a Guardian City summit — dormant gold-white runes. Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot presses paws to the keystone; cyan-gold twin light with Nova unlocks the ring.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Spark was never only for one world.",
+          "x": 40,
+          "y": 15,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Professor Elyan Voss",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "GATE-UNLOCK",
+          "x": 70,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*bright-yip!*",
+          "x": 45,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p6b",
+      "description": "Team assembled at the Gate: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Cael, Aurelia, Nira Quill, companions including Axiom, Bramblefox, Mossprig, Thornling, Wisplet, Spirit Moth, Truthwing, Lumenhare; portal opens to orbit.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I stand with you — under watch. I will not fail a door again.",
+          "x": 25,
+          "y": 30,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        },
+        {
+          "kind": "speech",
+          "text": "I am still uneasy… but we bargain with the sky.",
+          "x": 70,
+          "y": 35,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Aurelia Voss",
+          "readOrder": 4
+        },
+        {
+          "kind": "speech",
+          "text": "Together. Consent first.",
+          "x": 50,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p6a",
+      "kind": "speech",
+      "text": "Spark was never only for one world.",
+      "x": 40,
+      "y": 15,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Professor Elyan Voss",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p6a",
+      "kind": "creature",
+      "text": "*bright-yip!*",
+      "x": 45,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p6b",
+      "kind": "speech",
+      "text": "I stand with you — under watch. I will not fail a door again.",
+      "x": 25,
+      "y": 30,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p6b",
+      "kind": "speech",
+      "text": "I am still uneasy… but we bargain with the sky.",
+      "x": 70,
+      "y": 35,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Aurelia Voss",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p6b",
+      "kind": "speech",
+      "text": "Together. Consent first.",
+      "x": 50,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p6a",
+      "kind": "sfx",
+      "text": "GATE-UNLOCK",
+      "x": 70,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss",
+    "cael-vesper",
+    "aurelia-voss",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "axiom",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth",
+    "truthwing",
+    "lumenhare",
+    "cindermink"
+  ],
+  "locations": [
+    "Star Gate",
+    "Guardian City Summit"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "starGate": "open"
+  },
+  "requiredMoments": [
+    5
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 6/25 — Star Gate. Story purpose: Spark activates the Star Gate; team prepares ascent. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p6a): Ancient Star Gate ring on a Guardian City summit — dormant gold-white runes. Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot presses paws to the keystone; cyan-gold twin light with Nova unlocks the ring. Panel 2 (p6b): Team assembled at the Gate: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Cael, Aurelia, Nira Quill, companions including Axiom, Bramblefox, Mossprig, Thornling, Wisplet, Spirit Moth, Truthwing, Lumenhare; portal opens to orbit. Characters: mira-eggwarden, elyan-voss, cael-vesper, aurelia-voss, nira-quill. Creatures: spark, nova, axiom, bramblefox, mossprig, thornling, wisplet, spirit-moth, truthwing, lumenhare, cindermink. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Shattered Star celestial sanctuary. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"starGate\": \"open\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Turn to continue.",
+  "letteringInstructions": "Standard speech + narration; tails off faces and Spark/Nova/Astra eyes; Lyra speech calm/stern.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Star Gate — The Shattered Star page 6",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Professor Elyan Voss): Spark was never only for one world.",
+    "SFX: GATE-UNLOCK",
+    "CREATURE (Spark): *bright-yip!*",
+    "SPEECH (Cael Vesper): I stand with you — under watch. I will not fail a door again.",
+    "SPEECH (Aurelia Voss): I am still uneasy… but we bargain with the sky.",
+    "SPEECH (Mira Eggwarden): Together. Consent first."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Professor Elyan Voss): Spark was never only for one world.",
+    "SFX: GATE-UNLOCK",
+    "CREATURE (Spark): *bright-yip!*",
+    "SPEECH (Cael Vesper): I stand with you — under watch. I will not fail a door again.",
+    "SPEECH (Aurelia Voss): I am still uneasy… but we bargain with the sky.",
+    "SPEECH (Mira Eggwarden): Together. Consent first."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-010.webp",
+  "id": "the-shattered-star-issue-010-p010"
+}

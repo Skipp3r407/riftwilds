@@ -1,0 +1,80 @@
+{
+  "pageNumber": 36,
+  "storyPageNumber": null,
+  "bookRole": "letters",
+  "title": "Editor's Note",
+  "storyPurpose": "Editor's Note",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ed",
+      "description": "Editor desk with mask and lantern; warm parchment light.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "EDITOR'S NOTE",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "narration",
+          "text": "Performance can be kindness or cage. This issue asks Keepers to tell the difference — and to free what was never meant to be an act.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 60
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ed",
+      "kind": "caption",
+      "text": "EDITOR'S NOTE",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "ed",
+      "kind": "narration",
+      "text": "Performance can be kindness or cage. This issue asks Keepers to tell the difference — and to free what was never meant to be an act.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 60
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book letters page for The Traveling Circus Issue #3 — Editor's Note. Editor desk with mask and lantern; warm parchment light. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Editor's Note",
+  "atmosphere": "festival",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: EDITOR'S NOTE",
+    "NARRATION: Performance can be kindness or cage. This issue asks Keepers to tell the difference — and to free what was never meant to be an act."
+  ],
+  "id": "the-traveling-circus-issue-003-p036",
+  "cleanArtRel": "generated/raw-art/page-036.png",
+  "letteredArtRel": "generated/lettered-pages/page-036.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-036.webp"
+}

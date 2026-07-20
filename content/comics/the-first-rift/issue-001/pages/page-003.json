@@ -1,0 +1,47 @@
+{
+  "pageNumber": 3,
+  "id": "the-first-rift-issue-001-p003",
+  "role": "credits",
+  "title": "Credits",
+  "layout": "narrative",
+  "atmosphere": "dusk",
+  "beat": "Credits",
+  "artPrompt": "Lore-desk workshop, no readable text. Quills, cyan rift-ink, maps of Fracture roads, amber lantern. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "Story · Riftwilds Lore Desk",
+          "x": 50,
+          "y": 25
+        },
+        {
+          "kind": "caption",
+          "text": "Art · Commons Archive plates + Grok pipeline",
+          "x": 50,
+          "y": 40
+        },
+        {
+          "kind": "caption",
+          "text": "Lettering · Issue #001 engine (flattened)",
+          "x": 50,
+          "y": 55
+        },
+        {
+          "kind": "narration",
+          "text": "Canon · World Codex · Riftling Codex · Legends of the Rift TCG",
+          "x": 50,
+          "y": 75
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-003.png",
+  "letteredArtRel": "generated/lettered/page-003.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-003.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

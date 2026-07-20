@@ -1,0 +1,193 @@
+{
+  "pageNumber": 8,
+  "storyPageNumber": 4,
+  "bookRole": "story",
+  "title": "Named Gate",
+  "storyPurpose": "Map reveals Traitor's Gate; Cael recognizes and warns about intent recording.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p4a",
+      "description": "Close on map label zone empty for lettering bake — ancient fortress between fractured regions; cyan route line.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "TRAITOR'S GATE",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "That's where the token wants us.",
+          "x": 50,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p4b",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif recognizes the mark; half-mask tilting; genuine fear mixed with guilt.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "That Gate records intent as well as name.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "It remembers who lied.",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p4c",
+      "description": "Aurelia Voss the Gilded Merchant: elegant, warm gold and deep-red market robes, ledger-chain jewelry, half-veil, calculating calm eyes gathers selective ledgers; Nira packs; Mira cradles egg; Spark steady.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I will open the road. Not the verdict.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Aurelia Voss",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p4a",
+      "kind": "speech",
+      "text": "That's where the token wants us.",
+      "x": 50,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p4b",
+      "kind": "speech",
+      "text": "That Gate records intent as well as name.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p4b",
+      "kind": "whisper",
+      "text": "It remembers who lied.",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p4c",
+      "kind": "speech",
+      "text": "I will open the road. Not the verdict.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Aurelia Voss",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p4a",
+      "kind": "caption",
+      "text": "TRAITOR'S GATE",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "aurelia-voss",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Gilded Crossroads",
+    "Traitor's Gate (map)"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "destination": "traitors-gate",
+    "cael": "warns-intent"
+  },
+  "requiredMoments": [
+    4,
+    5
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 4/25 — Named Gate. Story purpose: Map reveals Traitor's Gate; Cael recognizes and warns about intent recording. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p4a): Close on map label zone empty for lettering bake — ancient fortress between fractured regions; cyan route line. Panel 2 (p4b): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif recognizes the mark; half-mask tilting; genuine fear mixed with guilt. Panel 3 (p4c): Aurelia Voss the Gilded Merchant: elegant, warm gold and deep-red market robes, ledger-chain jewelry, half-veil, calculating calm eyes gathers selective ledgers; Nira packs; Mira cradles egg; Spark steady. Characters: mira-eggwarden, cael-vesper, aurelia-voss, nira-quill. Creatures: spark, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"destination\": \"traitors-gate\", \"cael\": \"warns-intent\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Travel under tension.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Named Gate — The Traitor's Gate page 4",
+  "atmosphere": "dusk",
+  "transcript": [
+    "CAPTION: TRAITOR'S GATE",
+    "SPEECH (Mira Eggwarden): That's where the token wants us.",
+    "SPEECH (Cael Vesper): That Gate records intent as well as name.",
+    "WHISPER (Cael Vesper): It remembers who lied.",
+    "SPEECH (Aurelia Voss): I will open the road. Not the verdict."
+  ],
+  "a11yTranscript": [
+    "CAPTION: TRAITOR'S GATE",
+    "SPEECH (Mira Eggwarden): That's where the token wants us.",
+    "SPEECH (Cael Vesper): That Gate records intent as well as name.",
+    "WHISPER (Cael Vesper): It remembers who lied.",
+    "SPEECH (Aurelia Voss): I will open the road. Not the verdict."
+  ],
+  "codexLinks": [
+    "traitors-gate"
+  ],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p008",
+  "cleanArtRel": "generated/raw-art/page-008.webp",
+  "letteredArtRel": "generated/lettered-pages/page-008.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-008.webp"
+}

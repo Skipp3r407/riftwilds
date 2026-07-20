@@ -1,0 +1,30 @@
+{
+  "factions": [
+    {
+      "id": "veiled-meridian",
+      "name": "Veiled Meridian",
+      "goal": "Buy egg, seize Spark, control routes"
+    },
+    {
+      "id": "merchant-circle",
+      "name": "Merchant Circle",
+      "leader": "Aurelia Voss",
+      "status": "uneasy-ally"
+    },
+    {
+      "id": "hatchery-compact",
+      "name": "Hatchery Compact",
+      "status": "established \u2014 condemns trafficking"
+    },
+    {
+      "id": "lanternveil-circus",
+      "name": "Lanternveil Traveling Circus",
+      "status": "ally-uneasy"
+    },
+    {
+      "id": "tempestria-crown",
+      "name": "Tempestria Crown",
+      "status": "reforming \u2014 off-page"
+    }
+  ]
+}

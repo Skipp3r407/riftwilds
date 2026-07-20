@@ -1,0 +1,18 @@
+{
+  "celestial-keepers": {
+    "name": "Celestial Keepers",
+    "summary": "Original guardians of Prime Companions; few remain; some are living memory or Star-fused."
+  },
+  "hollow-ones": {
+    "name": "Hollow Ones",
+    "summary": "Ancient consumers of Rift energy; cannot create; followed the Star through space."
+  },
+  "veiled-meridian": {
+    "name": "Veiled Meridian",
+    "note": "Background pressure; Seris not center stage"
+  },
+  "compact": {
+    "name": "Keeper Compact",
+    "note": "Mira's ethic carries to the sky"
+  }
+}

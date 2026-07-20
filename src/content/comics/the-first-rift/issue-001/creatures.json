@@ -1,0 +1,53 @@
+{
+  "creatures": [
+    {
+      "id": "bramblefox",
+      "name": "Bramblefox",
+      "ability": "Forest Bond",
+      "abilityId": "forest-bond",
+      "exists": true
+    },
+    {
+      "id": "mossprig",
+      "name": "Mossprig",
+      "ability": "Living Bulwark",
+      "abilityId": "living-bulwark",
+      "exists": true
+    },
+    {
+      "id": "thornling",
+      "name": "Thornling",
+      "ability": "Sprouting Energy",
+      "abilityId": "sprouting-energy",
+      "exists": true
+    },
+    {
+      "id": "wisplet",
+      "name": "Wisplet",
+      "ability": "Lantern Soft",
+      "abilityId": "lantern-soft",
+      "exists": true
+    },
+    {
+      "id": "emberfox",
+      "name": "Emberfox",
+      "ability": "Ashen Hide",
+      "abilityId": "ashen-hide",
+      "exists": true
+    },
+    {
+      "id": "ashwing",
+      "name": "Ashwing",
+      "ability": "Kindled Spirit",
+      "abilityId": "kindled-spirit",
+      "exists": true
+    },
+    {
+      "id": "spirit-moth",
+      "name": "Spirit Moth",
+      "ability": null,
+      "exists": "tcg-card-only",
+      "notes": "Cameo silhouette only; distinct from Citadelmoth."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "pageNumber": 5,
+  "storyPageNumber": 1,
+  "bookRole": "story",
+  "title": "Sky Breaks Open",
+  "storyPurpose": "Entire world witnesses the Broken Star descending.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p1a",
+      "description": "Full-bleed: Riftwilds night sky torn by a colossal shattered celestial body descending — white-crystal continents, gold ring architecture, emerald forests visible in the fracture; Commons rooftops and Guardian City spires far below with tiny Keepers staring upward; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes with Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot and Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species on a Forge Network overlook; aurora light washes the world.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Months after the Forge Network woke…",
+          "x": 50,
+          "y": 8,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "THE BROKEN STAR DESCENDS",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "SKY-HUMMMMM",
+          "x": 72,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "p1a",
+      "kind": "narration",
+      "text": "Months after the Forge Network woke…",
+      "x": 50,
+      "y": 8,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p1a",
+      "kind": "caption",
+      "text": "THE BROKEN STAR DESCENDS",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p1a",
+      "kind": "sfx",
+      "text": "SKY-HUMMMMM",
+      "x": 72,
+      "y": 35,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss",
+    "cael-vesper",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "axiom",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth",
+    "truthwing",
+    "lumenhare",
+    "cindermink"
+  ],
+  "locations": [
+    "Commons",
+    "Guardian Cities",
+    "Sky"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "star": "descending",
+    "witness": "world"
+  },
+  "requiredMoments": [
+    1
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 1/25 — Sky Breaks Open. Story purpose: Entire world witnesses the Broken Star descending. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-bleed: Riftwilds night sky torn by a colossal shattered celestial body descending — white-crystal continents, gold ring architecture, emerald forests visible in the fracture; Commons rooftops and Guardian City spires far below with tiny Keepers staring upward; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes with Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot and Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species on a Forge Network overlook; aurora light washes the world. Characters: mira-eggwarden, elyan-voss, cael-vesper, aurelia-voss. Creatures: spark, nova, axiom, bramblefox, mossprig, thornling, wisplet, spirit-moth, truthwing, lumenhare, cindermink. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Riftwilds sky above Guardian Cities. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"star\": \"descending\", \"witness\": \"world\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Guardian Cities answer.",
+  "letteringInstructions": "Standard speech + narration; tails off faces and Spark/Nova/Astra eyes; Lyra speech calm/stern.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Sky Breaks Open — The Shattered Star page 1",
+  "atmosphere": "night",
+  "transcript": [
+    "NARRATION: Months after the Forge Network woke…",
+    "CAPTION: THE BROKEN STAR DESCENDS",
+    "SFX: SKY-HUMMMMM"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Months after the Forge Network woke…",
+    "CAPTION: THE BROKEN STAR DESCENDS",
+    "SFX: SKY-HUMMMMM"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-005.webp",
+  "id": "the-shattered-star-issue-010-p005"
+}

@@ -1,0 +1,82 @@
+{
+  "pageNumber": 34,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Ability Spotlight — Memory Trace",
+  "storyPurpose": "Ability Spotlight — Memory Trace",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ability",
+      "description": "Ability spotlight art: Echoquill recording a Guardian strike as teal memory ribbon; empty rules text zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "ABILITY — MEMORY TRACE",
+          "x": 50,
+          "y": 14,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "When an enemy ability is used, record it once per round. Knowledge is a second shield.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ability",
+      "kind": "caption",
+      "text": "ABILITY — MEMORY TRACE",
+      "x": 50,
+      "y": 14,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "ability",
+      "kind": "narration",
+      "text": "When an enemy ability is used, record it once per round. Knowledge is a second shield.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [
+    "echoquill"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Lost City Issue #4 — Ability Spotlight — Memory Trace. Ability spotlight art: Echoquill recording a Guardian strike as teal memory ribbon; empty rules text zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ability Spotlight — Memory Trace",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: ABILITY — MEMORY TRACE",
+    "NARRATION: When an enemy ability is used, record it once per round. Knowledge is a second shield."
+  ],
+  "id": "the-lost-city-issue-004-p034",
+  "cleanArtRel": "generated/raw-art/page-034.webp",
+  "letteredArtRel": "generated/lettered-pages/page-034.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-034.webp"
+}

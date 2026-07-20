@@ -1,0 +1,72 @@
+{
+  "mira-eggwarden": {
+    "name": "Mira Eggwarden",
+    "role": "Keeper POV",
+    "canon": true
+  },
+  "high-keeper-lyra": {
+    "name": "High Keeper Lyra",
+    "role": "Celestial Keepers leader",
+    "new": true
+  },
+  "elyan-voss": {
+    "name": "Professor Elyan Voss",
+    "role": "Riftwright — alive, retired/hopeful advisor",
+    "canon": true,
+    "statusAfterIssue9": "alive-retired-hopeful"
+  },
+  "cael-vesper": {
+    "name": "Cael Vesper",
+    "role": "Lanternmaster — supervised ally (not fully trusted, fighting beside Compact)",
+    "canon": true,
+    "statusAfterIssue9": "supervised-ally"
+  },
+  "aurelia-voss": {
+    "name": "Aurelia Voss",
+    "role": "Gilded Merchant — uneasy ally",
+    "canon": true,
+    "statusAfterIssue9": "uneasy-ally"
+  },
+  "nira-quill": {
+    "name": "Nira Quill",
+    "role": "Hunter ally",
+    "canon": true,
+    "statusAfterIssue9": "ally"
+  },
+  "oathwarden-seraph": {
+    "name": "Oathwarden Seraph",
+    "role": "Gate guardian support",
+    "canon": true
+  },
+  "last-guardian": {
+    "name": "Last Guardian",
+    "role": "Awakened construct",
+    "canon": true
+  },
+  "arkan": {
+    "name": "Chief Engineer Arkan",
+    "role": "Echo / memory only — Issue #8 sacrifice",
+    "dialogue": false,
+    "presence": "echo-only"
+  },
+  "seris-vale": {
+    "name": "Seris Vale",
+    "role": "Ascendant Commander — defeated in Issue #9",
+    "statusAfterIssue9": "defeated",
+    "onPage": false,
+    "note": "Older-enemy / protocol manipulator older than Meridian remains unsolved mystery"
+  },
+  "elara-venn": {
+    "name": "Elara Venn",
+    "role": "Vision/echo only",
+    "dialogue": false
+  },
+  "rejected": {
+    "cal-reed": "NOT_CANON"
+  },
+  "hollow-king": {
+    "name": "Hollow King",
+    "role": "Cliffhanger only — Issue #11",
+    "revealed": "eye-only"
+  }
+}

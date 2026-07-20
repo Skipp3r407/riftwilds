@@ -1,0 +1,212 @@
+{
+  "pageNumber": 28,
+  "storyPageNumber": 24,
+  "bookRole": "story",
+  "title": "The Riftwright",
+  "storyPurpose": "Riftwright title revealed; Aurelia withholds full identity.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p24a",
+      "description": "Archive vault opening post-battle: First Rift architect plate — title THE RIFTRIGHT glowing; face and name redacted with teal seal.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "THE RIFTRIGHT",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "The architect of the First Rift did not act alone.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p24b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes reaching for unsealed name; Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains hand stopping her.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Who were they?",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "A title first. A name when you've paid more doors.",
+          "x": 60,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 42,
+          "speaker": "Aurelia Voss",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p24c",
+      "description": "Dormant egg safe in Compact wrap; Cindermink free at Mira's feet; Cael watching from shadow.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "This egg is not property. Neither is Cindermink.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        },
+        {
+          "kind": "creature",
+          "text": "*grateful-chuff*",
+          "x": 55,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Cindermink",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p24b",
+      "kind": "speech",
+      "text": "Who were they?",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p24b",
+      "kind": "speech",
+      "text": "A title first. A name when you've paid more doors.",
+      "x": 60,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 42,
+      "speaker": "Aurelia Voss",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p24c",
+      "kind": "speech",
+      "text": "This egg is not property. Neither is Cindermink.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p24c",
+      "kind": "creature",
+      "text": "*grateful-chuff*",
+      "x": 55,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Cindermink",
+      "readOrder": 5
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p24a",
+      "kind": "caption",
+      "text": "THE RIFTRIGHT",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p24a",
+      "kind": "narration",
+      "text": "The architect of the First Rift did not act alone.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "aurelia-voss",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "cindermink"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "archive vault",
+    "riftwright": "title-revealed-withheld"
+  },
+  "requiredMoments": [
+    34,
+    35
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 24/25 — The Riftwright. Story purpose: Riftwright title revealed; Aurelia withholds full identity. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p24a): Archive vault opening post-battle: First Rift architect plate — title THE RIFTRIGHT glowing; face and name redacted with teal seal. Panel 2 (p24b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes reaching for unsealed name; Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains hand stopping her. Panel 3 (p24c): Dormant egg safe in Compact wrap; Cindermink free at Mira's feet; Cael watching from shadow. Characters: mira-eggwarden, aurelia-voss, cael-vesper. Creatures: spark, cindermink. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"archive vault\", \"riftwright\": \"title-revealed-withheld\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "A message in the dark.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Riftwright — The Merchant's Secret page 24",
+  "atmosphere": "market",
+  "transcript": [
+    "CAPTION: THE RIFTRIGHT",
+    "NARRATION: The architect of the First Rift did not act alone.",
+    "SPEECH (Mira Eggwarden): Who were they?",
+    "SPEECH (Aurelia Voss): A title first. A name when you've paid more doors.",
+    "SPEECH (Mira Eggwarden): This egg is not property. Neither is Cindermink.",
+    "CREATURE (Cindermink): *grateful-chuff*"
+  ],
+  "a11yTranscript": [
+    "CAPTION: THE RIFTRIGHT",
+    "NARRATION: The architect of the First Rift did not act alone.",
+    "SPEECH (Mira Eggwarden): Who were they?",
+    "SPEECH (Aurelia Voss): A title first. A name when you've paid more doors.",
+    "SPEECH (Mira Eggwarden): This egg is not property. Neither is Cindermink.",
+    "CREATURE (Cindermink): *grateful-chuff*"
+  ],
+  "codexLinks": [
+    "riftwright"
+  ],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p028",
+  "cleanArtRel": "generated/raw-art/page-028.webp",
+  "letteredArtRel": "generated/lettered-pages/page-028.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-028.webp"
+}

@@ -1,0 +1,218 @@
+{
+  "pageNumber": 28,
+  "storyPageNumber": 24,
+  "bookRole": "story",
+  "title": "Ledger of Doors",
+  "storyPurpose": "Aftermath: Vaelor steps from absolute control; Thundervane free but weak; Seris escapes with royal trade ledger.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p24a",
+      "description": "King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade seated on lower steps (not throne), crown set aside; Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion resting free of armor chains; Mira and Spark nearby.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I remain king. I will not remain a wall.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*grateful-rumble*",
+          "x": 60,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Thundervane",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p24b",
+      "description": "Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal fleeing through storm tunnel with ornate royal trade ledger glowing faint cyan seals; Lost City component still on belt.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "If the peak fails, the market opens.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Seris Vale",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "boot-dash",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p24c",
+      "description": "Echoquill projecting faint map of merchant-route seals from ledger residue; Cael frowning.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*archive-lock*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Echoquill",
+          "readOrder": 4
+        },
+        {
+          "kind": "speech",
+          "text": "Those routes don't sell goods. They sell access.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 38,
+          "speaker": "Cael Vesper",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p24a",
+      "kind": "speech",
+      "text": "I remain king. I will not remain a wall.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p24a",
+      "kind": "creature",
+      "text": "*grateful-rumble*",
+      "x": 60,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Thundervane",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p24b",
+      "kind": "speech",
+      "text": "If the peak fails, the market opens.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Seris Vale",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p24c",
+      "kind": "creature",
+      "text": "*archive-lock*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Echoquill",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p24c",
+      "kind": "speech",
+      "text": "Those routes don't sell goods. They sell access.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 38,
+      "speaker": "Cael Vesper",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p24b",
+      "kind": "sfx",
+      "text": "boot-dash",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "vaelor-tempest",
+    "seris-vale",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane",
+    "echoquill"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [
+    "royal-trade-ledger",
+    "lost-city-rift-component"
+  ],
+  "continuity": {
+    "location": "citadel aftermath",
+    "vaelor": "shared-rule",
+    "seris": "escaped-with-ledger"
+  },
+  "requiredMoments": [
+    23,
+    24
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 24/25 — Ledger of Doors. Story purpose: Aftermath: Vaelor steps from absolute control; Thundervane free but weak; Seris escapes with royal trade ledger. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p24a): King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade seated on lower steps (not throne), crown set aside; Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion resting free of armor chains; Mira and Spark nearby. Panel 2 (p24b): Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal fleeing through storm tunnel with ornate royal trade ledger glowing faint cyan seals; Lost City component still on belt. Panel 3 (p24c): Echoquill projecting faint map of merchant-route seals from ledger residue; Cael frowning. Characters: mira-eggwarden, vaelor-tempest, seris-vale, cael-vesper. Creatures: spark, thundervane, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"citadel aftermath\", \"vaelor\": \"shared-rule\", \"seris\": \"escaped-with-ledger\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Merchant cliffhanger.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ledger of Doors — The Storm King page 24",
+  "atmosphere": "dusk",
+  "transcript": [
+    "SPEECH (King Vaelor Tempest): I remain king. I will not remain a wall.",
+    "CREATURE (Thundervane): *grateful-rumble*",
+    "SPEECH (Seris Vale): If the peak fails, the market opens.",
+    "SFX: boot-dash",
+    "CREATURE (Echoquill): *archive-lock*",
+    "SPEECH (Cael Vesper): Those routes don't sell goods. They sell access."
+  ],
+  "a11yTranscript": [
+    "SPEECH (King Vaelor Tempest): I remain king. I will not remain a wall.",
+    "CREATURE (Thundervane): *grateful-rumble*",
+    "SPEECH (Seris Vale): If the peak fails, the market opens.",
+    "SFX: boot-dash",
+    "CREATURE (Echoquill): *archive-lock*",
+    "SPEECH (Cael Vesper): Those routes don't sell goods. They sell access."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p028",
+  "cleanArtRel": "generated/raw-art/page-028.webp",
+  "letteredArtRel": "generated/lettered-pages/page-028.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-028.webp"
+}

@@ -1,0 +1,112 @@
+{
+  "track": [
+    {
+      "page": 1,
+      "star": "descending",
+      "witness": "world"
+    },
+    {
+      "page": 2,
+      "guardianCities": "broadcast"
+    },
+    {
+      "page": 3,
+      "starIdentity": "celestial-sanctuary"
+    },
+    {
+      "page": 4,
+      "engines": "emergency"
+    },
+    {
+      "page": 5,
+      "nova": "recognizes-star"
+    },
+    {
+      "page": 6,
+      "starGate": "open"
+    },
+    {
+      "page": 7,
+      "location": "orbit"
+    },
+    {
+      "page": 8,
+      "arrivedVisual": true
+    },
+    {
+      "page": 9,
+      "docked": true
+    },
+    {
+      "page": 10,
+      "lyraNearby": true
+    },
+    {
+      "page": 11,
+      "lyra": "met",
+      "distrust": true
+    },
+    {
+      "page": 12,
+      "primes": "sleeping-thousands"
+    },
+    {
+      "page": 13,
+      "history": "star-left-for-primes",
+      "sparkPurpose": "reconnect"
+    },
+    {
+      "page": 14,
+      "hollowOnes": "arrived"
+    },
+    {
+      "page": 15,
+      "alarms": true,
+      "astra": "deployed"
+    },
+    {
+      "page": 16,
+      "primes": "awakening"
+    },
+    {
+      "page": 17,
+      "starEngine": "synchronizing"
+    },
+    {
+      "page": 18,
+      "battle": "climax-left"
+    },
+    {
+      "page": 19,
+      "battle": "climax-right",
+      "star": "beginning-to-move"
+    },
+    {
+      "page": 20,
+      "lyra": "accepts-keeper",
+      "star": "moving"
+    },
+    {
+      "page": 21,
+      "archives": "unlocked"
+    },
+    {
+      "page": 22,
+      "galaxyMap": "unlocked"
+    },
+    {
+      "page": 23,
+      "aftermath": "quiet"
+    },
+    {
+      "page": 24,
+      "hollowKing": "watching"
+    },
+    {
+      "page": 25,
+      "cliffhanger": "hollow-king-eye",
+      "next": "the-hollow-king"
+    }
+  ],
+  "hatchedCompanion": "Nova"
+}

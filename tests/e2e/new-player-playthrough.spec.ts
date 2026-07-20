@@ -1,25 +1,17 @@
 import { test, expect } from "@playwright/test";
 
 /**
- * New-player Live World playthrough smoke.
- * Full Phaser keyboard quest automation is limited in headless CI;
- * this covers the enterable path and UI surfaces that must work.
+ * New-player path smoke — Live World is Coming Soon until public launch.
+ * Phaser enter stays covered by unit/dev-preview tests when flags flip.
  */
 test.describe("New player playthrough", () => {
-  test("landing → Live World enter CTA → world shell mounts", async ({ page }) => {
+  test("landing → Live World Coming Soon gate", async ({ page }) => {
     await page.goto("/");
     await expect(page.locator("body")).toBeVisible();
 
     await page.goto("/live-world");
-    const enter = page.getByRole("button", { name: /ENTER THE LIVE WORLD/i });
-    await expect(enter).toBeVisible({ timeout: 30_000 });
-    await enter.click();
-
-    // Loading / ready HUD should appear (status or canvas host)
-    await expect(page.locator("section.panel").first()).toBeVisible();
-    await expect(page.getByRole("button", { name: /Exit world/i })).toBeVisible({
-      timeout: 45_000,
-    });
+    await expect(page.getByText(/Coming Soon/i).first()).toBeVisible({ timeout: 30_000 });
+    await expect(page.getByRole("link", { name: /Rift Battle/i }).first()).toBeVisible();
   });
 
   test("hatchery demo path remains available (no SOL)", async ({ page }) => {

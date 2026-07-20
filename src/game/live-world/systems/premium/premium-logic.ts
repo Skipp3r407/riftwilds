@@ -36,23 +36,31 @@ export function hash2(col: number, row: number, salt = 0): number {
 }
 
 function pickGrass(col: number, row: number): TerrainKey {
-  const h = hash2(col, row, 3);
-  // Bias toward lush / flowered meadow (cozy pixel RPG outdoors)
-  if (h < 0.16) return "grass-flowers-blue";
-  if (h < 0.32) return "grass-flowers-white";
-  if (h < 0.42) return "grass-fern";
-  if (h < 0.58) return "grass-dense";
-  if (h < 0.88) return "grass-lush";
+  // Soft meadow patches (4×4) so grass reads hand-painted, not speckled tiles.
+  const pc = Math.floor(col / 4);
+  const pr = Math.floor(row / 4);
+  const h = hash2(pc, pr, 3);
+  // Sparse flower accents only at patch edges / rare cells
+  const detail = hash2(col, row, 37);
+  if (detail > 0.94) {
+    return detail > 0.97 ? "grass-flowers-blue" : "grass-flowers-white";
+  }
+  if (h < 0.12) return "grass-fern";
+  if (h < 0.28) return "grass-dense";
+  if (h < 0.78) return "grass-lush";
   return "grass-master";
 }
 
 function pickPath(col: number, row: number): TerrainKey {
-  const h = hash2(col, row, 5);
-  if (h < 0.2) return "path-worn";
-  if (h < 0.4) return "path-rocky";
-  if (h < 0.55) return "path-curve";
+  // Longer road runs share material for readable variation
+  const pc = Math.floor(col / 3);
+  const pr = Math.floor(row / 3);
+  const h = hash2(pc, pr, 5);
+  if (h < 0.18) return "path-worn";
+  if (h < 0.36) return "path-rocky";
+  if (h < 0.52) return "path-curve";
   if (h < 0.7) return "path-to-stone";
-  if (h < 0.85) return "path-bloom";
+  if (h < 0.86) return "path-bloom";
   return "path-master";
 }
 

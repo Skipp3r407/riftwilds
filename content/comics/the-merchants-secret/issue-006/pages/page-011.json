@@ -1,0 +1,162 @@
+{
+  "pageNumber": 11,
+  "storyPageNumber": 7,
+  "bookRole": "story",
+  "title": "Key for a Buyer",
+  "storyPurpose": "Private deal — Aurelia offers key to illegal buyer location.",
+  "layout": {
+    "type": "two-stack",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains sliding teal Rift glass key across lacquer table; Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract verifying seal.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I will give you the buyer's location. Not the buyer.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Aurelia Voss",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "And your price?",
+          "x": 35,
+          "y": 65,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p7b",
+      "description": "Mira and Nira exchanging glances; Cael watching the key like a confession.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "One favor. Unspecified. Compact-word.",
+          "x": 55,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Aurelia Voss",
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "Unspecified favors built this market.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p7a",
+      "kind": "speech",
+      "text": "I will give you the buyer's location. Not the buyer.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Aurelia Voss",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p7a",
+      "kind": "speech",
+      "text": "And your price?",
+      "x": 35,
+      "y": 65,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p7b",
+      "kind": "speech",
+      "text": "One favor. Unspecified. Compact-word.",
+      "x": 55,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Aurelia Voss",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p7b",
+      "kind": "whisper",
+      "text": "Unspecified favors built this market.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "aurelia-voss",
+    "nira-quill"
+  ],
+  "creatures": [
+    "lockjaw-wisp"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [
+    "merchant-key"
+  ],
+  "continuity": {
+    "location": "private deal chamber",
+    "deal": "key-for-favor"
+  },
+  "requiredMoments": [
+    13
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 7/25 — Key for a Buyer. Story purpose: Private deal — Aurelia offers key to illegal buyer location. Layout: two-stack. 2 panels with clear inked gutters. Panel 1 (p7a): Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains sliding teal Rift glass key across lacquer table; Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract verifying seal. Panel 2 (p7b): Mira and Nira exchanging glances; Cael watching the key like a confession. Characters: mira-eggwarden, cael-vesper, aurelia-voss, nira-quill. Creatures: lockjaw-wisp. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"private deal chamber\", \"deal\": \"key-for-favor\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Debate profit and preservation.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Key for a Buyer — The Merchant's Secret page 7",
+  "atmosphere": "market",
+  "transcript": [
+    "SPEECH (Aurelia Voss): I will give you the buyer's location. Not the buyer.",
+    "SPEECH (Mira Eggwarden): And your price?",
+    "SPEECH (Aurelia Voss): One favor. Unspecified. Compact-word.",
+    "WHISPER (Nira Quill): Unspecified favors built this market."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Aurelia Voss): I will give you the buyer's location. Not the buyer.",
+    "SPEECH (Mira Eggwarden): And your price?",
+    "SPEECH (Aurelia Voss): One favor. Unspecified. Compact-word.",
+    "WHISPER (Nira Quill): Unspecified favors built this market."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p011",
+  "cleanArtRel": "generated/raw-art/page-011.webp",
+  "letteredArtRel": "generated/lettered-pages/page-011.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-011.webp"
+}

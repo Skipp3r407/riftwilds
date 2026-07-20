@@ -1,0 +1,80 @@
+{
+  "pageNumber": 35,
+  "storyPageNumber": null,
+  "bookRole": "map",
+  "title": "World Map — Sanctum to Circus to Lost City",
+  "storyPurpose": "World Map — Sanctum to Circus to Lost City",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "map",
+      "description": "Stylized map: Commons, Shellward Sanctum, Lanternveil Circus route, Lost City pulse pin.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "THRESHOLD ROUTES",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "narration",
+          "text": "Where the crystal slept. Where lanterns roll. Where the Guardian stirs.",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 55
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "map",
+      "kind": "caption",
+      "text": "THRESHOLD ROUTES",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "map",
+      "kind": "narration",
+      "text": "Where the crystal slept. Where lanterns roll. Where the Guardian stirs.",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 55
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book map page for The Traveling Circus Issue #3 — World Map — Sanctum to Circus to Lost City. Stylized map: Commons, Shellward Sanctum, Lanternveil Circus route, Lost City pulse pin. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "World Map — Sanctum to Circus to Lost City",
+  "atmosphere": "festival",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: THRESHOLD ROUTES",
+    "NARRATION: Where the crystal slept. Where lanterns roll. Where the Guardian stirs."
+  ],
+  "id": "the-traveling-circus-issue-003-p035",
+  "cleanArtRel": "generated/raw-art/page-035.png",
+  "letteredArtRel": "generated/lettered-pages/page-035.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-035.webp"
+}

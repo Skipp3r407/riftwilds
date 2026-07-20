@@ -1,0 +1,116 @@
+{
+  "pageNumber": 28,
+  "bookRole": "story",
+  "title": "Map of Thresholds",
+  "storyPurpose": "Secret map: Commons, sanctuary, circus, Lost City; pulse under Lost City.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p24a",
+      "description": "Lanternmaster opens secret map: Commons, Shellward Sanctum, Lanternveil Circus, Lost City. Soft pulse under Lost City marker. Mira, Spark, Lumenhare watch.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "COMMONS · SANCTUM · CIRCUS · LOST CITY",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 65
+        },
+        {
+          "kind": "sfx",
+          "text": "pulse…pulse…",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "speech",
+          "speaker": "Lanternmaster",
+          "text": "The road remembers where hearts still sleep.",
+          "x": 40,
+          "y": 80,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 40
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p24a",
+      "kind": "speech",
+      "speaker": "Lanternmaster",
+      "text": "The road remembers where hearts still sleep.",
+      "x": 40,
+      "y": 80,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 40
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p24a",
+      "kind": "caption",
+      "text": "COMMONS · SANCTUM · CIRCUS · LOST CITY",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 65
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p24a",
+      "kind": "sfx",
+      "text": "pulse…pulse…",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "lanternmaster"
+  ],
+  "creatures": [
+    "spark",
+    "lumenhare"
+  ],
+  "continuity": {
+    "map": "lost-city-route",
+    "lostCity": {
+      "pulse": "beginning"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 24/25 — Map of Thresholds. Story purpose: Secret map: Commons, sanctuary, circus, Lost City; pulse under Lost City. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p24a): Lanternmaster opens secret map: Commons, Shellward Sanctum, Lanternveil Circus, Lost City. Soft pulse under Lost City marker. Mira, Spark, Lumenhare watch. Characters: mira-eggwarden, lanternmaster. Creatures: spark, lumenhare. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"map\":\"lost-city-route\",\"lostCity\":{\"pulse\":\"beginning\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Cliffhanger Guardian.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Map of Thresholds — The Traveling Circus page 24",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: COMMONS · SANCTUM · CIRCUS · LOST CITY",
+    "SFX: pulse…pulse…",
+    "SPEECH (Lanternmaster): The road remembers where hearts still sleep."
+  ],
+  "storyPageNumber": 24,
+  "id": "the-traveling-circus-issue-003-p028",
+  "cleanArtRel": "generated/raw-art/page-028.png",
+  "letteredArtRel": "generated/lettered-pages/page-028.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-028.webp"
+}

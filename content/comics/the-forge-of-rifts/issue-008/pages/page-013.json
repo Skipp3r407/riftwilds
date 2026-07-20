@@ -1,0 +1,158 @@
+{
+  "pageNumber": 13,
+  "storyPageNumber": 9,
+  "bookRole": "story",
+  "title": "Incubator Alpha",
+  "storyPurpose": "Team finds Companion Incubator Alpha — origin of Resonance Keepers / Spark's line.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p9a",
+      "description": "Vast incubation chamber: circular rings of empty pods, central cradle etched with Last Light / Resonance motifs, dormant egg's glow answering the cradle. Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark, companions small against scale. Empty caption zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "COMPANION INCUBATOR ALPHA",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Here, protectors were grown — not soldiers.",
+          "x": 50,
+          "y": 22,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*home-ache-chirp*",
+          "x": 42,
+          "y": 60,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "This is where your kind began… to keep, not to obey.",
+          "x": 58,
+          "y": 78,
+          "tail": "up",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p9a",
+      "kind": "creature",
+      "text": "*home-ache-chirp*",
+      "x": 42,
+      "y": 60,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p9a",
+      "kind": "speech",
+      "text": "This is where your kind began… to keep, not to obey.",
+      "x": 58,
+      "y": 78,
+      "tail": "up",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p9a",
+      "kind": "caption",
+      "text": "COMPANION INCUBATOR ALPHA",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p9a",
+      "kind": "narration",
+      "text": "Here, protectors were grown — not soldiers.",
+      "x": 50,
+      "y": 22,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth"
+  ],
+  "locations": [
+    "Companion Incubator Alpha"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Companion Incubator Alpha",
+    "spark": "lineage-recognition",
+    "egg": "cradle-sync"
+  },
+  "requiredMoments": [
+    8
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 9/25 — Incubator Alpha. Story purpose: Team finds Companion Incubator Alpha — origin of Resonance Keepers / Spark's line. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p9a): Vast incubation chamber: circular rings of empty pods, central cradle etched with Last Light / Resonance motifs, dormant egg's glow answering the cradle. Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark, companions small against scale. Empty caption zones. Characters: mira-eggwarden, nira-quill. Creatures: spark, bramblefox, mossprig, thornling, wisplet, spirit-moth. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Companion Incubator Alpha\", \"spark\": \"lineage-recognition\", \"egg\": \"cradle-sync\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Someone still lives here.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Incubator Alpha — The Forge of Rifts page 9",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: COMPANION INCUBATOR ALPHA",
+    "NARRATION: Here, protectors were grown — not soldiers.",
+    "CREATURE (Spark): *home-ache-chirp*",
+    "SPEECH (Mira Eggwarden): This is where your kind began… to keep, not to obey."
+  ],
+  "a11yTranscript": [
+    "CAPTION: COMPANION INCUBATOR ALPHA",
+    "NARRATION: Here, protectors were grown — not soldiers.",
+    "CREATURE (Spark): *home-ache-chirp*",
+    "SPEECH (Mira Eggwarden): This is where your kind began… to keep, not to obey."
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "spark"
+  ],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p013",
+  "cleanArtRel": "generated/raw-art/page-013.webp",
+  "letteredArtRel": "generated/lettered-pages/page-013.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-013.webp"
+}

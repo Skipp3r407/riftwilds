@@ -21,13 +21,16 @@
 
 ```bash
 npm run tcg:assets:publish
+npm run tcg:assets:habitats
 ```
 
-1. Copies existing clean source (pet thumb / subject / face) into the target folder.
-2. Writes path index — never mutates `cards.json` combat numbers.
-3. UI prefers clean art; MasterCardTemplate composes stats dynamically.
+1. `tcg:assets:publish` copies existing clean source (pet thumb / subject / face) into the target folder when art is missing.
+2. `tcg:assets:habitats` composites Codex habitat plates (`/assets/habitats/{region}.webp`) behind creature portraits into `art.webp` / `thumb.webp` for every `riftlingSlug` card family — matches Riftling Codex environments.
+3. Writes path index — never mutates `cards.json` combat numbers.
+4. UI prefers clean art; MasterCardTemplate composes stats dynamically.
 
 ## Rules
 
 - Never rasterize ATK/HP into `art.webp`.
+- Creature scenic backgrounds should reuse Codex habitat plates via `card.regionId` (not element→region alone).
 - Founder / foil / champion finishes are cosmetic-only.

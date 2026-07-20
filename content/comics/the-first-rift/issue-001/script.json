@@ -1,0 +1,391 @@
+{
+  "issueSlug": "the-first-rift",
+  "issueNumber": 1,
+  "storyTitle": "THE PULSE BELOW",
+  "themes": [
+    "loyalty",
+    "responsibility",
+    "ancient betrayal"
+  ],
+  "pageCount": 32,
+  "storyPageCount": 25,
+  "pages": [
+    {
+      "pageNumber": 1,
+      "role": "front-cover",
+      "title": "The First Rift",
+      "beat": "The First Rift",
+      "transcript": [
+        "CAPTION: LEGENDS OF THE RIFT",
+        "CAPTION: THE FIRST RIFT",
+        "NARRATION: When the Prime broke, a courier chose to keep."
+      ]
+    },
+    {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "title": "Inside front",
+      "beat": "Inside front",
+      "transcript": [
+        "CAPTION: Riftwilds Comic Publishing — original fantasy. No crypto required to read.",
+        "NARRATION: Credits & cosmetics may unlock along the way. The story itself stays free."
+      ]
+    },
+    {
+      "pageNumber": 3,
+      "role": "credits",
+      "title": "Credits",
+      "beat": "Credits",
+      "transcript": [
+        "CAPTION: Story · Riftwilds Lore Desk",
+        "CAPTION: Art · Commons Archive plates + Grok pipeline",
+        "CAPTION: Lettering · Issue #001 engine (flattened)",
+        "NARRATION: Canon · World Codex · Riftling Codex · Legends of the Rift TCG"
+      ]
+    },
+    {
+      "pageNumber": 4,
+      "role": "title",
+      "title": "THE PULSE BELOW",
+      "beat": "THE PULSE BELOW",
+      "transcript": [
+        "CAPTION: LEGENDS OF THE RIFT · ISSUE #001",
+        "CAPTION: THE PULSE BELOW",
+        "NARRATION: A present-day Keeper touches an ancient tear — and the First Rift answers."
+      ]
+    },
+    {
+      "pageNumber": 5,
+      "role": "story",
+      "title": null,
+      "beat": "Present — Mira feels the pulse under Commons cobbles",
+      "transcript": [
+        "NARRATION: Riftwild Commons. Dusk. The cobbles remember a scream the town pretends was weather.",
+        "SPEECH (Mira Eggwarden): That's not a cart. That's a pulse.",
+        "THOUGHT (Mira Eggwarden): Compact law says invite. It doesn't say ignore the floor when it answers.",
+        "SFX: THRUMMM"
+      ]
+    },
+    {
+      "pageNumber": 6,
+      "role": "story",
+      "title": null,
+      "beat": "Unstable ancient Rift at Commons fringe",
+      "transcript": [
+        "NARRATION: Beyond the last honest lamp, the fringe still argues with the Fracture.",
+        "SPEECH (Mira Eggwarden): You're not on any survey map. Good. Maps lie when roads rewrite.",
+        "SFX: RIFT-HUMMM"
+      ]
+    },
+    {
+      "pageNumber": 7,
+      "role": "story",
+      "title": null,
+      "beat": "Vision seizure — pulled into First Rift memory",
+      "transcript": [
+        "SFX: FWOOOM",
+        "SPEECH (Mira Eggwarden): —wait—!",
+        "NARRATION: The tear does not ask permission.",
+        "CAPTION: VISION — AGE OF FIRST EGGS",
+        "WHISPER (Unknown): Keep…"
+      ]
+    },
+    {
+      "pageNumber": 8,
+      "role": "story",
+      "title": null,
+      "beat": "Elara on Fracture road with egg",
+      "transcript": [
+        "NARRATION: Nine days before the Commons had a name.",
+        "SPEECH (Elara Venn): The egg is warm. That is enough to keep walking.",
+        "SPEECH (Stranger): Take the crown road — safer.",
+        "SPEECH (Elara Venn): Safer for whom?"
+      ]
+    },
+    {
+      "pageNumber": 9,
+      "role": "story",
+      "title": null,
+      "beat": "Waybread — keep not own",
+      "transcript": [
+        "NARRATION: She shared waybread with a child who had lost a name.",
+        "SPEECH (Elara Venn): Call the creature yours to keep — not yours to own.",
+        "CAPTION: CODEX ECHO — Waybread on the First Night",
+        "SFX: SHELL-SONG"
+      ]
+    },
+    {
+      "pageNumber": 10,
+      "role": "story",
+      "title": null,
+      "beat": "Gateway Hearts fragment",
+      "transcript": [
+        "NARRATION: Hearts were living cores. Stones are travel shards.",
+        "CAPTION: The Commons Riftstone is a fragment of the Prime — maps of places not yet found."
+      ]
+    },
+    {
+      "pageNumber": 11,
+      "role": "story",
+      "title": null,
+      "beat": "Riftstone claims mud — founding gathering",
+      "transcript": [
+        "NARRATION: Farmers, healers, and Keepers gathered where stable paths still intersected.",
+        "SFX: KRRRAAAK"
+      ]
+    },
+    {
+      "pageNumber": 12,
+      "role": "story",
+      "title": null,
+      "beat": "Hatch — First Riftling",
+      "transcript": [
+        "SPEECH (Child): Is it… looking at me?",
+        "SPEECH (Elara Venn): It is remembering the world. Help it stay gentle.",
+        "SFX: HATCH—!",
+        "NARRATION: The Soft Exodus had closed into eggs. Battle culture would come later.",
+        "SPEECH (Village elder): What do we call you?",
+        "SPEECH (Elara Venn): Courier. Keeper, if the egg agrees.",
+        "THOUGHT (First Riftling): …keep…",
+        "CAPTION: FIRST-LIGHT-01"
+      ]
+    },
+    {
+      "pageNumber": 13,
+      "role": "story",
+      "title": null,
+      "beat": "Bramblefox — Forest Bond",
+      "transcript": [
+        "NARRATION: When Bramblefox chooses a Keeper, the grove answers with green thread — Forest Bond, not a leash.",
+        "CREATURE (Bramblefox): *vine-hum…*",
+        "SFX: LEAF-SNAP",
+        "MAGIC (Grove): Bond accepted — roots remember both names.",
+        "WHISPER (Elara Venn): Softly. Bonds break when shouted at.",
+        "SHOUT (Village kid): It glowed!",
+        "SPEECH (Elara Venn): It agreed. That is rarer than glowing."
+      ]
+    },
+    {
+      "pageNumber": 14,
+      "role": "story",
+      "title": null,
+      "beat": "Mossprig — Living Bulwark",
+      "transcript": [
+        "NARRATION: Mossprig does not charge first. It becomes the wall the egg deserves.",
+        "SFX: WHUMP",
+        "SPEECH (Elara Venn): Thank you for choosing the cradle over the chase.",
+        "CREATURE (Mossprig): *soft moss-settle*"
+      ]
+    },
+    {
+      "pageNumber": 15,
+      "role": "story",
+      "title": null,
+      "beat": "Thornling — Sprouting Energy",
+      "transcript": [
+        "NARRATION: Thornling's answer is growth with teeth — Sprouting Energy to trip cruelty, not crown it.",
+        "SFX: CRACKLE-VASH",
+        "SPEECH (Scavenger): Just a shell—!",
+        "SHOUT (Elara Venn): It is a promise!",
+        "CREATURE (Thornling): *root-snap*"
+      ]
+    },
+    {
+      "pageNumber": 16,
+      "role": "story",
+      "title": null,
+      "beat": "Wisplet — Lantern Soft",
+      "transcript": [
+        "NARRATION: Wisplet does not blind the dark. It teaches the dark where feet may land.",
+        "SPEECH (Elara Venn): Stay with us, little light. The Compact starts with honesty — even to fog.",
+        "SFX: soft lantern whoosh"
+      ]
+    },
+    {
+      "pageNumber": 17,
+      "role": "story",
+      "title": null,
+      "beat": "Emberfox Ashen Hide + Ashwing Kindled Spirit",
+      "transcript": [
+        "NARRATION: Heat that guards. Fire that listens.",
+        "CREATURE (Emberfox): *ash-ruff*",
+        "CREATURE (Ashwing): *cinder-cry*",
+        "SPEECH (Elara Venn): None of you are weapons. You are the reason weapons can wait."
+      ]
+    },
+    {
+      "pageNumber": 18,
+      "role": "story",
+      "title": null,
+      "beat": "Clash — protect the egg",
+      "transcript": [
+        "SFX: LEAF-SNAP",
+        "SFX: WHUMP",
+        "SFX: FWOOOM",
+        "SPEECH (Elara Venn): Hold the cradle!",
+        "NARRATION: Loyalty is a formation."
+      ]
+    },
+    {
+      "pageNumber": 19,
+      "role": "story",
+      "title": null,
+      "beat": "Aftermath — Compact spoken before ink",
+      "transcript": [
+        "NARRATION: Mud took bootprints. The Riftstone took names.",
+        "SPEECH (Healer): We can raise walls. Or we can raise Keepers.",
+        "SPEECH (Elara Venn): Raise Keepers who know which wall is a cradle.",
+        "SFX: soft dawn wind"
+      ]
+    },
+    {
+      "pageNumber": 20,
+      "role": "story",
+      "title": null,
+      "beat": "Fear allowed — force is not",
+      "transcript": [
+        "SPEECH (Child): Will the egg leave if I am scared?",
+        "SPEECH (Elara Venn): Fear is allowed. Force is not.",
+        "NARRATION: That was the first Compact law — spoken before ink existed.",
+        "THOUGHT (First Riftling): …stay…"
+      ]
+    },
+    {
+      "pageNumber": 21,
+      "role": "story",
+      "title": null,
+      "beat": "Fracture roads rearrange",
+      "transcript": [
+        "NARRATION: On the seventh night the Fracture roads rearranged again.",
+        "SPEECH (Scout): East gate is west. West gate is… soup.",
+        "SPEECH (Elara Venn): Then we walk by warmth, not by map.",
+        "THOUGHT (First Riftling): …warm…",
+        "CAPTION: Codex stub — Fracture roads",
+        "SFX: path rewrite… hum"
+      ]
+    },
+    {
+      "pageNumber": 22,
+      "role": "story",
+      "title": null,
+      "beat": "Crown-shard refused",
+      "transcript": [
+        "NARRATION: A stranger offered a crown-shard for the egg — bright, legal-looking, wrong.",
+        "SPEECH (Crown courier): Name a price. The realm will keep it safer than mud.",
+        "SPEECH (Elara Venn): If safety needs a price, it is already theft.",
+        "SFX: shard reject — clink"
+      ]
+    },
+    {
+      "pageNumber": 23,
+      "role": "story",
+      "title": null,
+      "beat": "Something listens beyond the tear",
+      "transcript": [
+        "NARRATION: Beyond the tear, something practiced patience.",
+        "TELEPATHY (Beyond): …who keeps the invitation…",
+        "CAPTION: SECOND PULSE"
+      ]
+    },
+    {
+      "pageNumber": 24,
+      "role": "story",
+      "title": null,
+      "beat": "Mira jolts between vision and present",
+      "transcript": [
+        "SPEECH (Elara Venn): If you are listening from later — do not sell the story's consent.",
+        "SHOUT (Mira Eggwarden): I'm here— I'm here—!",
+        "NARRATION: The vision loosens. The pulse does not."
+      ]
+    },
+    {
+      "pageNumber": 25,
+      "role": "story",
+      "title": null,
+      "beat": "Present — Mira finds carved deliberate mark",
+      "transcript": [
+        "NARRATION: Under the moss: a mark that was not weather.",
+        "SPEECH (Mira Eggwarden): Someone opened this on purpose.",
+        "THOUGHT (Mira Eggwarden): Elara kept an egg. Who kept the knife?"
+      ]
+    },
+    {
+      "pageNumber": 26,
+      "role": "story",
+      "title": null,
+      "beat": "Loyalty / responsibility — Mira chooses Compact",
+      "transcript": [
+        "NARRATION: Responsibility is not a crown. It is a walk you finish.",
+        "SPEECH (Mira Eggwarden): Hatchery Compact still holds. Invite. Wait. Tell the truth about the tear.",
+        "CAPTION: Theme — loyalty · responsibility · ancient betrayal",
+        "SPEECH (Mira Eggwarden): I will not make the egg pay for someone else's curiosity."
+      ]
+    },
+    {
+      "pageNumber": 27,
+      "role": "story",
+      "title": null,
+      "beat": "Cliffhanger — First Rift was deliberate",
+      "transcript": [
+        "NARRATION: The First Rift was not an accident.",
+        "CAPTION: CLIFFHANGER",
+        "TELEPATHY (Beyond): We opened a door. You only named a town.",
+        "SFX: SECOND-PULSE"
+      ]
+    },
+    {
+      "pageNumber": 28,
+      "role": "story",
+      "title": null,
+      "beat": "Spirit Moth cameo + Mira reports",
+      "transcript": [
+        "NARRATION: A pale moth drifts the lamp-line — archive weather, not a weapon.",
+        "CAPTION: Spirit Moth — cameo (TCG silhouette)",
+        "SPEECH (Mira Eggwarden): Log it. Unstable ancient Rift. Deliberate tooling. Vision confirmed Elara's road.",
+        "WHISPER (Mira Eggwarden): And something still listening."
+      ]
+    },
+    {
+      "pageNumber": 29,
+      "role": "story",
+      "title": null,
+      "beat": "End splash — egg / pulse / next road",
+      "transcript": [
+        "NARRATION: The Commons keeps its name. The pulse keeps its secret.",
+        "SPEECH (Mira Eggwarden): I'm still inviting. Don't make me regret waiting.",
+        "CAPTION: END OF ISSUE #001 — THE PULSE BELOW"
+      ]
+    },
+    {
+      "pageNumber": 30,
+      "role": "teaser",
+      "title": "Next: Spark's Journey",
+      "beat": "Next: Spark's Journey",
+      "transcript": [
+        "CAPTION: NEXT ISSUE",
+        "CAPTION: SPARK'S JOURNEY",
+        "NARRATION: A Glowpup learns the road between hatchery and heart."
+      ]
+    },
+    {
+      "pageNumber": 31,
+      "role": "inside-back",
+      "title": "Inside back",
+      "beat": "Inside back",
+      "transcript": [
+        "CAPTION: LETTERS FROM THE COMMONS",
+        "NARRATION: Write the Lore Desk. Keep invitations honest."
+      ]
+    },
+    {
+      "pageNumber": 32,
+      "role": "back-cover",
+      "title": "Back cover",
+      "beat": "Back cover",
+      "transcript": [
+        "CAPTION: LEGENDS OF THE RIFT",
+        "NARRATION: Play the chapter in Live World when you are ready."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "updatedAt": "2026-07-20T15:12:04.059Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "1": {
+      "pageNumber": 1,
+      "role": "front-cover",
+      "title": "The Lost City — Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-001.webp",
+      "error": null
+    },
+    "2": {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "title": "Inside Front Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-002.webp",
+      "error": null
+    },
+    "3": {
+      "pageNumber": 3,
+      "role": "credits",
+      "title": "Credits",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-003.webp",
+      "error": null
+    },
+    "4": {
+      "pageNumber": 4,
+      "role": "title",
+      "title": "Chapter Four — The Lost City",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-004.webp",
+      "error": null
+    },
+    "5": {
+      "pageNumber": 5,
+      "role": "story",
+      "title": "City That Memory Kept",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-005.webp",
+      "error": null
+    },
+    "6": {
+      "pageNumber": 6,
+      "role": "story",
+      "title": "No Expedition Returned",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-006.webp",
+      "error": null
+    },
+    "7": {
+      "pageNumber": 7,
+      "role": "story",
+      "title": "The Gate That Knew a Name",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-007.webp",
+      "error": null
+    },
+    "8": {
+      "pageNumber": 8,
+      "role": "story",
+      "title": "Left Behind Mid-Step",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-008.webp",
+      "error": null
+    },
+    "9": {
+      "pageNumber": 9,
+      "role": "story",
+      "title": "Thornling's Mistake",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-009.webp",
+      "error": null
+    },
+    "10": {
+      "pageNumber": 10,
+      "role": "story",
+      "title": "Streets That Float",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-010.webp",
+      "error": null
+    },
+    "11": {
+      "pageNumber": 11,
+      "role": "story",
+      "title": "Wisplet Opens the Past",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-011.webp",
+      "error": null
+    },
+    "12": {
+      "pageNumber": 12,
+      "role": "story",
+      "title": "Keepers Before the Tear",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-012.webp",
+      "error": null
+    },
+    "13": {
+      "pageNumber": 13,
+      "role": "story",
+      "title": "Empty Nest Rows",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-013.webp",
+      "error": null
+    },
+    "14": {
+      "pageNumber": 14,
+      "role": "story",
+      "title": "Resonance Keepers",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-014.webp",
+      "error": null
+    },
+    "15": {
+      "pageNumber": 15,
+      "role": "story",
+      "title": "Not a Tool",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-015.webp",
+      "error": null
+    },
+    "16": {
+      "pageNumber": 16,
+      "role": "story",
+      "title": "Lanterns and Admissions",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-016.webp",
+      "error": null
+    },
+    "17": {
+      "pageNumber": 17,
+      "role": "story",
+      "title": "Stolen Seals",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-017.webp",
+      "error": null
+    },
+    "18": {
+      "pageNumber": 18,
+      "role": "story",
+      "title": "The Last Guardian Rises",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-018.webp",
+      "error": null
+    },
+    "19": {
+      "pageNumber": 19,
+      "role": "story",
+      "title": "Scan: Stolen Stabilizer",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-019.webp",
+      "error": null
+    },
+    "20": {
+      "pageNumber": 20,
+      "role": "story",
+      "title": "Partial Override",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-020.webp",
+      "error": null
+    },
+    "21": {
+      "pageNumber": 21,
+      "role": "story",
+      "title": "Living Bulwark",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-021.webp",
+      "error": null
+    },
+    "22": {
+      "pageNumber": 22,
+      "role": "story",
+      "title": "Plaza War Map",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-022.webp",
+      "error": null
+    },
+    "23": {
+      "pageNumber": 23,
+      "role": "story",
+      "title": "Joints, Not Heart",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-023.webp",
+      "error": null
+    },
+    "24": {
+      "pageNumber": 24,
+      "role": "story",
+      "title": "The Hunter Cuts the Wire",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-024.webp",
+      "error": null
+    },
+    "25": {
+      "pageNumber": 25,
+      "role": "story",
+      "title": "Chosen Contact",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-025.webp",
+      "error": null
+    },
+    "26": {
+      "pageNumber": 26,
+      "role": "story",
+      "title": "The Day Relief Never Came",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-026.webp",
+      "error": null
+    },
+    "27": {
+      "pageNumber": 27,
+      "role": "story",
+      "title": "Last Light of the Resonance Line",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-027.webp",
+      "error": null
+    },
+    "28": {
+      "pageNumber": 28,
+      "role": "story",
+      "title": "Engines Still Sleeping",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-028.webp",
+      "error": null
+    },
+    "29": {
+      "pageNumber": 29,
+      "role": "story",
+      "title": "A King Who Never Surrendered",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-029.webp",
+      "error": null
+    },
+    "30": {
+      "pageNumber": 30,
+      "role": "teaser",
+      "title": "Next Issue — The Storm King",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-030.webp",
+      "error": null
+    },
+    "31": {
+      "pageNumber": 31,
+      "role": "profile",
+      "title": "Character Profile — The Last Guardian",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-031.webp",
+      "error": null
+    },
+    "32": {
+      "pageNumber": 32,
+      "role": "profile",
+      "title": "Companion Profile — Echoquill",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-032.webp",
+      "error": null
+    },
+    "33": {
+      "pageNumber": 33,
+      "role": "lore",
+      "title": "Codex — Aureth Vale",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-033.webp",
+      "error": null
+    },
+    "34": {
+      "pageNumber": 34,
+      "role": "lore",
+      "title": "Ability Spotlight — Memory Trace",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-034.webp",
+      "error": null
+    },
+    "35": {
+      "pageNumber": 35,
+      "role": "map",
+      "title": "World Map — Commons to Storm Peaks",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-035.webp",
+      "error": null
+    },
+    "36": {
+      "pageNumber": 36,
+      "role": "letters",
+      "title": "Editor's Note — Memory & Duty",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-036.webp",
+      "error": null
+    },
+    "37": {
+      "pageNumber": 37,
+      "role": "inside-cover",
+      "title": "Inside Back Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-037.webp",
+      "error": null
+    },
+    "38": {
+      "pageNumber": 38,
+      "role": "back-cover",
+      "title": "Back Cover — Storm Signal",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-lost-city/issue-004/pages/page-038.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 38,
+    "letterOk": 38,
+    "grokOk": 0,
+    "proceduralOk": 38,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-004/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-004/generate-and-letter.mjs --force"
+  }
+}

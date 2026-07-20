@@ -1,0 +1,131 @@
+{
+  "pageNumber": 26,
+  "storyPageNumber": 22,
+  "bookRole": "story",
+  "title": "Bazaar Shifts",
+  "storyPurpose": "Portal engine overload; entire bazaar relocates.",
+  "layout": {
+    "type": "splash-inset",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p22a",
+      "description": "Portal engine core overloading — teal rings spinning; entire Gilded Crossroads lurching along old Rift route; stalls sliding; lanterns streaming; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal and royal trade ledger thrown; team braced.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "When the engine breaks schedule, the market breaks geography.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "SHIFT-ROOOAR",
+          "x": 55,
+          "y": 45,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "shout",
+          "text": "You moved my exit!",
+          "x": 70,
+          "y": 70,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Seris Vale",
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p22a",
+      "kind": "shout",
+      "text": "You moved my exit!",
+      "x": 70,
+      "y": 70,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Seris Vale",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p22a",
+      "kind": "narration",
+      "text": "When the engine breaks schedule, the market breaks geography.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p22a",
+      "kind": "sfx",
+      "text": "SHIFT-ROOOAR",
+      "x": 55,
+      "y": 45,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [
+    "portal-engine"
+  ],
+  "continuity": {
+    "location": "portal engine core",
+    "bazaar": "shifting"
+  },
+  "requiredMoments": [
+    32,
+    33
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 22/25 — Bazaar Shifts. Story purpose: Portal engine overload; entire bazaar relocates. Layout: splash-inset. 1 panels with clear inked gutters. Panel 1 (p22a): Portal engine core overloading — teal rings spinning; entire Gilded Crossroads lurching along old Rift route; stalls sliding; lanterns streaming; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal and royal trade ledger thrown; team braced. Characters: mira-eggwarden, seris-vale, aurelia-voss. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"portal engine core\", \"bazaar\": \"shifting\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Stabilize or lose everything.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Bazaar Shifts — The Merchant's Secret page 22",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: When the engine breaks schedule, the market breaks geography.",
+    "SFX: SHIFT-ROOOAR",
+    "SHOUT (Seris Vale): You moved my exit!"
+  ],
+  "a11yTranscript": [
+    "NARRATION: When the engine breaks schedule, the market breaks geography.",
+    "SFX: SHIFT-ROOOAR",
+    "SHOUT (Seris Vale): You moved my exit!"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p026",
+  "cleanArtRel": "generated/raw-art/page-026.webp",
+  "letteredArtRel": "generated/lettered-pages/page-026.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-026.webp"
+}

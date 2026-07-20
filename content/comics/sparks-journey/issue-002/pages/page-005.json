@@ -1,0 +1,132 @@
+{
+  "pageNumber": 5,
+  "bookRole": "story",
+  "title": "The Pulse Did Not End",
+  "storyPurpose": "Dawn aftermath; Mira with cracked pulse-egg; hatch begins.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p1a",
+      "description": "Full-page splash: dawn over Riftwild Commons hatchery fringe after Issue #1's Second Pulse night. Mira Eggwarden (practical hatchery robes, egg-care satchel) sits cradling the pulse-egg with soft cyan-gold glow — the invitation she refused to abandon. Bramblefox rests nearby. Visible new crack spidering across shell. Space for top caption.",
+      "camera": "wide heroic dawn",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The storm ended before sunrise. The pulse did not.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 70
+        },
+        {
+          "kind": "sfx",
+          "text": "shell-song…",
+          "x": 58,
+          "y": 48,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "whisper",
+          "speaker": "Mira Eggwarden",
+          "text": "Stay with me. Quiet now.",
+          "x": 35,
+          "y": 78,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p1a",
+      "kind": "whisper",
+      "speaker": "Mira Eggwarden",
+      "text": "Stay with me. Quiet now.",
+      "x": 35,
+      "y": 78,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p1a",
+      "kind": "narration",
+      "text": "The storm ended before sunrise. The pulse did not.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 70
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p1a",
+      "kind": "sfx",
+      "text": "shell-song…",
+      "x": 58,
+      "y": 48,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "bramblefox"
+  ],
+  "continuity": {
+    "spark": {
+      "form": "egg",
+      "emotion": "stirring",
+      "glow": "rising cyan-gold",
+      "crackLevel": 2
+    },
+    "keeper": {
+      "name": "Mira Eggwarden",
+      "clothing": "practical hatchery travel coat over Compact robes",
+      "injuries": []
+    },
+    "bramblefox": {
+      "injuries": [
+        "front-leg scrape",
+        "torn ear tip"
+      ],
+      "status": "guarding"
+    },
+    "time": "dawn",
+    "weather": "post-storm clear",
+    "location": "Commons fringe clearing"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 1/25 — The Pulse Did Not End. Story purpose: Dawn aftermath; Mira with cracked pulse-egg; hatch begins. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-page splash: dawn over Riftwild Commons hatchery fringe after Issue #1's Second Pulse night. Mira Eggwarden (practical hatchery robes, egg-care satchel) sits cradling the pulse-egg with soft cyan-gold glow — the invitation she refused to abandon. Bramblefox rests nearby. Visible new crack spidering across shell. Space for top caption. Characters: mira-eggwarden. Creatures: bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: first light through residual aurora haze. Continuity: {\"spark\":{\"form\":\"egg\",\"emotion\":\"stirring\",\"glow\":\"rising cyan-gold\",\"crackLevel\":2},\"keeper\":{\"name\":\"Mira Eggwarden\",\"clothing\":\"practical hatchery travel coat over Compact robes\",\"injuries\":[]},\"bramblefox\":{\"injuries\":[\"front-leg scrape\",\"torn ear tip\"],\"status\":\"guarding\"},\"time\":\"dawn\",\"weather\":\"post-storm clear\",\"location\":\"Commons fringe clearing\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Egg cracks open.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Pulse Did Not End — Spark's Journey page 1",
+  "atmosphere": "dawn",
+  "transcript": [
+    "NARRATION: The storm ended before sunrise. The pulse did not.",
+    "SFX: shell-song…",
+    "WHISPER (Mira Eggwarden): Stay with me. Quiet now."
+  ],
+  "storyPageNumber": 1,
+  "id": "sparks-journey-issue-002-p005",
+  "cleanArtRel": "generated/raw-art/page-005.png",
+  "letteredArtRel": "generated/lettered-pages/page-005.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-005.webp"
+}

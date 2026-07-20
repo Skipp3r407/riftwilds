@@ -1,0 +1,15 @@
+{
+  "twin-engines": {
+    "name": "Twin Engines",
+    "status": "cradle-mode-stabilized"
+  },
+  "lost-city-component": {
+    "name": "Lost City command component",
+    "status": "shattered-inert"
+  },
+  "memory-crystal-archive": {
+    "name": "Memory crystal archive",
+    "status": "partially-restored",
+    "mystery": "Older-than-Meridian signature remains blacked out"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "pageNumber": 19,
+  "storyPageNumber": 15,
+  "bookRole": "story",
+  "title": "Roads and Lanterns",
+  "storyPurpose": "Aurelia (uneasy ally) seals routes; Cael supervised ally holds lantern logistics — NOT a traitor reset.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p15a",
+      "description": "Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye — uneasy ally; distant kin surname to Elyan, shocked recognition optional and Lockjaw Wisp seal portal roads so Meridian reinforcements can't flood in — uneasy ally, selective trust.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Closed Contract — no more doors for conquerors.",
+          "x": 45,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Aurelia Voss",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p15b",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished coordinates lantern lines — supervised ally from Issues #7–#8; redemption unfinished; no new betrayal.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I don't ask forgiveness. I ask for useful light.",
+          "x": 50,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p15c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes: Compact justice, not exile — supervised trust continues.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Useful light is a start.",
+          "x": 50,
+          "y": 82,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "lockjaw-wisp",
+    "spark",
+    "nova"
+  ],
+  "locations": [
+    "Second Forge portal rings"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "cael": "supervised-ally-not-retraitor",
+    "aurelia": "uneasy-ally",
+    "routes": "sealed"
+  },
+  "requiredMoments": [
+    15
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 15/25 — Roads and Lanterns. Story purpose: Aurelia (uneasy ally) seals routes; Cael supervised ally holds lantern logistics — NOT a traitor reset. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p15a): Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye — uneasy ally; distant kin surname to Elyan, shocked recognition optional and Lockjaw Wisp seal portal roads so Meridian reinforcements can't flood in — uneasy ally, selective trust. Panel 2 (p15b): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished coordinates lantern lines — supervised ally from Issues #7–#8; redemption unfinished; no new betrayal. Panel 3 (p15c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes: Compact justice, not exile — supervised trust continues. Characters: mira-eggwarden, cael-vesper, aurelia-voss. Creatures: lockjaw-wisp, spark, nova. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Second Forge portal rings. Atmosphere: dusk. Continuity: {\"cael\": \"supervised-ally-not-retraitor\", \"aurelia\": \"uneasy-ally\", \"routes\": \"sealed\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Massive battle begins.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Roads and Lanterns — The Riftwright page 19",
+  "atmosphere": "dusk",
+  "transcript": [
+    "SPEECH (Aurelia Voss): Closed Contract — no more doors for conquerors.",
+    "SPEECH (Cael Vesper): I don't ask forgiveness. I ask for useful light.",
+    "SPEECH (Mira Eggwarden): Useful light is a start."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Aurelia Voss): Closed Contract — no more doors for conquerors.",
+    "SPEECH (Cael Vesper): I don't ask forgiveness. I ask for useful light.",
+    "SPEECH (Mira Eggwarden): Useful light is a start."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p019",
+  "cleanArtRel": "generated/raw-art/page-019.webp",
+  "letteredArtRel": "generated/lettered-pages/page-019.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-019.webp"
+}

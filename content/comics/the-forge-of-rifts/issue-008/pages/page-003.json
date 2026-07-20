@@ -1,0 +1,109 @@
+{
+  "pageNumber": 3,
+  "storyPageNumber": null,
+  "bookRole": "credits",
+  "title": "Credits",
+  "storyPurpose": "Credits",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "cr",
+      "description": "Credits plate: workshop desk with Forge tools, blueprints (blank), Spark motif, Compact lantern; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes silhouette at window of underground light.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "THE FORGE OF RIFTS",
+          "x": 50,
+          "y": 14,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Story · Continuity · Lettering · Art Direction — Riftwilds Studio Pipeline. Keeper: Mira Eggwarden. Cal Reed is not canon.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "ORIGINAL RIFTWILDS IP",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "cr",
+      "kind": "caption",
+      "text": "THE FORGE OF RIFTS",
+      "x": 50,
+      "y": 14,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "cr",
+      "kind": "narration",
+      "text": "Story · Continuity · Lettering · Art Direction — Riftwilds Studio Pipeline. Keeper: Mira Eggwarden. Cal Reed is not canon.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    },
+    {
+      "panelId": "cr",
+      "kind": "caption",
+      "text": "ORIGINAL RIFTWILDS IP",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book credits page for The Forge of Rifts Issue #8 — Credits. Credits plate: workshop desk with Forge tools, blueprints (blank), Spark motif, Compact lantern; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes silhouette at window of underground light. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Credits",
+  "atmosphere": "ruin",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: THE FORGE OF RIFTS",
+    "NARRATION: Story · Continuity · Lettering · Art Direction — Riftwilds Studio Pipeline. Keeper: Mira Eggwarden. Cal Reed is not canon.",
+    "CAPTION: ORIGINAL RIFTWILDS IP"
+  ],
+  "a11yTranscript": [
+    "CAPTION: THE FORGE OF RIFTS",
+    "NARRATION: Story · Continuity · Lettering · Art Direction — Riftwilds Studio Pipeline. Keeper: Mira Eggwarden. Cal Reed is not canon.",
+    "CAPTION: ORIGINAL RIFTWILDS IP"
+  ],
+  "id": "the-forge-of-rifts-issue-008-p003",
+  "cleanArtRel": "generated/raw-art/page-003.webp",
+  "letteredArtRel": "generated/lettered-pages/page-003.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-003.webp"
+}

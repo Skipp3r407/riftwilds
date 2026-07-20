@@ -1,0 +1,35 @@
+{
+  "pageNumber": 10,
+  "id": "the-first-rift-issue-001-p010",
+  "role": "story",
+  "title": null,
+  "layout": "lore",
+  "atmosphere": "rift",
+  "beat": "Gateway Hearts fragment",
+  "artPrompt": "Lore plate comic page, no text. Living Gateway Heart crystal-core in ancient sandstone ruins; soft cyan pulse; moss and earth dominant. Room at bottom for caption box. No painted words. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Hearts were living cores. Stones are travel shards.",
+          "x": 50,
+          "y": 18
+        },
+        {
+          "kind": "caption",
+          "text": "The Commons Riftstone is a fragment of the Prime — maps of places not yet found.",
+          "x": 50,
+          "y": 78
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-010.png",
+  "letteredArtRel": "generated/lettered/page-010.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-010.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

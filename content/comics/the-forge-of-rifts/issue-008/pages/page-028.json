@@ -1,0 +1,159 @@
+{
+  "pageNumber": 28,
+  "storyPageNumber": 24,
+  "bookRole": "story",
+  "title": "Second Forge",
+  "storyPurpose": "Reveal another hidden Forge exists under another continent.",
+  "layout": {
+    "type": "two-stack",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p24a",
+      "description": "Party in quiet Meridian Road alcove; Axiom projects a map hologram from residual matrix — two Forge glyphs on different continents.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*map-projection*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "There's another one.",
+          "x": 55,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p24b",
+      "description": "Wide map vision: primary Forge cooling wreck; second Forge pulsing awake far away under alien coastline; egg sync-pulse.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Deep beneath another continent, a second Forge listened.",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "If Meridian has the blueprint… they'll find it first.",
+          "x": 50,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 44,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p24a",
+      "kind": "creature",
+      "text": "*map-projection*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Axiom",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p24a",
+      "kind": "speech",
+      "text": "There's another one.",
+      "x": 55,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p24b",
+      "kind": "whisper",
+      "text": "If Meridian has the blueprint… they'll find it first.",
+      "x": 50,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 44,
+      "speaker": "Cael Vesper",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p24b",
+      "kind": "narration",
+      "text": "Deep beneath another continent, a second Forge listened.",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "axiom"
+  ],
+  "locations": [
+    "Second Forge (distant)"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Meridian Road alcove",
+    "secondForge": "revealed-exists"
+  },
+  "requiredMoments": [
+    24
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 24/25 — Second Forge. Story purpose: Reveal another hidden Forge exists under another continent. Layout: two-stack. 2 panels with clear inked gutters. Panel 1 (p24a): Party in quiet Meridian Road alcove; Axiom projects a map hologram from residual matrix — two Forge glyphs on different continents. Panel 2 (p24b): Wide map vision: primary Forge cooling wreck; second Forge pulsing awake far away under alien coastline; egg sync-pulse. Characters: mira-eggwarden, cael-vesper. Creatures: spark, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Meridian Road alcove\", \"secondForge\": \"revealed-exists\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Someone is already there.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Second Forge — The Forge of Rifts page 24",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Axiom): *map-projection*",
+    "SPEECH (Mira Eggwarden): There's another one.",
+    "NARRATION: Deep beneath another continent, a second Forge listened.",
+    "WHISPER (Cael Vesper): If Meridian has the blueprint… they'll find it first."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Axiom): *map-projection*",
+    "SPEECH (Mira Eggwarden): There's another one.",
+    "NARRATION: Deep beneath another continent, a second Forge listened.",
+    "WHISPER (Cael Vesper): If Meridian has the blueprint… they'll find it first."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p028",
+  "cleanArtRel": "generated/raw-art/page-028.webp",
+  "letteredArtRel": "generated/lettered-pages/page-028.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-028.webp"
+}

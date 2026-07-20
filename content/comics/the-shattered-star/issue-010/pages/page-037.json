@@ -1,0 +1,108 @@
+{
+  "pageNumber": 37,
+  "storyPageNumber": null,
+  "bookRole": "letters",
+  "title": "Editor's Note — Bigger Sky, Same Heart",
+  "storyPurpose": "Editor's Note — Bigger Sky, Same Heart",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "editor",
+      "description": "Warm editor desk motif with miniature Star model and Compact lantern; empty letter zone.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "EDITOR'S NOTE",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "We expand beyond a single planet without losing the emotional focus: a Keeper, her companions, and the choice to protect rather than consume. Volume Two is bigger — the heart stays Mira's.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 65,
+          "readOrder": 1
+        },
+        {
+          "kind": "narration",
+          "text": "Elara Venn remains vision and founding echo only. Cal Reed is not canon.",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "editor",
+      "kind": "caption",
+      "text": "EDITOR'S NOTE",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 0
+    },
+    {
+      "panelId": "editor",
+      "kind": "narration",
+      "text": "We expand beyond a single planet without losing the emotional focus: a Keeper, her companions, and the choice to protect rather than consume. Volume Two is bigger — the heart stays Mira's.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 65,
+      "readOrder": 1
+    },
+    {
+      "panelId": "editor",
+      "kind": "narration",
+      "text": "Elara Venn remains vision and founding echo only. Cal Reed is not canon.",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book letters page for The Shattered Star Issue #10 Volume Two — Editor's Note — Bigger Sky, Same Heart. Warm editor desk motif with miniature Star model and Compact lantern; empty letter zone. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Lyra: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Continue.",
+  "letteringInstructions": "Matter lettering; clear hierarchy.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Editor's Note — Bigger Sky, Same Heart",
+  "atmosphere": "celestial",
+  "transcript": [
+    "CAPTION: EDITOR'S NOTE",
+    "NARRATION: We expand beyond a single planet without losing the emotional focus: a Keeper, her companions, and the choice to protect rather than consume. Volume Two is bigger — the heart stays Mira's.",
+    "NARRATION: Elara Venn remains vision and founding echo only. Cal Reed is not canon."
+  ],
+  "a11yTranscript": [
+    "CAPTION: EDITOR'S NOTE",
+    "NARRATION: We expand beyond a single planet without losing the emotional focus: a Keeper, her companions, and the choice to protect rather than consume. Volume Two is bigger — the heart stays Mira's.",
+    "NARRATION: Elara Venn remains vision and founding echo only. Cal Reed is not canon."
+  ],
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-037.webp",
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "id": "the-shattered-star-issue-010-p037"
+}

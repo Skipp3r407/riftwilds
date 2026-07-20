@@ -1,0 +1,217 @@
+{
+  "pageNumber": 21,
+  "storyPageNumber": 17,
+  "bookRole": "story",
+  "title": "Bidding and Cry",
+  "storyPurpose": "Frenzied bidding; captive cry from pens below.",
+  "layout": {
+    "type": "four-grid",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p17a",
+      "description": "Paddle frenzy — gold numbers flashing in empty zones; Seris smiling.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Bid for the unhatched door!",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Auctioneer",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p17b",
+      "description": "Cut below: Cindermink and captives crying out as guards tighten pens.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*chain-rattle*",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Cindermink",
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "captive-CRY",
+          "x": 65,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p17c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes breaking cover stance; Spark trembling.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "They bid on one cage while others scream.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p17d",
+      "description": "Nira cutting a restraint sigil on gallery rail — small sabotage.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Then we break both.",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 4
+        },
+        {
+          "kind": "sfx",
+          "text": "sigil-SNAP",
+          "x": 70,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p17a",
+      "kind": "speech",
+      "text": "Bid for the unhatched door!",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Auctioneer",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p17b",
+      "kind": "creature",
+      "text": "*chain-rattle*",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Cindermink",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p17c",
+      "kind": "speech",
+      "text": "They bid on one cage while others scream.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p17d",
+      "kind": "speech",
+      "text": "Then we break both.",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p17b",
+      "kind": "sfx",
+      "text": "captive-CRY",
+      "x": 65,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    },
+    {
+      "panelId": "p17d",
+      "kind": "sfx",
+      "text": "sigil-SNAP",
+      "x": 70,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 5
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark",
+    "cindermink"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "auction floor / pens below",
+    "bidding": "active",
+    "cry": "captives"
+  },
+  "requiredMoments": [
+    27,
+    28
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 17/25 — Bidding and Cry. Story purpose: Frenzied bidding; captive cry from pens below. Layout: four-grid. 4 panels with clear inked gutters. Panel 1 (p17a): Paddle frenzy — gold numbers flashing in empty zones; Seris smiling. Panel 2 (p17b): Cut below: Cindermink and captives crying out as guards tighten pens. Panel 3 (p17c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes breaking cover stance; Spark trembling. Panel 4 (p17d): Nira cutting a restraint sigil on gallery rail — small sabotage. Characters: mira-eggwarden, nira-quill, seris-vale. Creatures: spark, cindermink. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"auction floor / pens below\", \"bidding\": \"active\", \"cry\": \"captives\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Spark cannot hide.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Bidding and Cry — The Merchant's Secret page 17",
+  "atmosphere": "market",
+  "transcript": [
+    "SPEECH (Auctioneer): Bid for the unhatched door!",
+    "CREATURE (Cindermink): *chain-rattle*",
+    "SFX: captive-CRY",
+    "SPEECH (Mira Eggwarden): They bid on one cage while others scream.",
+    "SPEECH (Nira Quill): Then we break both.",
+    "SFX: sigil-SNAP"
+  ],
+  "a11yTranscript": [
+    "SPEECH (Auctioneer): Bid for the unhatched door!",
+    "CREATURE (Cindermink): *chain-rattle*",
+    "SFX: captive-CRY",
+    "SPEECH (Mira Eggwarden): They bid on one cage while others scream.",
+    "SPEECH (Nira Quill): Then we break both.",
+    "SFX: sigil-SNAP"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p021",
+  "cleanArtRel": "generated/raw-art/page-021.webp",
+  "letteredArtRel": "generated/lettered-pages/page-021.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-021.webp"
+}

@@ -1,0 +1,175 @@
+{
+  "pageNumber": 23,
+  "storyPageNumber": 19,
+  "bookRole": "story",
+  "title": "Joints, Not Heart",
+  "storyPurpose": "Bramblefox finds damaged crystal joints; refuse destructive kill.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p19a",
+      "description": "Bramblefox at Guardian ankle: cracked teal crystal joints glowing stress fractures.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*here—*",
+          "x": 40,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "We could drop it.",
+          "x": 70,
+          "y": 55,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Tavi Brightline",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p19b",
+      "description": "Mira shakes head hard; Spark looks at Guardian's damaged eye with empathy not fear.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "If we destroy a wounded guard, we become the Tear's echo.",
+          "x": 50,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 48,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p19c",
+      "description": "Team sets nonlethal vine/conduit bind on joint — disable locomotion only.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Mercy is also a tactic.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 3
+        },
+        {
+          "kind": "sfx",
+          "text": "vine-CINCH",
+          "x": 60,
+          "y": 45,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p19a",
+      "kind": "creature",
+      "text": "*here—*",
+      "x": 40,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p19a",
+      "kind": "speech",
+      "text": "We could drop it.",
+      "x": 70,
+      "y": 55,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Tavi Brightline",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p19b",
+      "kind": "speech",
+      "text": "If we destroy a wounded guard, we become the Tear's echo.",
+      "x": 50,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 48,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p19c",
+      "kind": "narration",
+      "text": "Mercy is also a tactic.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p19c",
+      "kind": "sfx",
+      "text": "vine-CINCH",
+      "x": 60,
+      "y": 45,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "tavi-brightline"
+  ],
+  "creatures": [
+    "bramblefox",
+    "spark",
+    "mossprig"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "plan": "disable joints",
+    "refuseKill": true
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 19/25 — Joints, Not Heart. Story purpose: Bramblefox finds damaged crystal joints; refuse destructive kill. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p19a): Bramblefox at Guardian ankle: cracked teal crystal joints glowing stress fractures. Panel 2 (p19b): Mira shakes head hard; Spark looks at Guardian's damaged eye with empathy not fear. Panel 3 (p19c): Team sets nonlethal vine/conduit bind on joint — disable locomotion only. Characters: mira-eggwarden, tavi-brightline. Creatures: bramblefox, spark, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"plan\": \"disable joints\", \"refuseKill\": true} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Nira disables override.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Joints, Not Heart — The Lost City page 19",
+  "atmosphere": "dusk",
+  "transcript": [
+    "CREATURE (Bramblefox): *here—*",
+    "SPEECH (Tavi Brightline): We could drop it.",
+    "SPEECH (Mira Eggwarden): If we destroy a wounded guard, we become the Tear's echo.",
+    "NARRATION: Mercy is also a tactic.",
+    "SFX: vine-CINCH"
+  ],
+  "id": "the-lost-city-issue-004-p023",
+  "cleanArtRel": "generated/raw-art/page-023.webp",
+  "letteredArtRel": "generated/lettered-pages/page-023.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-023.webp"
+}

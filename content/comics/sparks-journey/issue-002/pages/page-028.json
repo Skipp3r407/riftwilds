@@ -1,0 +1,142 @@
+{
+  "pageNumber": 28,
+  "bookRole": "story",
+  "title": "Riftborn",
+  "storyPurpose": "Sanctuary mural: multiple Spark-like beings linked to world Rifts; Mira realizes Spark is one of several.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p24a",
+      "description": "Interior Shellward Sanctum: vast mural of several Glowpup-like Riftborn connected by luminous threads to different regional Rifts across Aeryndra. Spark stands small before it.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Not a mistake. A lineage of thresholds.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 55
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "You're one of several… Riftborn.",
+          "x": 40,
+          "y": 75,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p24b",
+      "description": "Close: Spark's markings mirror mural figures; quiet awe.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CODEX CLASS: RIFTBORN (PROVISIONAL)",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 50
+        },
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*soft wonder-hum*",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p24a",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "You're one of several… Riftborn.",
+      "x": 40,
+      "y": 75,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p24b",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*soft wonder-hum*",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p24a",
+      "kind": "narration",
+      "text": "Not a mistake. A lineage of thresholds.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 55
+    },
+    {
+      "panelId": "p24b",
+      "kind": "caption",
+      "text": "CODEX CLASS: RIFTBORN (PROVISIONAL)",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 50
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "continuity": {
+    "spark": {
+      "emotion": "identity awakening",
+      "glow": "sanctuary-steady",
+      "classification": "Riftborn"
+    },
+    "location": "Shellward Sanctum interior",
+    "revelation": "multiple Riftborn exist"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 24/25 — Riftborn. Story purpose: Sanctuary mural: multiple Spark-like beings linked to world Rifts; Mira realizes Spark is one of several. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p24a): Interior Shellward Sanctum: vast mural of several Glowpup-like Riftborn connected by luminous threads to different regional Rifts across Aeryndra. Spark stands small before it. Panel 2 (p24b): Close: Spark's markings mirror mural figures; quiet awe. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Shellward Sanctum. Time: dawn inside stone. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"identity awakening\",\"glow\":\"sanctuary-steady\",\"classification\":\"Riftborn\"},\"location\":\"Shellward Sanctum interior\",\"revelation\":\"multiple Riftborn exist\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Cliffhanger.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Riftborn — Spark's Journey page 24",
+  "atmosphere": "dawn",
+  "transcript": [
+    "NARRATION: Not a mistake. A lineage of thresholds.",
+    "SPEECH (Mira Eggwarden): You're one of several… Riftborn.",
+    "CAPTION: CODEX CLASS: RIFTBORN (PROVISIONAL)",
+    "CREATURE (Spark): *soft wonder-hum*"
+  ],
+  "storyPageNumber": 24,
+  "id": "sparks-journey-issue-002-p028",
+  "cleanArtRel": "generated/raw-art/page-028.png",
+  "letteredArtRel": "generated/lettered-pages/page-028.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-028.webp"
+}

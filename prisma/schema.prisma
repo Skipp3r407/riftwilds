@@ -18,6 +18,18 @@ enum TokenTier {
   FOUNDER
 }
 
+/// Account lifecycle — NO ACCOUNT = NO GAMEPLAY. Guest play is not a status.
+enum AccountStatus {
+  PENDING_VERIFICATION
+  ACTIVE
+  SUSPENDED
+  BANNED
+  DELETED
+  UNDER_REVIEW
+  PARENTAL_CONSENT_REQUIRED
+  RECOVERY_PENDING
+}
+
 enum Rarity {
   COMMON
   UNCOMMON
@@ -225,22 +237,48 @@ enum SeasonScope {
 // ─── Auth & Users ────────────────────────────────────────────────────────────
 
 model User {
-  id              String    @id @default(cuid())
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  id              String        @id @default(cuid())
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
   deletedAt       DateTime?
-  primaryWalletId String?   @unique
-  role            String    @default("player")
-  isBanned        Boolean   @default(false)
+  primaryWalletId String?       @unique
+  role            String        @default("player")
+  /** Canonical account lifecycle. isBanned is kept for legacy checks. */
+  accountStatus   AccountStatus @default(PENDING_VERIFICATION)
+  email           String?       @unique
+  emailNormalized String?       @unique
+  emailVerifiedAt DateTime?
+  passwordHash    String?
+  lockedUntil     DateTime?
+  failedLoginCount Int          @default(0)
+  region          String?
+  dateOfBirth     DateTime?
+  parentalConsentAt DateTime?
+  onboardingCompletedAt DateTime?
+  termsAcceptedAt DateTime?
+  privacyAcceptedAt DateTime?
+  lastLoginAt     DateTime?
+  rememberMeDefault Boolean     @default(false)
+  isBanned        Boolean       @default(false)
   banReason       String?
-  suspiciousScore Int       @default(0)
+  suspiciousScore Int           @default(0)
 
   wallets              Wallet[]
   sessions             Session[]
   authIdentities       AuthIdentity[]
+  authAccounts         AuthAccount[]
   authNonces           AuthNonce[]
   profile              PlayerProfile?
   settings             PlayerSettings?
+  emailVerificationTokens EmailVerificationToken[]
+  passwordResetTokens  PasswordResetToken[]
+  loginAttempts        LoginAttempt[]
+  trustedDevices       TrustedDevice[]
+  accountStatusHistory AccountStatusHistory[]
+  termsAcceptances     TermsAcceptance[]
+  privacyAcceptances   PrivacyAcceptance[]
+  securityAuditLogs    SecurityAuditLog[]
+  linkedWallets        LinkedWallet[]
   tokenSnapshots       TokenBalanceSnapshot[]
   eggs                 Egg[]
   creatures            Creature[]               @relation("CreatureOwner")
@@ -292,6 +330,8 @@ model User {
 
   @@index([role])
   @@index([createdAt])
+  @@index([accountStatus])
+  @@index([emailNormalized])
 }
 
 model Wallet {
@@ -339,15 +379,197 @@ model Session {
   /** Optional — email/social sessions may exist without a linked wallet. */
   walletAddress    String?
   tokenHash        String    @unique
+  /** Rotating refresh credential hash (httpOnly cookie companion). */
+  refreshTokenHash String?   @unique
+  refreshExpiresAt DateTime?
   expiresAt        DateTime
   revokedAt        DateTime?
   userAgentHash    String?
   ipHash           String?
+  deviceId         String?
+  rememberMe       Boolean   @default(false)
+  lastSeenAt       DateTime  @default(now())
+  csrfSecretHash   String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([expiresAt])
+  @@index([deviceId])
+}
+
+/// Provider credential row (email password / OAuth). Complements AuthIdentity.
+model AuthAccount {
+  id                String    @id @default(cuid())
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  userId            String
+  provider          String
+  providerAccountId String
+  email             String?
+  accessTokenEnc    String?
+  refreshTokenEnc   String?
+  expiresAt         DateTime?
+  scope             String?
+  tokenType         String?
+  idTokenEnc        String?
+  passwordHash      String?
+  verifiedAt        DateTime?
+  lastUsedAt        DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+  @@index([email])
+}
+
+model EmailVerificationToken {
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  userId    String
+  tokenHash String    @unique
+  email     String
+  expiresAt DateTime
+  usedAt    DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  userId    String
+  tokenHash String    @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  ipHash    String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model LoginAttempt {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  email       String?
+  userId      String?
+  success     Boolean
+  reason      String?
+  ipHash      String?
+  userAgentHash String?
+  provider    String?
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([email, createdAt])
+  @@index([userId, createdAt])
+  @@index([ipHash, createdAt])
+}
+
+model TrustedDevice {
+  id           String    @id @default(cuid())
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  userId       String
+  deviceKeyHash String
+  label        String?
+  userAgentHash String?
+  ipHash       String?
+  lastSeenAt   DateTime  @default(now())
+  revokedAt    DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, deviceKeyHash])
+  @@index([userId])
+}
+
+model AccountStatusHistory {
+  id         String        @id @default(cuid())
+  createdAt  DateTime      @default(now())
+  userId     String
+  fromStatus AccountStatus?
+  toStatus   AccountStatus
+  reason     String?
+  actorId    String?
+  metadata   Json?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model TermsAcceptance {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  userId      String
+  version     String
+  acceptedAt  DateTime @default(now())
+  ipHash      String?
+  userAgentHash String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, version])
+  @@index([userId])
+}
+
+model PrivacyAcceptance {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  userId      String
+  version     String
+  acceptedAt  DateTime @default(now())
+  ipHash      String?
+  userAgentHash String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, version])
+  @@index([userId])
+}
+
+model SecurityAuditLog {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  userId     String?
+  action     String
+  entityType String?
+  entityId   String?
+  ipHash     String?
+  userAgentHash String?
+  requestId  String?
+  metadata   Json?
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([action, createdAt])
+}
+
+/// Wallet linked only after a signed-in account exists (never replaces account).
+model LinkedWallet {
+  id           String    @id @default(cuid())
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  userId       String
+  address      String
+  network      String    @default("devnet")
+  isPrimary    Boolean   @default(false)
+  verifiedAt   DateTime?
+  linkedAt     DateTime  @default(now())
+  unlinkedAt   DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([address, network])
+  @@index([userId])
 }
 
 /// Modular auth identities (email / OAuth / bridges). Wallet SIWS still uses Wallet + Session.
@@ -391,6 +613,8 @@ model PlayerProfile {
   creatureCapacity   Int       @default(12)
   publicProfile      Boolean   @default(true)
   starterEggClaimed  Boolean   @default(false)
+  starterKeeperChosen Boolean  @default(false)
+  tutorialIntroSeen  Boolean   @default(false)
   demoCredits        Int       @default(10000)
   softCurrency       Int       @default(0)
   careStreak         Int       @default(0)
@@ -398,6 +622,7 @@ model PlayerProfile {
   questPoints        Int       @default(0)
   eventPoints        Int       @default(0)
   version            Int       @default(0)
+  lastLocationPath   String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 

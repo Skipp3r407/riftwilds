@@ -1,0 +1,204 @@
+{
+  "pageNumber": 19,
+  "storyPageNumber": 15,
+  "bookRole": "story",
+  "title": "Scan: Stolen Stabilizer",
+  "storyPurpose": "Guardian identifies unauthorized Keepers, stolen stabilizer, Meridian seal, evacuation order.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p15a",
+      "description": "Guardian sensor-eye sweeps cyan beam across Mira's team.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "UNAUTHORIZED KEEPERS.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Last Guardian",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p15b",
+      "description": "Beam locks on Spark — HUD-like glyph rings (abstract, no readable UI).",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "STABILIZER — MISSING FROM RESONANCE LINE.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Last Guardian",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*recoil chirp*",
+          "x": 40,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p15c",
+      "description": "Beam notes Meridian command seal on Seris's gauntlet.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "ALLY CODE — PARTIAL. MERIDIAN SEAL ACCEPTED.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Last Guardian",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p15d",
+      "description": "Guardian raises shield and weapon; evacuation banners unfurl from towers.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "SURRENDER STABILIZER. COMPLY.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Last Guardian",
+          "readOrder": 4
+        },
+        {
+          "kind": "speech",
+          "text": "Spark is not property.",
+          "x": 55,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 36,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p15a",
+      "kind": "speech",
+      "text": "UNAUTHORIZED KEEPERS.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Last Guardian",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p15b",
+      "kind": "speech",
+      "text": "STABILIZER — MISSING FROM RESONANCE LINE.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Last Guardian",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p15b",
+      "kind": "creature",
+      "text": "*recoil chirp*",
+      "x": 40,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p15c",
+      "kind": "speech",
+      "text": "ALLY CODE — PARTIAL. MERIDIAN SEAL ACCEPTED.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Last Guardian",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p15d",
+      "kind": "shout",
+      "text": "SURRENDER STABILIZER. COMPLY.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Last Guardian",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p15d",
+      "kind": "speech",
+      "text": "Spark is not property.",
+      "x": 55,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 36,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark",
+    "echoquill"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "guardianBelief": "Spark stolen stabilizer",
+    "meridianSeal": "partial ally"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 15/25 — Scan: Stolen Stabilizer. Story purpose: Guardian identifies unauthorized Keepers, stolen stabilizer, Meridian seal, evacuation order. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p15a): Guardian sensor-eye sweeps cyan beam across Mira's team. Panel 2 (p15b): Beam locks on Spark — HUD-like glyph rings (abstract, no readable UI). Panel 3 (p15c): Beam notes Meridian command seal on Seris's gauntlet. Panel 4 (p15d): Guardian raises shield and weapon; evacuation banners unfurl from towers. Characters: mira-eggwarden, seris-vale. Creatures: spark, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"guardianBelief\": \"Spark stolen stabilizer\", \"meridianSeal\": \"partial ally\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Override and attack.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Scan: Stolen Stabilizer — The Lost City page 15",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Last Guardian): UNAUTHORIZED KEEPERS.",
+    "SPEECH (Last Guardian): STABILIZER — MISSING FROM RESONANCE LINE.",
+    "CREATURE (Spark): *recoil chirp*",
+    "SPEECH (Last Guardian): ALLY CODE — PARTIAL. MERIDIAN SEAL ACCEPTED.",
+    "SHOUT (Last Guardian): SURRENDER STABILIZER. COMPLY.",
+    "SPEECH (Mira Eggwarden): Spark is not property."
+  ],
+  "id": "the-lost-city-issue-004-p019",
+  "cleanArtRel": "generated/raw-art/page-019.webp",
+  "letteredArtRel": "generated/lettered-pages/page-019.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-019.webp"
+}

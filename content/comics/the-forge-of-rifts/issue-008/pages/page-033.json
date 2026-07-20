@@ -1,0 +1,84 @@
+{
+  "pageNumber": 33,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Codex — The Forge of Rifts",
+  "storyPurpose": "Codex — The Forge of Rifts",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "lx",
+      "description": "Codex plate: cutaway of Forge civilization — labs, reactors, crystal rivers, Incubator Alpha, Engine Alpha.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CODEX — THE FORGE OF RIFTS",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Underground civilization around a machine that manufactures artificial Rift energy. Built to heal unstable dimensions. Weaponized after protocol rewrite. Primary site vented in Issue #8; a second Forge remains.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "lx",
+      "kind": "caption",
+      "text": "CODEX — THE FORGE OF RIFTS",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "lx",
+      "kind": "narration",
+      "text": "Underground civilization around a machine that manufactures artificial Rift energy. Built to heal unstable dimensions. Weaponized after protocol rewrite. Primary site vented in Issue #8; a second Forge remains.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Forge of Rifts Issue #8 — Codex — The Forge of Rifts. Codex plate: cutaway of Forge civilization — labs, reactors, crystal rivers, Incubator Alpha, Engine Alpha. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Codex — The Forge of Rifts",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: CODEX — THE FORGE OF RIFTS",
+    "NARRATION: Underground civilization around a machine that manufactures artificial Rift energy. Built to heal unstable dimensions. Weaponized after protocol rewrite. Primary site vented in Issue #8; a second Forge remains."
+  ],
+  "a11yTranscript": [
+    "CAPTION: CODEX — THE FORGE OF RIFTS",
+    "NARRATION: Underground civilization around a machine that manufactures artificial Rift energy. Built to heal unstable dimensions. Weaponized after protocol rewrite. Primary site vented in Issue #8; a second Forge remains."
+  ],
+  "id": "the-forge-of-rifts-issue-008-p033",
+  "cleanArtRel": "generated/raw-art/page-033.webp",
+  "letteredArtRel": "generated/lettered-pages/page-033.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-033.webp"
+}

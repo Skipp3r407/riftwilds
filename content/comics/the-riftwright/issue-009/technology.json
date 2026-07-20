@@ -1,0 +1,42 @@
+{
+  "title": "Forge Technology",
+  "systems": [
+    {
+      "id": "twin-engines",
+      "name": "Twin Engines",
+      "modes": [
+        "weapon",
+        "cradle"
+      ],
+      "finaleState": "cradle"
+    },
+    {
+      "id": "cradle-lattice",
+      "name": "Cradle Lattice",
+      "description": "Healing protocol that collapses artificial tears when twin-key locks."
+    },
+    {
+      "id": "ascendant-protocol",
+      "name": "Ascendant Protocol",
+      "description": "Meridian armor evolution used by Seris Vale; broken by twin-key + lattice."
+    },
+    {
+      "id": "twin-key-resonance",
+      "name": "Twin-Key Resonance",
+      "users": [
+        "Spark",
+        "Nova"
+      ],
+      "description": "Prime Companion + Last Light voluntary sync."
+    },
+    {
+      "id": "axiom-suite",
+      "name": "Axiom Suite",
+      "abilities": [
+        "Adaptive Matrix",
+        "Pulse Repair",
+        "System Restore"
+      ]
+    }
+  ]
+}

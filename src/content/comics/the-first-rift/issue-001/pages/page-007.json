@@ -1,0 +1,68 @@
+{
+  "pageNumber": 7,
+  "id": "the-first-rift-issue-001-p007",
+  "role": "story",
+  "title": null,
+  "layout": "grid-2x2",
+  "atmosphere": "rift",
+  "beat": "Vision seizure — pulled into First Rift memory",
+  "artPrompt": "Four-panel comic page, no text. 1: cyan light floods Mira's eyes. 2: Commons dissolves into layered desert-forest roads. 3: silhouette of Elara Venn with glowing egg. 4: Mira falling through tear into warm past light. No lettering in art. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "sfx",
+          "text": "FWOOOM",
+          "x": 50,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "—wait—!",
+          "x": 50,
+          "y": 50,
+          "tail": "down"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "The tear does not ask permission.",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "kind": "caption",
+          "text": "VISION — AGE OF FIRST EGGS",
+          "x": 50,
+          "y": 70
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "whisper",
+          "speaker": "Unknown",
+          "text": "Keep…",
+          "x": 50,
+          "y": 55
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-007.png",
+  "letteredArtRel": "generated/lettered/page-007.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-007.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

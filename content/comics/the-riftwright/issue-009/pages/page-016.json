@@ -1,0 +1,144 @@
+{
+  "pageNumber": 16,
+  "storyPageNumber": 12,
+  "bookRole": "story",
+  "title": "Siege of the Cradle",
+  "storyPurpose": "Ascendant forces assault Incubator Beta; party defends Nova and Spark.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p12a",
+      "description": "Constructs smash platforms; Bramblefox and Thornling intercept.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "CLANG",
+          "x": 30,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 20,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Left flank — move!",
+          "x": 55,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p12b",
+      "description": "Mossprig living bulwark companion (mossy shell, root feet) Living Bulwark shields Mira, Spark, Nova.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "…hold.",
+          "x": 40,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p12c",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished throws lantern-line barriers; supervised redemption in action.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Lantern line — stay behind the light!",
+          "x": 60,
+          "y": 50,
+          "tail": "down-left",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p12d",
+      "description": "Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence — Adaptive Matrix / Pulse Repair / System Restore; awakened at Forge of Rifts Issue #8 Pulse Repair on cracked bridge; Spirit Moth and Truthwing scout.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "Pulse Repair engaged.",
+          "x": 50,
+          "y": 85,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "axiom",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "spirit-moth",
+    "truthwing"
+  ],
+  "locations": [
+    "Incubator Beta siege"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "battle": "begun",
+    "nova": "protected"
+  },
+  "requiredMoments": [
+    12
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 12/25 — Siege of the Cradle. Story purpose: Ascendant forces assault Incubator Beta; party defends Nova and Spark. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p12a): Constructs smash platforms; Bramblefox and Thornling intercept. Panel 2 (p12b): Mossprig living bulwark companion (mossy shell, root feet) Living Bulwark shields Mira, Spark, Nova. Panel 3 (p12c): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished throws lantern-line barriers; supervised redemption in action. Panel 4 (p12d): Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence — Adaptive Matrix / Pulse Repair / System Restore; awakened at Forge of Rifts Issue #8 Pulse Repair on cracked bridge; Spirit Moth and Truthwing scout. Characters: mira-eggwarden, cael-vesper, nira-quill. Creatures: spark, nova, axiom, bramblefox, mossprig, thornling, spirit-moth, truthwing. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Incubator Beta siege. Atmosphere: storm. Continuity: {\"battle\": \"begun\", \"nova\": \"protected\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Companions rally.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Siege of the Cradle — The Riftwright page 16",
+  "atmosphere": "storm",
+  "transcript": [
+    "SFX: CLANG",
+    "SPEECH (Nira Quill): Left flank — move!",
+    "CREATURE (Mossprig): …hold.",
+    "SPEECH (Cael Vesper): Lantern line — stay behind the light!",
+    "CREATURE (Axiom): Pulse Repair engaged."
+  ],
+  "a11yTranscript": [
+    "SFX: CLANG",
+    "SPEECH (Nira Quill): Left flank — move!",
+    "CREATURE (Mossprig): …hold.",
+    "SPEECH (Cael Vesper): Lantern line — stay behind the light!",
+    "CREATURE (Axiom): Pulse Repair engaged."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p016",
+  "cleanArtRel": "generated/raw-art/page-016.webp",
+  "letteredArtRel": "generated/lettered-pages/page-016.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-016.webp"
+}

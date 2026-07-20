@@ -1,0 +1,190 @@
+{
+  "pageNumber": 12,
+  "storyPageNumber": 8,
+  "bookRole": "story",
+  "title": "Resonance Named",
+  "storyPurpose": "King identifies Spark as Resonance Keeper; offers stabilization; Mira asks the cost.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p8a",
+      "description": "King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade leaning forward, storm-eye glowing, gazing at Spark.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Resonance Keeper. Last Light of a broken line.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*alert-chirp*",
+          "x": 65,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p8b",
+      "description": "King gesturing toward floor seals leading down to engine.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "You may stabilize what my bond can no longer hold alone.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p8c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes stepped protectively before Spark; Compact lantern charm catching cyan light.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Stabilize how? What does that cost him?",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        },
+        {
+          "kind": "thought",
+          "text": "Invite. Wait. Never own.",
+          "x": 50,
+          "y": 72,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p8a",
+      "kind": "speech",
+      "text": "Resonance Keeper. Last Light of a broken line.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p8a",
+      "kind": "creature",
+      "text": "*alert-chirp*",
+      "x": 65,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p8b",
+      "kind": "speech",
+      "text": "You may stabilize what my bond can no longer hold alone.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p8c",
+      "kind": "speech",
+      "text": "Stabilize how? What does that cost him?",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p8c",
+      "kind": "thought",
+      "text": "Invite. Wait. Never own.",
+      "x": 50,
+      "y": 72,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "vaelor-tempest"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "throne hall",
+    "vaelor": "wants-spark-engine",
+    "mira": "refuses-blind"
+  },
+  "requiredMoments": [
+    8,
+    9
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 8/25 — Resonance Named. Story purpose: King identifies Spark as Resonance Keeper; offers stabilization; Mira asks the cost. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p8a): King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade leaning forward, storm-eye glowing, gazing at Spark. Panel 2 (p8b): King gesturing toward floor seals leading down to engine. Panel 3 (p8c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes stepped protectively before Spark; Compact lantern charm catching cyan light. Characters: mira-eggwarden, vaelor-tempest. Creatures: spark, thundervane. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"throne hall\", \"vaelor\": \"wants-spark-engine\", \"mira\": \"refuses-blind\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Orders and refusal.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Resonance Named — The Storm King page 8",
+  "atmosphere": "storm",
+  "transcript": [
+    "SPEECH (King Vaelor Tempest): Resonance Keeper. Last Light of a broken line.",
+    "CREATURE (Spark): *alert-chirp*",
+    "SPEECH (King Vaelor Tempest): You may stabilize what my bond can no longer hold alone.",
+    "SPEECH (Mira Eggwarden): Stabilize how? What does that cost him?",
+    "THOUGHT (Mira Eggwarden): Invite. Wait. Never own."
+  ],
+  "a11yTranscript": [
+    "SPEECH (King Vaelor Tempest): Resonance Keeper. Last Light of a broken line.",
+    "CREATURE (Spark): *alert-chirp*",
+    "SPEECH (King Vaelor Tempest): You may stabilize what my bond can no longer hold alone.",
+    "SPEECH (Mira Eggwarden): Stabilize how? What does that cost him?",
+    "THOUGHT (Mira Eggwarden): Invite. Wait. Never own."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p012",
+  "cleanArtRel": "generated/raw-art/page-012.webp",
+  "letteredArtRel": "generated/lettered-pages/page-012.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-012.webp"
+}

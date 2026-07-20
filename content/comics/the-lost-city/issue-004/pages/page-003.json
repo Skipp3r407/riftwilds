@@ -1,0 +1,120 @@
+{
+  "pageNumber": 3,
+  "storyPageNumber": null,
+  "bookRole": "credits",
+  "title": "Credits",
+  "storyPurpose": "Credits",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "credits",
+      "description": "Workshop lore-desk: quills, rift-ink, layered city maps, Echoquill feather — no painted credit text in art.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "Story · Riftwilds Lore Desk",
+          "x": 50,
+          "y": 28,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "Art · Grok + Publishing Engine",
+          "x": 50,
+          "y": 42,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "Lettering · Programmatic Bake",
+          "x": 50,
+          "y": 56,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        },
+        {
+          "kind": "narration",
+          "text": "Canon: World Codex · Riftling Codex · Legends of the Rift TCG. Keeper: Mira Eggwarden.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "credits",
+      "kind": "caption",
+      "text": "Story · Riftwilds Lore Desk",
+      "x": 50,
+      "y": 28,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "credits",
+      "kind": "caption",
+      "text": "Art · Grok + Publishing Engine",
+      "x": 50,
+      "y": 42,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "credits",
+      "kind": "caption",
+      "text": "Lettering · Programmatic Bake",
+      "x": 50,
+      "y": 56,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    },
+    {
+      "panelId": "credits",
+      "kind": "narration",
+      "text": "Canon: World Codex · Riftling Codex · Legends of the Rift TCG. Keeper: Mira Eggwarden.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book credits page for The Lost City Issue #4 — Credits. Workshop lore-desk: quills, rift-ink, layered city maps, Echoquill feather — no painted credit text in art. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Credits",
+  "atmosphere": "dusk",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: Story · Riftwilds Lore Desk",
+    "CAPTION: Art · Grok + Publishing Engine",
+    "CAPTION: Lettering · Programmatic Bake",
+    "NARRATION: Canon: World Codex · Riftling Codex · Legends of the Rift TCG. Keeper: Mira Eggwarden."
+  ],
+  "id": "the-lost-city-issue-004-p003",
+  "cleanArtRel": "generated/raw-art/page-003.webp",
+  "letteredArtRel": "generated/lettered-pages/page-003.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-003.webp"
+}

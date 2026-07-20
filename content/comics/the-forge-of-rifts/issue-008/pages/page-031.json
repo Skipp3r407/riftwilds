@@ -1,0 +1,107 @@
+{
+  "pageNumber": 31,
+  "storyPageNumber": null,
+  "bookRole": "profile",
+  "title": "Character Profile — Chief Engineer Arkan",
+  "storyPurpose": "Character Profile — Chief Engineer Arkan",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "pr",
+      "description": "Character profile plate: full-body Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes with callout zones empty for lettering; tools, monocle, burned hands.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CHIEF ENGINEER ARKAN",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Last surviving Forge architect. Memory-preserved for centuries. Brilliant. Regretful. Not evil — not absolved. Died believing someone could finally fix his mistakes.",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "ROLE: Support NPC · Sacrifice",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "pr",
+      "kind": "caption",
+      "text": "CHIEF ENGINEER ARKAN",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "pr",
+      "kind": "narration",
+      "text": "Last surviving Forge architect. Memory-preserved for centuries. Brilliant. Regretful. Not evil — not absolved. Died believing someone could finally fix his mistakes.",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    },
+    {
+      "panelId": "pr",
+      "kind": "caption",
+      "text": "ROLE: Support NPC · Sacrifice",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "arkan"
+  ],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for The Forge of Rifts Issue #8 — Character Profile — Chief Engineer Arkan. Character profile plate: full-body Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes with callout zones empty for lettering; tools, monocle, burned hands. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Character Profile — Chief Engineer Arkan",
+  "atmosphere": "ruin",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: CHIEF ENGINEER ARKAN",
+    "NARRATION: Last surviving Forge architect. Memory-preserved for centuries. Brilliant. Regretful. Not evil — not absolved. Died believing someone could finally fix his mistakes.",
+    "CAPTION: ROLE: Support NPC · Sacrifice"
+  ],
+  "a11yTranscript": [
+    "CAPTION: CHIEF ENGINEER ARKAN",
+    "NARRATION: Last surviving Forge architect. Memory-preserved for centuries. Brilliant. Regretful. Not evil — not absolved. Died believing someone could finally fix his mistakes.",
+    "CAPTION: ROLE: Support NPC · Sacrifice"
+  ],
+  "id": "the-forge-of-rifts-issue-008-p031",
+  "cleanArtRel": "generated/raw-art/page-031.webp",
+  "letteredArtRel": "generated/lettered-pages/page-031.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-031.webp"
+}

@@ -1,0 +1,133 @@
+{
+  "pageNumber": 23,
+  "bookRole": "story",
+  "title": "Not Evil — Collared",
+  "storyPurpose": "Mira realizes creature controlled; Spark approaches despite danger.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p19a",
+      "description": "Close on Ironmantle neck: glowing Meridian control collar; pain in creature eyes.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "It's not choosing this.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p19b",
+      "description": "Spark steps forward despite danger; Mira hand half-raised — not a command.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*determined-chirp*",
+          "x": 50,
+          "y": 50,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p19c",
+      "description": "Lanternmaster mid-combat misdirection; Seris snarls.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "speaker": "Seris Vale",
+          "text": "Collar the Riftborn!",
+          "x": 60,
+          "y": 40,
+          "tail": "down",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p19a",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "It's not choosing this.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p19b",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*determined-chirp*",
+      "x": 50,
+      "y": 50,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p19c",
+      "kind": "shout",
+      "speaker": "Seris Vale",
+      "text": "Collar the Riftborn!",
+      "x": 60,
+      "y": 40,
+      "tail": "down",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "lanternmaster"
+  ],
+  "creatures": [
+    "spark",
+    "ironmantle"
+  ],
+  "continuity": {
+    "ironmantle": {
+      "truth": "controlled-not-evil"
+    },
+    "spark": {
+      "approaching": true
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 19/25 — Not Evil — Collared. Story purpose: Mira realizes creature controlled; Spark approaches despite danger. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p19a): Close on Ironmantle neck: glowing Meridian control collar; pain in creature eyes. Panel 2 (p19b): Spark steps forward despite danger; Mira hand half-raised — not a command. Panel 3 (p19c): Lanternmaster mid-combat misdirection; Seris snarls. Characters: mira-eggwarden, seris-vale, lanternmaster. Creatures: spark, ironmantle. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"ironmantle\":{\"truth\":\"controlled-not-evil\"},\"spark\":{\"approaching\":true}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Spark chooses.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Not Evil — Collared — The Traveling Circus page 19",
+  "atmosphere": "festival",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): It's not choosing this.",
+    "CREATURE (Spark): *determined-chirp*",
+    "SHOUT (Seris Vale): Collar the Riftborn!"
+  ],
+  "storyPageNumber": 19,
+  "id": "the-traveling-circus-issue-003-p023",
+  "cleanArtRel": "generated/raw-art/page-023.png",
+  "letteredArtRel": "generated/lettered-pages/page-023.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-023.webp"
+}

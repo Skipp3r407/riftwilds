@@ -1,0 +1,221 @@
+{
+  "pageNumber": 7,
+  "storyPageNumber": 3,
+  "bookRole": "story",
+  "title": "Incomplete Accusation",
+  "storyPurpose": "Mira confronts Nira; Spark senses incomplete truth; egg pulses toward map.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p3a",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes faces Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes under broken lantern; companions tense; accusation held in posture.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "You knew their buyers. Their files.",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 36,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Knowing isn't feeding.",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p3b",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot between them, cyan-gold resonance flickering confused — not hostile toward Nira.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*no-wrong-glow*",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        },
+        {
+          "kind": "thought",
+          "text": "Spark isn't sure. That should stop me.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 38,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p3c",
+      "description": "Warm dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages pulsing, light pointing toward old folded map on crate.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "pulse…",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "p3d",
+      "description": "Map corner unfolds toward a marked fortress glyph — Gate route awakening.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The egg does not argue. It points.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p3a",
+      "kind": "speech",
+      "text": "You knew their buyers. Their files.",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 36,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p3a",
+      "kind": "speech",
+      "text": "Knowing isn't feeding.",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p3b",
+      "kind": "creature",
+      "text": "*no-wrong-glow*",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p3b",
+      "kind": "thought",
+      "text": "Spark isn't sure. That should stop me.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 38,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p3d",
+      "kind": "narration",
+      "text": "The egg does not argue. It points.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 5
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p3c",
+      "kind": "sfx",
+      "text": "pulse…",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "dormant-egg",
+    "bramblefox"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [
+    "dormant-riftborn-egg",
+    "gate-map"
+  ],
+  "continuity": {
+    "accusation": "nira-incomplete",
+    "egg": "points-to-gate"
+  },
+  "requiredMoments": [
+    2,
+    3,
+    4
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 3/25 — Incomplete Accusation. Story purpose: Mira confronts Nira; Spark senses incomplete truth; egg pulses toward map. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p3a): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes faces Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes under broken lantern; companions tense; accusation held in posture. Panel 2 (p3b): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot between them, cyan-gold resonance flickering confused — not hostile toward Nira. Panel 3 (p3c): Warm dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages pulsing, light pointing toward old folded map on crate. Panel 4 (p3d): Map corner unfolds toward a marked fortress glyph — Gate route awakening. Characters: mira-eggwarden, nira-quill. Creatures: spark, dormant-egg, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"accusation\": \"nira-incomplete\", \"egg\": \"points-to-gate\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "The Gate named.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Incomplete Accusation — The Traitor's Gate page 3",
+  "atmosphere": "night",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): You knew their buyers. Their files.",
+    "SPEECH (Nira Quill): Knowing isn't feeding.",
+    "CREATURE (Spark): *no-wrong-glow*",
+    "THOUGHT (Mira Eggwarden): Spark isn't sure. That should stop me.",
+    "SFX: pulse…",
+    "NARRATION: The egg does not argue. It points."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Mira Eggwarden): You knew their buyers. Their files.",
+    "SPEECH (Nira Quill): Knowing isn't feeding.",
+    "CREATURE (Spark): *no-wrong-glow*",
+    "THOUGHT (Mira Eggwarden): Spark isn't sure. That should stop me.",
+    "SFX: pulse…",
+    "NARRATION: The egg does not argue. It points."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p007",
+  "cleanArtRel": "generated/raw-art/page-007.webp",
+  "letteredArtRel": "generated/lettered-pages/page-007.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-007.webp"
+}

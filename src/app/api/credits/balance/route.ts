@@ -1,11 +1,17 @@
 import { withApiGuard, jsonOk, jsonError } from "@/lib/security/api-guard";
 import {
+  ensureDevOverrideMockCredits,
   ensureStarterCredits,
   getCreditAccount,
   getCreditBalance,
   listLedgerEntries,
 } from "@/lib/credits/ledger";
 import { CREDITS_DISCLAIMER } from "@/lib/credits/config";
+import {
+  DEV_KEEPER_PROFILE,
+  DEV_OVERRIDE_USER_ID,
+  isDevOverrideRuntimeAllowed,
+} from "@/lib/auth/dev-override";
 import { getSessionContext } from "@/lib/auth/session";
 import { listPrismaLedgerEntries, isCreditsPrismaEnabled } from "@/lib/credits/persistence";
 import { hydrateMemoryFromPrisma } from "@/lib/credits/persist-bridge";
@@ -24,7 +30,16 @@ export async function GET(request: Request) {
   const userId = session?.userId ?? demoUser;
 
   await hydrateMemoryFromPrisma(userId);
-  if (getCreditBalance(userId) <= 0) {
+
+  const isDevKeeper =
+    isDevOverrideRuntimeAllowed() &&
+    session?.userId === DEV_OVERRIDE_USER_ID &&
+    userId === DEV_OVERRIDE_USER_ID;
+
+  // Dev Override: one-time mock soft currency (9_999_999) for header / shops.
+  if (isDevKeeper) {
+    ensureDevOverrideMockCredits(userId, DEV_KEEPER_PROFILE.softCurrency);
+  } else if (getCreditBalance(userId) <= 0) {
     ensureStarterCredits(userId);
   }
   const account = getCreditAccount(userId);

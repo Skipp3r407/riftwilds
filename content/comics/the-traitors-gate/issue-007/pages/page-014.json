@@ -1,0 +1,163 @@
+{
+  "pageNumber": 14,
+  "storyPageNumber": 10,
+  "bookRole": "story",
+  "title": "Withheld Memory",
+  "storyPurpose": "Aurelia refuses one memory; Oathwarden Seraph activates.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p10a",
+      "description": "Aurelia Voss the Gilded Merchant: elegant, warm gold and deep-red market robes, ledger-chain jewelry, half-veil, calculating calm eyes hand raised refusing a memory-mirror pull; Lockjaw Wisp Closed Contract stance; Mira tense.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "One memory stays mine. Sell everything else — not that.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Aurelia Voss",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*contract-lock*",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Lockjaw Wisp",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p10b",
+      "description": "Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors materializes — towering, judgment spear, orbiting mirrors, cyan oath flame; chamber seals.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Concealed intent may close the Gate permanently.",
+          "x": 50,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Oathwarden Seraph",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "LOCK-RING",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p10a",
+      "kind": "speech",
+      "text": "One memory stays mine. Sell everything else — not that.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Aurelia Voss",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p10a",
+      "kind": "creature",
+      "text": "*contract-lock*",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Lockjaw Wisp",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p10b",
+      "kind": "speech",
+      "text": "Concealed intent may close the Gate permanently.",
+      "x": 50,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Oathwarden Seraph",
+      "readOrder": 2
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p10b",
+      "kind": "sfx",
+      "text": "LOCK-RING",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "aurelia-voss",
+    "oathwarden-seraph"
+  ],
+  "creatures": [
+    "lockjaw-wisp",
+    "spark",
+    "truthwing"
+  ],
+  "locations": [
+    "Traitor's Gate — Command Hall"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "oathwarden": "active",
+    "aurelia": "withholds-memory"
+  },
+  "requiredMoments": [
+    8,
+    9
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 10/25 — Withheld Memory. Story purpose: Aurelia refuses one memory; Oathwarden Seraph activates. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p10a): Aurelia Voss the Gilded Merchant: elegant, warm gold and deep-red market robes, ledger-chain jewelry, half-veil, calculating calm eyes hand raised refusing a memory-mirror pull; Lockjaw Wisp Closed Contract stance; Mira tense. Panel 2 (p10b): Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors materializes — towering, judgment spear, orbiting mirrors, cyan oath flame; chamber seals. Characters: mira-eggwarden, aurelia-voss, oathwarden-seraph. Creatures: lockjaw-wisp, spark, truthwing. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"oathwarden\": \"active\", \"aurelia\": \"withholds-memory\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Mirrors lie.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Withheld Memory — The Traitor's Gate page 10",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Aurelia Voss): One memory stays mine. Sell everything else — not that.",
+    "CREATURE (Lockjaw Wisp): *contract-lock*",
+    "SPEECH (Oathwarden Seraph): Concealed intent may close the Gate permanently.",
+    "SFX: LOCK-RING"
+  ],
+  "a11yTranscript": [
+    "SPEECH (Aurelia Voss): One memory stays mine. Sell everything else — not that.",
+    "CREATURE (Lockjaw Wisp): *contract-lock*",
+    "SPEECH (Oathwarden Seraph): Concealed intent may close the Gate permanently.",
+    "SFX: LOCK-RING"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "oathwarden-mirror-verdict"
+  ],
+  "id": "the-traitors-gate-issue-007-p014",
+  "cleanArtRel": "generated/raw-art/page-014.webp",
+  "letteredArtRel": "generated/lettered-pages/page-014.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-014.webp"
+}

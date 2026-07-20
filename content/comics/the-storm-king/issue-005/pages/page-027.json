@@ -1,0 +1,181 @@
+{
+  "pageNumber": 27,
+  "storyPageNumber": 23,
+  "bookRole": "story",
+  "title": "Combined Stormlight",
+  "storyPurpose": "Action splash: companions combine; Meridian control shatters; corrupted host driven back.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p23a",
+      "description": "Action splash: combined power — Spark resonance, Thundervane Crown of Thunder field, Mossprig defense dome, Thornling conductor surge, Wisplet phase net, Bramblefox precision strike — Meridian control lattice shattering; corrupted creatures driven back through mending storm wall; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal stumbling; empty SFX zones.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "CROWN OF THUNDER",
+          "x": 50,
+          "y": 14,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "SHATTER-KRACK",
+          "x": 70,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*resonance!*",
+          "x": 35,
+          "y": 50,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        },
+        {
+          "kind": "shout",
+          "text": "The lattice—!",
+          "x": 65,
+          "y": 70,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Seris Vale",
+          "readOrder": 3
+        },
+        {
+          "kind": "narration",
+          "text": "A wall rebuilt by choice holds differently.",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p23a",
+      "kind": "creature",
+      "text": "*resonance!*",
+      "x": 35,
+      "y": 50,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p23a",
+      "kind": "shout",
+      "text": "The lattice—!",
+      "x": 65,
+      "y": 70,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Seris Vale",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p23a",
+      "kind": "narration",
+      "text": "A wall rebuilt by choice holds differently.",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 4
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p23a",
+      "kind": "sfx",
+      "text": "CROWN OF THUNDER",
+      "x": 50,
+      "y": 14,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p23a",
+      "kind": "sfx",
+      "text": "SHATTER-KRACK",
+      "x": 70,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "vaelor-tempest"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "bramblefox"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "citadel / sky",
+    "meridian": "control-shattered",
+    "host": "driven-back"
+  },
+  "requiredMoments": [
+    19,
+    23
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 23/25 — Combined Stormlight. Story purpose: Action splash: companions combine; Meridian control shatters; corrupted host driven back. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p23a): Action splash: combined power — Spark resonance, Thundervane Crown of Thunder field, Mossprig defense dome, Thornling conductor surge, Wisplet phase net, Bramblefox precision strike — Meridian control lattice shattering; corrupted creatures driven back through mending storm wall; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal stumbling; empty SFX zones. Characters: mira-eggwarden, seris-vale, vaelor-tempest. Creatures: spark, thundervane, mossprig, thornling, wisplet, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"citadel / sky\", \"meridian\": \"control-shattered\", \"host\": \"driven-back\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Aftermath and escape.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Combined Stormlight — The Storm King page 23",
+  "atmosphere": "storm",
+  "transcript": [
+    "SFX: CROWN OF THUNDER",
+    "SFX: SHATTER-KRACK",
+    "CREATURE (Spark): *resonance!*",
+    "SHOUT (Seris Vale): The lattice—!",
+    "NARRATION: A wall rebuilt by choice holds differently."
+  ],
+  "a11yTranscript": [
+    "SFX: CROWN OF THUNDER",
+    "SFX: SHATTER-KRACK",
+    "CREATURE (Spark): *resonance!*",
+    "SHOUT (Seris Vale): The lattice—!",
+    "NARRATION: A wall rebuilt by choice holds differently."
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "crown-of-thunder"
+  ],
+  "id": "the-storm-king-issue-005-p027",
+  "cleanArtRel": "generated/raw-art/page-027.webp",
+  "letteredArtRel": "generated/lettered-pages/page-027.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-027.webp"
+}

@@ -4,23 +4,39 @@
  * Original IP — do not copy protected TCG mechanics or characters.
  */
 
+/**
+ * Canonical card categories (Companion / Spell / Item / Equipment / Terrain /
+ * Relic / Trap / Commander / Evolution). See `framework/card-categories.ts`.
+ * Legacy aliases remain accepted until callers migrate fully.
+ */
+export const TCG_CARD_CATEGORIES_CANONICAL = [
+  "companion",
+  "spell",
+  "item",
+  "equipment",
+  "terrain",
+  "relic",
+  "trap",
+  "commander",
+  "evolution",
+] as const;
+
+/** @deprecated Prefer TCG_CARD_CATEGORIES_CANONICAL — kept for legacy JSON/readers. */
 export const TCG_CARD_TYPES = [
+  ...TCG_CARD_CATEGORIES_CANONICAL,
   "creature",
   "hero",
-  "spell",
-  "equipment",
-  "relic",
   "location",
   "weather",
   "artifact",
-  "trap",
-  "companion",
   "legendary",
   "token",
   "event",
   "quest",
 ] as const;
 export type TcgCardType = (typeof TCG_CARD_TYPES)[number];
+export type TcgCardCategoryCanonical =
+  (typeof TCG_CARD_CATEGORIES_CANONICAL)[number];
 
 export const TCG_RARITIES = [
   "common",
@@ -113,6 +129,12 @@ export type TcgLocalization = {
   rulesText: string;
   flavorText: string;
   loreBlurb?: string;
+  /** Longer collection / codex lore (optional). */
+  loreBody?: string;
+  /** World / overworld hook id for item/equipment scaffolding. */
+  worldHookId?: string;
+  /** Short UI hint for battle + world dual-use items. */
+  worldHookHint?: string;
 };
 
 export type TcgArtMeta = {

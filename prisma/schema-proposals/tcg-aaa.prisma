@@ -9,10 +9,14 @@ model TcgBinderCard {
   baseCardId String
   finish     String   @default("standard")
   count      Int      @default(0)
+  /// Optional denormalized category for binder tabs (companion/spell/item/…).
+  /// Source of truth remains cards.json type; sync on grant/craft.
+  category   String?
   updatedAt  DateTime @updatedAt
 
   @@unique([userId, cardId])
   @@index([userId, baseCardId])
+  @@index([userId, category])
   @@map("tcg_binder_cards")
 }
 

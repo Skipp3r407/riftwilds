@@ -1,0 +1,95 @@
+{
+  "pageNumber": 34,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Ability Spotlight — Mirror Verdict",
+  "storyPurpose": "Ability Spotlight — Mirror Verdict",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ability",
+      "description": "Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors demonstrating Mirror Verdict — copying a betrayal gesture into mirrored light; empty ability text zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "MIRROR VERDICT",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Reveal and temporarily copy one recent action, buff, or betrayal effect. Judgment without mercy — or favor.",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ability",
+      "kind": "caption",
+      "text": "MIRROR VERDICT",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "ability",
+      "kind": "narration",
+      "text": "Reveal and temporarily copy one recent action, buff, or betrayal effect. Judgment without mercy — or favor.",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "oathwarden-seraph"
+  ],
+  "creatures": [],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Traitor's Gate Issue #7 — Ability Spotlight — Mirror Verdict. Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors demonstrating Mirror Verdict — copying a betrayal gesture into mirrored light; empty ability text zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Gate: black stone towers, cyan locks. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Matter page captions; large title zones.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ability Spotlight — Mirror Verdict",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: MIRROR VERDICT",
+    "NARRATION: Reveal and temporarily copy one recent action, buff, or betrayal effect. Judgment without mercy — or favor."
+  ],
+  "a11yTranscript": [
+    "CAPTION: MIRROR VERDICT",
+    "NARRATION: Reveal and temporarily copy one recent action, buff, or betrayal effect. Judgment without mercy — or favor."
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "oathwarden-mirror-verdict"
+  ],
+  "spoilerLevel": "none",
+  "id": "the-traitors-gate-issue-007-p034",
+  "cleanArtRel": "generated/raw-art/page-034.webp",
+  "letteredArtRel": "generated/lettered-pages/page-034.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-034.webp"
+}

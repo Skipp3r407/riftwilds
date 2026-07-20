@@ -1,0 +1,280 @@
+{
+  "slug": "the-storm-king",
+  "issueNumber": 5,
+  "title": "The Storm King",
+  "subtitle": "Chapter Five \u2014 Tempestria's Wall",
+  "synopsis": "Mira Eggwarden, Spark, and the expedition enter Tempestria \u2014 a mountain kingdom inside a permanent storm. King Vaelor Tempest and companion Thundervane are dying inside a failing Rift weather engine. Veiled Meridian sabotage tears the barrier; Spark refuses to replace Thundervane; the king releases the forced bond. Seris Vale escapes with a royal ledger that opens Issue #6: The Merchant's Secret.",
+  "publishedAt": "2026-07-20",
+  "status": "published",
+  "storyPageCount": 25,
+  "bookPageCount": 38,
+  "estimatedReadMinutes": 22,
+  "protagonist": "Mira Eggwarden",
+  "featuredCreatures": [
+    "Spark",
+    "Thundervane",
+    "Galesprig",
+    "Bramblefox",
+    "Mossprig",
+    "Thornling",
+    "Wisplet",
+    "Echoquill"
+  ],
+  "locations": [
+    "Tempestria",
+    "Royal Citadel",
+    "Storm Engine Chamber",
+    "Merchant Hall (teaser)"
+  ],
+  "unlockGates": [
+    {
+      "kind": "prior-issue",
+      "slug": "the-lost-city",
+      "label": "Complete Issue #4: The Lost City"
+    },
+    {
+      "kind": "admin-dev",
+      "label": "Admin / COMICS_DEV_UNLOCK override"
+    }
+  ],
+  "nextIssueTeaser": {
+    "slug": "the-merchants-secret",
+    "hook": "You brought me a map. No \u2014 every door."
+  },
+  "pipeline": {
+    "artProvider": "grok",
+    "lettering": "programmatic",
+    "bakedLettering": true,
+    "contentRoot": "content/comics/the-storm-king/issue-005"
+  },
+  "bookPages": [
+    {
+      "pageNumber": 1,
+      "storyPageNumber": null,
+      "role": "front-cover",
+      "title": "The Storm King \u2014 Cover"
+    },
+    {
+      "pageNumber": 2,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Front Cover"
+    },
+    {
+      "pageNumber": 3,
+      "storyPageNumber": null,
+      "role": "credits",
+      "title": "Credits"
+    },
+    {
+      "pageNumber": 4,
+      "storyPageNumber": null,
+      "role": "title",
+      "title": "Chapter Five \u2014 The Storm King"
+    },
+    {
+      "pageNumber": 5,
+      "storyPageNumber": 1,
+      "role": "story",
+      "title": "Kingdom Built of Weather"
+    },
+    {
+      "pageNumber": 6,
+      "storyPageNumber": 2,
+      "role": "story",
+      "title": "Roots Against the Gale"
+    },
+    {
+      "pageNumber": 7,
+      "storyPageNumber": 3,
+      "role": "story",
+      "title": "Updraft Invitation"
+    },
+    {
+      "pageNumber": 8,
+      "storyPageNumber": 4,
+      "role": "story",
+      "title": "Village Under Rods"
+    },
+    {
+      "pageNumber": 9,
+      "storyPageNumber": 5,
+      "role": "story",
+      "title": "Praise and Prison"
+    },
+    {
+      "pageNumber": 10,
+      "storyPageNumber": 6,
+      "role": "story",
+      "title": "Royal Insignia"
+    },
+    {
+      "pageNumber": 11,
+      "storyPageNumber": 7,
+      "role": "story",
+      "title": "Throne Under Conduit"
+    },
+    {
+      "pageNumber": 12,
+      "storyPageNumber": 8,
+      "role": "story",
+      "title": "Resonance Named"
+    },
+    {
+      "pageNumber": 13,
+      "storyPageNumber": 9,
+      "role": "story",
+      "title": "Refuse the Engine"
+    },
+    {
+      "pageNumber": 14,
+      "storyPageNumber": 10,
+      "role": "story",
+      "title": "Bond Pain"
+    },
+    {
+      "pageNumber": 15,
+      "storyPageNumber": 11,
+      "role": "story",
+      "title": "Engine That Feeds on Bond"
+    },
+    {
+      "pageNumber": 16,
+      "storyPageNumber": 12,
+      "role": "story",
+      "title": "Warned Years Ago"
+    },
+    {
+      "pageNumber": 17,
+      "storyPageNumber": 13,
+      "role": "story",
+      "title": "Tower Sabotage"
+    },
+    {
+      "pageNumber": 18,
+      "storyPageNumber": 14,
+      "role": "story",
+      "title": "Offer of Chains"
+    },
+    {
+      "pageNumber": 19,
+      "storyPageNumber": 15,
+      "role": "story",
+      "title": "Sky Tears Open"
+    },
+    {
+      "pageNumber": 20,
+      "storyPageNumber": 16,
+      "role": "story",
+      "title": "Neither Can the Kingdom"
+    },
+    {
+      "pageNumber": 21,
+      "storyPageNumber": 17,
+      "role": "story",
+      "title": "Bridges of Thunder"
+    },
+    {
+      "pageNumber": 22,
+      "storyPageNumber": 18,
+      "role": "story",
+      "title": "Crown Against the Host"
+    },
+    {
+      "pageNumber": 23,
+      "storyPageNumber": 19,
+      "role": "story",
+      "title": "Hunter's Cut"
+    },
+    {
+      "pageNumber": 24,
+      "storyPageNumber": 20,
+      "role": "story",
+      "title": "Memory of the First Wall"
+    },
+    {
+      "pageNumber": 25,
+      "storyPageNumber": 21,
+      "role": "story",
+      "title": "Loyalty Is Not Obligation"
+    },
+    {
+      "pageNumber": 26,
+      "storyPageNumber": 22,
+      "role": "story",
+      "title": "Release and Steady"
+    },
+    {
+      "pageNumber": 27,
+      "storyPageNumber": 23,
+      "role": "story",
+      "title": "Combined Stormlight"
+    },
+    {
+      "pageNumber": 28,
+      "storyPageNumber": 24,
+      "role": "story",
+      "title": "Ledger of Doors"
+    },
+    {
+      "pageNumber": 29,
+      "storyPageNumber": 25,
+      "role": "story",
+      "title": "Every Door"
+    },
+    {
+      "pageNumber": 30,
+      "storyPageNumber": null,
+      "role": "teaser",
+      "title": "Next Issue \u2014 The Merchant's Secret"
+    },
+    {
+      "pageNumber": 31,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Character Profile \u2014 King Vaelor Tempest"
+    },
+    {
+      "pageNumber": 32,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Companion Profile \u2014 Thundervane"
+    },
+    {
+      "pageNumber": 33,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Codex \u2014 Tempestria"
+    },
+    {
+      "pageNumber": 34,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Ability Spotlight \u2014 Crown of Thunder"
+    },
+    {
+      "pageNumber": 35,
+      "storyPageNumber": null,
+      "role": "map",
+      "title": "World Map \u2014 Peaks to Market"
+    },
+    {
+      "pageNumber": 36,
+      "storyPageNumber": null,
+      "role": "letters",
+      "title": "Editor's Note \u2014 Walls & Weather"
+    },
+    {
+      "pageNumber": 37,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Back Cover"
+    },
+    {
+      "pageNumber": 38,
+      "storyPageNumber": null,
+      "role": "back-cover",
+      "title": "Back Cover \u2014 Every Door"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "traitorId": "cael-vesper",
+  "traitorName": "Cael Vesper",
+  "revealStoryPage": 13,
+  "confessionStoryPage": 14,
+  "motivation": "coercion",
+  "captive": "Lumenhare",
+  "intendedDeaths": false,
+  "redemption": "supervised travel; unfinished",
+  "retroactiveClues": [
+    "issue-003-lanternveil-moral-gray",
+    "issue-005-prior-tempestria-negotiation",
+    "issue-006-merchant-debt-and-p25-transmission"
+  ],
+  "spoilerSafeUntil": "issue-complete"
+}

@@ -1,0 +1,121 @@
+{
+  "pageNumber": 12,
+  "storyPageNumber": 8,
+  "bookRole": "story",
+  "title": "Egg of Twin Keys",
+  "storyPurpose": "Dormant egg reaches critical hatch; Mira chooses consent Compact over force.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p8a",
+      "description": "Close: dormant Riftborn egg — cyan-amber seams become starlit indigo cracks; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's hands cradle gently.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "No force. No Meridian override. You come if you choose.",
+          "x": 40,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p8b",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot presses nose to shell — voluntary Compact glow; party forms protective ring (Bramblefox, Mossprig, Thornling, Wisplet).",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "…come.",
+          "x": 55,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "CRACK-kk",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 24,
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p8c",
+      "description": "Shell splits with constellation light — silhouette of newborn inside, face not yet fully shown.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "A second heart answers the first.",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "dormant-riftborn-egg",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet"
+  ],
+  "locations": [
+    "Incubator Beta hatch floor"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "egg": "hatching",
+    "compact": "consent"
+  },
+  "requiredMoments": [
+    8
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 8/25 — Egg of Twin Keys. Story purpose: Dormant egg reaches critical hatch; Mira chooses consent Compact over force. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p8a): Close: dormant Riftborn egg — cyan-amber seams become starlit indigo cracks; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's hands cradle gently. Panel 2 (p8b): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot presses nose to shell — voluntary Compact glow; party forms protective ring (Bramblefox, Mossprig, Thornling, Wisplet). Panel 3 (p8c): Shell splits with constellation light — silhouette of newborn inside, face not yet fully shown. Characters: mira-eggwarden. Creatures: spark, dormant-riftborn-egg, bramblefox, mossprig, thornling, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Incubator Beta hatch floor. Atmosphere: dawn. Continuity: {\"egg\": \"hatching\", \"compact\": \"consent\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Name the hatchling.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Egg of Twin Keys — The Riftwright page 12",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): No force. No Meridian override. You come if you choose.",
+    "CREATURE (Spark): …come.",
+    "SFX: CRACK-kk",
+    "NARRATION: A second heart answers the first."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Mira Eggwarden): No force. No Meridian override. You come if you choose.",
+    "CREATURE (Spark): …come.",
+    "SFX: CRACK-kk",
+    "NARRATION: A second heart answers the first."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p012",
+  "cleanArtRel": "generated/raw-art/page-012.webp",
+  "letteredArtRel": "generated/lettered-pages/page-012.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-012.webp"
+}

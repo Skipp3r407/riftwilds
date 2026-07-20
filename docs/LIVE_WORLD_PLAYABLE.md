@@ -1,6 +1,6 @@
 # Playable Live World — Browser Multiplayer Habitat
 
-The Live World is a **playable browser habitat** (Phaser), not a passive livestream. Product focus stays TCG / Rift Battles, but the habitat remains **enterable during development** so you can work on it. Systems stay in-repo for MMO compatibility. Optional pre-release Coming Soon soft-gate: set `LIVE_WORLD_PUBLIC_ACCESS_ENABLED=false`. Spectator/stream views remain secondary and disabled by default.
+The Live World is a **playable browser habitat** (Phaser), not a passive livestream. Product focus stays TCG / Rift Battles. **Public access is soft-gated** (`LIVE_WORLD_PUBLIC_ACCESS_ENABLED=false`) so `/live-world`, `/restoration`, and World directory labels read **Coming Soon** until launch. Systems stay in-repo. Spectator/stream views remain secondary and disabled by default.
 
 **Launch product:** TCG / Rift Battles (`/tcg/battle`, `/tcg/collection`).
 
@@ -8,10 +8,11 @@ The Live World is a **playable browser habitat** (Phaser), not a passive livestr
 
 | Item | Value |
 |------|--------|
-| Route | `/live-world` (open by default; soft-gated when public access off) |
+| Route | `/live-world` (Coming Soon when public access off) |
 | Legacy redirect | `/live` → `/live-world` |
 | Primary CTA (when open) | **ENTER THE LIVE WORLD** |
-| Soft-gate (optional) | Set `LIVE_WORLD_PUBLIC_ACCESS_ENABLED=false` → Coming Soon → CTAs to Rift Battle / Binder |
+| Soft-gate (current default) | `LIVE_WORLD_PUBLIC_ACCESS_ENABLED=false` → Coming Soon → CTAs to Rift Battle / Binder |
+| World Restoration | `/restoration` — same public gate (community settlement restore board) |
 | Spectator | `/live-world/spectate` (`LIVE_WORLD_SPECTATOR_MODE_ENABLED=false`) |
 | Legacy stream | `/live/stream` → spectate |
 
@@ -28,8 +29,8 @@ Defaults in `src/lib/config/feature-flags.ts`:
 | Flag | Default | Notes |
 |------|---------|--------|
 | `PLAYABLE_LIVE_WORLD_ENABLED` | `true` | Phaser systems intact; used with entry helpers |
-| `LIVE_WORLD_PUBLIC_ACCESS_ENABLED` | `true` | Default open for development; set `false` before public release for Coming Soon |
-| `LIVE_WORLD_DEV_PREVIEW_ENABLED` | `true` | Non-prod preview when public access is off |
+| `LIVE_WORLD_PUBLIC_ACCESS_ENABLED` | `false` | Coming Soon until public launch; set `true` to open |
+| `LIVE_WORLD_DEV_PREVIEW_ENABLED` | `false` | Non-prod Phaser enter when public access is off; also auto-opens under `NODE_ENV=development` / Dev Override (see `docs/DEV_OVERRIDE.md`) |
 | `LIVE_WORLD_ENABLED` | `true` | Legacy alias for older UI checks |
 | `LIVE_WORLD_MULTIPLAYER_ENABLED` | `true` | Hooks scaffolded; Phase 1 still local |
 | `LIVE_WORLD_CHAT_ENABLED` | `true` | Stub only until Phase 2 |
@@ -41,6 +42,13 @@ Defaults in `src/lib/config/feature-flags.ts`:
 | `LIVE_WORLD_GUILDS_ENABLED` | `false` | Phase 5 |
 | `LIVE_WORLD_SPECTATOR_MODE_ENABLED` | `false` | Not default UX |
 | `LIVE_WORLD_MOBILE_CONTROLS_ENABLED` | `true` | Virtual joystick + Talk/Run |
+
+### Re-enable for public launch
+
+1. Set `LIVE_WORLD_PUBLIC_ACCESS_ENABLED: true` in `feature-flags.ts`.
+2. Local/dev: `npm run dev` (or Dev Override) auto-opens entry with **COMING SOON · DEV ACCESS** while public stays off. Optionally set `LIVE_WORLD_DEV_PREVIEW_ENABLED: true` / `LIVE_WORLD_DEV_PREVIEW_ENABLED=true` env for other non-prod runtimes.
+3. Nav badges and World/Restoration Coming Soon copy clear automatically when public access is on.
+
 
 ## Code map
 

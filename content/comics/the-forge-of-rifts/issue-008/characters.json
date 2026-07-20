@@ -1,0 +1,54 @@
+{
+  "cast": [
+    {
+      "id": "mira-eggwarden",
+      "name": "Mira Eggwarden",
+      "role": "Keeper protagonist"
+    },
+    {
+      "id": "arkan",
+      "name": "Chief Engineer Arkan",
+      "role": "Forge architect \u2014 sacrifice"
+    },
+    {
+      "id": "seris-vale",
+      "name": "Seris Vale",
+      "role": "Meridian commander"
+    },
+    {
+      "id": "cael-vesper",
+      "name": "Cael Vesper",
+      "role": "Lanternmaster \u2014 supervised redemption"
+    },
+    {
+      "id": "nira-quill",
+      "name": "Nira Quill",
+      "role": "Allied hunter"
+    },
+    {
+      "id": "aurelia-voss",
+      "name": "Aurelia Voss",
+      "role": "Off-page merchant intel"
+    },
+    {
+      "id": "elara-venn",
+      "name": "Elara Venn",
+      "role": "Vision/counsel only \u2014 not present"
+    },
+    {
+      "id": "riftwright",
+      "name": "The Riftwright",
+      "role": "Alive silhouette cliffhanger \u2014 identity withheld"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "cal-reed",
+      "note": "NON-CANON"
+    },
+    {
+      "id": "voltkit",
+      "note": "legacy seed \u2014 not used"
+    }
+  ]
+}

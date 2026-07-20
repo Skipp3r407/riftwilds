@@ -1,0 +1,154 @@
+{
+  "pageNumber": 23,
+  "bookRole": "story",
+  "title": "You Do Not Have To",
+  "storyPurpose": "Hunters gaining; Spark sees Mossprig hurt; overload; Mira refuses to command Spark to fight.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p19a",
+      "description": "Hunters' dampening field tightens; Mira knocked to a knee; Vex advances.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Vex Halden",
+          "text": "End this. Collar the anomaly.",
+          "x": 55,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p19b",
+      "description": "Spark stares at Mossprig's burn; resonance overload rings around Spark.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "RESONANCE+++",
+          "x": 50,
+          "y": 45,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p19c",
+      "description": "Mira, breathless, speaks to Spark without order — open hand.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "You don't have to fight for us. You don't have to be useful to be kept.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "readOrder": 2,
+          "maxWidthPct": 48
+        },
+        {
+          "kind": "whisper",
+          "speaker": "Mira Eggwarden",
+          "text": "If you run through that door, I'll still call you Spark.",
+          "x": 50,
+          "y": 75,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 45
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p19a",
+      "kind": "speech",
+      "speaker": "Vex Halden",
+      "text": "End this. Collar the anomaly.",
+      "x": 55,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p19c",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "You don't have to fight for us. You don't have to be useful to be kept.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "readOrder": 2,
+      "maxWidthPct": 48
+    },
+    {
+      "panelId": "p19c",
+      "kind": "whisper",
+      "speaker": "Mira Eggwarden",
+      "text": "If you run through that door, I'll still call you Spark.",
+      "x": 50,
+      "y": 75,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 45
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p19b",
+      "kind": "sfx",
+      "text": "RESONANCE+++",
+      "x": 50,
+      "y": 45,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "continuity": {
+    "spark": {
+      "emotion": "overload / listening",
+      "glow": "critical",
+      "resonance": 3
+    },
+    "keeper": {
+      "stance": "refuse-to-weaponize"
+    },
+    "hunters": {
+      "advantage": true
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 19/25 — You Do Not Have To. Story purpose: Hunters gaining; Spark sees Mossprig hurt; overload; Mira refuses to command Spark to fight. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p19a): Hunters' dampening field tightens; Mira knocked to a knee; Vex advances. Panel 2 (p19b): Spark stares at Mossprig's burn; resonance overload rings around Spark. Panel 3 (p19c): Mira, breathless, speaks to Spark without order — open hand. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"overload / listening\",\"glow\":\"critical\",\"resonance\":3},\"keeper\":{\"stance\":\"refuse-to-weaponize\"},\"hunters\":{\"advantage\":true}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Vision.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "You Do Not Have To — Spark's Journey page 19",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SPEECH (Vex Halden): End this. Collar the anomaly.",
+    "SFX: RESONANCE+++",
+    "SPEECH (Mira Eggwarden): You don't have to fight for us. You don't have to be useful to be kept.",
+    "WHISPER (Mira Eggwarden): If you run through that door, I'll still call you Spark."
+  ],
+  "storyPageNumber": 19,
+  "id": "sparks-journey-issue-002-p023",
+  "cleanArtRel": "generated/raw-art/page-023.png",
+  "letteredArtRel": "generated/lettered-pages/page-023.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-023.webp"
+}

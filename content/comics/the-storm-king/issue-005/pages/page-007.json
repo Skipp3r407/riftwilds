@@ -1,0 +1,162 @@
+{
+  "pageNumber": 7,
+  "storyPageNumber": 3,
+  "bookRole": "story",
+  "title": "Updraft Invitation",
+  "storyPurpose": "Galesprig guides team through upward-blowing waterfall path.",
+  "layout": {
+    "type": "two-stack",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p3a",
+      "description": "Galesprig: small fox-bird mountain companion, pale gray fur, blue feathered ears, spiral wind markings, ribbon-like tail, short glides, curious cautious eyes appears on a wind-carved ledge, ribbon tail pointing toward waterfall blowing upward into cloud sea.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*chirp-updraft*",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Galesprig",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "A local scout. Follow the wind — carefully.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p3b",
+      "description": "Team following Galesprig behind reverse waterfall into a hidden slate tunnel; Spirit Moth reading lightning pattern at entrance.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Some doors are made of weather.",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "wind-tunnel-WHOOSH",
+          "x": 65,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p3a",
+      "kind": "creature",
+      "text": "*chirp-updraft*",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Galesprig",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p3a",
+      "kind": "speech",
+      "text": "A local scout. Follow the wind — carefully.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 1
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p3b",
+      "kind": "narration",
+      "text": "Some doors are made of weather.",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p3b",
+      "kind": "sfx",
+      "text": "wind-tunnel-WHOOSH",
+      "x": 65,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "galesprig",
+    "spirit-moth",
+    "bramblefox",
+    "mossprig"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "hidden waterfall path",
+    "guide": "galesprig"
+  },
+  "requiredMoments": [
+    4
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 3/25 — Updraft Invitation. Story purpose: Galesprig guides team through upward-blowing waterfall path. Layout: two-stack. 2 panels with clear inked gutters. Panel 1 (p3a): Galesprig: small fox-bird mountain companion, pale gray fur, blue feathered ears, spiral wind markings, ribbon-like tail, short glides, curious cautious eyes appears on a wind-carved ledge, ribbon tail pointing toward waterfall blowing upward into cloud sea. Panel 2 (p3b): Team following Galesprig behind reverse waterfall into a hidden slate tunnel; Spirit Moth reading lightning pattern at entrance. Characters: mira-eggwarden, cael-vesper. Creatures: spark, galesprig, spirit-moth, bramblefox, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"hidden waterfall path\", \"guide\": \"galesprig\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Enter the lower village.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Updraft Invitation — The Storm King page 3",
+  "atmosphere": "storm",
+  "transcript": [
+    "CREATURE (Galesprig): *chirp-updraft*",
+    "SPEECH (Cael Vesper): A local scout. Follow the wind — carefully.",
+    "NARRATION: Some doors are made of weather.",
+    "SFX: wind-tunnel-WHOOSH"
+  ],
+  "a11yTranscript": [
+    "CREATURE (Galesprig): *chirp-updraft*",
+    "SPEECH (Cael Vesper): A local scout. Follow the wind — carefully.",
+    "NARRATION: Some doors are made of weather.",
+    "SFX: wind-tunnel-WHOOSH"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "galesprig"
+  ],
+  "id": "the-storm-king-issue-005-p007",
+  "cleanArtRel": "generated/raw-art/page-007.webp",
+  "letteredArtRel": "generated/lettered-pages/page-007.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-007.webp"
+}

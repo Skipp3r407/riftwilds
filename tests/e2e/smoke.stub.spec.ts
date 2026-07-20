@@ -72,10 +72,10 @@ test.describe("riftwilds smoke", () => {
     );
   });
 
-  test("live-world page loads playable shell", async ({ page }) => {
+  test("live-world page soft-gates with Coming Soon", async ({ page }) => {
     await page.goto("/live-world", { waitUntil: "domcontentloaded" });
     await expect(page.getByRole("heading").first()).toBeVisible({ timeout: 20_000 });
-    await expect(page.locator("body")).toContainText(/Live World|Enter|Play|habitat|region|world/i);
+    await expect(page.locator("body")).toContainText(/Coming Soon|Live World|Rift Battle/i);
   });
 
   test("major nav routes respond", async ({ page }) => {

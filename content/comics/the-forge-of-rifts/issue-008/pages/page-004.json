@@ -1,0 +1,109 @@
+{
+  "pageNumber": 4,
+  "storyPageNumber": null,
+  "bookRole": "title",
+  "title": "Chapter Eight — The Forge of Rifts",
+  "storyPurpose": "Chapter Eight — The Forge of Rifts",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "tp",
+      "description": "Title spread energy: party small on bridge into Forge maw; empty title zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CHAPTER EIGHT",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "THE FORGE OF RIFTS",
+          "x": 50,
+          "y": 42,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "narration",
+          "text": "Progress without ethics leaves a wound that looks like a doorway.",
+          "x": 50,
+          "y": 72,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "tp",
+      "kind": "caption",
+      "text": "CHAPTER EIGHT",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "tp",
+      "kind": "caption",
+      "text": "THE FORGE OF RIFTS",
+      "x": 50,
+      "y": 42,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "tp",
+      "kind": "narration",
+      "text": "Progress without ethics leaves a wound that looks like a doorway.",
+      "x": 50,
+      "y": 72,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book title page for The Forge of Rifts Issue #8 — Chapter Eight — The Forge of Rifts. Title spread energy: party small on bridge into Forge maw; empty title zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Chapter Eight — The Forge of Rifts",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: CHAPTER EIGHT",
+    "CAPTION: THE FORGE OF RIFTS",
+    "NARRATION: Progress without ethics leaves a wound that looks like a doorway."
+  ],
+  "a11yTranscript": [
+    "CAPTION: CHAPTER EIGHT",
+    "CAPTION: THE FORGE OF RIFTS",
+    "NARRATION: Progress without ethics leaves a wound that looks like a doorway."
+  ],
+  "id": "the-forge-of-rifts-issue-008-p004",
+  "cleanArtRel": "generated/raw-art/page-004.webp",
+  "letteredArtRel": "generated/lettered-pages/page-004.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-004.webp"
+}

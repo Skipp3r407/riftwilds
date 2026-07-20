@@ -7,6 +7,7 @@ export type CreditsBalanceResponse = {
   ok?: boolean;
   balance: number;
   userId?: string;
+  authenticated?: boolean;
   disclaimer?: string;
   recent?: { delta: number; reason: string; createdAt: string }[];
   error?: string;

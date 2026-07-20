@@ -111,11 +111,14 @@ Defaults live in `src/lib/config/feature-flags.ts`:
 
 ## Guest login how-to
 
+**Breaking:** Anonymous `rift_guest` gameplay and Nakama guest device login are **disabled** while `AUTH_ACCOUNT_REQUIRED_FOR_PLAY` is on (see `docs/AUTH_ACCOUNT_REQUIRED.md`). Sign in with a Riftkeeper account first; Nakama remains additive after app auth.
+
+Legacy steps (only if the account gate is rolled back locally):
+
 1. Start Docker + set `NEXT_PUBLIC_NAKAMA_ENABLED=true`
 2. Open `/settings/nakama`
-3. Click **Guest login (rift_guest)**
-4. The client mints/stores `rift_guest_token` in `sessionStorage` and calls Nakama `authenticateDevice` with id `rift_guest_<token>`
-5. Hatchery/Credits APIs still use the same guest cookie/header path — Nakama does not replace owner-key
+3. Guest login button is disabled in the UI when the account gate is active
+4. Previously: client minted `rift_guest_token` and called Nakama `authenticateDevice` with `rift_guest_<token>`
 
 ## Email login how-to
 

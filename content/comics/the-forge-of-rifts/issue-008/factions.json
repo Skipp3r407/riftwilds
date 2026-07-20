@@ -1,0 +1,29 @@
+{
+  "factions": [
+    {
+      "id": "veiled-meridian",
+      "name": "Veiled Meridian",
+      "goal": "Restart Forge; mass-produce Riftborn; capture Spark/egg"
+    },
+    {
+      "id": "hatchery-compact",
+      "name": "Hatchery Compact",
+      "status": "invite-wait \u2014 protect not own"
+    },
+    {
+      "id": "forge-architects",
+      "name": "Forge Architects (defunct)",
+      "status": "Arkan last survivor \u2014 sacrificed"
+    },
+    {
+      "id": "lanternveil-circus",
+      "name": "Lanternveil Traveling Circus",
+      "status": "ally-uneasy \u2014 off-page wards"
+    },
+    {
+      "id": "tempestria-crown",
+      "name": "Tempestria Crown",
+      "status": "reforming \u2014 off-page"
+    }
+  ]
+}

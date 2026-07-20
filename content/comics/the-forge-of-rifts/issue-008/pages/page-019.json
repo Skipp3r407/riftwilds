@@ -1,0 +1,213 @@
+{
+  "pageNumber": 19,
+  "storyPageNumber": 15,
+  "bookRole": "story",
+  "title": "Escaped Experiments",
+  "storyPurpose": "Companion experiments escape; Forge security constructs activate.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p15a",
+      "description": "Broken incubation pods burst — unstable prototype creatures thrashing, scared not evil; Cindermink-style restraint possible via Axiom Pulse Repair calming one.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "POD-BURST",
+          "x": 68,
+          "y": 22,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*pulse-repair*",
+          "x": 40,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 1
+        },
+        {
+          "kind": "speech",
+          "text": "Don't harm them — guide them!",
+          "x": 55,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p15b",
+      "description": "Forge Guardians awaken on rails — black steel / white stone constructs with cyan oath flames (Oathwarden / Last Guardian lineage echo).",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Security remembered oaths older than Meridian uniforms.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 3
+        },
+        {
+          "kind": "sfx",
+          "text": "guardian-LOCK",
+          "x": 65,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "p15c",
+      "description": "Chaos triangulation: Meridian vs Guardians vs freed experiments; party in middle; egg cracking glow intensifying.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "The Forge is choosing sides — and none of them are calm!",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Nira Quill",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p15a",
+      "kind": "creature",
+      "text": "*pulse-repair*",
+      "x": 40,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Axiom",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p15a",
+      "kind": "speech",
+      "text": "Don't harm them — guide them!",
+      "x": 55,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p15c",
+      "kind": "speech",
+      "text": "The Forge is choosing sides — and none of them are calm!",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Nira Quill",
+      "readOrder": 5
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p15b",
+      "kind": "narration",
+      "text": "Security remembered oaths older than Meridian uniforms.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p15a",
+      "kind": "sfx",
+      "text": "POD-BURST",
+      "x": 68,
+      "y": 22,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p15b",
+      "kind": "sfx",
+      "text": "guardian-LOCK",
+      "x": 65,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark",
+    "axiom",
+    "mossprig",
+    "bramblefox"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Engine Alpha plaza",
+    "experiments": "escaped",
+    "guardians": "active"
+  },
+  "requiredMoments": [
+    14,
+    15
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 15/25 — Escaped Experiments. Story purpose: Companion experiments escape; Forge security constructs activate. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p15a): Broken incubation pods burst — unstable prototype creatures thrashing, scared not evil; Cindermink-style restraint possible via Axiom Pulse Repair calming one. Panel 2 (p15b): Forge Guardians awaken on rails — black steel / white stone constructs with cyan oath flames (Oathwarden / Last Guardian lineage echo). Panel 3 (p15c): Chaos triangulation: Meridian vs Guardians vs freed experiments; party in middle; egg cracking glow intensifying. Characters: mira-eggwarden, nira-quill, seris-vale. Creatures: spark, axiom, mossprig, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Engine Alpha plaza\", \"experiments\": \"escaped\", \"guardians\": \"active\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "The battle becomes the Forge itself.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Escaped Experiments — The Forge of Rifts page 15",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: POD-BURST",
+    "CREATURE (Axiom): *pulse-repair*",
+    "SPEECH (Mira Eggwarden): Don't harm them — guide them!",
+    "NARRATION: Security remembered oaths older than Meridian uniforms.",
+    "SFX: guardian-LOCK",
+    "SPEECH (Nira Quill): The Forge is choosing sides — and none of them are calm!"
+  ],
+  "a11yTranscript": [
+    "SFX: POD-BURST",
+    "CREATURE (Axiom): *pulse-repair*",
+    "SPEECH (Mira Eggwarden): Don't harm them — guide them!",
+    "NARRATION: Security remembered oaths older than Meridian uniforms.",
+    "SFX: guardian-LOCK",
+    "SPEECH (Nira Quill): The Forge is choosing sides — and none of them are calm!"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p019",
+  "cleanArtRel": "generated/raw-art/page-019.webp",
+  "letteredArtRel": "generated/lettered-pages/page-019.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-019.webp"
+}

@@ -1,0 +1,59 @@
+{
+  "pageNumber": 26,
+  "id": "the-first-rift-issue-001-p026",
+  "role": "story",
+  "title": null,
+  "layout": "three-stack",
+  "atmosphere": "dawn",
+  "beat": "Loyalty / responsibility — Mira chooses Compact",
+  "artPrompt": "Three-stack, no text. Mira returns toward Commons Hatchery lights; Bramblefox-like fringe watcher optional silhouette; dawn responsibility mood. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Responsibility is not a crown. It is a walk you finish.",
+          "x": 50,
+          "y": 20
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Hatchery Compact still holds. Invite. Wait. Tell the truth about the tear.",
+          "x": 45,
+          "y": 55,
+          "tail": "down"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "Theme — loyalty · responsibility · ancient betrayal",
+          "x": 50,
+          "y": 50
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "I will not make the egg pay for someone else's curiosity.",
+          "x": 50,
+          "y": 45,
+          "tail": "up"
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-026.png",
+  "letteredArtRel": "generated/lettered/page-026.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-026.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

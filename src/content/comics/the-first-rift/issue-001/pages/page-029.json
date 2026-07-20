@@ -1,0 +1,43 @@
+{
+  "pageNumber": 29,
+  "id": "the-first-rift-issue-001-p029",
+  "role": "story",
+  "title": null,
+  "layout": "splash",
+  "atmosphere": "night",
+  "beat": "End splash — egg / pulse / next road",
+  "artPrompt": "End splash, no text. Mira on Commons ridge looking toward distant Fracture glow; soft egg-shaped cyan reflection in her satchel glass vial; companions of legend as faint constellation shapes in sky. Hopeful cliffhanger. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "The Commons keeps its name. The pulse keeps its secret.",
+          "x": 50,
+          "y": 14
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "I'm still inviting. Don't make me regret waiting.",
+          "x": 40,
+          "y": 55,
+          "tail": "up"
+        },
+        {
+          "kind": "caption",
+          "text": "END OF ISSUE #001 — THE PULSE BELOW",
+          "x": 50,
+          "y": 82
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-029.png",
+  "letteredArtRel": "generated/lettered/page-029.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-029.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

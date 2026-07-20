@@ -1,0 +1,198 @@
+{
+  "pageNumber": 15,
+  "storyPageNumber": 11,
+  "bookRole": "story",
+  "title": "Forge History",
+  "storyPurpose": "Arkan reveals Forge purpose, weaponization, Riftwright disappearance before activation.",
+  "layout": {
+    "type": "four-grid",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p11a",
+      "description": "Arkan gesturing at holographic Forge timeline: healing engines, Resonance Keepers, Guardian Constructs, City Engines, Stabilizers.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "We made Resonance Keepers. Guardians. City Engines. Stabilizers.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Arkan",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p11b",
+      "description": "Holo shifts to First Rift tear — artificial; protocol rings corrupted; gloved hand rewriting (identity hidden).",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Someone rewrote the Forge protocols. The Riftwright never intended genocide.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Arkan",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p11c",
+      "description": "Empty command dais — Riftwright gone before final activation; other silhouette pushing the last command (face obscured).",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The Riftwright vanished before activation. Someone else pushed the final command.",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p11d",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes holding Spark; egg bright; Arkan ashamed.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Then the enemy may not be the original creators.",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        },
+        {
+          "kind": "whisper",
+          "text": "Knowledge without conscience is just a prettier knife.",
+          "x": 55,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Arkan",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p11a",
+      "kind": "speech",
+      "text": "We made Resonance Keepers. Guardians. City Engines. Stabilizers.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Arkan",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p11b",
+      "kind": "speech",
+      "text": "Someone rewrote the Forge protocols. The Riftwright never intended genocide.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Arkan",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p11d",
+      "kind": "speech",
+      "text": "Then the enemy may not be the original creators.",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p11d",
+      "kind": "whisper",
+      "text": "Knowledge without conscience is just a prettier knife.",
+      "x": 55,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Arkan",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p11c",
+      "kind": "narration",
+      "text": "The Riftwright vanished before activation. Someone else pushed the final command.",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "arkan"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [
+    "forge-blueprints",
+    "memory-crystal"
+  ],
+  "continuity": {
+    "location": "history holodais",
+    "reveal": "protocols-altered",
+    "riftwright": "vanished-pre-activation",
+    "saboteur": "withheld"
+  },
+  "requiredMoments": [
+    10
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 11/25 — Forge History. Story purpose: Arkan reveals Forge purpose, weaponization, Riftwright disappearance before activation. Layout: four-grid. 4 panels with clear inked gutters. Panel 1 (p11a): Arkan gesturing at holographic Forge timeline: healing engines, Resonance Keepers, Guardian Constructs, City Engines, Stabilizers. Panel 2 (p11b): Holo shifts to First Rift tear — artificial; protocol rings corrupted; gloved hand rewriting (identity hidden). Panel 3 (p11c): Empty command dais — Riftwright gone before final activation; other silhouette pushing the last command (face obscured). Panel 4 (p11d): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes holding Spark; egg bright; Arkan ashamed. Characters: mira-eggwarden, arkan. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"history holodais\", \"reveal\": \"protocols-altered\", \"riftwright\": \"vanished-pre-activation\", \"saboteur\": \"withheld\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "A prototype wakes.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Forge History — The Forge of Rifts page 11",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Arkan): We made Resonance Keepers. Guardians. City Engines. Stabilizers.",
+    "SPEECH (Arkan): Someone rewrote the Forge protocols. The Riftwright never intended genocide.",
+    "NARRATION: The Riftwright vanished before activation. Someone else pushed the final command.",
+    "SPEECH (Mira Eggwarden): Then the enemy may not be the original creators.",
+    "WHISPER (Arkan): Knowledge without conscience is just a prettier knife."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Arkan): We made Resonance Keepers. Guardians. City Engines. Stabilizers.",
+    "SPEECH (Arkan): Someone rewrote the Forge protocols. The Riftwright never intended genocide.",
+    "NARRATION: The Riftwright vanished before activation. Someone else pushed the final command.",
+    "SPEECH (Mira Eggwarden): Then the enemy may not be the original creators.",
+    "WHISPER (Arkan): Knowledge without conscience is just a prettier knife."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p015",
+  "cleanArtRel": "generated/raw-art/page-015.webp",
+  "letteredArtRel": "generated/lettered-pages/page-015.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-015.webp"
+}

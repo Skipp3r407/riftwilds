@@ -1,0 +1,172 @@
+{
+  "pageNumber": 21,
+  "bookRole": "story",
+  "title": "Living Bulwark",
+  "storyPurpose": "Binding relic fires at Spark; Mossprig takes the hit with Living Bulwark.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p17a",
+      "description": "Binding relic beam streaks toward Spark; Mossprig lunges into the path, Living Bulwark vine-light blooming.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "BIND-LANCE",
+          "x": 60,
+          "y": 35,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Mossprig",
+          "text": "*BULWARK!*",
+          "x": 40,
+          "y": 55,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p17b",
+      "description": "Impact: Mossprig absorbs binding burn across shoulder moss-flesh; visible scorch; Spark stares in horror; Mira reaches.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "KRRRAAAK",
+          "x": 50,
+          "y": 30,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*chir—!!*",
+          "x": 65,
+          "y": 60,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Mossprig!",
+          "x": 30,
+          "y": 75,
+          "tail": "up",
+          "readOrder": 4,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p17a",
+      "kind": "creature",
+      "speaker": "Mossprig",
+      "text": "*BULWARK!*",
+      "x": 40,
+      "y": 55,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p17b",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*chir—!!*",
+      "x": 65,
+      "y": 60,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p17b",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Mossprig!",
+      "x": 30,
+      "y": 75,
+      "tail": "up",
+      "readOrder": 4,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p17a",
+      "kind": "sfx",
+      "text": "BIND-LANCE",
+      "x": 60,
+      "y": 35,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p17b",
+      "kind": "sfx",
+      "text": "KRRRAAAK",
+      "x": 50,
+      "y": 30,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "mossprig",
+    "spark",
+    "bramblefox"
+  ],
+  "continuity": {
+    "mossprig": {
+      "injuries": [
+        "binding burn across shoulder"
+      ],
+      "status": "protecting Spark",
+      "ability": "Living Bulwark used"
+    },
+    "spark": {
+      "emotion": "horror / guilt surge",
+      "glow": "building overload"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 17/25 — Living Bulwark. Story purpose: Binding relic fires at Spark; Mossprig takes the hit with Living Bulwark. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p17a): Binding relic beam streaks toward Spark; Mossprig lunges into the path, Living Bulwark vine-light blooming. Panel 2 (p17b): Impact: Mossprig absorbs binding burn across shoulder moss-flesh; visible scorch; Spark stares in horror; Mira reaches. Characters: mira-eggwarden. Creatures: mossprig, spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"mossprig\":{\"injuries\":[\"binding burn across shoulder\"],\"status\":\"protecting Spark\",\"ability\":\"Living Bulwark used\"},\"spark\":{\"emotion\":\"horror / guilt surge\",\"glow\":\"building overload\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Coordinated battle.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Living Bulwark — Spark's Journey page 17",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SFX: BIND-LANCE",
+    "CREATURE (Mossprig): *BULWARK!*",
+    "SFX: KRRRAAAK",
+    "CREATURE (Spark): *chir—!!*",
+    "SPEECH (Mira Eggwarden): Mossprig!"
+  ],
+  "storyPageNumber": 17,
+  "id": "sparks-journey-issue-002-p021",
+  "cleanArtRel": "generated/raw-art/page-021.png",
+  "letteredArtRel": "generated/lettered-pages/page-021.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-021.webp"
+}

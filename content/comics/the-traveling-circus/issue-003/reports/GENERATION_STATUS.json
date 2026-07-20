@@ -1,0 +1,396 @@
+{
+  "updatedAt": "2026-07-20T15:12:59.929Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "1": {
+      "pageNumber": 1,
+      "role": "front-cover",
+      "title": "The Traveling Circus — Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-01.webp",
+      "error": null
+    },
+    "2": {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "title": "Inside Front Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-02.webp",
+      "error": null
+    },
+    "3": {
+      "pageNumber": 3,
+      "role": "credits",
+      "title": "Credits",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-03.webp",
+      "error": null
+    },
+    "4": {
+      "pageNumber": 4,
+      "role": "title",
+      "title": "Chapter Three — Lanternveil",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-04.webp",
+      "error": null
+    },
+    "5": {
+      "pageNumber": 5,
+      "role": "story",
+      "title": "Roads Beneath Lanterns",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-05.webp",
+      "error": null
+    },
+    "6": {
+      "pageNumber": 6,
+      "role": "story",
+      "title": "Step Right In",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-06.webp",
+      "error": null
+    },
+    "7": {
+      "pageNumber": 7,
+      "role": "story",
+      "title": "The Greeter Notices",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-07.webp",
+      "error": null
+    },
+    "8": {
+      "pageNumber": 8,
+      "role": "story",
+      "title": "Wonder Market",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-08.webp",
+      "error": null
+    },
+    "9": {
+      "pageNumber": 9,
+      "role": "story",
+      "title": "Snack Catastrophe",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-09.webp",
+      "error": null
+    },
+    "10": {
+      "pageNumber": 10,
+      "role": "story",
+      "title": "Lanternmaster Knows the Name",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-10.webp",
+      "error": null
+    },
+    "11": {
+      "pageNumber": 11,
+      "role": "story",
+      "title": "Not Neatly in a Codex",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-11.webp",
+      "error": null
+    },
+    "12": {
+      "pageNumber": 12,
+      "role": "story",
+      "title": "Curtain Call Begins",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-12.webp",
+      "error": null
+    },
+    "13": {
+      "pageNumber": 13,
+      "role": "story",
+      "title": "Ghosts Under the Boards",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-13.webp",
+      "error": null
+    },
+    "14": {
+      "pageNumber": 14,
+      "role": "story",
+      "title": "Resonance Meeting",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-14.webp",
+      "error": null
+    },
+    "15": {
+      "pageNumber": 15,
+      "role": "story",
+      "title": "Don't Ask Backstage",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-15.webp",
+      "error": null
+    },
+    "16": {
+      "pageNumber": 16,
+      "role": "story",
+      "title": "Restricted Wagon",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-16.webp",
+      "error": null
+    },
+    "17": {
+      "pageNumber": 17,
+      "role": "story",
+      "title": "Archive of Routes",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-17.webp",
+      "error": null
+    },
+    "18": {
+      "pageNumber": 18,
+      "role": "story",
+      "title": "Ember Route",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-18.webp",
+      "error": null
+    },
+    "19": {
+      "pageNumber": 19,
+      "role": "story",
+      "title": "Crystal in the Vault",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-19.webp",
+      "error": null
+    },
+    "20": {
+      "pageNumber": 20,
+      "role": "story",
+      "title": "Sabotage",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-20.webp",
+      "error": null
+    },
+    "21": {
+      "pageNumber": 21,
+      "role": "story",
+      "title": "Living Bulwark",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-21.webp",
+      "error": null
+    },
+    "22": {
+      "pageNumber": 22,
+      "role": "story",
+      "title": "Grand Chaos",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-22.webp",
+      "error": null
+    },
+    "23": {
+      "pageNumber": 23,
+      "role": "story",
+      "title": "Not Evil — Collared",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-23.webp",
+      "error": null
+    },
+    "24": {
+      "pageNumber": 24,
+      "role": "story",
+      "title": "Spark Chooses",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-24.webp",
+      "error": null
+    },
+    "25": {
+      "pageNumber": 25,
+      "role": "story",
+      "title": "Quiet Betrayal of the Hunt",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-25.webp",
+      "error": null
+    },
+    "26": {
+      "pageNumber": 26,
+      "role": "story",
+      "title": "Lanternmaster Unmasked in Battle",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-26.webp",
+      "error": null
+    },
+    "27": {
+      "pageNumber": 27,
+      "role": "story",
+      "title": "We Move Them",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-27.webp",
+      "error": null
+    },
+    "28": {
+      "pageNumber": 28,
+      "role": "story",
+      "title": "Map of Thresholds",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-28.webp",
+      "error": null
+    },
+    "29": {
+      "pageNumber": 29,
+      "role": "story",
+      "title": "The Guardian Remembers",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-29.webp",
+      "error": null
+    },
+    "30": {
+      "pageNumber": 30,
+      "role": "teaser",
+      "title": "Next Issue — The Lost City",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-30.webp",
+      "error": null
+    },
+    "31": {
+      "pageNumber": 31,
+      "role": "profile",
+      "title": "Character Profile — The Lanternmaster",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-31.webp",
+      "error": null
+    },
+    "32": {
+      "pageNumber": 32,
+      "role": "profile",
+      "title": "Companion Profile — Lumenhare",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-32.webp",
+      "error": null
+    },
+    "33": {
+      "pageNumber": 33,
+      "role": "lore",
+      "title": "Codex — Lanternveil Traveling Circus",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-33.webp",
+      "error": null
+    },
+    "34": {
+      "pageNumber": 34,
+      "role": "lore",
+      "title": "Ability Spotlight — Grand Illusion",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-34.webp",
+      "error": null
+    },
+    "35": {
+      "pageNumber": 35,
+      "role": "map",
+      "title": "World Map — Sanctum to Circus to Lost City",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-35.webp",
+      "error": null
+    },
+    "36": {
+      "pageNumber": 36,
+      "role": "letters",
+      "title": "Editor's Note",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-36.webp",
+      "error": null
+    },
+    "37": {
+      "pageNumber": 37,
+      "role": "inside-cover",
+      "title": "Inside Back Cover",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-37.webp",
+      "error": null
+    },
+    "38": {
+      "pageNumber": 38,
+      "role": "back-cover",
+      "title": "Back Cover — Lanternveil Grand Performance",
+      "artEngine": "procedural",
+      "artStatus": "ok",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/pages/the-traveling-circus/page-38.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 38,
+    "letterOk": 38,
+    "grokOk": 0,
+    "proceduralOk": 38,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-003/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-003/generate-and-letter.mjs --force"
+  }
+}

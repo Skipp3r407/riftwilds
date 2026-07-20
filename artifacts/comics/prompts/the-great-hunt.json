@@ -1,0 +1,717 @@
+[
+  {
+    "id": "the-great-hunt-p01",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 1,
+    "role": "front-cover",
+    "layout": "splash",
+    "title": "The Great Hunt",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-01.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 1 of 36. Treat as interior showcase plate matching cover energy (not a second book cover with title text). Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift · Issue #7 | narration: A luminous quarry, and a rule: chase without cruelty. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p02",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 2,
+    "role": "inside-cover",
+    "layout": "narrative",
+    "title": "Inside cover",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-02.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 2 of 36. Quiet inside-cover atmosphere: parchment light, soft Gateway glow, invitation to read. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Riftwilds Comic Publishing — original fantasy. No crypto required to read. | narration: Credits & cosmetics may unlock along the way. The story itself stays free. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p03",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 3,
+    "role": "title",
+    "layout": "narrative",
+    "title": "The Great Hunt",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-03.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 3 of 36. Title-spread energy without painted lettering: cast gathered near the Prime Gateway. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dawn. Story beats to illustrate (do not paint this text): caption: Issue #7 | narration: Keepers race Elderwood trails after a luminous quarry — the prize is witness, not conquest. | Series: Cal Reed · Mossprig · Thornling · Ashwing Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p04",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 4,
+    "role": "credits",
+    "layout": "narrative",
+    "title": "Credits",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-04.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 4 of 36. Workshop / lore-desk scene: quills, rift-ink, maps — no readable credit text. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Story · Riftwilds Lore Desk | caption: Art · Commons Archive (official plates) | caption: Lettering · Publishing Engine | narration: Canon alignment: World Codex · Riftling Codex · Legends of the Rift TCG. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p05",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 5,
+    "role": "recap",
+    "layout": "narrative",
+    "title": "Previously in the Riftwilds…",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-05.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 5 of 36. Recap montage plate: Fracture tear, road, egg, Commons founding — sequential beats in panels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: rift. Story beats to illustrate (do not paint this text): narration: After Issue #6, Keepers still walk Fracture roads. Bonds deepen. Shadows listen. | caption: Age of First Eggs — Keepers' Road. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p06",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 6,
+    "role": "splash",
+    "layout": "splash",
+    "title": "Trail light",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-06.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 6 of 36. Story page titled conceptually: Trail light. Single full-bleed cinematic splash panel filling the page. Scene: Keepers and riftlings racing through elderwood on a hunt. Atmosphere: dawn. Story beats to illustrate (do not paint this text): narration: The quarry left light, not blood. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p07",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 7,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-07.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 7 of 36. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: day. Story beats to illustrate (do not paint this text): Cal Reed: If you corner it, you failed. | Mossprig: *soft rustle* | sfx: FWOOOM | narration: The Great Hunt teaches reading the world — not owning the horizon. | Keeper: I wanted a trophy. Spark wanted a story. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p08",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 8,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-08.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 8 of 36. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): Cal Reed: We saw it. That is enough for the Compact. | caption: Quest stub: HUNT-WITNESS | sfx: wind through boughs Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p09",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 9,
+    "role": "story",
+    "layout": "lore",
+    "title": "Hunt culture",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-09.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 9 of 36. Story page titled conceptually: Hunt culture. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: dawn. Lore motif: Hunt culture — Preservation first. Battle culture later as survival training — never as excuse for cruelty. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p10",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 10,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-10.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 10 of 36. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: day. Story beats to illustrate (do not paint this text): Cal Reed: If you corner it, you failed. | Mossprig: *soft rustle* | sfx: dash! | narration: Trail light taught reading — not owning. | Keeper: I wanted a trophy. Spark wanted a story. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p11",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 11,
+    "role": "story",
+    "layout": "narrative",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-11.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 11 of 36. Story page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): Cal Reed: We saw it. That is enough for the Compact. | Mossprig: *proud rustle* | caption: Quest stub: HUNT-WITNESS | sfx: wind through boughs Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p12",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 12,
+    "role": "splash",
+    "layout": "splash",
+    "title": "Witness, not conquest",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-12.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 12 of 36. Story page titled conceptually: Witness, not conquest. Single full-bleed cinematic splash panel filling the page. Scene: Luminous quarry light fading into Elderwood dusk. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: The quarry left light, not blood. Keepers left footprints that did not chase past the marker. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p13",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 13,
+    "role": "story",
+    "layout": "two-col",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-13.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 13 of 36. Story page. Two tall side-by-side panels with a dark gutter between them. Atmosphere: dawn. Story beats to illustrate (do not paint this text): Cal Reed: Report it as witnessed. | Keeper: And thank the trail. | narration: Preservation first. Battle culture later — never as excuse for cruelty. | sfx: soft birdcall Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p14",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 14,
+    "role": "story",
+    "layout": "lore",
+    "title": "Hunt culture",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-14.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 14 of 36. Story page titled conceptually: Hunt culture. Illustrated lore plate: large atmospheric scene with an ornate crystal/heart motif and room at the bottom for a lore box overlay. Atmosphere: dawn. Lore motif: Hunt culture — The Great Hunt teaches world-reading. Cornering a luminous quarry breaks Compact spirit even if no shell cracks. Story beats to illustrate (do not paint this text): caption: Codex fragment — recovered from the margin. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p15",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 15,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-15.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 15 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p16",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 16,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-16.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 16 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p17",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 17,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-17.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 17 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p18",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 18,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-18.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 18 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p19",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 19,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-19.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 19 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p20",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 20,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-20.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 20 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p21",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 21,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-21.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 21 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p22",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 22,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-22.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 22 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p23",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 23,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-23.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 23 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p24",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 24,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-24.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 24 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p25",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 25,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-25.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 25 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p26",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 26,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-26.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 26 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p27",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 27,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-27.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 27 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p28",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 28,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-28.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 28 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p29",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 29,
+    "role": "story",
+    "layout": "narrative",
+    "title": "Trail manners",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-29.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 29 of 36. Story page titled conceptually: Trail manners. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): narration: Elderwood rewards witnesses more than hunters. | Elara Venn: If you corner it, you failed. | Keeper: The prize is the story we can still tell gently. | sfx: leaf hush Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p30",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 30,
+    "role": "end",
+    "layout": "end",
+    "title": "Issue complete",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-30.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 30 of 36. Story page titled conceptually: Issue complete. Closing story plate: warm Commons dusk scene with companions silhouetted, ceremonial feel. Atmosphere: festival. Story beats to illustrate (do not paint this text): caption: You finished Issue #7: The Great Hunt. | narration: Keepers race Elderwood trails after a luminous quarry — the prize is witness, not conquest. | caption: Play this chapter → Open Quests Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p31",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 31,
+    "role": "profile",
+    "layout": "narrative",
+    "title": "Keeper & Companion Profiles",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-31.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 31 of 36. Character profile plate: portraits of Elara, First Riftling, Bramblefox, Mossprig in ornate frames within the page. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: day. Story beats to illustrate (do not paint this text): Cal Reed: Hunt lead — Competent, dry humor, Compact-loyal. | Mossprig: Tracker — Grove-affinity pathfinder — official companion art & TCG family. | caption: Open: /codex/riftlings/mossprig | Thornling: Scout — Owl-talon line; watches the canopy for cruelty. | caption: Open: /codex/riftlings/thornling | Ashwing: Flank — Cinder bite held in reserve — hunt without burning the trail. | caption: Open: /codex/riftlings/ashwing Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p32",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 32,
+    "role": "map",
+    "layout": "narrative",
+    "title": "Map of the Fracture Roads",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-32.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 32 of 36. Hand-painted fantasy map of Riftwilds Commons and Fracture roads — decorative, no tiny unreadable labels. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: ruin. Story beats to illustrate (do not paint this text): narration: Paths rewrite overnight. Marked sites: Commons · Hatchery · Gateway shards · Festival lantern ring. | caption: Elderwood Forest: Golden light shafts, cyan trail markers. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p33",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 33,
+    "role": "ad",
+    "layout": "narrative",
+    "title": "Commons Notice Board",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-33.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 33 of 36. In-universe playful poster for Riftwilds TCG / Live World — illustrated scene, no real logos or readable ad copy. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: festival. Story beats to illustrate (do not paint this text): Crier: WAYBREAD FAIR — two loaves, one story! | caption: Fake Riftwilds ad · Visit the Hatchery Compact · Credits welcome, crypto never required for reading. | sfx: THRUMMM Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p34",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 34,
+    "role": "teaser",
+    "layout": "narrative",
+    "title": "Next issue",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-34.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 34 of 36. Next-issue teaser silhouette cliffhanger — mysterious, atmospheric. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: night. Story beats to illustrate (do not paint this text): caption: Next: the last guardian | narration: One oath remains when the wall does not. | Archive Keeper: Tease cards in the Codex. Build the bond in Deck Atelier. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  },
+  {
+    "id": "the-great-hunt-p35",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 35,
+    "role": "letters",
+    "layout": "narrative",
+    "title": "Letters from the Commons",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-35.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 35 of 36. Letters page atmosphere: Keeper mail, wax seals, egg sketches on a wooden table. Single illustrated narrative panel filling most of the page with rich environment detail. Atmosphere: dusk. Story beats to illustrate (do not paint this text): caption: Dear Archive — My Bramblefox used Forest Bond on a scarecrow. Is that allowed? | narration: Archive replies: Bonds are for living hearts. Scarecrows get a polite leaf-pat and a comic reread. | Mossprig: *soft rustle of approval* Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": false
+  },
+  {
+    "id": "the-great-hunt-p36",
+    "issueSlug": "the-great-hunt",
+    "pageNumber": 36,
+    "role": "back-cover",
+    "layout": "splash",
+    "title": "The Great Hunt",
+    "outputRelPath": "assets/comics/pages/the-great-hunt/page-36.webp",
+    "aspectRatio": "3:4",
+    "prompt": "Premium painted fantasy comic BOOK PAGE for original Riftwilds IP (Legends of the Rift). Portrait comic page composition 3:4, rich full-bleed illustration with clear inked panel gutters, characters in scene, atmospheric backgrounds, cinematic lighting. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC characters, logos, or proprietary SFX lettering. Leave clean negative space in upper/lower panel corners for speech bubbles (do NOT paint dialogue text, captions, logos, watermarks, page numbers, or UI). Fantasy onomatopoeia shapes OK without readable English. Painterly digital comic art, professional publishing quality — not a diagram, icon plate, or abstract lore card. Issue #7 \"The Great Hunt\" (the-great-hunt), page 36 of 36. Back-matter closing vista of the Commons under soft riftlight. Single full-bleed cinematic splash panel filling the page. Atmosphere: rift. Story beats to illustrate (do not paint this text): caption: Legends of the Rift #7 | narration: Official Riftwilds comic · Unlock Codex · Tease cards · Never P2W story gates. Feature cast when relevant: Cal Reed: original Riftwilds fantasy character. Mossprig: slender cervine-botanical Riftling with moss cape, branching leaf antlers with golden veins, cream muzzle, vine tail. Thornling: compact bristly plant Riftling, thorn crest, mossy hide, cautious stance. Ashwing: ember-feathered avian Riftling, warm charcoal and amber plumage, intelligent eyes, soft ash motes. Series: original Riftwilds fantasy character. Keeper: original Riftwilds fantasy character. Elara Venn: young adult woman courier-Keeper, weathered travel cloak, warm brown skin, dark braided hair with amber beads, determined gentle eyes, carries a glowing soft egg or young Riftling. Crier: original Riftwilds fantasy character. Make it look like a real printed fantasy comic page with depth, acting, and environment — never a minimalist icon diagram.",
+    "referenceRelPaths": [
+      "public/assets/comics/covers/07-the-great-hunt.png",
+      "public/assets/cards/rise-of-the-rift/elara-venn/art.png",
+      "public/assets/cards/rise-of-the-rift/bramblefox/art.webp",
+      "public/assets/cards/rise-of-the-rift/mossprig/art.webp",
+      "public/assets/npcs/riftwild-commons/elara-venn/full-body.png"
+    ],
+    "status": "pending",
+    "dedicated": true
+  }
+]

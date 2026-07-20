@@ -1,0 +1,54 @@
+{
+  "cast": [
+    {
+      "id": "mira-eggwarden",
+      "name": "Mira Eggwarden",
+      "role": "Keeper protagonist"
+    },
+    {
+      "id": "cael-vesper",
+      "name": "Cael Vesper",
+      "role": "Lanternmaster"
+    },
+    {
+      "id": "tavi-brightline",
+      "name": "Tavi Brightline",
+      "role": "Trusted circus performer"
+    },
+    {
+      "id": "nira-quill",
+      "name": "Nira Quill",
+      "role": "Uncertain hunter"
+    },
+    {
+      "id": "seris-vale",
+      "name": "Seris Vale",
+      "role": "Meridian commander"
+    },
+    {
+      "id": "vaelor-tempest",
+      "name": "King Vaelor Tempest",
+      "role": "Storm King"
+    },
+    {
+      "id": "hooded-merchant",
+      "name": "Hooded Merchant",
+      "role": "Issue #6 teaser"
+    },
+    {
+      "id": "elara-venn",
+      "name": "Elara Venn",
+      "role": "Vision/counsel only \u2014 not present"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "cal-reed",
+      "note": "NON-CANON"
+    },
+    {
+      "id": "voltkit",
+      "note": "legacy seed \u2014 not used"
+    }
+  ]
+}

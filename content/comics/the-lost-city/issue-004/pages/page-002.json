@@ -1,0 +1,80 @@
+{
+  "pageNumber": 2,
+  "storyPageNumber": null,
+  "bookRole": "inside-cover",
+  "title": "Inside Front Cover",
+  "storyPurpose": "Inside Front Cover",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ifc",
+      "description": "Quiet parchment-and-teal inside cover: Aureth Vale seal watermark, Soft Gateway glow, invitation to read. No trade logos.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "Riftwilds Comic Publishing — original fantasy. Free to read.",
+          "x": 50,
+          "y": 30,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Credits & cosmetics may unlock along the way. The story itself stays free.",
+          "x": 50,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ifc",
+      "kind": "caption",
+      "text": "Riftwilds Comic Publishing — original fantasy. Free to read.",
+      "x": 50,
+      "y": 30,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 0
+    },
+    {
+      "panelId": "ifc",
+      "kind": "narration",
+      "text": "Credits & cosmetics may unlock along the way. The story itself stays free.",
+      "x": 50,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for The Lost City Issue #4 — Inside Front Cover. Quiet parchment-and-teal inside cover: Aureth Vale seal watermark, Soft Gateway glow, invitation to read. No trade logos. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Inside Front Cover",
+  "atmosphere": "dusk",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: Riftwilds Comic Publishing — original fantasy. Free to read.",
+    "NARRATION: Credits & cosmetics may unlock along the way. The story itself stays free."
+  ],
+  "id": "the-lost-city-issue-004-p002",
+  "cleanArtRel": "generated/raw-art/page-002.webp",
+  "letteredArtRel": "generated/lettered-pages/page-002.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-002.webp"
+}

@@ -152,6 +152,8 @@ type ClientUnit = {
   keywords?: string[];
   statuses?: { id: string; stacks: number }[];
   exhausted: boolean;
+  lane?: "front" | "back";
+  cannotStrikeKeeper?: boolean;
 };
 
 type ClientCommander = {
@@ -168,12 +170,18 @@ type ClientSide = {
   maxKeeperHp: number;
   riftEnergy: number;
   riftEnergyMax: number;
+  tempEnergy?: number;
   hand: ClientCard[];
   handCount: number;
   deckCount: number;
   board: ClientUnit[];
+  defeatedCount?: number;
+  exileCount?: number;
+  riftBurnCount?: number;
   isAi: boolean;
   commander?: ClientCommander;
+  frontline?: ClientUnit[];
+  backline?: ClientUnit[];
 };
 
 type Snapshot = {
@@ -185,6 +193,13 @@ type Snapshot = {
   winnerId: string | null;
   mode?: string;
   turnTimerSeconds?: number;
+  rulesVersion?: string;
+  fieldSlots?: {
+    frontline: number;
+    backline: number;
+    terrain: number;
+    maxCreatures: number;
+  };
   yourSideId?: string;
   players: ClientSide[];
   events: { type: string; actorId: string; payload: Record<string, unknown> }[];
@@ -214,7 +229,9 @@ function playBlockReason(
   if (!def || !player || !snap) return "No card selected";
   if (snap.status !== "ACTIVE") return "Match finished";
   if (snap.activeSideId !== player.id) return "Not your turn";
-  if (snap.phase !== "MAIN") return "Can't play right now";
+  if (snap.phase !== "MAIN" && snap.phase !== "SECOND_MAIN") {
+    return "Can't play right now";
+  }
   if (busy) return "Busy…";
   // Affordance must use engine play cost (riftCost), never power/attack.
   const playCost = def.riftCost;
@@ -241,7 +258,7 @@ function hasLegalHandPlay(
 ): boolean {
   if (!player || !snap || busy) return false;
   if (snap.status !== "ACTIVE" || snap.activeSideId !== player.id) return false;
-  if (snap.phase !== "MAIN") return false;
+  if (snap.phase !== "MAIN" && snap.phase !== "SECOND_MAIN") return false;
   return player.hand.some((c) => {
     const def = getTcgCardDef(c.defId);
     return !playBlockReason(def, player, snap, busy);
@@ -753,6 +770,7 @@ export function RiftBattleBoard({
   const [inviteBusy, setInviteBusy] = useState(false);
   const [copied, setCopied] = useState(false);
   const [illegalToken, setIllegalToken] = useState(0);
+  const [rulesOpen, setRulesOpen] = useState(false);
   const consoleRef = useRef<HTMLDivElement>(null);
   const fullscreen = useLiveWorldFullscreen({ targetRef: consoleRef });
   const arenaExpanded = fullscreen.active;
@@ -1425,7 +1443,11 @@ export function RiftBattleBoard({
                     </div>
                     <div className="battle-console__intel-row">
                       <span>Phase</span>
-                      <strong>{snap.phase}</strong>
+                      <strong>{snap.phase.replaceAll("_", " ")}</strong>
+                    </div>
+                    <div className="battle-console__intel-row">
+                      <span>Rules</span>
+                      <strong>v{snap.rulesVersion ?? TCG_DEFAULTS.rulesVersion}</strong>
                     </div>
                     <div className="battle-console__intel-row">
                       <span>Active</span>
@@ -1467,8 +1489,24 @@ export function RiftBattleBoard({
                   <div className="battle-console__intel-block">
                     <p className="battle-console__intel-label">Field pressure</p>
                     <div className="battle-console__intel-row">
+                      <span>Front / Back</span>
+                      <strong>
+                        {
+                          player.board.filter((u) => (u.lane ?? "front") === "front")
+                            .length
+                        }
+                        /{TCG_DEFAULTS.frontlineSlots} ·{" "}
+                        {
+                          player.board.filter((u) => u.lane === "back").length
+                        }
+                        /{TCG_DEFAULTS.backlineSlots}
+                      </strong>
+                    </div>
+                    <div className="battle-console__intel-row">
                       <span>Your units</span>
-                      <strong>{player.board.length}</strong>
+                      <strong>
+                        {player.board.length}/{TCG_DEFAULTS.maxBoardUnits}
+                      </strong>
                     </div>
                     <div className="battle-console__intel-row">
                       <span>Foe units</span>
@@ -1476,8 +1514,52 @@ export function RiftBattleBoard({
                     </div>
                     <div className="battle-console__intel-row">
                       <span>Hand</span>
-                      <strong>{player.hand.length}</strong>
+                      <strong>
+                        {player.hand.length}/{TCG_DEFAULTS.maxHandSize}
+                      </strong>
                     </div>
+                    <div className="battle-console__intel-row">
+                      <span>Defeated / Exile</span>
+                      <strong>
+                        {player.defeatedCount ?? 0} / {player.exileCount ?? 0}
+                      </strong>
+                    </div>
+                    <button
+                      type="button"
+                      className="battle-console__rules-btn mt-2 w-full rounded border border-white/15 bg-white/5 px-2 py-1.5 text-left text-xs text-[var(--cyan)] hover:bg-white/10"
+                      onClick={() => setRulesOpen((v) => !v)}
+                    >
+                      <BookOpen className="mr-1 inline h-3.5 w-3.5" aria-hidden />
+                      {rulesOpen ? "Hide rules" : "Battle rules"}
+                    </button>
+                    {rulesOpen ? (
+                      <div className="battle-console__rules-panel mt-2 space-y-1 text-[11px] leading-snug text-[var(--text-muted)]">
+                        <p>
+                          Keeper {TCG_DEFAULTS.keeperHp} HP · Energy{" "}
+                          {TCG_DEFAULTS.riftEnergyStartMax}→
+                          {TCG_DEFAULTS.riftEnergyCap} · Hand{" "}
+                          {TCG_DEFAULTS.openingHand}/{TCG_DEFAULTS.maxHandSize}
+                        </p>
+                        <p>
+                          Field {TCG_DEFAULTS.frontlineSlots} Front +{" "}
+                          {TCG_DEFAULTS.backlineSlots} Back · Deck{" "}
+                          {TCG_DEFAULTS.minDeckSize}+Commander
+                        </p>
+                        <p>
+                          Phases: Start → Main → Combat → Second Main → End
+                        </p>
+                        <p>
+                          Frontline protects Keeper (Flying / Pierce exceptions).
+                          Empty deck = Rift Collapse damage.
+                        </p>
+                        <Link
+                          href="/tcg/rules"
+                          className="text-[var(--cyan)] underline-offset-2 hover:underline"
+                        >
+                          Full rules reference
+                        </Link>
+                      </div>
+                    ) : null}
                   </div>
                   <div className="battle-console__intel-block">
                     <p className="battle-console__intel-label">Legend</p>
@@ -1559,6 +1641,7 @@ export function RiftBattleBoard({
                   spawnToken={battleVfx.spawnTokenBySide[foe.id] ?? 0}
                   boardPulse={sideHasBoardPulse(battleVfx.boardPulses, foe.id)}
                   reduceMotion={Boolean(reduceMotion)}
+                  showLanes
                   mood={
                     outcomeLabel === "Victory"
                       ? "sad"
@@ -1617,6 +1700,7 @@ export function RiftBattleBoard({
                     player.id,
                   )}
                   reduceMotion={Boolean(reduceMotion)}
+                  showLanes
                   mood={
                     outcomeLabel === "Victory"
                       ? "celebrate"
@@ -1992,7 +2076,11 @@ function FieldCombatOverlay({ unit }: { unit: ClientUnit }) {
         <span className="battle-field-overlay__ex" title="Resting — strikes on a later turn">
           Rest
         </span>
-      ) : null}
+      ) : (
+        <span className="battle-field-overlay__ex" title="Ready to strike">
+          Ready
+        </span>
+      )}
       {statusIds.length > 0 ? (
         <span className="battle-field-overlay__status">
           {statusIds.slice(0, 2).join("·")}
@@ -2011,6 +2099,7 @@ function BoardRow({
   boardPulse,
   reduceMotion,
   mood = null,
+  showLanes,
   dropReady,
   dropInvalid,
   dropHover,
@@ -2030,6 +2119,7 @@ function BoardRow({
   reduceMotion?: boolean;
   /** End-of-match card emotion on this lane. */
   mood?: "celebrate" | "sad" | null;
+  showLanes?: boolean;
   dropReady?: boolean;
   dropInvalid?: boolean;
   dropHover?: boolean;
@@ -2040,7 +2130,9 @@ function BoardRow({
   onDragLeaveField?: () => void;
   onDropField?: (e: DragEvent<HTMLDivElement>) => void;
 }) {
-  const emptySlots = Math.max(0, 4 - units.length);
+  const emptySlots = Math.max(0, TCG_DEFAULTS.maxBoardUnits - units.length);
+  const front = units.filter((u) => (u.lane ?? "front") === "front");
+  const back = units.filter((u) => u.lane === "back");
   const interactive = Boolean(yours && (dropReady || dropInvalid));
   const lastUnitId = units[units.length - 1]?.instanceId;
   const spawnSeen = useRef<Record<string, number>>({});
@@ -2075,7 +2167,7 @@ function BoardRow({
   return (
     <div
       className={cn(
-        "battle-console__lane",
+        "battle-console__lane relative",
         yours && "battle-console__lane--you",
         mood === "celebrate" && "battle-console__lane--celebrate",
         mood === "sad" && "battle-console__lane--sad",
@@ -2114,6 +2206,12 @@ function BoardRow({
       onDragLeave={yours ? onDragLeaveField : undefined}
       onDrop={yours ? onDropField : undefined}
     >
+      {showLanes && units.length > 0 ? (
+        <div className="battle-console__lane-tags pointer-events-none absolute left-2 top-1 z-[1] flex gap-2 text-[10px] uppercase tracking-wider text-white/50">
+          <span>Front {front.length}/{TCG_DEFAULTS.frontlineSlots}</span>
+          <span>Back {back.length}/{TCG_DEFAULTS.backlineSlots}</span>
+        </div>
+      ) : null}
       {units.map((u) => (
         <BoardUnitShell
           key={u.instanceId}
@@ -2127,13 +2225,27 @@ function BoardRow({
           }
           reduceMotion={reduceMotion}
         >
-          <div className="battle-console__unit-wrap">
+          <div
+            className="battle-console__unit-wrap"
+            data-lane={u.lane ?? "front"}
+            title={
+              (u.lane ?? "front") === "front"
+                ? "Frontline — protects Keeper"
+                : "Backline — support"
+            }
+          >
             <CardFace
               defId={u.defId}
               size="board"
               onOpenDetail={() => onInspect(u.defId)}
             />
             <FieldCombatOverlay unit={u} />
+            {showLanes ? (
+              <span className="battle-field-overlay__lane absolute bottom-0 right-0 rounded bg-black/55 px-1 text-[9px] uppercase text-white/70">
+                {(u.lane ?? "front") === "front" ? "F" : "B"}
+                {u.exhausted ? "" : u.cannotStrikeKeeper ? "·R" : "·"}
+              </span>
+            ) : null}
           </div>
         </BoardUnitShell>
       ))}

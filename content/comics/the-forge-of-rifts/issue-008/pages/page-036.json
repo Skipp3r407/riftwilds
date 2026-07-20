@@ -1,0 +1,84 @@
+{
+  "pageNumber": 36,
+  "storyPageNumber": null,
+  "bookRole": "map",
+  "title": "World Map — Meridian Road to Twin Forges",
+  "storyPurpose": "World Map — Meridian Road to Twin Forges",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "mp",
+      "description": "World map update: Traitor's Gate → Meridian Road → Forge of Rifts (vented) → distant Second Forge under far continent; Tempestria/Crossroads marks small.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "ROUTE OF THE FORGE ROAD",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Traitor's Gate → Meridian Road → Forge of Rifts (vented) → Second Forge (active)",
+          "x": 50,
+          "y": 85,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "mp",
+      "kind": "caption",
+      "text": "ROUTE OF THE FORGE ROAD",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "mp",
+      "kind": "narration",
+      "text": "Traitor's Gate → Meridian Road → Forge of Rifts (vented) → Second Forge (active)",
+      "x": 50,
+      "y": 85,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book map page for The Forge of Rifts Issue #8 — World Map — Meridian Road to Twin Forges. World map update: Traitor's Gate → Meridian Road → Forge of Rifts (vented) → distant Second Forge under far continent; Tempestria/Crossroads marks small. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "World Map — Meridian Road to Twin Forges",
+  "atmosphere": "dusk",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: ROUTE OF THE FORGE ROAD",
+    "NARRATION: Traitor's Gate → Meridian Road → Forge of Rifts (vented) → Second Forge (active)"
+  ],
+  "a11yTranscript": [
+    "CAPTION: ROUTE OF THE FORGE ROAD",
+    "NARRATION: Traitor's Gate → Meridian Road → Forge of Rifts (vented) → Second Forge (active)"
+  ],
+  "id": "the-forge-of-rifts-issue-008-p036",
+  "cleanArtRel": "generated/raw-art/page-036.webp",
+  "letteredArtRel": "generated/lettered-pages/page-036.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-036.webp"
+}

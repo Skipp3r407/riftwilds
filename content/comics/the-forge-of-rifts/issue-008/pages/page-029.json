@@ -1,0 +1,145 @@
+{
+  "pageNumber": 29,
+  "storyPageNumber": 25,
+  "bookRole": "story",
+  "title": "The Riftwright",
+  "storyPurpose": "Cliffhanger: second Forge activates; Riftwright silhouette; alive teaser.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p25a",
+      "description": "Full-bleed cliffhanger: deep underground Second Forge reactor hall — black steel, white stone, cyan plasma, orange molten. A lone SILHOUETTE (face and identity fully hidden — hood/coat, engineer posture) walks toward the central reactor as it ignites. Empty dialogue zones. NO face. NO name plate.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Inside, a figure walked toward the central reactor.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "So… after all this time… someone finally reached my Forge.",
+          "x": 50,
+          "y": 48,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "THE RIFTWRIGHT IS ALIVE",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 48,
+          "readOrder": 2
+        },
+        {
+          "kind": "caption",
+          "text": "NEXT: THE RIFTWRIGHT",
+          "x": 50,
+          "y": 90,
+          "tail": null,
+          "maxWidthPct": 42,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p25a",
+      "kind": "speech",
+      "text": "So… after all this time… someone finally reached my Forge.",
+      "x": 50,
+      "y": 48,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 1
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p25a",
+      "kind": "narration",
+      "text": "Inside, a figure walked toward the central reactor.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "THE RIFTWRIGHT IS ALIVE",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 48,
+      "readOrder": 2
+    },
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "NEXT: THE RIFTWRIGHT",
+      "x": 50,
+      "y": 90,
+      "tail": null,
+      "maxWidthPct": 42,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "locations": [
+    "Second Forge"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "Second Forge reactor",
+    "riftwright": "alive-silhouette-only",
+    "identity": "WITHHELD",
+    "next": "the-riftwright"
+  },
+  "requiredMoments": [
+    25
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 25/25 — The Riftwright. Story purpose: Cliffhanger: second Forge activates; Riftwright silhouette; alive teaser. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Full-bleed cliffhanger: deep underground Second Forge reactor hall — black steel, white stone, cyan plasma, orange molten. A lone SILHOUETTE (face and identity fully hidden — hood/coat, engineer posture) walks toward the central reactor as it ignites. Empty dialogue zones. NO face. NO name plate. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"Second Forge reactor\", \"riftwright\": \"alive-silhouette-only\", \"identity\": \"WITHHELD\", \"next\": \"the-riftwright\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "End Issue #8 — continue in The Riftwright.",
+  "letteringInstructions": "Cliffhanger captions clear; silhouette speech without speaker name.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Riftwright — The Forge of Rifts page 25",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Inside, a figure walked toward the central reactor.",
+    "SPEECH: So… after all this time… someone finally reached my Forge.",
+    "CAPTION: THE RIFTWRIGHT IS ALIVE",
+    "CAPTION: NEXT: THE RIFTWRIGHT"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Inside, a figure walked toward the central reactor.",
+    "SPEECH: So… after all this time… someone finally reached my Forge.",
+    "CAPTION: THE RIFTWRIGHT IS ALIVE",
+    "CAPTION: NEXT: THE RIFTWRIGHT"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p029",
+  "cleanArtRel": "generated/raw-art/page-029.webp",
+  "letteredArtRel": "generated/lettered-pages/page-029.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-029.webp"
+}

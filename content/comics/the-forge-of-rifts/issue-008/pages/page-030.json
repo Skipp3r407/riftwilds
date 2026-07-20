@@ -1,0 +1,105 @@
+{
+  "pageNumber": 30,
+  "storyPageNumber": null,
+  "bookRole": "teaser",
+  "title": "Next Issue — The Riftwright",
+  "storyPurpose": "Next Issue — The Riftwright",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "te",
+      "description": "Teaser plate: second Forge silhouette; hooded figure from behind only; no face; empty title zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "NEXT ISSUE",
+          "x": 50,
+          "y": 14,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "THE RIFTWRIGHT",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "narration",
+          "text": "Alive. Waiting. And the Meridian already holds a key.",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 52,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "te",
+      "kind": "caption",
+      "text": "NEXT ISSUE",
+      "x": 50,
+      "y": 14,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "te",
+      "kind": "caption",
+      "text": "THE RIFTWRIGHT",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "te",
+      "kind": "narration",
+      "text": "Alive. Waiting. And the Meridian already holds a key.",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 52,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book teaser page for The Forge of Rifts Issue #8 — Next Issue — The Riftwright. Teaser plate: second Forge silhouette; hooded figure from behind only; no face; empty title zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Arkan: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Empty zones for title lettering. NO readable text in art. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Next Issue — The Riftwright",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: NEXT ISSUE",
+    "CAPTION: THE RIFTWRIGHT",
+    "NARRATION: Alive. Waiting. And the Meridian already holds a key."
+  ],
+  "a11yTranscript": [
+    "CAPTION: NEXT ISSUE",
+    "CAPTION: THE RIFTWRIGHT",
+    "NARRATION: Alive. Waiting. And the Meridian already holds a key."
+  ],
+  "id": "the-forge-of-rifts-issue-008-p030",
+  "cleanArtRel": "generated/raw-art/page-030.webp",
+  "letteredArtRel": "generated/lettered-pages/page-030.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-030.webp"
+}

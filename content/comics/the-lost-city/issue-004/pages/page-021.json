@@ -1,0 +1,148 @@
+{
+  "pageNumber": 21,
+  "storyPageNumber": 17,
+  "bookRole": "story",
+  "title": "Living Bulwark",
+  "storyPurpose": "Mossprig Living Bulwark vs massive energy strike; shield cracks but holds.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p17a",
+      "description": "Mossprig expands Living Bulwark — moss-and-root dome over Mira, Spark, Tavi, Cael; Guardian energy spear impacts.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*BULWARK!*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "SHIELD-BOOM",
+          "x": 60,
+          "y": 45,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p17b",
+      "description": "Bulwark cracks with light fissures but holds; team dashes through gap Bramblefox found.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Thank you — don't burn yourself empty!",
+          "x": 45,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*strain-hum*",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p17a",
+      "kind": "creature",
+      "text": "*BULWARK!*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mossprig",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p17b",
+      "kind": "speech",
+      "text": "Thank you — don't burn yourself empty!",
+      "x": 45,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p17b",
+      "kind": "creature",
+      "text": "*strain-hum*",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mossprig",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p17a",
+      "kind": "sfx",
+      "text": "SHIELD-BOOM",
+      "x": 60,
+      "y": 45,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "tavi-brightline"
+  ],
+  "creatures": [
+    "mossprig",
+    "spark",
+    "bramblefox"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "mossprig": "Living Bulwark cracked but held"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 17/25 — Living Bulwark. Story purpose: Mossprig Living Bulwark vs massive energy strike; shield cracks but holds. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p17a): Mossprig expands Living Bulwark — moss-and-root dome over Mira, Spark, Tavi, Cael; Guardian energy spear impacts. Panel 2 (p17b): Bulwark cracks with light fissures but holds; team dashes through gap Bramblefox found. Characters: mira-eggwarden, cael-vesper, tavi-brightline. Creatures: mossprig, spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"mossprig\": \"Living Bulwark cracked but held\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Battle across plaza.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Living Bulwark — The Lost City page 17",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Mossprig): *BULWARK!*",
+    "SFX: SHIELD-BOOM",
+    "SPEECH (Mira Eggwarden): Thank you — don't burn yourself empty!",
+    "CREATURE (Mossprig): *strain-hum*"
+  ],
+  "id": "the-lost-city-issue-004-p021",
+  "cleanArtRel": "generated/raw-art/page-021.webp",
+  "letteredArtRel": "generated/lettered-pages/page-021.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-021.webp"
+}

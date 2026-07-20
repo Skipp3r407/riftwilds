@@ -1,0 +1,237 @@
+{
+  "pageNumber": 23,
+  "storyPageNumber": 19,
+  "bookRole": "story",
+  "title": "Hunter's Cut",
+  "storyPurpose": "Seris attempts remote Spark link; Nira sabotages; nearly exposed as Meridian traitor.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p19a",
+      "description": "Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal at engine console connecting Lost City Rift component; cyan tether reaching toward Spark midair.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Replacement stabilizer online — Subject One, yield.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Seris Vale",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "tether-HUM",
+          "x": 65,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p19b",
+      "description": "Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes sabotaging the tether with quill-knife and counter-sigil; sparks flying; Spark freed mid-yelp.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Not like that. Not him.",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*free-chirp!*",
+          "x": 70,
+          "y": 55,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p19c",
+      "description": "Seris head-snapping toward Nira; Meridian agents turning; Nira already melting into storm shadows.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Quill—? You cut your own leash.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Seris Vale",
+          "readOrder": 4
+        },
+        {
+          "kind": "whisper",
+          "text": "I cut theirs.",
+          "x": 50,
+          "y": 72,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 5
+        },
+        {
+          "kind": "speech",
+          "text": "Nira—!",
+          "x": 30,
+          "y": 55,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 6
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p19a",
+      "kind": "speech",
+      "text": "Replacement stabilizer online — Subject One, yield.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Seris Vale",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p19b",
+      "kind": "speech",
+      "text": "Not like that. Not him.",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p19b",
+      "kind": "creature",
+      "text": "*free-chirp!*",
+      "x": 70,
+      "y": 55,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p19c",
+      "kind": "speech",
+      "text": "Quill—? You cut your own leash.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Seris Vale",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p19c",
+      "kind": "whisper",
+      "text": "I cut theirs.",
+      "x": 50,
+      "y": 72,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 5
+    },
+    {
+      "panelId": "p19c",
+      "kind": "speech",
+      "text": "Nira—!",
+      "x": 30,
+      "y": 55,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 6
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p19a",
+      "kind": "sfx",
+      "text": "tether-HUM",
+      "x": 65,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [
+    "lost-city-rift-component"
+  ],
+  "continuity": {
+    "location": "engine chamber",
+    "nira": "open-disloyalty",
+    "seris": "link-failed"
+  },
+  "requiredMoments": [
+    17,
+    18
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 19/25 — Hunter's Cut. Story purpose: Seris attempts remote Spark link; Nira sabotages; nearly exposed as Meridian traitor. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p19a): Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal at engine console connecting Lost City Rift component; cyan tether reaching toward Spark midair. Panel 2 (p19b): Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes sabotaging the tether with quill-knife and counter-sigil; sparks flying; Spark freed mid-yelp. Panel 3 (p19c): Seris head-snapping toward Nira; Meridian agents turning; Nira already melting into storm shadows. Characters: mira-eggwarden, seris-vale, nira-quill. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"engine chamber\", \"nira\": \"open-disloyalty\", \"seris\": \"link-failed\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Spark enters the bond.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Hunter's Cut — The Storm King page 19",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Seris Vale): Replacement stabilizer online — Subject One, yield.",
+    "SFX: tether-HUM",
+    "SPEECH (Nira Quill): Not like that. Not him.",
+    "CREATURE (Spark): *free-chirp!*",
+    "SPEECH (Seris Vale): Quill—? You cut your own leash.",
+    "WHISPER (Nira Quill): I cut theirs.",
+    "SPEECH (Mira Eggwarden): Nira—!"
+  ],
+  "a11yTranscript": [
+    "SPEECH (Seris Vale): Replacement stabilizer online — Subject One, yield.",
+    "SFX: tether-HUM",
+    "SPEECH (Nira Quill): Not like that. Not him.",
+    "CREATURE (Spark): *free-chirp!*",
+    "SPEECH (Seris Vale): Quill—? You cut your own leash.",
+    "WHISPER (Nira Quill): I cut theirs.",
+    "SPEECH (Mira Eggwarden): Nira—!"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p023",
+  "cleanArtRel": "generated/raw-art/page-023.webp",
+  "letteredArtRel": "generated/lettered-pages/page-023.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-023.webp"
+}

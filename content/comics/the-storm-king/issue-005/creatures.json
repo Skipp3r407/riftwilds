@@ -1,0 +1,54 @@
+{
+  "featured": [
+    {
+      "id": "spark",
+      "name": "Spark",
+      "note": "Resonance Line / Last Light"
+    },
+    {
+      "id": "thundervane",
+      "name": "Thundervane",
+      "note": "See THUNDERVANE_CANON_PROPOSAL.md"
+    },
+    {
+      "id": "galesprig",
+      "name": "Galesprig",
+      "note": "See GALESPRIG_CANON_PROPOSAL.md"
+    },
+    {
+      "id": "echoquill",
+      "name": "Echoquill",
+      "purpose": "Living Archive"
+    },
+    {
+      "id": "bramblefox",
+      "name": "Bramblefox",
+      "purpose": "Track / flank"
+    },
+    {
+      "id": "mossprig",
+      "name": "Mossprig",
+      "purpose": "Living Bulwark"
+    },
+    {
+      "id": "thornling",
+      "name": "Thornling",
+      "purpose": "Conductors"
+    },
+    {
+      "id": "wisplet",
+      "name": "Wisplet",
+      "purpose": "Phase / barriers"
+    },
+    {
+      "id": "spirit-moth",
+      "name": "Spirit Moth",
+      "purpose": "Lightning signals"
+    },
+    {
+      "id": "lumenhare",
+      "name": "Lumenhare",
+      "purpose": "Circus companion light"
+    }
+  ]
+}

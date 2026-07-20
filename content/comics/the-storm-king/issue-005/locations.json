@@ -1,0 +1,34 @@
+{
+  "locations": [
+    {
+      "id": "tempestria",
+      "name": "Tempestria",
+      "blurb": "Storm Kingdom inside permanent barrier"
+    },
+    {
+      "id": "cliffside-village",
+      "name": "Cliffside Village",
+      "blurb": "Lightning-rod homes"
+    },
+    {
+      "id": "royal-citadel",
+      "name": "Royal Citadel",
+      "blurb": "Throne under storm conduit"
+    },
+    {
+      "id": "storm-engine",
+      "name": "Storm Engine Chamber",
+      "blurb": "Beneath the throne"
+    },
+    {
+      "id": "thunder-arena",
+      "name": "Thunder Arena",
+      "blurb": "Aerial defense ground"
+    },
+    {
+      "id": "merchant-hall",
+      "name": "Hidden Trading Hall",
+      "blurb": "Issue #6 teaser"
+    }
+  ]
+}

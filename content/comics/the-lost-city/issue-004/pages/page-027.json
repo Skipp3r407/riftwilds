@@ -1,0 +1,147 @@
+{
+  "pageNumber": 27,
+  "storyPageNumber": 23,
+  "bookRole": "story",
+  "title": "Last Light of the Resonance Line",
+  "storyPurpose": "Return present; Guardian accepts war ended; names Spark; lowers weapon.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p23a",
+      "description": "Back in plaza: Guardian lowers weapon and shield; damaged eye softens; Mossprig still braced but easing.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "TIMESTAMP CONFLICT. WAR… CONCLUDED.",
+          "x": 50,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Last Guardian",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "weapon-lower…",
+          "x": 60,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p23b",
+      "description": "Guardian bows massive head toward Spark; Mira stands beside Spark without claiming ownership.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Last Light of the Resonance Line. You are not stolen. You are late — and alive.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 48,
+          "speaker": "Last Guardian",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*warm pulse*",
+          "x": 40,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p23a",
+      "kind": "speech",
+      "text": "TIMESTAMP CONFLICT. WAR… CONCLUDED.",
+      "x": 50,
+      "y": 22,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Last Guardian",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p23b",
+      "kind": "speech",
+      "text": "Last Light of the Resonance Line. You are not stolen. You are late — and alive.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 48,
+      "speaker": "Last Guardian",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p23b",
+      "kind": "creature",
+      "text": "*warm pulse*",
+      "x": 40,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p23a",
+      "kind": "sfx",
+      "text": "weapon-lower…",
+      "x": 60,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "mossprig",
+    "echoquill"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "guardian": "accepts war ended",
+    "sparkTitle": "Last Light of the Resonance Line"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 23/25 — Last Light of the Resonance Line. Story purpose: Return present; Guardian accepts war ended; names Spark; lowers weapon. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p23a): Back in plaza: Guardian lowers weapon and shield; damaged eye softens; Mossprig still braced but easing. Panel 2 (p23b): Guardian bows massive head toward Spark; Mira stands beside Spark without claiming ownership. Characters: mira-eggwarden. Creatures: spark, mossprig, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"guardian\": \"accepts war ended\", \"sparkTitle\": \"Last Light of the Resonance Line\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Archive map + storm signal.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Last Light of the Resonance Line — The Lost City page 23",
+  "atmosphere": "dusk",
+  "transcript": [
+    "SPEECH (Last Guardian): TIMESTAMP CONFLICT. WAR… CONCLUDED.",
+    "SFX: weapon-lower…",
+    "SPEECH (Last Guardian): Last Light of the Resonance Line. You are not stolen. You are late — and alive.",
+    "CREATURE (Spark): *warm pulse*"
+  ],
+  "id": "the-lost-city-issue-004-p027",
+  "cleanArtRel": "generated/raw-art/page-027.webp",
+  "letteredArtRel": "generated/lettered-pages/page-027.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-027.webp"
+}

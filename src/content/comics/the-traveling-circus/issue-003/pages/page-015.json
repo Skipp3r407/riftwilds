@@ -1,0 +1,151 @@
+{
+  "pageNumber": 15,
+  "bookRole": "story",
+  "title": "Don't Ask Backstage",
+  "storyPurpose": "Performer warns Mira; Bramblefox sees Meridian tracking sigil.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p11a",
+      "description": "Performer (Seris Vale in disguise) blocks corridor; fake smile.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Seris Vale",
+          "text": "Keepers shouldn't ask questions backstage. Spoilers ruin the act.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 45
+        }
+      ]
+    },
+    {
+      "id": "p11b",
+      "description": "Bramblefox nose to performer's cuff — three-arc Meridian tracking sigil charm.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Bramblefox",
+          "text": "*growl-low*",
+          "x": 40,
+          "y": 55,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "sfx",
+          "text": "sigil-glint",
+          "x": 70,
+          "y": 35,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p11c",
+      "description": "Mira locks eyes with Seris; Spark half-hides behind Mira's satchel.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Funny. Spoilers usually hide behind badges.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "readOrder": 3,
+          "maxWidthPct": 40
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p11a",
+      "kind": "speech",
+      "speaker": "Seris Vale",
+      "text": "Keepers shouldn't ask questions backstage. Spoilers ruin the act.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 45
+    },
+    {
+      "panelId": "p11b",
+      "kind": "creature",
+      "speaker": "Bramblefox",
+      "text": "*growl-low*",
+      "x": 40,
+      "y": 55,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p11c",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Funny. Spoilers usually hide behind badges.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "readOrder": 3,
+      "maxWidthPct": 40
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p11b",
+      "kind": "sfx",
+      "text": "sigil-glint",
+      "x": 70,
+      "y": 35,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale"
+  ],
+  "creatures": [
+    "bramblefox",
+    "spark"
+  ],
+  "continuity": {
+    "infiltrator": "seris-vale-identified",
+    "meridian": {
+      "onSite": true
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 11/25 — Don't Ask Backstage. Story purpose: Performer warns Mira; Bramblefox sees Meridian tracking sigil. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p11a): Performer (Seris Vale in disguise) blocks corridor; fake smile. Panel 2 (p11b): Bramblefox nose to performer's cuff — three-arc Meridian tracking sigil charm. Panel 3 (p11c): Mira locks eyes with Seris; Spark half-hides behind Mira's satchel. Characters: mira-eggwarden, seris-vale. Creatures: bramblefox, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"infiltrator\":\"seris-vale-identified\",\"meridian\":{\"onSite\":true}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Thornling restricted wagon.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Don't Ask Backstage — The Traveling Circus page 11",
+  "atmosphere": "festival",
+  "transcript": [
+    "SPEECH (Seris Vale): Keepers shouldn't ask questions backstage. Spoilers ruin the act.",
+    "CREATURE (Bramblefox): *growl-low*",
+    "SFX: sigil-glint",
+    "SPEECH (Mira Eggwarden): Funny. Spoilers usually hide behind badges."
+  ],
+  "storyPageNumber": 11,
+  "id": "the-traveling-circus-issue-003-p015",
+  "cleanArtRel": "generated/raw-art/page-015.png",
+  "letteredArtRel": "generated/lettered-pages/page-015.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-015.webp"
+}

@@ -1,0 +1,87 @@
+{
+  "pageNumber": 37,
+  "storyPageNumber": null,
+  "bookRole": "letters",
+  "title": "Inside Back Cover",
+  "storyPurpose": "Letters / thanks Volume One.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ib1",
+      "description": "Soft parchment letters page with Compact seal and twin-key doodle — empty for lettering.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Thank you for reading Volume One of Legends of the Rift.",
+          "x": 50,
+          "y": 30,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "Keepers · Companions · Compact",
+          "x": 50,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 45,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "Local Archive copy · Volume One Finale",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 48,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "nova"
+  ],
+  "locations": [
+    "Letters desk"
+  ],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, Inside Back Cover. Story purpose: Letters / thanks Volume One. Layout: splash. 1 panels with clear inked gutters. Panel 1 (ib1): Soft parchment letters page with Compact seal and twin-key doodle — empty for lettering. Characters: mira-eggwarden. Creatures: spark, nova. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Letters desk. Atmosphere: dusk. Continuity: {}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Inside Back Cover — The Riftwright page 37",
+  "atmosphere": "dusk",
+  "transcript": [
+    "NARRATION: Thank you for reading Volume One of Legends of the Rift.",
+    "CAPTION: Keepers · Companions · Compact",
+    "CAPTION: Local Archive copy · Volume One Finale"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Thank you for reading Volume One of Legends of the Rift.",
+    "CAPTION: Keepers · Companions · Compact",
+    "CAPTION: Local Archive copy · Volume One Finale"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p037",
+  "cleanArtRel": "generated/raw-art/page-037.webp",
+  "letteredArtRel": "generated/lettered-pages/page-037.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-037.webp"
+}

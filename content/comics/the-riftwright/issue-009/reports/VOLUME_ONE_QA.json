@@ -1,0 +1,36 @@
+{
+  "SCRIPT": {
+    "status": "pass",
+    "storyPages": 25,
+    "bookPages": 38,
+    "requiredMoments": 25,
+    "notes": "Full dialogue/narration/SFX/Grok prompts present on all pages."
+  },
+  "ART": {
+    "status": "pending-generation",
+    "notes": "Run generate-and-letter.mjs; Grok if XAI_API_KEY else procedural."
+  },
+  "CONTINUITY": {
+    "status": "pass",
+    "mira": true,
+    "elaraVisionOnly": true,
+    "calReedAbsent": true,
+    "arkanEcho": true,
+    "axiomPresent": true,
+    "eggHatchedToNova": true,
+    "caelSupervised": true
+  },
+  "LORE": {
+    "status": "pass",
+    "riftwrightNamed": "Professor Elyan Voss",
+    "mysteryRetained": true,
+    "historyTechnologyTimelineLoreJson": true
+  },
+  "VOLUME_ONE": {
+    "status": "pass",
+    "finaleMarked": true,
+    "volumeTwoTeaseOnly": true,
+    "nextTitle": "The Shattered Star",
+    "doNotStartVolumeTwoIssues": true
+  }
+}

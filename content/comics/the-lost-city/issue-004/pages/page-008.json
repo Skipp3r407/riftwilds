@@ -1,0 +1,180 @@
+{
+  "pageNumber": 8,
+  "storyPageNumber": 4,
+  "bookRole": "story",
+  "title": "Left Behind Mid-Step",
+  "storyPurpose": "Silent market; sudden evacuation freeze-frame.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p4a",
+      "description": "Abandoned market plaza: carts, fruit petrified under crystal dust, cups still upright.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "They left mid-errand. Mid-laugh. Mid-promise.",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p4b",
+      "description": "Mira touches a child's discarded toy without taking it; Compact restraint.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "We annotate. We don't loot memory.",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p4c",
+      "description": "Bramblefox sniffs three-arc Meridian residue near a stall — fresh vs ancient dust contrast.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*low rrk*",
+          "x": 40,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "Someone else already walked this quiet.",
+          "x": 60,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Tavi Brightline",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p4d",
+      "description": "Wide: empty homes with doors ajar; gravity waterfall beyond street.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "water-upward hush",
+          "x": 55,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p4b",
+      "kind": "speech",
+      "text": "We annotate. We don't loot memory.",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p4c",
+      "kind": "creature",
+      "text": "*low rrk*",
+      "x": 40,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p4c",
+      "kind": "whisper",
+      "text": "Someone else already walked this quiet.",
+      "x": 60,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Tavi Brightline",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p4a",
+      "kind": "narration",
+      "text": "They left mid-errand. Mid-laugh. Mid-promise.",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p4d",
+      "kind": "sfx",
+      "text": "water-upward hush",
+      "x": 55,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "tavi-brightline"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "meridian": "fresh trail in market",
+    "evacuation": "sudden"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 4/25 — Left Behind Mid-Step. Story purpose: Silent market; sudden evacuation freeze-frame. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p4a): Abandoned market plaza: carts, fruit petrified under crystal dust, cups still upright. Panel 2 (p4b): Mira touches a child's discarded toy without taking it; Compact restraint. Panel 3 (p4c): Bramblefox sniffs three-arc Meridian residue near a stall — fresh vs ancient dust contrast. Panel 4 (p4d): Wide: empty homes with doors ajar; gravity waterfall beyond street. Characters: mira-eggwarden, tavi-brightline. Creatures: spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"meridian\": \"fresh trail in market\", \"evacuation\": \"sudden\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Transit activates.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Left Behind Mid-Step — The Lost City page 4",
+  "atmosphere": "ruin",
+  "transcript": [
+    "NARRATION: They left mid-errand. Mid-laugh. Mid-promise.",
+    "SPEECH (Mira Eggwarden): We annotate. We don't loot memory.",
+    "CREATURE (Bramblefox): *low rrk*",
+    "WHISPER (Tavi Brightline): Someone else already walked this quiet.",
+    "SFX: water-upward hush"
+  ],
+  "id": "the-lost-city-issue-004-p008",
+  "cleanArtRel": "generated/raw-art/page-008.webp",
+  "letteredArtRel": "generated/lettered-pages/page-008.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-008.webp"
+}

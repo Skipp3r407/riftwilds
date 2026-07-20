@@ -1,0 +1,54 @@
+{
+  "pageNumber": 28,
+  "id": "the-first-rift-issue-001-p028",
+  "role": "story",
+  "title": null,
+  "layout": "two-col",
+  "atmosphere": "dusk",
+  "beat": "Spirit Moth cameo + Mira reports",
+  "artPrompt": "Two-panel page, no text. Left: faint Spirit Moth TCG-accurate silhouette near lantern (cameo only). Right: Mira speaking to Hatchery doorway silhouette. No invented moth powers. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "A pale moth drifts the lamp-line — archive weather, not a weapon.",
+          "x": 50,
+          "y": 20
+        },
+        {
+          "kind": "caption",
+          "text": "Spirit Moth — cameo (TCG silhouette)",
+          "x": 50,
+          "y": 70
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Log it. Unstable ancient Rift. Deliberate tooling. Vision confirmed Elara's road.",
+          "x": 45,
+          "y": 45,
+          "tail": "down"
+        },
+        {
+          "kind": "whisper",
+          "speaker": "Mira Eggwarden",
+          "text": "And something still listening.",
+          "x": 55,
+          "y": 75
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-028.png",
+  "letteredArtRel": "generated/lettered/page-028.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-028.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

@@ -1,0 +1,109 @@
+{
+  "pageNumber": 4,
+  "storyPageNumber": null,
+  "bookRole": "title",
+  "title": "Chapter Five — The Storm King",
+  "storyPurpose": "Chapter Five — The Storm King",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "title",
+      "description": "Title spread energy without painted lettering: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark, companions on ridge; Tempestria citadel in storm break; empty center for title bake.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CHAPTER FIVE",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "THE STORM KING",
+          "x": 50,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "narration",
+          "text": "Duty built a wall of weather. The wall began to eat its makers.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "title",
+      "kind": "caption",
+      "text": "CHAPTER FIVE",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "title",
+      "kind": "caption",
+      "text": "THE STORM KING",
+      "x": 50,
+      "y": 35,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "title",
+      "kind": "narration",
+      "text": "Duty built a wall of weather. The wall began to eat its makers.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book title page for The Storm King Issue #5 — Chapter Five — The Storm King. Title spread energy without painted lettering: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Spark, companions on ridge; Tempestria citadel in storm break; empty center for title bake. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Storm King: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Chapter Five — The Storm King",
+  "atmosphere": "storm",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: CHAPTER FIVE",
+    "CAPTION: THE STORM KING",
+    "NARRATION: Duty built a wall of weather. The wall began to eat its makers."
+  ],
+  "a11yTranscript": [
+    "CAPTION: CHAPTER FIVE",
+    "CAPTION: THE STORM KING",
+    "NARRATION: Duty built a wall of weather. The wall began to eat its makers."
+  ],
+  "id": "the-storm-king-issue-005-p004",
+  "cleanArtRel": "generated/raw-art/page-004.webp",
+  "letteredArtRel": "generated/lettered-pages/page-004.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-004.webp"
+}

@@ -36,15 +36,37 @@ function InteractPromptChip({ label }: { label: string }) {
   const title = (hintMatch ? label.slice(0, hintMatch.index) : label)
     .replace(/\s*[—–-]\s*$/, "")
     .trim() || label;
+  const [hold, setHold] = useState(0);
+
+  useEffect(() => {
+    setHold(0);
+    const id = window.setInterval(() => {
+      setHold((h) => (h >= 100 ? 0 : h + 4));
+    }, 80);
+    return () => window.clearInterval(id);
+  }, [label]);
 
   return (
-    <div className="lw-hud-interact-prompt" title={label}>
+    <div className="lw-hud-interact-prompt relative" title={`${label} · hold to interact`}>
+      <span
+        className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-[var(--lw-trim)] bg-[rgba(255,184,77,0.12)] text-[10px] font-bold text-[var(--amber)] shadow-[0_0_10px_var(--lw-glow-amber)]"
+        aria-hidden
+      >
+        E
+      </span>
       <span className="lw-hud-interact-prompt__label truncate">{title}</span>
       {hint ? (
         <span className="lw-hud-interact-prompt__hint" aria-hidden>
           {hint}
         </span>
-      ) : null}
+      ) : (
+        <span className="text-[9px] text-[var(--text-dim)]" aria-hidden>
+          near
+        </span>
+      )}
+      <span className="lw-hud-interact-prompt__hold" aria-hidden>
+        <span style={{ width: `${hold}%` }} />
+      </span>
     </div>
   );
 }

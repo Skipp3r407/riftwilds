@@ -1,0 +1,109 @@
+{
+  "pageNumber": 11,
+  "storyPageNumber": 7,
+  "bookRole": "story",
+  "title": "Prime Companion",
+  "storyPurpose": "Incubator Beta reveals Nova bloodline — Prime Companion template linked to Spark's Resonance Line.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Cinematic: Companion Incubator Beta blooms with constellation light; holographic adult Nova Prime silhouette of starlit cream-indigo fur above the dormant egg; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot and egg synchronize pulses; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure watch in awe.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The Nova bloodline — Prime Companion. Twin-key to the Last Light.",
+          "x": 50,
+          "y": 8,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Spark was never meant to stand alone.",
+          "x": 30,
+          "y": 78,
+          "tail": "up-right",
+          "maxWidthPct": 34,
+          "speaker": "Elyan Voss",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "…!",
+          "x": 68,
+          "y": 72,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "pulse-SYNC",
+          "x": 80,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 28,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss"
+  ],
+  "creatures": [
+    "spark",
+    "dormant-riftborn-egg",
+    "axiom"
+  ],
+  "locations": [
+    "Companion Incubator Beta"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "novaLine": "revealed",
+    "egg": "ready-to-hatch"
+  },
+  "requiredMoments": [
+    7
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 7/25 — Prime Companion. Story purpose: Incubator Beta reveals Nova bloodline — Prime Companion template linked to Spark's Resonance Line. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p7a): Cinematic: Companion Incubator Beta blooms with constellation light; holographic adult Nova Prime silhouette of starlit cream-indigo fur above the dormant egg; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot and egg synchronize pulses; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure watch in awe. Characters: mira-eggwarden, elyan-voss. Creatures: spark, dormant-riftborn-egg, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Companion Incubator Beta. Atmosphere: rift. Continuity: {\"novaLine\": \"revealed\", \"egg\": \"ready-to-hatch\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "The egg cracks.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Prime Companion — The Riftwright page 11",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: The Nova bloodline — Prime Companion. Twin-key to the Last Light.",
+    "SPEECH (Elyan Voss): Spark was never meant to stand alone.",
+    "CREATURE (Spark): …!",
+    "SFX: pulse-SYNC"
+  ],
+  "a11yTranscript": [
+    "NARRATION: The Nova bloodline — Prime Companion. Twin-key to the Last Light.",
+    "SPEECH (Elyan Voss): Spark was never meant to stand alone.",
+    "CREATURE (Spark): …!",
+    "SFX: pulse-SYNC"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "nova-prime-companion"
+  ],
+  "id": "the-riftwright-issue-009-p011",
+  "cleanArtRel": "generated/raw-art/page-011.webp",
+  "letteredArtRel": "generated/lettered-pages/page-011.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-011.webp"
+}

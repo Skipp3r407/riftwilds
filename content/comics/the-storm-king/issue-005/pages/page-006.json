@@ -1,0 +1,217 @@
+{
+  "pageNumber": 6,
+  "storyPageNumber": 2,
+  "bookRole": "story",
+  "title": "Roots Against the Gale",
+  "storyPurpose": "Wind nearly throws Thornling; Mossprig anchors; Spark flinches at lightning.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p2a",
+      "description": "Expedition on narrow mountain trail; hurricane wind tears at cloaks; Thornling skidding toward edge.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Hold the little green!",
+          "x": 35,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Tavi Brightline",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "WHOOOOM",
+          "x": 70,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p2b",
+      "description": "Mossprig roots deep into slate stone, living bulwark shield blooming; team huddled behind moss barrier.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*root-brace*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Thank you. Stay low.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p2c",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot winces as nearby lightning forks; cyan markings flare painfully; Mira steadies Spark with open hand (invite, not command).",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*pain-chirp*",
+          "x": 45,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 4
+        },
+        {
+          "kind": "thought",
+          "text": "The lightning hurts him. The engine is already speaking.",
+          "x": 55,
+          "y": 72,
+          "tail": null,
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p2a",
+      "kind": "speech",
+      "text": "Hold the little green!",
+      "x": 35,
+      "y": 20,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Tavi Brightline",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p2b",
+      "kind": "creature",
+      "text": "*root-brace*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mossprig",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p2b",
+      "kind": "speech",
+      "text": "Thank you. Stay low.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p2c",
+      "kind": "creature",
+      "text": "*pain-chirp*",
+      "x": 45,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p2c",
+      "kind": "thought",
+      "text": "The lightning hurts him. The engine is already speaking.",
+      "x": 55,
+      "y": 72,
+      "tail": null,
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p2a",
+      "kind": "sfx",
+      "text": "WHOOOOM",
+      "x": 70,
+      "y": 35,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "tavi-brightline",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "mossprig",
+    "thornling",
+    "bramblefox"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "mountain border path",
+    "mossprig": "anchoring",
+    "spark": {
+      "pain": "lightning"
+    }
+  },
+  "requiredMoments": [
+    2,
+    3
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 2/25 — Roots Against the Gale. Story purpose: Wind nearly throws Thornling; Mossprig anchors; Spark flinches at lightning. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Expedition on narrow mountain trail; hurricane wind tears at cloaks; Thornling skidding toward edge. Panel 2 (p2b): Mossprig roots deep into slate stone, living bulwark shield blooming; team huddled behind moss barrier. Panel 3 (p2c): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot winces as nearby lightning forks; cyan markings flare painfully; Mira steadies Spark with open hand (invite, not command). Characters: mira-eggwarden, tavi-brightline, cael-vesper. Creatures: spark, mossprig, thornling, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"mountain border path\", \"mossprig\": \"anchoring\", \"spark\": {\"pain\": \"lightning\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "A guide appears.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Roots Against the Gale — The Storm King page 2",
+  "atmosphere": "storm",
+  "transcript": [
+    "SPEECH (Tavi Brightline): Hold the little green!",
+    "SFX: WHOOOOM",
+    "CREATURE (Mossprig): *root-brace*",
+    "SPEECH (Mira Eggwarden): Thank you. Stay low.",
+    "CREATURE (Spark): *pain-chirp*",
+    "THOUGHT (Mira Eggwarden): The lightning hurts him. The engine is already speaking."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Tavi Brightline): Hold the little green!",
+    "SFX: WHOOOOM",
+    "CREATURE (Mossprig): *root-brace*",
+    "SPEECH (Mira Eggwarden): Thank you. Stay low.",
+    "CREATURE (Spark): *pain-chirp*",
+    "THOUGHT (Mira Eggwarden): The lightning hurts him. The engine is already speaking."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p006",
+  "cleanArtRel": "generated/raw-art/page-006.webp",
+  "letteredArtRel": "generated/lettered-pages/page-006.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-006.webp"
+}

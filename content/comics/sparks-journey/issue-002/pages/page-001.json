@@ -1,0 +1,106 @@
+{
+  "pageNumber": 1,
+  "storyPageNumber": null,
+  "bookRole": "front-cover",
+  "title": "Spark's Journey — Cover",
+  "storyPurpose": "Spark's Journey — Cover",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "cover",
+      "description": "Main cover: Spark foreground cyan-gold; Mira Eggwarden reaching toward Spark without touching; Bramblefox and Mossprig flanking; rift-scarred forest behind; distant hunter silhouettes; ancient Shellward nested-arc symbol above; cyan-gold energy trail as path. Trade dress space top/bottom. Original Riftwilds — not Marvel/DC.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "RIFTWILDS",
+          "x": 50,
+          "y": 8,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "caption",
+          "text": "SPARK'S JOURNEY",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "caption",
+          "text": "ISSUE #2",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "RIFTWILDS",
+      "x": 50,
+      "y": 8,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "SPARK'S JOURNEY",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "ISSUE #2",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book front-cover page for Spark's Journey Issue #2 — Spark's Journey — Cover. Main cover: Spark foreground cyan-gold; Mira Eggwarden reaching toward Spark without touching; Bramblefox and Mossprig flanking; rift-scarred forest behind; distant hunter silhouettes; ancient Shellward nested-arc symbol above; cyan-gold energy trail as path. Trade dress space top/bottom. Original Riftwilds — not Marvel/DC. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Spark's Journey — Cover",
+  "atmosphere": "rift",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: RIFTWILDS",
+    "CAPTION: SPARK'S JOURNEY",
+    "CAPTION: ISSUE #2"
+  ],
+  "id": "sparks-journey-issue-002-p001",
+  "cleanArtRel": "generated/raw-art/page-001.png",
+  "letteredArtRel": "generated/lettered-pages/page-001.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-001.webp"
+}

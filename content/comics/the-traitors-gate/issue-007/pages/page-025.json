@@ -1,0 +1,162 @@
+{
+  "pageNumber": 25,
+  "storyPageNumber": 21,
+  "bookRole": "story",
+  "title": "Never Release",
+  "storyPurpose": "Spark enters Gate memory; reveals Meridian never planned to free captive; Cael turns.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p21a",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot enters memory-light lattice with Truthwing; records show disposal order for Lumenhare and Cael.",
+      "bubbles": [
+        {
+          "kind": "magic",
+          "text": "ASSET DISPOSAL — AFTER OPENING",
+          "x": 50,
+          "y": 25,
+          "tail": null,
+          "maxWidthPct": 42,
+          "speaker": "Gate Memory",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*liar-light!*",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p21b",
+      "description": "Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif fury and grief; turns spear of lantern-light toward Seris; no longer compliant.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "You never meant to free them.",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 38,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "shout",
+          "text": "I'm done opening your doors!",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 36,
+          "speaker": "Cael Vesper",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p21a",
+      "kind": "magic",
+      "text": "ASSET DISPOSAL — AFTER OPENING",
+      "x": 50,
+      "y": 25,
+      "tail": null,
+      "maxWidthPct": 42,
+      "speaker": "Gate Memory",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p21a",
+      "kind": "creature",
+      "text": "*liar-light!*",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p21b",
+      "kind": "speech",
+      "text": "You never meant to free them.",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 38,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p21b",
+      "kind": "shout",
+      "text": "I'm done opening your doors!",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 36,
+      "speaker": "Cael Vesper",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark",
+    "truthwing",
+    "lumenhare"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "cael": "turns-against-meridian",
+    "lie": "exposed"
+  },
+  "requiredMoments": [
+    21,
+    22
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 21/25 — Never Release. Story purpose: Spark enters Gate memory; reveals Meridian never planned to free captive; Cael turns. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p21a): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot enters memory-light lattice with Truthwing; records show disposal order for Lumenhare and Cael. Panel 2 (p21b): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif fury and grief; turns spear of lantern-light toward Seris; no longer compliant. Characters: mira-eggwarden, cael-vesper, seris-vale. Creatures: spark, truthwing, lumenhare. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"cael\": \"turns-against-meridian\", \"lie\": \"exposed\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Key breaks.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Never Release — The Traitor's Gate page 21",
+  "atmosphere": "rift",
+  "transcript": [
+    "MAGIC (Gate Memory): ASSET DISPOSAL — AFTER OPENING",
+    "CREATURE (Spark): *liar-light!*",
+    "SPEECH (Cael Vesper): You never meant to free them.",
+    "SHOUT (Cael Vesper): I'm done opening your doors!"
+  ],
+  "a11yTranscript": [
+    "MAGIC (Gate Memory): ASSET DISPOSAL — AFTER OPENING",
+    "CREATURE (Spark): *liar-light!*",
+    "SPEECH (Cael Vesper): You never meant to free them.",
+    "SHOUT (Cael Vesper): I'm done opening your doors!"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p025",
+  "cleanArtRel": "generated/raw-art/page-025.webp",
+  "letteredArtRel": "generated/lettered-pages/page-025.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-025.webp"
+}

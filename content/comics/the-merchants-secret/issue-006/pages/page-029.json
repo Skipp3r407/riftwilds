@@ -1,0 +1,154 @@
+{
+  "pageNumber": 29,
+  "storyPageNumber": 25,
+  "bookRole": "story",
+  "title": "The Traitor's Gate",
+  "storyPurpose": "Cliffhanger: Cael Vesper receives merchant token transmission.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p25a",
+      "description": "Dark service corridor beneath shifting bazaar: Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif alone, half-mask lowered, merchant token in palm glowing warm gold; teal message sigil unfolding; Mira and Spark distant through arch — unaware. Empty zones for NEXT title.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "text": "The Keeper has the egg. Proceed to the next gate.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Merchant Signal",
+          "readOrder": 0
+        },
+        {
+          "kind": "thought",
+          "text": "…the price.",
+          "x": 35,
+          "y": 55,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "NEXT: THE TRAITOR'S GATE",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "token-PULSE",
+          "x": 70,
+          "y": 65,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p25a",
+      "kind": "whisper",
+      "text": "The Keeper has the egg. Proceed to the next gate.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Merchant Signal",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p25a",
+      "kind": "thought",
+      "text": "…the price.",
+      "x": 35,
+      "y": 55,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 1
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "NEXT: THE TRAITOR'S GATE",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p25a",
+      "kind": "sfx",
+      "text": "token-PULSE",
+      "x": 70,
+      "y": 65,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [
+    "merchant-token"
+  ],
+  "continuity": {
+    "location": "service corridor",
+    "teaser": "the-traitors-gate",
+    "traitor": "cael-vesper",
+    "transmission": "keeper-has-egg"
+  },
+  "requiredMoments": [
+    35,
+    36
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 25/25 — The Traitor's Gate. Story purpose: Cliffhanger: Cael Vesper receives merchant token transmission. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Dark service corridor beneath shifting bazaar: Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif alone, half-mask lowered, merchant token in palm glowing warm gold; teal message sigil unfolding; Mira and Spark distant through arch — unaware. Empty zones for NEXT title. Characters: cael-vesper. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"service corridor\", \"teaser\": \"the-traitors-gate\", \"traitor\": \"cael-vesper\", \"transmission\": \"keeper-has-egg\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "End Issue #6.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Traitor's Gate — The Merchant's Secret page 25",
+  "atmosphere": "night",
+  "transcript": [
+    "WHISPER (Merchant Signal): The Keeper has the egg. Proceed to the next gate.",
+    "THOUGHT (Cael Vesper): …the price.",
+    "CAPTION: NEXT: THE TRAITOR'S GATE",
+    "SFX: token-PULSE"
+  ],
+  "a11yTranscript": [
+    "WHISPER (Merchant Signal): The Keeper has the egg. Proceed to the next gate.",
+    "THOUGHT (Cael Vesper): …the price.",
+    "CAPTION: NEXT: THE TRAITOR'S GATE",
+    "SFX: token-PULSE"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p029",
+  "cleanArtRel": "generated/raw-art/page-029.webp",
+  "letteredArtRel": "generated/lettered-pages/page-029.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-029.webp"
+}

@@ -1,0 +1,60 @@
+{
+  "pageNumber": 36,
+  "storyPageNumber": null,
+  "bookRole": "letters",
+  "title": "Editor's Note — Trust & Choice",
+  "storyPurpose": "Editor's Note — Trust & Choice",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ed",
+      "description": "Letters page atmosphere: soft desk lamp, open Compact seal wax, Spark pawprint sketch.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "EDITOR'S NOTE: Spark's Journey is about trust under fear — the difference between protection and control. A companion who can run away and still be invited back is the Compact made flesh. Write the Lore Desk. Keep invitations honest.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 70
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ed",
+      "kind": "narration",
+      "text": "EDITOR'S NOTE: Spark's Journey is about trust under fear — the difference between protection and control. A companion who can run away and still be invited back is the Compact made flesh. Write the Lore Desk. Keep invitations honest.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 70
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book letters page for Spark's Journey Issue #2 — Editor's Note — Trust & Choice. Letters page atmosphere: soft desk lamp, open Compact seal wax, Spark pawprint sketch. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Editor's Note — Trust & Choice",
+  "atmosphere": "day",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "NARRATION: EDITOR'S NOTE: Spark's Journey is about trust under fear — the difference between protection and control. A companion who can run away and still be invited back is the Compact made flesh. Write the Lore Desk. Keep invitations honest."
+  ],
+  "id": "sparks-journey-issue-002-p036",
+  "cleanArtRel": "generated/raw-art/page-036.png",
+  "letteredArtRel": "generated/lettered-pages/page-036.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-036.webp"
+}

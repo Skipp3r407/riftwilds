@@ -1,0 +1,159 @@
+{
+  "pageNumber": 6,
+  "bookRole": "story",
+  "title": "First Eye",
+  "storyPurpose": "Egg cracking sequence; Spark's eye opens; companions react.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p2a",
+      "description": "Extreme close-up: shell fissures widening; cyan-gold light leaking.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "KRK-KRACK",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p2b",
+      "description": "Bramblefox watches cautiously; Mossprig shields tiny Thornling from flying shell fragments.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Thornling",
+          "text": "*eep!*",
+          "x": 70,
+          "y": 55,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Mossprig",
+          "text": "*steady…*",
+          "x": 30,
+          "y": 60,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p2c",
+      "description": "Inside shell: Spark's large eye opens — luminous, frightened, cyan-gold iris.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Something chooses the world — and flinches.",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "readOrder": 3,
+          "maxWidthPct": 55
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p2b",
+      "kind": "creature",
+      "speaker": "Thornling",
+      "text": "*eep!*",
+      "x": 70,
+      "y": 55,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p2b",
+      "kind": "creature",
+      "speaker": "Mossprig",
+      "text": "*steady…*",
+      "x": 30,
+      "y": 60,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p2c",
+      "kind": "narration",
+      "text": "Something chooses the world — and flinches.",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "readOrder": 3,
+      "maxWidthPct": 55
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p2a",
+      "kind": "sfx",
+      "text": "KRK-KRACK",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "spark"
+  ],
+  "continuity": {
+    "spark": {
+      "form": "hatching",
+      "emotion": "awakening",
+      "glow": "bright unstable",
+      "crackLevel": 3
+    },
+    "mossprig": {
+      "status": "shielding Thornling"
+    },
+    "thornling": {
+      "status": "startled"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 2/25 — First Eye. Story purpose: Egg cracking sequence; Spark's eye opens; companions react. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Extreme close-up: shell fissures widening; cyan-gold light leaking. Panel 2 (p2b): Bramblefox watches cautiously; Mossprig shields tiny Thornling from flying shell fragments. Panel 3 (p2c): Inside shell: Spark's large eye opens — luminous, frightened, cyan-gold iris. Characters: mira-eggwarden. Creatures: bramblefox, mossprig, thornling, spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"form\":\"hatching\",\"emotion\":\"awakening\",\"glow\":\"bright unstable\",\"crackLevel\":3},\"mossprig\":{\"status\":\"shielding Thornling\"},\"thornling\":{\"status\":\"startled\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Spark emerges.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "First Eye — Spark's Journey page 2",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SFX: KRK-KRACK",
+    "CREATURE (Thornling): *eep!*",
+    "CREATURE (Mossprig): *steady…*",
+    "NARRATION: Something chooses the world — and flinches."
+  ],
+  "storyPageNumber": 2,
+  "id": "sparks-journey-issue-002-p006",
+  "cleanArtRel": "generated/raw-art/page-006.png",
+  "letteredArtRel": "generated/lettered-pages/page-006.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-006.webp"
+}

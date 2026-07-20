@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { canEnterLiveWorld, isLiveWorldEntryOpen } from "@/lib/config/feature-flags";
+import {
+  canEnterLiveWorld,
+  isLiveWorldEntryOpen,
+  isLiveWorldPublicAccess,
+  liveWorldAccessBadge,
+} from "@/lib/config/feature-flags";
 import { projectConfig } from "@/lib/config/project";
 import { PageHeader } from "@/components/shared/page-header";
 import { LiveWorldShell } from "@/components/live-world/live-world-shell";
@@ -9,6 +14,8 @@ export const metadata = { title: "Live World" };
 export default function LiveWorldPage() {
   const entryOpen = isLiveWorldEntryOpen();
   const playable = canEnterLiveWorld();
+  const publicAccess = isLiveWorldPublicAccess();
+  const accessBadge = liveWorldAccessBadge();
 
   if (!entryOpen) {
     return (
@@ -89,10 +96,24 @@ export default function LiveWorldPage() {
             Enter Riftwild Commons and control your Keeper directly. Walk the plaza, keep your{" "}
             {projectConfig.CREATURE_NAME} companion close, and talk to NPCs. Multiplayer authority
             lands later — the habitat stays enterable while you build and test.
+            {!publicAccess ? (
+              <>
+                {" "}
+                <span className="text-[var(--amber)]">
+                  Public players still see Coming Soon — this is local/dev access.
+                </span>
+              </>
+            ) : null}
           </>
         }
-        status={playable ? "Open" : "Disabled"}
-        statusTone={playable ? "live" : "warn"}
+        status={
+          !publicAccess
+            ? (accessBadge ?? "COMING SOON · DEV ACCESS")
+            : playable
+              ? "Open"
+              : "Disabled"
+        }
+        statusTone={!publicAccess ? "warn" : playable ? "live" : "warn"}
         actions={
           <>
             <a href="#enter-live-world" className="btn-primary focus-ring">

@@ -1,0 +1,326 @@
+{
+  "title": "Spark's Journey",
+  "issue": 2,
+  "subtitle": "Hatchling of the Pulse",
+  "protagonist": "Mira Eggwarden",
+  "companion": "Spark",
+  "synopsis": "The pulse-egg under Mira Eggwarden's Compact care hatches into Spark, an unstable Glowpup-line Riftborn. Mira escorts Spark toward Shellward Sanctum while Veiled Meridian hunters try to capture Subject One. Spark flees fear, returns by choice, unlocks Prismatic Burst, and discovers it is one of several Riftborn — as the Meridian begins the collection at the Traveling Circus.",
+  "themes": [
+    "trust",
+    "fear of being different",
+    "found family",
+    "responsibility",
+    "protection versus control",
+    "bond",
+    "identity",
+    "courage"
+  ],
+  "storyPageCount": 25,
+  "bookPageCount": 38,
+  "storyStartBookPage": 5,
+  "requiredMoments": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "title": "The Pulse Did Not End",
+      "beat": "Dawn aftermath; Mira with cracked pulse-egg; hatch begins.",
+      "transcript": [
+        "NARRATION: The storm ended before sunrise. The pulse did not.",
+        "SFX: shell-song…",
+        "WHISPER (Mira Eggwarden): Stay with me. Quiet now."
+      ]
+    },
+    {
+      "pageNumber": 2,
+      "title": "First Eye",
+      "beat": "Egg cracking sequence; Spark's eye opens; companions react.",
+      "transcript": [
+        "SFX: KRK-KRACK",
+        "CREATURE (Thornling): *eep!*",
+        "CREATURE (Mossprig): *steady…*",
+        "NARRATION: Something chooses the world — and flinches."
+      ]
+    },
+    {
+      "pageNumber": 3,
+      "title": "Hatchling",
+      "beat": "Spark emerges, panics with small pulse, hides behind Bramblefox; Mira kneels.",
+      "transcript": [
+        "CREATURE (Spark): *chirp—!*",
+        "SFX: PULSE-THUM",
+        "CREATURE (Bramblefox): *soft rrk*",
+        "SPEECH (Mira Eggwarden): I'm not going to grab you. Invite only.",
+        "NARRATION: Compact starts at the first breath."
+      ]
+    },
+    {
+      "pageNumber": 4,
+      "title": "Unknown Resonance",
+      "beat": "Codex scan fails; UNKNOWN RESONANCE / NO MATCH FOUND lettered into image.",
+      "transcript": [
+        "SPEECH (Mira Eggwarden): Easy. Just reading the shell-song you kept.",
+        "SFX: scan-hummm",
+        "CAPTION: UNKNOWN RESONANCE",
+        "CAPTION: NO MATCH FOUND",
+        "THOUGHT (Mira Eggwarden): Not Nature. Not Storm. Not anything we catalogued."
+      ]
+    },
+    {
+      "pageNumber": 5,
+      "title": "Shellward Mark",
+      "beat": "Scholar/Keeper recognizes ancient sanctuary symbol on Spark.",
+      "transcript": [
+        "SPEECH (Keeper Scholar Len): That mark… Shellward. Pre-Commons nesting law.",
+        "NARRATION: A door older than the plaza. A promise older than fear.",
+        "SPEECH (Mira Eggwarden): If the Compact still means anything, we take it there — not to a cage."
+      ]
+    },
+    {
+      "pageNumber": 6,
+      "title": "Before Destabilization",
+      "beat": "Mission: reach sanctuary before Spark destabilizes; shadowed hunter on ridge.",
+      "transcript": [
+        "SPEECH (Mira Eggwarden): Take Spark to Shellward Sanctum before the pulse frays.",
+        "SPEECH (Mira Eggwarden): We walk. We invite. We don't make it a weapon.",
+        "WHISPER (Hunter Spotter): Subject One lives. Mark the trail.",
+        "NARRATION: Some invitations arrive with knives."
+      ]
+    },
+    {
+      "pageNumber": 7,
+      "title": "Leaving the Hearth",
+      "beat": "Quiet travel departure; Spark learns the group's rhythm.",
+      "transcript": [
+        "NARRATION: The road teaches tempo before it teaches danger.",
+        "CREATURE (Spark): *…chir?*",
+        "SPEECH (Mira Eggwarden): That's Bramblefox. Scout. That's Mossprig. Wall. Thornling… chaos with thorns."
+      ]
+    },
+    {
+      "pageNumber": 8,
+      "title": "Motes and Marks",
+      "beat": "Spark imitates Thornling / chases motes; then markings flare.",
+      "transcript": [
+        "CREATURE (Thornling): *hee!*",
+        "CREATURE (Spark): *chir-chir!*",
+        "SPEECH (Mira Eggwarden): Curiosity that can play is Keeper-shaped.",
+        "SFX: FLARE-CRACKLE",
+        "SPEECH (Mira Eggwarden): Hey— hey. Breathe with me."
+      ]
+    },
+    {
+      "pageNumber": 9,
+      "title": "Scar of the First Tear",
+      "beat": "Rift-scarred region: floating stones, damaged trees, reversed waterfall.",
+      "transcript": [
+        "NARRATION: Where the First Tear taught stone to forget gravity.",
+        "WHISPER (Mira Eggwarden): Stay close. This ground remembers wrong.",
+        "SFX: rift-hummm"
+      ]
+    },
+    {
+      "pageNumber": 10,
+      "title": "Fear Has a Finger",
+      "beat": "Travelers see Spark; one panics and blames Spark for Rift damage.",
+      "transcript": [
+        "SPEECH (Travel Kid): It shines like a Gateway…",
+        "CREATURE (Spark): *chir?*",
+        "SHOUT (Frightened Traveler): That thing woke the tear! Look at our road!",
+        "SPEECH (Merchant): Keep it away from the wagons!"
+      ]
+    },
+    {
+      "pageNumber": 11,
+      "title": "Not a Weapon",
+      "beat": "Mira publicly defends Spark; Spark withdraws emotionally.",
+      "transcript": [
+        "SPEECH (Mira Eggwarden): It hatched after we sealed a wound. Blame the hand that opened it — not the pulse that survived.",
+        "CREATURE (Spark): *…*",
+        "THOUGHT (Mira Eggwarden): They heard a monster. It heard a verdict.",
+        "WHISPER (Mira Eggwarden): You're not a weapon. I won't let them write you as one."
+      ]
+    },
+    {
+      "pageNumber": 12,
+      "title": "Glow Into Dark",
+      "beat": "Night: Spark runs away; hunters activate tracking.",
+      "transcript": [
+        "SFX: pad-pad-pad",
+        "SHOUT (Mira Eggwarden): Spark—!",
+        "SPEECH (Vex Halden): Trail lock. Alive capture only.",
+        "WHISPER (Nira Quill): If it's only a hatchling…",
+        "SPEECH (Vex Halden): Subject One is inventory. Move."
+      ]
+    },
+    {
+      "pageNumber": 13,
+      "title": "Scent and Spirit",
+      "beat": "Bramblefox tracks; Wisplet senses spiritual trail; Mira follows.",
+      "transcript": [
+        "CREATURE (Bramblefox): *hunt-rrk*",
+        "CREATURE (Wisplet): *chime…*",
+        "SPEECH (Mira Eggwarden): I'm not reclaiming property. I'm answering a runaway invitation."
+      ]
+    },
+    {
+      "pageNumber": 14,
+      "title": "The Arch That Waits",
+      "beat": "Spark finds ancient stone arch that opens only for Spark; hidden road appears.",
+      "transcript": [
+        "CREATURE (Spark): *…chir*",
+        "SFX: stone-awaken",
+        "NARRATION: Some doors do not open for keys. They open for kinship.",
+        "CAPTION: SHELLWARD ROAD"
+      ]
+    },
+    {
+      "pageNumber": 15,
+      "title": "Sigils Ignite",
+      "beat": "Group reaches Spark; hunter sigils ignite; hunters step from concealment.",
+      "transcript": [
+        "WHISPER (Mira Eggwarden): You found a door. You still get to choose the room.",
+        "SFX: SIGIL-LOCK",
+        "SPEECH (Vex Halden): Subject One. Step away from the Keepers.",
+        "THOUGHT (Nira Quill): It looks like a child of light — not a weapon crate."
+      ]
+    },
+    {
+      "pageNumber": 16,
+      "title": "Refuse the Cage",
+      "beat": "Lead hunter demands Spark; Mira refuses; Nira uncertain; battle starts.",
+      "transcript": [
+        "SPEECH (Vex Halden): It belongs to the Meridian. Hand it over — alive.",
+        "SPEECH (Mira Eggwarden): It belongs to its own becoming. Compact law. Back away.",
+        "SPEECH (Nira Quill): Vex— if the scan was wrong—",
+        "SFX: WHUMP",
+        "SFX: SHIIING",
+        "CREATURE (Bramblefox): *snarl*"
+      ]
+    },
+    {
+      "pageNumber": 17,
+      "title": "Living Bulwark",
+      "beat": "Binding relic fires at Spark; Mossprig takes the hit with Living Bulwark.",
+      "transcript": [
+        "SFX: BIND-LANCE",
+        "CREATURE (Mossprig): *BULWARK!*",
+        "SFX: KRRRAAAK",
+        "CREATURE (Spark): *chir—!!*",
+        "SPEECH (Mira Eggwarden): Mossprig!"
+      ]
+    },
+    {
+      "pageNumber": 18,
+      "title": "Grove Against Veil",
+      "beat": "Full coordinated battle; Spark frightened in center.",
+      "transcript": [
+        "SFX: LEAF-SNAP",
+        "CREATURE (Thornling): *sprout-GO!*",
+        "SFX: phase-chime",
+        "NARRATION: Power without choice is just another cage.",
+        "CREATURE (Spark): *tremble-hum*"
+      ]
+    },
+    {
+      "pageNumber": 19,
+      "title": "You Do Not Have To",
+      "beat": "Hunters gaining; Spark sees Mossprig hurt; overload; Mira refuses to command Spark to fight.",
+      "transcript": [
+        "SPEECH (Vex Halden): End this. Collar the anomaly.",
+        "SFX: RESONANCE+++",
+        "SPEECH (Mira Eggwarden): You don't have to fight for us. You don't have to be useful to be kept.",
+        "WHISPER (Mira Eggwarden): If you run through that door, I'll still call you Spark."
+      ]
+    },
+    {
+      "pageNumber": 20,
+      "title": "You Were Never Made to Obey",
+      "beat": "Spark vision: ancient Keepers with several Spark-like young; invitation not command.",
+      "transcript": [
+        "CAPTION: You were never made to obey.",
+        "TELEPATHY (Ancient Keeper Echo): Become. Then choose."
+      ]
+    },
+    {
+      "pageNumber": 21,
+      "title": "Chosen Step",
+      "beat": "Spark voluntarily returns beside Mira; no command; controlled Resonance activates.",
+      "transcript": [
+        "CREATURE (Spark): *chir…* (bond-warmth)",
+        "SPEECH (Mira Eggwarden): Okay. Together — if you want.",
+        "NARRATION: Resonance held — not spilled.",
+        "CAPTION: RIFT RESONANCE"
+      ]
+    },
+    {
+      "pageNumber": 22,
+      "title": "Prismatic Burst",
+      "beat": "Spark unleashes controlled Prismatic Burst; group combines powers; binding field breaks — not instant win.",
+      "transcript": [
+        "SFX: PRISM—BURST",
+        "SFX: field-SHATTER",
+        "SHOUT (Vex Halden): Dampening— hold the line!"
+      ]
+    },
+    {
+      "pageNumber": 23,
+      "title": "Door for One",
+      "beat": "Battle ends; Nira stops Vex from harming Spark; hunters retreat; sanctuary doors open for Spark.",
+      "transcript": [
+        "SPEECH (Nira Quill): Alive capture — not a corpse for the ledger.",
+        "SPEECH (Vex Halden): You'll answer for this.",
+        "NARRATION: The Meridian withdraws — not defeated forever.",
+        "SPEECH (Mira Eggwarden): It opens for you. We'll wait our turn.",
+        "CREATURE (Spark): *invite-chirp*"
+      ]
+    },
+    {
+      "pageNumber": 24,
+      "title": "Riftborn",
+      "beat": "Sanctuary mural: multiple Spark-like beings linked to world Rifts; Mira realizes Spark is one of several.",
+      "transcript": [
+        "NARRATION: Not a mistake. A lineage of thresholds.",
+        "SPEECH (Mira Eggwarden): You're one of several… Riftborn.",
+        "CAPTION: CODEX CLASS: RIFTBORN (PROVISIONAL)",
+        "CREATURE (Spark): *soft wonder-hum*"
+      ]
+    },
+    {
+      "pageNumber": 25,
+      "title": "Begin the Collection",
+      "beat": "Empty pedestal; map marks Traveling Circus; Meridian message; TO BE CONTINUED Issue #3.",
+      "transcript": [
+        "NARRATION: Someone reached the heart first.",
+        "TELEPATHY (Veiled Meridian Channel): Subject One has awakened. Begin the collection.",
+        "CAPTION: TO BE CONTINUED IN ISSUE #3",
+        "CAPTION: THE TRAVELING CIRCUS"
+      ]
+    }
+  ]
+}

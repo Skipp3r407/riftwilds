@@ -1,0 +1,42 @@
+{
+  "volume": "Volume One Finale",
+  "fromIssue008": {
+    "arkan": "Sacrificed at Engine Alpha",
+    "axiom": "Awakened — Adaptive Matrix / Pulse Repair / System Restore",
+    "egg": "Further cracked at Forge (after Gate crack)",
+    "secondForge": "Activated — cliffhanger into #9",
+    "riftwrightSilhouette": "So… after all this time… someone finally reached my Forge.",
+    "bridgePhrase": "Begin the second creation.",
+    "riftbornDoctrine": "Created to protect, not obey",
+    "protocols": "Altered by unknown (withheld)",
+    "riftwrightPreActivation": "Disappeared before First Rift activation; someone else pushed final command"
+  },
+  "coreReveal": "Riftwright is Professor Elyan Voss — blamed wrongly; built cradles; disappeared before activation.",
+  "hatchedCompanion": "Nova",
+  "mysteryRetained": {
+    "question": "Who manipulated history / rewrote Forge protocols after the First Rift?",
+    "constraints": [
+      "Older than Meridian",
+      "Unnamed in Volume One",
+      "Carries into Volume Two: The Shattered Star"
+    ]
+  },
+  "arkan": "Sacrificed at Forge of Rifts; echo guides cradle lattice; fades after Engines stabilize.",
+  "castLocks": {
+    "mira": "POV Keeper",
+    "cael": "Supervised ally — NOT re-traitored",
+    "nira": "Cleared ally",
+    "aurelia": "Uneasy ally",
+    "seris": "Ascendant Commander then contained",
+    "elara": "Vision only",
+    "calReed": "Non-canon"
+  },
+  "themes": [
+    "History as weapon",
+    "Progress without ethics",
+    "Consent Compact",
+    "Found family",
+    "Tragic responsibility",
+    "Redemption unfinished"
+  ]
+}

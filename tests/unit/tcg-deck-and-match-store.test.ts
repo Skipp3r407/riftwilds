@@ -1,5 +1,6 @@
 import { describe, expect, it, beforeEach } from "vitest";
 import { TCG_STARTER_SET_20 } from "@/content/tcg";
+import { toConstructedSlice } from "@/content/tcg/framework/deck-rules";
 import {
   buildStarterDeckList,
   validateDeckList,
@@ -50,7 +51,9 @@ describe("tcg deck validation (constructed)", () => {
   });
 
   it("accepts the showcase twenty under constructed rules", () => {
-    expect(validateDeckList(TCG_STARTER_SET_20.cardIds).ok).toBe(true);
+    expect(validateDeckList(toConstructedSlice(TCG_STARTER_SET_20.cardIds)).ok).toBe(
+      true,
+    );
   });
 
   it("content validator allows teaching pools that break copy caps when sized legally", () => {

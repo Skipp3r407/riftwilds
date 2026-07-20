@@ -1,0 +1,19 @@
+{
+  "main": {
+    "title": "Spark's Journey",
+    "issue": 2,
+    "prompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book front-cover page for Spark's Journey Issue #2 — Spark's Journey — Cover. Main cover: Spark foreground cyan-gold; Mira Eggwarden reaching toward Spark without touching; Bramblefox and Mossprig flanking; rift-scarred forest behind; distant hunter silhouettes; ancient Shellward nested-arc symbol above; cyan-gold energy trail as path. Trade dress space top/bottom. Original Riftwilds — not Marvel/DC. Empty zones for title lettering. NO readable text in art."
+  },
+  "variant-a": {
+    "label": "Spark portrait with ancient markings",
+    "prompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Variant cover A: intimate Spark portrait, Shellward nested-arc markings glowing, cyan-gold aura, empty title zones. Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. NO text."
+  },
+  "variant-b": {
+    "label": "Companion team protecting Spark",
+    "prompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Variant cover B: Bramblefox, Mossprig, Thornling, Wisplet forming protective ring around Spark; Mira silhouette behind. NO text."
+  },
+  "foil": {
+    "label": "Foil — animated cyan-gold Rift markings",
+    "prompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Foil cover treatment concept: Spark with heightened cyan-gold rift marking shimmer suitable for foil overlay; empty title zones. NO text."
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "pageNumber": 24,
+  "storyPageNumber": 20,
+  "bookRole": "story",
+  "title": "Collapse",
+  "storyPurpose": "Forge begins collapsing; truth settles — creators vs corrupters.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p20a",
+      "description": "Platforms fall; molten channels overflow; Guardians freeze mid-step; Meridian scrambling.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "COLLAPSE-RUMBLE",
+          "x": 65,
+          "y": 25,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Machines die louder than men — and quieter than guilt.",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 52,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p20b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes clutching egg and Spark; Axiom System Restore dampening corrupted Rift shards; Cael and Nira pulling wounded clear.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Arkan bought us a path. We use it.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*system-restore*",
+          "x": 55,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Axiom",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p20c",
+      "description": "Arkan's monocle left on cracked white stone — empty; blue dust dispersing.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "text": "He stayed centuries… and still chose us over the machine.",
+          "x": 50,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Cael Vesper",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p20b",
+      "kind": "speech",
+      "text": "Arkan bought us a path. We use it.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p20b",
+      "kind": "creature",
+      "text": "*system-restore*",
+      "x": 55,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Axiom",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p20c",
+      "kind": "whisper",
+      "text": "He stayed centuries… and still chose us over the machine.",
+      "x": 50,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Cael Vesper",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p20a",
+      "kind": "narration",
+      "text": "Machines die louder than men — and quieter than guilt.",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 52,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p20a",
+      "kind": "sfx",
+      "text": "COLLAPSE-RUMBLE",
+      "x": 65,
+      "y": 25,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "axiom"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "collapsing Engine Alpha",
+    "arkan": "gone",
+    "forge": "collapsing"
+  },
+  "requiredMoments": [
+    20
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 20/25 — Collapse. Story purpose: Forge begins collapsing; truth settles — creators vs corrupters. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p20a): Platforms fall; molten channels overflow; Guardians freeze mid-step; Meridian scrambling. Panel 2 (p20b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes clutching egg and Spark; Axiom System Restore dampening corrupted Rift shards; Cael and Nira pulling wounded clear. Panel 3 (p20c): Arkan's monocle left on cracked white stone — empty; blue dust dispersing. Characters: mira-eggwarden, cael-vesper, nira-quill. Creatures: spark, axiom. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"collapsing Engine Alpha\", \"arkan\": \"gone\", \"forge\": \"collapsing\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Spark steadies the reactor.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Collapse — The Forge of Rifts page 20",
+  "atmosphere": "ruin",
+  "transcript": [
+    "SFX: COLLAPSE-RUMBLE",
+    "NARRATION: Machines die louder than men — and quieter than guilt.",
+    "SPEECH (Mira Eggwarden): Arkan bought us a path. We use it.",
+    "CREATURE (Axiom): *system-restore*",
+    "WHISPER (Cael Vesper): He stayed centuries… and still chose us over the machine."
+  ],
+  "a11yTranscript": [
+    "SFX: COLLAPSE-RUMBLE",
+    "NARRATION: Machines die louder than men — and quieter than guilt.",
+    "SPEECH (Mira Eggwarden): Arkan bought us a path. We use it.",
+    "CREATURE (Axiom): *system-restore*",
+    "WHISPER (Cael Vesper): He stayed centuries… and still chose us over the machine."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p024",
+  "cleanArtRel": "generated/raw-art/page-024.webp",
+  "letteredArtRel": "generated/lettered-pages/page-024.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-024.webp"
+}

@@ -1,0 +1,107 @@
+{
+  "pageNumber": 28,
+  "storyPageNumber": 24,
+  "bookRole": "story",
+  "title": "A Crack in the Sky",
+  "storyPurpose": "Finale tease begins — night sky above the continent shows a broken star.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p24a",
+      "description": "Wide night: party looks up from Forge vent to the heavens; a distant star is visibly cracked / shattered, faint sleeping companion silhouettes curled inside the break — mysterious, beautiful, ominous.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Far above healed Engines… a star forgets how to shine whole.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "What is that?",
+          "x": 30,
+          "y": 70,
+          "tail": "up-right",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        },
+        {
+          "kind": "speech",
+          "text": "Not Meridian work. Older… or farther.",
+          "x": 65,
+          "y": 78,
+          "tail": "up-left",
+          "maxWidthPct": 34,
+          "speaker": "Elyan Voss",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "distant-chime",
+          "x": 80,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 28,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss"
+  ],
+  "creatures": [
+    "spark",
+    "nova"
+  ],
+  "locations": [
+    "Second Forge sky vent",
+    "Shattered Star (distant)"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "volumeTwoTease": "shattered-star",
+    "mystery": "history-manipulator-unnamed"
+  },
+  "requiredMoments": [
+    24
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 24/25 — A Crack in the Sky. Story purpose: Finale tease begins — night sky above the continent shows a broken star. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p24a): Wide night: party looks up from Forge vent to the heavens; a distant star is visibly cracked / shattered, faint sleeping companion silhouettes curled inside the break — mysterious, beautiful, ominous. Characters: mira-eggwarden, elyan-voss. Creatures: spark, nova. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Second Forge sky vent, Shattered Star (distant). Atmosphere: night. Continuity: {\"volumeTwoTease\": \"shattered-star\", \"mystery\": \"history-manipulator-unnamed\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Volume One finale image.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "A Crack in the Sky — The Riftwright page 28",
+  "atmosphere": "night",
+  "transcript": [
+    "NARRATION: Far above healed Engines… a star forgets how to shine whole.",
+    "SPEECH (Mira Eggwarden): What is that?",
+    "SPEECH (Elyan Voss): Not Meridian work. Older… or farther.",
+    "SFX: distant-chime"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Far above healed Engines… a star forgets how to shine whole.",
+    "SPEECH (Mira Eggwarden): What is that?",
+    "SPEECH (Elyan Voss): Not Meridian work. Older… or farther.",
+    "SFX: distant-chime"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p028",
+  "cleanArtRel": "generated/raw-art/page-028.webp",
+  "letteredArtRel": "generated/lettered-pages/page-028.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-028.webp"
+}

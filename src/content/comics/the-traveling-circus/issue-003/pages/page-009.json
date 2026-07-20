@@ -1,0 +1,197 @@
+{
+  "pageNumber": 9,
+  "bookRole": "story",
+  "title": "Snack Catastrophe",
+  "storyPurpose": "Thornling comic food stall incident; Mossprig helps; Spark briefly laughs/relaxes.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p5a",
+      "description": "Thornling topples stacked caramel-root cones; sticky chaos.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "SPLORP",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Thornling",
+          "text": "*eep!*",
+          "x": 70,
+          "y": 60,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p5b",
+      "description": "Mossprig Living Bulwark mini-dome catches falling trays; vendor relieved.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Vendor",
+          "text": "Hero moss!",
+          "x": 60,
+          "y": 25,
+          "tail": "down",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Mossprig",
+          "text": "*steady…*",
+          "x": 35,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p5c",
+      "description": "Spark chirps a laugh-pulse; Mira soft smile — rare ease.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*yip-laugh!*",
+          "x": 45,
+          "y": 40,
+          "tail": "up",
+          "readOrder": 4,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Even chaos can be Compact if nobody gets hurt.",
+          "x": 55,
+          "y": 75,
+          "tail": "up",
+          "readOrder": 5,
+          "maxWidthPct": 42
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p5a",
+      "kind": "creature",
+      "speaker": "Thornling",
+      "text": "*eep!*",
+      "x": 70,
+      "y": 60,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p5b",
+      "kind": "speech",
+      "speaker": "Vendor",
+      "text": "Hero moss!",
+      "x": 60,
+      "y": 25,
+      "tail": "down",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p5b",
+      "kind": "creature",
+      "speaker": "Mossprig",
+      "text": "*steady…*",
+      "x": 35,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p5c",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*yip-laugh!*",
+      "x": 45,
+      "y": 40,
+      "tail": "up",
+      "readOrder": 4,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p5c",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Even chaos can be Compact if nobody gets hurt.",
+      "x": 55,
+      "y": 75,
+      "tail": "up",
+      "readOrder": 5,
+      "maxWidthPct": 42
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p5a",
+      "kind": "sfx",
+      "text": "SPLORP",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "thornling",
+    "mossprig",
+    "spark"
+  ],
+  "continuity": {
+    "spark": {
+      "emotion": "relaxed-brief"
+    },
+    "mira": {
+      "emotion": "warm"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 5/25 — Snack Catastrophe. Story purpose: Thornling comic food stall incident; Mossprig helps; Spark briefly laughs/relaxes. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p5a): Thornling topples stacked caramel-root cones; sticky chaos. Panel 2 (p5b): Mossprig Living Bulwark mini-dome catches falling trays; vendor relieved. Panel 3 (p5c): Spark chirps a laugh-pulse; Mira soft smile — rare ease. Characters: mira-eggwarden. Creatures: thornling, mossprig, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"spark\":{\"emotion\":\"relaxed-brief\"},\"mira\":{\"emotion\":\"warm\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Meet Lanternmaster.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Snack Catastrophe — The Traveling Circus page 5",
+  "atmosphere": "festival",
+  "transcript": [
+    "SFX: SPLORP",
+    "CREATURE (Thornling): *eep!*",
+    "SPEECH (Vendor): Hero moss!",
+    "CREATURE (Mossprig): *steady…*",
+    "CREATURE (Spark): *yip-laugh!*",
+    "SPEECH (Mira Eggwarden): Even chaos can be Compact if nobody gets hurt."
+  ],
+  "storyPageNumber": 5,
+  "id": "the-traveling-circus-issue-003-p009",
+  "cleanArtRel": "generated/raw-art/page-009.png",
+  "letteredArtRel": "generated/lettered-pages/page-009.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-009.webp"
+}

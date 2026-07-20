@@ -1,0 +1,62 @@
+{
+  "pageNumber": 31,
+  "storyPageNumber": null,
+  "bookRole": "profile",
+  "title": "Keeper Profile — Mira Eggwarden",
+  "storyPurpose": "Keeper Profile — Mira Eggwarden",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "prof-mira",
+      "description": "Character profile plate: Mira Eggwarden portrait in hatchery mentor portrait — Compact robes, soft braid, satchel; empty text zones.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "MIRA EGGWARDEN — Hatchery mentor. Bond philosophy: keep, don't own. Compact first. Refuses to treat companions as weapons even when the Meridian calls them inventory.",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 65
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "prof-mira",
+      "kind": "narration",
+      "text": "MIRA EGGWARDEN — Hatchery mentor. Bond philosophy: keep, don't own. Compact first. Refuses to treat companions as weapons even when the Meridian calls them inventory.",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 65
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for Spark's Journey Issue #2 — Keeper Profile — Mira Eggwarden. Character profile plate: Mira Eggwarden portrait in hatchery mentor portrait — Compact robes, soft braid, satchel; empty text zones. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Keeper Profile — Mira Eggwarden",
+  "atmosphere": "day",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "NARRATION: MIRA EGGWARDEN — Hatchery mentor. Bond philosophy: keep, don't own. Compact first. Refuses to treat companions as weapons even when the Meridian calls them inventory."
+  ],
+  "id": "sparks-journey-issue-002-p031",
+  "cleanArtRel": "generated/raw-art/page-031.png",
+  "letteredArtRel": "generated/lettered-pages/page-031.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-031.webp"
+}

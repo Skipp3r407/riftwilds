@@ -1,0 +1,56 @@
+{
+  "pageNumber": 20,
+  "id": "the-first-rift-issue-001-p020",
+  "role": "story",
+  "title": null,
+  "layout": "two-col",
+  "atmosphere": "day",
+  "beat": "Fear allowed — force is not",
+  "artPrompt": "Two-panel page, no text. Child afraid near egg; Elara gentle; First Riftling stays. Compact law beat. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Child",
+          "text": "Will the egg leave if I am scared?",
+          "x": 40,
+          "y": 40,
+          "tail": "down"
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Fear is allowed. Force is not.",
+          "x": 65,
+          "y": 60,
+          "tail": "up"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "That was the first Compact law — spoken before ink existed.",
+          "x": 50,
+          "y": 30
+        },
+        {
+          "kind": "thought",
+          "speaker": "First Riftling",
+          "text": "…stay…",
+          "x": 50,
+          "y": 65
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-020.png",
+  "letteredArtRel": "generated/lettered/page-020.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-020.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

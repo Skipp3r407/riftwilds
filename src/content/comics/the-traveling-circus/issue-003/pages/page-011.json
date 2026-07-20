@@ -1,0 +1,152 @@
+{
+  "pageNumber": 11,
+  "bookRole": "story",
+  "title": "Not Neatly in a Codex",
+  "storyPurpose": "Lanternmaster: shelters that don't fit Codex; Mira asks Riftborn; he avoids.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Lanternmaster gestures to window showing odd companions in care pens — kind public face.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Lanternmaster",
+          "text": "We shelter what does not fit neatly inside a Codex.",
+          "x": 50,
+          "y": 25,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 45
+        }
+      ]
+    },
+    {
+      "id": "p7b",
+      "description": "Mira leans forward; Spark glow steady.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "Riftborn. Say the word if you know it.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "readOrder": 1,
+          "maxWidthPct": 40
+        }
+      ]
+    },
+    {
+      "id": "p7c",
+      "description": "Lanternmaster turns away to mask rack — theatrical dodge; Lumenhare ears dim.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Lanternmaster",
+          "text": "Words are costumes. Come see the show — truth prefers an audience.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "readOrder": 2,
+          "maxWidthPct": 45
+        },
+        {
+          "kind": "whisper",
+          "speaker": "Mira Eggwarden",
+          "text": "That's not an answer.",
+          "x": 50,
+          "y": 78,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p7a",
+      "kind": "speech",
+      "speaker": "Lanternmaster",
+      "text": "We shelter what does not fit neatly inside a Codex.",
+      "x": 50,
+      "y": 25,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 45
+    },
+    {
+      "panelId": "p7b",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "Riftborn. Say the word if you know it.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "readOrder": 1,
+      "maxWidthPct": 40
+    },
+    {
+      "panelId": "p7c",
+      "kind": "speech",
+      "speaker": "Lanternmaster",
+      "text": "Words are costumes. Come see the show — truth prefers an audience.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "readOrder": 2,
+      "maxWidthPct": 45
+    },
+    {
+      "panelId": "p7c",
+      "kind": "whisper",
+      "speaker": "Mira Eggwarden",
+      "text": "That's not an answer.",
+      "x": 50,
+      "y": 78,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "lanternmaster"
+  ],
+  "creatures": [
+    "spark",
+    "lumenhare"
+  ],
+  "continuity": {
+    "lanternmaster": {
+      "avoidedRiftborn": true
+    },
+    "theme": "masks"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 7/25 — Not Neatly in a Codex. Story purpose: Lanternmaster: shelters that don't fit Codex; Mira asks Riftborn; he avoids. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p7a): Lanternmaster gestures to window showing odd companions in care pens — kind public face. Panel 2 (p7b): Mira leans forward; Spark glow steady. Panel 3 (p7c): Lanternmaster turns away to mask rack — theatrical dodge; Lumenhare ears dim. Characters: mira-eggwarden, lanternmaster. Creatures: spark, lumenhare. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"lanternmaster\":{\"avoidedRiftborn\":true},\"theme\":\"masks\"} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Main performance.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Not Neatly in a Codex — The Traveling Circus page 7",
+  "atmosphere": "festival",
+  "transcript": [
+    "SPEECH (Lanternmaster): We shelter what does not fit neatly inside a Codex.",
+    "SPEECH (Mira Eggwarden): Riftborn. Say the word if you know it.",
+    "SPEECH (Lanternmaster): Words are costumes. Come see the show — truth prefers an audience.",
+    "WHISPER (Mira Eggwarden): That's not an answer."
+  ],
+  "storyPageNumber": 7,
+  "id": "the-traveling-circus-issue-003-p011",
+  "cleanArtRel": "generated/raw-art/page-011.png",
+  "letteredArtRel": "generated/lettered-pages/page-011.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-011.webp"
+}

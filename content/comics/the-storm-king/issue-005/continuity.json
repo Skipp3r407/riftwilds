@@ -1,0 +1,151 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "location": "ridge at Tempestria storm wall",
+      "time": "day",
+      "spark": {
+        "glow": "unsteady-storm"
+      }
+    },
+    {
+      "page": 2,
+      "location": "mountain border path",
+      "mossprig": "anchoring",
+      "spark": {
+        "pain": "lightning"
+      }
+    },
+    {
+      "page": 3,
+      "location": "hidden waterfall path",
+      "guide": "galesprig"
+    },
+    {
+      "page": 4,
+      "location": "Tempestria lower village",
+      "public": "staring-at-spark"
+    },
+    {
+      "page": 5,
+      "location": "lower village",
+      "politics": "split-opinion"
+    },
+    {
+      "page": 6,
+      "location": "village square",
+      "escort": "to-citadel",
+      "cael": "recognizes-insignia"
+    },
+    {
+      "page": 7,
+      "location": "royal citadel throne hall",
+      "thundervane": "weakened",
+      "vaelor": "proud"
+    },
+    {
+      "page": 8,
+      "location": "throne hall",
+      "vaelor": "wants-spark-engine",
+      "mira": "refuses-blind"
+    },
+    {
+      "page": 9,
+      "location": "throne hall",
+      "conflict": "mira-refuses-engine"
+    },
+    {
+      "page": 10,
+      "location": "throne hall",
+      "thundervane": "collapsed",
+      "spark": {
+        "pain": "shared-bond"
+      }
+    },
+    {
+      "page": 11,
+      "location": "storm engine chamber",
+      "engine": "consuming-bond"
+    },
+    {
+      "page": 12,
+      "location": "engine chamber",
+      "cael": "prior-visit-revealed"
+    },
+    {
+      "page": 13,
+      "location": "citadel / tower",
+      "meridian": "sabotage-active",
+      "artifact": "lost-city-component"
+    },
+    {
+      "page": 14,
+      "location": "citadel balcony / village",
+      "public": "panic",
+      "vaelor": "blames-outsiders"
+    },
+    {
+      "page": 15,
+      "location": "sky over Tempestria",
+      "barrier": "torn",
+      "threat": "corrupted-aerial"
+    },
+    {
+      "page": 16,
+      "location": "citadel roost",
+      "thundervane": "forced-flight"
+    },
+    {
+      "page": 17,
+      "location": "suspended bridges",
+      "battle": "companions-active"
+    },
+    {
+      "page": 18,
+      "location": "citadel skies",
+      "battle": "peak",
+      "meridian": "engine-push"
+    },
+    {
+      "page": 19,
+      "location": "engine chamber",
+      "nira": "open-disloyalty",
+      "seris": "link-failed"
+    },
+    {
+      "page": 20,
+      "location": "bond-vision",
+      "truth": "forced-bond-strain"
+    },
+    {
+      "page": 21,
+      "location": "engine chamber",
+      "vaelor": "realization",
+      "spark": "refuses-replace"
+    },
+    {
+      "page": 22,
+      "location": "engine chamber",
+      "bond": "released",
+      "engine": "voluntarily-stabilized"
+    },
+    {
+      "page": 23,
+      "location": "citadel / sky",
+      "meridian": "control-shattered",
+      "host": "driven-back"
+    },
+    {
+      "page": 24,
+      "location": "citadel aftermath",
+      "vaelor": "shared-rule",
+      "seris": "escaped-with-ledger"
+    },
+    {
+      "page": 25,
+      "location": "hidden trading hall",
+      "teaser": "the-merchants-secret",
+      "ledger": "delivered"
+    }
+  ]
+}

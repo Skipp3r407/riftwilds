@@ -36,6 +36,31 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-20-comics-mira-canon",
+    date: "2026-07-20",
+    title: "Comics Continuity Mira-canon & Volume 1-2 pipeline",
+    summary:
+      "Ships Continuity Mira-canon issues 1–10 with baked lettering, Volume 1-2 comic art pipelines, sequential unlock, and related comics reader / auth site polish.",
+    added: [
+      "Continuity Mira-canon comic issues 1–10 on the comics shelf (covers, pages, and catalog entries)",
+      "Volume 1-2 comic generation pipelines with Grok art provider hooks and issue runner scripts",
+      "Baked lettering / speech-bubble engine for comic pages",
+      "Sequential comic unlock (later issues lock until earlier ones are completed; optional dev unlock flags)",
+      "Account flows: signup, email verify, forgot/reset password, and onboarding surfaces",
+      "TCG rules and tutorial routes for the battle loop",
+    ],
+    changed: [
+      "Comics library, reader, and cover presentation refreshed for the Mira-canon shelf",
+      "Brand assets and comics audio manifests updated for the new issues",
+      "Auth/session scaffolding expanded for account-gated play (email auth, OAuth setup stubs, CSRF helpers)",
+    ],
+    knownIssues: [
+      "Some later Mira-canon issues may still receive art or lettering polish passes",
+      "OAuth providers remain setup-stubs until client IDs are configured in production",
+    ],
+  },
+
+  {
     id: "2026-07-20-tcg-build-types",
     date: "2026-07-20",
     title: "TCG production build typecheck",

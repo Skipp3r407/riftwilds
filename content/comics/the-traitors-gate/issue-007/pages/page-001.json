@@ -1,0 +1,124 @@
+{
+  "pageNumber": 1,
+  "storyPageNumber": null,
+  "bookRole": "front-cover",
+  "title": "The Traitor's Gate — Cover",
+  "storyPurpose": "The Traitor's Gate — Cover",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "cover",
+      "description": "Premium cover: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes center holding hidden transmitter; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot protecting dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages; Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes one side; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif opposite partly obscured; Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors towering above Gate; cracked memory mirrors with conflicting faces; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal beyond portal; Bramblefox, Mossprig, Wisplet battle-ready; black towers cyan-violet Rift. Empty title zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "LEGENDS OF THE RIFT",
+          "x": 50,
+          "y": 8,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "THE TRAITOR'S GATE",
+          "x": 50,
+          "y": 82,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "ISSUE #7",
+          "x": 50,
+          "y": 92,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "LEGENDS OF THE RIFT",
+      "x": 50,
+      "y": 8,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "THE TRAITOR'S GATE",
+      "x": 50,
+      "y": 82,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "ISSUE #7",
+      "x": 50,
+      "y": 92,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill",
+    "cael-vesper",
+    "seris-vale",
+    "oathwarden-seraph"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "wisplet",
+    "dormant-egg"
+  ],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book front-cover page for The Traitor's Gate Issue #7 — The Traitor's Gate — Cover. Premium cover: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes center holding hidden transmitter; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot protecting dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages; Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes one side; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif opposite partly obscured; Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors towering above Gate; cracked memory mirrors with conflicting faces; Seris Vale: Meridian commander, sharp features, storm-dark field coat with three-arc sigil, carries Lost City Rift component crystal beyond portal; Bramblefox, Mossprig, Wisplet battle-ready; black towers cyan-violet Rift. Empty title zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Gate: black stone towers, cyan locks. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Matter page captions; large title zones.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Traitor's Gate — Cover",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: LEGENDS OF THE RIFT",
+    "CAPTION: THE TRAITOR'S GATE",
+    "CAPTION: ISSUE #7"
+  ],
+  "a11yTranscript": [
+    "CAPTION: LEGENDS OF THE RIFT",
+    "CAPTION: THE TRAITOR'S GATE",
+    "CAPTION: ISSUE #7"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spoilerLevel": "cover-safe",
+  "id": "the-traitors-gate-issue-007-p001",
+  "cleanArtRel": "generated/raw-art/page-001.webp",
+  "letteredArtRel": "generated/lettered-pages/page-001.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-001.webp"
+}

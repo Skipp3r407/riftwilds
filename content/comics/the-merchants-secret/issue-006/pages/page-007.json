@@ -1,0 +1,184 @@
+{
+  "pageNumber": 7,
+  "storyPageNumber": 3,
+  "bookRole": "story",
+  "title": "Lantern Entry",
+  "storyPurpose": "Spirit Moth reads coded lanterns; Bramblefox catches Meridian scent.",
+  "layout": {
+    "type": "two-stack",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p3a",
+      "description": "Team passing under Spirit Moth lantern canopy — coded flicker patterns mapping safe lanes; Lumenhare blending with circus light cover.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*pattern-blink*",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spirit Moth",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Follow the moth. It reads merchant codes.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p3b",
+      "description": "Bramblefox nose low, Forest Bond vines twitching toward a shadowed stall; Meridian three-arc sigil residue on crate seal.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*scent-alert*",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Meridian. Already inside.",
+          "x": 55,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 36,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        },
+        {
+          "kind": "sfx",
+          "text": "crate-scrape",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p3a",
+      "kind": "creature",
+      "text": "*pattern-blink*",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spirit Moth",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p3a",
+      "kind": "speech",
+      "text": "Follow the moth. It reads merchant codes.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p3b",
+      "kind": "creature",
+      "text": "*scent-alert*",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p3b",
+      "kind": "speech",
+      "text": "Meridian. Already inside.",
+      "x": 55,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 36,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p3b",
+      "kind": "sfx",
+      "text": "crate-scrape",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "spirit-moth",
+    "lumenhare"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "lantern entry lane",
+    "meridian": "scent-detected"
+  },
+  "requiredMoments": [
+    5,
+    6
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 3/25 — Lantern Entry. Story purpose: Spirit Moth reads coded lanterns; Bramblefox catches Meridian scent. Layout: two-stack. 2 panels with clear inked gutters. Panel 1 (p3a): Team passing under Spirit Moth lantern canopy — coded flicker patterns mapping safe lanes; Lumenhare blending with circus light cover. Panel 2 (p3b): Bramblefox nose low, Forest Bond vines twitching toward a shadowed stall; Meridian three-arc sigil residue on crate seal. Characters: mira-eggwarden, cael-vesper. Creatures: spark, bramblefox, spirit-moth, lumenhare. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"lantern entry lane\", \"meridian\": \"scent-detected\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "See the wonder and the price.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Lantern Entry — The Merchant's Secret page 3",
+  "atmosphere": "market",
+  "transcript": [
+    "CREATURE (Spirit Moth): *pattern-blink*",
+    "SPEECH (Cael Vesper): Follow the moth. It reads merchant codes.",
+    "CREATURE (Bramblefox): *scent-alert*",
+    "SPEECH (Mira Eggwarden): Meridian. Already inside.",
+    "SFX: crate-scrape"
+  ],
+  "a11yTranscript": [
+    "CREATURE (Spirit Moth): *pattern-blink*",
+    "SPEECH (Cael Vesper): Follow the moth. It reads merchant codes.",
+    "CREATURE (Bramblefox): *scent-alert*",
+    "SPEECH (Mira Eggwarden): Meridian. Already inside.",
+    "SFX: crate-scrape"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p007",
+  "cleanArtRel": "generated/raw-art/page-007.webp",
+  "letteredArtRel": "generated/lettered-pages/page-007.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-007.webp"
+}

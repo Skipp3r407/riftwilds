@@ -1,0 +1,27 @@
+{
+  "spark": {
+    "name": "Spark",
+    "line": "Glowpup / Resonance / Last Light",
+    "role": "Twin-key with Nova"
+  },
+  "nova": {
+    "name": "Nova",
+    "line": "Nova bloodline — Prime Companion",
+    "role": "Hatched from dormant Crossroads egg; twin-key with Spark",
+    "hatchedInIssue": 9
+  },
+  "axiom": {
+    "name": "Axiom",
+    "line": "Prototype crystalline fox",
+    "abilities": [
+      "Adaptive Matrix",
+      "Pulse Repair",
+      "System Restore"
+    ]
+  },
+  "dormant-riftborn-egg": {
+    "name": "Dormant Riftborn Egg",
+    "status": "hatched-into-nova",
+    "notes": "Carried from Issues #6–#8; hatches Issue #9."
+  }
+}

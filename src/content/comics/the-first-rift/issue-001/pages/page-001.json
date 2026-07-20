@@ -1,0 +1,41 @@
+{
+  "pageNumber": 1,
+  "id": "the-first-rift-issue-001-p001",
+  "role": "front-cover",
+  "title": "The First Rift",
+  "layout": "splash",
+  "atmosphere": "dusk",
+  "beat": "The First Rift",
+  "artPrompt": "Premium fantasy comic COVER, no text/logos. Elara Venn with glowing egg before cyan Prime Gateway tear over mud that will be Commons; Bramblefox and Mossprig silhouettes. Earth tones, cyan accent. 3:4. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "caption",
+          "text": "LEGENDS OF THE RIFT",
+          "x": 50,
+          "y": 18
+        },
+        {
+          "kind": "caption",
+          "text": "THE FIRST RIFT",
+          "x": 50,
+          "y": 38
+        },
+        {
+          "kind": "narration",
+          "text": "When the Prime broke, a courier chose to keep.",
+          "x": 50,
+          "y": 62
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-001.png",
+  "letteredArtRel": "generated/lettered/page-001.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-001.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

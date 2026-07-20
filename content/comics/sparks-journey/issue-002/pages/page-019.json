@@ -1,0 +1,165 @@
+{
+  "pageNumber": 19,
+  "bookRole": "story",
+  "title": "Sigils Ignite",
+  "storyPurpose": "Group reaches Spark; hunter sigils ignite; hunters step from concealment.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p15a",
+      "description": "Mira's group reaches Spark at arch threshold; Spark hesitates between flee and return.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "speaker": "Mira Eggwarden",
+          "text": "You found a door. You still get to choose the room.",
+          "x": 50,
+          "y": 20,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p15b",
+      "description": "Ground rings of three-arc hunter sigils flare around the party.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "SIGIL-LOCK",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p15c",
+      "description": "Veiled Meridian hunters step from concealment with dampening rods and trained lean hound-companions.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Vex Halden",
+          "text": "Subject One. Step away from the Keepers.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p15d",
+      "description": "Nira Quill's eyes show doubt behind veil; Spark cowers.",
+      "bubbles": [
+        {
+          "kind": "thought",
+          "speaker": "Nira Quill",
+          "text": "It looks like a child of light — not a weapon crate.",
+          "x": 50,
+          "y": 60,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p15a",
+      "kind": "whisper",
+      "speaker": "Mira Eggwarden",
+      "text": "You found a door. You still get to choose the room.",
+      "x": 50,
+      "y": 20,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p15c",
+      "kind": "speech",
+      "speaker": "Vex Halden",
+      "text": "Subject One. Step away from the Keepers.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p15d",
+      "kind": "thought",
+      "speaker": "Nira Quill",
+      "text": "It looks like a child of light — not a weapon crate.",
+      "x": 50,
+      "y": 60,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p15b",
+      "kind": "sfx",
+      "text": "SIGIL-LOCK",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "vex-halden",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet"
+  ],
+  "continuity": {
+    "hunters": {
+      "status": "surrounding",
+      "bindingField": "forming"
+    },
+    "spark": {
+      "emotion": "trapped terror",
+      "position": "arch threshold"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 15/25 — Sigils Ignite. Story purpose: Group reaches Spark; hunter sigils ignite; hunters step from concealment. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p15a): Mira's group reaches Spark at arch threshold; Spark hesitates between flee and return. Panel 2 (p15b): Ground rings of three-arc hunter sigils flare around the party. Panel 3 (p15c): Veiled Meridian hunters step from concealment with dampening rods and trained lean hound-companions. Panel 4 (p15d): Nira Quill's eyes show doubt behind veil; Spark cowers. Characters: mira-eggwarden, vex-halden, nira-quill. Creatures: spark, bramblefox, mossprig, thornling, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"hunters\":{\"status\":\"surrounding\",\"bindingField\":\"forming\"},\"spark\":{\"emotion\":\"trapped terror\",\"position\":\"arch threshold\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Refusal / battle begins.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Sigils Ignite — Spark's Journey page 15",
+  "atmosphere": "night",
+  "transcript": [
+    "WHISPER (Mira Eggwarden): You found a door. You still get to choose the room.",
+    "SFX: SIGIL-LOCK",
+    "SPEECH (Vex Halden): Subject One. Step away from the Keepers.",
+    "THOUGHT (Nira Quill): It looks like a child of light — not a weapon crate."
+  ],
+  "storyPageNumber": 15,
+  "id": "sparks-journey-issue-002-p019",
+  "cleanArtRel": "generated/raw-art/page-019.png",
+  "letteredArtRel": "generated/lettered-pages/page-019.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-019.webp"
+}

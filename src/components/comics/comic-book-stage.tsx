@@ -23,6 +23,9 @@ type Props = {
   coverLabel?: string;
   onOpenCover: () => void;
   onEdgeNav?: (dir: 1 | -1) => void;
+  focusPanelIndex?: number | null;
+  focusBubbleIndex?: number | null;
+  onPanelFocus?: (panelIndex: number) => void;
 };
 
 export function ComicBookStage({
@@ -41,6 +44,9 @@ export function ComicBookStage({
   coverLabel,
   onOpenCover,
   onEdgeNav,
+  focusPanelIndex = null,
+  focusBubbleIndex = null,
+  onPanelFocus,
 }: Props) {
   const reduceMotionPref = useReducedMotion();
   const reduceMotion = Boolean(reduceMotionPref);
@@ -182,6 +188,9 @@ export function ComicBookStage({
                     foundHotspots={foundHotspots}
                     onHotspot={onHotspot}
                     zoom={zoom}
+                    focusPanelIndex={focusPanelIndex}
+                    focusBubbleIndex={focusBubbleIndex}
+                    onPanelFocus={onPanelFocus}
                   />
                 </motion.div>
               )

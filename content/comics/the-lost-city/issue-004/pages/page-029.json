@@ -1,0 +1,111 @@
+{
+  "pageNumber": 29,
+  "storyPageNumber": 25,
+  "bookRole": "story",
+  "title": "A King Who Never Surrendered",
+  "storyPurpose": "Cliffhanger: storm mountain fortress; massive figure opens glowing eyes; next: Storm King.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p25a",
+      "description": "Distant mountain fortress inside supernatural storm; lightning wraps a throne-like tower; a massive crowned silhouette opens glowing storm-cyan eyes. Tiny inset of Aureth Vale archive signal linking toward the peaks. Empty zones for end captions.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Above the clouds, a king who never surrendered hears the call.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 65,
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "KRACK-THUNDER",
+          "x": 60,
+          "y": 48,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "NEXT: THE STORM KING",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "p25a",
+      "kind": "narration",
+      "text": "Above the clouds, a king who never surrendered hears the call.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 65,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "NEXT: THE STORM KING",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p25a",
+      "kind": "sfx",
+      "text": "KRACK-THUNDER",
+      "x": 60,
+      "y": 48,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "locations": [
+    "Storm Kingdom"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "teaser": "the-storm-king",
+    "cliffhanger": true
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 25/25 — A King Who Never Surrendered. Story purpose: Cliffhanger: storm mountain fortress; massive figure opens glowing eyes; next: Storm King. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Distant mountain fortress inside supernatural storm; lightning wraps a throne-like tower; a massive crowned silhouette opens glowing storm-cyan eyes. Tiny inset of Aureth Vale archive signal linking toward the peaks. Empty zones for end captions. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Storm Kingdom peaks. Time: day. Weather: clear over ruins. Lighting: supernatural storm cyan lightning. Continuity: {\"teaser\": \"the-storm-king\", \"cliffhanger\": true} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "End of Issue #4.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "A King Who Never Surrendered — The Lost City page 25",
+  "atmosphere": "storm",
+  "transcript": [
+    "NARRATION: Above the clouds, a king who never surrendered hears the call.",
+    "SFX: KRACK-THUNDER",
+    "CAPTION: NEXT: THE STORM KING"
+  ],
+  "id": "the-lost-city-issue-004-p029",
+  "cleanArtRel": "generated/raw-art/page-029.webp",
+  "letteredArtRel": "generated/lettered-pages/page-029.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-029.webp"
+}

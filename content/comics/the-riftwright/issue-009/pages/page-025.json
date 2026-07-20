@@ -1,0 +1,126 @@
+{
+  "pageNumber": 25,
+  "storyPageNumber": 21,
+  "bookRole": "story",
+  "title": "History Restored",
+  "storyPurpose": "Memory vaults rewrite toward truth; Elyan's name cleared in Forge records — public world still healing.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p21a",
+      "description": "Memory mural corrects: Elyan sealing, not tearing; Arkan's sacrifice named; Spark and Nova as cradle keys.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "FORGE RECORD — RESTORED",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 42,
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p21b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes: \"The world outside will take longer. Truth isn't a switch.\"",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "The world outside will take longer. Truth isn't a switch.",
+          "x": 45,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p21c",
+      "description": "Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure removes cracked monocle; soft smile — tragic peace, not victory pose.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Then I will teach. Not hide.",
+          "x": 55,
+          "y": 55,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Elyan Voss",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p21d",
+      "description": "Again: the older-than-Meridian void signature remains blacked out — ONE mystery kept.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "One signature still refuses the light.",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 48,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "echoquill",
+    "wisplet"
+  ],
+  "locations": [
+    "Memory vaults"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "history": "forge-restored",
+    "mystery": "history-manipulator-unnamed"
+  },
+  "requiredMoments": [
+    21
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, STORY PAGE 21/25 — History Restored. Story purpose: Memory vaults rewrite toward truth; Elyan's name cleared in Forge records — public world still healing. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p21a): Memory mural corrects: Elyan sealing, not tearing; Arkan's sacrifice named; Spark and Nova as cradle keys. Panel 2 (p21b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes: \"The world outside will take longer. Truth isn't a switch.\" Panel 3 (p21c): Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure removes cracked monocle; soft smile — tragic peace, not victory pose. Panel 4 (p21d): Again: the older-than-Meridian void signature remains blacked out — ONE mystery kept. Characters: mira-eggwarden, elyan-voss. Creatures: spark, nova, echoquill, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Memory vaults. Atmosphere: ruin. Continuity: {\"history\": \"forge-restored\", \"mystery\": \"history-manipulator-unnamed\"}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "Aftermath.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "History Restored — The Riftwright page 25",
+  "atmosphere": "ruin",
+  "transcript": [
+    "CAPTION: FORGE RECORD — RESTORED",
+    "SPEECH (Mira Eggwarden): The world outside will take longer. Truth isn't a switch.",
+    "SPEECH (Elyan Voss): Then I will teach. Not hide.",
+    "NARRATION: One signature still refuses the light."
+  ],
+  "a11yTranscript": [
+    "CAPTION: FORGE RECORD — RESTORED",
+    "SPEECH (Mira Eggwarden): The world outside will take longer. Truth isn't a switch.",
+    "SPEECH (Elyan Voss): Then I will teach. Not hide.",
+    "NARRATION: One signature still refuses the light."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p025",
+  "cleanArtRel": "generated/raw-art/page-025.webp",
+  "letteredArtRel": "generated/lettered-pages/page-025.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-025.webp"
+}

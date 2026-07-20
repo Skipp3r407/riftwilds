@@ -1,0 +1,133 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "location": "gilded-crossroads-aftermath",
+      "egg": "warm-dormant",
+      "token": "examined"
+    },
+    {
+      "page": 2,
+      "location": "merchant-evidence-tent",
+      "nira": "implicated-surface"
+    },
+    {
+      "page": 3,
+      "accusation": "nira-incomplete",
+      "egg": "points-to-gate"
+    },
+    {
+      "page": 4,
+      "destination": "traitors-gate",
+      "cael": "warns-intent"
+    },
+    {
+      "page": 5,
+      "location": "fractured-approach",
+      "team": "divided"
+    },
+    {
+      "page": 6,
+      "surveillance": "meridian-scout"
+    },
+    {
+      "page": 7,
+      "location": "traitors-gate-exterior",
+      "statues": "awake"
+    },
+    {
+      "page": 8,
+      "location": "verification-chamber",
+      "truthwing": "introduced"
+    },
+    {
+      "page": 9,
+      "cael": "admits-old-gate-use",
+      "suspicion": "shifts-to-cael"
+    },
+    {
+      "page": 10,
+      "oathwarden": "active",
+      "aurelia": "withholds-memory"
+    },
+    {
+      "page": 11,
+      "mirrors": "false-nira",
+      "mira": "nearly-convinced"
+    },
+    {
+      "page": 12,
+      "mirrors": "debunked",
+      "suspect": "nearby-ally"
+    },
+    {
+      "page": 13,
+      "traitor": "cael-revealed",
+      "captive": "lumenhare",
+      "device": "found"
+    },
+    {
+      "page": 14,
+      "confession": "complete",
+      "forgiveness": "not-yet"
+    },
+    {
+      "page": 15,
+      "siege": "begun",
+      "exits": "sealed"
+    },
+    {
+      "page": 16,
+      "oathwarden": "partial-override",
+      "egg": "targeted"
+    },
+    {
+      "page": 17,
+      "egg": "cracked-once",
+      "mossprig": "bulwark",
+      "bramblefox": "bridge-hunt"
+    },
+    {
+      "page": 18,
+      "battle": "peak",
+      "cael": "between-sides"
+    },
+    {
+      "page": 19,
+      "captive": "shown",
+      "leverage": "active"
+    },
+    {
+      "page": 20,
+      "mira": "rescue-choice",
+      "trust": "conditional"
+    },
+    {
+      "page": 21,
+      "cael": "turns-against-meridian",
+      "lie": "exposed"
+    },
+    {
+      "page": 22,
+      "identity-key": "destroyed",
+      "lumenhare": "freed",
+      "egg": "eye-hint"
+    },
+    {
+      "page": 23,
+      "seris": "retreated",
+      "cael": "supervised",
+      "passage": "allowed"
+    },
+    {
+      "page": 24,
+      "gate": "open",
+      "destination": "forge-of-rifts"
+    },
+    {
+      "page": 25,
+      "teaser": "the-forge-of-rifts",
+      "cliffhanger": "second-creation"
+    }
+  ]
+}

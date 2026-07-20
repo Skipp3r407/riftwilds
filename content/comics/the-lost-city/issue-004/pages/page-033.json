@@ -1,0 +1,80 @@
+{
+  "pageNumber": 33,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Codex — Aureth Vale",
+  "storyPurpose": "Codex — Aureth Vale",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "lore",
+      "description": "Codex plate: layered city cross-section — plazas, suspended bridges, engine core, memory archive — pale stone teal crystal gold inlay.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CODEX — AURETH VALE",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Ancient Riftkeeper capital. Fracture-layered climates. Erased from modern maps. The engines still hum.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "lore",
+      "kind": "caption",
+      "text": "CODEX — AURETH VALE",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "lore",
+      "kind": "narration",
+      "text": "Ancient Riftkeeper capital. Fracture-layered climates. Erased from modern maps. The engines still hum.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Lost City Issue #4 — Codex — Aureth Vale. Codex plate: layered city cross-section — plazas, suspended bridges, engine core, memory archive — pale stone teal crystal gold inlay. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Codex — Aureth Vale",
+  "atmosphere": "ruin",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: CODEX — AURETH VALE",
+    "NARRATION: Ancient Riftkeeper capital. Fracture-layered climates. Erased from modern maps. The engines still hum."
+  ],
+  "id": "the-lost-city-issue-004-p033",
+  "cleanArtRel": "generated/raw-art/page-033.webp",
+  "letteredArtRel": "generated/lettered-pages/page-033.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-033.webp"
+}

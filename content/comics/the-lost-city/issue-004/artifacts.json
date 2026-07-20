@@ -1,0 +1,24 @@
+{
+  "artifacts": [
+    {
+      "id": "ancient-command-seal",
+      "name": "Ancient Command Seal",
+      "status": "Meridian partial copy"
+    },
+    {
+      "id": "rift-engine-map",
+      "name": "Rift Engine Network Map",
+      "status": "opened by Guardian"
+    },
+    {
+      "id": "resonance-keeper-record",
+      "name": "Resonance Keeper Records",
+      "status": "sanctuary archive"
+    },
+    {
+      "id": "circus-warded-crystal",
+      "name": "Shellward Crystal",
+      "status": "remains at Lanternveil \u2014 not on expedition"
+    }
+  ]
+}

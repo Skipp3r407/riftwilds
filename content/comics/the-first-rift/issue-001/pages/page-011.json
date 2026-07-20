@@ -1,0 +1,35 @@
+{
+  "pageNumber": 11,
+  "id": "the-first-rift-issue-001-p011",
+  "role": "story",
+  "title": null,
+  "layout": "splash",
+  "atmosphere": "dawn",
+  "beat": "Riftstone claims mud — founding gathering",
+  "artPrompt": "Full-bleed splash, no text. Farmers, healers, Keepers gather where stable paths intersect; cyan Riftstone rising from mud at dawn; Elara with egg at center. Warm earth first. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Farmers, healers, and Keepers gathered where stable paths still intersected.",
+          "x": 50,
+          "y": 12
+        },
+        {
+          "kind": "sfx",
+          "text": "KRRRAAAK",
+          "x": 60,
+          "y": 55
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-011.png",
+  "letteredArtRel": "generated/lettered/page-011.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-011.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

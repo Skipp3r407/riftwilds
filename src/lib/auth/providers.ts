@@ -1,12 +1,12 @@
 /**
- * Modular auth provider registry — email / social first, wallet optional.
- * SIWS wallet flow remains the production Web3 path; OAuth stubs are scaffolding.
+ * Modular auth provider registry — account required; wallet optional after sign-in.
  */
 
 export type AuthProviderId =
   | "email"
   | "google"
   | "discord"
+  | "apple"
   | "twitter"
   | "wallet_siws"
   | "nakama_guest"
@@ -20,39 +20,57 @@ export type AuthProviderDef = {
   kind: AuthProviderKind;
   label: string;
   description: string;
-  /** Shown on /login as primary (email/social) vs secondary (wallet). */
   priority: "primary" | "secondary";
-  /** Runtime readiness — stubs stay disabled until credentials exist. */
   implemented: boolean;
   featureFlag?: string;
 };
+
+function oauthKeysPresent(id: "google" | "discord" | "apple"): boolean {
+  if (typeof process === "undefined") return false;
+  if (id === "google") {
+    return Boolean(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET);
+  }
+  if (id === "discord") {
+    return Boolean(process.env.DISCORD_CLIENT_ID && process.env.DISCORD_CLIENT_SECRET);
+  }
+  return Boolean(process.env.APPLE_CLIENT_ID && process.env.APPLE_TEAM_ID);
+}
 
 export const AUTH_PROVIDERS: AuthProviderDef[] = [
   {
     id: "email",
     kind: "email",
-    label: "Email",
-    description: "Magic-link or passwordless email — recommended for newcomers.",
+    label: "Email & password",
+    description: "Create a Riftkeeper account — required before gameplay.",
     priority: "primary",
-    implemented: false,
+    implemented: true,
     featureFlag: "AUTH_EMAIL_ENABLED",
   },
   {
     id: "google",
     kind: "oauth",
     label: "Google",
-    description: "Social sign-in stub (NextAuth / Clerk adapter later).",
+    description: "Social sign-in (live when GOOGLE_CLIENT_* keys are set).",
     priority: "primary",
-    implemented: false,
+    implemented: true,
     featureFlag: "AUTH_SOCIAL_ENABLED",
   },
   {
     id: "discord",
     kind: "oauth",
     label: "Discord",
-    description: "Community social sign-in stub.",
+    description: "Community social sign-in (scaffold until keys configured).",
     priority: "primary",
-    implemented: false,
+    implemented: true,
+    featureFlag: "AUTH_SOCIAL_ENABLED",
+  },
+  {
+    id: "apple",
+    kind: "oauth",
+    label: "Apple",
+    description: "Sign in with Apple (scaffold until keys configured).",
+    priority: "primary",
+    implemented: true,
     featureFlag: "AUTH_SOCIAL_ENABLED",
   },
   {
@@ -68,7 +86,7 @@ export const AUTH_PROVIDERS: AuthProviderDef[] = [
     id: "wallet_siws",
     kind: "wallet",
     label: "Solana wallet",
-    description: "Sign-In With Solana — full Web3 features when connected.",
+    description: "Sign-In With Solana — creates/links account; wallet does not replace login.",
     priority: "secondary",
     implemented: true,
     featureFlag: "AUTH_WALLET_SIWS_ENABLED",
@@ -76,9 +94,9 @@ export const AUTH_PROVIDERS: AuthProviderDef[] = [
   {
     id: "nakama_guest",
     kind: "bridge",
-    label: "Nakama guest",
+    label: "Nakama (account session)",
     description:
-      "Bridge rift_guest device auth to Nakama for multiplayer — does not replace SIWS or demo owner keys.",
+      "Nakama multiplayer after app account — anonymous rift_guest bridge disabled when account gate is on.",
     priority: "secondary",
     implemented: true,
     featureFlag: "NAKAMA_AUTH_BRIDGE_ENABLED",
@@ -111,5 +129,15 @@ export function listAuthProviders(opts?: {
     if (opts?.priority && p.priority !== opts.priority) return false;
     if (opts?.implementedOnly && !p.implemented) return false;
     return true;
+  }).map((p) => {
+    if (p.kind === "oauth" && (p.id === "google" || p.id === "discord" || p.id === "apple")) {
+      return {
+        ...p,
+        description: oauthKeysPresent(p.id)
+          ? p.description
+          : `${p.label} scaffold — add OAuth keys to enable live redirect.`,
+      };
+    }
+    return p;
   });
 }

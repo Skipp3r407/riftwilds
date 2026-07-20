@@ -1,0 +1,91 @@
+{
+  "pageNumber": 35,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Evidence File — Transmission Timeline",
+  "storyPurpose": "Evidence File — Transmission Timeline",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "evidence",
+      "description": "In-universe evidence board: route pins Circus → Lost City → Tempestria → Crossroads → Gate; token sketches; empty detail zones for baked labels.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "EVIDENCE FILE",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Leaks escalated from roads to doors to the egg. Motive: a captive companion. Promise: a lie.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "evidence",
+      "kind": "caption",
+      "text": "EVIDENCE FILE",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "evidence",
+      "kind": "narration",
+      "text": "Leaks escalated from roads to doors to the egg. Motive: a captive companion. Promise: a lie.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Traitor's Gate Issue #7 — Evidence File — Transmission Timeline. In-universe evidence board: route pins Circus → Lost City → Tempestria → Crossroads → Gate; token sketches; empty detail zones for baked labels. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Gate: black stone towers, cyan locks. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Matter page captions; large title zones.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Evidence File — Transmission Timeline",
+  "atmosphere": "night",
+  "transcript": [
+    "CAPTION: EVIDENCE FILE",
+    "NARRATION: Leaks escalated from roads to doors to the egg. Motive: a captive companion. Promise: a lie."
+  ],
+  "a11yTranscript": [
+    "CAPTION: EVIDENCE FILE",
+    "NARRATION: Leaks escalated from roads to doors to the egg. Motive: a captive companion. Promise: a lie."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spoilerLevel": "post-reveal",
+  "id": "the-traitors-gate-issue-007-p035",
+  "cleanArtRel": "generated/raw-art/page-035.webp",
+  "letteredArtRel": "generated/lettered-pages/page-035.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-035.webp"
+}

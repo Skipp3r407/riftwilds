@@ -1,0 +1,36 @@
+{
+  "spark": {
+    "name": "Spark",
+    "role": "Resonance Key — reconnects civilizations"
+  },
+  "nova": {
+    "name": "Nova",
+    "role": "Newly hatched Prime Companion (Issue #9); twin-key with Spark",
+    "hatchedInIssue": 9
+  },
+  "astra": {
+    "name": "Astra",
+    "role": "Prime Celestial Companion — Legendary Support",
+    "abilities": {
+      "passive": "Starlight Bond",
+      "active": "Celestial Step",
+      "ultimate": "Sky of a Thousand Lights"
+    },
+    "new": true
+  },
+  "axiom": {
+    "name": "Axiom",
+    "role": "Prototype crystalline fox"
+  },
+  "team": [
+    "Bramblefox",
+    "Mossprig",
+    "Thornling",
+    "Wisplet",
+    "Spirit Moth",
+    "Truthwing",
+    "Lumenhare",
+    "Cindermink",
+    "Thundervane"
+  ]
+}

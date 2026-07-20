@@ -1,0 +1,64 @@
+{
+  "featured": [
+    {
+      "id": "spark",
+      "name": "Spark",
+      "note": "Resonance Line / Last Light"
+    },
+    {
+      "id": "truthwing",
+      "name": "Truthwing",
+      "note": "See TRUTHWING_CANON_PROPOSAL.md"
+    },
+    {
+      "id": "lumenhare",
+      "name": "Lumenhare",
+      "note": "Captive leverage \u2014 rescued"
+    },
+    {
+      "id": "dormant-egg",
+      "name": "Dormant Riftborn Egg",
+      "note": "Warm; Gate-responsive; cracks twice max"
+    },
+    {
+      "id": "bramblefox",
+      "name": "Bramblefox",
+      "purpose": "Track / protect Nira"
+    },
+    {
+      "id": "mossprig",
+      "name": "Mossprig",
+      "purpose": "Living Bulwark"
+    },
+    {
+      "id": "thornling",
+      "name": "Thornling",
+      "purpose": "Finds transmitter"
+    },
+    {
+      "id": "wisplet",
+      "name": "Wisplet",
+      "purpose": "Mirror cleanse"
+    },
+    {
+      "id": "spirit-moth",
+      "name": "Spirit Moth",
+      "purpose": "Warning lights"
+    },
+    {
+      "id": "cindermink",
+      "name": "Cindermink",
+      "purpose": "Break restraints"
+    },
+    {
+      "id": "lockjaw-wisp",
+      "name": "Lockjaw Wisp",
+      "purpose": "Merchant contracts"
+    },
+    {
+      "id": "echoquill",
+      "name": "Echoquill",
+      "purpose": "Archive warn"
+    }
+  ]
+}

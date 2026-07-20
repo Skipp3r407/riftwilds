@@ -1,0 +1,80 @@
+{
+  "pageNumber": 35,
+  "storyPageNumber": null,
+  "bookRole": "map",
+  "title": "World Map — Commons to Storm Peaks",
+  "storyPurpose": "World Map — Commons to Storm Peaks",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "map",
+      "description": "Painterly world map: Riftwild Commons, Shellward Sanctum, Lanternveil Circus route, Aureth Vale Lost City, Storm Kingdom destination marker glowing. Empty label zones for programmatic lettering.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "ROUTE OF THE RESONANCE LINE",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Commons → Sanctum → Circus → Aureth Vale → Storm Peaks",
+          "x": 50,
+          "y": 85,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "map",
+      "kind": "caption",
+      "text": "ROUTE OF THE RESONANCE LINE",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    },
+    {
+      "panelId": "map",
+      "kind": "narration",
+      "text": "Commons → Sanctum → Circus → Aureth Vale → Storm Peaks",
+      "x": 50,
+      "y": 85,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book map page for The Lost City Issue #4 — World Map — Commons to Storm Peaks. Painterly world map: Riftwild Commons, Shellward Sanctum, Lanternveil Circus route, Aureth Vale Lost City, Storm Kingdom destination marker glowing. Empty label zones for programmatic lettering. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "World Map — Commons to Storm Peaks",
+  "atmosphere": "dusk",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: ROUTE OF THE RESONANCE LINE",
+    "NARRATION: Commons → Sanctum → Circus → Aureth Vale → Storm Peaks"
+  ],
+  "id": "the-lost-city-issue-004-p035",
+  "cleanArtRel": "generated/raw-art/page-035.webp",
+  "letteredArtRel": "generated/lettered-pages/page-035.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-035.webp"
+}

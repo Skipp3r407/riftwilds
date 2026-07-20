@@ -1,0 +1,27 @@
+{
+  "factions": [
+    {
+      "id": "veiled-meridian",
+      "name": "Veiled Meridian",
+      "status": "new-canon-issue-002",
+      "goal": "Capture Spark alive (Subject One)",
+      "methods": [
+        "tracking sigils",
+        "binding relics",
+        "rift dampeners",
+        "trained hunter companions"
+      ],
+      "note": "Field cell of Issue #1 Hooded Observer — full org not revealed"
+    },
+    {
+      "id": "hatchery-compact",
+      "name": "Hatchery Compact",
+      "status": "established"
+    },
+    {
+      "id": "commons-keepers",
+      "name": "Commons Keepers Circle",
+      "status": "established"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "pageNumber": 11,
+  "storyPageNumber": 7,
+  "bookRole": "story",
+  "title": "Into Orbit",
+  "storyPurpose": "Team enters orbit aboard a Celestial tether-bridge of light.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Dramatic ascent: Mira and companions ride a gold-cyan tether-bridge into near-orbit; Riftwilds curve below; the Shattered Star looms huge above — floating continents, crystal oceans, broken gold cities.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The Compact has never stood this high.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "WHOOOOM",
+          "x": 30,
+          "y": 45,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "speech",
+          "text": "Hold on—!",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "caption",
+          "text": "ORBITAL APPROACH",
+          "x": 50,
+          "y": 90,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p7a",
+      "kind": "speech",
+      "text": "Hold on—!",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p7a",
+      "kind": "narration",
+      "text": "The Compact has never stood this high.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p7a",
+      "kind": "caption",
+      "text": "ORBITAL APPROACH",
+      "x": 50,
+      "y": 90,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p7a",
+      "kind": "sfx",
+      "text": "WHOOOOM",
+      "x": 30,
+      "y": 45,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "aurelia-voss",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "nova",
+    "axiom",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth",
+    "truthwing",
+    "lumenhare",
+    "cindermink"
+  ],
+  "locations": [
+    "Orbit",
+    "Shattered Star Approach"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "orbit"
+  },
+  "requiredMoments": [
+    6
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 7/25 — Into Orbit. Story purpose: Team enters orbit aboard a Celestial tether-bridge of light. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p7a): Dramatic ascent: Mira and companions ride a gold-cyan tether-bridge into near-orbit; Riftwilds curve below; the Shattered Star looms huge above — floating continents, crystal oceans, broken gold cities. Characters: mira-eggwarden, cael-vesper, aurelia-voss, nira-quill. Creatures: spark, nova, axiom, bramblefox, mossprig, thornling, wisplet, spirit-moth, truthwing, lumenhare, cindermink. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Shattered Star celestial sanctuary. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"location\": \"orbit\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Turn to continue.",
+  "letteringInstructions": "Standard speech + narration; tails off faces and Spark/Nova/Astra eyes; Lyra speech calm/stern.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Into Orbit — The Shattered Star page 7",
+  "atmosphere": "space",
+  "transcript": [
+    "NARRATION: The Compact has never stood this high.",
+    "SFX: WHOOOOM",
+    "SPEECH (Mira Eggwarden): Hold on—!",
+    "CAPTION: ORBITAL APPROACH"
+  ],
+  "a11yTranscript": [
+    "NARRATION: The Compact has never stood this high.",
+    "SFX: WHOOOOM",
+    "SPEECH (Mira Eggwarden): Hold on—!",
+    "CAPTION: ORBITAL APPROACH"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-011.webp",
+  "id": "the-shattered-star-issue-010-p011"
+}

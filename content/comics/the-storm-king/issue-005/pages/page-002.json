@@ -1,0 +1,84 @@
+{
+  "pageNumber": 2,
+  "storyPageNumber": null,
+  "bookRole": "inside-cover",
+  "title": "Inside Front Cover",
+  "storyPurpose": "Inside Front Cover",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ifc",
+      "description": "Quiet inside-cover: storm-map parchment, Compact lantern, Tempestria route marked from Aureth Vale; soft cyan glow; empty invitation zone.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Previously: Aureth Vale woke. The Guardian remembered. A signal answered from the peaks.",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "CONTINUE THE FRACTURE DAWN",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ifc",
+      "kind": "narration",
+      "text": "Previously: Aureth Vale woke. The Guardian remembered. A signal answered from the peaks.",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 0
+    },
+    {
+      "panelId": "ifc",
+      "kind": "caption",
+      "text": "CONTINUE THE FRACTURE DAWN",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for The Storm King Issue #5 — Inside Front Cover. Quiet inside-cover: storm-map parchment, Compact lantern, Tempestria route marked from Aureth Vale; soft cyan glow; empty invitation zone. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Storm King: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Inside Front Cover",
+  "atmosphere": "dusk",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "NARRATION: Previously: Aureth Vale woke. The Guardian remembered. A signal answered from the peaks.",
+    "CAPTION: CONTINUE THE FRACTURE DAWN"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Previously: Aureth Vale woke. The Guardian remembered. A signal answered from the peaks.",
+    "CAPTION: CONTINUE THE FRACTURE DAWN"
+  ],
+  "id": "the-storm-king-issue-005-p002",
+  "cleanArtRel": "generated/raw-art/page-002.webp",
+  "letteredArtRel": "generated/lettered-pages/page-002.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-002.webp"
+}

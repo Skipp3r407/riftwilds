@@ -1,0 +1,116 @@
+{
+  "pageNumber": 26,
+  "storyPageNumber": 22,
+  "bookRole": "story",
+  "title": "The Day Relief Never Came",
+  "storyPurpose": "Memory splash: final day — network order, evacuation, altered command, seal with people inside.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p22a",
+      "description": "Memory splash collage: Aureth Vale's final day — Keepers ordered to keep Rift network active; Guardian shepherding evacuation routes; a trusted official's hand altering a command seal; city gates sealing while silhouettes still inside; Guardian waiting on empty road for relief that never arrives. Emotional, tragic, grand.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Hold the network. Guard the cradles. Wait for relief.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 0
+        },
+        {
+          "kind": "magic",
+          "text": "SEAL THE CITY. FORGET THE NAME.",
+          "x": 50,
+          "y": 48,
+          "tail": null,
+          "maxWidthPct": 50,
+          "speaker": "Altered Order",
+          "readOrder": 1
+        },
+        {
+          "kind": "whisper",
+          "text": "…relief inbound…",
+          "x": 40,
+          "y": 82,
+          "tail": "up",
+          "maxWidthPct": 36,
+          "speaker": "Last Guardian",
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p22a",
+      "kind": "magic",
+      "text": "SEAL THE CITY. FORGET THE NAME.",
+      "x": 50,
+      "y": 48,
+      "tail": null,
+      "maxWidthPct": 50,
+      "speaker": "Altered Order",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p22a",
+      "kind": "whisper",
+      "text": "…relief inbound…",
+      "x": 40,
+      "y": 82,
+      "tail": "up",
+      "maxWidthPct": 36,
+      "speaker": "Last Guardian",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p22a",
+      "kind": "narration",
+      "text": "Hold the network. Guard the cradles. Wait for relief.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "truth": "command altered; city sealed with people; Guardian waited"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 22/25 — The Day Relief Never Came. Story purpose: Memory splash: final day — network order, evacuation, altered command, seal with people inside. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p22a): Memory splash collage: Aureth Vale's final day — Keepers ordered to keep Rift network active; Guardian shepherding evacuation routes; a trusted official's hand altering a command seal; city gates sealing while silhouettes still inside; Guardian waiting on empty road for relief that never arrives. Emotional, tragic, grand. Characters: mira-eggwarden. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: memory storm light. Continuity: {\"truth\": \"command altered; city sealed with people; Guardian waited\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "War ended long ago.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Day Relief Never Came — The Lost City page 22",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Hold the network. Guard the cradles. Wait for relief.",
+    "MAGIC (Altered Order): SEAL THE CITY. FORGET THE NAME.",
+    "WHISPER (Last Guardian): …relief inbound…"
+  ],
+  "id": "the-lost-city-issue-004-p026",
+  "cleanArtRel": "generated/raw-art/page-026.webp",
+  "letteredArtRel": "generated/lettered-pages/page-026.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-026.webp"
+}

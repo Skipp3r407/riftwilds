@@ -1,0 +1,100 @@
+{
+  "pageNumber": 30,
+  "storyPageNumber": null,
+  "bookRole": "teaser",
+  "title": "Next Issue — The Storm King",
+  "storyPurpose": "Next Issue — The Storm King",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "teaser",
+      "description": "Teaser plate: storm-wrapped mountain throne tower; lightning crown motif; empty title zone for THE STORM KING.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "NEXT ISSUE",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "A dormant engine answers from the peaks. A king who never surrendered listens.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "THE STORM KING",
+          "x": 50,
+          "y": 82,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "teaser",
+      "kind": "caption",
+      "text": "NEXT ISSUE",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "teaser",
+      "kind": "narration",
+      "text": "A dormant engine answers from the peaks. A king who never surrendered listens.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    },
+    {
+      "panelId": "teaser",
+      "kind": "caption",
+      "text": "THE STORM KING",
+      "x": 50,
+      "y": 82,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book teaser page for The Lost City Issue #4 — Next Issue — The Storm King. Teaser plate: storm-wrapped mountain throne tower; lightning crown motif; empty title zone for THE STORM KING. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Next Issue — The Storm King",
+  "atmosphere": "storm",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: NEXT ISSUE",
+    "NARRATION: A dormant engine answers from the peaks. A king who never surrendered listens.",
+    "CAPTION: THE STORM KING"
+  ],
+  "id": "the-lost-city-issue-004-p030",
+  "cleanArtRel": "generated/raw-art/page-030.webp",
+  "letteredArtRel": "generated/lettered-pages/page-030.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-030.webp"
+}

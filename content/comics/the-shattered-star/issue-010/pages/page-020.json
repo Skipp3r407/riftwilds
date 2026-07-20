@@ -1,0 +1,191 @@
+{
+  "pageNumber": 20,
+  "storyPageNumber": 16,
+  "bookRole": "story",
+  "title": "Starlight Bond",
+  "storyPurpose": "Astra joins battle; Prime companions begin to awaken.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p16a",
+      "description": "Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence uses Celestial Step — allies including Mira's team blink across floating bridges ignoring broken terrain; Hollow Ones slam into empty platforms.",
+      "bubbles": [
+        {
+          "kind": "magic",
+          "text": "CELESTIAL STEP",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Starlight Bond — wake the willing!",
+          "x": 40,
+          "y": 60,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "High Keeper Lyra",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p16b",
+      "description": "Cradles open: select Prime companions awaken with soft light; Nova howls encouragement; Spark syncs.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*wake-call!*",
+          "x": 35,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nova",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*resonance!*",
+          "x": 65,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        },
+        {
+          "kind": "narration",
+          "text": "Legacy chooses survivors who still want a future.",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p16a",
+      "kind": "magic",
+      "text": "CELESTIAL STEP",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p16a",
+      "kind": "speech",
+      "text": "Starlight Bond — wake the willing!",
+      "x": 40,
+      "y": 60,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "High Keeper Lyra",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p16b",
+      "kind": "creature",
+      "text": "*wake-call!*",
+      "x": 35,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Nova",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p16b",
+      "kind": "creature",
+      "text": "*resonance!*",
+      "x": 65,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p16b",
+      "kind": "narration",
+      "text": "Legacy chooses survivors who still want a future.",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 4
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "high-keeper-lyra"
+  ],
+  "creatures": [
+    "astra",
+    "nova",
+    "spark",
+    "spark",
+    "nova",
+    "axiom",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet",
+    "spirit-moth",
+    "truthwing",
+    "lumenhare",
+    "cindermink"
+  ],
+  "locations": [
+    "Shattered Star"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "primes": "awakening"
+  },
+  "requiredMoments": [
+    13,
+    14
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 16/25 — Starlight Bond. Story purpose: Astra joins battle; Prime companions begin to awaken. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p16a): Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence uses Celestial Step — allies including Mira's team blink across floating bridges ignoring broken terrain; Hollow Ones slam into empty platforms. Panel 2 (p16b): Cradles open: select Prime companions awaken with soft light; Nova howls encouragement; Spark syncs. Characters: mira-eggwarden, high-keeper-lyra. Creatures: astra, nova, spark, spark, nova, axiom, bramblefox, mossprig, thornling, wisplet, spirit-moth, truthwing, lumenhare, cindermink. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Shattered Star celestial sanctuary. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"primes\": \"awakening\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Turn to continue.",
+  "letteringInstructions": "Standard speech + narration; tails off faces and Spark/Nova/Astra eyes; Lyra speech calm/stern.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Starlight Bond — The Shattered Star page 16",
+  "atmosphere": "battle",
+  "transcript": [
+    "MAGIC: CELESTIAL STEP",
+    "SPEECH (High Keeper Lyra): Starlight Bond — wake the willing!",
+    "CREATURE (Nova): *wake-call!*",
+    "CREATURE (Spark): *resonance!*",
+    "NARRATION: Legacy chooses survivors who still want a future."
+  ],
+  "a11yTranscript": [
+    "MAGIC: CELESTIAL STEP",
+    "SPEECH (High Keeper Lyra): Starlight Bond — wake the willing!",
+    "CREATURE (Nova): *wake-call!*",
+    "CREATURE (Spark): *resonance!*",
+    "NARRATION: Legacy chooses survivors who still want a future."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": null,
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-020.webp",
+  "id": "the-shattered-star-issue-010-p020"
+}

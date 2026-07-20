@@ -1,0 +1,107 @@
+{
+  "pageNumber": 1,
+  "storyPageNumber": null,
+  "bookRole": "front-cover",
+  "title": "The Traveling Circus — Cover",
+  "storyPurpose": "The Traveling Circus — Cover",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "cover",
+      "description": "Main cover: Spark centered beneath floating lanterns; Mira Eggwarden and companions entering circus; Lanternmaster above grand pavilion; Lumenhare leaping illusion rings; Meridian agents in shadows; sanctuary crystal glow in wagon; Lost City silhouette distant. Trade dress empty zones. Original Riftwilds.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "RIFTWILDS",
+          "x": 50,
+          "y": 8,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "caption",
+          "text": "THE TRAVELING CIRCUS",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "caption",
+          "text": "ISSUE #3",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "RIFTWILDS",
+      "x": 50,
+      "y": 8,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "THE TRAVELING CIRCUS",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "cover",
+      "kind": "caption",
+      "text": "ISSUE #3",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 34
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "lanternmaster"
+  ],
+  "creatures": [
+    "spark",
+    "lumenhare",
+    "bramblefox"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book front-cover page for The Traveling Circus Issue #3 — The Traveling Circus — Cover. Main cover: Spark centered beneath floating lanterns; Mira Eggwarden and companions entering circus; Lanternmaster above grand pavilion; Lumenhare leaping illusion rings; Meridian agents in shadows; sanctuary crystal glow in wagon; Lost City silhouette distant. Trade dress empty zones. Original Riftwilds. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Traveling Circus — Cover",
+  "atmosphere": "festival",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: RIFTWILDS",
+    "CAPTION: THE TRAVELING CIRCUS",
+    "CAPTION: ISSUE #3"
+  ],
+  "id": "the-traveling-circus-issue-003-p001",
+  "cleanArtRel": "generated/raw-art/page-001.png",
+  "letteredArtRel": "generated/lettered-pages/page-001.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-001.webp"
+}

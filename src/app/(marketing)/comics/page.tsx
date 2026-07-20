@@ -5,7 +5,7 @@ import { COMIC_SERIES, listPublishedComics } from "@/content/comics";
 export const metadata: Metadata = {
   title: "Lore Library | Legends of the Rift",
   description:
-    "Riftwilds Lore Library — Legends of the Rift. Ten illustrated comic issues with Codex unlocks and cosmetic rewards (never P2W).",
+    "Riftwilds Comic Publishing — Legends of the Rift. Publisher-grade issues with Codex unlocks, card teases, and cosmetic rewards (never crypto-gated story).",
 };
 
 export default function ComicsLibraryPage() {

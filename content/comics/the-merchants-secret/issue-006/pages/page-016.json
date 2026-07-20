@@ -1,0 +1,159 @@
+{
+  "pageNumber": 16,
+  "storyPageNumber": 12,
+  "bookRole": "story",
+  "title": "Egg Auction Announced",
+  "storyPurpose": "Dormant Riftborn egg auction announced; Spark violent reaction.",
+  "layout": {
+    "type": "splash-inset",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p12a",
+      "description": "Auction plaza broadcast: ornate placard silhouette of dormant Riftborn egg in restraint field; crowd gathering; Meridian buyers in storm-dark coats.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "LOT ONE — DORMANT RIFBORN EGG",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Unhatched. Unbonded. Unregistered.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Auctioneer",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*violent-flare!*",
+          "x": 35,
+          "y": 55,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        },
+        {
+          "kind": "shout",
+          "text": "Spark—!",
+          "x": 65,
+          "y": 70,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p12a",
+      "kind": "speech",
+      "text": "Unhatched. Unbonded. Unregistered.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Auctioneer",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p12a",
+      "kind": "creature",
+      "text": "*violent-flare!*",
+      "x": 35,
+      "y": 55,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p12a",
+      "kind": "shout",
+      "text": "Spark—!",
+      "x": 65,
+      "y": 70,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p12a",
+      "kind": "caption",
+      "text": "LOT ONE — DORMANT RIFBORN EGG",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [
+    "dormant-riftborn-egg"
+  ],
+  "continuity": {
+    "location": "auction plaza",
+    "egg": "announced",
+    "spark": {
+      "reaction": "violent"
+    }
+  },
+  "requiredMoments": [
+    21,
+    22
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 12/25 — Egg Auction Announced. Story purpose: Dormant Riftborn egg auction announced; Spark violent reaction. Layout: splash-inset. 1 panels with clear inked gutters. Panel 1 (p12a): Auction plaza broadcast: ornate placard silhouette of dormant Riftborn egg in restraint field; crowd gathering; Meridian buyers in storm-dark coats. Characters: mira-eggwarden, seris-vale. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"auction plaza\", \"egg\": \"announced\", \"spark\": {\"reaction\": \"violent\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Into the archive.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Egg Auction Announced — The Merchant's Secret page 12",
+  "atmosphere": "market",
+  "transcript": [
+    "CAPTION: LOT ONE — DORMANT RIFBORN EGG",
+    "SPEECH (Auctioneer): Unhatched. Unbonded. Unregistered.",
+    "CREATURE (Spark): *violent-flare!*",
+    "SHOUT (Mira Eggwarden): Spark—!"
+  ],
+  "a11yTranscript": [
+    "CAPTION: LOT ONE — DORMANT RIFBORN EGG",
+    "SPEECH (Auctioneer): Unhatched. Unbonded. Unregistered.",
+    "CREATURE (Spark): *violent-flare!*",
+    "SHOUT (Mira Eggwarden): Spark—!"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "dormant-riftborn-egg"
+  ],
+  "id": "the-merchants-secret-issue-006-p016",
+  "cleanArtRel": "generated/raw-art/page-016.webp",
+  "letteredArtRel": "generated/lettered-pages/page-016.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-016.webp"
+}

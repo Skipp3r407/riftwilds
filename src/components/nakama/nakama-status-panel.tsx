@@ -31,10 +31,8 @@ export function NakamaStatusPanel() {
   }, [nakama?.state]);
 
   async function onGuest() {
-    if (!nakama) return;
-    setBusy(true);
-    await nakama.connectGuest();
-    setBusy(false);
+    // Guest Nakama login disabled — NO ACCOUNT = NO GAMEPLAY.
+    return;
   }
 
   async function onEmail(create: boolean) {
@@ -98,10 +96,11 @@ export function NakamaStatusPanel() {
         <button
           type="button"
           className="btn-secondary focus-ring"
-          disabled={!nakama || busy || !cfg.enabled}
+          disabled
+          title="Guest play disabled — sign in with a Riftkeeper account"
           onClick={() => void onGuest()}
         >
-          Guest login (rift_guest)
+          Guest login (disabled)
         </button>
         <button
           type="button"

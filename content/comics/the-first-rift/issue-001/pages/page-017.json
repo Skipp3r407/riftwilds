@@ -1,0 +1,56 @@
+{
+  "pageNumber": 17,
+  "id": "the-first-rift-issue-001-p017",
+  "role": "story",
+  "title": null,
+  "layout": "two-col",
+  "atmosphere": "dusk",
+  "beat": "Emberfox Ashen Hide + Ashwing Kindled Spirit",
+  "artPrompt": "Two-panel page, no text. Left: Emberfox flares Ashen Hide against cold Fracture wind. Right: Ashwing (ember-feathered avian) Kindled Spirit dive-assist over mud plaza. Official silhouettes. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "caption": "Ashen Hide · Kindled Spirit",
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Heat that guards. Fire that listens.",
+          "x": 50,
+          "y": 12
+        },
+        {
+          "kind": "creature",
+          "speaker": "Emberfox",
+          "text": "*ash-ruff*",
+          "x": 35,
+          "y": 55
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "creature",
+          "speaker": "Ashwing",
+          "text": "*cinder-cry*",
+          "x": 65,
+          "y": 40
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "None of you are weapons. You are the reason weapons can wait.",
+          "x": 45,
+          "y": 70,
+          "tail": "up"
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-017.png",
+  "letteredArtRel": "generated/lettered/page-017.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-017.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

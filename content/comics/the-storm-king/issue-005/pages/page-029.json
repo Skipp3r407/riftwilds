@@ -1,0 +1,152 @@
+{
+  "pageNumber": 29,
+  "storyPageNumber": 25,
+  "bookRole": "story",
+  "title": "Every Door",
+  "storyPurpose": "Cliffhanger: merchant receives ledger — 'I brought you every door.' → Merchant's Secret.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p25a",
+      "description": "Dark luxurious trading hall / wagon interior: richly dressed Hooded Merchant (original design — amber lanterns, sealed crates, cyan-glow ledger ink) smiling as Seris Vale places stolen royal ledger on table; tiny inset of Tempestria peaks calming; empty zones for NEXT title.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "You brought me a map.",
+          "x": 35,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Hooded Merchant",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "No. I brought you every door.",
+          "x": 65,
+          "y": 45,
+          "tail": "left",
+          "maxWidthPct": 36,
+          "speaker": "Seris Vale",
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "NEXT: THE MERCHANT'S SECRET",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "ledger-THUD",
+          "x": 50,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p25a",
+      "kind": "speech",
+      "text": "You brought me a map.",
+      "x": 35,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Hooded Merchant",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p25a",
+      "kind": "speech",
+      "text": "No. I brought you every door.",
+      "x": 65,
+      "y": 45,
+      "tail": "left",
+      "maxWidthPct": 36,
+      "speaker": "Seris Vale",
+      "readOrder": 1
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "NEXT: THE MERCHANT'S SECRET",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p25a",
+      "kind": "sfx",
+      "text": "ledger-THUD",
+      "x": 50,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "seris-vale",
+    "hooded-merchant"
+  ],
+  "creatures": [],
+  "locations": [
+    "Merchant Network (teaser)"
+  ],
+  "artifacts": [
+    "royal-trade-ledger"
+  ],
+  "continuity": {
+    "location": "hidden trading hall",
+    "teaser": "the-merchants-secret",
+    "ledger": "delivered"
+  },
+  "requiredMoments": [
+    24,
+    25
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 25/25 — Every Door. Story purpose: Cliffhanger: merchant receives ledger — 'I brought you every door.' → Merchant's Secret. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Dark luxurious trading hall / wagon interior: richly dressed Hooded Merchant (original design — amber lanterns, sealed crates, cyan-glow ledger ink) smiling as Seris Vale places stolen royal ledger on table; tiny inset of Tempestria peaks calming; empty zones for NEXT title. Characters: seris-vale, hooded-merchant. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"hidden trading hall\", \"teaser\": \"the-merchants-secret\", \"ledger\": \"delivered\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "End Issue #5.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Every Door — The Storm King page 25",
+  "atmosphere": "night",
+  "transcript": [
+    "SPEECH (Hooded Merchant): You brought me a map.",
+    "SPEECH (Seris Vale): No. I brought you every door.",
+    "CAPTION: NEXT: THE MERCHANT'S SECRET",
+    "SFX: ledger-THUD"
+  ],
+  "a11yTranscript": [
+    "SPEECH (Hooded Merchant): You brought me a map.",
+    "SPEECH (Seris Vale): No. I brought you every door.",
+    "CAPTION: NEXT: THE MERCHANT'S SECRET",
+    "SFX: ledger-THUD"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p029",
+  "cleanArtRel": "generated/raw-art/page-029.webp",
+  "letteredArtRel": "generated/lettered-pages/page-029.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-029.webp"
+}

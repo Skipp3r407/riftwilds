@@ -1,0 +1,45 @@
+{
+  "cast": [
+    {
+      "id": "mira-eggwarden",
+      "name": "Mira Eggwarden",
+      "role": "Keeper protagonist"
+    },
+    {
+      "id": "cael-vesper",
+      "name": "Cael Vesper",
+      "role": "Lanternmaster"
+    },
+    {
+      "id": "tavi-brightline",
+      "name": "Tavi Brightline",
+      "role": "Trusted circus performer"
+    },
+    {
+      "id": "nira-quill",
+      "name": "Nira Quill",
+      "role": "Uncertain hunter"
+    },
+    {
+      "id": "seris-vale",
+      "name": "Seris Vale",
+      "role": "Meridian commander"
+    },
+    {
+      "id": "last-guardian",
+      "name": "The Last Guardian",
+      "role": "City defense construct"
+    },
+    {
+      "id": "elara-venn",
+      "name": "Elara Venn",
+      "role": "Vision/counsel only \u2014 not present"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "cal-reed",
+      "note": "NON-CANON"
+    }
+  ]
+}

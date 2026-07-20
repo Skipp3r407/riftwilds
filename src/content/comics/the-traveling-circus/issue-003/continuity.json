@@ -1,0 +1,201 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "location": "Lanternveil approach",
+      "time": "twilight",
+      "spark": {
+        "emotion": "wonder-alert",
+        "glow": "lantern-resonance"
+      },
+      "mira": {
+        "stance": "cautious-curious"
+      }
+    },
+    {
+      "page": 2,
+      "thornling": {
+        "status": "food-distracted"
+      },
+      "bramblefox": {
+        "status": "scanning-masks"
+      }
+    },
+    {
+      "page": 3,
+      "greeter": {
+        "noticedSpark": true,
+        "hidReaction": true
+      },
+      "spark": {
+        "glow": "lantern-sync"
+      }
+    },
+    {
+      "page": 4,
+      "mood": "warm-joyful",
+      "spiritMoth": {
+        "tracking": "lantern-signal"
+      }
+    },
+    {
+      "page": 5,
+      "spark": {
+        "emotion": "relaxed-brief"
+      },
+      "mira": {
+        "emotion": "warm"
+      }
+    },
+    {
+      "page": 6,
+      "lanternmaster": {
+        "knowsSparkName": true
+      },
+      "mira": {
+        "noticedRiftSymbol": true
+      }
+    },
+    {
+      "page": 7,
+      "lanternmaster": {
+        "avoidedRiftborn": true
+      },
+      "theme": "masks"
+    },
+    {
+      "page": 8,
+      "performance": "main-begun",
+      "lumenhare": {
+        "introduced": true
+      }
+    },
+    {
+      "page": 9,
+      "underStage": "trapped-spirits-detected",
+      "spark": {
+        "emotion": "uneasy"
+      }
+    },
+    {
+      "page": 10,
+      "sparkLumenhare": {
+        "bond": "resonance-recognition"
+      }
+    },
+    {
+      "page": 11,
+      "infiltrator": "seris-vale-identified",
+      "meridian": {
+        "onSite": true
+      }
+    },
+    {
+      "page": 12,
+      "clue": "broken-rift-restraint",
+      "thornling": {
+        "foundRestricted": true
+      }
+    },
+    {
+      "page": 13,
+      "archive": "riftborn-ledger-found"
+    },
+    {
+      "page": 14,
+      "revelation": "ember-route",
+      "spark": {
+        "identity": "one-of-routes"
+      }
+    },
+    {
+      "page": 15,
+      "crystal": "shellward-in-circus-vault",
+      "alarms": true
+    },
+    {
+      "page": 16,
+      "sabotage": true,
+      "ironmantle": {
+        "status": "berserk-controlled"
+      }
+    },
+    {
+      "page": 17,
+      "mossprig": {
+        "ability": "Living Bulwark"
+      },
+      "mira": {
+        "stance": "battle-strategy"
+      }
+    },
+    {
+      "page": 18,
+      "battle": "coordinated-circus"
+    },
+    {
+      "page": 19,
+      "ironmantle": {
+        "truth": "controlled-not-evil"
+      },
+      "spark": {
+        "approaching": true
+      }
+    },
+    {
+      "page": 20,
+      "spark": {
+        "choice": "voluntary-help"
+      },
+      "combo": "resonance+illusion"
+    },
+    {
+      "page": 21,
+      "nira": {
+        "helpedSecretly": true
+      },
+      "ironmantle": {
+        "status": "freed"
+      }
+    },
+    {
+      "page": 22,
+      "meridian": {
+        "retreatedPartialData": true
+      },
+      "lanternmaster": {
+        "combatRevealed": true
+      },
+      "spark": {
+        "captured": false
+      }
+    },
+    {
+      "page": 23,
+      "crystal": "confirmed-circus-protection",
+      "lanternmaster": {
+        "admittedRiftbornShelter": true
+      }
+    },
+    {
+      "page": 24,
+      "map": "lost-city-route",
+      "lostCity": {
+        "pulse": "beginning"
+      }
+    },
+    {
+      "page": 25,
+      "cliffhanger": "guardian-remembers",
+      "nextIssue": "the-lost-city",
+      "spark": {
+        "bond": "voluntary-with-mira"
+      }
+    }
+  ],
+  "canonLock": {
+    "keeper": "Mira Eggwarden",
+    "vision": "Elara Venn",
+    "rejected": "Cal Reed"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "pageNumber": 5,
+  "storyPageNumber": 1,
+  "bookRole": "story",
+  "title": "Ash of the Crossroads",
+  "storyPurpose": "Aftermath of Gilded Crossroads; Mira studies hidden token; suspicion begins.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p1a",
+      "description": "Full-bleed splash: damaged Gilded Crossroads after portal collapse — broken bridges, dimmed amber lanterns, merchant workers rebuilding. Foreground: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes examining small hidden transmission token; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot beside warm dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages; Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes standing apart; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif half-turned, eyes averted; Bramblefox, Mossprig, Thornling nearby; Lockjaw Wisp on crates. Balloon-safe top.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "A secret can survive the person who kept it. Suspicion rarely waits that long.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 62,
+          "readOrder": 0
+        },
+        {
+          "kind": "thought",
+          "text": "Someone walked every road with us.",
+          "x": 28,
+          "y": 78,
+          "tail": "up",
+          "maxWidthPct": 32,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*worried-glow*",
+          "x": 62,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p1a",
+      "kind": "thought",
+      "text": "Someone walked every road with us.",
+      "x": 28,
+      "y": 78,
+      "tail": "up",
+      "maxWidthPct": 32,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p1a",
+      "kind": "creature",
+      "text": "*worried-glow*",
+      "x": 62,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p1a",
+      "kind": "narration",
+      "text": "A secret can survive the person who kept it. Suspicion rarely waits that long.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 62,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "nira-quill",
+    "cael-vesper",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "lockjaw-wisp",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [
+    "hidden-token",
+    "dormant-riftborn-egg"
+  ],
+  "continuity": {
+    "location": "gilded-crossroads-aftermath",
+    "egg": "warm-dormant",
+    "token": "examined"
+  },
+  "requiredMoments": [
+    1
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 1/25 — Ash of the Crossroads. Story purpose: Aftermath of Gilded Crossroads; Mira studies hidden token; suspicion begins. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-bleed splash: damaged Gilded Crossroads after portal collapse — broken bridges, dimmed amber lanterns, merchant workers rebuilding. Foreground: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes examining small hidden transmission token; Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot beside warm dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages; Nira Quill: uncertain hunter, lean, weather cloak, quill-knife kit, conflicted eyes standing apart; Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif half-turned, eyes averted; Bramblefox, Mossprig, Thornling nearby; Lockjaw Wisp on crates. Balloon-safe top. Characters: mira-eggwarden, nira-quill, cael-vesper, aurelia-voss. Creatures: spark, bramblefox, mossprig, thornling, lockjaw-wisp, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"location\": \"gilded-crossroads-aftermath\", \"egg\": \"warm-dormant\", \"token\": \"examined\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Evidence arrives.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Ash of the Crossroads — The Traitor's Gate page 1",
+  "atmosphere": "dusk",
+  "transcript": [
+    "NARRATION: A secret can survive the person who kept it. Suspicion rarely waits that long.",
+    "THOUGHT (Mira Eggwarden): Someone walked every road with us.",
+    "CREATURE (Spark): *worried-glow*"
+  ],
+  "a11yTranscript": [
+    "NARRATION: A secret can survive the person who kept it. Suspicion rarely waits that long.",
+    "THOUGHT (Mira Eggwarden): Someone walked every road with us.",
+    "CREATURE (Spark): *worried-glow*"
+  ],
+  "codexLinks": [
+    "gilded-crossroads"
+  ],
+  "cardTeases": [],
+  "id": "the-traitors-gate-issue-007-p005",
+  "cleanArtRel": "generated/raw-art/page-005.webp",
+  "letteredArtRel": "generated/lettered-pages/page-005.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-005.webp"
+}

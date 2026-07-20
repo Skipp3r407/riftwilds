@@ -1,0 +1,92 @@
+{
+  "pageNumber": 12,
+  "id": "the-first-rift-issue-001-p012",
+  "role": "story",
+  "title": null,
+  "layout": "grid-2x2",
+  "atmosphere": "day",
+  "beat": "Hatch — First Riftling",
+  "artPrompt": "Four-panel hatch scene, no text. Young Mira-like child wonder; soft hatch light; village elder; newborn First Riftling pale shell-glow curious eyes. Warm Commons day. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Child",
+          "text": "Is it… looking at me?",
+          "x": 40,
+          "y": 40,
+          "tail": "down"
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "It is remembering the world. Help it stay gentle.",
+          "x": 60,
+          "y": 65,
+          "tail": "up"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "sfx",
+          "text": "HATCH—!",
+          "x": 50,
+          "y": 45
+        },
+        {
+          "kind": "narration",
+          "text": "The Soft Exodus had closed into eggs. Battle culture would come later.",
+          "x": 50,
+          "y": 75
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Village elder",
+          "text": "What do we call you?",
+          "x": 40,
+          "y": 35,
+          "tail": "down"
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Courier. Keeper, if the egg agrees.",
+          "x": 65,
+          "y": 60,
+          "tail": "up"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "thought",
+          "speaker": "First Riftling",
+          "text": "…keep…",
+          "x": 50,
+          "y": 50
+        },
+        {
+          "kind": "caption",
+          "text": "FIRST-LIGHT-01",
+          "x": 50,
+          "y": 80
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-012.png",
+  "letteredArtRel": "generated/lettered/page-012.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-012.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

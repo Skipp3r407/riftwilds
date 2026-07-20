@@ -1,0 +1,187 @@
+{
+  "pageNumber": 20,
+  "storyPageNumber": 16,
+  "bookRole": "story",
+  "title": "Neither Can the Kingdom",
+  "storyPurpose": "King summons Thundervane despite condition; Mira argues; king answers.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p16a",
+      "description": "King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade raising storm blade; conduit igniting; Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion forced to rise on shaking legs.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Rise, old friend. One more wall.",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*pained-roar*",
+          "x": 65,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Thundervane",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p16b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes pleading; Spark pressed to her leg glowing distress.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "He cannot survive another battle like this!",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p16c",
+      "description": "Close on Vaelor's storm-eye — grief under armor.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Neither can the kingdom.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 3
+        },
+        {
+          "kind": "sfx",
+          "text": "wing-BEAT",
+          "x": 70,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p16a",
+      "kind": "speech",
+      "text": "Rise, old friend. One more wall.",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p16a",
+      "kind": "creature",
+      "text": "*pained-roar*",
+      "x": 65,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Thundervane",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p16b",
+      "kind": "speech",
+      "text": "He cannot survive another battle like this!",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p16c",
+      "kind": "speech",
+      "text": "Neither can the kingdom.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p16c",
+      "kind": "sfx",
+      "text": "wing-BEAT",
+      "x": 70,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "vaelor-tempest"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "citadel roost",
+    "thundervane": "forced-flight"
+  },
+  "requiredMoments": [
+    16
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 16/25 — Neither Can the Kingdom. Story purpose: King summons Thundervane despite condition; Mira argues; king answers. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p16a): King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade raising storm blade; conduit igniting; Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion forced to rise on shaking legs. Panel 2 (p16b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes pleading; Spark pressed to her leg glowing distress. Panel 3 (p16c): Close on Vaelor's storm-eye — grief under armor. Characters: mira-eggwarden, vaelor-tempest. Creatures: spark, thundervane. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"citadel roost\", \"thundervane\": \"forced-flight\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Battle on the bridges.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Neither Can the Kingdom — The Storm King page 16",
+  "atmosphere": "storm",
+  "transcript": [
+    "SPEECH (King Vaelor Tempest): Rise, old friend. One more wall.",
+    "CREATURE (Thundervane): *pained-roar*",
+    "SPEECH (Mira Eggwarden): He cannot survive another battle like this!",
+    "SPEECH (King Vaelor Tempest): Neither can the kingdom.",
+    "SFX: wing-BEAT"
+  ],
+  "a11yTranscript": [
+    "SPEECH (King Vaelor Tempest): Rise, old friend. One more wall.",
+    "CREATURE (Thundervane): *pained-roar*",
+    "SPEECH (Mira Eggwarden): He cannot survive another battle like this!",
+    "SPEECH (King Vaelor Tempest): Neither can the kingdom.",
+    "SFX: wing-BEAT"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p020",
+  "cleanArtRel": "generated/raw-art/page-020.webp",
+  "letteredArtRel": "generated/lettered-pages/page-020.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-020.webp"
+}

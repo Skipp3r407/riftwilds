@@ -1,0 +1,55 @@
+{
+  "mira-eggwarden": {
+    "name": "Mira Eggwarden",
+    "role": "Present-day Keeper / POV",
+    "status": "canon-protagonist",
+    "notes": "Volume One finale lead. Protects Spark + Nova. Refuses Meridian methods."
+  },
+  "elyan-voss": {
+    "name": "Professor Elyan Voss",
+    "role": "The Riftwright",
+    "status": "tragic-ally",
+    "notes": "Blamed for First Rift; built cradles; not cartoon villain. Distant kin surname to Aurelia Voss."
+  },
+  "seris-vale": {
+    "name": "Seris Vale",
+    "role": "Ascendant Commander",
+    "status": "contained-antagonist",
+    "notes": "Ascends via protocol; defeated; contained not executed."
+  },
+  "cael-vesper": {
+    "name": "Cael Vesper",
+    "role": "Lanternmaster — supervised ally",
+    "status": "redemption-unfinished",
+    "notes": "Traitor consequences continue as useful light / supervised travel."
+  },
+  "nira-quill": {
+    "name": "Nira Quill",
+    "role": "Hunter ally",
+    "status": "earned-trust"
+  },
+  "aurelia-voss": {
+    "name": "Aurelia Voss",
+    "role": "Gilded Merchant",
+    "status": "ally",
+    "notes": "Recognizes Voss name; Closed Contract seals routes."
+  },
+  "elara-venn": {
+    "name": "Elara Venn",
+    "role": "First Keeper",
+    "status": "vision-only",
+    "notes": "Blessing echo on p23 only. Not present-day POV."
+  },
+  "arkan": {
+    "name": "Chief Engineer Arkan",
+    "role": "Forge architect",
+    "status": "sacrificed-echo",
+    "notes": "Memory projection only after Issue #8 sacrifice."
+  },
+  "cal-reed": {
+    "name": "Cal Reed",
+    "role": "REJECTED",
+    "status": "non-canon",
+    "notes": "Forbidden in art and dialogue."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "pageNumber": 24,
+  "storyPageNumber": 20,
+  "bookRole": "story",
+  "title": "The Hunter Cuts the Wire",
+  "storyPurpose": "Nira Quill disables Meridian override; Guardian unstable; Spark hears pain.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p20a",
+      "description": "Nira Quill (uncertain hunter) appears from rooftop shadow; smashes Meridian override relay with a dampener spike.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I won't collect a scream and call it order.",
+          "x": 45,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Nira Quill",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "RELAY-SHATTER",
+          "x": 65,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p20b",
+      "description": "Guardian staggers; override glyphs die; core spasms; Spark presses paws to ground, feeling pain-resonance.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "COMMAND… CONFLICT…",
+          "x": 50,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Last Guardian",
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*hurt…*",
+          "x": 40,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        },
+        {
+          "kind": "whisper",
+          "text": "I won't order you. If you go — you choose.",
+          "x": 65,
+          "y": 78,
+          "tail": "up",
+          "maxWidthPct": 38,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p20a",
+      "kind": "speech",
+      "text": "I won't collect a scream and call it order.",
+      "x": 45,
+      "y": 20,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Nira Quill",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p20b",
+      "kind": "speech",
+      "text": "COMMAND… CONFLICT…",
+      "x": 50,
+      "y": 22,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Last Guardian",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p20b",
+      "kind": "creature",
+      "text": "*hurt…*",
+      "x": 40,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p20b",
+      "kind": "whisper",
+      "text": "I won't order you. If you go — you choose.",
+      "x": 65,
+      "y": 78,
+      "tail": "up",
+      "maxWidthPct": 38,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p20a",
+      "kind": "sfx",
+      "text": "RELAY-SHATTER",
+      "x": 65,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "nira-quill",
+    "mira-eggwarden",
+    "seris-vale"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "nira": "disabled override",
+    "guardian": "unstable",
+    "sparkChoice": "pending"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 20/25 — The Hunter Cuts the Wire. Story purpose: Nira Quill disables Meridian override; Guardian unstable; Spark hears pain. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p20a): Nira Quill (uncertain hunter) appears from rooftop shadow; smashes Meridian override relay with a dampener spike. Panel 2 (p20b): Guardian staggers; override glyphs die; core spasms; Spark presses paws to ground, feeling pain-resonance. Characters: nira-quill, mira-eggwarden, seris-vale. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"nira\": \"disabled override\", \"guardian\": \"unstable\", \"sparkChoice\": \"pending\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Spark touches the core.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Hunter Cuts the Wire — The Lost City page 20",
+  "atmosphere": "rift",
+  "transcript": [
+    "SPEECH (Nira Quill): I won't collect a scream and call it order.",
+    "SFX: RELAY-SHATTER",
+    "SPEECH (Last Guardian): COMMAND… CONFLICT…",
+    "CREATURE (Spark): *hurt…*",
+    "WHISPER (Mira Eggwarden): I won't order you. If you go — you choose."
+  ],
+  "id": "the-lost-city-issue-004-p024",
+  "cleanArtRel": "generated/raw-art/page-024.webp",
+  "letteredArtRel": "generated/lettered-pages/page-024.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-024.webp"
+}

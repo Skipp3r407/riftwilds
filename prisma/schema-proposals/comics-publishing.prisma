@@ -1,0 +1,222 @@
+// Riftwilds Comic Publishing Engine — PROPOSAL ONLY.
+// Do NOT apply to production. Use after explicit approval via prisma migrate.
+// Local reading currently uses code catalog + localStorage progress.
+
+/// Top-level series (e.g. Legends of the Rift).
+model ComicSeries {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  subtitle    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  volumes     ComicVolume[]
+  arcs        ComicStoryArc[]
+  issues      ComicIssueRow[]
+
+  @@map("comic_series")
+}
+
+model ComicVolume {
+  id            String   @id @default(cuid())
+  seriesId      String
+  slug          String
+  title         String
+  volumeNumber  Int
+  series        ComicSeries @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  issues        ComicIssueRow[]
+
+  @@unique([seriesId, slug])
+  @@map("comic_volumes")
+}
+
+model ComicStoryArc {
+  id           String   @id @default(cuid())
+  seriesId     String
+  slug         String
+  title        String
+  subtitle     String?
+  expansionId  String?
+  series       ComicSeries @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  issues       ComicIssueRow[]
+
+  @@unique([seriesId, slug])
+  @@map("comic_story_arcs")
+}
+
+model ComicIssueRow {
+  id              String   @id @default(cuid())
+  seriesId        String
+  volumeId        String?
+  arcId           String?
+  slug            String   @unique
+  issueNumber     Int
+  title           String
+  subtitle        String?
+  synopsis        String
+  status          String   // published | scheduled | draft
+  publishedAt     DateTime?
+  unlockJson      Json     // ComicUnlockGate[] — must include free for core story
+  nextTeaserJson  Json?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  series   ComicSeries    @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  volume   ComicVolume?   @relation(fields: [volumeId], references: [id])
+  arc      ComicStoryArc? @relation(fields: [arcId], references: [id])
+  pages    ComicPageRow[]
+  covers   ComicCoverRow[]
+  rewards  ComicRewardRow[]
+  progress ComicReadingProgress[]
+
+  @@index([seriesId, issueNumber])
+  @@map("comic_issues")
+}
+
+model ComicCoverRow {
+  id          String  @id @default(cuid())
+  issueId     String
+  kind        String  // standard | variant-a | foil | …
+  src         String
+  label       String
+  unlockHint  String?
+  animatedSrc String?
+  issue       ComicIssueRow @relation(fields: [issueId], references: [id], onDelete: Cascade)
+
+  @@unique([issueId, kind])
+  @@map("comic_covers")
+}
+
+model ComicPageRow {
+  id            String  @id @default(cuid())
+  issueId       String
+  pageNumber    Int
+  role          String  // front-cover | story | splash | …
+  layout        String
+  title         String?
+  artSrc        String?
+  atmosphere    String?
+  musicCueId    String?
+  voiceCueId    String?
+  isKeyArt      Boolean @default(false)
+  loreSidebarJson Json?
+  issue         ComicIssueRow @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  panels        ComicPanelRow[]
+  hotspots      ComicHotspotRow[]
+
+  @@unique([issueId, pageNumber])
+  @@map("comic_pages")
+}
+
+model ComicPanelRow {
+  id         String  @id @default(cuid())
+  pageId     String
+  sortOrder  Int     @default(0)
+  artSrc     String?
+  artAlt     String?
+  caption    String?
+  frameJson  Json?   // { x, y, w, h, tiltDeg, impact }
+  focusId    String?
+  canonJson  Json?
+  page       ComicPageRow @relation(fields: [pageId], references: [id], onDelete: Cascade)
+  dialogue   ComicDialogueRow[]
+
+  @@index([pageId, sortOrder])
+  @@map("comic_panels")
+}
+
+model ComicDialogueRow {
+  id         String  @id @default(cuid())
+  panelId    String
+  sortOrder  Int     @default(0)
+  kind       String  // speech | thought | narration | whisper | shout | magic | telepathy | creature | sfx | caption
+  speaker    String?
+  text       String
+  x          Float?
+  y          Float?
+  tail       String?
+  canonJson  Json?
+  panel      ComicPanelRow @relation(fields: [panelId], references: [id], onDelete: Cascade)
+
+  @@index([panelId, sortOrder])
+  @@map("comic_dialogue")
+}
+
+model ComicHotspotRow {
+  id            String  @id @default(cuid())
+  pageId        String
+  externalId    String
+  label         String
+  x             Float
+  y             Float
+  w             Float
+  h             Float
+  codexEntryId  String?
+  secretCode    String?
+  rewardId      String?
+  canonJson     Json?
+  page          ComicPageRow @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([pageId, externalId])
+  @@map("comic_hotspots")
+}
+
+/// Official cast / creatures referenced by issues (Bramblefox, Mossprig, …).
+model ComicCharacterRef {
+  id           String  @id @default(cuid())
+  name         String
+  speciesSlug  String?
+  role         String?
+  blurb        String?
+  canonJson    Json?
+
+  @@unique([name])
+  @@map("comic_characters")
+}
+
+model ComicCreatureRef {
+  id           String  @id @default(cuid())
+  speciesSlug  String  @unique
+  displayName  String
+  familyId     String?
+  cardId       String?
+  abilityId    String?
+
+  @@map("comic_creatures")
+}
+
+model ComicRewardRow {
+  id          String  @id @default(cuid())
+  issueId     String?
+  externalId  String  @unique
+  label       String
+  description String
+  kind        String
+  creditsStub Int?
+  issue       ComicIssueRow? @relation(fields: [issueId], references: [id])
+
+  @@map("comic_rewards")
+}
+
+model ComicReadingProgress {
+  id               String   @id @default(cuid())
+  userId           String
+  issueId          String
+  currentPage      Int      @default(1)
+  maxPageReached   Int      @default(1)
+  completed        Boolean  @default(false)
+  bookmarkedPage   Int?
+  favorite         Boolean  @default(false)
+  foundHotspots    Json     @default("[]")
+  unlockedSecrets  Json     @default("[]")
+  collectedCovers  Json     @default("[\"standard\"]")
+  voteChoiceId     String?
+  lastReadAt       DateTime?
+  completedAt      DateTime?
+  updatedAt        DateTime @updatedAt
+  issue            ComicIssueRow @relation(fields: [issueId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, issueId])
+  @@index([userId, lastReadAt])
+  @@map("comic_reading_progress")
+}

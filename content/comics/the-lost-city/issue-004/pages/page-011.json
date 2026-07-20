@@ -1,0 +1,119 @@
+{
+  "pageNumber": 11,
+  "storyPageNumber": 7,
+  "bookRole": "story",
+  "title": "Wisplet Opens the Past",
+  "storyPurpose": "Wisplet spectral; memory silhouettes of ancient citizens.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Wisplet phases spectral cyan; translucent memory-silhouettes of ancient citizens walk through the same street as the living team — beautiful and tragic double-exposure composition.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The street remembers footsteps the stone forgot to keep.",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 60,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*soft chime*",
+          "x": 30,
+          "y": 50,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Wisplet",
+          "readOrder": 1
+        },
+        {
+          "kind": "speech",
+          "text": "Don't chase them. Let them pass.",
+          "x": 70,
+          "y": 78,
+          "tail": "up",
+          "maxWidthPct": 36,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p7a",
+      "kind": "creature",
+      "text": "*soft chime*",
+      "x": 30,
+      "y": 50,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Wisplet",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p7a",
+      "kind": "speech",
+      "text": "Don't chase them. Let them pass.",
+      "x": 70,
+      "y": 78,
+      "tail": "up",
+      "maxWidthPct": 36,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p7a",
+      "kind": "narration",
+      "text": "The street remembers footsteps the stone forgot to keep.",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 60,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "wisplet",
+    "spark",
+    "bramblefox"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "memoryEchoes": true,
+    "wisplet": "spectral"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 7/25 — Wisplet Opens the Past. Story purpose: Wisplet spectral; memory silhouettes of ancient citizens. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p7a): Wisplet phases spectral cyan; translucent memory-silhouettes of ancient citizens walk through the same street as the living team — beautiful and tragic double-exposure composition. Characters: mira-eggwarden. Creatures: wisplet, spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: spectral cyan over dusk stone. Continuity: {\"memoryEchoes\": true, \"wisplet\": \"spectral\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "War preparation memory.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Wisplet Opens the Past — The Lost City page 7",
+  "atmosphere": "dusk",
+  "transcript": [
+    "NARRATION: The street remembers footsteps the stone forgot to keep.",
+    "CREATURE (Wisplet): *soft chime*",
+    "SPEECH (Mira Eggwarden): Don't chase them. Let them pass."
+  ],
+  "id": "the-lost-city-issue-004-p011",
+  "cleanArtRel": "generated/raw-art/page-011.webp",
+  "letteredArtRel": "generated/lettered-pages/page-011.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-011.webp"
+}

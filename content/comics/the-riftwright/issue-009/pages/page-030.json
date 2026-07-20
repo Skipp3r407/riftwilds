@@ -1,0 +1,111 @@
+{
+  "pageNumber": 30,
+  "storyPageNumber": null,
+  "bookRole": "profile",
+  "title": "Character Profiles",
+  "storyPurpose": "Profiles: Mira, Elyan, Seris Ascendant, Cael, Nira, Aurelia.",
+  "layout": {
+    "type": "lore",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "pr1",
+      "description": "Character profile plate: portrait row of Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure, Ascendant Seris Vale: Meridian commander evolving into Ascendant Commander — sharp features, storm-dark field coat with three-arc sigil overgrown by ascending crystal armor plates and reactor filaments, Lost City Rift component embedded at collar, Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished, Nira Quill: allied hunter (cleared false lead in Issue #7), lean, weather cloak, quill-knife kit, hard-earned trust, Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye — uneasy ally; distant kin surname to Elyan, shocked recognition optional — empty text bands.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "MIRA EGGWARDEN — Keeper",
+          "x": 25,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 28,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "ELYAN VOSS — Riftwright",
+          "x": 75,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 28,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "SERIS VALE — Ascendant",
+          "x": 25,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 28,
+          "readOrder": 2
+        },
+        {
+          "kind": "caption",
+          "text": "CAEL · NIRA · AURELIA",
+          "x": 75,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 30,
+          "readOrder": 3
+        },
+        {
+          "kind": "narration",
+          "text": "Tragedy is not the same as villainy.",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "elyan-voss",
+    "seris-vale",
+    "cael-vesper",
+    "nira-quill",
+    "aurelia-voss"
+  ],
+  "creatures": [],
+  "locations": [
+    "Profile atelier"
+  ],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Deep forge bronze, cooling-lake teal, starlit indigo night, amber Compact lanterns, cyan-gold Resonance — purple only as controlled Forge reactor accent, never neon AI default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Riftwright\" Issue #9 Volume One Finale, Character Profiles. Story purpose: Profiles: Mira, Elyan, Seris Ascendant, Cael, Nira, Aurelia. Layout: lore. 1 panels with clear inked gutters. Panel 1 (pr1): Character profile plate: portrait row of Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes, Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure, Ascendant Seris Vale: Meridian commander evolving into Ascendant Commander — sharp features, storm-dark field coat with three-arc sigil overgrown by ascending crystal armor plates and reactor filaments, Lost City Rift component embedded at collar, Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; supervised ally — trust unfinished, Nira Quill: allied hunter (cleared false lead in Issue #7), lean, weather cloak, quill-knife kit, hard-earned trust, Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye — uneasy ally; distant kin surname to Elyan, shocked recognition optional — empty text bands. Characters: mira-eggwarden, elyan-voss, seris-vale, cael-vesper, nira-quill, aurelia-voss. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova the Prime Companion hatchling: soft starlit cream-and-indigo fur, twin-key constellation markings that mirror Spark's cyan-gold pattern inverted, luminous violet-amber eyes, crystalline mane filaments, glowing comet-tip tail; newborn Prime Companion of the Nova bloodline — original Riftwilds design, not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Riftwright lock: Professor Elyan Voss the Riftwright: late-50s scholar-engineer, pale weathered skin, silver-streaked dark hair tied back, forge-stained scholar coat over resonance apron, cracked monocle lens with cyan filament, tired tragic eyes — not a cartoon villain; dignity and grief in equal measure. Environment: Profile atelier. Atmosphere: dusk. Continuity: {}. Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Character Profiles — The Riftwright page 30",
+  "atmosphere": "dusk",
+  "transcript": [
+    "CAPTION: MIRA EGGWARDEN — Keeper",
+    "CAPTION: ELYAN VOSS — Riftwright",
+    "CAPTION: SERIS VALE — Ascendant",
+    "CAPTION: CAEL · NIRA · AURELIA",
+    "NARRATION: Tragedy is not the same as villainy."
+  ],
+  "a11yTranscript": [
+    "CAPTION: MIRA EGGWARDEN — Keeper",
+    "CAPTION: ELYAN VOSS — Riftwright",
+    "CAPTION: SERIS VALE — Ascendant",
+    "CAPTION: CAEL · NIRA · AURELIA",
+    "NARRATION: Tragedy is not the same as villainy."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-riftwright-issue-009-p030",
+  "cleanArtRel": "generated/raw-art/page-030.webp",
+  "letteredArtRel": "generated/lettered-pages/page-030.webp",
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-030.webp"
+}

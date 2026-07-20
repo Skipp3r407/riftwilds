@@ -64,21 +64,24 @@ const ELEMENT_LABEL = {
   neutral: "SPIRIT",
 };
 
-/** Region map / wallpaper plates keyed by element + regionId. */
+/**
+ * Scenic plates keyed by regionId.
+ * Prefer Codex habitat webps (same plates as Riftling Codex); map PNGs as fallback.
+ */
 const REGION_PLATES = {
-  "ember-crater": "public/assets/maps/regions/ember-crater.png",
-  "moonwater-coast": "public/assets/maps/regions/moonwater-coast.png",
-  "elderwood-forest": "public/assets/maps/regions/elderwood-forest.png",
-  "stormspire-peaks": "public/assets/maps/regions/stormspire-peaks.png",
-  "stoneheart-canyon": "public/assets/maps/regions/stoneheart-canyon.png",
-  "frostveil-basin": "public/assets/maps/regions/frostveil-basin.png",
-  "radiant-citadel": "public/assets/maps/regions/radiant-citadel.png",
-  "void-hollow": "public/assets/maps/regions/void-hollow.png",
-  "alloy-ruins": "public/assets/maps/regions/alloy-ruins.png",
-  "spirit-marsh": "public/assets/maps/regions/spirit-marsh.png",
-  "spirit-realm": "public/assets/wallpapers/cosmic-aurora.png",
-  "celestial-rift": "public/assets/maps/regions/celestial-rift.png",
-  "riftwild-commons": "public/assets/maps/regions/riftwild-commons.png",
+  "ember-crater": "public/assets/habitats/ember-crater.webp",
+  "moonwater-coast": "public/assets/habitats/moonwater-coast.webp",
+  "elderwood-forest": "public/assets/habitats/elderwood-forest.webp",
+  "stormspire-peaks": "public/assets/habitats/stormspire-peaks.webp",
+  "stoneheart-canyon": "public/assets/habitats/stoneheart-canyon.webp",
+  "frostveil-basin": "public/assets/habitats/frostveil-basin.webp",
+  "radiant-citadel": "public/assets/habitats/radiant-citadel.webp",
+  "void-hollow": "public/assets/habitats/void-hollow.webp",
+  "alloy-ruins": "public/assets/habitats/alloy-ruins.webp",
+  "spirit-marsh": "public/assets/habitats/spirit-marsh.webp",
+  "spirit-realm": "public/assets/habitats/spirit-marsh.webp",
+  "celestial-rift": "public/assets/habitats/celestial-rift.webp",
+  "riftwild-commons": "public/assets/habitats/riftwild-commons.webp",
 };
 
 /** Living-world building tiles + tiny library NPC pawns — never use as card face art. */

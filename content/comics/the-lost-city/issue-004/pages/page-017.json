@@ -1,0 +1,170 @@
+{
+  "pageNumber": 17,
+  "storyPageNumber": 13,
+  "bookRole": "story",
+  "title": "Stolen Seals",
+  "storyPurpose": "Meridian agents enter central core with command seals; Seris restores power.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p13a",
+      "description": "Elsewhere: Veiled Meridian agents in dark travel cloaks with three-arc sigils enter city core via sealed service gate.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "text": "Seal accepted. Quiet feet.",
+          "x": 50,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Meridian Agent",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "seal-click",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p13b",
+      "description": "Seris Vale (senior Meridian commander): calm, sharp, holding partial ancient command seals to a cyan console.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Control is not cruelty. Another Tear will not wait for kindness.",
+          "x": 50,
+          "y": 25,
+          "tail": "down",
+          "maxWidthPct": 48,
+          "speaker": "Seris Vale",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p13c",
+      "description": "City core engines begin lighting — teal veins racing through pale stone streets above.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "ENGINE-WAKE",
+          "x": 50,
+          "y": 45,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        },
+        {
+          "kind": "caption",
+          "text": "CORE POWER: PARTIAL",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p13a",
+      "kind": "whisper",
+      "text": "Seal accepted. Quiet feet.",
+      "x": 50,
+      "y": 20,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Meridian Agent",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p13b",
+      "kind": "speech",
+      "text": "Control is not cruelty. Another Tear will not wait for kindness.",
+      "x": 50,
+      "y": 25,
+      "tail": "down",
+      "maxWidthPct": 48,
+      "speaker": "Seris Vale",
+      "readOrder": 2
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p13c",
+      "kind": "caption",
+      "text": "CORE POWER: PARTIAL",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p13a",
+      "kind": "sfx",
+      "text": "seal-click",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "p13c",
+      "kind": "sfx",
+      "text": "ENGINE-WAKE",
+      "x": 50,
+      "y": 45,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "seris-vale"
+  ],
+  "creatures": [],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [
+    "ancient-command-seal"
+  ],
+  "continuity": {
+    "meridian": "core infiltration",
+    "seris": "restoring power"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 13/25 — Stolen Seals. Story purpose: Meridian agents enter central core with command seals; Seris restores power. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p13a): Elsewhere: Veiled Meridian agents in dark travel cloaks with three-arc sigils enter city core via sealed service gate. Panel 2 (p13b): Seris Vale (senior Meridian commander): calm, sharp, holding partial ancient command seals to a cyan console. Panel 3 (p13c): City core engines begin lighting — teal veins racing through pale stone streets above. Characters: seris-vale. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale city core. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"meridian\": \"core infiltration\", \"seris\": \"restoring power\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Guardian rises.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Stolen Seals — The Lost City page 13",
+  "atmosphere": "rift",
+  "transcript": [
+    "WHISPER (Meridian Agent): Seal accepted. Quiet feet.",
+    "SFX: seal-click",
+    "SPEECH (Seris Vale): Control is not cruelty. Another Tear will not wait for kindness.",
+    "SFX: ENGINE-WAKE",
+    "CAPTION: CORE POWER: PARTIAL"
+  ],
+  "id": "the-lost-city-issue-004-p017",
+  "cleanArtRel": "generated/raw-art/page-017.webp",
+  "letteredArtRel": "generated/lettered-pages/page-017.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-017.webp"
+}

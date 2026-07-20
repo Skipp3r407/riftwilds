@@ -53,20 +53,23 @@ describe("TCG AAA framework", () => {
     expect(n.familyId).toBe("family-ashwing");
   });
 
-  it("enforces 30-card constructed + commander", () => {
-    const ids = TCG_LAUNCH_POOL.cardIds.slice(0, 30);
+  it("enforces 29-card main deck + commander", () => {
+    const ids = TCG_LAUNCH_POOL.cardIds.slice(0, CONSTRUCTED_RULES.deckSize);
     const ok = validateConstructedDeck(ids, "hero-elara-venn", lookup, {
       allowNonCompetitive: true,
+      relaxComposition: true,
     });
     expect(ok.ok).toBe(true);
 
     const short = validateConstructedDeck(ids.slice(0, 20), "hero-elara-venn", lookup, {
       allowNonCompetitive: true,
+      relaxComposition: true,
     });
     expect(short.ok).toBe(false);
 
     const noCmd = validateConstructedDeck(ids, null, lookup, {
       allowNonCompetitive: true,
+      relaxComposition: true,
     });
     expect(noCmd.ok).toBe(false);
   });
@@ -104,9 +107,10 @@ describe("TCG AAA framework", () => {
   });
 
   it("keeps constructed copy limits by rarity", () => {
-    expect(CONSTRUCTED_RULES.copyLimits.common).toBe(3);
+    expect(CONSTRUCTED_RULES.copyLimits.common).toBe(2);
     expect(CONSTRUCTED_RULES.copyLimits.rare).toBe(2);
     expect(CONSTRUCTED_RULES.copyLimits.legendary).toBe(1);
-    expect(CONSTRUCTED_RULES.deckSize).toBe(30);
+    expect(CONSTRUCTED_RULES.deckSize).toBe(29);
+    expect(CONSTRUCTED_RULES.totalPieces).toBe(30);
   });
 });

@@ -1,0 +1,122 @@
+{
+  "pageNumber": 11,
+  "bookRole": "story",
+  "title": "Leaving the Hearth",
+  "storyPurpose": "Quiet travel departure; Spark learns the group's rhythm.",
+  "layout": {
+    "type": "wide",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p7a",
+      "description": "Quiet travel page: path out of Riftwild Commons. Mira leads; Bramblefox paces left of Spark (carried in soft wrap against Mira's satchel); Mossprig right; Thornling on Mossprig's shoulder; Wisplet above. Soft morning light.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The road teaches tempo before it teaches danger.",
+          "x": 50,
+          "y": 10,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 60
+        },
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*…chir?*",
+          "x": 48,
+          "y": 45,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "That's Bramblefox. Scout. That's Mossprig. Wall. Thornling… chaos with thorns.",
+          "x": 55,
+          "y": 78,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 45
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p7a",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*…chir?*",
+      "x": 48,
+      "y": 45,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p7a",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "That's Bramblefox. Scout. That's Mossprig. Wall. Thornling… chaos with thorns.",
+      "x": 55,
+      "y": 78,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 45
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p7a",
+      "kind": "narration",
+      "text": "The road teaches tempo before it teaches danger.",
+      "x": 50,
+      "y": 10,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 60
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig",
+    "thornling",
+    "wisplet"
+  ],
+  "continuity": {
+    "spark": {
+      "emotion": "listening",
+      "glow": "low steady",
+      "position": "in wrap against Mira"
+    },
+    "location": "road out of Commons",
+    "hunterPositions": "trailing beyond sight"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 7/25 — Leaving the Hearth. Story purpose: Quiet travel departure; Spark learns the group's rhythm. Layout: wide. 1 panels with clear inked gutters. Panel 1 (p7a): Quiet travel page: path out of Riftwild Commons. Mira leads; Bramblefox paces left of Spark (carried in soft wrap against Mira's satchel); Mossprig right; Thornling on Mossprig's shoulder; Wisplet above. Soft morning light. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Commons outbound trail. Time: late morning. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"listening\",\"glow\":\"low steady\",\"position\":\"in wrap against Mira\"},\"location\":\"road out of Commons\",\"hunterPositions\":\"trailing beyond sight\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Warm bonding beat.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Leaving the Hearth — Spark's Journey page 7",
+  "atmosphere": "dawn",
+  "transcript": [
+    "NARRATION: The road teaches tempo before it teaches danger.",
+    "CREATURE (Spark): *…chir?*",
+    "SPEECH (Mira Eggwarden): That's Bramblefox. Scout. That's Mossprig. Wall. Thornling… chaos with thorns."
+  ],
+  "storyPageNumber": 7,
+  "id": "sparks-journey-issue-002-p011",
+  "cleanArtRel": "generated/raw-art/page-011.png",
+  "letteredArtRel": "generated/lettered-pages/page-011.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-011.webp"
+}

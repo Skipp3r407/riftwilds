@@ -44,8 +44,8 @@ export const WALLPAPERS = {
   pets: "/assets/ui/wallpapers/pets.png",
   docs: "/assets/ui/wallpapers/docs.png",
   battle: "/assets/ui/wallpapers/battle.png",
-  /** Practice Board — subterranean hex-grid arena cavern */
-  "tcg-battle": "/assets/ui/wallpapers/tcg-battle.png?v=practiceboard2",
+  /** Practice Board — painted rift cavern arena (no hex grid) */
+  "tcg-battle": "/assets/ui/wallpapers/tcg-battle.png?v=practiceboard3",
   memorials: "/assets/ui/wallpapers/memorials.png",
   about: "/assets/about/about-hero-rift.png",
   /** Parents & Kids — magical archive / parchment hall */
@@ -109,10 +109,10 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/patch-notes", name: "docs", opacity: 0.38 },
   { prefix: "/updates", name: "docs", opacity: 0.38 },
   { prefix: "/battle", name: "battle", opacity: 0.4 },
-  /** Practice Board — cavern art stays visible under HUD glass */
-  { prefix: "/tcg/battle", name: "tcg-battle", opacity: 0.58 },
+  /** Practice Board — painted cavern stays visible under HUD glass */
+  { prefix: "/tcg/battle", name: "tcg-battle", opacity: 0.64 },
   { prefix: "/tcg/collection", name: "collection", opacity: 0.48 },
-  { prefix: "/tcg", name: "tcg-battle", opacity: 0.48 },
+  { prefix: "/tcg", name: "tcg-battle", opacity: 0.52 },
   { prefix: "/memorials", name: "memorials", opacity: 0.4 },
   { prefix: "/legal", name: "docs", opacity: 0.35 },
   { prefix: "/about", name: "about", opacity: 0.28 },
@@ -226,9 +226,9 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
         </>
       ) : battleHall ? (
         <>
-          {/* Practice cavern — hold cyan grid glow; keep mid-board dark for HUD */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.36)] via-[rgba(7,11,22,0.1)] to-[rgba(6,8,14,0.52)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_42%,transparent_0%,rgba(7,11,22,0.14)_55%,rgba(7,11,22,0.42)_100%),radial-gradient(ellipse_at_20%_80%,rgba(120,70,180,0.08)_0%,transparent_40%),radial-gradient(ellipse_at_85%_30%,rgba(255,184,77,0.07)_0%,transparent_38%)]" />
+          {/* Practice cavern — soft crystal/lantern wash; mid-board dark for HUD */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.3)] via-[rgba(7,11,22,0.06)] to-[rgba(6,8,14,0.48)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_42%,transparent_0%,rgba(7,11,22,0.12)_58%,rgba(7,11,22,0.38)_100%),radial-gradient(ellipse_at_18%_70%,rgba(61,231,255,0.07)_0%,transparent_42%),radial-gradient(ellipse_at_82%_55%,rgba(255,184,77,0.08)_0%,transparent_40%)]" />
         </>
       ) : kidsHall ? (
         <>

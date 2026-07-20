@@ -1,0 +1,133 @@
+{
+  "pageNumber": 29,
+  "bookRole": "story",
+  "title": "The Guardian Remembers",
+  "storyPurpose": "Lost City night cliffhanger; towers light; shadow; NEXT THE LOST CITY.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p25a",
+      "description": "Cliffhanger splash: Lost City at night — ancient layered towers lighting one by one cyan-amber; massive shadow beneath ruins; small Mira/Spark silhouette on ridge optional.",
+      "bubbles": [
+        {
+          "kind": "telepathy",
+          "speaker": "Beneath the Ruins",
+          "text": "The Guardian remembers.",
+          "x": 50,
+          "y": 28,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 50
+        },
+        {
+          "kind": "sfx",
+          "text": "TOWER-LIGHT… TOWER-LIGHT…",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "caption",
+          "text": "TO BE CONTINUED",
+          "x": 50,
+          "y": 72,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 45
+        },
+        {
+          "kind": "caption",
+          "text": "NEXT: THE LOST CITY",
+          "x": 50,
+          "y": 84,
+          "tail": null,
+          "readOrder": 3,
+          "maxWidthPct": 50
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p25a",
+      "kind": "telepathy",
+      "speaker": "Beneath the Ruins",
+      "text": "The Guardian remembers.",
+      "x": 50,
+      "y": 28,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 50
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "TO BE CONTINUED",
+      "x": 50,
+      "y": 72,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 45
+    },
+    {
+      "panelId": "p25a",
+      "kind": "caption",
+      "text": "NEXT: THE LOST CITY",
+      "x": 50,
+      "y": 84,
+      "tail": null,
+      "readOrder": 3,
+      "maxWidthPct": 50
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p25a",
+      "kind": "sfx",
+      "text": "TOWER-LIGHT… TOWER-LIGHT…",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "continuity": {
+    "cliffhanger": "guardian-remembers",
+    "nextIssue": "the-lost-city",
+    "spark": {
+      "bond": "voluntary-with-mira"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 25/25 — The Guardian Remembers. Story purpose: Lost City night cliffhanger; towers light; shadow; NEXT THE LOST CITY. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Cliffhanger splash: Lost City at night — ancient layered towers lighting one by one cyan-amber; massive shadow beneath ruins; small Mira/Spark silhouette on ridge optional. Characters: mira-eggwarden. Creatures: . Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: night city awakening. Continuity: {\"cliffhanger\":\"guardian-remembers\",\"nextIssue\":\"the-lost-city\",\"spark\":{\"bond\":\"voluntary-with-mira\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "End Issue #3.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Guardian Remembers — The Traveling Circus page 25",
+  "atmosphere": "rift",
+  "transcript": [
+    "TELEPATHY (Beneath the Ruins): The Guardian remembers.",
+    "SFX: TOWER-LIGHT… TOWER-LIGHT…",
+    "CAPTION: TO BE CONTINUED",
+    "CAPTION: NEXT: THE LOST CITY"
+  ],
+  "storyPageNumber": 25,
+  "id": "the-traveling-circus-issue-003-p029",
+  "cleanArtRel": "generated/raw-art/page-029.png",
+  "letteredArtRel": "generated/lettered-pages/page-029.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-029.webp"
+}

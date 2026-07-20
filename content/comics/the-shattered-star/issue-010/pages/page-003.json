@@ -1,0 +1,129 @@
+{
+  "pageNumber": 3,
+  "storyPageNumber": null,
+  "bookRole": "credits",
+  "title": "Credits",
+  "storyPurpose": "Credits",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "credits",
+      "description": "Elegant credit plate — white crystal and gold frame, empty columns for lettering.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "RIFTWILDS COMIC PUBLISHING",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        },
+        {
+          "kind": "caption",
+          "text": "THE SHATTERED STAR · ISSUE #10",
+          "x": 50,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "narration",
+          "text": "Story free to read. Credits & cosmetics never gate the Compact.",
+          "x": 50,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        },
+        {
+          "kind": "caption",
+          "text": "KEEPER POV: MIRA EGGWARDEN",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 45,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "credits",
+      "kind": "caption",
+      "text": "RIFTWILDS COMIC PUBLISHING",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    },
+    {
+      "panelId": "credits",
+      "kind": "caption",
+      "text": "THE SHATTERED STAR · ISSUE #10",
+      "x": 50,
+      "y": 35,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    },
+    {
+      "panelId": "credits",
+      "kind": "narration",
+      "text": "Story free to read. Credits & cosmetics never gate the Compact.",
+      "x": 50,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    },
+    {
+      "panelId": "credits",
+      "kind": "caption",
+      "text": "KEEPER POV: MIRA EGGWARDEN",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "maxWidthPct": 45,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book credits page for The Shattered Star Issue #10 Volume Two — Credits. Elegant credit plate — white crystal and gold frame, empty columns for lettering. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Lyra: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Continue.",
+  "letteringInstructions": "Matter lettering; clear hierarchy.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Credits",
+  "atmosphere": "celestial",
+  "transcript": [
+    "CAPTION: RIFTWILDS COMIC PUBLISHING",
+    "CAPTION: THE SHATTERED STAR · ISSUE #10",
+    "NARRATION: Story free to read. Credits & cosmetics never gate the Compact.",
+    "CAPTION: KEEPER POV: MIRA EGGWARDEN"
+  ],
+  "a11yTranscript": [
+    "CAPTION: RIFTWILDS COMIC PUBLISHING",
+    "CAPTION: THE SHATTERED STAR · ISSUE #10",
+    "NARRATION: Story free to read. Credits & cosmetics never gate the Compact.",
+    "CAPTION: KEEPER POV: MIRA EGGWARDEN"
+  ],
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-003.webp",
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "id": "the-shattered-star-issue-010-p003"
+}

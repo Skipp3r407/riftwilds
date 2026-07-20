@@ -61,5 +61,8 @@ export const economyDefaults = {
 export const authDefaults = {
   NONCE_TTL_SECONDS: 300,
   SESSION_TTL_SECONDS: 60 * 60 * 24 * 7,
+  /** Remember-me extends to 30 days when selected. */
+  SESSION_TTL_REMEMBER_SECONDS: 60 * 60 * 24 * 30,
   COOKIE_NAME: "ph_session",
+  REFRESH_COOKIE_NAME: "ph_refresh",
 } as const;

@@ -1,0 +1,14 @@
+{
+  "star-engine": {
+    "name": "Star Engine",
+    "function": "Moves/orients the Shattered Star; twin Resonance Keys (Spark + Nova)"
+  },
+  "star-gate": {
+    "name": "Star Gate",
+    "function": "Guardian City ascent tether to orbit"
+  },
+  "forge-network-link": {
+    "name": "Forge Network Link",
+    "function": "Ground half of civilization; incomplete without Star"
+  }
+}

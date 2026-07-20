@@ -1,0 +1,156 @@
+{
+  "pageNumber": 8,
+  "bookRole": "story",
+  "title": "Wonder Market",
+  "storyPurpose": "Warm montage: food, care tents, card booths, games, merchants, kids meeting companions.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p4a",
+      "description": "Food stalls with steam and ember-gold banners; kids laughing.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "sizzle!",
+          "x": 40,
+          "y": 50,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p4b",
+      "description": "Creature care tent: gentle healers checking companion paws; Mossprig soft curiosity.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Mossprig",
+          "text": "*soft rustle*",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p4c",
+      "description": "Card-trading booth with theatrical ability demo props (not gambling); Spark watches.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CARD BOOTHS · CHEERS ONLY",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 45
+        }
+      ]
+    },
+    {
+      "id": "p4d",
+      "description": "Games and merchants; Spirit Moth drifts toward a lantern signal in distance.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "speaker": "Spirit Moth",
+          "text": "*signal-flicker*",
+          "x": 70,
+          "y": 30,
+          "tail": "down",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p4b",
+      "kind": "creature",
+      "speaker": "Mossprig",
+      "text": "*soft rustle*",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p4d",
+      "kind": "creature",
+      "speaker": "Spirit Moth",
+      "text": "*signal-flicker*",
+      "x": 70,
+      "y": 30,
+      "tail": "down",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p4c",
+      "kind": "caption",
+      "text": "CARD BOOTHS · CHEERS ONLY",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 45
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p4a",
+      "kind": "sfx",
+      "text": "sizzle!",
+      "x": 40,
+      "y": 50,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "mossprig",
+    "spark",
+    "spirit-moth"
+  ],
+  "continuity": {
+    "mood": "warm-joyful",
+    "spiritMoth": {
+      "tracking": "lantern-signal"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 4/25 — Wonder Market. Story purpose: Warm montage: food, care tents, card booths, games, merchants, kids meeting companions. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p4a): Food stalls with steam and ember-gold banners; kids laughing. Panel 2 (p4b): Creature care tent: gentle healers checking companion paws; Mossprig soft curiosity. Panel 3 (p4c): Card-trading booth with theatrical ability demo props (not gambling); Spark watches. Panel 4 (p4d): Games and merchants; Spirit Moth drifts toward a lantern signal in distance. Characters: mira-eggwarden. Creatures: mossprig, spark, spirit-moth. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"mood\":\"warm-joyful\",\"spiritMoth\":{\"tracking\":\"lantern-signal\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Comic food incident.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Wonder Market — The Traveling Circus page 4",
+  "atmosphere": "festival",
+  "transcript": [
+    "SFX: sizzle!",
+    "CREATURE (Mossprig): *soft rustle*",
+    "CAPTION: CARD BOOTHS · CHEERS ONLY",
+    "CREATURE (Spirit Moth): *signal-flicker*"
+  ],
+  "storyPageNumber": 4,
+  "id": "the-traveling-circus-issue-003-p008",
+  "cleanArtRel": "generated/raw-art/page-008.png",
+  "letteredArtRel": "generated/lettered-pages/page-008.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-008.webp"
+}

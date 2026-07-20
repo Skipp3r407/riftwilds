@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { withApiGuard, jsonOk } from "@/lib/security/api-guard";
-import { featureFlagDefaults } from "@/lib/config/feature-flags";
+import {
+  featureFlagDefaults,
+  isLiveWorldEntryOpen,
+  isLiveWorldPublicAccess,
+} from "@/lib/config/feature-flags";
 import { CIVILIZATION_MILESTONES } from "@/game/civilization/milestones";
 import {
   activeWorldEffects,
@@ -24,7 +28,21 @@ export async function GET(request: Request) {
     return jsonOk({ enabled: false }, guard.requestId);
   }
 
+  // Public Coming Soon; local/dev preview (Dev Override) may still read progress.
+  if (!isLiveWorldEntryOpen()) {
+    return jsonOk(
+      {
+        enabled: false,
+        comingSoon: true,
+        disclaimer:
+          "World Restoration opens with Live World — Coming Soon. Cooperative entertainment with no cash value.",
+      },
+      guard.requestId,
+    );
+  }
+
   const progress = getCivilizationProgress();
+  const publicAccess = isLiveWorldPublicAccess();
   return jsonOk(
     {
       enabled: true,
@@ -36,8 +54,11 @@ export async function GET(request: Request) {
         unlocked: progress.unlockedMilestoneKeys.includes(m.key),
       })),
       activeEffects: activeWorldEffects(),
-      disclaimer:
-        "Civilization progress is cooperative entertainment content with no cash value.",
+      comingSoon: !publicAccess,
+      devAccess: !publicAccess,
+      disclaimer: publicAccess
+        ? "Civilization progress is cooperative entertainment content with no cash value."
+        : "COMING SOON · DEV ACCESS — local/dev preview only. Cooperative entertainment with no cash value.",
     },
     guard.requestId,
   );
@@ -56,6 +77,18 @@ export async function POST(request: Request) {
   if (!featureFlagDefaults.CIVILIZATION_RESTORATION_ENABLED) {
     return NextResponse.json(
       { ok: false, error: "disabled", requestId: guard.requestId },
+      { status: 403 },
+    );
+  }
+
+  // Soft-gate: public closed, but local/dev (Dev Override / NODE_ENV=development) may contribute.
+  if (!isLiveWorldEntryOpen()) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "coming_soon",
+        requestId: guard.requestId,
+      },
       { status: 403 },
     );
   }

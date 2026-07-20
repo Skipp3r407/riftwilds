@@ -1,0 +1,143 @@
+{
+  "keeper": "Mira Eggwarden",
+  "elara": "vision-only",
+  "rejected": "Cal Reed",
+  "pages": [
+    {
+      "page": 5,
+      "location": "Second Forge threshold",
+      "fromIssue008": true,
+      "egg": "further-cracked",
+      "arkan": "sacrificed",
+      "axiom": "awakened",
+      "cael": "supervised-ally",
+      "bridge": "begin-the-second-creation"
+    },
+    {
+      "page": 6,
+      "riftwright": "silhouette-callback-issue-008",
+      "egg": "further-cracked-vibrating",
+      "lore": "protect-not-obey"
+    },
+    {
+      "page": 7,
+      "mystery": "history-manipulator-unnamed",
+      "egg": "warm"
+    },
+    {
+      "page": 8,
+      "riftwright": "named-elyan-voss",
+      "trust": "tentative"
+    },
+    {
+      "page": 9,
+      "arkan": "echo-present",
+      "egg": "cracking"
+    },
+    {
+      "page": 10,
+      "aurelia": "voss-kin-aware",
+      "mystery": "history-manipulator-unnamed"
+    },
+    {
+      "page": 11,
+      "novaLine": "revealed",
+      "egg": "ready-to-hatch"
+    },
+    {
+      "page": 12,
+      "egg": "hatching",
+      "compact": "consent"
+    },
+    {
+      "page": 13,
+      "egg": "hatched",
+      "nova": "alive",
+      "twinKey": "forming"
+    },
+    {
+      "page": 14,
+      "twinKey": "locked",
+      "seris": "ascending"
+    },
+    {
+      "page": 15,
+      "seris": "ascendant-commander"
+    },
+    {
+      "page": 16,
+      "battle": "begun",
+      "nova": "protected"
+    },
+    {
+      "page": 17,
+      "companions": "full-rally"
+    },
+    {
+      "page": 18,
+      "engines": "contested"
+    },
+    {
+      "page": 19,
+      "cael": "supervised-ally-not-retraitor",
+      "aurelia": "uneasy-ally",
+      "routes": "sealed"
+    },
+    {
+      "page": 20,
+      "battle": "peak-approach"
+    },
+    {
+      "page": 21,
+      "twinKey": "surging"
+    },
+    {
+      "page": 22,
+      "battle": "peak"
+    },
+    {
+      "page": 23,
+      "seris": "defeated-armor-cracked",
+      "battle": "turning"
+    },
+    {
+      "page": 24,
+      "engines": "stabilized",
+      "arkan": "echo-fades"
+    },
+    {
+      "page": 25,
+      "history": "forge-restored",
+      "mystery": "history-manipulator-unnamed"
+    },
+    {
+      "page": 26,
+      "seris": "contained",
+      "cael": "supervised"
+    },
+    {
+      "page": 27,
+      "elara": "vision-only",
+      "volumeOne": "closing"
+    },
+    {
+      "page": 28,
+      "volumeTwoTease": "shattered-star",
+      "mystery": "history-manipulator-unnamed"
+    },
+    {
+      "page": 29,
+      "volumeOne": "complete",
+      "volumeTwoTease": "the-shattered-star",
+      "mystery": "history-manipulator-unnamed",
+      "doNotStartVolumeTwoIssues": true
+    }
+  ],
+  "finale": {
+    "engines": "stabilized",
+    "nova": "hatched",
+    "seris": "contained",
+    "mysteryRetained": true,
+    "volumeTwo": "tease-only"
+  }
+}

@@ -12,7 +12,15 @@ import {
 } from "@/game/live-world/systems/emotes/emote-system";
 import { PING_TO_EMOTE } from "@/game/live-world/systems/emotes/pings";
 
-export type ChatChannel = "nearby" | "party" | "whisper" | "system" | "global";
+export type ChatChannel =
+  | "nearby"
+  | "guild"
+  | "party"
+  | "trade"
+  | "whisper"
+  | "system"
+  | "combat"
+  | "global";
 
 export type ChatMessage = {
   id: string;

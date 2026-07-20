@@ -3,11 +3,18 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  isLiveWorldEntryOpen,
+  isLiveWorldPublicAccess,
+  liveWorldAccessBadge,
+} from "@/lib/config/feature-flags";
 import { PageHeader, StatusChip } from "@/components/shared/page-header";
 import { GlobalActivityFeed } from "@/components/ecosystem/activity-feed";
 
 type CivPayload = {
   enabled?: boolean;
+  comingSoon?: boolean;
+  devAccess?: boolean;
   progressPercent?: number;
   progress?: {
     era: number | string;
@@ -29,6 +36,10 @@ type CivPayload = {
 };
 
 export default function WorldRestorationPage() {
+  const liveWorldOpen = isLiveWorldEntryOpen();
+  const liveWorldPublic = isLiveWorldPublicAccess();
+  const accessBadge = liveWorldAccessBadge();
+
   const [data, setData] = useState<CivPayload | null>(null);
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
@@ -43,10 +54,12 @@ export default function WorldRestorationPage() {
   };
 
   useEffect(() => {
+    if (!liveWorldOpen) return;
     refresh();
-  }, []);
+  }, [liveWorldOpen]);
 
   const contribute = async () => {
+    if (!liveWorldOpen) return;
     setBusy(true);
     try {
       await fetch("/api/civilization", {
@@ -62,6 +75,74 @@ export default function WorldRestorationPage() {
 
   const percent = data?.progressPercent ?? 0;
 
+  if (!liveWorldOpen) {
+    return (
+      <div className="space-y-6">
+        <PageHeader
+          kicker="Living world"
+          titleSlug="restoration"
+          title="World Restoration"
+          description={
+            <>
+              Collective civilization milestones that permanently reshape The Riftwilds — Keepers
+              donate Credits to restore settlements, lanterns, and landmarks. Opens with Live World.
+            </>
+          }
+          status="Coming Soon"
+          statusTone="warn"
+          actions={
+            <>
+              <Link href="/tcg/battle" className="btn-primary focus-ring text-sm">
+                Play Rift Battle
+              </Link>
+              <Link href="/live-world" className="btn-secondary focus-ring text-sm">
+                Live World — Coming Soon
+              </Link>
+              <Link href="/world" className="btn-secondary focus-ring text-sm">
+                World map
+              </Link>
+            </>
+          }
+        />
+
+        <section className="panel relative overflow-hidden p-8 md:p-10">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-[rgba(61,231,255,0.1)] blur-3xl"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-24 -left-10 h-48 w-48 rounded-full bg-[rgba(255,184,77,0.08)] blur-3xl"
+          />
+          <div className="relative mx-auto max-w-xl text-center">
+            <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-[var(--amber)]">
+              Coming in a future update
+            </p>
+            <h2 className="font-display mt-3 text-2xl text-white md:text-3xl">
+              Restore the Riftwilds together
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)] md:text-base">
+              World Restoration is the Live World community board: cooperative credit donations that
+              unlock settlement milestones (lanterns, plazas, forges) for everyone. Contribution and
+              live progress open when Live World launches — no public contribute actions until then.
+            </p>
+            <div className="mt-7 flex flex-wrap justify-center gap-3">
+              <Link href="/tcg/battle" className="btn-primary focus-ring">
+                Start a Rift Battle
+              </Link>
+              <Link href="/tcg/collection" className="btn-secondary focus-ring">
+                Open Card Binder
+              </Link>
+              <Link href="/ecosystem" className="btn-secondary focus-ring">
+                Ecosystem
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
       <PageHeader
@@ -69,15 +150,21 @@ export default function WorldRestorationPage() {
         titleSlug="restoration"
         title="World Restoration"
         description="Collective civilization milestones permanently reshape The Riftwilds. Cooperative entertainment — no cash value."
-        status={data?.enabled ? "Live progress" : "Paused"}
-        statusTone={data?.enabled ? "live" : "warn"}
+        status={
+          !liveWorldPublic
+            ? (accessBadge ?? "COMING SOON · DEV ACCESS")
+            : data?.enabled
+              ? "Live progress"
+              : "Paused"
+        }
+        statusTone={!liveWorldPublic ? "warn" : data?.enabled ? "live" : "warn"}
         actions={
           <>
             <Link href="/ecosystem" className="btn-secondary focus-ring text-sm">
               Ecosystem
             </Link>
             <Link href="/live-world" className="btn-primary focus-ring text-sm">
-              Enter Live World
+              {liveWorldOpen ? "Enter Live World" : "Live World — Coming Soon"}
             </Link>
           </>
         }

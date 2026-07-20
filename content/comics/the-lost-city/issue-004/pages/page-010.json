@@ -1,0 +1,152 @@
+{
+  "pageNumber": 10,
+  "storyPageNumber": 6,
+  "bookRole": "story",
+  "title": "Streets That Float",
+  "storyPurpose": "Transit through suspended streets; shelters, training grounds, sealed towers.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p6a",
+      "description": "Aerial transit corridor: suspended bridges, companion shelters with empty nest alcoves, training rings overgrown.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Training halls. Nest cradles. Stages without audiences.",
+          "x": 40,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Cael Vesper",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "rail-HUM",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p6b",
+      "description": "Sealed laboratory towers with gold-inlay wards; Spirit Moth drifts toward a signal; Spark presses to glass of empty sanctuary window.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*…empty…*",
+          "x": 35,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "Not empty. Waiting.",
+          "x": 65,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p6a",
+      "kind": "speech",
+      "text": "Training halls. Nest cradles. Stages without audiences.",
+      "x": 40,
+      "y": 20,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Cael Vesper",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p6b",
+      "kind": "creature",
+      "text": "*…empty…*",
+      "x": 35,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p6b",
+      "kind": "whisper",
+      "text": "Not empty. Waiting.",
+      "x": 65,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p6a",
+      "kind": "sfx",
+      "text": "rail-HUM",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "spirit-moth",
+    "wisplet",
+    "lumenhare"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "saw": [
+      "companion shelters",
+      "training grounds",
+      "sealed towers"
+    ]
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 6/25 — Streets That Float. Story purpose: Transit through suspended streets; shelters, training grounds, sealed towers. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p6a): Aerial transit corridor: suspended bridges, companion shelters with empty nest alcoves, training rings overgrown. Panel 2 (p6b): Sealed laboratory towers with gold-inlay wards; Spirit Moth drifts toward a signal; Spark presses to glass of empty sanctuary window. Characters: mira-eggwarden, cael-vesper. Creatures: spark, spirit-moth, wisplet, lumenhare. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"saw\": [\"companion shelters\", \"training grounds\", \"sealed towers\"]} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Memory echoes.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Streets That Float — The Lost City page 6",
+  "atmosphere": "ruin",
+  "transcript": [
+    "SPEECH (Cael Vesper): Training halls. Nest cradles. Stages without audiences.",
+    "SFX: rail-HUM",
+    "CREATURE (Spark): *…empty…*",
+    "WHISPER (Mira Eggwarden): Not empty. Waiting."
+  ],
+  "id": "the-lost-city-issue-004-p010",
+  "cleanArtRel": "generated/raw-art/page-010.webp",
+  "letteredArtRel": "generated/lettered-pages/page-010.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-010.webp"
+}

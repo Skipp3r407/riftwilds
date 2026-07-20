@@ -1,0 +1,147 @@
+{
+  "pageNumber": 14,
+  "bookRole": "story",
+  "title": "Fear Has a Finger",
+  "storyPurpose": "Travelers see Spark; one panics and blames Spark for Rift damage.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p10a",
+      "description": "Merchant caravan travelers freeze seeing Spark's glow; a child points in wonder.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Travel Kid",
+          "text": "It shines like a Gateway…",
+          "x": 40,
+          "y": 25,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Spark",
+          "text": "*chir?*",
+          "x": 60,
+          "y": 60,
+          "tail": "up",
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p10b",
+      "description": "Frightened adult traveler steps forward accusingly, gesturing at scarred trees and Spark.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "speaker": "Frightened Traveler",
+          "text": "That thing woke the tear! Look at our road!",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "readOrder": 2,
+          "maxWidthPct": 42
+        },
+        {
+          "kind": "speech",
+          "speaker": "Merchant",
+          "text": "Keep it away from the wagons!",
+          "x": 55,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p10a",
+      "kind": "speech",
+      "speaker": "Travel Kid",
+      "text": "It shines like a Gateway…",
+      "x": 40,
+      "y": 25,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p10a",
+      "kind": "creature",
+      "speaker": "Spark",
+      "text": "*chir?*",
+      "x": 60,
+      "y": 60,
+      "tail": "up",
+      "readOrder": 1,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p10b",
+      "kind": "shout",
+      "speaker": "Frightened Traveler",
+      "text": "That thing woke the tear! Look at our road!",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "readOrder": 2,
+      "maxWidthPct": 42
+    },
+    {
+      "panelId": "p10b",
+      "kind": "speech",
+      "speaker": "Merchant",
+      "text": "Keep it away from the wagons!",
+      "x": 55,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "frightened-traveler"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox"
+  ],
+  "continuity": {
+    "spark": {
+      "emotion": "hurt confusion",
+      "glow": "shrinking"
+    },
+    "social": "public fear"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 10/25 — Fear Has a Finger. Story purpose: Travelers see Spark; one panics and blames Spark for Rift damage. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p10a): Merchant caravan travelers freeze seeing Spark's glow; a child points in wonder. Panel 2 (p10b): Frightened adult traveler steps forward accusingly, gesturing at scarred trees and Spark. Characters: mira-eggwarden, frightened-traveler. Creatures: spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: scar wilds trail / caravan stop. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"hurt confusion\",\"glow\":\"shrinking\"},\"social\":\"public fear\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Mira defends Spark.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Fear Has a Finger — Spark's Journey page 10",
+  "atmosphere": "dawn",
+  "transcript": [
+    "SPEECH (Travel Kid): It shines like a Gateway…",
+    "CREATURE (Spark): *chir?*",
+    "SHOUT (Frightened Traveler): That thing woke the tear! Look at our road!",
+    "SPEECH (Merchant): Keep it away from the wagons!"
+  ],
+  "storyPageNumber": 10,
+  "id": "sparks-journey-issue-002-p014",
+  "cleanArtRel": "generated/raw-art/page-014.png",
+  "letteredArtRel": "generated/lettered-pages/page-014.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-014.webp"
+}

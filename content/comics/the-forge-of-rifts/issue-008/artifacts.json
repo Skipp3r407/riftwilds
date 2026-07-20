@@ -1,0 +1,44 @@
+{
+  "artifacts": [
+    {
+      "id": "dormant-riftborn-egg",
+      "name": "Dormant Riftborn Egg",
+      "status": "cracked further \u2014 with Mira/Spark"
+    },
+    {
+      "id": "artificial-rift-amplifier",
+      "name": "Artificial Rift Amplifier",
+      "status": "with Seris"
+    },
+    {
+      "id": "ancient-control-core",
+      "name": "Ancient Control Core",
+      "status": "with Seris"
+    },
+    {
+      "id": "forge-blueprints",
+      "name": "Forge Blueprints",
+      "status": "partially recovered; critical scroll stolen"
+    },
+    {
+      "id": "second-forge-blueprint",
+      "name": "Second Forge Blueprint",
+      "status": "stolen by Seris"
+    },
+    {
+      "id": "rift-engine-alpha",
+      "name": "Rift Engine Alpha",
+      "status": "vented/stabilized \u2014 primary site collapsing"
+    },
+    {
+      "id": "memory-crystal",
+      "name": "Memory Crystal",
+      "status": "viewed \u2014 saboteur identity withheld"
+    },
+    {
+      "id": "arkan-monocle",
+      "name": "Arkan's Monocle",
+      "status": "left behind after sacrifice"
+    }
+  ]
+}

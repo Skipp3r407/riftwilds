@@ -1,0 +1,38 @@
+{
+  "featured": [
+    {
+      "id": "spark",
+      "name": "Spark"
+    },
+    {
+      "id": "lumenhare",
+      "name": "Lumenhare",
+      "note": "See LUMENHARE_CANON_PROPOSAL.md"
+    },
+    {
+      "id": "bramblefox",
+      "name": "Bramblefox"
+    },
+    {
+      "id": "mossprig",
+      "name": "Mossprig"
+    },
+    {
+      "id": "thornling",
+      "name": "Thornling"
+    },
+    {
+      "id": "wisplet",
+      "name": "Wisplet"
+    },
+    {
+      "id": "spirit-moth",
+      "name": "Spirit Moth"
+    },
+    {
+      "id": "ironmantle",
+      "name": "Ironmantle",
+      "note": "Controlled then freed"
+    }
+  ]
+}

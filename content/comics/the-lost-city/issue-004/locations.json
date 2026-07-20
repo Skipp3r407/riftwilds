@@ -1,0 +1,34 @@
+{
+  "locations": [
+    {
+      "id": "aureth-vale",
+      "name": "Aureth Vale",
+      "blurb": "Lost City \u2014 Fracture-layered Riftkeeper capital"
+    },
+    {
+      "id": "central-plaza",
+      "name": "Central Plaza",
+      "blurb": "Guardian rise site"
+    },
+    {
+      "id": "companion-sanctuary",
+      "name": "Companion Sanctuary",
+      "blurb": "Empty Resonance cradles"
+    },
+    {
+      "id": "city-core",
+      "name": "City Core",
+      "blurb": "Rift engine chamber"
+    },
+    {
+      "id": "memory-archive",
+      "name": "Memory Archive",
+      "blurb": "Network map chamber"
+    },
+    {
+      "id": "storm-kingdom",
+      "name": "Storm Kingdom",
+      "blurb": "Issue #5 teaser only"
+    }
+  ]
+}

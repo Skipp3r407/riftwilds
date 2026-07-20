@@ -1,0 +1,40 @@
+{
+  "location": "Gilded Crossroads",
+  "version": "issue-006",
+  "postedRules": [
+    "No weapons drawn in the central exchange",
+    "No unregistered spells",
+    "No touching sealed merchandise",
+    "No names without payment",
+    "Companion care stalls require Compact or rescue-charter stamps",
+    "Portal engine access — Merchant Circle only"
+  ],
+  "legalTrade": {
+    "allowed": [
+      "Cosmetics and Credits cosmetics stubs",
+      "Card trades and collectible plates",
+      "Potions, tools, and mundane goods",
+      "Registered Rift keys with provenance seals",
+      "Companion care services (grooming, healing, shelter)"
+    ],
+    "forbidden": [
+      "Sale of living companions as inventory SKUs",
+      "Forced bonds / restraint-field auctions of Riftborn",
+      "Counterfeit Compact seals",
+      "Meridian command-route sales without Circle audit"
+    ]
+  },
+  "ethics": {
+    "principle": "Living cores are not SKUs",
+    "rescueVsTrafficking": "Legitimate rescue shelters treat injuries and return freedom. Trafficking cages companions for buyers. The comic condemns trafficking; legal player marketplace cosmetics are not companion ownership.",
+    "playerFacing": "Website + game economy: cosmetics and Credits — never sell story consent or living companions for SOL."
+  },
+  "glossary": [
+    { "term": "Central Exchange", "blurb": "Weapons-sheathed trade floor." },
+    { "term": "Sealed Merchandise", "blurb": "Untouchable until bid closes — may hide contraband." },
+    { "term": "Rescue Charter", "blurb": "Legal stamp for companion shelters." },
+    { "term": "Holding Pen", "blurb": "Illegal — Compact violation." },
+    { "term": "Portal Engine", "blurb": "Relocates the entire bazaar along old Rift routes." },
+    { "term": "Riftwright", "blurb": "Title of the First Rift architect — identity sealed." }
+  ]
+}

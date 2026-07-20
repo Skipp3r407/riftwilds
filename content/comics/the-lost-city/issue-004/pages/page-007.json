@@ -1,0 +1,167 @@
+{
+  "pageNumber": 7,
+  "storyPageNumber": 3,
+  "bookRole": "story",
+  "title": "The Gate That Knew a Name",
+  "storyPurpose": "Main gate opens untouched; statues turn toward Spark; glowing eyes close-up.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p3a",
+      "description": "Massive ancient gate of pale stone and teal inlay opens without touch as Spark approaches; runes ignite cyan-gold.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "GRIND-AWAKEN",
+          "x": 50,
+          "y": 35,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Nobody touched it.",
+          "x": 30,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p3b",
+      "description": "Line of ancient Keeper statues slowly turn stone heads toward Spark; end on extreme close-up of one statue's glowing cyan eyes.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "The city does not ask names. It remembers them.",
+          "x": 50,
+          "y": 14,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        },
+        {
+          "kind": "creature",
+          "text": "*soft yip*",
+          "x": 40,
+          "y": 75,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 3
+        },
+        {
+          "kind": "sfx",
+          "text": "stone-turn…",
+          "x": 70,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p3a",
+      "kind": "speech",
+      "text": "Nobody touched it.",
+      "x": 30,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p3b",
+      "kind": "creature",
+      "text": "*soft yip*",
+      "x": 40,
+      "y": 75,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p3b",
+      "kind": "narration",
+      "text": "The city does not ask names. It remembers them.",
+      "x": 50,
+      "y": 14,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p3a",
+      "kind": "sfx",
+      "text": "GRIND-AWAKEN",
+      "x": 50,
+      "y": 35,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p3b",
+      "kind": "sfx",
+      "text": "stone-turn…",
+      "x": 70,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "bramblefox",
+    "mossprig"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "gate": "opened for Spark",
+    "statues": "tracking Spark"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 3/25 — The Gate That Knew a Name. Story purpose: Main gate opens untouched; statues turn toward Spark; glowing eyes close-up. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p3a): Massive ancient gate of pale stone and teal inlay opens without touch as Spark approaches; runes ignite cyan-gold. Panel 2 (p3b): Line of ancient Keeper statues slowly turn stone heads toward Spark; end on extreme close-up of one statue's glowing cyan eyes. Characters: mira-eggwarden, cael-vesper. Creatures: spark, bramblefox, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"gate\": \"opened for Spark\", \"statues\": \"tracking Spark\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Silent market.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Gate That Knew a Name — The Lost City page 3",
+  "atmosphere": "ruin",
+  "transcript": [
+    "SFX: GRIND-AWAKEN",
+    "SPEECH (Mira Eggwarden): Nobody touched it.",
+    "NARRATION: The city does not ask names. It remembers them.",
+    "CREATURE (Spark): *soft yip*",
+    "SFX: stone-turn…"
+  ],
+  "id": "the-lost-city-issue-004-p007",
+  "cleanArtRel": "generated/raw-art/page-007.webp",
+  "letteredArtRel": "generated/lettered-pages/page-007.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-007.webp"
+}

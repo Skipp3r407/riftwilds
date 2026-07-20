@@ -1,0 +1,80 @@
+{
+  "pageNumber": 2,
+  "storyPageNumber": null,
+  "bookRole": "inside-cover",
+  "title": "Inside Front Cover",
+  "storyPurpose": "Inside Front Cover",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "ifc",
+      "description": "Quiet lantern-parchment inside cover; nested lantern watermark.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Legends of the Rift · Volume One · Issue Three",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 55
+        },
+        {
+          "kind": "caption",
+          "text": "Previously: Spark's Journey",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "ifc",
+      "kind": "narration",
+      "text": "Legends of the Rift · Volume One · Issue Three",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 55
+    },
+    {
+      "panelId": "ifc",
+      "kind": "caption",
+      "text": "Previously: Spark's Journey",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for The Traveling Circus Issue #3 — Inside Front Cover. Quiet lantern-parchment inside cover; nested lantern watermark. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Inside Front Cover",
+  "atmosphere": "festival",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "NARRATION: Legends of the Rift · Volume One · Issue Three",
+    "CAPTION: Previously: Spark's Journey"
+  ],
+  "id": "the-traveling-circus-issue-003-p002",
+  "cleanArtRel": "generated/raw-art/page-002.png",
+  "letteredArtRel": "generated/lettered-pages/page-002.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-002.webp"
+}

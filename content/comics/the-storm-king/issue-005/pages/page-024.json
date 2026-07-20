@@ -1,0 +1,207 @@
+{
+  "pageNumber": 24,
+  "storyPageNumber": 20,
+  "bookRole": "story",
+  "title": "Memory of the First Wall",
+  "storyPurpose": "Spark resonance vision with Thundervane — original bond and centuries of strain.",
+  "layout": {
+    "type": "montage",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p20a",
+      "description": "Vision: young Vaelor and young Thundervane on peak raising first storm barrier together — hopeful, equal.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Once, the wall was a promise — not a prison.",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*joy-rumble*",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Young Thundervane",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p20b",
+      "description": "Montage strip: centuries of strain — storms held, armor added, king aging oddly, companion weakening.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Years became walls. Walls became hunger.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "time-HUM",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p20c",
+      "description": "Present vision-space: exhausted Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion forehead to forehead with Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot; silent plea — release, don't replace.",
+      "bubbles": [
+        {
+          "kind": "telepathy",
+          "text": "Do not become the next wall.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Thundervane",
+          "readOrder": 4
+        },
+        {
+          "kind": "creature",
+          "text": "*understand-glow*",
+          "x": 50,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p20a",
+      "kind": "creature",
+      "text": "*joy-rumble*",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Young Thundervane",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p20c",
+      "kind": "telepathy",
+      "text": "Do not become the next wall.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Thundervane",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p20c",
+      "kind": "creature",
+      "text": "*understand-glow*",
+      "x": 50,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 5
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p20a",
+      "kind": "narration",
+      "text": "Once, the wall was a promise — not a prison.",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 0
+    },
+    {
+      "panelId": "p20b",
+      "kind": "narration",
+      "text": "Years became walls. Walls became hunger.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p20b",
+      "kind": "sfx",
+      "text": "time-HUM",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "vaelor-tempest"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "bond-vision",
+    "truth": "forced-bond-strain"
+  },
+  "requiredMoments": [
+    20,
+    21
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 20/25 — Memory of the First Wall. Story purpose: Spark resonance vision with Thundervane — original bond and centuries of strain. Layout: montage. 3 panels with clear inked gutters. Panel 1 (p20a): Vision: young Vaelor and young Thundervane on peak raising first storm barrier together — hopeful, equal. Panel 2 (p20b): Montage strip: centuries of strain — storms held, armor added, king aging oddly, companion weakening. Panel 3 (p20c): Present vision-space: exhausted Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion forehead to forehead with Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot; silent plea — release, don't replace. Characters: vaelor-tempest. Creatures: spark, thundervane. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"bond-vision\", \"truth\": \"forced-bond-strain\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Truth to Mira.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Memory of the First Wall — The Storm King page 20",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Once, the wall was a promise — not a prison.",
+    "CREATURE (Young Thundervane): *joy-rumble*",
+    "NARRATION: Years became walls. Walls became hunger.",
+    "SFX: time-HUM",
+    "TELEPATHY (Thundervane): Do not become the next wall.",
+    "CREATURE (Spark): *understand-glow*"
+  ],
+  "a11yTranscript": [
+    "NARRATION: Once, the wall was a promise — not a prison.",
+    "CREATURE (Young Thundervane): *joy-rumble*",
+    "NARRATION: Years became walls. Walls became hunger.",
+    "SFX: time-HUM",
+    "TELEPATHY (Thundervane): Do not become the next wall.",
+    "CREATURE (Spark): *understand-glow*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p024",
+  "cleanArtRel": "generated/raw-art/page-024.webp",
+  "letteredArtRel": "generated/lettered-pages/page-024.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-024.webp"
+}

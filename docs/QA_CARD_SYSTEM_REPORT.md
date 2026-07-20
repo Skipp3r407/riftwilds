@@ -1,6 +1,6 @@
 # QA_CARD_SYSTEM_REPORT
 
-Generated: 2026-07-19T16:50:12.874Z  
+Generated: 2026-07-20T14:09:19.771Z  
 **Local only** — no commit/push/deploy.
 
 ## Simulation
@@ -11,10 +11,10 @@ Generated: 2026-07-19T16:50:12.874Z
 | Completed | 500 |
 | Still ACTIVE (turn cap / guard) | 0 |
 | Errors | 0 |
-| Player wins | 343 |
-| AI wins | 157 |
+| Player wins | 245 |
+| AI wins | 255 |
 | Draws | 0 |
-| Avg turns | 14.19 |
+| Avg turns | 13.55 |
 
 ## Coverage notes
 

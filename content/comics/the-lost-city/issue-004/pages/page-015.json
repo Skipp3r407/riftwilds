@@ -1,0 +1,177 @@
+{
+  "pageNumber": 15,
+  "storyPageNumber": 11,
+  "bookRole": "story",
+  "title": "Not a Tool",
+  "storyPurpose": "Spark fears purpose-as-ownership; Mira reassures; Cael silent.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p11a",
+      "description": "Spark's glow destabilizes — fear of being an engine part; Echoquill backs a step.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*distress pulse*",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "PULSE-STUTTER",
+          "x": 70,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p11b",
+      "description": "Mira kneels, open hands, eye-level with Spark — Compact posture.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "History can name a use. It doesn't own your choice.",
+          "x": 50,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p11c",
+      "description": "Cael stands half in shadow, mask tilted down — silent, guilty; Lumenhare presses his boot.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Some roads are lit by lanterns that refuse to name their fuel.",
+          "x": 50,
+          "y": 20,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 3
+        },
+        {
+          "kind": "creature",
+          "text": "*soft thump*",
+          "x": 65,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Lumenhare",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p11a",
+      "kind": "creature",
+      "text": "*distress pulse*",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p11b",
+      "kind": "speech",
+      "text": "History can name a use. It doesn't own your choice.",
+      "x": 50,
+      "y": 22,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p11c",
+      "kind": "creature",
+      "text": "*soft thump*",
+      "x": 65,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Lumenhare",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p11c",
+      "kind": "narration",
+      "text": "Some roads are lit by lanterns that refuse to name their fuel.",
+      "x": 50,
+      "y": 20,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 3
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p11a",
+      "kind": "sfx",
+      "text": "PULSE-STUTTER",
+      "x": 70,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "echoquill",
+    "lumenhare"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "spark": {
+      "emotion": "fear of tool-status"
+    },
+    "cael": "silent guilt"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 11/25 — Not a Tool. Story purpose: Spark fears purpose-as-ownership; Mira reassures; Cael silent. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p11a): Spark's glow destabilizes — fear of being an engine part; Echoquill backs a step. Panel 2 (p11b): Mira kneels, open hands, eye-level with Spark — Compact posture. Panel 3 (p11c): Cael stands half in shadow, mask tilted down — silent, guilty; Lumenhare presses his boot. Characters: mira-eggwarden, cael-vesper. Creatures: spark, echoquill, lumenhare. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"spark\": {\"emotion\": \"fear of tool-status\"}, \"cael\": \"silent guilt\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Confrontation.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Not a Tool — The Lost City page 11",
+  "atmosphere": "dusk",
+  "transcript": [
+    "CREATURE (Spark): *distress pulse*",
+    "SFX: PULSE-STUTTER",
+    "SPEECH (Mira Eggwarden): History can name a use. It doesn't own your choice.",
+    "NARRATION: Some roads are lit by lanterns that refuse to name their fuel.",
+    "CREATURE (Lumenhare): *soft thump*"
+  ],
+  "id": "the-lost-city-issue-004-p015",
+  "cleanArtRel": "generated/raw-art/page-015.webp",
+  "letteredArtRel": "generated/lettered-pages/page-015.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-015.webp"
+}

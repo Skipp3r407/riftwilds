@@ -1,0 +1,193 @@
+{
+  "pageNumber": 20,
+  "bookRole": "story",
+  "title": "Refuse the Cage",
+  "storyPurpose": "Lead hunter demands Spark; Mira refuses; Nira uncertain; battle starts.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p16a",
+      "description": "Vex extends binding collar relic toward Spark.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Vex Halden",
+          "text": "It belongs to the Meridian. Hand it over — alive.",
+          "x": 50,
+          "y": 25,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 45
+        }
+      ]
+    },
+    {
+      "id": "p16b",
+      "description": "Mira plants himself; companions brace.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Mira Eggwarden",
+          "text": "It belongs to its own becoming. Compact law. Back away.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "readOrder": 1,
+          "maxWidthPct": 45
+        },
+        {
+          "kind": "speech",
+          "speaker": "Nira Quill",
+          "text": "Vex— if the scan was wrong—",
+          "x": 40,
+          "y": 75,
+          "tail": "up",
+          "readOrder": 2,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p16c",
+      "description": "Battle ignites: hunter companions leap; Bramblefox meets them; rods crackle.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "WHUMP",
+          "x": 30,
+          "y": 40,
+          "tail": null,
+          "readOrder": 3,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "sfx",
+          "text": "SHIIING",
+          "x": 70,
+          "y": 50,
+          "tail": null,
+          "readOrder": 4,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "creature",
+          "speaker": "Bramblefox",
+          "text": "*snarl*",
+          "x": 45,
+          "y": 70,
+          "tail": "up",
+          "readOrder": 5,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p16a",
+      "kind": "speech",
+      "speaker": "Vex Halden",
+      "text": "It belongs to the Meridian. Hand it over — alive.",
+      "x": 50,
+      "y": 25,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 45
+    },
+    {
+      "panelId": "p16b",
+      "kind": "speech",
+      "speaker": "Mira Eggwarden",
+      "text": "It belongs to its own becoming. Compact law. Back away.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "readOrder": 1,
+      "maxWidthPct": 45
+    },
+    {
+      "panelId": "p16b",
+      "kind": "speech",
+      "speaker": "Nira Quill",
+      "text": "Vex— if the scan was wrong—",
+      "x": 40,
+      "y": 75,
+      "tail": "up",
+      "readOrder": 2,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p16c",
+      "kind": "creature",
+      "speaker": "Bramblefox",
+      "text": "*snarl*",
+      "x": 45,
+      "y": 70,
+      "tail": "up",
+      "readOrder": 5,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p16c",
+      "kind": "sfx",
+      "text": "WHUMP",
+      "x": 30,
+      "y": 40,
+      "tail": null,
+      "readOrder": 3,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "p16c",
+      "kind": "sfx",
+      "text": "SHIIING",
+      "x": 70,
+      "y": 50,
+      "tail": null,
+      "readOrder": 4,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [],
+  "continuity": {
+    "battle": "begun",
+    "spark": {
+      "emotion": "terrified center",
+      "glow": "erratic"
+    },
+    "nira": {
+      "doubt": true
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 16/25 — Refuse the Cage. Story purpose: Lead hunter demands Spark; Mira refuses; Nira uncertain; battle starts. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p16a): Vex extends binding collar relic toward Spark. Panel 2 (p16b): Mira plants himself; companions brace. Panel 3 (p16c): Battle ignites: hunter companions leap; Bramblefox meets them; rods crackle. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"battle\":\"begun\",\"spark\":{\"emotion\":\"terrified center\",\"glow\":\"erratic\"},\"nira\":{\"doubt\":true}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Binding shot / Mossprig.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "Refuse the Cage — Spark's Journey page 16",
+  "atmosphere": "night",
+  "transcript": [
+    "SPEECH (Vex Halden): It belongs to the Meridian. Hand it over — alive.",
+    "SPEECH (Mira Eggwarden): It belongs to its own becoming. Compact law. Back away.",
+    "SPEECH (Nira Quill): Vex— if the scan was wrong—",
+    "SFX: WHUMP",
+    "SFX: SHIIING",
+    "CREATURE (Bramblefox): *snarl*"
+  ],
+  "storyPageNumber": 16,
+  "id": "sparks-journey-issue-002-p020",
+  "cleanArtRel": "generated/raw-art/page-020.png",
+  "letteredArtRel": "generated/lettered-pages/page-020.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-020.webp"
+}

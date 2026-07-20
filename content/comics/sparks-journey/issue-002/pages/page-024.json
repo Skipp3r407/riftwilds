@@ -1,0 +1,94 @@
+{
+  "pageNumber": 24,
+  "bookRole": "story",
+  "title": "You Were Never Made to Obey",
+  "storyPurpose": "Spark vision: ancient Keepers with several Spark-like young; invitation not command.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p20a",
+      "description": "Vision splash: soft ancient sanctuary light. Robed ancient Keepers stand with several glowing young Riftborn similar to Spark. One Keeper kneels, hand open toward Spark — invitation gesture. No chains. Ethereal, not modern Commons.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "You were never made to obey.",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 60
+        },
+        {
+          "kind": "telepathy",
+          "speaker": "Ancient Keeper Echo",
+          "text": "Become. Then choose.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 40
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p20a",
+      "kind": "telepathy",
+      "speaker": "Ancient Keeper Echo",
+      "text": "Become. Then choose.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 40
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p20a",
+      "kind": "caption",
+      "text": "You were never made to obey.",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 60
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {
+    "spark": {
+      "emotion": "vision clarity",
+      "glow": "vision-stable",
+      "vision": "ancient Keepers / Riftborn kin"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 20/25 — You Were Never Made to Obey. Story purpose: Spark vision: ancient Keepers with several Spark-like young; invitation not command. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p20a): Vision splash: soft ancient sanctuary light. Robed ancient Keepers stand with several glowing young Riftborn similar to Spark. One Keeper kneels, hand open toward Spark — invitation gesture. No chains. Ethereal, not modern Commons. Characters: mira-eggwarden. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: vision: pre-Commons sanctuary. Time: dawn. Weather: post-storm clear. Lighting: soft sacred cyan-gold. Continuity: {\"spark\":{\"emotion\":\"vision clarity\",\"glow\":\"vision-stable\",\"vision\":\"ancient Keepers / Riftborn kin\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
+  "pageTurnObjective": "Voluntary return.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
+  "generationStatus": "generated",
+  "letteringStatus": "lettered",
+  "approvalStatus": "script-complete",
+  "artAlt": "You Were Never Made to Obey — Spark's Journey page 20",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: You were never made to obey.",
+    "TELEPATHY (Ancient Keeper Echo): Become. Then choose."
+  ],
+  "storyPageNumber": 20,
+  "id": "sparks-journey-issue-002-p024",
+  "cleanArtRel": "generated/raw-art/page-024.png",
+  "letteredArtRel": "generated/lettered-pages/page-024.webp",
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-024.webp"
+}

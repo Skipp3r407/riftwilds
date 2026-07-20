@@ -1,0 +1,150 @@
+{
+  "pageNumber": 16,
+  "storyPageNumber": 12,
+  "bookRole": "story",
+  "title": "Lanterns and Admissions",
+  "storyPurpose": "Mira confronts Cael; circus transported Resonance Keepers; didn't know Spark survived.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p12a",
+      "description": "Mira faces Cael in sanctuary light; Spark between them; Tavi watches from doorway.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "How long has Lanternveil moved Resonance Keepers?",
+          "x": 40,
+          "y": 20,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Generations. Between safe stages. We hid lights from nets — not for sale.",
+          "x": 60,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 44,
+          "speaker": "Cael Vesper",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p12b",
+      "description": "Cael removes half-mask briefly — honest face; Spark's glow steadies.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "We did not know this one survived the Soft Exodus roads.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Cael Vesper",
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "Then stop performing. Help us keep it free.",
+          "x": 50,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p12a",
+      "kind": "speech",
+      "text": "How long has Lanternveil moved Resonance Keepers?",
+      "x": 40,
+      "y": 20,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p12a",
+      "kind": "speech",
+      "text": "Generations. Between safe stages. We hid lights from nets — not for sale.",
+      "x": 60,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 44,
+      "speaker": "Cael Vesper",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p12b",
+      "kind": "speech",
+      "text": "We did not know this one survived the Soft Exodus roads.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Cael Vesper",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p12b",
+      "kind": "whisper",
+      "text": "Then stop performing. Help us keep it free.",
+      "x": 50,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper",
+    "tavi-brightline"
+  ],
+  "creatures": [
+    "spark",
+    "lumenhare",
+    "echoquill"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "cael": "admits Resonance Keeper transport",
+    "alliance": "uneasy honesty"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 12/25 — Lanterns and Admissions. Story purpose: Mira confronts Cael; circus transported Resonance Keepers; didn't know Spark survived. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p12a): Mira faces Cael in sanctuary light; Spark between them; Tavi watches from doorway. Panel 2 (p12b): Cael removes half-mask briefly — honest face; Spark's glow steadies. Characters: mira-eggwarden, cael-vesper, tavi-brightline. Creatures: spark, lumenhare, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"cael\": \"admits Resonance Keeper transport\", \"alliance\": \"uneasy honesty\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Meridian at the core.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Lanterns and Admissions — The Lost City page 12",
+  "atmosphere": "night",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): How long has Lanternveil moved Resonance Keepers?",
+    "SPEECH (Cael Vesper): Generations. Between safe stages. We hid lights from nets — not for sale.",
+    "SPEECH (Cael Vesper): We did not know this one survived the Soft Exodus roads.",
+    "WHISPER (Mira Eggwarden): Then stop performing. Help us keep it free."
+  ],
+  "id": "the-lost-city-issue-004-p016",
+  "cleanArtRel": "generated/raw-art/page-016.webp",
+  "letteredArtRel": "generated/lettered-pages/page-016.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-016.webp"
+}

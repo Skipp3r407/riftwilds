@@ -1,0 +1,93 @@
+{
+  "pageNumber": 33,
+  "storyPageNumber": null,
+  "bookRole": "lore",
+  "title": "Codex — The Traitor's Gate",
+  "storyPurpose": "Codex — The Traitor's Gate",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "codex",
+      "description": "Codex plate: Gate diagram shapes — twin towers, suspended portal, memory mirrors, lower route — empty label zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CODEX: TRAITOR'S GATE",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "Ancient Rift transit fortress. Judges identity, bond, and intent. Built as border, prison, and memorial to betrayal.",
+          "x": 50,
+          "y": 78,
+          "tail": null,
+          "maxWidthPct": 58,
+          "readOrder": 1
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "codex",
+      "kind": "caption",
+      "text": "CODEX: TRAITOR'S GATE",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "codex",
+      "kind": "narration",
+      "text": "Ancient Rift transit fortress. Judges identity, bond, and intent. Built as border, prison, and memorial to betrayal.",
+      "x": 50,
+      "y": 78,
+      "tail": null,
+      "maxWidthPct": 58,
+      "readOrder": 1
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [],
+  "locations": [],
+  "artifacts": [],
+  "continuity": {},
+  "requiredMoments": [],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Traitor's Gate Issue #7 — Codex — The Traitor's Gate. Codex plate: Gate diagram shapes — twin towers, suspended portal, memory mirrors, lower route — empty label zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Gate: black stone towers, cyan locks. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "",
+  "letteringInstructions": "Matter page captions; large title zones.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Codex — The Traitor's Gate",
+  "atmosphere": "rift",
+  "transcript": [
+    "CAPTION: CODEX: TRAITOR'S GATE",
+    "NARRATION: Ancient Rift transit fortress. Judges identity, bond, and intent. Built as border, prison, and memorial to betrayal."
+  ],
+  "a11yTranscript": [
+    "CAPTION: CODEX: TRAITOR'S GATE",
+    "NARRATION: Ancient Rift transit fortress. Judges identity, bond, and intent. Built as border, prison, and memorial to betrayal."
+  ],
+  "codexLinks": [
+    "traitors-gate"
+  ],
+  "cardTeases": [],
+  "spoilerLevel": "none",
+  "id": "the-traitors-gate-issue-007-p033",
+  "cleanArtRel": "generated/raw-art/page-033.webp",
+  "letteredArtRel": "generated/lettered-pages/page-033.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-033.webp"
+}

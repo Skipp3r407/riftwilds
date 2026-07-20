@@ -1,0 +1,353 @@
+{
+  "slug": "the-shattered-star",
+  "issueNumber": 10,
+  "title": "The Shattered Star",
+  "subtitle": "Volume Two · Issue #1 — Chapter Ten",
+  "synopsis": "Months after Forge Network restoration, the Broken Star descends. Mira Eggwarden, Spark, and newly hatched Prime companion Nova ascend through a Star Gate to the Shattered Star — an ancient celestial sanctuary of the Celestial Keepers. High Keeper Lyra and Astra confront Hollow Ones while Spark reconnects world and sky. Cliffhanger: the Hollow King opens one eye.",
+  "publishedAt": "2026-07-20",
+  "status": "published",
+  "storyPageCount": 25,
+  "bookPageCount": 39,
+  "estimatedReadMinutes": 20,
+  "protagonist": "Mira Eggwarden",
+  "volumeOpener": true,
+  "volumeId": "vol-2-shattered-sky",
+  "volumeNumber": 2,
+  "volumeIssueNumber": 1,
+  "shelfBadge": "Volume Two · Issue #1",
+  "arcId": "arc-shattered-sky",
+  "hatchedCompanionFromIssue9": "Nova",
+  "riftwrightCanonName": "Professor Elyan Voss",
+  "riftwrightStatus": "alive-retired-hopeful",
+  "carryForwardFromIssue9": {
+    "mira": "POV",
+    "cael": "supervised-ally",
+    "nira": "ally",
+    "aurelia": "uneasy-ally",
+    "elyan": "alive-retired-hopeful",
+    "ascendantCommander": "defeated",
+    "arkan": "echo-only",
+    "axiom": true,
+    "nova": "hatched-prime-twin-key",
+    "forgeNetwork": "restored",
+    "history": "partially-restored",
+    "olderEnemyMystery": "unsolved-older-than-meridian"
+  },
+  "featuredCreatures": [
+    "Spark",
+    "Nova",
+    "Astra",
+    "Axiom",
+    "Bramblefox",
+    "Mossprig",
+    "Thornling",
+    "Wisplet",
+    "Spirit Moth",
+    "Truthwing",
+    "Lumenhare",
+    "Cindermink",
+    "Thundervane"
+  ],
+  "featuredCharacters": [
+    "Mira Eggwarden",
+    "High Keeper Lyra",
+    "Professor Elyan Voss",
+    "Cael Vesper",
+    "Aurelia Voss",
+    "Nira Quill",
+    "Oathwarden Seraph",
+    "Last Guardian"
+  ],
+  "locations": [
+    "Shattered Star",
+    "Prime Sanctuaries",
+    "Star Engine",
+    "Celestial Archives",
+    "Ancient Docking City",
+    "Guardian Cities",
+    "Star Gate"
+  ],
+  "unlockGates": [
+    {
+      "kind": "prior-issue",
+      "slug": "the-riftwright",
+      "label": "Complete Issue #9: The Riftwright"
+    },
+    {
+      "kind": "admin-dev",
+      "label": "Admin / COMICS_DEV_UNLOCK override"
+    }
+  ],
+  "related": {
+    "companions": [
+      "spark",
+      "nova",
+      "astra",
+      "axiom"
+    ],
+    "codex": [
+      "shattered-star",
+      "celestial-keepers",
+      "prime-companions",
+      "star-engine",
+      "hollow-ones"
+    ],
+    "factions": [
+      "celestial-keepers",
+      "hollow-ones"
+    ],
+    "locations": [
+      "shattered-star",
+      "prime-sanctuary",
+      "star-engine"
+    ],
+    "galaxyMap": true
+  },
+  "nextIssueTeaser": {
+    "slug": "the-hollow-king",
+    "hook": "The lights have returned… then so have they.",
+    "title": "The Hollow King"
+  },
+  "pipeline": {
+    "artProvider": "grok",
+    "lettering": "programmatic",
+    "bakedLettering": true,
+    "contentRoot": "content/comics/the-shattered-star/issue-010"
+  },
+  "bookPages": [
+    {
+      "pageNumber": 1,
+      "storyPageNumber": null,
+      "role": "front-cover",
+      "title": "The Shattered Star — Cover"
+    },
+    {
+      "pageNumber": 2,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Front Cover"
+    },
+    {
+      "pageNumber": 3,
+      "storyPageNumber": null,
+      "role": "credits",
+      "title": "Credits"
+    },
+    {
+      "pageNumber": 4,
+      "storyPageNumber": null,
+      "role": "title",
+      "title": "Chapter Ten — The Shattered Star"
+    },
+    {
+      "pageNumber": 5,
+      "storyPageNumber": 1,
+      "role": "story",
+      "title": "Sky Breaks Open"
+    },
+    {
+      "pageNumber": 6,
+      "storyPageNumber": 2,
+      "role": "story",
+      "title": "Ancient Warnings"
+    },
+    {
+      "pageNumber": 7,
+      "storyPageNumber": 3,
+      "role": "story",
+      "title": "Not a Moon"
+    },
+    {
+      "pageNumber": 8,
+      "storyPageNumber": 4,
+      "role": "story",
+      "title": "Emergency Mode"
+    },
+    {
+      "pageNumber": 9,
+      "storyPageNumber": 5,
+      "role": "story",
+      "title": "Home Geometry"
+    },
+    {
+      "pageNumber": 10,
+      "storyPageNumber": 6,
+      "role": "story",
+      "title": "Star Gate"
+    },
+    {
+      "pageNumber": 11,
+      "storyPageNumber": 7,
+      "role": "story",
+      "title": "Into Orbit"
+    },
+    {
+      "pageNumber": 12,
+      "storyPageNumber": 8,
+      "role": "story",
+      "title": "The Shattered Star"
+    },
+    {
+      "pageNumber": 13,
+      "storyPageNumber": 9,
+      "role": "story",
+      "title": "Docking City"
+    },
+    {
+      "pageNumber": 14,
+      "storyPageNumber": 10,
+      "role": "story",
+      "title": "Living Architecture"
+    },
+    {
+      "pageNumber": 15,
+      "storyPageNumber": 11,
+      "role": "story",
+      "title": "High Keeper Lyra"
+    },
+    {
+      "pageNumber": 16,
+      "storyPageNumber": 12,
+      "role": "story",
+      "title": "Sleeping Primes"
+    },
+    {
+      "pageNumber": 17,
+      "storyPageNumber": 13,
+      "role": "story",
+      "title": "Why the Star Left"
+    },
+    {
+      "pageNumber": 18,
+      "storyPageNumber": 14,
+      "role": "story",
+      "title": "They Followed"
+    },
+    {
+      "pageNumber": 19,
+      "storyPageNumber": 15,
+      "role": "story",
+      "title": "Celestial Alarms"
+    },
+    {
+      "pageNumber": 20,
+      "storyPageNumber": 16,
+      "role": "story",
+      "title": "Starlight Bond"
+    },
+    {
+      "pageNumber": 21,
+      "storyPageNumber": 17,
+      "role": "story",
+      "title": "Star Engine"
+    },
+    {
+      "pageNumber": 22,
+      "storyPageNumber": 18,
+      "role": "story",
+      "title": "Sky of a Thousand Lights"
+    },
+    {
+      "pageNumber": 23,
+      "storyPageNumber": 19,
+      "role": "story",
+      "title": "Breach and Beam"
+    },
+    {
+      "pageNumber": 24,
+      "storyPageNumber": 20,
+      "role": "story",
+      "title": "The Star Moves"
+    },
+    {
+      "pageNumber": 25,
+      "storyPageNumber": 21,
+      "role": "story",
+      "title": "Celestial Archives"
+    },
+    {
+      "pageNumber": 26,
+      "storyPageNumber": 22,
+      "role": "story",
+      "title": "Maps Beyond Maps"
+    },
+    {
+      "pageNumber": 27,
+      "storyPageNumber": 23,
+      "role": "story",
+      "title": "What Remains"
+    },
+    {
+      "pageNumber": 28,
+      "storyPageNumber": 24,
+      "role": "story",
+      "title": "Something Watches"
+    },
+    {
+      "pageNumber": 29,
+      "storyPageNumber": 25,
+      "role": "story",
+      "title": "The Hollow King"
+    },
+    {
+      "pageNumber": 30,
+      "storyPageNumber": null,
+      "role": "teaser",
+      "title": "Next Issue — The Hollow King"
+    },
+    {
+      "pageNumber": 31,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Character Profile — High Keeper Lyra"
+    },
+    {
+      "pageNumber": 32,
+      "storyPageNumber": null,
+      "role": "profile",
+      "title": "Companion Profile — Astra"
+    },
+    {
+      "pageNumber": 33,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Codex — The Shattered Star"
+    },
+    {
+      "pageNumber": 34,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Technology — Star Engine"
+    },
+    {
+      "pageNumber": 35,
+      "storyPageNumber": null,
+      "role": "lore",
+      "title": "Timeline — Age of the Celestial Keepers"
+    },
+    {
+      "pageNumber": 36,
+      "storyPageNumber": null,
+      "role": "map",
+      "title": "Galaxy Map · Prime Sanctuary Blueprint"
+    },
+    {
+      "pageNumber": 37,
+      "storyPageNumber": null,
+      "role": "letters",
+      "title": "Editor's Note — Bigger Sky, Same Heart"
+    },
+    {
+      "pageNumber": 38,
+      "storyPageNumber": null,
+      "role": "inside-cover",
+      "title": "Inside Back Cover"
+    },
+    {
+      "pageNumber": 39,
+      "storyPageNumber": null,
+      "role": "back-cover",
+      "title": "Back Cover — The Hollow King"
+    }
+  ]
+}

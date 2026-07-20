@@ -98,6 +98,10 @@ export async function POST(request: NextRequest) {
       if (!existing) {
         const created = await tx.user.create({
           data: {
+            accountStatus: "ACTIVE",
+            emailVerifiedAt: new Date(),
+            termsAcceptedAt: new Date(),
+            privacyAcceptedAt: new Date(),
             wallets: {
               create: {
                 address: wallet,
@@ -107,12 +111,23 @@ export async function POST(request: NextRequest) {
                 lastSeenAt: new Date(),
               },
             },
+            linkedWallets: {
+              create: {
+                address: wallet,
+                network,
+                isPrimary: true,
+                verifiedAt: new Date(),
+              },
+            },
             profile: {
               create: {
                 displayName: `Keeper-${wallet.slice(0, 4)}`,
               },
             },
             settings: { create: {} },
+            accountStatusHistory: {
+              create: { toStatus: "ACTIVE", reason: "wallet_siws_register" },
+            },
           },
           include: { wallets: true },
         });
@@ -123,9 +138,34 @@ export async function POST(request: NextRequest) {
         return created;
       }
 
+      if (
+        existing.user.isBanned ||
+        existing.user.accountStatus === "BANNED" ||
+        existing.user.accountStatus === "DELETED" ||
+        existing.user.deletedAt
+      ) {
+        throw new AppError({
+          code: ErrorCodes.FORBIDDEN,
+          message: "This account cannot sign in.",
+          requestId,
+          status: 403,
+        });
+      }
+
       await tx.wallet.update({
         where: { id: existing.id },
         data: { verifiedAt: new Date(), lastSeenAt: new Date() },
+      });
+      await tx.linkedWallet.upsert({
+        where: { address_network: { address: wallet, network } },
+        create: {
+          userId: existing.userId,
+          address: wallet,
+          network,
+          isPrimary: true,
+          verifiedAt: new Date(),
+        },
+        update: { verifiedAt: new Date(), unlinkedAt: null },
       });
       return existing.user;
     });

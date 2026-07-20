@@ -129,14 +129,18 @@ function sizeClass(size: CardTemplateSize): string {
 
 export function layoutForType(type: string): string {
   const t = type.toLowerCase();
-  if (["creature", "companion", "legendary", "token", "unit"].includes(t)) {
-    return "creature";
-  }
-  if (t === "hero" || t === "commander") return "commander";
+  // Canonical categories
+  if (t === "companion" || t === "unit") return "companion";
+  if (t === "evolution") return "evolution";
+  if (t === "commander" || t === "hero") return "commander";
   if (t === "spell") return "spell";
-  if (["equipment", "relic", "artifact"].includes(t)) return "equipment";
-  if (["location", "weather", "terrain"].includes(t)) return "terrain";
+  if (t === "item") return "item";
+  if (t === "equipment") return "equipment";
+  if (t === "relic" || t === "artifact") return "relic";
+  if (t === "terrain" || t === "location" || t === "weather") return "terrain";
   if (t === "trap") return "trap";
+  // Legacy aliases
+  if (["creature", "legendary", "token"].includes(t)) return "companion";
   return "other";
 }
 
@@ -186,7 +190,7 @@ function SpecializedStatBar(props: {
     ultimate,
   } = props;
 
-  if (layout === "creature") {
+  if (layout === "companion" || layout === "evolution" || layout === "creature") {
     return (
       <div className="rift-card__stats master-card__stats">
         <span className="rift-card__stat rift-card__stat--atk" title="Attack">
@@ -208,6 +212,11 @@ function SpecializedStatBar(props: {
           <span className="rift-card__stat rift-card__stat--spd" title="Speed">
             <i aria-hidden />
             {spd ?? "—"}
+          </span>
+        ) : null}
+        {layout === "evolution" ? (
+          <span className="master-card__spell-tag master-card__spell-tag--evo">
+            evo
           </span>
         ) : null}
       </div>
@@ -235,10 +244,10 @@ function SpecializedStatBar(props: {
     );
   }
 
-  if (layout === "spell" || layout === "trap") {
+  if (layout === "spell") {
     return (
       <div className="rift-card__stats rift-card__stats--spell master-card__stats--spell">
-        <span className="master-card__spell-tag">{layout}</span>
+        <span className="master-card__spell-tag">spell</span>
         {spellSpeed ? (
           <span className="master-card__meta-chip">{spellSpeed}</span>
         ) : null}
@@ -247,6 +256,50 @@ function SpecializedStatBar(props: {
         ) : null}
         {typeof atk === "number" && atk > 0 ? (
           <span className="rift-card__stat rift-card__stat--atk" title="Effect power">
+            <i aria-hidden />
+            {atk}
+          </span>
+        ) : null}
+      </div>
+    );
+  }
+
+  if (layout === "item") {
+    return (
+      <div className="rift-card__stats master-card__stats master-card__stats--item">
+        <span className="master-card__spell-tag master-card__spell-tag--item">
+          item
+        </span>
+        <span className="master-card__meta-chip" title="Consumable">
+          consume
+        </span>
+        {targetType ? (
+          <span className="master-card__meta-chip">{targetType}</span>
+        ) : null}
+        {typeof atk === "number" && atk > 0 ? (
+          <span className="rift-card__stat rift-card__stat--hp" title="Heal / effect">
+            <i aria-hidden />
+            {atk}
+          </span>
+        ) : null}
+      </div>
+    );
+  }
+
+  if (layout === "trap") {
+    return (
+      <div className="rift-card__stats rift-card__stats--spell master-card__stats--trap">
+        <span className="master-card__spell-tag master-card__spell-tag--trap">
+          trap
+        </span>
+        <span className="master-card__meta-chip" title="Set face-down">
+          face-down
+        </span>
+        {spellSpeed ? (
+          <span className="master-card__meta-chip">{spellSpeed}</span>
+        ) : null}
+        {typeof atk === "number" && atk > 0 ? (
+          <span className="rift-card__stat rift-card__stat--atk" title="Trigger power">
             <i aria-hidden />
             {atk}
           </span>
@@ -280,6 +333,22 @@ function SpecializedStatBar(props: {
         ) : null}
         {eligibleTarget && size !== "thumb" ? (
           <span className="master-card__meta-chip">{eligibleTarget}</span>
+        ) : null}
+      </div>
+    );
+  }
+
+  if (layout === "relic") {
+    return (
+      <div className="rift-card__stats master-card__stats master-card__stats--relic">
+        <span className="master-card__spell-tag master-card__spell-tag--relic">
+          relic
+        </span>
+        <span className="master-card__meta-chip" title="Persists on board">
+          permanent
+        </span>
+        {globalEffect && (size === "inspect" || size === "collection") ? (
+          <span className="master-card__meta-chip">{globalEffect}</span>
         ) : null}
       </div>
     );

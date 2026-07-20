@@ -1,0 +1,1850 @@
+[
+  {
+    "id": "the-first-rift-p01",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 1,
+    "role": "front-cover",
+    "title": "The First Rift",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-01.webp",
+    "bubbles": [
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Legends of the Rift · Issue #1",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "When the Prime broke, a courier chose to keep.",
+        "x": 50,
+        "y": 40,
+        "tail": "down",
+        "maxWidthPct": 82
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p02",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 2,
+    "role": "inside-cover",
+    "title": "Inside cover",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-02.webp",
+    "bubbles": [
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Riftwilds Comic Publishing — original fantasy. No crypto required to read.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Credits & cosmetics may unlock along the way. The story itself stays free.",
+        "x": 50,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 82
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p03",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 3,
+    "role": "title",
+    "title": "The First Rift",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-03.webp",
+    "bubbles": [
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Issue #1",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Elara Venn carries a damaged egg through the Fracture's first nights and names the path of keeping at the Riftstone.",
+        "x": 50,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Series",
+        "text": "Elara Venn · First Riftling · Bramblefox · Mossprig",
+        "x": 50,
+        "y": 72,
+        "tail": "down",
+        "maxWidthPct": 44
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p04",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 4,
+    "role": "credits",
+    "title": "Credits",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-04.webp",
+    "bubbles": [
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Story · Riftwilds Lore Desk",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Art · Commons Archive (official plates)",
+        "x": 50,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Lettering · Publishing Engine",
+        "x": 50,
+        "y": 34,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Canon alignment: World Codex · Riftling Codex · Legends of the Rift TCG.",
+        "x": 50,
+        "y": 36,
+        "tail": "down",
+        "maxWidthPct": 82
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p05",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 5,
+    "role": "recap",
+    "title": "Previously in the Riftwilds…",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-05.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Aeryndra's Prime Gateway failed. Layered roads learned to rewrite themselves. A courier carried a warm egg toward mud that would become the Commons.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Age of First Eggs → Founding of the Commons.",
+        "x": 50,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 88
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p06",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 6,
+    "role": "splash",
+    "title": "The sky tears",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-06.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Aeryndra's Prime Gateway screamed once — then the world learned how to layer.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p07",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 7,
+    "role": "story",
+    "title": null,
+    "caption": "Nine days before the Commons had a name",
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-07.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Roads crossed deserts that had never met forests.",
+        "x": 25,
+        "y": 11.600000000000001,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "The egg is warm. That is enough to keep walking.",
+        "x": 14.440000000000001,
+        "y": 34.64,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "rift-crack…",
+        "x": 30.759999999999998,
+        "y": 57.67999999999999,
+        "tail": "down",
+        "maxWidthPct": 70
+      },
+      {
+        "kind": "thought",
+        "speaker": "Elara Venn",
+        "text": "If I name myself hero, I will fail the small thing in my arms.",
+        "x": 62.519999999999996,
+        "y": 61.519999999999996,
+        "tail": "up-right",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "speech",
+        "speaker": "Stranger",
+        "text": "Take the crown road — safer.",
+        "x": 86.52,
+        "y": 30.799999999999997,
+        "tail": "down-left",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Safer for whom?",
+        "x": 66.36,
+        "y": 73.03999999999999,
+        "tail": "up",
+        "maxWidthPct": 44
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p08",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 8,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-08.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "She shared waybread with a child who had lost a name.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Call the creature yours to keep — not yours to own.",
+        "x": 28,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Codex echo: Waybread on the First Night",
+        "x": 50,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "soft crack — shell-song",
+        "x": 50,
+        "y": 58,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p09",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 9,
+    "role": "story",
+    "title": "Gateway Hearts",
+    "caption": null,
+    "loreSidebar": {
+      "title": "Gateway Hearts",
+      "body": "Hearts were living cores. Stones are travel shards. The Commons Riftstone is a fragment of the Prime — maps of places not yet found."
+    },
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-09.webp",
+    "bubbles": [
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Codex fragment — recovered from the margin.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 88
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p10",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 10,
+    "role": "splash",
+    "title": "The Riftstone claims mud",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-10.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Farmers, healers, and Keepers gathered where stable paths still intersected.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p11",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 11,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": {
+      "title": "Original IP note",
+      "body": "Riftlings are living archives — not weapons-first. Preservation before prowess."
+    },
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-11.webp",
+    "bubbles": [
+      {
+        "kind": "speech",
+        "speaker": "Mira (young)",
+        "text": "Is it… looking at me?",
+        "x": 25,
+        "y": 25,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "It is remembering the world. Help it stay gentle.",
+        "x": 25,
+        "y": 25,
+        "tail": "down-right",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "HATCH—!",
+        "x": 75,
+        "y": 25,
+        "tail": "down",
+        "maxWidthPct": 70
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "The Soft Exodus had closed into eggs. Battle culture would come later.",
+        "x": 75,
+        "y": 25,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Village elder",
+        "text": "What do we call you?",
+        "x": 25,
+        "y": 75,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Courier. Keeper, if the egg agrees.",
+        "x": 25,
+        "y": 75,
+        "tail": "down-right",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Secret symbol: FIRST-LIGHT-01",
+        "x": 75,
+        "y": 40,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "thought",
+        "speaker": "First Riftling",
+        "text": "…keep…",
+        "x": 75,
+        "y": 75,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p12",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 12,
+    "role": "story",
+    "title": "Forest Bond — living vine-light",
+    "caption": "Ability tease · Forest Bond",
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-12.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "When Bramblefox chooses a Keeper, the grove answers with green thread — Forest Bond, not a leash.",
+        "x": 50,
+        "y": 6,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "creature",
+        "speaker": "Bramblefox",
+        "text": "*vine-hum…*",
+        "x": 30.799999999999997,
+        "y": 15.879999999999999,
+        "tail": "up",
+        "maxWidthPct": 40
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "LEAF-SNAP",
+        "x": 69.19999999999999,
+        "y": 20,
+        "tail": "down",
+        "maxWidthPct": 70
+      },
+      {
+        "kind": "magic",
+        "speaker": "Grove",
+        "text": "Bond accepted — roots remember both names.",
+        "x": 50,
+        "y": 46.4,
+        "tail": "down",
+        "maxWidthPct": 56
+      },
+      {
+        "kind": "whisper",
+        "speaker": "Elara Venn",
+        "text": "Softly. Bonds break when shouted at.",
+        "x": 28.880000000000003,
+        "y": 55.08,
+        "tail": "up",
+        "maxWidthPct": 38
+      },
+      {
+        "kind": "telepathy",
+        "speaker": "First Riftling",
+        "text": "…keep… grow…",
+        "x": 71.12,
+        "y": 53.22,
+        "tail": "down-right",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "shout",
+        "speaker": "Village kid",
+        "text": "It glowed!",
+        "x": 40.400000000000006,
+        "y": 76.3,
+        "tail": "down",
+        "maxWidthPct": 52
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "It agreed. That is rarer than glowing.",
+        "x": 67.28,
+        "y": 82,
+        "tail": "down-left",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Tease card: Bramblefox · Deck Atelier · Codex family-bramblefox",
+        "x": 50,
+        "y": 40,
+        "tail": "down",
+        "maxWidthPct": 88
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p13",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 13,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-13.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Years soft-shifted. Elara's bond slowed her aging — Spirit bleed, not magic vanity.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "New Keepers still arrive with empty hands and full fear.",
+        "x": 28,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Good. Fear means they noticed the egg is becoming.",
+        "x": 36,
+        "y": 28,
+        "tail": "down-right",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Play this chapter in Live World when you are ready.",
+        "x": 50,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 88
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p14",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 14,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-14.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Mud took bootprints. The Riftstone took names.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Healer",
+        "text": "We can raise walls. Or we can raise Keepers.",
+        "x": 28,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Raise Keepers who know which wall is a cradle.",
+        "x": 36,
+        "y": 28,
+        "tail": "down-right",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "soft dawn wind",
+        "x": 50,
+        "y": 58,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p15",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 15,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-15.webp",
+    "bubbles": [
+      {
+        "kind": "speech",
+        "speaker": "Child",
+        "text": "Will the egg leave if I am scared?",
+        "x": 25,
+        "y": 50,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Fear is allowed. Force is not.",
+        "x": 25,
+        "y": 50,
+        "tail": "down-right",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "That was the first Compact law — spoken before ink existed.",
+        "x": 75,
+        "y": 40,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "thought",
+        "speaker": "First Riftling",
+        "text": "…stay…",
+        "x": 75,
+        "y": 50,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p16",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 16,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-16.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "On the seventh night the Fracture roads rearranged again.",
+        "x": 50,
+        "y": 16.5,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Scout",
+        "text": "East gate is west. West gate is… soup.",
+        "x": 50,
+        "y": 16.5,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Then we walk by warmth, not by map.",
+        "x": 50,
+        "y": 49.5,
+        "tail": "down-right",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "First Riftling",
+        "text": "…warm…",
+        "x": 50,
+        "y": 49.5,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Codex stub: Fracture roads",
+        "x": 50,
+        "y": 40,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "path rewrite… hum",
+        "x": 50,
+        "y": 82.5,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p17",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 17,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-17.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "A stranger offered a crown-shard for the egg — bright, legal-looking, wrong.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Crown courier",
+        "text": "Name a price. The realm will keep it safer than mud.",
+        "x": 64,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "The egg is not inventory. Leave.",
+        "x": 36,
+        "y": 28,
+        "tail": "down-right",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "shard reject — clink",
+        "x": 50,
+        "y": 58,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p18",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 18,
+    "role": "story",
+    "title": "Soft Exodus fragment",
+    "caption": null,
+    "loreSidebar": {
+      "title": "Soft Exodus fragment",
+      "body": "When the Prime tore, living stories fled into shells. First Riftlings are archives that chose caretakers — not weapons that chose masters."
+    },
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-18.webp",
+    "bubbles": [
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Codex fragment — recovered from the margin.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 88
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p19",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 19,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-19.webp",
+    "bubbles": [
+      {
+        "kind": "speech",
+        "speaker": "Village elder",
+        "text": "We will call this place Commons — shared ground.",
+        "x": 25,
+        "y": 50,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Shared duty. Shared keeping.",
+        "x": 25,
+        "y": 50,
+        "tail": "down-right",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "The Riftstone accepted mud, names, and a courier who refused a throne.",
+        "x": 75,
+        "y": 40,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "thought",
+        "speaker": "First Riftling",
+        "text": "…home…",
+        "x": 75,
+        "y": 50,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p20",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 20,
+    "role": "splash",
+    "title": "Something listens beyond the tear",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-20.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "As the Commons named itself, a second pulse answered from unmapped dark — not crown, not merchant. Cliffhanger: the Fracture was not finished speaking.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p21",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 21,
+    "role": "story",
+    "title": null,
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-21.webp",
+    "bubbles": [
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "We keep what we can see. We prepare for what we cannot.",
+        "x": 28,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "First Riftling",
+        "text": "…listen…",
+        "x": 76,
+        "y": 20,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Issue #1 closes on a promise — and a pulse that will call Spark, Circus, and every Keeper after.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Next: Spark's Journey — Compact on the open road",
+        "x": 50,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 88
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p22",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 22,
+    "role": "story",
+    "title": "Mud and names",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-22.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Before walls, the Commons was a promise spoken over warm shells.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Carry the egg like a future, not a trophy.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "If I rush the naming, I will miss the becoming.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "soft shell-song",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p23",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 23,
+    "role": "story",
+    "title": "Crown road refused",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-23.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Safer roads asked for a price the egg could not pay.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Safer for whom?",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "A crown that buys consent is still theft.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "boot on wet stone",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p24",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 24,
+    "role": "story",
+    "title": "Second pulse foreshadow",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-24.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Beyond the first tear, something colder practiced waiting.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "We keep what we can see.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "The Fracture is not finished speaking.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "distant cyan blink",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p25",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 25,
+    "role": "story",
+    "title": "Mud and names",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-25.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Before walls, the Commons was a promise spoken over warm shells.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Carry the egg like a future, not a trophy.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "If I rush the naming, I will miss the becoming.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "soft shell-song",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p26",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 26,
+    "role": "story",
+    "title": "Crown road refused",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-26.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Safer roads asked for a price the egg could not pay.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Safer for whom?",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "A crown that buys consent is still theft.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "boot on wet stone",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p27",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 27,
+    "role": "story",
+    "title": "Second pulse foreshadow",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-27.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Beyond the first tear, something colder practiced waiting.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "We keep what we can see.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "The Fracture is not finished speaking.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "distant cyan blink",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p28",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 28,
+    "role": "story",
+    "title": "Mud and names",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-28.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Before walls, the Commons was a promise spoken over warm shells.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Carry the egg like a future, not a trophy.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "If I rush the naming, I will miss the becoming.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "soft shell-song",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p29",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 29,
+    "role": "story",
+    "title": "Crown road refused",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-29.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Safer roads asked for a price the egg could not pay.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Safer for whom?",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "A crown that buys consent is still theft.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "boot on wet stone",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p30",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 30,
+    "role": "story",
+    "title": "Second pulse foreshadow",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-30.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Beyond the first tear, something colder practiced waiting.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "We keep what we can see.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "The Fracture is not finished speaking.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "distant cyan blink",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p31",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 31,
+    "role": "story",
+    "title": "Mud and names",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-31.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Before walls, the Commons was a promise spoken over warm shells.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Carry the egg like a future, not a trophy.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "If I rush the naming, I will miss the becoming.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "soft shell-song",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p32",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 32,
+    "role": "story",
+    "title": "Crown road refused",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-32.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Safer roads asked for a price the egg could not pay.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Safer for whom?",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "A crown that buys consent is still theft.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "boot on wet stone",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p33",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 33,
+    "role": "story",
+    "title": "Second pulse foreshadow",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-33.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Beyond the first tear, something colder practiced waiting.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "We keep what we can see.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "The Fracture is not finished speaking.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "distant cyan blink",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p34",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 34,
+    "role": "story",
+    "title": "Mud and names",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-34.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Before walls, the Commons was a promise spoken over warm shells.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Carry the egg like a future, not a trophy.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "If I rush the naming, I will miss the becoming.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "soft shell-song",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p35",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 35,
+    "role": "story",
+    "title": "Crown road refused",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-35.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Safer roads asked for a price the egg could not pay.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Safer for whom?",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "A crown that buys consent is still theft.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "boot on wet stone",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p36",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 36,
+    "role": "story",
+    "title": "Second pulse foreshadow",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-36.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Beyond the first tear, something colder practiced waiting.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "We keep what we can see.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "The Fracture is not finished speaking.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "distant cyan blink",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p37",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 37,
+    "role": "story",
+    "title": "Mud and names",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-37.webp",
+    "bubbles": [
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Before walls, the Commons was a promise spoken over warm shells.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "Carry the egg like a future, not a trophy.",
+        "x": 30,
+        "y": 28,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "thought",
+        "speaker": "Keeper",
+        "text": "If I rush the naming, I will miss the becoming.",
+        "x": 72,
+        "y": 55,
+        "tail": "down-left",
+        "maxWidthPct": 42
+      },
+      {
+        "kind": "sfx",
+        "speaker": null,
+        "text": "soft shell-song",
+        "x": 55,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 70
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p38",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 38,
+    "role": "end",
+    "title": "Issue complete",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-38.webp",
+    "bubbles": [
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "You finished Issue #1: The First Rift.",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "narration",
+        "speaker": null,
+        "text": "Elara Venn carries a damaged egg through the Fracture's first nights and names the path of keeping at the Riftstone.",
+        "x": 50,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 82
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Play this chapter → Enter Live World — Commons",
+        "x": 50,
+        "y": 34,
+        "tail": "down",
+        "maxWidthPct": 88
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p39",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 39,
+    "role": "end",
+    "title": "Shape the side-story",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-39.webp",
+    "bubbles": [
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "What should Elara's next courier route emphasize?",
+        "x": 50,
+        "y": 10,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "speech",
+        "speaker": "Care first",
+        "text": "More hatchery ethics scenes next arc.",
+        "x": 28,
+        "y": 30,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Exploration",
+        "text": "Push toward unmapped Gateway paths.",
+        "x": 72,
+        "y": 46,
+        "tail": "down-left",
+        "maxWidthPct": 44
+      }
+    ]
+  },
+  {
+    "id": "the-first-rift-p40",
+    "issueSlug": "the-first-rift",
+    "pageNumber": 40,
+    "role": "profile",
+    "title": "Keeper & Companion Profiles",
+    "caption": null,
+    "loreSidebar": null,
+    "plateRel": "public/assets/comics/pages/the-first-rift/page-40.webp",
+    "bubbles": [
+      {
+        "kind": "speech",
+        "speaker": "Elara Venn",
+        "text": "First Keeper — Courier who refused a crown and kept an egg.",
+        "x": 28,
+        "y": 22,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "First Riftling",
+        "text": "Companion — Living archive born from Soft Exodus fragment.",
+        "x": 72,
+        "y": 38,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "speech",
+        "speaker": "Bramblefox",
+        "text": "Grove companion — Forest Bond shown as living vine-light — game-accurate Nature skirmisher tease.",
+        "x": 28,
+        "y": 54,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Open: /codex/riftlings/bramblefox",
+        "x": 50,
+        "y": 40,
+        "tail": "down",
+        "maxWidthPct": 88
+      },
+      {
+        "kind": "speech",
+        "speaker": "Mossprig",
+        "text": "Tracker — Grove-affinity pathfinder; soft rustle is dialogue, not noise.",
+        "x": 72,
+        "y": 70,
+        "tail": "down",
+        "maxWidthPct": 44
+      },
+      {
+        "kind": "caption",
+        "speaker": null,
+        "text": "Open: /codex/riftlings/mossprig",
+        "x": 50,
+        "y": 40,
+        "tail": "down",
+        "maxWidthPct": 88
+      }
+    ]
+  }
+]

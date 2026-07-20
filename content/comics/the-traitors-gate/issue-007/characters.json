@@ -1,0 +1,72 @@
+{
+  "cast": [
+    {
+      "id": "mira-eggwarden",
+      "name": "Mira Eggwarden",
+      "role": "Keeper protagonist"
+    },
+    {
+      "id": "cael-vesper",
+      "name": "Cael Vesper",
+      "role": "Lanternmaster / coerced traitor",
+      "spoiler": true
+    },
+    {
+      "id": "nira-quill",
+      "name": "Nira Quill",
+      "role": "Uncertain hunter \u2014 falsely accused"
+    },
+    {
+      "id": "aurelia-voss",
+      "name": "Aurelia Voss",
+      "role": "Gilded Merchant"
+    },
+    {
+      "id": "seris-vale",
+      "name": "Seris Vale",
+      "role": "Meridian commander"
+    },
+    {
+      "id": "oathwarden-seraph",
+      "name": "Oathwarden Seraph",
+      "role": "Gate guardian"
+    },
+    {
+      "id": "elara-venn",
+      "name": "Elara Venn",
+      "role": "Vision/counsel only \u2014 not present"
+    }
+  ],
+  "publicFeatured": [
+    {
+      "id": "mira-eggwarden",
+      "name": "Mira Eggwarden",
+      "role": "Keeper"
+    },
+    {
+      "id": "nira-quill",
+      "name": "Nira Quill",
+      "role": "Hunter under suspicion"
+    },
+    {
+      "id": "aurelia-voss",
+      "name": "Aurelia Voss",
+      "role": "Gilded Merchant"
+    },
+    {
+      "id": "oathwarden-seraph",
+      "name": "Oathwarden Seraph",
+      "role": "Gate guardian"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "cal-reed",
+      "note": "NON-CANON"
+    },
+    {
+      "id": "voltkit",
+      "note": "legacy seed \u2014 not used"
+    }
+  ]
+}

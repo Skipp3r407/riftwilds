@@ -1,0 +1,82 @@
+{
+  "pageNumber": 32,
+  "storyPageNumber": null,
+  "bookRole": "profile",
+  "title": "Companion Profile — Lumenhare",
+  "storyPurpose": "Companion Profile — Lumenhare",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "comp",
+      "description": "Lumenhare reference: front/side/leap; indigo gold stars; ability effect sketches without text.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "LUMENHARE",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 34
+        },
+        {
+          "kind": "narration",
+          "text": "Support · Illusion · Mobility — Curtain Call · Lantern Leap · Grand Illusion",
+          "x": 50,
+          "y": 70,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 55
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "comp",
+      "kind": "caption",
+      "text": "LUMENHARE",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 34
+    },
+    {
+      "panelId": "comp",
+      "kind": "narration",
+      "text": "Support · Illusion · Mobility — Curtain Call · Lantern Leap · Grand Illusion",
+      "x": 50,
+      "y": 70,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 55
+    }
+  ],
+  "soundEffects": [],
+  "characters": [],
+  "creatures": [
+    "lumenhare"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for The Traveling Circus Issue #3 — Companion Profile — Lumenhare. Lumenhare reference: front/side/leap; indigo gold stars; ability effect sketches without text. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Companion Profile — Lumenhare",
+  "atmosphere": "festival",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: LUMENHARE",
+    "NARRATION: Support · Illusion · Mobility — Curtain Call · Lantern Leap · Grand Illusion"
+  ],
+  "id": "the-traveling-circus-issue-003-p032",
+  "cleanArtRel": "generated/raw-art/page-032.png",
+  "letteredArtRel": "generated/lettered-pages/page-032.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-032.webp"
+}

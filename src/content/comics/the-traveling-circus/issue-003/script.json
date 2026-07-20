@@ -1,0 +1,326 @@
+{
+  "title": "The Traveling Circus",
+  "issue": 3,
+  "subtitle": "Lanternveil",
+  "protagonist": "Mira Eggwarden",
+  "companion": "Spark",
+  "synopsis": "Mira Eggwarden, Spark, and their companions follow the Meridian collection trail to the Lanternveil Traveling Circus. Wonder hides wards, infiltrators, and the Shellward crystal. A public battle frees a controlled companion and points the map toward the Lost City — where the Guardian remembers.",
+  "themes": [
+    "performance versus truth",
+    "found family",
+    "masks",
+    "consent",
+    "freedom",
+    "protection vs imprisonment"
+  ],
+  "storyPageCount": 25,
+  "bookPageCount": 38,
+  "requiredMoments": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "pages": [
+    {
+      "pageNumber": 1,
+      "title": "Roads Beneath Lanterns",
+      "beat": "Full splash: team sees Lanternveil Circus at twilight; Spark glows.",
+      "transcript": [
+        "NARRATION: Some places are built on roads. Others build the road beneath them.",
+        "SFX: lantern-hum…",
+        "CREATURE (Spark): *bright pulse!*"
+      ]
+    },
+    {
+      "pageNumber": 2,
+      "title": "Step Right In",
+      "beat": "Team enters; Thornling distracted; Bramblefox scans; Spark watches ring leaps.",
+      "transcript": [
+        "SPEECH (Mira Eggwarden): Stay close. Wonder first — answers second.",
+        "CREATURE (Thornling): *WANT!*",
+        "CREATURE (Mossprig): *hold—*",
+        "CREATURE (Bramblefox): *rrrk…*",
+        "CREATURE (Spark): *chirp awe*"
+      ]
+    },
+    {
+      "pageNumber": 3,
+      "title": "The Greeter Notices",
+      "beat": "Masked greeter welcomes Mira; Spark markings pulse to lantern; greeter hides reaction.",
+      "transcript": [
+        "SPEECH (Masked Greeter): Welcome, Keepers. Lanternveil opens for the curious — and the careful.",
+        "SFX: pulse…",
+        "THOUGHT (Masked Greeter): …Riftborn markings. Not here. Not loud.",
+        "WHISPER (Mira Eggwarden): You felt that too."
+      ]
+    },
+    {
+      "pageNumber": 4,
+      "title": "Wonder Market",
+      "beat": "Warm montage: food, care tents, card booths, games, merchants, kids meeting companions.",
+      "transcript": [
+        "SFX: sizzle!",
+        "CREATURE (Mossprig): *soft rustle*",
+        "CAPTION: CARD BOOTHS · CHEERS ONLY",
+        "CREATURE (Spirit Moth): *signal-flicker*"
+      ]
+    },
+    {
+      "pageNumber": 5,
+      "title": "Snack Catastrophe",
+      "beat": "Thornling comic food stall incident; Mossprig helps; Spark briefly laughs/relaxes.",
+      "transcript": [
+        "SFX: SPLORP",
+        "CREATURE (Thornling): *eep!*",
+        "SPEECH (Vendor): Hero moss!",
+        "CREATURE (Mossprig): *steady…*",
+        "CREATURE (Spark): *yip-laugh!*",
+        "SPEECH (Mira Eggwarden): Even chaos can be Compact if nobody gets hurt."
+      ]
+    },
+    {
+      "pageNumber": 6,
+      "title": "Lanternmaster Knows the Name",
+      "beat": "Mira meets Lanternmaster; he knows Spark's name; Mira sees ancient Rift symbol on wall.",
+      "transcript": [
+        "SPEECH (Lanternmaster): Mira Eggwarden. And Spark — Subject One, if the hunters' gossip is to be believed.",
+        "SPEECH (Mira Eggwarden): We don't use that name.",
+        "SPEECH (Lanternmaster): Safety is a stage light. It shows what I choose to show.",
+        "THOUGHT (Mira Eggwarden): That mark… Shellward's cousin."
+      ]
+    },
+    {
+      "pageNumber": 7,
+      "title": "Not Neatly in a Codex",
+      "beat": "Lanternmaster: shelters that don't fit Codex; Mira asks Riftborn; he avoids.",
+      "transcript": [
+        "SPEECH (Lanternmaster): We shelter what does not fit neatly inside a Codex.",
+        "SPEECH (Mira Eggwarden): Riftborn. Say the word if you know it.",
+        "SPEECH (Lanternmaster): Words are costumes. Come see the show — truth prefers an audience.",
+        "WHISPER (Mira Eggwarden): That's not an answer."
+      ]
+    },
+    {
+      "pageNumber": 8,
+      "title": "Curtain Call Begins",
+      "beat": "Main performance; introduce Lumenhare; acrobatics/illusion/elemental demos.",
+      "transcript": [
+        "SFX: BRASS FANFARE",
+        "CAPTION: LUMENHARE — LANTERN LEAP",
+        "CREATURE (Lumenhare): *thump-leap!*",
+        "NARRATION: Wonder is honest. Motives rarely are."
+      ]
+    },
+    {
+      "pageNumber": 9,
+      "title": "Ghosts Under the Boards",
+      "beat": "Wisplet detects trapped spirits under stage; Spirit Moth pulse; Spark uneasy.",
+      "transcript": [
+        "CREATURE (Wisplet): *warning-chime*",
+        "SFX: hidden-pulse",
+        "CREATURE (Spark): *uneasy hum*",
+        "SPEECH (Mira Eggwarden): Something's wrong under the stage.",
+        "NARRATION: Applause can be a lid."
+      ]
+    },
+    {
+      "pageNumber": 10,
+      "title": "Resonance Meeting",
+      "beat": "Spark meets Lumenhare backstage; nonverbal resonance recognition.",
+      "transcript": [
+        "CREATURE (Spark): *question-pulse*",
+        "CREATURE (Lumenhare): *answer-glow*",
+        "NARRATION: They speak without owning each other.",
+        "SPEECH (Mira Eggwarden): Invite only. Always."
+      ]
+    },
+    {
+      "pageNumber": 11,
+      "title": "Don't Ask Backstage",
+      "beat": "Performer warns Mira; Bramblefox sees Meridian tracking sigil.",
+      "transcript": [
+        "SPEECH (Seris Vale): Keepers shouldn't ask questions backstage. Spoilers ruin the act.",
+        "CREATURE (Bramblefox): *growl-low*",
+        "SFX: sigil-glint",
+        "SPEECH (Mira Eggwarden): Funny. Spoilers usually hide behind badges."
+      ]
+    },
+    {
+      "pageNumber": 12,
+      "title": "Restricted Wagon",
+      "beat": "Thornling chases snack cart into restricted wagon; crates; broken Rift restraint.",
+      "transcript": [
+        "CREATURE (Thornling): *chase!*",
+        "SFX: skrrt",
+        "NARRATION: Not circus brass. Hunter iron.",
+        "SPEECH (Mira Eggwarden): That's a collar. Not a costume."
+      ]
+    },
+    {
+      "pageNumber": 13,
+      "title": "Archive of Routes",
+      "beat": "Archive wagon: Riftborn records MISSING/CAPTURED/HIDDEN.",
+      "transcript": [
+        "NARRATION: They kept records the Codex never dared to finish.",
+        "SPEECH (Mira Eggwarden): Missing. Captured. Hidden…",
+        "CREATURE (Spark): *afraid-hum*"
+      ]
+    },
+    {
+      "pageNumber": 14,
+      "title": "Ember Route",
+      "beat": "Spark sees self-like image; Resonance Bearer Ember Route; multiple routes.",
+      "transcript": [
+        "CREATURE (Spark): *recognition-chirp*",
+        "CAPTION: RESONANCE BEARER: EMBER ROUTE",
+        "SPEECH (Mira Eggwarden): Not one accident. Several roads."
+      ]
+    },
+    {
+      "pageNumber": 15,
+      "title": "Crystal in the Vault",
+      "beat": "Bramblefox leads to vault; Shellward crystal seen; alarms.",
+      "transcript": [
+        "CREATURE (Bramblefox): *this way*",
+        "NARRATION: Not stolen by hunters. Held under lantern law.",
+        "CREATURE (Spark): *drawn-pulse!*",
+        "SFX: ALARM-CHIME!!!",
+        "SHOUT (Seris Vale): Collection protocol — now!"
+      ]
+    },
+    {
+      "pageNumber": 16,
+      "title": "Sabotage",
+      "beat": "Grand performance sabotaged; Rift engine overload; controlled companion breaks free.",
+      "transcript": [
+        "SFX: KRRAAACK—OVERLOAD",
+        "SHOUT (Crowd): RUN—!",
+        "NARRATION: The act ends. The trap begins."
+      ]
+    },
+    {
+      "pageNumber": 17,
+      "title": "Living Bulwark",
+      "beat": "Crowds flee; Mossprig shields civilians; Mira organizes companions.",
+      "transcript": [
+        "SFX: STOMP",
+        "CREATURE (Mossprig): *BULWARK!*",
+        "SPEECH (Mira Eggwarden): Bramblefox flank. Thornling energy. Spark — with me, not as a weapon.",
+        "CREATURE (Lumenhare): *curtain!*"
+      ]
+    },
+    {
+      "pageNumber": 18,
+      "title": "Grand Chaos",
+      "beat": "Battle spread: Pulse Step, flank, Sprouting Energy, Grand Illusion, Wisplet phases cables.",
+      "transcript": [
+        "SFX: PULSE-STEP",
+        "SFX: ILLUSION×3",
+        "SFX: phase-chime",
+        "CREATURE (Thornling): *sprout-POW!*",
+        "NARRATION: Consent is a formation. Fear is a stampede."
+      ]
+    },
+    {
+      "pageNumber": 19,
+      "title": "Not Evil — Collared",
+      "beat": "Mira realizes creature controlled; Spark approaches despite danger.",
+      "transcript": [
+        "SPEECH (Mira Eggwarden): It's not choosing this.",
+        "CREATURE (Spark): *determined-chirp*",
+        "SHOUT (Seris Vale): Collar the Riftborn!"
+      ]
+    },
+    {
+      "pageNumber": 20,
+      "title": "Spark Chooses",
+      "beat": "Mira refuses to order Spark; Spark chooses; Spark + Lumenhare combine.",
+      "transcript": [
+        "SPEECH (Mira Eggwarden): I won't order you forward. If you go, you choose.",
+        "SFX: RESONANCE+ILLUSION",
+        "CREATURE (Spark): *together!*",
+        "CREATURE (Lumenhare): *veil!*"
+      ]
+    },
+    {
+      "pageNumber": 21,
+      "title": "Quiet Betrayal of the Hunt",
+      "beat": "Nira disables control relay; Bramblefox destroys restraint; Ironmantle freed.",
+      "transcript": [
+        "WHISPER (Nira Quill): Not another Subject One. Not like this.",
+        "SFX: SNAP—VINE",
+        "CREATURE (Bramblefox): *rrRAH!*",
+        "NARRATION: Freed — not defeated.",
+        "CREATURE (Ironmantle): *…safe?*"
+      ]
+    },
+    {
+      "pageNumber": 22,
+      "title": "Lanternmaster Unmasked in Battle",
+      "beat": "Freed creature turns on infiltrators; Lanternmaster combat; infiltrators retreat.",
+      "transcript": [
+        "SFX: CLANG—LANTERN STAFF",
+        "SHOUT (Seris Vale): We have enough for the Lost City team—!",
+        "SPEECH (Lanternmaster): Exit stage left. Curtain's mine."
+      ]
+    },
+    {
+      "pageNumber": 23,
+      "title": "We Move Them",
+      "beat": "Aftermath; Lanternmaster admits circus protected Riftborn; crystal protected.",
+      "transcript": [
+        "SPEECH (Lanternmaster): We have moved Riftborn between safe places for generations. Stages make better walls than prisons — sometimes.",
+        "SPEECH (Lanternmaster): Your sanctuary crystal was never Meridian loot. It was lantern cargo.",
+        "SPEECH (Mira Eggwarden): Protection and imprisonment share a door. Which side are you on when it closes?"
+      ]
+    },
+    {
+      "pageNumber": 24,
+      "title": "Map of Thresholds",
+      "beat": "Secret map: Commons, sanctuary, circus, Lost City; pulse under Lost City.",
+      "transcript": [
+        "CAPTION: COMMONS · SANCTUM · CIRCUS · LOST CITY",
+        "SFX: pulse…pulse…",
+        "SPEECH (Lanternmaster): The road remembers where hearts still sleep."
+      ]
+    },
+    {
+      "pageNumber": 25,
+      "title": "The Guardian Remembers",
+      "beat": "Lost City night cliffhanger; towers light; shadow; NEXT THE LOST CITY.",
+      "transcript": [
+        "TELEPATHY (Beneath the Ruins): The Guardian remembers.",
+        "SFX: TOWER-LIGHT… TOWER-LIGHT…",
+        "CAPTION: TO BE CONTINUED",
+        "CAPTION: NEXT: THE LOST CITY"
+      ]
+    }
+  ],
+  "canonLock": {
+    "keeper": "Mira Eggwarden",
+    "vision": "Elara Venn",
+    "rejected": "Cal Reed"
+  }
+}

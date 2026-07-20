@@ -1,0 +1,212 @@
+{
+  "pageNumber": 14,
+  "storyPageNumber": 10,
+  "bookRole": "story",
+  "title": "Chief Engineer",
+  "storyPurpose": "Meet Chief Engineer Arkan emerging from memory preservation.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p10a",
+      "description": "Preservation alcove cracks open: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes stepping out — elderly, prosthetics, crystal monocle, blue energy veins, tool harness; centuries of dust falling.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "stasis-HISS",
+          "x": 70,
+          "y": 25,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Visitors. Living ones. How… rude of the centuries.",
+          "x": 45,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 42,
+          "speaker": "Arkan",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p10b",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes protective stance with Spark; Arkan studying Spark with aching curiosity, not greed.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Stay back. We're Keepers — not spare parts.",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Good. The Forge forgot that difference. I have not.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Arkan",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p10c",
+      "description": "Arkan's burned hands raised empty; monocle reflecting Spark's glow; shame in posture.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "text": "I am Chief Engineer Arkan. Last architect who stayed.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 46,
+          "speaker": "Arkan",
+          "readOrder": 4
+        },
+        {
+          "kind": "creature",
+          "text": "*wary-curious*",
+          "x": 55,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p10a",
+      "kind": "speech",
+      "text": "Visitors. Living ones. How… rude of the centuries.",
+      "x": 45,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 42,
+      "speaker": "Arkan",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p10b",
+      "kind": "speech",
+      "text": "Stay back. We're Keepers — not spare parts.",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p10b",
+      "kind": "speech",
+      "text": "Good. The Forge forgot that difference. I have not.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Arkan",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p10c",
+      "kind": "whisper",
+      "text": "I am Chief Engineer Arkan. Last architect who stayed.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 46,
+      "speaker": "Arkan",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p10c",
+      "kind": "creature",
+      "text": "*wary-curious*",
+      "x": 55,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p10a",
+      "kind": "sfx",
+      "text": "stasis-HISS",
+      "x": 70,
+      "y": 25,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "arkan"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Forge of Rifts"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "preservation alcove near Incubator",
+    "arkan": "introduced"
+  },
+  "requiredMoments": [
+    9
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black steel and white stone first; cyan plasma, orange molten channels, restrained purple Rift energy accents, massive crystal columns, ancient mechanical architecture. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Forge of Rifts\" Issue #8, STORY PAGE 10/25 — Chief Engineer. Story purpose: Meet Chief Engineer Arkan emerging from memory preservation. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p10a): Preservation alcove cracks open: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes stepping out — elderly, prosthetics, crystal monocle, blue energy veins, tool harness; centuries of dust falling. Panel 2 (p10b): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes protective stance with Spark; Arkan studying Spark with aching curiosity, not greed. Panel 3 (p10c): Arkan's burned hands raised empty; monocle reflecting Spark's glow; shame in posture. Characters: mira-eggwarden, arkan. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Arkan lock: Chief Engineer Arkan: elderly former Riftwright engineer, mechanical prosthetics, ancient engineer robes, crystal monocle, tool harness, burned hands, blue energy veins under translucent skin, regretful brilliant eyes. Axiom lock: Axiom: small floating crystalline fox prototype companion, transparent body with glowing internal circuitry, holographic tail, broken crystal horns, soft cyan-gold light, curious restorative presence. Environment: Forge of Rifts underground civilization. Time: timeless subterranean. Weather: plasma haze and molten heat. Lighting: cyan plasma, orange molten channels, crystal column glow. Continuity: {\"location\": \"preservation alcove near Incubator\", \"arkan\": \"introduced\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork. NO Riftwright face.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
+  "pageTurnObjective": "Hear the Forge's history.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Chief Engineer — The Forge of Rifts page 10",
+  "atmosphere": "rift",
+  "transcript": [
+    "SFX: stasis-HISS",
+    "SPEECH (Arkan): Visitors. Living ones. How… rude of the centuries.",
+    "SPEECH (Mira Eggwarden): Stay back. We're Keepers — not spare parts.",
+    "SPEECH (Arkan): Good. The Forge forgot that difference. I have not.",
+    "WHISPER (Arkan): I am Chief Engineer Arkan. Last architect who stayed.",
+    "CREATURE (Spark): *wary-curious*"
+  ],
+  "a11yTranscript": [
+    "SFX: stasis-HISS",
+    "SPEECH (Arkan): Visitors. Living ones. How… rude of the centuries.",
+    "SPEECH (Mira Eggwarden): Stay back. We're Keepers — not spare parts.",
+    "SPEECH (Arkan): Good. The Forge forgot that difference. I have not.",
+    "WHISPER (Arkan): I am Chief Engineer Arkan. Last architect who stayed.",
+    "CREATURE (Spark): *wary-curious*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "arkan"
+  ],
+  "spread": null,
+  "id": "the-forge-of-rifts-issue-008-p014",
+  "cleanArtRel": "generated/raw-art/page-014.webp",
+  "letteredArtRel": "generated/lettered-pages/page-014.webp",
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-014.webp"
+}

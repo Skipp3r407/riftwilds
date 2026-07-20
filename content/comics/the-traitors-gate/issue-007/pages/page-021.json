@@ -1,0 +1,183 @@
+{
+  "pageNumber": 21,
+  "storyPageNumber": 17,
+  "bookRole": "story",
+  "title": "Bulwark Bridge",
+  "storyPurpose": "Mossprig Living Bulwark protects egg; Bramblefox hunts infiltrators on bridge.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p17a",
+      "description": "Mossprig Living Bulwark dome over Mira and dormant egg; capture beam shatters on green shield; egg cracks once under stress.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*BULWARK*",
+          "x": 45,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mossprig",
+          "readOrder": 0
+        },
+        {
+          "kind": "sfx",
+          "text": "CRACK",
+          "x": 60,
+          "y": 55,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 1
+        },
+        {
+          "kind": "narration",
+          "text": "One seam opens. An eye does not — yet.",
+          "x": 50,
+          "y": 80,
+          "tail": null,
+          "maxWidthPct": 40,
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p17b",
+      "description": "Bramblefox races narrow upper bridge, tackling Meridian infiltrators; cyan fog below void.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*tackled!*",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Bramblefox",
+          "readOrder": 3
+        },
+        {
+          "kind": "sfx",
+          "text": "SCRAPE",
+          "x": 70,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p17a",
+      "kind": "creature",
+      "text": "*BULWARK*",
+      "x": 45,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mossprig",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p17b",
+      "kind": "creature",
+      "text": "*tackled!*",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Bramblefox",
+      "readOrder": 3
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p17a",
+      "kind": "narration",
+      "text": "One seam opens. An eye does not — yet.",
+      "x": 50,
+      "y": 80,
+      "tail": null,
+      "maxWidthPct": 40,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p17a",
+      "kind": "sfx",
+      "text": "CRACK",
+      "x": 60,
+      "y": 55,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 1
+    },
+    {
+      "panelId": "p17b",
+      "kind": "sfx",
+      "text": "SCRAPE",
+      "x": 70,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 4
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "mossprig",
+    "bramblefox",
+    "spark",
+    "dormant-egg"
+  ],
+  "locations": [
+    "Traitor's Gate — Upper Bridge"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "egg": "cracked-once",
+    "mossprig": "bulwark",
+    "bramblefox": "bridge-hunt"
+  },
+  "requiredMoments": [
+    17,
+    18
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black stone, pale silver metal, moss and timber first; cyan Rift light, deep red warning runes, restrained violet gate shimmer as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traitor's Gate\" Issue #7, STORY PAGE 17/25 — Bulwark Bridge. Story purpose: Mossprig Living Bulwark protects egg; Bramblefox hunts infiltrators on bridge. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p17a): Mossprig Living Bulwark dome over Mira and dormant egg; capture beam shatters on green shield; egg cracks once under stress. Panel 2 (p17b): Bramblefox races narrow upper bridge, tackling Meridian infiltrators; cyan fog below void. Characters: mira-eggwarden. Creatures: mossprig, bramblefox, spark, dormant-egg. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Egg lock: dormant Riftborn egg: warm oval shell with cyan-amber seam markings, soft pulse glow, no full hatch — visually identical across pages. Oathwarden lock: Oathwarden Seraph: tall ceremonial black-and-silver armor, split judgment mask, cyan oath flame, long judgment spear, broken Keeper cloak, floating lock rings, one armor side corrupted, orbiting memory mirrors. Environment: Traitor Gate approaches. Time: day. Lighting: black stone with cyan rift accents. Continuity: {\"egg\": \"cracked-once\", \"mossprig\": \"bulwark\", \"bramblefox\": \"bridge-hunt\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Siege spreads.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Bulwark Bridge — The Traitor's Gate page 17",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Mossprig): *BULWARK*",
+    "SFX: CRACK",
+    "NARRATION: One seam opens. An eye does not — yet.",
+    "CREATURE (Bramblefox): *tackled!*",
+    "SFX: SCRAPE"
+  ],
+  "a11yTranscript": [
+    "CREATURE (Mossprig): *BULWARK*",
+    "SFX: CRACK",
+    "NARRATION: One seam opens. An eye does not — yet.",
+    "CREATURE (Bramblefox): *tackled!*",
+    "SFX: SCRAPE"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "mossprig-living-bulwark"
+  ],
+  "id": "the-traitors-gate-issue-007-p021",
+  "cleanArtRel": "generated/raw-art/page-021.webp",
+  "letteredArtRel": "generated/lettered-pages/page-021.webp",
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-021.webp"
+}

@@ -1,7 +1,7 @@
 import type { StarterSpecies } from "@/lib/assets/manifest";
 
 /** Bump when pet list thumbs are regenerated. */
-export const PET_THUMB_V = "petthumb2";
+export const PET_THUMB_V = "petthumb4";
 
 /** Painted Riftling portraits (AI-generated masters, 1024px). */
 export function creaturePortraitPath(slug: string): string {
@@ -10,10 +10,10 @@ export function creaturePortraitPath(slug: string): string {
 
 /**
  * Lightweight list/codex thumbs (384px webp).
- * Prefer these on dense pages (/creatures) so ~100 portraits can load.
+ * Prefer seam-trimmed plate variants when present (Staticat/Stormmoth edge fix).
  */
 export function creatureThumbPath(slug: string): string {
-  return `/assets/pets/thumbs/${slug}.webp?v=${PET_THUMB_V}`;
+  return `/assets/pets/thumbs/${slug}.plate.webp?v=${PET_THUMB_V}`;
 }
 
 export function creatureProfilePath(slug: string, usePlaceholder = false): string {
@@ -126,7 +126,7 @@ export function isDevPlaceholderPath(path: string): boolean {
 }
 
 /** Brand lockups - transparent PNGs/SVGs for dark UI chrome. Bump ?v= after regenerating. */
-export const BRAND_ASSET_V = "theme4";
+export const BRAND_ASSET_V = "theme4b";
 export const brandLogoPath = `/assets/brand/riftwilds-logo.png?v=${BRAND_ASSET_V}`;
 export const brandMarkPath = `/assets/brand/riftwilds-mark.png?v=${BRAND_ASSET_V}`;
 export const brandWordmarkPath = `/assets/brand/riftwilds-wordmark.png?v=${BRAND_ASSET_V}`;
@@ -140,6 +140,24 @@ export { titleAtmospherePath, resolveTitleSlug } from "@/lib/assets/title-banner
 
 /** Bump when section UI thumbs are remasked / regenerated. */
 export const SECTION_UI_THUMB_V = "arena8";
+
+/** Bump when login / auth provider + section thumbs are regenerated. */
+export const AUTH_ART_V = "auth1";
+
+/** Social provider thumb under public/assets/auth/providers/{id}.png */
+export function authProviderThumbPath(id: string): string {
+  return `/assets/auth/providers/${id}.png?v=${AUTH_ART_V}`;
+}
+
+/** Login section thumb under public/assets/auth/sections/{slug}.png */
+export function authSectionThumbPath(slug: string): string {
+  return `/assets/auth/sections/${slug}.png?v=${AUTH_ART_V}`;
+}
+
+/** Square mystery egg for /login header (crisp in narrow frame). */
+export function authLoginHeaderEggPath(): string {
+  return `/assets/auth/login-header-egg.png?v=${AUTH_ART_V}`;
+}
 
 /** Bump when quest panel art is regenerated. */
 export const QUEST_ART_V = "quest2";

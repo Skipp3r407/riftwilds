@@ -1,0 +1,191 @@
+{
+  "pageNumber": 25,
+  "storyPageNumber": 21,
+  "bookRole": "story",
+  "title": "Loyalty Is Not Obligation",
+  "storyPurpose": "Spark communicates truth; Thundervane rejects replacement; king sees confusion of loyalty/obligation.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p21a",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot back in physical space pressed to Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's hands; cyan memory light fading; Mira listening.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*refuse-replace*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "He won't take Thundervane's place. He won't be owned by an engine.",
+          "x": 60,
+          "y": 65,
+          "tail": "up",
+          "maxWidthPct": 40,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p21b",
+      "description": "Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion weak but clear eye-lock with King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade; armor lightning dimming.",
+      "bubbles": [
+        {
+          "kind": "telepathy",
+          "text": "I stayed for love. You kept me for fear.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "Thundervane",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p21c",
+      "description": "Vaelor's storm-eye dimming to human grief; hand trembling on gauntlet crystal.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I confused loyalty… with obligation.",
+          "x": 50,
+          "y": 40,
+          "tail": "down",
+          "maxWidthPct": 42,
+          "speaker": "King Vaelor Tempest",
+          "readOrder": 3
+        },
+        {
+          "kind": "whisper",
+          "text": "Then choose which one remains.",
+          "x": 50,
+          "y": 75,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p21a",
+      "kind": "creature",
+      "text": "*refuse-replace*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p21a",
+      "kind": "speech",
+      "text": "He won't take Thundervane's place. He won't be owned by an engine.",
+      "x": 60,
+      "y": 65,
+      "tail": "up",
+      "maxWidthPct": 40,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p21b",
+      "kind": "telepathy",
+      "text": "I stayed for love. You kept me for fear.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "Thundervane",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p21c",
+      "kind": "speech",
+      "text": "I confused loyalty… with obligation.",
+      "x": 50,
+      "y": 40,
+      "tail": "down",
+      "maxWidthPct": 42,
+      "speaker": "King Vaelor Tempest",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p21c",
+      "kind": "whisper",
+      "text": "Then choose which one remains.",
+      "x": 50,
+      "y": 75,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "vaelor-tempest",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark",
+    "thundervane"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "engine chamber",
+    "vaelor": "realization",
+    "spark": "refuses-replace"
+  },
+  "requiredMoments": [
+    21,
+    22
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 21/25 — Loyalty Is Not Obligation. Story purpose: Spark communicates truth; Thundervane rejects replacement; king sees confusion of loyalty/obligation. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p21a): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot back in physical space pressed to Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes's hands; cyan memory light fading; Mira listening. Panel 2 (p21b): Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion weak but clear eye-lock with King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade; armor lightning dimming. Panel 3 (p21c): Vaelor's storm-eye dimming to human grief; hand trembling on gauntlet crystal. Characters: mira-eggwarden, vaelor-tempest, cael-vesper. Creatures: spark, thundervane. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"engine chamber\", \"vaelor\": \"realization\", \"spark\": \"refuses-replace\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Release the bond.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Loyalty Is Not Obligation — The Storm King page 21",
+  "atmosphere": "rift",
+  "transcript": [
+    "CREATURE (Spark): *refuse-replace*",
+    "SPEECH (Mira Eggwarden): He won't take Thundervane's place. He won't be owned by an engine.",
+    "TELEPATHY (Thundervane): I stayed for love. You kept me for fear.",
+    "SPEECH (King Vaelor Tempest): I confused loyalty… with obligation.",
+    "WHISPER (Cael Vesper): Then choose which one remains."
+  ],
+  "a11yTranscript": [
+    "CREATURE (Spark): *refuse-replace*",
+    "SPEECH (Mira Eggwarden): He won't take Thundervane's place. He won't be owned by an engine.",
+    "TELEPATHY (Thundervane): I stayed for love. You kept me for fear.",
+    "SPEECH (King Vaelor Tempest): I confused loyalty… with obligation.",
+    "WHISPER (Cael Vesper): Then choose which one remains."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p025",
+  "cleanArtRel": "generated/raw-art/page-025.webp",
+  "letteredArtRel": "generated/lettered-pages/page-025.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-025.webp"
+}

@@ -1,0 +1,193 @@
+{
+  "pageNumber": 9,
+  "storyPageNumber": 5,
+  "bookRole": "story",
+  "title": "Praise and Prison",
+  "storyPurpose": "Villagers disagree about the Storm King — protector vs prison.",
+  "layout": {
+    "type": "four-grid",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p5a",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes speaking with elder under storm awning; Compact lantern charm visible.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Does the king keep you safe — or keep you in?",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p5b",
+      "description": "Proud citizen gesturing toward lightning towers.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Without Vaelor, the Rift would have eaten us generations ago.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Villager A",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p5c",
+      "description": "Weary parent shuttering a window as children flinch at thunder.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Safe is a word for people who can leave. We can't.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 40,
+          "speaker": "Villager B",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p5d",
+      "description": "Spark looking between towers and people; Echoquill recording soft memory light.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*archive-trill*",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Echoquill",
+          "readOrder": 3
+        },
+        {
+          "kind": "thought",
+          "text": "Protection that forbids exit is still a cage.",
+          "x": 55,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 38,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p5a",
+      "kind": "speech",
+      "text": "Does the king keep you safe — or keep you in?",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p5b",
+      "kind": "speech",
+      "text": "Without Vaelor, the Rift would have eaten us generations ago.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Villager A",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p5c",
+      "kind": "speech",
+      "text": "Safe is a word for people who can leave. We can't.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 40,
+      "speaker": "Villager B",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p5d",
+      "kind": "creature",
+      "text": "*archive-trill*",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Echoquill",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p5d",
+      "kind": "thought",
+      "text": "Protection that forbids exit is still a cage.",
+      "x": 55,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 38,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "echoquill"
+  ],
+  "locations": [
+    "Tempestria"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "lower village",
+    "politics": "split-opinion"
+  },
+  "requiredMoments": [
+    6
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Storm King\" Issue #5, STORY PAGE 5/25 — Praise and Prison. Story purpose: Villagers disagree about the Storm King — protector vs prison. Layout: four-grid. 4 panels with clear inked gutters. Panel 1 (p5a): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes speaking with elder under storm awning; Compact lantern charm visible. Panel 2 (p5b): Proud citizen gesturing toward lightning towers. Panel 3 (p5c): Weary parent shuttering a window as children flinch at thunder. Panel 4 (p5d): Spark looking between towers and people; Echoquill recording soft memory light. Characters: mira-eggwarden. Creatures: spark, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Storm King lock: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Thundervane lock: Thundervane: massive winged storm-lion companion, dark storm fur and feathered wings, electric-cyan markings, white-hot eyes, lightning along spine, royal armor fragments, visible exhaustion. Environment: Tempestria Storm Kingdom. Time: day. Weather: permanent supernatural storm. Lighting: slate peaks with electric cyan lightning. Continuity: {\"location\": \"lower village\", \"politics\": \"split-opinion\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Royal escort arrives.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Praise and Prison — The Storm King page 5",
+  "atmosphere": "storm",
+  "transcript": [
+    "SPEECH (Mira Eggwarden): Does the king keep you safe — or keep you in?",
+    "SPEECH (Villager A): Without Vaelor, the Rift would have eaten us generations ago.",
+    "SPEECH (Villager B): Safe is a word for people who can leave. We can't.",
+    "CREATURE (Echoquill): *archive-trill*",
+    "THOUGHT (Mira Eggwarden): Protection that forbids exit is still a cage."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Mira Eggwarden): Does the king keep you safe — or keep you in?",
+    "SPEECH (Villager A): Without Vaelor, the Rift would have eaten us generations ago.",
+    "SPEECH (Villager B): Safe is a word for people who can leave. We can't.",
+    "CREATURE (Echoquill): *archive-trill*",
+    "THOUGHT (Mira Eggwarden): Protection that forbids exit is still a cage."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-storm-king-issue-005-p009",
+  "cleanArtRel": "generated/raw-art/page-009.webp",
+  "letteredArtRel": "generated/lettered-pages/page-009.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-009.webp"
+}

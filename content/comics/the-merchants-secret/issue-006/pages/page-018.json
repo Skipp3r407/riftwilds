@@ -1,0 +1,190 @@
+{
+  "pageNumber": 18,
+  "storyPageNumber": 14,
+  "bookRole": "story",
+  "title": "Auction Trap",
+  "storyPurpose": "Private auction revealed as trap; Meridian buyers unmasked.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p14a",
+      "description": "Private auction chamber: dormant egg on restraint pedestal — teal field; Meridian buyers raising paddles.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Lot one opens the Resonance line. Bid accordingly.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Seris Vale",
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p14b",
+      "description": "Trap reveal: restraint field doubles as capture net for Spark if revealed; Wisplet showing shimmer walls.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "The egg is bait.",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        },
+        {
+          "kind": "creature",
+          "text": "*barrier-flare*",
+          "x": 65,
+          "y": 55,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Wisplet",
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p14c",
+      "description": "Meridian command buyers unmasked — three-arc sigils; Nira recognizing handlers from her file.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Handlers. Not collectors.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Nira Quill",
+          "readOrder": 3
+        },
+        {
+          "kind": "shout",
+          "text": "Seize Subject One if it shows.",
+          "x": 65,
+          "y": 72,
+          "tail": "left",
+          "maxWidthPct": 36,
+          "speaker": "Seris Vale",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p14a",
+      "kind": "speech",
+      "text": "Lot one opens the Resonance line. Bid accordingly.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Seris Vale",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p14b",
+      "kind": "speech",
+      "text": "The egg is bait.",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p14b",
+      "kind": "creature",
+      "text": "*barrier-flare*",
+      "x": 65,
+      "y": 55,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Wisplet",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p14c",
+      "kind": "speech",
+      "text": "Handlers. Not collectors.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Nira Quill",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p14c",
+      "kind": "shout",
+      "text": "Seize Subject One if it shows.",
+      "x": 65,
+      "y": 72,
+      "tail": "left",
+      "maxWidthPct": 36,
+      "speaker": "Seris Vale",
+      "readOrder": 4
+    }
+  ],
+  "captions": [],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "nira-quill"
+  ],
+  "creatures": [
+    "wisplet",
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "private auction trap",
+    "buyers": "meridian-unmasked"
+  },
+  "requiredMoments": [
+    24,
+    25
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 14/25 — Auction Trap. Story purpose: Private auction revealed as trap; Meridian buyers unmasked. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p14a): Private auction chamber: dormant egg on restraint pedestal — teal field; Meridian buyers raising paddles. Panel 2 (p14b): Trap reveal: restraint field doubles as capture net for Spark if revealed; Wisplet showing shimmer walls. Panel 3 (p14c): Meridian command buyers unmasked — three-arc sigils; Nira recognizing handlers from her file. Characters: mira-eggwarden, seris-vale, nira-quill. Creatures: wisplet, spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"private auction trap\", \"buyers\": \"meridian-unmasked\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Network beyond control.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Auction Trap — The Merchant's Secret page 14",
+  "atmosphere": "market",
+  "transcript": [
+    "SPEECH (Seris Vale): Lot one opens the Resonance line. Bid accordingly.",
+    "SPEECH (Mira Eggwarden): The egg is bait.",
+    "CREATURE (Wisplet): *barrier-flare*",
+    "SPEECH (Nira Quill): Handlers. Not collectors.",
+    "SHOUT (Seris Vale): Seize Subject One if it shows."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Seris Vale): Lot one opens the Resonance line. Bid accordingly.",
+    "SPEECH (Mira Eggwarden): The egg is bait.",
+    "CREATURE (Wisplet): *barrier-flare*",
+    "SPEECH (Nira Quill): Handlers. Not collectors.",
+    "SHOUT (Seris Vale): Seize Subject One if it shows."
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p018",
+  "cleanArtRel": "generated/raw-art/page-018.webp",
+  "letteredArtRel": "generated/lettered-pages/page-018.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-018.webp"
+}

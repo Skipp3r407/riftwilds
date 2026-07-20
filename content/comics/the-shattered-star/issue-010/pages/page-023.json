@@ -1,0 +1,161 @@
+{
+  "pageNumber": 23,
+  "storyPageNumber": 19,
+  "bookRole": "story",
+  "title": "Breach and Beam",
+  "storyPurpose": "Double-page battle spread RIGHT — Hollow breach vs Guardian support.",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "p19a",
+      "description": "EPIC RIGHT HALF of double-page: Hollow Ones breach a Prime Sanctuary wall; Truthwing and Cael's lantern seal a gap; Aurelia's Lockjaw Wisp phases keys; Guardian City support beams smash Hollow formations; Star begins to rotate/move; sleeping Primes behind crystal shields; continuation of left spread composition.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "They breach the sanctuary—!",
+          "x": 40,
+          "y": 18,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "High Keeper Lyra",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "Lantern line — hold!",
+          "x": 55,
+          "y": 40,
+          "tail": "left",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "GUARDIAN CITIES SUPPORT FROM BELOW",
+          "x": 50,
+          "y": 85,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "BEAM-CRACK",
+          "x": 75,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p19a",
+      "kind": "shout",
+      "text": "They breach the sanctuary—!",
+      "x": 40,
+      "y": 18,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "High Keeper Lyra",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p19a",
+      "kind": "speech",
+      "text": "Lantern line — hold!",
+      "x": 55,
+      "y": 40,
+      "tail": "left",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 1
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p19a",
+      "kind": "caption",
+      "text": "GUARDIAN CITIES SUPPORT FROM BELOW",
+      "x": 50,
+      "y": 85,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p19a",
+      "kind": "sfx",
+      "text": "BEAM-CRACK",
+      "x": 75,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "high-keeper-lyra",
+    "cael-vesper",
+    "aurelia-voss",
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "truthwing",
+    "lockjaw-wisp",
+    "astra",
+    "spark",
+    "nova"
+  ],
+  "locations": [
+    "Shattered Star"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "battle": "climax-right",
+    "star": "beginning-to-move"
+  },
+  "requiredMoments": [
+    17,
+    18,
+    19
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. White crystal and emerald vegetation first; gold architecture, aurora lighting, cyan-gold Rift accents, blue cavern skies with visible stars, floating waterfalls. NO purple neon AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Shattered Star\" Issue #10 Volume Two, STORY PAGE 19/25 — Breach and Beam. Story purpose: Double-page battle spread RIGHT — Hollow breach vs Guardian support. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p19a): EPIC RIGHT HALF of double-page: Hollow Ones breach a Prime Sanctuary wall; Truthwing and Cael's lantern seal a gap; Aurelia's Lockjaw Wisp phases keys; Guardian City support beams smash Hollow formations; Star begins to rotate/move; sleeping Primes behind crystal shields; continuation of left spread composition. Characters: high-keeper-lyra, cael-vesper, aurelia-voss, mira-eggwarden. Creatures: truthwing, lockjaw-wisp, astra, spark, nova. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Nova design lock: Nova: newly hatched Prime Companion from Issue #9, sleek luminous body with star-seam fur, twin Resonance Key glow matching Spark, constellation freckles, curious protective eyes, adolescent Prime silhouette — original species. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Lyra lock: High Keeper Lyra: tall elegant Celestial Keeper, long white hair, gold and white armor, blue crystal crown, elegant cloak with ancient companion markings, calm stern eyes, floating gold relics. Astra lock: Astra: massive celestial wolf Prime Companion, galaxy fur with constellation markings, golden antlers, blue crystalline wings, nebula tail, legendary support presence. Axiom lock: Axiom: small floating crystalline fox prototype, transparent body with glowing circuitry, holographic tail, soft cyan-gold light. Environment: Shattered Star celestial sanctuary. Time: day-aurora. Weather: rift aurora mist. Lighting: white crystal, gold architecture, aurora cyan-gold. Continuity: {\"battle\": \"climax-right\", \"star\": \"beginning-to-move\"} Leave empty balloon-safe and narration-safe negative space. NO readable text in artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "pageTurnObjective": "Turn to continue.",
+  "letteringInstructions": "Wide-spread lettering; keep center gutter clear for page join.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Breach and Beam — The Shattered Star page 19",
+  "atmosphere": "battle",
+  "transcript": [
+    "SHOUT (High Keeper Lyra): They breach the sanctuary—!",
+    "SPEECH (Cael Vesper): Lantern line — hold!",
+    "CAPTION: GUARDIAN CITIES SUPPORT FROM BELOW",
+    "SFX: BEAM-CRACK"
+  ],
+  "a11yTranscript": [
+    "SHOUT (High Keeper Lyra): They breach the sanctuary—!",
+    "SPEECH (Cael Vesper): Lantern line — hold!",
+    "CAPTION: GUARDIAN CITIES SUPPORT FROM BELOW",
+    "SFX: BEAM-CRACK"
+  ],
+  "codexLinks": [],
+  "cardTeases": [],
+  "spread": {
+    "role": "right",
+    "pairStoryPage": 18
+  },
+  "volumeLabel": "Volume Two · Issue #1 / Issue #10",
+  "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-023.webp",
+  "id": "the-shattered-star-issue-010-p023"
+}

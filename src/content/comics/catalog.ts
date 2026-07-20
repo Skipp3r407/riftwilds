@@ -4,18 +4,36 @@
  */
 
 import { COVER, PAGE_ART, SPLASH, WALLPAPERS } from "@/content/comics/art";
+import { characterWithCanon } from "@/content/comics/canon-links";
 import {
   buildEndPages,
   caption,
+  creature,
   ensureIssueArt,
   expandBeatsToPages,
+  magic,
   narrate,
   sfx,
+  shout,
   speech,
+  telepathy,
   thought,
+  whisper,
   type Beat,
 } from "@/content/comics/page-builder";
+import { publishIssue } from "@/content/comics/publishing-engine";
 import { BRIDGE_POOLS, STORY_EXPANSIONS } from "@/content/comics/story-expansions";
+import { RIFTWILDS_COMIC_SERIES } from "@/content/comics/story-arcs";
+import { ISSUE_001_COMIC } from "@/content/comics/the-first-rift/issue-001.generated";
+import { ISSUE_002_COMIC } from "@/content/comics/sparks-journey/issue-002.generated";
+import { ISSUE_003_COMIC } from "@/content/comics/the-traveling-circus/issue-003.generated";
+import { ISSUE_004_COMIC } from "@/content/comics/the-lost-city/issue-004.generated";
+import { ISSUE_005_COMIC } from "@/content/comics/the-storm-king/issue-005.generated";
+import { ISSUE_008_COMIC } from "@/content/comics/the-forge-of-rifts/issue-008.generated";
+import { ISSUE_006_COMIC } from "@/content/comics/the-merchants-secret/issue-006.generated";
+import { ISSUE_007_COMIC } from "@/content/comics/the-traitors-gate/issue-007.generated";
+import { ISSUE_009_COMIC } from "@/content/comics/the-riftwright/issue-009.generated";
+import { ISSUE_010_COMIC } from "@/content/comics/the-shattered-star/issue-010.generated";
 import type { ComicIssue, ComicIssueMeta } from "@/content/comics/types";
 import { estimateReadingTimeMinutes } from "@/lib/comics/navigation";
 
@@ -158,6 +176,18 @@ const SEEDS: IssueSeed[] = [
     characters: [
       { name: "Elara Venn", role: "First Keeper", blurb: "Courier who refused a crown and kept an egg." },
       { name: "First Riftling", role: "Companion", blurb: "Living archive born from Soft Exodus fragment." },
+      characterWithCanon(
+        "Bramblefox",
+        "Grove companion",
+        "Forest Bond shown as living vine-light — game-accurate Nature skirmisher tease.",
+        "bramblefox",
+      ),
+      characterWithCanon(
+        "Mossprig",
+        "Tracker",
+        "Grove-affinity pathfinder; soft rustle is dialogue, not noise.",
+        "mossprig",
+      ),
     ],
     locations: [
       { name: "Riftwild Commons", blurb: "Refuge around the Prime shard — the Riftstone." },
@@ -313,6 +343,71 @@ const SEEDS: IssueSeed[] = [
           title: "Original IP note",
           body: "Riftlings are living archives — not weapons-first. Preservation before prowess.",
         },
+      },
+      {
+        kind: "scene",
+        layout: "three-stack",
+        title: "Forest Bond — living vine-light",
+        atmosphere: "day",
+        artSrc: PAGE_ART.forest,
+        panels: [
+          {
+            caption: "Ability tease · Forest Bond",
+            bubbles: [
+              narrate(
+                "When Bramblefox chooses a Keeper, the grove answers with green thread — Forest Bond, not a leash.",
+                { x: 50, y: 12 },
+              ),
+              creature("Bramblefox", "*vine-hum…*", { x: 30, y: 48, tail: "up" }),
+              sfx("LEAF-SNAP", { x: 70, y: 55 }),
+            ],
+          },
+          {
+            bubbles: [
+              magic("Grove", "Bond accepted — roots remember both names.", {
+                x: 50,
+                y: 40,
+              }),
+              whisper("Elara Venn", "Softly. Bonds break when shouted at.", {
+                x: 28,
+                y: 68,
+                tail: "up",
+              }),
+              telepathy("First Riftling", "…keep… grow…", { x: 72, y: 62 }),
+            ],
+          },
+          {
+            bubbles: [
+              shout("Village kid", "It glowed!", { x: 40, y: 30, tail: "down" }),
+              speech("Elara Venn", "It agreed. That is rarer than glowing.", {
+                x: 68,
+                y: 55,
+                tail: "down-left",
+              }),
+              caption("Tease card: Bramblefox · Deck Atelier · Codex family-bramblefox"),
+            ],
+          },
+        ],
+        hotspots: [
+          {
+            id: "hs-forest-bond",
+            label: "Forest Bond glyph",
+            x: 58,
+            y: 40,
+            w: 16,
+            h: 14,
+            codexEntryId: "wl-hatchery-compact",
+            secretCode: "FOREST-BOND-01",
+            hint: "Green thread coils around a fallen leaf…",
+            canonLink: {
+              tcgFamilyId: "family-bramblefox",
+              tcgCardId: "rotr-c-bramblefox",
+              abilityId: "forest-bond",
+              riftlingSlug: "bramblefox",
+              label: "Bramblefox · Forest Bond",
+            },
+          },
+        ],
       },
       {
         kind: "dialogue",
@@ -769,79 +864,69 @@ const SEEDS: IssueSeed[] = [
     ],
   },
   {
-    coverKey: "the-great-hunt",
-    slug: "the-great-hunt",
+    coverKey: "the-traitors-gate",
+    slug: "the-traitors-gate",
     issueNumber: 7,
-    title: "The Great Hunt",
-    subtitle: "A luminous quarry, and a rule: chase without cruelty.",
+    title: "The Traitor's Gate",
+    subtitle: "Chapter Seven — Judgment at the Border",
     synopsis:
-      "Keepers race Elderwood trails after a luminous quarry — the prize is witness, not conquest.",
-    publishedAt: "2026-04-06",
+      "After the Gilded Crossroads, suspicion fractures Mira Eggwarden's alliance. A dormant Riftborn egg pulls the team toward the Traitor's Gate — an ancient fortress that judges identity, bond, and intent.",
+    publishedAt: "2026-07-20",
     status: "published",
-    tags: ["hunt", "elderwood", "companions"],
-    playChapterHref: "/quests",
-    playChapterLabel: "Open Quests",
+    tags: ["traitors-gate", "suspicion", "mira-eggwarden"],
+    playChapterHref: "/live-world",
+    playChapterLabel: "Travel the Fracture roads",
     characters: [
-      { name: "Cal Reed", role: "Hunt lead", blurb: "Competent, dry humor, Compact-loyal." },
-      { name: "Mossprig", role: "Tracker", blurb: "Grove-affinity pathfinder." },
+      { name: "Mira Eggwarden", role: "Keeper", blurb: "Suspicion, judgment, and rescue." },
+      { name: "Nira Quill", role: "Hunter under suspicion", blurb: "Obvious suspect — not the whole truth." },
+      { name: "Aurelia Voss", role: "Gilded Merchant", blurb: "Evidence without premature verdict." },
+      { name: "Oathwarden Seraph", role: "Gate guardian", blurb: "Judges identity, bond, and intent." },
     ],
-    locations: [{ name: "Elderwood Forest", blurb: "Golden light shafts, cyan trail markers." }],
+    locations: [{ name: "Traitor's Gate", blurb: "Ancient Rift transit fortress." }],
     beats: [
       {
         kind: "splash",
-        title: "Trail light",
-        artSrc: SPLASH.hunt,
-        artAlt: "Keepers and riftlings racing through elderwood on a hunt",
-        atmosphere: "dawn",
-        narration: "The quarry left light, not blood.",
+        title: "Ash of the Crossroads",
+        artSrc: SPLASH.merchant,
+        artAlt: "Damaged market after portal collapse; egg and token glow",
+        atmosphere: "dusk",
+        narration: "A secret can survive the person who kept it. Suspicion rarely waits that long.",
       },
       {
         kind: "scene",
-        atmosphere: "day",
-        artSrc: PAGE_ART.regionElderwood,
+        atmosphere: "rift",
+        artSrc: PAGE_ART.rift,
         panels: [
           {
             bubbles: [
-              speech("Cal Reed", "If you corner it, you failed."),
-              speech("Mossprig", "*soft rustle*"),
-              sfx("dash!"),
+              speech("Mira Eggwarden", "Someone walked every road with us."),
+              creature("Spark", "*worried-glow*", { x: 30, y: 55, tail: "up" }),
+              sfx("token-PULSE", { x: 72, y: 40 }),
             ],
           },
           {
             bubbles: [
-              narrate("The Great Hunt teaches reading the world — not owning the horizon."),
-              thought("Keeper", "I wanted a trophy. Spark wanted a story."),
+              narrate("The Gate records intent as well as name."),
+              thought("Keeper", "Spark isn't sure. That should stop me."),
             ],
-          },
-        ],
-        hotspots: [
-          {
-            id: "hs-hunt-marker",
-            label: "Cyan trail marker",
-            x: 30,
-            y: 40,
-            w: 10,
-            h: 10,
-            secretCode: "HUNT-WITNESS",
-            hint: "A trail marker blinks once.",
           },
         ],
       },
       {
         kind: "dialogue",
-        atmosphere: "dusk",
-        artSrc: PAGE_ART.forest,
+        atmosphere: "rift",
+        artSrc: PAGE_ART.rift,
         lines: [
-          speech("Cal Reed", "We saw it. That is enough for the Compact."),
-          caption("Quest stub: HUNT-WITNESS"),
-          sfx("wind through boughs"),
+          speech("Oathwarden Seraph", "Concealed intent may close the Gate permanently."),
+          caption("NEXT: THE FORGE OF RIFTS"),
+          sfx("LOCK-RING"),
         ],
       },
       {
         kind: "lore",
-        title: "Hunt culture",
-        body: "Preservation first. Battle culture later as survival training — never as excuse for cruelty.",
-        atmosphere: "dawn",
+        title: "Gate judgment",
+        body: "The Traitor's Gate judges identity, bond, and intent. Spoiler-safe shelf copy never names the leak.",
+        atmosphere: "rift",
       },
     ],
   },
@@ -1105,13 +1190,44 @@ const SEEDS: IssueSeed[] = [
   },
 ];
 
-export const COMIC_ISSUES: ComicIssue[] = SEEDS.map(buildIssue);
+/** Story seeds → art ensure → publishing engine (front/back matter, covers, arcs). */
+const LEGACY_ISSUES: ComicIssue[] = SEEDS.map(buildIssue).map((issue) =>
+  publishIssue(issue, { maxPages: 40 }),
+);
+
+/**
+ * Structured baked-lettering books override legacy publishing-engine seeds.
+ * Issue #5 locks until Issue #4 complete; Issue #6 until Issue #5 (or COMICS_DEV_UNLOCK / admin-dev).
+ */
+export const COMIC_ISSUES: ComicIssue[] = LEGACY_ISSUES.map((issue) => {
+  if (issue.slug === "the-first-rift") return ISSUE_001_COMIC;
+  if (issue.slug === "sparks-journey") return ISSUE_002_COMIC;
+  if (issue.slug === "the-traveling-circus") return ISSUE_003_COMIC;
+  if (issue.slug === "the-lost-city") return ISSUE_004_COMIC;
+  if (issue.slug === "the-storm-king") return ISSUE_005_COMIC;
+  if (issue.slug === "the-merchants-secret") return ISSUE_006_COMIC;
+  if (issue.slug === "the-traitors-gate") return ISSUE_007_COMIC;
+  // Mira-canon Issue #8 supersedes legacy Last Guardian seed slot.
+  if (issue.slug === "the-last-guardian") return ISSUE_008_COMIC;
+  if (issue.slug === "the-forge-of-rifts") return ISSUE_008_COMIC;
+  // Mira-canon Volume One Finale supersedes legacy Festival of Lights as Issue #9.
+  if (issue.issueNumber === 9 || issue.slug === "festival-of-lights" || issue.slug === "the-riftwright") {
+    return ISSUE_009_COMIC;
+  }
+  // Volume Two opener supersedes legacy Shadow Beyond as Issue #10.
+  if (issue.issueNumber === 10 || issue.slug === "the-shadow-beyond" || issue.slug === "the-shattered-star") {
+    return ISSUE_010_COMIC;
+  }
+  return issue;
+});
 
 export const COMIC_SERIES = {
-  title: "Legends of the Rift",
-  subtitle:
-    "Lore Library — ten illustrated issues of Aeryndra. Read to unlock Codex ties and cosmetics; never pay-to-win.",
+  id: RIFTWILDS_COMIC_SERIES.id,
+  title: RIFTWILDS_COMIC_SERIES.title,
+  subtitle: RIFTWILDS_COMIC_SERIES.subtitle,
   issueCount: COMIC_ISSUES.length,
+  volumes: RIFTWILDS_COMIC_SERIES.volumes,
+  arcs: RIFTWILDS_COMIC_SERIES.arcs,
 } as const;
 
 export function getComicIssue(slug: string): ComicIssue | undefined {

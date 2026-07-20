@@ -9,6 +9,7 @@ import { ELEMENT_TO_AFFINITY } from "@/content/tcg/framework/element-map";
 import { CONSTRUCTED_RULES } from "@/content/tcg/framework/deck-rules";
 import { normalizeCard } from "@/content/tcg/framework/normalize-card";
 import { summarizeAbilities } from "@/game/tcg/combat/abilities";
+import { RIFT_SPARK_TOKEN, isRiftSparkToken } from "@/game/tcg/rules/rift-spark";
 import type { TcgCardDef, TcgCardType, TcgRarity } from "@/game/tcg/types";
 
 /**
@@ -17,12 +18,17 @@ import type { TcgCardDef, TcgCardType, TcgRarity } from "@/game/tcg/types";
  */
 
 const UNIT_TYPES = new Set([
-  "creature",
   "companion",
+  "evolution",
+  "commander",
+  // legacy
+  "creature",
   "legendary",
   "token",
   "hero",
 ]);
+
+const AURA_TYPES = new Set(["terrain", "location", "weather"]);
 
 function mapRarity(r: TcgCard["rarity"]): TcgRarity {
   if (r === "legendary" || r === "mythic" || r === "founder") return "LEGENDARY";
@@ -34,7 +40,7 @@ function mapRarity(r: TcgCard["rarity"]): TcgRarity {
 
 function mapType(t: TcgCard["type"]): TcgCardType {
   if (UNIT_TYPES.has(t)) return "UNIT";
-  if (t === "weather" || t === "location") return "AURA";
+  if (AURA_TYPES.has(t)) return "AURA";
   return "SPELL";
 }
 
@@ -109,6 +115,7 @@ export function clearTcgCardCatalogCache(): void {
 }
 
 export function getTcgCardDef(id: string): TcgCardDef | undefined {
+  if (isRiftSparkToken(id)) return RIFT_SPARK_TOKEN;
   const fromCache = getTcgCardCatalog().find((c) => c.id === id);
   if (fromCache) return fromCache;
   const raw = getCardById(id);

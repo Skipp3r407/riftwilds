@@ -1,0 +1,175 @@
+{
+  "pageNumber": 25,
+  "storyPageNumber": 21,
+  "bookRole": "story",
+  "title": "Chosen Contact",
+  "storyPurpose": "Spark approaches Guardian voluntarily; touches damaged core; shared memory begins.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p21a",
+      "description": "Spark walks alone across cracked plaza toward kneeling/unstable Guardian; Mira's team holds position — not commanding.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Invite. Wait. Even when the city shakes.",
+          "x": 50,
+          "y": 16,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p21b",
+      "description": "Spark's paw touches Guardian's damaged cyan core; Echoquill projects Memory Trace bridge light.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*…with you…*",
+          "x": 40,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 1
+        },
+        {
+          "kind": "sfx",
+          "text": "RESONANCE-LOCK",
+          "x": 65,
+          "y": 40,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 2
+        }
+      ]
+    },
+    {
+      "id": "p21c",
+      "description": "Both dissolve into shared memory light — world washes teal-gold; Seris shouts uselessly from edge.",
+      "bubbles": [
+        {
+          "kind": "shout",
+          "text": "Break the link!",
+          "x": 70,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Seris Vale",
+          "readOrder": 3
+        },
+        {
+          "kind": "speech",
+          "text": "No. This is consent.",
+          "x": 30,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p21b",
+      "kind": "creature",
+      "text": "*…with you…*",
+      "x": 40,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p21c",
+      "kind": "shout",
+      "text": "Break the link!",
+      "x": 70,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Seris Vale",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p21c",
+      "kind": "speech",
+      "text": "No. This is consent.",
+      "x": 30,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p21a",
+      "kind": "narration",
+      "text": "Invite. Wait. Even when the city shakes.",
+      "x": 50,
+      "y": 16,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p21b",
+      "kind": "sfx",
+      "text": "RESONANCE-LOCK",
+      "x": 65,
+      "y": 40,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 2
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "seris-vale",
+    "nira-quill"
+  ],
+  "creatures": [
+    "spark",
+    "echoquill"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "spark": "voluntary Guardian link",
+    "seris": "fails to break"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 21/25 — Chosen Contact. Story purpose: Spark approaches Guardian voluntarily; touches damaged core; shared memory begins. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p21a): Spark walks alone across cracked plaza toward kneeling/unstable Guardian; Mira's team holds position — not commanding. Panel 2 (p21b): Spark's paw touches Guardian's damaged cyan core; Echoquill projects Memory Trace bridge light. Panel 3 (p21c): Both dissolve into shared memory light — world washes teal-gold; Seris shouts uselessly from edge. Characters: mira-eggwarden, seris-vale, nira-quill. Creatures: spark, echoquill. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"spark\": \"voluntary Guardian link\", \"seris\": \"fails to break\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Final day memory.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Chosen Contact — The Lost City page 21",
+  "atmosphere": "rift",
+  "transcript": [
+    "NARRATION: Invite. Wait. Even when the city shakes.",
+    "CREATURE (Spark): *…with you…*",
+    "SFX: RESONANCE-LOCK",
+    "SHOUT (Seris Vale): Break the link!",
+    "SPEECH (Mira Eggwarden): No. This is consent."
+  ],
+  "id": "the-lost-city-issue-004-p025",
+  "cleanArtRel": "generated/raw-art/page-025.webp",
+  "letteredArtRel": "generated/lettered-pages/page-025.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-025.webp"
+}

@@ -237,9 +237,10 @@ describe("tcg practice loadout", () => {
         return (
           def != null &&
           def.riftCost <= state.players[0]!.riftEnergy &&
-          (card?.type === "creature" ||
-            card?.type === "companion" ||
-            card?.type === "spell")
+          (card?.type === "companion" ||
+            card?.type === "evolution" ||
+            card?.type === "spell" ||
+            card?.type === "item")
         );
       });
       expect(hasSoloPlay).toBe(true);

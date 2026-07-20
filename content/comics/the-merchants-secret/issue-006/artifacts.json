@@ -1,0 +1,39 @@
+{
+  "artifacts": [
+    {
+      "id": "royal-trade-ledger",
+      "name": "Royal Trade Ledger",
+      "status": "weaponized then partially burned"
+    },
+    {
+      "id": "lost-city-rift-component",
+      "name": "Lost City Rift Component",
+      "status": "with Seris \u2014 fleeing"
+    },
+    {
+      "id": "dormant-riftborn-egg",
+      "name": "Dormant Riftborn Egg",
+      "status": "rescued by Mira/Spark"
+    },
+    {
+      "id": "merchant-key",
+      "name": "Merchant Key",
+      "status": "Aurelia's bargain token"
+    },
+    {
+      "id": "merchant-token",
+      "name": "Merchant Token",
+      "status": "Cael's hidden debt \u2014 cliffhanger"
+    },
+    {
+      "id": "portal-engine",
+      "name": "Portal Engine",
+      "status": "overloaded then stabilized"
+    },
+    {
+      "id": "circus-warded-crystal",
+      "name": "Shellward Crystal",
+      "status": "Lanternveil-warded off-page"
+    }
+  ]
+}

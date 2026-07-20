@@ -56,22 +56,10 @@ export function validateDeckList(
     return { ok: true, size: result.size };
   }
 
-  if (defIds.length < TCG_DEFAULTS.minDeckSize) {
-    return {
-      ok: false,
-      reason: `Deck needs exactly ${CONSTRUCTED_RULES.deckSize} cards`,
-    };
-  }
-  if (defIds.length > TCG_DEFAULTS.maxDeckSize) {
-    return {
-      ok: false,
-      reason: `Deck exceeds ${CONSTRUCTED_RULES.deckSize} cards`,
-    };
-  }
   if (defIds.length !== CONSTRUCTED_RULES.deckSize) {
     return {
       ok: false,
-      reason: `Constructed decks must be exactly ${CONSTRUCTED_RULES.deckSize} cards`,
+      reason: `Constructed decks must be exactly ${CONSTRUCTED_RULES.deckSize} cards + 1 Commander (have ${defIds.length} main-deck cards)`,
     };
   }
   const counts = new Map<string, number>();

@@ -1,0 +1,82 @@
+{
+  "pageNumber": 13,
+  "id": "the-first-rift-issue-001-p013",
+  "role": "story",
+  "title": null,
+  "layout": "three-stack",
+  "atmosphere": "day",
+  "beat": "Bramblefox — Forest Bond",
+  "artPrompt": "Three horizontal panels, no text. Bramblefox (vine-fur fox Riftling, leaf ears) bonds with green Forest Bond threads to Keeper and First Riftling in sunlit grove. Official creature silhouette. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "caption": "Ability — Forest Bond",
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "When Bramblefox chooses a Keeper, the grove answers with green thread — Forest Bond, not a leash.",
+          "x": 50,
+          "y": 20
+        },
+        {
+          "kind": "creature",
+          "speaker": "Bramblefox",
+          "text": "*vine-hum…*",
+          "x": 30,
+          "y": 55
+        },
+        {
+          "kind": "sfx",
+          "text": "LEAF-SNAP",
+          "x": 72,
+          "y": 50
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "magic",
+          "speaker": "Grove",
+          "text": "Bond accepted — roots remember both names.",
+          "x": 50,
+          "y": 40
+        },
+        {
+          "kind": "whisper",
+          "speaker": "Elara Venn",
+          "text": "Softly. Bonds break when shouted at.",
+          "x": 28,
+          "y": 70,
+          "tail": "up"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "shout",
+          "speaker": "Village kid",
+          "text": "It glowed!",
+          "x": 40,
+          "y": 35,
+          "tail": "down"
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "It agreed. That is rarer than glowing.",
+          "x": 68,
+          "y": 55,
+          "tail": "down-left"
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-013.png",
+  "letteredArtRel": "generated/lettered/page-013.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-013.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

@@ -1,0 +1,216 @@
+{
+  "pageNumber": 25,
+  "storyPageNumber": 21,
+  "bookRole": "story",
+  "title": "Break the Chain",
+  "storyPurpose": "Cindermink Break the Chain; Lockjaw seals vault.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p21a",
+      "description": "Cindermink: small sleek companion, ember-red fur, soot-black paws, bright gold eyes, chain scars around one hind leg, smoke-like tail, nervous but defiant unleashing Break the Chain — ember flare severing pen restraints; captives spilling free.",
+      "bubbles": [
+        {
+          "kind": "sfx",
+          "text": "BREAK THE CHAIN",
+          "x": 50,
+          "y": 18,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "creature",
+          "text": "*ember-cut!*",
+          "x": 45,
+          "y": 45,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Cindermink",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p21b",
+      "description": "Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract executing Closed Contract — sealing auction vault and Meridian control console.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*closed-contract*",
+          "x": 50,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Lockjaw Wisp",
+          "readOrder": 2
+        },
+        {
+          "kind": "speech",
+          "text": "Vault sealed. Debts collected.",
+          "x": 60,
+          "y": 70,
+          "tail": "up",
+          "maxWidthPct": 38,
+          "speaker": "Aurelia Voss",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p21c",
+      "description": "Mira gathering freed companions; Spark guarding dormant egg.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "Freedom is not a receipt.",
+          "x": 50,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 4
+        },
+        {
+          "kind": "creature",
+          "text": "*guard-hum*",
+          "x": 55,
+          "y": 72,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p21a",
+      "kind": "creature",
+      "text": "*ember-cut!*",
+      "x": 45,
+      "y": 45,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Cindermink",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p21b",
+      "kind": "creature",
+      "text": "*closed-contract*",
+      "x": 50,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Lockjaw Wisp",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p21b",
+      "kind": "speech",
+      "text": "Vault sealed. Debts collected.",
+      "x": 60,
+      "y": 70,
+      "tail": "up",
+      "maxWidthPct": 38,
+      "speaker": "Aurelia Voss",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p21c",
+      "kind": "speech",
+      "text": "Freedom is not a receipt.",
+      "x": 50,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p21c",
+      "kind": "creature",
+      "text": "*guard-hum*",
+      "x": 55,
+      "y": 72,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 5
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p21a",
+      "kind": "sfx",
+      "text": "BREAK THE CHAIN",
+      "x": 50,
+      "y": 18,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "aurelia-voss"
+  ],
+  "creatures": [
+    "cindermink",
+    "lockjaw-wisp",
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "vault / pens",
+    "cindermink": "break-the-chain",
+    "lockjaw": "vault-sealed"
+  },
+  "requiredMoments": [
+    31,
+    32
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 21/25 — Break the Chain. Story purpose: Cindermink Break the Chain; Lockjaw seals vault. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p21a): Cindermink: small sleek companion, ember-red fur, soot-black paws, bright gold eyes, chain scars around one hind leg, smoke-like tail, nervous but defiant unleashing Break the Chain — ember flare severing pen restraints; captives spilling free. Panel 2 (p21b): Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract executing Closed Contract — sealing auction vault and Meridian control console. Panel 3 (p21c): Mira gathering freed companions; Spark guarding dormant egg. Characters: mira-eggwarden, aurelia-voss. Creatures: cindermink, lockjaw-wisp, spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"vault / pens\", \"cindermink\": \"break-the-chain\", \"lockjaw\": \"vault-sealed\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Engine overload.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Break the Chain — The Merchant's Secret page 21",
+  "atmosphere": "market",
+  "transcript": [
+    "SFX: BREAK THE CHAIN",
+    "CREATURE (Cindermink): *ember-cut!*",
+    "CREATURE (Lockjaw Wisp): *closed-contract*",
+    "SPEECH (Aurelia Voss): Vault sealed. Debts collected.",
+    "SPEECH (Mira Eggwarden): Freedom is not a receipt.",
+    "CREATURE (Spark): *guard-hum*"
+  ],
+  "a11yTranscript": [
+    "SFX: BREAK THE CHAIN",
+    "CREATURE (Cindermink): *ember-cut!*",
+    "CREATURE (Lockjaw Wisp): *closed-contract*",
+    "SPEECH (Aurelia Voss): Vault sealed. Debts collected.",
+    "SPEECH (Mira Eggwarden): Freedom is not a receipt.",
+    "CREATURE (Spark): *guard-hum*"
+  ],
+  "codexLinks": [],
+  "cardTeases": [
+    "cindermink",
+    "lockjaw-wisp"
+  ],
+  "id": "the-merchants-secret-issue-006-p025",
+  "cleanArtRel": "generated/raw-art/page-025.webp",
+  "letteredArtRel": "generated/lettered-pages/page-025.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-025.webp"
+}

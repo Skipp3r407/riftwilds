@@ -45,7 +45,7 @@
   ],
   "notes": [
     "All IDs resolve in cards.json (ROTR foundational set).",
-    "Constructed showcase: exactly 30 cards + separate Commander.",
+    "Constructed showcase: trim to 29 main-deck cards + separate Commander (rules v2).",
     "F2P competitive — craft path never requires crypto/SOL."
   ]
 }

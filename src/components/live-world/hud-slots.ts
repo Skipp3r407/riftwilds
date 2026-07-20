@@ -14,11 +14,11 @@ import { hasCustomHudPanelPosition } from "@/game/live-world/systems/immersive/h
  * Center of screen stays clear for the world (Level-2 panels collapsed by default).
  */
 
-/** Mid-left World Pulse stack (below status chrome). */
+/** Mid-left World Pulse stack (below unified top command bar). */
 export function midLeftHudStackClass(statusCollapsed: boolean): string {
-  return statusCollapsed
-    ? "pointer-events-none absolute left-3 top-12 z-30 flex w-[min(16rem,calc(100%-1.5rem))] flex-col items-start gap-2 md:left-4"
-    : "pointer-events-none absolute left-3 top-[5.5rem] z-30 flex w-[min(16rem,calc(100%-1.5rem))] flex-col items-start gap-2 md:left-4 md:top-24";
+  // Top command bar owns the header; pulse docks under it on all breakpoints.
+  void statusCollapsed;
+  return "pointer-events-none absolute left-3 top-[4.75rem] z-30 flex w-[min(16rem,calc(100%-1.5rem))] flex-col items-start gap-2 md:left-4 md:top-[5.25rem]";
 }
 
 export function townActivityUsesMidLeftStack(
@@ -29,9 +29,8 @@ export function townActivityUsesMidLeftStack(
 
 /** Right column: minimap + nearby badge + objectives (narrower for play space). */
 export function rightColumnHudStackClass(statusCollapsed: boolean): string {
-  return statusCollapsed
-    ? "pointer-events-none absolute right-3 top-12 z-30 flex w-[min(12.5rem,calc(100%-1.5rem))] flex-col items-end gap-1 md:right-4"
-    : "pointer-events-none absolute right-3 top-[4.25rem] z-30 flex w-[min(12.5rem,calc(100%-1.5rem))] flex-col items-end gap-1 md:right-4 md:top-[4.75rem]";
+  void statusCollapsed;
+  return "pointer-events-none absolute right-3 top-[4.75rem] z-30 flex w-[min(13.5rem,calc(100%-1.5rem))] flex-col items-end gap-1.5 md:right-4 md:top-[5.25rem] md:w-[min(14.5rem,calc(100%-2rem))] xl:w-[min(15.5rem,22vw)]";
 }
 
 /** @deprecated Prefer rightColumnHudStackClass — kept for free-drag fallbacks. */

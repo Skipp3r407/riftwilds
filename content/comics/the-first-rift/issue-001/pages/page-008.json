@@ -1,0 +1,57 @@
+{
+  "pageNumber": 8,
+  "id": "the-first-rift-issue-001-p008",
+  "role": "story",
+  "title": null,
+  "layout": "two-col",
+  "atmosphere": "dusk",
+  "beat": "Elara on Fracture road with egg",
+  "artPrompt": "Two-panel page, no text. Elara Venn (warm brown skin, dark braids with amber beads, travel cloak) carrying a soft glowing egg across Fracture-layered road where desert meets forest wrongly. Painterly comic. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Nine days before the Commons had a name.",
+          "x": 50,
+          "y": 12
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "The egg is warm. That is enough to keep walking.",
+          "x": 35,
+          "y": 58,
+          "tail": "down"
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "speech",
+          "speaker": "Stranger",
+          "text": "Take the crown road — safer.",
+          "x": 70,
+          "y": 30,
+          "tail": "down-left"
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Safer for whom?",
+          "x": 32,
+          "y": 72,
+          "tail": "up"
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-008.png",
+  "letteredArtRel": "generated/lettered/page-008.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-008.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

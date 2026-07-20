@@ -42,7 +42,61 @@ export const DEMO_MAIL: MailMessage[] = [
     read: false,
     avatarSrc: "/assets/npcs/riftwild-commons/archivist-solen/thumbnail.png",
   },
-];
+  {
+    id: "mail_2",
+    fromLabel: "Keeper Mira",
+    subject: "Care streak checkpoint",
+    body: "Your Groveheart rhythm looks steady — soft Credits only, no token promises.",
+    at: new Date(Date.now() - 3_600_000).toISOString(),
+    read: false,
+    avatarSrc: "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
+  },
+  {
+    id: "mail_3",
+    fromLabel: "Crystal Courier",
+    subject: "Spirit crystal parcel waiting",
+    body: "A sealed Spirit Crystal crate is ready at the Commons vault — cosmetics & crafting only.",
+    at: new Date(Date.now() - 7_200_000).toISOString(),
+    read: true,
+    avatarSrc: "/assets/cards/rise-of-the-rift/item-spirit-crystal/thumb.png",
+  },
+  {
+    id: "mail_4",
+    fromLabel: "Hatchery Desk",
+    subject: "Emberfox wants a play date",
+    body: "Your Emberfox left a soot-print invite for the Training Yard this evening.",
+    at: new Date(Date.now() - 12_000_000).toISOString(),
+    read: true,
+    avatarSrc: "/assets/pets/thumbs/emberfox.webp",
+  },
+  {
+    id: "mail_5",
+    fromLabel: "Bloomtide Office",
+    subject: "Festival lantern shift open",
+    body: "Volunteer for Bloomtide lantern duty — Presence XP only, never SOL.",
+    at: new Date(Date.now() - 28_800_000).toISOString(),
+    read: true,
+    avatarSrc: "/assets/festivals/bloomtide-festival.png",
+  },
+  {
+    id: "mail_6",
+    fromLabel: "Yard Captain Reed",
+    subject: "Arena showcase roster",
+    body: "Training showcase slots open tomorrow. Affinity drills — no wagering.",
+    at: new Date(Date.now() - 50_400_000).toISOString(),
+    read: true,
+    avatarSrc: "/assets/npcs/riftwild-commons/captain-orren/thumbnail.png",
+  },
+  {
+    id: "mail_7",
+    fromLabel: "Gemwright Opal",
+    subject: "Harmony crystal polish ready",
+    body: "Your Harmony Crystal came off the wheel — pick it up in Stoneheart when you pass through.",
+    at: new Date(Date.now() - 72_000_000).toISOString(),
+    read: true,
+    avatarSrc: "/assets/cards/rise-of-the-rift/mat-harmony-crystal/thumb.png",
+  },
+]
 
 export const MENTOR_OFFERS: MentorOffer[] = [
   {
@@ -135,6 +189,8 @@ export type PartyStub = {
   objective: string;
   leaderAvatarSrc: string;
   objectiveThumbSrc: string;
+  /** Your party vs pending invite row (still stub actions). */
+  kind: "active" | "invite";
 };
 
 export type DirectMessageStub = {
@@ -186,15 +242,72 @@ export const DEMO_FRIENDS: FriendStub[] = [
   },
 ];
 
-export const DEMO_PARTY: PartyStub = {
-  id: "party_demo",
-  leaderLabel: "You",
-  memberLabels: [],
-  maxSize: 4,
-  objective: "Explore Ember Crater (stub)",
-  leaderAvatarSrc: "/assets/brand/riftwilds-mark.png",
-  objectiveThumbSrc: "/assets/regions/ember-crater.png",
-};
+/** Multi-row party board — destinations reuse official region / scenic thumbs. */
+export const DEMO_PARTIES: PartyStub[] = [
+  {
+    id: "party_ember",
+    leaderLabel: "You",
+    memberLabels: [],
+    maxSize: 4,
+    objective: "Explore Ember Crater (stub)",
+    leaderAvatarSrc: "/assets/brand/riftwilds-mark.png",
+    objectiveThumbSrc: "/assets/social/thumbs/ember-crater-explore.png",
+    kind: "active",
+  },
+  {
+    id: "party_moonwater",
+    leaderLabel: "Luma Tidecrest",
+    memberLabels: ["Luma Tidecrest", "Coast Child Shell"],
+    maxSize: 4,
+    objective: "Tidewalk Moonwater Coast",
+    leaderAvatarSrc: "/assets/npcs/moonwater-coast/luma-tidecrest/thumbnail.png",
+    objectiveThumbSrc: "/assets/cards/rise-of-the-rift/region-moonwater-coast/thumb.png",
+    kind: "invite",
+  },
+  {
+    id: "party_elderwood",
+    leaderLabel: "Keeper Mira",
+    memberLabels: ["Keeper Mira"],
+    maxSize: 4,
+    objective: "Scout Elderwood canopy trails",
+    leaderAvatarSrc: "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
+    objectiveThumbSrc: "/assets/cards/rise-of-the-rift/region-elderwood-forest/thumb.png",
+    kind: "invite",
+  },
+  {
+    id: "party_stoneheart",
+    leaderLabel: "Petra Stoneveil",
+    memberLabels: ["Petra Stoneveil", "Gemwright Opal"],
+    maxSize: 5,
+    objective: "Forge run — Stoneheart Canyon",
+    leaderAvatarSrc: "/assets/npcs/stoneheart-canyon/petra-stoneveil/thumbnail.png",
+    objectiveThumbSrc: "/assets/cards/rise-of-the-rift/region-stoneheart-canyon/thumb.png",
+    kind: "invite",
+  },
+  {
+    id: "party_stormspire",
+    leaderLabel: "Aeron Cloudstep",
+    memberLabels: ["Aeron Cloudstep"],
+    maxSize: 4,
+    objective: "Stormspire ridge patrol",
+    leaderAvatarSrc: "/assets/npcs/stormspire-peaks/aeron-cloudstep/thumbnail.png",
+    objectiveThumbSrc: "/assets/cards/rise-of-the-rift/region-stormspire-peaks/thumb.png",
+    kind: "invite",
+  },
+  {
+    id: "party_spirit",
+    leaderLabel: "Medium Amara",
+    memberLabels: ["Medium Amara", "Marsh Singer Fog"],
+    maxSize: 4,
+    objective: "Lantern walk — Spirit Marsh",
+    leaderAvatarSrc: "/assets/npcs/spirit-marsh/medium-amara/thumbnail.png",
+    objectiveThumbSrc: "/assets/cards/rise-of-the-rift/region-spirit-marsh/thumb.png",
+    kind: "invite",
+  },
+];
+
+/** @deprecated Prefer DEMO_PARTIES — kept for callers expecting a single active party. */
+export const DEMO_PARTY: PartyStub = DEMO_PARTIES[0]!;
 
 export const DEMO_DMS: DirectMessageStub[] = [
   {
@@ -215,7 +328,7 @@ export const DEMO_COMMUNITY_POSTS: CommunityPostStub[] = [
     body: "Pump.fun was the launch chapter. Play, restore the world, and trade here.",
     at: new Date().toISOString(),
     channel: "announcements",
-    thumbSrc: "/assets/brand/riftwilds-mark.png",
+    thumbSrc: "/assets/social/thumbs/post-welcome-ecosystem.png",
   },
   {
     id: "post_help",
@@ -224,8 +337,82 @@ export const DEMO_COMMUNITY_POSTS: CommunityPostStub[] = [
     body: "Feed and rest on a rhythm — soft rewards only, no token buy promises.",
     at: new Date(Date.now() - 86_400_000).toISOString(),
     channel: "help",
-    thumbSrc: "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
+    thumbSrc: "/assets/social/thumbs/post-care-streak.png",
     authorAvatarSrc: "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
+  },
+  {
+    id: "post_festival",
+    authorLabel: "Bloomtide Office",
+    title: "Bloomtide lantern rehearsal",
+    body: "Practice routes open in the Commons plaza — Presence XP for helpers, never SOL.",
+    at: new Date(Date.now() - 43_200_000).toISOString(),
+    channel: "announcements",
+    thumbSrc: "/assets/festivals/bloomtide-festival.png",
+  },
+  {
+    id: "post_creature",
+    authorLabel: "Hatchery Desk",
+    title: "Creature of the week: Emberfox",
+    body: "Share a cozy Emberfox moment in Keepers chat — cosmetics and bragging rights only.",
+    at: new Date(Date.now() - 129_600_000).toISOString(),
+    channel: "keepers",
+    thumbSrc: "/assets/pets/thumbs/emberfox.webp",
+  },
+  {
+    id: "post_crystal",
+    authorLabel: "Gemwright Opal",
+    title: "Harmony crystal polish hour",
+    body: "Stoneheart benches are open for cosmetic crystal work — Credits crafting, no market guarantees.",
+    at: new Date(Date.now() - 172_800_000).toISOString(),
+    channel: "keepers",
+    thumbSrc: "/assets/cards/rise-of-the-rift/mat-harmony-crystal/thumb.png",
+    authorAvatarSrc: "/assets/npcs/stoneheart-canyon/gemwright-opal/thumbnail.png",
+  },
+  {
+    id: "post_creator",
+    authorLabel: "Creator Hub",
+    title: "Creator preview drop",
+    body: "Fan-kit stills and press boards refresh this week — open /creators when you are ready.",
+    at: new Date(Date.now() - 216_000_000).toISOString(),
+    channel: "creators",
+    thumbSrc: "/assets/social/thumbs/event-creator-hub.png",
+  },
+];
+
+/** Scenic Town Featured placeholders when the hour has no live winners yet. */
+export type TownFeaturedStub = {
+  title: string;
+  displayName: string;
+  regionSlug: string;
+  regionLabel: string;
+  avatarSrc: string;
+  scenicThumbSrc: string;
+};
+
+export const DEMO_TOWN_FEATURED: TownFeaturedStub[] = [
+  {
+    title: "Town Hero",
+    displayName: "Keeper Mira",
+    regionSlug: "riftwild-commons",
+    regionLabel: "Riftwild Commons",
+    avatarSrc: "/assets/npcs/riftwild-commons/mira-shellbright/thumbnail.png",
+    scenicThumbSrc: "/assets/cards/rise-of-the-rift/region-riftwild-commons/thumb.png",
+  },
+  {
+    title: "Master Merchant",
+    displayName: "Plaza Vendor Cal",
+    regionSlug: "riftwild-commons",
+    regionLabel: "Riftwild Commons",
+    avatarSrc: "/assets/npcs/riftwild-commons/plaza-vendor-cal/thumbnail.png",
+    scenicThumbSrc: "/assets/festivals/commons-moon-market.png",
+  },
+  {
+    title: "Community Favorite",
+    displayName: "Archivist Solen",
+    regionSlug: "riftwild-commons",
+    regionLabel: "Riftwild Commons",
+    avatarSrc: "/assets/npcs/riftwild-commons/archivist-solen/thumbnail.png",
+    scenicThumbSrc: "/assets/social/avatar-bgs/rift-commons.svg",
   },
 ];
 
@@ -266,9 +453,11 @@ export function getSocialHubSnapshot() {
   return {
     friends: DEMO_FRIENDS,
     party: DEMO_PARTY,
+    parties: DEMO_PARTIES,
     dms: DEMO_DMS,
     mail: DEMO_MAIL,
     posts: DEMO_COMMUNITY_POSTS,
+    townFeaturedPreview: DEMO_TOWN_FEATURED,
     calendar: listEventCalendarStubs(),
     mentors: MENTOR_OFFERS,
     chat: demoChatChannels(),

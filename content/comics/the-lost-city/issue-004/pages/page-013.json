@@ -1,0 +1,181 @@
+{
+  "pageNumber": 13,
+  "storyPageNumber": 9,
+  "bookRole": "story",
+  "title": "Empty Nest Rows",
+  "storyPurpose": "Spark follows echo into abandoned sanctuary; Echoquill appears.",
+  "layout": {
+    "type": "grid-2x2",
+    "panelCount": 4
+  },
+  "panels": [
+    {
+      "id": "p9a",
+      "description": "Abandoned companion sanctuary: rows of empty resting chambers lined with teal crystal nests.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Cradles without breath. Names without voices.",
+          "x": 50,
+          "y": 16,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 0
+        }
+      ]
+    },
+    {
+      "id": "p9b",
+      "description": "Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot walks alone down the aisle, drawn; Mira waits at threshold — invite, not push.",
+      "bubbles": [
+        {
+          "kind": "whisper",
+          "text": "I'm here when you look back.",
+          "x": 50,
+          "y": 80,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p9c",
+      "description": "Echoquill: small owl-fox-bird Rift companion, pale feathers, teal-gold markings, crystal feather tips, large reflective eyes that project soft memory light emerges from a high nest alcove, projecting a soft memory fragment of Spark's kind.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*archive-trill*",
+          "x": 55,
+          "y": 35,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Echoquill",
+          "readOrder": 2
+        },
+        {
+          "kind": "sfx",
+          "text": "memory-shimmer",
+          "x": 40,
+          "y": 60,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p9d",
+      "description": "Echoquill lands near Spark; reflective eyes share a calm pulse — first contact.",
+      "bubbles": [
+        {
+          "kind": "creature",
+          "text": "*curious chirp*",
+          "x": 45,
+          "y": 55,
+          "tail": "up",
+          "maxWidthPct": 34,
+          "speaker": "Spark",
+          "readOrder": 4
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p9b",
+      "kind": "whisper",
+      "text": "I'm here when you look back.",
+      "x": 50,
+      "y": 80,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p9c",
+      "kind": "creature",
+      "text": "*archive-trill*",
+      "x": 55,
+      "y": 35,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Echoquill",
+      "readOrder": 2
+    },
+    {
+      "panelId": "p9d",
+      "kind": "creature",
+      "text": "*curious chirp*",
+      "x": 45,
+      "y": 55,
+      "tail": "up",
+      "maxWidthPct": 34,
+      "speaker": "Spark",
+      "readOrder": 4
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p9a",
+      "kind": "narration",
+      "text": "Cradles without breath. Names without voices.",
+      "x": 50,
+      "y": 16,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 0
+    }
+  ],
+  "soundEffects": [
+    {
+      "panelId": "p9c",
+      "kind": "sfx",
+      "text": "memory-shimmer",
+      "x": 40,
+      "y": 60,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 3
+    }
+  ],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark",
+    "echoquill",
+    "wisplet",
+    "spirit-moth"
+  ],
+  "locations": [
+    "Aureth Vale"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "echoquill": "first contact",
+    "sanctuary": "empty nests"
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Lost City\" Issue #4, STORY PAGE 9/25 — Empty Nest Rows. Story purpose: Spark follows echo into abandoned sanctuary; Echoquill appears. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p9a): Abandoned companion sanctuary: rows of empty resting chambers lined with teal crystal nests. Panel 2 (p9b): Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot walks alone down the aisle, drawn; Mira waits at threshold — invite, not push. Panel 3 (p9c): Echoquill: small owl-fox-bird Rift companion, pale feathers, teal-gold markings, crystal feather tips, large reflective eyes that project soft memory light emerges from a high nest alcove, projecting a soft memory fragment of Spark's kind. Panel 4 (p9d): Echoquill lands near Spark; reflective eyes share a calm pulse — first contact. Characters: mira-eggwarden. Creatures: spark, echoquill, wisplet, spirit-moth. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Environment: Aureth Vale Lost City. Time: day. Weather: clear over ruins. Lighting: pale stone with teal crystal glow. Continuity: {\"echoquill\": \"first contact\", \"sanctuary\": \"empty nests\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Resonance Keeper records.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Empty Nest Rows — The Lost City page 9",
+  "atmosphere": "ruin",
+  "transcript": [
+    "NARRATION: Cradles without breath. Names without voices.",
+    "WHISPER (Mira Eggwarden): I'm here when you look back.",
+    "CREATURE (Echoquill): *archive-trill*",
+    "SFX: memory-shimmer",
+    "CREATURE (Spark): *curious chirp*"
+  ],
+  "id": "the-lost-city-issue-004-p013",
+  "cleanArtRel": "generated/raw-art/page-013.webp",
+  "letteredArtRel": "generated/lettered-pages/page-013.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-013.webp"
+}

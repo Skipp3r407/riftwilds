@@ -1,0 +1,51 @@
+{
+  "pageNumber": 19,
+  "id": "the-first-rift-issue-001-p019",
+  "role": "story",
+  "title": null,
+  "layout": "narrative",
+  "atmosphere": "dawn",
+  "beat": "Aftermath — Compact spoken before ink",
+  "artPrompt": "Narrative page, no text. Soft dawn after battle; Elara kneeling; companions resting; child reaches toward First Riftling. Mud and names mood. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "panels": [
+    {
+      "lines": [
+        {
+          "kind": "narration",
+          "text": "Mud took bootprints. The Riftstone took names.",
+          "x": 50,
+          "y": 12
+        },
+        {
+          "kind": "speech",
+          "speaker": "Healer",
+          "text": "We can raise walls. Or we can raise Keepers.",
+          "x": 30,
+          "y": 45,
+          "tail": "down"
+        },
+        {
+          "kind": "speech",
+          "speaker": "Elara Venn",
+          "text": "Raise Keepers who know which wall is a cradle.",
+          "x": 68,
+          "y": 58,
+          "tail": "down-left"
+        },
+        {
+          "kind": "sfx",
+          "text": "soft dawn wind",
+          "x": 50,
+          "y": 82
+        }
+      ]
+    }
+  ],
+  "generationStatus": "seeded-legacy",
+  "letteringStatus": "lettered",
+  "cleanArtRel": "generated/clean/page-019.png",
+  "letteredArtRel": "generated/lettered/page-019.webp",
+  "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-019.webp",
+  "bakedLettering": true,
+  "composedPlate": true
+}

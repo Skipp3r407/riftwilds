@@ -1,0 +1,104 @@
+{
+  "pageNumber": 38,
+  "storyPageNumber": null,
+  "bookRole": "back-cover",
+  "title": "Back Cover — Storm Signal",
+  "storyPurpose": "Back Cover — Storm Signal",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "bc",
+      "description": "Back cover: Aureth Vale silhouette at dusk with storm mountain signal beam; Spark and Mira small on ridge looking out; empty blurb zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "THE LOST CITY",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "The Guardian remembers. The Meridian runs. The peaks answer.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "ISSUE #4 · LEGENDS OF THE RIFT",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "bc",
+      "kind": "caption",
+      "text": "THE LOST CITY",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "bc",
+      "kind": "narration",
+      "text": "The Guardian remembers. The Meridian runs. The peaks answer.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    },
+    {
+      "panelId": "bc",
+      "kind": "caption",
+      "text": "ISSUE #4 · LEGENDS OF THE RIFT",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book back-cover page for The Lost City Issue #4 — Back Cover — Storm Signal. Back cover: Aureth Vale silhouette at dusk with storm mountain signal beam; Spark and Mira small on ridge looking out; empty blurb zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Back Cover — Storm Signal",
+  "atmosphere": "night",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: THE LOST CITY",
+    "NARRATION: The Guardian remembers. The Meridian runs. The peaks answer.",
+    "CAPTION: ISSUE #4 · LEGENDS OF THE RIFT"
+  ],
+  "id": "the-lost-city-issue-004-p038",
+  "cleanArtRel": "generated/raw-art/page-038.webp",
+  "letteredArtRel": "generated/lettered-pages/page-038.webp",
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-038.webp"
+}

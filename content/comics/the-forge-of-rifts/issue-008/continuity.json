@@ -1,0 +1,150 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "location": "Forge threshold / Meridian Road",
+      "spark": "violent-reaction",
+      "egg": "cracked-once-from-gate",
+      "fromIssue7": "second-creation",
+      "cael": "supervised-turned"
+    },
+    {
+      "page": 2,
+      "location": "Forge threshold plaza",
+      "egg": "glowing-cracked-once",
+      "cael": "supervised-turned",
+      "nira": "cleared-ally"
+    },
+    {
+      "page": 3,
+      "location": "Forge machine-city descent",
+      "tone": "awe-dread"
+    },
+    {
+      "page": 4,
+      "location": "broken assembly hall",
+      "discovery": "abandoned-companions"
+    },
+    {
+      "page": 5,
+      "location": "assembly hall collapse pocket",
+      "mossprig": "protecting-prototypes"
+    },
+    {
+      "page": 6,
+      "location": "power ring corridor",
+      "power": "partial-restore",
+      "meridian": "alerted"
+    },
+    {
+      "page": 7,
+      "location": "memory vault",
+      "reveal": "first-rift-planned",
+      "saboteur": "identity-withheld"
+    },
+    {
+      "page": 8,
+      "location": "blueprint alcove",
+      "forgePurpose": "heal-not-weapon"
+    },
+    {
+      "page": 9,
+      "location": "Companion Incubator Alpha",
+      "spark": "lineage-recognition",
+      "egg": "cradle-sync"
+    },
+    {
+      "page": 10,
+      "location": "preservation alcove near Incubator",
+      "arkan": "introduced"
+    },
+    {
+      "page": 11,
+      "location": "history holodais",
+      "reveal": "protocols-altered",
+      "riftwright": "vanished-pre-activation",
+      "saboteur": "withheld"
+    },
+    {
+      "page": 12,
+      "location": "Incubator Alpha side cradle",
+      "axiom": "awakened"
+    },
+    {
+      "page": 13,
+      "location": "Incubator Alpha approach",
+      "meridian": "assault",
+      "seris": "control-core"
+    },
+    {
+      "page": 14,
+      "location": "Rift Engine Alpha plaza",
+      "artificialRift": "open"
+    },
+    {
+      "page": 15,
+      "location": "Engine Alpha plaza",
+      "experiments": "escaped",
+      "guardians": "active"
+    },
+    {
+      "page": 16,
+      "location": "Engine Alpha battle",
+      "battle": "multi-faction"
+    },
+    {
+      "page": 17,
+      "location": "Engine Alpha intake",
+      "spark": "nearly-captured-then-freed",
+      "cael": "earns-inch"
+    },
+    {
+      "page": 18,
+      "location": "Engine Alpha \u2014 double spread L",
+      "egg": "cracks-further-second-time",
+      "spread": "18-19",
+      "priorCrack": "gate-issue-007"
+    },
+    {
+      "page": 19,
+      "location": "Engine Alpha \u2014 double spread R",
+      "arkan": "sacrificed",
+      "spread": "18-19"
+    },
+    {
+      "page": 20,
+      "location": "collapsing Engine Alpha",
+      "arkan": "gone",
+      "forge": "collapsing"
+    },
+    {
+      "page": 21,
+      "location": "Rift Engine Alpha core",
+      "spark": "stabilized-reactor",
+      "theme": "protect-not-obey"
+    },
+    {
+      "page": 22,
+      "location": "Meridian Road egress",
+      "forgePrimary": "collapsed-vented",
+      "party": "escaped"
+    },
+    {
+      "page": 23,
+      "location": "egress / Meridian fissure",
+      "seris": "stole-second-forge-blueprint"
+    },
+    {
+      "page": 24,
+      "location": "Meridian Road alcove",
+      "secondForge": "revealed-exists"
+    },
+    {
+      "page": 25,
+      "location": "Second Forge reactor",
+      "riftwright": "alive-silhouette-only",
+      "identity": "WITHHELD",
+      "next": "the-riftwright"
+    }
+  ]
+}

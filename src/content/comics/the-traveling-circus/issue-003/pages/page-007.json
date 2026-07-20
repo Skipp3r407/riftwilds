@@ -1,0 +1,147 @@
+{
+  "pageNumber": 7,
+  "bookRole": "story",
+  "title": "The Greeter Notices",
+  "storyPurpose": "Masked greeter welcomes Mira; Spark markings pulse to lantern; greeter hides reaction.",
+  "layout": {
+    "type": "two-col",
+    "panelCount": 2
+  },
+  "panels": [
+    {
+      "id": "p3a",
+      "description": "Masked acrobat greeter bows with floating lantern; Mira polite but guarded; Spark markings pulse toward lantern.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "speaker": "Masked Greeter",
+          "text": "Welcome, Keepers. Lanternveil opens for the curious — and the careful.",
+          "x": 55,
+          "y": 25,
+          "tail": "down",
+          "readOrder": 0,
+          "maxWidthPct": 42
+        },
+        {
+          "kind": "sfx",
+          "text": "pulse…",
+          "x": 30,
+          "y": 60,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 34
+        }
+      ]
+    },
+    {
+      "id": "p3b",
+      "description": "Close on greeter eyes behind mask: recognition flicker at Spark's cyan-gold marks, then smooth smile — hides reaction. Three-arc charm half-hidden under sleeve cuff.",
+      "bubbles": [
+        {
+          "kind": "thought",
+          "speaker": "Masked Greeter",
+          "text": "…Riftborn markings. Not here. Not loud.",
+          "x": 50,
+          "y": 40,
+          "tail": null,
+          "readOrder": 2,
+          "maxWidthPct": 40
+        },
+        {
+          "kind": "whisper",
+          "speaker": "Mira Eggwarden",
+          "text": "You felt that too.",
+          "x": 50,
+          "y": 78,
+          "tail": "up",
+          "readOrder": 3,
+          "maxWidthPct": 34
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p3a",
+      "kind": "speech",
+      "speaker": "Masked Greeter",
+      "text": "Welcome, Keepers. Lanternveil opens for the curious — and the careful.",
+      "x": 55,
+      "y": 25,
+      "tail": "down",
+      "readOrder": 0,
+      "maxWidthPct": 42
+    },
+    {
+      "panelId": "p3b",
+      "kind": "thought",
+      "speaker": "Masked Greeter",
+      "text": "…Riftborn markings. Not here. Not loud.",
+      "x": 50,
+      "y": 40,
+      "tail": null,
+      "readOrder": 2,
+      "maxWidthPct": 40
+    },
+    {
+      "panelId": "p3b",
+      "kind": "whisper",
+      "speaker": "Mira Eggwarden",
+      "text": "You felt that too.",
+      "x": 50,
+      "y": 78,
+      "tail": "up",
+      "readOrder": 3,
+      "maxWidthPct": 34
+    }
+  ],
+  "captions": [],
+  "soundEffects": [
+    {
+      "panelId": "p3a",
+      "kind": "sfx",
+      "text": "pulse…",
+      "x": 30,
+      "y": 60,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 34
+    }
+  ],
+  "characters": [
+    "mira-eggwarden",
+    "masked-greeter"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {
+    "greeter": {
+      "noticedSpark": true,
+      "hidReaction": true
+    },
+    "spark": {
+      "glow": "lantern-sync"
+    }
+  },
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 3/25 — The Greeter Notices. Story purpose: Masked greeter welcomes Mira; Spark markings pulse to lantern; greeter hides reaction. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p3a): Masked acrobat greeter bows with floating lantern; Mira polite but guarded; Spark markings pulse toward lantern. Panel 2 (p3b): Close on greeter eyes behind mask: recognition flicker at Spark's cyan-gold marks, then smooth smile — hides reaction. Three-arc charm half-hidden under sleeve cuff. Characters: mira-eggwarden, masked-greeter. Creatures: spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"greeter\":{\"noticedSpark\":true,\"hidReaction\":true},\"spark\":{\"glow\":\"lantern-sync\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "pageTurnObjective": "Warm montage.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "The Greeter Notices — The Traveling Circus page 3",
+  "atmosphere": "festival",
+  "transcript": [
+    "SPEECH (Masked Greeter): Welcome, Keepers. Lanternveil opens for the curious — and the careful.",
+    "SFX: pulse…",
+    "THOUGHT (Masked Greeter): …Riftborn markings. Not here. Not loud.",
+    "WHISPER (Mira Eggwarden): You felt that too."
+  ],
+  "storyPageNumber": 3,
+  "id": "the-traveling-circus-issue-003-p007",
+  "cleanArtRel": "generated/raw-art/page-007.png",
+  "letteredArtRel": "generated/lettered-pages/page-007.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-007.webp"
+}

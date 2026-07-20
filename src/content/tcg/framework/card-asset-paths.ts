@@ -23,16 +23,25 @@ export type CardAssetPathBundle = {
 
 const bundle = assetPathsV1 as CardAssetPathBundle;
 
+/** Bump when habitat-composited clean art is regenerated. */
+export const CARD_CLEAN_ART_V = "habcard1";
+
+function withArtCacheBust(src: string | null): string | null {
+  if (!src) return null;
+  const join = src.includes("?") ? "&" : "?";
+  return `${src}${join}v=${CARD_CLEAN_ART_V}`;
+}
+
 export function resolvePublishedCleanArt(cardId: string): string | null {
   const entry = bundle.paths?.[cardId];
   if (!entry || entry.missing) return null;
-  return entry.art ?? entry.thumb ?? null;
+  return withArtCacheBust(entry.art ?? entry.thumb ?? null);
 }
 
 export function resolvePublishedThumb(cardId: string): string | null {
   const entry = bundle.paths?.[cardId];
   if (!entry || entry.missing) return null;
-  return entry.thumb ?? entry.art ?? null;
+  return withArtCacheBust(entry.thumb ?? entry.art ?? null);
 }
 
 export function getCardAssetPathBundle(): CardAssetPathBundle {

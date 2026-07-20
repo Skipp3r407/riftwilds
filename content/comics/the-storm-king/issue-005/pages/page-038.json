@@ -1,0 +1,109 @@
+{
+  "pageNumber": 38,
+  "storyPageNumber": null,
+  "bookRole": "back-cover",
+  "title": "Back Cover — Every Door",
+  "storyPurpose": "Back Cover — Every Door",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "bc",
+      "description": "Back cover: Tempestria silhouette calming under mend-storm; tiny merchant lantern glow on horizon; Mira and Spark small on citadel balcony; empty blurb zones.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "THE STORM KING",
+          "x": 50,
+          "y": 12,
+          "tail": null,
+          "maxWidthPct": 34,
+          "readOrder": 0
+        },
+        {
+          "kind": "narration",
+          "text": "The wall released its makers. The market opened its doors.",
+          "x": 50,
+          "y": 50,
+          "tail": null,
+          "maxWidthPct": 55,
+          "readOrder": 1
+        },
+        {
+          "kind": "caption",
+          "text": "ISSUE #5 · LEGENDS OF THE RIFT",
+          "x": 50,
+          "y": 88,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "bc",
+      "kind": "caption",
+      "text": "THE STORM KING",
+      "x": 50,
+      "y": 12,
+      "tail": null,
+      "maxWidthPct": 34,
+      "readOrder": 0
+    },
+    {
+      "panelId": "bc",
+      "kind": "narration",
+      "text": "The wall released its makers. The market opened its doors.",
+      "x": 50,
+      "y": 50,
+      "tail": null,
+      "maxWidthPct": 55,
+      "readOrder": 1
+    },
+    {
+      "panelId": "bc",
+      "kind": "caption",
+      "text": "ISSUE #5 · LEGENDS OF THE RIFT",
+      "x": 50,
+      "y": 88,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book back-cover page for The Storm King Issue #5 — Back Cover — Every Door. Back cover: Tempestria silhouette calming under mend-storm; tiny merchant lantern glow on horizon; Mira and Spark small on citadel balcony; empty blurb zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Storm King: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Empty zones for title lettering. NO readable text in art.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
+  "generationStatus": "cached",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Back Cover — Every Door",
+  "atmosphere": "night",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: THE STORM KING",
+    "NARRATION: The wall released its makers. The market opened its doors.",
+    "CAPTION: ISSUE #5 · LEGENDS OF THE RIFT"
+  ],
+  "a11yTranscript": [
+    "CAPTION: THE STORM KING",
+    "NARRATION: The wall released its makers. The market opened its doors.",
+    "CAPTION: ISSUE #5 · LEGENDS OF THE RIFT"
+  ],
+  "id": "the-storm-king-issue-005-p038",
+  "cleanArtRel": "generated/raw-art/page-038.webp",
+  "letteredArtRel": "generated/lettered-pages/page-038.webp",
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-038.webp"
+}

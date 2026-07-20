@@ -1,0 +1,84 @@
+{
+  "pageNumber": 31,
+  "storyPageNumber": null,
+  "bookRole": "profile",
+  "title": "Character Profile — The Lanternmaster",
+  "storyPurpose": "Character Profile — The Lanternmaster",
+  "layout": {
+    "type": "splash",
+    "panelCount": 1
+  },
+  "panels": [
+    {
+      "id": "prof",
+      "description": "Cael Vesper portrait with mask on/off split; Lumenhare; lantern symbol.",
+      "bubbles": [
+        {
+          "kind": "caption",
+          "text": "CAEL VESPER · THE LANTERNMASTER",
+          "x": 50,
+          "y": 15,
+          "tail": null,
+          "readOrder": 0,
+          "maxWidthPct": 60
+        },
+        {
+          "kind": "narration",
+          "text": "Charismatic · Theatrical · Never fully direct · Protects unusual companions along Rift lines",
+          "x": 50,
+          "y": 55,
+          "tail": null,
+          "readOrder": 1,
+          "maxWidthPct": 55
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "captions": [
+    {
+      "panelId": "prof",
+      "kind": "caption",
+      "text": "CAEL VESPER · THE LANTERNMASTER",
+      "x": 50,
+      "y": 15,
+      "tail": null,
+      "readOrder": 0,
+      "maxWidthPct": 60
+    },
+    {
+      "panelId": "prof",
+      "kind": "narration",
+      "text": "Charismatic · Theatrical · Never fully direct · Protects unusual companions along Rift lines",
+      "x": 50,
+      "y": 55,
+      "tail": null,
+      "readOrder": 1,
+      "maxWidthPct": 55
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "lanternmaster"
+  ],
+  "creatures": [
+    "lumenhare"
+  ],
+  "continuity": {},
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for The Traveling Circus Issue #3 — Character Profile — The Lanternmaster. Cael Vesper portrait with mask on/off split; Lumenhare; lantern symbol. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
+  "generationStatus": "pending",
+  "letteringStatus": "pending",
+  "approvalStatus": "script-complete",
+  "artAlt": "Character Profile — The Lanternmaster",
+  "atmosphere": "festival",
+  "letteringInstructions": "Bake titles/credits programmatically.",
+  "transcript": [
+    "CAPTION: CAEL VESPER · THE LANTERNMASTER",
+    "NARRATION: Charismatic · Theatrical · Never fully direct · Protects unusual companions along Rift lines"
+  ],
+  "id": "the-traveling-circus-issue-003-p031",
+  "cleanArtRel": "generated/raw-art/page-031.png",
+  "letteredArtRel": "generated/lettered-pages/page-031.webp",
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-031.webp"
+}

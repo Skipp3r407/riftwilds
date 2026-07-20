@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -14,10 +13,10 @@ import {
   type SetStateAction,
 } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { brandMarkPath, brandWordmarkPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import { headerNavGroups, type NavGroup } from "@/lib/config/nav";
 import { HeaderBalanceCluster } from "@/components/shared/header-wallet-balances";
+import { RiftwildsBrand } from "@/components/shared/riftwilds-brand";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { markOriginStorySeen } from "@/lib/origin-story";
 import { playSfx } from "@/hooks/use-sfx";
@@ -317,23 +316,9 @@ export function SiteHeader(_props: Props = {}) {
             className="hud-nav__brand focus-ring flex shrink-0 items-center gap-1.5 md:gap-2"
             aria-label={projectConfig.PROJECT_NAME}
           >
-            <Image
-              src={brandMarkPath}
-              alt=""
-              width={512}
-              height={512}
-              priority
-              unoptimized
-              className="hud-nav__brand-mark h-12 w-12 shrink-0 object-contain object-left md:h-14 md:w-14 xl:h-16 xl:w-16"
-            />
-            <Image
-              src={brandWordmarkPath}
-              alt="Riftwilds"
-              width={491}
-              height={140}
-              priority
-              unoptimized
-              className="hud-nav__brand-wordmark h-6 w-auto shrink-0 object-contain object-left sm:h-7 md:h-7 xl:h-7"
+            <RiftwildsBrand
+              markClassName="h-12 w-12 shrink-0 object-contain object-left md:h-14 md:w-14 xl:h-16 xl:w-16"
+              wordmarkClassName="h-6 w-auto shrink-0 object-contain object-left sm:h-7 md:h-7 xl:h-7"
             />
           </Link>
 

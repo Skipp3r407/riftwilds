@@ -1,0 +1,213 @@
+{
+  "pageNumber": 6,
+  "storyPageNumber": 2,
+  "bookRole": "story",
+  "title": "Market Rules",
+  "storyPurpose": "Cael explains market rules; Mira distrusts the commerce of doors.",
+  "layout": {
+    "type": "three-stack",
+    "panelCount": 3
+  },
+  "panels": [
+    {
+      "id": "p2a",
+      "description": "Posted rules board (black lacquer, gold lettering zones empty): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif gesturing; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes reading Compact charter stamp requirements.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "No weapons drawn. No unregistered spells. No touching sealed merchandise.",
+          "x": 50,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 44,
+          "speaker": "Cael Vesper",
+          "readOrder": 0
+        },
+        {
+          "kind": "speech",
+          "text": "And companions?",
+          "x": 35,
+          "y": 70,
+          "tail": "right",
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 1
+        }
+      ]
+    },
+    {
+      "id": "p2b",
+      "description": "Close on rule line: companion care stalls require Compact or rescue-charter stamps; holding pens forbidden.",
+      "bubbles": [
+        {
+          "kind": "narration",
+          "text": "Living cores are not SKUs — on paper.",
+          "x": 50,
+          "y": 25,
+          "tail": null,
+          "maxWidthPct": 50,
+          "readOrder": 2
+        },
+        {
+          "kind": "whisper",
+          "text": "Paper and cages disagree.",
+          "x": 55,
+          "y": 72,
+          "tail": null,
+          "maxWidthPct": 34,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 3
+        }
+      ]
+    },
+    {
+      "id": "p2c",
+      "description": "Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes side-eye at Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; Spark shifting nervously under cloak.",
+      "bubbles": [
+        {
+          "kind": "speech",
+          "text": "I know the customs. Trust the route.",
+          "x": 40,
+          "y": 30,
+          "tail": "down",
+          "maxWidthPct": 34,
+          "speaker": "Cael Vesper",
+          "readOrder": 4
+        },
+        {
+          "kind": "thought",
+          "text": "Routes are how doors get sold.",
+          "x": 60,
+          "y": 70,
+          "tail": null,
+          "maxWidthPct": 38,
+          "speaker": "Mira Eggwarden",
+          "readOrder": 5
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "panelId": "p2a",
+      "kind": "speech",
+      "text": "No weapons drawn. No unregistered spells. No touching sealed merchandise.",
+      "x": 50,
+      "y": 28,
+      "tail": "down",
+      "maxWidthPct": 44,
+      "speaker": "Cael Vesper",
+      "readOrder": 0
+    },
+    {
+      "panelId": "p2a",
+      "kind": "speech",
+      "text": "And companions?",
+      "x": 35,
+      "y": 70,
+      "tail": "right",
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 1
+    },
+    {
+      "panelId": "p2b",
+      "kind": "whisper",
+      "text": "Paper and cages disagree.",
+      "x": 55,
+      "y": 72,
+      "tail": null,
+      "maxWidthPct": 34,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 3
+    },
+    {
+      "panelId": "p2c",
+      "kind": "speech",
+      "text": "I know the customs. Trust the route.",
+      "x": 40,
+      "y": 30,
+      "tail": "down",
+      "maxWidthPct": 34,
+      "speaker": "Cael Vesper",
+      "readOrder": 4
+    },
+    {
+      "panelId": "p2c",
+      "kind": "thought",
+      "text": "Routes are how doors get sold.",
+      "x": 60,
+      "y": 70,
+      "tail": null,
+      "maxWidthPct": 38,
+      "speaker": "Mira Eggwarden",
+      "readOrder": 5
+    }
+  ],
+  "captions": [
+    {
+      "panelId": "p2b",
+      "kind": "narration",
+      "text": "Living cores are not SKUs — on paper.",
+      "x": 50,
+      "y": 25,
+      "tail": null,
+      "maxWidthPct": 50,
+      "readOrder": 2
+    }
+  ],
+  "soundEffects": [],
+  "characters": [
+    "mira-eggwarden",
+    "cael-vesper"
+  ],
+  "creatures": [
+    "spark"
+  ],
+  "locations": [
+    "Gilded Crossroads"
+  ],
+  "artifacts": [],
+  "continuity": {
+    "location": "central exchange rules post",
+    "mira": "distrusts-market",
+    "rules": "market-rules.json"
+  },
+  "requiredMoments": [
+    3,
+    4
+  ],
+  "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Merchant's Secret\" Issue #6, STORY PAGE 2/25 — Market Rules. Story purpose: Cael explains market rules; Mira distrusts the commerce of doors. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Posted rules board (black lacquer, gold lettering zones empty): Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif gesturing; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes reading Compact charter stamp requirements. Panel 2 (p2b): Close on rule line: companion care stalls require Compact or rescue-charter stamps; holding pens forbidden. Panel 3 (p2c): Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes side-eye at Cael Vesper the Lanternmaster: mid-40s, warm brown skin, silver-threaded dark hair, deep blue and ember-gold coat, brass lantern clasps, half-mask of painted wood with nested lantern motif; Spark shifting nervously under cloak. Characters: mira-eggwarden, cael-vesper. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Keeper lock: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Merchant lock: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Lockjaw lock: Lockjaw Wisp: small feline-lizard companion, black fur with warm gold filigree markings, keyhole-shaped pupils, floating brass appraisal rings, silent gait, phases through sealed doors when invited by contract. Environment: Gilded Crossroads moving bazaar. Time: night. Weather: lantern-lit market mist. Lighting: warm gold lanterns and teal Rift glass glow. Continuity: {\"location\": \"central exchange rules post\", \"mira\": \"distrusts-market\", \"rules\": \"market-rules.json\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+  "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
+  "pageTurnObjective": "Enter the bazaar.",
+  "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
+  "generationStatus": "ok",
+  "letteringStatus": "ok",
+  "approvalStatus": "script-complete",
+  "artAlt": "Market Rules — The Merchant's Secret page 2",
+  "atmosphere": "market",
+  "transcript": [
+    "SPEECH (Cael Vesper): No weapons drawn. No unregistered spells. No touching sealed merchandise.",
+    "SPEECH (Mira Eggwarden): And companions?",
+    "NARRATION: Living cores are not SKUs — on paper.",
+    "WHISPER (Mira Eggwarden): Paper and cages disagree.",
+    "SPEECH (Cael Vesper): I know the customs. Trust the route.",
+    "THOUGHT (Mira Eggwarden): Routes are how doors get sold."
+  ],
+  "a11yTranscript": [
+    "SPEECH (Cael Vesper): No weapons drawn. No unregistered spells. No touching sealed merchandise.",
+    "SPEECH (Mira Eggwarden): And companions?",
+    "NARRATION: Living cores are not SKUs — on paper.",
+    "WHISPER (Mira Eggwarden): Paper and cages disagree.",
+    "SPEECH (Cael Vesper): I know the customs. Trust the route.",
+    "THOUGHT (Mira Eggwarden): Routes are how doors get sold."
+  ],
+  "codexLinks": [
+    "market-rules"
+  ],
+  "cardTeases": [],
+  "id": "the-merchants-secret-issue-006-p006",
+  "cleanArtRel": "generated/raw-art/page-006.webp",
+  "letteredArtRel": "generated/lettered-pages/page-006.webp",
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-006.webp"
+}
