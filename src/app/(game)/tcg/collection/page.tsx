@@ -10,25 +10,10 @@ import { RiftPanel } from "@/components/ui/rift-panel";
 import { RiftButton } from "@/components/ui/rift-button";
 import { playSfx } from "@/hooks/use-sfx";
 import type { FamilyProgress } from "@/game/tcg/card-families";
-
-type CardRow = {
-  defId: string;
-  count: number;
-  def: {
-    name: string;
-    type: string;
-    affinity: string;
-    riftCost: number;
-    power: number;
-    rarity: string;
-    description: string;
-    cardImagePath?: string;
-    artPath?: string;
-  } | null;
-};
+import type { TcgCollectionCardRow } from "@/game/tcg/types";
 
 export default function TcgCollectionPage() {
-  const [cards, setCards] = useState<CardRow[]>([]);
+  const [cards, setCards] = useState<TcgCollectionCardRow[]>([]);
   const [families, setFamilies] = useState<FamilyProgress[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [inspectDefId, setInspectDefId] = useState<string | null>(null);
@@ -46,7 +31,7 @@ export default function TcgCollectionPage() {
         const fam = await famRes.json();
         if (!colRes.ok) throw new Error(col.error || "LOAD_FAILED");
         if (!famRes.ok) throw new Error(fam.error || "FAMILIES_FAILED");
-        const rows = (col.cards ?? []) as CardRow[];
+        const rows = (col.cards ?? []) as TcgCollectionCardRow[];
         setCards(rows);
         setFamilies((fam.families ?? []) as FamilyProgress[]);
         if (rows.length > 0) {

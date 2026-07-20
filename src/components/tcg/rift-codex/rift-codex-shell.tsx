@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, useTransition } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import type { FamilyProgress } from "@/game/tcg/card-families";
+import type { TcgCollectionCardRow } from "@/game/tcg/types";
 import {
   claimFamilyReward,
   loadCodexLocalState,
@@ -30,25 +31,9 @@ import { playSfx } from "@/hooks/use-sfx";
 import { enterSoundscape } from "@/lib/audio/adaptive-engine";
 import { cn } from "@/lib/utils/cn";
 
-type FlatRow = {
-  defId: string;
-  count: number;
-  def: {
-    name: string;
-    type: string;
-    affinity: string;
-    riftCost: number;
-    power: number;
-    rarity: string;
-    description: string;
-    cardImagePath?: string;
-    artPath?: string;
-  } | null;
-};
-
 type Props = {
   families: FamilyProgress[];
-  flatCards: FlatRow[];
+  flatCards: TcgCollectionCardRow[];
   /** When set, open directly on this family spread. */
   initialFamilyId?: string | null;
   /** Force initial section (e.g. museum route). */

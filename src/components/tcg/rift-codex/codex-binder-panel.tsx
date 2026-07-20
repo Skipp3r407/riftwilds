@@ -4,24 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import type { FamilyProgress } from "@/game/tcg/card-families";
+import type { TcgCollectionCardRow } from "@/game/tcg/types";
 import { CollectionBook } from "@/components/tcg/collection-book";
 import { getCardFamilyBySpecies } from "@/content/tcg";
-
-type FlatRow = {
-  defId: string;
-  count: number;
-  def: {
-    name: string;
-    type: string;
-    affinity: string;
-    riftCost: number;
-    power: number;
-    rarity: string;
-    description: string;
-    cardImagePath?: string;
-    artPath?: string;
-  } | null;
-};
 
 type HatchlingRow = {
   publicId: string;
@@ -35,7 +20,7 @@ type HatchlingRow = {
 
 type Props = {
   families: FamilyProgress[];
-  flatCards: FlatRow[];
+  flatCards: TcgCollectionCardRow[];
   onInspectCard: (defId: string) => void;
   onOpenFamily: (familyId: string) => void;
 };

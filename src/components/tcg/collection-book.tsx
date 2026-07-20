@@ -4,29 +4,14 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { FamilyProgress } from "@/game/tcg/card-families";
+import type { TcgCollectionCardRow } from "@/game/tcg/types";
 import { RiftCardFrame } from "@/components/tcg/rift-card-frame";
 import { getCardById, resolveCardImagePath } from "@/content/tcg";
 import { cn } from "@/lib/utils/cn";
 
-type FlatRow = {
-  defId: string;
-  count: number;
-  def: {
-    name: string;
-    type: string;
-    affinity: string;
-    riftCost: number;
-    power: number;
-    rarity: string;
-    description: string;
-    cardImagePath?: string;
-    artPath?: string;
-  } | null;
-};
-
 type Props = {
   families: FamilyProgress[];
-  flatCards: FlatRow[];
+  flatCards: TcgCollectionCardRow[];
   onInspectCard: (defId: string) => void;
   onOpenCodex: (familyId: string) => void;
   /** When embedded in Rift Codex, show flat binder only. */

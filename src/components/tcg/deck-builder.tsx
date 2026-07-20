@@ -14,28 +14,9 @@ import { RiftPanel } from "@/components/ui/rift-panel";
 import { RiftButton } from "@/components/ui/rift-button";
 import { playSfx } from "@/hooks/use-sfx";
 import { enterSoundscape } from "@/lib/audio/adaptive-engine";
+import type { DeckBuilderCardRow } from "@/game/tcg/schemas";
 
-type CatalogCard = {
-  id: string;
-  name: string;
-  type: string;
-  affinity: string;
-  riftCost: number;
-  power: number;
-  rarity: string;
-  maxCopies: number;
-  description: string;
-  cardImagePath?: string;
-  artPath?: string;
-  keywords: string[];
-  element: string;
-  owned: number;
-  role?: string;
-  defense?: number;
-  speed?: number;
-  familyId?: string;
-  competitiveEligible?: boolean;
-};
+type CatalogCard = DeckBuilderCardRow & { owned: number };
 
 const GALLERY_PREFS_KEY = "riftwilds.deck-atelier.gallery";
 

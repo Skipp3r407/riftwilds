@@ -32,7 +32,7 @@ describe("equipment / echo / awaken keywords", () => {
     const state = createTcgMatch({
       publicId: "tcg_equip_empty",
       playerDeck: pad.slice(0, 30),
-      opponent: { isAi: true, deck: pad.slice(0, 30) },
+      opponent: { name: "AI", isAi: true, deck: pad.slice(0, 30) },
     });
     const player = state.players[0]!;
     player.riftEnergy = 10;
@@ -68,7 +68,7 @@ describe("equipment / echo / awaken keywords", () => {
     const state = createTcgMatch({
       publicId: "tcg_equip_1",
       playerDeck: deck.slice(0, 30),
-      opponent: { isAi: true, deck: deck.slice(0, 30) },
+      opponent: { name: "AI", isAi: true, deck: deck.slice(0, 30) },
     });
 
     // Force a known hand: unit + equipment
@@ -143,7 +143,7 @@ describe("equipment / echo / awaken keywords", () => {
     const state = createTcgMatch({
       publicId: "tcg_echo_1",
       playerDeck: pad.slice(0, 30),
-      opponent: { isAi: true, deck: pad.slice(0, 30) },
+      opponent: { name: "AI", isAi: true, deck: pad.slice(0, 30) },
     });
     const player = state.players[0]!;
     player.riftEnergy = 10;
@@ -181,7 +181,7 @@ describe("equipment / echo / awaken keywords", () => {
     const state = createTcgMatch({
       publicId: "tcg_awaken_1",
       playerDeck: pad.slice(0, 30),
-      opponent: { isAi: true, deck: pad.slice(0, 30) },
+      opponent: { name: "AI", isAi: true, deck: pad.slice(0, 30) },
     });
     const player = state.players[0]!;
     player.riftEnergy = 10;

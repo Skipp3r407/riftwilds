@@ -36,6 +36,16 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-20-tcg-build-types",
+    date: "2026-07-20",
+    title: "TCG production build typecheck",
+    summary:
+      "Unblocked Vercel production builds after Collection Book / Deck Atelier card-stat typing drifted from the engine catalog.",
+    fixed: [
+      "Production TypeScript build: Collection Book and Deck Atelier now type card rows with full combat stats (attack/defense/health/speed) from the engine catalog.",
+    ],
+  },
+  {
     id: "2026-07-19-riftwilds-systems",
     date: "2026-07-19",
     title: "Premium cards, battle UX, and multiplayer scaffolding",

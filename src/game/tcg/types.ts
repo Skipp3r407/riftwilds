@@ -54,6 +54,13 @@ export type TcgCardDef = {
   templateLayout?: string;
 };
 
+/** Binder API row: owned count + catalog def (`/api/tcg/collection`). */
+export type TcgCollectionCardRow = {
+  defId: string;
+  count: number;
+  def: TcgCardDef | null;
+};
+
 export type TcgCardInstance = {
   instanceId: string;
   defId: string;

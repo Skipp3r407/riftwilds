@@ -9,7 +9,8 @@ import {
   type TcgStatusInstance,
 } from "@/game/tcg/combat/status";
 
-export type KeywordId = string;
+/** Runtime keyword id (broader than competitive `schemas.KeywordId`). */
+type KeywordId = string;
 
 export type KeywordDef = {
   id: KeywordId;

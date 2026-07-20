@@ -405,7 +405,7 @@ export function buildPlaceBioSections(input: {
     const lore = PROP_KIND_LORE[propKind];
     const regionSlug = input.regionId || "riftwild-commons";
     const scenic = regionScenicSrc(regionSlug);
-    return [
+    const sections: TcgBioSection[] = [
       {
         id: "place",
         label: "Place",
@@ -438,7 +438,8 @@ export function buildPlaceBioSections(input: {
         imageAlt: `${input.name} setting`,
         imageLayout: "scenic",
       },
-    ].filter((s) => s.body.trim().length > 0);
+    ];
+    return sections.filter((s) => s.body.trim().length > 0);
   }
 
   // Generic location/prop fallback from card text + region plate

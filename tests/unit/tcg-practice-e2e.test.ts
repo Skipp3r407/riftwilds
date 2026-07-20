@@ -125,7 +125,7 @@ describe("practice board end-to-end", () => {
     const state = createTcgMatch({
       publicId: "equip_with_unit",
       playerDeck: deck.slice(0, 30),
-      opponent: { isAi: true, deck: deck.slice(0, 30) },
+      opponent: { name: "AI", isAi: true, deck: deck.slice(0, 30) },
     });
     const player = state.players[0]!;
     player.riftEnergy = 10;

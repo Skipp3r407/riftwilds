@@ -7,26 +7,11 @@ import { RiftPageShell } from "@/components/ui/rift-page-shell";
 import { RiftPanel } from "@/components/ui/rift-panel";
 import { RiftButton } from "@/components/ui/rift-button";
 import type { FamilyProgress } from "@/game/tcg/card-families";
+import type { TcgCollectionCardRow } from "@/game/tcg/types";
 import { recordQuestMetric } from "@/game/quests/quest-demo-store";
 
-type CardRow = {
-  defId: string;
-  count: number;
-  def: {
-    name: string;
-    type: string;
-    affinity: string;
-    riftCost: number;
-    power: number;
-    rarity: string;
-    description: string;
-    cardImagePath?: string;
-    artPath?: string;
-  } | null;
-};
-
 export default function RiftCodexIndexPage() {
-  const [cards, setCards] = useState<CardRow[]>([]);
+  const [cards, setCards] = useState<TcgCollectionCardRow[]>([]);
   const [families, setFamilies] = useState<FamilyProgress[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [inspectDefId, setInspectDefId] = useState<string | null>(null);
@@ -43,7 +28,7 @@ export default function RiftCodexIndexPage() {
         const fam = await famRes.json();
         if (!colRes.ok) throw new Error(col.error || "LOAD_FAILED");
         if (!famRes.ok) throw new Error(fam.error || "FAMILIES_FAILED");
-        setCards((col.cards ?? []) as CardRow[]);
+        setCards((col.cards ?? []) as TcgCollectionCardRow[]);
         setFamilies((fam.families ?? []) as FamilyProgress[]);
       } catch (e) {
         setError(e instanceof Error ? e.message : "LOAD_FAILED");

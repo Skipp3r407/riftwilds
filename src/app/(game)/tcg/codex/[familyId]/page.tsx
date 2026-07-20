@@ -7,28 +7,13 @@ import { RiftCodexShell } from "@/components/tcg/rift-codex";
 import { TcgCardDetailModal } from "@/components/tcg/tcg-card-detail-modal";
 import { RiftPageShell } from "@/components/ui/rift-page-shell";
 import type { FamilyProgress } from "@/game/tcg/card-families";
-
-type CardRow = {
-  defId: string;
-  count: number;
-  def: {
-    name: string;
-    type: string;
-    affinity: string;
-    riftCost: number;
-    power: number;
-    rarity: string;
-    description: string;
-    cardImagePath?: string;
-    artPath?: string;
-  } | null;
-};
+import type { TcgCollectionCardRow } from "@/game/tcg/types";
 
 export default function TcgCodexFamilyPage() {
   const params = useParams<{ familyId: string }>();
   const familyId = params?.familyId;
   const [families, setFamilies] = useState<FamilyProgress[]>([]);
-  const [cards, setCards] = useState<CardRow[]>([]);
+  const [cards, setCards] = useState<TcgCollectionCardRow[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [inspectDefId, setInspectDefId] = useState<string | null>(null);
 
@@ -47,7 +32,7 @@ export default function TcgCodexFamilyPage() {
         if (!colRes.ok) throw new Error(col.error || "LOAD_FAILED");
         if (!cancelled) {
           setFamilies((fam.families ?? []) as FamilyProgress[]);
-          setCards((col.cards ?? []) as CardRow[]);
+          setCards((col.cards ?? []) as TcgCollectionCardRow[]);
         }
       } catch (e) {
         if (!cancelled) {
