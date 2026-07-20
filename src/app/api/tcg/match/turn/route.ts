@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
+import { guestIdentityFields } from "@/lib/auth/owner-key";
 import { snapshotTcgMatch, submitTcgAction } from "@/game/tcg/match-store";
-import { readTcgOwnerKey } from "@/game/tcg/owner-key";
+import {
+  attachTcgGuestCookie,
+  readTcgOwnerKey,
+} from "@/game/tcg/owner-key";
 import { appendReplayHook } from "@/game/rift-arena/replay-hooks";
 
 const bodySchema = z.object({
@@ -36,6 +40,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "NO_SESSION" }, { status: 401 });
   }
 
+  const guestToken = key.startsWith("guest_") ? key.slice("guest_".length) : null;
+
   try {
     const rec = submitTcgAction(
       parsed.data.publicId,
@@ -58,7 +64,11 @@ export async function POST(req: Request) {
       },
     });
 
-    return NextResponse.json(snapshotTcgMatch(rec, key));
+    const res = NextResponse.json({
+      ...snapshotTcgMatch(rec, key),
+      ...guestIdentityFields(Boolean(guestToken), guestToken),
+    });
+    return attachTcgGuestCookie(res, guestToken);
   } catch (err) {
     const message = err instanceof Error ? err.message : "ACTION_FAILED";
     return NextResponse.json({ error: message }, { status: 400 });

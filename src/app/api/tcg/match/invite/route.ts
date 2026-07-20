@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
+import { guestIdentityFields } from "@/lib/auth/owner-key";
 import {
   createTcgLobby,
   getTcgLobby,
@@ -51,6 +52,7 @@ export async function POST(req: Request) {
     invitePath,
     inviteUrl: `${origin}${invitePath}`,
     youAre: "host" as const,
+    ...guestIdentityFields(Boolean(guestToken), guestToken),
   });
   return attachTcgGuestCookie(res, guestToken);
 }
@@ -89,6 +91,7 @@ export async function GET(req: Request) {
     inviteUrl: `${origin}${invitePath}`,
     youAre,
     match,
+    ...guestIdentityFields(Boolean(guestToken), guestToken),
   });
   return attachTcgGuestCookie(res, guestToken);
 }

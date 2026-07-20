@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
+import { guestIdentityFields } from "@/lib/auth/owner-key";
 import {
   getActiveCommanderHeroId,
   getActiveDeckList,
@@ -57,7 +58,10 @@ export async function POST(req: Request) {
     );
   }
 
-  const { key, guestToken } = await resolveTcgOwnerKey();
+  const { key, guestToken, authorized } = await resolveTcgOwnerKey();
+  if (!authorized || !key) {
+    return NextResponse.json({ error: "NO_SESSION" }, { status: 401 });
+  }
   const deckList = getActiveDeckList(key);
   // Prefer constructed rules; fall back for teaching starter pools.
   const constructed = validateDeckList(deckList);
@@ -111,6 +115,9 @@ export async function POST(req: Request) {
     payload: { encounter: parsed.data.encounter?.enemyId ?? null },
   });
 
-  const res = NextResponse.json(snapshotTcgMatch(rec, key));
+  const res = NextResponse.json({
+    ...snapshotTcgMatch(rec, key),
+    ...guestIdentityFields(Boolean(guestToken), guestToken),
+  });
   return attachTcgGuestCookie(res, guestToken);
 }

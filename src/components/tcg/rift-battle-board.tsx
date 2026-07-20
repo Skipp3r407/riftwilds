@@ -47,6 +47,10 @@ import {
 } from "@/lib/audio/adaptive-engine";
 import { playElementSfx } from "@/lib/audio/sfx";
 import { speakVoice } from "@/lib/audio/voice-bus";
+import {
+  guestFetch,
+  rememberGuestTokenFromPayload,
+} from "@/lib/auth/guest-client";
 import { cn } from "@/lib/utils/cn";
 
 const HAND_DRAG_MIME = "application/x-rift-hand-card";
@@ -798,7 +802,7 @@ export function RiftBattleBoard({
       ? "Private Lobby"
       : "Practice Board";
 
-  const start = useCallback(async () => {
+  const start = useCallback(async (signal?: AbortSignal) => {
     setBusy(true);
     setError(null);
     setLobby(null);
@@ -808,6 +812,11 @@ export function RiftBattleBoard({
     setPreviewHand(null);
     setInspectDefId(null);
     const controller = new AbortController();
+    const onAbort = () => controller.abort();
+    if (signal) {
+      if (signal.aborted) controller.abort();
+      else signal.addEventListener("abort", onAbort, { once: true });
+    }
     const timeout = window.setTimeout(() => controller.abort(), 20_000);
     try {
       const body: Record<string, unknown> = { playerName: "Keeper" };
@@ -818,31 +827,37 @@ export function RiftBattleBoard({
           returnTo: returnTo || "/tcg/collection",
         };
       }
-      const res = await fetch("/api/tcg/match/start", {
+      const res = await guestFetch("/api/tcg/match/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        credentials: "include",
         body: JSON.stringify(body),
         signal: controller.signal,
       });
       const data = (await res.json()) as {
         error?: string;
         reason?: string;
+        guestToken?: string;
       } & Partial<Snapshot>;
+      rememberGuestTokenFromPayload(data);
+      if (signal?.aborted) return;
       if (!res.ok) {
         const detail = data.reason ? `${data.error}: ${data.reason}` : data.error;
         throw new Error(detail || "START_FAILED");
       }
       setSnap(data as Snapshot);
     } catch (e) {
+      if (signal?.aborted) return;
       if (e instanceof DOMException && e.name === "AbortError") {
+        // Strict Mode remount / superseded start — not a user-facing failure.
+        if (signal) return;
         setError("Match start timed out — try opening the board again.");
       } else {
         setError(e instanceof Error ? e.message : "START_FAILED");
       }
     } finally {
       window.clearTimeout(timeout);
-      setBusy(false);
+      if (signal) signal.removeEventListener("abort", onAbort);
+      if (!signal?.aborted) setBusy(false);
     }
   }, [encounterEnemyId, regionSlug, returnTo]);
 
@@ -851,13 +866,13 @@ export function RiftBattleBoard({
     setError(null);
     setSnap(null);
     try {
-      const res = await fetch("/api/tcg/match/invite", {
+      const res = await guestFetch("/api/tcg/match/invite", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        credentials: "include",
         body: JSON.stringify({ hostName: "Keeper" }),
       });
       const data = await res.json();
+      rememberGuestTokenFromPayload(data);
       if (!res.ok) throw new Error(data.error || "INVITE_FAILED");
       setLobby({
         code: data.code,
@@ -879,19 +894,21 @@ export function RiftBattleBoard({
     }
   }, []);
 
-  const joinInvite = useCallback(async (code: string) => {
+  const joinInvite = useCallback(async (code: string, signal?: AbortSignal) => {
     const normalized = code.trim().toUpperCase();
     if (!normalized) return;
     setInviteBusy(true);
     setError(null);
     try {
-      const res = await fetch("/api/tcg/match/invite/join", {
+      const res = await guestFetch("/api/tcg/match/invite/join", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        credentials: "include",
         body: JSON.stringify({ code: normalized, guestName: "Keeper" }),
+        signal,
       });
       const data = await res.json();
+      rememberGuestTokenFromPayload(data);
+      if (signal?.aborted) return;
       if (!res.ok) throw new Error(data.error || "JOIN_FAILED");
       setLobby({
         code: data.code,
@@ -906,19 +923,21 @@ export function RiftBattleBoard({
         setSnap(data.match as Snapshot);
       }
     } catch (e) {
+      if (signal?.aborted) return;
+      if (e instanceof DOMException && e.name === "AbortError") return;
       setError(e instanceof Error ? e.message : "JOIN_FAILED");
     } finally {
-      setInviteBusy(false);
+      if (!signal?.aborted) setInviteBusy(false);
     }
   }, []);
 
   const pollLobby = useCallback(async (code: string) => {
     try {
-      const res = await fetch(
+      const res = await guestFetch(
         `/api/tcg/match/invite?code=${encodeURIComponent(code)}`,
-        { credentials: "include" },
       );
       const data = await res.json();
+      rememberGuestTokenFromPayload(data);
       if (!res.ok) return;
       setLobby({
         code: data.code,
@@ -936,11 +955,13 @@ export function RiftBattleBoard({
   }, []);
 
   useEffect(() => {
+    const controller = new AbortController();
     if (inviteCode) {
-      void joinInvite(inviteCode);
-      return;
+      void joinInvite(inviteCode, controller.signal);
+    } else {
+      void start(controller.signal);
     }
-    void start();
+    return () => controller.abort();
   }, [inviteCode, joinInvite, start]);
 
   /** Host waits for guest — poll until private match starts. */
@@ -1006,13 +1027,13 @@ export function RiftBattleBoard({
       setError(null);
       setPlayHint(null);
       try {
-        const res = await fetch("/api/tcg/match/turn", {
+        const res = await guestFetch("/api/tcg/match/turn", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          credentials: "include",
           body: JSON.stringify({ publicId: snap.publicId, action }),
         });
         const data = await res.json();
+        rememberGuestTokenFromPayload(data);
         if (!res.ok) throw new Error(data.error || "TURN_FAILED");
         setSnap(data);
         setSelectedHand(null);
@@ -1081,6 +1102,11 @@ export function RiftBattleBoard({
                       ? "Can't play right now"
                       : "Card not in hand",
           );
+        } else if (message === "MATCH_NOT_FOUND" || message === "NO_SESSION") {
+          // Drop zombie snap so Retry starts a clean board (or rejoin invite).
+          setSnap(null);
+          setSelectedHand(null);
+          setError(message);
         } else {
           setError(message);
         }
@@ -1285,11 +1311,18 @@ export function RiftBattleBoard({
 
         {error && (
           <div className="battle-console__alert" role="alert">
-            <p>{error}</p>
+            <p>
+              {error === "MATCH_NOT_FOUND"
+                ? "Match not found — open a new practice board or rejoin the invite."
+                : error === "NO_SESSION"
+                  ? "Session lost — retry to restore your guest seat."
+                  : error}
+            </p>
             <button
               type="button"
               disabled={busy || inviteBusy}
               onClick={() => {
+                setError(null);
                 if (inviteCode || lobby?.code) {
                   void joinInvite(inviteCode || lobby!.code);
                 } else {

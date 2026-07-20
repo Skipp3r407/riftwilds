@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import {
   applyTcgAction,
   createTcgMatch,
@@ -20,9 +22,10 @@ type MatchRecord = {
 };
 
 /**
- * Persist matches on globalThis so Next/Turbopack route bundles share one Map.
- * Module-scoped Maps fork per route chunk — start writes then turn reads empty
- * (MATCH_NOT_FOUND after a successful MATCH_START).
+ * Persist matches on globalThis + local disk so Next/Turbopack route workers
+ * share one store. Module-scoped Maps fork per route chunk; bare globalThis
+ * still forks across some dev workers — that caused MATCH_NOT_FOUND after a
+ * successful MATCH_START while the client kept the snapshot.
  */
 type MatchMaps = {
   matches: Map<string, MatchRecord>;
@@ -32,13 +35,75 @@ const globalForMatches = globalThis as unknown as {
   __riftwildsTcgMatches?: MatchMaps;
 };
 
+const DISK_RELATIVE = path.join(".data", "tcg", "matches.json");
+const MATCH_TTL_MS = 1000 * 60 * 60 * 2; // 2h practice / private lobbies
+
+function diskPath(): string {
+  return path.join(process.cwd(), DISK_RELATIVE);
+}
+
+function canUseFs(): boolean {
+  try {
+    return typeof process !== "undefined" && Boolean(process.cwd?.());
+  } catch {
+    return false;
+  }
+}
+
+function pruneStale(matches: Map<string, MatchRecord>): void {
+  const cutoff = Date.now() - MATCH_TTL_MS;
+  for (const [id, rec] of matches) {
+    if (rec.createdAt < cutoff) matches.delete(id);
+  }
+}
+
+function readDiskInto(matches: Map<string, MatchRecord>): void {
+  if (!canUseFs()) return;
+  try {
+    const p = diskPath();
+    if (!fs.existsSync(p)) return;
+    const raw = fs.readFileSync(p, "utf8");
+    const parsed = JSON.parse(raw) as Record<string, MatchRecord>;
+    for (const [id, rec] of Object.entries(parsed)) {
+      if (!rec?.state?.publicId || !rec.seats?.player) continue;
+      if (!matches.has(id)) matches.set(id, rec);
+    }
+    pruneStale(matches);
+  } catch {
+    /* demo-safe: memory remains usable */
+  }
+}
+
+function writeDisk(matches: Map<string, MatchRecord>): void {
+  if (!canUseFs()) return;
+  try {
+    pruneStale(matches);
+    const p = diskPath();
+    fs.mkdirSync(path.dirname(p), { recursive: true });
+    const obj: Record<string, MatchRecord> = {};
+    for (const [id, rec] of matches) obj[id] = rec;
+    fs.writeFileSync(p, JSON.stringify(obj), "utf8");
+  } catch {
+    /* demo-safe */
+  }
+}
+
 function matchMaps(): MatchMaps {
   if (!globalForMatches.__riftwildsTcgMatches) {
-    globalForMatches.__riftwildsTcgMatches = {
-      matches: new Map(),
-    };
+    const matches = new Map<string, MatchRecord>();
+    readDiskInto(matches);
+    globalForMatches.__riftwildsTcgMatches = { matches };
   }
   return globalForMatches.__riftwildsTcgMatches;
+}
+
+/** Ensure a match id is visible even if this worker's memory was empty. */
+function hydrateMatch(publicId: string): MatchRecord | undefined {
+  const maps = matchMaps();
+  const hit = maps.matches.get(publicId);
+  if (hit) return hit;
+  readDiskInto(maps.matches);
+  return maps.matches.get(publicId);
 }
 
 function publicId(): string {
@@ -49,6 +114,11 @@ function sideIdForOwner(rec: MatchRecord, ownerKey: string): string | null {
   if (rec.seats.player === ownerKey) return "player";
   if (rec.seats.opponent === ownerKey) return "opponent";
   return null;
+}
+
+function persist(rec: MatchRecord): void {
+  matchMaps().matches.set(rec.state.publicId, rec);
+  writeDisk(matchMaps().matches);
 }
 
 export function startTcgMatch(
@@ -62,7 +132,7 @@ export function startTcgMatch(
     state,
     createdAt: Date.now(),
   };
-  matchMaps().matches.set(id, rec);
+  persist(rec);
   return rec;
 }
 
@@ -96,12 +166,12 @@ export function startPrivateTcgMatch(input: {
     state,
     createdAt: Date.now(),
   };
-  matchMaps().matches.set(id, rec);
+  persist(rec);
   return rec;
 }
 
 export function getTcgMatch(publicId: string, ownerKey: string): MatchRecord | null {
-  const rec = matchMaps().matches.get(publicId);
+  const rec = hydrateMatch(publicId);
   if (!rec) return null;
   if (!sideIdForOwner(rec, ownerKey)) return null;
   return rec;
@@ -117,6 +187,7 @@ export function submitTcgAction(
   const actorId = sideIdForOwner(rec, ownerKey);
   if (!actorId) return null;
   applyTcgAction(rec.state, actorId, action);
+  persist(rec);
   return rec;
 }
 
@@ -128,4 +199,11 @@ export function snapshotTcgMatch(rec: MatchRecord, viewerKey?: string) {
 /** Test helper */
 export function __clearTcgMatchesForTests(): void {
   matchMaps().matches.clear();
+  if (!canUseFs()) return;
+  try {
+    const p = diskPath();
+    if (fs.existsSync(p)) fs.unlinkSync(p);
+  } catch {
+    /* ignore */
+  }
 }

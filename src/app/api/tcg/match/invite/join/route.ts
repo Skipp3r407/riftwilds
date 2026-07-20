@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
+import { guestIdentityFields } from "@/lib/auth/owner-key";
 import {
   getActiveCommanderHeroId,
   getActiveDeckList,
@@ -88,6 +89,7 @@ export async function POST(req: Request) {
       inviteUrl: `${origin}${invitePath}`,
       youAre: "host" as const,
       match: null,
+      ...guestIdentityFields(Boolean(guestToken), guestToken),
     });
     return attachTcgGuestCookie(res, guestToken);
   }
@@ -103,6 +105,7 @@ export async function POST(req: Request) {
       ...lobbyPublicView(lobby),
       youAre,
       match: snapshotTcgMatch(rec, key),
+      ...guestIdentityFields(Boolean(guestToken), guestToken),
     });
     return attachTcgGuestCookie(res, guestToken);
   }
@@ -157,6 +160,7 @@ export async function POST(req: Request) {
     inviteUrl: `${origin}${invitePath}`,
     youAre,
     match: snapshotTcgMatch(rec, key),
+    ...guestIdentityFields(Boolean(guestToken), guestToken),
   });
   return attachTcgGuestCookie(res, guestToken);
 }

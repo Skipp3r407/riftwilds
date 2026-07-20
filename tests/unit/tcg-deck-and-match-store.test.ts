@@ -107,6 +107,21 @@ describe("tcg match store identity", () => {
     expect(snapshotTcgMatch(after!, owner).publicId).toBe(id);
   });
 
+  it("rehydrates a practice match from disk after memory wipe (worker fork)", () => {
+    const owner = "guest_match_disk";
+    const rec = startTcgMatch(owner, { playerName: "DiskQA", mode: "practice" });
+    const id = rec.state.publicId;
+
+    // Simulate a Turbopack worker with empty globalThis memory.
+    const g = globalThis as unknown as { __riftwildsTcgMatches?: unknown };
+    delete g.__riftwildsTcgMatches;
+
+    expect(getTcgMatch(id, owner)).toBeTruthy();
+    const after = submitTcgAction(id, owner, { kind: "END_TURN" });
+    expect(after).toBeTruthy();
+    expect(after!.state.turn).toBeGreaterThanOrEqual(2);
+  });
+
   it("surrender completes and blocks further plays", () => {
     const owner = "guest_surrender";
     const rec = startTcgMatch(owner);

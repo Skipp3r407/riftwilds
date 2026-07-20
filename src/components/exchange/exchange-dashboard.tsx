@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { EarningMethod, RiftExchangeDashboard } from "@/lib/exchange/types";
+import { exchangeMethodThumbPath } from "@/lib/assets/paths";
 import { cn } from "@/lib/utils/cn";
 import { playSfx } from "@/hooks/use-sfx";
 
@@ -272,57 +274,73 @@ export function ExchangeDashboard() {
 function EarningMethodCard({ method }: { method: EarningMethod }) {
   const left = timeLeft(method.endsAt);
   return (
-    <article className="panel flex flex-col gap-3 p-4 transition hover:border-[var(--cyan)]/35">
-      <div className="flex items-start justify-between gap-2">
-        <div>
-          <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--text-dim)]">
-            {method.category} · {method.difficulty}
-          </p>
-          <h3 className="mt-0.5 font-display text-lg text-white">{method.title}</h3>
-        </div>
-        <span
-          className={cn(
-            "shrink-0 rounded border px-2 py-0.5 text-[10px] uppercase tracking-wide",
-            STATUS_TONE[method.status],
-          )}
-        >
-          {method.status}
-        </span>
+    <article className="group panel relative flex flex-col gap-3 overflow-hidden p-4 transition hover:border-[var(--cyan)]/35">
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <Image
+          src={exchangeMethodThumbPath(method.id)}
+          alt=""
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          className="object-cover opacity-55 transition duration-300 group-hover:opacity-65"
+          unoptimized
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8,10,18,0.55)] via-[rgba(8,10,18,0.72)] to-[rgba(8,10,18,0.92)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,rgba(8,10,18,0.45)_100%)]" />
       </div>
-      <p className="text-sm text-[var(--text-muted)]">{method.summary}</p>
-      <p className="text-xs text-[var(--amber)]">
-        Est. reward range: <span className="text-white">{method.rewardRangeLabel}</span>
-      </p>
-      <p className="text-[11px] text-[var(--text-dim)]">
-        Illustrative entertainment band — never a guarantee.
-      </p>
-      <ul className="space-y-0.5 text-[11px] text-[var(--text-muted)]">
-        {method.requirements.slice(0, 3).map((r) => (
-          <li key={r}>• {r}</li>
-        ))}
-      </ul>
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-1">
-        <span className="text-[11px] text-[var(--text-dim)]">
-          Popularity {method.popularity}
-          {left ? ` · ${left}` : ""}
-          {method.progressPercent != null ? ` · ${method.progressPercent}%` : ""}
-        </span>
-        <Link
-          href={method.href}
-          onClick={() => playSfx("ui.click")}
-          className="btn-secondary focus-ring text-xs"
-        >
-          Open
-        </Link>
-      </div>
-      {method.progressPercent != null ? (
-        <div className="h-1.5 overflow-hidden rounded-full bg-[rgba(255,255,255,0.06)]">
-          <div
-            className="h-full rounded-full bg-[var(--amber)]/70"
-            style={{ width: `${method.progressPercent}%` }}
-          />
+      <div className="relative z-[1] flex flex-1 flex-col gap-3">
+        <div className="flex items-start justify-between gap-2">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--text-dim)]">
+              {method.category} · {method.difficulty}
+            </p>
+            <h3 className="mt-0.5 font-display text-lg text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.65)]">
+              {method.title}
+            </h3>
+          </div>
+          <span
+            className={cn(
+              "shrink-0 rounded border bg-[rgba(8,10,18,0.55)] px-2 py-0.5 text-[10px] uppercase tracking-wide backdrop-blur-sm",
+              STATUS_TONE[method.status],
+            )}
+          >
+            {method.status}
+          </span>
         </div>
-      ) : null}
+        <p className="text-sm text-[var(--text-muted)]">{method.summary}</p>
+        <p className="text-xs text-[var(--amber)]">
+          Est. reward range: <span className="text-white">{method.rewardRangeLabel}</span>
+        </p>
+        <p className="text-[11px] text-[var(--text-dim)]">
+          Illustrative entertainment band — never a guarantee.
+        </p>
+        <ul className="space-y-0.5 text-[11px] text-[var(--text-muted)]">
+          {method.requirements.slice(0, 3).map((r) => (
+            <li key={r}>• {r}</li>
+          ))}
+        </ul>
+        <div className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-1">
+          <span className="text-[11px] text-[var(--text-dim)]">
+            Popularity {method.popularity}
+            {left ? ` · ${left}` : ""}
+            {method.progressPercent != null ? ` · ${method.progressPercent}%` : ""}
+          </span>
+          <Link
+            href={method.href}
+            onClick={() => playSfx("ui.click")}
+            className="btn-secondary focus-ring text-xs"
+          >
+            Open
+          </Link>
+        </div>
+        {method.progressPercent != null ? (
+          <div className="h-1.5 overflow-hidden rounded-full bg-[rgba(255,255,255,0.06)]">
+            <div
+              className="h-full rounded-full bg-[var(--amber)]/70"
+              style={{ width: `${method.progressPercent}%` }}
+            />
+          </div>
+        ) : null}
+      </div>
     </article>
   );
 }

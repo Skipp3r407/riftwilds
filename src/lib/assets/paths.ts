@@ -172,6 +172,14 @@ export function sectionUiThumbPath(folder: string, slug: string): string {
   return `/assets/ui/${folder}/${slug}.png?v=${SECTION_UI_THUMB_V}`;
 }
 
+/** Bump when Rift Exchange method card backgrounds are regenerated. */
+export const EXCHANGE_METHOD_ART_V = "ex1";
+
+/** Atmospheric cover thumb under public/assets/ui/exchange/{methodId}.png */
+export function exchangeMethodThumbPath(methodId: string): string {
+  return `/assets/ui/exchange/${methodId}.png?v=${EXCHANGE_METHOD_ART_V}`;
+}
+
 /** Bump when Keeper Dashboard panel art is regenerated. */
 export const DASHBOARD_PANEL_ART_V = "dash1";
 

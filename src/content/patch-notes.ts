@@ -1,5 +1,5 @@
 /**
- * Public patch / update notes — newest first.
+ * Public patch / update notes - newest first.
  * Append via `npm run patch-notes:add` or edit this file before every push.
  * See docs/PATCH_NOTES_WORKFLOW.md
  */
@@ -7,7 +7,7 @@
 export type PatchNoteSectionKey = "added" | "changed" | "fixed" | "knownIssues";
 
 export type PatchNoteEntry = {
-  /** Stable id — used as DOM anchor (`#entry-id`) */
+  /** Stable id - used as DOM anchor (`#entry-id`) */
   id: string;
   /** ISO date YYYY-MM-DD (display + sort) */
   date: string;
@@ -36,13 +36,30 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-20-practice-exchange",
+    date: "2026-07-20",
+    title: "Practice Board persistence and Rift Exchange section art",
+    summary:
+      "Fixes Practice Board MATCH_NOT_FOUND after reloads via match-store persistence and guest identity, and adds atmospheric section thumbnails on Rift Exchange earning-method cards.",
+    added: [
+      "Atmospheric cover thumbnails for all Rift Exchange earning-method sections",
+    ],
+    changed: [
+      "Rift Exchange method cards use dedicated section background art instead of a flat panel",
+    ],
+    fixed: [
+      "Practice Board / Rift Battle: matches no longer report MATCH_NOT_FOUND after refresh or invite join (persisted match store + guest fetch identity)",
+      "Patch Notes UTF-8 encoding so Vercel production builds do not fail on corrupted en-dashes",
+    ],
+  },
+  {
     id: "2026-07-20-comics-mira-canon",
     date: "2026-07-20",
     title: "Comics Continuity Mira-canon & Volume 1-2 pipeline",
     summary:
-      "Ships Continuity Mira-canon issues 1�10 with baked lettering, Volume 1-2 comic art pipelines, sequential unlock, and related comics reader / auth site polish.",
+      "Ships Continuity Mira-canon issues 1-10 with baked lettering, Volume 1-2 comic art pipelines, sequential unlock, and related comics reader / auth site polish.",
     added: [
-      "Continuity Mira-canon comic issues 1�10 on the comics shelf (covers, pages, and catalog entries)",
+      "Continuity Mira-canon comic issues 1-10 on the comics shelf (covers, pages, and catalog entries)",
       "Volume 1-2 comic generation pipelines with Grok art provider hooks and issue runner scripts",
       "Baked lettering / speech-bubble engine for comic pages",
       "Sequential comic unlock (later issues lock until earlier ones are completed; optional dev unlock flags)",
@@ -88,7 +105,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Codex world lore, comics library, quests, and social hubs refreshed with new art and navigation",
     ],
     knownIssues: [
-      "Nakama multiplayer remains gated behind feature flags and local Docker setup — not a live production matchmaker yet",
+      "Nakama multiplayer remains gated behind feature flags and local Docker setup - not a live production matchmaker yet",
       "Some marketplace sub-desks (auctions, rentals, commissions) are scaffolded stubs pending full economy wiring",
     ],
   },
@@ -98,7 +115,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Practice Board battle desk console",
     summary:
-      "Rift Battle’s Practice Board now sits inside a framed command console — Board Intel, Command Feed, and a bold action bar — while keeping the same Rift Energy rules.",
+      "Rift Battle's Practice Board now sits inside a framed command console - Board Intel, Command Feed, and a bold action bar - while keeping the same Rift Energy rules.",
     changed: [
       "Practice Board / Battle Desk UI rebuilt as a metallic rift-console shell with corner accents and atmospheric stage",
       "Opponent and Keeper status strips show HP and Rift Energy bars alongside deck count",
@@ -111,7 +128,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Card shop & trade desk redesign",
     summary:
-      "Market surfaces now lead with Rift Battle packs, binders, and cosmetics — Credits-first, with original product art replacing placeholder icons.",
+      "Market surfaces now lead with Rift Battle packs, binders, and cosmetics - Credits-first, with original product art replacing placeholder icons.",
     added: [
       "Unique product art for Ember Spark / Tideglass / Grove / Stormspire packs, Binder Page, Extra Deck Slot, sleeves, board skin, and Keeper Folio",
       "Marketplace demo listings for Tideglass Pack, Binder Page, and Extra Deck Slot with product thumbnails",
@@ -138,9 +155,9 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Public product & economy roadmap",
     summary:
-      "A player-facing roadmap for Rift Battles now, Credits/coin expansion next, and Living World as a later release — SOL stays optional and never required for core play.",
+      "A player-facing roadmap for Rift Battles now, Credits/coin expansion next, and Living World as a later release - SOL stays optional and never required for core play.",
     added: [
-      "Public /roadmap page — Now (Rift Battles), Next (Gold · Rift Shards · optional SOL), Later (Living World)",
+      "Public /roadmap page - Now (Rift Battles), Next (Gold · Rift Shards · optional SOL), Later (Living World)",
       "docs/vision/PRODUCT_ECONOMY_ROADMAP.md aligned with vision and economy docs",
       "Roadmap links from Play / Economy / Community nav, Help destinations, Community page, and Learn footer",
     ],
@@ -150,7 +167,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "More Riftling avatars with unlock paths",
     summary:
-      "Social avatar picker now offers the full launch Riftling roster as cosmetics — free starters, task unlocks, Credits buys, and optional SOL (coming soon).",
+      "Social avatar picker now offers the full launch Riftling roster as cosmetics - free starters, task unlocks, Credits buys, and optional SOL (coming soon).",
     added: [
       "100 launch Riftling species portraits in the Avatar & safety picker (was 12 starters)",
       "Unlock paths: free starters, hatchery ownership, quest/achievement tasks, Credits purchase",
@@ -158,7 +175,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     ],
     changed: [
       "Locked avatars show task progress and Buy with Credits; Show all expands the large grid",
-      "Clear cosmetics-only copy — avatars never grant pets or gameplay power",
+      "Clear cosmetics-only copy - avatars never grant pets or gameplay power",
     ],
     knownIssues: [
       "SOL avatar checkout remains off (SOL_PURCHASES_ENABLED=false) by design",
@@ -188,9 +205,9 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Ambience playlist no longer cuts out early",
     summary:
-      "Frostveil’s bed and a few quiet sci-fi loops were going silent after a few seconds; the playlist and crossfade engine now keep ambience playing through.",
+      "Frostveil's bed and a few quiet sci-fi loops were going silent after a few seconds; the playlist and crossfade engine now keep ambience playing through.",
     changed: [
-      "Frostveil / playlist track “Space Graveyard” replaced with continuous CC0 “Icy Realm”",
+      "Frostveil / playlist track "Space Graveyard" replaced with continuous CC0 "Icy Realm"",
       "Quiet Dark Sci-Fi beds (Sector, Airy, Pulse, Urgent) get a gentle playback gain so they stay audible at normal Music volume",
     ],
     fixed: [
@@ -330,14 +347,14 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     title: "Live World companion matches your hatch",
     version: "2ec87bb",
     summary:
-      "Your following Riftling in Live World now uses the same species look as the pet you hatched — Glowpup-line sparklets stay distinct from Alloybits and other affinities.",
+      "Your following Riftling in Live World now uses the same species look as the pet you hatched - Glowpup-line sparklets stay distinct from Alloybits and other affinities.",
     fixed: [
       "Live World follower no longer always shows the generic cozy Spark sheet regardless of hatch species",
       "HUD companion label uses your hatched species name instead of a hardcoded Spark stub",
     ],
     changed: [
       "Companion overworld art maps hatch species (and affinity fallback) to matching cozy pixel walk sheets",
-      "Ambient village Riftlings stay decorative props and no longer share the player companion’s identity or anim keys",
+      "Ambient village Riftlings stay decorative props and no longer share the player companion's identity or anim keys",
     ],
     added: [
       "Extra cozy companion palettes for storm, spirit, void, alloy, and radiant affinities",
@@ -359,7 +376,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
   {
     id: "2026-07-18-cozy-depth-pass-2",
     date: "2026-07-18",
-    title: "Commons depth pass — shores, cottages, walks",
+    title: "Commons depth pass - shores, cottages, walks",
     summary:
       "Live World Commons gets richer path/pond autotiles, unique cottage variants, picket yards with original-IP critters, and Keeper/Riftling walk cycles.",
     added: [
@@ -373,7 +390,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Tree/bush contact shadows and layering read more grounded in the meadow",
     ],
     knownIssues: [
-      "Still procedural pixel art vs hand-painted Kenmi-quality tiles — more frame polish and unique props remain on the backlog",
+      "Still procedural pixel art vs hand-painted Kenmi-quality tiles - more frame polish and unique props remain on the backlog",
     ],
   },
   {
@@ -381,7 +398,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Commons goes cozy pixel village",
     summary:
-      "Live World Commons shifts to a bright cute fantasy RPG look — lush grass, dirt paths, cottage facades, denser clutter, and chibi Keeper/Riftling sprites (original IP).",
+      "Live World Commons shifts to a bright cute fantasy RPG look - lush grass, dirt paths, cottage facades, denser clutter, and chibi Keeper/Riftling sprites (original IP).",
     added: [
       "Original cozy 16-bit terrain pack (flowered grass, path borders, pond edges/lilies, farm soil, plaza cobble)",
       "Cute cottage building facades for Commons hubs with amber lanterns and cyan rift-glass accents",
@@ -394,7 +411,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Village prop scatter is denser along paths, yards, and farm hubs",
     ],
     knownIssues: [
-      "Procedural pixel pack approximates a hand-authored cute RPG tileset — further art passes will deepen cottage variety and walk cycles",
+      "Procedural pixel pack approximates a hand-authored cute RPG tileset - further art passes will deepen cottage variety and walk cycles",
     ],
   },
   {
@@ -402,9 +419,9 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "20 more kids coloring pages",
     summary:
-      "Kids Corner grows to 28 printable game-sketch coloring sheets — Keepers, harbor, academy, hatchery, species, and kid-safe boss silhouettes.",
+      "Kids Corner grows to 28 printable game-sketch coloring sheets - Keepers, harbor, academy, hatchery, species, and kid-safe boss silhouettes.",
     added: [
-      "20 new Riftwilds coloring pages (PNG + PDF) on /coloring — Keeper & Companion, Commons Arena, Player Academy, Moonwater Harbor, Hatchery Care, Ember Forge, Riftling Species, Glowpup Den, Emberkit Scout, Pouchling Market, Stone Guardian, Rift Serpent, Circus Acrobat, Gateway Awakening, Elderwood Camp, Market Day, Homestead Garden, Riftstone Plaza, First Bond, and Lantern Night",
+      "20 new Riftwilds coloring pages (PNG + PDF) on /coloring - Keeper & Companion, Commons Arena, Player Academy, Moonwater Harbor, Hatchery Care, Ember Forge, Riftling Species, Glowpup Den, Emberkit Scout, Pouchling Market, Stone Guardian, Rift Serpent, Circus Acrobat, Gateway Awakening, Elderwood Camp, Market Day, Homestead Garden, Riftstone Plaza, First Bond, and Lantern Night",
     ],
     changed: [
       "Coloring, comics kids section, Fan Kit, and press copy now list 28 printable game-sketch pages",
@@ -429,7 +446,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     title: "Printables match Riftwilds theme",
     version: "printables-v3",
     summary:
-      "/printables art and chrome retuned to epic warm fantasy — Keepers, rift storms, bronze/amber/cyan CTAs (no purple pills).",
+      "/printables art and chrome retuned to epic warm fantasy - Keepers, rift storms, bronze/amber/cyan CTAs (no purple pills).",
     changed: [
       "All 12 × 300 DPI printables regenerated with richer warfront scenes: damaged Commons timber, lanterns, storm debris, athletic Glowpup stance",
       "Download buttons use bronze/amber PDF and cyan-outline PNG styles instead of purple crypto primary skins",
@@ -443,7 +460,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Every Creator Hub creator and offer card now has its own thematic atmosphere behind the cutout art.",
     changed: [
-      "Creator Hub cards on /creators no longer share one plain charcoal well — Echo Archives, Ember Atelier, Groveheart Field Notes, and Lantern Homestead Kit each get a distinct parchment, ember, grove, or lantern background",
+      "Creator Hub cards on /creators no longer share one plain charcoal well - Echo Archives, Ember Atelier, Groveheart Field Notes, and Lantern Homestead Kit each get a distinct parchment, ember, grove, or lantern background",
     ],
   },
   {
@@ -493,14 +510,14 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
   {
     id: "2026-07-18-printables-theme-pass",
     date: "2026-07-18",
-    title: "Printables theme pass — adventure art",
+    title: "Printables theme pass - adventure art",
     version: "printables-v2",
     summary:
       "/printables chrome and all 300 DPI assets retuned to warm fantasy + cyan/amber rift energy: Keepers, Riftlings, living towns under threat.",
     changed: [
       "Printables hub restyled with bronze/parchment chrome (no purple mush)",
-      "All 12 printables regenerated: Spark’s Stand, Commons Under Threat, Hatchery Aurora, fantasy MMO trading-card frames, adventure bookmarks, circus under fire",
-      "Copy and card order sell battles, exploration, and care — not toddler-cute stickers",
+      "All 12 printables regenerated: Spark's Stand, Commons Under Threat, Hatchery Aurora, fantasy MMO trading-card frames, adventure bookmarks, circus under fire",
+      "Copy and card order sell battles, exploration, and care - not toddler-cute stickers",
     ],
     fixed: [
       "Poster preview thumbs now show full scene art (object-cover on dark ink frames)",
@@ -512,7 +529,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     title: "Friends and private messages",
     version: "social",
     summary:
-      "Social Hub now supports real friend requests, inbox PMs, blocks/reports stubs, and Live World deep-links — no wallet required.",
+      "Social Hub now supports real friend requests, inbox PMs, blocks/reports stubs, and Live World deep-links - no wallet required.",
     added: [
       "Friends + PM APIs at /api/social/friends, /api/social/messages, /api/social/summary",
       "Social Hub tabs: Friends, Requests, Messages, Safety (block / report / privacy)",
@@ -526,7 +543,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Footer Learn links include Social Hub",
     ],
     knownIssues: [
-      "PM delivery is request/response only — WebSocket push is backlog",
+      "PM delivery is request/response only - WebSocket push is backlog",
       "Prisma friends/PM tables are prepare-only (FRIENDS_AND_PM_PRISMA_ENABLED off)",
       "Party invites remain stubs until multiplayer Phase 2",
     ],
@@ -580,7 +597,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Legends of the Rift reader polish, free downloads / Fan Kit hub, printable coloring, and World Codex illustration pass.",
     added: [
       "Comics library with book-feel reader experience for published issues",
-      "Fan Kit hub — wallpapers, stickers, avatar frames, share cards, and download packs",
+      "Fan Kit hub - wallpapers, stickers, avatar frames, share cards, and download packs",
       "Kids coloring pages (printable PNG/SVG/PDF) and Press / Streamer kit surfaces",
       "World Codex lore art for major Aeryndra moments and places",
     ],
@@ -609,7 +626,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Live World HUD overlap and layout migration issues for Chat / Presence panels",
     ],
     knownIssues: [
-      "World-expansion migrations remain prepare-first — operators should not force-enable capacity expansion until approved",
+      "World-expansion migrations remain prepare-first - operators should not force-enable capacity expansion until approved",
     ],
   },
   {
@@ -652,7 +669,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Initial closed-alpha platform: hatchery, Live World, arena, marketplace, economy framing, and core Keepers loop.",
     added: [
-      "Core Keepers loop — hatch, care, collection, quests, and Academy",
+      "Core Keepers loop - hatch, care, collection, quests, and Academy",
       "Live World exploration shell and Arena combat foundations",
       "Marketplace, shop, inventory, guilds, and homestead entry points",
       "Token / treasury / transparency / fairness marketing surfaces",

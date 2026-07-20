@@ -1,8 +1,9 @@
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { NextResponse } from "next/server";
 import {
   attachGuestCookie,
   GUEST_COOKIE_NAME,
+  GUEST_TOKEN_HEADER,
   isValidGuestToken,
   resolveOwnerKey,
 } from "@/lib/auth/owner-key";
@@ -52,6 +53,19 @@ export async function resolveTcgOwnerKey(): Promise<{
     return { key: `guest_${legacy}`, guestToken: legacy, mintedGuest: false, authorized: true };
   }
 
+  // Prefer client-sent header before minting — stops Strict Mode double-start
+  // from seating the same board under two guest keys.
+  const hdrs = await headers();
+  const fromHeader = hdrs.get(GUEST_TOKEN_HEADER);
+  if (isValidGuestToken(fromHeader)) {
+    return {
+      key: `guest_${fromHeader}`,
+      guestToken: fromHeader,
+      mintedGuest: false,
+      authorized: true,
+    };
+  }
+
   const resolved = await resolveOwnerKey();
   return {
     key: resolved.ownerKey,
@@ -61,7 +75,11 @@ export async function resolveTcgOwnerKey(): Promise<{
   };
 }
 
-/** Read-only: null when no session/guest cookie (used by turn route). */
+/**
+ * Read-only owner key for turn actions.
+ * Accepts session / guest cookies OR `x-rift-guest` (cookie delay / drop).
+ * Does not mint — missing identity → null (401 NO_SESSION).
+ */
 export async function readTcgOwnerKey(): Promise<string | null> {
   const jar = await cookies();
   const session = jar.get(authDefaults.COOKIE_NAME)?.value;
@@ -71,6 +89,9 @@ export async function readTcgOwnerKey(): Promise<string | null> {
   if (isValidGuestToken(shared)) return `guest_${shared}`;
   const legacy = jar.get(TCG_GUEST_COOKIE)?.value;
   if (isValidGuestToken(legacy)) return `guest_${legacy}`;
+  const hdrs = await headers();
+  const fromHeader = hdrs.get(GUEST_TOKEN_HEADER);
+  if (isValidGuestToken(fromHeader)) return `guest_${fromHeader}`;
   return null;
 }
 
