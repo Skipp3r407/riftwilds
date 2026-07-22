@@ -46,6 +46,12 @@ class MusicStemMixer {
     const ctx = await audioManager.getContext();
     if (!ctx || !this.bus) {
       this.active = false;
+      this.teardown();
+      return;
+    }
+    this.active = false;
+    if (fadeMs <= 0) {
+      this.teardown();
       return;
     }
     const t = ctx.currentTime;
@@ -55,7 +61,6 @@ class MusicStemMixer {
     window.setTimeout(() => {
       this.teardown();
     }, fadeMs + 40);
-    this.active = false;
   }
 
   async setIntensity(value: number) {

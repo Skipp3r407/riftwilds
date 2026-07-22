@@ -106,7 +106,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Continue.",
   "letteringInstructions": "Matter lettering; clear hierarchy.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Chapter Ten — The Shattered Star",
@@ -125,5 +125,7 @@
   ],
   "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-004.webp",
   "volumeLabel": "Volume Two · Issue #1 / Issue #10",
-  "id": "the-shattered-star-issue-010-p004"
+  "id": "the-shattered-star-issue-010-p004",
+  "bakedLettering": true,
+  "composedPlate": true
 }

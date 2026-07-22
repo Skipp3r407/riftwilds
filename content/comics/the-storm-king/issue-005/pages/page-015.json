@@ -137,7 +137,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Cael's history.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
-  "generationStatus": "cached",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Engine That Feeds on Bond — The Storm King page 11",
@@ -161,5 +161,7 @@
   "id": "the-storm-king-issue-005-p015",
   "cleanArtRel": "generated/raw-art/page-015.webp",
   "letteredArtRel": "generated/lettered-pages/page-015.webp",
-  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-015.webp"
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-015.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

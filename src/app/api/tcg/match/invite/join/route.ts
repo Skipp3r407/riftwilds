@@ -8,6 +8,7 @@ import {
 } from "@/game/tcg/collection-store";
 import {
   materializeDeck,
+  shuffleDeck,
   validateContentDeckList,
   validateDeckList,
 } from "@/game/tcg/deck";
@@ -51,7 +52,8 @@ function resolveDeck(ownerKey: string) {
   if (!valid.ok) return { ok: false as const, reason: valid.reason };
   return {
     ok: true as const,
-    deck: materializeDeck(deckList),
+    // Shuffle at materialize so private seats never deal binder/catalog order.
+    deck: shuffleDeck(materializeDeck(deckList)),
     commanderHeroId: getActiveCommanderHeroId(ownerKey),
   };
 }
@@ -67,7 +69,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "INVALID_BODY" }, { status: 400 });
   }
 
-  const { key, guestToken } = await resolveTcgOwnerKey();
+  const { key, guestToken, authorized } = await resolveTcgOwnerKey();
+  if (!authorized || !key) {
+    return NextResponse.json({ error: "NO_SESSION" }, { status: 401 });
+  }
   const attached = attachGuestToLobby(
     parsed.data.code,
     key,

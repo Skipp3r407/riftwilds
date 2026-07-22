@@ -118,7 +118,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
   "pageTurnObjective": "End Issue #8 — continue in The Riftwright.",
   "letteringInstructions": "Cliffhanger captions clear; silhouette speech without speaker name.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "The Riftwright — The Forge of Rifts page 25",
@@ -141,5 +141,7 @@
   "id": "the-forge-of-rifts-issue-008-p029",
   "cleanArtRel": "generated/raw-art/page-029.webp",
   "letteredArtRel": "generated/lettered-pages/page-029.webp",
-  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-029.webp"
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-029.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

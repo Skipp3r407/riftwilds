@@ -42,6 +42,7 @@ export {
   startMenuAmbient,
   stopAmbient,
 } from "@/lib/audio/ambient";
+export { pauseAllBeds } from "@/lib/audio/beds";
 export {
   musicEngine,
   playRegionMusic,
@@ -49,6 +50,11 @@ export {
   crossfadeMusic,
   MUSIC_PLAYLIST,
 } from "@/lib/audio/music";
+export {
+  MUSIC_UI_STORAGE_KEY,
+  readMusicUiPaused,
+  type MusicUiPrefs,
+} from "@/lib/audio/music-ui";
 export { musicStems } from "@/lib/audio/music-stems";
 export { reverbEngine, type ReverbZoneId } from "@/lib/audio/reverb";
 export {

@@ -117,8 +117,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Wisplet detects under-stage.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "pending",
-  "letteringStatus": "pending",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Curtain Call Begins — The Traveling Circus page 8",
   "atmosphere": "festival",
@@ -132,5 +132,7 @@
   "id": "the-traveling-circus-issue-003-p012",
   "cleanArtRel": "generated/raw-art/page-012.png",
   "letteredArtRel": "generated/lettered-pages/page-012.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-012.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-012.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

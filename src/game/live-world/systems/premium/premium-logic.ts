@@ -139,6 +139,10 @@ function pickPathAutotile(
   if (n && w && !s && !e) return "path-corner-nw";
   if (s && e && !n && !w) return "path-corner-se";
   if (s && w && !n && !e) return "path-corner-sw";
+  // Multi-edge junctions — prefer bloom over a harsh single-axis strip
+  if (edges >= 3) return "path-bloom";
+  if (n && s) return "path-bloom";
+  if (e && w) return "path-bloom";
   if (n && !s) return "path-edge-n";
   if (s && !n) return "path-edge-s";
   if (e && !w) return "path-edge-e";
@@ -199,11 +203,15 @@ export function resolveTerrainTexture(
       return "path-ruined";
     case "safe":
     case "accent":
-    case "settlement":
+    case "settlement": {
       if (zoneId === "central-plaza" || zoneId === "portal-circle") {
         return pickPlaza(col, row, 31, 22);
       }
+      // Soft dirt↔grass seams for yards / streets (same autotile kit as paths)
+      const settleAuto = pickPathAutotile(col, row, grid);
+      if (settleAuto) return settleAuto;
       return pickSettlement(kind, col, row, zoneId);
+    }
     case "danger":
       return hash2(col, row, 4) < 0.4 ? "grass-dry" : "path-roots";
     default:
@@ -287,8 +295,20 @@ function districtAnchors(T: number): DistrictScatter[] {
     {
       cx: 31 * T,
       cy: 22 * T,
-      keys: ["bench", "lantern-post", "flowers", "banner-pole", ...lights.slice(0, 6), ...flowers.slice(0, 8), ...fauna.slice(0, 6), ...hardscape.slice(0, 4)],
-      count: 24,
+      keys: [
+        "bench",
+        "lantern-post",
+        "flowers",
+        "banner-pole",
+        "clay-pot",
+        "pot-cluster",
+        "signpost",
+        ...lights.slice(0, 6),
+        ...flowers.slice(0, 8),
+        ...fauna.slice(0, 6),
+        ...hardscape.slice(0, 4),
+      ],
+      count: 30,
       radius: 95,
       salt: 1,
     },
@@ -296,16 +316,34 @@ function districtAnchors(T: number): DistrictScatter[] {
     {
       cx: 9 * T,
       cy: 36 * T,
-      keys: ["market-stall", "barrel", "crate", "banner-pole", ...market, ...lights.slice(0, 4)],
-      count: 26,
+      keys: [
+        "market-stall",
+        "barrel",
+        "crate",
+        "banner-pole",
+        "clay-pot",
+        "pot-cluster",
+        "signpost",
+        ...market,
+        ...lights.slice(0, 4),
+      ],
+      count: 32,
       radius: 78,
       salt: 2,
     },
     {
       cx: 12 * T,
       cy: 39 * T,
-      keys: ["barrel", "crate", "flowers", "signpost", ...market.slice(0, 10), ...hardscape.slice(0, 6)],
-      count: 16,
+      keys: [
+        "barrel",
+        "crate",
+        "flowers",
+        "signpost",
+        "clay-pot",
+        ...market.slice(0, 10),
+        ...hardscape.slice(0, 6),
+      ],
+      count: 20,
       radius: 42,
       salt: 22,
     },
@@ -318,6 +356,9 @@ function districtAnchors(T: number): DistrictScatter[] {
         "lantern-post",
         "flowers",
         "bush-berry",
+        "clay-pot",
+        "pot-cluster",
+        "boulder",
         "tree-flowering",
         "tree-birch",
         ...trees.slice(0, 8),
@@ -325,7 +366,7 @@ function districtAnchors(T: number): DistrictScatter[] {
         ...hardscape.slice(0, 8),
         ...libKeys("fence-", "furniture-").slice(0, 10),
       ],
-      count: 22,
+      count: 28,
       radius: 52,
       salt: 9,
     },
@@ -357,12 +398,13 @@ function districtAnchors(T: number): DistrictScatter[] {
         "tree-small",
         "flowers",
         "bush-berry",
+        "clay-pot",
         "lantern-post",
         ...trees.filter((k) => k.includes("flowering") || k.includes("birch") || k.includes("orchard")),
         ...flowers.slice(0, 8),
         ...libKeys("riftling-").slice(0, 4),
       ],
-      count: 20,
+      count: 26,
       radius: 64,
       salt: 4,
     },
@@ -450,6 +492,7 @@ function districtAnchors(T: number): DistrictScatter[] {
         "tree-flowering",
         "bush-berry",
         "rock-moss",
+        "boulder",
         "flowers",
         "lantern-post",
         ...trees,
@@ -457,7 +500,7 @@ function districtAnchors(T: number): DistrictScatter[] {
         ...flowers.slice(0, 10),
         ...lights,
       ],
-      count: 30,
+      count: 38,
       radius: 72,
       salt: 7,
     },
@@ -465,8 +508,17 @@ function districtAnchors(T: number): DistrictScatter[] {
     {
       cx: 56 * T,
       cy: 12 * T,
-      keys: ["tree-pine", "tree-oak", "tree-rift", "rock-moss", "bush-berry", ...trees, ...libKeys("rock-", "mushroom-")],
-      count: 22,
+      keys: [
+        "tree-pine",
+        "tree-oak",
+        "tree-rift",
+        "rock-moss",
+        "boulder",
+        "bush-berry",
+        ...trees,
+        ...libKeys("rock-", "mushroom-"),
+      ],
+      count: 28,
       radius: 55,
       salt: 24,
     },
@@ -474,8 +526,19 @@ function districtAnchors(T: number): DistrictScatter[] {
     {
       cx: 4 * T,
       cy: 4 * T,
-      keys: ["tree-pine", "tree-oak", "tree-rift", "tree-birch", "rock-moss", "ruin-arch", "bush-berry", ...trees, ...bushes],
-      count: 26,
+      keys: [
+        "tree-pine",
+        "tree-oak",
+        "tree-rift",
+        "tree-birch",
+        "rock-moss",
+        "boulder",
+        "ruin-arch",
+        "bush-berry",
+        ...trees,
+        ...bushes,
+      ],
+      count: 34,
       radius: 70,
       salt: 8,
     },
@@ -615,13 +678,17 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
     });
   }
 
-  // Cozy village clutter — fences, barrels, benches, flower patches, ambient Riftlings
+  // Cozy village clutter — fences, pots, barrels, benches, flower patches, ambient Riftlings
   const cozyKeys: PropKey[] = [
     "bench",
     "barrel",
     "crate",
     "flowers",
     "bush-berry",
+    "clay-pot",
+    "pot-cluster",
+    "boulder",
+    "rock-moss",
     "lantern-post",
     "signpost",
     "lib-fence-post",
@@ -640,18 +707,23 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
     "ambient-riftling-radiantpup",
     "critter-sparkmoth",
     "critter-mossbun-kit",
-    ...libKeys("fence-", "barrel-", "crate-", "flower-", "furniture-", "goods-").slice(0, 24),
+    ...libKeys("fence-", "barrel-", "crate-", "flower-", "furniture-", "goods-", "rock-", "bush-").slice(
+      0,
+      32,
+    ),
   ];
   const cozyHubs = [
-    { x: 8 * T, y: 18 * T, r: 36, n: 14 },
-    { x: 14 * T, y: 38 * T, r: 34, n: 14 },
-    { x: 18 * T, y: 42 * T, r: 30, n: 12 },
-    { x: 28 * T, y: 26 * T, r: 40, n: 14 },
-    { x: 48 * T, y: 36 * T, r: 32, n: 12 },
-    { x: 10 * T, y: 10 * T, r: 28, n: 12 },
-    { x: 22 * T, y: 20 * T, r: 26, n: 10 },
-    { x: 36 * T, y: 30 * T, r: 28, n: 10 },
-    { x: 8 * T, y: 36 * T, r: 28, n: 12 },
+    { x: 8 * T, y: 18 * T, r: 36, n: 18 },
+    { x: 14 * T, y: 38 * T, r: 34, n: 18 },
+    { x: 18 * T, y: 42 * T, r: 30, n: 16 },
+    { x: 28 * T, y: 26 * T, r: 40, n: 18 },
+    { x: 48 * T, y: 36 * T, r: 32, n: 16 },
+    { x: 10 * T, y: 10 * T, r: 28, n: 16 },
+    { x: 22 * T, y: 20 * T, r: 26, n: 14 },
+    { x: 36 * T, y: 30 * T, r: 28, n: 14 },
+    { x: 8 * T, y: 36 * T, r: 28, n: 16 },
+    { x: 30 * T, y: 40 * T, r: 32, n: 14 },
+    { x: 44 * T, y: 22 * T, r: 30, n: 14 },
   ];
   for (const hub of cozyHubs) {
     for (let i = 0; i < hub.n; i++) {
@@ -704,22 +776,31 @@ export function commonsPropScatter(blueprint: MapBlueprint): ScatterSpec[] {
   const pathFences = libKeys("fence-");
 
   // Alley clutter along pathways — denser lived-in street details
+  const pathClutter: PropKey[] = [
+    "clay-pot",
+    "pot-cluster",
+    "boulder",
+    "bush-berry",
+    "rock-moss",
+    "signpost",
+  ];
   for (const path of blueprint.pathways) {
     for (let i = 0; i < path.waypoints.length - 1; i++) {
       const a = path.waypoints[i]!;
       const b = path.waypoints[i + 1]!;
-      if (hash2(a.x, a.y, i) < 0.88) {
+      if (hash2(a.x, a.y, i) < 0.92) {
+        const roll = hash2(b.x, b.y, i);
         out.push({
           key:
-            hash2(b.x, b.y, i) < 0.35
+            roll < 0.28
               ? pickLib(pathFlowers, i, 3)
-              : hash2(i, a.y, 3) < 0.3
+              : roll < 0.42
                 ? pickLib(libKeys("rock-"), i, 5)
-                : hash2(i, b.x, 4) < 0.5
+                : roll < 0.58
                   ? pickLib(pathGoods, i, 6)
-                  : hash2(i, a.x, 5) < 0.35
+                  : roll < 0.7
                     ? pickLib(pathFences, i, 7) || "lib-fence-post"
-                    : "bush-berry",
+                    : pathClutter[Math.floor(hash2(i, a.x, 8) * pathClutter.length) % pathClutter.length]!,
           x: (a.x + b.x) / 2 + (hash2(i, a.x) - 0.5) * 28,
           y: (a.y + b.y) / 2 + (hash2(i, a.y) - 0.5) * 28,
           scale: 0.7,

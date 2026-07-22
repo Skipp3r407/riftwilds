@@ -106,7 +106,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Aftermath truth.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Lanternmaster Unmasked in Battle — The Traveling Circus page 22",
@@ -120,5 +120,7 @@
   "id": "the-traveling-circus-issue-003-p026",
   "cleanArtRel": "generated/raw-art/page-026.png",
   "letteredArtRel": "generated/lettered-pages/page-026.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-026.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-026.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

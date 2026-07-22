@@ -99,7 +99,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "War ended long ago.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "The Day Relief Never Came — The Lost City page 22",
@@ -112,5 +112,7 @@
   "id": "the-lost-city-issue-004-p026",
   "cleanArtRel": "generated/raw-art/page-026.webp",
   "letteredArtRel": "generated/lettered-pages/page-026.webp",
-  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-026.webp"
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-026.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

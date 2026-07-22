@@ -83,7 +83,7 @@
   "continuity": {},
   "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Black lacquer wood and brass first; warm gold filigree, deep red merchant fabric, teal Rift glass lanterns and crystal accents. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for The Merchant's Secret Issue #6 — Inside Back Cover. Inside back: Gilded Crossroads Merchant Pass aesthetic — route stamps, rescue charter icon, portal engine warning; no real barcodes. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Merchant: Aurelia Voss the Gilded Merchant: tall elegant merchant leader, black lacquer coat with warm gold filigree, half-veil over one eye, amber lantern pin, teal Rift glass jewelry, composed smile hiding hard bargains. Empty zones for title lettering. NO readable text in art.",
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Inside Back Cover",
@@ -102,5 +102,7 @@
   "id": "the-merchants-secret-issue-006-p037",
   "cleanArtRel": "generated/raw-art/page-037.webp",
   "letteredArtRel": "generated/lettered-pages/page-037.webp",
-  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-037.webp"
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-037.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

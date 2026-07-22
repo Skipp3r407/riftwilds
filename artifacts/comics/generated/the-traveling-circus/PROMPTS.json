@@ -1,0 +1,382 @@
+{
+  "1": {
+    "role": "front-cover",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "The Traveling Circus — Cover",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book front-cover page for The Traveling Circus Issue #3 — The Traveling Circus — Cover. Main cover: Spark centered beneath floating lanterns; Mira Eggwarden and companions entering circus; Lanternmaster above grand pavilion; Lumenhare leaping illusion rings; Meridian agents in shadows; sanctuary crystal glow in wagon; Lost City silhouette distant. Trade dress empty zones. Original Riftwilds. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "2": {
+    "role": "inside-cover",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Inside Front Cover",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for The Traveling Circus Issue #3 — Inside Front Cover. Quiet lantern-parchment inside cover; nested lantern watermark. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "3": {
+    "role": "credits",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Credits",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book credits page for The Traveling Circus Issue #3 — Credits. Circus workshop desk: masks, quills, lantern ink — empty credit boxes. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "4": {
+    "role": "title",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Chapter Three — Lanternveil",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book title page for The Traveling Circus Issue #3 — Chapter Three — Lanternveil. Title energy: circus pavilion silhouette, Spark and Lumenhare leap, Mira on threshold. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "5": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Roads Beneath Lanterns",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 1/25 — Roads Beneath Lanterns. Story purpose: Full splash: team sees Lanternveil Circus at twilight; Spark glows. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-bleed splash: Lanternveil Traveling Circus at twilight — floating lanterns, painted deep-blue ember-gold wagons, crowds, companion performers, grand pavilion, Riftwild hills behind. Mira Eggwarden and companions in foreground; Spark glowing cyan-gold reacting to lanterns. Balloon-safe top. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling, wisplet. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: circus approach road. Time: twilight. Weather: soft magical fog. Lighting: twilight ember + cyan lanterns. Continuity: {\"location\":\"Lanternveil approach\",\"time\":\"twilight\",\"spark\":{\"emotion\":\"wonder-alert\",\"glow\":\"lantern-resonance\"},\"mira\":{\"stance\":\"cautious-curious\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "6": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Step Right In",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 2/25 — Step Right In. Story purpose: Team enters; Thornling distracted; Bramblefox scans; Spark watches ring leaps. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Gate of painted wagons; Mira leads Spark; crowd cheers. Greeter silhouette ahead. Panel 2 (p2b): Thornling lunges toward candy-ribbon stall; Mossprig tries to block. Panel 3 (p2c): Bramblefox ears sharp scanning masked crowd; Spark watches luminous companion leap rings of light. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"thornling\":{\"status\":\"food-distracted\"},\"bramblefox\":{\"status\":\"scanning-masks\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 3
+  },
+  "7": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "The Greeter Notices",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 3/25 — The Greeter Notices. Story purpose: Masked greeter welcomes Mira; Spark markings pulse to lantern; greeter hides reaction. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p3a): Masked acrobat greeter bows with floating lantern; Mira polite but guarded; Spark markings pulse toward lantern. Panel 2 (p3b): Close on greeter eyes behind mask: recognition flicker at Spark's cyan-gold marks, then smooth smile — hides reaction. Three-arc charm half-hidden under sleeve cuff. Characters: mira-eggwarden, masked-greeter. Creatures: spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"greeter\":{\"noticedSpark\":true,\"hidReaction\":true},\"spark\":{\"glow\":\"lantern-sync\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 2
+  },
+  "8": {
+    "role": "story",
+    "layout": {
+      "type": "grid-2x2",
+      "panelCount": 4
+    },
+    "title": "Wonder Market",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 4/25 — Wonder Market. Story purpose: Warm montage: food, care tents, card booths, games, merchants, kids meeting companions. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p4a): Food stalls with steam and ember-gold banners; kids laughing. Panel 2 (p4b): Creature care tent: gentle healers checking companion paws; Mossprig soft curiosity. Panel 3 (p4c): Card-trading booth with theatrical ability demo props (not gambling); Spark watches. Panel 4 (p4d): Games and merchants; Spirit Moth drifts toward a lantern signal in distance. Characters: mira-eggwarden. Creatures: mossprig, spark, spirit-moth. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"mood\":\"warm-joyful\",\"spiritMoth\":{\"tracking\":\"lantern-signal\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 4
+  },
+  "9": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Snack Catastrophe",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 5/25 — Snack Catastrophe. Story purpose: Thornling comic food stall incident; Mossprig helps; Spark briefly laughs/relaxes. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p5a): Thornling topples stacked caramel-root cones; sticky chaos. Panel 2 (p5b): Mossprig Living Bulwark mini-dome catches falling trays; vendor relieved. Panel 3 (p5c): Spark chirps a laugh-pulse; Mira soft smile — rare ease. Characters: mira-eggwarden. Creatures: thornling, mossprig, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"spark\":{\"emotion\":\"relaxed-brief\"},\"mira\":{\"emotion\":\"warm\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 3
+  },
+  "10": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Lanternmaster Knows the Name",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 6/25 — Lanternmaster Knows the Name. Story purpose: Mira meets Lanternmaster; he knows Spark's name; Mira sees ancient Rift symbol on wall. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p6a): Rich wagon interior. Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture seated with tea lanterns. Mira and Spark enter. Lumenhare on cushion. Panel 2 (p6b): Mira notices nested ancient Rift symbol painted behind curtain — matches Shellward / First Rift language. Spark uneasy. Characters: mira-eggwarden, lanternmaster. Creatures: spark, lumenhare. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"lanternmaster\":{\"knowsSparkName\":true},\"mira\":{\"noticedRiftSymbol\":true}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 2
+  },
+  "11": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Not Neatly in a Codex",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 7/25 — Not Neatly in a Codex. Story purpose: Lanternmaster: shelters that don't fit Codex; Mira asks Riftborn; he avoids. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p7a): Lanternmaster gestures to window showing odd companions in care pens — kind public face. Panel 2 (p7b): Mira leans forward; Spark glow steady. Panel 3 (p7c): Lanternmaster turns away to mask rack — theatrical dodge; Lumenhare ears dim. Characters: mira-eggwarden, lanternmaster. Creatures: spark, lumenhare. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"lanternmaster\":{\"avoidedRiftborn\":true},\"theme\":\"masks\"} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 3
+  },
+  "12": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Curtain Call Begins",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 8/25 — Curtain Call Begins. Story purpose: Main performance; introduce Lumenhare; acrobatics/illusion/elemental demos. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p8a): Grand pavilion performance: companion acrobatics, illusion rings, elemental sparks. Lumenhare center stage Lantern Leap through gold rings. Crowd awe. Mira's team in seats; Spark watches intently. Characters: mira-eggwarden. Creatures: lumenhare, spark, bramblefox. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"performance\":\"main-begun\",\"lumenhare\":{\"introduced\":true}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "13": {
+    "role": "story",
+    "layout": {
+      "type": "grid-2x2",
+      "panelCount": 4
+    },
+    "title": "Ghosts Under the Boards",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 9/25 — Ghosts Under the Boards. Story purpose: Wisplet detects trapped spirits under stage; Spirit Moth pulse; Spark uneasy. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p9a): Wisplet drifts down toward stage boards; faint ghostly companion silhouettes beneath. Panel 2 (p9b): Spirit Moth reacts to hidden lantern pulse backstage. Panel 3 (p9c): Spark unease — glow strobes; Mira notices. Panel 4 (p9d): Crowd still cheering above; contrast joy vs under-stage gloom. Characters: mira-eggwarden. Creatures: wisplet, spirit-moth, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"underStage\":\"trapped-spirits-detected\",\"spark\":{\"emotion\":\"uneasy\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 4
+  },
+  "14": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Resonance Meeting",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 10/25 — Resonance Meeting. Story purpose: Spark meets Lumenhare backstage; nonverbal resonance recognition. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p10a): Backstage quiet: Spark and Lumenhare face each other; ear-light and cyan-gold pulse exchange; no humans between them. Panel 2 (p10b): Shared resonance flare — Lumenhare recognizes Spark as kin-route; Mira watches from doorway without interrupting. Characters: mira-eggwarden. Creatures: spark, lumenhare. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"sparkLumenhare\":{\"bond\":\"resonance-recognition\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 2
+  },
+  "15": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Don't Ask Backstage",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 11/25 — Don't Ask Backstage. Story purpose: Performer warns Mira; Bramblefox sees Meridian tracking sigil. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p11a): Performer (Seris Vale in disguise) blocks corridor; fake smile. Panel 2 (p11b): Bramblefox nose to performer's cuff — three-arc Meridian tracking sigil charm. Panel 3 (p11c): Mira locks eyes with Seris; Spark half-hides behind Mira's satchel. Characters: mira-eggwarden, seris-vale. Creatures: bramblefox, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"infiltrator\":\"seris-vale-identified\",\"meridian\":{\"onSite\":true}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 3
+  },
+  "16": {
+    "role": "story",
+    "layout": {
+      "type": "grid-2x2",
+      "panelCount": 4
+    },
+    "title": "Restricted Wagon",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 12/25 — Restricted Wagon. Story purpose: Thornling chases snack cart into restricted wagon; crates; broken Rift restraint. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p12a): Thornling races after glowing snack toy past RESTRICTED curtain. Panel 2 (p12b): Inside wagon: crates with ancient symbols; Thornling skids. Panel 3 (p12c): Open crate: broken Rift restraint collar with Meridian tooling marks. Panel 4 (p12d): Mossprig pulls Thornling out; Mira and Bramblefox arrive. Characters: mira-eggwarden. Creatures: thornling, mossprig, bramblefox. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"clue\":\"broken-rift-restraint\",\"thornling\":{\"foundRestricted\":true}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 4
+  },
+  "17": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Archive of Routes",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 13/25 — Archive of Routes. Story purpose: Archive wagon: Riftborn records MISSING/CAPTURED/HIDDEN. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p13a): Mobile archive wagon: illustrated ledgers of Riftborn companions across eras. Mira, Spark, Wisplet, Spirit Moth. Stamps as icon marks (not readable text): missing/captured/hidden motifs. Characters: mira-eggwarden. Creatures: spark, wisplet, spirit-moth. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"archive\":\"riftborn-ledger-found\"} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "18": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Ember Route",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 14/25 — Ember Route. Story purpose: Spark sees self-like image; Resonance Bearer Ember Route; multiple routes. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p14a): Close: ledger illustration of creature resembling Spark with nested markings. Panel 2 (p14b): Mira reads note (lettered overlay): Resonance Bearer — Ember Route. Characters: mira-eggwarden. Creatures: spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"revelation\":\"ember-route\",\"spark\":{\"identity\":\"one-of-routes\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 2
+  },
+  "19": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Crystal in the Vault",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 15/25 — Crystal in the Vault. Story purpose: Bramblefox leads to vault; Shellward crystal seen; alarms. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p15a): Bramblefox leads team through backstage tunnel to artifact vault door with lantern wards. Panel 2 (p15b): Vault interior: Shellward sanctuary crystal on warded pedestal — same crystal missing from Issue #2 — glowing soft cyan-gold. Panel 3 (p15c): Alarms flare — cyan ward rings; Seris silhouette at door. Characters: mira-eggwarden, seris-vale. Creatures: bramblefox, spark, mossprig. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"crystal\":\"shellward-in-circus-vault\",\"alarms\":true} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 3
+  },
+  "20": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Sabotage",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 16/25 — Sabotage. Story purpose: Grand performance sabotaged; Rift engine overload; controlled companion breaks free. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p16a): Dramatic splash: central Rift engine under pavilion overloads cyan-amber; Ironmantle (large armored controlled companion) breaks free onstage with glowing Meridian control collar; audience mid-scream; lanterns swinging. Characters: mira-eggwarden, lanternmaster. Creatures: ironmantle, lumenhare, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"sabotage\":true,\"ironmantle\":{\"status\":\"berserk-controlled\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "21": {
+    "role": "story",
+    "layout": {
+      "type": "grid-2x2",
+      "panelCount": 4
+    },
+    "title": "Living Bulwark",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 17/25 — Living Bulwark. Story purpose: Crowds flee; Mossprig shields civilians; Mira organizes companions. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p17a): Crowds panic fleeing pavilion; Ironmantle attacks blindly. Panel 2 (p17b): Mossprig Living Bulwark dome shields children and vendors; shoulder burn visible. Panel 3 (p17c): Mira points positions — strategy, not panic. Panel 4 (p17d): Lumenhare Curtain Call illusions draw Ironmantle's strike off civilians. Characters: mira-eggwarden. Creatures: mossprig, bramblefox, thornling, spark, lumenhare, ironmantle. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"mossprig\":{\"ability\":\"Living Bulwark\"},\"mira\":{\"stance\":\"battle-strategy\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 4
+  },
+  "22": {
+    "role": "story",
+    "layout": {
+      "type": "spread",
+      "panelCount": 1
+    },
+    "title": "Grand Chaos",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 18/25 — Grand Chaos. Story purpose: Battle spread: Pulse Step, flank, Sprouting Energy, Grand Illusion, Wisplet phases cables. Layout: spread. 1 panels with clear inked gutters. Panel 1 (p18a): Wide battle spread: Spark Pulse Step blur; Bramblefox vine-flank; Thornling Sprouting Energy; Lumenhare Grand Illusion copies; Wisplet phases binding cables; performers evacuating; Meridian agents attacking from backstage. Characters: mira-eggwarden. Creatures: spark, bramblefox, thornling, lumenhare, wisplet, ironmantle. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"battle\":\"coordinated-circus\"} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "23": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Not Evil — Collared",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 19/25 — Not Evil — Collared. Story purpose: Mira realizes creature controlled; Spark approaches despite danger. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p19a): Close on Ironmantle neck: glowing Meridian control collar; pain in creature eyes. Panel 2 (p19b): Spark steps forward despite danger; Mira hand half-raised — not a command. Panel 3 (p19c): Lanternmaster mid-combat misdirection; Seris snarls. Characters: mira-eggwarden, seris-vale, lanternmaster. Creatures: spark, ironmantle. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"ironmantle\":{\"truth\":\"controlled-not-evil\"},\"spark\":{\"approaching\":true}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 3
+  },
+  "24": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Spark Chooses",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 20/25 — Spark Chooses. Story purpose: Mira refuses to order Spark; Spark chooses; Spark + Lumenhare combine. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p20a): Mira kneels to Spark's eye level — open hands, no order. Panel 2 (p20b): Spark and Lumenhare combine cyan-gold resonance with indigo-gold Grand Illusion weave around Ironmantle collar. Characters: mira-eggwarden. Creatures: spark, lumenhare, ironmantle. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"spark\":{\"choice\":\"voluntary-help\"},\"combo\":\"resonance+illusion\"} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 2
+  },
+  "25": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Quiet Betrayal of the Hunt",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 21/25 — Quiet Betrayal of the Hunt. Story purpose: Nira disables control relay; Bramblefox destroys restraint; Ironmantle freed. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p21a): Nira Quill in Meridian kit secretly cuts glowing control relay — conflicted face. Panel 2 (p21b): Bramblefox Forest Bond vines shatter exposed restraint collar. Panel 3 (p21c): Ironmantle collapses then breathes free — collar dead; eyes clear. Characters: nira-quill. Creatures: bramblefox, ironmantle, spark. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"nira\":{\"helpedSecretly\":true},\"ironmantle\":{\"status\":\"freed\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 3
+  },
+  "26": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Lanternmaster Unmasked in Battle",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 22/25 — Lanternmaster Unmasked in Battle. Story purpose: Freed creature turns on infiltrators; Lanternmaster combat; infiltrators retreat. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p22a): Action splash: Ironmantle turns on Meridian agents; Lanternmaster reveals combat skill with staff-lantern; Seris retreats with partial data slate; Spark shielded by Mira and Lumenhare. Damage on pavilion. Characters: lanternmaster, mira-eggwarden, seris-vale. Creatures: ironmantle, spark, lumenhare. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"meridian\":{\"retreatedPartialData\":true},\"lanternmaster\":{\"combatRevealed\":true},\"spark\":{\"captured\":false}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "27": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "We Move Them",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 23/25 — We Move Them. Story purpose: Aftermath; Lanternmaster admits circus protected Riftborn; crystal protected. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p23a): Aftermath damaged pavilion; caring for Ironmantle; Mira faces Lanternmaster. Panel 2 (p23b): Vault crystal under ward; Spark calm beside it briefly. Characters: mira-eggwarden, lanternmaster. Creatures: spark, ironmantle. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"crystal\":\"confirmed-circus-protection\",\"lanternmaster\":{\"admittedRiftbornShelter\":true}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 2
+  },
+  "28": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Map of Thresholds",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 24/25 — Map of Thresholds. Story purpose: Secret map: Commons, sanctuary, circus, Lost City; pulse under Lost City. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p24a): Lanternmaster opens secret map: Commons, Shellward Sanctum, Lanternveil Circus, Lost City. Soft pulse under Lost City marker. Mira, Spark, Lumenhare watch. Characters: mira-eggwarden, lanternmaster. Creatures: spark, lumenhare. Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: ember-gold lanterns with cyan rift accents. Continuity: {\"map\":\"lost-city-route\",\"lostCity\":{\"pulse\":\"beginning\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "29": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "The Guardian Remembers",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"The Traveling Circus\" Issue #3, STORY PAGE 25/25 — The Guardian Remembers. Story purpose: Lost City night cliffhanger; towers light; shadow; NEXT THE LOST CITY. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Cliffhanger splash: Lost City at night — ancient layered towers lighting one by one cyan-amber; massive shadow beneath ruins; small Mira/Spark silhouette on ridge optional. Characters: mira-eggwarden. Creatures: . Mira design lock: Mira Eggwarden: young hatchery mentor/Keeper, practical robes and egg-care satchel, warm determined expression, travel-stained coat, Compact lantern charm. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail; steadier aura when bonded to Mira; cute but original — not a franchise mascot. Lumenhare: Lumenhare: small indigo hare-like Rift companion, long luminous ears with gold tips, gold star markings, lantern-shaped tail glow, expressive eyes, illusion afterimages when leaping. Lanternmaster: Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture. Environment: Lanternveil Traveling Circus. Time: twilight. Weather: soft magical fog. Lighting: night city awakening. Continuity: {\"cliffhanger\":\"guardian-remembers\",\"nextIssue\":\"the-lost-city\",\"spark\":{\"bond\":\"voluntary-with-mira\"}} Leave empty balloon-safe and narration-safe negative space. NO readable text of any kind in the artwork. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "30": {
+    "role": "teaser",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Next Issue — The Lost City",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book teaser page for The Traveling Circus Issue #3 — Next Issue — The Lost City. Teaser: Lost City towers lighting; Guardian shadow; map pin pulse. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "31": {
+    "role": "profile",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Character Profile — The Lanternmaster",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for The Traveling Circus Issue #3 — Character Profile — The Lanternmaster. Cael Vesper portrait with mask on/off split; Lumenhare; lantern symbol. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "32": {
+    "role": "profile",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Companion Profile — Lumenhare",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for The Traveling Circus Issue #3 — Companion Profile — Lumenhare. Lumenhare reference: front/side/leap; indigo gold stars; ability effect sketches without text. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "33": {
+    "role": "lore",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Codex — Lanternveil Traveling Circus",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Traveling Circus Issue #3 — Codex — Lanternveil Traveling Circus. Illustrated codex plate: wagons, pavilion, vault, rift engine silhouette. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "34": {
+    "role": "lore",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Ability Spotlight — Grand Illusion",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Traveling Circus Issue #3 — Ability Spotlight — Grand Illusion. Lumenhare creating illusion copies of Spark and Bramblefox absorbing strikes. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "35": {
+    "role": "map",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "World Map — Sanctum to Circus to Lost City",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book map page for The Traveling Circus Issue #3 — World Map — Sanctum to Circus to Lost City. Stylized map: Commons, Shellward Sanctum, Lanternveil Circus route, Lost City pulse pin. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "36": {
+    "role": "letters",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Editor's Note",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book letters page for The Traveling Circus Issue #3 — Editor's Note. Editor desk with mask and lantern; warm parchment light. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "37": {
+    "role": "inside-cover",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Inside Back Cover",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for The Traveling Circus Issue #3 — Inside Back Cover. Quiet aftershow: Ironmantle resting, Spark and Lumenhare nearby, damaged pavilion lanterns. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  },
+  "38": {
+    "role": "back-cover",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Back Cover — Lanternveil Grand Performance",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book back-cover page for The Traveling Circus Issue #3 — Back Cover — Lanternveil Grand Performance. In-universe ad: floating lanterns, companion performers, ticket graphic empty zones, hidden ancient symbol, moonrise warning mood. No gambling. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
+    "panelCount": 1
+  }
+}

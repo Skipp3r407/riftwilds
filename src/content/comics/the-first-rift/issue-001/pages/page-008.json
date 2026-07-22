@@ -3,10 +3,10 @@
   "id": "the-first-rift-issue-001-p008",
   "role": "story",
   "title": null,
-  "layout": "two-col",
-  "atmosphere": "dusk",
+  "layout": "tier-3",
+  "atmosphere": "day",
   "beat": "Elara on Fracture road with egg",
-  "artPrompt": "Two-panel page, no text. Elara Venn (warm brown skin, dark braids with amber beads, travel cloak) carrying a soft glowing egg across Fracture-layered road where desert meets forest wrongly. Painterly comic. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "artPrompt": "Western fantasy COMIC PAGE with THREE HORIZONTAL TIERS (stacked panels) separated by equal white gutters and thick black borders. Tier 1 wide: courier Elara Venn walking a cracked Fracture road under a pale cyan sky, glowing egg wrapped against her chest. Tier 2: two side-by-side panels — left Elara mid-shot speaking; right a cloaked stranger pointing toward a distant crown road. Tier 3 wide: Elara turning away from the stranger, jaw set, egg warm in her arms. Sequential Z-path. NO floating creature card insets, NO collage lore plates. Earth tones, cyan accents. Original Riftwilds IP. NO readable text, balloons, logos, or UI in the art.",
   "panels": [
     {
       "lines": [
@@ -14,15 +14,17 @@
           "kind": "narration",
           "text": "Nine days before the Commons had a name.",
           "x": 50,
-          "y": 12
+          "y": 10,
+          "maxWidthPct": 60
         },
         {
           "kind": "speech",
           "speaker": "Elara Venn",
           "text": "The egg is warm. That is enough to keep walking.",
-          "x": 35,
-          "y": 58,
-          "tail": "down"
+          "x": 30,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 32
         }
       ]
     },
@@ -33,22 +35,28 @@
           "speaker": "Stranger",
           "text": "Take the crown road — safer.",
           "x": 70,
-          "y": 30,
-          "tail": "down-left"
-        },
+          "y": 52,
+          "tail": "down",
+          "maxWidthPct": 28
+        }
+      ]
+    },
+    {
+      "lines": [
         {
           "kind": "speech",
           "speaker": "Elara Venn",
           "text": "Safer for whom?",
-          "x": 32,
-          "y": 72,
-          "tail": "up"
+          "x": 36,
+          "y": 82,
+          "tail": "up",
+          "maxWidthPct": 26
         }
       ]
     }
   ],
-  "generationStatus": "seeded-legacy",
-  "letteringStatus": "lettered",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
   "cleanArtRel": "generated/clean/page-008.png",
   "letteredArtRel": "generated/lettered/page-008.webp",
   "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-008.webp",

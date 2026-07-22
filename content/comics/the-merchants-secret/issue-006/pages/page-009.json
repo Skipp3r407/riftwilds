@@ -203,7 +203,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
   "pageTurnObjective": "Meet the merchant.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Shelter and Cry — The Merchant's Secret page 5",
@@ -231,5 +231,7 @@
   "id": "the-merchants-secret-issue-006-p009",
   "cleanArtRel": "generated/raw-art/page-009.webp",
   "letteredArtRel": "generated/lettered-pages/page-009.webp",
-  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-009.webp"
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-009.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

@@ -115,7 +115,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Evidence arrives.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Ash of the Crossroads — The Traitor's Gate page 1",
@@ -137,5 +137,7 @@
   "id": "the-traitors-gate-issue-007-p005",
   "cleanArtRel": "generated/raw-art/page-005.webp",
   "letteredArtRel": "generated/lettered-pages/page-005.webp",
-  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-005.webp"
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-005.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

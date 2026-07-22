@@ -65,7 +65,7 @@
   "continuity": {},
   "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Slate stone, silver metal, moss and timber first; electric cyan crystal, white lightning, deep indigo storm clouds, gold royal accents as accents only. NO purple AI-fantasy neon default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for The Storm King Issue #5 — Ability Spotlight — Crown of Thunder. Ability spotlight: Thundervane creating storm field that shelters allies and knocks back corrupted flyers; empty rules zones. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Storm King: King Vaelor Tempest the Storm King: tall ancient armored monarch, storm-worn cloak, silver-and-cyan crown, lightning scars, Rift crystal in gauntlet, one eye glowing storm-cyan, weathered proud face, storm blade. Empty zones for title lettering. NO readable text in art.",
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
-  "generationStatus": "cached",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Ability Spotlight — Crown of Thunder",
@@ -82,5 +82,7 @@
   "id": "the-storm-king-issue-005-p034",
   "cleanArtRel": "generated/raw-art/page-034.webp",
   "letteredArtRel": "generated/lettered-pages/page-034.webp",
-  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-034.webp"
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-034.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

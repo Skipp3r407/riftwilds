@@ -23,7 +23,7 @@ try {
 
 const ROOT = path.resolve(import.meta.dirname, "../../..");
 const ISSUE = path.join(ROOT, "content/comics/the-first-rift/issue-001");
-const PUBLIC_PAGES = path.join(ROOT, "public/assets/comics/pages/the-first-rift");
+const PUBLIC_PAGES = path.join(ROOT, "public/assets/comics/the-first-rift/issue-001/pages");
 const PUBLIC_COVERS = path.join(ROOT, "public/assets/comics/covers");
 const RAW = path.join(ISSUE, "generated/raw-art");
 const LETTERED = path.join(ISSUE, "generated/lettered-pages");
@@ -185,27 +185,64 @@ async function callGrok(prompt, negativePrompt) {
   return Buffer.from(b64, "base64");
 }
 
-function balloonPath(kind, x, y, bw, bh, tail) {
-  const left = x - bw / 2;
-  const top = y - bh / 2;
-  const r = kind === "thought" || kind === "telepathy" ? Math.min(28, bh / 2) : 18;
+function balloonFill(kind) {
+  if (kind === "shout") return "rgba(255,236,200,0.97)";
+  if (kind === "creature") return "rgba(236,252,240,0.96)";
+  if (kind === "magic") return "rgba(18,40,28,0.92)";
+  if (kind === "telepathy") return "rgba(230,240,255,0.96)";
+  return "rgba(255,252,245,0.97)";
+}
+
+function balloonStroke(kind) {
+  if (kind === "thought" || kind === "telepathy" || kind === "whisper") return "rgba(42,33,24,0.42)";
+  if (kind === "shout") return "rgba(90,40,10,0.7)";
+  return "rgba(42,33,24,0.55)";
+}
+
+/** Classic Western comic balloon: oval/cloud body + directional tail. No speaker-name UI chips. */
+function renderSpeechBalloon(kind, cx, cy, bw, bh, tail, textParts) {
+  const fill = balloonFill(kind);
+  const stroke = balloonStroke(kind);
+  const isThought = kind === "thought" || kind === "telepathy";
+  const isShout = kind === "shout";
+  const rx = Math.max(22, bw * 0.42);
+  const ry = Math.max(18, bh * 0.48);
+  const left = cx - bw / 2;
+  const top = cy - bh / 2;
+
+  let body;
+  if (isThought) {
+    body = `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${stroke}" stroke-width="2.5" stroke-dasharray="7 5"/>
+      <circle cx="${cx - rx * 0.55}" cy="${cy + ry * 0.95}" r="10" fill="${fill}" stroke="${stroke}" stroke-width="2"/>
+      <circle cx="${cx - rx * 0.72}" cy="${cy + ry * 1.25}" r="6" fill="${fill}" stroke="${stroke}" stroke-width="1.8"/>`;
+  } else if (isShout) {
+    // jagged burst outline via slightly oversized rounded rect + thick stroke
+    body = `<rect x="${left}" y="${top}" width="${bw}" height="${bh}" rx="10" ry="10" fill="${fill}" stroke="${stroke}" stroke-width="3.5"/>`;
+  } else {
+    body = `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${stroke}" stroke-width="2.8"/>`;
+  }
+
   let tailSvg = "";
-  const cx = x;
-  const midY = y;
-  if (!["narration", "caption", "sfx", "magic"].includes(kind)) {
-    const tw = 16;
-    const th = 18;
+  if (!isThought) {
+    const tip = 28;
+    const base = 14;
     if (tail?.startsWith("up")) {
-      tailSvg = `<polygon points="${cx - tw},${top + 4} ${cx + tw},${top + 4} ${cx},${top - th}" fill="rgba(255,252,245,0.96)" stroke="rgba(42,33,24,0.45)" stroke-width="2"/>`;
+      tailSvg = `<polygon points="${cx - base},${top + 8} ${cx + base},${top + 8} ${cx},${top - tip}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>`;
     } else if (tail === "left") {
-      tailSvg = `<polygon points="${left + 4},${midY - tw} ${left + 4},${midY + tw} ${left - th},${midY}" fill="rgba(255,252,245,0.96)" stroke="rgba(42,33,24,0.45)" stroke-width="2"/>`;
+      tailSvg = `<polygon points="${left + 8},${cy - base} ${left + 8},${cy + base} ${left - tip},${cy}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>`;
     } else if (tail === "right") {
-      tailSvg = `<polygon points="${left + bw - 4},${midY - tw} ${left + bw - 4},${midY + tw} ${left + bw + th},${midY}" fill="rgba(255,252,245,0.96)" stroke="rgba(42,33,24,0.45)" stroke-width="2"/>`;
+      tailSvg = `<polygon points="${left + bw - 8},${cy - base} ${left + bw - 8},${cy + base} ${left + bw + tip},${cy}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>`;
+    } else if (tail === "down-left") {
+      tailSvg = `<polygon points="${cx - 8},${top + bh - 6} ${cx + 10},${top + bh - 10} ${cx - tip},${top + bh + tip}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>`;
+    } else if (tail === "down-right") {
+      tailSvg = `<polygon points="${cx - 10},${top + bh - 10} ${cx + 8},${top + bh - 6} ${cx + tip},${top + bh + tip}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>`;
     } else {
-      tailSvg = `<polygon points="${cx - tw},${top + bh - 4} ${cx + tw},${top + bh - 4} ${cx},${top + bh + th}" fill="rgba(255,252,245,0.96)" stroke="rgba(42,33,24,0.45)" stroke-width="2"/>`;
+      // down / default — point toward character mouth below balloon
+      tailSvg = `<polygon points="${cx - base},${top + bh - 6} ${cx + base},${top + bh - 6} ${cx},${top + bh + tip}" fill="${fill}" stroke="${stroke}" stroke-width="2"/>`;
     }
   }
-  return { left, top, r, tailSvg };
+
+  return `${tailSvg}${body}${textParts}`;
 }
 
 function renderBubbleSvg(b) {
@@ -215,24 +252,24 @@ function renderBubbleSvg(b) {
   const cy = Math.round(((b.y ?? 50) / 100) * H);
 
   if (kind === "sfx") {
-    const lines = wrapWords(String(b.text).toUpperCase(), 18);
-    const fontSize = 40;
-    const lineH = 46;
+    const lines = wrapWords(String(b.text).toUpperCase(), 14);
+    const fontSize = 48;
+    const lineH = 52;
     const blockH = lines.length * lineH;
     const startY = cy - blockH / 2 + fontSize;
     const tspans = lines
       .map((line, i) => `<tspan x="${cx}" y="${startY + i * lineH}" text-anchor="middle">${escapeXml(line)}</tspan>`)
       .join("");
-    return `<text font-family="${FONT}" font-size="${fontSize}" font-weight="700" fill="#ffb84d" stroke="rgba(20,14,10,0.75)" stroke-width="3" paint-order="stroke" letter-spacing="0.1em">${tspans}</text>`;
+    return `<text font-family="${FONT}" font-size="${fontSize}" font-weight="700" fill="#ffb84d" stroke="rgba(20,14,10,0.8)" stroke-width="4" paint-order="stroke" letter-spacing="0.14em" transform="rotate(-6 ${cx} ${cy})">${tspans}</text>`;
   }
 
   if (kind === "narration" || kind === "caption") {
-    const lines = wrapWords(b.text, kind === "caption" ? 36 : 42);
-    const fontSize = kind === "caption" ? 22 : 23;
+    const lines = wrapWords(b.text, kind === "caption" ? 34 : 40);
+    const fontSize = kind === "caption" ? 21 : 22;
     const lineH = fontSize + 8;
-    const padX = 20;
-    const padY = 14;
-    const bw = Math.min(maxW, 640);
+    const padX = 18;
+    const padY = 12;
+    const bw = Math.min(maxW, kind === "caption" ? 560 : 640);
     const bh = padY * 2 + lines.length * lineH;
     const left = Math.max(24, Math.min(W - bw - 24, cx - bw / 2));
     const top = Math.max(24, Math.min(H - bh - 48, cy - bh / 2));
@@ -240,65 +277,47 @@ function renderBubbleSvg(b) {
       .map((line, i) => `<tspan x="${left + padX}" y="${top + padY + fontSize + i * lineH}">${escapeXml(line)}</tspan>`)
       .join("");
     return `
-      <rect x="${left}" y="${top}" width="${bw}" height="${bh}" rx="4" ry="4"
-            fill="rgba(20,14,10,0.88)" stroke="rgba(232,213,176,0.5)" stroke-width="2"/>
+      <rect x="${left}" y="${top}" width="${bw}" height="${bh}" rx="2" ry="2"
+            fill="rgba(12,10,8,0.9)" stroke="rgba(232,213,176,0.55)" stroke-width="2"/>
       <text font-family="${FONT}" font-size="${fontSize}" fill="#f5ead2"
-            font-style="${kind === "narration" ? "italic" : "normal"}" font-weight="${kind === "caption" ? "700" : "400"}">${tspans}</text>`;
+            font-style="${kind === "narration" ? "italic" : "normal"}" font-weight="${kind === "caption" ? "700" : "400"}"
+            letter-spacing="${kind === "caption" ? "0.04em" : "0"}">${tspans}</text>`;
   }
 
-  const speaker = b.speaker ? String(b.speaker).toUpperCase() : "";
-  const bodyLines = wrapWords(b.text, 26);
-  const fontSize = kind === "shout" ? 23 : 21;
-  const lineH = fontSize + 7;
-  const padX = 18;
-  const padY = 12;
-  const speakerH = speaker ? 16 : 0;
-  const bw = Math.min(maxW, 400);
-  const bh = padY * 2 + speakerH + bodyLines.length * lineH;
-  const { left, top, r, tailSvg } = balloonPath(kind, cx, cy, bw, bh, b.tail);
-  const fill =
-    kind === "shout"
-      ? "rgba(255,236,200,0.96)"
-      : kind === "creature"
-        ? "rgba(236,252,240,0.95)"
-        : kind === "magic"
-          ? "rgba(18,40,28,0.9)"
-          : kind === "telepathy"
-            ? "rgba(230,240,255,0.95)"
-            : "rgba(255,252,245,0.96)";
-  const stroke =
-    kind === "thought" || kind === "telepathy" || kind === "whisper"
-      ? "rgba(42,33,24,0.4)"
-      : "rgba(42,33,24,0.5)";
-  const dash =
-    kind === "thought" || kind === "telepathy"
-      ? `stroke-dasharray="6 4"`
-      : kind === "creature"
-        ? `stroke-dasharray="3 3"`
-        : "";
+  // No speaker-name chips — Western comics rely on balloon tails + art for speaker ID
+  const bodyLines = wrapWords(b.text, kind === "shout" ? 22 : 24);
+  const fontSize = kind === "shout" ? 23 : 20;
+  const lineH = fontSize + 6;
+  const padX = 22;
+  const padY = 16;
+  const bw = Math.min(Math.max(maxW * 0.85, 160), 380);
+  const bh = Math.max(padY * 2 + bodyLines.length * lineH, 56);
   const textFill = kind === "magic" ? "#d8ffe8" : "#2a2118";
-  let yCursor = top + padY + (speaker ? 13 : fontSize);
-  const parts = [];
-  if (speaker) {
-    parts.push(
-      `<text x="${left + padX}" y="${yCursor}" font-family="${FONT}" font-size="12" fill="#8b5a3c" letter-spacing="0.1em">${escapeXml(speaker)}</text>`,
-    );
-    yCursor += 16;
-  }
-  bodyLines.forEach((line, i) => {
-    parts.push(
-      `<text x="${left + padX}" y="${yCursor + i * lineH}" font-family="${FONT}" font-size="${fontSize}" fill="${textFill}" font-weight="${kind === "shout" ? "700" : "400"}" font-style="${kind === "whisper" ? "italic" : "normal"}">${escapeXml(line)}</text>`,
-    );
-  });
-  return `${tailSvg}<rect x="${left}" y="${top}" width="${bw}" height="${bh}" rx="${r}" ry="${r}" fill="${fill}" stroke="${stroke}" stroke-width="2.5" ${dash}/>${parts.join("")}`;
+  const textStartY = cy - bh / 2 + padY + fontSize;
+  const tspans = bodyLines
+    .map(
+      (line, i) =>
+        `<tspan x="${cx}" y="${textStartY + i * lineH}" text-anchor="middle">${escapeXml(line)}</tspan>`,
+    )
+    .join("");
+  const textParts = `<text font-family="${FONT}" font-size="${fontSize}" fill="${textFill}" font-weight="${kind === "shout" ? "700" : "400"}" font-style="${kind === "whisper" ? "italic" : "normal"}">${tspans}</text>`;
+  return renderSpeechBalloon(kind, cx, cy, bw, bh, b.tail, textParts);
 }
 
 function collectBubbles(page) {
   const bubbles = [];
   for (const p of page.panels || []) {
     for (const b of p.bubbles || []) bubbles.push(b);
+    for (const b of p.lines || []) bubbles.push(b);
   }
-  return bubbles.sort((a, b) => (a.readOrder ?? 0) - (b.readOrder ?? 0));
+  if (!bubbles.length) {
+    for (const b of page.dialogue || []) bubbles.push(b);
+    for (const b of page.captions || []) bubbles.push(b);
+    for (const b of page.soundEffects || []) bubbles.push(b);
+  }
+  return bubbles
+    .filter((b) => b?.text?.trim())
+    .sort((a, b) => (a.readOrder ?? 0) - (b.readOrder ?? 0));
 }
 
 function renderOverlay(page) {
@@ -371,12 +390,12 @@ async function main() {
     const id = String(page.pageNumber).padStart(3, "0");
     const rawPath = path.join(RAW, `page-${id}.webp`);
     const letteredPath = path.join(LETTERED, `page-${id}.webp`);
-    const publicPath = path.join(PUBLIC_PAGES, `page-${String(page.pageNumber).padStart(2, "0")}.webp`);
+    const publicPath = path.join(PUBLIC_PAGES, `page-${id}.webp`);
     const thumbPath = path.join(THUMBS, `page-${id}.webp`);
 
     const entry = {
       pageNumber: page.pageNumber,
-      role: page.bookRole,
+      role: page.bookRole || page.role,
       title: page.title,
       artEngine: null,
       artStatus: "pending",
@@ -384,6 +403,14 @@ async function main() {
       publicPath: path.relative(ROOT, publicPath).replace(/\\/g, "/"),
       error: null,
     };
+
+    const artPrompt =
+      page.grokPrompt ||
+      page.artPrompt ||
+      `Original Riftwilds fantasy comic page, ${page.layout || "narrative"} layout, beat: ${page.beat || page.title || ""}. NO readable text.`;
+    const neg =
+      page.negativePrompt ||
+      "readable text, logos, watermarks, UI overlays, credit labels, floating card insets, collage lore plates, speech balloons painted in art";
 
     try {
       if (!letterOnly) {
@@ -394,7 +421,7 @@ async function main() {
           let buf = null;
           if (process.env.XAI_API_KEY) {
             try {
-              buf = await callGrok(page.grokPrompt, page.negativePrompt);
+              buf = await callGrok(artPrompt, neg);
               entry.artEngine = "grok";
               grokOk++;
               await new Promise((r) => setTimeout(r, Number(process.env.COMIC_GROK_DELAY_MS || 1200)));
@@ -420,9 +447,6 @@ async function main() {
         proceduralOk++;
       }
 
-      if (!force && fs.existsSync(letteredPath) && !letterOnly) {
-        // still refresh public if missing
-      }
       const base = await sharp(rawPath).resize(W, H, { fit: "cover" }).png().toBuffer();
       const overlay = renderOverlay(page);
       await sharp(base)
@@ -432,7 +456,7 @@ async function main() {
       fs.copyFileSync(letteredPath, publicPath);
       await sharp(letteredPath).resize(240, 320, { fit: "cover" }).webp({ quality: 75 }).toFile(thumbPath);
 
-      if (page.bookRole === "front-cover") {
+      if ((page.bookRole || page.role) === "front-cover") {
         const coverDest = path.join(PUBLIC_COVERS, "the-first-rift.webp");
         fs.mkdirSync(PUBLIC_COVERS, { recursive: true });
         fs.copyFileSync(letteredPath, coverDest);

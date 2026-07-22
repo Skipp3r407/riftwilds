@@ -125,19 +125,22 @@ export const STANDARD_BATTLE_RULES: BattleRulesConfig = {
     maxSpells: 10,
     maxSupportCombined: 6,
     maxPowerRarityCombined: 3,
+    // Unique-only constructed: max 1 of each cardId / gameplay id.
+    // Companion variants with different ids (e.g. Dawnkit vs Dawnkit Companion)
+    // remain separate cards. Draft may override upward.
     copyLimits: {
-      common: 2,
-      uncommon: 2,
-      rare: 2,
-      epic: 2,
+      common: 1,
+      uncommon: 1,
+      rare: 1,
+      epic: 1,
       legendary: 1,
       mythic: 1,
       ancient: 1,
       founder: 1,
-      seasonal: 2,
-      holiday: 2,
-      animated: 2,
-      foil: 2,
+      seasonal: 1,
+      holiday: 1,
+      animated: 1,
+      foil: 1,
       signed: 1,
       collector: 1,
     } satisfies CopyLimits,
@@ -346,7 +349,7 @@ export function maxCopiesForRarity(
   rarity: TcgRarity | string,
   rules: BattleRulesConfig = STANDARD_BATTLE_RULES,
 ): number {
-  return rules.deck.copyLimits[rarity] ?? 2;
+  return rules.deck.copyLimits[rarity] ?? 1;
 }
 
 export function isPowerRarity(

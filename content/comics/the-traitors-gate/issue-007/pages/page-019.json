@@ -190,7 +190,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Dual keys.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Lockdown — The Traitor's Gate page 15",
@@ -216,5 +216,7 @@
   "id": "the-traitors-gate-issue-007-p019",
   "cleanArtRel": "generated/raw-art/page-019.webp",
   "letteredArtRel": "generated/lettered-pages/page-019.webp",
-  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-019.webp"
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-019.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

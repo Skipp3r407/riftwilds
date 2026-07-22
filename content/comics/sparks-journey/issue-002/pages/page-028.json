@@ -123,8 +123,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
   "pageTurnObjective": "Cliffhanger.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
-  "generationStatus": "generated",
-  "letteringStatus": "lettered",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Riftborn — Spark's Journey page 24",
   "atmosphere": "dawn",
@@ -138,5 +138,7 @@
   "id": "sparks-journey-issue-002-p028",
   "cleanArtRel": "generated/raw-art/page-028.png",
   "letteredArtRel": "generated/lettered-pages/page-028.webp",
-  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-028.webp"
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-028.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

@@ -165,19 +165,30 @@ export function createAtmosphere(
       { x: 28 * T, y: 40 * T },
       { x: 26 * T, y: 38 * T },
       { x: 30 * T, y: 41 * T },
+      { x: 27 * T, y: 42 * T },
+      { x: 29 * T, y: 39 * T },
+      { x: 25 * T, y: 40 * T },
     ];
     for (let i = 0; i < pondSpots.length; i++) {
       const p = pondSpots[i]!;
-      const e = scene.add.ellipse(p.x, p.y, 70 + i * 12, 36 + i * 6, 0x9ae8ff, 0.1);
+      const e = scene.add.ellipse(
+        p.x,
+        p.y,
+        48 + (i % 3) * 14,
+        24 + (i % 3) * 8,
+        0x9ae8ff,
+        0.11,
+      );
       e.setDepth(1.2);
       e.setBlendMode(Phaser.BlendModes.ADD);
       waterShimmer.push(e);
       scene.tweens.add({
         targets: e,
-        alpha: { from: 0.06, to: 0.16 },
-        scaleX: { from: 0.92, to: 1.08 },
-        scaleY: { from: 1.05, to: 0.9 },
-        duration: 1600 + i * 280,
+        alpha: { from: 0.05, to: 0.18 },
+        scaleX: { from: 0.9, to: 1.1 },
+        scaleY: { from: 1.06, to: 0.88 },
+        x: p.x + (i % 2 === 0 ? 6 : -5),
+        duration: 1400 + i * 220,
         yoyo: true,
         repeat: -1,
         ease: "Sine.easeInOut",

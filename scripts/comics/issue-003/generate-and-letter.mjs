@@ -23,7 +23,7 @@ try {
 
 const ROOT = path.resolve(import.meta.dirname, "../../..");
 const ISSUE = path.join(ROOT, "content/comics/the-traveling-circus/issue-003");
-const PUBLIC_PAGES = path.join(ROOT, "public/assets/comics/pages/the-traveling-circus");
+const PUBLIC_PAGES = path.join(ROOT, "public/assets/comics/the-traveling-circus/issue-003/pages");
 const PUBLIC_COVERS = path.join(ROOT, "public/assets/comics/covers");
 const RAW = path.join(ISSUE, "generated/raw-art");
 const LETTERED = path.join(ISSUE, "generated/lettered-pages");
@@ -297,8 +297,16 @@ function collectBubbles(page) {
   const bubbles = [];
   for (const p of page.panels || []) {
     for (const b of p.bubbles || []) bubbles.push(b);
+    for (const b of p.lines || []) bubbles.push(b);
   }
-  return bubbles.sort((a, b) => (a.readOrder ?? 0) - (b.readOrder ?? 0));
+  if (!bubbles.length) {
+    for (const b of page.dialogue || []) bubbles.push(b);
+    for (const b of page.captions || []) bubbles.push(b);
+    for (const b of page.soundEffects || []) bubbles.push(b);
+  }
+  return bubbles
+    .filter((b) => b?.text?.trim())
+    .sort((a, b) => (a.readOrder ?? 0) - (b.readOrder ?? 0));
 }
 
 function renderOverlay(page) {
@@ -371,7 +379,7 @@ async function main() {
     const id = String(page.pageNumber).padStart(3, "0");
     const rawPath = path.join(RAW, `page-${id}.webp`);
     const letteredPath = path.join(LETTERED, `page-${id}.webp`);
-    const publicPath = path.join(PUBLIC_PAGES, `page-${String(page.pageNumber).padStart(2, "0")}.webp`);
+    const publicPath = path.join(PUBLIC_PAGES, `page-${id}.webp`);
     const thumbPath = path.join(THUMBS, `page-${id}.webp`);
 
     const entry = {

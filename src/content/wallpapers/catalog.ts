@@ -13,6 +13,8 @@ export type Wallpaper = {
   pngSrc: string;
   /** Optional SVG source */
   svgSrc?: string;
+  /** Optional UI tile preview (lighter than full wallpaper download) */
+  thumbSrc?: string;
   tags: string[];
 };
 
@@ -28,6 +30,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Keepers hold the fountain square as a cyan rift storm cracks the plaza and stalls shatter.",
     pngSrc: "/assets/wallpapers/commons-plaza.png",
+    thumbSrc: "/assets/ui/comics/desktop-commons.png",
     tags: ["commons", "battle", "siege"],
   },
   {
@@ -38,6 +41,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Spark the Glowpup leaps into a corrupted beast’s charge — cyan sparks vs amber fangs.",
     pngSrc: "/assets/wallpapers/spark-glow.png",
+    thumbSrc: "/assets/ui/comics/desktop-spark.png",
     tags: ["spark", "riftling", "battle"],
   },
   {
@@ -48,6 +52,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Rifters and Riftlings clash with corrupted wildlife as a rift tear rips the meadow open.",
     pngSrc: "/assets/wallpapers/riftling-meadow.png",
+    thumbSrc: "/assets/ui/comics/desktop-meadow.png",
     tags: ["riftling", "ambush", "battle"],
   },
   {
@@ -58,6 +63,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "The Traveling Circus tent burns and tears while Keepers defend the ring from rift beasts.",
     pngSrc: "/assets/wallpapers/circus-night.png",
+    thumbSrc: "/assets/ui/comics/desktop-circus.png",
     tags: ["circus", "siege", "night"],
   },
   {
@@ -174,6 +180,11 @@ export const WALLPAPERS: Wallpaper[] = [
 
 export function listWallpapers(): Wallpaper[] {
   return WALLPAPERS;
+}
+
+/** Featured Desktop Art tiles (Commons, Spark, Meadow, Circus). */
+export function listFeaturedWallpapers(limit = 4): Wallpaper[] {
+  return WALLPAPERS.slice(0, limit);
 }
 
 export function getWallpaper(slug: string): Wallpaper | undefined {

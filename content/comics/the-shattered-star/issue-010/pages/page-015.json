@@ -128,7 +128,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Turn to continue.",
   "letteringInstructions": "Standard speech + narration; tails off faces and Spark/Nova/Astra eyes; Lyra speech calm/stern.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "High Keeper Lyra — The Shattered Star page 11",
@@ -152,5 +152,7 @@
   "spread": null,
   "volumeLabel": "Volume Two · Issue #1 / Issue #10",
   "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-015.webp",
-  "id": "the-shattered-star-issue-010-p015"
+  "id": "the-shattered-star-issue-010-p015",
+  "bakedLettering": true,
+  "composedPlate": true
 }

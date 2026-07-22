@@ -60,13 +60,15 @@ function propWorldScale(key: PropKey): number {
     key === "flowers" ||
     key === "rock-moss" ||
     key === "bush-berry" ||
+    key === "boulder" ||
     isLibraryFlowerKey(key) ||
     isLibraryBushKey(key) ||
     key.startsWith("lw-grass-") ||
     key.startsWith("lw-rock-")
   ) {
-    return 0.42;
+    return key === "boulder" ? 0.48 : 0.42;
   }
+  if (key === "clay-pot" || key === "pot-cluster") return 0.4;
   if (
     key === "barrel" ||
     key === "crate" ||
@@ -146,6 +148,11 @@ export function spawnPremiumProps(
       p.key === "bridge" ||
       p.key === "bush-berry" ||
       p.key === "stump" ||
+      p.key === "clay-pot" ||
+      p.key === "pot-cluster" ||
+      p.key === "boulder" ||
+      p.key === "rock-moss" ||
+      p.key === "signpost" ||
       p.key.startsWith("picket-") ||
       p.key === "yard-fence-corner" ||
       p.key.startsWith("critter-") ||
@@ -262,9 +269,20 @@ export function trySpawnBuildingSprite(
     w * 0.92,
     Math.max(6, h * 0.1),
     0x8a7a68,
-    0.35,
+    0.4,
   );
   foundation.setDepth(depthAt(DEPTH.buildingFoundation, footY));
+
+  // Side wall face — cheap 2.5D massing under the facade
+  const wallFace = scene.add.rectangle(
+    footX - w * 0.42,
+    footY - h * 0.42,
+    Math.max(8, w * 0.14),
+    h * 0.72,
+    0x5a4a38,
+    0.28,
+  );
+  wallFace.setDepth(depthAt(DEPTH.buildingWall, footY, -0.02));
 
   // Cute cottage facade — readable 3⁄4 cottage sprite
   const img = scene.add.image(footX, o.y + h * 0.96, tex);
@@ -278,7 +296,19 @@ export function trySpawnBuildingSprite(
   img.setScale(scale);
   img.setDepth(depthAt(DEPTH.building, footY));
 
-  addContactShadow(scene, footX + 3, footY - 3, w * 0.85, h * 0.18, 0.2);
+  // Soft roof silhouette wash (reads as depth without hiding the art)
+  const roofCap = scene.add.ellipse(
+    footX + 2,
+    o.y + h * 0.22,
+    w * 0.95,
+    h * 0.22,
+    0x000000,
+    0.08,
+  );
+  roofCap.setDepth(depthAt(DEPTH.buildingRoof, footY, -0.01));
+
+  addContactShadow(scene, footX + 5, footY - 2, w * 0.95, h * 0.22, 0.26);
+  addContactShadow(scene, footX + 10, footY + 2, w * 0.55, h * 0.1, 0.12);
 
   img.setData("buildingFacade", true);
   img.setData("occluder", true);

@@ -44,8 +44,8 @@
   "continuity": {},
   "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for Spark's Journey Issue #2 — Inside Back Cover. Quiet night Commons silhouette; circus lanterns faint on horizon; space for house links. Empty zones for title lettering. NO readable text in art.",
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
-  "generationStatus": "generated",
-  "letteringStatus": "lettered",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Inside Back Cover",
   "atmosphere": "day",
@@ -56,5 +56,7 @@
   "id": "sparks-journey-issue-002-p037",
   "cleanArtRel": "generated/raw-art/page-037.png",
   "letteredArtRel": "generated/lettered-pages/page-037.webp",
-  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-037.webp"
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-037.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

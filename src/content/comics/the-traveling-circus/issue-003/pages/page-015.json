@@ -132,8 +132,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Thornling restricted wagon.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "pending",
-  "letteringStatus": "pending",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Don't Ask Backstage — The Traveling Circus page 11",
   "atmosphere": "festival",
@@ -147,5 +147,7 @@
   "id": "the-traveling-circus-issue-003-p015",
   "cleanArtRel": "generated/raw-art/page-015.png",
   "letteredArtRel": "generated/lettered-pages/page-015.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-015.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-015.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

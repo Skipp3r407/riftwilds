@@ -92,7 +92,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "",
   "letteringInstructions": "Matter page captions; large title zones.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Back Cover — Begin the Second Creation",
@@ -113,5 +113,7 @@
   "id": "the-traitors-gate-issue-007-p039",
   "cleanArtRel": "generated/raw-art/page-039.webp",
   "letteredArtRel": "generated/lettered-pages/page-039.webp",
-  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-039.webp"
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-039.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

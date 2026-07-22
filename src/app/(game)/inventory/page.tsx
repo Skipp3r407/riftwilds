@@ -14,7 +14,15 @@ export default function InventoryPage() {
         title="Inventory"
         description={
           <>
-            Packs, cosmetics, and care goods land here. Open your{" "}
+            Packs, food, cosmetics, and care goods land here — never in a Combat
+            Deck. Open{" "}
+            <Link
+              href="/companion-care"
+              className="text-[var(--cyan)] underline-offset-2 hover:underline"
+            >
+              Companion Care
+            </Link>{" "}
+            to feed pets, or your{" "}
             <Link href="/tcg/collection" className="text-[var(--cyan)] underline-offset-2 hover:underline">
               Card Binder
             </Link>{" "}
@@ -23,7 +31,10 @@ export default function InventoryPage() {
         }
         actions={
           <>
-            <Link href="/shop/packs" className="btn-primary focus-ring text-sm">
+            <Link href="/companion-care" className="btn-primary focus-ring text-sm">
+              Companion Care
+            </Link>
+            <Link href="/shop/packs" className="btn-secondary focus-ring text-sm">
               Card packs
             </Link>
             <Link href="/tcg/collection" className="btn-secondary focus-ring text-sm">

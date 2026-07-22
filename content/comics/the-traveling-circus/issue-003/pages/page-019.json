@@ -151,7 +151,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Sabotage battle reveal.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Crystal in the Vault — The Traveling Circus page 15",
@@ -167,5 +167,7 @@
   "id": "the-traveling-circus-issue-003-p019",
   "cleanArtRel": "generated/raw-art/page-019.png",
   "letteredArtRel": "generated/lettered-pages/page-019.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-019.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-019.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

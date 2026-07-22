@@ -96,8 +96,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
   "pageTurnObjective": "Civilians panic.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
-  "generationStatus": "generated",
-  "letteringStatus": "lettered",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Scar of the First Tear — Spark's Journey page 9",
   "atmosphere": "rift",
@@ -110,5 +110,7 @@
   "id": "sparks-journey-issue-002-p013",
   "cleanArtRel": "generated/raw-art/page-013.png",
   "letteredArtRel": "generated/lettered-pages/page-013.webp",
-  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-013.webp"
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-013.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

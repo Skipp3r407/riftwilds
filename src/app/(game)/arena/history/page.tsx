@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { BattleHistoryList } from "@/components/arena/battle-history";
 import { ArenaNoWageringBanner } from "@/components/arena/disclosures";
 import Link from "next/link";
@@ -14,12 +15,16 @@ export default function ArenaHistoryPage() {
           </p>
           <h1 className="font-display text-3xl text-white">Battle history</h1>
         </div>
-        <Link href="/arena/training" className="btn-secondary focus-ring text-sm">
-          Train again
+        <Link href="/tcg/battle" className="btn-secondary focus-ring text-sm">
+          Battle Hub
         </Link>
       </div>
       <ArenaNoWageringBanner />
-      <BattleHistoryList />
+      <Suspense
+        fallback={<p className="text-sm text-[var(--text-muted)]">Loading history…</p>}
+      >
+        <BattleHistoryList />
+      </Suspense>
     </div>
   );
 }

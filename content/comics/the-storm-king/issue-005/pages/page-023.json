@@ -205,7 +205,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Spark enters the bond.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
-  "generationStatus": "cached",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Hunter's Cut — The Storm King page 19",
@@ -233,5 +233,7 @@
   "id": "the-storm-king-issue-005-p023",
   "cleanArtRel": "generated/raw-art/page-023.webp",
   "letteredArtRel": "generated/lettered-pages/page-023.webp",
-  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-023.webp"
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-023.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

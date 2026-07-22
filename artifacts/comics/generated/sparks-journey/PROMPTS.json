@@ -1,0 +1,382 @@
+{
+  "1": {
+    "role": "front-cover",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Spark's Journey — Cover",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book front-cover page for Spark's Journey Issue #2 — Spark's Journey — Cover. Main cover: Spark foreground cyan-gold; Mira Eggwarden reaching toward Spark without touching; Bramblefox and Mossprig flanking; rift-scarred forest behind; distant hunter silhouettes; ancient Shellward nested-arc symbol above; cyan-gold energy trail as path. Trade dress space top/bottom. Original Riftwilds — not Marvel/DC. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "2": {
+    "role": "inside-cover",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Inside Front Cover",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for Spark's Journey Issue #2 — Inside Front Cover. Quiet parchment-light inside cover: Shellward nested-arc watermark, soft Gateway glow, invitation to read. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "3": {
+    "role": "credits",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Credits",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book credits page for Spark's Journey Issue #2 — Credits. Workshop lore-desk scene: quills, rift-ink, maps — empty credit boxes for lettering. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "4": {
+    "role": "title",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Chapter Two — Hatchling of the Pulse",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book title page for Spark's Journey Issue #2 — Chapter Two — Hatchling of the Pulse. Title spread energy: Spark silhouette on Shellward Road, Mira and companions behind, no painted lettering. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "5": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "The Pulse Did Not End",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 1/25 — The Pulse Did Not End. Story purpose: Dawn aftermath; Mira with cracked pulse-egg; hatch begins. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p1a): Full-page splash: dawn over Riftwild Commons hatchery fringe after Issue #1's Second Pulse night. Mira Eggwarden (practical hatchery robes, egg-care satchel) sits cradling the pulse-egg with soft cyan-gold glow — the invitation she refused to abandon. Bramblefox rests nearby. Visible new crack spidering across shell. Space for top caption. Characters: mira-eggwarden. Creatures: bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: first light through residual aurora haze. Continuity: {\"spark\":{\"form\":\"egg\",\"emotion\":\"stirring\",\"glow\":\"rising cyan-gold\",\"crackLevel\":2},\"keeper\":{\"name\":\"Mira Eggwarden\",\"clothing\":\"practical hatchery travel coat over Compact robes\",\"injuries\":[]},\"bramblefox\":{\"injuries\":[\"front-leg scrape\",\"torn ear tip\"],\"status\":\"guarding\"},\"time\":\"dawn\",\"weather\":\"post-storm clear\",\"location\":\"Commons fringe clearing\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 1
+  },
+  "6": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "First Eye",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 2/25 — First Eye. Story purpose: Egg cracking sequence; Spark's eye opens; companions react. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p2a): Extreme close-up: shell fissures widening; cyan-gold light leaking. Panel 2 (p2b): Bramblefox watches cautiously; Mossprig shields tiny Thornling from flying shell fragments. Panel 3 (p2c): Inside shell: Spark's large eye opens — luminous, frightened, cyan-gold iris. Characters: mira-eggwarden. Creatures: bramblefox, mossprig, thornling, spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"form\":\"hatching\",\"emotion\":\"awakening\",\"glow\":\"bright unstable\",\"crackLevel\":3},\"mossprig\":{\"status\":\"shielding Thornling\"},\"thornling\":{\"status\":\"startled\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 3
+  },
+  "7": {
+    "role": "story",
+    "layout": {
+      "type": "grid-2x2",
+      "panelCount": 4
+    },
+    "title": "Hatchling",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 3/25 — Hatchling. Story purpose: Spark emerges, panics with small pulse, hides behind Bramblefox; Mira kneels. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p3a): Spark emerges fully — Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Wet fur, trembling. Panel 2 (p3b): Small uncontrolled cyan-gold energy pulse knocks leaves; Wisplet drifts back. Panel 3 (p3c): Spark presses hard against Bramblefox's flank, refusing everyone else. Panel 4 (p3d): Mira kneels at a respectful distance, open empty hands — not grabbing. Characters: mira-eggwarden, mira-eggwarden. Creatures: spark, bramblefox, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"form\":\"hatchling\",\"emotion\":\"terrified\",\"glow\":\"unstable flare\",\"position\":\"behind Bramblefox\",\"trusts\":[\"bramblefox\"]},\"mira\":{\"present\":true}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 4
+  },
+  "8": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Unknown Resonance",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 4/25 — Unknown Resonance. Story purpose: Codex scan fails; UNKNOWN RESONANCE / NO MATCH FOUND lettered into image. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p4a): Mira holds a palm Codex crystal toward Spark (still behind Bramblefox). Soft scan light washes markings. scan light washes Spark's markings. Panel 2 (p4b): Close on Codex readout glyphs (abstract shapes — no readable UI chrome) flashing rejection; Spark's markings flicker mismatched colors. Characters: mira-eggwarden, mira-eggwarden. Creatures: spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Commons fringe / hatchery path. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"anxious\",\"glow\":\"flickering multi-thread\",\"codexStatus\":\"no-match\"},\"items\":[\"codex crystal scanner\"]} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 2
+  },
+  "9": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Shellward Mark",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 5/25 — Shellward Mark. Story purpose: Scholar/Keeper recognizes ancient sanctuary symbol on Spark. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p5a): Elder Codex aide Solen's colleague or local scholar leans close to Spark's shoulder crystals — an ancient nested-arc sanctuary mark. Panel 2 (p5b): Inset: charcoal rubbing of matching sanctuary glyph from a Codex folio. Panel 3 (p5c): Mira and Scholar Len exchange looks; Spark peeks past Bramblefox, curious despite fear. Characters: mira-eggwarden, mira-eggwarden, keeper-scholar-len. Creatures: spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"markings\":\"Shellward nested-arc confirmed\",\"emotion\":\"wary-curious\"},\"mission\":\"escort-to-shellward-sanctum\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 3
+  },
+  "10": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Before Destabilization",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 6/25 — Before Destabilization. Story purpose: Mission: reach sanctuary before Spark destabilizes; shadowed hunter on ridge. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p6a): Mira packs travel kit; Spark half-asleep against Bramblefox; Mossprig and Thornling ready. she checks her Compact lantern charm. Panel 2 (p6b): Distant rooftop/ridge: Veiled Meridian hunter silhouette with tracking lens and three-arc sigil charm. Commons below unaware. Characters: mira-eggwarden, mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"hunters\":{\"status\":\"observing\",\"faction\":\"Veiled Meridian\",\"tracking\":\"pending\"},\"mission\":\"active\",\"time\":\"morning\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 2
+  },
+  "11": {
+    "role": "story",
+    "layout": {
+      "type": "wide",
+      "panelCount": 1
+    },
+    "title": "Leaving the Hearth",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 7/25 — Leaving the Hearth. Story purpose: Quiet travel departure; Spark learns the group's rhythm. Layout: wide. 1 panels with clear inked gutters. Panel 1 (p7a): Quiet travel page: path out of Riftwild Commons. Mira leads; Bramblefox paces left of Spark (carried in soft wrap against Mira's satchel); Mossprig right; Thornling on Mossprig's shoulder; Wisplet above. Soft morning light. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Commons outbound trail. Time: late morning. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"listening\",\"glow\":\"low steady\",\"position\":\"in wrap against Mira\"},\"location\":\"road out of Commons\",\"hunterPositions\":\"trailing beyond sight\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 1
+  },
+  "12": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Motes and Marks",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 8/25 — Motes and Marks. Story purpose: Spark imitates Thornling / chases motes; then markings flare. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p8a): Spark clumsily imitates Thornling's hop; Thornling delights. Panel 2 (p8b): Spark chases floating rift-dust motes; Mira smiles warmly. Panel 3 (p8c): Suddenly Spark's cyan-gold markings flare hard; motes shatter; companions brace. Characters: mira-eggwarden. Creatures: spark, thornling, bramblefox, mossprig. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"startled overload\",\"glow\":\"flare spike\",\"destabilization\":1}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 3
+  },
+  "13": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Scar of the First Tear",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 9/25 — Scar of the First Tear. Story purpose: Rift-scarred region: floating stones, damaged trees, reversed waterfall. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p9a): Dramatic establishing splash of fractured wilds: floating mossy stones, split trees glowing with old cyan scars, a waterfall running upward into cloud. Party small on path. Spark's glow answers the landscape. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: fractured wilds. Time: afternoon. Weather: post-storm clear. Lighting: skewed daylight + cyan scar glow. Continuity: {\"location\":\"First-Rift scar wilds\",\"weather\":\"warped air shimmer\",\"spark\":{\"emotion\":\"resonant unease\",\"glow\":\"answering landscape\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 1
+  },
+  "14": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Fear Has a Finger",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 10/25 — Fear Has a Finger. Story purpose: Travelers see Spark; one panics and blames Spark for Rift damage. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p10a): Merchant caravan travelers freeze seeing Spark's glow; a child points in wonder. Panel 2 (p10b): Frightened adult traveler steps forward accusingly, gesturing at scarred trees and Spark. Characters: mira-eggwarden, frightened-traveler. Creatures: spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: scar wilds trail / caravan stop. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"hurt confusion\",\"glow\":\"shrinking\"},\"social\":\"public fear\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 2
+  },
+  "15": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Not a Weapon",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 11/25 — Not a Weapon. Story purpose: Mira publicly defends Spark; Spark withdraws emotionally. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p11a): Mira steps between Spark and the crowd, firm but not aggressive. Panel 2 (p11b): Close-up: Spark's ears flatten; glow dims; eyes wet with fear of being unwanted. Panel 3 (p11c): Mira glances back — sees Spark's withdrawal; restrained quiet beat. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"unwanted / withdrawing\",\"glow\":\"dim\",\"trust\":\"fragile\"},\"keeper\":{\"stance\":\"public defense\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 3
+  },
+  "16": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Glow Into Dark",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 12/25 — Glow Into Dark. Story purpose: Night: Spark runs away; hunters activate tracking. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p12a): Night camp edge. Spark slips from wrap and bolts into forest; glow streak vanishing between trunks. Mira reaches too late. Panel 2 (p12b): Veiled Meridian hunters in veiled half-masks activate binding-compass devices; three-arc sigils light. Lead hunter Vex Halden cold; Nira Quill hesitant. Characters: mira-eggwarden, vex-halden, nira-quill. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: night. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"flight\",\"glow\":\"vanishing\",\"position\":\"forest unknown\"},\"hunters\":{\"status\":\"tracking active\",\"devices\":\"binding-compass on\"},\"time\":\"night\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 2
+  },
+  "17": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Scent and Spirit",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 13/25 — Scent and Spirit. Story purpose: Bramblefox tracks; Wisplet senses spiritual trail; Mira follows. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p13a): Bramblefox nose to disturbed leaves and cyan-gold mote residue. Panel 2 (p13b): Wisplet leaves soft spirit-light breadcrumbs in air; Mossprig and Thornling follow. Panel 3 (p13c): Mira running with lantern, satchel bouncing; determined, not angry. Characters: mira-eggwarden. Creatures: bramblefox, wisplet, mossprig, thornling. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"position\":\"ahead toward stone arch\",\"glow\":\"intermittent\"},\"tracking\":\"companion-led\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 3
+  },
+  "18": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "The Arch That Waits",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 14/25 — The Arch That Waits. Story purpose: Spark finds ancient stone arch that opens only for Spark; hidden road appears. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p14a): Ancient stone arch half-swallowed by roots; dead to Mira's approach in inset memory — but as Spark nears alone, nested-arc glyphs ignite cyan-gold. Panel 2 (p14b): Hidden luminous road unfolds beyond the arch — soft sanctuary path light. Characters: mira-eggwarden. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: ancient arch / Shellward Road. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"wonder amid fear\",\"glow\":\"door-keyed\",\"sanctuaryProgress\":\"arch-opened\"},\"path\":\"Shellward Road revealed\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 2
+  },
+  "19": {
+    "role": "story",
+    "layout": {
+      "type": "grid-2x2",
+      "panelCount": 4
+    },
+    "title": "Sigils Ignite",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 15/25 — Sigils Ignite. Story purpose: Group reaches Spark; hunter sigils ignite; hunters step from concealment. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p15a): Mira's group reaches Spark at arch threshold; Spark hesitates between flee and return. Panel 2 (p15b): Ground rings of three-arc hunter sigils flare around the party. Panel 3 (p15c): Veiled Meridian hunters step from concealment with dampening rods and trained lean hound-companions. Panel 4 (p15d): Nira Quill's eyes show doubt behind veil; Spark cowers. Characters: mira-eggwarden, vex-halden, nira-quill. Creatures: spark, bramblefox, mossprig, thornling, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"hunters\":{\"status\":\"surrounding\",\"bindingField\":\"forming\"},\"spark\":{\"emotion\":\"trapped terror\",\"position\":\"arch threshold\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 4
+  },
+  "20": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Refuse the Cage",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 16/25 — Refuse the Cage. Story purpose: Lead hunter demands Spark; Mira refuses; Nira uncertain; battle starts. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p16a): Vex extends binding collar relic toward Spark. Panel 2 (p16b): Mira plants himself; companions brace. Panel 3 (p16c): Battle ignites: hunter companions leap; Bramblefox meets them; rods crackle. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"battle\":\"begun\",\"spark\":{\"emotion\":\"terrified center\",\"glow\":\"erratic\"},\"nira\":{\"doubt\":true}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 3
+  },
+  "21": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Living Bulwark",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 17/25 — Living Bulwark. Story purpose: Binding relic fires at Spark; Mossprig takes the hit with Living Bulwark. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p17a): Binding relic beam streaks toward Spark; Mossprig lunges into the path, Living Bulwark vine-light blooming. Panel 2 (p17b): Impact: Mossprig absorbs binding burn across shoulder moss-flesh; visible scorch; Spark stares in horror; Mira reaches. Characters: mira-eggwarden. Creatures: mossprig, spark, bramblefox. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"mossprig\":{\"injuries\":[\"binding burn across shoulder\"],\"status\":\"protecting Spark\",\"ability\":\"Living Bulwark used\"},\"spark\":{\"emotion\":\"horror / guilt surge\",\"glow\":\"building overload\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 2
+  },
+  "22": {
+    "role": "story",
+    "layout": {
+      "type": "grid-2x2",
+      "panelCount": 4
+    },
+    "title": "Grove Against Veil",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 18/25 — Grove Against Veil. Story purpose: Full coordinated battle; Spark frightened in center. Layout: grid-2x2. 4 panels with clear inked gutters. Panel 1 (p18a): Bramblefox flanks with Forest Bond vine-light, tripping a hunter companion. Panel 2 (p18b): Thornling unleashes Sprouting Energy spark-burst creating cover thorns. Panel 3 (p18c): Wisplet phases through a restraint net; Spirit Moth omen-glint in background optional. Panel 4 (p18d): Center: Spark curled, terrified, glow strobing; Mossprig still shielding despite burn; hunters press. Characters: mira-eggwarden. Creatures: bramblefox, thornling, wisplet, mossprig, spark, spirit-moth. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"terrified\",\"glow\":\"unstable cyan-gold\",\"position\":\"behind Mossprig\"},\"mossprig\":{\"injuries\":[\"binding burn across shoulder\"],\"status\":\"protecting Spark\"},\"battle\":\"coordinated companions vs Meridian\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 4
+  },
+  "23": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "You Do Not Have To",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 19/25 — You Do Not Have To. Story purpose: Hunters gaining; Spark sees Mossprig hurt; overload; Mira refuses to command Spark to fight. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p19a): Hunters' dampening field tightens; Mira knocked to a knee; Vex advances. Panel 2 (p19b): Spark stares at Mossprig's burn; resonance overload rings around Spark. Panel 3 (p19c): Mira, breathless, speaks to Spark without order — open hand. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"overload / listening\",\"glow\":\"critical\",\"resonance\":3},\"keeper\":{\"stance\":\"refuse-to-weaponize\"},\"hunters\":{\"advantage\":true}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 3
+  },
+  "24": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "You Were Never Made to Obey",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 20/25 — You Were Never Made to Obey. Story purpose: Spark vision: ancient Keepers with several Spark-like young; invitation not command. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p20a): Vision splash: soft ancient sanctuary light. Robed ancient Keepers stand with several glowing young Riftborn similar to Spark. One Keeper kneels, hand open toward Spark — invitation gesture. No chains. Ethereal, not modern Commons. Characters: mira-eggwarden. Creatures: spark. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: vision: pre-Commons sanctuary. Time: dawn. Weather: post-storm clear. Lighting: soft sacred cyan-gold. Continuity: {\"spark\":{\"emotion\":\"vision clarity\",\"glow\":\"vision-stable\",\"vision\":\"ancient Keepers / Riftborn kin\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 1
+  },
+  "25": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Chosen Step",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 21/25 — Chosen Step. Story purpose: Spark voluntarily returns beside Mira; no command; controlled Resonance activates. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p21a): Back in battle night: Spark walks from cover to stand beside Mira — voluntary, deliberate. Mira does not grab or point. Panel 2 (p21b): Spark's glow steadies into controlled aura; Rift Resonance rings visible as soft orbiting motes (max 3). Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"chosen courage\",\"glow\":\"controlled bright\",\"bond\":\"voluntary with Mira\",\"resonance\":3,\"abilityReady\":\"Prismatic Burst\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 2
+  },
+  "26": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Prismatic Burst",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 22/25 — Prismatic Burst. Story purpose: Spark unleashes controlled Prismatic Burst; group combines powers; binding field breaks — not instant win. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p22a): Action splash: Spark at center releases Prismatic Burst — structured cyan-gold-amber ribbons (not chaotic nuke). Bramblefox/Mossprig/Thornling/Wisplet abilities sync into the burst. Hunter binding field shatters. Hunters staggered but not vaporized. Mira shields eyes, standing with Spark. Characters: mira-eggwarden. Creatures: spark, bramblefox, mossprig, thornling, wisplet. Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: prismatic burst climax. Continuity: {\"spark\":{\"emotion\":\"strained resolve\",\"glow\":\"burst afterglow\",\"resonance\":0,\"ability\":\"Prismatic Burst used\"},\"hunters\":{\"bindingField\":\"broken\",\"status\":\"staggered\"},\"battle\":\"turning\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 1
+  },
+  "27": {
+    "role": "story",
+    "layout": {
+      "type": "three-stack",
+      "panelCount": 3
+    },
+    "title": "Door for One",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 23/25 — Door for One. Story purpose: Battle ends; Nira stops Vex from harming Spark; hunters retreat; sanctuary doors open for Spark. Layout: three-stack. 3 panels with clear inked gutters. Panel 1 (p23a): Nira Quill blocks Vex's finishing strike toward Spark with her own rod. Panel 2 (p23b): Hunters retreat into trees; devices sparking dead. Panel 3 (p23c): At road's end: Shellward Sanctum doors of living stone and nested-arc metal open as Spark approaches alone; Mira's party waits at threshold respectfully. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: pre-dawn. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"hunters\":{\"status\":\"retreated\",\"nira\":\"defected-soft\"},\"sanctuaryProgress\":\"doors-open-for-Spark\",\"mossprig\":{\"injuries\":[\"binding burn across shoulder\"],\"status\":\"stable\"}} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 3
+  },
+  "28": {
+    "role": "story",
+    "layout": {
+      "type": "two-col",
+      "panelCount": 2
+    },
+    "title": "Riftborn",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 24/25 — Riftborn. Story purpose: Sanctuary mural: multiple Spark-like beings linked to world Rifts; Mira realizes Spark is one of several. Layout: two-col. 2 panels with clear inked gutters. Panel 1 (p24a): Interior Shellward Sanctum: vast mural of several Glowpup-like Riftborn connected by luminous threads to different regional Rifts across Aeryndra. Spark stands small before it. Panel 2 (p24b): Close: Spark's markings mirror mural figures; quiet awe. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Shellward Sanctum. Time: dawn inside stone. Weather: post-storm clear. Lighting: soft dawn amber with cyan accents. Continuity: {\"spark\":{\"emotion\":\"identity awakening\",\"glow\":\"sanctuary-steady\",\"classification\":\"Riftborn\"},\"location\":\"Shellward Sanctum interior\",\"revelation\":\"multiple Riftborn exist\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 2
+  },
+  "29": {
+    "role": "story",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Begin the Collection",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic \"Spark's Journey\" Issue #2, STORY PAGE 25/25 — Begin the Collection. Story purpose: Empty pedestal; map marks Traveling Circus; Meridian message; TO BE CONTINUED Issue #3. Layout: splash. 1 panels with clear inked gutters. Panel 1 (p25a): Cliffhanger splash: empty crystal pedestal with disturbed dust (someone already took the relic). Magical map activates on floor marking Commons → Sanctum path and a glowing pin at Traveling Circus wagons. Tiny three-arc sigil chalked near pedestal. Spark and Mira silhouettes at edge. Characters: mira-eggwarden. Creatures: . Spark design lock: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Environment: Riftwild Commons fringe. Time: dawn. Weather: post-storm clear. Lighting: map glow + empty pedestal gloom. Continuity: {\"spark\":{\"emotion\":\"uneasy resolve\",\"glow\":\"steady with Mira\",\"bond\":\"voluntary\"},\"sanctuaryProgress\":\"entered; crystal missing\",\"items\":{\"pedestalCrystal\":\"stolen-before-arrival\"},\"cliffhanger\":\"collection begins → Traveling Circus\",\"nextIssue\":\"the-traveling-circus\"} Leave empty balloon-safe and narration-safe negative space in upper/lower panel corners. NO readable text of any kind in the artwork.",
+    "panelCount": 1
+  },
+  "30": {
+    "role": "teaser",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Next Issue — The Traveling Circus",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book teaser page for Spark's Journey Issue #2 — Next Issue — The Traveling Circus. Teaser plate: lantern wagons at dusk approaching Commons plaza; masked host silhouette; Spark cameo optional at edge under Compact rules. No logos. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "31": {
+    "role": "profile",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Keeper Profile — Mira Eggwarden",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for Spark's Journey Issue #2 — Keeper Profile — Mira Eggwarden. Character profile plate: Mira Eggwarden portrait in hatchery mentor portrait — Compact robes, soft braid, satchel; empty text zones. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "32": {
+    "role": "profile",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Companion Profile — Spark",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for Spark's Journey Issue #2 — Companion Profile — Spark. Companion profile plate: full-body Spark — Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Empty lore boxes. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "33": {
+    "role": "lore",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Codex — Riftborn",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for Spark's Journey Issue #2 — Codex — Riftborn. Codex lore plate: mural motif of multiple Riftborn linked to world Rifts; ornate crystal frame; empty text box. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "34": {
+    "role": "lore",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Ability Spotlight — Rift Resonance",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book lore page for Spark's Journey Issue #2 — Ability Spotlight — Rift Resonance. Ability spotlight: Spark with orbiting Resonance motes; allies using elemental abilities feeding the rings. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "35": {
+    "role": "map",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "World Map — Commons to Shellward",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book map page for Spark's Journey Issue #2 — World Map — Commons to Shellward. Stylized in-world map: Riftwild Commons, outbound trail, First-Rift scar wilds, ancient arch, Shellward Sanctum NW. Pin for Traveling Circus foreshadow. Empty legend boxes. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "36": {
+    "role": "letters",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Editor's Note — Trust & Choice",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book letters page for Spark's Journey Issue #2 — Editor's Note — Trust & Choice. Letters page atmosphere: soft desk lamp, open Compact seal wax, Spark pawprint sketch. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "37": {
+    "role": "inside-cover",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Inside Back Cover",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for Spark's Journey Issue #2 — Inside Back Cover. Quiet night Commons silhouette; circus lanterns faint on horizon; space for house links. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  },
+  "38": {
+    "role": "back-cover",
+    "layout": {
+      "type": "splash",
+      "panelCount": 1
+    },
+    "title": "Back Cover — Traveling Lantern Caravan",
+    "artPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book back-cover page for Spark's Journey Issue #2 — Back Cover — Traveling Lantern Caravan. In-universe ad for Traveling Lantern Caravan / Riftwild Traveling Circus: lantern wagons, companion performances, mysterious masked host, one slightly unsettling three-arc charm half-hidden under a wagon. Empty poster text zones. No gambling. Empty zones for title lettering. NO readable text in art.",
+    "panelCount": 1
+  }
+}

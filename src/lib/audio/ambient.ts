@@ -33,9 +33,8 @@ function buildLayers(
 
   const nodes: AudioNode[] = [bus];
 
-  // Pure oscillators read as a continuous "hum" — keep them very soft and
-  // low-passed so regional beds feel like air, not a stuck sine tone.
-  if (recipe.droneGain > 0.001) {
+  // Pure oscillators read as a continuous "hum" — skip unless gain is clearly audible.
+  if (recipe.droneGain > 0.01) {
     const drone = ctx.createOscillator();
     drone.type = recipe.droneType === "square" || recipe.droneType === "sawtooth"
       ? "triangle"
@@ -54,7 +53,7 @@ function buildLayers(
     nodes.push(drone, droneLp, droneG);
   }
 
-  if (recipe.padHz && recipe.padGain && recipe.padGain > 0.001) {
+  if (recipe.padHz && recipe.padGain && recipe.padGain > 0.01) {
     const pad = ctx.createOscillator();
     pad.type = "sine";
     pad.frequency.value = recipe.padHz;

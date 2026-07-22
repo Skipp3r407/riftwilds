@@ -114,7 +114,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
   "pageTurnObjective": "Stabilize the Engines.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
-  "generationStatus": "pending",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Clash — Part Two — The Riftwright page 23",
@@ -140,5 +140,7 @@
   "id": "the-riftwright-issue-009-p023",
   "cleanArtRel": "generated/raw-art/page-023.webp",
   "letteredArtRel": "generated/lettered-pages/page-023.webp",
-  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-023.webp"
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-023.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

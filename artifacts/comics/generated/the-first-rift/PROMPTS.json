@@ -1,0 +1,194 @@
+{
+  "1": {
+    "role": "front-cover",
+    "layout": "splash",
+    "beat": "The First Rift",
+    "artPrompt": "Premium fantasy comic COVER, no text/logos. Elara Venn with glowing egg before cyan Prime Gateway tear over mud that will be Commons; Bramblefox and Mossprig silhouettes. Earth tones, cyan accent. 3:4. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "2": {
+    "role": "inside-cover",
+    "layout": "narrative",
+    "beat": "Inside front",
+    "artPrompt": "Quiet inside-cover atmosphere, no text. Soft Gateway glow through timber arch; invitation to read. Warm parchment light. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "3": {
+    "role": "credits",
+    "layout": "splash",
+    "beat": "Credits — comic splash, not a lore plate",
+    "artPrompt": "Western fantasy COMIC BOOK splash page, single full-bleed painted scene, clear gutters none needed. Warm dusk workshop of Riftwild Commons: timber desk, cyan rift-ink, rolled Fracture maps, amber lantern light. Young Keeper Mira Eggwarden (practical robes, egg-care satchel) leans over a map while a leafy fox-like Bramblefox sits on the bench — BOTH integrated in the SAME scene, not floating card insets. Leave soft empty mid-page band for credit lettering. Painterly fantasy comic, earth tones, cyan accent only. Original Riftwilds IP. NO readable text, logos, watermarks, UI, credit boxes, floating portrait cards, collage overlays, or artbook insets."
+  },
+  "4": {
+    "role": "title",
+    "layout": "splash",
+    "beat": "Title splash — cinematic comic open",
+    "artPrompt": "Western fantasy COMIC BOOK title splash, full-page cinematic panel with thick black outer border. Mira Eggwarden at present-day Riftwild Commons fringe touching a vertical cyan Fracture tear; warm amber dusk on timber roofs behind her. The tear dissolves upward into a ghost-vision of courier Elara Venn cradling a glowing egg on mud that will become the Commons. Clear empty upper third for title lettering. ONE continuous painted scene — no floating creature cards, no collage insets, no split artbook plates. Earth tones, cyan accent. Original Riftwilds IP. NO readable text, logos, watermarks, UI, or credit labels."
+  },
+  "5": {
+    "role": "story",
+    "layout": "tier-2",
+    "beat": "Present — Mira feels the pulse under Commons cobbles",
+    "artPrompt": "Western fantasy COMIC PAGE with CLEAR PANEL GRID and white gutters. Layout: TOP wide establishing panel (full width) of Riftwild Commons timber plaza at dusk, amber lanterns, cobbles with a faint cyan hairline crack. BOTTOM row: two equal panels — left close-up of Mira Eggwarden (young hatchery mentor, practical robes, egg-care satchel) kneeling, palm on vibrating stone; right medium shot of the plaza crack glowing cyan under her boots. Thick black panel borders, consistent gutter width, Z-path reading left-to-right then down. Characters INSIDE panels only — NO floating portrait cards, NO collage insets, NO lore-plate overlays. Painterly comic, earth tones, cyan accent. Original Riftwilds IP. NO readable text, balloons, captions, logos, or UI in the art."
+  },
+  "6": {
+    "role": "story",
+    "layout": "splash-inset",
+    "beat": "Unstable ancient Rift at Commons fringe",
+    "artPrompt": "Western fantasy COMIC PAGE. Large cinematic main panel of Mira Eggwarden at the mossy fringe of Riftwild Commons where a vertical cyan Fracture tear hangs wrong over mud and birch; ancient stone teeth half-swallowed by roots. Small BOTTOM inset panel (true comic inset with black border, not a floating card) showing Mira's wary face in cyan rim-light. White gutter around inset. No collage creature stickers. Earth greens and sandstone; cyan only on the tear. Original Riftwilds IP. NO readable text, logos, watermarks, UI, or lore-plate overlays."
+  },
+  "7": {
+    "role": "story",
+    "layout": "grid-2x2",
+    "beat": "Vision seizure — pulled into First Rift memory",
+    "artPrompt": "Western fantasy COMIC PAGE, strict 2x2 PANEL GRID with equal white gutters and thick black borders. Panel 1 (top-left): cyan light floods Mira Eggwarden's eyes, close-up. Panel 2 (top-right): Commons plaza dissolves into layered desert-forest Fracture roads. Panel 3 (bottom-left): silhouette of courier Elara Venn cradling a glowing egg in warm past light. Panel 4 (bottom-right): Mira falling through the tear into that past. Sequential Z-path storytelling. Characters drawn inside each panel — NO floating card insets, NO collage overlays, NO lore-plate stickers. Original Riftwilds IP. NO readable text, balloons, captions, logos, or UI in the art."
+  },
+  "8": {
+    "role": "story",
+    "layout": "tier-3",
+    "beat": "Elara on Fracture road with egg",
+    "artPrompt": "Western fantasy COMIC PAGE with THREE HORIZONTAL TIERS (stacked panels) separated by equal white gutters and thick black borders. Tier 1 wide: courier Elara Venn walking a cracked Fracture road under a pale cyan sky, glowing egg wrapped against her chest. Tier 2: two side-by-side panels — left Elara mid-shot speaking; right a cloaked stranger pointing toward a distant crown road. Tier 3 wide: Elara turning away from the stranger, jaw set, egg warm in her arms. Sequential Z-path. NO floating creature card insets, NO collage lore plates. Earth tones, cyan accents. Original Riftwilds IP. NO readable text, balloons, logos, or UI in the art."
+  },
+  "9": {
+    "role": "story",
+    "layout": "tier-2",
+    "beat": "Waybread — keep not own",
+    "artPrompt": "Western fantasy COMIC PAGE with CLEAR PANEL GRID and white gutters. TOP wide panel: night camp fire, courier Elara Venn shares waybread with a lost child, soft glowing egg nearby, amber firelight, distant cyan rift hairline. BOTTOM two panels: left close-up of Elara speaking kindly; right child holding a small shell fragment as soft light hums. Thick black borders, sequential storytelling. NO floating portrait cards, NO collage creature stickers, NO lore-plate overlays. Original Riftwilds IP. NO readable text, balloons, logos, or UI in the art."
+  },
+  "10": {
+    "role": "story",
+    "layout": "splash-inset",
+    "beat": "Gateway Hearts fragment",
+    "artPrompt": "Western fantasy COMIC PAGE, not an artbook lore plate. Large main panel: living Gateway Heart — organic crystal-core pulsing cyan inside ancient sandstone ruins, moss and earth dominant, soft cyan pulse illuminating broken arches. Small bottom inset comic panel (true bordered inset with white gutter) showing a shard of Riftstone glowing in a Keeper's palm. Sequential comic framing. NO floating card insets, NO collage overlays, NO encyclopedia UI. Original Riftwilds IP. NO readable text, logos, watermarks, or UI in the art."
+  },
+  "11": {
+    "role": "story",
+    "layout": "tier-2",
+    "beat": "Riftstone claims mud — founding gathering",
+    "artPrompt": "Western fantasy COMIC PAGE with PANEL GRID and white gutters. TOP wide panel: farmers, healers, and Keepers gather at dawn where stable Fracture paths intersect; mud flats. BOTTOM wide panel: cyan Riftstone rising from mud with a crack of light; courier Elara with glowing egg at center of the crowd. Thick black borders. Characters inside panels — NO floating fox card stickers, NO collage lore plates. Warm earth first, cyan on the stone only. Original Riftwilds IP. NO readable text, balloons, logos, or UI in the art."
+  },
+  "12": {
+    "role": "story",
+    "layout": "grid-2x2",
+    "beat": "Hatch — First Riftling",
+    "artPrompt": "Western fantasy COMIC PAGE, strict 2x2 PANEL GRID with equal white gutters and thick black borders. Panel 1: child wonder staring at cracking egg. Panel 2: soft hatch burst of warm light, newborn First Riftling pale shell-glow curious eyes emerging. Panel 3: village elder asking Elara a question; Elara with satchel answering. Panel 4: close-up of newborn Riftling's gentle eyes. Warm Commons day, sequential hatch story. NO floating card insets, NO collage overlays. Original Riftwilds IP. NO readable text, balloons, logos, or UI in the art."
+  },
+  "13": {
+    "role": "story",
+    "layout": "three-stack",
+    "beat": "Bramblefox — Forest Bond",
+    "artPrompt": "Three horizontal panels, no text. Bramblefox (vine-fur fox Riftling, leaf ears) bonds with green Forest Bond threads to Keeper and First Riftling in sunlit grove. Official creature silhouette. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "14": {
+    "role": "story",
+    "layout": "two-col",
+    "beat": "Mossprig — Living Bulwark",
+    "artPrompt": "Two-panel page, no text. Mossprig (cervine-botanical, moss cape, leaf antlers) raises a living moss wall between egg and tumbling Fracture debris. Living Bulwark pose. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "15": {
+    "role": "story",
+    "layout": "three-stack",
+    "beat": "Thornling — Sprouting Energy",
+    "artPrompt": "Three-stack panels, no text. Thornling (bristly plant Riftling) releases Sprouting Energy — vines burst to tangle shadow-shard scavengers away from the egg without killing. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "16": {
+    "role": "story",
+    "layout": "wide",
+    "beat": "Wisplet — Lantern Soft",
+    "artPrompt": "Wide night page, no text. Wisplet (small lantern-spirit Riftling) casts Lantern Soft glow through fog around Elara and egg; companions silhouetted. Amber + soft cyan accents. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "17": {
+    "role": "story",
+    "layout": "two-col",
+    "beat": "Emberfox Ashen Hide + Ashwing Kindled Spirit",
+    "artPrompt": "Two-panel page, no text. Left: Emberfox flares Ashen Hide against cold Fracture wind. Right: Ashwing (ember-feathered avian) Kindled Spirit dive-assist over mud plaza. Official silhouettes. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "18": {
+    "role": "story",
+    "layout": "grid-2x2",
+    "beat": "Clash — protect the egg",
+    "artPrompt": "Four-panel action page, no text. Companions coordinate: Forest Bond vines, Living Bulwark wall, Sprouting Energy tangle, Kindled Spirit dive — vs angular Fracture scrap-hounds. Egg protected center. No logos. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "19": {
+    "role": "story",
+    "layout": "narrative",
+    "beat": "Aftermath — Compact spoken before ink",
+    "artPrompt": "Narrative page, no text. Soft dawn after battle; Elara kneeling; companions resting; child reaches toward First Riftling. Mud and names mood. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "20": {
+    "role": "story",
+    "layout": "two-col",
+    "beat": "Fear allowed — force is not",
+    "artPrompt": "Two-panel page, no text. Child afraid near egg; Elara gentle; First Riftling stays. Compact law beat. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "21": {
+    "role": "story",
+    "layout": "three-stack",
+    "beat": "Fracture roads rearrange",
+    "artPrompt": "Three-stack, no text. Roads twist; scout confused; Elara walks by egg-warmth not map; cyan path rewrite. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "22": {
+    "role": "story",
+    "layout": "narrative",
+    "beat": "Crown-shard refused",
+    "artPrompt": "Night confrontation page, no text. Crown courier offers bright shard; Elara shields egg; wrong gold light vs soft egg cyan. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "23": {
+    "role": "story",
+    "layout": "splash",
+    "beat": "Something listens beyond the tear",
+    "artPrompt": "Splash page, no text. Wide Fracture tear; faint silhouette listening beyond; Elara small in foreground with egg; ominous but beautiful. Cyan + deep earth. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "24": {
+    "role": "story",
+    "layout": "two-col",
+    "beat": "Mira jolts between vision and present",
+    "artPrompt": "Two-panel page, no text. Left: Elara era. Right: Mira gasping at present-day fringe Rift, same cyan frequency. Match lighting bridge. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "25": {
+    "role": "story",
+    "layout": "narrative",
+    "beat": "Present — Mira finds carved deliberate mark",
+    "artPrompt": "Narrative page, no text. Mira's lantern reveals an intentional Fracture glyph carved under moss — too clean to be accident. Present-day Commons fringe. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "26": {
+    "role": "story",
+    "layout": "three-stack",
+    "beat": "Loyalty / responsibility — Mira chooses Compact",
+    "artPrompt": "Three-stack, no text. Mira returns toward Commons Hatchery lights; Bramblefox-like fringe watcher optional silhouette; dawn responsibility mood. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "27": {
+    "role": "story",
+    "layout": "wide",
+    "beat": "Cliffhanger — First Rift was deliberate",
+    "artPrompt": "Wide cinematic page, no text. Split: ancient Elara with egg / present Mira at glyph. Center: Prime Gateway scream frozen mid-opening with tool-marks in stone. Cliffhanger energy. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "28": {
+    "role": "story",
+    "layout": "two-col",
+    "beat": "Spirit Moth cameo + Mira reports",
+    "artPrompt": "Two-panel page, no text. Left: faint Spirit Moth TCG-accurate silhouette near lantern (cameo only). Right: Mira speaking to Hatchery doorway silhouette. No invented moth powers. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "29": {
+    "role": "story",
+    "layout": "splash",
+    "beat": "End splash — egg / pulse / next road",
+    "artPrompt": "End splash, no text. Mira on Commons ridge looking toward distant Fracture glow; soft egg-shaped cyan reflection in her satchel glass vial; companions of legend as faint constellation shapes in sky. Hopeful cliffhanger. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "30": {
+    "role": "teaser",
+    "layout": "narrative",
+    "beat": "Next: Spark's Journey",
+    "artPrompt": "Teaser plate, no text. Glowpup Spark on mossy hatchery path; Mira silhouette. Warm curiosity. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "31": {
+    "role": "inside-back",
+    "layout": "narrative",
+    "beat": "Inside back",
+    "artPrompt": "Letters/mail atmosphere, no readable text. Wax seals, egg sketches, Compact pamphlet shapes. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  },
+  "32": {
+    "role": "back-cover",
+    "layout": "splash",
+    "beat": "Back cover",
+    "artPrompt": "Back-cover vista of Riftwild Commons under soft riftlight, no text/logos. Premium comic finish. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image."
+  }
+}

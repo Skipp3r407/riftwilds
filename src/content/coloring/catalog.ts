@@ -16,6 +16,8 @@ export type ColoringSheet = {
   svgSrc: string;
   /** Optional single-page PDF */
   pdfSrc?: string;
+  /** Optional colorful UI tile preview (distinct from the line-art printable) */
+  thumbSrc?: string;
   tags: string[];
 };
 
@@ -32,6 +34,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/spark.png",
     svgSrc: "/assets/coloring/spark.svg",
     pdfSrc: "/assets/coloring/spark.pdf",
+    thumbSrc: "/assets/ui/comics/kids-spark.png",
     tags: ["riftling", "spark"],
   },
   {
@@ -43,6 +46,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/riftwild-commons.png",
     svgSrc: "/assets/coloring/riftwild-commons.svg",
     pdfSrc: "/assets/coloring/riftwild-commons.pdf",
+    thumbSrc: "/assets/ui/comics/kids-commons.png",
     tags: ["landmark", "commons"],
   },
   {
@@ -54,6 +58,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/traveling-circus.png",
     svgSrc: "/assets/coloring/traveling-circus.svg",
     pdfSrc: "/assets/coloring/traveling-circus.pdf",
+    thumbSrc: "/assets/ui/comics/kids-circus.png",
     tags: ["circus", "event"],
   },
   {
@@ -65,6 +70,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/hatchery-egg.png",
     svgSrc: "/assets/coloring/hatchery-egg.svg",
     pdfSrc: "/assets/coloring/hatchery-egg.pdf",
+    thumbSrc: "/assets/ui/comics/kids-hatchery.png",
     tags: ["egg", "hatchery"],
   },
   {
@@ -335,6 +341,11 @@ export const COLORING_SHEETS: ColoringSheet[] = [
 
 export function listColoringSheets(): ColoringSheet[] {
   return COLORING_SHEETS;
+}
+
+/** Featured Kids Corner tiles (Spark, Commons, Circus, Hatchery). */
+export function listFeaturedColoringSheets(limit = 4): ColoringSheet[] {
+  return COLORING_SHEETS.slice(0, limit);
 }
 
 export function getColoringSheet(slug: string): ColoringSheet | undefined {

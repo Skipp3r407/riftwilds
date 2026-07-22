@@ -7,7 +7,11 @@ import {
   isValidGuestToken,
   resolveOwnerKey,
 } from "@/lib/auth/owner-key";
-import { isGuestGameplayAllowed } from "@/lib/auth/account-play-policy";
+import {
+  isGuestGameplayAllowed,
+  isLocalPreviewBypass,
+  LOCAL_PREVIEW_OWNER_KEY,
+} from "@/lib/auth/account-play-policy";
 import { authDefaults } from "@/lib/config/project";
 
 /** @deprecated Prefer shared `rift_guest` via resolveOwnerKey — kept for legacy cookie reads. */
@@ -15,7 +19,8 @@ export const TCG_GUEST_COOKIE = "tcg_guest";
 
 /**
  * Stable TCG owner identity.
- * When account is required, returns unauthorized (no guest mint).
+ * When account is required, returns unauthorized (no guest mint) —
+ * except local preview bypass, which seats a stable preview keeper.
  */
 export async function resolveTcgOwnerKey(): Promise<{
   key: string;
@@ -28,6 +33,17 @@ export async function resolveTcgOwnerKey(): Promise<{
   if (session) {
     return {
       key: `sess_${session.slice(0, 24)}`,
+      guestToken: null,
+      mintedGuest: false,
+      authorized: true,
+    };
+  }
+
+  // Keep Practice Board playable when layout/middleware use preview bypass
+  // without a ph_session cookie (classic false NO_SESSION / “Session lost”).
+  if (isLocalPreviewBypass()) {
+    return {
+      key: LOCAL_PREVIEW_OWNER_KEY,
       guestToken: null,
       mintedGuest: false,
       authorized: true,
@@ -84,6 +100,7 @@ export async function readTcgOwnerKey(): Promise<string | null> {
   const jar = await cookies();
   const session = jar.get(authDefaults.COOKIE_NAME)?.value;
   if (session) return `sess_${session.slice(0, 24)}`;
+  if (isLocalPreviewBypass()) return LOCAL_PREVIEW_OWNER_KEY;
   if (!isGuestGameplayAllowed()) return null;
   const shared = jar.get(GUEST_COOKIE_NAME)?.value;
   if (isValidGuestToken(shared)) return `guest_${shared}`;

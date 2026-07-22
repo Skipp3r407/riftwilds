@@ -126,7 +126,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "End Issue #5.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
-  "generationStatus": "cached",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Every Door — The Storm King page 25",
@@ -148,5 +148,7 @@
   "id": "the-storm-king-issue-005-p029",
   "cleanArtRel": "generated/raw-art/page-029.webp",
   "letteredArtRel": "generated/lettered-pages/page-029.webp",
-  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-029.webp"
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-029.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

@@ -19,15 +19,20 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   ArrowLeft,
   BookOpen,
+  ChevronDown,
   Eye,
   Heart,
+  History,
   Layers,
-  Swords,
+  LogOut,
+  MoreHorizontal,
+  Settings,
   UserPlus,
   Zap,
 } from "lucide-react";
 import { isEquipmentContentType } from "@/game/tcg/combat";
 import { getTcgCardDef } from "@/game/tcg/card-catalog";
+import { resolvePlayCost, playCostContextFromSide } from "@/game/tcg/play-cost";
 import { TCG_DEFAULTS, type TcgCardDef } from "@/game/tcg/types";
 import { recordQuestMetric } from "@/game/quests/quest-demo-store";
 import { TcgCardDetailModal } from "@/components/tcg/tcg-card-detail-modal";
@@ -38,6 +43,12 @@ import {
   sideHasMeterPulse,
   useBattleVfx,
 } from "@/components/tcg/battle-vfx";
+import { BattleEventFeed } from "@/components/tcg/battle-event-feed";
+import {
+  BattleLayoutSettings,
+  BattleModeMenu,
+} from "@/components/tcg/battle-mode-menu";
+import { useBattleLayoutOptional } from "@/components/tcg/battle-layout-context";
 import { FullscreenToggleButton } from "@/components/live-world/fullscreen-toggle-button";
 import { useLiveWorldFullscreen } from "@/hooks/use-live-world-fullscreen";
 import { playSfx } from "@/hooks/use-sfx";
@@ -51,11 +62,53 @@ import {
   guestFetch,
   rememberGuestTokenFromPayload,
 } from "@/lib/auth/guest-client";
+import {
+  readBattleFeedCollapsed,
+  readBattleFeedWidth,
+  readBattleIntelCollapsed,
+  writeBattleFeedCollapsed,
+  writeBattleFeedWidth,
+  writeBattleIntelCollapsed,
+} from "@/lib/tcg/battle-layout-prefs";
 import { cn } from "@/lib/utils/cn";
 
 const HAND_DRAG_MIME = "application/x-rift-hand-card";
 const LONG_PRESS_MS = 420;
 const DOUBLE_TAP_MS = 320;
+const BOARD_CARD_SIZE_KEY = "riftwilds.battle.board-card-size";
+
+type BoardCardSize = "s" | "m" | "l" | "xl";
+
+const BOARD_CARD_SIZES: { id: BoardCardSize; label: string }[] = [
+  { id: "s", label: "S" },
+  { id: "m", label: "M" },
+  { id: "l", label: "L" },
+  { id: "xl", label: "XL" },
+];
+
+/** Default M is larger than the prior fixed board size so field cards fill the lanes. */
+const DEFAULT_BOARD_CARD_SIZE: BoardCardSize = "m";
+
+function readBoardCardSize(): BoardCardSize {
+  if (typeof window === "undefined") return DEFAULT_BOARD_CARD_SIZE;
+  try {
+    const raw = localStorage.getItem(BOARD_CARD_SIZE_KEY);
+    if (BOARD_CARD_SIZES.some((s) => s.id === raw)) {
+      return raw as BoardCardSize;
+    }
+  } catch {
+    /* ignore quota / private mode */
+  }
+  return DEFAULT_BOARD_CARD_SIZE;
+}
+
+function writeBoardCardSize(size: BoardCardSize) {
+  try {
+    localStorage.setItem(BOARD_CARD_SIZE_KEY, size);
+  } catch {
+    /* ignore quota / private mode */
+  }
+}
 
 function isCoarsePointer(): boolean {
   if (typeof window === "undefined") return false;
@@ -70,11 +123,17 @@ function clamp(n: number, min: number, max: number) {
 function HandCardHoverPreview({
   faceSrc,
   name,
+  playCost,
+  unaffordable,
+  blockReason,
   anchorRef,
   reduceMotion,
 }: {
   faceSrc: string | null;
   name: string;
+  playCost?: number | null;
+  unaffordable?: boolean;
+  blockReason?: string | null;
   anchorRef: RefObject<HTMLElement | null>;
   reduceMotion: boolean;
 }) {
@@ -103,7 +162,8 @@ function HandCardHoverPreview({
         top,
         width,
         height,
-        zIndex: 70,
+        // Above expanded battle chrome (80); below lore journal modal (100).
+        zIndex: 90,
         // Never intercept hand drag / field drops.
         pointerEvents: "none",
       });
@@ -122,7 +182,10 @@ function HandCardHoverPreview({
 
   return createPortal(
     <div
-      className="battle-hand-card-preview"
+      className={cn(
+        "battle-hand-card-preview",
+        unaffordable && "battle-hand-card-preview--unaffordable",
+      )}
       style={box}
       aria-hidden
       data-testid="battle-hand-card-preview"
@@ -134,6 +197,22 @@ function HandCardHoverPreview({
         ) : (
           <span className="battle-hand-card-preview__fallback">{name}</span>
         )}
+        {playCost != null ? (
+          <span
+            className={cn(
+              "battle-hand-card__cost battle-hand-card-preview__cost",
+              unaffordable && "battle-hand-card__cost--blocked",
+            )}
+            aria-hidden
+          >
+            {playCost}
+          </span>
+        ) : null}
+        {unaffordable && blockReason ? (
+          <span className="battle-hand-card-preview__block" aria-hidden>
+            {blockReason}
+          </span>
+        ) : null}
       </div>
     </div>,
     document.body,
@@ -175,6 +254,10 @@ type ClientSide = {
   riftEnergy: number;
   riftEnergyMax: number;
   tempEnergy?: number;
+  energySpentThisTurn?: number;
+  firstCompanionDiscountUsed?: boolean;
+  temporaryPlayCostModifier?: number;
+  playCostReduction?: number;
   hand: ClientCard[];
   handCount: number;
   deckCount: number;
@@ -224,6 +307,35 @@ type LobbyInfo = {
   youAre?: string;
 };
 
+const NOT_ENOUGH_RIFT_ENERGY = "Not enough Rift Energy.";
+
+function isBattleDevMode(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const q = new URLSearchParams(window.location.search);
+    if (q.get("battleDev") === "1" || q.get("dev") === "1") return true;
+    return window.localStorage.getItem("riftwilds.battleDev") === "1";
+  } catch {
+    return process.env.NODE_ENV === "development";
+  }
+}
+
+function logClientRejectedPlay(
+  reason: string,
+  detail: Record<string, unknown>,
+): void {
+  if (isBattleDevMode() || process.env.NODE_ENV === "development") {
+    console.info("[tcg] rejected play (client)", reason, detail);
+  }
+}
+
+function handPlayCost(
+  def: TcgCardDef,
+  player: ClientSide,
+): number {
+  return resolvePlayCost(def, playCostContextFromSide(player)).cost;
+}
+
 function playBlockReason(
   def: TcgCardDef | null | undefined,
   player: ClientSide | null | undefined,
@@ -237,10 +349,14 @@ function playBlockReason(
     return "Can't play right now";
   }
   if (busy) return "Busy…";
-  // Affordance must use engine play cost (riftCost), never power/attack.
-  const playCost = def.riftCost;
+  const ct = def.contentType ?? "";
+  if (ct === "commander" || ct === "hero") {
+    return "Commander sits in the hero slot — not playable from hand";
+  }
+  // Affordance must use engine play cost (riftCost + discounts), never power/attack.
+  const playCost = handPlayCost(def, player);
   if (player.riftEnergy < playCost) {
-    return `Costs ${playCost} · have ${player.riftEnergy}`;
+    return NOT_ENOUGH_RIFT_ENERGY;
   }
   if (def.type === "UNIT" && player.board.length >= TCG_DEFAULTS.maxBoardUnits) {
     return `Board full (${TCG_DEFAULTS.maxBoardUnits}/${TCG_DEFAULTS.maxBoardUnits}) — End Turn to attack`;
@@ -252,6 +368,15 @@ function playBlockReason(
     return "Needs a friendly unit to equip";
   }
   return null;
+}
+
+/** Banner under unaffordable hand cards — includes numeric cost for clarity. */
+function unaffordableBanner(
+  def: TcgCardDef,
+  player: ClientSide,
+): string {
+  const playCost = handPlayCost(def, player);
+  return `Costs ${playCost} · have ${player.riftEnergy}`;
 }
 
 /** True when the hand has at least one card the engine would accept right now. */
@@ -306,43 +431,6 @@ function turnGuidance(input: {
     return "Board full — select a spell, or End Turn to attack";
   }
   return "Select a card · drag or Play to deploy · End Turn to attack";
-}
-
-/** Short player-facing battle-log lines (raw engine codes as fallback). */
-function formatBattleLogLine(e: {
-  type: string;
-  payload: Record<string, unknown>;
-}): string {
-  const dmg =
-    typeof e.payload.damage === "number" ? ` · ${e.payload.damage} dmg` : "";
-  switch (e.type) {
-    case "EQUIP_NO_TARGET":
-      return "Equip failed · no friendly unit";
-    case "PLAY_EQUIPMENT":
-      return `Equipped${dmg}`;
-    case "PLAY_UNIT":
-      return "Unit played";
-    case "PLAY_SPELL":
-      return `Spell${dmg}`;
-    case "PLAY_SPELL_HEAL":
-      return "Heal spell";
-    case "FACE_STRIKE":
-      return `Face strike${dmg}`;
-    case "UNIT_STRIKE":
-      return `Unit strike${dmg}`;
-    case "UNIT_DEATH":
-      return "Unit fell";
-    case "BOARD_ATTACK":
-      return `Attack${dmg}`;
-    case "TURN_START":
-      return "Turn start";
-    case "SURRENDER":
-      return "Surrender";
-    case "MATCH_END":
-      return "Match over";
-    default:
-      return `${e.type}${dmg}`;
-  }
 }
 
 function CombatCommandActions({
@@ -438,6 +526,8 @@ function CardFace({
   disabled,
   unaffordable,
   blockReason,
+  playCost,
+  shake,
   size = "hand",
   previewPinned,
   enableHoverZoom,
@@ -454,6 +544,10 @@ function CardFace({
   /** Dim + cost hint — still selectable so players see why it won't play. */
   unaffordable?: boolean;
   blockReason?: string | null;
+  /** Engine play cost (printed ± discounts). Overlay corrects baked art. */
+  playCost?: number | null;
+  /** Illegal-play shake on this specific card. */
+  shake?: boolean;
   size?: "hand" | "board";
   /** Touch: keep enlarged preview after tap / long-press. */
   previewPinned?: boolean;
@@ -480,8 +574,8 @@ function CardFace({
   const lastTapAt = useRef(0);
   const sizeClass =
     size === "hand"
-      ? "aspect-[500/700] w-[7.25rem] sm:w-[8.5rem] md:w-[9.5rem]"
-      : "aspect-[500/700] w-[5.25rem] sm:w-[6.25rem] md:w-[7rem]";
+      ? "aspect-[500/700] w-[7.75rem] sm:w-[9rem] md:w-[10.25rem]"
+      : "battle-board-card aspect-[500/700]";
   const isHand = size === "hand";
   // Never keep the hover portal up while dragging — but also never toggle
   // layout on pointerdown (that cancels HTML5 DnD mid-gesture).
@@ -555,7 +649,10 @@ function CardFace({
         isHand && reduceMotion && "battle-hand-card--reduced-motion",
         isHand && draggable && "battle-hand-card--draggable",
         isHand && dragging && "battle-hand-card--dragging",
+        isHand && unaffordable && "battle-hand-card--unaffordable",
+        isHand && shake && "battle-hand-card--illegal-shake",
       )}
+      data-unaffordable={isHand && unaffordable ? "true" : undefined}
       // Drag lives on the face control — Chromium will not start HTML5 DnD from a
       // parent when a full-size <button> child receives the pointer.
       onMouseEnter={() => {
@@ -657,19 +754,18 @@ function CardFace({
           !isHand && "hover:border-amber-300/70 hover:shadow-[0_10px_28px_rgba(255,184,77,0.18)]",
           selected &&
             "ring-2 ring-amber-300 shadow-[0_0_22px_rgba(255,184,77,0.42)]",
-          // Cost feedback via badge only — never dim the card face (breaks hover read).
-          unaffordable && "border-amber-500/40",
+          unaffordable && "battle-hand-card__face--unaffordable",
           disabled && "pointer-events-none opacity-50",
           draggable && "cursor-grab active:cursor-grabbing",
         )}
       >
         {face ? (
-          // Complete card face bitmap (name/cost/rules baked in) — no DOM text overlays.
+          // Face bitmap may bake an outdated cost — engine cost badge overlays truth.
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={face}
             alt={def.name}
-            className="pointer-events-none h-full w-full object-cover"
+            className="pointer-events-none h-full w-full object-contain"
             draggable={false}
             onError={() => setImgFailed(true)}
           />
@@ -678,8 +774,19 @@ function CardFace({
             {def.name}
           </span>
         )}
+        {isHand && playCost != null ? (
+          <span
+            className={cn(
+              "battle-hand-card__cost pointer-events-none absolute left-1.5 top-1.5 z-[4]",
+              unaffordable && "battle-hand-card__cost--blocked",
+            )}
+            aria-label={`Rift Energy ${playCost}`}
+          >
+            {playCost}
+          </span>
+        ) : null}
         {unaffordable && blockReason ? (
-          <span className="pointer-events-none absolute inset-x-1 bottom-1 z-[1] rounded bg-black/75 px-1 py-0.5 text-center text-[9px] font-medium leading-tight text-amber-100/95">
+          <span className="battle-hand-card__block pointer-events-none absolute inset-x-1 bottom-1 z-[4] rounded bg-black/80 px-1 py-0.5 text-center text-[9px] font-medium leading-tight text-amber-100/95">
             {blockReason}
           </span>
         ) : null}
@@ -688,7 +795,7 @@ function CardFace({
         <button
           type="button"
           draggable={false}
-          className="absolute right-1 top-1 z-[3] flex h-6 w-6 items-center justify-center rounded-md border border-amber-300/40 bg-black/70 text-amber-100/90 shadow-sm backdrop-blur-sm transition hover:border-amber-200/70 hover:bg-black/85 focus-ring"
+          className="absolute right-1 top-1 z-[5] flex h-6 w-6 items-center justify-center rounded-md border border-amber-300/40 bg-black/70 text-amber-100/90 shadow-sm backdrop-blur-sm transition hover:border-amber-200/70 hover:bg-black/85 focus-ring"
           aria-label={`Open ${def.name} bio`}
           title="Detail + bio"
           onClick={(e) => {
@@ -709,6 +816,9 @@ function CardFace({
         <HandCardHoverPreview
           faceSrc={face}
           name={def.name}
+          playCost={playCost}
+          unaffordable={unaffordable}
+          blockReason={blockReason}
           anchorRef={cardRef}
           reduceMotion={Boolean(reduceMotion)}
         />
@@ -722,18 +832,30 @@ function ConsoleShell({
   shellRef,
   className,
   displayMode,
+  boardCardSize,
+  layoutPreset,
+  enterAnim,
 }: {
   children: ReactNode;
   shellRef?: RefObject<HTMLDivElement | null>;
   className?: string;
   displayMode?: string;
+  boardCardSize?: BoardCardSize;
+  layoutPreset?: string;
+  enterAnim?: boolean;
 }) {
   return (
     <div
       ref={shellRef}
-      className={cn("battle-console", className)}
+      className={cn(
+        "battle-console",
+        enterAnim && "battle-console--enter",
+        className,
+      )}
       data-testid="rift-battle-console"
       data-display-mode={displayMode}
+      data-board-card-size={boardCardSize ?? DEFAULT_BOARD_CARD_SIZE}
+      data-layout-preset={layoutPreset ?? "immersive"}
     >
       <div className="battle-console__corners" aria-hidden>
         <span />
@@ -766,6 +888,14 @@ export function RiftBattleBoard({
   const [draggingHand, setDraggingHand] = useState<string | null>(null);
   const [fieldDropHover, setFieldDropHover] = useState(false);
   const [playHint, setPlayHint] = useState<string | null>(null);
+  const [illegalToken, setIllegalToken] = useState(0);
+  const [illegalHandId, setIllegalHandId] = useState<string | null>(null);
+  const [energyDenyPulse, setEnergyDenyPulse] = useState(0);
+  const illegalHandTimer = useRef<number | null>(null);
+  const energyDenyTimer = useRef<number | null>(null);
+
+  const [feedHighlightIds, setFeedHighlightIds] = useState<string[]>([]);
+  const feedHighlightTimer = useRef<number | null>(null);
   const [inspectDefId, setInspectDefId] = useState<string | null>(null);
   const [inspectFromHand, setInspectFromHand] = useState(false);
   const [turnSecondsLeft, setTurnSecondsLeft] = useState<number | null>(null);
@@ -773,23 +903,118 @@ export function RiftBattleBoard({
   const [joinCodeInput, setJoinCodeInput] = useState(inviteCode?.toUpperCase() ?? "");
   const [inviteBusy, setInviteBusy] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [illegalToken, setIllegalToken] = useState(0);
   const [rulesOpen, setRulesOpen] = useState(false);
+  const [boardCardSize, setBoardCardSize] = useState<BoardCardSize>(
+    DEFAULT_BOARD_CARD_SIZE,
+  );
+  const [utilsMenuOpen, setUtilsMenuOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [feedCollapsed, setFeedCollapsed] = useState(false);
+  const [intelCollapsed, setIntelCollapsed] = useState(false);
+  const [feedWidth, setFeedWidth] = useState(200);
+  const [enterAnim, setEnterAnim] = useState(true);
   const consoleRef = useRef<HTMLDivElement>(null);
   const fullscreen = useLiveWorldFullscreen({ targetRef: consoleRef });
   const arenaExpanded = fullscreen.active;
   const exitFullscreenRef = useRef(fullscreen.exit);
   exitFullscreenRef.current = fullscreen.exit;
   const reduceMotion = useReducedMotion();
+  const battleLayout = useBattleLayoutOptional();
+  const layoutPreset = battleLayout?.layoutPreset ?? "immersive";
+  const focusMode = battleLayout?.focusMode ?? true;
+
+  useEffect(() => {
+    setBoardCardSize(readBoardCardSize());
+    setFeedCollapsed(readBattleFeedCollapsed());
+    setIntelCollapsed(readBattleIntelCollapsed());
+    setFeedWidth(readBattleFeedWidth());
+  }, []);
+
+  useEffect(() => {
+    if (reduceMotion) {
+      setEnterAnim(false);
+      return;
+    }
+    const t = window.setTimeout(() => setEnterAnim(false), 700);
+    return () => window.clearTimeout(t);
+  }, [reduceMotion]);
 
   useEffect(() => {
     return () => {
       // Exit native/viewport expand when leaving the board — never trap the user.
       void exitFullscreenRef.current();
+      if (illegalHandTimer.current != null) {
+        window.clearTimeout(illegalHandTimer.current);
+      }
+      if (energyDenyTimer.current != null) {
+        window.clearTimeout(energyDenyTimer.current);
+      }
     };
   }, []);
 
-  const backHref = returnTo || snap?.encounter?.returnTo || "/arena";
+  const signalIllegalPlay = useCallback(
+    (opts: {
+      hint: string;
+      handInstanceId?: string | null;
+      energyDeny?: boolean;
+      defId?: string;
+      cost?: number;
+      energy?: number;
+    }) => {
+      setIllegalToken((n) => n + 1);
+      setPlayHint(opts.hint);
+      playSfx("ui.error");
+      if (opts.handInstanceId) {
+        setSelectedHand(opts.handInstanceId);
+        setIllegalHandId(opts.handInstanceId);
+        if (illegalHandTimer.current != null) {
+          window.clearTimeout(illegalHandTimer.current);
+        }
+        illegalHandTimer.current = window.setTimeout(() => {
+          setIllegalHandId(null);
+          illegalHandTimer.current = null;
+        }, 450);
+      }
+      if (opts.energyDeny) {
+        setEnergyDenyPulse((n) => n + 1);
+        if (energyDenyTimer.current != null) {
+          window.clearTimeout(energyDenyTimer.current);
+        }
+        energyDenyTimer.current = window.setTimeout(() => {
+          setEnergyDenyPulse(0);
+          energyDenyTimer.current = null;
+        }, 700);
+      }
+      logClientRejectedPlay(opts.hint, {
+        handInstanceId: opts.handInstanceId ?? null,
+        defId: opts.defId ?? null,
+        cost: opts.cost ?? null,
+        energy: opts.energy ?? null,
+      });
+    },
+    [],
+  );
+
+  // Wire global Focus Mode shortcuts dispatched from BattleLayoutProvider.
+  useEffect(() => {
+    const onFs = () => {
+      void fullscreen.toggle();
+    };
+    window.addEventListener("riftwilds:battle-toggle-fullscreen", onFs);
+    return () =>
+      window.removeEventListener("riftwilds:battle-toggle-fullscreen", onFs);
+  }, [fullscreen]);
+
+  const endTurnShortcutRef = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    const onEndTurn = () => endTurnShortcutRef.current?.();
+    window.addEventListener("riftwilds:battle-end-turn", onEndTurn);
+    return () =>
+      window.removeEventListener("riftwilds:battle-end-turn", onEndTurn);
+  }, []);
+
+  const backHref = returnTo || snap?.encounter?.returnTo || "/tcg/battle";
   const isPrivateFlow = Boolean(inviteCode || lobby);
   const deskTitle = encounterEnemyId
     ? encounterEnemyId.replace(/-/g, " ")
@@ -827,24 +1052,38 @@ export function RiftBattleBoard({
           returnTo: returnTo || "/tcg/collection",
         };
       }
-      const res = await guestFetch("/api/tcg/match/start", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-        signal: controller.signal,
-      });
-      const data = (await res.json()) as {
-        error?: string;
-        reason?: string;
-        guestToken?: string;
-      } & Partial<Snapshot>;
-      rememberGuestTokenFromPayload(data);
-      if (signal?.aborted) return;
-      if (!res.ok) {
-        const detail = data.reason ? `${data.error}: ${data.reason}` : data.error;
-        throw new Error(detail || "START_FAILED");
+      // One silent retry covers cookie settle / preview-seat race after Dev bypass.
+      let lastError = "START_FAILED";
+      for (let attempt = 0; attempt < 2; attempt++) {
+        if (signal?.aborted || controller.signal.aborted) return;
+        if (attempt > 0) {
+          await new Promise((r) => window.setTimeout(r, 200));
+        }
+        const res = await guestFetch("/api/tcg/match/start", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+          signal: controller.signal,
+          cache: "no-store",
+        });
+        const data = (await res.json()) as {
+          error?: string;
+          reason?: string;
+          guestToken?: string;
+        } & Partial<Snapshot>;
+        rememberGuestTokenFromPayload(data);
+        if (signal?.aborted) return;
+        if (res.ok) {
+          setSnap(data as Snapshot);
+          return;
+        }
+        const detail = data.reason
+          ? `${data.error}: ${data.reason}`
+          : data.error;
+        lastError = detail || "START_FAILED";
+        if (data.error !== "NO_SESSION" || attempt === 1) break;
       }
-      setSnap(data as Snapshot);
+      throw new Error(lastError);
     } catch (e) {
       if (signal?.aborted) return;
       if (e instanceof DOMException && e.name === "AbortError") {
@@ -1079,49 +1318,82 @@ export function RiftBattleBoard({
         }
       } catch (e) {
         const message = e instanceof Error ? e.message : "TURN_FAILED";
-        playSfx("ui.error");
         if (
           message === "INSUFFICIENT_RIFT_ENERGY" ||
           message === "BOARD_FULL" ||
           message === "EQUIP_NO_TARGET" ||
           message === "NOT_YOUR_TURN" ||
           message === "WRONG_PHASE" ||
-          message === "CARD_NOT_IN_HAND"
+          message === "CARD_NOT_IN_HAND" ||
+          message === "COMMANDER_NOT_PLAYABLE"
         ) {
-          setIllegalToken((n) => n + 1);
-          setPlayHint(
-            message === "INSUFFICIENT_RIFT_ENERGY"
-              ? "Not enough Rift Energy"
-              : message === "BOARD_FULL"
-                ? "Board full"
-                : message === "EQUIP_NO_TARGET"
-                  ? "Needs a friendly unit to equip"
-                  : message === "NOT_YOUR_TURN"
-                    ? "Not your turn"
-                    : message === "WRONG_PHASE"
-                      ? "Can't play right now"
-                      : "Card not in hand",
-          );
+          const handId =
+            typeof action.handInstanceId === "string"
+              ? action.handInstanceId
+              : selectedHand;
+          signalIllegalPlay({
+            hint:
+              message === "INSUFFICIENT_RIFT_ENERGY"
+                ? NOT_ENOUGH_RIFT_ENERGY
+                : message === "BOARD_FULL"
+                  ? "Board full"
+                  : message === "EQUIP_NO_TARGET"
+                    ? "Needs a friendly unit to equip"
+                    : message === "COMMANDER_NOT_PLAYABLE"
+                      ? "Commander isn't playable from hand"
+                      : message === "NOT_YOUR_TURN"
+                        ? "Not your turn"
+                        : message === "WRONG_PHASE"
+                          ? "Can't play right now"
+                          : "Card not in hand",
+            handInstanceId: handId,
+            energyDeny: message === "INSUFFICIENT_RIFT_ENERGY",
+          });
         } else if (message === "MATCH_NOT_FOUND" || message === "NO_SESSION") {
           // Drop zombie snap so Retry starts a clean board (or rejoin invite).
+          playSfx("ui.error");
           setSnap(null);
           setSelectedHand(null);
           setError(message);
         } else {
+          playSfx("ui.error");
           setError(message);
         }
       } finally {
         setBusy(false);
       }
     },
-    [snap],
+    [selectedHand, signalIllegalPlay, snap],
   );
+
+  endTurnShortcutRef.current = () => {
+    if (!snap || snap.status !== "ACTIVE" || busy) return;
+    const me =
+      snap.players.find((p) => p.id === (snap.yourSideId ?? "player")) ??
+      snap.players.find((p) => !p.isAi);
+    if (!me || snap.activeSideId !== me.id) return;
+    void act({ kind: "END_TURN" });
+  };
 
   const yourSideId = snap?.yourSideId ?? "player";
   const player = snap?.players.find((p) => p.id === yourSideId) ?? snap?.players.find((p) => !p.isAi);
   const foe = snap?.players.find((p) => p.id !== player?.id);
 
-  const log = useMemo(() => snap?.events.slice().reverse() ?? [], [snap]);
+  const sideNames = useMemo(() => {
+    const map: Record<string, string> = {};
+    for (const p of snap?.players ?? []) map[p.id] = p.name;
+    return map;
+  }, [snap?.players]);
+
+  const onFeedHighlight = useCallback((ids: string[]) => {
+    setFeedHighlightIds(ids);
+    if (feedHighlightTimer.current) {
+      window.clearTimeout(feedHighlightTimer.current);
+    }
+    feedHighlightTimer.current = window.setTimeout(() => {
+      setFeedHighlightIds([]);
+    }, 1400);
+  }, []);
 
   const selectedCard = player?.hand.find((c) => c.instanceId === selectedHand);
   const selectedDef = selectedCard ? getTcgCardDef(selectedCard.defId) : null;
@@ -1175,17 +1447,24 @@ export function RiftBattleBoard({
       if (!snap || !player) return;
       const card = player.hand.find((c) => c.instanceId === handInstanceId);
       if (!card) {
-        setIllegalToken((n) => n + 1);
-        setPlayHint("Card not in hand");
+        signalIllegalPlay({
+          hint: "Card not in hand",
+          handInstanceId,
+        });
         return;
       }
       const def = getTcgCardDef(card.defId);
       const reason = playBlockReason(def, player, snap, busy);
       if (reason) {
-        setSelectedHand(handInstanceId);
-        setIllegalToken((n) => n + 1);
-        setPlayHint(reason);
-        playSfx("ui.error");
+        const energyDeny = reason === NOT_ENOUGH_RIFT_ENERGY;
+        signalIllegalPlay({
+          hint: reason,
+          handInstanceId,
+          energyDeny,
+          defId: def?.id,
+          cost: def ? handPlayCost(def, player) : undefined,
+          energy: player.riftEnergy,
+        });
         return;
       }
       void act({
@@ -1195,7 +1474,7 @@ export function RiftBattleBoard({
         cardType: def?.type,
       });
     },
-    [act, busy, player, snap],
+    [act, busy, player, signalIllegalPlay, snap],
   );
 
   const battleVfx = useBattleVfx({
@@ -1208,6 +1487,20 @@ export function RiftBattleBoard({
   });
 
   const illegalShake = battleVfx.fx.some((f) => f.kind === "illegal");
+
+  // Combat Mode: fade intel/feed while attack/spell/summon VFX play.
+  useEffect(() => {
+    const combatFx = battleVfx.fx.some(
+      (f) =>
+        f.kind === "attack" ||
+        f.kind === "spell" ||
+        f.kind === "summon" ||
+        f.kind === "cardReveal",
+    );
+    battleLayout?.setCombatAnimating(combatFx);
+    // Intentionally omit battleLayout object identity — only sync VFX → chrome.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [battleVfx.fx]);
 
   const openInspect = useCallback((defId: string, fromHand: boolean) => {
     setInspectFromHand(fromHand);
@@ -1234,16 +1527,25 @@ export function RiftBattleBoard({
   return (
     <div
       className={cn(
-        "mx-auto w-full max-w-6xl px-0 py-2 sm:py-3",
+        "battle-mode-root mx-auto w-full px-0 py-2 sm:py-3",
+        focusMode ? "max-w-none" : "max-w-6xl",
+        layoutPreset === "ultra-wide" && "battle-mode-root--ultra-wide",
         arenaExpanded && "max-w-none py-0",
       )}
     >
       <ConsoleShell
         shellRef={consoleRef}
         displayMode={fullscreen.displayMode}
-        className={arenaExpanded ? "battle-console--expanded" : undefined}
+        boardCardSize={boardCardSize}
+        layoutPreset={layoutPreset}
+        enterAnim={enterAnim && !reduceMotion}
+        className={cn(
+          arenaExpanded && "battle-console--expanded",
+          focusMode && "battle-console--focus",
+          battleLayout?.combatAnimating && "battle-console--combat",
+        )}
       >
-        <header className="battle-console__header">
+        <header className="battle-console__header battle-console__header--compact">
           <div className="battle-console__header-main">
             <div>
               <p className="battle-console__brand">RIFTWILDS</p>
@@ -1251,43 +1553,117 @@ export function RiftBattleBoard({
                 {deskMode}
                 {encounterEnemyId ? ` · ${deskTitle}` : ""}
               </p>
-              <p className="battle-console__lede">
-                Hover a hand card to enlarge it, click for detail + bio, then drag to Your Field
-                or hit Play. Spend Rift Energy, then end your turn. SOL is never required.
-              </p>
+              {!focusMode ? (
+                <p className="battle-console__lede">
+                  Hover a hand card to enlarge it, click for detail + bio, then drag to Your Field
+                  or hit Play. Spend Rift Energy, then end your turn. SOL is never required.
+                </p>
+              ) : null}
             </div>
             <div className="battle-console__header-right">
               <div className="battle-console__utils">
+                <div
+                  className="battle-console__size"
+                  role="group"
+                  aria-label="Field card size"
+                >
+                  <span className="battle-console__size-label">Cards</span>
+                  <div className="battle-console__size-btns">
+                    {BOARD_CARD_SIZES.map((s) => (
+                      <button
+                        key={s.id}
+                        type="button"
+                        className={cn(
+                          "battle-console__size-btn focus-ring",
+                          boardCardSize === s.id && "is-active",
+                        )}
+                        aria-pressed={boardCardSize === s.id}
+                        title={`Field cards ${s.label}`}
+                        onClick={() => {
+                          setBoardCardSize(s.id);
+                          writeBoardCardSize(s.id);
+                        }}
+                      >
+                        {s.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
                 <FullscreenToggleButton
                   active={arenaExpanded}
                   onToggle={() => void fullscreen.toggle()}
                   compact
                   className="battle-console__util focus-ring"
                 />
-                <Link
-                  href="/arena"
-                  className="battle-console__util battle-console__util--chrome focus-ring"
+                <button
+                  type="button"
+                  className="battle-console__util focus-ring"
+                  title="Battle settings"
+                  onClick={() => {
+                    setSettingsOpen(true);
+                    battleLayout?.setBattleMenuOpen(true);
+                  }}
                 >
-                  <Swords aria-hidden />
-                  Rift Arena
-                </Link>
-                <Link
-                  href="/tcg/deck-builder"
-                  className="battle-console__util battle-console__util--chrome focus-ring"
-                >
-                  <Layers aria-hidden />
-                  Deck Atelier
-                </Link>
-                <Link
-                  href="/tcg/collection"
-                  className="battle-console__util battle-console__util--chrome focus-ring"
-                >
-                  <BookOpen aria-hidden />
-                  Card Binder
-                </Link>
+                  <Settings aria-hidden />
+                  <span className="max-sm:sr-only">Settings</span>
+                </button>
+                <div className="battle-console__overflow">
+                  <button
+                    type="button"
+                    className="battle-console__util focus-ring"
+                    aria-expanded={utilsMenuOpen}
+                    aria-haspopup="menu"
+                    title="More actions"
+                    onClick={() => setUtilsMenuOpen((v) => !v)}
+                  >
+                    <MoreHorizontal aria-hidden />
+                    <span className="max-sm:sr-only">More</span>
+                    <ChevronDown className="h-3 w-3 opacity-70" aria-hidden />
+                  </button>
+                  {utilsMenuOpen ? (
+                    <div className="battle-console__overflow-menu" role="menu">
+                      <Link
+                        href="/tcg/deck-builder"
+                        className="battle-console__overflow-item"
+                        role="menuitem"
+                        onClick={() => setUtilsMenuOpen(false)}
+                      >
+                        <Layers aria-hidden />
+                        Deck
+                      </Link>
+                      <Link
+                        href="/tcg/codex"
+                        className="battle-console__overflow-item"
+                        role="menuitem"
+                        onClick={() => setUtilsMenuOpen(false)}
+                      >
+                        <BookOpen aria-hidden />
+                        Codex
+                      </Link>
+                      <Link
+                        href="/arena"
+                        className="battle-console__overflow-item"
+                        role="menuitem"
+                        onClick={() => setUtilsMenuOpen(false)}
+                      >
+                        <History aria-hidden />
+                        Match History
+                      </Link>
+                      <Link
+                        href={backHref}
+                        className="battle-console__overflow-item"
+                        role="menuitem"
+                        onClick={() => setUtilsMenuOpen(false)}
+                      >
+                        <LogOut aria-hidden />
+                        Exit Match
+                      </Link>
+                    </div>
+                  ) : null}
+                </div>
                 <Link href={backHref} className="battle-console__util focus-ring">
                   <ArrowLeft aria-hidden />
-                  {backHref.includes("live-world") ? "Return" : "Back"}
+                  {backHref.includes("live-world") ? "Return" : "Exit"}
                 </Link>
               </div>
               {snap ? (
@@ -1315,7 +1691,7 @@ export function RiftBattleBoard({
               {error === "MATCH_NOT_FOUND"
                 ? "Match not found — open a new practice board or rejoin the invite."
                 : error === "NO_SESSION"
-                  ? "Session lost — retry to restore your guest seat."
+                  ? "Session lost — retry to restore your seat (or sign in again)."
                   : error}
             </p>
             <button
@@ -1464,9 +1840,44 @@ export function RiftBattleBoard({
 
         {snap && player && foe && (
           <>
-            <div className="battle-console__body">
-              <aside className="battle-console__panel order-2 lg:order-none max-lg:max-h-48">
-                <p className="battle-console__panel-title">Match Intel</p>
+            <div
+              className={cn(
+                "battle-console__body",
+                intelCollapsed && "battle-console__body--intel-collapsed",
+                feedCollapsed && "battle-console__body--feed-collapsed",
+              )}
+              style={
+                {
+                  ["--battle-feed-col" as string]: `${feedWidth}px`,
+                } as CSSProperties
+              }
+            >
+              <aside
+                className={cn(
+                  "battle-console__panel battle-console__panel--intel order-2 lg:order-none max-lg:max-h-48",
+                  intelCollapsed && "battle-console__panel--collapsed",
+                  battleLayout?.combatAnimating && "battle-console__panel--combat-fade",
+                )}
+              >
+                <div className="battle-console__panel-head">
+                  <p className="battle-console__panel-title">Match Intel</p>
+                  <button
+                    type="button"
+                    className="battle-console__panel-toggle focus-ring"
+                    aria-pressed={intelCollapsed}
+                    title={intelCollapsed ? "Expand Match Intel" : "Collapse Match Intel"}
+                    onClick={() => {
+                      setIntelCollapsed((v) => {
+                        const next = !v;
+                        writeBattleIntelCollapsed(next);
+                        return next;
+                      });
+                    }}
+                  >
+                    {intelCollapsed ? "«" : "»"}
+                  </button>
+                </div>
+                {!intelCollapsed ? (
                 <div className="battle-console__panel-body">
                   <div className="battle-console__intel-block">
                     <p className="battle-console__intel-label">Duel status</p>
@@ -1631,6 +2042,9 @@ export function RiftBattleBoard({
                     </div>
                   </div>
                 </div>
+                ) : (
+                  <p className="battle-console__panel-collapsed-hint">Intel</p>
+                )}
               </aside>
 
               <section
@@ -1675,6 +2089,7 @@ export function RiftBattleBoard({
                   boardPulse={sideHasBoardPulse(battleVfx.boardPulses, foe.id)}
                   reduceMotion={Boolean(reduceMotion)}
                   showLanes
+                  highlightIds={feedHighlightIds}
                   mood={
                     outcomeLabel === "Victory"
                       ? "sad"
@@ -1734,6 +2149,7 @@ export function RiftBattleBoard({
                   )}
                   reduceMotion={Boolean(reduceMotion)}
                   showLanes
+                  highlightIds={feedHighlightIds}
                   mood={
                     outcomeLabel === "Victory"
                       ? "celebrate"
@@ -1798,33 +2214,45 @@ export function RiftBattleBoard({
                       "energySpend",
                     ),
                   )}
+                  energyDeny={energyDenyPulse > 0}
                 />
               </section>
 
-              <aside className="battle-console__panel order-3 lg:order-none max-lg:max-h-48">
-                <p className="battle-console__panel-title">Battle Log</p>
-                <div className="battle-console__panel-body">
-                  <div className="battle-console__feed">
-                    {log.length === 0 && (
-                      <div className="battle-console__feed-item">No clashes yet…</div>
-                    )}
-                    {log.map((e, i) => (
-                      <div
-                        key={`${e.type}-${i}`}
-                        className="battle-console__feed-item"
-                        style={{ animationDelay: `${Math.min(i, 8) * 30}ms` }}
-                      >
-                        {formatBattleLogLine(e)}
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <aside
+                className={cn(
+                  "battle-console__panel battle-console__panel--feed order-3 lg:order-none max-lg:max-h-64",
+                  feedCollapsed && "battle-console__panel--collapsed",
+                  battleLayout?.combatAnimating && "battle-console__panel--combat-fade",
+                )}
+              >
+                <BattleEventFeed
+                  events={snap.events}
+                  yourSideId={player.id}
+                  sideNames={sideNames}
+                  matchStatus={snap.status}
+                  onHighlight={onFeedHighlight}
+                  compact
+                  collapsed={feedCollapsed}
+                  autoHidden={Boolean(battleLayout?.combatAnimating)}
+                  widthPx={feedWidth}
+                  onToggleCollapsed={() => {
+                    setFeedCollapsed((v) => {
+                      const next = !v;
+                      writeBattleFeedCollapsed(next);
+                      return next;
+                    });
+                  }}
+                  onResizeWidth={(px) => {
+                    setFeedWidth(px);
+                    writeBattleFeedWidth(px);
+                  }}
+                />
               </aside>
             </div>
 
             <section
               className={cn(
-                "battle-console__hand-dock",
+                "battle-console__hand-dock battle-console__hand-dock--fan",
                 illegalShake && "battle-console__hand-dock--illegal",
                 outcomeLabel === "Victory" && "battle-console__hand-dock--victory",
                 outcomeLabel === "Defeat" && "battle-console__hand-dock--defeat",
@@ -1834,7 +2262,12 @@ export function RiftBattleBoard({
               <p className="battle-console__hand-label">
                 Hand · hover to enlarge · click for bio · drag / Play to field
                 {player ? (
-                  <span className="battle-console__hand-energy">
+                  <span
+                    className={cn(
+                      "battle-console__hand-energy",
+                      energyDenyPulse > 0 && "battle-console__hand-energy--deny",
+                    )}
+                  >
                     {" "}
                     · Energy {player.riftEnergy}/{player.riftEnergyMax}
                   </span>
@@ -1851,21 +2284,47 @@ export function RiftBattleBoard({
                   {playHint}
                 </p>
               ) : null}
-              <div className="battle-console__hand-row">
-                {player.hand.map((c) => {
+              <div className="battle-console__hand-row battle-console__hand-row--fan">
+                {player.hand.map((c, handIndex) => {
                   const def = getTcgCardDef(c.defId);
                   const block = playBlockReason(def, player, snap, busy);
-                  // Only dim with cost banner when energy (or board) blocks play —
+                  const cost = def ? handPlayCost(def, player) : null;
+                  const energyBlocked =
+                    !!def &&
+                    cost != null &&
+                    player.riftEnergy < cost;
+                  // Dim when energy (or board / commander) blocks play —
                   // never confuse power with riftCost.
                   const costBlocked =
                     !!def &&
                     isPlayerTurn &&
                     !!block &&
-                    (player.riftEnergy < def.riftCost ||
-                      block === "Board full");
+                    (energyBlocked ||
+                      block.startsWith("Board full") ||
+                      block.startsWith("Commander sits"));
+                  const banner =
+                    costBlocked && energyBlocked && def
+                      ? unaffordableBanner(def, player)
+                      : costBlocked
+                        ? block
+                        : null;
+                  const fanCount = Math.max(player.hand.length, 1);
+                  const fanT = fanCount <= 1 ? 0 : handIndex / (fanCount - 1);
+                  const fanAngle = (fanT - 0.5) * Math.min(28, 4.5 * fanCount);
+                  const fanY = Math.abs(fanT - 0.5) * 18;
                   return (
-                    <CardFace
+                    <div
                       key={c.instanceId}
+                      className="battle-hand-fan-slot"
+                      style={
+                        {
+                          ["--hand-fan-angle" as string]: `${fanAngle}deg`,
+                          ["--hand-fan-y" as string]: `${fanY}px`,
+                          ["--hand-fan-z" as string]: String(handIndex),
+                        } as CSSProperties
+                      }
+                    >
+                    <CardFace
                       defId={c.defId}
                       size="hand"
                       enableHoverZoom
@@ -1874,15 +2333,19 @@ export function RiftBattleBoard({
                         selectedHand === c.instanceId || draggingHand === c.instanceId
                       }
                       unaffordable={costBlocked}
-                      blockReason={costBlocked ? block : null}
-                      draggable={isPlayerTurn && !busy}
+                      blockReason={banner}
+                      playCost={cost}
+                      shake={illegalHandId === c.instanceId}
+                      draggable={isPlayerTurn && !busy && !costBlocked}
                       onSelectForPlay={() => selectHandForPlay(c.instanceId)}
                       onOpenDetail={() => {
                         setSelectedHand(c.instanceId);
                         openInspect(c.defId, true);
                       }}
                       onPlay={
-                        isPlayerTurn ? () => tryPlayCard(c.instanceId) : undefined
+                        isPlayerTurn && !costBlocked
+                          ? () => tryPlayCard(c.instanceId)
+                          : undefined
                       }
                       onDragStart={(e) => {
                         setSelectedHand(c.instanceId);
@@ -1898,6 +2361,7 @@ export function RiftBattleBoard({
                         setFieldDropHover(false);
                       }}
                     />
+                    </div>
                   );
                 })}
                 {player.hand.length === 0 && (
@@ -1937,6 +2401,7 @@ export function RiftBattleBoard({
                     player.id,
                     "energy",
                   ) && "battle-console__command-energy--gain",
+                  energyDenyPulse > 0 && "battle-console__command-energy--deny",
                 )}
               >
                 <strong>RIFT ENERGY</strong>{" "}
@@ -1950,6 +2415,31 @@ export function RiftBattleBoard({
           </>
         )}
       </ConsoleShell>
+
+      <BattleModeMenu
+        open={Boolean(battleLayout?.battleMenuOpen)}
+        onClose={() => {
+          battleLayout?.setBattleMenuOpen(false);
+          setSettingsOpen(false);
+        }}
+        exitHref={backHref}
+        settingsOpen={settingsOpen}
+        onOpenSettings={() => setSettingsOpen(true)}
+      />
+
+      {settingsOpen && !battleLayout?.battleMenuOpen ? (
+        <div className="battle-mode-menu" role="dialog" aria-modal="true" aria-label="Battle settings">
+          <button
+            type="button"
+            className="battle-mode-menu__backdrop"
+            aria-label="Close settings"
+            onClick={() => setSettingsOpen(false)}
+          />
+          <div className="battle-mode-menu__panel">
+            <BattleLayoutSettings onClose={() => setSettingsOpen(false)} />
+          </div>
+        </div>
+      ) : null}
 
       <TcgCardDetailModal
         open={!!inspectDefId}
@@ -1984,6 +2474,7 @@ function StatusStrip({
   damagePulse,
   energyPulse,
   energySpendPulse,
+  energyDeny,
 }: {
   side: ClientSide;
   role: string;
@@ -1991,6 +2482,7 @@ function StatusStrip({
   damagePulse?: boolean;
   energyPulse?: boolean;
   energySpendPulse?: boolean;
+  energyDeny?: boolean;
 }) {
   const hpPct = Math.max(
     0,
@@ -2009,6 +2501,7 @@ function StatusStrip({
         damagePulse && "battle-console__status--hit",
         energyPulse && "battle-console__status--energy-gain",
         energySpendPulse && "battle-console__status--energy-spend",
+        energyDeny && "battle-console__status--energy-deny",
       )}
     >
       <div className="battle-console__status-name">
@@ -2039,6 +2532,7 @@ function StatusStrip({
             emphasizeEnergy && "battle-console__meter--energy-hero",
             energyPulse && "battle-console__meter--energy-pulse",
             energySpendPulse && "battle-console__meter--energy-spend",
+            energyDeny && "battle-console__meter--energy-deny",
           )}
           aria-label={`Rift Energy ${side.riftEnergy} of ${side.riftEnergyMax}`}
         >
@@ -2050,6 +2544,7 @@ function StatusStrip({
             className={cn(
               "battle-console__meter-value battle-console__meter-value--energy",
               emphasizeEnergy && "battle-console__meter-value--energy-hero",
+              energyDeny && "battle-console__meter-value--energy-deny",
             )}
           >
             {side.riftEnergy}
@@ -2060,6 +2555,7 @@ function StatusStrip({
               "battle-console__bar battle-console__bar--energy",
               energyPulse && "battle-console__bar--energy-refill",
               energySpendPulse && "battle-console__bar--energy-spend",
+              energyDeny && "battle-console__bar--energy-deny",
             )}
             aria-hidden
           >
@@ -2133,6 +2629,7 @@ function BoardRow({
   reduceMotion,
   mood = null,
   showLanes,
+  highlightIds,
   dropReady,
   dropInvalid,
   dropHover,
@@ -2153,6 +2650,7 @@ function BoardRow({
   /** End-of-match card emotion on this lane. */
   mood?: "celebrate" | "sad" | null;
   showLanes?: boolean;
+  highlightIds?: string[];
   dropReady?: boolean;
   dropInvalid?: boolean;
   dropHover?: boolean;
@@ -2256,6 +2754,7 @@ function BoardRow({
             boardPulse?.kind === "summon" &&
             Boolean(spawnIds[u.instanceId] || u.instanceId === lastUnitId)
           }
+          highlight={Boolean(highlightIds?.includes(u.instanceId))}
           reduceMotion={reduceMotion}
         >
           <div

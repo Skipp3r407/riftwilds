@@ -3,42 +3,53 @@
   "id": "the-first-rift-issue-001-p003",
   "role": "credits",
   "title": "Credits",
-  "layout": "narrative",
+  "layout": "splash",
   "atmosphere": "dusk",
-  "beat": "Credits",
-  "artPrompt": "Lore-desk workshop, no readable text. Quills, cyan rift-ink, maps of Fracture roads, amber lantern. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "beat": "Credits — comic splash, not a lore plate",
+  "artPrompt": "Western fantasy COMIC BOOK splash page, single full-bleed painted scene, clear gutters none needed. Warm dusk workshop of Riftwild Commons: timber desk, cyan rift-ink, rolled Fracture maps, amber lantern light. Young Keeper Mira Eggwarden (practical robes, egg-care satchel) leans over a map while a leafy fox-like Bramblefox sits on the bench — BOTH integrated in the SAME scene, not floating card insets. Leave soft empty mid-page band for credit lettering. Painterly fantasy comic, earth tones, cyan accent only. Original Riftwilds IP. NO readable text, logos, watermarks, UI, credit boxes, floating portrait cards, collage overlays, or artbook insets.",
   "panels": [
     {
       "lines": [
         {
           "kind": "caption",
-          "text": "Story · Riftwilds Lore Desk",
+          "text": "THE FIRST RIFT · ISSUE #001",
           "x": 50,
-          "y": 25
+          "y": 18,
+          "maxWidthPct": 55
         },
         {
           "kind": "caption",
-          "text": "Art · Commons Archive plates + Grok pipeline",
+          "text": "Story & Continuity · Riftwilds Narrative Studio",
           "x": 50,
-          "y": 40
+          "y": 38,
+          "maxWidthPct": 62
         },
         {
           "kind": "caption",
-          "text": "Lettering · Issue #001 engine (flattened)",
+          "text": "Art Direction · Riftwilds  ·  Illustration · Studio-directed",
           "x": 50,
-          "y": 55
+          "y": 50,
+          "maxWidthPct": 62
+        },
+        {
+          "kind": "caption",
+          "text": "Lettering · Riftwilds comic lettering",
+          "x": 50,
+          "y": 62,
+          "maxWidthPct": 55
         },
         {
           "kind": "narration",
-          "text": "Canon · World Codex · Riftling Codex · Legends of the Rift TCG",
+          "text": "For Keepers who chose care first.",
           "x": 50,
-          "y": 75
+          "y": 78,
+          "maxWidthPct": 50
         }
       ]
     }
   ],
-  "generationStatus": "seeded-legacy",
-  "letteringStatus": "lettered",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
   "cleanArtRel": "generated/clean/page-003.png",
   "letteredArtRel": "generated/lettered/page-003.webp",
   "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-003.webp",

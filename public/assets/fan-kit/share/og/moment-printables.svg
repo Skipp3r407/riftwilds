@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Riftwilds — 300 DPI printables">
+  <defs>
+    <linearGradient id="print-sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1510"/>
+      <stop offset="42%" stop-color="#0c141f"/>
+      <stop offset="100%" stop-color="#12161c"/>
+    </linearGradient>
+    <radialGradient id="print-bloomL" cx="18%" cy="22%" r="48%">
+      <stop offset="0%" stop-color="#ff9a4d" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#ff9a4d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="print-bloomR" cx="82%" cy="38%" r="42%">
+      <stop offset="0%" stop-color="#ffb84d" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffb84d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="print-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0c10" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#0a0c10" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0a0c10" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="print-btn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9a4d"/>
+      <stop offset="100%" stop-color="#ff9a4d" stop-opacity="0.82"/>
+    </linearGradient>
+    <filter id="print-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- Atmosphere -->
+  <rect width="1200" height="630" fill="url(#print-sky)"/>
+  <rect width="1200" height="630" fill="url(#print-bloomL)"/>
+  <rect width="1200" height="630" fill="url(#print-bloomR)"/>
+  <circle cx="980" cy="120" r="3" fill="#f3efe6" opacity="0.55"/>
+  <circle cx="1040" cy="90" r="2" fill="#f3efe6" opacity="0.4"/>
+  <circle cx="860" cy="70" r="2.5" fill="#3de7ff" opacity="0.45"/>
+  <circle cx="720" cy="110" r="1.8" fill="#f3efe6" opacity="0.35"/>
+  <circle cx="1120" cy="200" r="2" fill="#ffb84d" opacity="0.4"/>
+
+  <!-- Scene art (right half) -->
+  <g transform="translate(620,40)">
+  <!-- stacked print sheets -->
+  <g transform="translate(40,60) rotate(-4)">
+    <rect x="40" y="40" width="300" height="400" rx="8" fill="#2a2118" opacity="0.4"/>
+  </g>
+  <g transform="translate(60,40) rotate(2)">
+    <rect x="40" y="40" width="300" height="400" rx="8" fill="#c4a882" opacity="0.35"/>
+  </g>
+  <g transform="translate(80,20)">
+    <rect x="40" y="40" width="300" height="400" rx="8" fill="#f3efe6" stroke="#c4a882" stroke-width="4"/>
+    <rect x="60" y="60" width="260" height="200" rx="6" fill="#0f1826"/>
+    <!-- mini poster art -->
+    <circle cx="190" cy="140" r="48" fill="none" stroke="#3de7ff" stroke-width="5"/>
+    <ellipse cx="190" cy="140" rx="20" ry="28" fill="#e8d5b0"/>
+    <text x="190" y="220" text-anchor="middle" fill="#ffb84d" font-family="Georgia, serif" font-size="16" letter-spacing="2">300 DPI</text>
+    <!-- sticker row -->
+    <circle cx="100" cy="300" r="28" fill="#ffe566" stroke="#2a2118" stroke-width="2"/>
+    <circle cx="170" cy="300" r="28" fill="#ff7a3d" stroke="#2a2118" stroke-width="2"/>
+    <circle cx="240" cy="300" r="28" fill="#5aad62" stroke="#2a2118" stroke-width="2"/>
+    <circle cx="310" cy="300" r="28" fill="#3d9bff" stroke="#2a2118" stroke-width="2"/>
+    <!-- bookmark -->
+    <rect x="90" y="360" width="200" height="48" rx="4" fill="#1a1510" stroke="#ffb84d" stroke-width="2"/>
+    <text x="190" y="392" text-anchor="middle" fill="#c4a882" font-family="Georgia, serif" font-size="14">PRINT PACK</text>
+  </g>
+  <!-- printer dots -->
+  <circle cx="460" cy="100" r="6" fill="#ff6b6b"/>
+  <circle cx="480" cy="100" r="6" fill="#ffb84d"/>
+  <circle cx="500" cy="100" r="6" fill="#3dffb0"/>
+</g>
+
+  <!-- Left readability veil -->
+  <rect x="0" y="0" width="620" height="630" fill="url(#print-bar)" opacity="0.35"/>
+  <path d="M0 0 H560 Q640 0 640 80 V550 Q640 630 560 630 H0 Z" fill="#0a0c10" opacity="0.42"/>
+
+  <!-- Frame -->
+  <rect x="28" y="28" width="1144" height="574" rx="22" fill="none" stroke="#c4a882" stroke-opacity="0.38" stroke-width="2.5"/>
+  <rect x="40" y="40" width="1120" height="550" rx="16" fill="none" stroke="#ff9a4d" stroke-opacity="0.18" stroke-width="1.5"/>
+
+  <!-- Brand egg mark -->
+  <g transform="translate(72,72)">
+    <ellipse cx="22" cy="28" rx="18" ry="24" fill="#1a2030" stroke="#c9a15a" stroke-width="2"/>
+    <ellipse cx="22" cy="28" rx="10" ry="14" fill="#3de7ff" opacity="0.55"/>
+    <circle cx="22" cy="30" r="5" fill="#ffb84d"/>
+  </g>
+  <text x="118" y="108" fill="#ffb84d" font-family="Georgia, 'Times New Roman', serif" font-size="26" letter-spacing="7" font-weight="700">RIFTWILDS</text>
+  <text x="118" y="132" fill="#a89b86" font-family="Georgia, 'Times New Roman', serif" font-size="14" letter-spacing="3">SHAREABLE MOMENT</text>
+
+  <!-- Copy -->
+  <text x="72" y="280" fill="#f3efe6" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700">300 DPI printables</text>
+  <text x="72" y="340" fill="#c4b8a4" font-family="Georgia, 'Times New Roman', serif" font-size="26">Stickers · posters · bookmarks</text>
+
+  <!-- CTA chip -->
+  <rect x="72" y="420" width="276" height="52" rx="12" fill="url(#print-btn)"/>
+  <text x="210" y="454" text-anchor="middle" fill="#0c0e12" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700">Download printables</text>
+
+  <text x="72" y="540" fill="#7a7268" font-family="Georgia, 'Times New Roman', serif" font-size="15">riftwilds.com · Free for Keepers, kids &amp; streamers</text>
+</svg>

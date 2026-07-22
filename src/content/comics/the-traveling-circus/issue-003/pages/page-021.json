@@ -143,8 +143,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Coordinated battle spread.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "pending",
-  "letteringStatus": "pending",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Living Bulwark — The Traveling Circus page 17",
   "atmosphere": "festival",
@@ -158,5 +158,7 @@
   "id": "the-traveling-circus-issue-003-p021",
   "cleanArtRel": "generated/raw-art/page-021.png",
   "letteredArtRel": "generated/lettered-pages/page-021.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-021.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-021.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

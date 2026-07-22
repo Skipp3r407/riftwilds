@@ -41,8 +41,8 @@
       ]
     }
   ],
-  "generationStatus": "seeded-legacy",
-  "letteringStatus": "lettered",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
   "cleanArtRel": "generated/clean/page-019.png",
   "letteredArtRel": "generated/lettered/page-019.webp",
   "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-019.webp",

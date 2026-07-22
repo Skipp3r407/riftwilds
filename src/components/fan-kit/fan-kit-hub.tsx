@@ -25,6 +25,7 @@ import { ColoringDownloads } from "@/components/coloring/coloring-downloads";
 import { PrintablesDownloads } from "@/components/printables/printables-downloads";
 import { WallpaperDownloads } from "@/components/wallpapers/wallpaper-downloads";
 import { StatusChip } from "@/components/shared/page-header";
+import { roadmapMilestoneThumbPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 
 const NAV_ANCHORS = [
@@ -168,20 +169,30 @@ export function FanKitHub() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SHARE_MOMENTS.map((m) => (
-            <article key={m.id} className="panel flex flex-col overflow-hidden">
-              <div className="relative aspect-[1200/630] bg-[rgba(10,18,32,0.9)]">
+            <article
+              key={m.id}
+              className="panel group flex flex-col overflow-hidden transition duration-300 hover:-translate-y-0.5 hover:border-[var(--cyan)]/35"
+            >
+              <div className="relative aspect-[1200/630] overflow-hidden bg-[rgba(10,18,32,0.95)]">
                 <Image
                   src={m.imageSrc}
-                  alt=""
+                  alt={`${m.title} — Riftwilds share card`}
                   fill
-                  className="object-cover"
+                  className="object-cover transition duration-500 group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   unoptimized
                 />
+                <div
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[rgba(8,10,14,0.55)] to-transparent"
+                  aria-hidden
+                />
               </div>
-              <div className="flex flex-1 flex-col gap-2 p-4">
-                <h3 className="font-display text-base text-white">{m.title}</h3>
-                <p className="text-xs text-[var(--text-muted)]">{m.caption}</p>
+              <div className="flex flex-1 flex-col gap-2 border-t border-[var(--stroke)] p-4">
+                <p className="text-[10px] uppercase tracking-[0.16em] text-[var(--amber)]">
+                  Riftwilds · OG card
+                </p>
+                <h3 className="font-display text-base leading-snug text-white">{m.title}</h3>
+                <p className="text-xs leading-relaxed text-[var(--text-muted)]">{m.caption}</p>
                 <div className="mt-auto flex flex-wrap gap-2 pt-2">
                   <ShareButton title={m.title} text={m.caption} path={m.sharePath} />
                   <CopyLinkButton path={m.sharePath} />
@@ -303,17 +314,39 @@ export function FanKitHub() {
         </div>
         <ol className="grid gap-3 md:grid-cols-2">
           {ROADMAP_MILESTONES.map((m) => (
-            <li key={m.id} className="panel flex flex-col gap-2 p-5">
-              <div className="flex items-start justify-between gap-2">
-                <h3 className="font-display text-base text-white">{m.title}</h3>
-                <StatusChip tone={statusTone[m.status]}>{statusLabel[m.status]}</StatusChip>
+            <li
+              key={m.id}
+              className="group panel relative flex min-h-[10.5rem] flex-col gap-2 overflow-hidden p-5"
+            >
+              <div className="pointer-events-none absolute inset-0" aria-hidden>
+                <Image
+                  src={roadmapMilestoneThumbPath(m.id)}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover opacity-55 transition duration-300 group-hover:opacity-65"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[rgba(8,10,18,0.55)] via-[rgba(8,10,18,0.72)] to-[rgba(8,10,18,0.92)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,rgba(8,10,18,0.45)_100%)]" />
               </div>
-              <p className="text-sm text-[var(--text-muted)]">{m.blurb}</p>
-              {m.href && (
-                <Link href={m.href} className="mt-auto text-sm text-[var(--cyan)] hover:underline">
-                  Open →
-                </Link>
-              )}
+              <div className="relative z-[1] flex flex-1 flex-col gap-2">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="font-display text-base text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.65)]">
+                    {m.title}
+                  </h3>
+                  <StatusChip tone={statusTone[m.status]}>{statusLabel[m.status]}</StatusChip>
+                </div>
+                <p className="text-sm text-[var(--text-muted)]">{m.blurb}</p>
+                {m.href && (
+                  <Link
+                    href={m.href}
+                    className="mt-auto text-sm text-[var(--cyan)] hover:underline"
+                  >
+                    Open →
+                  </Link>
+                )}
+              </div>
             </li>
           ))}
         </ol>

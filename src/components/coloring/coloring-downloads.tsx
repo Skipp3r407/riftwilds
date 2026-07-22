@@ -4,13 +4,14 @@ import { Download } from "lucide-react";
 import {
   COLORING_CREDIT,
   listColoringSheets,
+  listFeaturedColoringSheets,
   type ColoringSheet,
 } from "@/content/coloring";
 import { cn } from "@/lib/utils/cn";
 
 type Props = {
-  /** Compact strip for comic reader; full grid elsewhere */
-  variant?: "full" | "compact";
+  /** Compact tile strip for comics; full grid elsewhere; featured = 4 Kids Corner tiles */
+  variant?: "full" | "compact" | "featured";
   className?: string;
   /** Show link to /coloring index */
   showIndexLink?: boolean;
@@ -21,56 +22,115 @@ function filenameFromSrc(src: string) {
   return src.split("/").pop() ?? "download.png";
 }
 
+function previewSrc(sheet: ColoringSheet) {
+  return sheet.thumbSrc ?? sheet.pngSrc;
+}
+
 export function ColoringDownloads({
   variant = "full",
   className,
   showIndexLink = true,
-  sheets = listColoringSheets(),
+  sheets,
 }: Props) {
-  if (variant === "compact") {
+  const resolvedSheets =
+    sheets ??
+    (variant === "featured" || variant === "compact"
+      ? listFeaturedColoringSheets(4)
+      : listColoringSheets());
+
+  if (variant === "compact" || variant === "featured") {
     return (
       <aside
         className={cn(
           "rounded-xl border border-[rgba(196,168,130,0.35)] bg-[rgba(20,14,10,0.45)] px-4 py-3",
+          variant === "featured" &&
+            "rounded-2xl border-[var(--stroke)] bg-[radial-gradient(ellipse_at_15%_0%,rgba(255,184,77,0.12),transparent_50%),radial-gradient(ellipse_at_85%_30%,rgba(61,231,255,0.1),transparent_45%),linear-gradient(165deg,#1a1510_0%,#121a28_55%,#0e1624_100%)] p-6 md:p-8",
           className,
         )}
         aria-label="Kids coloring pages"
       >
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-wrap items-end justify-between gap-2">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--amber)]">
+            <p
+              className={cn(
+                "text-[10px] uppercase tracking-[0.18em] text-[var(--amber)]",
+                variant === "featured" && "page-kicker",
+              )}
+            >
               Kids corner
             </p>
-            <p className="font-display text-lg text-[var(--parchment,#e8d5b0)]">
-              Download to color
+            <p
+              className={cn(
+                "font-display text-lg text-[var(--parchment,#e8d5b0)]",
+                variant === "featured" && "mt-2 text-2xl text-white md:text-3xl",
+              )}
+            >
+              {variant === "featured" ? "Coloring pages" : "Download to color"}
             </p>
+            {variant === "featured" ? (
+              <p className="mt-2 max-w-xl text-sm text-[var(--text-muted)]">
+                Spark, Commons, circus, and hatchery — printable game-sketch sheets for crayons and
+                markers.
+              </p>
+            ) : null}
           </div>
           {showIndexLink ? (
             <div className="flex flex-wrap gap-2">
               <Link href="/coloring" className="btn-secondary focus-ring text-sm">
-                All coloring pages
+                {variant === "featured" ? "View all downloads" : "All coloring pages"}
               </Link>
-              <Link href="/fan-kit#kids" className="btn-secondary focus-ring text-sm">
-                Fan Kit
-              </Link>
+              {variant === "compact" ? (
+                <Link href="/fan-kit#kids" className="btn-secondary focus-ring text-sm">
+                  Fan Kit
+                </Link>
+              ) : null}
             </div>
           ) : null}
         </div>
-        <ul className="mt-3 flex flex-wrap gap-2">
-          {sheets.slice(0, 4).map((sheet) => (
+        <ul
+          className={cn(
+            "mt-3 grid gap-3",
+            variant === "featured"
+              ? "sm:grid-cols-2 lg:grid-cols-4"
+              : "grid-cols-2 sm:grid-cols-4",
+          )}
+        >
+          {resolvedSheets.map((sheet) => (
             <li key={sheet.id}>
               <a
                 href={sheet.pngSrc}
                 download={filenameFromSrc(sheet.pngSrc)}
-                className="btn-secondary focus-ring inline-flex items-center gap-1.5 text-xs"
+                className="group focus-ring relative block overflow-hidden rounded-lg ring-1 ring-[rgba(196,168,130,0.28)] transition hover:ring-[rgba(255,184,77,0.55)]"
               >
-                <Download size={14} aria-hidden />
-                {sheet.shortLabel}
+                <div className="relative aspect-video bg-[rgba(0,0,0,0.35)]">
+                  <Image
+                    src={previewSrc(sheet)}
+                    alt=""
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    unoptimized
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent px-2.5 pb-2 pt-8">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-medium text-white">
+                      <Download size={14} aria-hidden className="shrink-0 text-[var(--amber)]" />
+                      {sheet.shortLabel}
+                    </span>
+                  </div>
+                </div>
+                <span className="sr-only">Download {sheet.title}</span>
               </a>
             </li>
           ))}
         </ul>
-        <p className="mt-2 text-[11px] text-[rgba(232,213,176,0.55)]">{COLORING_CREDIT}</p>
+        <p
+          className={cn(
+            "mt-2 text-[11px] text-[rgba(232,213,176,0.55)]",
+            variant === "featured" && "mt-5 text-xs text-[var(--text-muted)]",
+          )}
+        >
+          {COLORING_CREDIT}
+        </p>
       </aside>
     );
   }
@@ -102,7 +162,7 @@ export function ColoringDownloads({
       </div>
 
       <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {sheets.map((sheet) => (
+        {resolvedSheets.map((sheet) => (
           <li key={sheet.id}>
             <article className="panel overflow-hidden p-3">
               <div className="relative aspect-[850/1100] overflow-hidden rounded-lg bg-white ring-1 ring-[rgba(196,168,130,0.25)]">

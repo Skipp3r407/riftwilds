@@ -332,9 +332,6 @@ export function ComicReader({ issue, prevSlug, nextSlug }: Props) {
               </Link>
             )}
           </div>
-          <p className="text-xs text-[var(--text-muted)]">
-            Dev override: set <code>NEXT_PUBLIC_COMICS_DEV_UNLOCK=1</code> or finish Issue #1.
-          </p>
         </div>
       </div>
     );

@@ -180,7 +180,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
   "pageTurnObjective": "A message in the dark.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "The Riftwright — The Merchant's Secret page 24",
@@ -208,5 +208,7 @@
   "id": "the-merchants-secret-issue-006-p028",
   "cleanArtRel": "generated/raw-art/page-028.webp",
   "letteredArtRel": "generated/lettered-pages/page-028.webp",
-  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-028.webp"
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-028.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

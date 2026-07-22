@@ -250,7 +250,7 @@ export const ISSUE_010_COMIC: ComicIssue = {
     "issue-010",
     "mira-eggwarden",
   ],
-  covers: expandCoverVariants("The Shattered Star", "/assets/comics/covers/10-the-shattered-star.webp"),
+  covers: expandCoverVariants("The Shattered Star", "/assets/comics/covers/10-the-shattered-star.png"),
   pages: [
   {
     id: "the-shattered-star-issue-010-p001",

@@ -1,10 +1,56 @@
 {
-  "updatedAt": "2026-07-20T15:06:16.962Z",
-  "from": 1,
-  "to": 32,
-  "artReady": 32,
-  "lettered": 32,
-  "blocked": 0,
-  "resume": "npx tsx scripts/comics/run-issue-001-pipeline.mts --from=1 --to=32 --seed-from-legacy",
-  "resumeArt": "COMIC_IMAGE_PROVIDER=grok XAI_API_KEY=… npx tsx scripts/comics/run-issue-001-pipeline.mts --from=1 --to=32"
+  "updatedAt": "2026-07-22T12:45:18.263Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "9": {
+      "pageNumber": 9,
+      "role": "story",
+      "title": null,
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-first-rift/issue-001/pages/page-009.webp",
+      "error": null
+    },
+    "10": {
+      "pageNumber": 10,
+      "role": "story",
+      "title": null,
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-first-rift/issue-001/pages/page-010.webp",
+      "error": null
+    },
+    "11": {
+      "pageNumber": 11,
+      "role": "story",
+      "title": null,
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-first-rift/issue-001/pages/page-011.webp",
+      "error": null
+    },
+    "12": {
+      "pageNumber": 12,
+      "role": "story",
+      "title": null,
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-first-rift/issue-001/pages/page-012.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 0,
+    "letterOk": 4,
+    "grokOk": 0,
+    "proceduralOk": 0,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-001/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-001/generate-and-letter.mjs --force"
+  }
 }

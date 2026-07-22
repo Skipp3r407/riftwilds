@@ -40,31 +40,26 @@ function StatChip({ label, value }: { label: string; value: string | number }) {
 }
 
 function BioSectionImage({ section }: { section: TcgBioSection }) {
-  const isAffinityMedallion = section.id === "affinity";
-  const frame =
+  // Height-driven wells + object-contain — avoid w-full + max-h + aspect-ratio
+  // which flattens into a short strip and chops heads with object-cover.
+  const variant =
     section.imageLayout === "hero"
-      ? "aspect-square max-h-36 w-full sm:max-h-40"
+      ? "hero"
       : section.imageLayout === "scenic"
-        ? "aspect-[16/9] max-h-32 w-full sm:max-h-36"
-        : isAffinityMedallion
-          ? "aspect-square max-h-28 w-full sm:max-h-32"
-          : "aspect-[16/9] max-h-28 w-full sm:max-h-32";
+        ? "scenic"
+        : section.id === "affinity"
+          ? "medallion"
+          : "plate";
 
   return (
     <div
-      className={cn(
-        "relative overflow-hidden rounded-lg border border-[rgba(255,184,77,0.2)] bg-black/40",
-        frame,
-      )}
+      className={cn("lore-journal__media", `lore-journal__media--${variant}`)}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={section.imageSrc}
         alt={section.imageAlt}
-        className={cn(
-          "h-full w-full object-center",
-          isAffinityMedallion ? "object-contain p-1.5" : "object-cover",
-        )}
+        className="lore-journal__media-img"
         onError={(e) => {
           const img = e.target as HTMLImageElement;
           if (!section.imageFallback || img.dataset.fallbackApplied === "1") {
@@ -102,7 +97,7 @@ function IllustratedBioPanel({
         <p className="mt-1 text-xs text-white/50">{bio.subtitle}</p>
       ) : null}
 
-      <div className="mt-3 max-h-[min(48vh,26rem)] space-y-3 overflow-y-auto pr-0.5">
+      <div className="mt-3 max-h-[min(56vh,32rem)] space-y-3 overflow-y-auto pr-0.5">
         {bio.sections.map((section) => (
           <article
             key={section.id}
@@ -331,6 +326,25 @@ export function TcgCardDetailModal({ defId, open, onClose, battlePlay }: Props) 
                         </div>
                       </div>
                     ) : null}
+
+                    <div
+                      className="rounded-md border border-white/10 bg-white/5 px-3 py-2"
+                      title={`${detail.classificationCategory} · ${detail.useLocation}`}
+                    >
+                      <p className="text-[10px] uppercase tracking-wider text-white/45">
+                        Category · Use location
+                      </p>
+                      <p className="mt-0.5 text-sm text-white/90">
+                        {detail.classificationCategory}
+                        <span className="text-white/40"> · </span>
+                        {detail.useLocation}
+                      </p>
+                      {!detail.combatDeckLegal ? (
+                        <p className="mt-1 text-[11px] text-amber-200/90">
+                          Belongs in Inventory / Companion Care — not the Combat Deck.
+                        </p>
+                      ) : null}
+                    </div>
 
                     {detail.rulesText ? (
                       <div>

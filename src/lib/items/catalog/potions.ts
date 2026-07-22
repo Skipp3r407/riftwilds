@@ -234,9 +234,10 @@ export const POTION_CATALOG: PotionCatalogItem[] = [
     shopCategory: "CARE",
     family: "CARE",
     affinity: null,
-    description: "Free-path compatible meal — also sold in convenience packs.",
-    effect: "Restores hunger. Gameplay-earned meals also available.",
-    careEffects: { hunger: 25, happiness: 5 },
+    description:
+      "Companion Care food — restores hunger outside battle. Not a combat spell.",
+    effect: "Feed Companion: restore hunger, +bond, small care XP.",
+    careEffects: { hunger: 25, happiness: 5, bond: 3 },
     stack: 50,
   }),
   p({

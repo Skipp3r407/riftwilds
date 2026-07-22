@@ -106,7 +106,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Enter the circus.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Roads Beneath Lanterns — The Traveling Circus page 1",
@@ -120,5 +120,7 @@
   "id": "the-traveling-circus-issue-003-p005",
   "cleanArtRel": "generated/raw-art/page-005.png",
   "letteredArtRel": "generated/lettered-pages/page-005.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-005.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-005.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

@@ -2,6 +2,9 @@
  * Public patch / update notes - newest first.
  * Append via `npm run patch-notes:add` or edit this file before every push.
  * See docs/PATCH_NOTES_WORKFLOW.md
+ *
+ * Player-facing only: describe what players get (Added / Changed / Fixed).
+ * Never reveal how content was made (tools, providers, scripts, pipelines, stubs, etc.).
  */
 
 export type PatchNoteSectionKey = "added" | "changed" | "fixed" | "knownIssues";
@@ -36,24 +39,47 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
-    id: "2026-07-20-auth-help-atmosphere",
-    date: "2026-07-20",
-    title: "Auth gateway polish and Help crash fix",
+    id: "2026-07-22-battle-hub-stakes-comics",
+    date: "2026-07-22",
+    title: "Battle Hub, Rift Stakes, and comics archive look",
     summary:
-      "Auth pages get a dedicated cavern wallpaper and denser Magical Dust; local/dev login bypass is clearer on /login and /signup; production /help no longer hits Rift turbulence.",
+      "Rift Battle becomes a Battle Hub with mode art, Rift Stakes gets tier lobby art and clearer fees, and Comics picks up an archive-hall wallpaper, plus inventory/energy and nav cleanup.",
     added: [
-      "Dedicated auth gateway wallpaper on /login, /signup, and related account flows",
-      "Dev bypass login panel on /login and /signup for local and preview testing",
+      "Battle Hub mode cards with atmospheric thumbnails (Practice, Casual, Ranked, AI, Tournament, Stakes)",
+      "Rift Stakes lobby tier art for Micro, Low, Standard, and High stakes",
+      "Comics library archive-hall wallpaper",
+      "Dedicated Battle Hub wallpaper on the battle route",
     ],
     changed: [
-      "Magical Dust is denser with an auth-route boost and rift-page motes",
+      "Rift Battle entry reads as a hub with clearer mode tabs, including Stakes",
+      "Site nav focuses on Battle Hub; Rift Stakes lives under battle modes",
+      "Inventory and energy surfaces refined for the immersive game shell",
+      "Patch Notes wording scrubbed to stay player-facing",
     ],
     fixed: [
-      "/help now renders publicly (moved out of the gameplay auth shell)",
-      "Gameplay layouts no longer mutate cookies during render; session clear goes through /api/auth/logout",
-      "/academy is gated at the edge like other play surfaces, avoiding the same Rift turbulence crash",
-      "Production deploy no longer hard-fails when AUTH_DEV_BYPASS preview env is present",
-      "Patch Notes UTF-8 restored so Vercel builds do not fail on corrupted characters",
+      "Battle and account play gates stay aligned so invite/join and practice paths keep working",
+    ],
+    knownIssues: [
+      "Some comic issues may still receive art polish",
+    ],
+  },
+  {
+    id: "2026-07-20-auth-help-atmosphere",
+    date: "2026-07-20",
+    title: "Login atmosphere and Help page fix",
+    summary:
+      "Login and signup get a dedicated cavern look with denser Magical Dust; Help is back for everyone without a crash.",
+    added: [
+      "Dedicated cavern wallpaper on login, signup, and related account screens",
+    ],
+    changed: [
+      "Magical Dust is denser on account pages and rift routes",
+    ],
+    fixed: [
+      "/help loads for everyone again (no more Rift turbulence crash)",
+      "Signing out clears your session cleanly",
+      "Academy uses the same play gate as other play surfaces",
+      "Patch Notes text encoding restored so pages display correctly",
     ],
   },
 
@@ -62,7 +88,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-20",
     title: "Practice Board persistence and Rift Exchange section art",
     summary:
-      "Fixes Practice Board MATCH_NOT_FOUND after reloads via match-store persistence and guest identity, and adds atmospheric section thumbnails on Rift Exchange earning-method cards.",
+      "Practice Board matches stick around after a refresh, and Rift Exchange earning methods get atmospheric section art.",
     added: [
       "Atmospheric cover thumbnails for all Rift Exchange earning-method sections",
     ],
@@ -70,65 +96,64 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Rift Exchange method cards use dedicated section background art instead of a flat panel",
     ],
     fixed: [
-      "Practice Board / Rift Battle: matches no longer report MATCH_NOT_FOUND after refresh or invite join (persisted match store + guest fetch identity)",
-      "Patch Notes UTF-8 encoding so Vercel production builds do not fail on corrupted en-dashes",
+      "Practice Board / Rift Battle: matches no longer disappear after refresh or invite join",
+      "Patch Notes text encoding so special characters display correctly",
     ],
   },
   {
     id: "2026-07-20-comics-mira-canon",
     date: "2026-07-20",
-    title: "Comics Continuity Mira-canon & Volume 1-2 pipeline",
+    title: "Comics Continuity Mira-canon & Volumes 1–2",
     summary:
-      "Ships Continuity Mira-canon issues 1-10 with baked lettering, Volume 1-2 comic art pipelines, sequential unlock, and related comics reader / auth site polish.",
+      "Continuity Mira-canon issues 1–10 arrive on the shelf with covers, pages, speech balloons, sequential unlock, plus comics reader and account polish.",
     added: [
-      "Continuity Mira-canon comic issues 1-10 on the comics shelf (covers, pages, and catalog entries)",
-      "Volume 1-2 comic generation pipelines with Grok art provider hooks and issue runner scripts",
-      "Baked lettering / speech-bubble engine for comic pages",
-      "Sequential comic unlock (later issues lock until earlier ones are completed; optional dev unlock flags)",
-      "Account flows: signup, email verify, forgot/reset password, and onboarding surfaces",
+      "Comics issues 1–10 on the shelf with covers and pages (Continuity Mira-canon)",
+      "Speech balloons and lettering on comic pages",
+      "Sequential comic unlock — later issues stay locked until you finish earlier ones",
+      "Account flows: signup, email verify, forgot/reset password, and onboarding",
       "TCG rules and tutorial routes for the battle loop",
     ],
     changed: [
       "Comics library, reader, and cover presentation refreshed for the Mira-canon shelf",
-      "Brand assets and comics audio manifests updated for the new issues",
-      "Auth/session scaffolding expanded for account-gated play (email auth, OAuth setup stubs, CSRF helpers)",
+      "Brand assets and comics audio updated for the new issues",
+      "Account sign-in expanded for email login and account-gated play",
     ],
     knownIssues: [
-      "Some later Mira-canon issues may still receive art or lettering polish passes",
-      "OAuth providers remain setup-stubs until client IDs are configured in production",
+      "Some later issues may still get art polish",
+      "Social login coming soon",
     ],
   },
 
   {
     id: "2026-07-20-tcg-build-types",
     date: "2026-07-20",
-    title: "TCG production build typecheck",
+    title: "Collection Book and Deck Atelier card stats",
     summary:
-      "Unblocked Vercel production builds after Collection Book / Deck Atelier card-stat typing drifted from the engine catalog.",
+      "Collection Book and Deck Atelier show full combat stats again so card rows stay accurate in binder and deck tools.",
     fixed: [
-      "Production TypeScript build: Collection Book and Deck Atelier now type card rows with full combat stats (attack/defense/health/speed) from the engine catalog.",
+      "Collection Book and Deck Atelier card rows now show full combat stats (attack, defense, health, speed)",
     ],
   },
   {
     id: "2026-07-19-riftwilds-systems",
     date: "2026-07-19",
-    title: "Premium cards, battle UX, and multiplayer scaffolding",
+    title: "Premium cards, battle UX, and multiplayer prep",
     summary:
-      "A large Riftwilds systems pass: premium TCG card framework and art, richer battle/codex/hatchery/arena surfaces, treasury and marketplace scaffolding, plus local Nakama multiplayer stack setup.",
+      "A large Riftwilds pass: premium TCG card look and art, richer battle/codex/hatchery/arena surfaces, treasury and marketplace prep, and early multiplayer foundations (not live yet).",
     added: [
-      "Premium card template, deck builder, Rift Codex, museum, and pack-opening surfaces for the TCG loop",
-      "Arena hub modes, collectibles/wallet/exchange routes, and treasury-ops admin tooling",
+      "Premium card look, deck builder, Rift Codex, museum, and pack-opening surfaces for the TCG loop",
+      "Arena hub modes, collectibles/wallet/exchange routes, and treasury admin tools",
       "Expanded audio SFX catalog, page wallpapers, and companion/card art across codex and battle",
-      "Local Nakama + Docker Compose scaffolding for realtime multiplayer experiments (off by default)",
+      "Early realtime multiplayer foundations for local experiments (off by default — not a live matchmaker yet)",
     ],
     changed: [
-      "Battle match engine, practice loadout, and Rift Battle UX polish with stronger status/intel feedback",
+      "Battle match rules, practice loadout, and Rift Battle UX polish with stronger status and intel feedback",
       "Hatchery earn paths and marketplace/shop purchase flows aligned with the credits-first economy",
       "Codex world lore, comics library, quests, and social hubs refreshed with new art and navigation",
     ],
     knownIssues: [
-      "Nakama multiplayer remains gated behind feature flags and local Docker setup - not a live production matchmaker yet",
-      "Some marketplace sub-desks (auctions, rentals, commissions) are scaffolded stubs pending full economy wiring",
+      "Online multiplayer matchmaking is not live yet — still in early prep",
+      "Some marketplace desks (auctions, rentals, commissions) are listed but not fully open yet",
     ],
   },
 
@@ -169,7 +194,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "The three Riftling previews under the Mystery Rift Egg now shuffle from the full launch roster on each page load.",
     changed: [
-      "Home hero Mystery Rift Egg companions randomize three distinct launch Riftlings (name, portrait, affinity) on each client page load instead of fixed Ember / Grove / Tide",
+      "Home hero Mystery Rift Egg companions randomize three distinct launch Riftlings (name, portrait, affinity) on each visit instead of fixed Ember / Grove / Tide",
     ],
   },
   {
@@ -180,7 +205,6 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "A player-facing roadmap for Rift Battles now, Credits/coin expansion next, and Living World as a later release - SOL stays optional and never required for core play.",
     added: [
       "Public /roadmap page - Now (Rift Battles), Next (Gold · Rift Shards · optional SOL), Later (Living World)",
-      "docs/vision/PRODUCT_ECONOMY_ROADMAP.md aligned with vision and economy docs",
       "Roadmap links from Play / Economy / Community nav, Help destinations, Community page, and Learn footer",
     ],
   },
@@ -200,7 +224,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Clear cosmetics-only copy - avatars never grant pets or gameplay power",
     ],
     knownIssues: [
-      "SOL avatar checkout remains off (SOL_PURCHASES_ENABLED=false) by design",
+      "SOL avatar checkout remains off by design for now",
     ],
   },
   {
@@ -210,11 +234,11 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Region aura and market-stall cards no longer show crude building-tile placeholders; inspect opens illustrated region and place lore beside creature bios.",
     added: [
-      "Region bio sections on location aura cards (overview, climate, landmarks, gateway) from region content packs",
+      "Region bio sections on location aura cards (overview, climate, landmarks, gateway)",
       "Place lore sections on market stalls, gates, bridges, and docks with scenic images",
     ],
     changed: [
-      "Location and prop card faces regenerate from region maps / trade wallpapers instead of library wall and stall tiles",
+      "Location and prop card faces use region and trade scenic art instead of plain wall and stall tiles",
       "Market stall flavor and rules text are unique per trade",
     ],
     fixed: [
@@ -227,13 +251,13 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Ambience playlist no longer cuts out early",
     summary:
-      "Frostveil's bed and a few quiet sci-fi loops were going silent after a few seconds; the playlist and crossfade engine now keep ambience playing through.",
+      "Frostveil's bed and a few quiet sci-fi loops were going silent after a few seconds; ambience now keeps playing through track changes.",
     changed: [
       "Frostveil / playlist track “Space Graveyard” replaced with continuous CC0 “Icy Realm”",
-      "Quiet Dark Sci-Fi beds (Sector, Airy, Pulse, Urgent) get a gentle playback gain so they stay audible at normal Music volume",
+      "Quiet Dark Sci-Fi beds (Sector, Airy, Pulse, Urgent) stay audible at normal Music volume",
     ],
     fixed: [
-      "Ambience player tracks no longer cut off after a few seconds (sparse source + overlapping crossfade race)",
+      "Ambience player tracks no longer cut off after a few seconds",
     ],
   },
   {
@@ -264,15 +288,15 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Full TCG card faces and inspect detail",
     summary:
-      "Every foundational card now has a flattened WebP face; binder and battle open an inspect modal with stats and Riftling bios, and practice hand cards are larger.",
+      "Every foundational card now has a full card face; binder and battle open an inspect view with stats and Riftling bios, and practice hand cards are larger.",
     added: [
-      "Card inspect modal on Card Binder and Practice Board with stats, rules, flavor, and creature bio from species lore",
-      "Scenic emblem card faces for the remaining 90 cards that lacked pet/item source art (spells, tokens, commons like Ash Urchin)",
+      "Card inspect on Card Binder and Practice Board with stats, rules, flavor, and creature bio from species lore",
+      "Scenic emblem card faces for the remaining cards that lacked pet/item art (spells, tokens, commons like Ash Urchin)",
     ],
     changed: [
       "Practice Board hand and board cards scaled up for clearer art",
       "Battle: tap a card to inspect; Play lives in the detail view and toolbar",
-      "Card image resolution always prefers /assets/tcg/cards/{id}.webp",
+      "Card images prefer the full finished face art when available",
     ],
     fixed: [
       "Binder/battle no longer show text-only placeholders for Ember Spark, Forge Temper, Ash Urchin, and other missing faces",
@@ -289,7 +313,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Full-bleed Social Hub wallpaper (Commons plaza / rift lanterns) on /social",
     ],
     changed: [
-      "Social Hub Friends / Requests / Messages / Avatar & safety tabs use reusable ImageButton tab skins",
+      "Social Hub Friends / Requests / Messages / Avatar & safety tabs use clearer image tab skins",
     ],
   },
   {
@@ -309,14 +333,14 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
   {
     id: "2026-07-18-tcg-flat-card-faces",
     date: "2026-07-18",
-    title: "Flattened Rift Battles card faces",
+    title: "Finished Rift Battles card faces",
     summary:
-      "Binder and battle UIs now show complete flattened card face images instead of HTML overlays on crop art.",
+      "Binder and battle UIs now show complete card face images instead of layered text overlays on crop art.",
     added: [
-      "Full flattened WebP card faces for the foundational set (645 cards) via tcg:generate:card-images",
+      "Full card face images for the foundational set (645 cards)",
     ],
     changed: [
-      "Card Binder and Rift Battle boards render img-only card faces",
+      "Card Binder and Rift Battle boards show finished card face art",
     ],
   },
   {
@@ -324,19 +348,19 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Rift Battles set, Help, and Live World depth",
     summary:
-      "Foundational TCG content and battle surfaces ship alongside Help/music polish, social avatars, optional SOL economy scaffolding (flags off), and a Live World 2.5D HUD depth pass. Live World stays enterable for development.",
+      "Foundational TCG content and battle surfaces ship alongside Help/music polish, social avatars, optional SOL economy prep (off for now), and a Live World depth pass. Live World stays enterable while we keep polishing.",
     added: [
-      "Foundational Rift Battles card set with collection, match engine, and /tcg battle surfaces",
+      "Foundational Rift Battles card set with collection, matches, and /tcg battle surfaces",
       "TCG shop paths for packs, binders, and card cosmetics plus battle wallpaper art",
       "/help center reworked around Rift Battles and card play",
       "Social avatar picker for profiles and friends",
-      "SOL economy foundation and admin/status APIs with every SOL_* flag defaulting off",
+      "Optional SOL economy foundation — all SOL purchases stay off for now",
     ],
     changed: [
       "Play hub, home hero, quests, marketplace, shop, and leaderboards lead with Rift Battles",
       "Live World immersive HUD and depth layering for a clearer 2.5D overworld read",
       "Ambience music player chrome and mute/play sync polish",
-      "Live World public access stays on so the habitat remains enterable during development",
+      "Live World stays publicly enterable while we keep polishing the habitat",
     ],
     knownIssues: [
       "Optional SOL purchases, marketplace settlement, minting, and withdrawals remain fully gated off",
@@ -346,21 +370,21 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
   {
     id: "2026-07-18-build-comics-music",
     date: "2026-07-18",
-    title: "Deploy fix, comics reader, and music player",
+    title: "Comics reader and music player polish",
     summary:
-      "Production build unblocked, comics book reader fits speech bubbles in the viewport, and the floating music player mute/play controls restyle to match Riftwilds chrome.",
+      "Comics book reader keeps speech balloons in view, and the floating music player mute/play controls match Riftwilds chrome.",
     fixed: [
-      "Live World production build no longer fails on the missing graphics-quality immersive module",
-      "TypeScript blockers across credits, shop scrolls, storm participation, and hatchery HMR migration that would fail Vercel after webpack",
-      "Music player mute/play stays in sync with the audio engine and can unmute from the floating bar",
+      "Live World loads reliably again after a missing graphics-quality setting issue",
+      "Credits, shop scrolls, storm participation, and hatchery care no longer break after updates",
+      "Music player mute/play stays in sync and can unmute from the floating bar",
     ],
     changed: [
-      "Comics reader uses a book-stage viewport with speech-bubble layout that stays readable on page art",
+      "Comics reader uses a book-stage viewport with speech balloons that stay readable on page art",
       "Music player chrome uses warm Riftwilds glass instead of cold sci-fi violet",
       "Live World immersive settings expose graphics quality presets (Low default; Ultra opt-in)",
     ],
     added: [
-      "Open-book matte frame and comic speech-bubble layout helpers for issue pages",
+      "Open-book matte frame and clearer comic speech-balloon layout on issue pages",
     ],
   },
   {
@@ -371,12 +395,12 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Your following Riftling in Live World now uses the same species look as the pet you hatched - Glowpup-line sparklets stay distinct from Alloybits and other affinities.",
     fixed: [
-      "Live World follower no longer always shows the generic cozy Spark sheet regardless of hatch species",
-      "HUD companion label uses your hatched species name instead of a hardcoded Spark stub",
+      "Live World follower no longer always shows the generic cozy Spark look regardless of hatch species",
+      "HUD companion label uses your hatched species name instead of always saying Spark",
     ],
     changed: [
-      "Companion overworld art maps hatch species (and affinity fallback) to matching cozy pixel walk sheets",
-      "Ambient village Riftlings stay decorative props and no longer share the player companion's identity or anim keys",
+      "Companion overworld art matches your hatch species (with affinity fallback) to cozy pixel walk sheets",
+      "Ambient village Riftlings stay decorative props and no longer share your companion's identity",
     ],
     added: [
       "Extra cozy companion palettes for storm, spirit, void, alloy, and radiant affinities",
@@ -400,19 +424,19 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     date: "2026-07-18",
     title: "Commons depth pass - shores, cottages, walks",
     summary:
-      "Live World Commons gets richer path/pond autotiles, unique cottage variants, picket yards with original-IP critters, and Keeper/Riftling walk cycles.",
+      "Live World Commons gets richer path/pond shores, unique cottage variants, picket yards with original-IP critters, and Keeper/Riftling walk cycles.",
     added: [
-      "Neighbor-aware path border and pond shore autotiles (edges + corners) for seamless village transitions",
+      "Path border and pond shore tiles (edges + corners) for seamless village transitions",
       "Unique cottage facades (timber, row houses, tavern, farm shed, interior peek) with chimney and flower-box variety",
       "Picket fence yards, market stall cluster, and Sparkmoth / Mossbun-kit yard critters (original IP)",
-      "4-frame Keeper + companion Riftling walk/idle sheets with cleaner follow trailing",
+      "Keeper + companion Riftling walk/idle animations with cleaner follow trailing",
     ],
     changed: [
       "Keeper Row paths connect cottage doors; pond shore expands with a small plaza reflect pool",
       "Tree/bush contact shadows and layering read more grounded in the meadow",
     ],
     knownIssues: [
-      "Still procedural pixel art vs hand-painted Kenmi-quality tiles - more frame polish and unique props remain on the backlog",
+      "Village art will keep getting more hand-crafted polish — more frames and unique props are still on the backlog",
     ],
   },
   {
@@ -429,11 +453,11 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     ],
     changed: [
       "Commons day lighting is brighter and friendlier; rift cyan stays an accent, not gloom",
-      "Phaser Live World uses crisp pixelArt rendering and a closer default camera zoom",
+      "Live World uses crisp pixel art rendering and a closer default camera zoom",
       "Village prop scatter is denser along paths, yards, and farm hubs",
     ],
     knownIssues: [
-      "Procedural pixel pack approximates a hand-authored cute RPG tileset - further art passes will deepen cottage variety and walk cycles",
+      "Village tileset will keep deepening — further art passes will expand cottage variety and walk cycles",
     ],
   },
   {
@@ -470,7 +494,7 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "/printables art and chrome retuned to epic warm fantasy - Keepers, rift storms, bronze/amber/cyan CTAs (no purple pills).",
     changed: [
-      "All 12 × 300 DPI printables regenerated with richer warfront scenes: damaged Commons timber, lanterns, storm debris, athletic Glowpup stance",
+      "All 12 × 300 DPI printables refreshed with richer warfront scenes: damaged Commons timber, lanterns, storm debris, athletic Glowpup stance",
       "Download buttons use bronze/amber PDF and cyan-outline PNG styles instead of purple crypto primary skins",
       "Each printable card gets a unique subtle atmosphere well (spark storm, plaza, hatchery aurora, circus ember, and more)",
     ],
@@ -502,31 +526,31 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     title: "Community tools, narration, and asset library",
     version: "0.2.0",
     summary:
-      "Feedback + patch notes, ElevenLabs comic VO pipeline, Social friends/PM, printable fan gear, game-sketch coloring, Theme4 brand marks, 1284-piece game asset library, chat auto-hide, and Live Care build fix.",
+      "Feedback + patch notes, comic storybook narration clips, Social friends/PM, printable fan gear, game-sketch coloring, brand marks, a large game asset library, chat auto-hide, and a Live Care fix.",
     added: [
-      "Feedback / Bug Report at /feedback (alias /bugs) with API + safety checks",
-      "Patch Notes at /patch-notes (alias /updates) and maintainer workflow docs",
-      "ElevenLabs narration tooling for comic storybook clips and commercial VO (pre-generated, runtime key-free)",
-      "Social Hub friends + private messages (/social) with APIs, badge, and Live World deep-links",
+      "Feedback / Bug Report at /feedback (alias /bugs)",
+      "Patch Notes at /patch-notes (alias /updates)",
+      "Comic storybook and commercial voice-over clips you can play in-reader when available",
+      "Social Hub friends + private messages (/social) with unread badge and Live World deep-links",
       "300 DPI Printables hub at /printables with game-theme adventure art",
-      "Game asset library catalog (~1284 WebP entries) under /assets/game/library/",
+      "Large game asset library for in-world props and scenic pieces",
       "Live World Commons prop install (~232 library props scattered in-world)",
-      "Theme4 egg + Riftwilds logo/wordmark/favicon set under /assets/brand/",
+      "Theme4 egg + Riftwilds logo/wordmark/favicon set",
     ],
     changed: [
       "Kids coloring sheets redone as detailed game-sketch line art",
       "Downloadable wallpapers redone as cinematic battle / warfront scenes",
-      "Printables regenerated to warm fantasy + cyan/amber rift energy",
+      "Printables refreshed to warm fantasy + cyan/amber rift energy",
       "Live World chat supports auto-hide / transparent idle peek (pin keeps it open)",
       "Header SOL / RIFT currency pills get clearer spacing",
       "Nav/footer links for Feedback, Patch Notes, Printables, and Social",
     ],
     fixed: [
-      "Vercel production build: live-care-panel no longer type-errors when pet is null",
+      "Live Care panel no longer breaks when you have no active pet",
     ],
     knownIssues: [
-      "Fuller 2.5D terrain/HUD overhaul remains unapproved and is not in this release",
-      "Friends/PM Prisma persistence stays prepare-only until migration is enabled",
+      "Fuller 2.5D terrain/HUD overhaul is still in progress and is not in this release",
+      "Friends/PM cloud save is prepare-only until that storage path is fully enabled",
     ],
   },
   {
@@ -538,11 +562,11 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "/printables chrome and all 300 DPI assets retuned to warm fantasy + cyan/amber rift energy: Keepers, Riftlings, living towns under threat.",
     changed: [
       "Printables hub restyled with bronze/parchment chrome (no purple mush)",
-      "All 12 printables regenerated: Spark's Stand, Commons Under Threat, Hatchery Aurora, fantasy MMO trading-card frames, adventure bookmarks, circus under fire",
+      "All 12 printables refreshed: Spark's Stand, Commons Under Threat, Hatchery Aurora, fantasy MMO trading-card frames, adventure bookmarks, circus under fire",
       "Copy and card order sell battles, exploration, and care - not toddler-cute stickers",
     ],
     fixed: [
-      "Poster preview thumbs now show full scene art (object-cover on dark ink frames)",
+      "Poster preview thumbs now show full scene art (full-bleed on dark ink frames)",
     ],
   },
   {
@@ -551,23 +575,22 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     title: "Friends and private messages",
     version: "social",
     summary:
-      "Social Hub now supports real friend requests, inbox PMs, blocks/reports stubs, and Live World deep-links - no wallet required.",
+      "Social Hub now supports real friend requests, inbox PMs, block/report/privacy tools, and Live World deep-links - no wallet required.",
     added: [
-      "Friends + PM APIs at /api/social/friends, /api/social/messages, /api/social/summary",
+      "Friends and private messages in Social Hub",
       "Social Hub tabs: Friends, Requests, Messages, Safety (block / report / privacy)",
-      "Unread badge on sidebar Social + summary poller",
+      "Unread badge on sidebar Social",
       "Live World nearby actions: Add friend / Whisper / Invite → /social deep-links",
       "Town keepers (keeper_mira, captain_reed, archivist_echo) for onboarding",
-      "docs/social/FRIENDS_AND_PM.md and unit tests for friend/PM rules",
     ],
     changed: [
-      "/social upgraded from demo-only stubs for friends/DMs",
+      "/social upgraded from demo-only friends/DMs to a real Social Hub",
       "Footer Learn links include Social Hub",
     ],
     knownIssues: [
-      "PM delivery is request/response only - WebSocket push is backlog",
-      "Prisma friends/PM tables are prepare-only (FRIENDS_AND_PM_PRISMA_ENABLED off)",
-      "Party invites remain stubs until multiplayer Phase 2",
+      "PMs update when you open or refresh — live push notifications are still backlog",
+      "Cloud save for friends/PM is prepare-only until that storage path is fully enabled",
+      "Party invites are listed but not fully live until multiplayer Phase 2",
     ],
   },
   {
@@ -578,36 +601,34 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Downloadable print-ready stickers, posters, bookmarks, trading cards, and a Traveling Circus party invite for viewers.",
     added: [
-      "Printables hub at /printables with 12 × 300 DPI assets (PNG + PDF) under /assets/printables/",
+      "Printables hub at /printables with 12 × 300 DPI assets (PNG + PDF)",
       "Sticker sheets, mini posters (Letter + A4), bookmark trio, trading-card sheet, 5×7 cards, Spark standee, circus invite",
-      "Fan Kit and Kids Coloring cross-links plus regenerator script (npm run assets:printables)",
+      "Fan Kit and Kids Coloring cross-links",
     ],
     changed: [
       "Nav and footer include Printables next to Fan Kit / Coloring",
     ],
-    fixed: [],
   },
   {
     id: "2026-07-18-patch-notes-narration",
     date: "2026-07-18",
-    title: "Patch Notes, narration, and build hardening",
+    title: "Patch Notes, narration, and Live Care fix",
     version: "0.1.1",
     summary:
-      "Public update log, optional ElevenLabs comic/commercial VO pipeline, kids coloring polish, and a Vercel TypeScript fix for Live Care.",
+      "Public update log, optional comic/commercial voice-over clips, kids coloring polish, and a Live Care fix when you have no active pet.",
     added: [
-      "Public Patch Notes page at /patch-notes (alias /updates) with a typed content catalog for every push",
-      "Maintainer workflow + CLI stub helper so release notes ship with each push",
-      "ElevenLabs narration tooling for comic storybook clips and commercial VO (pre-generated assets; runtime stays key-free)",
+      "Public Patch Notes page at /patch-notes (alias /updates)",
+      "Comic storybook and commercial voice-over clips you can play when available",
     ],
     changed: [
       "Kids coloring sheets refreshed toward clearer game-sketch line art where updated",
     ],
     fixed: [
-      "Vercel production build: `live-care-panel` no longer type-errors when pet is null during companion/cry audio setup",
+      "Live Care panel no longer breaks when you have no active pet during companion audio setup",
     ],
     knownIssues: [
       "A fuller 2.5D visual overhaul is still in progress and is not part of this release",
-      "Comic page narration only plays when pre-generated clips are present for that issue",
+      "Comic page narration only plays when voice clips are available for that issue",
     ],
   },
   {
@@ -626,7 +647,6 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     changed: [
       "Marketing footer and Fan Kit wallpaper panels for clearer community downloads",
     ],
-    fixed: [],
   },
   {
     id: "2026-07-18-living-world-batch",
@@ -634,21 +654,21 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     title: "Housing, world expansion, and Live World fixes",
     version: "73b2c66",
     summary:
-      "Homestead/housing systems, automatic world-expansion scaffolding, comic series foundations, and Live World input/HUD stability.",
+      "Homestead/housing systems, early world-expansion prep, early Legends of the Rift comic covers, and Live World input/HUD stability.",
     added: [
       "Player housing build/place flow and homestead/neighborhood foundations",
-      "World expansion admin + capacity/assignment scaffolding (prepare-first migrations)",
-      "Official comic series content pipeline and covers for early Legends of the Rift issues",
+      "Early world-expansion prep for capacity and neighborhood assignment (not fully live yet)",
+      "Early Legends of the Rift comic covers and series foundations",
     ],
     changed: [
       "Live World HUD docking for Chat / Presence and talk-prompt layout",
     ],
     fixed: [
       "WASD movement restored when chat is pinned; HUD remount stability improved",
-      "Live World HUD overlap and layout migration issues for Chat / Presence panels",
+      "Live World HUD overlap and layout issues for Chat / Presence panels",
     ],
     knownIssues: [
-      "World-expansion migrations remain prepare-first - operators should not force-enable capacity expansion until approved",
+      "World-expansion capacity tools stay off until operators approve them for live use",
     ],
   },
   {
@@ -659,14 +679,13 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
     summary:
       "Population/presence systems, retention events, credits UI polish, and a draggable Live World HUD shell.",
     added: [
-      "Living-world population and retention event hooks",
+      "Living-world population and retention events",
       "Draggable / slot-based Live World HUD layouts",
       "Credits economy icon and related UI polish",
     ],
     changed: [
-      "Live World shell wiring after HUD drag integration",
+      "Live World shell updated after HUD drag support",
     ],
-    fixed: [],
   },
   {
     id: "2026-07-17-npcs-quests-art",
@@ -679,9 +698,8 @@ export const PATCH_NOTES: PatchNoteEntry[] = [
       "Playable Live World NPCs and a starter quest chain with portraits",
       "Unique illustrations across the quest catalog",
       "Creature battle animation sheets plus ability/feature icon artwork",
-      "NPC full-body art, overworld sprites, and sync/report tooling",
+      "NPC full-body art and overworld sprites",
     ],
-    fixed: [],
   },
   {
     id: "2026-07-17-platform-foundation",

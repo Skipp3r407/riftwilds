@@ -186,20 +186,28 @@ function paintPathEdgeDir(c, seed, dir) {
   paintGrass(c, seed, true);
   for (let y = 0; y < c.h; y++) {
     for (let x = 0; x < c.w; x++) {
-      const n = (hash2(x, y, seed) - 0.5) * 3.2;
+      // Wider, noisier fringe so seams read as meadow→trail, not a hard square.
+      const n = (hash2(x, y, seed) - 0.5) * 4.6;
+      const n2 = (hash2(x, y, seed + 7) - 0.5) * 2.2;
       let onPath = false;
-      if (dir === "n") onPath = y > c.h * 0.42 + n;
-      else if (dir === "s") onPath = y < c.h * 0.58 + n;
-      else if (dir === "e") onPath = x < c.w * 0.58 + n;
-      else if (dir === "w") onPath = x > c.w * 0.42 + n;
+      if (dir === "n") onPath = y > c.h * 0.38 + n + n2;
+      else if (dir === "s") onPath = y < c.h * 0.62 + n + n2;
+      else if (dir === "e") onPath = x < c.w * 0.62 + n + n2;
+      else if (dir === "w") onPath = x > c.w * 0.38 + n + n2;
       if (!onPath) continue;
       const edge =
-        (dir === "n" && y < c.h * 0.42 + n + 2.2) ||
-        (dir === "s" && y > c.h * 0.58 + n - 2.2) ||
-        (dir === "e" && x > c.w * 0.58 + n - 2.2) ||
-        (dir === "w" && x < c.w * 0.42 + n + 2.2);
-      if (edge) set(c, x, y, C.pathEdge);
-      else {
+        (dir === "n" && y < c.h * 0.38 + n + n2 + 3.4) ||
+        (dir === "s" && y > c.h * 0.62 + n + n2 - 3.4) ||
+        (dir === "e" && x > c.w * 0.62 + n + n2 - 3.4) ||
+        (dir === "w" && x < c.w * 0.38 + n + n2 + 3.4);
+      if (edge) {
+        // Mixed fringe: dirt edge + grass tufts + pebbles
+        const f = hash2(x, y, seed + 9);
+        if (f > 0.72) set(c, x, y, C.grass3);
+        else if (f > 0.55) set(c, x, y, C.pathEdge);
+        else if (f < 0.12) set(c, x, y, C.stone);
+        else set(c, x, y, C.path2);
+      } else {
         const h = hash2(x, y, seed + 2);
         set(c, x, y, h < 0.28 ? C.path2 : h > 0.78 ? C.path3 : C.path1);
       }
@@ -238,6 +246,8 @@ function paintWater(c, seed, lily = false) {
       if (h < 0.2) set(c, x, y, C.water2);
       else if (h > 0.85) set(c, x, y, C.water3);
       if ((x + y * 2 + seed) % 11 === 0) set(c, x, y, C.water3);
+      // Sparse sparkle highlights (classic pond glitter)
+      if (hash2(x, y, seed + 19) > 0.94) set(c, x, y, [235, 252, 255]);
     }
   }
   if (lily) {
@@ -268,24 +278,30 @@ function paintWaterEdgeDir(c, seed, dir) {
   paintGrass(c, seed, true);
   for (let y = 0; y < c.h; y++) {
     for (let x = 0; x < c.w; x++) {
-      const n = (hash2(x, y, seed) - 0.5) * 2.6;
+      const n = (hash2(x, y, seed) - 0.5) * 3.4;
+      const n2 = (hash2(x, y, seed + 11) - 0.5) * 1.8;
       let onWater = false;
-      if (dir === "n") onWater = y > c.h * 0.48 + n;
-      else if (dir === "s") onWater = y < c.h * 0.52 + n;
-      else if (dir === "e") onWater = x < c.w * 0.52 + n;
-      else if (dir === "w") onWater = x > c.w * 0.48 + n;
+      if (dir === "n") onWater = y > c.h * 0.44 + n + n2;
+      else if (dir === "s") onWater = y < c.h * 0.56 + n + n2;
+      else if (dir === "e") onWater = x < c.w * 0.56 + n + n2;
+      else if (dir === "w") onWater = x > c.w * 0.44 + n + n2;
       if (!onWater) continue;
       const shoreBand =
-        (dir === "n" && y < c.h * 0.48 + n + 2.5) ||
-        (dir === "s" && y > c.h * 0.52 + n - 2.5) ||
-        (dir === "e" && x > c.w * 0.52 + n - 2.5) ||
-        (dir === "w" && x < c.w * 0.48 + n + 2.5);
+        (dir === "n" && y < c.h * 0.44 + n + n2 + 3.2) ||
+        (dir === "s" && y > c.h * 0.56 + n + n2 - 3.2) ||
+        (dir === "e" && x > c.w * 0.56 + n + n2 - 3.2) ||
+        (dir === "w" && x < c.w * 0.44 + n + n2 + 3.2);
       if (shoreBand) {
-        set(c, x, y, hash2(x, y, seed + 4) > 0.55 ? C.stoneDk : C.stone);
+        const s = hash2(x, y, seed + 4);
+        if (s > 0.78) set(c, x, y, C.grass3);
+        else if (s > 0.45) set(c, x, y, C.stoneDk);
+        else set(c, x, y, C.stone);
       } else {
         const h = hash2(x, y, seed + 3);
         set(c, x, y, h < 0.2 ? C.waterDeep : h > 0.82 ? C.water3 : C.water1);
-        if ((x + y + seed) % 13 === 0) set(c, x, y, C.water3);
+        // Shore sparkle / foam flecks
+        if ((x + y + seed) % 11 === 0) set(c, x, y, [230, 250, 255]);
+        else if ((x * 3 + y + seed) % 17 === 0) set(c, x, y, C.water3);
       }
     }
   }
@@ -492,7 +508,8 @@ function drawCottage(c, opts = {}) {
   const bx = Math.floor((c.w - bodyW) / 2);
   const by = footY - bodyH;
 
-  // soft contact shadow
+  // Soft elongated contact + depth shadow (cottage massing reads taller)
+  fillEllipse(c, c.w / 2 + 3, footY + 1, bodyW / 2 + 5, 4.5, [30, 40, 24, 120]);
   fillEllipse(c, c.w / 2 + 1, footY + 1, bodyW / 2 + 3, 3.5, C.shadow);
 
   if (peek) {
@@ -516,6 +533,16 @@ function drawCottage(c, opts = {}) {
   } else {
     for (let y = by; y < by + bodyH; y += 3) {
       for (let x = bx; x < bx + bodyW; x++) if (hash2(x, y, 1) > 0.4) set(c, x, y, wallDk);
+    }
+  }
+  // West-face shade band — cheap 2.5D massing without fighting the facade art
+  for (let y = by + 2; y < by + bodyH - 1; y++) {
+    for (let x = bx; x < bx + 3; x++) {
+      const i = (y * c.w + x) * 4;
+      if (c.data[i + 3] < 8) continue;
+      c.data[i] = Math.floor(c.data[i] * 0.72);
+      c.data[i + 1] = Math.floor(c.data[i + 1] * 0.72);
+      c.data[i + 2] = Math.floor(c.data[i + 2] * 0.78);
     }
   }
 
@@ -754,6 +781,26 @@ function drawProp(c, kind) {
     fillEllipse(c, cx, foot - 5, 9, 6, C.stone);
     set(c, cx - 2, foot - 7, C.leaf1);
     set(c, cx + 3, foot - 6, C.leaf2);
+  } else if (kind === "clay-pot") {
+    // Village urn — original Riftwilds pottery, not a licensed pot sprite
+    fillEllipse(c, cx, foot - 1, 5, 2, C.shadow);
+    fillEllipse(c, cx, foot - 7, 6, 7, [180, 110, 70]);
+    fillRect(c, cx - 5, foot - 10, 10, 3, [150, 90, 55]);
+    fillEllipse(c, cx, foot - 12, 4, 2, [200, 130, 85]);
+    set(c, cx + 2, foot - 8, C.amber);
+    set(c, cx - 1, foot - 5, [120, 70, 40]);
+  } else if (kind === "pot-cluster") {
+    fillEllipse(c, cx, foot - 1, 8, 2, C.shadow);
+    fillEllipse(c, cx - 4, foot - 6, 4, 5, [170, 100, 65]);
+    fillEllipse(c, cx + 3, foot - 8, 5, 6, [190, 120, 75]);
+    fillEllipse(c, cx + 1, foot - 5, 3, 4, [155, 95, 60]);
+    set(c, cx + 4, foot - 10, C.leaf1);
+    set(c, cx - 3, foot - 8, C.flowerA);
+  } else if (kind === "boulder") {
+    fillEllipse(c, cx + 1, foot, 10, 3, C.shadow);
+    fillEllipse(c, cx, foot - 7, 10, 8, C.stoneDk);
+    fillEllipse(c, cx - 2, foot - 9, 5, 4, C.stone);
+    set(c, cx + 3, foot - 10, C.leaf2);
   } else if (kind === "market-stall") {
     fillRect(c, cx - 12, foot - 10, 24, 10, C.wood);
     for (let x = cx - 14; x <= cx + 14; x++) {
@@ -901,6 +948,9 @@ async function genProps() {
     "lantern-post",
     "flowers",
     "rock-moss",
+    "clay-pot",
+    "pot-cluster",
+    "boulder",
     "market-stall",
     "bridge",
     "campfire",

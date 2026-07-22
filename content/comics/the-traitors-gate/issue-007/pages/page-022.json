@@ -155,7 +155,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "The captive shown.",
   "letteringInstructions": "Sparse balloons; big SFX; leave art readable.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Gate of Consequence — The Traitor's Gate page 18",
@@ -179,5 +179,7 @@
   "id": "the-traitors-gate-issue-007-p022",
   "cleanArtRel": "generated/raw-art/page-022.webp",
   "letteredArtRel": "generated/lettered-pages/page-022.webp",
-  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-022.webp"
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-022.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

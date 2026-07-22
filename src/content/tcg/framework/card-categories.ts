@@ -49,7 +49,7 @@ export const CATEGORY_PURPOSE: Record<TcgCardCategory, string> = {
   companion:
     "Core battle units — ATK/DEF/HP/Speed, cost, keywords, role, element, family, evolution.",
   spell: "One-time magic — cost, speed, target, effect; discarded after resolve.",
-  item: "Consumables — leather/wood/potion frames; consume on use; battle + world hooks.",
+  item: "World inventory consumables (food, care, medicine) — not shuffled into combat decks. Combat one-shots use Spell.",
   equipment: "Attach to companions; persist until destroy, unequip, or death.",
   terrain: "One per player — environmental board effects; replacing swaps the prior.",
   relic: "Permanent board artifacts — persist for the match (not attach mods).",

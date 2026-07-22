@@ -392,13 +392,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "front-cover",
       "title": "The Traveling Circus — Cover",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-01.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-001.webp",
       "artAlt": "The Traveling Circus — Cover",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "cover",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-01.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-001.webp",
           "artAlt": "The Traveling Circus — Cover",
           "atmosphere": "festival",
           "bubbles": [
@@ -440,13 +440,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "inside-cover",
       "title": "Inside Front Cover",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-02.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-002.webp",
       "artAlt": "Inside Front Cover",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "ifc",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-02.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-002.webp",
           "artAlt": "Inside Front Cover",
           "atmosphere": "festival",
           "bubbles": [
@@ -480,13 +480,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "credits",
       "title": "Credits",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-03.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-003.webp",
       "artAlt": "Credits",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "cred",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-03.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-003.webp",
           "artAlt": "Credits",
           "atmosphere": "festival",
           "bubbles": [
@@ -520,13 +520,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "title",
       "title": "Chapter Three — Lanternveil",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-04.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-004.webp",
       "artAlt": "Chapter Three — Lanternveil",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "title",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-04.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-004.webp",
           "artAlt": "Chapter Three — Lanternveil",
           "atmosphere": "festival",
           "bubbles": [
@@ -568,13 +568,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "story",
       "title": "Roads Beneath Lanterns",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-05.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-005.webp",
       "artAlt": "Roads Beneath Lanterns — The Traveling Circus page 1",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p1a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-05.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-005.webp",
           "artAlt": "Roads Beneath Lanterns — The Traveling Circus page 1",
           "atmosphere": "festival",
           "bubbles": [
@@ -617,13 +617,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "three-stack",
       "role": "story",
       "title": "Step Right In",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-06.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-006.webp",
       "artAlt": "Step Right In — The Traveling Circus page 2",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p2a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-06.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-006.webp",
           "artAlt": "Step Right In — The Traveling Circus page 2",
           "atmosphere": "festival",
           "bubbles": [
@@ -640,7 +640,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p2b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-06.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-006.webp",
           "artAlt": "Step Right In — The Traveling Circus page 2",
           "atmosphere": "festival",
           "bubbles": [
@@ -666,7 +666,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p2c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-06.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-006.webp",
           "artAlt": "Step Right In — The Traveling Circus page 2",
           "atmosphere": "festival",
           "bubbles": [
@@ -702,13 +702,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "two-col",
       "role": "story",
       "title": "The Greeter Notices",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-07.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-007.webp",
       "artAlt": "The Greeter Notices — The Traveling Circus page 3",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p3a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-07.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-007.webp",
           "artAlt": "The Greeter Notices — The Traveling Circus page 3",
           "atmosphere": "festival",
           "bubbles": [
@@ -733,7 +733,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p3b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-07.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-007.webp",
           "artAlt": "The Greeter Notices — The Traveling Circus page 3",
           "atmosphere": "festival",
           "bubbles": [
@@ -769,13 +769,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "grid-2x2",
       "role": "story",
       "title": "Wonder Market",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-08.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-008.webp",
       "artAlt": "Wonder Market — The Traveling Circus page 4",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p4a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-08.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-008.webp",
           "artAlt": "Wonder Market — The Traveling Circus page 4",
           "atmosphere": "festival",
           "bubbles": [
@@ -791,7 +791,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p4b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-08.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-008.webp",
           "artAlt": "Wonder Market — The Traveling Circus page 4",
           "atmosphere": "festival",
           "bubbles": [
@@ -808,7 +808,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p4c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-08.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-008.webp",
           "artAlt": "Wonder Market — The Traveling Circus page 4",
           "atmosphere": "festival",
           "bubbles": [
@@ -824,7 +824,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p4d",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-08.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-008.webp",
           "artAlt": "Wonder Market — The Traveling Circus page 4",
           "atmosphere": "festival",
           "bubbles": [
@@ -851,13 +851,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "three-stack",
       "role": "story",
       "title": "Snack Catastrophe",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-09.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-009.webp",
       "artAlt": "Snack Catastrophe — The Traveling Circus page 5",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p5a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-09.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-009.webp",
           "artAlt": "Snack Catastrophe — The Traveling Circus page 5",
           "atmosphere": "festival",
           "bubbles": [
@@ -882,7 +882,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p5b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-09.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-009.webp",
           "artAlt": "Snack Catastrophe — The Traveling Circus page 5",
           "atmosphere": "festival",
           "bubbles": [
@@ -908,7 +908,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p5c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-09.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-009.webp",
           "artAlt": "Snack Catastrophe — The Traveling Circus page 5",
           "atmosphere": "festival",
           "bubbles": [
@@ -944,13 +944,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "two-col",
       "role": "story",
       "title": "Lanternmaster Knows the Name",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-10.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-010.webp",
       "artAlt": "Lanternmaster Knows the Name — The Traveling Circus page 6",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p6a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-10.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-010.webp",
           "artAlt": "Lanternmaster Knows the Name — The Traveling Circus page 6",
           "atmosphere": "festival",
           "bubbles": [
@@ -976,7 +976,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p6b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-10.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-010.webp",
           "artAlt": "Lanternmaster Knows the Name — The Traveling Circus page 6",
           "atmosphere": "festival",
           "bubbles": [
@@ -1012,13 +1012,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "three-stack",
       "role": "story",
       "title": "Not Neatly in a Codex",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-11.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-011.webp",
       "artAlt": "Not Neatly in a Codex — The Traveling Circus page 7",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p7a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-11.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-011.webp",
           "artAlt": "Not Neatly in a Codex — The Traveling Circus page 7",
           "atmosphere": "festival",
           "bubbles": [
@@ -1035,7 +1035,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p7b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-11.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-011.webp",
           "artAlt": "Not Neatly in a Codex — The Traveling Circus page 7",
           "atmosphere": "festival",
           "bubbles": [
@@ -1052,7 +1052,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p7c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-11.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-011.webp",
           "artAlt": "Not Neatly in a Codex — The Traveling Circus page 7",
           "atmosphere": "festival",
           "bubbles": [
@@ -1088,13 +1088,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "story",
       "title": "Curtain Call Begins",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-12.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-012.webp",
       "artAlt": "Curtain Call Begins — The Traveling Circus page 8",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p8a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-12.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-012.webp",
           "artAlt": "Curtain Call Begins — The Traveling Circus page 8",
           "atmosphere": "festival",
           "bubbles": [
@@ -1145,13 +1145,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "grid-2x2",
       "role": "story",
       "title": "Ghosts Under the Boards",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-13.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-013.webp",
       "artAlt": "Ghosts Under the Boards — The Traveling Circus page 9",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p9a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-13.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-013.webp",
           "artAlt": "Ghosts Under the Boards — The Traveling Circus page 9",
           "atmosphere": "festival",
           "bubbles": [
@@ -1168,7 +1168,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p9b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-13.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-013.webp",
           "artAlt": "Ghosts Under the Boards — The Traveling Circus page 9",
           "atmosphere": "festival",
           "bubbles": [
@@ -1184,7 +1184,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p9c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-13.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-013.webp",
           "artAlt": "Ghosts Under the Boards — The Traveling Circus page 9",
           "atmosphere": "festival",
           "bubbles": [
@@ -1210,7 +1210,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p9d",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-13.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-013.webp",
           "artAlt": "Ghosts Under the Boards — The Traveling Circus page 9",
           "atmosphere": "festival",
           "bubbles": [
@@ -1236,13 +1236,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "two-col",
       "role": "story",
       "title": "Resonance Meeting",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-14.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-014.webp",
       "artAlt": "Resonance Meeting — The Traveling Circus page 10",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p10a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-14.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-014.webp",
           "artAlt": "Resonance Meeting — The Traveling Circus page 10",
           "atmosphere": "festival",
           "bubbles": [
@@ -1268,7 +1268,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p10b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-14.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-014.webp",
           "artAlt": "Resonance Meeting — The Traveling Circus page 10",
           "atmosphere": "festival",
           "bubbles": [
@@ -1303,13 +1303,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "three-stack",
       "role": "story",
       "title": "Don't Ask Backstage",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-15.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-015.webp",
       "artAlt": "Don't Ask Backstage — The Traveling Circus page 11",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p11a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-15.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-015.webp",
           "artAlt": "Don't Ask Backstage — The Traveling Circus page 11",
           "atmosphere": "festival",
           "bubbles": [
@@ -1326,7 +1326,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p11b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-15.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-015.webp",
           "artAlt": "Don't Ask Backstage — The Traveling Circus page 11",
           "atmosphere": "festival",
           "bubbles": [
@@ -1351,7 +1351,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p11c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-15.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-015.webp",
           "artAlt": "Don't Ask Backstage — The Traveling Circus page 11",
           "atmosphere": "festival",
           "bubbles": [
@@ -1378,13 +1378,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "grid-2x2",
       "role": "story",
       "title": "Restricted Wagon",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-16.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-016.webp",
       "artAlt": "Restricted Wagon — The Traveling Circus page 12",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p12a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-16.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-016.webp",
           "artAlt": "Restricted Wagon — The Traveling Circus page 12",
           "atmosphere": "festival",
           "bubbles": [
@@ -1401,7 +1401,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p12b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-16.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-016.webp",
           "artAlt": "Restricted Wagon — The Traveling Circus page 12",
           "atmosphere": "festival",
           "bubbles": [
@@ -1417,7 +1417,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p12c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-16.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-016.webp",
           "artAlt": "Restricted Wagon — The Traveling Circus page 12",
           "atmosphere": "festival",
           "bubbles": [
@@ -1433,7 +1433,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p12d",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-16.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-016.webp",
           "artAlt": "Restricted Wagon — The Traveling Circus page 12",
           "atmosphere": "festival",
           "bubbles": [
@@ -1460,13 +1460,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "story",
       "title": "Archive of Routes",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-17.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-017.webp",
       "artAlt": "Archive of Routes — The Traveling Circus page 13",
       "atmosphere": "rift",
       "panels": [
         {
           "id": "p13a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-17.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-017.webp",
           "artAlt": "Archive of Routes — The Traveling Circus page 13",
           "atmosphere": "rift",
           "bubbles": [
@@ -1510,13 +1510,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "two-col",
       "role": "story",
       "title": "Ember Route",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-18.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-018.webp",
       "artAlt": "Ember Route — The Traveling Circus page 14",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p14a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-18.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-018.webp",
           "artAlt": "Ember Route — The Traveling Circus page 14",
           "atmosphere": "festival",
           "bubbles": [
@@ -1533,7 +1533,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p14b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-18.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-018.webp",
           "artAlt": "Ember Route — The Traveling Circus page 14",
           "atmosphere": "festival",
           "bubbles": [
@@ -1568,13 +1568,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "three-stack",
       "role": "story",
       "title": "Crystal in the Vault",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-19.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-019.webp",
       "artAlt": "Crystal in the Vault — The Traveling Circus page 15",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p15a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-19.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-019.webp",
           "artAlt": "Crystal in the Vault — The Traveling Circus page 15",
           "atmosphere": "festival",
           "bubbles": [
@@ -1591,7 +1591,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p15b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-19.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-019.webp",
           "artAlt": "Crystal in the Vault — The Traveling Circus page 15",
           "atmosphere": "festival",
           "bubbles": [
@@ -1616,7 +1616,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p15c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-19.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-019.webp",
           "artAlt": "Crystal in the Vault — The Traveling Circus page 15",
           "atmosphere": "festival",
           "bubbles": [
@@ -1651,13 +1651,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "story",
       "title": "Sabotage",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-20.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-020.webp",
       "artAlt": "Sabotage — The Traveling Circus page 16",
       "atmosphere": "rift",
       "panels": [
         {
           "id": "p16a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-20.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-020.webp",
           "artAlt": "Sabotage — The Traveling Circus page 16",
           "atmosphere": "rift",
           "bubbles": [
@@ -1700,13 +1700,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "grid-2x2",
       "role": "story",
       "title": "Living Bulwark",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-21.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-021.webp",
       "artAlt": "Living Bulwark — The Traveling Circus page 17",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p17a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-21.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-021.webp",
           "artAlt": "Living Bulwark — The Traveling Circus page 17",
           "atmosphere": "festival",
           "bubbles": [
@@ -1722,7 +1722,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p17b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-21.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-021.webp",
           "artAlt": "Living Bulwark — The Traveling Circus page 17",
           "atmosphere": "festival",
           "bubbles": [
@@ -1739,7 +1739,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p17c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-21.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-021.webp",
           "artAlt": "Living Bulwark — The Traveling Circus page 17",
           "atmosphere": "festival",
           "bubbles": [
@@ -1756,7 +1756,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p17d",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-21.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-021.webp",
           "artAlt": "Living Bulwark — The Traveling Circus page 17",
           "atmosphere": "festival",
           "bubbles": [
@@ -1783,13 +1783,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "spread",
       "role": "story",
       "title": "Grand Chaos",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-22.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-022.webp",
       "artAlt": "Grand Chaos — The Traveling Circus page 18",
       "atmosphere": "rift",
       "panels": [
         {
           "id": "p18a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-22.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-022.webp",
           "artAlt": "Grand Chaos — The Traveling Circus page 18",
           "atmosphere": "rift",
           "bubbles": [
@@ -1848,13 +1848,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "three-stack",
       "role": "story",
       "title": "Not Evil — Collared",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-23.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-023.webp",
       "artAlt": "Not Evil — Collared — The Traveling Circus page 19",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p19a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-23.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-023.webp",
           "artAlt": "Not Evil — Collared — The Traveling Circus page 19",
           "atmosphere": "festival",
           "bubbles": [
@@ -1871,7 +1871,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p19b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-23.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-023.webp",
           "artAlt": "Not Evil — Collared — The Traveling Circus page 19",
           "atmosphere": "festival",
           "bubbles": [
@@ -1888,7 +1888,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p19c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-23.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-023.webp",
           "artAlt": "Not Evil — Collared — The Traveling Circus page 19",
           "atmosphere": "festival",
           "bubbles": [
@@ -1915,13 +1915,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "two-col",
       "role": "story",
       "title": "Spark Chooses",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-24.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-024.webp",
       "artAlt": "Spark Chooses — The Traveling Circus page 20",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p20a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-24.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-024.webp",
           "artAlt": "Spark Chooses — The Traveling Circus page 20",
           "atmosphere": "festival",
           "bubbles": [
@@ -1938,7 +1938,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p20b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-24.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-024.webp",
           "artAlt": "Spark Chooses — The Traveling Circus page 20",
           "atmosphere": "festival",
           "bubbles": [
@@ -1982,13 +1982,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "three-stack",
       "role": "story",
       "title": "Quiet Betrayal of the Hunt",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-25.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-025.webp",
       "artAlt": "Quiet Betrayal of the Hunt — The Traveling Circus page 21",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p21a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-25.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-025.webp",
           "artAlt": "Quiet Betrayal of the Hunt — The Traveling Circus page 21",
           "atmosphere": "festival",
           "bubbles": [
@@ -2005,7 +2005,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p21b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-25.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-025.webp",
           "artAlt": "Quiet Betrayal of the Hunt — The Traveling Circus page 21",
           "atmosphere": "festival",
           "bubbles": [
@@ -2030,7 +2030,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p21c",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-25.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-025.webp",
           "artAlt": "Quiet Betrayal of the Hunt — The Traveling Circus page 21",
           "atmosphere": "festival",
           "bubbles": [
@@ -2065,13 +2065,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "story",
       "title": "Lanternmaster Unmasked in Battle",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-26.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-026.webp",
       "artAlt": "Lanternmaster Unmasked in Battle — The Traveling Circus page 22",
       "atmosphere": "rift",
       "panels": [
         {
           "id": "p22a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-26.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-026.webp",
           "artAlt": "Lanternmaster Unmasked in Battle — The Traveling Circus page 22",
           "atmosphere": "rift",
           "bubbles": [
@@ -2115,13 +2115,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "two-col",
       "role": "story",
       "title": "We Move Them",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-27.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-027.webp",
       "artAlt": "We Move Them — The Traveling Circus page 23",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "p23a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-27.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-027.webp",
           "artAlt": "We Move Them — The Traveling Circus page 23",
           "atmosphere": "festival",
           "bubbles": [
@@ -2138,7 +2138,7 @@ export const ISSUE_003_COMIC: ComicIssue = {
         },
         {
           "id": "p23b",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-27.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-027.webp",
           "artAlt": "We Move Them — The Traveling Circus page 23",
           "atmosphere": "festival",
           "bubbles": [
@@ -2174,13 +2174,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "story",
       "title": "Map of Thresholds",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-28.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-028.webp",
       "artAlt": "Map of Thresholds — The Traveling Circus page 24",
       "atmosphere": "rift",
       "panels": [
         {
           "id": "p24a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-28.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-028.webp",
           "artAlt": "Map of Thresholds — The Traveling Circus page 24",
           "atmosphere": "rift",
           "bubbles": [
@@ -2223,13 +2223,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "story",
       "title": "The Guardian Remembers",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-29.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-029.webp",
       "artAlt": "The Guardian Remembers — The Traveling Circus page 25",
       "atmosphere": "rift",
       "panels": [
         {
           "id": "p25a",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-29.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-029.webp",
           "artAlt": "The Guardian Remembers — The Traveling Circus page 25",
           "atmosphere": "rift",
           "bubbles": [
@@ -2280,13 +2280,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "teaser",
       "title": "Next Issue — The Lost City",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-30.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-030.webp",
       "artAlt": "Next Issue — The Lost City",
       "atmosphere": "rift",
       "panels": [
         {
           "id": "teaser",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-30.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-030.webp",
           "artAlt": "Next Issue — The Lost City",
           "atmosphere": "rift",
           "bubbles": [
@@ -2328,13 +2328,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "profile",
       "title": "Character Profile — The Lanternmaster",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-31.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-031.webp",
       "artAlt": "Character Profile — The Lanternmaster",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "prof",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-31.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-031.webp",
           "artAlt": "Character Profile — The Lanternmaster",
           "atmosphere": "festival",
           "bubbles": [
@@ -2368,13 +2368,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "profile",
       "title": "Companion Profile — Lumenhare",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-32.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-032.webp",
       "artAlt": "Companion Profile — Lumenhare",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "comp",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-32.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-032.webp",
           "artAlt": "Companion Profile — Lumenhare",
           "atmosphere": "festival",
           "bubbles": [
@@ -2408,13 +2408,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "lore",
       "title": "Codex — Lanternveil Traveling Circus",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-33.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-033.webp",
       "artAlt": "Codex — Lanternveil Traveling Circus",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "codex",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-33.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-033.webp",
           "artAlt": "Codex — Lanternveil Traveling Circus",
           "atmosphere": "festival",
           "bubbles": [
@@ -2448,13 +2448,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "lore",
       "title": "Ability Spotlight — Grand Illusion",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-34.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-034.webp",
       "artAlt": "Ability Spotlight — Grand Illusion",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "abil",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-34.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-034.webp",
           "artAlt": "Ability Spotlight — Grand Illusion",
           "atmosphere": "festival",
           "bubbles": [
@@ -2488,13 +2488,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "map",
       "title": "World Map — Sanctum to Circus to Lost City",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-35.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-035.webp",
       "artAlt": "World Map — Sanctum to Circus to Lost City",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "map",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-35.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-035.webp",
           "artAlt": "World Map — Sanctum to Circus to Lost City",
           "atmosphere": "festival",
           "bubbles": [
@@ -2528,13 +2528,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "letters",
       "title": "Editor's Note",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-36.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-036.webp",
       "artAlt": "Editor's Note",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "ed",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-36.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-036.webp",
           "artAlt": "Editor's Note",
           "atmosphere": "festival",
           "bubbles": [
@@ -2568,13 +2568,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "inside-cover",
       "title": "Inside Back Cover",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-37.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-037.webp",
       "artAlt": "Inside Back Cover",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "ibc",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-37.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-037.webp",
           "artAlt": "Inside Back Cover",
           "atmosphere": "festival",
           "bubbles": [
@@ -2600,13 +2600,13 @@ export const ISSUE_003_COMIC: ComicIssue = {
       "layout": "splash",
       "role": "back-cover",
       "title": "Back Cover — Lanternveil Grand Performance",
-      "artSrc": "/assets/comics/pages/the-traveling-circus/page-38.webp",
+      "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-038.webp",
       "artAlt": "Back Cover — Lanternveil Grand Performance",
       "atmosphere": "festival",
       "panels": [
         {
           "id": "bc",
-          "artSrc": "/assets/comics/pages/the-traveling-circus/page-38.webp",
+          "artSrc": "/assets/comics/the-traveling-circus/issue-003/pages/page-038.webp",
           "artAlt": "Back Cover — Lanternveil Grand Performance",
           "atmosphere": "festival",
           "bubbles": [

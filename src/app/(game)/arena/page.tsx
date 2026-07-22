@@ -20,7 +20,7 @@ export default function ArenaHomePage() {
           status="Paused"
           statusTone="warn"
           actions={
-            <Link href="/tcg/battle" className="btn-primary focus-ring">
+            <Link href="/tcg/battle?mode=practice&board=1" className="btn-primary focus-ring">
               Practice Board
             </Link>
           }
@@ -36,16 +36,19 @@ export default function ArenaHomePage() {
         kicker="Skill competition"
         titleSlug="arena"
         title="Rift Arena"
-        description="Free skill card duels by default. Invite friends, train vs AI, browse ladders and calendars. SOL Arena is a separate optional mode and stays disabled."
+        description="Free skill card duels by default. Invite friends, train vs AI, browse ladders and calendars. Optional SOL play lives under Rift Battle → Rift Stakes — never mixed into free queues."
         status="Live · Free"
         statusTone="live"
         actions={
           <>
-            <Link href="/tcg/battle" className="btn-primary focus-ring">
+            <Link href="/tcg/battle?mode=practice&board=1" className="btn-primary focus-ring">
               Practice vs Kael
             </Link>
             <Link href="/tcg/deck-builder" className="btn-secondary focus-ring">
               Deck Atelier
+            </Link>
+            <Link href="/tcg/battle?mode=stakes" className="btn-secondary focus-ring">
+              Rift Stakes (optional)
             </Link>
           </>
         }

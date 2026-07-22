@@ -63,7 +63,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "NO_SESSION" }, { status: 401 });
   }
   const deckList = getActiveDeckList(key);
-  // Prefer constructed rules; fall back for teaching starter pools.
+  // getActiveDeckList repairs duplicate-heavy / undersized binders to unique 29.
+  // Practice still rebuilds loadouts below — only gate on those if needed.
   const constructed = validateDeckList(deckList);
   const valid = constructed.ok ? constructed : validateContentDeckList(deckList);
   if (!valid.ok) {

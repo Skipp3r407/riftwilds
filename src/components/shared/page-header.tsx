@@ -162,7 +162,12 @@ export function PageHeader({
         ) : null}
         <div className="page-header__band-content">
           {status ? (
-            <span className={cn(toneClass[statusTone], "page-header__status")}>{status}</span>
+            <span
+              className={cn(toneClass[statusTone], "page-header__status")}
+              title={status}
+            >
+              {status}
+            </span>
           ) : null}
           {kicker ? <p className="page-kicker">{kicker}</p> : null}
           <h1 className={cn("page-title", kicker ? "mt-2" : undefined)}>{title}</h1>

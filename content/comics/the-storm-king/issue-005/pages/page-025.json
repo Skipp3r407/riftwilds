@@ -163,7 +163,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Release the bond.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
-  "generationStatus": "cached",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Loyalty Is Not Obligation — The Storm King page 21",
@@ -187,5 +187,7 @@
   "id": "the-storm-king-issue-005-p025",
   "cleanArtRel": "generated/raw-art/page-025.webp",
   "letteredArtRel": "generated/lettered-pages/page-025.webp",
-  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-025.webp"
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-025.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

@@ -41,7 +41,7 @@ describe("battle rules config v2", () => {
     expect(r.energy.cap).toBe(10);
     expect(r.field.frontlineSlots).toBe(3);
     expect(r.field.backlineSlots).toBe(2);
-    expect(r.deck.copyLimits.common).toBe(2);
+    expect(r.deck.copyLimits.common).toBe(1);
     expect(r.deck.maxPowerRarityCombined).toBe(3);
     expect(CONSTRUCTED_RULES.deckSize).toBe(29);
     expect(TCG_DEFAULTS.keeperHp).toBe(25);

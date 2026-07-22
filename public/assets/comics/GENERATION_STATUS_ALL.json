@@ -1,0 +1,95 @@
+{
+  "updatedAt": "2026-07-22T12:05:10.389Z",
+  "issues": {
+    "1": {
+      "seeded": 32,
+      "lettered": 32,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=1 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=1 --prefer-grok --force"
+    },
+    "2": {
+      "seeded": 38,
+      "lettered": 38,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=2 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=2 --prefer-grok --force"
+    },
+    "3": {
+      "seeded": 38,
+      "lettered": 38,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=3 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=3 --prefer-grok --force"
+    },
+    "4": {
+      "seeded": 38,
+      "lettered": 38,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=4 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=4 --prefer-grok --force"
+    },
+    "5": {
+      "seeded": 38,
+      "lettered": 38,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=5 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=5 --prefer-grok --force"
+    },
+    "6": {
+      "seeded": 38,
+      "lettered": 38,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=6 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=6 --prefer-grok --force"
+    },
+    "7": {
+      "seeded": 39,
+      "lettered": 39,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=7 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=7 --prefer-grok --force"
+    },
+    "8": {
+      "seeded": 39,
+      "lettered": 39,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=8 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=8 --prefer-grok --force"
+    },
+    "9": {
+      "seeded": 38,
+      "lettered": 38,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=9 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=9 --prefer-grok --force"
+    },
+    "10": {
+      "seeded": 39,
+      "lettered": 39,
+      "storyLettered": 25,
+      "grokOk": 0,
+      "errors": 0,
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=10 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=10 --prefer-grok --force"
+    }
+  }
+}

@@ -111,7 +111,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
   "pageTurnObjective": "Meet the man history blamed.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
-  "generationStatus": "pending",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Archives of Blame — The Riftwright page 7",
@@ -135,5 +135,7 @@
   "id": "the-riftwright-issue-009-p007",
   "cleanArtRel": "generated/raw-art/page-007.webp",
   "letteredArtRel": "generated/lettered-pages/page-007.webp",
-  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-007.webp"
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-007.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

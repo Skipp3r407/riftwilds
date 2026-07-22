@@ -89,7 +89,7 @@
   "continuity": {},
   "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; pale stone, teal crystal, gold inlay, cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book front-cover page for The Lost City Issue #4 — The Lost City — Cover. Main cover: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot foreground; Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes and companions entering pale-stone teal-crystal city; The Last Guardian: towering stone-and-crystal construct in ancient Keeper armor, cyan energy core, moss and roots over armor, one damaged sensor-eye, massive shield, heavy Rift-powered weapon, emotional traces of former bond towering behind ruins; floating waterfalls; Meridian agents hidden on rooftops; cyan city core glow below; storm mountains faint in distance. Trade dress space top/bottom. Original Riftwilds. Keeper: Mira Eggwarden: young adult Hatchery mentor/Keeper, warm brown skin, dark hair in practical braid, travel-stained hatchery coat over Compact robes, Compact lantern charm on satchel, determined protective eyes. Spark: Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, steadier aura when bonded; cute but original — not a franchise mascot. Empty zones for title lettering. NO readable text in art.",
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "The Lost City — Cover",
@@ -103,5 +103,7 @@
   "id": "the-lost-city-issue-004-p001",
   "cleanArtRel": "generated/raw-art/page-001.webp",
   "letteredArtRel": "generated/lettered-pages/page-001.webp",
-  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-001.webp"
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-001.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

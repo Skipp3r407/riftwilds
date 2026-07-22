@@ -114,7 +114,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
   "pageTurnObjective": "Battle part two.",
   "letteringInstructions": "Dense SFX OK; keep speech readable; no overlapping tails on twin-key beam.",
-  "generationStatus": "pending",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Clash — Part One — The Riftwright page 22",
@@ -138,5 +138,7 @@
   "id": "the-riftwright-issue-009-p022",
   "cleanArtRel": "generated/raw-art/page-022.webp",
   "letteredArtRel": "generated/lettered-pages/page-022.webp",
-  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-022.webp"
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-022.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

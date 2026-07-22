@@ -39,7 +39,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "INVALID_BODY" }, { status: 400 });
   }
 
-  const { key, guestToken } = await resolveTcgOwnerKey();
+  const { key, guestToken, authorized } = await resolveTcgOwnerKey();
+  if (!authorized || !key) {
+    return NextResponse.json({ error: "NO_SESSION" }, { status: 401 });
+  }
   const lobby = createTcgLobby({
     hostKey: key,
     hostName: parsed.data.hostName,
@@ -68,7 +71,10 @@ export async function GET(req: Request) {
     return NextResponse.json({ error: "CODE_REQUIRED" }, { status: 400 });
   }
 
-  const { key, guestToken } = await resolveTcgOwnerKey();
+  const { key, guestToken, authorized } = await resolveTcgOwnerKey();
+  if (!authorized || !key) {
+    return NextResponse.json({ error: "NO_SESSION" }, { status: 401 });
+  }
   const lobby = getTcgLobby(code);
   if (!lobby) {
     return NextResponse.json({ error: "LOBBY_NOT_FOUND" }, { status: 404 });

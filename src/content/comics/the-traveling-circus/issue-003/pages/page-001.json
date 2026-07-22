@@ -89,8 +89,8 @@
   "continuity": {},
   "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book front-cover page for The Traveling Circus Issue #3 — The Traveling Circus — Cover. Main cover: Spark centered beneath floating lanterns; Mira Eggwarden and companions entering circus; Lanternmaster above grand pavilion; Lumenhare leaping illusion rings; Meridian agents in shadows; sanctuary crystal glow in wagon; Lost City silhouette distant. Trade dress empty zones. Original Riftwilds. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
-  "generationStatus": "pending",
-  "letteringStatus": "pending",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "The Traveling Circus — Cover",
   "atmosphere": "festival",
@@ -103,5 +103,7 @@
   "id": "the-traveling-circus-issue-003-p001",
   "cleanArtRel": "generated/raw-art/page-001.png",
   "letteredArtRel": "generated/lettered-pages/page-001.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-001.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-001.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

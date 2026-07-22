@@ -161,10 +161,10 @@ function NavDropdown({ group, pathname, openId, setOpenId }: NavDropdownProps) {
                   close();
                 }}
               >
-                <span className="flex w-full items-center justify-between gap-2">
-                  <span>{item.label}</span>
+                <span className="hud-nav__dropdown-item">
+                  <span className="hud-nav__dropdown-item-label">{item.label}</span>
                   {item.badge ? (
-                    <span className="shrink-0 font-display text-[9px] uppercase tracking-[0.14em] text-[var(--amber)]">
+                    <span className="hud-nav__dropdown-item-badge" title={item.badge}>
                       {item.badge}
                     </span>
                   ) : null}
@@ -434,10 +434,10 @@ export function SiteHeader(_props: Props = {}) {
                           closeMobile();
                         }}
                       >
-                        <span className="flex w-full items-center justify-between gap-2">
-                          <span>{item.label}</span>
+                        <span className="hud-nav__dropdown-item">
+                          <span className="hud-nav__dropdown-item-label">{item.label}</span>
                           {item.badge ? (
-                            <span className="shrink-0 font-display text-[9px] uppercase tracking-[0.14em] text-[var(--amber)]">
+                            <span className="hud-nav__dropdown-item-badge" title={item.badge}>
                               {item.badge}
                             </span>
                           ) : null}

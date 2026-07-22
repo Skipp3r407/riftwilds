@@ -4,7 +4,9 @@ import {
   isDevOverrideRuntimeAllowed,
 } from "@/lib/auth/dev-override";
 import { createCsrfToken, setCsrfCookie } from "@/lib/auth/csrf";
+import { secureCookieOptions } from "@/lib/auth/cookie-options";
 import { createDevOverrideSession } from "@/lib/auth/session";
+import { authDefaults } from "@/lib/config/project";
 import { ErrorCodes } from "@/lib/errors/app-error";
 import { withApiGuard } from "@/lib/security/api-guard";
 
@@ -54,7 +56,10 @@ export async function POST(request: Request) {
     const csrf = createCsrfToken();
     await setCsrfCookie(csrf);
 
-    return NextResponse.json({
+    // Also attach ph_session on the response object — cookies().set alone can
+    // miss some Route Handler responses, leaving Practice Board on preview seat.
+    const expiresAt = new Date(Date.now() + 1000 * 60 * 60 * 24 * 7);
+    const res = NextResponse.json({
       ok: true,
       requestId: guard.requestId,
       mode: session.mode,
@@ -75,6 +80,11 @@ export async function POST(request: Request) {
       csrf,
       note: "Local signed session — not written to production DB. Mock state seeds in localStorage.",
     });
+    res.cookies.set(authDefaults.COOKIE_NAME, session.token, {
+      ...secureCookieOptions(60 * 60 * 24 * 7),
+      expires: expiresAt,
+    });
+    return res;
   } catch {
     return NextResponse.json(
       {

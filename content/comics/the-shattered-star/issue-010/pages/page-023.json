@@ -132,7 +132,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Turn to continue.",
   "letteringInstructions": "Wide-spread lettering; keep center gutter clear for page join.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Breach and Beam — The Shattered Star page 19",
@@ -157,5 +157,7 @@
   },
   "volumeLabel": "Volume Two · Issue #1 / Issue #10",
   "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-023.webp",
-  "id": "the-shattered-star-issue-010-p023"
+  "id": "the-shattered-star-issue-010-p023",
+  "bakedLettering": true,
+  "composedPlate": true
 }

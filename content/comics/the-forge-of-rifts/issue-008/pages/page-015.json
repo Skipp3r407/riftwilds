@@ -169,7 +169,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
   "pageTurnObjective": "A prototype wakes.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Forge History — The Forge of Rifts page 11",
@@ -194,5 +194,7 @@
   "id": "the-forge-of-rifts-issue-008-p015",
   "cleanArtRel": "generated/raw-art/page-015.webp",
   "letteredArtRel": "generated/lettered-pages/page-015.webp",
-  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-015.webp"
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-015.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

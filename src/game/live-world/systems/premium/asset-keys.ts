@@ -88,6 +88,9 @@ export const LIBRARY_PROP_KEYS = [
 /** Ambient village Riftlings + stump clutter (cozy pixel pack). */
 export const COZY_AMBIENT_PROP_KEYS = [
   "stump",
+  "clay-pot",
+  "pot-cluster",
+  "boulder",
   "ambient-riftling-sparklet",
   "ambient-riftling-mossbun",
   "ambient-riftling-emberpup",

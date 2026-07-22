@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { isLocalPreviewBypass } from "@/lib/auth/account-play-policy";
 import { shouldUseSecureCookies } from "@/lib/auth/cookie-options";
 import {
   buildLoginRedirectPath,
@@ -32,14 +33,6 @@ function isLikelyBot(userAgent: string | null): boolean {
 function hasSessionCookie(request: NextRequest): boolean {
   const value = request.cookies.get(authDefaults.COOKIE_NAME)?.value;
   return Boolean(value && value.length >= 16);
-}
-
-/** Local-only: skip edge cookie gate when Postgres/auth cannot run (preview demos). */
-function isLocalPreviewBypass(): boolean {
-  return (
-    process.env.NODE_ENV !== "production" &&
-    process.env.AUTH_LOCAL_PREVIEW_BYPASS === "true"
-  );
 }
 
 export function middleware(request: NextRequest) {

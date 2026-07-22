@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import type { ComicIssue, ComicProgressState } from "@/content/comics/types";
 import { COMIC_ARCS, COMIC_VOLUMES } from "@/content/comics/story-arcs";
@@ -15,6 +16,8 @@ import {
   toggleFavoriteIssue,
   unlockLabel,
 } from "@/lib/comics";
+
+const COMICS_HERO_ART = "/assets/ui/comics/hero-legends.png";
 
 type Props = {
   issues: ComicIssue[];
@@ -91,42 +94,65 @@ export function ComicsLibrary({ issues, seriesTitle, seriesSubtitle }: Props) {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 md:px-6">
-      <header className="relative overflow-hidden rounded-2xl border border-[var(--stroke)] bg-[radial-gradient(ellipse_at_20%_0%,rgba(61,231,255,0.14),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(255,184,77,0.12),transparent_45%),linear-gradient(160deg,#1a1510_0%,#0a1830_55%,#121a28_100%)] px-6 py-12 md:px-10 md:py-16">
-        <p className="page-kicker">Lore Library · Comic Publishing</p>
-        <h1 className="font-display mt-3 text-4xl text-white md:text-6xl">{seriesTitle}</h1>
-        <p className="mt-4 max-w-2xl text-base text-[var(--text-muted)] md:text-lg">{seriesSubtitle}</p>
-        <p className="mt-3 text-sm text-[var(--text-muted)]">
-          {issues.length} illustrated issues · volumes &amp; arcs · Codex / card teases · cosmetics
-          only (never crypto-gated story)
-        </p>
-        <div className="mt-6 flex flex-wrap gap-2">
-          {continueIssue ? (
-            <Link
-              href={`/comics/${continueIssue.slug}`}
-              className="btn-primary focus-ring"
-            >
-              Continue · {continueIssue.title}
+      <header className="relative overflow-hidden rounded-2xl border border-[var(--stroke)] bg-[radial-gradient(ellipse_at_20%_0%,rgba(61,231,255,0.14),transparent_50%),radial-gradient(ellipse_at_80%_20%,rgba(255,184,77,0.12),transparent_45%),linear-gradient(160deg,#1a1510_0%,#0a1830_55%,#121a28_100%)]">
+        <div className="absolute inset-0">
+          <Image
+            src={COMICS_HERO_ART}
+            alt=""
+            fill
+            priority
+            className="object-cover object-[70%_40%] opacity-55"
+            sizes="100vw"
+            unoptimized
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-[#0a1228]/95 via-[#0a1228]/72 to-[#0a1228]/35"
+            aria-hidden
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-[#0a1228]/90 via-transparent to-[#0a1228]/40"
+            aria-hidden
+          />
+        </div>
+        <div className="relative px-6 py-12 md:px-10 md:py-16">
+          <p className="page-kicker">Lore Library · Comic Publishing</p>
+          <h1 className="font-display mt-3 text-4xl text-white md:text-6xl">{seriesTitle}</h1>
+          <p className="mt-4 max-w-2xl text-base text-[var(--text-muted)] md:text-lg">
+            {seriesSubtitle}
+          </p>
+          <p className="mt-3 text-sm text-[var(--text-muted)]">
+            {issues.length} illustrated issues · volumes &amp; arcs · Codex / card teases · cosmetics
+            only (never crypto-gated story)
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {continueIssue ? (
+              <Link
+                href={`/comics/${continueIssue.slug}`}
+                className="btn-primary focus-ring"
+              >
+                Continue · {continueIssue.title}
+              </Link>
+            ) : (
+              <Link href={`/comics/${issues[0]?.slug ?? ""}`} className="btn-primary focus-ring">
+                Start Issue #1
+              </Link>
+            )}
+            <Link href="/admin/comics" className="btn-secondary focus-ring">
+              Comic Studio
             </Link>
-          ) : (
-            <Link href={`/comics/${issues[0]?.slug ?? ""}`} className="btn-primary focus-ring">
-              Start Issue #1
+            <Link href="/codex/world" className="btn-secondary focus-ring">
+              World Codex
             </Link>
-          )}
-          <Link href="/admin/comics" className="btn-secondary focus-ring">
-            Comic Studio
-          </Link>
-          <Link href="/codex/world" className="btn-secondary focus-ring">
-            World Codex
-          </Link>
-          <Link href="/tcg/codex" className="btn-secondary focus-ring">
-            Rift Codex
-          </Link>
-          <Link href="/tcg/deck-builder" className="btn-secondary focus-ring">
-            Deck Atelier
-          </Link>
-          <Link href="/fan-kit" className="btn-secondary focus-ring">
-            Fan Kit
-          </Link>
+            <Link href="/tcg/codex" className="btn-secondary focus-ring">
+              Rift Codex
+            </Link>
+            <Link href="/tcg/deck-builder" className="btn-secondary focus-ring">
+              Deck Atelier
+            </Link>
+            <Link href="/fan-kit" className="btn-secondary focus-ring">
+              Fan Kit
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -247,7 +273,7 @@ export function ComicsLibrary({ issues, seriesTitle, seriesSubtitle }: Props) {
                 Beyond the Forge Network — celestial sanctuaries, Prime companions, and the Hollow dark.
                 {unlocked
                   ? " Shelf unlocked."
-                  : " Unlocks after completing Issue #9: The Riftwright (or admin/dev override)."}
+                  : " Unlocks after completing Issue #9: The Riftwright."}
               </p>
               <ul className="mt-3 flex flex-wrap gap-2 text-[11px] text-[var(--amber)]">
                 <li className="rounded-sm bg-[rgba(0,0,0,0.35)] px-2 py-1 ring-1 ring-[rgba(255,184,77,0.35)]">
@@ -313,8 +339,8 @@ export function ComicsLibrary({ issues, seriesTitle, seriesSubtitle }: Props) {
       </section>
 
       <div className="mt-12 space-y-10">
-        <ColoringDownloads />
-        <WallpaperDownloads />
+        <ColoringDownloads variant="featured" />
+        <WallpaperDownloads variant="featured" />
       </div>
 
       <section className="panel mt-12 p-6" aria-label="Series extras">

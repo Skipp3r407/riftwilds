@@ -191,7 +191,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "The Gate named.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Incomplete Accusation — The Traitor's Gate page 3",
@@ -217,5 +217,7 @@
   "id": "the-traitors-gate-issue-007-p007",
   "cleanArtRel": "generated/raw-art/page-007.webp",
   "letteredArtRel": "generated/lettered-pages/page-007.webp",
-  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-007.webp"
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-007.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

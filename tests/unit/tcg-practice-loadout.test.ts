@@ -33,7 +33,7 @@ describe("tcg practice loadout", () => {
     expect(ids).toContain("starter-nature");
   });
 
-  it("marks solo-playable units/spells useful and excludes equip/relic bricks", () => {
+  it("marks solo-playable units/spells useful and excludes equip/relic/commander bricks", () => {
     expect(isPracticeUsefulCard("rotr-c-emberfox")).toBe(true);
     expect(isPracticeUsefulCard("rotr-comp-ashwing")).toBe(true);
     expect(isPracticeUsefulCard("rotr-s-ember-spark")).toBe(true);
@@ -45,6 +45,12 @@ describe("tcg practice loadout", () => {
     expect(isPracticeUsefulCard("rotr-r-mat-clear-water")).toBe(false);
     // Terrain stays out of randomized practice pools.
     expect(isPracticeUsefulCard("rotr-l-riftwild-plaza")).toBe(false);
+    // Commanders are hero-slot only (authored at energyCost 0) — never hand-dealt.
+    expect(isPracticeUsefulCard("rotr-h-npc-keeper-travel-cloak")).toBe(false);
+    expect(isPracticeUsefulCard("rotr-h-npc-npc-cook")).toBe(false);
+    expect(isPracticeUsefulCard("rotr-h-elara-venn")).toBe(false);
+    // Free tokens are not constructed teaching fills.
+    expect(isPracticeUsefulCard("rotr-t-spark-fragment")).toBe(false);
   });
 
   it("random practice slices contain only useful cards and keep early curve", () => {
@@ -59,6 +65,11 @@ describe("tcg practice loadout", () => {
       expect(card?.type).not.toBe("location");
       expect(card?.type).not.toBe("weather");
       expect(card?.type).not.toBe("trap");
+      expect(card?.type).not.toBe("commander");
+      expect(card?.type).not.toBe("hero");
+      expect(card?.isToken).not.toBe(true);
+      // Hand cards must spend meaningful energy (printed ≥ 1 after catalog clamp).
+      expect(getTcgCardDef(id)?.riftCost ?? 0).toBeGreaterThanOrEqual(1);
     }
     const early = fire.player.cardIds.filter((id) => {
       const cost = getTcgCardDef(id)?.riftCost ?? 99;
@@ -98,19 +109,46 @@ describe("tcg practice loadout", () => {
     expect(signature(a)).not.toBe(signature(b));
   });
 
-  it("preserves custom player decks while still randomizing AI", () => {
+  it("preserves custom player deck composition while shuffling order", () => {
+    const activeDeck = Array.from(
+      { length: CONSTRUCTED_RULES.deckSize },
+      (_, i) => `keep-${i}`,
+    );
     const custom = resolvePracticeMatchLoadouts({
       activeDeckId: "custom_keep_me",
-      activeDeck: Array.from({ length: 30 }, (_, i) => `keep-${i}`),
+      activeDeck,
       commanderHeroId: "hero-elara-venn",
       rng: sequenceRng(3),
     });
     expect(custom.player.deckId).toBe("custom_keep_me");
-    expect(custom.player.cardIds[0]).toBe("keep-0");
+    expect(custom.player.cardIds).toHaveLength(CONSTRUCTED_RULES.deckSize);
+    expect(new Set(custom.player.cardIds).size).toBe(CONSTRUCTED_RULES.deckSize);
+    // Fake ids are padded from catalog; every original keep-* that remains
+    // must still be present when the list was already unique + exact size.
+    expect([...custom.player.cardIds].sort()).toEqual([...activeDeck].sort());
+    // Seeded shuffle must not leave binder order intact.
+    expect(custom.player.cardIds.join(",")).not.toBe(activeDeck.join(","));
     expect(custom.ai.deckId.startsWith("starter-")).toBe(true);
     for (const id of custom.ai.cardIds) {
       expect(isPracticeUsefulCard(id)).toBe(true);
     }
+  });
+
+  it("never deals duplicate cardIds in practice loadouts", () => {
+    const dupHeavy = [
+      ...Array.from({ length: 20 }, () => "rotr-c-emberfox"),
+      ...Array.from({ length: 20 }, () => "rotr-comp-ashwing"),
+      ...Array.from({ length: 20 }, () => "rotr-s-item-spirit-renewal-potion"),
+    ];
+    const loadout = resolvePracticeMatchLoadouts({
+      activeDeckId: "starter-fire",
+      activeDeck: dupHeavy,
+      rng: sequenceRng(42),
+    });
+    expect(loadout.player.cardIds).toHaveLength(CONSTRUCTED_RULES.deckSize);
+    expect(new Set(loadout.player.cardIds).size).toBe(CONSTRUCTED_RULES.deckSize);
+    expect(loadout.ai.cardIds).toHaveLength(CONSTRUCTED_RULES.deckSize);
+    expect(new Set(loadout.ai.cardIds).size).toBe(CONSTRUCTED_RULES.deckSize);
   });
 
   it("soft-mulligans brick opening hands toward a turn-1 play", () => {
@@ -196,6 +234,7 @@ describe("tcg practice loadout", () => {
     ];
     const slice = toPracticeConstructedSlice(mixed, sequenceRng(5));
     expect(slice).toHaveLength(CONSTRUCTED_RULES.deckSize);
+    expect(new Set(slice).size).toBe(CONSTRUCTED_RULES.deckSize);
     expect(slice.every(isPracticeUsefulCard)).toBe(true);
     // Terrain + equipment stay filtered; units / combat spells only.
     expect(slice.some((id) => id.includes("riftwild-plaza"))).toBe(false);

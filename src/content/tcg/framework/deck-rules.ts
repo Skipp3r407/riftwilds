@@ -7,6 +7,10 @@
 import type { TcgCard, TcgHero, TcgRarity } from "@/content/tcg/types";
 import { normalizeCard } from "@/content/tcg/framework/normalize-card";
 import {
+  INVENTORY_DECK_REJECT_MESSAGE,
+  isInventoryOnlyCard,
+} from "@/content/tcg/framework/combat-eligibility";
+import {
   STANDARD_BATTLE_RULES,
   getBattleRules,
   isPowerRarity,
@@ -115,6 +119,15 @@ export function validateConstructedDeck(
       return { ok: false, reason: `Unknown card ${id}`, code: "UNKNOWN_CARD" };
     }
     const card = normalizeCard(raw);
+    // Inventory / Companion Care goods are never legal in combat decks —
+    // even when allowNonCompetitive is set for teaching soft-mode.
+    if (isInventoryOnlyCard(card.id, card.type)) {
+      return {
+        ok: false,
+        reason: INVENTORY_DECK_REJECT_MESSAGE,
+        code: "INVENTORY_NOT_COMBAT",
+      };
+    }
     if (!opts?.allowNonCompetitive && !card.competitiveEligible) {
       return {
         ok: false,
@@ -169,6 +182,13 @@ export function validateConstructedDeck(
 /** Slice oversized teaching pools to a legal constructed main-deck list. */
 export function toConstructedSlice(cardIds: string[]): string[] {
   const size = CONSTRUCTED_RULES.deckSize;
-  if (cardIds.length <= size) return [...cardIds];
-  return cardIds.slice(0, size);
+  const unique: string[] = [];
+  const seen = new Set<string>();
+  for (const id of cardIds) {
+    if (seen.has(id)) continue;
+    seen.add(id);
+    unique.push(id);
+    if (unique.length >= size) break;
+  }
+  return unique;
 }

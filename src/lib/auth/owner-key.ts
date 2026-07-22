@@ -1,7 +1,11 @@
 import { cookies, headers } from "next/headers";
 import { authDefaults } from "@/lib/config/project";
 import { secureCookieOptions } from "@/lib/auth/cookie-options";
-import { isGuestGameplayAllowed } from "@/lib/auth/account-play-policy";
+import {
+  isGuestGameplayAllowed,
+  isLocalPreviewBypass,
+  LOCAL_PREVIEW_OWNER_KEY,
+} from "@/lib/auth/account-play-policy";
 
 export const GUEST_COOKIE_NAME = "rift_guest";
 export const GUEST_TOKEN_HEADER = "x-rift-guest";
@@ -27,6 +31,7 @@ export type OwnerKeyResult = {
 /**
  * Stable owner key for gameplay stores.
  * When AUTH_ACCOUNT_REQUIRED_FOR_PLAY is on, never mints rift_guest.
+ * Local preview bypass (no cookie) still gets a stable authorized seat.
  */
 export async function resolveOwnerKey(guestCookieName = GUEST_COOKIE_NAME): Promise<OwnerKeyResult> {
   const jar = await cookies();
@@ -34,6 +39,15 @@ export async function resolveOwnerKey(guestCookieName = GUEST_COOKIE_NAME): Prom
   if (session) {
     return {
       ownerKey: `sess_${session.slice(0, 24)}`,
+      isGuest: false,
+      guestToken: null,
+      authorized: true,
+    };
+  }
+
+  if (isLocalPreviewBypass()) {
+    return {
+      ownerKey: LOCAL_PREVIEW_OWNER_KEY,
       isGuest: false,
       guestToken: null,
       authorized: true,

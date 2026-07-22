@@ -151,6 +151,18 @@ export const featureFlagDefaults = {
   /** Phase 2 — escrow write path. DEFAULT OFF. Requires stakes + wallet + compliance. */
   RIFT_ARENA_SOL_ESCROW_ENABLED: false,
 
+  // ─── Rift Stakes (optional SOL wager PvP — separate from free Arena) ───────
+  /**
+   * Optional Rift Stakes lobby + DEMO escrow. DEFAULT OFF in production builds.
+   * Local preview: set true here, or RIFT_STAKES_ENABLED=true in env.
+   * Never gates Casual / Ranked / Training / Practice.
+   */
+  RIFT_STAKES_ENABLED: process.env.NODE_ENV !== "production",
+  /** Real on-chain escrow/payout. DEFAULT OFF — DEMO uses identical API. */
+  RIFT_STAKES_ONCHAIN_ENABLED: false,
+  /** Public fee/treasury transparency surfaces for Rift Stakes. */
+  RIFT_STAKES_TREASURY_UI_ENABLED: true,
+
   // ─── Riftwilds Arena (legacy pet battler — soft-secondary) ─────────────────
   ARENA_ENABLED: true,
   CASUAL_DUELS_ENABLED: false,

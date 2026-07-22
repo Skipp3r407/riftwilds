@@ -106,9 +106,9 @@ describe("TCG AAA framework", () => {
     expect(cards.every((c) => c.element === "fire")).toBe(true);
   });
 
-  it("keeps constructed copy limits by rarity", () => {
-    expect(CONSTRUCTED_RULES.copyLimits.common).toBe(2);
-    expect(CONSTRUCTED_RULES.copyLimits.rare).toBe(2);
+  it("keeps constructed copy limits unique-only by rarity", () => {
+    expect(CONSTRUCTED_RULES.copyLimits.common).toBe(1);
+    expect(CONSTRUCTED_RULES.copyLimits.rare).toBe(1);
     expect(CONSTRUCTED_RULES.copyLimits.legendary).toBe(1);
     expect(CONSTRUCTED_RULES.deckSize).toBe(29);
     expect(CONSTRUCTED_RULES.totalPieces).toBe(30);

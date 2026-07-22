@@ -15,6 +15,10 @@ import { RiftButton } from "@/components/ui/rift-button";
 import { playSfx } from "@/hooks/use-sfx";
 import { enterSoundscape } from "@/lib/audio/adaptive-engine";
 import type { DeckBuilderCardRow } from "@/game/tcg/schemas";
+import {
+  INVENTORY_DECK_REJECT_MESSAGE,
+  isCombatEligibleCard,
+} from "@/content/tcg/framework/combat-eligibility";
 
 type CatalogCard = DeckBuilderCardRow & { owned: number };
 
@@ -318,6 +322,8 @@ export function DeckBuilder() {
     if (!data) return [];
     const q = deferredQuery.trim().toLowerCase();
     return data.catalog.filter((c) => {
+      // Combat-only atelier — inventory goods never appear in the gallery.
+      if (!isCombatEligibleCard(c.id)) return false;
       if (affinity !== "ALL" && c.affinity !== affinity) return false;
       if (typeFilter !== "ALL" && c.type !== typeFilter) return false;
       if (roleFilter !== "ALL" && (c.role ?? "") !== roleFilter) return false;
@@ -581,6 +587,11 @@ export function DeckBuilder() {
   function addCard(id: string) {
     const card = byId.get(id);
     if (!card) return;
+    if (!isCombatEligibleCard(id)) {
+      setStatus(INVENTORY_DECK_REJECT_MESSAGE);
+      playSfx("deck.error");
+      return;
+    }
     const n = deckCounts.get(id) ?? 0;
     if (n >= card.maxCopies || n >= card.owned) {
       setStatus(`Copy limit for ${card.name}`);

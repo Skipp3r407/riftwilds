@@ -183,7 +183,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
   "pageTurnObjective": "Engine overload.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Break the Chain — The Merchant's Secret page 21",
@@ -212,5 +212,7 @@
   "id": "the-merchants-secret-issue-006-p025",
   "cleanArtRel": "generated/raw-art/page-025.webp",
   "letteredArtRel": "generated/lettered-pages/page-025.webp",
-  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-025.webp"
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-025.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

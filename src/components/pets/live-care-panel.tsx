@@ -196,13 +196,17 @@ export function LiveCarePanel({ publicPetId }: { publicPetId: string }) {
     void load();
   }, [load]);
 
-  const act = async (action: CareAction) => {
-    setBusy(action);
+  const act = async (action: CareAction, catalogItemId?: string) => {
+    setBusy(catalogItemId ? `${action}:${catalogItemId}` : action);
     playSfx("ui.click");
     const res = await fetch(`/api/pets/${publicPetId}/care`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action, requestId: newRequestId(action) }),
+      body: JSON.stringify({
+        action,
+        catalogItemId,
+        requestId: newRequestId(action),
+      }),
     });
     const data = await res.json();
     if (!res.ok) {
@@ -552,22 +556,45 @@ export function LiveCarePanel({ publicPetId }: { publicPetId: string }) {
             <div>
               <h3 className="font-display text-sm text-white">Pet inventory</h3>
               <p className="mt-1 text-xs text-[var(--text-muted)]">
-                Food, medicine, toys, and accessories. Shop / craft hooks listed for each item.
+                Companion Care only — food, medicine, toys, and housing. Never shuffled into combat
+                decks. Use Basic Pet Meal / Basic Meal to Feed (hunger, bond, care XP).
               </p>
               <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {(progress?.inventory ?? []).map((slot) => {
                   const item = CARE_ITEM_CATALOG.find((c) => c.id === slot.itemId);
+                  const canUse = Boolean(item);
+                  const useLabel =
+                    item?.useAction === "FEED" || item?.kind === "meal"
+                      ? "Feed"
+                      : item?.useAction === "PLAY"
+                        ? "Play"
+                        : item?.useAction === "HEAL" || item?.useAction === "MEDICINE"
+                          ? "Heal"
+                          : "Use";
                   return (
                     <li key={slot.itemId} className="panel-inset px-3 py-2.5 text-sm">
-                      <p className="text-white">{item?.name ?? slot.itemId}</p>
+                      <p className="text-white">
+                        {item?.name ??
+                          (slot.itemId === "basic-pet-meal" ? "Basic Pet Meal" : slot.itemId)}
+                      </p>
                       <p className="text-xs text-[var(--text-muted)]">
                         ×{slot.qty}
-                        {item ? ` · shop ${item.shopPriceCredits} Credits` : ""}
+                        {item ? ` · ${item.kind} · Companion Care` : " · Companion Care"}
                       </p>
-                      {item?.craftRecipeId ? (
-                        <p className="mt-1 text-[10px] text-[var(--cyan)]">
-                          Craft: {item.craftRecipeId}
-                        </p>
+                      {canUse ? (
+                        <button
+                          type="button"
+                          disabled={!!busy}
+                          className="btn-secondary focus-ring mt-2 text-[10px]"
+                          onClick={() =>
+                            void act(
+                              item!.useAction === "GIVE_ITEM" ? "FEED" : item!.useAction,
+                              slot.itemId,
+                            )
+                          }
+                        >
+                          {useLabel}
+                        </button>
                       ) : null}
                     </li>
                   );

@@ -115,7 +115,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Spark chooses.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Not Evil — Collared — The Traveling Circus page 19",
@@ -129,5 +129,7 @@
   "id": "the-traveling-circus-issue-003-p023",
   "cleanArtRel": "generated/raw-art/page-023.png",
   "letteredArtRel": "generated/lettered-pages/page-023.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-023.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-023.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

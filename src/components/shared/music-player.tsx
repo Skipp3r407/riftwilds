@@ -15,11 +15,16 @@ import {
 import { useAudio } from "@/hooks/use-audio";
 import { useSfx } from "@/hooks/use-sfx";
 import { stopAmbient } from "@/lib/audio/ambient";
+import { pauseAllBeds } from "@/lib/audio/beds";
 import { audioManager } from "@/lib/audio/manager";
 import { MUSIC_PLAYLIST, musicEngine } from "@/lib/audio/music";
+import {
+  DEFAULT_MUSIC_UI,
+  MUSIC_UI_STORAGE_KEY,
+  type MusicUiPrefs,
+} from "@/lib/audio/music-ui";
 import { cn } from "@/lib/utils/cn";
 
-const UI_STORAGE_KEY = "riftwilds-music-ui";
 /** Collapse the floating bar after this idle window. */
 const AUTO_HIDE_MS = 30_000;
 
@@ -30,18 +35,8 @@ const PLAYER_SHELL =
 const RANGE_CLASS =
   "h-1.5 w-14 cursor-pointer accent-[var(--amber)] sm:w-[4.25rem]";
 
-type UiPrefs = {
-  hidden: boolean;
-  trackIndex: number;
-  /** Explicit user pause — when true, skip site autoplay until they hit play. */
-  paused: boolean;
-};
-
-const DEFAULT_UI: UiPrefs = {
-  hidden: false,
-  trackIndex: 0,
-  paused: false,
-};
+type UiPrefs = MusicUiPrefs;
+const DEFAULT_UI = DEFAULT_MUSIC_UI;
 
 /** Marketing shell has no MobileGameNav — keep the dock low. */
 const MARKETING_PREFIXES = [
@@ -96,7 +91,7 @@ function isBattlePath(pathname: string | null): boolean {
 function readUi(): UiPrefs {
   if (typeof window === "undefined") return DEFAULT_UI;
   try {
-    const raw = localStorage.getItem(UI_STORAGE_KEY);
+    const raw = localStorage.getItem(MUSIC_UI_STORAGE_KEY);
     if (!raw) {
       // migrate track from legacy music prefs
       const legacy = localStorage.getItem("riftwilds-music-prefs");
@@ -143,7 +138,7 @@ function shouldSkipAutoplay(): boolean {
 
 function writeUi(prefs: UiPrefs) {
   try {
-    localStorage.setItem(UI_STORAGE_KEY, JSON.stringify(prefs));
+    localStorage.setItem(MUSIC_UI_STORAGE_KEY, JSON.stringify(prefs));
   } catch {
     /* ignore */
   }
@@ -378,11 +373,17 @@ export function MusicPlayer() {
     unlock();
     unlockSfx();
     if (playing) {
-      musicEngine.pause();
-      setPlaying(false);
+      // Persist pause before stopping beds so async soundscapes respect it.
+      const next: UiPrefs = { hidden, trackIndex, paused: true };
+      writeUi(next);
       setPausedPref(true);
+      // HTMLAudio.pause alone leaves Web Audio drones/stems humming.
+      pauseAllBeds();
+      setPlaying(false);
       return;
     }
+    const next: UiPrefs = { hidden, trackIndex, paused: false };
+    writeUi(next);
     setPausedPref(false);
     await musicEngine.playTrack(trackIndex, 500);
     setPlaying(musicEngine.isPlaying());
@@ -419,6 +420,7 @@ export function MusicPlayer() {
   const shellMotion = "motion-safe:transition-[opacity,transform] motion-safe:duration-200";
 
   // Clear mobile game nav on game routes; sit lower on marketing; clear battle CTAs.
+  // Scroll-to-top (.scroll-to-top--*) stacks above via --dock-music-height + --dock-stack-gap.
   const dockPosition = cn(
     "fixed right-3 z-[55]",
     onBattle

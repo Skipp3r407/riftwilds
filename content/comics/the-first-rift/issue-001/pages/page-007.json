@@ -6,15 +6,15 @@
   "layout": "grid-2x2",
   "atmosphere": "rift",
   "beat": "Vision seizure — pulled into First Rift memory",
-  "artPrompt": "Four-panel comic page, no text. 1: cyan light floods Mira's eyes. 2: Commons dissolves into layered desert-forest roads. 3: silhouette of Elara Venn with glowing egg. 4: Mira falling through tear into warm past light. No lettering in art. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "artPrompt": "Western fantasy COMIC PAGE, strict 2x2 PANEL GRID with equal white gutters and thick black borders. Panel 1 (top-left): cyan light floods Mira Eggwarden's eyes, close-up. Panel 2 (top-right): Commons plaza dissolves into layered desert-forest Fracture roads. Panel 3 (bottom-left): silhouette of courier Elara Venn cradling a glowing egg in warm past light. Panel 4 (bottom-right): Mira falling through the tear into that past. Sequential Z-path storytelling. Characters drawn inside each panel — NO floating card insets, NO collage overlays, NO lore-plate stickers. Original Riftwilds IP. NO readable text, balloons, captions, logos, or UI in the art.",
   "panels": [
     {
       "lines": [
         {
           "kind": "sfx",
           "text": "FWOOOM",
-          "x": 50,
-          "y": 40
+          "x": 26,
+          "y": 22
         }
       ]
     },
@@ -24,9 +24,10 @@
           "kind": "speech",
           "speaker": "Mira Eggwarden",
           "text": "—wait—!",
-          "x": 50,
-          "y": 50,
-          "tail": "down"
+          "x": 74,
+          "y": 28,
+          "tail": "down",
+          "maxWidthPct": 22
         }
       ]
     },
@@ -35,14 +36,16 @@
         {
           "kind": "narration",
           "text": "The tear does not ask permission.",
-          "x": 50,
-          "y": 30
+          "x": 26,
+          "y": 58,
+          "maxWidthPct": 36
         },
         {
           "kind": "caption",
           "text": "VISION — AGE OF FIRST EGGS",
-          "x": 50,
-          "y": 70
+          "x": 26,
+          "y": 88,
+          "maxWidthPct": 36
         }
       ]
     },
@@ -52,14 +55,16 @@
           "kind": "whisper",
           "speaker": "Unknown",
           "text": "Keep…",
-          "x": 50,
-          "y": 55
+          "x": 74,
+          "y": 72,
+          "tail": "down",
+          "maxWidthPct": 22
         }
       ]
     }
   ],
-  "generationStatus": "seeded-legacy",
-  "letteringStatus": "lettered",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
   "cleanArtRel": "generated/clean/page-007.png",
   "letteredArtRel": "generated/lettered/page-007.webp",
   "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-007.webp",

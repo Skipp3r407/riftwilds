@@ -157,9 +157,10 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
     return { ok: false, error: "CARE_DISABLED", message: "Pet care is disabled" };
   }
 
-  const def = CARE_ACTION_DEFS[req.action];
+  let action: CareAction = req.action;
+  let def = CARE_ACTION_DEFS[action];
   if (!def) {
-    return { ok: false, error: "UNKNOWN_ACTION", message: `Unknown care action: ${req.action}` };
+    return { ok: false, error: "UNKNOWN_ACTION", message: `Unknown care action: ${action}` };
   }
 
   const requestId = req.requestId?.trim() || `care_${randomUUID()}`;
@@ -182,7 +183,58 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
   ensureStarterCredits(req.ownerKey);
   let progress = ensurePetCareProgress(pet);
 
-  const lastAt = progress.cooldowns[req.action] ?? 0;
+  let creditCost = def.creditCost;
+  let catalogNote = "";
+
+  if (req.catalogItemId) {
+    // Bridge shop/TCG inventory ids (basic-pet-meal) → care catalog (basic-meal).
+    const resolvedCatalogId =
+      req.catalogItemId === "basic-pet-meal"
+        ? "basic-meal"
+        : req.catalogItemId === "premium-pet-meal"
+          ? "premium-meal"
+          : req.catalogItemId;
+    const item = getCareCatalogItem(resolvedCatalogId);
+    if (!item) {
+      return { ok: false, error: "ITEM_NOT_FOUND", message: "Unknown care item" };
+    }
+    if (item.useAction !== action && action !== "GIVE_ITEM") {
+      return {
+        ok: false,
+        error: "ITEM_NOT_FOUND",
+        message: "Item does not match this care action",
+      };
+    }
+    // Accept either shop id or care id in the pet bag.
+    const nextInv =
+      consumeInventory(progress, resolvedCatalogId) ??
+      consumeInventory(progress, req.catalogItemId);
+    if (!nextInv) {
+      return {
+        ok: false,
+        error: "ITEM_MISSING",
+        message: `No ${item.name} in pet inventory`,
+        creditsBalance: getCreditBalance(req.ownerKey),
+      };
+    }
+    progress = nextInv;
+    creditCost = 0; // inventory consume — already paid at shop
+    catalogNote = `Used ${item.name} from inventory.`;
+    // Inventory use applies the item's mapped care action (e.g. Basic Pet Meal → FEED).
+    if (action === "GIVE_ITEM") {
+      action = item.useAction;
+      def = CARE_ACTION_DEFS[action];
+      if (!def) {
+        return {
+          ok: false,
+          error: "UNKNOWN_ACTION",
+          message: `Unknown care action: ${action}`,
+        };
+      }
+    }
+  }
+
+  const lastAt = progress.cooldowns[action] ?? 0;
   const remaining = def.cooldownMs - (now - lastAt);
   if (remaining > 0) {
     return {
@@ -203,35 +255,6 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
     };
   }
 
-  let creditCost = def.creditCost;
-  let catalogNote = "";
-
-  if (req.catalogItemId) {
-    const item = getCareCatalogItem(req.catalogItemId);
-    if (!item) {
-      return { ok: false, error: "ITEM_NOT_FOUND", message: "Unknown care item" };
-    }
-    if (item.useAction !== req.action && req.action !== "GIVE_ITEM") {
-      return {
-        ok: false,
-        error: "ITEM_NOT_FOUND",
-        message: "Item does not match this care action",
-      };
-    }
-    const nextInv = consumeInventory(progress, req.catalogItemId);
-    if (!nextInv) {
-      return {
-        ok: false,
-        error: "ITEM_MISSING",
-        message: `No ${item.name} in pet inventory`,
-        creditsBalance: getCreditBalance(req.ownerKey),
-      };
-    }
-    progress = nextInv;
-    creditCost = 0; // inventory consume — already paid at shop
-    catalogNote = `Used ${item.name} from inventory.`;
-  }
-
   if (creditCost > 0) {
     if (!canAfford(req.ownerKey, creditCost)) {
       return {
@@ -244,7 +267,7 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
     const debit = spendCareAction({
       userId: req.ownerKey,
       petId: pet.publicId,
-      action: req.action,
+      action,
       amount: creditCost,
       requestId,
     });
@@ -259,9 +282,9 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
   }
 
   const before = { ...pet.care };
-  let after = applyCareAction(before, req.action);
-  after = applyCareGameplayTuning(before, after, req.action);
-  after = applyTraitBonuses(pet, req.action, after);
+  let after = applyCareAction(before, action);
+  after = applyCareGameplayTuning(before, after, action);
+  after = applyTraitBonuses(pet, action, after);
 
   pet.care = after;
   pet.condition = derivePetCondition(
@@ -277,13 +300,13 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
     ...progress,
     careXp: progress.careXp + xpGain,
     careLevel: careLevelFromXp(progress.careXp + xpGain),
-    cooldowns: { ...progress.cooldowns, [req.action]: now },
+    cooldowns: { ...progress.cooldowns, [action]: now },
   };
 
   const journalEntry: CareJournalEntry = {
     id: `j_${requestId.slice(0, 16)}`,
     at: new Date(now).toISOString(),
-    action: req.action,
+    action,
     label: def.label,
     creditCost,
     careXpGained: xpGain,
@@ -295,7 +318,7 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
     journal: [journalEntry, ...progress.journal].slice(0, 40),
   };
 
-  if (req.action === "FEED" && !pet.memories.some((m) => m.kind === "FIRST_MEAL")) {
+  if (action === "FEED" && !pet.memories.some((m) => m.kind === "FIRST_MEAL")) {
     pet.memories.push({
       kind: "FIRST_MEAL",
       label: "First meal shared",
@@ -309,7 +332,7 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
   const result: CareActionResult & { ok: true } = {
     ok: true,
     pet,
-    action: req.action,
+    action,
     creditCost,
     creditsBalance: getCreditBalance(req.ownerKey),
     energySpent: def.energyCost,

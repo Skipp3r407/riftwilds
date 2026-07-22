@@ -87,7 +87,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
   "pageTurnObjective": "Find who said they reached my Forge.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
-  "generationStatus": "pending",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Second Forge Threshold — The Riftwright page 5",
@@ -111,5 +111,7 @@
   "id": "the-riftwright-issue-009-p005",
   "cleanArtRel": "generated/raw-art/page-005.webp",
   "letteredArtRel": "generated/lettered-pages/page-005.webp",
-  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-005.webp"
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-005.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

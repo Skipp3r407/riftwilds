@@ -134,7 +134,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Memory echoes.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Streets That Float — The Lost City page 6",
@@ -148,5 +148,7 @@
   "id": "the-lost-city-issue-004-p010",
   "cleanArtRel": "generated/raw-art/page-010.webp",
   "letteredArtRel": "generated/lettered-pages/page-010.webp",
-  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-010.webp"
+  "publicArtRel": "assets/comics/the-lost-city/issue-004/pages/page-010.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

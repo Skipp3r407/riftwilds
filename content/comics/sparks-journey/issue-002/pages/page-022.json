@@ -167,8 +167,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
   "pageTurnObjective": "Overload / Keeper refuses to command.",
   "letteringInstructions": "Dense SFX; keep center clear for Spark face.",
-  "generationStatus": "generated",
-  "letteringStatus": "lettered",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Grove Against Veil — Spark's Journey page 18",
   "atmosphere": "dawn",
@@ -183,5 +183,7 @@
   "id": "sparks-journey-issue-002-p022",
   "cleanArtRel": "generated/raw-art/page-022.png",
   "letteredArtRel": "generated/lettered-pages/page-022.webp",
-  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-022.webp"
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-022.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

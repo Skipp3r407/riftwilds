@@ -6,7 +6,9 @@
 import { audioManager } from "@/lib/audio/manager";
 import { musicEngine } from "@/lib/audio/music";
 import { ambientEngine } from "@/lib/audio/ambient";
+import { pauseAllBeds } from "@/lib/audio/beds";
 import { musicStems } from "@/lib/audio/music-stems";
+import { readMusicUiPaused } from "@/lib/audio/music-ui";
 import { reverbEngine } from "@/lib/audio/reverb";
 import { playSfx, type SfxEventId } from "@/lib/audio/sfx";
 import { clamp01 } from "@/lib/audio/prefs";
@@ -85,14 +87,24 @@ class AdaptiveAudioEngine {
       mode === "guild" ||
       mode === "hatchery";
 
+    // User paused the floating Ambience player — keep beds silent.
+    // (Do not stack procedural drones under the playlist; they survive HTMLAudio.pause.)
+    const userPaused = readMusicUiPaused();
+
     if (hubish) {
       this.state.intensity =
         mode === "hatchery" ? 0.28 : mode === "login" ? 0.22 : 0.18;
       this.state.regionId = null;
       this.combatBedActive = false;
       void musicStems.stop(600);
-      await musicEngine.playMenuTheme(fadeMs);
-      ambientEngine.startMenu();
+      // Playlist is the hub bed. Starting menu oscillators here raced past
+      // MusicPlayer's stopAmbient and left a sine hum after pause.
+      ambientEngine.stop(300);
+      if (userPaused) {
+        pauseAllBeds();
+      } else {
+        await musicEngine.playMenuTheme(fadeMs);
+      }
       if (mode === "login") {
         playSfx("login.enter");
       }
@@ -116,8 +128,12 @@ class AdaptiveAudioEngine {
           this.combatBedActive = false;
           void musicStems.stop(600);
           if (this.state.regionId) {
-            await musicEngine.playRegionTheme(this.state.regionId, fadeMs);
-            ambientEngine.startRegion(this.state.regionId);
+            if (userPaused) {
+              pauseAllBeds();
+            } else {
+              await musicEngine.playRegionTheme(this.state.regionId, fadeMs);
+              ambientEngine.startRegion(this.state.regionId);
+            }
           }
           break;
         case "arena":

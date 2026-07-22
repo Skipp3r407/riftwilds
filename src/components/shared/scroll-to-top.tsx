@@ -106,15 +106,13 @@ export function ScrollToTop() {
     });
   }
 
-  // Stack above the music dock (≈3.5rem control + gap) with the same path offsets.
-  const position = cn(
-    "fixed right-3 z-[50]",
-    onBattle
-      ? "bottom-[calc(10.5rem+var(--safe-bottom))] md:bottom-[calc(8rem+0.5rem)] md:right-5"
-      : onMarketing
-        ? "bottom-[calc(4.75rem+var(--safe-bottom))] md:bottom-[calc(5rem)] md:right-5"
-        : "bottom-[calc(8.75rem+var(--safe-bottom))] md:bottom-[calc(5rem)] md:right-5",
-  );
+  // Position via globals.css (.scroll-to-top / --marketing|--game|--battle).
+  // Bottoms = music-player bottoms + --dock-music-height + --dock-stack-gap.
+  const pathClass = onBattle
+    ? "scroll-to-top--battle"
+    : onMarketing
+      ? "scroll-to-top--marketing"
+      : "scroll-to-top--game";
 
   return (
     <button
@@ -125,8 +123,8 @@ export function ScrollToTop() {
       tabIndex={visible ? 0 : -1}
       aria-hidden={!visible}
       className={cn(
-        position,
         "scroll-to-top focus-ring group relative flex h-11 w-11 items-center justify-center",
+        pathClass,
         "rounded-xl border border-[var(--stroke-bronze)]",
         "lw-hud-glass text-[var(--amber)]",
         "shadow-[0_10px_28px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(232,213,176,0.12)]",

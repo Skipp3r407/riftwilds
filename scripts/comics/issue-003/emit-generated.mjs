@@ -46,7 +46,7 @@ const pages = fs
 const issueMeta = JSON.parse(fs.readFileSync(path.join(ISSUE, "issue.json"), "utf8"));
 
 const comicPages = pages.map((p) => {
-  const artSrc = `/assets/comics/pages/the-traveling-circus/page-${String(p.pageNumber).padStart(2, "0")}.webp`;
+  const artSrc = `/assets/comics/the-traveling-circus/issue-003/pages/page-${String(p.pageNumber).padStart(3, "0")}.webp`;
   const layoutType = p.layout?.type || (p.bookRole === "front-cover" ? "splash" : "narrative");
   const role = ROLE_MAP[p.bookRole] || "story";
   const panels = (p.panels || []).map((panel) => ({
@@ -96,7 +96,7 @@ for (const p of pages) {
   transcripts[p.pageNumber] = lines;
 }
 
-const coverSrc = "/assets/comics/covers/03-traveling-circus.webp";
+const coverSrc = "/assets/comics/covers/03-traveling-circus.png";
 
 const issue = {
   slug: "the-traveling-circus",

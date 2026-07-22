@@ -148,8 +148,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
   "pageTurnObjective": "Ancient markings recognized.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
-  "generationStatus": "generated",
-  "letteringStatus": "lettered",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Unknown Resonance — Spark's Journey page 4",
   "atmosphere": "dawn",
@@ -164,5 +164,7 @@
   "id": "sparks-journey-issue-002-p008",
   "cleanArtRel": "generated/raw-art/page-008.png",
   "letteredArtRel": "generated/lettered-pages/page-008.webp",
-  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-008.webp"
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-008.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

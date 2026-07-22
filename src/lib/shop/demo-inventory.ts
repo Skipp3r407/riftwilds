@@ -1,20 +1,25 @@
 /**
  * Shared demo inventory for shop grants + inventory UI.
  * Server inventory syncs after Phase 2 purchases.
+ *
+ * Care / food goods that formerly appeared as TCG "item" cards live here.
  */
 
 import type { ItemRarity } from "@/lib/items/types";
 
-export const DEMO_INVENTORY_STORAGE_KEY = "riftwilds-demo-inventory-v4";
+export const DEMO_INVENTORY_STORAGE_KEY = "riftwilds-demo-inventory-v5";
 
 export type DemoInventoryTab =
   | "All"
+  | "Food"
   | "Weapons"
   | "Armor"
   | "Potions"
   | "Abilities"
   | "Materials"
   | "Care"
+  | "Tools"
+  | "Quests"
   | "Cosmetics"
   | "Recovery"
   | "Collectibles";
@@ -29,6 +34,8 @@ export type DemoInventoryRow = {
   ownership: string;
   tradeability: string;
   tab: Exclude<DemoInventoryTab, "All">;
+  /** Optional Companion Care action hint for Use/Feed buttons. */
+  careHint?: "feed" | "play" | "train" | "heal" | "clean" | "rest" | "bond" | "use";
 };
 
 export const DEMO_STARTER_INVENTORY: DemoInventoryRow[] = [
@@ -48,11 +55,84 @@ export const DEMO_STARTER_INVENTORY: DemoInventoryRow[] = [
     name: "Basic Pet Meal",
     family: "CARE",
     rarity: "COMMON",
-    quantity: 5,
+    quantity: 8,
     iconPath: "/assets/items/potions/icons/basic-pet-meal.png?v=4",
     ownership: "Off-chain",
     tradeability: "Tradable",
+    tab: "Food",
+    careHint: "feed",
+  },
+  {
+    id: "premium-pet-meal",
+    name: "Premium Pet Meal",
+    family: "CARE",
+    rarity: "UNCOMMON",
+    quantity: 2,
+    iconPath: "/assets/items/potions/icons/premium-pet-meal.png?v=4",
+    ownership: "Off-chain",
+    tradeability: "Tradable",
+    tab: "Food",
+    careHint: "feed",
+  },
+  {
+    id: "crystal-berry-snack",
+    name: "Crystal Berry Snack",
+    family: "CARE",
+    rarity: "COMMON",
+    quantity: 4,
+    iconPath: "/assets/items/potions/icons/crystal-berry-snack.png?v=4",
+    ownership: "Off-chain",
+    tradeability: "Tradable",
+    tab: "Food",
+    careHint: "feed",
+  },
+  {
+    id: "happiness-treat",
+    name: "Happiness Treat",
+    family: "CARE",
+    rarity: "COMMON",
+    quantity: 3,
+    iconPath: "/assets/items/potions/icons/happiness-treat.png?v=4",
+    ownership: "Off-chain",
+    tradeability: "Tradable",
+    tab: "Food",
+    careHint: "feed",
+  },
+  {
+    id: "rift-toy",
+    name: "Rift Toy",
+    family: "CARE",
+    rarity: "COMMON",
+    quantity: 2,
+    iconPath: "/assets/items/potions/icons/rift-toy.png?v=4",
+    ownership: "Off-chain",
+    tradeability: "Tradable",
     tab: "Care",
+    careHint: "play",
+  },
+  {
+    id: "comfortable-nest",
+    name: "Comfortable Nest",
+    family: "CARE",
+    rarity: "UNCOMMON",
+    quantity: 1,
+    iconPath: "/assets/items/potions/icons/comfortable-nest.png?v=4",
+    ownership: "Off-chain",
+    tradeability: "Tradable",
+    tab: "Care",
+    careHint: "rest",
+  },
+  {
+    id: "medicine-pack",
+    name: "Medicine Pack",
+    family: "RECOVERY",
+    rarity: "UNCOMMON",
+    quantity: 2,
+    iconPath: "/assets/items/potions/icons/medicine-pack.png?v=4",
+    ownership: "Off-chain",
+    tradeability: "Tradable",
+    tab: "Recovery",
+    careHint: "heal",
   },
   {
     id: "small-healing-salve",
@@ -103,6 +183,12 @@ export function familyToInventoryTab(family: string): Exclude<DemoInventoryTab, 
       return "Materials";
     case "CARE":
       return "Care";
+    case "FOOD":
+      return "Food";
+    case "TOOL":
+      return "Tools";
+    case "QUEST":
+      return "Quests";
     case "COSMETIC":
       return "Cosmetics";
     case "RECOVERY":
@@ -120,36 +206,44 @@ export function grantDemoInventoryItem(
     family: string;
     rarity: ItemRarity;
     iconPath: string;
+    quantity?: number;
+    careHint?: DemoInventoryRow["careHint"];
   },
-  quantity = 1,
 ): DemoInventoryRow[] {
-  const qty = Math.max(1, Math.floor(quantity));
-  const existing = rows.find((r) => r.id === item.id);
-  if (existing) {
-    return rows.map((r) =>
-      r.id === item.id ? { ...r, quantity: r.quantity + qty } : r,
-    );
+  const qty = item.quantity ?? 1;
+  const idx = rows.findIndex((r) => r.id === item.id);
+  if (idx >= 0) {
+    const next = [...rows];
+    const cur = next[idx]!;
+    next[idx] = { ...cur, quantity: cur.quantity + qty };
+    return next;
   }
-  const next: DemoInventoryRow = {
-    id: item.id,
-    name: item.name,
-    family: item.family,
-    rarity: item.rarity,
-    quantity: qty,
-    iconPath: item.iconPath,
-    ownership: "Off-chain",
-    tradeability: "Tradable",
-    tab: familyToInventoryTab(item.family),
-  };
-  return [...rows, next];
+  return [
+    ...rows,
+    {
+      id: item.id,
+      name: item.name,
+      family: item.family,
+      rarity: item.rarity,
+      quantity: qty,
+      iconPath: item.iconPath,
+      ownership: "Off-chain",
+      tradeability: "Tradable",
+      tab: familyToInventoryTab(item.family),
+      careHint: item.careHint,
+    },
+  ];
 }
 
-export function parseDemoInventory(raw: string | null): DemoInventoryRow[] {
-  if (!raw) return [...DEMO_STARTER_INVENTORY];
+export function parseDemoInventory(raw: string): DemoInventoryRow[] {
   try {
     const parsed = JSON.parse(raw) as DemoInventoryRow[];
     if (!Array.isArray(parsed)) return [...DEMO_STARTER_INVENTORY];
-    return parsed;
+    return parsed.map((r) => ({
+      ...r,
+      tab: r.tab ?? familyToInventoryTab(r.family),
+      quantity: Math.max(0, Number(r.quantity) || 0),
+    }));
   } catch {
     return [...DEMO_STARTER_INVENTORY];
   }

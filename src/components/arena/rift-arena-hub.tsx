@@ -79,12 +79,12 @@ type HubPayload = {
 
 const typeHref: Record<string, string> = {
   FREE: "/arena#queue",
-  TRAINING: "/tcg/battle",
-  PRIVATE: "/tcg/battle",
+  TRAINING: "/tcg/battle?mode=practice&board=1",
+  PRIVATE: "/tcg/battle?mode=practice&board=1",
   FRIEND: "/social?tab=friends",
-  RANKED: "/arena/ranked",
-  GUILD: "/arena/tournaments",
-  TOURNAMENT: "/arena/tournaments",
+  RANKED: "/tcg/battle?mode=ranked",
+  GUILD: "/tcg/battle?mode=tournament",
+  TOURNAMENT: "/tcg/battle?mode=tournament",
   CUSTOM: "/arena/duels",
 };
 

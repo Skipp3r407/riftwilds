@@ -187,7 +187,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "A guide appears.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
-  "generationStatus": "cached",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Roots Against the Gale — The Storm King page 2",
@@ -213,5 +213,7 @@
   "id": "the-storm-king-issue-005-p006",
   "cleanArtRel": "generated/raw-art/page-006.webp",
   "letteredArtRel": "generated/lettered-pages/page-006.webp",
-  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-006.webp"
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-006.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

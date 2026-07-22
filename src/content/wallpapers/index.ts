@@ -3,5 +3,6 @@ export {
   WALLPAPERS,
   getWallpaper,
   listWallpapers,
+  listFeaturedWallpapers,
   type Wallpaper,
 } from "./catalog";

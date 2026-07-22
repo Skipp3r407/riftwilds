@@ -115,7 +115,8 @@ describe("card category ecosystem", () => {
   });
 
   it("item consume goes to defeated and emits PLAY_ITEM", () => {
-    const itemId = "rotr-s-item-medicine-pack";
+    // Battle Utility consumable (care Medicine Pack is inventory-only).
+    const itemId = "rotr-s-item-small-healing-salve";
     const unitId = "rotr-c-bramblefox";
     const deck = materializeDeck([
       ...Array(20).fill(unitId),

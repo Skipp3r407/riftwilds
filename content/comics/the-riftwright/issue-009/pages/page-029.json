@@ -68,7 +68,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
   "pageTurnObjective": "End Volume One.",
   "letteringInstructions": "Finale captions centered; no speech; mythic narration only.",
-  "generationStatus": "pending",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "The Shattered Star — The Riftwright page 29",
@@ -88,5 +88,7 @@
   "id": "the-riftwright-issue-009-p029",
   "cleanArtRel": "generated/raw-art/page-029.webp",
   "letteredArtRel": "generated/lettered-pages/page-029.webp",
-  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-029.webp"
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-029.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

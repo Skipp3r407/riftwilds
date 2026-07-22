@@ -3,13 +3,14 @@ import Link from "next/link";
 import { Download } from "lucide-react";
 import {
   WALLPAPER_CREDIT,
+  listFeaturedWallpapers,
   listWallpapers,
   type Wallpaper,
 } from "@/content/wallpapers";
 import { cn } from "@/lib/utils/cn";
 
 type Props = {
-  variant?: "full" | "compact";
+  variant?: "full" | "compact" | "featured";
   className?: string;
   showIndexLink?: boolean;
   wallpapers?: Wallpaper[];
@@ -19,52 +20,113 @@ function filenameFromSrc(src: string) {
   return src.split("/").pop() ?? "wallpaper.png";
 }
 
+function previewSrc(wp: Wallpaper) {
+  return wp.thumbSrc ?? wp.pngSrc;
+}
+
 export function WallpaperDownloads({
   variant = "full",
   className,
   showIndexLink = true,
-  wallpapers = listWallpapers(),
+  wallpapers,
 }: Props) {
-  if (variant === "compact") {
+  const resolved =
+    wallpapers ??
+    (variant === "featured" || variant === "compact"
+      ? listFeaturedWallpapers(4)
+      : listWallpapers());
+
+  if (variant === "compact" || variant === "featured") {
     return (
       <aside
         className={cn(
           "rounded-xl border border-[rgba(61,231,255,0.28)] bg-[rgba(10,18,36,0.55)] px-4 py-3",
+          variant === "featured" &&
+            "rounded-2xl border-[var(--stroke)] bg-[radial-gradient(ellipse_at_80%_0%,rgba(61,231,255,0.14),transparent_50%),radial-gradient(ellipse_at_10%_40%,rgba(255,184,77,0.1),transparent_45%),linear-gradient(165deg,#0a1228_0%,#121a28_55%,#1a1510_100%)] p-6 md:p-8",
           className,
         )}
         aria-label="Wallpapers"
       >
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-wrap items-end justify-between gap-2">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--cyan)]">Desktop art</p>
-            <p className="font-display text-lg text-white">Wallpapers</p>
+            <p
+              className={cn(
+                "text-[10px] uppercase tracking-[0.18em] text-[var(--cyan)]",
+                variant === "featured" && "page-kicker",
+              )}
+            >
+              Desktop art
+            </p>
+            <p
+              className={cn(
+                "font-display text-lg text-white",
+                variant === "featured" && "mt-2 text-2xl md:text-3xl",
+              )}
+            >
+              {variant === "featured" ? "Battle Wallpapers" : "Wallpapers"}
+            </p>
+            {variant === "featured" ? (
+              <p className="mt-2 max-w-xl text-sm text-[var(--text-muted)]">
+                Commons, Spark, Meadow, and Circus — cinematic Riftwilds warfronts ready for your
+                desktop.
+              </p>
+            ) : null}
           </div>
           {showIndexLink ? (
             <div className="flex flex-wrap gap-2">
               <Link href="/coloring#wallpapers" className="btn-secondary focus-ring text-sm">
-                Browse all
+                {variant === "featured" ? "Browse all" : "Browse all"}
               </Link>
               <Link href="/fan-kit#downloads" className="btn-secondary focus-ring text-sm">
-                Fan Kit
+                {variant === "compact" ? "Fan Kit" : "Fan Kit hub"}
               </Link>
             </div>
           ) : null}
         </div>
-        <ul className="mt-3 flex flex-wrap gap-2">
-          {wallpapers.slice(0, 4).map((wp) => (
+        <ul
+          className={cn(
+            "mt-3 grid gap-3",
+            variant === "featured"
+              ? "sm:grid-cols-2 lg:grid-cols-4"
+              : "grid-cols-2 sm:grid-cols-4",
+          )}
+        >
+          {resolved.map((wp) => (
             <li key={wp.id}>
               <a
                 href={wp.pngSrc}
                 download={filenameFromSrc(wp.pngSrc)}
-                className="btn-secondary focus-ring inline-flex items-center gap-1.5 text-xs"
+                className="group focus-ring relative block overflow-hidden rounded-lg ring-1 ring-[rgba(61,231,255,0.22)] transition hover:ring-[rgba(61,231,255,0.55)]"
               >
-                <Download size={14} aria-hidden />
-                {wp.shortLabel}
+                <div className="relative aspect-video bg-[#0a1228]">
+                  <Image
+                    src={previewSrc(wp)}
+                    alt=""
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    unoptimized
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent px-2.5 pb-2 pt-8">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-medium text-white">
+                      <Download size={14} aria-hidden className="shrink-0 text-[var(--cyan)]" />
+                      {wp.shortLabel}
+                    </span>
+                  </div>
+                </div>
+                <span className="sr-only">Download {wp.title}</span>
               </a>
             </li>
           ))}
         </ul>
-        <p className="mt-2 text-[11px] text-[var(--text-muted)]">{WALLPAPER_CREDIT}</p>
+        <p
+          className={cn(
+            "mt-2 text-[11px] text-[var(--text-muted)]",
+            variant === "featured" && "mt-5 text-xs",
+          )}
+        >
+          {WALLPAPER_CREDIT}
+        </p>
       </aside>
     );
   }
@@ -97,12 +159,12 @@ export function WallpaperDownloads({
       </div>
 
       <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {wallpapers.map((wp) => (
+        {resolved.map((wp) => (
           <li key={wp.id}>
             <article className="panel overflow-hidden p-3">
               <div className="relative aspect-video overflow-hidden rounded-lg bg-[#0a1228] ring-1 ring-[rgba(61,231,255,0.2)]">
                 <Image
-                  src={wp.pngSrc}
+                  src={previewSrc(wp)}
                   alt={`${wp.title} wallpaper preview`}
                   fill
                   className="object-cover"

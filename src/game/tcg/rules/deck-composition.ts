@@ -137,6 +137,14 @@ export function validateComposition(
   rules: BattleRulesConfig,
 ): { ok: true } | { ok: false; reason: string; code: string } {
   const c = countDeckComposition(cards);
+  if (c.commander > 0) {
+    return {
+      ok: false,
+      reason:
+        "Commander / Keeper cards belong in the Commander slot — not the 29-card main deck.",
+      code: "COMMANDER_IN_MAIN_DECK",
+    };
+  }
   if (c.creatures < rules.deck.minCreatures) {
     return {
       ok: false,

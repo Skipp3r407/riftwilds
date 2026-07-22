@@ -119,6 +119,18 @@ export type TcgPlayerSide = {
   tempEnergy: number;
   /** Energy spent this turn (Empower). */
   energySpentThisTurn: number;
+  /**
+   * Commander passive: first Companion each game costs 1 less.
+   * True after that discount has been consumed.
+   */
+  firstCompanionDiscountUsed: boolean;
+  /**
+   * Temporary flat play-cost delta for this side (negative = cheaper).
+   * Cleared / adjusted by effects; applied in resolvePlayCost.
+   */
+  temporaryPlayCostModifier?: number;
+  /** Flat relic/buff play-cost reduction (non-negative). */
+  playCostReduction?: number;
   deck: TcgCardInstance[];
   hand: TcgCardInstance[];
   board: TcgBoardUnit[];
@@ -169,6 +181,10 @@ export type TcgMatchPhase =
 export type TcgMatchEvent = {
   type: string;
   actorId: string;
+  /**
+   * Structured payload — always includes `seq`, `turn`, `phase` from the engine.
+   * Card/unit display names are resolved when def ids are present.
+   */
   payload: Record<string, unknown>;
 };
 

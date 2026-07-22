@@ -44,7 +44,7 @@
   "continuity": {},
   "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; deep blue and ember-gold circus fabrics; cyan rift energy and amber lantern accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book inside-cover page for The Traveling Circus Issue #3 — Inside Back Cover. Quiet aftershow: Ironmantle resting, Spark and Lumenhare nearby, damaged pavilion lanterns. Empty zones for title lettering. NO readable text in art. NO Cal Reed.",
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Inside Back Cover",
@@ -56,5 +56,7 @@
   "id": "the-traveling-circus-issue-003-p037",
   "cleanArtRel": "generated/raw-art/page-037.png",
   "letteredArtRel": "generated/lettered-pages/page-037.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-037.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-037.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

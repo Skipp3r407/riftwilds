@@ -20,6 +20,10 @@ import {
 } from "@/game/tcg/combat";
 import { addStatus } from "@/game/tcg/combat/status";
 import { getCardById } from "@/content/tcg";
+import {
+  INVENTORY_DECK_REJECT_MESSAGE,
+  isInventoryOnlyCard,
+} from "@/content/tcg/framework/combat-eligibility";
 import { getTcgCardDef } from "@/game/tcg/card-catalog";
 import {
   buildStarterDeckInstances,
@@ -33,6 +37,23 @@ import {
   refillRiftEnergy,
   spendRiftEnergy,
 } from "@/game/tcg/rift-energy";
+import {
+  isCommanderPlayDef,
+  playCostContextFromSide,
+  resolvePlayCost,
+} from "@/game/tcg/play-cost";
+
+function logRejectedPlay(
+  reason: string,
+  detail: Record<string, unknown>,
+): void {
+  if (
+    process.env.NODE_ENV === "development" ||
+    process.env.TCG_BATTLE_DEV === "1"
+  ) {
+    console.info("[tcg] rejected play", reason, detail);
+  }
+}
 import {
   getBattleRules,
   matchModeToBattleMode,
@@ -76,13 +97,39 @@ function rulesOf(state: TcgMatchState): BattleRulesConfig {
   return getBattleRules(matchModeToBattleMode(state.mode));
 }
 
+function resolveEventCardName(defId: unknown): string | null {
+  if (typeof defId !== "string" || !defId) return null;
+  const def = resolveCardDef(defId);
+  return def?.name ?? defId;
+}
+
 function pushEvent(
   state: TcgMatchState,
   type: string,
   actorId: string,
   payload: Record<string, unknown> = {},
 ): void {
-  state.events.push({ type, actorId, payload });
+  const seq = (state.events.at(-1)?.payload?.seq as number | undefined) ?? 0;
+  const nextSeq = typeof seq === "number" ? seq + 1 : state.events.length + 1;
+  const enriched: Record<string, unknown> = {
+    ...payload,
+    seq: nextSeq,
+    turn: state.turn,
+    phase: state.phase,
+  };
+
+  // Resolve human-readable names for common id keys (player feed + tooltips).
+  if (enriched.defId && !enriched.cardName) {
+    enriched.cardName = resolveEventCardName(enriched.defId);
+  }
+  if (enriched.attackerDefId && !enriched.attackerName) {
+    enriched.attackerName = resolveEventCardName(enriched.attackerDefId);
+  }
+  if (enriched.targetDefId && !enriched.targetName) {
+    enriched.targetName = resolveEventCardName(enriched.targetDefId);
+  }
+
+  state.events.push({ type, actorId, payload: enriched });
   if (state.events.length > 80) {
     state.events.splice(0, state.events.length - 80);
   }
@@ -130,8 +177,12 @@ function drawOne(
       damage: dmg,
       collapseIndex: side.riftCollapseCount,
     });
-    // Legacy alias for older UI listeners.
-    pushEvent(state, "FATIGUE", side.id, { keeperHp: side.keeperHp, damage: dmg });
+    // Legacy alias for older UI listeners / Dev console.
+    pushEvent(state, "FATIGUE", side.id, {
+      keeperHp: side.keeperHp,
+      damage: dmg,
+      hiddenFromPlayer: true,
+    });
     return;
   }
   if (side.hand.length >= rules.hand.maxSize) {
@@ -218,6 +269,8 @@ function beginTurn(state: TcgMatchState, side: TcgPlayerSide): void {
   const rules = rulesOf(state);
   state.phase = "START";
 
+  const energyBefore = side.riftEnergy;
+  const previousMax = side.riftEnergyMax;
   const { riftEnergy, riftEnergyMax } = refillRiftEnergy(state.turn, {
     startMax: rules.energy.turn1Max,
     cap: rules.energy.cap,
@@ -230,6 +283,22 @@ function beginTurn(state: TcgMatchState, side: TcgPlayerSide): void {
   side.echoReady = false;
   side.echoResolving = false;
   if (side.commander) side.commander.powerUsedThisTurn = false;
+
+  const maxGained = Math.max(0, riftEnergyMax - previousMax);
+  // Player-facing "gained N" prefers the max ramp; refill always restores to max.
+  const gained =
+    maxGained > 0
+      ? maxGained
+      : Math.max(0, riftEnergy - Math.min(energyBefore, previousMax));
+  pushEvent(state, "ENERGY_REFILL", side.id, {
+    energyBefore: previousMax > 0 ? previousMax : energyBefore,
+    energyAfter: riftEnergy,
+    previousMax,
+    riftEnergy,
+    riftEnergyMax,
+    gained,
+    maxGained,
+  });
 
   applyAwakenTransforms(state, side);
 
@@ -270,7 +339,7 @@ function beginTurn(state: TcgMatchState, side: TcgPlayerSide): void {
   if (!skipDraw) {
     drawOne(side, state, rules);
   } else {
-    pushEvent(state, "SKIP_TURN1_DRAW", side.id, {});
+    pushEvent(state, "SKIP_TURN1_DRAW", side.id, { hiddenFromPlayer: true });
   }
 
   if (
@@ -386,6 +455,7 @@ function strikeFace(
 
 function resolveCombat(state: TcgMatchState, attacker: TcgPlayerSide): void {
   state.phase = "COMBAT";
+  pushEvent(state, "COMBAT_PHASE", attacker.id, { phase: "COMBAT" });
   const defender = opposite(state, attacker.id);
 
   const ready = attacker.board
@@ -645,6 +715,8 @@ function playItem(
     defId: def.id,
     cost: def.riftCost,
     consumed: true,
+    // Spell/heal narration already emitted by resolveSpellEffect.
+    hiddenFromPlayer: true,
   });
 }
 
@@ -718,6 +790,10 @@ function playCard(
   const inst = side.hand[idx]!;
   const def = resolveCardDef(inst.defId);
   if (!def) throw new Error("UNKNOWN_CARD");
+  // Inventory / Companion Care leftovers must never resolve in battle.
+  if (isInventoryOnlyCard(def.id, def.contentType)) {
+    throw new Error(`INVENTORY_NOT_COMBAT:${INVENTORY_DECK_REJECT_MESSAGE}`);
+  }
   assertPlayPhase(state, def);
 
   if (isRiftSparkToken(def.id)) {
@@ -726,7 +802,22 @@ function playCard(
     return;
   }
 
-  if (!canAffordRiftCost(side.riftEnergy, def.riftCost)) {
+  // Commanders are hero-slot only — never summonable from the main deck / hand.
+  if (isCommanderPlayDef(def)) {
+    throw new Error("COMMANDER_NOT_PLAYABLE");
+  }
+
+  const playCost = resolvePlayCost(def, playCostContextFromSide(side));
+
+  if (!canAffordRiftCost(side.riftEnergy, playCost.cost)) {
+    logRejectedPlay("INSUFFICIENT_RIFT_ENERGY", {
+      defId: def.id,
+      name: def.name,
+      energy: side.riftEnergy,
+      cost: playCost.cost,
+      printedCost: playCost.printedCost,
+      sideId: side.id,
+    });
     throw new Error("INSUFFICIENT_RIFT_ENERGY");
   }
   if (def.type === "UNIT" && side.board.length >= rules.field.maxCreatures) {
@@ -742,9 +833,12 @@ function playCard(
     throw new Error("EQUIP_NO_TARGET");
   }
 
-  const paid = def.riftCost;
+  const paid = playCost.cost;
   side.riftEnergy = spendRiftEnergy(side.riftEnergy, paid);
   side.energySpentThisTurn += paid;
+  if (playCost.usedCompanionDiscount) {
+    side.firstCompanionDiscountUsed = true;
+  }
   side.hand.splice(idx, 1);
 
   if (def.type === "UNIT") {
@@ -786,7 +880,8 @@ function playCard(
       health: def.health,
       defense: def.defense,
       speed: def.speed,
-      cost: def.riftCost,
+      cost: paid,
+      printedCost: def.riftCost,
       keywords: def.keywords,
       exhausted: unit.exhausted,
       cannotStrikeKeeper: unit.cannotStrikeKeeper,
@@ -820,6 +915,7 @@ function playCard(
 function finishEndTurn(state: TcgMatchState, side: TcgPlayerSide): void {
   if (state.status !== "ACTIVE") return;
   state.phase = "END";
+  pushEvent(state, "END_PHASE", side.id, { phase: "END" });
   // Expire temporary energy
   if (side.tempEnergy > 0) {
     side.riftEnergy = Math.max(0, side.riftEnergy - side.tempEnergy);
@@ -848,13 +944,14 @@ function enterSecondMainOrFinish(
   if (side.isAi || rules.turn.autoSkipSecondMain) {
     pushEvent(state, "SECOND_MAIN_SKIPPED", side.id, {
       reason: side.isAi ? "AI" : "MODE",
+      hiddenFromPlayer: true,
     });
     finishEndTurn(state, side);
     return;
   }
 
   state.phase = "SECOND_MAIN";
-  pushEvent(state, "SECOND_MAIN", side.id, {});
+  pushEvent(state, "SECOND_MAIN", side.id, { hiddenFromPlayer: true });
 }
 
 function endTurn(state: TcgMatchState, side: TcgPlayerSide): void {
@@ -959,7 +1056,12 @@ function applyAiTurn(state: TcgMatchState): void {
       .filter((x) => {
         if (!x.def) return false;
         if (isRiftSparkToken(x.def.id)) return true;
-        if (!canAffordRiftCost(ai.riftEnergy, x.def.riftCost)) return false;
+        if (isCommanderPlayDef(x.def)) return false;
+        const cost = resolvePlayCost(
+          x.def,
+          playCostContextFromSide(ai),
+        ).cost;
+        if (!canAffordRiftCost(ai.riftEnergy, cost)) return false;
         if (
           x.def.type === "UNIT" &&
           ai.board.length >= rules.field.maxCreatures
@@ -974,11 +1076,12 @@ function applyAiTurn(state: TcgMatchState): void {
         }
         return true;
       })
-      .sort(
-        (a, b) =>
-          a.def!.riftCost - b.def!.riftCost ||
-          b.def!.attack - a.def!.attack,
-      );
+      .sort((a, b) => {
+        const ctx = playCostContextFromSide(ai);
+        const ca = resolvePlayCost(a.def!, ctx).cost;
+        const cb = resolvePlayCost(b.def!, ctx).cost;
+        return ca - cb || b.def!.attack - a.def!.attack;
+      });
     const pick = playable[0];
     if (!pick) break;
     playCard(state, ai, pick.c.instanceId);
@@ -1002,9 +1105,16 @@ function makeSide(
   seatIndex: number,
   rules: BattleRulesConfig,
   commander?: TcgCommanderState | null,
-  opts?: { practiceSoftMulligan?: boolean; grantRiftSpark?: boolean },
+  opts?: {
+    practiceSoftMulligan?: boolean;
+    grantRiftSpark?: boolean;
+    /** Explicit rng for tests only — live play uses secureRandom. */
+    rng?: () => number;
+  },
 ): TcgPlayerSide {
-  let shuffled = shuffleDeck(deck, secureRandom);
+  const rng = opts?.rng ?? secureRandom;
+  // Authoritative pre-deal shuffle — remaining draws use this order via shift().
+  let shuffled = shuffleDeck(deck, rng);
   if (opts?.practiceSoftMulligan) {
     shuffled = ensurePracticeOpeningHandPlayable(shuffled, {
       openingHand: rules.hand.openingSize,
@@ -1033,6 +1143,9 @@ function makeSide(
     riftEnergyMax: energy.riftEnergyMax,
     tempEnergy: 0,
     energySpentThisTurn: 0,
+    firstCompanionDiscountUsed: false,
+    temporaryPlayCostModifier: 0,
+    playCostReduction: 0,
     deck: shuffled,
     hand,
     board: [],
@@ -1072,6 +1185,11 @@ export type CreateMatchInput = {
   opponent?: CreateMatchOpponentInput;
   /** Skip mulligan phase (tests / quick start). Default: practice skips. */
   skipMulligan?: boolean;
+  /**
+   * Explicit RNG for tests / sims only. Omit for live play (crypto shuffle).
+   * Never set a default seed in production paths.
+   */
+  rng?: () => number;
 };
 
 export function createTcgMatch(input: CreateMatchInput): TcgMatchState {
@@ -1082,6 +1200,7 @@ export function createTcgMatch(input: CreateMatchInput): TcgMatchState {
   const powerMode: TcgPowerMode =
     input.powerMode ??
     (mode === "ranked" ? "competitive" : TCG_DEFAULTS.rankedPowerMode);
+  const rng = input.rng ?? secureRandom;
   const playerCommander = resolveCommander(
     input.commanderHeroId ?? "hero-elara-venn",
   );
@@ -1100,7 +1219,7 @@ export function createTcgMatch(input: CreateMatchInput): TcgMatchState {
     0,
     rules,
     playerCommander,
-    { practiceSoftMulligan },
+    { practiceSoftMulligan, rng },
   );
   const foe = makeSide(
     opponentIsAi ? "ai" : "opponent",
@@ -1114,6 +1233,7 @@ export function createTcgMatch(input: CreateMatchInput): TcgMatchState {
     {
       practiceSoftMulligan,
       grantRiftSpark: rules.turn.secondPlayerRiftSpark,
+      rng,
     },
   );
 
@@ -1243,6 +1363,9 @@ export function toTcgClientSnapshot(
       riftEnergyMax: p.riftEnergyMax,
       tempEnergy: p.tempEnergy,
       energySpentThisTurn: p.energySpentThisTurn,
+      firstCompanionDiscountUsed: p.firstCompanionDiscountUsed,
+      temporaryPlayCostModifier: p.temporaryPlayCostModifier ?? 0,
+      playCostReduction: p.playCostReduction ?? 0,
       hand: hideHand
         ? p.hand.map((c) => ({ instanceId: c.instanceId, defId: "hidden" }))
         : p.hand,
@@ -1288,7 +1411,7 @@ export function toTcgClientSnapshot(
     },
     yourSideId: viewerSideId,
     players: state.players.map(mapSide),
-    events: state.events.slice(-24),
+    events: state.events.slice(-80),
     encounter: state.encounter ?? null,
   };
 }

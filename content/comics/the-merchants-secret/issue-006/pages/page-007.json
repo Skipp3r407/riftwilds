@@ -156,7 +156,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
   "pageTurnObjective": "See the wonder and the price.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Lantern Entry — The Merchant's Secret page 3",
@@ -180,5 +180,7 @@
   "id": "the-merchants-secret-issue-006-p007",
   "cleanArtRel": "generated/raw-art/page-007.webp",
   "letteredArtRel": "generated/lettered-pages/page-007.webp",
-  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-007.webp"
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-007.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

@@ -106,8 +106,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Map to Lost City.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "pending",
-  "letteringStatus": "pending",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "We Move Them — The Traveling Circus page 23",
   "atmosphere": "festival",
@@ -120,5 +120,7 @@
   "id": "the-traveling-circus-issue-003-p027",
   "cleanArtRel": "generated/raw-art/page-027.png",
   "letteredArtRel": "generated/lettered-pages/page-027.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-027.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-027.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

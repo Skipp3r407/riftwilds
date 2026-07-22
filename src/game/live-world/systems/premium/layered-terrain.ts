@@ -124,25 +124,77 @@ export function drawPremiumTerrain(
         group.add(bloom);
       }
 
-      // Soft foam / lily sparkle on water shores
-      if (blendEdges && kind === "water" && isSeam && hash2(col, row, 41) > 0.55) {
-        const foam = scene.add.ellipse(
-          x + (hash2(col, row, 42) - 0.5) * 8,
-          y + (hash2(col, row, 43) - 0.5) * 6,
-          4 + hash2(col, row, 44) * 5,
-          2 + hash2(col, row, 45) * 3,
-          0xe8f8ff,
-          0.35,
-        );
-        foam.setDepth(depthAt(DEPTH.groundDecal, y, 0.03));
-        group.add(foam);
+      // Soft foam / lily sparkle on water shores + open water glitter
+      if (blendEdges && kind === "water") {
+        if (isSeam && hash2(col, row, 41) > 0.45) {
+          const foam = scene.add.ellipse(
+            x + (hash2(col, row, 42) - 0.5) * 8,
+            y + (hash2(col, row, 43) - 0.5) * 6,
+            4 + hash2(col, row, 44) * 5,
+            2 + hash2(col, row, 45) * 3,
+            0xe8f8ff,
+            0.4,
+          );
+          foam.setDepth(depthAt(DEPTH.groundDecal, y, 0.03));
+          group.add(foam);
+        }
+        if (hash2(col, row, 46) > 0.72) {
+          const spark = scene.add.circle(
+            x + (hash2(col, row, 47) - 0.5) * 10,
+            y + (hash2(col, row, 48) - 0.5) * 8,
+            1.2 + hash2(col, row, 49) * 1.4,
+            0xf0fbff,
+            0.55,
+          );
+          spark.setDepth(depthAt(DEPTH.groundDecal, y, 0.04));
+          spark.setBlendMode(Phaser.BlendModes.ADD);
+          scene.tweens.add({
+            targets: spark,
+            alpha: { from: 0.2, to: 0.75 },
+            duration: 900 + hash2(col, row, 50) * 700,
+            yoyo: true,
+            repeat: -1,
+            ease: "Sine.easeInOut",
+          });
+          group.add(spark);
+        }
       }
 
-      // Lived-in meadow clutter — fewer, softer tufts (avoid noisy tile sprinkle)
+      // Grass→trail fringe from the meadow side (softens square dirt edges)
       if (
         blendEdges &&
         kind === "ground" &&
-        hash2(col, row, 13) > 0.78 &&
+        neighborDiffers(grid, row, col, kind)
+      ) {
+        const fringe = scene.add.ellipse(
+          x + (hash2(col, row, 60) - 0.5) * 6,
+          y + (hash2(col, row, 61) - 0.5) * 5,
+          T * (0.7 + hash2(col, row, 62) * 0.25),
+          T * (0.38 + hash2(col, row, 63) * 0.18),
+          0x4a8a42,
+          0.22,
+        );
+        fringe.setDepth(depthAt(DEPTH.groundDecal, y, 0.015));
+        group.add(fringe);
+        if (hash2(col, row, 64) > 0.55) {
+          const dirtNibble = scene.add.ellipse(
+            x + (hash2(col, row, 65) - 0.5) * 8,
+            y + (hash2(col, row, 66) - 0.5) * 6,
+            8 + hash2(col, row, 67) * 6,
+            4 + hash2(col, row, 68) * 3,
+            0xc4a070,
+            0.14,
+          );
+          dirtNibble.setDepth(depthAt(DEPTH.groundDecal, y, 0.016));
+          group.add(dirtNibble);
+        }
+      }
+
+      // Lived-in meadow clutter — tufts + petals (classic outdoor density)
+      if (
+        blendEdges &&
+        kind === "ground" &&
+        hash2(col, row, 13) > 0.7 &&
         !neighborDiffers(grid, row, col, kind)
       ) {
         const speck = scene.add.ellipse(
@@ -151,11 +203,11 @@ export function drawPremiumTerrain(
           6 + hash2(col, row, 21) * 8,
           3.5 + hash2(col, row, 23) * 4,
           0x3f7a38,
-          0.16,
+          0.18,
         );
         speck.setDepth(depthAt(DEPTH.groundDecal, y, 0.01));
         group.add(speck);
-        if (hash2(col, row, 27) > 0.82) {
+        if (hash2(col, row, 27) > 0.76) {
           const petal = scene.add.circle(
             x + (hash2(col, row, 29) - 0.5) * 12,
             y + (hash2(col, row, 31) - 0.5) * 10,

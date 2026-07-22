@@ -135,7 +135,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Mirrors lie.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Gate text formal.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Withheld Memory — The Traitor's Gate page 10",
@@ -159,5 +159,7 @@
   "id": "the-traitors-gate-issue-007-p014",
   "cleanArtRel": "generated/raw-art/page-014.webp",
   "letteredArtRel": "generated/lettered-pages/page-014.webp",
-  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-014.webp"
+  "publicArtRel": "assets/comics/the-traitors-gate/issue-007/pages/page-014.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

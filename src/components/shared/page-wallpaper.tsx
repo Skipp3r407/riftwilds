@@ -45,7 +45,9 @@ export const WALLPAPERS = {
   docs: "/assets/ui/wallpapers/docs.png",
   battle: "/assets/ui/wallpapers/battle.png",
   /** Practice Board — painted rift cavern arena (no hex grid) */
-  "tcg-battle": "/assets/ui/wallpapers/tcg-battle.png?v=practiceboard3",
+  "tcg-battle": "/assets/ui/wallpapers/tcg-battle.png?v=practiceboard4",
+  /** Rift Battle Hub — cavern overlook / mode-select hall (distinct from desk) */
+  "tcg-battle-hub": "/assets/ui/wallpapers/tcg-battle-hub.png?v=battlehub1",
   memorials: "/assets/ui/wallpapers/memorials.png",
   about: "/assets/about/about-hero-rift.png",
   /** Parents & Kids — magical archive / parchment hall */
@@ -54,6 +56,8 @@ export const WALLPAPERS = {
   coloring: "/assets/ui/wallpapers/homestead.png",
   /** Fan Kit hub — soft care atmosphere */
   "fan-kit": "/assets/ui/wallpapers/care.png",
+  /** Comics library — rift-lit comic archive / shelf hall */
+  comics: "/assets/ui/wallpapers/comics.png?v=comicsarchive1",
   /** Auth gateway — rift cavern threshold (dark center for form cards) */
   auth: "/assets/ui/wallpapers/auth.png?v=authgate1",
 } as const;
@@ -111,8 +115,8 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/patch-notes", name: "docs", opacity: 0.38 },
   { prefix: "/updates", name: "docs", opacity: 0.38 },
   { prefix: "/battle", name: "battle", opacity: 0.4 },
-  /** Practice Board — painted cavern stays visible under HUD glass */
-  { prefix: "/tcg/battle", name: "tcg-battle", opacity: 0.64 },
+  /** Battle Hub tabs — overlook hall; Practice Board wash keeps desk art */
+  { prefix: "/tcg/battle", name: "tcg-battle-hub", opacity: 0.66 },
   { prefix: "/tcg/collection", name: "collection", opacity: 0.48 },
   { prefix: "/tcg", name: "tcg-battle", opacity: 0.52 },
   { prefix: "/memorials", name: "memorials", opacity: 0.4 },
@@ -122,7 +126,8 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/printables", name: "printables", opacity: 0.58 },
   { prefix: "/coloring", name: "coloring", opacity: 0.52 },
   { prefix: "/fan-kit", name: "fan-kit", opacity: 0.48 },
-  { prefix: "/comics", name: "live-world", opacity: 0.42 },
+  /** Comics shelf / readers — keep archive aisle readable under cover grid */
+  { prefix: "/comics", name: "comics", opacity: 0.55 },
   /** Riftkeeper auth gateway — dedicated cavern wallpaper (dark center) */
   { prefix: "/login", name: "auth", opacity: 0.62 },
   { prefix: "/signup", name: "auth", opacity: 0.62 },
@@ -173,9 +178,11 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
       name === "play" ||
       name === "shop" ||
       name === "tcg-battle" ||
+      name === "tcg-battle-hub" ||
       name === "printables" ||
       name === "coloring" ||
       name === "codex" ||
+      name === "comics" ||
       name === "academy" ||
       name === "auth");
 
@@ -183,8 +190,10 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
   const hatcheryHall = name === "hatchery";
   const authHall = name === "auth";
   const codexHall = name === "codex";
+  const comicsHall = name === "comics";
   const academyHall = name === "academy";
   const arenaHall = name === "arena";
+  const battleHubHall = name === "tcg-battle-hub";
   const battleHall = name === "tcg-battle" || name === "battle";
   const kidsHall =
     name === "printables" || name === "coloring" || name === "fan-kit" || name === "docs";
@@ -227,6 +236,12 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.42)] via-[rgba(7,11,22,0.1)] to-[rgba(6,8,14,0.52)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_18%,rgba(90,70,160,0.1)_0%,transparent_42%),radial-gradient(ellipse_at_20%_70%,rgba(61,231,255,0.07)_0%,transparent_40%),radial-gradient(ellipse_at_center,transparent_0%,rgba(7,11,22,0.18)_62%,rgba(7,11,22,0.4)_100%)]" />
         </>
+      ) : comicsHall ? (
+        <>
+          {/* Comic archive — tame ceiling rift bloom; keep shelf edges visible under covers */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.4)] via-[rgba(7,11,22,0.08)] to-[rgba(6,8,14,0.5)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,rgba(61,231,255,0.06)_0%,transparent_40%),radial-gradient(ellipse_at_18%_70%,rgba(255,150,70,0.05)_0%,transparent_38%),radial-gradient(ellipse_at_center,transparent_0%,rgba(7,11,22,0.16)_60%,rgba(7,11,22,0.4)_100%)]" />
+        </>
       ) : academyHall ? (
         <>
           {/* Keeper school night — tame cyan fountain / rift sky; keep cathedral readable under panels */}
@@ -239,11 +254,17 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.32)] via-[rgba(7,11,22,0.08)] to-[rgba(6,8,14,0.5)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_22%_55%,rgba(61,231,255,0.08)_0%,transparent_42%),radial-gradient(ellipse_at_78%_55%,rgba(255,150,70,0.08)_0%,transparent_42%),radial-gradient(ellipse_at_center,transparent_0%,rgba(7,11,22,0.16)_58%,rgba(7,11,22,0.4)_100%)]" />
         </>
+      ) : battleHubHall ? (
+        <>
+          {/* Battle Hub overlook — tame rift bloom; dark mid for glass mode tabs */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.34)] via-[rgba(7,11,22,0.06)] to-[rgba(6,8,14,0.52)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,transparent_0%,rgba(7,11,22,0.16)_56%,rgba(7,11,22,0.44)_100%),radial-gradient(ellipse_at_20%_65%,rgba(61,231,255,0.07)_0%,transparent_42%),radial-gradient(ellipse_at_80%_55%,rgba(160,90,220,0.06)_0%,transparent_40%)]" />
+        </>
       ) : battleHall ? (
         <>
           {/* Practice cavern — soft crystal/lantern wash; mid-board dark for HUD */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.3)] via-[rgba(7,11,22,0.06)] to-[rgba(6,8,14,0.48)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_42%,transparent_0%,rgba(7,11,22,0.12)_58%,rgba(7,11,22,0.38)_100%),radial-gradient(ellipse_at_18%_70%,rgba(61,231,255,0.07)_0%,transparent_42%),radial-gradient(ellipse_at_82%_55%,rgba(255,184,77,0.08)_0%,transparent_40%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.28)] via-[rgba(7,11,22,0.04)] to-[rgba(6,8,14,0.5)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,transparent_0%,rgba(7,11,22,0.14)_55%,rgba(7,11,22,0.42)_100%),radial-gradient(ellipse_at_18%_70%,rgba(61,231,255,0.06)_0%,transparent_42%),radial-gradient(ellipse_at_82%_55%,rgba(255,184,77,0.07)_0%,transparent_40%)]" />
         </>
       ) : kidsHall ? (
         <>

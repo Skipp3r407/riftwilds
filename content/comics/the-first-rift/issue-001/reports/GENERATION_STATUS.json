@@ -1,10 +1,56 @@
 {
-  "updatedAt": "2026-07-20T15:06:16.962Z",
-  "from": 1,
-  "to": 32,
-  "artReady": 32,
-  "lettered": 32,
-  "blocked": 0,
-  "resume": "npx tsx scripts/comics/run-issue-001-pipeline.mts --from=1 --to=32 --seed-from-legacy",
-  "resumeArt": "COMIC_IMAGE_PROVIDER=grok XAI_API_KEY=… npx tsx scripts/comics/run-issue-001-pipeline.mts --from=1 --to=32"
+  "updatedAt": "2026-07-22T13:16:39.234Z",
+  "grokConfigured": false,
+  "font": "ComicNeue-Bold",
+  "pages": {
+    "1": {
+      "pageNumber": 1,
+      "role": "front-cover",
+      "title": "The First Rift",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-first-rift/issue-001/pages/page-001.webp",
+      "error": null
+    },
+    "2": {
+      "pageNumber": 2,
+      "role": "inside-cover",
+      "title": "Inside front",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-first-rift/issue-001/pages/page-002.webp",
+      "error": null
+    },
+    "3": {
+      "pageNumber": 3,
+      "role": "credits",
+      "title": "Credits",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-first-rift/issue-001/pages/page-003.webp",
+      "error": null
+    },
+    "4": {
+      "pageNumber": 4,
+      "role": "title",
+      "title": "THE PULSE BELOW",
+      "artEngine": null,
+      "artStatus": "pending",
+      "letteringStatus": "ok",
+      "publicPath": "public/assets/comics/the-first-rift/issue-001/pages/page-004.webp",
+      "error": null
+    }
+  },
+  "summary": {
+    "artOk": 0,
+    "letterOk": 4,
+    "grokOk": 0,
+    "proceduralOk": 0,
+    "errors": 0,
+    "resume": "node scripts/comics/issue-001/generate-and-letter.mjs --force --pages=1-10",
+    "grokResume": "set XAI_API_KEY=... && node scripts/comics/issue-001/generate-and-letter.mjs --force"
+  }
 }

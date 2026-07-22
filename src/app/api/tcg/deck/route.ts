@@ -11,9 +11,11 @@ import {
   getTcgRegistry,
 } from "@/content/tcg";
 import { CONSTRUCTED_RULES } from "@/content/tcg/framework/deck-rules";
+import { isCombatEligibleCard } from "@/content/tcg/framework/combat-eligibility";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 import { getTcgCardCatalog } from "@/game/tcg/card-catalog";
 import {
+  getActiveDeckList,
   getCollection,
   setActiveCommander,
   setActiveContentDeck,
@@ -33,8 +35,10 @@ export async function GET() {
   }
 
   const { key, guestToken } = await resolveTcgOwnerKey();
+  // Purge inventory leftovers from hot binders before returning the atelier payload.
+  const activeDeck = getActiveDeckList(key);
   const collection = getCollection(key);
-  const catalog = getTcgCardCatalog();
+  const catalog = getTcgCardCatalog().filter((def) => isCombatEligibleCard(def.id));
   const owned = new Map(collection.cards.map((c) => [c.defId, c.count]));
 
   const rows = catalog.map((def) => {
@@ -63,7 +67,7 @@ export async function GET() {
       size: TCG_LAUNCH_POOL.cardIds.length,
     },
     facets: registry.facets,
-    activeDeck: collection.activeDeck,
+    activeDeck,
     activeDeckId: collection.activeDeckId,
     commanderHeroId: collection.commanderHeroId,
     savedDecks: collection.savedDecks,
@@ -87,7 +91,7 @@ const postSchema = z.discriminatedUnion("action", [
   z.object({
     action: z.literal("save"),
     name: z.string().min(1).max(48).optional(),
-    cardIds: z.array(z.string().min(1).max(80)).length(30),
+    cardIds: z.array(z.string().min(1).max(80)).length(CONSTRUCTED_RULES.deckSize),
     commanderHeroId: z.string().min(1).max(64).nullable().optional(),
   }),
   z.object({

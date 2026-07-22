@@ -77,8 +77,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
   "pageTurnObjective": "Voluntary return.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
-  "generationStatus": "generated",
-  "letteringStatus": "lettered",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "You Were Never Made to Obey — Spark's Journey page 20",
   "atmosphere": "rift",
@@ -90,5 +90,7 @@
   "id": "sparks-journey-issue-002-p024",
   "cleanArtRel": "generated/raw-art/page-024.png",
   "letteredArtRel": "generated/lettered-pages/page-024.webp",
-  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-024.webp"
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-024.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

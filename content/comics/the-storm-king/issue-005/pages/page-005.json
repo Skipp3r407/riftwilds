@@ -111,7 +111,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Cross the mountain path.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
-  "generationStatus": "cached",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Kingdom Built of Weather — The Storm King page 1",
@@ -135,5 +135,7 @@
   "id": "the-storm-king-issue-005-p005",
   "cleanArtRel": "generated/raw-art/page-005.webp",
   "letteredArtRel": "generated/lettered-pages/page-005.webp",
-  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-005.webp"
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-005.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

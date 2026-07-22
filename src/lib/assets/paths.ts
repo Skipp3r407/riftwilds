@@ -180,6 +180,14 @@ export function exchangeMethodThumbPath(methodId: string): string {
   return `/assets/ui/exchange/${methodId}.png?v=${EXCHANGE_METHOD_ART_V}`;
 }
 
+/** Bump when Fan Kit roadmap milestone card backgrounds are regenerated. */
+export const ROADMAP_MILESTONE_ART_V = "rm1";
+
+/** Atmospheric cover thumb under public/assets/ui/roadmap/{milestoneId}.png */
+export function roadmapMilestoneThumbPath(milestoneId: string): string {
+  return `/assets/ui/roadmap/${milestoneId}.png?v=${ROADMAP_MILESTONE_ART_V}`;
+}
+
 /** Bump when Keeper Dashboard panel art is regenerated. */
 export const DASHBOARD_PANEL_ART_V = "dash1";
 

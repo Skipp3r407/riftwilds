@@ -59,3 +59,5 @@ When coordinating a multi-task push:
 - Do not invent rewards, mint status, or “live” systems that are still gated.
 - Do not dump every internal refactor — keep notes player-readable.
 - Do not skip notes for “small” pushes that change Live World, economy framing, or public pages.
+- **Never reveal how content was created.** No pipelines, providers (e.g. Grok), runner scripts, API hooks, scaffolding, stubs, CSRF helpers, OAuth client-ID setup, TypeScript/Vercel/build internals, `npm run …` commands, or “engine/manifest” jargon in titles, summaries, or bullets. Say what players get (Added / Changed / Fixed), not how staff made it.
+- Soften known issues into player language (e.g. “Some later issues may still get art polish”, “Social login coming soon”) — not lettering-pass / OAuth-stub wording.

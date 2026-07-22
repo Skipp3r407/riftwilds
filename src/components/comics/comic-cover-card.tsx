@@ -91,7 +91,7 @@ export function ComicCoverCard({
             src={cover.src}
             alt={`Locked cover for Issue #${issue.issueNumber}: ${issue.title}`}
             fill
-            className="object-cover opacity-40 grayscale"
+            className="object-cover opacity-60 saturate-[0.55] brightness-90"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             unoptimized
           />

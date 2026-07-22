@@ -3,10 +3,10 @@
   "id": "the-first-rift-issue-001-p009",
   "role": "story",
   "title": null,
-  "layout": "narrative",
+  "layout": "tier-2",
   "atmosphere": "night",
   "beat": "Waybread — keep not own",
-  "artPrompt": "Single cinematic comic page, no text. Night camp: Elara shares waybread with a lost child; soft egg glow; amber fire; distant cyan rift hairline. Emotional, warm. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "artPrompt": "Western fantasy COMIC PAGE with CLEAR PANEL GRID and white gutters. TOP wide panel: night camp fire, courier Elara Venn shares waybread with a lost child, soft glowing egg nearby, amber firelight, distant cyan rift hairline. BOTTOM two panels: left close-up of Elara speaking kindly; right child holding a small shell fragment as soft light hums. Thick black borders, sequential storytelling. NO floating portrait cards, NO collage creature stickers, NO lore-plate overlays. Original Riftwilds IP. NO readable text, balloons, logos, or UI in the art.",
   "panels": [
     {
       "lines": [
@@ -14,33 +14,44 @@
           "kind": "narration",
           "text": "She shared waybread with a child who had lost a name.",
           "x": 50,
-          "y": 12
-        },
+          "y": 10,
+          "maxWidthPct": 64
+        }
+      ]
+    },
+    {
+      "lines": [
         {
           "kind": "speech",
           "speaker": "Elara Venn",
           "text": "Call the creature yours to keep — not yours to own.",
-          "x": 40,
-          "y": 48,
-          "tail": "down"
+          "x": 28,
+          "y": 62,
+          "tail": "down",
+          "maxWidthPct": 32
+        }
+      ]
+    },
+    {
+      "lines": [
+        {
+          "kind": "sfx",
+          "text": "SHELL-SONG",
+          "x": 74,
+          "y": 58
         },
         {
           "kind": "caption",
           "text": "CODEX ECHO — Waybread on the First Night",
-          "x": 50,
-          "y": 82
-        },
-        {
-          "kind": "sfx",
-          "text": "SHELL-SONG",
-          "x": 75,
-          "y": 65
+          "x": 72,
+          "y": 88,
+          "maxWidthPct": 36
         }
       ]
     }
   ],
-  "generationStatus": "seeded-legacy",
-  "letteringStatus": "lettered",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
   "cleanArtRel": "generated/clean/page-009.png",
   "letteredArtRel": "generated/lettered/page-009.webp",
   "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-009.webp",

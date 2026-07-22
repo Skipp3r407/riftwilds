@@ -101,6 +101,9 @@ describe("Live World premium Commons", () => {
       "lantern-post",
       "campfire",
       "stump",
+      "clay-pot",
+      "pot-cluster",
+      "boulder",
       "picket-fence",
       "picket-fence-gate",
       "critter-sparkmoth",
@@ -196,5 +199,17 @@ describe("Live World premium Commons", () => {
     expect(kinds.has("critter-sparkmoth")).toBe(true);
     expect(kinds.has("critter-mossbun-kit")).toBe(true);
     expect(kinds.has("market-stall")).toBe(true);
+  });
+
+  it("scatters classic adventure clutter (pots, boulders, denser foliage)", () => {
+    const bp = getBlueprint("riftwild-commons");
+    const props = commonsPropScatter(bp);
+    const kinds = new Set(props.map((p) => p.key));
+    expect(kinds.has("clay-pot")).toBe(true);
+    expect(kinds.has("pot-cluster")).toBe(true);
+    expect(kinds.has("boulder")).toBe(true);
+    expect(kinds.has("bush-berry")).toBe(true);
+    expect(kinds.has("signpost")).toBe(true);
+    expect(props.length).toBeGreaterThan(200);
   });
 });

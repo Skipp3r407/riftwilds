@@ -66,7 +66,7 @@ export function contentCardToEngineDef(card: TcgCard): TcgCardDef {
   const health = type === "UNIT" ? Math.max(1, normalized.health ?? 1) : 0;
   const resolved = resolveCardImagePath(card);
   const cardImagePath = resolved || `/assets/tcg/cards/${card.id}.webp`;
-  const maxCopies = CONSTRUCTED_RULES.copyLimits[card.rarity] ?? 3;
+  const maxCopies = CONSTRUCTED_RULES.copyLimits[card.rarity] ?? 1;
   const abilitySummary = summarizeAbilities(normalized.abilities);
 
   return {
@@ -74,7 +74,13 @@ export function contentCardToEngineDef(card: TcgCard): TcgCardDef {
     name: normalized.localization.name,
     type,
     affinity: ELEMENT_TO_AFFINITY[normalized.element] ?? "SPIRIT",
-    riftCost: Math.max(0, normalized.energyCost),
+    // Printed play cost. Tokens may be free; commanders are hero-slot (not hand-played).
+    // Every other card spends at least 1 Rift Energy when played from hand.
+    riftCost: (() => {
+      const raw = Math.max(0, normalized.energyCost);
+      if (normalized.isToken || normalized.category === "commander") return raw;
+      return Math.max(1, raw);
+    })(),
     power: attack,
     attack,
     health,

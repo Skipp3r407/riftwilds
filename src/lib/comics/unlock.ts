@@ -79,18 +79,19 @@ function evaluateGate(gate: ComicUnlockGate, ctx: UnlockContext, devUnlock: bool
 }
 
 export function unlockLabel(meta: ComicIssueMeta): string {
-  const gates = gatesForIssue(meta);
+  // Never surface admin-dev / env-override gates in player-facing copy.
+  const gates = gatesForIssue(meta).filter((g) => g.kind !== "admin-dev");
   if (gates.some((g) => g.kind === "free")) return "Free to read";
   const prior = gates.find((g) => g.kind === "prior-issue");
   if (prior && prior.kind === "prior-issue") return prior.label;
-  return gates.map((g) => ("label" in g ? g.label : g.kind)).join(" · ");
+  return gates.map((g) => ("label" in g ? g.label : g.kind)).join(" · ") || "Locked";
 }
 
 export function issueLockReason(meta: ComicIssueMeta, ctx: UnlockContext): string | null {
   if (isIssueUnlocked(meta, ctx)) return null;
   const prior = gatesForIssue(meta).find((g) => g.kind === "prior-issue");
   if (prior && prior.kind === "prior-issue") {
-    return `Locked until you finish ${prior.label.replace(/^Complete\s+/i, "")}. Admin/dev: set COMICS_DEV_UNLOCK=1.`;
+    return `Locked until you finish ${prior.label.replace(/^Complete\s+/i, "")}.`;
   }
   return "Locked";
 }

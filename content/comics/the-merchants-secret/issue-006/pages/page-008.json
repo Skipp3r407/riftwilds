@@ -175,7 +175,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, companion trafficking glorified",
   "pageTurnObjective": "Find the rescue shelter.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; merchant speech polished/controlled.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Wonder and Danger — The Merchant's Secret page 4",
@@ -201,5 +201,7 @@
   "id": "the-merchants-secret-issue-006-p008",
   "cleanArtRel": "generated/raw-art/page-008.webp",
   "letteredArtRel": "generated/lettered-pages/page-008.webp",
-  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-008.webp"
+  "publicArtRel": "assets/comics/the-merchants-secret/issue-006/pages/page-008.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

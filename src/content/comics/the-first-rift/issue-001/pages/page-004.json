@@ -5,8 +5,8 @@
   "title": "THE PULSE BELOW",
   "layout": "splash",
   "atmosphere": "dusk",
-  "beat": "THE PULSE BELOW",
-  "artPrompt": "Story title splash energy WITHOUT painted lettering. Mira at present Rift fringe dissolving into Elara-with-egg vision. Leave clear upper third for title lettering pass. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "beat": "Title splash — cinematic comic open",
+  "artPrompt": "Western fantasy COMIC BOOK title splash, full-page cinematic panel with thick black outer border. Mira Eggwarden at present-day Riftwild Commons fringe touching a vertical cyan Fracture tear; warm amber dusk on timber roofs behind her. The tear dissolves upward into a ghost-vision of courier Elara Venn cradling a glowing egg on mud that will become the Commons. Clear empty upper third for title lettering. ONE continuous painted scene — no floating creature cards, no collage insets, no split artbook plates. Earth tones, cyan accent. Original Riftwilds IP. NO readable text, logos, watermarks, UI, or credit labels.",
   "panels": [
     {
       "lines": [
@@ -14,25 +14,28 @@
           "kind": "caption",
           "text": "LEGENDS OF THE RIFT · ISSUE #001",
           "x": 50,
-          "y": 22
+          "y": 16,
+          "maxWidthPct": 58
         },
         {
           "kind": "caption",
           "text": "THE PULSE BELOW",
           "x": 50,
-          "y": 42
+          "y": 34,
+          "maxWidthPct": 70
         },
         {
           "kind": "narration",
           "text": "A present-day Keeper touches an ancient tear — and the First Rift answers.",
           "x": 50,
-          "y": 68
+          "y": 78,
+          "maxWidthPct": 58
         }
       ]
     }
   ],
-  "generationStatus": "seeded-legacy",
-  "letteringStatus": "lettered",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
   "cleanArtRel": "generated/clean/page-004.png",
   "letteredArtRel": "generated/lettered/page-004.webp",
   "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-004.webp",

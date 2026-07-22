@@ -89,7 +89,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, cartoon villain Riftwright, Volume Two story pages beyond teaser",
   "pageTurnObjective": "Ascendant Commander rises.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and companion eyes; tragic Elyan voice restrained.",
-  "generationStatus": "pending",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Twin-Key Resonance — The Riftwright page 14",
@@ -111,5 +111,7 @@
   "id": "the-riftwright-issue-009-p014",
   "cleanArtRel": "generated/raw-art/page-014.webp",
   "letteredArtRel": "generated/lettered-pages/page-014.webp",
-  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-014.webp"
+  "publicArtRel": "assets/comics/the-riftwright/issue-009/pages/page-014.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

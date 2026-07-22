@@ -2,6 +2,9 @@
  * Primary Riftwilds navigation — TCG-first launch IA.
  * Live World + World Restoration soft-gated via `LIVE_WORLD_PUBLIC_ACCESS_ENABLED`.
  * Pump.fun chart/milestones live under Community / Token Launch — not homepage identity.
+ *
+ * Battle IA: Rift Battle is the Battle Hub. Rift Stakes is a mode tab inside it —
+ * never a primary sidebar item.
  */
 
 import { liveWorldAccessBadge } from "@/lib/config/feature-flags";
@@ -11,7 +14,7 @@ export type NavLink = {
   label: string;
   /** Shown in compact header (legacy flat list) */
   header?: boolean;
-  /** Shown in game sidebar */
+  /** Shown in game sidebar (flat legacy; prefer sidebarNavGroups) */
   sidebar?: boolean;
   /** Optional status chip (e.g. Coming Soon) */
   badge?: string;
@@ -26,12 +29,23 @@ export type NavGroup = {
   items: { href: string; label: string; badge?: string }[];
 };
 
+/** Grouped game sidebar sections */
+export type SidebarNavGroup = {
+  id: string;
+  label: string;
+  items: { href: string; label: string; badge?: string }[];
+};
+
 /**
  * Coming Soon until Live World public launch.
  * Local/dev shows "COMING SOON · DEV ACCESS" when entry is open for developers.
  */
 const liveWorldNavBadge = liveWorldAccessBadge();
 
+/**
+ * Flat catalog kept for validators / legacy consumers.
+ * Rift Stakes is intentionally absent — use Battle Hub `?mode=stakes`.
+ */
 export const primaryNav: NavLink[] = [
   { href: "/", label: "Home", header: true, sidebar: false },
   { href: "/play", label: "Play", header: true, sidebar: true },
@@ -75,18 +89,103 @@ export const primaryNav: NavLink[] = [
 ];
 
 export const headerNav = primaryNav.filter((l) => l.header);
+/** @deprecated Prefer `sidebarNavGroups` — flat list retained for tooling. */
 export const sidebarNav = primaryNav.filter((l) => l.sidebar);
 
 export const extraSidebarNav: NavLink[] = [
-  { href: "/profile", label: "Profile" },
-  { href: "/collection", label: "Collection" },
-  { href: "/quests", label: "Quests" },
   { href: "/help", label: "Help" },
   { href: "/roadmap", label: "Roadmap" },
   { href: "/academy", label: "Academy" },
-  { href: "/leaderboards", label: "Leaderboards" },
   { href: "/login", label: "Account" },
-  { href: "/settings/nakama", label: "Nakama" },
+];
+
+/**
+ * Grouped sidebar — PLAY / CARDS / WORLD / COLLECTION / MARKET / COMMUNITY / TREASURY.
+ * Preserves destinations; removes Rift Stakes duplicate (lives under Rift Battle).
+ */
+export const sidebarNavGroups: SidebarNavGroup[] = [
+  {
+    id: "play",
+    label: "Play",
+    items: [
+      { href: "/play", label: "Play hub" },
+      { href: "/tcg/battle", label: "Rift Battle" },
+      { href: "/arena", label: "Arena (free)" },
+      { href: "/dashboard", label: "Dashboard" },
+      { href: "/quests", label: "Quests" },
+    ],
+  },
+  {
+    id: "cards",
+    label: "Cards",
+    items: [
+      { href: "/tcg/deck-builder", label: "Deck Atelier" },
+      { href: "/tcg/codex", label: "Rift Codex" },
+      { href: "/tcg/collection", label: "Card Binder" },
+      { href: "/tcg/museum", label: "Museum Hall" },
+      { href: "/shop", label: "Card Shop" },
+    ],
+  },
+  {
+    id: "world",
+    label: "World",
+    items: [
+      { href: "/world", label: "World" },
+      { href: "/live-world", label: "Live World", badge: liveWorldNavBadge },
+      { href: "/restoration", label: "Restoration", badge: liveWorldNavBadge },
+      { href: "/homestead", label: "Homestead" },
+      { href: "/guilds", label: "Guilds" },
+      { href: "/ecosystem", label: "Ecosystem" },
+    ],
+  },
+  {
+    id: "collection",
+    label: "Collection",
+    items: [
+      { href: "/hatchery", label: "Hatchery" },
+      { href: "/collection", label: "Pet Collection" },
+      { href: "/inventory", label: "Inventory" },
+      { href: "/profile", label: "Profile" },
+    ],
+  },
+  {
+    id: "market",
+    label: "Market",
+    items: [
+      { href: "/exchange", label: "Rift Exchange" },
+      { href: "/marketplace", label: "Marketplace" },
+      { href: "/marketplace/shops", label: "Player shops" },
+      { href: "/marketplace/auctions", label: "Auction house" },
+    ],
+  },
+  {
+    id: "community",
+    label: "Community",
+    items: [
+      { href: "/social", label: "Social Hub" },
+      { href: "/creators", label: "Creators" },
+      { href: "/fan-kit", label: "Fan Kit" },
+      { href: "/comics", label: "Comics" },
+      { href: "/leaderboards", label: "Leaderboards" },
+    ],
+  },
+  {
+    id: "treasury",
+    label: "Treasury",
+    items: [
+      { href: "/treasury", label: "Community Treasury" },
+      { href: "/rewards", label: "Reward Center" },
+      { href: "/loyalty", label: "Loyalty / Rift Storm" },
+      { href: "/economy", label: "Economy" },
+      { href: "/token", label: "Token" },
+      { href: "/transparency", label: "Transparency" },
+      {
+        href: "/tcg/battle?mode=stakes&panel=treasury",
+        label: "Stakes Fee Treasury",
+        badge: "Optional · SOL",
+      },
+    ],
+  },
 ];
 
 /** Grouped command-bar navigation (desktop dropdowns + mobile sections) */
@@ -98,6 +197,12 @@ export const headerNavGroups: NavGroup[] = [
     items: [
       { href: "/play", label: "Play hub" },
       { href: "/tcg/battle", label: "Rift Battle" },
+      {
+        href: "/tcg/battle?mode=stakes",
+        label: "Rift Stakes",
+        badge: "Optional · SOL",
+      },
+      { href: "/arena", label: "Arena (free)" },
       { href: "/tcg/deck-builder", label: "Deck Atelier" },
       { href: "/tcg/codex", label: "Rift Codex" },
       { href: "/tcg/museum", label: "Museum Hall" },
@@ -118,14 +223,26 @@ export const headerNavGroups: NavGroup[] = [
     label: "Rift Battles",
     href: "/tcg/battle",
     items: [
-      { href: "/tcg/battle", label: "Rift Battle" },
+      { href: "/tcg/battle", label: "Battle Hub" },
+      { href: "/tcg/battle?mode=practice", label: "Practice" },
+      { href: "/tcg/battle?mode=casual", label: "Casual" },
+      { href: "/tcg/battle?mode=ranked", label: "Ranked" },
+      { href: "/tcg/battle?mode=ai", label: "AI Challenge" },
+      { href: "/tcg/battle?mode=tournament", label: "Tournament" },
+      {
+        href: "/tcg/battle?mode=stakes",
+        label: "Rift Stakes",
+        badge: "Optional · SOL",
+      },
+      {
+        href: "/tcg/battle?mode=stakes&panel=treasury",
+        label: "Stakes Fee Treasury",
+      },
       { href: "/tcg/deck-builder", label: "Deck Atelier" },
       { href: "/tcg/codex", label: "Rift Codex" },
-      { href: "/tcg/museum", label: "Museum Hall" },
       { href: "/tcg/collection", label: "Card Binder" },
-      { href: "/arena", label: "Arena (legacy)" },
+      { href: "/arena", label: "Arena (free)" },
       { href: "/leaderboards", label: "Leaderboards" },
-      { href: "/battle", label: "Battle" },
     ],
   },
   {
@@ -196,6 +313,7 @@ export const headerNavGroups: NavGroup[] = [
       { href: "/fan-kit", label: "Fan Kit" },
       { href: "/press", label: "Press / Streamer Kit" },
       { href: "/creators", label: "Creators" },
+      { href: "/comics", label: "Comics" },
       { href: "/coloring", label: "Kids Coloring" },
       { href: "/printables", label: "Printables (300 DPI)" },
       { href: "/patch-notes", label: "Patch Notes" },

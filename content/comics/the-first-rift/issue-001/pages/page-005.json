@@ -3,10 +3,10 @@
   "id": "the-first-rift-issue-001-p005",
   "role": "story",
   "title": null,
-  "layout": "two-col",
+  "layout": "tier-2",
   "atmosphere": "dusk",
   "beat": "Present — Mira feels the pulse under Commons cobbles",
-  "artPrompt": "Two-panel comic page, no text. Left: Mira Eggwarden (young hatchery mentor, practical robes, egg-care satchel) kneeling on warm Commons cobbles at dusk, hand on vibrating stone. Right: timber plaza of Riftwild Commons, amber lanterns, cyan hairline crack underfoot. Painterly fantasy comic, earth tones, cyan accent only. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "artPrompt": "Western fantasy COMIC PAGE with CLEAR PANEL GRID and white gutters. Layout: TOP wide establishing panel (full width) of Riftwild Commons timber plaza at dusk, amber lanterns, cobbles with a faint cyan hairline crack. BOTTOM row: two equal panels — left close-up of Mira Eggwarden (young hatchery mentor, practical robes, egg-care satchel) kneeling, palm on vibrating stone; right medium shot of the plaza crack glowing cyan under her boots. Thick black panel borders, consistent gutter width, Z-path reading left-to-right then down. Characters INSIDE panels only — NO floating portrait cards, NO collage insets, NO lore-plate overlays. Painterly comic, earth tones, cyan accent. Original Riftwilds IP. NO readable text, balloons, captions, logos, or UI in the art.",
   "panels": [
     {
       "lines": [
@@ -14,15 +14,21 @@
           "kind": "narration",
           "text": "Riftwild Commons. Dusk. The cobbles remember a scream the town pretends was weather.",
           "x": 50,
-          "y": 12
-        },
+          "y": 10,
+          "maxWidthPct": 72
+        }
+      ]
+    },
+    {
+      "lines": [
         {
           "kind": "speech",
           "speaker": "Mira Eggwarden",
           "text": "That's not a cart. That's a pulse.",
           "x": 28,
-          "y": 55,
-          "tail": "down"
+          "y": 58,
+          "tail": "down",
+          "maxWidthPct": 30
         }
       ]
     },
@@ -32,21 +38,22 @@
           "kind": "thought",
           "speaker": "Mira Eggwarden",
           "text": "Compact law says invite. It doesn't say ignore the floor when it answers.",
-          "x": 70,
-          "y": 40,
-          "tail": "down-left"
+          "x": 72,
+          "y": 52,
+          "tail": "down-left",
+          "maxWidthPct": 30
         },
         {
           "kind": "sfx",
           "text": "THRUMMM",
-          "x": 55,
-          "y": 78
+          "x": 58,
+          "y": 86
         }
       ]
     }
   ],
-  "generationStatus": "seeded-legacy",
-  "letteringStatus": "lettered",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
   "cleanArtRel": "generated/clean/page-005.png",
   "letteredArtRel": "generated/lettered/page-005.webp",
   "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-005.webp",

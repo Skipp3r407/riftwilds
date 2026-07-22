@@ -1,3 +1,4 @@
+export * from "@/game/tcg/events";
 export * from "@/game/tcg/types";
 export * from "@/game/tcg/schemas";
 export * from "@/game/tcg/rift-energy";

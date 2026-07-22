@@ -46,8 +46,8 @@
   "continuity": {},
   "grokPrompt": "Original high-energy Western fantasy comic storytelling with dynamic panel composition, dramatic inked linework, richly painted colors, expressive character acting, and clear cinematic action. Original Riftwilds IP only. Warm earth greens, sandstone, timber, moss first; cyan rift energy and amber hearth as accents only. NO purple AI-fantasy default. NO Marvel/DC/Pokémon characters or logos. Riftwilds comic book profile page for Spark's Journey Issue #2 — Companion Profile — Spark. Companion profile plate: full-body Spark — Spark the Glowpup-line Riftborn hatchling: soft luminous fur, cyan-gold rift markings, large expressive eyes, small crystal growths, glowing-tip emotional tail, unstable glow when frightened, steadier aura when bonded; cute but original — not a franchise mascot. Empty lore boxes. Empty zones for title lettering. NO readable text in art.",
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
-  "generationStatus": "generated",
-  "letteringStatus": "lettered",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Companion Profile — Spark",
   "atmosphere": "day",
@@ -58,5 +58,7 @@
   "id": "sparks-journey-issue-002-p032",
   "cleanArtRel": "generated/raw-art/page-032.png",
   "letteredArtRel": "generated/lettered-pages/page-032.webp",
-  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-032.webp"
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-032.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

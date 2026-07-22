@@ -4,6 +4,10 @@ import {
   resolveCardImagePath,
   type TcgCard,
 } from "@/content/tcg";
+import {
+  classifyCard,
+  classificationTooltipLines,
+} from "@/content/tcg/framework/card-classification";
 import { ROLE_DISPLAY } from "@/content/tcg/framework/roles";
 import { contentPackForRegion } from "@/content/regions";
 import { getSpeciesLore } from "@/content/pets/lore";
@@ -49,6 +53,10 @@ export type TcgCardDetailView = {
   riftlingSlug: string | null;
   relatedRiftlings: string[];
   competitiveEligible: boolean;
+  /** Classification tooltip: category + where to use. */
+  classificationCategory: string;
+  useLocation: string;
+  combatDeckLegal: boolean;
   /** Present only when a real species lore entry exists. */
   creatureBio: {
     slug: string;
@@ -174,6 +182,8 @@ export function getTcgCardDetail(defId: string): TcgCardDetailView | null {
     (a) => a.timing === "activated" || a.timing === "battlecry",
   );
   const ultimate = normalized?.abilities.find((a) => a.timing === "ultimate");
+  const classification = classifyCard(card);
+  const tip = classificationTooltipLines(classification);
 
   return {
     id: card.id,
@@ -202,6 +212,9 @@ export function getTcgCardDetail(defId: string): TcgCardDetailView | null {
     riftlingSlug: card.riftlingSlug ?? null,
     relatedRiftlings: card.relatedRiftlings ?? [],
     competitiveEligible: normalized?.competitiveEligible ?? true,
+    classificationCategory: tip.category,
+    useLocation: tip.useLocation,
+    combatDeckLegal: classification.combatDeckLegal,
     creatureBio,
     illustratedBio: pickIllustratedBio(card, creatureBio),
   };

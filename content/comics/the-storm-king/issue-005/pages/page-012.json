@@ -162,7 +162,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Orders and refusal.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; king speech formal/controlled.",
-  "generationStatus": "cached",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Resonance Named — The Storm King page 8",
@@ -186,5 +186,7 @@
   "id": "the-storm-king-issue-005-p012",
   "cleanArtRel": "generated/raw-art/page-012.webp",
   "letteredArtRel": "generated/lettered-pages/page-012.webp",
-  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-012.webp"
+  "publicArtRel": "assets/comics/the-storm-king/issue-005/pages/page-012.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

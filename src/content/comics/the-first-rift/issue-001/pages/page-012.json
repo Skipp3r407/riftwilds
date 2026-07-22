@@ -6,7 +6,7 @@
   "layout": "grid-2x2",
   "atmosphere": "day",
   "beat": "Hatch — First Riftling",
-  "artPrompt": "Four-panel hatch scene, no text. Young Mira-like child wonder; soft hatch light; village elder; newborn First Riftling pale shell-glow curious eyes. Warm Commons day. Original Riftwilds IP only. NO dialogue text, captions, logos, watermarks, or UI in the image.",
+  "artPrompt": "Western fantasy COMIC PAGE, strict 2x2 PANEL GRID with equal white gutters and thick black borders. Panel 1: child wonder staring at cracking egg. Panel 2: soft hatch burst of warm light, newborn First Riftling pale shell-glow curious eyes emerging. Panel 3: village elder asking Elara a question; Elara with satchel answering. Panel 4: close-up of newborn Riftling's gentle eyes. Warm Commons day, sequential hatch story. NO floating card insets, NO collage overlays. Original Riftwilds IP. NO readable text, balloons, logos, or UI in the art.",
   "panels": [
     {
       "lines": [
@@ -14,17 +14,19 @@
           "kind": "speech",
           "speaker": "Child",
           "text": "Is it… looking at me?",
-          "x": 40,
-          "y": 40,
-          "tail": "down"
+          "x": 26,
+          "y": 22,
+          "tail": "down",
+          "maxWidthPct": 28
         },
         {
           "kind": "speech",
           "speaker": "Elara Venn",
           "text": "It is remembering the world. Help it stay gentle.",
-          "x": 60,
-          "y": 65,
-          "tail": "up"
+          "x": 28,
+          "y": 40,
+          "tail": "up",
+          "maxWidthPct": 30
         }
       ]
     },
@@ -33,14 +35,15 @@
         {
           "kind": "sfx",
           "text": "HATCH—!",
-          "x": 50,
-          "y": 45
+          "x": 74,
+          "y": 22
         },
         {
           "kind": "narration",
           "text": "The Soft Exodus had closed into eggs. Battle culture would come later.",
-          "x": 50,
-          "y": 75
+          "x": 74,
+          "y": 42,
+          "maxWidthPct": 34
         }
       ]
     },
@@ -50,17 +53,19 @@
           "kind": "speech",
           "speaker": "Village elder",
           "text": "What do we call you?",
-          "x": 40,
-          "y": 35,
-          "tail": "down"
+          "x": 26,
+          "y": 62,
+          "tail": "down",
+          "maxWidthPct": 26
         },
         {
           "kind": "speech",
           "speaker": "Elara Venn",
           "text": "Courier. Keeper, if the egg agrees.",
-          "x": 65,
-          "y": 60,
-          "tail": "up"
+          "x": 30,
+          "y": 82,
+          "tail": "up",
+          "maxWidthPct": 30
         }
       ]
     },
@@ -70,20 +75,21 @@
           "kind": "thought",
           "speaker": "First Riftling",
           "text": "…keep…",
-          "x": 50,
-          "y": 50
+          "x": 74,
+          "y": 68
         },
         {
           "kind": "caption",
           "text": "FIRST-LIGHT-01",
-          "x": 50,
-          "y": 80
+          "x": 74,
+          "y": 88,
+          "maxWidthPct": 28
         }
       ]
     }
   ],
-  "generationStatus": "seeded-legacy",
-  "letteringStatus": "lettered",
+  "generationStatus": "pending",
+  "letteringStatus": "ok",
   "cleanArtRel": "generated/clean/page-012.png",
   "letteredArtRel": "generated/lettered/page-012.webp",
   "publicArtRel": "assets/comics/the-first-rift/issue-001/pages/page-012.webp",

@@ -66,7 +66,11 @@ describe("tcg match engine", () => {
 
     const affordable = state.players[0].hand.find((c) => {
       const def = getTcgCardCatalog().find((d) => d.id === c.defId);
-      return def && def.riftCost <= state.players[0].riftEnergy;
+      return (
+        def &&
+        def.type === "UNIT" &&
+        def.riftCost <= state.players[0].riftEnergy
+      );
     });
     if (affordable) {
       applyTcgAction(state, "player", {

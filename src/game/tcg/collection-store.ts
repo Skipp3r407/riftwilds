@@ -5,8 +5,17 @@ import {
   getDeckById,
   getHeroById,
 } from "@/content/tcg";
-import { buildStarterDeckList, expandContentDeck, validateDeckList } from "@/game/tcg/deck";
+import {
+  buildStarterDeckList,
+  expandContentDeck,
+  padUniqueToConstructedSize,
+  uniqueCardIds,
+  validateDeckList,
+} from "@/game/tcg/deck";
+import { isCombatEligibleCard } from "@/content/tcg/framework/combat-eligibility";
 import { TCG_DEFAULTS } from "@/game/tcg/types";
+import { CONSTRUCTED_RULES } from "@/content/tcg/framework/deck-rules";
+import { grantFromTcgMigration } from "@/lib/inventory/player-inventory-store";
 
 /**
  * In-memory binder stub — seeds from foundational content pack.
@@ -89,10 +98,34 @@ export function getCollection(ownerKey: string): {
 }
 
 export function getActiveDeckList(ownerKey: string): string[] {
-  const list = [...ensure(ownerKey).activeDeck];
-  if (list.length <= TCG_DEFAULTS.maxDeckSize) return list;
-  // Hot binders may still hold oversized teaching pools — practice uses a legal slice.
-  return list.slice(0, TCG_DEFAULTS.starterDeckSize);
+  const b = ensure(ownerKey);
+  const list = b.activeDeck;
+  const combatOnly = list.filter((id) => isCombatEligibleCard(id));
+  const stripped = list.filter((id) => !isCombatEligibleCard(id));
+  for (const id of stripped) {
+    grantFromTcgMigration(ownerKey, id, 1);
+  }
+  // Also migrate saved decks once when active deck is read.
+  for (const [, saved] of b.savedDecks) {
+    const kept = saved.cardIds.filter((id) => isCombatEligibleCard(id));
+    const removed = saved.cardIds.filter((id) => !isCombatEligibleCard(id));
+    if (removed.length) {
+      for (const id of removed) grantFromTcgMigration(ownerKey, id, 1);
+      saved.cardIds = padUniqueToConstructedSize(kept);
+    }
+  }
+  const unique = uniqueCardIds(combatOnly);
+  const needsRepair =
+    combatOnly.length !== list.length ||
+    unique.length !== combatOnly.length ||
+    unique.length < CONSTRUCTED_RULES.deckSize ||
+    list.length > CONSTRUCTED_RULES.deckSize;
+  if (needsRepair) {
+    // Hot binders may still hold food/care leftovers or duplicate-heavy
+    // teaching slices — purge inventory items and normalize to combat-only.
+    b.activeDeck = padUniqueToConstructedSize(combatOnly);
+  }
+  return [...b.activeDeck];
 }
 
 export function getActiveCommanderHeroId(ownerKey: string): string | null {
@@ -103,11 +136,8 @@ export function setActiveContentDeck(ownerKey: string, deckId: string): boolean 
   const deck = getDeckById(deckId);
   if (!deck) return false;
   const b = ensure(ownerKey);
-  const list = expandContentDeck(deck);
-  b.activeDeck =
-    list.length > TCG_DEFAULTS.maxDeckSize
-      ? list.slice(0, TCG_DEFAULTS.starterDeckSize)
-      : list;
+  const list = expandContentDeck(deck).filter((id) => isCombatEligibleCard(id));
+  b.activeDeck = padUniqueToConstructedSize(list);
   b.activeDeckId = deckId;
   const faction = TCG_FACTIONS.find((f) => f.defaultStarterDeckId === deckId);
   if (faction?.commanderHeroIds[0]) {
@@ -118,9 +148,9 @@ export function setActiveContentDeck(ownerKey: string, deckId: string): boolean 
 
 export function setActiveShowcaseDeck(ownerKey: string): boolean {
   const b = ensure(ownerKey);
-  const list = [...TCG_STARTER_SET_20.cardIds];
+  const list = TCG_STARTER_SET_20.cardIds.filter((id) => isCombatEligibleCard(id));
   if (list.length < TCG_DEFAULTS.minDeckSize) return false;
-  b.activeDeck = list;
+  b.activeDeck = padUniqueToConstructedSize(list);
   b.activeDeckId = TCG_STARTER_SET_20.id;
   b.commanderHeroId = TCG_STARTER_SET_20.recommendedCommanderId;
   return true;

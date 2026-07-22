@@ -167,15 +167,16 @@ export const REGION_AMBIENT: Record<string, AmbientLayerRecipe> = {
     lfoHz: 0.11,
     mood: "starfield shimmer",
   },
-  // Marketing / hub return bed — noise-led only (no audible sine hum).
+  // Hub return bed — noise-only. Any drone/pad here reads as a stuck sine hum
+  // and survives MusicPlayer pause (Web Audio ≠ HTMLAudio).
   menu: {
     droneHz: 98,
     droneType: "sine",
-    droneGain: 0.004,
-    noiseGain: 0.018,
+    droneGain: 0,
+    noiseGain: 0.012,
     noiseFilterHz: 900,
     padHz: 147,
-    padGain: 0.006,
+    padGain: 0,
     lfoHz: 0.05,
     mood: "soft magical menu (no drone hum)",
   },

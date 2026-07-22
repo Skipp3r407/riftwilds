@@ -141,7 +141,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit",
   "pageTurnObjective": "Turn to continue.",
   "letteringInstructions": "Wide-spread lettering; keep center gutter clear for page join.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Sky of a Thousand Lights — The Shattered Star page 18",
@@ -166,5 +166,7 @@
   },
   "volumeLabel": "Volume Two · Issue #1 / Issue #10",
   "publicArtRel": "assets/comics/the-shattered-star/issue-010/pages/page-022.webp",
-  "id": "the-shattered-star-issue-010-p022"
+  "id": "the-shattered-star-issue-010-p022",
+  "bakedLettering": true,
+  "composedPlate": true
 }

@@ -154,7 +154,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed, Voltkit, Riftwright face reveal, named saboteur identity",
   "pageTurnObjective": "Run.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Arkan speech weary/brilliant; Axiom soft creature chirps.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Reactor Alpha — The Forge of Rifts page 21",
@@ -179,5 +179,7 @@
   "id": "the-forge-of-rifts-issue-008-p025",
   "cleanArtRel": "generated/raw-art/page-025.webp",
   "letteredArtRel": "generated/lettered-pages/page-025.webp",
-  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-025.webp"
+  "publicArtRel": "assets/comics/the-forge-of-rifts/issue-008/pages/page-025.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

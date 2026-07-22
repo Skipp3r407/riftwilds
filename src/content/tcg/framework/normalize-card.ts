@@ -25,6 +25,7 @@ import {
   type TcgCardCategory,
   type TcgTemplateLayout,
 } from "@/content/tcg/framework/card-categories";
+import { isInventoryOnlyCard } from "@/content/tcg/framework/combat-eligibility";
 
 export type NormalizedTcgCard = TcgCard & {
   /** Canonical category (Companion / Spell / Item / …). */
@@ -205,6 +206,8 @@ function deriveCompetitive(
   }
   // Terrain weather-origin stubs remain non-competitive when tagged.
   if (card.collectionTags?.includes("weather-prop")) return false;
+  // Care / food / materials / tools / quests live in Inventory — never combat-legal.
+  if (isInventoryOnlyCard(card.id, category)) return false;
   return true;
 }
 
@@ -277,7 +280,12 @@ export function normalizeCard(card: TcgCard): NormalizedTcgCard {
     typeof withKw.health === "number"
       ? clampStat(withKw.health, STAT_RANGES.health)
       : withKw.health;
-  const energyCost = clampStat(withKw.energyCost, STAT_RANGES.cost);
+  // Tokens + commanders may be authored at 0 (free token / hero slot).
+  // All other cards clamp to the competitive cost curve (min 1).
+  const energyCost =
+    withKw.isToken || category === "commander"
+      ? Math.max(0, Math.round(withKw.energyCost))
+      : clampStat(withKw.energyCost, STAT_RANGES.cost);
 
   return {
     ...withKw,

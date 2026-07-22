@@ -155,6 +155,8 @@ class MusicEngine {
     this.current()?.pause();
     this.other()?.pause();
     this.playing = false;
+    if (this.a) this.a.volume = 0;
+    if (this.b) this.b.volume = 0;
     this.emit();
   }
 

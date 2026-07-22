@@ -424,6 +424,29 @@ export type CareCatalogItem = {
 
 export const CARE_FOOD_CATALOG: CareCatalogItem[] = [
   {
+    id: "basic-pet-meal",
+    name: "Basic Pet Meal",
+    kind: "meal",
+    description:
+      "Inventory Food — restores hunger, small bond, and care XP. Not a combat spell.",
+    shopPriceCredits: 35,
+    craftRecipeId: null,
+    useAction: "FEED",
+    effects: { hunger: 25, happiness: 5, bond: 3 },
+    rarity: "common",
+  },
+  {
+    id: "premium-pet-meal",
+    name: "Premium Pet Meal",
+    kind: "meal",
+    description: "Larger Inventory Food meal for hunger and happiness.",
+    shopPriceCredits: 80,
+    craftRecipeId: null,
+    useAction: "FEED",
+    effects: { hunger: 40, happiness: 15, bond: 5 },
+    rarity: "uncommon",
+  },
+  {
     id: "riftberry",
     name: "Riftberry",
     kind: "berry",
@@ -750,6 +773,7 @@ export const DEFAULT_CARE_PROGRESS: PetCareProgress = {
   cosmetics: [],
   journal: [],
   inventory: [
+    { itemId: "basic-meal", qty: 5 },
     { itemId: "riftberry", qty: 2 },
     { itemId: "fresh-water", qty: 2 },
   ],

@@ -126,7 +126,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Nira sabotages relay.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "ok",
+  "generationStatus": "seeded",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Spark Chooses — The Traveling Circus page 20",
@@ -141,5 +141,7 @@
   "id": "the-traveling-circus-issue-003-p024",
   "cleanArtRel": "generated/raw-art/page-024.png",
   "letteredArtRel": "generated/lettered-pages/page-024.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-024.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-024.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

@@ -1,0 +1,101 @@
+# Rift Stakes Prisma proposal (NOT auto-migrated)
+
+Local DEMO uses `.data/rift-stakes/state.json`. Apply these models when ready for Neon.
+
+```prisma
+model RiftStakeMatch {
+  id              String   @id @default(cuid())
+  publicId        String   @unique
+  status          String
+  stakeTierId     String
+  hostOwnerKey    String
+  guestOwnerKey   String?
+  winnerOwnerKey  String?
+  feeSnapshotJson Json?
+  demoMode        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  completedAt     DateTime?
+  escrow          RiftStakeEscrow?
+  feeRows         RiftStakeFee[]
+
+  @@index([hostOwnerKey, createdAt])
+  @@index([status, createdAt])
+}
+
+model RiftStakeEscrow {
+  id                     String   @id @default(cuid())
+  matchId                String   @unique
+  phase                  String
+  stakePerPlayerLamports BigInt
+  hostWallet             String?
+  guestWallet            String?
+  hostDeposited          Boolean  @default(false)
+  guestDeposited         Boolean  @default(false)
+  demoMode               Boolean  @default(true)
+  onChainTxIdsJson       Json?
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  match                  RiftStakeMatch @relation(fields: [matchId], references: [id])
+}
+
+model RiftStakeTreasury {
+  id                     String @id @default("singleton")
+  treasuryWallet         String
+  collectedFeesLamports  BigInt @default(0)
+  updatedAt              DateTime @updatedAt
+}
+
+model RiftStakeTreasuryTransaction {
+  id             String   @id @default(cuid())
+  kind           String
+  matchId        String?
+  escrowId       String?
+  amountLamports BigInt
+  bucket         String?
+  note           String
+  demoMode       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model RiftStakeFeeHistory {
+  id                      String   @id @default(cuid())
+  matchId                 String
+  feeBps                  Int
+  platformFeeLamports     BigInt
+  prizePoolLamports       BigInt
+  winnerReceivesLamports  BigInt
+  charged                 Boolean
+  reason                  String
+  createdAt               DateTime @default(now())
+
+  @@index([matchId])
+}
+
+model RiftStakeFee {
+  id         String @id @default(cuid())
+  matchId    String
+  feeBps     Int
+  charged    Boolean
+  match      RiftStakeMatch @relation(fields: [matchId], references: [id])
+}
+
+model RiftStakePromotion {
+  id        String   @id @default(cuid())
+  name      String
+  feeBps    Int
+  active    Boolean  @default(false)
+  startsAt  DateTime
+  endsAt    DateTime
+  note      String?
+}
+
+model RiftStakeVipFee {
+  id         String @id @default(cuid())
+  label      String
+  feeBps     Int
+  minMatches Int
+  note       String?
+}
+```

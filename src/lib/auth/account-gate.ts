@@ -10,6 +10,10 @@ import {
   type AccountGateBlocked,
 } from "@/lib/auth/account-status";
 import {
+  isLocalPreviewBypass,
+  LOCAL_PREVIEW_USER_ID,
+} from "@/lib/auth/account-play-policy";
+import {
   DEV_OVERRIDE_USER_ID,
   isDevOverrideRuntimeAllowed,
 } from "@/lib/auth/dev-override";
@@ -22,6 +26,9 @@ import type { AuthContext } from "@/lib/security/authorization";
 export {
   isAccountRequiredForPlay,
   isGuestGameplayAllowed,
+  isLocalPreviewBypass,
+  LOCAL_PREVIEW_OWNER_KEY,
+  LOCAL_PREVIEW_USER_ID,
 } from "@/lib/auth/account-play-policy";
 
 export type GameplaySession = AuthContext & {
@@ -43,14 +50,11 @@ export async function resolveGameplayGate(opts?: {
   | { ok: false; decision: AccountGateBlocked }
 > {
   // Local-only preview when Postgres is unavailable (see AUTH_LOCAL_PREVIEW_BYPASS).
-  if (
-    process.env.NODE_ENV !== "production" &&
-    process.env.AUTH_LOCAL_PREVIEW_BYPASS === "true"
-  ) {
+  if (isLocalPreviewBypass()) {
     return {
       ok: true,
       session: {
-        userId: "local-preview-user",
+        userId: LOCAL_PREVIEW_USER_ID,
         walletAddress: null,
         role: "player",
         tokenTier: "VISITOR",

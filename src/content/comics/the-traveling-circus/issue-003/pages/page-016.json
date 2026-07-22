@@ -137,8 +137,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Archive records.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "pending",
-  "letteringStatus": "pending",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Restricted Wagon — The Traveling Circus page 12",
   "atmosphere": "festival",
@@ -152,5 +152,7 @@
   "id": "the-traveling-circus-issue-003-p016",
   "cleanArtRel": "generated/raw-art/page-016.png",
   "letteredArtRel": "generated/lettered-pages/page-016.webp",
-  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-016.webp"
+  "publicArtRel": "assets/comics/the-traveling-circus/issue-003/pages/page-016.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }

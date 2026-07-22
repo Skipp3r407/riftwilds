@@ -783,6 +783,7 @@ export function BoardUnitShell({
   spawn,
   attackPulse,
   summonPulse,
+  highlight,
   reduceMotion,
 }: {
   children: ReactNode;
@@ -791,6 +792,8 @@ export function BoardUnitShell({
   spawn?: boolean;
   attackPulse?: boolean;
   summonPulse?: boolean;
+  /** Pulsed from Event Feed click-to-highlight. */
+  highlight?: boolean;
   reduceMotion?: boolean;
 }) {
   const tint = affinityVfx(affinity);
@@ -803,6 +806,7 @@ export function BoardUnitShell({
         spawn && reduceMotion && "battle-unit--spawn-soft",
         attackPulse && "battle-unit--strike",
         summonPulse && "battle-unit--summon-glow",
+        highlight && "battle-unit--feed-highlight",
       )}
       style={
         {

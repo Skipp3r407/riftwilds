@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-07-18T17:17:44.175Z",
+  "generatedAt": "2026-07-22T12:00:00.000Z",
   "dpi": 300,
-  "count": 12,
-  "theme": "riftwilds-epic-warm-fantasy-v3",
+  "theme": "riftwilds-enhanced-painterly-v4",
+  "count": 10,
+  "note": "AI-enhanced masters installed via install-enhanced-printables.mjs",
   "sizes": {
     "letter": {
       "w": 2550,
@@ -28,26 +29,9 @@
   },
   "files": [
     {
-      "slug": "sticker-sheet-riftlings",
-      "png": "sticker-sheet-riftlings.png",
-      "pdf": "sticker-sheet-riftlings.pdf",
-      "svg": "sticker-sheet-riftlings.svg",
-      "pixels": "2550×3300",
-      "paper": "US Letter 8.5×11\""
-    },
-    {
-      "slug": "sticker-sheet-crests",
-      "png": "sticker-sheet-crests.png",
-      "pdf": "sticker-sheet-crests.pdf",
-      "svg": "sticker-sheet-crests.svg",
-      "pixels": "2550×3300",
-      "paper": "US Letter 8.5×11\""
-    },
-    {
       "slug": "poster-spark",
       "png": "poster-spark.png",
       "pdf": "poster-spark.pdf",
-      "svg": "poster-spark.svg",
       "pixels": "2550×3300",
       "paper": "US Letter 8.5×11\""
     },
@@ -55,7 +39,6 @@
       "slug": "poster-spark-a4",
       "png": "poster-spark-a4.png",
       "pdf": "poster-spark-a4.pdf",
-      "svg": "poster-spark-a4.svg",
       "pixels": "2480×3508",
       "paper": "A4"
     },
@@ -63,7 +46,6 @@
       "slug": "poster-commons",
       "png": "poster-commons.png",
       "pdf": "poster-commons.pdf",
-      "svg": "poster-commons.svg",
       "pixels": "2550×3300",
       "paper": "US Letter 8.5×11\""
     },
@@ -71,15 +53,6 @@
       "slug": "poster-hatchery",
       "png": "poster-hatchery.png",
       "pdf": "poster-hatchery.pdf",
-      "svg": "poster-hatchery.svg",
-      "pixels": "2550×3300",
-      "paper": "US Letter 8.5×11\""
-    },
-    {
-      "slug": "bookmarks-sheet",
-      "png": "bookmarks-sheet.png",
-      "pdf": "bookmarks-sheet.pdf",
-      "svg": "bookmarks-sheet.svg",
       "pixels": "2550×3300",
       "paper": "US Letter 8.5×11\""
     },
@@ -87,7 +60,27 @@
       "slug": "trading-cards-sheet",
       "png": "trading-cards-sheet.png",
       "pdf": "trading-cards-sheet.pdf",
-      "svg": "trading-cards-sheet.svg",
+      "pixels": "2550×3300",
+      "paper": "US Letter 8.5×11\""
+    },
+    {
+      "slug": "bookmarks-sheet",
+      "png": "bookmarks-sheet.png",
+      "pdf": "bookmarks-sheet.pdf",
+      "pixels": "2550×3300",
+      "paper": "US Letter 8.5×11\""
+    },
+    {
+      "slug": "sticker-sheet-riftlings",
+      "png": "sticker-sheet-riftlings.png",
+      "pdf": "sticker-sheet-riftlings.pdf",
+      "pixels": "2550×3300",
+      "paper": "US Letter 8.5×11\""
+    },
+    {
+      "slug": "sticker-sheet-crests",
+      "png": "sticker-sheet-crests.png",
+      "pdf": "sticker-sheet-crests.pdf",
       "pixels": "2550×3300",
       "paper": "US Letter 8.5×11\""
     },
@@ -95,7 +88,6 @@
       "slug": "card-spark-5x7",
       "png": "card-spark-5x7.png",
       "pdf": "card-spark-5x7.pdf",
-      "svg": "card-spark-5x7.svg",
       "pixels": "1500×2100",
       "paper": "5×7\""
     },
@@ -103,25 +95,8 @@
       "slug": "card-circus-5x7",
       "png": "card-circus-5x7.png",
       "pdf": "card-circus-5x7.pdf",
-      "svg": "card-circus-5x7.svg",
       "pixels": "1500×2100",
       "paper": "5×7\""
-    },
-    {
-      "slug": "circus-party-invite",
-      "png": "circus-party-invite.png",
-      "pdf": "circus-party-invite.pdf",
-      "svg": "circus-party-invite.svg",
-      "pixels": "2550×3300",
-      "paper": "US Letter 8.5×11\""
-    },
-    {
-      "slug": "standee-spark",
-      "png": "standee-spark.png",
-      "pdf": "standee-spark.pdf",
-      "svg": "standee-spark.svg",
-      "pixels": "2550×3300",
-      "paper": "US Letter 8.5×11\""
     }
   ]
 }

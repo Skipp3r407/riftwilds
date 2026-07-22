@@ -114,8 +114,8 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
   "pageTurnObjective": "Sealed path opens.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
-  "generationStatus": "generated",
-  "letteringStatus": "lettered",
+  "generationStatus": "seeded",
+  "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Scent and Spirit — Spark's Journey page 13",
   "atmosphere": "night",
@@ -128,5 +128,7 @@
   "id": "sparks-journey-issue-002-p017",
   "cleanArtRel": "generated/raw-art/page-017.png",
   "letteredArtRel": "generated/lettered-pages/page-017.webp",
-  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-017.webp"
+  "publicArtRel": "assets/comics/sparks-journey/issue-002/pages/page-017.webp",
+  "bakedLettering": true,
+  "composedPlate": true
 }
