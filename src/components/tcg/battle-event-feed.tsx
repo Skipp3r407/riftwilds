@@ -338,7 +338,9 @@ export function BattleEventFeed({
           </div>
         </>
       ) : (
-        <p className="battle-feed__collapsed-hint">Feed · hover to peek</p>
+        <p className="battle-feed__collapsed-hint">
+          Feed · tap to expand
+        </p>
       )}
     </div>
   );

@@ -86,6 +86,14 @@ export default function TcgRulesPage() {
           </li>
           <li>P1 skips turn-1 draw · P2 receives Rift Spark</li>
           <li>
+            Draw one at turn start — never auto-replace a played card
+          </li>
+          <li>
+            Channel ({R.cardAdvantage.energyToDrawCost} Energy → draw) · Commander
+            Focus ({R.cardAdvantage.commanderDrawCost} Energy → draw) · Bank /
+            Recycle once each per turn
+          </li>
+          <li>
             Field: {R.field.frontlineSlots} Front + {R.field.backlineSlots} Back +
             Terrain + Commander
           </li>

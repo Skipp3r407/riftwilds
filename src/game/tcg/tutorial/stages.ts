@@ -10,6 +10,7 @@ export type TutorialStageId =
   | "lanes"
   | "spells"
   | "evolve"
+  | "cardadvantage"
   | "deckbuild"
   | "fullmatch";
 
@@ -73,15 +74,25 @@ export const TUTORIAL_STAGES: TutorialStage[] = [
     launchMode: "tutorial",
   },
   {
-    id: "deckbuild",
+    id: "cardadvantage",
     order: 7,
+    title: "Card advantage",
+    objective:
+      "Draw comes at turn start — not when you play. Use Insight, Scout, Channel, or Focus for extra cards.",
+    hint:
+      "You draw 1 at the start of each turn. Playing a card does not auto-replace it. Channel spends leftover Energy; Recycle filters bricks.",
+    launchMode: "tutorial",
+  },
+  {
+    id: "deckbuild",
+    order: 8,
     title: "Build a legal deck",
     objective: "Assemble 29 cards + 1 Commander within copy and composition limits.",
     hint: "Min 14 creatures · max 10 spells · max 6 support · max 3 power rarities.",
   },
   {
     id: "fullmatch",
-    order: 8,
+    order: 9,
     title: "Guided match",
     objective: "Finish a complete Practice Board duel under Standard rules.",
     hint: "Win by reducing the enemy Keeper to 0 HP.",

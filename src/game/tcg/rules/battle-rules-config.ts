@@ -5,6 +5,15 @@
 
 import type { TcgRarity } from "@/content/tcg/types";
 
+/** Strategic card advantage levers (Rules v2.2). Keep in sync with card-advantage.ts. */
+export type CardAdvantageRules = {
+  energyToDrawCost: number;
+  discardForEnergyAmount: number;
+  commanderDrawCost: number;
+  commanderDrawPerTurn: number;
+  oneConversionEachPerTurn: boolean;
+};
+
 /** Battlefield lane for creatures. */
 export type FieldLane = "front" | "back";
 
@@ -119,11 +128,16 @@ export type BattleRulesConfig = {
   tokens: {
     riftSparkDefId: string;
   };
+  /**
+   * Strategic card advantage (v2.2) — limited draws / conversions.
+   * Never grants auto-draw-on-play.
+   */
+  cardAdvantage: CardAdvantageRules;
 };
 
 /** Standard competitive baseline (also used by practice unless overridden). */
 export const STANDARD_BATTLE_RULES: BattleRulesConfig = {
-  rulesVersion: "2.1.0",
+  rulesVersion: "2.2.0",
   keeper: {
     startingHp: 25,
   },
@@ -212,6 +226,13 @@ export const STANDARD_BATTLE_RULES: BattleRulesConfig = {
   },
   tokens: {
     riftSparkDefId: "token-rift-spark",
+  },
+  cardAdvantage: {
+    energyToDrawCost: 2,
+    discardForEnergyAmount: 1,
+    commanderDrawCost: 1,
+    commanderDrawPerTurn: 1,
+    oneConversionEachPerTurn: true,
   },
 };
 

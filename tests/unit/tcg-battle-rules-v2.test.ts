@@ -107,7 +107,7 @@ describe("match engine v2", () => {
     expect(state.players[1].hand.some((c) => isRiftSparkToken(c.defId))).toBe(
       true,
     );
-    expect(state.rulesVersion).toBe("2.1.0");
+    expect(state.rulesVersion).toBe("2.2.0");
     expect(getMatchRules(state).turn.autoSkipSecondMain).toBe(true);
     expect(state.phase).toBe("MULLIGAN");
   });

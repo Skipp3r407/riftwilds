@@ -13,6 +13,7 @@ export {
   type SpellSpeed,
   type CopyLimits,
   type ModeRulesOverride,
+  type CardAdvantageRules,
 } from "@/game/tcg/rules/battle-rules-config";
 
 export {
@@ -62,3 +63,14 @@ export {
   normalizeCurveTags,
   type TcgCurveTag,
 } from "@/game/tcg/rules/card-tags";
+
+export {
+  CARD_ADVANTAGE_KEYWORDS,
+  DEFAULT_CARD_ADVANTAGE_RULES,
+  canCommanderDraw,
+  canDiscardForEnergy,
+  canEnergyToDraw,
+  canRecycle,
+  type CardAdvantageConversion,
+  type CardAdvantageKeyword,
+} from "@/game/tcg/rules/card-advantage";

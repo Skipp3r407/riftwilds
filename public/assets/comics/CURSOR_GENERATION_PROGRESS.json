@@ -1,0 +1,28 @@
+{
+  "updatedAt": "2026-07-22T14:30:00.000Z",
+  "engine": "Cursor GenerateImage (no XAI_API_KEY)",
+  "paths": {
+    "readerLettered": "public/assets/comics/<slug>/issue-00N/pages/page-00N.webp",
+    "rawArt": "content/comics/<slug>/issue-00N/generated/raw-art/page-00N.webp",
+    "covers": "public/assets/comics/covers/0N-*.png",
+    "cursorStaging": "~/.cursor/projects/.../assets/issue00N-page-00N.png",
+    "artifacts": "artifacts/comics/generated/<slug>/"
+  },
+  "install": "node scripts/comics/install-cursor-generated.mjs <slug> <n> --pages=A-B",
+  "letter": "delete public pages then: node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=N --pages=A-B --skip-composites",
+  "issues": {
+    "1": { "slug": "the-first-rift", "status": "complete", "aiPages": 32, "story": "25/25", "note": "full book lettered" },
+    "2": { "slug": "sparks-journey", "status": "complete", "aiPages": 38, "story": "25/25", "note": "full book lettered" },
+    "3": { "slug": "the-traveling-circus", "status": "complete", "aiPages": 38, "story": "25/25", "note": "full book lettered" },
+    "4": { "slug": "the-lost-city", "status": "story_complete_front_partial", "aiPages": 31, "story": "25/25 generated+lettered", "frontBack": "cover/credits/title/teaser/back done; profile/lore/map/letters pages 31-37 still legacy" },
+    "5": { "slug": "the-storm-king", "status": "cover_only", "aiPages": 0, "story": "0/25" },
+    "6": { "slug": "the-merchants-secret", "status": "cover_only", "aiPages": 0, "story": "0/25", "canon": "Aurelia Voss=Merchant; Cael Vesper=traitor" },
+    "7": { "slug": "the-traitors-gate", "status": "cover_only", "aiPages": 0, "story": "0/25" },
+    "8": { "slug": "the-forge-of-rifts", "status": "cover_only", "aiPages": 0, "story": "0/25" },
+    "9": { "slug": "the-riftwright", "status": "cover_only", "aiPages": 0, "story": "0/25", "canon": "Nova hatches" },
+    "10": { "slug": "the-shattered-star", "status": "cover_only", "aiPages": 0, "story": "0/25", "canon": "Volume Two starts" }
+  },
+  "coversRegenerated": [2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "preview": ["/comics", "/comics/the-first-rift", "/comics/sparks-journey", "/comics/the-traveling-circus", "/comics/the-lost-city"],
+  "localOnly": true
+}

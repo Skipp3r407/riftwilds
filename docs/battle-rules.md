@@ -1,7 +1,7 @@
 # Battle Rules — Riftwilds TCG
 
 **Authority:** `src/game/tcg/rules/battle-rules-config.ts` · `src/game/tcg/match-engine.ts`  
-**Version:** 2.1.0  
+**Version:** 2.2.0  
 **Full rulebook:** [RULEBOOK.md](./RULEBOOK.md)
 
 ## Win

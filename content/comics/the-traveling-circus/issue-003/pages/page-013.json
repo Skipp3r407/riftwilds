@@ -158,7 +158,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Spark meets Lumenhare.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark/Lumenhare eyes.",
-  "generationStatus": "seeded",
+  "generationStatus": "cached",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Ghosts Under the Boards — The Traveling Circus page 9",

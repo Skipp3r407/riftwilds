@@ -212,10 +212,83 @@ export function BattleLayoutSettings({
         </label>
       </fieldset>
 
+      <fieldset className="battle-layout-settings__fieldset">
+        <legend>Mobile &amp; accessibility</legend>
+        <label className="battle-layout-settings__toggle">
+          <input
+            type="checkbox"
+            checked={layout.a11y.largeCard}
+            onChange={(e) => layout.setA11y({ largeCard: e.target.checked })}
+          />
+          <span>Large cards — bigger hand and field hit targets (48×48 min).</span>
+        </label>
+        <label className="battle-layout-settings__toggle">
+          <input
+            type="checkbox"
+            checked={layout.a11y.oneHand}
+            onChange={(e) => layout.setA11y({ oneHand: e.target.checked })}
+          />
+          <span>One-hand — bias the action dock toward the thumb edge.</span>
+        </label>
+        <label className="battle-layout-settings__toggle">
+          <input
+            type="checkbox"
+            checked={layout.a11y.highContrast}
+            onChange={(e) => layout.setA11y({ highContrast: e.target.checked })}
+          />
+          <span>High contrast — stronger borders and meter contrast.</span>
+        </label>
+      </fieldset>
+
+      <fieldset className="battle-layout-settings__fieldset">
+        <legend>Performance profile</legend>
+        <div className="battle-layout-settings__options">
+          {(
+            [
+              ["auto", "Auto", "Balanced on phone/tablet; high on desktop."],
+              ["high", "High", "Full VFX and hand fan motion."],
+              ["balanced", "Balanced", "Softer motion; adaptive graphics scaffolding."],
+              ["battery", "Battery", "Minimal motion; lowest GPU use."],
+            ] as const
+          ).map(([id, label, desc]) => (
+            <label
+              key={id}
+              className={cn(
+                "battle-layout-settings__option",
+                layout.perfProfile === id && "is-active",
+              )}
+            >
+              <input
+                type="radio"
+                name="battle-perf-profile"
+                value={id}
+                checked={layout.perfProfile === id}
+                onChange={() => layout.setPerfProfile(id)}
+              />
+              <span>
+                <strong>{label}</strong>
+                <small>{desc}</small>
+              </span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
       <p className="battle-layout-settings__keys">
         Shortcuts: <kbd>Tab</kbd> sidebar · <kbd>F11</kbd> fullscreen ·{" "}
         <kbd>Esc</kbd> menu · <kbd>Space</kbd> end turn
+        {layout.compactViewport ? (
+          <>
+            {" "}
+            · Touch: swipe L feed · R intel · up hand · down collapse
+          </>
+        ) : null}
       </p>
+      {layout.compactViewport ? (
+        <p className="battle-layout-settings__keys">
+          Viewport: <strong>{layout.viewport}</strong> (DevTools device mode to preview)
+        </p>
+      ) : null}
     </div>
   );
 }

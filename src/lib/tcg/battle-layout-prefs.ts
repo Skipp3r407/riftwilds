@@ -142,6 +142,14 @@ export function writeBattleIntelCollapsed(collapsed: boolean) {
   safeSet(BATTLE_INTEL_COLLAPSED_KEY, collapsed ? "1" : "0");
 }
 
+/* Portrait / compact viewport helpers live in battle-viewport.ts (re-exported). */
+export {
+  PORTRAIT_BATTLE_LAYOUT_MQ,
+  matchesPortraitBattleLayout,
+  readBattleIntelCollapsedForViewport,
+  readBattleFeedCollapsedForViewport,
+} from "@/lib/tcg/battle-viewport";
+
 /** Query/path heuristics for an active Practice Board / match desk. */
 export function isActiveBattleSearch(
   pathname: string | null | undefined,

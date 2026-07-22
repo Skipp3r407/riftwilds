@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-07-22T14:18:32.340Z",
+  "updatedAt": "2026-07-22T15:35:42.245Z",
   "issues": {
-    "2": {
+    "4": {
       "seeded": 0,
-      "lettered": 2,
+      "lettered": 1,
       "storyLettered": 0,
       "grokOk": 0,
       "errors": 0,
-      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=2 --force",
-      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=2 --prefer-grok --force"
+      "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=4 --force",
+      "grokResume": "set XAI_API_KEY=... && node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=4 --prefer-grok --force"
     }
   }
 }

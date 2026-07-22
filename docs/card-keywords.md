@@ -20,5 +20,9 @@ See canonical table in [keywords.md](./keywords.md). Registry: `src/game/tcg/com
 | Heal | full | Spell restores Keeper HP |
 | Echo / Awaken | full | Replay / transform |
 | Shatter | partial | Bonus vs Ward |
+| Insight | full | When this resolves, draw 1 |
+| Inspire | full | Once/turn: summon another companion → draw 1 |
+| Scout | full | Draw 1, then bottom a hand card |
+| Discover | full | Top 3 → take 1, shuffle rest |
 
-Practice decks still filter unsupported equipment bricks unless they resolve as units or damage/heal spells.
+Practice decks still filter unsupported equipment bricks unless they resolve as units, damage/heal spells, or card-advantage tools. See [CARD_ADVANTAGE.md](./CARD_ADVANTAGE.md).

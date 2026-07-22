@@ -18,6 +18,7 @@ import {
   tickStatuses,
   unitHasKeyword,
 } from "@/game/tcg/combat";
+import { resolveAbilityEffects } from "@/game/tcg/combat/abilities";
 import { addStatus } from "@/game/tcg/combat/status";
 import { getCardById } from "@/content/tcg";
 import {
@@ -30,6 +31,21 @@ import {
   secureRandom,
   shuffleDeck,
 } from "@/game/tcg/deck";
+import {
+  canCommanderDraw,
+  canDiscardForEnergy,
+  canEnergyToDraw,
+  canRecycle,
+  cardUsesDiscover,
+  cardUsesScout,
+  freshCardAdvantageFlags,
+  pickDiscoverIndex,
+  pickScoutBottomCard,
+  relicGrantsThriftDraw,
+  resetCardAdvantageTurnFlags,
+  resolveInsightDrawCount,
+  setCardAdvantageCostLookup,
+} from "@/game/tcg/rules/card-advantage";
 import { ensureOpeningHandPlayable } from "@/game/tcg/rules/opening-hand";
 import { ensurePracticeOpeningHandPlayable } from "@/game/tcg/practice-loadout";
 import {
@@ -43,6 +59,8 @@ import {
   playCostContextFromSide,
   resolvePlayCost,
 } from "@/game/tcg/play-cost";
+
+setCardAdvantageCostLookup((defId) => getTcgCardDef(defId)?.riftCost ?? 99);
 
 function logRejectedPlay(
   reason: string,
@@ -197,6 +215,276 @@ function drawOne(
   pushEvent(state, "DRAW", side.id, { defId: card.defId });
 }
 
+function ensureAdvantage(side: TcgPlayerSide) {
+  if (!side.cardAdvantage) {
+    side.cardAdvantage = freshCardAdvantageFlags();
+  }
+  return side.cardAdvantage;
+}
+
+/** Scout: draw 1, then put priciest hand card on bottom of deck. */
+function applyScout(
+  state: TcgMatchState,
+  side: TcgPlayerSide,
+  sourceDefId: string,
+): void {
+  const rules = rulesOf(state);
+  drawOne(side, state, rules);
+  const bottom = pickScoutBottomCard(side.hand);
+  if (!bottom) {
+    pushEvent(state, "SCOUT", side.id, {
+      defId: sourceDefId,
+      bottomDefId: null,
+    });
+    return;
+  }
+  const idx = side.hand.findIndex((c) => c.instanceId === bottom.instanceId);
+  if (idx >= 0) side.hand.splice(idx, 1);
+  side.deck.push(bottom);
+  pushEvent(state, "SCOUT", side.id, {
+    defId: sourceDefId,
+    bottomDefId: bottom.defId,
+  });
+}
+
+/** Discover: top 3 → pick cheapest into hand, shuffle rest into deck. */
+function applyDiscover(
+  state: TcgMatchState,
+  side: TcgPlayerSide,
+  sourceDefId: string,
+): void {
+  const revealed: TcgCardInstance[] = [];
+  while (revealed.length < 3 && side.deck.length > 0) {
+    revealed.push(side.deck.shift()!);
+  }
+  if (revealed.length === 0) {
+    pushEvent(state, "DISCOVER", side.id, {
+      defId: sourceDefId,
+      chosenDefId: null,
+      revealed: [],
+    });
+    return;
+  }
+  const pick = pickDiscoverIndex(revealed);
+  const chosen = revealed[pick]!;
+  const rest = revealed.filter((_, i) => i !== pick);
+  const rules = rulesOf(state);
+  if (side.hand.length >= rules.hand.maxSize) {
+    toRiftBurn(side, chosen);
+    pushEvent(state, "HAND_FULL_BURN", side.id, { defId: chosen.defId });
+  } else {
+    side.hand.push(chosen);
+    pushEvent(state, "DRAW", side.id, {
+      defId: chosen.defId,
+      via: "discover",
+    });
+  }
+  // Shuffle rest back into deck (deterministic: append then rotate by length).
+  for (const c of rest) side.deck.push(c);
+  if (rest.length > 1) {
+    const n = rest.length;
+    const rotated = side.deck.splice(side.deck.length - n, n);
+    for (let i = rotated.length - 1; i > 0; i -= 1) {
+      const j = (i * 7 + n) % (i + 1);
+      const tmp = rotated[i]!;
+      rotated[i] = rotated[j]!;
+      rotated[j] = tmp;
+    }
+    side.deck.push(...rotated);
+  }
+  pushEvent(state, "DISCOVER", side.id, {
+    defId: sourceDefId,
+    chosenDefId: chosen.defId,
+    revealed: revealed.map((c) => c.defId),
+  });
+}
+
+function applyPlainDraws(
+  state: TcgMatchState,
+  side: TcgPlayerSide,
+  count: number,
+  via: string,
+): void {
+  const rules = rulesOf(state);
+  for (let i = 0; i < count; i += 1) {
+    drawOne(side, state, rules);
+    if (i === 0) {
+      // DRAW events already emitted; tag last for feed if needed.
+      const last = state.events[state.events.length - 1];
+      if (last?.type === "DRAW") {
+        last.payload = { ...last.payload, via };
+      }
+    }
+  }
+}
+
+/**
+ * Resolve card-advantage keywords / ability draws for a played card.
+ * Does NOT run on every play — only when the card itself grants advantage.
+ */
+function resolvePlayedCardAdvantage(
+  state: TcgMatchState,
+  side: TcgPlayerSide,
+  def: NonNullable<ReturnType<typeof resolveCardDef>>,
+  timing: "battlecry" | "activated",
+): void {
+  const content = getCardById(def.id);
+  const abilityDraw = resolveAbilityEffects({
+    abilities: content?.abilities ?? [],
+    timing: timing === "battlecry" ? ["battlecry", "activated"] : ["activated"],
+  }).draw;
+
+  if (cardUsesDiscover(def.keywords)) {
+    applyDiscover(state, side, def.id);
+    return;
+  }
+  if (cardUsesScout(def.keywords)) {
+    applyScout(state, side, def.id);
+    return;
+  }
+
+  const n = resolveInsightDrawCount({
+    keywords: def.keywords,
+    abilityDraw,
+  });
+  if (n > 0) {
+    applyPlainDraws(state, side, n, timing === "battlecry" ? "battlecry" : "insight");
+  }
+}
+
+function tryInspireDraw(
+  state: TcgMatchState,
+  side: TcgPlayerSide,
+  priorHadInspire: boolean,
+): void {
+  const flags = ensureAdvantage(side);
+  if (!priorHadInspire || flags.inspireUsedThisTurn) return;
+  flags.inspireUsedThisTurn = true;
+  drawOne(side, state, rulesOf(state));
+  pushEvent(state, "INSPIRE", side.id, { drew: true });
+}
+
+function tryRelicThriftDraw(state: TcgMatchState, side: TcgPlayerSide): void {
+  const flags = ensureAdvantage(side);
+  if (flags.relicDrawUsedThisTurn) return;
+  if (side.riftEnergy > 0) return;
+  if (flags.cardsPlayedThisTurn < 1) return;
+  const thrift = (side.relics ?? []).some((r) => {
+    const def = resolveCardDef(r.defId);
+    return def ? relicGrantsThriftDraw(def.keywords) : false;
+  });
+  if (!thrift) return;
+  flags.relicDrawUsedThisTurn = true;
+  drawOne(side, state, rulesOf(state));
+  pushEvent(state, "RELIC_THRIFT_DRAW", side.id, { drew: true });
+}
+
+function applyEnergyToDraw(state: TcgMatchState, side: TcgPlayerSide): void {
+  const rules = rulesOf(state);
+  const flags = ensureAdvantage(side);
+  const gate = canEnergyToDraw({
+    energy: side.riftEnergy,
+    handSize: side.hand.length,
+    maxHand: rules.hand.maxSize,
+    flags,
+    rules: rules.cardAdvantage,
+  });
+  if (!gate.ok) throw new Error(gate.reason);
+  side.riftEnergy = spendRiftEnergy(
+    side.riftEnergy,
+    rules.cardAdvantage.energyToDrawCost,
+  );
+  side.energySpentThisTurn += rules.cardAdvantage.energyToDrawCost;
+  flags.conversionsUsedThisTurn.push("ENERGY_TO_DRAW");
+  drawOne(side, state, rules);
+  pushEvent(state, "ENERGY_TO_DRAW", side.id, {
+    cost: rules.cardAdvantage.energyToDrawCost,
+    riftEnergy: side.riftEnergy,
+  });
+}
+
+function applyDiscardForEnergy(
+  state: TcgMatchState,
+  side: TcgPlayerSide,
+  handInstanceId: string,
+): void {
+  const rules = rulesOf(state);
+  const flags = ensureAdvantage(side);
+  const gate = canDiscardForEnergy({
+    handSize: side.hand.length,
+    flags,
+    rules: rules.cardAdvantage,
+  });
+  if (!gate.ok) throw new Error(gate.reason);
+  const idx = side.hand.findIndex((c) => c.instanceId === handInstanceId);
+  if (idx < 0) throw new Error("CARD_NOT_IN_HAND");
+  if (isRiftSparkToken(side.hand[idx]!.defId)) {
+    throw new Error("CANNOT_DISCARD_RIFT_SPARK");
+  }
+  const card = side.hand.splice(idx, 1)[0]!;
+  toDefeated(side, card);
+  flags.pendingTempEnergyNextTurn +=
+    rules.cardAdvantage.discardForEnergyAmount;
+  flags.conversionsUsedThisTurn.push("DISCARD_FOR_ENERGY");
+  pushEvent(state, "DISCARD_FOR_ENERGY", side.id, {
+    defId: card.defId,
+    banked: rules.cardAdvantage.discardForEnergyAmount,
+  });
+}
+
+function applyRecycle(
+  state: TcgMatchState,
+  side: TcgPlayerSide,
+  handInstanceId: string,
+): void {
+  const rules = rulesOf(state);
+  const flags = ensureAdvantage(side);
+  const gate = canRecycle({
+    handSize: side.hand.length,
+    deckSize: side.deck.length,
+    maxHand: rules.hand.maxSize,
+    flags,
+    rules: rules.cardAdvantage,
+  });
+  if (!gate.ok) throw new Error(gate.reason);
+  const idx = side.hand.findIndex((c) => c.instanceId === handInstanceId);
+  if (idx < 0) throw new Error("CARD_NOT_IN_HAND");
+  if (isRiftSparkToken(side.hand[idx]!.defId)) {
+    throw new Error("CANNOT_RECYCLE_RIFT_SPARK");
+  }
+  const card = side.hand.splice(idx, 1)[0]!;
+  side.deck.push(card);
+  flags.conversionsUsedThisTurn.push("RECYCLE");
+  drawOne(side, state, rules);
+  pushEvent(state, "RECYCLE", side.id, { defId: card.defId });
+}
+
+function applyCommanderDraw(state: TcgMatchState, side: TcgPlayerSide): void {
+  const rules = rulesOf(state);
+  const flags = ensureAdvantage(side);
+  const gate = canCommanderDraw({
+    energy: side.riftEnergy,
+    handSize: side.hand.length,
+    maxHand: rules.hand.maxSize,
+    flags,
+    rules: rules.cardAdvantage,
+    hasCommander: Boolean(side.commander),
+  });
+  if (!gate.ok) throw new Error(gate.reason);
+  side.riftEnergy = spendRiftEnergy(
+    side.riftEnergy,
+    rules.cardAdvantage.commanderDrawCost,
+  );
+  side.energySpentThisTurn += rules.cardAdvantage.commanderDrawCost;
+  flags.commanderDrawsThisTurn += 1;
+  if (side.commander) side.commander.powerUsedThisTurn = true;
+  drawOne(side, state, rules);
+  pushEvent(state, "COMMANDER_DRAW", side.id, {
+    cost: rules.cardAdvantage.commanderDrawCost,
+    riftEnergy: side.riftEnergy,
+  });
+}
+
 function removeDeadUnits(
   state: TcgMatchState,
   side: TcgPlayerSide,
@@ -270,6 +558,10 @@ function beginTurn(state: TcgMatchState, side: TcgPlayerSide): void {
   const rules = rulesOf(state);
   state.phase = "START";
 
+  const flags = ensureAdvantage(side);
+  const banked = flags.pendingTempEnergyNextTurn;
+  resetCardAdvantageTurnFlags(flags);
+
   const energyBefore = side.riftEnergy;
   const previousMax = side.riftEnergyMax;
   const { riftEnergy, riftEnergyMax } = refillRiftEnergy(state.turn, {
@@ -284,6 +576,18 @@ function beginTurn(state: TcgMatchState, side: TcgPlayerSide): void {
   side.echoReady = false;
   side.echoResolving = false;
   if (side.commander) side.commander.powerUsedThisTurn = false;
+
+  if (banked > 0) {
+    const granted = grantTempEnergy(side.riftEnergy, side.riftEnergyMax, banked);
+    side.riftEnergy = granted.riftEnergy;
+    side.riftEnergyMax = granted.riftEnergyMax;
+    side.tempEnergy += granted.tempGranted;
+    flags.pendingTempEnergyNextTurn = 0;
+    pushEvent(state, "BANKED_ENERGY", side.id, {
+      tempEnergy: granted.tempGranted,
+      riftEnergy: side.riftEnergy,
+    });
+  }
 
   const maxGained = Math.max(0, riftEnergyMax - previousMax);
   // Player-facing "gained N" prefers the max ramp; refill always restores to max.
@@ -531,6 +835,42 @@ function resolveSpellEffect(
       cost: def.riftCost,
       echoed: Boolean(opts?.echoed),
     });
+    if (!opts?.echoed) {
+      resolvePlayedCardAdvantage(state, side, def, "activated");
+    }
+    return;
+  }
+
+  const abilityDraw = resolveAbilityEffects({
+    abilities: content?.abilities ?? [],
+    timing: ["activated", "battlecry"],
+  }).draw;
+  const isAdvantageOnly =
+    (cardUsesDiscover(def.keywords) ||
+      cardUsesScout(def.keywords) ||
+      resolveInsightDrawCount({
+        keywords: def.keywords,
+        abilityDraw,
+      }) > 0) &&
+    !(typeof content?.attack === "number" && content.attack > 0) &&
+    !(content?.abilities ?? []).some((a) =>
+      a.effects.some(
+        (e) => e.op === "deal_damage" || e.op === "heal",
+      ),
+    );
+
+  if (isAdvantageOnly) {
+    pushEvent(state, "PLAY_SPELL", side.id, {
+      defId: def.id,
+      damage: 0,
+      defenderHp: foe.keeperHp,
+      cost: def.riftCost,
+      cardAdvantage: true,
+      echoed: Boolean(opts?.echoed),
+    });
+    if (!opts?.echoed) {
+      resolvePlayedCardAdvantage(state, side, def, "activated");
+    }
     return;
   }
 
@@ -545,6 +885,9 @@ function resolveSpellEffect(
       defId: def.id,
       cost: def.riftCost,
     });
+    if (!opts?.echoed) {
+      resolvePlayedCardAdvantage(state, side, def, "activated");
+    }
     return;
   }
 
@@ -584,6 +927,9 @@ function resolveSpellEffect(
     cost: def.riftCost,
     echoed: Boolean(opts?.echoed),
   });
+  if (!opts?.echoed) {
+    resolvePlayedCardAdvantage(state, side, def, "activated");
+  }
   checkWinner(state);
 }
 
@@ -841,8 +1187,13 @@ function playCard(
     side.firstCompanionDiscountUsed = true;
   }
   side.hand.splice(idx, 1);
+  const adv = ensureAdvantage(side);
+  adv.cardsPlayedThisTurn += 1;
 
   if (def.type === "UNIT") {
+    const priorHadInspire = side.board.some((u) =>
+      unitHasKeyword(u.keywords, "inspire"),
+    );
     const summon = applySummonKeywords({
       keywords: def.keywords,
       statuses: [],
@@ -874,6 +1225,7 @@ function playCard(
       summonedOnTurn: state.turn,
     };
     side.board.push(unit);
+    adv.companionsSummonedThisTurn += 1;
 
     pushEvent(state, "PLAY_UNIT", side.id, {
       defId: def.id,
@@ -889,6 +1241,11 @@ function playCard(
       lane: unit.lane,
       role: def.role ?? null,
     });
+
+    // Card-advantage keywords on the unit itself (Scout / Insight battlecry).
+    // Never auto-draw merely because a card was played.
+    resolvePlayedCardAdvantage(state, side, def, "battlecry");
+    tryInspireDraw(state, side, priorHadInspire);
   } else if (isEquipmentContentType(contentType)) {
     playEquipment(state, side, def, inst, targetInstanceId);
   } else if (isTerrainContentType(contentType) || def.type === "AURA") {
@@ -917,6 +1274,7 @@ function finishEndTurn(state: TcgMatchState, side: TcgPlayerSide): void {
   if (state.status !== "ACTIVE") return;
   state.phase = "END";
   pushEvent(state, "END_PHASE", side.id, { phase: "END" });
+  tryRelicThriftDraw(state, side);
   // Expire temporary energy
   if (side.tempEnergy > 0) {
     side.riftEnergy = Math.max(0, side.riftEnergy - side.tempEnergy);
@@ -1050,6 +1408,7 @@ function applyAiTurn(state: TcgMatchState): void {
   }
 
   let guard = 0;
+  let lastPlayableCount = 0;
   while (guard < 8 && state.status === "ACTIVE") {
     guard += 1;
     const playable = ai.hand
@@ -1086,9 +1445,37 @@ function applyAiTurn(state: TcgMatchState): void {
         if (cb !== ca) return cb - ca;
         return (b.def!.attack ?? 0) - (a.def!.attack ?? 0);
       });
+    lastPlayableCount = playable.length;
     const pick = playable[0];
     if (!pick) break;
     playCard(state, ai, pick.c.instanceId);
+  }
+
+  // Strategic conversions when stuck with leftover Energy / bricks (not flood).
+  const advRules = rules.cardAdvantage;
+  const flags = ensureAdvantage(ai);
+  const energyDrawOk = canEnergyToDraw({
+    energy: ai.riftEnergy,
+    handSize: ai.hand.length,
+    maxHand: rules.hand.maxSize,
+    flags,
+    rules: advRules,
+  });
+  if (energyDrawOk.ok && ai.riftEnergy >= advRules.energyToDrawCost + 1) {
+    // Keep 1 Energy buffer for future plays when possible.
+    applyEnergyToDraw(state, ai);
+  } else {
+    const cmdOk = canCommanderDraw({
+      energy: ai.riftEnergy,
+      handSize: ai.hand.length,
+      maxHand: rules.hand.maxSize,
+      flags,
+      rules: advRules,
+      hasCommander: Boolean(ai.commander),
+    });
+    if (cmdOk.ok && lastPlayableCount === 0) {
+      applyCommanderDraw(state, ai);
+    }
   }
 
   if (state.status !== "ACTIVE") return;
@@ -1174,6 +1561,7 @@ function makeSide(
     riftCollapseCount: 0,
     mulliganUsed: false,
     seatIndex,
+    cardAdvantage: freshCardAdvantageFlags(),
   };
 }
 
@@ -1345,6 +1733,38 @@ export function applyTcgAction(
     return state;
   }
 
+  if (action.kind === "ENERGY_TO_DRAW") {
+    if (state.phase !== "MAIN" && state.phase !== "SECOND_MAIN") {
+      throw new Error("WRONG_PHASE");
+    }
+    applyEnergyToDraw(state, side);
+    return state;
+  }
+
+  if (action.kind === "DISCARD_FOR_ENERGY") {
+    if (state.phase !== "MAIN" && state.phase !== "SECOND_MAIN") {
+      throw new Error("WRONG_PHASE");
+    }
+    applyDiscardForEnergy(state, side, action.handInstanceId);
+    return state;
+  }
+
+  if (action.kind === "RECYCLE") {
+    if (state.phase !== "MAIN" && state.phase !== "SECOND_MAIN") {
+      throw new Error("WRONG_PHASE");
+    }
+    applyRecycle(state, side, action.handInstanceId);
+    return state;
+  }
+
+  if (action.kind === "COMMANDER_DRAW") {
+    if (state.phase !== "MAIN" && state.phase !== "SECOND_MAIN") {
+      throw new Error("WRONG_PHASE");
+    }
+    applyCommanderDraw(state, side);
+    return state;
+  }
+
   if (action.kind === "DECLARE_COMBAT") {
     declareCombat(state, side);
     return state;
@@ -1399,6 +1819,7 @@ export function toTcgClientSnapshot(
       commander: p.commander ?? null,
       mulliganUsed: p.mulliganUsed,
       seatIndex: p.seatIndex,
+      cardAdvantage: p.cardAdvantage ?? freshCardAdvantageFlags(),
       frontline: p.board.filter((u) => u.lane === "front"),
       backline: p.board.filter((u) => u.lane === "back"),
     };
@@ -1415,6 +1836,7 @@ export function toTcgClientSnapshot(
     powerMode: state.powerMode,
     turnTimerSeconds: state.turnTimerSeconds,
     rulesVersion: state.rulesVersion,
+    cardAdvantage: rules.cardAdvantage,
     fieldSlots: {
       frontline: rules.field.frontlineSlots,
       backline: rules.field.backlineSlots,

@@ -28,7 +28,11 @@ export type KeywordId =
   | "harmony"
   | "charge"
   | "empower"
-  | "ancient";
+  | "ancient"
+  | "insight"
+  | "inspire"
+  | "scout"
+  | "discover";
 
 export type CommanderRef = {
   heroId: string;

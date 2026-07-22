@@ -185,7 +185,10 @@ describe("battle event feed", () => {
   });
 
   it("engine enrichs events with seq/turn/cardName and skips SECOND_MAIN in player feed", () => {
-    const state = createTcgMatch({ publicId: "feed_enrich_1" });
+    const state = createTcgMatch({
+      publicId: "feed_enrich_1",
+      skipMulligan: true,
+    });
     const affordable = state.players[0]!.hand.find((c) => {
       const def = getTcgCardCatalog().find((d) => d.id === c.defId);
       return (

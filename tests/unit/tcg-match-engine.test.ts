@@ -56,7 +56,10 @@ describe("tcg catalog + deck", () => {
 
 describe("tcg match engine", () => {
   it("creates a match and plays until end turn advances", () => {
-    const state = createTcgMatch({ publicId: "tcg_test_1" });
+    const state = createTcgMatch({
+      publicId: "tcg_test_1",
+      skipMulligan: true,
+    });
     expect(state.status).toBe("ACTIVE");
     expect(state.players[0].hand.length).toBe(5);
     expect(state.players[0].commander?.heroId).toBe("hero-elara-venn");

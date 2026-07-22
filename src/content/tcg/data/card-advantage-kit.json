@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "rulesVersion": "2.2.0",
+  "description": "Strategic card-advantage keywords + example cards (no auto-draw-on-play).",
+  "patches": [
+    {
+      "id": "rotr-s-storm-sip",
+      "addKeywords": ["insight"],
+      "rulesText": "Insight — Draw 1.",
+      "curveTags": ["Utility", "Support"]
+    },
+    {
+      "id": "rotr-c-pocket-scout",
+      "addKeywords": ["scout"],
+      "rulesText": "Scout — Draw 1, then put a card from your hand on the bottom of your deck.",
+      "curveTags": ["Starter", "Utility"]
+    }
+  ],
+  "cards": [
+    {
+      "id": "rotr-c-plaza-herald",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 901,
+      "type": "companion",
+      "element": "light",
+      "rarity": "uncommon",
+      "energyCost": 2,
+      "attack": 2,
+      "health": 2,
+      "role": "support",
+      "keywords": ["inspire"],
+      "abilities": [
+        {
+          "id": "plaza-herald-inspire",
+          "name": "Plaza Cheer",
+          "timing": "passive",
+          "text": "Inspire — Once per turn: when you summon another companion, draw 1.",
+          "effects": []
+        }
+      ],
+      "passive": "Inspire",
+      "localization": {
+        "name": "Plaza Herald",
+        "typeLine": "uncommon companion — light",
+        "rulesText": "Inspire — Once per turn: when you summon another companion, draw 1.",
+        "flavorText": "One cheer, and the next page turns itself.",
+        "loreBlurb": "One cheer, and the next page turns itself."
+      },
+      "art": {
+        "promptId": "art-plaza-herald",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Plaza Herald.",
+        "negativePrompt": "no Pokémon resemblance, no text, no watermark",
+        "cardImagePath": "/assets/tcg/cards/rotr-c-plaza-scout.webp",
+        "subjectPath": "/assets/tcg/subjects/plaza-scout.png"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-plaza-herald/idle",
+        "play": "anim/rotr-c-plaza-herald/play",
+        "death": "anim/rotr-c-plaza-herald/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_light",
+        "hit": "sfx/tcg/hit_light",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": ["vfx/light_motes"],
+      "voiceDirection": "Bright midrange",
+      "upgradePath": [],
+      "craftCost": 100,
+      "sellValue": 25,
+      "collectionTags": ["card-advantage", "inspire", "light"],
+      "curveTags": ["Support", "Tempo"],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-pathfinders-glance",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 902,
+      "type": "spell",
+      "element": "spirit",
+      "rarity": "uncommon",
+      "energyCost": 1,
+      "attack": null,
+      "health": null,
+      "keywords": ["discover"],
+      "abilities": [
+        {
+          "id": "pathfinders-glance",
+          "name": "Pathfinder's Glance",
+          "timing": "activated",
+          "text": "Discover — Look at the top 3 of your deck; put one into your hand, shuffle the rest.",
+          "effects": []
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Pathfinder's Glance",
+        "typeLine": "uncommon spell — spirit",
+        "rulesText": "Discover — Look at the top 3 of your deck; put one into your hand, shuffle the rest.",
+        "flavorText": "Three trails. One step.",
+        "loreBlurb": "Three trails. One step."
+      },
+      "art": {
+        "promptId": "art-pathfinders-glance",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Pathfinder's Glance.",
+        "negativePrompt": "no Pokémon resemblance, no text, no watermark",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-storm-sip.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-pathfinders-glance/idle",
+        "play": "anim/rotr-s-pathfinders-glance/play",
+        "death": "anim/rotr-s-pathfinders-glance/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_spirit",
+        "hit": "sfx/tcg/hit_spirit",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": ["vfx/spirit_motes"],
+      "voiceDirection": "Soft keeper narration",
+      "upgradePath": [],
+      "craftCost": 100,
+      "sellValue": 25,
+      "collectionTags": ["card-advantage", "discover", "spirit"],
+      "curveTags": ["Utility", "Support"],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-rift-reshuffle",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 903,
+      "type": "spell",
+      "element": "arcane",
+      "rarity": "common",
+      "energyCost": 1,
+      "attack": null,
+      "health": null,
+      "keywords": ["scout"],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Rift Reshuffle",
+        "typeLine": "common spell — arcane",
+        "rulesText": "Scout — Draw 1, then put a card from your hand on the bottom of your deck.",
+        "flavorText": "Trade the wrong page for a better one.",
+        "loreBlurb": "Trade the wrong page for a better one."
+      },
+      "art": {
+        "promptId": "art-rift-reshuffle",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Rift Reshuffle.",
+        "negativePrompt": "no Pokémon resemblance, no text, no watermark",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-storm-sip.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-rift-reshuffle/idle",
+        "play": "anim/rotr-s-rift-reshuffle/play",
+        "death": "anim/rotr-s-rift-reshuffle/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_arcane",
+        "hit": "sfx/tcg/hit_arcane",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": ["vfx/arcane_motes"],
+      "voiceDirection": "Soft keeper narration",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": ["card-advantage", "scout", "cycle"],
+      "curveTags": ["Utility", "Support"],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-r-keepers-quill",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 904,
+      "type": "relic",
+      "element": "neutral",
+      "rarity": "uncommon",
+      "energyCost": 3,
+      "attack": null,
+      "health": null,
+      "keywords": ["insight"],
+      "abilities": [
+        {
+          "id": "keepers-quill-thrift",
+          "name": "Thrifty Ledger",
+          "timing": "trigger",
+          "text": "At the end of your turn, if you spent all your Energy and played a card, draw 1.",
+          "effects": [{ "op": "draw", "value": 1, "aiHint": "end_turn_empty_energy" }]
+        }
+      ],
+      "passive": "Insight thrift",
+      "localization": {
+        "name": "Keeper's Quill",
+        "typeLine": "uncommon relic — neutral",
+        "rulesText": "Insight — At the end of your turn, if you spent all your Energy and played a card, draw 1.",
+        "flavorText": "Ink for every spent spark.",
+        "loreBlurb": "Ink for every spent spark."
+      },
+      "art": {
+        "promptId": "art-keepers-quill",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Keeper's Quill.",
+        "negativePrompt": "no Pokémon resemblance, no text, no watermark",
+        "cardImagePath": "/assets/tcg/cards/rotr-r-mat-wood-fiber.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-r-keepers-quill/idle",
+        "play": "anim/rotr-r-keepers-quill/play",
+        "death": "anim/rotr-r-keepers-quill/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_neutral",
+        "hit": "sfx/tcg/hit_neutral",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": ["vfx/neutral_motes"],
+      "voiceDirection": "Soft keeper narration",
+      "upgradePath": [],
+      "craftCost": 100,
+      "sellValue": 25,
+      "collectionTags": ["card-advantage", "relic", "insight"],
+      "curveTags": ["Support", "Control"],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    }
+  ]
+}

@@ -25,7 +25,9 @@ export type CurveWarning = {
     | "NO_TURN1_PLAYS"
     | "ZERO_COST_CAP"
     | "ZERO_COST_FLOOD"
-    | "THIN_EARLY_CURVE";
+    | "THIN_EARLY_CURVE"
+    | "STARVATION_RISK"
+    | "HIGH_CURVE";
   severity: "error" | "warn" | "info";
   message: string;
 };
@@ -96,6 +98,23 @@ export function analyzeDeckCurveWarnings(
       code: "TOO_EXPENSIVE",
       severity: "warn",
       message: `Average cost ${curve.averageCost.toFixed(2)} is high — expect slow starts.`,
+    });
+  }
+
+  const late = (curve.buckets[5] ?? 0) + (curve.buckets[6] ?? 0) + (curve.buckets[7] ?? 0);
+  if (curve.total >= 20 && late / curve.total >= 0.45) {
+    warnings.push({
+      code: "HIGH_CURVE",
+      severity: "warn",
+      message: `${Math.round((late / curve.total) * 100)}% of cards cost 5+ — high curve risks dead turns without filter/draw tools.`,
+    });
+  }
+
+  if (curve.earlyCurve < 6 && curve.total >= 20) {
+    warnings.push({
+      code: "STARVATION_RISK",
+      severity: "warn",
+      message: `Only ${curve.earlyCurve} early plays (≤${turn1}). Add Insight/Scout cycles or more cheap units to avoid starvation.`,
     });
   }
 

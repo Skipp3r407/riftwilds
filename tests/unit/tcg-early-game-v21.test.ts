@@ -21,8 +21,8 @@ import { validateConstructedDeck } from "@/content/tcg/framework/deck-rules";
 import { getHeroById } from "@/content/tcg";
 
 describe("early-game v2.1", () => {
-  it("keeps starting energy at 2 and rules version 2.1.0", () => {
-    expect(STANDARD_BATTLE_RULES.rulesVersion).toBe("2.1.0");
+  it("keeps starting energy at 2 and rules version 2.2.0", () => {
+    expect(STANDARD_BATTLE_RULES.rulesVersion).toBe("2.2.0");
     expect(STANDARD_BATTLE_RULES.energy.turn1Max).toBe(2);
     expect(STANDARD_BATTLE_RULES.deck.maxZeroCostPerDeck).toBe(4);
     expect(STANDARD_BATTLE_RULES.hand.ensureOpeningPlayable).toBe(true);

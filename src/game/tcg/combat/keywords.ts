@@ -129,6 +129,28 @@ export const KEYWORD_REGISTRY: Record<string, KeywordDef> = {
     shortText: "Temporary energy token — exiles after use.",
     support: "full",
   },
+  insight: {
+    id: "insight",
+    shortText: "When this resolves, draw 1.",
+    support: "full",
+  },
+  inspire: {
+    id: "inspire",
+    shortText:
+      "Once per turn: when you summon another companion, draw 1.",
+    support: "full",
+  },
+  scout: {
+    id: "scout",
+    shortText: "Draw 1, then put a card from your hand on the bottom of your deck.",
+    support: "full",
+  },
+  discover: {
+    id: "discover",
+    shortText:
+      "Look at the top 3 of your deck; put one into your hand, shuffle the rest.",
+    support: "full",
+  },
 };
 
 const ALIAS_TO_CANON = (() => {

@@ -28,6 +28,10 @@ import { DEFAULT_FORMATS } from "@/content/tcg/framework/formats";
 import { DEFAULT_LIVE_OPS } from "@/content/tcg/framework/live-ops";
 import { CONSTRUCTED_RULES } from "@/content/tcg/framework/deck-rules";
 import { normalizeCard } from "@/content/tcg/framework/normalize-card";
+import {
+  applyCardAdvantageKit,
+  type CardAdvantageKit,
+} from "@/content/tcg/framework/apply-card-advantage-kit";
 
 import animationManifest from "@/content/tcg/data/animationManifest.json";
 import artPrompts from "@/content/tcg/data/artPrompts.json";
@@ -37,6 +41,7 @@ import cardFamilies from "@/content/tcg/data/card-families.json";
 import cardFrames from "@/content/tcg/data/cardFrames.json";
 import cardImages from "@/content/tcg/data/cardImages.json";
 import cards from "@/content/tcg/data/cards.json";
+import cardAdvantageKit from "@/content/tcg/data/card-advantage-kit.json";
 import decks from "@/content/tcg/data/decks.json";
 import expansions from "@/content/tcg/data/expansions.json";
 import factions from "@/content/tcg/data/factions.json";
@@ -74,7 +79,13 @@ export const TCG_CARD_STATS_V2 = cardStatsV2 as unknown as CardStatMigrationBund
 
 /** JSON imports are wider than schema (optional keys); cast via unknown. */
 export const TCG_BUNDLE = bundle as unknown as TcgContentBundle;
-export const TCG_CARDS = cards as unknown as TcgCard[];
+export const TCG_CARD_ADVANTAGE_KIT =
+  cardAdvantageKit as unknown as CardAdvantageKit;
+/** Catalog with v2.2 card-advantage patches + example cards applied. */
+export const TCG_CARDS = applyCardAdvantageKit(
+  cards as unknown as TcgCard[],
+  TCG_CARD_ADVANTAGE_KIT,
+);
 export const TCG_HEROES = heroes as unknown as TcgHero[];
 export const TCG_DECKS = decks as unknown as TcgDeck[];
 export const TCG_KEYWORDS = keywords as unknown as TcgKeyword[];
@@ -105,11 +116,21 @@ export const TCG_LIVE_OPS = {
   ...DEFAULT_LIVE_OPS,
   ...(liveOpsJson as Partial<LiveOpsConfig>),
 } as LiveOpsConfig;
-export const TCG_LAUNCH_POOL = launchPool as {
+const LAUNCH_POOL_BASE = launchPool as {
   version: number;
   targetCount: number;
   description: string;
   cardIds: string[];
+};
+/** Launch pool includes v2.2 card-advantage example cards. */
+export const TCG_LAUNCH_POOL = {
+  ...LAUNCH_POOL_BASE,
+  cardIds: Array.from(
+    new Set([
+      ...LAUNCH_POOL_BASE.cardIds,
+      ...(TCG_CARD_ADVANTAGE_KIT.cards ?? []).map((c) => c.id),
+    ]),
+  ),
 };
 
 const cardById = new Map(TCG_CARDS.map((c) => [c.id, c]));

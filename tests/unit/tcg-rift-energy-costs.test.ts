@@ -117,8 +117,16 @@ describe("tcg rift energy play costs", () => {
                 x.def.type === "UNIT" &&
                 resolvePlayCost(x.def, playCostContextFromSide(side)).cost > 0,
             );
-          expect(any).toBeTruthy();
-          return any!;
+          if (any) return any;
+          // Hand may be all 0-cost after advantage seeding — inject a paid unit.
+          const injected = {
+            instanceId: "energy_reject_brick",
+            defId: "rotr-c-emberfox",
+          };
+          side.hand.push(injected);
+          const def = getTcgCardDef(injected.defId)!;
+          expect(def.riftCost).toBeGreaterThan(0);
+          return { c: injected, def };
         })();
 
     const beforeHand = side.hand.map((c) => c.instanceId);

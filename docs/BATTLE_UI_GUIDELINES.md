@@ -25,3 +25,7 @@ World / market / guild / collection mega chrome stays collapsed under Focus Mode
 ## Contrast
 
 Focus Mode slightly darkens the console wash and raises card/unit contrast so damage, HP, and energy remain readable on a larger stage.
+
+## Mobile & tablet
+
+Do **not** merely shrink the desktop rails. Use viewport classes (`phone-landscape` preferred). See [MOBILE_UI_GUIDELINES.md](./MOBILE_UI_GUIDELINES.md) and [TOUCH_CONTROLS.md](./TOUCH_CONTROLS.md).

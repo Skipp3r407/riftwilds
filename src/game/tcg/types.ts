@@ -163,6 +163,18 @@ export type TcgPlayerSide = {
   mulliganUsed: boolean;
   /** Seat order: 0 = first player. */
   seatIndex: number;
+  /** Strategic card advantage flags (Rules v2.2). */
+  cardAdvantage?: {
+    inspireUsedThisTurn: boolean;
+    companionsSummonedThisTurn: number;
+    cardsPlayedThisTurn: number;
+    pendingTempEnergyNextTurn: number;
+    conversionsUsedThisTurn: Array<
+      "ENERGY_TO_DRAW" | "DISCARD_FOR_ENERGY" | "RECYCLE"
+    >;
+    commanderDrawsThisTurn: number;
+    relicDrawUsedThisTurn: boolean;
+  };
 };
 
 export type TcgMatchStatus = "ACTIVE" | "COMPLETED";
@@ -241,7 +253,15 @@ export type TcgPlayAction =
   | { kind: "KEEP_HAND" }
   | { kind: "DECLARE_COMBAT" }
   | { kind: "END_TURN" }
-  | { kind: "SURRENDER" };
+  | { kind: "SURRENDER" }
+  /** Spend unused Energy to draw 1 (once / turn). */
+  | { kind: "ENERGY_TO_DRAW" }
+  /** Discard a hand card; bank temp Energy for next turn. */
+  | { kind: "DISCARD_FOR_ENERGY"; handInstanceId: string }
+  /** Shuffle a hand card into deck, then draw 1. */
+  | { kind: "RECYCLE"; handInstanceId: string }
+  /** Limited Commander Focus draw (once / turn). */
+  | { kind: "COMMANDER_DRAW" };
 
 const R = STANDARD_BATTLE_RULES;
 

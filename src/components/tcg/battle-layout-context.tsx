@@ -19,6 +19,12 @@ import {
   type BattleLayoutPreset,
   type BattleSidebarMode,
 } from "@/lib/tcg/battle-layout-prefs";
+import { useBattleViewport } from "@/hooks/use-battle-viewport";
+import type {
+  BattleA11yPrefs,
+  BattlePerfProfile,
+  BattleViewportClass,
+} from "@/lib/tcg/battle-viewport";
 
 type ShellSidebarVisual = "expanded" | "collapsed" | "hidden" | "peek";
 
@@ -47,6 +53,16 @@ type BattleLayoutContextValue = {
   /** Combat VFX playing — fade intel/feed. */
   combatAnimating: boolean;
   setCombatAnimating: (on: boolean) => void;
+  /** Intentional mobile / tablet / desktop battle viewport class. */
+  viewport: BattleViewportClass;
+  compactViewport: boolean;
+  portraitViewport: boolean;
+  perfProfile: BattlePerfProfile;
+  setPerfProfile: (p: BattlePerfProfile) => void;
+  a11y: BattleA11yPrefs;
+  setA11y: (patch: Partial<BattleA11yPrefs>) => void;
+  handExpanded: boolean;
+  setHandExpanded: (expanded: boolean) => void;
 };
 
 const BattleLayoutContext = createContext<BattleLayoutContextValue | null>(null);
@@ -80,6 +96,7 @@ export function BattleLayoutProvider({ children }: { children: ReactNode }) {
   const [battleMenuOpen, setBattleMenuOpen] = useState(false);
   const [combatAnimating, setCombatAnimating] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const viewportState = useBattleViewport(battleActive);
 
   useEffect(() => {
     setLayoutPresetState(readBattleLayoutPreset());
@@ -232,6 +249,15 @@ export function BattleLayoutProvider({ children }: { children: ReactNode }) {
       setBattleMenuOpen,
       combatAnimating,
       setCombatAnimating,
+      viewport: viewportState.viewport,
+      compactViewport: viewportState.compact,
+      portraitViewport: viewportState.portrait,
+      perfProfile: viewportState.perfStored,
+      setPerfProfile: viewportState.setPerfProfile,
+      a11y: viewportState.a11y,
+      setA11y: viewportState.setA11y,
+      handExpanded: viewportState.handExpanded,
+      setHandExpanded: viewportState.setHandExpanded,
     }),
     [
       battleActive,
@@ -246,6 +272,15 @@ export function BattleLayoutProvider({ children }: { children: ReactNode }) {
       toggleShellSidebar,
       battleMenuOpen,
       combatAnimating,
+      viewportState.viewport,
+      viewportState.compact,
+      viewportState.portrait,
+      viewportState.perfStored,
+      viewportState.setPerfProfile,
+      viewportState.a11y,
+      viewportState.setA11y,
+      viewportState.handExpanded,
+      viewportState.setHandExpanded,
     ],
   );
 

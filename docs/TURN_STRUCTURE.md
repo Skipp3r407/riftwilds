@@ -1,6 +1,6 @@
 # TURN_STRUCTURE.md
 
-**Authority:** Rules v2.1.0 · `battle-rules-config.ts` · [RULEBOOK.md](./RULEBOOK.md)
+**Authority:** Rules v2.2.0 · `battle-rules-config.ts` · [RULEBOOK.md](./RULEBOOK.md) · [CARD_ADVANTAGE.md](./CARD_ADVANTAGE.md)
 
 ## Sequence
 
@@ -9,11 +9,13 @@
 | Phase | What happens |
 |-------|----------------|
 | MULLIGAN | Keep / Partial / Full once; AI auto-keeps |
-| START | Energy max↑, refill, ready units, draw (P1 skips T1) |
-| MAIN | Play cards / abilities |
+| START | Energy max↑, refill, ready units, draw **one** (P1 skips T1); banked Energy |
+| MAIN | Play cards / abilities / Commander Focus / conversions |
 | COMBAT | Declare attackers; resolve |
 | SECOND_MAIN | Fast/Reaction (skipped in Practice/Quick/Casual) |
-| END | Temp Energy expires; pass |
+| END | Relic thrift draws; temp Energy expires; pass |
+
+Playing a card does **not** auto-draw a replacement.
 
 ### Example — turn sequence (P1 turn 1)
 

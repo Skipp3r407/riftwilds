@@ -35,12 +35,17 @@ Change via Esc → Settings, or the Settings util on the battle header.
 ## Primary files
 
 - `src/lib/tcg/battle-layout-prefs.ts` — prefs + route detection
-- `src/components/tcg/battle-layout-context.tsx` — Focus Mode + shortcuts
+- `src/lib/tcg/battle-viewport.ts` — mobile/tablet viewport classes + a11y/perf prefs
+- `src/hooks/use-battle-viewport.ts` — document attrs
+- `src/hooks/use-battle-gestures.ts` — swipe intel/feed/hand
+- `src/components/tcg/battle-layout-context.tsx` — Focus Mode + shortcuts + viewport
+- `src/components/tcg/battle-mobile-chrome.tsx` — dock, top bar, tablet FAB
+- `src/components/tcg/battle-landscape-prompt.tsx` — soft landscape recommend
 - `src/components/game/game-shell-chrome.tsx` — shell Focus Mode classes
 - `src/components/game/game-sidebar.tsx` — rail / pin / peek
 - `src/components/tcg/rift-battle-board.tsx` — console layout
 - `src/components/tcg/battle-event-feed.tsx` — compact / resize / auto-hide
 - `src/components/tcg/battle-mode-menu.tsx` — Esc menu + settings
-- `src/app/globals.css` — grid, Focus Mode, hand fan, menus
+- `src/app/globals.css` — grid, Focus Mode, hand fan, mobile/tablet bands
 
-See also: `FOCUS_MODE.md`, `SIDEBAR_SYSTEM.md`, `RESPONSIVE_LAYOUT.md`, `BATTLE_UI_GUIDELINES.md`, `IMMERSIVE_MODE.md`.
+See also: `FOCUS_MODE.md`, `SIDEBAR_SYSTEM.md`, `RESPONSIVE_LAYOUTS.md`, `MOBILE_UI_GUIDELINES.md`, `TOUCH_CONTROLS.md`, `BATTLE_UI_GUIDELINES.md`, `IMMERSIVE_MODE.md`.

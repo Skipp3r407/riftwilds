@@ -268,5 +268,44 @@
     "interactions": ["Overflow", "Bloom"],
     "counterplay": ["Race before the heal turn", "Corrupt"],
     "animationHint": "Soft green mend pulse"
+  },
+  {
+    "id": "insight",
+    "name": "Insight",
+    "shortText": "When this resolves, draw 1.",
+    "rules": "When a card with Insight resolves, its controller draws 1 card. Playing a card without Insight does not draw. Insight does not stack with a separate draw ability on the same card — take the higher amount.",
+    "interactions": [
+      "Scout and Discover replace plain Insight draws",
+      "Relics with Insight grant end-of-turn thrift draw when Energy is empty"
+    ],
+    "counterplay": ["Hand-size pressure", "Force dead draws via Rift Collapse"],
+    "animationHint": "Cyan page-flip mote"
+  },
+  {
+    "id": "inspire",
+    "name": "Inspire",
+    "shortText": "Once per turn: when you summon another companion, draw 1.",
+    "rules": "While you control a unit with Inspire, the first time each turn you summon another companion, draw 1. The Inspire unit's own summon does not trigger this.",
+    "interactions": ["Rewards multi-companion turns", "Does not trigger off spells"],
+    "counterplay": ["Remove the Inspire unit before the second summon"],
+    "animationHint": "Amber cheer ripple from the herald"
+  },
+  {
+    "id": "scout",
+    "name": "Scout",
+    "shortText": "Draw 1, then put a card from your hand on the bottom of your deck.",
+    "rules": "When Scout resolves, draw 1, then put one card from your hand on the bottom of your deck. Practice / AI auto-selects the highest-cost hand card.",
+    "interactions": ["Filters bricks without net card advantage", "Legal on companions and cycle spells"],
+    "counterplay": ["Empty their hand before Scout"],
+    "animationHint": "Trail map folds under the deck"
+  },
+  {
+    "id": "discover",
+    "name": "Discover",
+    "shortText": "Look at the top 3; put one into hand, shuffle the rest.",
+    "rules": "Reveal the top 3 cards of your deck. Put one into your hand; shuffle the others into your deck. Practice / AI auto-selects the lowest-cost revealed card.",
+    "interactions": ["Strong filter, limited raw advantage", "Hand-full burns the chosen card"],
+    "counterplay": ["Force Discover when top deck is expensive"],
+    "animationHint": "Three trail glyphs, one brightens"
   }
 ]

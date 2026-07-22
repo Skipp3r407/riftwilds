@@ -350,6 +350,72 @@ export function buildBattleFeed(
         });
         break;
       }
+      case "SCOUT": {
+        const bottom = payload.bottomDefId
+          ? cardLabel({ defId: payload.bottomDefId })
+          : "nothing";
+        pushNormal(
+          `${who} Scouted — drew, then put ${bottom} on the bottom.`,
+          { icon: "draw", flash: "newest" },
+        );
+        break;
+      }
+      case "DISCOVER": {
+        pushNormal(
+          `${who} Discovered ${cardLabel({ defId: payload.chosenDefId })}.`,
+          { icon: "draw", flash: "newest" },
+        );
+        break;
+      }
+      case "INSPIRE": {
+        pushNormal(`${who}'s Inspire drew a card.`, {
+          icon: "draw",
+          flash: "newest",
+        });
+        break;
+      }
+      case "ENERGY_TO_DRAW": {
+        pushNormal(
+          `${who} channeled ${num(payload.cost) ?? 2} Energy into a draw.`,
+          { icon: "draw", tone: "energy", flash: "newest" },
+        );
+        break;
+      }
+      case "DISCARD_FOR_ENERGY": {
+        pushNormal(
+          `${who} discarded ${cardLabel(payload)} to bank Energy next turn.`,
+          { icon: "energy", tone: "energy" },
+        );
+        break;
+      }
+      case "RECYCLE": {
+        pushNormal(
+          `${who} recycled ${cardLabel(payload)} into the deck and drew.`,
+          { icon: "draw", flash: "newest" },
+        );
+        break;
+      }
+      case "COMMANDER_DRAW": {
+        pushNormal(`${who}'s Commander Focus drew a card.`, {
+          icon: "draw",
+          flash: "newest",
+        });
+        break;
+      }
+      case "RELIC_THRIFT_DRAW": {
+        pushNormal(`${who}'s relic rewarded a thrifty draw.`, {
+          icon: "draw",
+          flash: "newest",
+        });
+        break;
+      }
+      case "BANKED_ENERGY": {
+        pushNormal(
+          `${who} received ${num(payload.tempEnergy) ?? 1} banked Energy.`,
+          { icon: "energy", tone: "energy", flash: "energy" },
+        );
+        break;
+      }
       case "HAND_FULL_BURN": {
         pushNormal(
           `${possessive(yours, who)} hand was full — ${cardLabel(payload)} burned in the Rift.`,

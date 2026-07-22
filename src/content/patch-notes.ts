@@ -39,6 +39,27 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-22-comics-advantage-mobile",
+    date: "2026-07-22",
+    title: "Comics pages, card advantage, and mobile battle",
+    summary:
+      "Fresh lettered comic pages for The Traveling Circus and The Lost City, Rules v2.2 hand-advantage keywords, and a clearer Practice Board on phones and tablets.",
+    added: [
+      "Updated comic art and lettering for The Traveling Circus issue 3 and The Lost City issue 4",
+      "Refreshed covers for The Traveling Circus and The Lost City",
+      "Hand-advantage keywords and card conversions in Rules v2.2",
+      "Portrait-friendly Practice Board chrome and touch-friendly battle controls on phones and tablets",
+    ],
+    changed: [
+      "Battle layout adapts better across phone portrait, landscape, and tablet sizes",
+      "Rules and keyword docs updated for the card-advantage kit",
+    ],
+    knownIssues: [
+      "Some comic issues may still receive art polish",
+    ],
+  },
+
+  {
     id: "2026-07-22-wallpapers-hub-energy",
     date: "2026-07-22",
     title: "Creature wallpapers, Battle Hub tiles, and early-game energy",

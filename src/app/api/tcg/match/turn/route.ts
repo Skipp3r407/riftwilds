@@ -25,6 +25,16 @@ const bodySchema = z.object({
       kind: z.literal("MULLIGAN"),
       replaceInstanceIds: z.array(z.string().min(1).max(48)).max(12),
     }),
+    z.object({ kind: z.literal("ENERGY_TO_DRAW") }),
+    z.object({
+      kind: z.literal("DISCARD_FOR_ENERGY"),
+      handInstanceId: z.string().min(1).max(48),
+    }),
+    z.object({
+      kind: z.literal("RECYCLE"),
+      handInstanceId: z.string().min(1).max(48),
+    }),
+    z.object({ kind: z.literal("COMMANDER_DRAW") }),
   ]),
 });
 

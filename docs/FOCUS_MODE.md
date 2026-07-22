@@ -31,6 +31,8 @@ Applied on `<html>` by `BattleLayoutProvider`:
 | `data-battle-layout` | `classic` \| `expanded` \| `immersive` \| `ultra-wide` |
 | `data-shell-sidebar` | `expanded` \| `collapsed` \| `peek` \| `hidden` |
 | `data-battle-combat` | `true` while combat VFX play |
+| `data-battle-viewport` | `phone-portrait` \| `phone-landscape` \| `tablet-portrait` \| `tablet-landscape` \| `desktop` \| `large` |
+| `data-battle-perf` | `high` \| `balanced` \| `battery` |
 
 ## Shortcuts
 
@@ -40,3 +42,5 @@ Applied on `<html>` by `BattleLayoutProvider`:
 | `F11` | Toggle battle fullscreen expand |
 | `Esc` | Open / close Battle Menu |
 | `Space` | End turn (ignored while typing in inputs) |
+
+Touch (compact viewports): swipe L feed · R intel · up expand hand · down collapse. See [TOUCH_CONTROLS.md](./TOUCH_CONTROLS.md).

@@ -184,7 +184,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike, Cal Reed",
   "pageTurnObjective": "Override and attack.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes; Guardian speech may be formal/fragmented.",
-  "generationStatus": "seeded",
+  "generationStatus": "cached",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Scan: Stolen Stabilizer — The Lost City page 15",

@@ -1,6 +1,6 @@
 # Official Riftwilds Rulebook
 
-**Version:** Rules **v2.1.0**  
+**Version:** Rules **v2.2.0**  
 **Authority:** `src/game/tcg/rules/battle-rules-config.ts` · `src/game/tcg/match-engine.ts`  
 **In-game:** `/tcg/rules`
 
@@ -9,6 +9,20 @@ This document is the **single source of truth** for competitive Riftwilds TCG ru
 ---
 
 ## Changelog (rules)
+
+### v2.2.0 — Strategic card advantage (2026-07-22)
+
+| Rule | Change |
+|------|--------|
+| Turn draw | Still **exactly one** card at start of turn (P1 skips turn 1). |
+| Auto-draw on play | **Forbidden** — playing a card never replaces itself unless that card has a draw keyword / effect. |
+| Keywords | **Insight**, **Inspire**, **Scout**, **Discover** (tactical filter / limited advantage). |
+| Commander Focus | Once/turn: spend **1** Energy → draw 1. |
+| Conversions | Channel (2 Energy → draw); Bank (discard → +1 Energy next turn); Recycle (shuffle → draw). Each once/turn. |
+| Relics | Insight relics (e.g. Keeper's Quill) may grant end-of-turn thrift draw when Energy is empty. |
+| Deck tools | High-curve / starvation warnings in Deck Atelier. |
+
+See [CARD_ADVANTAGE.md](./CARD_ADVANTAGE.md).
 
 ### v2.1.0 — Early-game curve / 0-cost / mulligan (2026-07-22)
 
@@ -101,13 +115,15 @@ See also: [TURN_STRUCTURE.md](./TURN_STRUCTURE.md), [turn-structure.md](./turn-s
 
 `MULLIGAN → START → MAIN → COMBAT → SECOND_MAIN → END`
 
-1. **START** — raise energy max, refill, ready units, start effects, draw (skip P1 turn 1).
-2. **MAIN** — play cards, abilities, Commander power.
+1. **START** — raise energy max, refill, ready units, start effects, draw **one** (skip P1 turn 1). Apply banked Energy from Bank conversion.
+2. **MAIN** — play cards, abilities, Commander Focus, optional conversions (Channel / Bank / Recycle).
 3. **COMBAT** — declare ready attackers; resolve damage.
 4. **SECOND MAIN** — Fast/Reaction (auto-skipped in Practice / Quick / Casual).
-5. **END** — expire temp Energy, pass turn.
+5. **END** — relic thrift draws, expire temp Energy, pass turn.
 
-Actions: `PLAY_CARD`, `DECLARE_COMBAT`, `END_TURN`, `MULLIGAN`, `KEEP_HAND`, `SURRENDER`.
+Actions: `PLAY_CARD`, `DECLARE_COMBAT`, `END_TURN`, `MULLIGAN`, `KEEP_HAND`, `SURRENDER`, `ENERGY_TO_DRAW`, `DISCARD_FOR_ENERGY`, `RECYCLE`, `COMMANDER_DRAW`.
+
+**No auto-draw-on-play.** Card advantage is deliberate (keywords / Focus / conversions).
 
 ## 6. Combat & field
 
@@ -135,7 +151,9 @@ See also: [ZERO_COST_CARD_DESIGN.md](./ZERO_COST_CARD_DESIGN.md), [ZERO_COST_CAR
 
 ## 9. Keywords
 
-See [KEYWORDS.md](./KEYWORDS.md) and [keywords.md](./keywords.md). Registry: `src/game/tcg/combat/keywords.ts`.
+See [KEYWORDS.md](./KEYWORDS.md), [keywords.md](./keywords.md), and [CARD_ADVANTAGE.md](./CARD_ADVANTAGE.md). Registry: `src/game/tcg/combat/keywords.ts`.
+
+Card-advantage keywords (v2.2): **Insight**, **Inspire**, **Scout**, **Discover**.
 
 ## 10. Companion Care vs Inventory
 
@@ -145,11 +163,23 @@ Food and care items live in **Inventory** only. They never enter combat decks or
 
 Optional wagering modes — see [rift-stakes/RIFT_STAKES.md](./rift-stakes/RIFT_STAKES.md). Core Energy / mulligan / deck rules are identical unless a mode override says otherwise.
 
-## 12. Related early-game docs
+## 12. Related early-game / advantage docs
 
+- [CARD_ADVANTAGE.md](./CARD_ADVANTAGE.md)
 - [MANA_CURVE_ANALYSIS.md](./MANA_CURVE_ANALYSIS.md)
 - [EARLY_GAME_BALANCE.md](./EARLY_GAME_BALANCE.md)
 - [DECK_CURVE_ANALYZER.md](./DECK_CURVE_ANALYZER.md)
 - [GAMEPLAY_RULES.md](./GAMEPLAY_RULES.md)
 - [FAQ.md](./FAQ.md)
 - [CHANGELOG.md](./CHANGELOG.md) (rules changelog mirror)
+
+## 13. Client controls (presentation)
+
+Rules are input-agnostic. Practice Board / match desk UI:
+
+| Input | Play a card | End turn | Inspect |
+|-------|-------------|----------|---------|
+| Desktop | Drag to field or Play | End Turn / Space | Click |
+| Touch | Double-tap or drag summon | Dock End / Pass | Long-press |
+
+Full chrome: [TOUCH_CONTROLS.md](./TOUCH_CONTROLS.md), [MOBILE_UI_GUIDELINES.md](./MOBILE_UI_GUIDELINES.md).

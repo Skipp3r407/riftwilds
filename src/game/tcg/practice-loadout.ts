@@ -69,6 +69,7 @@ export function isPracticeUsefulCard(cardId: string): boolean {
   }
 
   // Attach / hold / set cards brick empty boards or need reaction windows.
+  // Relics (incl. Keeper's Quill) stay out of random Practice pools — custom decks may still include them.
   if (
     category === "equipment" ||
     category === "relic" ||
@@ -96,10 +97,18 @@ export function isPracticeUsefulCard(cardId: string): boolean {
         return true;
       }
       if (fx.op === "echo_replay") return true;
+      if (fx.op === "draw") return true;
     }
   }
-  if (card.keywords.some((k) => String(k).toLowerCase() === "echo")) return true;
-  if (card.keywords.some((k) => String(k).toLowerCase() === "heal")) return true;
+  const kw = card.keywords.map((k) => String(k).toLowerCase());
+  if (kw.includes("echo") || kw.includes("heal")) return true;
+  if (
+    kw.includes("insight") ||
+    kw.includes("scout") ||
+    kw.includes("discover")
+  ) {
+    return true;
+  }
   return false;
 }
 
@@ -222,6 +231,34 @@ function pickRandomId(ids: string[], rng: () => number, avoid?: string): string 
   return pool[Math.min(idx, pool.length - 1)]!;
 }
 
+const PRACTICE_CARD_ADVANTAGE_IDS = [
+  "rotr-c-plaza-herald",
+  "rotr-s-pathfinders-glance",
+  "rotr-s-rift-reshuffle",
+  "rotr-s-storm-sip",
+  "rotr-c-pocket-scout",
+] as const;
+
+/** Seed a few v2.2 card-advantage examples into practice lists (unique-only). */
+function seedCardAdvantageExamples(
+  cardIds: string[],
+  rng: () => number,
+): string[] {
+  const out = [...cardIds];
+  const present = new Set(out);
+  for (const id of PRACTICE_CARD_ADVANTAGE_IDS) {
+    if (present.has(id)) continue;
+    if (!getCardById(id)) continue;
+    // Replace a mid-list slot so openers stay soft-shape friendly.
+    const slot = 8 + Math.floor(rng() * Math.max(1, out.length - 10));
+    const replaced = out[slot] ?? out[out.length - 1]!;
+    present.delete(replaced);
+    out[slot] = id;
+    present.add(id);
+  }
+  return out.slice(0, CONSTRUCTED_RULES.deckSize);
+}
+
 /** Build a legal unique 29-card practice list from a content starter (useful cards only). */
 export function buildPracticeStarterLoadout(
   deckId: string,
@@ -231,8 +268,9 @@ export function buildPracticeStarterLoadout(
   const deck = getDeckById(deckId);
   if (!deck || deck.kind !== "starter") return null;
   const pool = filterPracticeUsefulCards(expandContentDeck(deck));
-  const cardIds = toPracticeConstructedSlice(pool, rng);
+  let cardIds = toPracticeConstructedSlice(pool, rng);
   if (cardIds.length < CONSTRUCTED_RULES.deckSize) return null;
+  cardIds = seedCardAdvantageExamples(cardIds, rng);
   // Enforce uniqueness even if a future fill path regresses.
   if (new Set(cardIds).size !== cardIds.length) return null;
   const commanderHeroId = commanderForStarterDeck(
