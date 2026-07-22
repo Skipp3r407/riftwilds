@@ -14,6 +14,7 @@ import {
   brandAvatarKey,
   ensureSocialProfile,
   ensureSystemKeepersSeeded,
+  evaluateCharacterAvatarUnlock,
   evaluateSpeciesAvatarUnlock,
   getAvatarCatalog,
   listCharacterAvatarOptions,
@@ -23,11 +24,14 @@ import {
   npcAvatarKey,
   parseAvatarKey,
   petAvatarKey,
+  purchaseCharacterAvatarWithCredits,
+  purchaseCharacterAvatarWithSol,
   purchaseSpeciesAvatarWithCredits,
   purchaseSpeciesAvatarWithSol,
   resetSocialStoreForTests,
   setAvatar,
   speciesAvatarKey,
+  STARTER_CHARACTER_NPC_SLUGS,
   STARTER_RIFTLING_AVATAR_SLUGS,
 } from "@/lib/social";
 
@@ -40,13 +44,28 @@ describe("social avatars", () => {
     ensureSystemKeepersSeeded();
   });
 
-  it("lists character avatars from named NPCs and lore", () => {
-    const characters = listCharacterAvatarOptions();
+  it("lists character avatars with free Commons starters and locked regional portraits", () => {
+    const owner = "guest_avatar_characters";
+    ensureSocialProfile(owner);
+
+    const characters = listCharacterAvatarOptions(owner);
     expect(characters.length).toBeGreaterThan(10);
-    expect(characters.every((c) => c.unlocked)).toBe(true);
     expect(characters.some((c) => c.key === npcAvatarKey("elara-venn"))).toBe(true);
-    expect(characters.some((c) => c.key === loreAvatarKey("elara-venn"))).toBe(true);
+    expect(characters.some((c) => c.key === loreAvatarKey("first-riftling"))).toBe(true);
     expect(characters.some((c) => c.src.includes("/assets/npcs/"))).toBe(true);
+
+    const free = characters.filter((c) =>
+      STARTER_CHARACTER_NPC_SLUGS.includes(
+        c.key.replace("npc:", "") as (typeof STARTER_CHARACTER_NPC_SLUGS)[number],
+      ),
+    );
+    expect(free.length).toBe(STARTER_CHARACTER_NPC_SLUGS.length);
+    expect(free.every((c) => c.unlocked && !c.purchasable)).toBe(true);
+
+    const lore = characters.find((c) => c.key === loreAvatarKey("first-riftling"));
+    expect(lore?.unlocked).toBe(true);
+
+    expect(characters.some((c) => !c.unlocked && c.purchasable)).toBe(true);
   });
 
   it("expands Riftling cosmetics beyond free starters and keeps starters unlocked", () => {
@@ -253,7 +272,7 @@ describe("social avatars", () => {
     expect(stillLocked?.paths.solPurchaseEnabled).toBe(false);
   });
 
-  it("allows NPC and brand avatars without ownership checks", () => {
+  it("allows free Commons NPC and brand avatars without purchase", () => {
     const owner = "guest_avatar_npc";
     ensureSocialProfile(owner);
 
@@ -268,6 +287,71 @@ describe("social avatars", () => {
     if (!brand.ok) return;
     expect(brand.key).toBe(brandAvatarKey("mark"));
     expect(brand.src).toContain("riftwilds-mark");
+  });
+
+  it("locks regional keeper portraits until purchased with Credits", () => {
+    const owner = "guest_avatar_keeper_buy";
+    ensureSocialProfile(owner);
+
+    const characters = listCharacterAvatarOptions(owner);
+    const locked = characters.find((c) => !c.unlocked && c.kind === "npc");
+    expect(locked).toBeTruthy();
+    const slug = locked!.key.replace("npc:", "");
+
+    const denied = setAvatar(owner, { kind: "npc", npcSlug: slug });
+    expect(denied.ok).toBe(false);
+    if (!denied.ok) expect(denied.error).toBe("locked");
+
+    const evald = evaluateCharacterAvatarUnlock(owner, { kind: "npc", npcSlug: slug });
+    expect(evald?.unlocked).toBe(false);
+    const price = evald!.paths.creditsPrice;
+
+    creditCredits({
+      userId: owner,
+      amount: price + 50,
+      reason: "ADMIN_ADJUST",
+      requestId: "keeper-test-fund",
+    });
+
+    const bought = purchaseCharacterAvatarWithCredits({
+      ownerKey: owner,
+      avatarKey: locked!.key,
+      requestId: "keeper-buy-1",
+    });
+    expect(bought.ok).toBe(true);
+    if (!bought.ok) return;
+    expect(bought.profile.unlockedAvatarKeys).toContain(locked!.key);
+
+    const set = setAvatar(owner, { kind: "npc", npcSlug: slug });
+    expect(set.ok).toBe(true);
+
+    const sol = purchaseCharacterAvatarWithSol({
+      ownerKey: owner,
+      avatarKey: locked!.key,
+      requestId: "keeper-sol-already",
+    });
+    expect(sol.ok).toBe(false);
+    if (!sol.ok) expect(sol.error).toBe("already_unlocked");
+  });
+
+  it("blocks SOL keeper portrait purchase while SOL_PURCHASES_ENABLED is off", () => {
+    const owner = "guest_avatar_keeper_sol";
+    ensureSocialProfile(owner);
+
+    const characters = listCharacterAvatarOptions(owner);
+    const locked = characters.find((c) => !c.unlocked && c.kind === "npc");
+    expect(locked).toBeTruthy();
+
+    const result = purchaseCharacterAvatarWithSol({
+      ownerKey: owner,
+      avatarKey: locked!.key,
+      requestId: "keeper-sol-1",
+    });
+    expect(result.ok).toBe(false);
+    if (!result.ok) {
+      expect(result.error).toBe("sol_coming_soon");
+      expect(result.solPrice).toBeTruthy();
+    }
   });
 
   it("rejects unknown NPC / lore keys", () => {

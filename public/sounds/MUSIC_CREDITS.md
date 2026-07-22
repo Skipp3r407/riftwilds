@@ -1,6 +1,8 @@
 # Ambient music credits
 
-Tracks under `public/sounds/music/` are free for commercial use. Used as looping site ambience for Riftwilds.
+Tracks under `public/sounds/music/` are free for commercial use. Used as site ambience for Riftwilds (playlist auto-advances; beds are ≥ ~2:00 so they do not feel like short loops).
+
+Short OpenGameArt loops were extended locally with seamless integer multi-pass composition (≥120s) where needed.
 
 ## Dark Sci-Fi Audio Pack (Sector, Airy, Pulse, Urgent, Transmission)
 
@@ -40,7 +42,7 @@ Tracks under `public/sounds/music/` are free for commercial use. Used as looping
 - **Author:** iamoneabe
 - **License:** [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) / public domain
 - **File:** `dark-things.mp3`
-- **Notes:** Short dark synth loop.
+- **Notes:** Dark synth loop; site file is an integer multi-pass (≥2:00) so the dock does not feel like a short restart.
 
 ## Sirens in Darkness
 

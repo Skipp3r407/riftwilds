@@ -74,6 +74,8 @@ export async function POST(req: Request) {
     category: payload.kind === "feedback" ? payload.category : undefined,
     severity: payload.kind === "bug" ? payload.severity : undefined,
     title: payload.kind === "bug" ? payload.title : undefined,
+    screenshotUrls:
+      payload.kind === "bug" ? payload.screenshotUrls ?? [] : undefined,
     source: payload.source ?? "unknown",
     at: stored.createdAt,
     requestId: guard.requestId,
@@ -89,6 +91,8 @@ export async function POST(req: Request) {
       kind: payload.kind,
       category: payload.kind === "feedback" ? payload.category : undefined,
       severity: payload.kind === "bug" ? payload.severity : undefined,
+      screenshotCount:
+        payload.kind === "bug" ? (payload.screenshotUrls?.length ?? 0) : undefined,
     },
   });
 

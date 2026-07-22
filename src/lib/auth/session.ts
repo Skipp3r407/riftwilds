@@ -50,7 +50,13 @@ export async function createUserSession(params: {
   userAgentHash?: string;
   ipHash?: string;
   authMethod?: AuthContext["authMethod"];
-}): Promise<{ token: string; refreshToken: string }> {
+}): Promise<{
+  token: string;
+  refreshToken: string;
+  expiresAt: Date;
+  refreshExpiresAt: Date;
+  rememberMe: boolean;
+}> {
   const token = createSessionToken();
   const refreshToken = randomBytes(32).toString("base64url");
   const tokenHash = hashToken(token);
@@ -94,7 +100,7 @@ export async function createUserSession(params: {
     data: { lastLoginAt: new Date() },
   });
 
-  return { token, refreshToken };
+  return { token, refreshToken, expiresAt, refreshExpiresAt, rememberMe };
 }
 
 export async function destroySession(): Promise<void> {

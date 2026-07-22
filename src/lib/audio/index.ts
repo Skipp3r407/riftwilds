@@ -42,7 +42,7 @@ export {
   startMenuAmbient,
   stopAmbient,
 } from "@/lib/audio/ambient";
-export { pauseAllBeds } from "@/lib/audio/beds";
+export { pauseAllBeds, installBedLifecycleGuards } from "@/lib/audio/beds";
 export {
   musicEngine,
   playRegionMusic,

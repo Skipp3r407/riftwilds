@@ -8,6 +8,7 @@ import {
   ListMusic,
   Pause,
   Play,
+  Shuffle,
   Volume2,
   VolumeX,
   X,
@@ -106,6 +107,7 @@ function readUi(): UiPrefs {
               ? p.trackIndex
               : 0,
           paused: Boolean(p.paused),
+          shuffle: Boolean(p.shuffle),
         };
       }
       return DEFAULT_UI;
@@ -121,6 +123,7 @@ function readUi(): UiPrefs {
           : 0,
       // Missing key ⇒ autoplay on (new installs / older prefs without `paused`).
       paused: Boolean(parsed.paused),
+      shuffle: Boolean(parsed.shuffle),
     };
   } catch {
     return DEFAULT_UI;
@@ -215,6 +218,7 @@ export function MusicPlayer() {
   const [idleCollapsed, setIdleCollapsed] = useState(false);
   const [trackIndex, setTrackIndex] = useState(DEFAULT_UI.trackIndex);
   const [pausedPref, setPausedPref] = useState(DEFAULT_UI.paused);
+  const [shuffle, setShuffle] = useState(DEFAULT_UI.shuffle);
   const [playlistOpen, setPlaylistOpen] = useState(false);
   const interactingRef = useRef(false);
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -286,15 +290,22 @@ export function MusicPlayer() {
     }
     setHidden(startHidden);
     setPausedPref(prefs.paused);
+    setShuffle(prefs.shuffle);
     musicEngine.init();
+    musicEngine.setShuffle(prefs.shuffle);
     const enginePlaying = musicEngine.isPlaying();
     setPlaying(enginePlaying);
-    // Prefer live engine track while audio is active; otherwise restore UI browse index.
-    setTrackIndex(enginePlaying ? musicEngine.getTrackIndex() : prefs.trackIndex);
+    // Prefer singleton engine track whenever a bed is loaded (survives remounts).
+    setTrackIndex(
+      enginePlaying || musicEngine.hasLoadedTrack()
+        ? musicEngine.getTrackIndex()
+        : prefs.trackIndex,
+    );
     setReady(true);
     return musicEngine.subscribe(() => {
       const enginePlayingNow = musicEngine.isPlaying();
       setPlaying(enginePlayingNow);
+      setShuffle(musicEngine.isShuffle());
       // Mirror engine track while audio is active (region themes / crossfades).
       // When paused, leave local browsing (prev/next) alone.
       if (enginePlayingNow) {
@@ -305,8 +316,8 @@ export function MusicPlayer() {
 
   useEffect(() => {
     if (!ready) return;
-    writeUi({ hidden, trackIndex, paused: pausedPref });
-  }, [ready, hidden, trackIndex, pausedPref]);
+    writeUi({ hidden, trackIndex, paused: pausedPref, shuffle });
+  }, [ready, hidden, trackIndex, pausedPref, shuffle]);
 
   // Autoplay on mount; if the browser blocks it, start on the first user gesture.
   useEffect(() => {
@@ -323,10 +334,13 @@ export function MusicPlayer() {
     const start = async () => {
       if (!wantsAutoplay()) return false;
       unlock();
-      await musicEngine.playTrack(trackIndexRef.current, 500);
+      // Resume in place if the singleton already has a bed; never playTrack(0)
+      // on remount (that seeks / can swap to a stale UI index).
+      await musicEngine.resumeOrPlay(trackIndexRef.current, 500);
       if (cancelled) return musicEngine.isPlaying();
       const ok = musicEngine.isPlaying();
       setPlaying(ok);
+      if (ok) setTrackIndex(musicEngine.getTrackIndex());
       return ok;
     };
 
@@ -396,7 +410,7 @@ export function MusicPlayer() {
     unlockSfx();
     if (playing) {
       // Persist pause before stopping beds so async soundscapes respect it.
-      const next: UiPrefs = { hidden, trackIndex, paused: true };
+      const next: UiPrefs = { hidden, trackIndex, paused: true, shuffle };
       writeUi(next);
       setPausedPref(true);
       // HTMLAudio.pause alone leaves Web Audio drones/stems humming.
@@ -404,21 +418,36 @@ export function MusicPlayer() {
       setPlaying(false);
       return;
     }
-    const next: UiPrefs = { hidden, trackIndex, paused: false };
+    const next: UiPrefs = { hidden, trackIndex, paused: false, shuffle };
     writeUi(next);
     setPausedPref(false);
-    await musicEngine.playTrack(trackIndex, 500);
+    // Resume in place — playTrack would re-crossfade and seek to 0.
+    await musicEngine.resumeOrPlay(trackIndex, 500);
     setPlaying(musicEngine.isPlaying());
+    setTrackIndex(musicEngine.getTrackIndex());
   }
 
   async function stepTrack(delta: number) {
     unlock();
+    if (playing) {
+      if (delta >= 0) await musicEngine.next(600);
+      else await musicEngine.prev(600);
+      setTrackIndex(musicEngine.getTrackIndex());
+      setPlaying(musicEngine.isPlaying());
+      return;
+    }
+    // Paused browse: sequential scrub so users can pick without reshuffling the bag.
     const next = (trackIndex + delta + MUSIC_PLAYLIST.length) % MUSIC_PLAYLIST.length;
     setTrackIndex(next);
-    if (playing) {
-      await musicEngine.playTrack(next, 600);
-      setPlaying(musicEngine.isPlaying());
-    }
+  }
+
+  function toggleShuffle() {
+    unlock();
+    const next = !shuffle;
+    setShuffle(next);
+    musicEngine.setShuffle(next);
+    writeUi({ hidden, trackIndex, paused: pausedPref, shuffle: next });
+    bumpActivity();
   }
 
   async function selectTrack(index: number) {
@@ -626,6 +655,22 @@ export function MusicPlayer() {
                 title="Next"
               >
                 <ChevronRight size={16} aria-hidden />
+              </button>
+
+              <button
+                type="button"
+                onClick={toggleShuffle}
+                className={cn(
+                  "focus-ring flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition-colors",
+                  shuffle
+                    ? "bg-[rgba(255,184,77,0.12)] text-[var(--amber)]"
+                    : "text-[var(--text-muted)] hover:text-[var(--amber)]",
+                )}
+                aria-label={shuffle ? "Turn off shuffle" : "Turn on shuffle"}
+                aria-pressed={shuffle}
+                title={shuffle ? "Shuffle on" : "Shuffle"}
+              >
+                <Shuffle size={15} aria-hidden />
               </button>
 
               <button

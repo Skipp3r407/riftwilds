@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/shared/site-header";
 import { MobileGameNav } from "@/components/game/mobile-nav";
 import { GameSidebar } from "@/components/game/game-sidebar";
 import { GameShellChrome } from "@/components/game/game-shell-chrome";
+import { LevelUpCelebration } from "@/components/progression/level-up-celebration";
 import { RouteWallpaper } from "@/components/shared/route-wallpaper";
 import { HudAtmosphere } from "@/components/shared/hud-atmosphere";
 import { resolveGameplayGate } from "@/lib/auth/account-gate";
@@ -42,6 +43,7 @@ export default async function GameLayout({
       >
         {children}
       </GameShellChrome>
+      <LevelUpCelebration />
     </>
   );
 }

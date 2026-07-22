@@ -23,15 +23,18 @@ export const WALLPAPERS = {
   guilds: "/assets/ui/wallpapers/guilds.png",
   social: "/assets/ui/wallpapers/social.png",
   homestead: "/assets/ui/wallpapers/homestead.png",
-  economy: "/assets/ui/wallpapers/economy.png",
-  treasury: "/assets/treasury/hero.png",
+  /** Economy / revenue allocation — deep-space nebula (bump when regenerating) */
+  economy: "/assets/ui/wallpapers/economy.png?v=economynnebula1",
+  /** Treasury / rewards — violet-cyan nebula frame variant */
+  treasury: "/assets/ui/wallpapers/economy-nebula-alt.png?v=economynnebula1",
   token: "/assets/ui/wallpapers/token.png",
-  rewards: "/assets/ui/wallpapers/rewards.png",
+  rewards: "/assets/ui/wallpapers/economy-nebula-alt.png?v=economynnebula1",
   care: "/assets/ui/wallpapers/care.png",
   loyalty: "/assets/loyalty/rift-storm-banner.png",
   ecosystem: "/assets/ui/ecosystem/living-world-cta.png",
-  transparency: "/assets/ui/wallpapers/transparency.png",
-  fairness: "/assets/ui/wallpapers/fairness.png",
+  /** Transparency / fairness — softer side-nebula starfield */
+  transparency: "/assets/ui/wallpapers/economy-space-soft.png?v=economynnebula1",
+  fairness: "/assets/ui/wallpapers/economy-space-soft.png?v=economynnebula1",
   creatures: "/assets/ui/wallpapers/creatures.png",
   /** Riftling Codex — cosmic rift archive / species hall */
   codex: "/assets/ui/wallpapers/codex.png?v=riftarchive1",
@@ -76,7 +79,7 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/restoration", name: "restoration", opacity: 0.42 },
   /** Keep dual-portal arena readable under hub panels */
   { prefix: "/arena", name: "arena", opacity: 0.68 },
-  { prefix: "/exchange", name: "economy", opacity: 0.55 },
+  { prefix: "/exchange", name: "economy", opacity: 0.74 },
   { prefix: "/marketplace", name: "marketplace", opacity: 0.52 },
   /** Merchant hall — keep art readable; panels carry local scrims */
   { prefix: "/shop", name: "shop", opacity: 0.72 },
@@ -87,15 +90,16 @@ const ROUTE_WALLPAPERS: { prefix: string; name: WallpaperKey; opacity?: number }
   { prefix: "/homestead", name: "homestead", opacity: 0.42 },
   { prefix: "/housing", name: "homestead", opacity: 0.42 },
   { prefix: "/neighborhoods", name: "homestead", opacity: 0.4 },
-  { prefix: "/economy", name: "economy", opacity: 0.72 },
-  { prefix: "/treasury", name: "treasury", opacity: 0.68 },
+  /** Keep nebula readable under glass allocation cards */
+  { prefix: "/economy", name: "economy", opacity: 0.78 },
+  { prefix: "/treasury", name: "treasury", opacity: 0.74 },
   { prefix: "/token", name: "token", opacity: 0.62 },
-  { prefix: "/rewards", name: "rewards", opacity: 0.65 },
+  { prefix: "/rewards", name: "rewards", opacity: 0.74 },
   { prefix: "/loyalty", name: "loyalty", opacity: 0.55 },
   { prefix: "/ecosystem", name: "ecosystem", opacity: 0.5 },
   { prefix: "/community", name: "token", opacity: 0.58 },
-  { prefix: "/transparency", name: "transparency", opacity: 0.6 },
-  { prefix: "/fairness", name: "fairness", opacity: 0.6 },
+  { prefix: "/transparency", name: "transparency", opacity: 0.7 },
+  { prefix: "/fairness", name: "fairness", opacity: 0.7 },
   { prefix: "/creatures", name: "creatures", opacity: 0.45 },
   /** Species encyclopedia — keep nebula vault readable under card grid */
   { prefix: "/codex/riftlings", name: "codex", opacity: 0.58 },
@@ -184,7 +188,10 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
       name === "codex" ||
       name === "comics" ||
       name === "academy" ||
-      name === "auth");
+      name === "auth" ||
+      name === "economy" ||
+      name === "treasury" ||
+      name === "rewards");
 
   const shopHall = name === "shop" || name === "creators";
   const hatcheryHall = name === "hatchery";
@@ -195,6 +202,12 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
   const arenaHall = name === "arena";
   const battleHubHall = name === "tcg-battle-hub";
   const battleHall = name === "tcg-battle" || name === "battle";
+  const economyHall =
+    name === "economy" ||
+    name === "treasury" ||
+    name === "rewards" ||
+    name === "transparency" ||
+    name === "fairness";
   const kidsHall =
     name === "printables" || name === "coloring" || name === "fan-kit" || name === "docs";
 
@@ -212,7 +225,13 @@ export function PageWallpaper({ name, className, opacity = 0.55, priority }: Pro
         unoptimized
       />
       {/* Light scrim — wallpaper stays visible; glass panels carry most readability */}
-      {shopHall ? (
+      {economyHall ? (
+        <>
+          {/* Deep-space nebula — keep edge cyan/purple/amber; dark mid for glass cards */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(6,8,16,0.3)] via-[rgba(7,11,22,0.04)] to-[rgba(6,8,14,0.48)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_42%,transparent_0%,rgba(7,11,22,0.12)_58%,rgba(7,11,22,0.38)_100%),radial-gradient(ellipse_at_12%_18%,rgba(61,231,255,0.06)_0%,transparent_38%),radial-gradient(ellipse_at_88%_20%,rgba(160,90,220,0.06)_0%,transparent_36%),radial-gradient(ellipse_at_50%_92%,rgba(255,184,77,0.05)_0%,transparent_40%)]" />
+        </>
+      ) : shopHall ? (
         <>
           {/* Warmer, lighter wash so lantern/crystal hall reads through */}
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(18,12,8,0.18)] via-[rgba(8,10,16,0.08)] to-[rgba(6,8,14,0.42)]" />

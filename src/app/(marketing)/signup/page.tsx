@@ -13,6 +13,7 @@ import { playSfx } from "@/hooks/use-sfx";
 
 export default function SignupPage() {
   const router = useRouter();
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [acceptTerms, setAcceptTerms] = useState(false);
@@ -34,6 +35,7 @@ export default function SignupPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          username,
           email,
           password,
           acceptTerms: true,
@@ -43,12 +45,37 @@ export default function SignupPage() {
       });
       const json = await res.json();
       if (!res.ok || !json.ok) {
-        setError(json?.error?.message ?? "Sign-up failed");
+        const fieldErrors = json?.error?.fieldErrors as
+          | Record<string, string[] | undefined>
+          | undefined;
+        const firstField = fieldErrors
+          ? Object.values(fieldErrors).find((msgs) => msgs?.[0])?.[0]
+          : undefined;
+        setError(json?.error?.message ?? firstField ?? "Sign-up failed");
         return;
       }
       playSfx("login.success");
-      if (json.needsVerification && json.verificationToken) {
-        sessionStorage.setItem("rift_verify_token", json.verificationToken);
+      if (json.needsVerification) {
+        if (json.verificationToken) {
+          sessionStorage.setItem("rift_verify_token", json.verificationToken);
+        }
+        if (json.verificationCode) {
+          sessionStorage.setItem("rift_verify_code", json.verificationCode);
+        }
+        if (json.verificationExpiresAt) {
+          sessionStorage.setItem(
+            "rift_verify_expires",
+            json.verificationExpiresAt,
+          );
+        }
+        if (json.emailDelivery === "console" && json.verificationCode) {
+          sessionStorage.setItem(
+            "rift_verify_dev_hint",
+            `Email not configured — your code is: ${json.verificationCode} (dev)`,
+          );
+        } else {
+          sessionStorage.removeItem("rift_verify_dev_hint");
+        }
       }
       router.push(json.next ?? "/onboarding");
       router.refresh();
@@ -85,6 +112,21 @@ export default function SignupPage() {
         onSubmit={onSubmit}
         className="panel space-y-3 bg-[rgba(8,12,20,0.82)] p-6 backdrop-blur-[3px]"
       >
+        <label className="block text-sm text-[var(--text-muted)]">
+          Username
+          <input
+            type="text"
+            required
+            minLength={3}
+            maxLength={24}
+            pattern="[A-Za-z][A-Za-z0-9_]{2,23}"
+            autoComplete="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="mt-1 w-full rounded-lg border border-[var(--stroke)] bg-[rgba(6,10,18,0.85)] px-3 py-2 text-white"
+            placeholder="RiftKeeper"
+          />
+        </label>
         <label className="block text-sm text-[var(--text-muted)]">
           Email
           <input

@@ -19,6 +19,7 @@ import {
   npcAvatarKey,
   petAvatarKey,
   speciesAvatarKey,
+  STARTER_CHARACTER_NPC_SLUGS,
   STARTER_RIFTLING_AVATAR_SLUGS,
 } from "@/lib/social/avatar-keys";
 import {
@@ -26,6 +27,8 @@ import {
   avatarBackgroundForSpecies,
 } from "@/lib/social/avatar-backgrounds";
 import {
+  characterAvatarRarity,
+  evaluateCharacterAvatarUnlock,
   evaluateSpeciesAvatarUnlock,
   isRiftlingAvatarSlug,
   listRiftlingAvatarSlugs,
@@ -54,11 +57,15 @@ export function normalizeAvatarRarity(raw: string | undefined | null): ItemRarit
 
 export {
   brandAvatarKey,
+  isStarterCharacterNpcSlug,
+  isStarterLoreAvatarId,
   isStarterRiftlingAvatarSlug,
   loreAvatarKey,
   npcAvatarKey,
   petAvatarKey,
   speciesAvatarKey,
+  STARTER_CHARACTER_NPC_SLUGS,
+  STARTER_LORE_AVATAR_IDS,
   STARTER_RIFTLING_AVATAR_SLUGS,
 } from "@/lib/social/avatar-keys";
 
@@ -163,30 +170,72 @@ function stripQuery(src: string): string {
   return src.split("?")[0] ?? src;
 }
 
-/** Named active NPCs unlocked by default as cosmetic avatars. */
-export function listCharacterAvatarOptions(): SocialAvatarOption[] {
-  const npcs: SocialAvatarOption[] = NAMED_NPCS.filter((n) => n.active).map((n) => ({
-    key: npcAvatarKey(n.slug),
-    kind: "npc" as const,
-    label: n.displayName,
-    subtitle: n.title || n.occupation || "Keeper",
-    src: n.portraitAsset,
-    thumbSrc: n.thumbnailAsset || n.portraitAsset,
-    unlocked: true,
-    // Distinct commons/rift plates so keeper cards don't share one flat back.
-    bgSrc: avatarBackgroundForSpecies(n.slug, "RIFT"),
-  }));
+/**
+ * Named town keepers + lore portraits.
+ * Commons cast + origin lore stay free; regional heroes are portrait unlocks (Credits / optional SOL).
+ */
+export function listCharacterAvatarOptions(ownerKey?: string): SocialAvatarOption[] {
+  const npcs: SocialAvatarOption[] = NAMED_NPCS.filter((n) => n.active).map((n) => {
+    const evald = ownerKey
+      ? evaluateCharacterAvatarUnlock(ownerKey, { kind: "npc", npcSlug: n.slug })
+      : null;
+    const rarity = characterAvatarRarity("npc", n.slug);
+    const unlocked = evald?.unlocked ?? true;
+    const freeStarter = evald?.paths.freeStarter ?? STARTER_CHARACTER_NPC_SLUGS.includes(
+      n.slug as (typeof STARTER_CHARACTER_NPC_SLUGS)[number],
+    );
+    const purchasable = !freeStarter;
 
-  const lore: SocialAvatarOption[] = LORE_AVATARS.map((c) => ({
-    key: loreAvatarKey(c.id),
-    kind: "lore" as const,
-    label: c.label,
-    subtitle: c.subtitle,
-    src: c.src,
-    thumbSrc: c.src,
-    unlocked: true,
-    bgSrc: avatarBackgroundForSpecies(c.id, "SPIRIT"),
-  }));
+    let subtitle = n.title || n.occupation || "Keeper";
+    if (purchasable && !unlocked) {
+      subtitle = `${subtitle} · portrait unlock`;
+    } else if (purchasable && unlocked && evald?.paths.purchased) {
+      subtitle = `${subtitle} · unlocked`;
+    } else if (freeStarter) {
+      subtitle = `${subtitle} · free starter`;
+    }
+
+    return {
+      key: npcAvatarKey(n.slug),
+      kind: "npc" as const,
+      label: n.displayName,
+      subtitle,
+      src: n.portraitAsset,
+      thumbSrc: n.thumbnailAsset || n.portraitAsset,
+      unlocked,
+      lockedReason: evald?.lockedReason,
+      unlockPaths: evald?.paths,
+      rarity: purchasable ? rarity : undefined,
+      purchasable,
+      // Distinct commons/rift plates so keeper cards don't share one flat back.
+      bgSrc: avatarBackgroundForSpecies(n.slug, "RIFT"),
+    };
+  });
+
+  const lore: SocialAvatarOption[] = LORE_AVATARS.map((c) => {
+    const evald = ownerKey
+      ? evaluateCharacterAvatarUnlock(ownerKey, { kind: "lore", characterId: c.id })
+      : null;
+    const rarity = characterAvatarRarity("lore", c.id);
+    const unlocked = evald?.unlocked ?? true;
+    const freeStarter = evald?.paths.freeStarter ?? true;
+    const purchasable = !freeStarter;
+
+    return {
+      key: loreAvatarKey(c.id),
+      kind: "lore" as const,
+      label: c.label,
+      subtitle: freeStarter ? `${c.subtitle} · free starter` : c.subtitle,
+      src: c.src,
+      thumbSrc: c.src,
+      unlocked,
+      lockedReason: evald?.lockedReason,
+      unlockPaths: evald?.paths,
+      rarity: purchasable ? rarity : undefined,
+      purchasable,
+      bgSrc: avatarBackgroundForSpecies(c.id, "SPIRIT"),
+    };
+  });
 
   return [...npcs, ...lore].sort((a, b) => a.label.localeCompare(b.label));
 }
@@ -275,7 +324,7 @@ export function listAvailableAvatars(ownerKey: string): SocialAvatarCatalog {
   const profile = requireProfile(ownerKey);
   const pets = listPetAvatarOptions(ownerKey);
   const riftlings = listSpeciesAvatarOptions(ownerKey);
-  const characters = listCharacterAvatarOptions();
+  const characters = listCharacterAvatarOptions(ownerKey);
   const brand = listBrandAvatarOptions();
 
   const unlocked = riftlings.filter((o) => o.unlocked).length;
@@ -306,7 +355,8 @@ export function listAvailableAvatars(ownerKey: string): SocialAvatarCatalog {
     {
       id: "characters",
       title: "Keepers & characters",
-      description: "Named town keepers, heroes, and lore figures.",
+      description:
+        "Named town keepers, heroes, and lore figures. Commons cast is free; regional portraits unlock with Credits (optional SOL). Cosmetic keeper skins only — no gameplay power.",
       options: characters,
     },
     {
@@ -391,6 +441,19 @@ function resolveAvatarSelection(
         message: "That character avatar is not available.",
       };
     }
+    const unlock = evaluateCharacterAvatarUnlock(ownerKey, {
+      kind: "npc",
+      npcSlug: npc.slug,
+    });
+    if (!unlock?.unlocked) {
+      return {
+        ok: false,
+        error: "locked",
+        message:
+          unlock?.lockedReason ??
+          "That keeper portrait is locked. Buy the portrait unlock with Credits.",
+      };
+    }
     return {
       ok: true,
       kind: "npc",
@@ -406,6 +469,19 @@ function resolveAvatarSelection(
         ok: false,
         error: "not_found",
         message: "That lore avatar is not available.",
+      };
+    }
+    const unlock = evaluateCharacterAvatarUnlock(ownerKey, {
+      kind: "lore",
+      characterId: lore.id,
+    });
+    if (!unlock?.unlocked) {
+      return {
+        ok: false,
+        error: "locked",
+        message:
+          unlock?.lockedReason ??
+          "That lore portrait is locked. Buy the portrait unlock with Credits.",
       };
     }
     return {
@@ -435,7 +511,7 @@ function resolveAvatarSelection(
 
 /**
  * Set the player's social avatar.
- * Pet avatars require ownership; species require unlock; NPC / lore / brand are cosmetics.
+ * Pet avatars require ownership; species / NPC / lore require unlock; brand stays free.
  */
 export function setSocialAvatar(
   ownerKey: string,

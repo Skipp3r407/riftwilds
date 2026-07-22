@@ -11,6 +11,8 @@ import {
   ensureSocialProfile,
   getAvatarCatalog,
   parseAvatarKey,
+  purchaseCharacterAvatarWithCredits,
+  purchaseCharacterAvatarWithSol,
   purchaseSpeciesAvatarWithCredits,
   purchaseSpeciesAvatarWithSol,
   setAvatar,
@@ -43,12 +45,16 @@ const bodySchema = z.discriminatedUnion("kind", [
   }),
   z.object({
     kind: z.literal("purchase_credits"),
-    speciesSlug: z.string().min(1).max(80),
+    /** Riftling species slug (legacy). Prefer `avatarKey` for keepers / lore. */
+    speciesSlug: z.string().min(1).max(80).optional(),
+    /** Full avatar key: `species:…` | `npc:…` | `lore:…`. */
+    avatarKey: z.string().min(3).max(120).optional(),
     requestId: z.string().min(4).max(120).optional(),
   }),
   z.object({
     kind: z.literal("purchase_sol"),
-    speciesSlug: z.string().min(1).max(80),
+    speciesSlug: z.string().min(1).max(80).optional(),
+    avatarKey: z.string().min(3).max(120).optional(),
     requestId: z.string().min(4).max(120).optional(),
   }),
 ]);
@@ -125,11 +131,36 @@ export async function POST(request: Request) {
   const body = parsed.data;
 
   if (body.kind === "purchase_credits") {
-    const result = purchaseSpeciesAvatarWithCredits({
-      ownerKey: owner.ownerKey,
-      speciesSlug: body.speciesSlug,
-      requestId: body.requestId ?? `avatar-credits:${owner.ownerKey}:${body.speciesSlug}:${guard.requestId}`,
-    });
+    const avatarKey =
+      body.avatarKey ??
+      (body.speciesSlug ? `species:${body.speciesSlug.trim().toLowerCase()}` : null);
+    if (!avatarKey) {
+      return jsonError(
+        "Provide avatarKey or speciesSlug to purchase.",
+        400,
+        "validation_error",
+        guard.requestId,
+      );
+    }
+
+    const isCharacter = avatarKey.startsWith("npc:") || avatarKey.startsWith("lore:");
+    const result = isCharacter
+      ? purchaseCharacterAvatarWithCredits({
+          ownerKey: owner.ownerKey,
+          avatarKey,
+          requestId:
+            body.requestId ??
+            `avatar-credits:${owner.ownerKey}:${avatarKey}:${guard.requestId}`,
+        })
+      : purchaseSpeciesAvatarWithCredits({
+          ownerKey: owner.ownerKey,
+          speciesSlug: avatarKey.startsWith("species:")
+            ? avatarKey.slice("species:".length)
+            : (body.speciesSlug ?? ""),
+          requestId:
+            body.requestId ??
+            `avatar-credits:${owner.ownerKey}:${avatarKey}:${guard.requestId}`,
+        });
     if (!result.ok) {
       const status =
         result.error === "insufficient_credits"
@@ -158,11 +189,34 @@ export async function POST(request: Request) {
   }
 
   if (body.kind === "purchase_sol") {
-    const result = purchaseSpeciesAvatarWithSol({
-      ownerKey: owner.ownerKey,
-      speciesSlug: body.speciesSlug,
-      requestId: body.requestId ?? `avatar-sol:${owner.ownerKey}:${body.speciesSlug}:${guard.requestId}`,
-    });
+    const avatarKey =
+      body.avatarKey ??
+      (body.speciesSlug ? `species:${body.speciesSlug.trim().toLowerCase()}` : null);
+    if (!avatarKey) {
+      return jsonError(
+        "Provide avatarKey or speciesSlug to purchase.",
+        400,
+        "validation_error",
+        guard.requestId,
+      );
+    }
+
+    const isCharacter = avatarKey.startsWith("npc:") || avatarKey.startsWith("lore:");
+    const result = isCharacter
+      ? purchaseCharacterAvatarWithSol({
+          ownerKey: owner.ownerKey,
+          avatarKey,
+          requestId:
+            body.requestId ?? `avatar-sol:${owner.ownerKey}:${avatarKey}:${guard.requestId}`,
+        })
+      : purchaseSpeciesAvatarWithSol({
+          ownerKey: owner.ownerKey,
+          speciesSlug: avatarKey.startsWith("species:")
+            ? avatarKey.slice("species:".length)
+            : (body.speciesSlug ?? ""),
+          requestId:
+            body.requestId ?? `avatar-sol:${owner.ownerKey}:${avatarKey}:${guard.requestId}`,
+        });
     if (!result.ok) {
       const status =
         result.error === "sol_coming_soon"

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Pin, PinOff, PanelLeftClose, PanelLeftOpen } from "lucide-react";
+import { AccountSessionMenu } from "@/components/auth/account-session-menu";
 import { playSfx } from "@/hooks/use-sfx";
 import { useSocialBadgeCount } from "@/components/social/social-nav-badge";
 import { useBattleLayoutOptional } from "@/components/tcg/battle-layout-context";
@@ -210,20 +211,23 @@ export function GameSidebar() {
             <p className="mb-1 px-3 text-[10px] uppercase tracking-[0.18em] text-[var(--amber)]">
               Account
             </p>
-            {extraSidebarNav.map((link) => {
-              const active = isActive(pathname, link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => playSfx("ui.nav")}
-                  className={cn("nav-link focus-ring", active && "nav-link--active")}
-                  aria-current={active ? "page" : undefined}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+            {extraSidebarNav
+              .filter((link) => link.href !== "/login")
+              .map((link) => {
+                const active = isActive(pathname, link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => playSfx("ui.nav")}
+                    className={cn("nav-link focus-ring", active && "nav-link--active")}
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            <AccountSessionMenu variant="sidebar" />
           </>
         ) : null}
       </nav>

@@ -44,6 +44,10 @@ yarn-error.log*
 # local treasury ops ledger (demo persistence)
 /.data/
 
+# user-uploaded feedback screenshots (keep folder via .gitkeep)
+/public/uploads/feedback/**
+!/public/uploads/feedback/.gitkeep
+
 # local scratch / agent temp
 /tmp-*.json
 /artifacts/**/*.log

@@ -11,16 +11,21 @@ import {
   PawPrint,
   ScrollText,
   Settings2,
-  Shield,
   Sparkles,
   Swords,
 } from "lucide-react";
 import { AffinityChip } from "@/components/leaderboards/affinity-chip";
+import { AccountSessionMenu } from "@/components/auth/account-session-menu";
 import { AvatarPicker } from "@/components/social/avatar-picker";
 import { EmptyState, StatusChip } from "@/components/shared/page-header";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
 import { useActiveWallet } from "@/hooks/use-active-wallet";
-import { brandMarkPath, creaturePortraitPath } from "@/lib/assets/paths";
+import {
+  brandMarkPath,
+  creaturePortraitPath,
+  profileActivityThumbPath,
+  profileJumpThumbPath,
+} from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import {
   DEMO_ACHIEVEMENTS,
@@ -85,23 +90,6 @@ function tierTone(tier: string | null): "live" | "info" | "warn" | "default" {
   if (t === "FOUNDER" || t === "WARDEN") return "live";
   if (t === "RANGER" || t === "KEEPER") return "info";
   return "warn";
-}
-
-function activityIcon(kind: (typeof DEMO_ACTIVITY)[number]["kind"]) {
-  switch (kind) {
-    case "arena":
-      return Gamepad2;
-    case "care":
-      return PawPrint;
-    case "hatch":
-      return Egg;
-    case "quest":
-      return ScrollText;
-    case "memory":
-      return Sparkles;
-    default:
-      return Shield;
-  }
 }
 
 function achievementTone(rarity: ProfileAchievement["rarity"]): "default" | "info" | "live" | "warn" {
@@ -503,28 +491,36 @@ export function ProfileDashboard() {
             <StatusChip tone="info">Demo feed</StatusChip>
           </div>
           <ul className="mt-4 space-y-2">
-            {DEMO_ACTIVITY.map((item) => {
-              const Icon = activityIcon(item.kind);
-              return (
-                <li
-                  key={item.id}
-                  className="panel-inset flex gap-3 px-3 py-3 transition hover:border-[rgba(61,231,255,0.3)]"
-                >
-                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--stroke)] bg-[rgba(61,231,255,0.08)] text-[var(--cyan)]">
-                    <Icon className="h-3.5 w-3.5" aria-hidden />
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <div className="flex flex-wrap items-baseline justify-between gap-2">
-                      <p className="font-display text-sm text-white">{item.title}</p>
-                      <span className="text-[10px] uppercase tracking-[0.14em] text-[var(--text-dim)]">
-                        {item.at}
-                      </span>
-                    </div>
-                    <p className="mt-0.5 text-xs text-[var(--text-muted)]">{item.detail}</p>
+            {DEMO_ACTIVITY.map((item) => (
+              <li
+                key={item.id}
+                className="panel-inset flex gap-3 px-3 py-3 transition hover:border-[rgba(61,231,255,0.3)]"
+              >
+                <span className="relative mt-0.5 h-12 w-12 shrink-0 overflow-hidden rounded-[var(--radius-sm)] border border-[var(--stroke)]">
+                  <Image
+                    src={profileActivityThumbPath(item.kind)}
+                    alt=""
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                  <span
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(8,10,18,0.55)] to-transparent"
+                    aria-hidden
+                  />
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <p className="font-display text-sm text-white">{item.title}</p>
+                    <span className="text-[10px] uppercase tracking-[0.14em] text-[var(--text-dim)]">
+                      {item.at}
+                    </span>
                   </div>
-                </li>
-              );
-            })}
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">{item.detail}</p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -538,16 +534,28 @@ export function ProfileDashboard() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="panel-inset group flex items-center justify-between gap-3 px-3 py-3 transition hover:border-[rgba(61,231,255,0.35)]"
+                  className="panel-inset group relative flex min-h-[4.5rem] items-center justify-between gap-3 overflow-hidden px-3 py-3 transition hover:border-[rgba(61,231,255,0.35)]"
                 >
-                  <div>
-                    <p className="font-display text-sm text-white group-hover:text-[var(--cyan)]">
+                  <div className="pointer-events-none absolute inset-0" aria-hidden>
+                    <Image
+                      src={profileJumpThumbPath(link.thumb)}
+                      alt=""
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover opacity-55 transition duration-300 group-hover:opacity-70"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[rgba(8,10,18,0.92)] via-[rgba(8,10,18,0.78)] to-[rgba(8,10,18,0.45)]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,10,18,0.55)] via-transparent to-[rgba(8,10,18,0.25)]" />
+                  </div>
+                  <div className="relative z-[1] min-w-0">
+                    <p className="font-display text-sm text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.65)] group-hover:text-[var(--cyan)]">
                       {link.label}
                     </p>
                     <p className="mt-0.5 text-xs text-[var(--text-muted)]">{link.body}</p>
                   </div>
                   <ExternalLink
-                    className="h-3.5 w-3.5 shrink-0 text-[var(--text-dim)] group-hover:text-[var(--cyan)]"
+                    className="relative z-[1] h-3.5 w-3.5 shrink-0 text-[var(--text-dim)] group-hover:text-[var(--cyan)]"
                     aria-hidden
                   />
                 </Link>
@@ -993,6 +1001,18 @@ function SettingsPanel({
         <p className="text-[var(--text-muted)]">Universe</p>
         <p className="text-white">{projectConfig.UNIVERSE_NAME}</p>
         <p className="text-xs text-[var(--text-dim)]">Timezone: local browser</p>
+      </div>
+
+      <div className="rounded-xl border border-[var(--stroke)] bg-[rgba(0,0,0,0.25)] p-4 md:p-5">
+        <h4 className="font-display text-sm uppercase tracking-[0.18em] text-[var(--amber)]">
+          Session
+        </h4>
+        <p className="mt-1 text-xs text-[var(--text-muted)]">
+          End your Riftwilds account session on this device. Wallet connect is separate.
+        </p>
+        <div className="mt-3">
+          <AccountSessionMenu variant="inline" />
+        </div>
       </div>
     </div>
   );

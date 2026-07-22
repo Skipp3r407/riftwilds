@@ -1,14 +1,26 @@
 # Official Riftwilds Rulebook
 
-**Version:** Rules **v2.2.0**  
-**Authority:** `src/game/tcg/rules/battle-rules-config.ts` · `src/game/tcg/match-engine.ts`  
-**In-game:** `/tcg/rules`
+**Version:** Rules **v2.3.0**  
+**Authority:** `src/game/tcg/rules/battle-rules-config.ts` · `src/game/tcg/match-engine.ts` · `src/lib/progression/`  
+**In-game:** `/tcg/rules` · `/progression`
 
 This document is the **single source of truth** for competitive Riftwilds TCG rules. Code, tutorials, tooltips, AI, and other docs must not diverge from it.
 
 ---
 
 ## Changelog (rules)
+
+### v2.3.0 — Keeper XP & leveling (2026-07-22)
+
+| Rule | Change |
+|------|--------|
+| Keeper progression | Server-authoritative Level / XP / Lifetime XP / Prestige / Stat & Skill points. |
+| Curve | `getXPForLevel(level) = floor(100 × level^1.8)`; multi-level grants keep excess XP. |
+| Battle XP | Loss 10 · Win 50 · Perfect +25 · No cards lost +30 · Higher rank +75 · Tournament win 500. |
+| Anti-farm | No XP for AFK / surrender farm / bots; diminishing returns vs same opponent. |
+| Practice | Completing a Practice match grants battle XP via the match turn API (never client-set amounts). |
+
+See [progression/XP_SYSTEM.md](./progression/XP_SYSTEM.md).
 
 ### v2.2.0 — Strategic card advantage (2026-07-22)
 
@@ -183,3 +195,13 @@ Rules are input-agnostic. Practice Board / match desk UI:
 | Touch | Double-tap or drag summon | Dock End / Pass | Long-press |
 
 Full chrome: [TOUCH_CONTROLS.md](./TOUCH_CONTROLS.md), [MOBILE_UI_GUIDELINES.md](./MOBILE_UI_GUIDELINES.md).
+
+## 14. Keeper XP (progression)
+
+Keeper leveling is **not** a TCG combat rule, but Practice / match completion awards XP under the progression system:
+
+- Clients never submit XP amounts — only validated source keys.
+- Practice win/loss XP is granted server-side when a match reaches `COMPLETED`.
+- Quest completion, daily login, care, and hatch grant XP through `/api/progression/*`.
+
+Details: [progression/XP_SYSTEM.md](./progression/XP_SYSTEM.md).

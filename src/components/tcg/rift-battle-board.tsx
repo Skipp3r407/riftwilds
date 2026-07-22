@@ -90,6 +90,7 @@ import {
   writeBattleFeedWidth,
   writeBattleIntelCollapsed,
 } from "@/lib/tcg/battle-layout-prefs";
+import { emitProgressionEvent } from "@/lib/progression/client";
 import { isPhoneBattleViewport } from "@/lib/tcg/battle-viewport";
 import { cn } from "@/lib/utils/cn";
 
@@ -1447,6 +1448,16 @@ export function RiftBattleBoard({
         setDraggingHand(null);
         setFieldDropHover(false);
         setInspectDefId(null);
+        const prog = data?.progressionXp as
+          | { ok?: boolean; granted?: number; levelsGained?: number; rewards?: unknown[] }
+          | undefined;
+        if (prog?.ok && (prog.granted ?? 0) > 0) {
+          emitProgressionEvent({
+            granted: prog.granted,
+            levelsGained: prog.levelsGained,
+            rewards: prog.rewards,
+          });
+        }
         if (action.kind === "PLAY_CARD") {
           recordQuestMetric("tcg_card_play", 1);
           recordQuestMetric("tcg_energy_spend", 1);

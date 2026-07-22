@@ -6,6 +6,8 @@ import { hatchEgg } from "@/game/eggs/hatchery-store";
 import { grantCompanionCardForSpecies } from "@/game/eggs/companion-card-link";
 import { onPetHatched } from "@/game/achievements/hooks";
 import { appendTimelineEvent } from "@/game/timeline/store";
+import { grantXp } from "@/lib/progression";
+import { featureFlagDefaults } from "@/lib/config/feature-flags";
 
 const bodySchema = z.object({
   eggPublicId: z.string().min(4).max(64),
@@ -36,8 +38,18 @@ export async function POST(req: Request) {
       detail: "A companion emerged from its egg into The Riftwilds.",
       tags: ["hatchery", "pet", "companion-card"],
     });
+    let progressionXp = null;
+    if (featureFlagDefaults.KEEPER_PROGRESSION_ENABLED) {
+      progressionXp = grantXp({
+        ownerKey,
+        source: "RIFT_HATCH",
+        requestId: `hatch:${parsed.data.eggPublicId}`,
+        context: { petId: result.pet.publicId },
+      });
+    }
     const res = NextResponse.json({
       ...result,
+      progressionXp,
       companionCard,
       cinematic: {
         kind: "hatch_reveal",

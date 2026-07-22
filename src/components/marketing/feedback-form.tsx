@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import {
   BUG_SEVERITIES,
   BUG_SEVERITY_LABELS,
@@ -9,19 +9,39 @@ import {
   type BugSeverity,
   type FeedbackCategory,
 } from "@/lib/feedback/schema";
+import {
+  FEEDBACK_SCREENSHOT_MAX_BYTES,
+  FEEDBACK_SCREENSHOT_MAX_COUNT,
+  FEEDBACK_SCREENSHOT_MIME,
+} from "@/lib/feedback/screenshot-limits";
 
 type Tab = "bug" | "feedback";
 type Status = "idle" | "loading" | "ok" | "error";
+
+type LocalScreenshot = {
+  id: string;
+  file: File;
+  previewUrl: string;
+};
 
 const inputClass =
   "focus-ring w-full rounded-[var(--radius-md)] border border-[var(--stroke)] bg-[rgba(10,12,16,0.65)] px-3 py-2.5 text-sm text-white placeholder:text-[var(--text-dim)]";
 
 const labelClass = "mb-1.5 block text-xs font-medium text-[var(--text-muted)]";
 
+const ACCEPT = FEEDBACK_SCREENSHOT_MIME.join(",");
+const MAX_MB = Math.round(FEEDBACK_SCREENSHOT_MAX_BYTES / (1024 * 1024));
+
+function revokeAll(shots: LocalScreenshot[]) {
+  for (const s of shots) URL.revokeObjectURL(s.previewUrl);
+}
+
 export function FeedbackForm({ source = "feedback-page" }: { source?: string }) {
   const [tab, setTab] = useState<Tab>("bug");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState<string | null>(null);
+  const fileInputId = useId();
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Bug fields
   const [title, setTitle] = useState("");
@@ -32,6 +52,8 @@ export function FeedbackForm({ source = "feedback-page" }: { source?: string }) 
   const [browserDevice, setBrowserDevice] = useState("");
   const [severity, setSeverity] = useState<BugSeverity>("medium");
   const [screenshotNote, setScreenshotNote] = useState("");
+  const [screenshots, setScreenshots] = useState<LocalScreenshot[]>([]);
+  const [shotError, setShotError] = useState<string | null>(null);
   const [bugEmail, setBugEmail] = useState("");
 
   // Feedback fields
@@ -41,6 +63,21 @@ export function FeedbackForm({ source = "feedback-page" }: { source?: string }) 
 
   // Honeypot
   const [website, setWebsite] = useState("");
+  const screenshotsRef = useRef(screenshots);
+  screenshotsRef.current = screenshots;
+
+  useEffect(() => {
+    return () => revokeAll(screenshotsRef.current);
+  }, []);
+
+  const clearScreenshots = () => {
+    setScreenshots((prev) => {
+      revokeAll(prev);
+      return [];
+    });
+    setShotError(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
 
   const resetBug = () => {
     setTitle("");
@@ -51,6 +88,7 @@ export function FeedbackForm({ source = "feedback-page" }: { source?: string }) 
     setBrowserDevice("");
     setSeverity("medium");
     setScreenshotNote("");
+    clearScreenshots();
     setBugEmail("");
   };
 
@@ -60,12 +98,90 @@ export function FeedbackForm({ source = "feedback-page" }: { source?: string }) 
     setIdeaEmail("");
   };
 
+  const addScreenshots = (fileList: FileList | null) => {
+    if (!fileList || fileList.length === 0) return;
+    setShotError(null);
+
+    const incoming = Array.from(fileList);
+    const room = FEEDBACK_SCREENSHOT_MAX_COUNT - screenshots.length;
+    if (room <= 0) {
+      setShotError(`You can attach up to ${FEEDBACK_SCREENSHOT_MAX_COUNT} screenshots.`);
+      return;
+    }
+
+    const next: LocalScreenshot[] = [];
+    for (const file of incoming.slice(0, room)) {
+      const mime = (file.type || "").toLowerCase();
+      if (!(FEEDBACK_SCREENSHOT_MIME as readonly string[]).includes(mime)) {
+        setShotError("Screenshots must be PNG, JPG, or WebP.");
+        continue;
+      }
+      if (file.size > FEEDBACK_SCREENSHOT_MAX_BYTES) {
+        setShotError(`Each screenshot must be under ${MAX_MB}MB.`);
+        continue;
+      }
+      next.push({
+        id: `${file.name}_${file.size}_${file.lastModified}_${Math.random().toString(36).slice(2, 7)}`,
+        file,
+        previewUrl: URL.createObjectURL(file),
+      });
+    }
+
+    if (incoming.length > room) {
+      setShotError(`Only ${FEEDBACK_SCREENSHOT_MAX_COUNT} screenshots allowed — extra files were skipped.`);
+    }
+
+    if (next.length > 0) {
+      setScreenshots((prev) => [...prev, ...next]);
+    }
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
+
+  const removeScreenshot = (id: string) => {
+    setScreenshots((prev) => {
+      const target = prev.find((s) => s.id === id);
+      if (target) URL.revokeObjectURL(target.previewUrl);
+      return prev.filter((s) => s.id !== id);
+    });
+    setShotError(null);
+  };
+
+  const uploadScreenshots = async (): Promise<string[] | null> => {
+    if (screenshots.length === 0) return [];
+    const form = new FormData();
+    for (const shot of screenshots) form.append("files", shot.file, shot.file.name);
+    const res = await fetch("/api/feedback/upload", {
+      method: "POST",
+      body: form,
+    });
+    const data = (await res.json()) as {
+      ok?: boolean;
+      urls?: string[];
+      message?: string;
+    };
+    if (!res.ok || !data.ok || !Array.isArray(data.urls)) {
+      setStatus("error");
+      setMessage(data.message ?? "Couldn’t upload screenshots — try again.");
+      return null;
+    }
+    return data.urls;
+  };
+
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus("loading");
     setMessage(null);
+    setShotError(null);
 
     const pageUrl = typeof window !== "undefined" ? window.location.href : undefined;
+
+    let screenshotUrls: string[] = [];
+    if (tab === "bug") {
+      const uploaded = await uploadScreenshots();
+      if (uploaded == null) return;
+      screenshotUrls = uploaded;
+    }
+
     const body =
       tab === "bug"
         ? {
@@ -78,6 +194,7 @@ export function FeedbackForm({ source = "feedback-page" }: { source?: string }) 
             browserDevice,
             severity,
             screenshotNote,
+            screenshotUrls,
             email: bugEmail,
             pageUrl,
             website,
@@ -115,6 +232,8 @@ export function FeedbackForm({ source = "feedback-page" }: { source?: string }) 
       setMessage("Network hiccup — try again in a moment.");
     }
   };
+
+  const canAddMore = screenshots.length < FEEDBACK_SCREENSHOT_MAX_COUNT;
 
   return (
     <div className="space-y-4">
@@ -292,20 +411,113 @@ export function FeedbackForm({ source = "feedback-page" }: { source?: string }) 
                 </select>
               </div>
             </div>
+
             <div>
-              <label htmlFor="bug-screenshot" className={labelClass}>
+              <span className={labelClass} id={`${fileInputId}-label`}>
+                Screenshots{" "}
+                <span className="text-[var(--text-dim)]">
+                  (optional · up to {FEEDBACK_SCREENSHOT_MAX_COUNT} · PNG/JPG/WebP · {MAX_MB}MB each)
+                </span>
+              </span>
+
+              <div className="flex flex-wrap items-center gap-2">
+                <input
+                  ref={fileInputRef}
+                  id={fileInputId}
+                  type="file"
+                  accept={ACCEPT}
+                  multiple
+                  disabled={!canAddMore || status === "loading"}
+                  aria-labelledby={`${fileInputId}-label`}
+                  onChange={(e) => addScreenshots(e.target.files)}
+                  className="sr-only"
+                />
+                <label
+                  htmlFor={fileInputId}
+                  className={
+                    canAddMore && status !== "loading"
+                      ? "focus-ring inline-flex cursor-pointer items-center gap-2 rounded-[var(--radius-md)] border border-[var(--stroke)] bg-[rgba(10,12,16,0.65)] px-3 py-2 text-sm text-[var(--text-muted)] hover:border-[var(--cyan)]/40 hover:text-white"
+                      : "inline-flex cursor-not-allowed items-center gap-2 rounded-[var(--radius-md)] border border-[var(--stroke)] bg-[rgba(10,12,16,0.4)] px-3 py-2 text-sm text-[var(--text-dim)] opacity-60"
+                  }
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden
+                    className="shrink-0 text-[var(--cyan)]"
+                  >
+                    <path
+                      d="M4 16.5V18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.5M12 4v11m0 0 3.5-3.5M12 15l-3.5-3.5"
+                      stroke="currentColor"
+                      strokeWidth="1.75"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  {screenshots.length === 0 ? "Add screenshots" : "Add more"}
+                </label>
+                {screenshots.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={clearScreenshots}
+                    disabled={status === "loading"}
+                    className="focus-ring text-xs text-[var(--text-dim)] underline-offset-2 hover:text-white hover:underline disabled:opacity-50"
+                  >
+                    Clear all
+                  </button>
+                )}
+              </div>
+
+              {screenshots.length > 0 && (
+                <ul className="mt-3 flex flex-wrap gap-3" aria-label="Screenshot previews">
+                  {screenshots.map((shot, index) => (
+                    <li
+                      key={shot.id}
+                      className="relative h-24 w-24 overflow-hidden rounded-[var(--radius-md)] border border-[var(--stroke)] bg-[rgba(10,12,16,0.8)]"
+                    >
+                      {/* object URL preview — not next/image */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={shot.previewUrl}
+                        alt={`Screenshot ${index + 1} preview`}
+                        className="h-full w-full object-cover"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeScreenshot(shot.id)}
+                        disabled={status === "loading"}
+                        aria-label={`Remove screenshot ${index + 1}`}
+                        className="focus-ring absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-md border border-[var(--stroke)] bg-[rgba(8,12,20,0.88)] text-xs text-white hover:border-[var(--amber)] disabled:opacity-50"
+                      >
+                        ×
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {shotError && (
+                <p className="mt-2 text-xs text-[var(--amber)]" role="status">
+                  {shotError}
+                </p>
+              )}
+
+              <label htmlFor="bug-screenshot-note" className={`${labelClass} mt-3`}>
                 Screenshot note <span className="text-[var(--text-dim)]">(optional)</span>
               </label>
               <textarea
-                id="bug-screenshot"
+                id="bug-screenshot-note"
                 maxLength={1000}
                 rows={2}
                 value={screenshotNote}
                 onChange={(e) => setScreenshotNote(e.target.value)}
-                placeholder="Describe what a screenshot would show, or link if you host one elsewhere. File upload isn’t wired yet."
+                placeholder="Anything we should notice in the screenshots?"
                 className={inputClass}
               />
             </div>
+
             <div>
               <label htmlFor="bug-email" className={labelClass}>
                 Contact email <span className="text-[var(--text-dim)]">(optional)</span>

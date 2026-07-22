@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { createPasswordResetToken } from "@/lib/auth/email-auth";
+import { canExposeAuthDevSecrets } from "@/lib/auth/mail";
 import { withApiGuard } from "@/lib/security/api-guard";
 import { ErrorCodes } from "@/lib/errors/app-error";
 
@@ -35,12 +36,17 @@ export async function POST(request: NextRequest) {
   }
 
   const result = await createPasswordResetToken(parsed.data.email);
+  const expose = canExposeAuthDevSecrets();
 
   return NextResponse.json({
     ok: true,
     requestId: guard.requestId,
-    message: "If an account exists, a reset link was issued.",
-    // Local/dev only
-    resetToken: process.env.NODE_ENV === "production" ? undefined : result.token,
+    message:
+      result.emailDelivery === "console"
+        ? "If an account exists, a reset link was issued (email not configured — check on-screen or the server console)."
+        : "If an account exists, a reset link was issued.",
+    emailDelivery: result.emailDelivery,
+    // Local/dev only — never return raw tokens in production.
+    resetToken: expose ? result.token : undefined,
   });
 }

@@ -1,7 +1,7 @@
 import type { StarterSpecies } from "@/lib/assets/manifest";
 
 /** Bump when pet list thumbs are regenerated. */
-export const PET_THUMB_V = "petthumb4";
+export const PET_THUMB_V = "petthumb5";
 
 /** Painted Riftling portraits (AI-generated masters, 1024px). */
 export function creaturePortraitPath(slug: string): string {
@@ -170,6 +170,19 @@ export function questImagePath(questKey: string): string {
 /** Category thumb under public/assets/ui/{folder}/{slug}.png */
 export function sectionUiThumbPath(folder: string, slug: string): string {
   return `/assets/ui/${folder}/${slug}.png?v=${SECTION_UI_THUMB_V}`;
+}
+
+/** Bump when Keeper Profile jump/activity thumbs are regenerated. */
+export const PROFILE_UI_ART_V = "prof1";
+
+/** Jump-back-in cover under public/assets/ui/profile/jump-{slug}.png */
+export function profileJumpThumbPath(slug: string): string {
+  return `/assets/ui/profile/jump-${slug}.png?v=${PROFILE_UI_ART_V}`;
+}
+
+/** Recent-activity left thumb under public/assets/ui/profile/activity-{kind}.png */
+export function profileActivityThumbPath(kind: string): string {
+  return `/assets/ui/profile/activity-${kind}.png?v=${PROFILE_UI_ART_V}`;
 }
 
 /** Bump when Rift Exchange method card backgrounds are regenerated. */

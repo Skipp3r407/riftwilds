@@ -59,7 +59,7 @@ export const AUTH_PROVIDERS: AuthProviderDef[] = [
     id: "discord",
     kind: "oauth",
     label: "Discord",
-    description: "Community social sign-in (scaffold until keys configured).",
+    description: "Community social sign-in (live when Discord keys are set).",
     priority: "primary",
     implemented: true,
     featureFlag: "AUTH_SOCIAL_ENABLED",
@@ -68,7 +68,7 @@ export const AUTH_PROVIDERS: AuthProviderDef[] = [
     id: "apple",
     kind: "oauth",
     label: "Apple",
-    description: "Sign in with Apple (scaffold until keys configured).",
+    description: "Sign in with Apple (live when Apple keys are set).",
     priority: "primary",
     implemented: true,
     featureFlag: "AUTH_SOCIAL_ENABLED",
@@ -135,7 +135,7 @@ export function listAuthProviders(opts?: {
         ...p,
         description: oauthKeysPresent(p.id)
           ? p.description
-          : `${p.label} scaffold — add OAuth keys to enable live redirect.`,
+          : `${p.label} — add OAuth keys in .env to enable.`,
       };
     }
     return p;

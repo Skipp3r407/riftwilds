@@ -37,14 +37,21 @@ function OnboardingInner() {
   const [tutorialIntroSeen, setTutorialIntroSeen] = useState(false);
 
   const load = useCallback(async () => {
-    const res = await fetch("/api/auth/onboarding/complete");
+    const res = await fetch("/api/auth/onboarding/complete", {
+      credentials: "same-origin",
+    });
     if (res.status === 401) {
-      router.replace(`/login?returnUrl=${encodeURIComponent("/onboarding")}`);
+      setError("Session missing — sign in again to finish onboarding.");
+      router.replace(
+        `/login?returnUrl=${encodeURIComponent("/onboarding")}&reason=login-required`,
+      );
       return;
     }
-    const json = await res.json();
-    setState(json.state ?? null);
-    if (json.state?.complete) {
+    const json = await res.json().catch(() => null);
+    setState(json?.state ?? null);
+    if (json?.profile?.displayName) setDisplayName(json.profile.displayName);
+    if (json?.profile?.username) setUsername(json.profile.username);
+    if (json?.state?.complete) {
       router.replace(returnUrl.startsWith("/") ? returnUrl : "/play");
     }
   }, [router, returnUrl]);
@@ -59,12 +66,18 @@ function OnboardingInner() {
     try {
       const res = await fetch("/api/auth/onboarding/complete", {
         method: "POST",
+        credentials: "same-origin",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const json = await res.json();
-      if (!res.ok || !json.ok) {
-        setError(json?.error?.message ?? "Could not save onboarding step");
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json?.ok) {
+        setError(
+          json?.error?.message ??
+            (res.status === 401
+              ? "Session expired — sign in again."
+              : "Could not save onboarding step"),
+        );
         return;
       }
       setState(json.state);

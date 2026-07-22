@@ -129,6 +129,14 @@ class AudioManager {
     if (ctx?.state === "running") this.unlocked = true;
   }
 
+  /** Suspend the shared AudioContext (page hide / unload). Next unlock/play resumes it. */
+  suspendContext() {
+    if (!this.ctx || this.ctx.state !== "running") return;
+    void this.ctx.suspend().catch(() => {
+      /* ignore */
+    });
+  }
+
   async getContext(): Promise<AudioContext | null> {
     return this.ensureContext();
   }

@@ -77,22 +77,35 @@ function LoginForm() {
     try {
       const res = await fetch("/api/auth/login", {
         method: "POST",
+        credentials: "same-origin",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password, rememberMe }),
       });
-      const json = await res.json();
-      if (!res.ok || !json.ok) {
-        setError(json?.error?.message ?? "Sign-in failed");
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json?.ok) {
+        setError(
+          json?.error?.message ??
+            (res.status === 401
+              ? "Invalid email or password."
+              : `Sign-in failed (${res.status}).`),
+        );
         playSfx("ui.click");
         return;
       }
       playSfx("login.success");
-      const next =
-        json.next === "/onboarding" || json.next?.startsWith("/verify")
-          ? `${json.next}${json.next.includes("?") ? "&" : "?"}returnUrl=${encodeURIComponent(returnUrl)}`
-          : returnUrl.startsWith("/")
-            ? returnUrl
-            : "/play";
+      const apiNext =
+        typeof json.next === "string" && json.next.startsWith("/")
+          ? json.next
+          : "/play";
+      const needsSetup =
+        apiNext === "/onboarding" ||
+        apiNext.startsWith("/onboarding?") ||
+        apiNext.startsWith("/verify");
+      const next = needsSetup
+        ? `${apiNext}${apiNext.includes("?") ? "&" : "?"}returnUrl=${encodeURIComponent(returnUrl)}`
+        : returnUrl.startsWith("/")
+          ? returnUrl
+          : apiNext;
       router.push(next);
       router.refresh();
     } catch {
@@ -229,7 +242,9 @@ function LoginForm() {
 
         <div className="border-t border-[var(--stroke)] pt-4">
           <p className="mb-2 text-xs uppercase tracking-wide text-[var(--text-dim)]">
-            Social (scaffold if keys missing)
+            {process.env.NODE_ENV !== "production"
+              ? "Continue with · Connect Google in .env to enable"
+              : "Continue with"}
           </p>
           <div className="grid gap-2 sm:grid-cols-3">
             {providers

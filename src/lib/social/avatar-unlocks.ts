@@ -13,12 +13,28 @@ import { listPetsForOwner } from "@/game/eggs/hatchery-store";
 import { debitCredits, getCreditBalance } from "@/lib/credits/ledger";
 import { isSolPurchaseLive } from "@/lib/economy/sol/flags";
 import { grantEntitlement } from "@/lib/economy/sol/entitlements";
+import { NAMED_NPCS } from "@/content/npcs";
+import type { ItemRarity } from "@/lib/items/types";
 import {
+  isStarterCharacterNpcSlug,
+  isStarterLoreAvatarId,
+  loreAvatarKey,
+  npcAvatarKey,
   STARTER_RIFTLING_AVATAR_SLUGS,
   speciesAvatarKey,
 } from "@/lib/social/avatar-keys";
 import { getSocialStore } from "@/lib/social/store";
 import type { SocialProfile } from "@/lib/social/types";
+
+/** Lore portrait catalog ids purchasable / free via character unlocks. */
+const LORE_CHARACTER_IDS = ["first-riftling"] as const;
+
+const CHARACTER_RARITY_BANDS: readonly ItemRarity[] = [
+  "UNCOMMON",
+  "RARE",
+  "EPIC",
+  "LEGENDARY",
+];
 
 export type AvatarTaskProgress = {
   id: string;
@@ -269,16 +285,258 @@ function requireProfile(ownerKey: string): SocialProfile {
   return profile;
 }
 
-/** Persist a purchased / granted species avatar unlock on the social profile. */
-export function grantSpeciesAvatarUnlock(ownerKey: string, speciesSlug: string): SocialProfile {
+/** Persist a purchased / granted avatar unlock key on the social profile. */
+export function grantAvatarUnlockKey(ownerKey: string, key: string): SocialProfile {
   const profile = requireProfile(ownerKey);
-  const key = speciesAvatarKey(speciesSlug);
   const list = profile.unlockedAvatarKeys ?? [];
   if (!list.includes(key)) {
     profile.unlockedAvatarKeys = [...list, key];
   }
   profile.lastSeenAt = new Date().toISOString();
   return profile;
+}
+
+/** Persist a purchased / granted species avatar unlock on the social profile. */
+export function grantSpeciesAvatarUnlock(ownerKey: string, speciesSlug: string): SocialProfile {
+  return grantAvatarUnlockKey(ownerKey, speciesAvatarKey(speciesSlug));
+}
+
+/** Stable cosmetic rarity band for named keepers / lore (price + badge). */
+export function characterAvatarRarity(kind: "npc" | "lore", id: string): ItemRarity {
+  if (kind === "lore") return "EPIC";
+  if (isStarterCharacterNpcSlug(id)) return "COMMON";
+  let h = 0;
+  for (let i = 0; i < id.length; i += 1) {
+    h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  }
+  return CHARACTER_RARITY_BANDS[h % CHARACTER_RARITY_BANDS.length]!;
+}
+
+export function creditsPriceForCharacterRarity(rarity: ItemRarity): number {
+  return AVATAR_CREDITS_BY_RARITY[rarity] ?? AVATAR_CREDITS_BY_RARITY.RARE!;
+}
+
+export function solPriceForCharacterRarity(rarity: ItemRarity): string {
+  return AVATAR_SOL_BY_RARITY[rarity] ?? AVATAR_SOL_BY_RARITY.RARE!;
+}
+
+export function evaluateCharacterAvatarUnlock(
+  ownerKey: string,
+  input: { kind: "npc"; npcSlug: string } | { kind: "lore"; characterId: string },
+): AvatarUnlockEval | null {
+  if (input.kind === "npc") {
+    const slug = input.npcSlug.trim().toLowerCase();
+    const npc = NAMED_NPCS.find((n) => n.active && (n.slug === slug || n.id === slug));
+    if (!npc) return null;
+
+    const key = npcAvatarKey(npc.slug);
+    const profile = getSocialStore().profiles.get(ownerKey);
+    const purchased = (profile?.unlockedAvatarKeys ?? []).includes(key);
+    const freeStarter = isStarterCharacterNpcSlug(npc.slug);
+    const unlocked = freeStarter || purchased;
+    const rarity = characterAvatarRarity("npc", npc.slug);
+    const creditsPrice = creditsPriceForCharacterRarity(rarity);
+    const solPrice = solPriceForCharacterRarity(rarity);
+    const solPurchaseEnabled = isSolPurchaseLive();
+
+    let lockedReason: string | undefined;
+    if (!unlocked) {
+      lockedReason = `Portrait unlock · ${creditsPrice} Credits${
+        solPurchaseEnabled ? ` · ${solPrice} SOL` : ` · ${solPrice} SOL (coming soon)`
+      }. Cosmetic keeper skin only.`;
+    }
+
+    return {
+      unlocked,
+      lockedReason,
+      paths: {
+        freeStarter,
+        ownedPet: false,
+        task: null,
+        creditsPrice,
+        solPrice,
+        solPurchaseEnabled,
+        purchased,
+      },
+    };
+  }
+
+  const characterId = input.characterId.trim().toLowerCase();
+  if (!(LORE_CHARACTER_IDS as readonly string[]).includes(characterId)) return null;
+
+  const key = loreAvatarKey(characterId);
+  const profile = getSocialStore().profiles.get(ownerKey);
+  const purchased = (profile?.unlockedAvatarKeys ?? []).includes(key);
+  const freeStarter = isStarterLoreAvatarId(characterId);
+  const unlocked = freeStarter || purchased;
+  const rarity = characterAvatarRarity("lore", characterId);
+  const creditsPrice = creditsPriceForCharacterRarity(rarity);
+  const solPrice = solPriceForCharacterRarity(rarity);
+  const solPurchaseEnabled = isSolPurchaseLive();
+
+  let lockedReason: string | undefined;
+  if (!unlocked) {
+    lockedReason = `Portrait unlock · ${creditsPrice} Credits${
+      solPurchaseEnabled ? ` · ${solPrice} SOL` : ` · ${solPrice} SOL (coming soon)`
+    }. Cosmetic only.`;
+  }
+
+  return {
+    unlocked,
+    lockedReason,
+    paths: {
+      freeStarter,
+      ownedPet: false,
+      task: null,
+      creditsPrice,
+      solPrice,
+      solPurchaseEnabled,
+      purchased,
+    },
+  };
+}
+
+export function purchaseCharacterAvatarWithCredits(params: {
+  ownerKey: string;
+  avatarKey: string;
+  requestId: string;
+}):
+  | { ok: true; key: string; balance: number; profile: SocialProfile; catalogHint: "refresh" }
+  | { ok: false; error: string; message: string; balance?: number } {
+  const key = params.avatarKey.trim();
+  const colon = key.indexOf(":");
+  if (colon < 1) {
+    return { ok: false, error: "not_found", message: "That portrait unlock is not available." };
+  }
+  const kind = key.slice(0, colon);
+  const id = key.slice(colon + 1);
+  if (!id || (kind !== "npc" && kind !== "lore")) {
+    return { ok: false, error: "not_found", message: "That portrait unlock is not available." };
+  }
+
+  const evald =
+    kind === "npc"
+      ? evaluateCharacterAvatarUnlock(params.ownerKey, { kind: "npc", npcSlug: id })
+      : evaluateCharacterAvatarUnlock(params.ownerKey, { kind: "lore", characterId: id });
+  if (!evald) {
+    return { ok: false, error: "not_found", message: "That portrait unlock is not available." };
+  }
+  if (evald.unlocked) {
+    return {
+      ok: false,
+      error: "already_unlocked",
+      message: "That portrait is already unlocked.",
+      balance: getCreditBalance(params.ownerKey),
+    };
+  }
+
+  const amount = evald.paths.creditsPrice;
+  const debit = debitCredits({
+    userId: params.ownerKey,
+    amount,
+    reason: "PREMIUM_STORE",
+    requestId: params.requestId,
+    metadata: {
+      kind: "character_avatar",
+      avatarKey: key,
+      cosmeticOnly: true,
+      grantsGameplayPower: false,
+      label: "Portrait unlock / cosmetic keeper skin",
+    },
+  });
+  if (!debit.ok) {
+    return {
+      ok: false,
+      error: debit.error,
+      message: debit.message,
+      balance: debit.balance ?? getCreditBalance(params.ownerKey),
+    };
+  }
+
+  const profile = grantAvatarUnlockKey(params.ownerKey, key);
+  grantEntitlement({
+    userId: params.ownerKey,
+    kind: "COSMETIC",
+    assetKey: key,
+    requestId: `avatar-credits:${params.requestId}`,
+    source: "credits_premium_store",
+    metadata: { avatarKey: key, currency: "CREDITS", amount },
+  });
+
+  return {
+    ok: true,
+    key,
+    balance: debit.balance,
+    profile,
+    catalogHint: "refresh",
+  };
+}
+
+export function purchaseCharacterAvatarWithSol(params: {
+  ownerKey: string;
+  avatarKey: string;
+  requestId: string;
+}):
+  | { ok: true; key: string; profile: SocialProfile; note: string }
+  | { ok: false; error: string; message: string; solPrice?: string } {
+  const key = params.avatarKey.trim();
+  const colon = key.indexOf(":");
+  if (colon < 1) {
+    return { ok: false, error: "not_found", message: "That portrait unlock is not available." };
+  }
+  const kind = key.slice(0, colon);
+  const id = key.slice(colon + 1);
+  if (!id || (kind !== "npc" && kind !== "lore")) {
+    return { ok: false, error: "not_found", message: "That portrait unlock is not available." };
+  }
+
+  const evald =
+    kind === "npc"
+      ? evaluateCharacterAvatarUnlock(params.ownerKey, { kind: "npc", npcSlug: id })
+      : evaluateCharacterAvatarUnlock(params.ownerKey, { kind: "lore", characterId: id });
+  if (!evald) {
+    return { ok: false, error: "not_found", message: "That portrait unlock is not available." };
+  }
+  if (evald.unlocked) {
+    return {
+      ok: false,
+      error: "already_unlocked",
+      message: "That portrait is already unlocked.",
+      solPrice: evald.paths.solPrice,
+    };
+  }
+
+  if (!isSolPurchaseLive()) {
+    return {
+      ok: false,
+      error: "sol_coming_soon",
+      message:
+        "SOL portrait purchases are coming soon (SOL_PURCHASES_ENABLED is off). Unlock with Credits — cosmetic keeper skin only, never required.",
+      solPrice: evald.paths.solPrice,
+    };
+  }
+
+  const profile = grantAvatarUnlockKey(params.ownerKey, key);
+  grantEntitlement({
+    userId: params.ownerKey,
+    kind: "COSMETIC",
+    assetKey: key,
+    requestId: `avatar-sol:${params.requestId}`,
+    source: "sol_purchase_stub",
+    metadata: {
+      avatarKey: key,
+      currency: "SOL",
+      solPrice: evald.paths.solPrice,
+      softSimulation: true,
+    },
+  });
+
+  return {
+    ok: true,
+    key,
+    profile,
+    note: "SOL portrait unlock recorded (soft path / DEMO). Cosmetic keeper skin only.",
+  };
 }
 
 export function purchaseSpeciesAvatarWithCredits(params: {

@@ -145,14 +145,28 @@ function familyMeta(cardId: string): {
   };
 }
 
-/** Prefer per-card scenic face so Base / Companion / Ascendant never share one thumb. */
+/**
+ * Clean source art for MasterCardTemplate — never baked faces.
+ * Baked WebP faces may include obsolete "COPIES OWNED: 0" chrome.
+ */
 function displayArtForCard(card: CatalogCard): string | undefined {
+  const content = getCardById(card.id);
+  return (
+    card.cleanArtPath ||
+    content?.art.assetPath ||
+    card.artPath ||
+    undefined
+  );
+}
+
+/** Legacy composited face — fallback only when clean art is missing. */
+function displayFaceForCard(card: CatalogCard): string | undefined {
   const content = getCardById(card.id);
   if (content) {
     const face = resolveCardImagePath(content);
-    if (face) return face;
+    if (face && face !== content.art.assetPath) return face;
   }
-  return card.cardImagePath || card.artPath;
+  return card.cardImagePath;
 }
 
 type Faction = {
@@ -1032,6 +1046,7 @@ export function DeckBuilder() {
                             inDeck >= card.maxCopies || inDeck >= card.owned;
                           const content = getCardById(card.id);
                           const art = displayArtForCard(card);
+                          const face = displayFaceForCard(card);
                           const frameSize = frameSizeFor(galleryPrefs.size);
                           return (
                             <li key={entry.stackKey}>
@@ -1071,14 +1086,17 @@ export function DeckBuilder() {
                                   collectionNumber={content?.collectorNumber}
                                   expansionSet={content?.expansionId}
                                   artSrc={art}
-                                  cardFaceSrc={card.cardImagePath}
-                                  ownedCount={inDeck}
+                                  cardFaceSrc={face}
+                                  ownedCount={card.owned > 0 ? card.owned : null}
                                   dimmed={atCap}
                                   selected={focusListId === card.id}
                                   onClick={() => openCardBio(card.id)}
                                   footerSlot={
                                     <span className="text-[11px] text-amber-100/80">
                                       {entry.label}
+                                      {card.owned > 0
+                                        ? ` · in deck ${inDeck}/${Math.min(card.maxCopies, card.owned)}`
+                                        : " · preview"}
                                     </span>
                                   }
                                 />
@@ -1122,6 +1140,7 @@ export function DeckBuilder() {
                           inDeck >= card.maxCopies || inDeck >= card.owned;
                         const content = getCardById(card.id);
                         const art = displayArtForCard(card);
+                        const face = displayFaceForCard(card);
                         const frameSize = frameSizeFor(galleryPrefs.size);
                         const meta = familyMeta(card.id);
                         const isFirstOfExpandedFamily =
@@ -1180,15 +1199,16 @@ export function DeckBuilder() {
                                 collectionNumber={content?.collectorNumber}
                                 expansionSet={content?.expansionId}
                                 artSrc={art}
-                                cardFaceSrc={card.cardImagePath}
-                                ownedCount={inDeck}
+                                cardFaceSrc={face}
+                                ownedCount={card.owned > 0 ? card.owned : null}
                                 dimmed={atCap}
                                 selected={focusListId === card.id}
                                 onClick={() => openCardBio(card.id)}
                                 footerSlot={
                                   <span className="text-[11px] text-amber-100/80">
-                                    {inDeck}/
-                                    {Math.min(card.maxCopies, card.owned)}
+                                    {card.owned > 0
+                                      ? `In deck ${inDeck}/${Math.min(card.maxCopies, card.owned)}`
+                                      : "Preview — not in collection"}
                                   </span>
                                 }
                               />

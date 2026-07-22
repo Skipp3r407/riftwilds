@@ -6,7 +6,7 @@ import { CommercialShowcase } from "@/components/marketing/commercial-showcase";
 import { HatchOddsPanel } from "@/components/marketing/hatch-odds-panel";
 import { EconomySummary } from "@/components/economy";
 import { EveryPurchaseSection } from "@/components/revenue";
-import { homeAffinityBgPath, mysteryRiftEggPath } from "@/lib/assets/paths";
+import { homeAffinityBgPath, mysteryRiftEggPath, sectionUiThumbPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import { getActivePolicy, bpsToPercentLabel } from "@/lib/revenue/policies";
 
@@ -72,26 +72,32 @@ const faq = [
   {
     q: "How is this different from other Solana pet games?",
     a: `${projectConfig.PROJECT_NAME} centers on a strategic Rift Battles card game with Riftling companions, Credits-first economy, and transparent revenue policies — not just hatch-and-hold. Living World is a future release.`,
+    thumb: "different",
   },
   {
     q: "Do I need the token?",
     a: `Visitors can browse. Holding ${projectConfig.TOKEN_SYMBOL} unlocks Keeper+ features such as starter eggs. Token holding does not guarantee profit.`,
+    thumb: "token",
   },
   {
     q: "Are SOL rewards guaranteed?",
     a: "No. Holder allocations depend on actual eligible revenue, eligibility rules, treasury conditions, and policy versions. Claims stay feature-flagged until ready.",
+    thumb: "sol-rewards",
   },
   {
     q: "Can my Riftling die?",
     a: "Permanent death is off by default. Neglect can make a pet dormant. Memorials exist if that mode is ever enabled.",
+    thumb: "bond",
   },
   {
     q: "How are hatch results chosen?",
     a: "Server-authoritative randomness with logged rolls. See Fairness for the model — not a paid mystery box for equipment.",
+    thumb: "hatch",
   },
   {
     q: "Where does shop SOL go?",
     a: "Direct purchases split by the active public policy (Growth, Pet Holder Vault, Ops, Events). Full breakdown before you pay.",
+    thumb: "treasury",
   },
 ];
 
@@ -348,17 +354,46 @@ export default function HomePage() {
         <EconomySummary variant="home" />
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-16 md:px-6">
+      <section id="faq" className="mx-auto max-w-7xl px-4 py-16 md:px-6">
         <h2 className="font-display text-3xl text-white">Questions people ask</h2>
         <div className="mt-6 space-y-3">
-          {faq.map((item) => (
-            <details key={item.q} className="panel group p-4">
-              <summary className="focus-ring cursor-pointer list-none rounded font-medium text-white">
-                {item.q}
-              </summary>
-              <p className="mt-2 text-sm text-[var(--text-muted)]">{item.a}</p>
-            </details>
-          ))}
+          {faq.map((item) => {
+            const thumbSrc = sectionUiThumbPath("faq", item.thumb);
+            return (
+              <details
+                key={item.q}
+                className="panel group relative overflow-hidden !bg-[rgba(8,10,18,0.72)]"
+              >
+                <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
+                  <Image
+                    src={thumbSrc}
+                    alt=""
+                    fill
+                    className="object-cover opacity-[0.42] transition-opacity duration-300 group-hover:opacity-[0.55] group-open:opacity-[0.55]"
+                    sizes="720px"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[rgba(6,8,14,0.35)] via-[rgba(8,10,18,0.82)] to-[rgba(8,10,18,0.96)]" />
+                </div>
+                <summary className="focus-ring relative z-[1] flex cursor-pointer list-none items-center gap-3.5 rounded p-3 sm:gap-4 sm:p-4 [&::-webkit-details-marker]:hidden">
+                  <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-white/10 shadow-[0_0_24px_rgba(61,231,255,0.12)] sm:h-16 sm:w-16">
+                    <Image
+                      src={thumbSrc}
+                      alt=""
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 group-open:scale-105"
+                      sizes="64px"
+                      unoptimized
+                    />
+                  </span>
+                  <span className="min-w-0 flex-1 font-medium text-white">{item.q}</span>
+                </summary>
+                <p className="relative z-[1] border-t border-white/10 px-4 pb-4 pl-[4.35rem] pt-3 text-sm text-[var(--text-muted)] sm:pl-[5.25rem]">
+                  {item.a}
+                </p>
+              </details>
+            );
+          })}
         </div>
         <Link href="/docs" className="mt-6 inline-block text-sm text-[var(--cyan)] underline">
           Read the docs →

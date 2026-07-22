@@ -327,6 +327,8 @@ model User {
   safeLogoutCheckpoints SafeLogoutCheckpoint[]
   sleepingCharacters   SleepingCharacterStub[]
   presenceProfiles     PlayerPresenceProfile[]
+  progression          PlayerProgression?
+  progressionXpEvents  ProgressXpEvent[]
 
   @@index([role])
   @@index([createdAt])
@@ -428,14 +430,19 @@ model EmailVerificationToken {
   id        String    @id @default(cuid())
   createdAt DateTime  @default(now())
   userId    String
+  /** SHA-256 of one-time link token (base64url). */
   tokenHash String    @unique
+  /** SHA-256 of 6-digit one-time code (optional for older rows). */
+  codeHash  String?
   email     String
+  /** Codes + links expire together (default 10 minutes). */
   expiresAt DateTime
   usedAt    DateTime?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
+  @@index([codeHash])
   @@index([expiresAt])
 }
 
@@ -3112,6 +3119,61 @@ enum ServerPresenceState {
   IN_EVENT
   IN_MINIGAME
   IN_PRIVATE_INSTANCE
+}
+
+/// Keeper XP / leveling — server-authoritative progression (extends PlayerProfile.level).
+model PlayerProgression {
+  id                  String   @id @default(cuid())
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  userId              String?  @unique
+  ownerKey            String   @unique
+  level               Int      @default(1)
+  currentXp           Int      @default(0)
+  lifetimeXp          Int      @default(0)
+  prestige            Int      @default(0)
+  prestigeUnlocked    Boolean  @default(false)
+  statPoints          Int      @default(0)
+  skillPoints         Int      @default(0)
+  masteryXp           Int      @default(0)
+  loginStreak         Int      @default(0)
+  longestLoginStreak  Int      @default(0)
+  restedXpPool        Int      @default(0)
+  lastSeenAt          DateTime @default(now())
+  combatStatsJson     Json?
+  unlockedJson        Json?
+  masteryJson         Json?
+  statsJson           Json?
+  version             Int      @default(0)
+
+  user   User?             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  events ProgressXpEvent[]
+
+  @@index([level])
+  @@index([prestige])
+  @@index([lifetimeXp])
+}
+
+model ProgressXpEvent {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  userId         String?
+  ownerKey       String
+  progressionId  String?
+  sourceKey      String
+  amount         Int
+  requestId      String?
+  matchId        String?
+  breakdownJson  Json?
+  levelsGained   Int      @default(0)
+
+  user         User?              @relation(fields: [userId], references: [id], onDelete: SetNull)
+  progression  PlayerProgression? @relation(fields: [progressionId], references: [id], onDelete: SetNull)
+
+  @@unique([ownerKey, requestId])
+  @@index([ownerKey, createdAt])
+  @@index([userId, createdAt])
+  @@index([sourceKey])
 }
 
 /// Soft social presence profile — cosmetic progression, never combat power.

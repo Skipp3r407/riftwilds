@@ -67,13 +67,27 @@ class AdaptiveAudioEngine {
     return this.state;
   }
 
-  /** Enter a UI / game surface — sets music+ambient+reverb posture. */
+  /**
+   * Enter a UI / game surface — sets ambient/stems/reverb/SFX posture.
+   *
+   * Dock playlist music is user-owned: route/page soundscapes must NOT
+   * crossfade or restart the HTMLAudio playlist. Live-world region themes
+   * and in-match battle/boss beds may still opt into playlist changes via
+   * `switchPlaylist` (default off except battle/boss).
+   */
   async enterMode(
     mode: SoundscapeMode,
-    opts: { regionId?: string; fadeMs?: number } = {},
+    opts: {
+      regionId?: string;
+      fadeMs?: number;
+      /** When true, may change the dock playlist track. Default: battle/boss only. */
+      switchPlaylist?: boolean;
+    } = {},
   ) {
     this.state.mode = mode;
     const fadeMs = opts.fadeMs ?? 900;
+    const switchPlaylist =
+      opts.switchPlaylist ?? (mode === "battle" || mode === "boss");
 
     const hubish =
       mode === "menu" ||
@@ -102,9 +116,8 @@ class AdaptiveAudioEngine {
       ambientEngine.stop(300);
       if (userPaused) {
         pauseAllBeds();
-      } else {
-        await musicEngine.playMenuTheme(fadeMs);
       }
+      // Do not call playMenuTheme — that restarted / swapped tracks on every nav.
       if (mode === "login") {
         playSfx("login.enter");
       }
@@ -130,8 +143,11 @@ class AdaptiveAudioEngine {
           if (this.state.regionId) {
             if (userPaused) {
               pauseAllBeds();
-            } else {
+            } else if (switchPlaylist) {
               await musicEngine.playRegionTheme(this.state.regionId, fadeMs);
+              ambientEngine.startRegion(this.state.regionId);
+            } else {
+              // Keep dock playlist; still seat regional ambience under it.
               ambientEngine.startRegion(this.state.regionId);
             }
           }
@@ -145,7 +161,10 @@ class AdaptiveAudioEngine {
             durationMs: 1000,
             buses: ["ambient"],
           });
-          await musicEngine.playTrack(3, fadeMs); // Pulse
+          // Hub/lobby pages must not yank the dock playlist to Pulse.
+          if (switchPlaylist) {
+            await musicEngine.playTrack(3, fadeMs); // Pulse
+          }
           void musicStems.startCombatBed();
           if (mode === "tournament") playSfx("tournament.start");
           else playSfx("arena.start");
@@ -158,7 +177,9 @@ class AdaptiveAudioEngine {
             durationMs: 1200,
             buses: ["ambient"],
           });
-          await musicEngine.playTrack(4, fadeMs); // Urgent
+          if (switchPlaylist) {
+            await musicEngine.playTrack(4, fadeMs); // Urgent
+          }
           void musicStems.startCombatBed();
           void musicStems.setIntensity(0.72);
           break;
@@ -170,7 +191,9 @@ class AdaptiveAudioEngine {
             durationMs: 1600,
             buses: ["ambient", "music"],
           });
-          await musicEngine.playTrack(7, fadeMs); // Menacing
+          if (switchPlaylist) {
+            await musicEngine.playTrack(7, fadeMs); // Menacing
+          }
           void musicStems.startBossBed();
           playSfx("boss.enter");
           break;
@@ -296,7 +319,7 @@ export const adaptiveAudio = new AdaptiveAudioEngine();
 
 export function enterSoundscape(
   mode: SoundscapeMode,
-  opts?: { regionId?: string; fadeMs?: number },
+  opts?: { regionId?: string; fadeMs?: number; switchPlaylist?: boolean },
 ) {
   return adaptiveAudio.enterMode(mode, opts);
 }

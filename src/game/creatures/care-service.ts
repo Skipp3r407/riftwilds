@@ -42,6 +42,7 @@ import {
   spendCareAction,
   spendCareItem,
 } from "@/lib/credits";
+import { grantXp } from "@/lib/progression";
 import { assertOwnership } from "@/lib/security/authorization";
 
 export type CareActionRequest = {
@@ -328,6 +329,25 @@ export function performCareAction(req: CareActionRequest): CareActionResult {
 
   pet.careProgress = progress;
   savePet(pet);
+
+  // Keeper XP (separate from pet care XP) — server-side only.
+  if (isFeatureEnabled("KEEPER_PROGRESSION_ENABLED")) {
+    if (action === "FEED") {
+      grantXp({
+        ownerKey: req.ownerKey,
+        source: "RIFT_FEED",
+        requestId: `care-feed:${requestId}`,
+        context: { petId: pet.publicId },
+      });
+    } else if (action === "PLAY" || action === "PET" || action === "ENCOURAGE") {
+      grantXp({
+        ownerKey: req.ownerKey,
+        source: "RIFT_PLAY",
+        requestId: `care-play:${requestId}`,
+        context: { petId: pet.publicId },
+      });
+    }
+  }
 
   const result: CareActionResult & { ok: true } = {
     ok: true,

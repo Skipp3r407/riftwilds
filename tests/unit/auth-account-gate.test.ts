@@ -7,12 +7,20 @@ import {
   isPublicAuthPath,
 } from "@/lib/auth/protected-routes";
 import { hashPassword, isValidUsername, passwordPolicyError, verifyPassword } from "@/lib/auth/password";
+import {
+  EMAIL_VERIFICATION_TTL_MINUTES,
+  EMAIL_VERIFICATION_TTL_MS,
+  mintVerificationCode,
+  normalizeVerificationCode,
+} from "@/lib/auth/email-verification";
 import { featureFlagDefaults } from "@/lib/config/feature-flags";
 
 describe("NO ACCOUNT = NO GAMEPLAY routes", () => {
   it("keeps auth/legal pages public", () => {
     expect(isPublicAuthPath("/login")).toBe(true);
     expect(isPublicAuthPath("/signup")).toBe(true);
+    expect(isPublicAuthPath("/verify")).toBe(true);
+    expect(isPublicAuthPath("/verify-email")).toBe(true);
     expect(isPublicAuthPath("/legal/terms")).toBe(true);
     expect(isProtectedPath("/login")).toBe(false);
   });
@@ -111,6 +119,16 @@ describe("password helpers", () => {
     expect(passwordPolicyError("longenough1")).toBeNull();
     expect(isValidUsername("Keeper_1")).toBe(true);
     expect(isValidUsername("1bad")).toBe(false);
+  });
+});
+
+describe("email verification helpers", () => {
+  it("uses a 10-minute TTL and 6-digit codes", () => {
+    expect(EMAIL_VERIFICATION_TTL_MINUTES).toBe(10);
+    expect(EMAIL_VERIFICATION_TTL_MS).toBe(10 * 60 * 1000);
+    const code = mintVerificationCode();
+    expect(code).toMatch(/^\d{6}$/);
+    expect(normalizeVerificationCode("12 34 56")).toBe("123456");
   });
 });
 

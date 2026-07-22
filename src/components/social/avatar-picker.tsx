@@ -24,7 +24,7 @@ const SECTION_COPY: Record<
 > = {
   pets: { eyebrow: "Your hatchery", material: "arcane" },
   riftlings: { eyebrow: "Species cosmetics", material: "obsidian" },
-  characters: { eyebrow: "Town & lore", material: "marble" },
+  characters: { eyebrow: "Portrait unlocks", material: "marble" },
   brand: { eyebrow: "Marks", material: "gold" },
 };
 
@@ -51,13 +51,15 @@ function OptionButton({
   selected: boolean;
   pending: boolean;
   onPick: (key: string) => void;
-  onBuyCredits?: (slug: string) => void;
-  onBuySol?: (slug: string) => void;
+  onBuyCredits?: (avatarKey: string) => void;
+  onBuySol?: (avatarKey: string) => void;
   portraitSize?: "sm" | "md";
 }) {
   const paths = option.unlockPaths;
-  const slug = option.key.startsWith("species:") ? option.key.slice("species:".length) : null;
-  const showBuy = !option.unlocked && option.kind === "species" && slug && paths;
+  const showBuy =
+    !option.unlocked &&
+    Boolean(paths) &&
+    (option.kind === "species" || option.kind === "npc" || option.kind === "lore");
   const showRarity = Boolean(option.purchasable && option.rarity);
   const px = portraitSize === "sm" ? "h-12 w-12" : "h-16 w-16";
   const imgSize = portraitSize === "sm" ? "48px" : "64px";
@@ -160,6 +162,11 @@ function OptionButton({
 
       {showBuy && paths ? (
         <div className="relative z-[1] flex flex-col gap-1">
+          {option.kind === "npc" || option.kind === "lore" ? (
+            <p className="text-[9px] leading-snug text-[var(--text-dim)]">
+              Portrait unlock · cosmetic keeper skin
+            </p>
+          ) : null}
           {paths.task && !paths.task.met ? (
             <p className="text-[9px] leading-snug text-[var(--text-dim)]">
               Task: {paths.task.label} ({Math.min(paths.task.current, paths.task.target)}/
@@ -169,7 +176,7 @@ function OptionButton({
           <button
             type="button"
             disabled={pending}
-            onClick={() => onBuyCredits?.(slug)}
+            onClick={() => onBuyCredits?.(option.key)}
             className="focus-ring rounded-md border border-[var(--stroke-strong)] bg-[rgba(255,200,80,0.14)] px-1.5 py-1.5 text-[10px] font-medium text-[var(--amber,#ffc850)] hover:border-[var(--amber,#ffc850)]"
           >
             Buy {paths.creditsPrice} Credits
@@ -177,7 +184,7 @@ function OptionButton({
           <button
             type="button"
             disabled={pending || !paths.solPurchaseEnabled}
-            onClick={() => onBuySol?.(slug)}
+            onClick={() => onBuySol?.(option.key)}
             title={
               paths.solPurchaseEnabled
                 ? `Buy with ${paths.solPrice} SOL (optional)`
@@ -263,7 +270,7 @@ export function AvatarPicker({ onSelected, className }: Props) {
     });
   }
 
-  function buyCredits(speciesSlug: string) {
+  function buyCredits(avatarKey: string) {
     setMessage(null);
     setError(null);
     startTransition(async () => {
@@ -272,8 +279,8 @@ export function AvatarPicker({ onSelected, className }: Props) {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           kind: "purchase_credits",
-          speciesSlug,
-          requestId: `ui-avatar-credits:${speciesSlug}:${Date.now()}`,
+          avatarKey,
+          requestId: `ui-avatar-credits:${avatarKey}:${Date.now()}`,
         }),
       });
       const data = await res.json();
@@ -283,11 +290,15 @@ export function AvatarPicker({ onSelected, className }: Props) {
       }
       if (data.catalog) setCatalog(data.catalog as SocialAvatarCatalog);
       else load();
-      setMessage("Avatar unlocked with Credits. Cosmetic only — no gameplay power.");
+      setMessage(
+        avatarKey.startsWith("npc:") || avatarKey.startsWith("lore:")
+          ? "Portrait unlocked with Credits. Cosmetic keeper skin — no gameplay power."
+          : "Avatar unlocked with Credits. Cosmetic only — no gameplay power.",
+      );
     });
   }
 
-  function buySol(speciesSlug: string) {
+  function buySol(avatarKey: string) {
     setMessage(null);
     setError(null);
     startTransition(async () => {
@@ -296,8 +307,8 @@ export function AvatarPicker({ onSelected, className }: Props) {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           kind: "purchase_sol",
-          speciesSlug,
-          requestId: `ui-avatar-sol:${speciesSlug}:${Date.now()}`,
+          avatarKey,
+          requestId: `ui-avatar-sol:${avatarKey}:${Date.now()}`,
         }),
       });
       const data = await res.json();

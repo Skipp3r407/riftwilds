@@ -15,6 +15,8 @@ import {
 import { ChevronDown, Menu, X } from "lucide-react";
 import { projectConfig } from "@/lib/config/project";
 import { headerNavGroups, type NavGroup } from "@/lib/config/nav";
+import { AccountSessionMenu } from "@/components/auth/account-session-menu";
+import { ProgressionXpBar } from "@/components/progression/xp-bar";
 import { HeaderBalanceCluster } from "@/components/shared/header-wallet-balances";
 import { RiftwildsBrand } from "@/components/shared/riftwilds-brand";
 import { WalletConnectButton } from "@/components/wallet/wallet-connect-button";
@@ -178,7 +180,7 @@ function NavDropdown({ group, pathname, openId, setOpenId }: NavDropdownProps) {
   );
 }
 
-export function SiteHeader(_props: Props = {}) {
+export function SiteHeader({ variant = "marketing" }: Props = {}) {
   const [openId, setOpenId] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [navState, setNavState] = useState<SiteNavAutohideState>(() =>
@@ -292,6 +294,23 @@ export function SiteHeader(_props: Props = {}) {
           if (liveWorldRoute) setNavState((prev) => bumpSiteNavActivity(prev));
         }}
       >
+      {/* Full-width notice strip — hides with header under Focus Mode / battle desk. */}
+      <div
+        className="hud-nav__construction"
+        role="status"
+        data-testid="under-construction-banner"
+      >
+        <p className="hud-nav__construction-text">
+          <span className="hud-nav__construction-label">Site under construction</span>
+          <span className="hud-nav__construction-sep" aria-hidden="true">
+            ·
+          </span>
+          <span className="hud-nav__construction-note">
+            The Rift is still settling — expect rough edges
+          </span>
+        </p>
+      </div>
+
       {/* Checkbox toggle keeps the mobile drawer working without React state. */}
       <input
         ref={mobileToggleRef}
@@ -306,7 +325,7 @@ export function SiteHeader(_props: Props = {}) {
         <div className="hud-nav__accent" aria-hidden="true" />
         <div className="hud-nav__rail" aria-hidden="true" />
 
-        <div className="hud-nav__row mx-auto flex w-full max-w-[100rem] items-center px-4 py-2.5 md:px-6 md:py-3">
+        <div className="hud-nav__row mx-auto flex w-full max-w-[100rem] items-center px-4 py-2 md:px-6 md:py-2.5">
           <Link
             href="/"
             onClick={() => {
@@ -371,8 +390,10 @@ export function SiteHeader(_props: Props = {}) {
             </Link>
           </nav>
 
-          <div className="hud-nav__actions flex shrink-0 items-center justify-end">
+          <div className="hud-nav__actions flex shrink-0 items-center justify-end gap-1.5">
+            {variant === "game" ? <ProgressionXpBar /> : null}
             <HeaderBalanceCluster />
+            <AccountSessionMenu variant="header" />
             <WalletConnectButton />
             <label
               htmlFor="hud-nav-mobile-toggle"
@@ -491,6 +512,16 @@ export function SiteHeader(_props: Props = {}) {
             >
               Feedback / Bug Report
             </Link>
+          </div>
+
+          <div className="hud-nav__drawer-section">
+            <p className="hud-nav__drawer-label">Balances</p>
+            <HeaderBalanceCluster />
+          </div>
+
+          <div className="hud-nav__drawer-section">
+            <p className="hud-nav__drawer-label">Account</p>
+            <AccountSessionMenu variant="drawer" onAfterAction={closeMobile} />
           </div>
         </nav>
       </div>

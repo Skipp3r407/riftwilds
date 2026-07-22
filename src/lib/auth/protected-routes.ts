@@ -8,6 +8,7 @@ export const PUBLIC_AUTH_PATHS = [
   "/signup",
   "/onboarding",
   "/verify-email",
+  "/verify",
   "/forgot-password",
   "/reset-password",
   "/legal",

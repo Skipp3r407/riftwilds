@@ -49,28 +49,28 @@ export async function resolveGameplayGate(opts?: {
   | { ok: true; session: GameplaySession }
   | { ok: false; decision: AccountGateBlocked }
 > {
-  // Local-only preview when Postgres is unavailable (see AUTH_LOCAL_PREVIEW_BYPASS).
-  if (isLocalPreviewBypass()) {
-    return {
-      ok: true,
-      session: {
-        userId: LOCAL_PREVIEW_USER_ID,
-        walletAddress: null,
-        role: "player",
-        tokenTier: "VISITOR",
-        authMethod: "email",
-        accountStatus: "ACTIVE",
-        onboardingComplete: true,
-        emailVerified: true,
-        displayName: "Preview Keeper",
-        username: "preview_keeper",
-        lastLocationPath: opts?.returnUrl ?? "/play",
-      },
-    };
-  }
-
+  // Prefer a real / Dev Override session when present. Preview bypass is only
+  // a fallback for local play without cookies (see AUTH_LOCAL_PREVIEW_BYPASS).
   const full = await getFullSessionContext();
   if (!full) {
+    if (isLocalPreviewBypass()) {
+      return {
+        ok: true,
+        session: {
+          userId: LOCAL_PREVIEW_USER_ID,
+          walletAddress: null,
+          role: "player",
+          tokenTier: "VISITOR",
+          authMethod: "email",
+          accountStatus: "ACTIVE",
+          onboardingComplete: true,
+          emailVerified: true,
+          displayName: "Preview Keeper",
+          username: "preview_keeper",
+          lastLocationPath: opts?.returnUrl ?? "/play",
+        },
+      };
+    }
     return {
       ok: false,
       decision: {

@@ -8,6 +8,7 @@ import {
   readTcgOwnerKey,
 } from "@/game/tcg/owner-key";
 import { appendReplayHook } from "@/game/rift-arena/replay-hooks";
+import { grantBattleXp } from "@/lib/progression";
 
 const bodySchema = z.object({
   publicId: z.string().min(4).max(48),
@@ -80,8 +81,30 @@ export async function POST(req: Request) {
       },
     });
 
+    let xpGrant: ReturnType<typeof grantBattleXp> | null = null;
+    if (
+      featureFlagDefaults.KEEPER_PROGRESSION_ENABLED &&
+      rec.state.status === "COMPLETED" &&
+      rec.state.winnerId
+    ) {
+      const playerSide = rec.state.players.find((p) => !p.isAi) ?? rec.state.players[0];
+      const won = playerSide != null && rec.state.winnerId === playerSide.id;
+      const surrendered = parsed.data.action.kind === "SURRENDER";
+      xpGrant = grantBattleXp({
+        ownerKey: key,
+        won,
+        matchId: rec.state.publicId,
+        opponentId: rec.state.players.find((p) => p.id !== playerSide?.id)?.id ?? "ai",
+        // Surrendering player gets no XP; winner of a concede still earns.
+        surrendered: surrendered && !won,
+        // Practice AI is legitimate play — not bot-farm detection.
+        botMatch: false,
+      });
+    }
+
     const res = NextResponse.json({
       ...snapshotTcgMatch(rec, key),
+      progressionXp: xpGrant,
       ...guestIdentityFields(Boolean(guestToken), guestToken),
     });
     return attachTcgGuestCookie(res, guestToken);

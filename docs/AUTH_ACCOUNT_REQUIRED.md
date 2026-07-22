@@ -2,6 +2,8 @@
 
 **Local-only note:** This change is not pushed/deployed unless you ask. Apply the Prisma migration locally before testing account flows.
 
+Full database / Google / Resend setup: [AUTH_SETUP.md](./AUTH_SETUP.md).
+
 ## What changed
 
 Anonymous / `rift_guest` gameplay is **disabled** by default.

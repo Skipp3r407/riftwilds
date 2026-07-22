@@ -25,7 +25,7 @@ export type RiftCardFrameProps = {
   /** Prefer creature/source art for full-bleed; falls back to card face. */
   artSrc?: string | null;
   cardFaceSrc?: string | null;
-  ownedCount?: number;
+  ownedCount?: number | null;
   finish?: "standard" | "foil" | "gold" | "crystal" | "animated";
   size?: "sm" | "md" | "lg";
   selected?: boolean;

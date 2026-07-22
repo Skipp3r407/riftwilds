@@ -90,4 +90,39 @@ describe("parseFeedbackSubmission", () => {
     });
     expect(result.ok).toBe(false);
   });
+
+  it("accepts bug reports with screenshot URLs", () => {
+    const result = parseFeedbackSubmission({
+      kind: "bug",
+      title: "Broken hatch UI",
+      whatHappened: "The hatch overlay never dismisses after a failed hatch.",
+      stepsToReproduce: "1. Open hatchery\n2. Hatch\n3. Fail",
+      expected: "Overlay closes",
+      actual: "Overlay stays open",
+      severity: "medium",
+      screenshotUrls: ["/uploads/feedback/abc123def456.png"],
+      website: "",
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.data.kind === "bug") {
+      expect(result.data.screenshotUrls).toEqual([
+        "/uploads/feedback/abc123def456.png",
+      ]);
+    }
+  });
+
+  it("rejects invalid screenshot URL paths", () => {
+    const result = parseFeedbackSubmission({
+      kind: "bug",
+      title: "Broken hatch UI",
+      whatHappened: "The hatch overlay never dismisses after a failed hatch.",
+      stepsToReproduce: "1. Open hatchery\n2. Hatch\n3. Fail",
+      expected: "Overlay closes",
+      actual: "Overlay stays open",
+      severity: "medium",
+      screenshotUrls: ["https://evil.example/x.png"],
+      website: "",
+    });
+    expect(result.ok).toBe(false);
+  });
 });

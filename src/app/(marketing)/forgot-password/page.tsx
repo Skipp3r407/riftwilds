@@ -8,6 +8,9 @@ export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
   const [info, setInfo] = useState<string | null>(null);
   const [resetToken, setResetToken] = useState<string | null>(null);
+  const [emailDelivery, setEmailDelivery] = useState<"resend" | "console" | null>(
+    null,
+  );
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -18,7 +21,9 @@ export default function ForgotPasswordPage() {
     });
     const json = await res.json();
     setInfo(json.message ?? "If an account exists, a reset link was issued.");
+    setEmailDelivery(json.emailDelivery ?? null);
     if (json.resetToken) setResetToken(json.resetToken);
+    else setResetToken(null);
   }
 
   return (
@@ -44,7 +49,23 @@ export default function ForgotPasswordPage() {
           Send reset link
         </button>
         {info ? <p className="text-sm text-[var(--text-muted)]">{info}</p> : null}
-        {resetToken ? (
+        {emailDelivery === "console" && resetToken ? (
+          <div className="rounded-lg border border-[rgba(61,231,255,0.35)] bg-[rgba(10,18,28,0.9)] p-3 text-sm text-[var(--cyan)]">
+            <p className="font-medium">
+              Email not configured — your reset link is ready (dev)
+            </p>
+            <p className="mt-2 break-all text-xs text-[var(--text-muted)]">
+              Token: {resetToken}
+            </p>
+            <Link
+              href={`/reset-password?token=${encodeURIComponent(resetToken)}`}
+              className="mt-2 inline-block underline"
+            >
+              Continue to reset password
+            </Link>
+          </div>
+        ) : null}
+        {emailDelivery !== "console" && resetToken ? (
           <p className="break-all text-xs text-[var(--cyan)]">
             Local token:{" "}
             <Link

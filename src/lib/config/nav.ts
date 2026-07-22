@@ -54,6 +54,7 @@ export const primaryNav: NavLink[] = [
   { href: "/tcg/codex", label: "Rift Codex", header: true, sidebar: true },
   { href: "/tcg/collection", label: "Card Binder", header: true, sidebar: true },
   { href: "/dashboard", label: "Dashboard", header: true, sidebar: true },
+  { href: "/progression", label: "Progression", header: false, sidebar: true },
   { href: "/hatchery", label: "Hatchery", header: true, sidebar: true },
   { href: "/world", label: "World", header: true, sidebar: true },
   {
@@ -112,6 +113,7 @@ export const sidebarNavGroups: SidebarNavGroup[] = [
       { href: "/tcg/battle", label: "Rift Battle" },
       { href: "/arena", label: "Arena (free)" },
       { href: "/dashboard", label: "Dashboard" },
+      { href: "/progression", label: "Progression" },
       { href: "/quests", label: "Quests" },
     ],
   },
@@ -210,6 +212,7 @@ export const headerNavGroups: NavGroup[] = [
       { href: "/hatchery", label: "Hatchery" },
       { href: "/collection", label: "Pet Collection" },
       { href: "/dashboard", label: "Dashboard" },
+      { href: "/progression", label: "Progression" },
       { href: "/quests", label: "Quests" },
       { href: "/help", label: "Help" },
       { href: "/roadmap", label: "Roadmap" },

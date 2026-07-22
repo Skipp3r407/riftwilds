@@ -408,6 +408,12 @@ export const featureFlagDefaults = {
   /** Spirit recovery HTTP surface (extends game/spirit — does not replace). */
   SPIRIT_RECOVERY_API_ENABLED: true,
 
+  // ─── Keeper XP / leveling ──────────────────────────────────────────────────
+  /** Server-authoritative keeper XP, levels, mastery, prestige UI + APIs. */
+  KEEPER_PROGRESSION_ENABLED: true,
+  /** Persist PlayerProgression rows to Prisma when User exists (best-effort). */
+  KEEPER_PROGRESSION_PRISMA_ENABLED: false,
+
   // ─── Living World social presence / rest / town reputation ─────────────────
   /** Presence XP, rest hubs, social density, anti-AFK (never SOL / never P2W). */
   SOCIAL_PRESENCE_ENABLED: true,

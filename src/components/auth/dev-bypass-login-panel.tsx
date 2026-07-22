@@ -47,10 +47,17 @@ export function DevBypassLoginPanel({
     setBusy(true);
     onError?.("");
     try {
-      const res = await fetch("/api/auth/dev-override", { method: "POST" });
-      const json = await res.json();
-      if (!res.ok || !json.ok) {
-        const message = json?.error?.message ?? "Dev bypass unavailable";
+      const res = await fetch("/api/auth/dev-override", {
+        method: "POST",
+        credentials: "same-origin",
+      });
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json?.ok) {
+        const message =
+          json?.error?.message ??
+          (res.status === 403
+            ? "Dev bypass is disabled in this environment."
+            : "Dev bypass unavailable");
         onError?.(message);
         playSfx("ui.click");
         return;

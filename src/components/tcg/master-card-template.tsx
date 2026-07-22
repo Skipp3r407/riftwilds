@@ -580,7 +580,14 @@ export function MasterCardTemplate({
         </ul>
       ) : null}
       {typeof ownedCount === "number" ? (
-        <span className="rift-card__owned">×{ownedCount}</span>
+        <span
+          className="rift-card__owned"
+          title={`Copies owned: ${ownedCount}`}
+          aria-label={`Copies owned: ${ownedCount}`}
+        >
+          <em className="rift-card__owned-label">Copies owned</em>
+          <strong>{ownedCount}</strong>
+        </span>
       ) : null}
     </>
   );

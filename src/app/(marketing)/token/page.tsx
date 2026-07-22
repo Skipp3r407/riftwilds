@@ -263,7 +263,7 @@ export default function TokenPage() {
           aria-hidden
         >
           <Image
-            src="/assets/ui/wallpapers/economy.png"
+            src="/assets/ui/wallpapers/economy.png?v=economynnebula1"
             alt=""
             fill
             sizes="896px"

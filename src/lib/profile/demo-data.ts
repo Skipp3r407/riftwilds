@@ -114,36 +114,43 @@ export const PROFILE_QUICK_LINKS = [
     href: "/hatchery",
     label: "Hatchery",
     body: "Claim, incubate, and hatch Rift Eggs.",
+    thumb: "hatchery",
   },
   {
     href: "/help",
     label: "Help",
     body: "Rift Battles, binder, packs, quests, and Credits — TCG-first guide.",
+    thumb: "help",
   },
   {
     href: "/academy",
     label: "Player Academy",
     body: "Interactive drills and searchable FAQ.",
+    thumb: "academy",
   },
   {
     href: "/inventory",
     label: "Inventory",
     body: "Browse items, materials, and cosmetics.",
+    thumb: "inventory",
   },
   {
     href: "/arena",
     label: "Arena",
     body: "Train, load out, and earn Arena Points.",
+    thumb: "arena",
   },
   {
     href: "/quests",
     label: "Quests",
     body: "Story and daily missions (Phase 3).",
+    thumb: "quests",
   },
   {
     href: "/leaderboards",
     label: "Leaderboards",
     body: "Seasonal ladders for Arena, care, collection.",
+    thumb: "leaderboards",
   },
 ] as const;
 

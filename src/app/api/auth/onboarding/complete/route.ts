@@ -36,7 +36,16 @@ export async function GET() {
     );
   }
   const state = await getOnboardingState(session.userId);
-  return NextResponse.json({ ok: true, requestId, state });
+  return NextResponse.json({
+    ok: true,
+    requestId,
+    state,
+    profile: {
+      displayName: session.displayName,
+      username: session.username,
+      email: session.email,
+    },
+  });
 }
 
 export async function POST(request: NextRequest) {

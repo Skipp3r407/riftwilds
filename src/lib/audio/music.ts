@@ -28,6 +28,17 @@ const PLAYLIST = [
 type MusicMode = "idle" | "menu" | "region" | "manual";
 type MusicListener = () => void;
 
+function fisherYates(indices: number[]): number[] {
+  const out = [...indices];
+  for (let i = out.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = out[i]!;
+    out[i] = out[j]!;
+    out[j] = tmp;
+  }
+  return out;
+}
+
 class MusicEngine {
   private a: HTMLAudioElement | null = null;
   private b: HTMLAudioElement | null = null;
@@ -43,25 +54,35 @@ class MusicEngine {
   /** Bumps to cancel in-flight crossfade rAF ticks (prevents pausing the live bed). */
   private fadeGen = 0;
   private fading = false;
+  /** When true, next / end-of-track pick from a shuffled bag (no immediate repeat). */
+  private shuffle = false;
+  /** Remaining indices for the current shuffle pass. */
+  private shuffleBag: number[] = [];
+  /** Recent track history for shuffle "previous". */
+  private history: number[] = [];
 
   init() {
     if (typeof window === "undefined") return;
     if (!this.a) {
       this.a = new Audio();
       this.a.preload = "auto";
-      this.a.loop = true;
+      this.a.loop = false;
+      this.bindEnded(this.a);
     }
     if (!this.b) {
       this.b = new Audio();
       this.b.preload = "auto";
-      this.b.loop = true;
+      this.b.loop = false;
+      this.bindEnded(this.b);
     }
     if (!this.unsub) {
       this.unsub = audioManager.subscribe(() => this.applyVolume());
     }
+    // Arm pagehide/visibility silence without a static beds ↔ music import cycle.
+    void import("@/lib/audio/beds").then((m) => m.installBedLifecycleGuards());
   }
 
-  /** UI sync — fires when play state or track index changes. */
+  /** UI sync — fires when play state, track index, or shuffle changes. */
   subscribe(listener: MusicListener): () => void {
     this.listeners.add(listener);
     return () => this.listeners.delete(listener);
@@ -69,6 +90,16 @@ class MusicEngine {
 
   private emit() {
     for (const listener of this.listeners) listener();
+  }
+
+  private bindEnded(el: HTMLAudioElement) {
+    el.addEventListener("ended", () => {
+      // Only the live bed advances; ignore the faded-out twin after crossfade.
+      if (el !== this.current()) return;
+      if (!this.playing) return;
+      if (this.fading) return;
+      void this.next(700);
+    });
   }
 
   getPlaylist() {
@@ -87,17 +118,71 @@ class MusicEngine {
     return this.mode;
   }
 
+  isShuffle() {
+    return this.shuffle;
+  }
+
+  setShuffle(on: boolean) {
+    this.shuffle = on;
+    if (on) {
+      this.refillShuffleBag(this.trackIndex);
+    } else {
+      this.shuffleBag = [];
+    }
+    this.emit();
+  }
+
   setDayNightMultiplier(mul: number) {
     this.dayNightMul = clamp01(mul);
     this.applyVolume();
   }
 
+  /** True when the live bed element already has a source loaded. */
+  hasLoadedTrack() {
+    const el = this.current();
+    return Boolean(el?.getAttribute("src"));
+  }
+
+  /**
+   * Resume the current bed without seeking, or start `index` if nothing is loaded.
+   * Safe for MusicPlayer remount / autoplay — never restarts a playing track.
+   */
+  async resumeOrPlay(index: number, fadeMs = 500) {
+    this.init();
+    if (this.playing && this.hasLoadedTrack()) return;
+    if (this.hasLoadedTrack()) {
+      await this.play();
+      return;
+    }
+    await this.playTrack(index, fadeMs);
+  }
+
   async playTrack(index: number, fadeMs = 800) {
     this.init();
     this.mode = "manual";
-    this.trackIndex = ((index % PLAYLIST.length) + PLAYLIST.length) % PLAYLIST.length;
-    const track = PLAYLIST[this.trackIndex]!;
+    const nextIndex = ((index % PLAYLIST.length) + PLAYLIST.length) % PLAYLIST.length;
+    const track = PLAYLIST[nextIndex]!;
+    // Same track already audible — do not seek to 0 or re-crossfade.
+    if (this.playing && nextIndex === this.trackIndex) {
+      const el = this.current();
+      const src = el?.getAttribute("src") || "";
+      if (el && !el.paused && (src === track.src || src.endsWith(track.src))) {
+        this.trackGain = track.gain;
+        this.applyVolume();
+        this.emit();
+        return;
+      }
+    }
+    if (this.playing && nextIndex !== this.trackIndex) {
+      this.history.push(this.trackIndex);
+      if (this.history.length > PLAYLIST.length) this.history.shift();
+    }
+    this.trackIndex = nextIndex;
     this.trackGain = track.gain;
+    if (this.shuffle) {
+      this.shuffleBag = this.shuffleBag.filter((i) => i !== this.trackIndex);
+      if (this.shuffleBag.length === 0) this.refillShuffleBag(this.trackIndex);
+    }
     this.emit();
     await this.crossfadeTo(track.src, fadeMs);
   }
@@ -114,8 +199,16 @@ class MusicEngine {
     if (!theme) return;
     const idx = PLAYLIST.findIndex((t) => t.src === theme.src);
     if (idx >= 0) {
+      if (this.playing && idx !== this.trackIndex) {
+        this.history.push(this.trackIndex);
+        if (this.history.length > PLAYLIST.length) this.history.shift();
+      }
       this.trackIndex = idx;
       this.trackGain = PLAYLIST[idx]!.gain;
+      if (this.shuffle) {
+        this.shuffleBag = this.shuffleBag.filter((i) => i !== this.trackIndex);
+        if (this.shuffleBag.length === 0) this.refillShuffleBag(this.trackIndex);
+      }
     } else {
       this.trackGain = 1;
     }
@@ -135,7 +228,7 @@ class MusicEngine {
     if (!el.getAttribute("src")) {
       const track = PLAYLIST[this.trackIndex] ?? PLAYLIST[0];
       el.src = track.src;
-      el.loop = true;
+      el.loop = false;
       this.trackGain = track.gain;
     }
     this.applyVolume();
@@ -161,11 +254,11 @@ class MusicEngine {
   }
 
   async next(fadeMs = 600) {
-    await this.playTrack(this.trackIndex + 1, fadeMs);
+    await this.playTrack(this.pickNextIndex(), fadeMs);
   }
 
   async prev(fadeMs = 600) {
-    await this.playTrack(this.trackIndex - 1, fadeMs);
+    await this.playTrack(this.pickPrevIndex(), fadeMs);
   }
 
   /** Smooth crossfade API for external callers. */
@@ -193,7 +286,7 @@ class MusicEngine {
     if (idx >= 0) this.trackGain = PLAYLIST[idx]!.gain;
 
     to.src = src;
-    to.loop = true;
+    to.loop = false;
     to.volume = 0;
     try {
       await to.play();
@@ -236,6 +329,30 @@ class MusicEngine {
       }
     };
     requestAnimationFrame(tick);
+  }
+
+  private refillShuffleBag(exclude: number | null) {
+    const pool = PLAYLIST.map((_, i) => i).filter((i) => i !== exclude);
+    this.shuffleBag = fisherYates(pool.length > 0 ? pool : PLAYLIST.map((_, i) => i));
+  }
+
+  private pickNextIndex(): number {
+    if (!this.shuffle || PLAYLIST.length <= 1) {
+      return (this.trackIndex + 1) % PLAYLIST.length;
+    }
+    if (this.shuffleBag.length === 0) {
+      this.refillShuffleBag(this.trackIndex);
+    }
+    const next = this.shuffleBag.shift();
+    if (typeof next === "number") return next;
+    return (this.trackIndex + 1) % PLAYLIST.length;
+  }
+
+  private pickPrevIndex(): number {
+    if (this.shuffle && this.history.length > 0) {
+      return this.history.pop()!;
+    }
+    return (this.trackIndex - 1 + PLAYLIST.length) % PLAYLIST.length;
   }
 
   private current() {

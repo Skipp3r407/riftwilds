@@ -113,6 +113,8 @@ class AmbientEngine {
     if (this.bound || typeof window === "undefined") return;
     this.bound = true;
     audioManager.subscribe(() => this.applyGain());
+    // Same lifecycle silence as playlist beds (oscillators survive tab close).
+    void import("@/lib/audio/beds").then((m) => m.installBedLifecycleGuards());
   }
 
   async startRegion(regionId: string, fadeMs = 1200) {

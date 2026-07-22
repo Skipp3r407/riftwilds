@@ -1,5 +1,5 @@
 /**
- * Floating MusicPlayer UI prefs (track index / hidden / explicit pause).
+ * Floating MusicPlayer UI prefs (track index / hidden / explicit pause / shuffle).
  * Shared so adaptive soundscapes can respect a user pause without importing React.
  */
 
@@ -10,12 +10,15 @@ export type MusicUiPrefs = {
   trackIndex: number;
   /** Explicit user pause — skip autoplay / procedural beds until they hit play. */
   paused: boolean;
+  /** Randomize next / end-of-track selection (shuffle bag, no immediate repeat). */
+  shuffle: boolean;
 };
 
 export const DEFAULT_MUSIC_UI: MusicUiPrefs = {
   hidden: false,
   trackIndex: 0,
   paused: false,
+  shuffle: false,
 };
 
 /** True when the user explicitly paused the floating ambience player. */

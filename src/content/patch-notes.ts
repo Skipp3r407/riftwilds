@@ -39,6 +39,31 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-22-xp-auth-polish",
+    date: "2026-07-22",
+    title: "Keeper XP, account session, and site polish",
+    summary:
+      "Keeper progression with daily XP and prestige, clearer logout and email verify, feedback screenshots, purchasable keepers, music that remembers your track, and refreshed FAQ/economy/profile art.",
+    added: [
+      "Keeper XP progression page with daily claim, level rewards, and prestige",
+      "Account session menu with reliable logout across marketing and game chrome",
+      "Feedback screenshot uploads (with size limits)",
+      "Under-construction banner on the homepage while live play is still rolling out",
+      "FAQ, economy, and profile thumbnail / wallpaper art updates",
+    ],
+    changed: [
+      "Email verification and OAuth signup/login flows hardened for real accounts",
+      "Music player persists track choice and handles page lifecycle more cleanly",
+      "Keepers can be purchased / unlocked through the avatar shop paths",
+      "Deck builder shows copies owned more clearly; regenerates for several creatures",
+    ],
+    fixed: [
+      "Header nav active states and game chrome Progression XP bar visibility",
+      "Auth CSRF and session edge cases around onboarding and verify-email",
+    ],
+  },
+
+  {
     id: "2026-07-22-comics-advantage-mobile",
     date: "2026-07-22",
     title: "Comics pages, card advantage, and mobile battle",

@@ -1,4 +1,8 @@
 import { z } from "zod";
+import {
+  FEEDBACK_SCREENSHOT_MAX_COUNT,
+  feedbackScreenshotUrlSchema,
+} from "@/lib/feedback/screenshot-limits";
 
 export const FEEDBACK_CATEGORIES = [
   "gameplay",
@@ -67,6 +71,19 @@ export const bugReportSchema = z.object({
   browserDevice: optionalText(240),
   severity: z.enum(BUG_SEVERITIES),
   screenshotNote: optionalText(1000),
+  screenshotUrls: z
+    .array(
+      z
+        .string()
+        .trim()
+        .regex(
+          feedbackScreenshotUrlSchema,
+          "Screenshot URL looks invalid — re-upload and try again.",
+        ),
+    )
+    .max(FEEDBACK_SCREENSHOT_MAX_COUNT)
+    .optional()
+    .default([]),
   email: optionalEmail,
   pageUrl: optionalText(500),
   website: honeypot,

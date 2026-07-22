@@ -2,6 +2,14 @@
 
 Mirror of the Official Rulebook version history. Full text: [RULEBOOK.md](./RULEBOOK.md).
 
+## v2.3.0 — 2026-07-22
+
+- Keeper XP & leveling (server-authoritative): `src/lib/progression/`
+- Curve `floor(100 × level^1.8)`; multi-level grants keep excess XP
+- Battle / quest / care / daily / hatch sources; combo, rested, boosts, anti-farm
+- Practice match completion grants XP via turn API
+- Docs: [progression/XP_SYSTEM.md](./progression/XP_SYSTEM.md) · UI `/progression`
+
 ## v2.2.0 — 2026-07-22
 
 - Strategic card advantage: Insight / Inspire / Scout / Discover

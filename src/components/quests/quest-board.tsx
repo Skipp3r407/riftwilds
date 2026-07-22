@@ -35,7 +35,33 @@ import {
 import { StatusChip } from "@/components/shared/page-header";
 import { playSfx } from "@/hooks/use-sfx";
 import { guestFetch } from "@/lib/auth/guest-client";
+import {
+  emitProgressionEvent,
+  grantProgressionSource,
+} from "@/lib/progression/client";
 import { cn } from "@/lib/utils/cn";
+
+/** Claim keeper XP via server-authoritative progression API. */
+async function claimQuestXpReward(quest: QuestDef) {
+  const xpReward = quest.rewards.find((r) => r.kind === "xp");
+  const catalogXp = xpReward && xpReward.kind === "xp" ? xpReward.amount : null;
+  const result = await grantProgressionSource({
+    source: "QUEST_COMPLETE",
+    requestId: `quest-complete:${quest.key}`,
+    context: {
+      questKey: quest.key,
+      questDifficulty: quest.difficulty,
+      catalogXp,
+    },
+  });
+  if (result?.ok && result.granted > 0) {
+    emitProgressionEvent({
+      granted: result.granted,
+      levelsGained: result.levelsGained,
+      rewards: result.rewards,
+    });
+  }
+}
 
 /** Claim egg rewards via hatchery earn API (free, no wallet). */
 async function claimQuestEggRewards(quest: QuestDef) {
@@ -338,6 +364,7 @@ export function QuestBoard() {
                     const after = next[quest.key]?.status;
                     if (after === "completed" && before !== "completed") {
                       playSfx("quests.complete");
+                      void claimQuestXpReward(quest);
                       void claimQuestEggRewards(quest);
                     } else if (after === "active") {
                       playSfx("quests.objective");

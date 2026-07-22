@@ -8,6 +8,7 @@ import {
 
 /**
  * Drop into server or client pages to enter an adaptive soundscape on mount.
+ * Does not change the dock playlist track (see adaptive-engine switchPlaylist).
  */
 export function SoundscapeMount({
   mode,
@@ -19,7 +20,8 @@ export function SoundscapeMount({
   fadeMs?: number;
 }) {
   useEffect(() => {
-    void enterSoundscape(mode, { regionId, fadeMs });
+    // Page mounts must never yank playlist music — SFX/stems/reverb only.
+    void enterSoundscape(mode, { regionId, fadeMs, switchPlaylist: false });
   }, [mode, regionId, fadeMs]);
 
   return null;
