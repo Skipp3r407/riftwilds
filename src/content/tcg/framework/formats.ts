@@ -164,7 +164,8 @@ export const DEFAULT_FORMATS: TcgFormatDef[] = [
   {
     id: "practice",
     name: "Practice Board",
-    description: "Local / AI. Teaching pools sliced to 29 on load. Soft mulligan.",
+    description:
+      "Local / AI. Teaching pools sliced to 29 on load. Opening-hand shape + Keep/Partial/Full mulligan.",
     deckSize: MAIN,
     totalPieces: TOTAL,
     requireCommander: true,

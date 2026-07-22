@@ -1,0 +1,138 @@
+cd "C:\Users\Skipp3r407\Desktop\Websites\egg meme project"
+
+# Backup existing wallpapers once
+$backup = "artifacts/wallpapers-pre-logo"
+New-Item -ItemType Directory -Force -Path $backup | Out-Null
+Copy-Item "public/assets/wallpapers/*.png" $backup -Force
+
+# Ensure assets dir for raws is known
+$rawDir = "C:\Users\Skipp3r407\.cursor\projects\c-Users-Skipp3r407-Desktop-Websites-egg-meme-project\assets"
+Get-ChildItem $rawDir -Filter "wp-raw-*.png" | Select-Object Name, Length | Format-Table -AutoSize
+
+node --input-type=module -e @"
+import sharp from 'sharp';
+import fs from 'fs';
+import path from 'path';
+
+const ROOT = process.cwd();
+const OUT = path.join(ROOT, 'public/assets/wallpapers');
+const LOGO = path.join(ROOT, 'public/assets/brand/riftwilds-logo.png');
+const RAW_DIR = String.raw``C:\Users\Skipp3r407\.cursor\projects\c-Users-Skipp3r407-Desktop-Websites-egg-meme-project\assets``;
+const W = 1920, H = 1080;
+const LOGO_WIDTH = 300; // ~15.6% of width — visible, not dominant
+const PAD_X = 48;
+const PAD_Y = 40;
+
+const NEW_MAP = [
+  ['wp-raw-spark-commons.png', 'creature-spark-commons.png'],
+  ['wp-raw-emberfox-crater.png', 'creature-emberfox-crater.png'],
+  ['wp-raw-bramblefox-elderwood.png', 'creature-bramblefox-elderwood.png'],
+  ['wp-raw-mossprig-grove.png', 'creature-mossprig-grove.png'],
+  ['wp-raw-ashwing-ember.png', 'creature-ashwing-ember.png'],
+  ['wp-raw-auralynx-citadel.png', 'creature-auralynx-citadel.png'],
+  ['wp-raw-basaltpup-canyon.png', 'creature-basaltpup-canyon.png'],
+  ['wp-raw-tideotter-harbor.png', 'creature-tideotter-harbor.png'],
+  ['wp-raw-sparkmoth-stormspire.png', 'creature-sparkmoth-stormspire.png'],
+  ['wp-raw-cindercub-forge.png', 'creature-cindercub-forge.png'],
+  ['wp-raw-frostnip-peaks.png', 'creature-frostnip-peaks.png'],
+  ['wp-raw-wirefox-gearworks.png', 'creature-wirefox-gearworks.png'],
+  ['wp-raw-groveowl-canopy.png', 'creature-groveowl-canopy.png'],
+  ['wp-raw-fernfox-meadow.png', 'creature-fernfox-meadow.png'],
+  ['wp-raw-stormmoth-rift-sky.png', 'creature-stormmoth-rift-sky.png'],
+  ['wp-raw-cogpup-hatchery.png', 'creature-cogpup-hatchery.png'],
+  ['wp-raw-radiantkit-academy.png', 'creature-radiantkit-academy.png'],
+  ['wp-raw-pearlurk-tidepools.png', 'creature-pearlurk-tidepools.png'],
+  ['wp-raw-wispdeer-aurora.png', 'creature-wispdeer-aurora.png'],
+  ['wp-raw-voidling-rift-cavern.png', 'creature-voidling-rift-cavern.png'],
+];
+
+const EXISTING = [
+  'commons-plaza.png','spark-glow.png','riftling-meadow.png','circus-night.png',
+  'festival-lanterns.png','lantern-street.png','rift-sky.png','moonwater-harbor.png',
+  'elderwood-forest.png','radiant-castle.png','homestead-dusk.png','stormspire.png',
+  'keeper-academy.png','fountain-square.png','cosmic-aurora.png',
+];
+
+async function makeLogoOverlay(baseW, baseH) {
+  const logoBuf = await sharp(LOGO)
+    .resize({ width: LOGO_WIDTH, withoutEnlargement: true })
+    .png()
+    .toBuffer();
+  const meta = await sharp(logoBuf).metadata();
+  const lw = meta.width;
+  const lh = meta.height;
+  const left = baseW - lw - PAD_X;
+  const top = baseH - lh - PAD_Y;
+  // Soft dark scrim behind logo for readability on busy art
+  const scrimW = lw + 28;
+  const scrimH = lh + 20;
+  const scrimLeft = left - 14;
+  const scrimTop = top - 10;
+  const scrim = await sharp({
+    create: {
+      width: scrimW,
+      height: scrimH,
+      channels: 4,
+      background: { r: 0, g: 0, b: 0, alpha: 0.35 },
+    },
+  }).png().toBuffer();
+  return {
+    composites: [
+      { input: scrim, left: Math.max(0, scrimLeft), top: Math.max(0, scrimTop) },
+      { input: logoBuf, left, top },
+    ],
+    left, top, lw, lh,
+  };
+}
+
+async function stampFile(srcPath, destPath, resize) {
+  let pipeline = sharp(srcPath);
+  if (resize) {
+    pipeline = pipeline.resize(W, H, { fit: 'cover', position: 'centre' });
+  }
+  const meta = await sharp(srcPath).metadata();
+  const bw = resize ? W : (meta.width || W);
+  const bh = resize ? H : (meta.height || H);
+  // If not resizing but wrong size, normalize
+  const needResize = resize || meta.width !== W || meta.height !== H;
+  let base = sharp(srcPath);
+  if (needResize) {
+    base = base.resize(W, H, { fit: 'cover', position: 'centre' });
+  }
+  const { composites } = await makeLogoOverlay(W, H);
+  await base.composite(composites).png({ compressionLevel: 8 }).toFile(destPath);
+}
+
+let stamped = 0;
+
+// Existing: from backup to avoid double-stamp if re-run
+const backupDir = path.join(ROOT, 'artifacts/wallpapers-pre-logo');
+for (const name of EXISTING) {
+  const src = path.join(backupDir, name);
+  const dest = path.join(OUT, name);
+  if (!fs.existsSync(src)) {
+    console.error('MISSING backup', name);
+    continue;
+  }
+  await stampFile(src, dest, false);
+  stamped++;
+  console.log('stamped existing', name);
+}
+
+for (const [raw, outName] of NEW_MAP) {
+  const src = path.join(RAW_DIR, raw);
+  const dest = path.join(OUT, outName);
+  if (!fs.existsSync(src)) {
+    console.error('MISSING raw', raw);
+    continue;
+  }
+  await stampFile(src, dest, true);
+  stamped++;
+  console.log('stamped new', outName);
+}
+
+const all = fs.readdirSync(OUT).filter(f => f.endsWith('.png'));
+console.log('TOTAL_STAMPED', stamped);
+console.log('TOTAL_PNG_IN_DIR', all.length);
+console.log(all.sort().join('\n'));
+"@

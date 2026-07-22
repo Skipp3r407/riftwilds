@@ -107,8 +107,9 @@ describe("match engine v2", () => {
     expect(state.players[1].hand.some((c) => isRiftSparkToken(c.defId))).toBe(
       true,
     );
-    expect(state.rulesVersion).toBe("2.0.0");
+    expect(state.rulesVersion).toBe("2.1.0");
     expect(getMatchRules(state).turn.autoSkipSecondMain).toBe(true);
+    expect(state.phase).toBe("MULLIGAN");
   });
 
   it("P2 Rift Spark grants temp energy and exiles", () => {
@@ -127,7 +128,10 @@ describe("match engine v2", () => {
   });
 
   it("supports surrender as concede win", () => {
-    const state = createTcgMatch({ publicId: "rules_v2_surrender" });
+    const state = createTcgMatch({
+      publicId: "rules_v2_surrender",
+      skipMulligan: true,
+    });
     applyTcgAction(state, "player", { kind: "SURRENDER" });
     expect(state.status).toBe("COMPLETED");
     expect(state.winnerId).toBe("ai");
@@ -142,6 +146,7 @@ describe("match engine v2", () => {
     const state = createTcgMatch({
       publicId: "lane_1",
       mode: "practice",
+      skipMulligan: true,
       playerDeck: materializePracticeLoadout(loadout.player),
       commanderHeroId: loadout.player.commanderHeroId,
       opponent: {
@@ -175,6 +180,7 @@ describe("match engine v2", () => {
     const state = createTcgMatch({
       publicId: "practice_v2_e2e",
       mode: "practice",
+      skipMulligan: true,
       playerDeck: materializePracticeLoadout(loadout.player),
       commanderHeroId: loadout.player.commanderHeroId,
       opponent: {

@@ -288,6 +288,11 @@ export type TcgCard = {
   sellValue: number;
   unlockMethod?: TcgUnlockMethod;
   collectionTags: string[];
+  /**
+   * Competitive curve / playstyle tags (Tempo, Starter, Utility, …).
+   * Orthogonal to board role.
+   */
+  curveTags?: string[];
   expansionId: string;
   relatedNpcs: string[];
   relatedQuests: string[];

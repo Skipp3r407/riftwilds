@@ -62,8 +62,8 @@
   --font-body: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   /* Corner docks: scroll-to-top stacks above the expanded ambience shell */
-  --dock-music-height: 7rem; /* expanded player shell (+ a little headroom) */
-  --dock-stack-gap: 1rem; /* ~16px gap between ↑ and music dock */
+  --dock-music-height: 6.75rem; /* expanded player shell (~103px) + headroom */
+  --dock-stack-gap: 0.75rem; /* gap between ↑ and music dock */
 
   /* ——— AAA material / motion / rarity tokens ——— */
   --mat-obsidian: linear-gradient(
@@ -610,9 +610,10 @@ button.panel:focus-visible {
  * Kept in CSS (not Tailwind arbitrary calc) so vars always resolve.
  */
 .scroll-to-top {
-  position: fixed;
+  /* !important: Tailwind utilities can win over unlayered custom position */
+  position: fixed !important;
   right: 0.75rem; /* right-3 */
-  z-index: 50; /* below music dock (55), above page chrome */
+  z-index: 56; /* above music dock (55) so ↑ stacks clearly in the corner column */
 }
 
 /* Marketing shell — no MobileGameNav */
@@ -1031,12 +1032,37 @@ a.panel:hover .section-card-thumb__img {
 }
 
 /* Focus Mode on an active match desk: drop global site header entirely.
-   In-match chrome (Practice Board bar) owns Exit / Settings / wallet return path. */
+   In-match chrome (Practice Board bar) owns Exit / Settings / wallet return path.
+   Music + scroll-to-top docks stay mounted (body-level) and remain usable. */
 html[data-battle-focus="true"] .game-shell__header-slot,
 html[data-battle-focus="true"] .game-shell__header-slot--focus,
 html[data-battle-focus="true"] .game-shell__mobile-nav-slot,
 html[data-battle-focus="true"] .game-shell__mobile-nav-slot--focus {
   display: none !important;
+}
+
+/* Focus Mode: mobile nav is gone — tuck corner docks lower (still above safe area). */
+html[data-battle-focus="true"] .site-dock-music {
+  bottom: calc(1.25rem + var(--safe-bottom)) !important;
+}
+
+html[data-battle-focus="true"] .scroll-to-top--battle,
+html[data-battle-focus="true"] .scroll-to-top--game {
+  bottom: calc(
+    1.25rem + var(--dock-music-height) + var(--dock-stack-gap) + var(--safe-bottom)
+  ) !important;
+}
+
+@media (min-width: 768px) {
+  html[data-battle-focus="true"] .site-dock-music {
+    bottom: 1.5rem !important;
+    right: 1.25rem !important;
+  }
+
+  html[data-battle-focus="true"] .scroll-to-top--battle,
+  html[data-battle-focus="true"] .scroll-to-top--game {
+    bottom: calc(1.5rem + var(--dock-music-height) + var(--dock-stack-gap)) !important;
+  }
 }
 
 html[data-battle-focus="true"] .game-shell__main--focus {

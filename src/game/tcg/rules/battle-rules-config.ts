@@ -45,6 +45,11 @@ export type BattleRulesConfig = {
     maxSpells: number;
     maxSupportCombined: number;
     maxPowerRarityCombined: number;
+    /**
+     * Max collectible 0-cost combat cards per constructed deck.
+     * Anti-abuse for free utilities (tokens / Rift Spark do not count).
+     */
+    maxZeroCostPerDeck: number;
     copyLimits: CopyLimits;
     powerRarities: readonly string[];
   };
@@ -52,6 +57,11 @@ export type BattleRulesConfig = {
     openingSize: number;
     maxSize: number;
     mulliganOnce: boolean;
+    /**
+     * Soft-shape opening hands so ≥1 card is affordable vs turn-1 Energy.
+     * Does not replace the optional mulligan decision.
+     */
+    ensureOpeningPlayable: boolean;
   };
   energy: {
     turn1Max: number;
@@ -113,7 +123,7 @@ export type BattleRulesConfig = {
 
 /** Standard competitive baseline (also used by practice unless overridden). */
 export const STANDARD_BATTLE_RULES: BattleRulesConfig = {
-  rulesVersion: "2.0.0",
+  rulesVersion: "2.1.0",
   keeper: {
     startingHp: 25,
   },
@@ -125,6 +135,8 @@ export const STANDARD_BATTLE_RULES: BattleRulesConfig = {
     maxSpells: 10,
     maxSupportCombined: 6,
     maxPowerRarityCombined: 3,
+    /** Configurable anti-abuse cap for free utilities. */
+    maxZeroCostPerDeck: 4,
     // Unique-only constructed: max 1 of each cardId / gameplay id.
     // Companion variants with different ids (e.g. Dawnkit vs Dawnkit Companion)
     // remain separate cards. Draft may override upward.
@@ -150,8 +162,14 @@ export const STANDARD_BATTLE_RULES: BattleRulesConfig = {
     openingSize: 5,
     maxSize: 9,
     mulliganOnce: true,
+    ensureOpeningPlayable: true,
   },
   energy: {
+    /**
+     * Starting Energy audit (v2.1): KEEP turn1Max = 2.
+     * Raising to 3 would mindlessly speed early turns and inflate 0-cost value.
+     * Dead hands are addressed via opening-hand shaping + mulligan + curve tools.
+     */
     turn1Max: 2,
     perTurnGain: 1,
     cap: 10,

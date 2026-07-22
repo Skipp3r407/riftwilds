@@ -1,6 +1,7 @@
 # Deck Construction
 
-**Config:** `STANDARD_BATTLE_RULES.deck` · validator `src/content/tcg/framework/deck-rules.ts`
+**Config:** `STANDARD_BATTLE_RULES.deck` · validator `src/content/tcg/framework/deck-rules.ts`  
+**Version:** Rules v2.1.0 · [DECK_BUILDING.md](./DECK_BUILDING.md) · [RULEBOOK.md](./RULEBOOK.md)
 
 ## Standard list
 
@@ -9,13 +10,13 @@
 - Max **10** spells
 - Max **6** equipment / artifact / terrain / support combined
 - Max **3** Legendary + Mythic + Ancient combined
+- Max **4** zero-cost collectible combat cards
 
 ## Copy limits
 
 | Rarity | Max copies |
 |--------|------------|
-| Common, Uncommon, Rare, Epic | 2 |
-| Legendary, Mythic, Ancient | 1 |
+| All Standard rarities | **1** (unique-only) |
 
 Cosmetic rarity never affects legality or power. Ranked uses normalized competitive stats only.
 

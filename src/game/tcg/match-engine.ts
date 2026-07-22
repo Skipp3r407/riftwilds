@@ -30,6 +30,7 @@ import {
   secureRandom,
   shuffleDeck,
 } from "@/game/tcg/deck";
+import { ensureOpeningHandPlayable } from "@/game/tcg/rules/opening-hand";
 import { ensurePracticeOpeningHandPlayable } from "@/game/tcg/practice-loadout";
 import {
   canAffordRiftCost,
@@ -1080,7 +1081,10 @@ function applyAiTurn(state: TcgMatchState): void {
         const ctx = playCostContextFromSide(ai);
         const ca = resolvePlayCost(a.def!, ctx).cost;
         const cb = resolvePlayCost(b.def!, ctx).cost;
-        return ca - cb || b.def!.attack - a.def!.attack;
+        // Tempo: curve out — spend highest affordable first; 0-cost as glue after.
+        // Prefer units with attack over empty spells when costs tie.
+        if (cb !== ca) return cb - ca;
+        return (b.def!.attack ?? 0) - (a.def!.attack ?? 0);
       });
     const pick = playable[0];
     if (!pick) break;
@@ -1106,7 +1110,10 @@ function makeSide(
   rules: BattleRulesConfig,
   commander?: TcgCommanderState | null,
   opts?: {
+    /** Soft-shape opening hand (practice useful-only filter). */
     practiceSoftMulligan?: boolean;
+    /** Soft-shape opening hand for all modes (any affordable ≤ turn1). */
+    ensureOpeningPlayable?: boolean;
     grantRiftSpark?: boolean;
     /** Explicit rng for tests only — live play uses secureRandom. */
     rng?: () => number;
@@ -1119,6 +1126,12 @@ function makeSide(
     shuffled = ensurePracticeOpeningHandPlayable(shuffled, {
       openingHand: rules.hand.openingSize,
     });
+  } else if (opts?.ensureOpeningPlayable ?? rules.hand.ensureOpeningPlayable) {
+    shuffled = ensureOpeningHandPlayable(shuffled, {
+      openingSize: rules.hand.openingSize,
+      maxOpenCost: rules.energy.turn1Max,
+      practiceUsefulOnly: false,
+    }, rules);
   }
   const hand = shuffled.splice(0, rules.hand.openingSize);
   const energy = refillRiftEnergy(1, {
@@ -1183,7 +1196,7 @@ export type CreateMatchInput = {
   encounter?: TcgMatchState["encounter"];
   /** Optional second seat — human for private invites, AI otherwise. */
   opponent?: CreateMatchOpponentInput;
-  /** Skip mulligan phase (tests / quick start). Default: practice skips. */
+  /** Skip mulligan phase (tests / quick start). Default: false when rules allow. */
   skipMulligan?: boolean;
   /**
    * Explicit RNG for tests / sims only. Omit for live play (crypto shuffle).
@@ -1239,8 +1252,7 @@ export function createTcgMatch(input: CreateMatchInput): TcgMatchState {
 
   const skipMulligan =
     input.skipMulligan ??
-    (mode === "practice" ||
-      mode === "quick" ||
+    (mode === "quick" ||
       mode === "tutorial" ||
       !rules.hand.mulliganOnce);
 

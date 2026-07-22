@@ -1,0 +1,306 @@
+{
+  "1": {
+    "role": "front-cover",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "The Traveling Circus — Cover",
+    "beat": "The Traveling Circus — Cover",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 1 (front-cover, splash, ~1 panels). Story beat: The Traveling Circus — Cover. Illustrate: Panel 1: Main cover: Spark centered beneath floating lanterns; Mira Eggwarden and companions entering circus; Lanternmaster above grand pavilion; Lumenhare leaping illusion rings; Meridian agents in shadows; sanctuary crystal glow in wagon; Lost City silhouette distant. Trade dress empty zones. Original Riftwilds.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "2": {
+    "role": "inside-cover",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Inside Front Cover",
+    "beat": "Inside Front Cover",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 2 (inside-cover, splash, ~1 panels). Story beat: Inside Front Cover. Illustrate: Panel 1: Quiet lantern-parchment inside cover; nested lantern watermark.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "3": {
+    "role": "credits",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Credits",
+    "beat": "Credits",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 3 (credits, splash, ~1 panels). Story beat: Credits. Illustrate: Panel 1: Circus workshop desk: masks, quills, lantern ink — empty credit boxes.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "4": {
+    "role": "title",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Chapter Three — Lanternveil",
+    "beat": "Chapter Three — Lanternveil",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 4 (title, splash, ~1 panels). Story beat: Chapter Three — Lanternveil. Illustrate: Panel 1: Title energy: circus pavilion silhouette, Spark and Lumenhare leap, Mira on threshold.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "5": {
+    "role": "story",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Roads Beneath Lanterns",
+    "beat": "Full splash: team sees Lanternveil Circus at twilight; Spark glows.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 5 (story, splash, ~1 panels). Story beat: Full splash: team sees Lanternveil Circus at twilight; Spark glows.. Illustrate: Panel 1: Full-bleed splash: Lanternveil Traveling Circus at twilight — floating lanterns, painted deep-blue ember-gold wagons, crowds, companion performers, grand pavilion, Riftwild hills behind. Mira Eggwarden and companions in foreground; Spark glowing cyan-gold reacting to lanterns. Balloon-safe top.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "6": {
+    "role": "story",
+    "layout": "three-stack",
+    "panelCount": 3,
+    "title": "Step Right In",
+    "beat": "Team enters; Thornling distracted; Bramblefox scans; Spark watches ring leaps.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 6 (story, three-stack, ~3 panels). Story beat: Team enters; Thornling distracted; Bramblefox scans; Spark watches ring leaps.. Illustrate: Panel 1: Gate of painted wagons; Mira leads Spark; crowd cheers. Greeter silhouette ahead. Panel 2: Thornling lunges toward candy-ribbon stall; Mossprig tries to block. Panel 3: Bramblefox ears sharp scanning masked crowd; Spark watches luminous companion leap rings of light.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "7": {
+    "role": "story",
+    "layout": "two-col",
+    "panelCount": 2,
+    "title": "The Greeter Notices",
+    "beat": "Masked greeter welcomes Mira; Spark markings pulse to lantern; greeter hides reaction.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 7 (story, two-col, ~2 panels). Story beat: Masked greeter welcomes Mira; Spark markings pulse to lantern; greeter hides reaction.. Illustrate: Panel 1: Masked acrobat greeter bows with floating lantern; Mira polite but guarded; Spark markings pulse toward lantern. Panel 2: Close on greeter eyes behind mask: recognition flicker at Spark's cyan-gold marks, then smooth smile — hides reaction. Three-arc charm half-hidden under sleeve cuff.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "8": {
+    "role": "story",
+    "layout": "grid-2x2",
+    "panelCount": 4,
+    "title": "Wonder Market",
+    "beat": "Warm montage: food, care tents, card booths, games, merchants, kids meeting companions.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 8 (story, grid-2x2, ~4 panels). Story beat: Warm montage: food, care tents, card booths, games, merchants, kids meeting companions.. Illustrate: Panel 1: Food stalls with steam and ember-gold banners; kids laughing. Panel 2: Creature care tent: gentle healers checking companion paws; Mossprig soft curiosity. Panel 3: Card-trading booth with theatrical ability demo props (not gambling); Spark watches. Panel 4: Games and merchants; Spirit Moth drifts toward a lantern signal in distance.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "9": {
+    "role": "story",
+    "layout": "three-stack",
+    "panelCount": 3,
+    "title": "Snack Catastrophe",
+    "beat": "Thornling comic food stall incident; Mossprig helps; Spark briefly laughs/relaxes.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 9 (story, three-stack, ~3 panels). Story beat: Thornling comic food stall incident; Mossprig helps; Spark briefly laughs/relaxes.. Illustrate: Panel 1: Thornling topples stacked caramel-root cones; sticky chaos. Panel 2: Mossprig Living Bulwark mini-dome catches falling trays; vendor relieved. Panel 3: Spark chirps a laugh-pulse; Mira soft smile — rare ease.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "10": {
+    "role": "story",
+    "layout": "two-col",
+    "panelCount": 2,
+    "title": "Lanternmaster Knows the Name",
+    "beat": "Mira meets Lanternmaster; he knows Spark's name; Mira sees ancient Rift symbol on wall.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 10 (story, two-col, ~2 panels). Story beat: Mira meets Lanternmaster; he knows Spark's name; Mira sees ancient Rift symbol on wall.. Illustrate: Panel 1: Rich wagon interior. Cael Vesper the Lanternmaster: mid-40s theatrical host, deep blue and ember-gold coat, brass lantern clasps, hand-painted half-mask with lantern motif, charismatic posture seated with tea lanterns. Mira and Spark enter. Lumenhare on cushion. Panel 2: Mira notices nested ancient Rift symbol painted behind curtain — matches Shellward / First Rift language. Spark uneasy.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "11": {
+    "role": "story",
+    "layout": "three-stack",
+    "panelCount": 3,
+    "title": "Not Neatly in a Codex",
+    "beat": "Lanternmaster: shelters that don't fit Codex; Mira asks Riftborn; he avoids.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 11 (story, three-stack, ~3 panels). Story beat: Lanternmaster: shelters that don't fit Codex; Mira asks Riftborn; he avoids.. Illustrate: Panel 1: Lanternmaster gestures to window showing odd companions in care pens — kind public face. Panel 2: Mira leans forward; Spark glow steady. Panel 3: Lanternmaster turns away to mask rack — theatrical dodge; Lumenhare ears dim.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "12": {
+    "role": "story",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Curtain Call Begins",
+    "beat": "Main performance; introduce Lumenhare; acrobatics/illusion/elemental demos.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 12 (story, splash, ~1 panels). Story beat: Main performance; introduce Lumenhare; acrobatics/illusion/elemental demos.. Illustrate: Panel 1: Grand pavilion performance: companion acrobatics, illusion rings, elemental sparks. Lumenhare center stage Lantern Leap through gold rings. Crowd awe. Mira's team in seats; Spark watches intently.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "13": {
+    "role": "story",
+    "layout": "grid-2x2",
+    "panelCount": 4,
+    "title": "Ghosts Under the Boards",
+    "beat": "Wisplet detects trapped spirits under stage; Spirit Moth pulse; Spark uneasy.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 13 (story, grid-2x2, ~4 panels). Story beat: Wisplet detects trapped spirits under stage; Spirit Moth pulse; Spark uneasy.. Illustrate: Panel 1: Wisplet drifts down toward stage boards; faint ghostly companion silhouettes beneath. Panel 2: Spirit Moth reacts to hidden lantern pulse backstage. Panel 3: Spark unease — glow strobes; Mira notices. Panel 4: Crowd still cheering above; contrast joy vs under-stage gloom.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "14": {
+    "role": "story",
+    "layout": "two-col",
+    "panelCount": 2,
+    "title": "Resonance Meeting",
+    "beat": "Spark meets Lumenhare backstage; nonverbal resonance recognition.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 14 (story, two-col, ~2 panels). Story beat: Spark meets Lumenhare backstage; nonverbal resonance recognition.. Illustrate: Panel 1: Backstage quiet: Spark and Lumenhare face each other; ear-light and cyan-gold pulse exchange; no humans between them. Panel 2: Shared resonance flare — Lumenhare recognizes Spark as kin-route; Mira watches from doorway without interrupting.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "15": {
+    "role": "story",
+    "layout": "three-stack",
+    "panelCount": 3,
+    "title": "Don't Ask Backstage",
+    "beat": "Performer warns Mira; Bramblefox sees Meridian tracking sigil.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 15 (story, three-stack, ~3 panels). Story beat: Performer warns Mira; Bramblefox sees Meridian tracking sigil.. Illustrate: Panel 1: Performer (Seris Vale in disguise) blocks corridor; fake smile. Panel 2: Bramblefox nose to performer's cuff — three-arc Meridian tracking sigil charm. Panel 3: Mira locks eyes with Seris; Spark half-hides behind Mira's satchel.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "16": {
+    "role": "story",
+    "layout": "grid-2x2",
+    "panelCount": 4,
+    "title": "Restricted Wagon",
+    "beat": "Thornling chases snack cart into restricted wagon; crates; broken Rift restraint.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 16 (story, grid-2x2, ~4 panels). Story beat: Thornling chases snack cart into restricted wagon; crates; broken Rift restraint.. Illustrate: Panel 1: Thornling races after glowing snack toy past RESTRICTED curtain. Panel 2: Inside wagon: crates with ancient symbols; Thornling skids. Panel 3: Open crate: broken Rift restraint collar with Meridian tooling marks. Panel 4: Mossprig pulls Thornling out; Mira and Bramblefox arrive.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "17": {
+    "role": "story",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Archive of Routes",
+    "beat": "Archive wagon: Riftborn records MISSING/CAPTURED/HIDDEN.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 17 (story, splash, ~1 panels). Story beat: Archive wagon: Riftborn records MISSING/CAPTURED/HIDDEN.. Illustrate: Panel 1: Mobile archive wagon: illustrated ledgers of Riftborn companions across eras. Mira, Spark, Wisplet, Spirit Moth. Stamps as icon marks (not readable text): missing/captured/hidden motifs.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "18": {
+    "role": "story",
+    "layout": "two-col",
+    "panelCount": 2,
+    "title": "Ember Route",
+    "beat": "Spark sees self-like image; Resonance Bearer Ember Route; multiple routes.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 18 (story, two-col, ~2 panels). Story beat: Spark sees self-like image; Resonance Bearer Ember Route; multiple routes.. Illustrate: Panel 1: Close: ledger illustration of creature resembling Spark with nested markings. Panel 2: Mira reads note (lettered overlay): Resonance Bearer — Ember Route.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "19": {
+    "role": "story",
+    "layout": "three-stack",
+    "panelCount": 3,
+    "title": "Crystal in the Vault",
+    "beat": "Bramblefox leads to vault; Shellward crystal seen; alarms.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 19 (story, three-stack, ~3 panels). Story beat: Bramblefox leads to vault; Shellward crystal seen; alarms.. Illustrate: Panel 1: Bramblefox leads team through backstage tunnel to artifact vault door with lantern wards. Panel 2: Vault interior: Shellward sanctuary crystal on warded pedestal — same crystal missing from Issue #2 — glowing soft cyan-gold. Panel 3: Alarms flare — cyan ward rings; Seris silhouette at door.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "20": {
+    "role": "story",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Sabotage",
+    "beat": "Grand performance sabotaged; Rift engine overload; controlled companion breaks free.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 20 (story, splash, ~1 panels). Story beat: Grand performance sabotaged; Rift engine overload; controlled companion breaks free.. Illustrate: Panel 1: Dramatic splash: central Rift engine under pavilion overloads cyan-amber; Ironmantle (large armored controlled companion) breaks free onstage with glowing Meridian control collar; audience mid-scream; lanterns swinging.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "21": {
+    "role": "story",
+    "layout": "grid-2x2",
+    "panelCount": 4,
+    "title": "Living Bulwark",
+    "beat": "Crowds flee; Mossprig shields civilians; Mira organizes companions.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 21 (story, grid-2x2, ~4 panels). Story beat: Crowds flee; Mossprig shields civilians; Mira organizes companions.. Illustrate: Panel 1: Crowds panic fleeing pavilion; Ironmantle attacks blindly. Panel 2: Mossprig Living Bulwark dome shields children and vendors; shoulder burn visible. Panel 3: Mira points positions — strategy, not panic. Panel 4: Lumenhare Curtain Call illusions draw Ironmantle's strike off civilians.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "22": {
+    "role": "story",
+    "layout": "spread",
+    "panelCount": 1,
+    "title": "Grand Chaos",
+    "beat": "Battle spread: Pulse Step, flank, Sprouting Energy, Grand Illusion, Wisplet phases cables.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 22 (story, spread, ~1 panels). Story beat: Battle spread: Pulse Step, flank, Sprouting Energy, Grand Illusion, Wisplet phases cables.. Illustrate: Panel 1: Wide battle spread: Spark Pulse Step blur; Bramblefox vine-flank; Thornling Sprouting Energy; Lumenhare Grand Illusion copies; Wisplet phases binding cables; performers evacuating; Meridian agents attacking from backstage.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "23": {
+    "role": "story",
+    "layout": "three-stack",
+    "panelCount": 3,
+    "title": "Not Evil — Collared",
+    "beat": "Mira realizes creature controlled; Spark approaches despite danger.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 23 (story, three-stack, ~3 panels). Story beat: Mira realizes creature controlled; Spark approaches despite danger.. Illustrate: Panel 1: Close on Ironmantle neck: glowing Meridian control collar; pain in creature eyes. Panel 2: Spark steps forward despite danger; Mira hand half-raised — not a command. Panel 3: Lanternmaster mid-combat misdirection; Seris snarls.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "24": {
+    "role": "story",
+    "layout": "two-col",
+    "panelCount": 2,
+    "title": "Spark Chooses",
+    "beat": "Mira refuses to order Spark; Spark chooses; Spark + Lumenhare combine.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 24 (story, two-col, ~2 panels). Story beat: Mira refuses to order Spark; Spark chooses; Spark + Lumenhare combine.. Illustrate: Panel 1: Mira kneels to Spark's eye level — open hands, no order. Panel 2: Spark and Lumenhare combine cyan-gold resonance with indigo-gold Grand Illusion weave around Ironmantle collar.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "25": {
+    "role": "story",
+    "layout": "three-stack",
+    "panelCount": 3,
+    "title": "Quiet Betrayal of the Hunt",
+    "beat": "Nira disables control relay; Bramblefox destroys restraint; Ironmantle freed.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 25 (story, three-stack, ~3 panels). Story beat: Nira disables control relay; Bramblefox destroys restraint; Ironmantle freed.. Illustrate: Panel 1: Nira Quill in Meridian kit secretly cuts glowing control relay — conflicted face. Panel 2: Bramblefox Forest Bond vines shatter exposed restraint collar. Panel 3: Ironmantle collapses then breathes free — collar dead; eyes clear.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "26": {
+    "role": "story",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Lanternmaster Unmasked in Battle",
+    "beat": "Freed creature turns on infiltrators; Lanternmaster combat; infiltrators retreat.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 26 (story, splash, ~1 panels). Story beat: Freed creature turns on infiltrators; Lanternmaster combat; infiltrators retreat.. Illustrate: Panel 1: Action splash: Ironmantle turns on Meridian agents; Lanternmaster reveals combat skill with staff-lantern; Seris retreats with partial data slate; Spark shielded by Mira and Lumenhare. Damage on pavilion.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "27": {
+    "role": "story",
+    "layout": "two-col",
+    "panelCount": 2,
+    "title": "We Move Them",
+    "beat": "Aftermath; Lanternmaster admits circus protected Riftborn; crystal protected.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 27 (story, two-col, ~2 panels). Story beat: Aftermath; Lanternmaster admits circus protected Riftborn; crystal protected.. Illustrate: Panel 1: Aftermath damaged pavilion; caring for Ironmantle; Mira faces Lanternmaster. Panel 2: Vault crystal under ward; Spark calm beside it briefly.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "28": {
+    "role": "story",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Map of Thresholds",
+    "beat": "Secret map: Commons, sanctuary, circus, Lost City; pulse under Lost City.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 28 (story, splash, ~1 panels). Story beat: Secret map: Commons, sanctuary, circus, Lost City; pulse under Lost City.. Illustrate: Panel 1: Lanternmaster opens secret map: Commons, Shellward Sanctum, Lanternveil Circus, Lost City. Soft pulse under Lost City marker. Mira, Spark, Lumenhare watch.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "29": {
+    "role": "story",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "The Guardian Remembers",
+    "beat": "Lost City night cliffhanger; towers light; shadow; NEXT THE LOST CITY.",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 29 (story, splash, ~1 panels). Story beat: Lost City night cliffhanger; towers light; shadow; NEXT THE LOST CITY.. Illustrate: Panel 1: Cliffhanger splash: Lost City at night — ancient layered towers lighting one by one cyan-amber; massive shadow beneath ruins; small Mira/Spark silhouette on ridge optional.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "30": {
+    "role": "teaser",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Next Issue — The Lost City",
+    "beat": "Next Issue — The Lost City",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 30 (teaser, splash, ~1 panels). Story beat: Next Issue — The Lost City. Illustrate: Panel 1: Teaser: Lost City towers lighting; Guardian shadow; map pin pulse.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "31": {
+    "role": "profile",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Character Profile — The Lanternmaster",
+    "beat": "Character Profile — The Lanternmaster",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 31 (profile, splash, ~1 panels). Story beat: Character Profile — The Lanternmaster. Illustrate: Panel 1: Cael Vesper portrait with mask on/off split; Lumenhare; lantern symbol.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "32": {
+    "role": "profile",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Companion Profile — Lumenhare",
+    "beat": "Companion Profile — Lumenhare",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 32 (profile, splash, ~1 panels). Story beat: Companion Profile — Lumenhare. Illustrate: Panel 1: Lumenhare reference: front/side/leap; indigo gold stars; ability effect sketches without text.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "33": {
+    "role": "lore",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Codex — Lanternveil Traveling Circus",
+    "beat": "Codex — Lanternveil Traveling Circus",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 33 (lore, splash, ~1 panels). Story beat: Codex — Lanternveil Traveling Circus. Illustrate: Panel 1: Illustrated codex plate: wagons, pavilion, vault, rift engine silhouette.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "34": {
+    "role": "lore",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Ability Spotlight — Grand Illusion",
+    "beat": "Ability Spotlight — Grand Illusion",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 34 (lore, splash, ~1 panels). Story beat: Ability Spotlight — Grand Illusion. Illustrate: Panel 1: Lumenhare creating illusion copies of Spark and Bramblefox absorbing strikes.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "35": {
+    "role": "map",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "World Map — Sanctum to Circus to Lost City",
+    "beat": "World Map — Sanctum to Circus to Lost City",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 35 (map, splash, ~1 panels). Story beat: World Map — Sanctum to Circus to Lost City. Illustrate: Panel 1: Stylized map: Commons, Shellward Sanctum, Lanternveil Circus route, Lost City pulse pin.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "36": {
+    "role": "letters",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Editor's Note",
+    "beat": "Editor's Note",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 36 (letters, splash, ~1 panels). Story beat: Editor's Note. Illustrate: Panel 1: Editor desk with mask and lantern; warm parchment light.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "37": {
+    "role": "inside-cover",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Inside Back Cover",
+    "beat": "Inside Back Cover",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 37 (inside-cover, splash, ~1 panels). Story beat: Inside Back Cover. Illustrate: Panel 1: Quiet aftershow: Ironmantle resting, Spark and Lumenhare nearby, damaged pavilion lanterns.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  },
+  "38": {
+    "role": "back-cover",
+    "layout": "splash",
+    "panelCount": 1,
+    "title": "Back Cover — Lanternveil Grand Performance",
+    "beat": "Back Cover — Lanternveil Grand Performance",
+    "prompt": "Western fantasy sequential COMIC BOOK PAGE, portrait 3:4, clear inked panel grid with white gutters and thick black borders when multi-panel. Characters drawn INSIDE panels only. NO floating portrait cards, NO collage insets, NO lore-plate overlays, NO encyclopedia UI. Painterly digital comic, earth greens/sandstone/timber first; cyan rift energy and amber lantern as accents only. NO purple AI-fantasy default. Leave clean empty corners for speech balloons. NO readable text, captions, logos, watermarks, page numbers, or UI painted into the art. Original Riftwilds IP. Issue page 38 (back-cover, splash, ~1 panels). Story beat: Back Cover — Lanternveil Grand Performance. Illustrate: Panel 1: In-universe ad: floating lanterns, companion performers, ticket graphic empty zones, hidden ancient symbol, moonrise warning mood. No gambling.. Mira Eggwarden is the hatchery mentor Keeper (not Cal Reed)."
+  }
+}

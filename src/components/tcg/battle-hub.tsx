@@ -14,12 +14,14 @@ import {
   BATTLE_HISTORY_MODE_FILTERS,
   BATTLE_HUB_MODE_META,
   BATTLE_HUB_MODES,
+  BATTLE_HUB_SECTION_TILES,
   battleHubHref,
   parseBattleHubMode,
   type BattleHubMode,
+  type BattleHubTile,
 } from "@/lib/tcg/battle-hub";
 import { cn } from "@/lib/utils/cn";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import { formatSol } from "@/game/rift-stakes/config";
 
 type StakesPanel = "lobby" | "history" | "leaderboard" | "treasury";
@@ -31,175 +33,161 @@ function parseStakesPanel(value: string | null): StakesPanel {
   return "lobby";
 }
 
-function ModeLinkGrid({ mode }: { mode: BattleHubMode }) {
-  const meta = BATTLE_HUB_MODE_META[mode];
+function HubThumbTile({
+  tile,
+  onSelect,
+}: {
+  tile: BattleHubTile;
+  onSelect?: () => void;
+}) {
+  const warn = tile.tone === "warn" || tile.tone === "amber";
+  const className = cn(
+    "group relative block overflow-hidden rounded-xl border text-left transition",
+    warn
+      ? "border-amber-400/35 bg-amber-950/15 hover:border-amber-300/55"
+      : "border-[rgba(61,231,255,0.18)] bg-[rgba(8,12,22,0.55)] hover:border-[rgba(61,231,255,0.42)]",
+  );
+
+  const inner = (
+    <>
+      <div className="relative aspect-[16/9] w-full overflow-hidden">
+        <Image
+          src={tile.thumbnail}
+          alt=""
+          fill
+          className="object-cover transition duration-300 group-hover:scale-[1.04]"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
+        <div
+          className={cn(
+            "pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent",
+            warn
+              ? "from-[rgba(28,16,6,0.94)] via-[rgba(28,16,6,0.45)]"
+              : "from-[rgba(6,10,18,0.94)] via-[rgba(6,10,18,0.42)]",
+          )}
+          aria-hidden
+        />
+      </div>
+      <div className="relative -mt-10 space-y-1 px-3 pb-3 pt-1">
+        <p className="font-display text-sm text-white drop-shadow-sm">{tile.title}</p>
+        <p className="text-xs text-[var(--text-muted)]">{tile.body}</p>
+      </div>
+    </>
+  );
+
+  if (tile.href) {
+    return (
+      <Link
+        href={tile.href}
+        onClick={() => {
+          playSfx("ui.click");
+          onSelect?.();
+        }}
+        className={className}
+      >
+        {inner}
+      </Link>
+    );
+  }
+
   return (
-    <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-      {(meta.relatedHrefs ?? []).map((link) => (
-        <li key={link.href}>
-          <Link
-            href={link.href}
-            onClick={() => playSfx("ui.click")}
-            className="btn-secondary focus-ring inline-flex w-full justify-center text-sm"
-          >
-            {link.label}
-          </Link>
-        </li>
+    <div className={className}>
+      {inner}
+    </div>
+  );
+}
+
+function HubTileGrid({
+  mode,
+  columns = "sm:grid-cols-2 lg:grid-cols-3",
+  filter,
+}: {
+  mode: BattleHubMode;
+  columns?: string;
+  filter?: (tile: BattleHubTile) => boolean;
+}) {
+  const tiles = BATTLE_HUB_SECTION_TILES[mode].filter(filter ?? (() => true));
+  return (
+    <div className={cn("grid gap-3", columns)}>
+      {tiles.map((tile) => (
+        <HubThumbTile key={tile.id} tile={tile} />
       ))}
-    </ul>
+    </div>
+  );
+}
+
+function ModeSection({
+  title,
+  description,
+  children,
+  material = "obsidian",
+}: {
+  title: string;
+  description: string;
+  children: ReactNode;
+  material?: "obsidian" | "gold" | "marble";
+}) {
+  return (
+    <RiftPanel material={material} className="space-y-3">
+      <h2 className="font-display text-xl text-white">{title}</h2>
+      <p className="text-sm text-[var(--text-muted)]">{description}</p>
+      {children}
+    </RiftPanel>
   );
 }
 
 function PracticePanel() {
   return (
-    <RiftPanel material="obsidian" className="space-y-3">
-      <h2 className="font-display text-xl text-white">Practice</h2>
-      <p className="text-sm text-[var(--text-muted)]">
-        Sandbox the Practice Board vs Kael, tune decks in the Atelier, or run the guided tutorial.
-        Nothing here touches ranked MMR or SOL.
-      </p>
-      <div className="flex flex-wrap gap-2">
-        <Link
-          href="/tcg/battle?mode=practice&board=1"
-          onClick={() => playSfx("ui.click")}
-          className="btn-primary focus-ring text-sm"
-        >
-          Open Practice Board
-        </Link>
-        <Link href="/tcg/tutorial" className="btn-secondary focus-ring text-sm">
-          Tutorial
-        </Link>
-        <Link href="/tcg/deck-builder" className="btn-secondary focus-ring text-sm">
-          Deck Atelier
-        </Link>
-      </div>
-      <ModeLinkGrid mode="practice" />
-    </RiftPanel>
+    <ModeSection
+      title="Practice"
+      description="Sandbox the Practice Board vs Kael, tune decks in the Atelier, or run the guided tutorial. Nothing here touches ranked MMR or SOL."
+    >
+      <HubTileGrid mode="practice" columns="sm:grid-cols-2" />
+    </ModeSection>
   );
 }
 
 function CasualPanel() {
   return (
-    <RiftPanel material="obsidian" className="space-y-3">
-      <h2 className="font-display text-xl text-white">Casual</h2>
-      <p className="text-sm text-[var(--text-muted)]">
-        Quick free matches, friend challenges, and private rooms. Queues stay fully free — Rift
-        Stakes never shares this matchmaking pool.
-      </p>
-      <div className="grid gap-3 sm:grid-cols-3">
-        {[
-          {
-            title: "Quick match",
-            body: "Join the free Arena queue.",
-            href: "/arena#queue",
-          },
-          {
-            title: "Friends",
-            body: "Challenge Keepers from Social.",
-            href: "/social?tab=friends",
-          },
-          {
-            title: "Private room",
-            body: "Invite link on the Practice Board.",
-            href: "/tcg/battle?mode=practice&board=1",
-          },
-        ].map((card) => (
-          <Link
-            key={card.title}
-            href={card.href}
-            onClick={() => playSfx("ui.click")}
-            className="rounded-xl border border-[rgba(61,231,255,0.18)] bg-[rgba(8,12,22,0.55)] p-4 transition hover:border-[rgba(61,231,255,0.4)]"
-          >
-            <p className="font-display text-sm text-white">{card.title}</p>
-            <p className="mt-1 text-xs text-[var(--text-muted)]">{card.body}</p>
-          </Link>
-        ))}
-      </div>
-      <ModeLinkGrid mode="casual" />
-    </RiftPanel>
+    <ModeSection
+      title="Casual"
+      description="Quick free matches, friend challenges, and private rooms. Queues stay fully free — Rift Stakes never shares this matchmaking pool."
+    >
+      <HubTileGrid mode="casual" columns="sm:grid-cols-2 lg:grid-cols-3" />
+    </ModeSection>
   );
 }
 
 function RankedPanel() {
   return (
-    <RiftPanel material="obsidian" className="space-y-3">
-      <h2 className="font-display text-xl text-white">Ranked</h2>
-      <p className="text-sm text-[var(--text-muted)]">
-        Seasonal ladders, MMR, and skill-normalized decks. Competitive and free — no wallet
-        required.
-      </p>
-      <dl className="grid gap-2 text-sm sm:grid-cols-3">
-        {[
-          ["Season", "Active free ladder"],
-          ["Rank", "Tier climb · Arena Points"],
-          ["MMR", "Skill queue · no SOL"],
-        ].map(([k, v]) => (
-          <div
-            key={k}
-            className="rounded-xl border border-[rgba(61,231,255,0.14)] bg-[rgba(8,12,22,0.45)] p-3"
-          >
-            <dt className="text-[10px] uppercase tracking-[0.16em] text-[var(--cyan)]">{k}</dt>
-            <dd className="mt-1 text-[var(--text)]">{v}</dd>
-          </div>
-        ))}
-      </dl>
-      <ModeLinkGrid mode="ranked" />
-    </RiftPanel>
+    <ModeSection
+      title="Ranked"
+      description="Seasonal ladders, MMR, and skill-normalized decks. Competitive and free — no wallet required."
+    >
+      <HubTileGrid mode="ranked" columns="sm:grid-cols-2 lg:grid-cols-3" />
+    </ModeSection>
   );
 }
 
 function AiPanel() {
   return (
-    <RiftPanel material="obsidian" className="space-y-3">
-      <h2 className="font-display text-xl text-white">AI Challenge</h2>
-      <p className="text-sm text-[var(--text-muted)]">
-        Difficulty tiers, story bosses, and training drills. Start on the Practice Board or legacy
-        training grounds.
-      </p>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {["Easy", "Normal", "Hard", "Boss"].map((tier) => (
-          <div
-            key={tier}
-            className="rounded-xl border border-[rgba(61,231,255,0.14)] bg-[rgba(8,12,22,0.45)] p-3"
-          >
-            <p className="text-[10px] uppercase tracking-[0.16em] text-[var(--amber)]">
-              Difficulty
-            </p>
-            <p className="mt-1 font-display text-white">{tier}</p>
-          </div>
-        ))}
-      </div>
-      <ModeLinkGrid mode="ai" />
-    </RiftPanel>
+    <ModeSection
+      title="AI Challenge"
+      description="Difficulty tiers, story bosses, and training drills. Start on the Practice Board or legacy training grounds."
+    >
+      <HubTileGrid mode="ai" columns="sm:grid-cols-2 lg:grid-cols-4" />
+    </ModeSection>
   );
 }
 
 function TournamentPanel() {
   return (
-    <RiftPanel material="obsidian" className="space-y-3">
-      <h2 className="font-display text-xl text-white">Tournament</h2>
-      <p className="text-sm text-[var(--text-muted)]">
-        Upcoming, live, hosted, and guild cups. Free-entry architecture first; SOL tournament
-        flags stay off until compliance.
-      </p>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {[
-          ["Upcoming", "Browse the calendar"],
-          ["Live", "Spectate & join open cups"],
-          ["Hosted", "Player-run brackets"],
-          ["Guild", "Guild clash seasons"],
-        ].map(([title, body]) => (
-          <div
-            key={title}
-            className="rounded-xl border border-[rgba(61,231,255,0.14)] bg-[rgba(8,12,22,0.45)] p-3"
-          >
-            <p className="font-display text-sm text-white">{title}</p>
-            <p className="mt-1 text-xs text-[var(--text-muted)]">{body}</p>
-          </div>
-        ))}
-      </div>
-      <ModeLinkGrid mode="tournament" />
-    </RiftPanel>
+    <ModeSection
+      title="Tournament"
+      description="Upcoming, live, hosted, and guild cups. Free-entry architecture first; SOL tournament flags stay off until compliance."
+    >
+      <HubTileGrid mode="tournament" columns="sm:grid-cols-2 lg:grid-cols-3" />
+    </ModeSection>
   );
 }
 
@@ -304,6 +292,31 @@ function StakesLeaderboardInline() {
   );
 }
 
+function StakesPanelHero({ panelId }: { panelId: StakesPanel }) {
+  const tile = BATTLE_HUB_SECTION_TILES.stakes.find((t) => t.id === panelId);
+  if (!tile) return null;
+  return (
+    <div className="relative mb-4 aspect-[21/7] min-h-[7rem] w-full overflow-hidden rounded-xl">
+      <Image
+        src={tile.thumbnail}
+        alt=""
+        fill
+        className="object-cover"
+        sizes="(max-width: 1024px) 100vw, 960px"
+        priority
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(28,16,6,0.92)] via-[rgba(28,16,6,0.35)] to-transparent"
+        aria-hidden
+      />
+      <div className="absolute inset-x-0 bottom-0 p-4">
+        <p className="font-display text-lg text-white drop-shadow-sm">{tile.title}</p>
+        <p className="text-xs text-amber-100/80">{tile.body}</p>
+      </div>
+    </div>
+  );
+}
+
 function StakesPanel({
   panel,
   onPanel,
@@ -311,13 +324,6 @@ function StakesPanel({
   panel: StakesPanel;
   onPanel: (p: StakesPanel) => void;
 }) {
-  const tabs: { id: StakesPanel; label: string }[] = [
-    { id: "lobby", label: "Lobby" },
-    { id: "history", label: "History" },
-    { id: "leaderboard", label: "Leaderboard" },
-    { id: "treasury", label: "Fee treasury" },
-  ];
-
   return (
     <div className="space-y-4">
       <RiftPanel material="gold" className="space-y-3">
@@ -335,33 +341,65 @@ function StakesPanel({
           </div>
           <WalletConnectButton />
         </div>
-        <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Rift Stakes panels">
-          {tabs.map((t) => (
-            <button
-              key={t.id}
-              type="button"
-              role="tab"
-              aria-selected={panel === t.id}
-              onClick={() => {
-                playSfx("ui.nav");
-                onPanel(t.id);
-              }}
-              className={cn(
-                "rounded-lg px-3 py-1.5 text-xs uppercase tracking-[0.14em] transition",
-                panel === t.id
-                  ? "bg-amber-500/25 text-amber-100 ring-1 ring-amber-400/50"
-                  : "bg-[rgba(8,12,22,0.55)] text-[var(--text-muted)] hover:text-[var(--text)]",
-              )}
-            >
-              {t.label}
-            </button>
-          ))}
+        <div
+          className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4"
+          role="tablist"
+          aria-label="Rift Stakes panels"
+        >
+          {BATTLE_HUB_SECTION_TILES.stakes.map((tile) => {
+            const id = tile.id as StakesPanel;
+            const active = panel === id;
+            return (
+              <button
+                key={tile.id}
+                type="button"
+                role="tab"
+                aria-selected={active}
+                onClick={() => {
+                  playSfx("ui.nav");
+                  onPanel(id);
+                }}
+                className={cn(
+                  "group relative overflow-hidden rounded-xl border text-left transition",
+                  active
+                    ? "border-amber-300/70 ring-1 ring-amber-400/55"
+                    : "border-amber-400/30 hover:border-amber-300/50",
+                )}
+              >
+                <div className="relative aspect-[16/9] w-full overflow-hidden">
+                  <Image
+                    src={tile.thumbnail}
+                    alt=""
+                    fill
+                    className="object-cover transition duration-300 group-hover:scale-[1.04]"
+                    sizes="(max-width: 640px) 100vw, 25vw"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(28,16,6,0.94)] via-[rgba(28,16,6,0.4)] to-transparent"
+                    aria-hidden
+                  />
+                </div>
+                <div className="relative -mt-9 space-y-0.5 px-3 pb-3">
+                  <p className="font-display text-sm text-white">{tile.title}</p>
+                  <p className="text-[10px] uppercase tracking-[0.12em] text-amber-200/85">
+                    {active ? "Active" : "Open"}
+                  </p>
+                </div>
+              </button>
+            );
+          })}
         </div>
       </RiftPanel>
 
-      {panel === "lobby" ? <RiftStakesLobby hubEmbedded /> : null}
+      {panel === "lobby" ? (
+        <div>
+          <StakesPanelHero panelId="lobby" />
+          <RiftStakesLobby hubEmbedded />
+        </div>
+      ) : null}
       {panel === "history" ? (
         <RiftPanel material="obsidian">
+          <StakesPanelHero panelId="history" />
           <h3 className="font-display text-lg text-white">Stake match history</h3>
           <p className="mt-1 text-xs text-[var(--text-muted)]">
             Settled and open stake matches only — free Arena history stays under Casual / Ranked.
@@ -373,6 +411,7 @@ function StakesPanel({
       ) : null}
       {panel === "leaderboard" ? (
         <RiftPanel material="obsidian">
+          <StakesPanelHero panelId="leaderboard" />
           <h3 className="font-display text-lg text-white">Stakes leaderboard</h3>
           <p className="mt-1 text-xs text-[var(--text-muted)]">
             Wins, losses, and net SOL from settled stakes only.
@@ -384,6 +423,7 @@ function StakesPanel({
       ) : null}
       {panel === "treasury" ? (
         <RiftPanel material="obsidian" className="space-y-3">
+          <StakesPanelHero panelId="treasury" />
           <h3 className="font-display text-lg text-white">Fee treasury</h3>
           <p className="text-xs text-[var(--text-muted)]">
             Platform fees from Rift Stakes only. Internal split remains transparent.

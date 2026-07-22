@@ -236,6 +236,19 @@ export function mysteryRiftEggPath(): string {
   return `/assets/hatchery/claim-starter-egg.png?v=${HERO_EGG_V}`;
 }
 
+/** Bump when homepage affinity card backgrounds are regenerated. */
+export const HOME_AFFINITY_BG_V = "habg1";
+
+/**
+ * Atmospheric affinity backdrop for homepage creature / marketplace cards.
+ * Under public/assets/marketing/home-affinity-bgs/{ember-rift|grove-moss|tide-glow|spirit-haze}.webp
+ */
+export function homeAffinityBgPath(
+  slug: "ember-rift" | "grove-moss" | "tide-glow" | "spirit-haze",
+): string {
+  return `/assets/marketing/home-affinity-bgs/${slug}.webp?v=${HOME_AFFINITY_BG_V}`;
+}
+
 /** Empty eggs panel art under public/assets/hatchery/empty-eggs.png */
 export function hatcheryEmptyEggsPath(): string {
   return `/assets/hatchery/empty-eggs.png?v=${HATCHERY_ART_V}`;

@@ -123,7 +123,10 @@ export function ScrollToTop() {
       tabIndex={visible ? 0 : -1}
       aria-hidden={!visible}
       className={cn(
-        "scroll-to-top focus-ring group relative flex h-11 w-11 items-center justify-center",
+        /* `fixed` must be a Tailwind utility — a bare `relative` here previously
+           overrode `.scroll-to-top { position: fixed }` and parked the button at
+           the document end (~23k px down), so it never floated over the page. */
+        "scroll-to-top focus-ring group fixed flex h-11 w-11 items-center justify-center",
         pathClass,
         "rounded-xl border border-[var(--stroke-bronze)]",
         "lw-hud-glass text-[var(--amber)]",

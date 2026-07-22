@@ -6,7 +6,7 @@ import { CommercialShowcase } from "@/components/marketing/commercial-showcase";
 import { HatchOddsPanel } from "@/components/marketing/hatch-odds-panel";
 import { EconomySummary } from "@/components/economy";
 import { EveryPurchaseSection } from "@/components/revenue";
-import { mysteryRiftEggPath } from "@/lib/assets/paths";
+import { homeAffinityBgPath, mysteryRiftEggPath } from "@/lib/assets/paths";
 import { projectConfig } from "@/lib/config/project";
 import { getActivePolicy, bpsToPercentLabel } from "@/lib/revenue/policies";
 
@@ -43,24 +43,28 @@ const featured = [
     affinity: "Ember",
     rarity: "Uncommon",
     src: "/assets/pets/cindercub.png?v=mask3",
+    bg: homeAffinityBgPath("ember-rift"),
   },
   {
     name: "Mossprig",
     affinity: "Grove",
     rarity: "Common",
     src: "/assets/pets/mossprig.png?v=mask3",
+    bg: homeAffinityBgPath("grove-moss"),
   },
   {
     name: "Bubbloon",
     affinity: "Tide",
     rarity: "Common",
     src: "/assets/pets/bubbloon.png?v=mask3",
+    bg: homeAffinityBgPath("tide-glow"),
   },
   {
     name: "Wisplet",
     affinity: "Spirit",
     rarity: "Rare",
     src: "/assets/pets/wisplet.png?v=mask3",
+    bg: homeAffinityBgPath("spirit-haze"),
   },
 ];
 
@@ -195,10 +199,29 @@ export default function HomePage() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map((c) => (
             <article key={c.name} className="panel overflow-hidden">
-              <div className="relative aspect-[4/3] bg-[rgba(7,11,22,0.6)]">
-                <Image src={c.src} alt="" fill className="object-contain p-4" unoptimized />
+              <div className="relative aspect-[4/3] overflow-hidden bg-[rgba(7,11,22,0.6)]">
+                <Image
+                  src={c.bg}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                  unoptimized
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(6,10,20,0.72)] via-[rgba(6,10,20,0.28)] to-[rgba(6,10,20,0.35)]"
+                  aria-hidden
+                />
+                <Image
+                  src={c.src}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="relative z-[1] object-contain p-4 drop-shadow-[0_8px_18px_rgba(0,0,0,0.45)]"
+                  unoptimized
+                />
               </div>
-              <div className="p-4">
+              <div className="relative p-4">
                 <h3 className="font-display text-lg text-white">{c.name}</h3>
                 <p className="mt-1 text-xs uppercase tracking-wider text-[var(--text-muted)]">
                   {c.affinity} · {c.rarity}
@@ -277,17 +300,37 @@ export default function HomePage() {
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {featured.slice(0, 3).map((c, i) => (
-              <div key={c.name} className="panel p-4">
-                <div className="relative mx-auto h-24 w-24">
-                  <Image src={c.src} alt="" fill className="object-contain" unoptimized />
+              <div key={c.name} className="panel relative overflow-hidden p-4">
+                <Image
+                  src={c.bg}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                  className="object-cover"
+                  unoptimized
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(6,10,20,0.92)] via-[rgba(6,10,20,0.62)] to-[rgba(6,10,20,0.45)]"
+                  aria-hidden
+                />
+                <div className="relative z-[1]">
+                  <div className="relative mx-auto h-24 w-24">
+                    <Image
+                      src={c.src}
+                      alt=""
+                      fill
+                      className="object-contain drop-shadow-[0_6px_14px_rgba(0,0,0,0.5)]"
+                      unoptimized
+                    />
+                  </div>
+                  <p className="font-display mt-3 text-center text-white">{c.name}</p>
+                  <p className="mt-1 text-center text-xs text-[var(--text-muted)]">
+                    {c.rarity} · Listing demo
+                  </p>
+                  <p className="mt-2 text-center font-display text-[var(--amber)]">
+                    {["—", "—", "—"][i]} SOL
+                  </p>
                 </div>
-                <p className="font-display mt-3 text-center text-white">{c.name}</p>
-                <p className="mt-1 text-center text-xs text-[var(--text-muted)]">
-                  {c.rarity} · Listing demo
-                </p>
-                <p className="mt-2 text-center font-display text-[var(--amber)]">
-                  {["—", "—", "—"][i]} SOL
-                </p>
               </div>
             ))}
           </div>

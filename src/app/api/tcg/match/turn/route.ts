@@ -18,7 +18,13 @@ const bodySchema = z.object({
       targetInstanceId: z.string().min(1).max(48).optional(),
     }),
     z.object({ kind: z.literal("END_TURN") }),
+    z.object({ kind: z.literal("DECLARE_COMBAT") }),
     z.object({ kind: z.literal("SURRENDER") }),
+    z.object({ kind: z.literal("KEEP_HAND") }),
+    z.object({
+      kind: z.literal("MULLIGAN"),
+      replaceInstanceIds: z.array(z.string().min(1).max(48)).max(12),
+    }),
   ]),
 });
 

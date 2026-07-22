@@ -131,6 +131,260 @@ export const BATTLE_HUB_MODE_META: Record<BattleHubMode, BattleHubModeMeta> = {
   },
 };
 
+/** Section / sub-tile thumbnails inside each Battle Hub mode tab. */
+export type BattleHubTile = {
+  id: string;
+  title: string;
+  body: string;
+  thumbnail: string;
+  href?: string;
+  tone?: "default" | "warn" | "amber";
+};
+
+export const BATTLE_HUB_SECTION_TILES: Record<BattleHubMode, BattleHubTile[]> = {
+  practice: [
+    {
+      id: "practice-board",
+      title: "Practice Board",
+      body: "Sandbox duel vs Kael — no MMR, no SOL.",
+      thumbnail: "/assets/ui/battle-hub/hub-practice-board.png",
+      href: "/tcg/battle?mode=practice&board=1",
+    },
+    {
+      id: "tutorial",
+      title: "Tutorial",
+      body: "Guided walkthrough of core combat.",
+      thumbnail: "/assets/ui/battle-hub/hub-practice-tutorial.png",
+      href: "/tcg/tutorial",
+    },
+    {
+      id: "atelier",
+      title: "Deck Atelier",
+      body: "Tune lists before you queue.",
+      thumbnail: "/assets/ui/battle-hub/hub-practice-atelier.png",
+      href: "/tcg/deck-builder",
+    },
+    {
+      id: "legacy",
+      title: "Legacy training",
+      body: "Classic training grounds drills.",
+      thumbnail: "/assets/ui/battle-hub/hub-practice-legacy.png",
+      href: "/arena/training",
+    },
+  ],
+  casual: [
+    {
+      id: "quick",
+      title: "Quick match",
+      body: "Join the free Arena queue.",
+      thumbnail: "/assets/ui/battle-hub/hub-casual-quick.png",
+      href: "/arena#queue",
+    },
+    {
+      id: "friends",
+      title: "Friends",
+      body: "Challenge Keepers from Social.",
+      thumbnail: "/assets/ui/battle-hub/hub-casual-friends.png",
+      href: "/social?tab=friends",
+    },
+    {
+      id: "private",
+      title: "Private room",
+      body: "Invite link on the Practice Board.",
+      thumbnail: "/assets/ui/battle-hub/hub-casual-private.png",
+      href: "/tcg/battle?mode=practice&board=1",
+    },
+    {
+      id: "arena",
+      title: "Free Arena hub",
+      body: "Browse free match surfaces.",
+      thumbnail: "/assets/ui/battle-hub/hub-casual-arena.png",
+      href: "/arena",
+    },
+    {
+      id: "duels",
+      title: "Custom duels",
+      body: "Set your own free duel table.",
+      thumbnail: "/assets/ui/battle-hub/hub-casual-duels.png",
+      href: "/arena/duels",
+    },
+  ],
+  ranked: [
+    {
+      id: "season",
+      title: "Season",
+      body: "Active free ladder.",
+      thumbnail: "/assets/ui/battle-hub/hub-ranked-season.png",
+      href: "/arena/ranked",
+    },
+    {
+      id: "rank",
+      title: "Rank",
+      body: "Tier climb · Arena Points.",
+      thumbnail: "/assets/ui/battle-hub/hub-ranked-rank.png",
+      href: "/arena/ranked",
+    },
+    {
+      id: "mmr",
+      title: "MMR",
+      body: "Skill queue · no SOL.",
+      thumbnail: "/assets/ui/battle-hub/hub-ranked-mmr.png",
+      href: "/arena/ranked",
+    },
+    {
+      id: "ladder",
+      title: "Ranked ladder",
+      body: "Season standings and climb path.",
+      thumbnail: "/assets/ui/battle-hub/hub-ranked-ladder.png",
+      href: "/arena/ranked",
+    },
+    {
+      id: "leaderboard",
+      title: "Leaderboard",
+      body: "Arena competitive boards.",
+      thumbnail: "/assets/ui/battle-hub/hub-ranked-leaderboard.png",
+      href: "/arena/leaderboard",
+    },
+    {
+      id: "global",
+      title: "Global boards",
+      body: "Cross-mode Keeper rankings.",
+      thumbnail: "/assets/ui/battle-hub/hub-ranked-global.png",
+      href: "/leaderboards",
+    },
+  ],
+  ai: [
+    {
+      id: "easy",
+      title: "Easy",
+      body: "Gentle drills for new Keepers.",
+      thumbnail: "/assets/ui/battle-hub/hub-ai-easy.png",
+      href: "/tcg/battle?mode=practice&board=1",
+    },
+    {
+      id: "normal",
+      title: "Normal",
+      body: "Balanced rivalry vs Kael.",
+      thumbnail: "/assets/ui/battle-hub/hub-ai-normal.png",
+      href: "/tcg/battle?mode=practice&board=1",
+    },
+    {
+      id: "hard",
+      title: "Hard",
+      body: "High-pressure training.",
+      thumbnail: "/assets/ui/battle-hub/hub-ai-hard.png",
+      href: "/tcg/battle?mode=practice&board=1",
+    },
+    {
+      id: "boss",
+      title: "Boss",
+      body: "Story boss intensity.",
+      thumbnail: "/assets/ui/battle-hub/hub-ai-boss.png",
+      href: "/arena/training",
+      tone: "amber",
+    },
+    {
+      id: "kael",
+      title: "Practice vs Kael",
+      body: "Open the Practice Board.",
+      thumbnail: "/assets/ui/battle-hub/hub-ai-kael.png",
+      href: "/tcg/battle?mode=practice&board=1",
+    },
+    {
+      id: "training",
+      title: "Training grounds",
+      body: "Legacy AI drills & routines.",
+      thumbnail: "/assets/ui/battle-hub/hub-ai-training.png",
+      href: "/arena/training",
+    },
+    {
+      id: "guided",
+      title: "Guided tutorial",
+      body: "Learn the rules step by step.",
+      thumbnail: "/assets/ui/battle-hub/hub-practice-tutorial.png",
+      href: "/tcg/tutorial",
+    },
+  ],
+  tournament: [
+    {
+      id: "upcoming",
+      title: "Upcoming",
+      body: "Browse the calendar.",
+      thumbnail: "/assets/ui/battle-hub/hub-tournament-upcoming.png",
+      href: "/social?tab=calendar",
+    },
+    {
+      id: "live",
+      title: "Live",
+      body: "Spectate & join open cups.",
+      thumbnail: "/assets/ui/battle-hub/hub-tournament-live.png",
+      href: "/arena/tournaments",
+    },
+    {
+      id: "hosted",
+      title: "Hosted",
+      body: "Player-run brackets.",
+      thumbnail: "/assets/ui/battle-hub/hub-tournament-hosted.png",
+      href: "/arena/tournaments",
+    },
+    {
+      id: "guild",
+      title: "Guild",
+      body: "Guild clash seasons.",
+      thumbnail: "/assets/ui/battle-hub/hub-tournament-guild.png",
+      href: "/guilds",
+    },
+    {
+      id: "lobby",
+      title: "Tournament lobby",
+      body: "Cups, brackets, and entry.",
+      thumbnail: "/assets/ui/battle-hub/hub-tournament-lobby.png",
+      href: "/arena/tournaments",
+    },
+    {
+      id: "calendar",
+      title: "Event calendar",
+      body: "Upcoming free cups & events.",
+      thumbnail: "/assets/ui/battle-hub/hub-tournament-calendar.png",
+      href: "/social?tab=calendar",
+    },
+  ],
+  stakes: [
+    {
+      id: "lobby",
+      title: "Lobby",
+      body: "Stake tiers, queues, escrow.",
+      thumbnail: "/assets/ui/battle-hub/hub-stakes-lobby.png",
+      href: "/tcg/battle?mode=stakes",
+      tone: "warn",
+    },
+    {
+      id: "history",
+      title: "History",
+      body: "Settled and open stake matches.",
+      thumbnail: "/assets/ui/battle-hub/hub-stakes-history.png",
+      href: "/tcg/battle?mode=stakes&panel=history",
+      tone: "warn",
+    },
+    {
+      id: "leaderboard",
+      title: "Leaderboard",
+      body: "Net SOL from settled stakes.",
+      thumbnail: "/assets/ui/battle-hub/hub-stakes-leaderboard.png",
+      href: "/tcg/battle?mode=stakes&panel=leaderboard",
+      tone: "warn",
+    },
+    {
+      id: "treasury",
+      title: "Fee treasury",
+      body: "Platform fees from Rift Stakes.",
+      thumbnail: "/assets/ui/battle-hub/hub-stakes-treasury.png",
+      href: "/tcg/battle?mode=stakes&panel=treasury",
+      tone: "warn",
+    },
+  ],
+};
+
 export const BATTLE_HUB_PATH = "/tcg/battle";
 
 export function isBattleHubMode(value: string | null | undefined): value is BattleHubMode {

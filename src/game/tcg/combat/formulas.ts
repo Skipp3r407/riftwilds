@@ -7,7 +7,7 @@ import type { TcgElement } from "@/content/tcg/types";
 
 /** Stat clamps from the AAA card-stat brief. */
 export const STAT_RANGES = {
-  cost: { min: 1, max: 10 },
+  cost: { min: 0, max: 10 },
   attack: { min: 0, max: 15 },
   health: { min: 1, max: 30 },
   defense: { min: 0, max: 10 },

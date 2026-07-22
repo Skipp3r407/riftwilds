@@ -20,6 +20,13 @@ Codes: `INVENTORY_NOT_COMBAT` / `INVENTORY_NOT_DECK`.
 6. **Practice Board** — `isPracticeUsefulCard` hard-gates inventory
 7. **Match engine** — throws if a leftover somehow reaches play
 
+## Soft guidance
+
+Curve warnings from `analyzeDeckCurveWarnings` (no T1 plays, expensive curve, 0-cost info) are soft in the Atelier unless they violate hard caps.
+
+Hard codes include: `MAX_ZERO_COST`, `INVENTORY_NOT_COMBAT`, `DECK_SIZE`, `COPY_LIMIT`, composition codes.
+
 ## Save migration
 
 `getActiveDeckList` strips inventory ids, grants inventory stacks, pads unique combat cards. Saved decks migrate the same way.
+

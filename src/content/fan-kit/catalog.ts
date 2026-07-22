@@ -25,7 +25,7 @@ export const BRAND_GUIDELINES = [
   "Logo mark + wordmark stay intact; don’t stretch, recolor into neon purple, or crop the egg mark oddly.",
 ];
 
-/** Wallpapers: reuse `@/content/wallpapers` + WallpaperDownloads (15-pack). */
+/** Wallpapers: reuse `@/content/wallpapers` + WallpaperDownloads (full catalog). */
 
 export const FAN_KIT_LOGO_PACK: FanKitAsset[] = [
   {

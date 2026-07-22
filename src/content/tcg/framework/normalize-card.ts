@@ -280,12 +280,13 @@ export function normalizeCard(card: TcgCard): NormalizedTcgCard {
     typeof withKw.health === "number"
       ? clampStat(withKw.health, STAT_RANGES.health)
       : withKw.health;
-  // Tokens + commanders may be authored at 0 (free token / hero slot).
-  // All other cards clamp to the competitive cost curve (min 1).
+  // Tokens, commanders, and carefully designed 0-cost utilities may be 0.
+  // Positive costs clamp to the competitive curve (1–10).
+  const roundedCost = Math.round(withKw.energyCost);
   const energyCost =
-    withKw.isToken || category === "commander"
-      ? Math.max(0, Math.round(withKw.energyCost))
-      : clampStat(withKw.energyCost, STAT_RANGES.cost);
+    roundedCost <= 0
+      ? 0
+      : clampStat(roundedCost, STAT_RANGES.cost);
 
   return {
     ...withKw,

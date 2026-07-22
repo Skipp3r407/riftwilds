@@ -19,6 +19,8 @@ import {
   INVENTORY_DECK_REJECT_MESSAGE,
   isCombatEligibleCard,
 } from "@/content/tcg/framework/combat-eligibility";
+import { STANDARD_BATTLE_RULES } from "@/game/tcg/rules/battle-rules-config";
+import type { CurveWarning } from "@/game/tcg/rules/mana-curve";
 
 type CatalogCard = DeckBuilderCardRow & { owned: number };
 
@@ -294,29 +296,89 @@ export function DeckBuilder() {
     data?.defaults.minDeckSize ??
     30;
 
+  const maxZeroCost =
+    data?.constructedRules?.maxZeroCostPerDeck ??
+    STANDARD_BATTLE_RULES.deck.maxZeroCostPerDeck;
+  const turn1Energy =
+    data?.defaults?.riftEnergyStartMax ??
+    STANDARD_BATTLE_RULES.energy.turn1Max;
+
   const validation = useMemo(() => {
-    if (!data) return { ok: false, reason: "Loading…" };
+    if (!data) return { ok: false, reason: "Loading…", warnings: [] as CurveWarning[] };
     if (deck.length !== targetSize) {
       return {
         ok: false,
         reason: `Need exactly ${targetSize} cards (${deck.length}/${targetSize})`,
+        warnings: [] as CurveWarning[],
       };
     }
+    let zeroCost = 0;
+    let turn1Plays = 0;
+    let costSum = 0;
     for (const [id, n] of deckCounts) {
       const card = byId.get(id);
-      if (!card) return { ok: false, reason: `Unknown card ${id}` };
+      if (!card) return { ok: false, reason: `Unknown card ${id}`, warnings: [] as CurveWarning[] };
       if (n > card.maxCopies) {
-        return { ok: false, reason: `Too many copies of ${card.name}` };
+        return { ok: false, reason: `Too many copies of ${card.name}`, warnings: [] as CurveWarning[] };
       }
       if (n > card.owned) {
-        return { ok: false, reason: `Not enough owned copies of ${card.name}` };
+        return { ok: false, reason: `Not enough owned copies of ${card.name}`, warnings: [] as CurveWarning[] };
       }
+      const cost = card.riftCost ?? 0;
+      costSum += cost * n;
+      if (cost === 0) zeroCost += n;
+      if (cost <= turn1Energy) turn1Plays += n;
+    }
+    if (zeroCost > maxZeroCost) {
+      return {
+        ok: false,
+        reason: `At most ${maxZeroCost} zero-cost cards (have ${zeroCost})`,
+        warnings: [] as CurveWarning[],
+      };
     }
     if (!commanderId) {
-      return { ok: false, reason: "Choose a commander (separate from the 30)" };
+      return {
+        ok: false,
+        reason: "Choose a commander (separate from the 30)",
+        warnings: [] as CurveWarning[],
+      };
     }
-    return { ok: true, reason: "Legal Standard deck (30 + Commander)" };
-  }, [data, deck, deckCounts, byId, commanderId, targetSize]);
+    const warnings: CurveWarning[] = [];
+    if (turn1Plays === 0) {
+      warnings.push({
+        code: "NO_TURN1_PLAYS",
+        severity: "error",
+        message: `No cards costing ≤ ${turn1Energy} — opening turns will brick.`,
+      });
+    } else if (turn1Plays < 4) {
+      warnings.push({
+        code: "THIN_EARLY_CURVE",
+        severity: "warn",
+        message: `Only ${turn1Plays} cards costing ≤ ${turn1Energy}. Aim for 6–8 early plays.`,
+      });
+    }
+    const avg = deck.length ? costSum / deck.length : 0;
+    if (avg >= 3.6) {
+      warnings.push({
+        code: "TOO_EXPENSIVE",
+        severity: "warn",
+        message: `Average cost ${avg.toFixed(2)} is high — expect slow starts.`,
+      });
+    }
+    if (zeroCost === maxZeroCost) {
+      warnings.push({
+        code: "ZERO_COST_FLOOD",
+        severity: "info",
+        message: `At the ${maxZeroCost} zero-cost deck cap.`,
+      });
+    }
+    const hardCurveError = false;
+    return {
+      ok: true,
+      reason: `Legal Standard deck · 0-cost ${zeroCost}/${maxZeroCost} · T1 plays ${turn1Plays}`,
+      warnings,
+    };
+  }, [data, deck, deckCounts, byId, commanderId, targetSize, maxZeroCost, turn1Energy]);
 
   const filtered = useMemo(() => {
     if (!data) return [];
@@ -1211,11 +1273,12 @@ export function DeckBuilder() {
 
             <div
               className="mt-3 flex h-12 items-end gap-1"
-              aria-label="Mana curve"
+              aria-label="Energy curve"
             >
               {curve.map((n, i) => {
                 const h =
                   n <= 0 ? 0 : Math.max(4, Math.round((n / curveMax) * 36));
+                const isEarly = i <= turn1Energy;
                 return (
                   <div
                     key={i}
@@ -1228,7 +1291,11 @@ export function DeckBuilder() {
                     <div
                       className={cn(
                         "w-full rounded-sm transition-[height]",
-                        n > 0 ? "bg-cyan-400/55" : "bg-white/5",
+                        n > 0
+                          ? isEarly
+                            ? "bg-amber-400/60"
+                            : "bg-cyan-400/55"
+                          : "bg-white/5",
                       )}
                       style={{ height: n > 0 ? `${h}px` : "2px" }}
                     />
@@ -1239,6 +1306,22 @@ export function DeckBuilder() {
                 );
               })}
             </div>
+            {validation.warnings?.length ? (
+              <ul className="mt-2 space-y-1 text-[10px]">
+                {validation.warnings.map((w) => (
+                  <li
+                    key={w.code}
+                    className={cn(
+                      w.severity === "error" && "text-rose-300",
+                      w.severity === "warn" && "text-amber-200",
+                      w.severity === "info" && "text-cyan-200/80",
+                    )}
+                  >
+                    {w.message}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
 
             {deckRows.length === 0 ? (
               <p className="mt-4 rounded-md border border-dashed border-white/15 bg-black/25 px-3 py-6 text-center text-xs text-[var(--text-muted)]">

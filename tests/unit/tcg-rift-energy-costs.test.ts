@@ -34,15 +34,18 @@ function practiceMatch(publicId: string, seed = 1) {
   return createTcgMatch({
     publicId,
     mode: "practice",
+    skipMulligan: true,
     playerDeck: materializePracticeLoadout(loadout.player, rng),
     commanderHeroId: loadout.player.commanderHeroId,
   });
 }
 
 describe("tcg rift energy play costs", () => {
-  it("clamps non-token playables to at least 1 and keeps commanders as hero-slot 0", () => {
+  it("allows authored collectible 0-cost utilities and keeps commanders as hero-slot 0", () => {
     clearTcgCardCatalogCache();
     expect(getTcgCardDef("rotr-c-emberfox")!.riftCost).toBeGreaterThanOrEqual(1);
+    expect(getTcgCardDef("rotr-c-glowbug")!.riftCost).toBe(0);
+    expect(getTcgCardDef("rotr-s-morning-dew")!.riftCost).toBe(0);
     expect(getTcgCardDef("rotr-h-npc-keeper-travel-cloak")!.riftCost).toBe(0);
     expect(isCommanderPlayDef(getTcgCardDef("rotr-h-npc-keeper-travel-cloak")!)).toBe(
       true,

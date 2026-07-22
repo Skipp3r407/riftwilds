@@ -33,6 +33,7 @@ import {
 import { isEquipmentContentType } from "@/game/tcg/combat";
 import { getTcgCardDef } from "@/game/tcg/card-catalog";
 import { resolvePlayCost, playCostContextFromSide } from "@/game/tcg/play-cost";
+import { MulliganPanel } from "@/components/tcg/mulligan-panel";
 import { TCG_DEFAULTS, type TcgCardDef } from "@/game/tcg/types";
 import { recordQuestMetric } from "@/game/quests/quest-demo-store";
 import { TcgCardDetailModal } from "@/components/tcg/tcg-card-detail-modal";
@@ -1533,7 +1534,7 @@ export function RiftBattleBoard({
         arenaExpanded && "max-w-none py-0",
       )}
     >
-      <ConsoleShell
+        <ConsoleShell
         shellRef={consoleRef}
         displayMode={fullscreen.displayMode}
         boardCardSize={boardCardSize}
@@ -1545,6 +1546,17 @@ export function RiftBattleBoard({
           battleLayout?.combatAnimating && "battle-console--combat",
         )}
       >
+        {snap?.phase === "MULLIGAN" && player ? (
+          <MulliganPanel
+            hand={player.hand}
+            turn1Energy={TCG_DEFAULTS.riftEnergyStartMax}
+            busy={busy}
+            onKeep={() => void act({ kind: "KEEP_HAND" })}
+            onMulligan={(replaceInstanceIds) =>
+              void act({ kind: "MULLIGAN", replaceInstanceIds })
+            }
+          />
+        ) : null}
         <header className="battle-console__header battle-console__header--compact">
           <div className="battle-console__header-main">
             <div>

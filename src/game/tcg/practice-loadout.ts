@@ -24,6 +24,7 @@ import {
   shuffleDeck,
   uniqueCardIds,
 } from "@/game/tcg/deck";
+import { ensureOpeningHandPlayable } from "@/game/tcg/rules/opening-hand";
 import { TCG_DEFAULTS, type TcgCardInstance } from "@/game/tcg/types";
 
 export type PracticeLoadout = {
@@ -314,62 +315,20 @@ export function resolvePracticeMatchLoadouts(input: {
 }
 
 /**
- * Soft-mulligan for Practice Board: if opening hand has nothing affordable on
+ * Soft-shape for Practice Board: if opening hand has nothing affordable on
  * turn 1, swap the priciest hand card with a cheap playable from the deck.
  * Teaching-only — does not alter constructed deck composition.
+ * Delegates to canonical opening-hand rules (practiceUsefulOnly).
  */
 export function ensurePracticeOpeningHandPlayable(
   deck: TcgCardInstance[],
   opts?: { openingHand?: number; maxOpenCost?: number },
 ): TcgCardInstance[] {
-  const openingHand = opts?.openingHand ?? TCG_DEFAULTS.openingHand;
-  /** Turn-1 energy is 2 under Standard rules. */
-  const maxOpenCost = opts?.maxOpenCost ?? TCG_DEFAULTS.riftEnergyStartMax;
-  if (deck.length <= openingHand) return [...deck];
-
-  const cards = [...deck];
-  const hand = cards.slice(0, openingHand);
-  const rest = cards.slice(openingHand);
-
-  const affordable = (inst: TcgCardInstance) => {
-    const def = getTcgCardDef(inst.defId);
-    return Boolean(def && def.riftCost <= maxOpenCost && isPracticeUsefulCard(def.id));
-  };
-
-  if (hand.some(affordable)) return cards;
-
-  const donorIdx = rest.findIndex(affordable);
-  if (donorIdx < 0) {
-    // Fall back to cost ≤ 2 so turn-2 teaching hands are rarely bricks.
-    const midIdx = rest.findIndex((inst) => {
-      const def = getTcgCardDef(inst.defId);
-      return Boolean(
-        def && def.riftCost <= EARLY_CURVE_MAX_COST && isPracticeUsefulCard(def.id),
-      );
-    });
-    if (midIdx < 0) return cards;
-    const handCost = (inst: TcgCardInstance) =>
-      getTcgCardDef(inst.defId)?.riftCost ?? 99;
-    let replaceAt = 0;
-    for (let i = 1; i < hand.length; i += 1) {
-      if (handCost(hand[i]!) > handCost(hand[replaceAt]!)) replaceAt = i;
-    }
-    const tmp = hand[replaceAt]!;
-    hand[replaceAt] = rest[midIdx]!;
-    rest[midIdx] = tmp;
-    return [...hand, ...rest];
-  }
-
-  const handCost = (inst: TcgCardInstance) =>
-    getTcgCardDef(inst.defId)?.riftCost ?? 99;
-  let replaceAt = 0;
-  for (let i = 1; i < hand.length; i += 1) {
-    if (handCost(hand[i]!) > handCost(hand[replaceAt]!)) replaceAt = i;
-  }
-  const tmp = hand[replaceAt]!;
-  hand[replaceAt] = rest[donorIdx]!;
-  rest[donorIdx] = tmp;
-  return [...hand, ...rest];
+  return ensureOpeningHandPlayable(deck, {
+    openingSize: opts?.openingHand ?? TCG_DEFAULTS.openingHand,
+    maxOpenCost: opts?.maxOpenCost ?? TCG_DEFAULTS.riftEnergyStartMax,
+    practiceUsefulOnly: true,
+  });
 }
 
 export function materializePracticeLoadout(

@@ -39,6 +39,31 @@ export const PATCH_NOTE_SECTION_LABELS: Record<PatchNoteSectionKey, string> = {
  */
 export const PATCH_NOTES: PatchNoteEntry[] = [
   {
+    id: "2026-07-22-wallpapers-hub-energy",
+    date: "2026-07-22",
+    title: "Creature wallpapers, Battle Hub tiles, and early-game energy",
+    summary:
+      "Downloadable creature wallpapers ship with the Riftwilds logo, Battle Hub gets section art, Kids Corner stays examples-only on Comics, and Practice early-game energy/mulligan feels smoother.",
+    added: [
+      "Dozens of downloadable creature and scene wallpapers with the brand logo in the corner",
+      "Battle Hub section thumbnails across Practice, Casual, Ranked, AI, Tournament, and Stakes panels",
+      "Homepage creature and Marketplace card background art",
+      "Practice Keep / Partial / Full mulligan and clearer deck mana-curve guidance",
+      "More 0-cost utility cards for a healthier opening curve",
+    ],
+    changed: [
+      "Kids Corner and Desktop Art on Comics are examples only (downloads stay on Coloring and Fan Kit)",
+      "Music player and scroll-to-top docks restored on marketing and game routes",
+      "Opening-hand shaping and deck rules tightened around early Energy play",
+    ],
+    fixed: [
+      "Dock controls no longer disappear on the homepage",
+    ],
+    knownIssues: [
+      "Some comic issues may still receive art polish",
+    ],
+  },
+  {
     id: "2026-07-22-battle-hub-stakes-comics",
     date: "2026-07-22",
     title: "Battle Hub, Rift Stakes, and comics archive look",

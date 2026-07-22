@@ -1,256 +1,16 @@
 {
-  "updatedAt": "2026-07-22T12:05:42.878Z",
+  "updatedAt": "2026-07-22T14:00:21.291Z",
   "issue": 2,
   "slug": "sparks-journey",
   "grokConfigured": false,
   "seedSlug": "sparks-journey",
   "seedIllustratedCount": 36,
   "pages": {
-    "1": {
-      "pageNumber": 1,
-      "role": "front-cover",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-01.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-001.webp",
-      "error": null
-    },
-    "2": {
-      "pageNumber": 2,
-      "role": "inside-cover",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-02.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 2,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-002.webp",
-      "error": null
-    },
-    "3": {
-      "pageNumber": 3,
-      "role": "credits",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-03.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 2,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-003.webp",
-      "error": null
-    },
-    "4": {
-      "pageNumber": 4,
-      "role": "title",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-04.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-004.webp",
-      "error": null
-    },
-    "5": {
-      "pageNumber": 5,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-05.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-005.webp",
-      "error": null
-    },
-    "6": {
-      "pageNumber": 6,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-06.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-006.webp",
-      "error": null
-    },
-    "7": {
-      "pageNumber": 7,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-07.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 5,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-007.webp",
-      "error": null
-    },
-    "8": {
-      "pageNumber": 8,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-08.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 5,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-008.webp",
-      "error": null
-    },
-    "9": {
-      "pageNumber": 9,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-09.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-009.webp",
-      "error": null
-    },
-    "10": {
-      "pageNumber": 10,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-10.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-010.webp",
-      "error": null
-    },
-    "11": {
-      "pageNumber": 11,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-11.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-011.webp",
-      "error": null
-    },
-    "12": {
-      "pageNumber": 12,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-12.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 5,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-012.webp",
-      "error": null
-    },
-    "13": {
-      "pageNumber": 13,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-13.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-013.webp",
-      "error": null
-    },
-    "14": {
-      "pageNumber": 14,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-14.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-014.webp",
-      "error": null
-    },
-    "15": {
-      "pageNumber": 15,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-15.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-015.webp",
-      "error": null
-    },
-    "16": {
-      "pageNumber": 16,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-16.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 5,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-016.webp",
-      "error": null
-    },
-    "17": {
-      "pageNumber": 17,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-17.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-017.webp",
-      "error": null
-    },
-    "18": {
-      "pageNumber": 18,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-18.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-018.webp",
-      "error": null
-    },
-    "19": {
-      "pageNumber": 19,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-19.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-019.webp",
-      "error": null
-    },
-    "20": {
-      "pageNumber": 20,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-20.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 6,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-020.webp",
-      "error": null
-    },
-    "21": {
-      "pageNumber": 21,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-21.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 5,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-021.webp",
-      "error": null
-    },
-    "22": {
-      "pageNumber": 22,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-22.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 5,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-022.webp",
-      "error": null
-    },
-    "23": {
-      "pageNumber": 23,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-23.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-023.webp",
-      "error": null
-    },
-    "24": {
-      "pageNumber": 24,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-24.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 2,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-024.webp",
-      "error": null
-    },
     "25": {
       "pageNumber": 25,
       "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-25.webp",
-      "artStatus": "seeded",
+      "artSource": "cached-raw",
+      "artStatus": "cached",
       "letteringStatus": "ok",
       "bubbleCount": 4,
       "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-025.webp",
@@ -259,8 +19,8 @@
     "26": {
       "pageNumber": 26,
       "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-26.webp",
-      "artStatus": "seeded",
+      "artSource": "cached-raw",
+      "artStatus": "cached",
       "letteringStatus": "ok",
       "bubbleCount": 3,
       "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-026.webp",
@@ -269,8 +29,8 @@
     "27": {
       "pageNumber": 27,
       "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-27.webp",
-      "artStatus": "seeded",
+      "artSource": "cached-raw",
+      "artStatus": "cached",
       "letteringStatus": "ok",
       "bubbleCount": 5,
       "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-027.webp",
@@ -279,118 +39,18 @@
     "28": {
       "pageNumber": 28,
       "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-28.webp",
-      "artStatus": "seeded",
+      "artSource": "cached-raw",
+      "artStatus": "cached",
       "letteringStatus": "ok",
       "bubbleCount": 4,
       "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-028.webp",
       "error": null
-    },
-    "29": {
-      "pageNumber": 29,
-      "role": "story",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-29.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-029.webp",
-      "error": null
-    },
-    "30": {
-      "pageNumber": 30,
-      "role": "teaser",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-30.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-030.webp",
-      "error": null
-    },
-    "31": {
-      "pageNumber": 31,
-      "role": "profile",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-31.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 1,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-031.webp",
-      "error": null
-    },
-    "32": {
-      "pageNumber": 32,
-      "role": "profile",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-32.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 1,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-032.webp",
-      "error": null
-    },
-    "33": {
-      "pageNumber": 33,
-      "role": "lore",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-33.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 1,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-033.webp",
-      "error": null
-    },
-    "34": {
-      "pageNumber": 34,
-      "role": "lore",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-34.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 1,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-034.webp",
-      "error": null
-    },
-    "35": {
-      "pageNumber": 35,
-      "role": "map",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-35.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 1,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-035.webp",
-      "error": null
-    },
-    "36": {
-      "pageNumber": 36,
-      "role": "letters",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-36.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 1,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-036.webp",
-      "error": null
-    },
-    "37": {
-      "pageNumber": 37,
-      "role": "inside-cover",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-01.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 1,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-037.webp",
-      "error": null
-    },
-    "38": {
-      "pageNumber": 38,
-      "role": "back-cover",
-      "artSource": "public/assets/comics/pages/sparks-journey/page-02.webp",
-      "artStatus": "seeded",
-      "letteringStatus": "ok",
-      "bubbleCount": 2,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-038.webp",
-      "error": null
     }
   },
   "summary": {
-    "seeded": 38,
-    "lettered": 38,
-    "storyLettered": 25,
+    "seeded": 0,
+    "lettered": 4,
+    "storyLettered": 4,
     "grokOk": 0,
     "errors": 0,
     "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=2 --force",

@@ -1,7 +1,8 @@
 # Battle Rules — Riftwilds TCG
 
 **Authority:** `src/game/tcg/rules/battle-rules-config.ts` · `src/game/tcg/match-engine.ts`  
-**Version:** 2.0.0
+**Version:** 2.1.0  
+**Full rulebook:** [RULEBOOK.md](./RULEBOOK.md)
 
 ## Win
 
@@ -14,10 +15,11 @@
 
 | System | Rule |
 |--------|------|
-| Opening hand | 5; mulligan once |
+| Opening hand | 5; soft-shaped ≥1 playable vs T1 Energy; mulligan once (Keep/Partial/Full) |
 | Hand cap | 9 (overflow → Rift Burn) |
 | Energy | Turn 1 max **2**, +1/turn to **10**; refill each turn start |
 | Temp energy | Expires end of turn (Rift Spark) |
+| 0-cost deck cap | Max **4** collectible zero-cost combat cards |
 | P1 | No draw on turn 1 |
 | P2 | Receives **Rift Spark** (+1 temp energy, exile) plus configurable turn-1 bonus Energy (default +2 temp) toward 49–51% FP win rate |
 
@@ -28,13 +30,13 @@ Frontline protects Keeper unless attacker has Flying, Pierce, Stealth, or Siege.
 
 ## Turn phases
 
-`START → MAIN → COMBAT → SECOND_MAIN → END`
+`MULLIGAN → START → MAIN → COMBAT → SECOND_MAIN → END`
 
-Practice / Quick / Casual auto-skip Second Main for pace.
+Practice / Quick / Casual auto-skip Second Main for pace. Practice **does** use mulligan (v2.1).
 
 ## Combat
 
 Damage = `max(1, round((atk − def) × elementMod))` when atk > 0.  
 Summoned units enter Exhausted unless Charge / Rush / Swift.
 
-See also: [turn-structure](./turn-structure.md), [combat-resolution](./combat-resolution.md), [keywords](./keywords.md).
+See also: [TURN_STRUCTURE.md](./TURN_STRUCTURE.md), [combat-resolution.md](./combat-resolution.md), [KEYWORDS.md](./KEYWORDS.md).

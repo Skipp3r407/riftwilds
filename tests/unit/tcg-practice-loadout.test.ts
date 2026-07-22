@@ -68,8 +68,8 @@ describe("tcg practice loadout", () => {
       expect(card?.type).not.toBe("commander");
       expect(card?.type).not.toBe("hero");
       expect(card?.isToken).not.toBe(true);
-      // Hand cards must spend meaningful energy (printed ≥ 1 after catalog clamp).
-      expect(getTcgCardDef(id)?.riftCost ?? 0).toBeGreaterThanOrEqual(1);
+      // Printed costs are ≥ 0; collectible 0-cost utilities are legal (deck-capped).
+      expect(getTcgCardDef(id)?.riftCost ?? -1).toBeGreaterThanOrEqual(0);
     }
     const early = fire.player.cardIds.filter((id) => {
       const cost = getTcgCardDef(id)?.riftCost ?? 99;
@@ -297,6 +297,7 @@ describe("tcg practice loadout", () => {
       const state = createTcgMatch({
         publicId: `practice_turns_${seed}`,
         mode: "practice",
+        skipMulligan: true,
         playerDeck: materializePracticeLoadout(loadout.player),
         commanderHeroId: loadout.player.commanderHeroId,
       });

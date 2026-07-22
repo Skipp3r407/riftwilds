@@ -74,13 +74,9 @@ export function contentCardToEngineDef(card: TcgCard): TcgCardDef {
     name: normalized.localization.name,
     type,
     affinity: ELEMENT_TO_AFFINITY[normalized.element] ?? "SPIRIT",
-    // Printed play cost. Tokens may be free; commanders are hero-slot (not hand-played).
-    // Every other card spends at least 1 Rift Energy when played from hand.
-    riftCost: (() => {
-      const raw = Math.max(0, normalized.energyCost);
-      if (normalized.isToken || normalized.category === "commander") return raw;
-      return Math.max(1, raw);
-    })(),
+    // Printed play cost. Tokens / commanders may be 0; carefully designed
+    // collectible 0-cost utilities are allowed (deck cap enforces anti-abuse).
+    riftCost: Math.max(0, normalized.energyCost),
     power: attack,
     attack,
     health,

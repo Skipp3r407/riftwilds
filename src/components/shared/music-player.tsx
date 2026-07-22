@@ -209,7 +209,10 @@ export function MusicPlayer() {
   const onBattle = isBattlePath(pathname);
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
+  /** Explicit user dismiss (X) — persisted. */
   const [hidden, setHidden] = useState(DEFAULT_UI.hidden);
+  /** Idle auto-collapse — session only; must not persist or the dock "vanishes" forever. */
+  const [idleCollapsed, setIdleCollapsed] = useState(false);
   const [trackIndex, setTrackIndex] = useState(DEFAULT_UI.trackIndex);
   const [pausedPref, setPausedPref] = useState(DEFAULT_UI.paused);
   const [playlistOpen, setPlaylistOpen] = useState(false);
@@ -228,6 +231,7 @@ export function MusicPlayer() {
 
   const musicVolume = volumes.music;
   const musicMuted = mutedAll || musicVolume <= 0;
+  const collapsed = hidden || idleCollapsed;
 
   trackIndexRef.current = trackIndex;
   pausedPrefRef.current = pausedPref;
@@ -241,11 +245,16 @@ export function MusicPlayer() {
 
   function scheduleAutoHide() {
     clearHideTimer();
-    if (!ready || hidden || interactingRef.current) return;
+    if (!ready || collapsed || interactingRef.current) return;
     hideTimerRef.current = setTimeout(() => {
       setPlaylistOpen(false);
-      setHidden(true);
+      setIdleCollapsed(true);
     }, AUTO_HIDE_MS);
+  }
+
+  function expandPlayer() {
+    setHidden(false);
+    setIdleCollapsed(false);
   }
 
   function setInteracting(active: boolean) {
@@ -262,7 +271,20 @@ export function MusicPlayer() {
 
   useEffect(() => {
     const prefs = readUi();
-    setHidden(prefs.hidden);
+    // One-shot restore: idle auto-hide used to persist `hidden:true`, which made the
+    // dock look permanently gone (tiny edge chevron). Re-expand once for everyone.
+    let startHidden = prefs.hidden;
+    try {
+      const flag = "riftwilds-music-dock-restore-v1";
+      if (!localStorage.getItem(flag)) {
+        startHidden = false;
+        writeUi({ ...prefs, hidden: false });
+        localStorage.setItem(flag, "1");
+      }
+    } catch {
+      startHidden = false;
+    }
+    setHidden(startHidden);
     setPausedPref(prefs.paused);
     musicEngine.init();
     const enginePlaying = musicEngine.isPlaying();
@@ -339,7 +361,7 @@ export function MusicPlayer() {
 
   // Start / clear the 30s idle timer when the bar is shown or collapsed.
   useEffect(() => {
-    if (!ready || hidden) {
+    if (!ready || collapsed) {
       if (hideTimerRef.current != null) {
         clearTimeout(hideTimerRef.current);
         hideTimerRef.current = null;
@@ -350,7 +372,7 @@ export function MusicPlayer() {
     if (interactingRef.current) return;
     hideTimerRef.current = setTimeout(() => {
       setPlaylistOpen(false);
-      setHidden(true);
+      setIdleCollapsed(true);
     }, AUTO_HIDE_MS);
     return () => {
       if (hideTimerRef.current != null) {
@@ -358,7 +380,7 @@ export function MusicPlayer() {
         hideTimerRef.current = null;
       }
     };
-  }, [ready, hidden]);
+  }, [ready, collapsed]);
 
   // Marketing pages: never keep procedural ambience running.
   // (Old bug: auto-started menu drone + menu.wav → site-wide hum after unlock.)
@@ -422,7 +444,7 @@ export function MusicPlayer() {
   // Clear mobile game nav on game routes; sit lower on marketing; clear battle CTAs.
   // Scroll-to-top (.scroll-to-top--*) stacks above via --dock-music-height + --dock-stack-gap.
   const dockPosition = cn(
-    "fixed right-3 z-[55]",
+    "site-dock-music fixed right-3 z-[55]",
     onBattle
       ? "bottom-[calc(7rem+var(--safe-bottom))] md:bottom-8 md:right-5"
       : onMarketing
@@ -431,7 +453,8 @@ export function MusicPlayer() {
   );
 
   const collapsedPosition = cn(
-    "focus-ring fixed right-0 z-[55] flex h-11 w-8 items-center justify-center",
+    "site-dock-music focus-ring fixed right-0 z-[55] flex h-11 items-center justify-center gap-1",
+    "w-auto min-w-8 px-2",
     onBattle
       ? "bottom-[calc(7rem+var(--safe-bottom))] md:bottom-8"
       : onMarketing
@@ -446,15 +469,18 @@ export function MusicPlayer() {
 
   return (
     <>
-      {!ready ? null : hidden ? (
+      {!ready ? null : collapsed ? (
         <button
           type="button"
-          onClick={() => setHidden(false)}
+          onClick={expandPlayer}
           className={collapsedPosition}
           aria-label="Show ambience player"
           title="Show ambience"
         >
           <ChevronLeft size={16} aria-hidden />
+          <span className="hidden pr-0.5 font-display text-[9px] uppercase tracking-[0.14em] sm:inline">
+            Music
+          </span>
         </button>
       ) : (
         <div

@@ -152,7 +152,7 @@
   "negativePrompt": "readable dialogue text, captions, logos, watermarks, page numbers, UI chrome, Marvel, DC, Pokémon, manga screentone trademarks, extra limbs, duplicate characters, missing companions, purple neon fantasy default, photoreal modern clothing, Pikachu lookalike",
   "pageTurnObjective": "Coordinated battle.",
   "letteringInstructions": "Standard speech + narration; keep tails off faces and Spark's eyes.",
-  "generationStatus": "seeded",
+  "generationStatus": "cached",
   "letteringStatus": "ok",
   "approvalStatus": "script-complete",
   "artAlt": "Living Bulwark — Spark's Journey page 17",

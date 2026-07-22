@@ -59,8 +59,11 @@ export default function TcgRulesPage() {
             support
           </li>
           <li>
-            Copy limits: Common–Epic 2 · Legendary/Mythic/Ancient 1 · max{" "}
+            Unique-only copies (max 1) · max{" "}
             {R.deck.maxPowerRarityCombined} power rarities combined
+          </li>
+          <li>
+            Max {R.deck.maxZeroCostPerDeck} zero-cost combat cards per deck
           </li>
         </ul>
       </section>
@@ -71,7 +74,11 @@ export default function TcgRulesPage() {
         <ul className="list-disc space-y-1 pl-5">
           <li>
             Opening hand {R.hand.openingSize}, hand cap {R.hand.maxSize}, mulligan
-            once
+            once (Keep / Partial / Full)
+          </li>
+          <li>
+            Opening hands soft-shaped so ≥1 card costs ≤ turn-1 Energy (
+            {R.energy.turn1Max})
           </li>
           <li>
             Energy turn 1 = {R.energy.turn1Max}, +{R.energy.perTurnGain}/turn to{" "}

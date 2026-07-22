@@ -1,0 +1,1837 @@
+{
+  "version": 1,
+  "description": "Carefully balanced 0-cost combat utilities (v2.1 early-game).",
+  "cards": [
+    {
+      "id": "rotr-c-glowbug",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 736,
+      "type": "companion",
+      "element": "nature",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Glowbug",
+        "typeLine": "common companion — nature",
+        "rulesText": "",
+        "flavorText": "A lantern that forgot to grow up.",
+        "loreBlurb": "A lantern that forgot to grow up."
+      },
+      "art": {
+        "promptId": "art-glowbug",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Glowbug. It is a companion of the nature element tied to elderwood-forest. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "elderwood-forest atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-bramblefox.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-glowbug/idle",
+        "play": "anim/rotr-c-glowbug/play",
+        "death": "anim/rotr-c-glowbug/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_nature",
+        "hit": "sfx/tcg/hit_nature",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/nature_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "nature",
+        "starter",
+        "tempo",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Tempo",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-pocket-scout",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 737,
+      "type": "companion",
+      "element": "neutral",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Pocket Scout",
+        "typeLine": "common companion — neutral",
+        "rulesText": "",
+        "flavorText": "Maps the first ten steps of every journey.",
+        "loreBlurb": "Maps the first ten steps of every journey."
+      },
+      "art": {
+        "promptId": "art-pocket-scout",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Pocket Scout. It is a creature of the neutral element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-c-plaza-scout.webp",
+        "subjectPath": "/assets/tcg/subjects/plaza-scout.png"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-pocket-scout/idle",
+        "play": "anim/rotr-c-pocket-scout/play",
+        "death": "anim/rotr-c-pocket-scout/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_neutral",
+        "hit": "sfx/tcg/hit_neutral",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/neutral_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "neutral",
+        "starter",
+        "tempo",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Tempo",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-dewdrop-mite",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 738,
+      "type": "companion",
+      "element": "nature",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 0,
+      "health": 2,
+      "role": "defender",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Dewdrop Mite",
+        "typeLine": "common companion — nature",
+        "rulesText": "",
+        "flavorText": "Holds a single morning bead.",
+        "loreBlurb": "Holds a single morning bead."
+      },
+      "art": {
+        "promptId": "art-dewdrop-mite",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Dewdrop Mite. It is a companion of the water element tied to moonwater-coast. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "moonwater-coast atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-bubbloon.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-dewdrop-mite/idle",
+        "play": "anim/rotr-c-dewdrop-mite/play",
+        "death": "anim/rotr-c-dewdrop-mite/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_water",
+        "hit": "sfx/tcg/hit_water",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/water_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "nature",
+        "starter",
+        "support",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-ember-mote",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 739,
+      "type": "companion",
+      "element": "fire",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Ember Mote",
+        "typeLine": "common companion — fire",
+        "rulesText": "",
+        "flavorText": "Warmth the size of a thimble.",
+        "loreBlurb": "Warmth the size of a thimble."
+      },
+      "art": {
+        "promptId": "art-ember-mote",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Ember Mote. It is a companion of the fire element tied to ember-crater. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "ember-crater atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-ashwing.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-ember-mote/idle",
+        "play": "anim/rotr-c-ember-mote/play",
+        "death": "anim/rotr-c-ember-mote/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_fire",
+        "hit": "sfx/tcg/hit_fire",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/fire_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "fire",
+        "starter",
+        "tempo"
+      ],
+      "curveTags": [
+        "Starter",
+        "Tempo"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-puddle-wisp",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 740,
+      "type": "companion",
+      "element": "water",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Puddle Wisp",
+        "typeLine": "common companion — water",
+        "rulesText": "",
+        "flavorText": "Ripple with opinions.",
+        "loreBlurb": "Ripple with opinions."
+      },
+      "art": {
+        "promptId": "art-puddle-wisp",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Puddle Wisp. It is a companion of the water element tied to moonwater-coast. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "moonwater-coast atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-brinepaw.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-puddle-wisp/idle",
+        "play": "anim/rotr-c-puddle-wisp/play",
+        "death": "anim/rotr-c-puddle-wisp/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_water",
+        "hit": "sfx/tcg/hit_water",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/water_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "water",
+        "starter",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-dust-mote",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 741,
+      "type": "companion",
+      "element": "earth",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Dust Mote",
+        "typeLine": "common companion — earth",
+        "rulesText": "",
+        "flavorText": "Settles where feet hesitate.",
+        "loreBlurb": "Settles where feet hesitate."
+      },
+      "art": {
+        "promptId": "art-dust-mote",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Dust Mote. It is a creature of the earth element tied to stoneheart-canyon. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "stoneheart-canyon atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-c-basaltpup.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-dust-mote/idle",
+        "play": "anim/rotr-c-dust-mote/play",
+        "death": "anim/rotr-c-dust-mote/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_earth",
+        "hit": "sfx/tcg/hit_earth",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/earth_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "earth",
+        "starter",
+        "tempo"
+      ],
+      "curveTags": [
+        "Starter",
+        "Tempo"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-static-flea",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 742,
+      "type": "companion",
+      "element": "storm",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Static Flea",
+        "typeLine": "common companion — storm",
+        "rulesText": "",
+        "flavorText": "Zaps once, apologizes never.",
+        "loreBlurb": "Zaps once, apologizes never."
+      },
+      "art": {
+        "promptId": "art-static-flea",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Static Flea. It is a creature of the storm element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-c-static-mite.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-static-flea/idle",
+        "play": "anim/rotr-c-static-flea/play",
+        "death": "anim/rotr-c-static-flea/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_storm",
+        "hit": "sfx/tcg/hit_storm",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/storm_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "storm",
+        "starter",
+        "tempo",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Tempo",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-hollow-chirp",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 743,
+      "type": "companion",
+      "element": "spirit",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "support",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Hollow Chirp",
+        "typeLine": "common companion — spirit",
+        "rulesText": "",
+        "flavorText": "A song that fits in a pocket.",
+        "loreBlurb": "A song that fits in a pocket."
+      },
+      "art": {
+        "promptId": "art-hollow-chirp",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Hollow Chirp. It is a companion of the light element tied to radiant-citadel. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "radiant-citadel atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-auralynx.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-hollow-chirp/idle",
+        "play": "anim/rotr-c-hollow-chirp/play",
+        "death": "anim/rotr-c-hollow-chirp/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_light",
+        "hit": "sfx/tcg/hit_light",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/light_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "spirit",
+        "starter",
+        "support"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-seed-tick",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 744,
+      "type": "companion",
+      "element": "nature",
+      "rarity": "uncommon",
+      "energyCost": 0,
+      "attack": 0,
+      "health": 2,
+      "role": "defender",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Seed Tick",
+        "typeLine": "uncommon companion — nature",
+        "rulesText": "",
+        "flavorText": "Waits for rain that already fell.",
+        "loreBlurb": "Waits for rain that already fell."
+      },
+      "art": {
+        "promptId": "art-seed-tick",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Seed Tick. It is a companion of the nature element tied to elderwood-forest. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "elderwood-forest atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-bramblefox.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-seed-tick/idle",
+        "play": "anim/rotr-c-seed-tick/play",
+        "death": "anim/rotr-c-seed-tick/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_nature",
+        "hit": "sfx/tcg/hit_nature",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/nature_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 100,
+      "sellValue": 20,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "nature",
+        "starter",
+        "support",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-frost-nibble",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 745,
+      "type": "companion",
+      "element": "water",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Frost Nibble",
+        "typeLine": "common companion — water",
+        "rulesText": "",
+        "flavorText": "Cold enough to wake a keeper.",
+        "loreBlurb": "Cold enough to wake a keeper."
+      },
+      "art": {
+        "promptId": "art-frost-nibble",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Frost Nibble. It is a companion of the water element tied to moonwater-coast. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "moonwater-coast atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-brinepaw.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-frost-nibble/idle",
+        "play": "anim/rotr-c-frost-nibble/play",
+        "death": "anim/rotr-c-frost-nibble/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_water",
+        "hit": "sfx/tcg/hit_water",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/water_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "water",
+        "starter",
+        "tempo"
+      ],
+      "curveTags": [
+        "Starter",
+        "Tempo"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-cinder-gnat",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 746,
+      "type": "companion",
+      "element": "fire",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 1,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Cinder Gnat",
+        "typeLine": "common companion — fire",
+        "rulesText": "",
+        "flavorText": "Smoke with tiny wings.",
+        "loreBlurb": "Smoke with tiny wings."
+      },
+      "art": {
+        "promptId": "art-cinder-gnat",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Cinder Gnat. It is a companion of the fire element tied to ember-crater. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "ember-crater atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-ashwing.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-cinder-gnat/idle",
+        "play": "anim/rotr-c-cinder-gnat/play",
+        "death": "anim/rotr-c-cinder-gnat/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_fire",
+        "hit": "sfx/tcg/hit_fire",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/fire_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "fire",
+        "starter",
+        "tempo"
+      ],
+      "curveTags": [
+        "Starter",
+        "Tempo"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-c-pebble-pup",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 747,
+      "type": "companion",
+      "element": "earth",
+      "rarity": "uncommon",
+      "energyCost": 0,
+      "attack": 1,
+      "health": 2,
+      "role": "bruiser",
+      "keywords": [],
+      "abilities": [],
+      "passive": null,
+      "localization": {
+        "name": "Pebble Pup",
+        "typeLine": "uncommon companion — earth",
+        "rulesText": "",
+        "flavorText": "Rolls proudly into first turns.",
+        "loreBlurb": "Rolls proudly into first turns."
+      },
+      "art": {
+        "promptId": "art-pebble-pup",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Pebble Pup. It is a companion of the earth element tied to stoneheart-canyon. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "alert companion stance",
+        "background": "stoneheart-canyon atmosphere, soft bokeh",
+        "cardImagePath": "/assets/tcg/cards/rotr-comp-basaltpup.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-c-pebble-pup/idle",
+        "play": "anim/rotr-c-pebble-pup/play",
+        "death": "anim/rotr-c-pebble-pup/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_earth",
+        "hit": "sfx/tcg/hit_earth",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/earth_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 100,
+      "sellValue": 20,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "earth",
+        "starter",
+        "support",
+        "tempo"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support",
+        "Tempo"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-morning-dew",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 748,
+      "type": "spell",
+      "element": "nature",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "healer",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-morning-dew",
+          "name": "Heal",
+          "timing": "activated",
+          "text": "Heal 1.",
+          "effects": [
+            {
+              "op": "heal",
+              "value": 1,
+              "target": "self",
+              "aiHint": "heal when low"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Morning Dew",
+        "typeLine": "common spell — nature",
+        "rulesText": "Heal 1.",
+        "flavorText": "One drop, one second chance.",
+        "loreBlurb": "One drop, one second chance."
+      },
+      "art": {
+        "promptId": "art-morning-dew",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Morning Dew. It is a spell of the light element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-festival-cheer.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-morning-dew/idle",
+        "play": "anim/rotr-s-morning-dew/play",
+        "death": "anim/rotr-s-morning-dew/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_light",
+        "hit": "sfx/tcg/hit_light",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/light_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "nature",
+        "starter",
+        "support",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-rift-whisk",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 749,
+      "type": "spell",
+      "element": "arcane",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-rift-whisk",
+          "name": "Strike",
+          "timing": "activated",
+          "text": "Deal 1 damage.",
+          "effects": [
+            {
+              "op": "deal_damage",
+              "value": 1,
+              "target": "enemy",
+              "aiHint": "chip damage"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Rift Whisk",
+        "typeLine": "common spell — arcane",
+        "rulesText": "Deal 1 damage.",
+        "flavorText": "A spark taught manners.",
+        "loreBlurb": "A spark taught manners."
+      },
+      "art": {
+        "promptId": "art-rift-whisk",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Rift Whisk. It is a spell of the fire element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-ember-spark.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-rift-whisk/idle",
+        "play": "anim/rotr-s-rift-whisk/play",
+        "death": "anim/rotr-s-rift-whisk/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_fire",
+        "hit": "sfx/tcg/hit_fire",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/fire_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "arcane",
+        "starter",
+        "removal",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Removal",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-binding-thread",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 750,
+      "type": "spell",
+      "element": "spirit",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "support",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-binding-thread",
+          "name": "Brace",
+          "timing": "activated",
+          "text": "Give an ally +1 Health.",
+          "effects": [
+            {
+              "op": "heal",
+              "value": 1,
+              "target": "ally",
+              "aiHint": "buff ally"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Binding Thread",
+        "typeLine": "common spell — spirit",
+        "rulesText": "Give an ally +1 Health.",
+        "flavorText": "Sews courage into seams.",
+        "loreBlurb": "Sews courage into seams."
+      },
+      "art": {
+        "promptId": "art-binding-thread",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Binding Thread. It is a spell of the earth element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-stone-brace.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-binding-thread/idle",
+        "play": "anim/rotr-s-binding-thread/play",
+        "death": "anim/rotr-s-binding-thread/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_earth",
+        "hit": "sfx/tcg/hit_earth",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/earth_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "spirit",
+        "starter",
+        "support",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-brace-dust",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 751,
+      "type": "spell",
+      "element": "earth",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "support",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-brace-dust",
+          "name": "Brace",
+          "timing": "activated",
+          "text": "Give an ally +1 Health.",
+          "effects": [
+            {
+              "op": "heal",
+              "value": 1,
+              "target": "ally",
+              "aiHint": "buff ally"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Brace Dust",
+        "typeLine": "common spell — earth",
+        "rulesText": "Give an ally +1 Health.",
+        "flavorText": "Grit that remembers walls.",
+        "loreBlurb": "Grit that remembers walls."
+      },
+      "art": {
+        "promptId": "art-brace-dust",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Brace Dust. It is a spell of the earth element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-stone-brace.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-brace-dust/idle",
+        "play": "anim/rotr-s-brace-dust/play",
+        "death": "anim/rotr-s-brace-dust/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_earth",
+        "hit": "sfx/tcg/hit_earth",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/earth_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "earth",
+        "starter",
+        "support"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-ember-pinch",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 752,
+      "type": "spell",
+      "element": "fire",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-ember-pinch",
+          "name": "Strike",
+          "timing": "activated",
+          "text": "Deal 1 damage.",
+          "effects": [
+            {
+              "op": "deal_damage",
+              "value": 1,
+              "target": "enemy",
+              "aiHint": "chip damage"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Ember Pinch",
+        "typeLine": "common spell — fire",
+        "rulesText": "Deal 1 damage.",
+        "flavorText": "Hot enough to notice.",
+        "loreBlurb": "Hot enough to notice."
+      },
+      "art": {
+        "promptId": "art-ember-pinch",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Ember Pinch. It is a spell of the fire element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-ember-spark.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-ember-pinch/idle",
+        "play": "anim/rotr-s-ember-pinch/play",
+        "death": "anim/rotr-s-ember-pinch/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_fire",
+        "hit": "sfx/tcg/hit_fire",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/fire_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "fire",
+        "starter",
+        "removal",
+        "tempo"
+      ],
+      "curveTags": [
+        "Starter",
+        "Removal",
+        "Tempo"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-tide-sip",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 753,
+      "type": "spell",
+      "element": "water",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "healer",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-tide-sip",
+          "name": "Heal",
+          "timing": "activated",
+          "text": "Heal 1.",
+          "effects": [
+            {
+              "op": "heal",
+              "value": 1,
+              "target": "self",
+              "aiHint": "heal when low"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Tide Sip",
+        "typeLine": "common spell — water",
+        "rulesText": "Heal 1.",
+        "flavorText": "A mouthful of harbor calm.",
+        "loreBlurb": "A mouthful of harbor calm."
+      },
+      "art": {
+        "promptId": "art-tide-sip",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Tide Sip. It is a spell of the light element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-festival-cheer.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-tide-sip/idle",
+        "play": "anim/rotr-s-tide-sip/play",
+        "death": "anim/rotr-s-tide-sip/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_light",
+        "hit": "sfx/tcg/hit_light",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/light_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "water",
+        "starter",
+        "support",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-trail-marker",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 754,
+      "type": "spell",
+      "element": "neutral",
+      "rarity": "uncommon",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-trail-marker",
+          "name": "Brace",
+          "timing": "activated",
+          "text": "Give an ally +1 Health.",
+          "effects": [
+            {
+              "op": "heal",
+              "value": 1,
+              "target": "ally",
+              "aiHint": "buff ally"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Trail Marker",
+        "typeLine": "uncommon spell — neutral",
+        "rulesText": "Give an ally +1 Health.",
+        "flavorText": "Marks the path for the next step.",
+        "loreBlurb": "Marks the path for the next step."
+      },
+      "art": {
+        "promptId": "art-trail-marker",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Trail Marker. It is a spell of the earth element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-stone-brace.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-trail-marker/idle",
+        "play": "anim/rotr-s-trail-marker/play",
+        "death": "anim/rotr-s-trail-marker/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_earth",
+        "hit": "sfx/tcg/hit_earth",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/earth_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 100,
+      "sellValue": 20,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "neutral",
+        "starter",
+        "utility",
+        "support"
+      ],
+      "curveTags": [
+        "Starter",
+        "Utility",
+        "Support"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-flicker-charm",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 755,
+      "type": "spell",
+      "element": "light",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-flicker-charm",
+          "name": "Strike",
+          "timing": "activated",
+          "text": "Deal 1 damage.",
+          "effects": [
+            {
+              "op": "deal_damage",
+              "value": 1,
+              "target": "enemy",
+              "aiHint": "chip damage"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Flicker Charm",
+        "typeLine": "common spell — light",
+        "rulesText": "Deal 1 damage.",
+        "flavorText": "Bright, brief, honest.",
+        "loreBlurb": "Bright, brief, honest."
+      },
+      "art": {
+        "promptId": "art-flicker-charm",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Flicker Charm. It is a spell of the fire element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-ember-spark.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-flicker-charm/idle",
+        "play": "anim/rotr-s-flicker-charm/play",
+        "death": "anim/rotr-s-flicker-charm/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_fire",
+        "hit": "sfx/tcg/hit_fire",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/fire_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "light",
+        "starter",
+        "removal",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Removal",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-quiet-step",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 756,
+      "type": "spell",
+      "element": "shadow",
+      "rarity": "uncommon",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "utility",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-quiet-step",
+          "name": "Brace",
+          "timing": "activated",
+          "text": "Give an ally +1 Health.",
+          "effects": [
+            {
+              "op": "heal",
+              "value": 1,
+              "target": "ally",
+              "aiHint": "buff ally"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Quiet Step",
+        "typeLine": "uncommon spell — shadow",
+        "rulesText": "Give an ally +1 Health.",
+        "flavorText": "Soft soles for loud rifts.",
+        "loreBlurb": "Soft soles for loud rifts."
+      },
+      "art": {
+        "promptId": "art-quiet-step",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Quiet Step. It is a spell of the earth element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-stone-brace.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-quiet-step/idle",
+        "play": "anim/rotr-s-quiet-step/play",
+        "death": "anim/rotr-s-quiet-step/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_earth",
+        "hit": "sfx/tcg/hit_earth",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/earth_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 100,
+      "sellValue": 20,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "shadow",
+        "starter",
+        "utility",
+        "control"
+      ],
+      "curveTags": [
+        "Starter",
+        "Utility",
+        "Control"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    },
+    {
+      "id": "rotr-s-soft-focus",
+      "setId": "rise-of-the-rift",
+      "collectorNumber": 757,
+      "type": "spell",
+      "element": "spirit",
+      "rarity": "common",
+      "energyCost": 0,
+      "attack": null,
+      "health": null,
+      "role": "healer",
+      "keywords": [],
+      "abilities": [
+        {
+          "id": "spell-rotr-s-soft-focus",
+          "name": "Heal",
+          "timing": "activated",
+          "text": "Heal 1.",
+          "effects": [
+            {
+              "op": "heal",
+              "value": 1,
+              "target": "self",
+              "aiHint": "heal when low"
+            }
+          ]
+        }
+      ],
+      "passive": null,
+      "localization": {
+        "name": "Soft Focus",
+        "typeLine": "common spell — spirit",
+        "rulesText": "Heal 1.",
+        "flavorText": "Breathe once. Play once.",
+        "loreBlurb": "Breathe once. Play once."
+      },
+      "art": {
+        "promptId": "art-soft-focus",
+        "prompt": "Create an original fantasy trading card illustration for Riftwilds named Soft Focus. It is a spell of the light element tied to the Riftwilds. Painterly fantasy, beautiful lighting, soft magical atmosphere, readable silhouette, high detail, original character, no text, no logos. Three-quarter elevated perspective, consistent lighting from the upper left, cyan and amber rift accents used sparingly.",
+        "negativePrompt": "no Pokémon resemblance, no Digimon, no existing TCG mascot, no photorealism, no text, no watermark, no logo, no copyrighted franchise characters, no extra limbs, no cropped feet",
+        "camera": "three-quarter elevated",
+        "lighting": "upper-left soft key, cyan rim sparingly",
+        "palette": [
+          "#2f5a3a",
+          "#3de7ff",
+          "#ffb84d",
+          "#0a1830",
+          "#e8d5b0"
+        ],
+        "mood": "adventurous wonder",
+        "pose": "iconic still-life of power",
+        "background": "rift-lit fantasy haze",
+        "cardImagePath": "/assets/tcg/cards/rotr-s-festival-cheer.webp"
+      },
+      "animation": {
+        "idle": "anim/rotr-s-soft-focus/idle",
+        "play": "anim/rotr-s-soft-focus/play",
+        "death": "anim/rotr-s-soft-focus/death"
+      },
+      "sound": {
+        "play": "sfx/tcg/play_light",
+        "hit": "sfx/tcg/hit_light",
+        "death": "sfx/tcg/death_soft"
+      },
+      "particles": [
+        "vfx/light_motes"
+      ],
+      "voiceDirection": "Soft keeper narration, hopeful",
+      "upgradePath": [],
+      "craftCost": 40,
+      "sellValue": 10,
+      "collectionTags": [
+        "zero-cost",
+        "starter-utility",
+        "spirit",
+        "starter",
+        "support",
+        "utility"
+      ],
+      "curveTags": [
+        "Starter",
+        "Support",
+        "Utility"
+      ],
+      "expansionId": "rise-of-the-rift",
+      "relatedNpcs": [],
+      "relatedQuests": [],
+      "relatedRiftlings": [],
+      "isToken": false,
+      "unlockMethod": "starter",
+      "competitiveEligible": true
+    }
+  ]
+}

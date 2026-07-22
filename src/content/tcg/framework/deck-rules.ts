@@ -21,6 +21,10 @@ import {
   countDeckComposition,
   validateComposition,
 } from "@/game/tcg/rules/deck-composition";
+import {
+  analyzeDeckCurveWarnings,
+  countZeroCostInDeck,
+} from "@/game/tcg/rules/mana-curve";
 
 const RULES = STANDARD_BATTLE_RULES;
 
@@ -36,6 +40,7 @@ export const CONSTRUCTED_RULES = {
   maxSpells: RULES.deck.maxSpells,
   maxSupportCombined: RULES.deck.maxSupportCombined,
   maxPowerRarityCombined: RULES.deck.maxPowerRarityCombined,
+  maxZeroCostPerDeck: RULES.deck.maxZeroCostPerDeck,
   requireCommander: true,
   cosmeticsArePowerNeutral: true,
   f2pCompetitive:
@@ -56,6 +61,8 @@ export type DeckValidationResult =
         support: number;
         powerRarity: number;
       };
+      curveWarnings?: import("@/game/tcg/rules/mana-curve").CurveWarning[];
+      zeroCostCount?: number;
     }
   | { ok: false; reason: string; code: string };
 
@@ -163,6 +170,15 @@ export function validateConstructedDeck(
     if (!comp.ok) return comp;
   }
 
+  const zeroCostCount = countZeroCostInDeck(resolved);
+  if (zeroCostCount > rules.deck.maxZeroCostPerDeck) {
+    return {
+      ok: false,
+      reason: `At most ${rules.deck.maxZeroCostPerDeck} zero-cost cards per deck (have ${zeroCostCount}).`,
+      code: "MAX_ZERO_COST",
+    };
+  }
+
   const composition = countDeckComposition(resolved);
 
   return {
@@ -176,6 +192,8 @@ export function validateConstructedDeck(
       support: composition.support,
       powerRarity: composition.powerRarity,
     },
+    curveWarnings: analyzeDeckCurveWarnings(resolved, rules),
+    zeroCostCount,
   };
 }
 

@@ -1,0 +1,590 @@
+{
+  "generatedAt": "2026-07-22T14:00:34.757Z",
+  "totalFiles": 55,
+  "alreadyHadLogo": 35,
+  "newlyStamped": 20,
+  "failed": 0,
+  "finalWithLogo": 55,
+  "thresholdMae": 42,
+  "placement": {
+    "LOGO_WIDTH": 300,
+    "PAD_X": 48,
+    "PAD_Y": 40,
+    "TARGET_W": 1920,
+    "TARGET_H": 1080
+  },
+  "results": [
+    {
+      "name": "auralynx-radiant-citadel.png",
+      "action": "stamped",
+      "maeBefore": 90.52,
+      "resized": true
+    },
+    {
+      "name": "bramblefox-elderwood-path.png",
+      "action": "stamped",
+      "maeBefore": 88.41,
+      "resized": true
+    },
+    {
+      "name": "cindercub-ember-forge.png",
+      "action": "stamped",
+      "maeBefore": 93.3,
+      "resized": true
+    },
+    {
+      "name": "circus-night.png",
+      "action": "skip-already-stamped",
+      "mae": 12.88
+    },
+    {
+      "name": "circus-riftling-ring.png",
+      "action": "stamped",
+      "maeBefore": 93.06,
+      "resized": true
+    },
+    {
+      "name": "commons-plaza.png",
+      "action": "skip-already-stamped",
+      "mae": 12.07
+    },
+    {
+      "name": "cosmic-aurora.png",
+      "action": "skip-already-stamped",
+      "mae": 10.32
+    },
+    {
+      "name": "creature-ashwing-ember.png",
+      "action": "skip-already-stamped",
+      "mae": 10.59
+    },
+    {
+      "name": "creature-auralynx-citadel.png",
+      "action": "skip-already-stamped",
+      "mae": 9.88
+    },
+    {
+      "name": "creature-basaltpup-canyon.png",
+      "action": "skip-already-stamped",
+      "mae": 9.98
+    },
+    {
+      "name": "creature-bramblefox-elderwood.png",
+      "action": "skip-already-stamped",
+      "mae": 9.32
+    },
+    {
+      "name": "creature-cindercub-forge.png",
+      "action": "skip-already-stamped",
+      "mae": 10.4
+    },
+    {
+      "name": "creature-cogpup-hatchery.png",
+      "action": "skip-already-stamped",
+      "mae": 11.29
+    },
+    {
+      "name": "creature-emberfox-crater.png",
+      "action": "skip-already-stamped",
+      "mae": 10.62
+    },
+    {
+      "name": "creature-fernfox-meadow.png",
+      "action": "skip-already-stamped",
+      "mae": 9.65
+    },
+    {
+      "name": "creature-frostnip-peaks.png",
+      "action": "skip-already-stamped",
+      "mae": 9.09
+    },
+    {
+      "name": "creature-groveowl-canopy.png",
+      "action": "skip-already-stamped",
+      "mae": 9.54
+    },
+    {
+      "name": "creature-mossprig-grove.png",
+      "action": "skip-already-stamped",
+      "mae": 10.32
+    },
+    {
+      "name": "creature-pearlurk-tidepools.png",
+      "action": "skip-already-stamped",
+      "mae": 10.79
+    },
+    {
+      "name": "creature-radiantkit-academy.png",
+      "action": "skip-already-stamped",
+      "mae": 11.38
+    },
+    {
+      "name": "creature-spark-commons.png",
+      "action": "skip-already-stamped",
+      "mae": 11.18
+    },
+    {
+      "name": "creature-sparkmoth-stormspire.png",
+      "action": "skip-already-stamped",
+      "mae": 8.98
+    },
+    {
+      "name": "creature-stormmoth-rift-sky.png",
+      "action": "skip-already-stamped",
+      "mae": 10.19
+    },
+    {
+      "name": "creature-tideotter-harbor.png",
+      "action": "skip-already-stamped",
+      "mae": 9.6
+    },
+    {
+      "name": "creature-voidling-rift-cavern.png",
+      "action": "skip-already-stamped",
+      "mae": 12.08
+    },
+    {
+      "name": "creature-wirefox-gearworks.png",
+      "action": "skip-already-stamped",
+      "mae": 11.94
+    },
+    {
+      "name": "creature-wispdeer-aurora.png",
+      "action": "skip-already-stamped",
+      "mae": 9.44
+    },
+    {
+      "name": "dreamhare-moonwater.png",
+      "action": "stamped",
+      "maeBefore": 86.64,
+      "resized": true
+    },
+    {
+      "name": "elderwood-forest.png",
+      "action": "skip-already-stamped",
+      "mae": 9.62
+    },
+    {
+      "name": "emberfox-crater-glow.png",
+      "action": "stamped",
+      "maeBefore": 93.7,
+      "resized": true
+    },
+    {
+      "name": "festival-lanterns.png",
+      "action": "skip-already-stamped",
+      "mae": 12.45
+    },
+    {
+      "name": "festival-meadow-pack.png",
+      "action": "stamped",
+      "maeBefore": 79.73,
+      "resized": true
+    },
+    {
+      "name": "fountain-square.png",
+      "action": "skip-already-stamped",
+      "mae": 10.34
+    },
+    {
+      "name": "galekit-peak-winds.png",
+      "action": "stamped",
+      "maeBefore": 75.18,
+      "resized": true
+    },
+    {
+      "name": "homestead-dusk.png",
+      "action": "skip-already-stamped",
+      "mae": 11.7
+    },
+    {
+      "name": "iciclepup-frostveil.png",
+      "action": "stamped",
+      "maeBefore": 84.59,
+      "resized": true
+    },
+    {
+      "name": "keeper-academy.png",
+      "action": "skip-already-stamped",
+      "mae": 12.03
+    },
+    {
+      "name": "lantern-street.png",
+      "action": "skip-already-stamped",
+      "mae": 12.11
+    },
+    {
+      "name": "mira-companions-hatchery.png",
+      "action": "stamped",
+      "maeBefore": 87.41,
+      "resized": true
+    },
+    {
+      "name": "moonwater-harbor.png",
+      "action": "skip-already-stamped",
+      "mae": 11.65
+    },
+    {
+      "name": "mossprig-saplight-grove.png",
+      "action": "stamped",
+      "maeBefore": 100.87,
+      "resized": true
+    },
+    {
+      "name": "night-sky-moths.png",
+      "action": "stamped",
+      "maeBefore": 72.59,
+      "resized": true
+    },
+    {
+      "name": "nova-star-gate.png",
+      "action": "stamped",
+      "maeBefore": 86.02,
+      "resized": true
+    },
+    {
+      "name": "radiant-castle.png",
+      "action": "skip-already-stamped",
+      "mae": 12.45
+    },
+    {
+      "name": "rift-cavern-companions.png",
+      "action": "stamped",
+      "maeBefore": 81.37,
+      "resized": true
+    },
+    {
+      "name": "rift-sky.png",
+      "action": "skip-already-stamped",
+      "mae": 10
+    },
+    {
+      "name": "riftling-meadow.png",
+      "action": "skip-already-stamped",
+      "mae": 12.06
+    },
+    {
+      "name": "riftpup-cyan-breach.png",
+      "action": "stamped",
+      "maeBefore": 76.92,
+      "resized": true
+    },
+    {
+      "name": "soulmoth-lantern-night.png",
+      "action": "stamped",
+      "maeBefore": 86.84,
+      "resized": true
+    },
+    {
+      "name": "spark-glow.png",
+      "action": "skip-already-stamped",
+      "mae": 12.75
+    },
+    {
+      "name": "spark-plaza-dawn.png",
+      "action": "stamped",
+      "maeBefore": 80.73,
+      "resized": true
+    },
+    {
+      "name": "stormspire.png",
+      "action": "skip-already-stamped",
+      "mae": 10.07
+    },
+    {
+      "name": "thornling-rootlanes.png",
+      "action": "stamped",
+      "maeBefore": 84.26,
+      "resized": true
+    },
+    {
+      "name": "windrift-storm-ridge.png",
+      "action": "stamped",
+      "maeBefore": 74.73,
+      "resized": true
+    },
+    {
+      "name": "wisplet-spirit-marsh.png",
+      "action": "stamped",
+      "maeBefore": 82.99,
+      "resized": true
+    }
+  ],
+  "verify": [
+    {
+      "name": "auralynx-radiant-citadel.png",
+      "mae": 11.55,
+      "hasLogo": true
+    },
+    {
+      "name": "bramblefox-elderwood-path.png",
+      "mae": 12.12,
+      "hasLogo": true
+    },
+    {
+      "name": "cindercub-ember-forge.png",
+      "mae": 12.36,
+      "hasLogo": true
+    },
+    {
+      "name": "circus-night.png",
+      "mae": 12.88,
+      "hasLogo": true
+    },
+    {
+      "name": "circus-riftling-ring.png",
+      "mae": 12.29,
+      "hasLogo": true
+    },
+    {
+      "name": "commons-plaza.png",
+      "mae": 12.07,
+      "hasLogo": true
+    },
+    {
+      "name": "cosmic-aurora.png",
+      "mae": 10.32,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-ashwing-ember.png",
+      "mae": 10.59,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-auralynx-citadel.png",
+      "mae": 9.88,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-basaltpup-canyon.png",
+      "mae": 9.98,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-bramblefox-elderwood.png",
+      "mae": 9.32,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-cindercub-forge.png",
+      "mae": 10.4,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-cogpup-hatchery.png",
+      "mae": 11.29,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-emberfox-crater.png",
+      "mae": 10.62,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-fernfox-meadow.png",
+      "mae": 9.65,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-frostnip-peaks.png",
+      "mae": 9.09,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-groveowl-canopy.png",
+      "mae": 9.54,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-mossprig-grove.png",
+      "mae": 10.32,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-pearlurk-tidepools.png",
+      "mae": 10.79,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-radiantkit-academy.png",
+      "mae": 11.38,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-spark-commons.png",
+      "mae": 11.18,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-sparkmoth-stormspire.png",
+      "mae": 8.98,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-stormmoth-rift-sky.png",
+      "mae": 10.19,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-tideotter-harbor.png",
+      "mae": 9.6,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-voidling-rift-cavern.png",
+      "mae": 12.08,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-wirefox-gearworks.png",
+      "mae": 11.94,
+      "hasLogo": true
+    },
+    {
+      "name": "creature-wispdeer-aurora.png",
+      "mae": 9.44,
+      "hasLogo": true
+    },
+    {
+      "name": "dreamhare-moonwater.png",
+      "mae": 12.11,
+      "hasLogo": true
+    },
+    {
+      "name": "elderwood-forest.png",
+      "mae": 9.62,
+      "hasLogo": true
+    },
+    {
+      "name": "emberfox-crater-glow.png",
+      "mae": 12.88,
+      "hasLogo": true
+    },
+    {
+      "name": "festival-lanterns.png",
+      "mae": 12.45,
+      "hasLogo": true
+    },
+    {
+      "name": "festival-meadow-pack.png",
+      "mae": 10.67,
+      "hasLogo": true
+    },
+    {
+      "name": "fountain-square.png",
+      "mae": 10.34,
+      "hasLogo": true
+    },
+    {
+      "name": "galekit-peak-winds.png",
+      "mae": 10.32,
+      "hasLogo": true
+    },
+    {
+      "name": "homestead-dusk.png",
+      "mae": 11.7,
+      "hasLogo": true
+    },
+    {
+      "name": "iciclepup-frostveil.png",
+      "mae": 9.29,
+      "hasLogo": true
+    },
+    {
+      "name": "keeper-academy.png",
+      "mae": 12.03,
+      "hasLogo": true
+    },
+    {
+      "name": "lantern-street.png",
+      "mae": 12.11,
+      "hasLogo": true
+    },
+    {
+      "name": "mira-companions-hatchery.png",
+      "mae": 11.32,
+      "hasLogo": true
+    },
+    {
+      "name": "moonwater-harbor.png",
+      "mae": 11.65,
+      "hasLogo": true
+    },
+    {
+      "name": "mossprig-saplight-grove.png",
+      "mae": 11.19,
+      "hasLogo": true
+    },
+    {
+      "name": "night-sky-moths.png",
+      "mae": 10.28,
+      "hasLogo": true
+    },
+    {
+      "name": "nova-star-gate.png",
+      "mae": 11.95,
+      "hasLogo": true
+    },
+    {
+      "name": "radiant-castle.png",
+      "mae": 12.45,
+      "hasLogo": true
+    },
+    {
+      "name": "rift-cavern-companions.png",
+      "mae": 11.38,
+      "hasLogo": true
+    },
+    {
+      "name": "rift-sky.png",
+      "mae": 10,
+      "hasLogo": true
+    },
+    {
+      "name": "riftling-meadow.png",
+      "mae": 12.06,
+      "hasLogo": true
+    },
+    {
+      "name": "riftpup-cyan-breach.png",
+      "mae": 10.83,
+      "hasLogo": true
+    },
+    {
+      "name": "soulmoth-lantern-night.png",
+      "mae": 11.42,
+      "hasLogo": true
+    },
+    {
+      "name": "spark-glow.png",
+      "mae": 12.75,
+      "hasLogo": true
+    },
+    {
+      "name": "spark-plaza-dawn.png",
+      "mae": 10.17,
+      "hasLogo": true
+    },
+    {
+      "name": "stormspire.png",
+      "mae": 10.07,
+      "hasLogo": true
+    },
+    {
+      "name": "thornling-rootlanes.png",
+      "mae": 11.61,
+      "hasLogo": true
+    },
+    {
+      "name": "windrift-storm-ridge.png",
+      "mae": 10,
+      "hasLogo": true
+    },
+    {
+      "name": "wisplet-spirit-marsh.png",
+      "mae": 11.78,
+      "hasLogo": true
+    }
+  ]
+}

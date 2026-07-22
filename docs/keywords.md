@@ -1,22 +1,9 @@
-# Keywords
+# KEYWORDS.md
 
-**Registry:** `src/game/tcg/combat/keywords.ts` · content mirror `src/content/tcg/data/keywords.json`
+Pointer to the live keyword registry and player-facing docs.
 
-| Keyword | Support | Summary |
-|---------|---------|---------|
-| Charge | full | Attack including Keeper on arrival |
-| Rush | full | Attack creatures on arrival, not Keeper |
-| Swift | partial | Ready if Energy remains after summon |
-| Vigilant | partial | Does not Exhaust after strike |
-| Guardian | full | Must be attacked first |
-| Flying | full | Bypass grounded Frontline/Guardians for Keeper |
-| Pierce / Reach | full | Bypass Frontline for Keeper |
-| Ward | full | Blocks next hostile spell |
-| Bloom | full | +1/+1 at turn start |
-| Poison | full | Dawn damage stacks |
-| Echo | full | Replay cheap spell once at +1 |
-| Awaken | full | Transform next turn |
-| Heal | full | Restore Keeper HP |
-| Shatter / Empower / … | partial | Expanding |
+- Registry: `src/game/tcg/combat/keywords.ts`
+- Legacy doc: [keywords.md](./keywords.md)
+- Card timing: [card-timing.md](./card-timing.md)
 
-Never hardcode keyword logic in React card faces — resolve via the registry.
+**0-cost collectibles** may not carry Charge, Rush, Swift, Siege, Flying, Pierce, or Echo (see [ZERO_COST_CARD_DESIGN.md](./ZERO_COST_CARD_DESIGN.md)).

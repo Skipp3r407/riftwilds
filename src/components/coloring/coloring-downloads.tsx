@@ -10,10 +10,10 @@ import {
 import { cn } from "@/lib/utils/cn";
 
 type Props = {
-  /** Compact tile strip for comics; full grid elsewhere; featured = 4 Kids Corner tiles */
+  /** Compact tile strip for comics; full grid elsewhere; featured = examples-only Kids Corner strip */
   variant?: "full" | "compact" | "featured";
   className?: string;
-  /** Show link to /coloring index */
+  /** Show link to /coloring index (ignored for featured examples strip) */
   showIndexLink?: boolean;
   sheets?: ColoringSheet[];
 };
@@ -38,63 +38,79 @@ export function ColoringDownloads({
       ? listFeaturedColoringSheets(4)
       : listColoringSheets());
 
-  if (variant === "compact" || variant === "featured") {
+  if (variant === "featured") {
+    return (
+      <aside
+        className={cn(
+          "rounded-2xl border border-[var(--stroke)] bg-[radial-gradient(ellipse_at_15%_0%,rgba(255,184,77,0.12),transparent_50%),radial-gradient(ellipse_at_85%_30%,rgba(61,231,255,0.1),transparent_45%),linear-gradient(165deg,#1a1510_0%,#121a28_55%,#0e1624_100%)] p-6 md:p-8",
+          className,
+        )}
+        aria-label="Kids Corner art examples"
+      >
+        <div>
+          <p className="page-kicker">Kids corner</p>
+          <p className="font-display mt-2 text-2xl text-white md:text-3xl">Coloring examples</p>
+          <p className="mt-2 max-w-xl text-sm text-[var(--text-muted)]">
+            Spark, Commons, circus, and hatchery — a preview of the kids art style from the lore
+            library.
+          </p>
+        </div>
+        <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {resolvedSheets.map((sheet) => (
+            <li key={sheet.id}>
+              <div className="relative overflow-hidden rounded-lg ring-1 ring-[rgba(196,168,130,0.28)]">
+                <div className="relative aspect-video bg-[rgba(0,0,0,0.35)]">
+                  <Image
+                    src={previewSrc(sheet)}
+                    alt={`${sheet.title} example`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    unoptimized
+                  />
+                  <span className="absolute right-2 top-2 rounded-sm bg-black/70 px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--amber)] ring-1 ring-[rgba(255,184,77,0.35)]">
+                    Example
+                  </span>
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent px-2.5 pb-2 pt-8">
+                    <span className="text-xs font-medium text-white">{sheet.shortLabel}</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    );
+  }
+
+  if (variant === "compact") {
     return (
       <aside
         className={cn(
           "rounded-xl border border-[rgba(196,168,130,0.35)] bg-[rgba(20,14,10,0.45)] px-4 py-3",
-          variant === "featured" &&
-            "rounded-2xl border-[var(--stroke)] bg-[radial-gradient(ellipse_at_15%_0%,rgba(255,184,77,0.12),transparent_50%),radial-gradient(ellipse_at_85%_30%,rgba(61,231,255,0.1),transparent_45%),linear-gradient(165deg,#1a1510_0%,#121a28_55%,#0e1624_100%)] p-6 md:p-8",
           className,
         )}
         aria-label="Kids coloring pages"
       >
         <div className="flex flex-wrap items-end justify-between gap-2">
           <div>
-            <p
-              className={cn(
-                "text-[10px] uppercase tracking-[0.18em] text-[var(--amber)]",
-                variant === "featured" && "page-kicker",
-              )}
-            >
+            <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--amber)]">
               Kids corner
             </p>
-            <p
-              className={cn(
-                "font-display text-lg text-[var(--parchment,#e8d5b0)]",
-                variant === "featured" && "mt-2 text-2xl text-white md:text-3xl",
-              )}
-            >
-              {variant === "featured" ? "Coloring pages" : "Download to color"}
-            </p>
-            {variant === "featured" ? (
-              <p className="mt-2 max-w-xl text-sm text-[var(--text-muted)]">
-                Spark, Commons, circus, and hatchery — printable game-sketch sheets for crayons and
-                markers.
-              </p>
-            ) : null}
+            <p className="font-display text-lg text-[var(--parchment,#e8d5b0)]">Download to color</p>
           </div>
           {showIndexLink ? (
             <div className="flex flex-wrap gap-2">
               <Link href="/coloring" className="btn-secondary focus-ring text-sm">
-                {variant === "featured" ? "View all downloads" : "All coloring pages"}
+                All coloring pages
               </Link>
-              {variant === "compact" ? (
-                <Link href="/fan-kit#kids" className="btn-secondary focus-ring text-sm">
-                  Fan Kit
-                </Link>
-              ) : null}
+              <Link href="/fan-kit#kids" className="btn-secondary focus-ring text-sm">
+                Fan Kit
+              </Link>
             </div>
           ) : null}
         </div>
-        <ul
-          className={cn(
-            "mt-3 grid gap-3",
-            variant === "featured"
-              ? "sm:grid-cols-2 lg:grid-cols-4"
-              : "grid-cols-2 sm:grid-cols-4",
-          )}
-        >
+        <ul className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {resolvedSheets.map((sheet) => (
             <li key={sheet.id}>
               <a
@@ -123,14 +139,7 @@ export function ColoringDownloads({
             </li>
           ))}
         </ul>
-        <p
-          className={cn(
-            "mt-2 text-[11px] text-[rgba(232,213,176,0.55)]",
-            variant === "featured" && "mt-5 text-xs text-[var(--text-muted)]",
-          )}
-        >
-          {COLORING_CREDIT}
-        </p>
+        <p className="mt-2 text-[11px] text-[rgba(232,213,176,0.55)]">{COLORING_CREDIT}</p>
       </aside>
     );
   }

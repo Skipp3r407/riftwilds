@@ -1,0 +1,21 @@
+{
+  "simCount": 10000,
+  "openingSize": 5,
+  "turn1Energy": 2,
+  "rulesVersion": "2.1.0",
+  "poolCurve": {
+    "total": 641,
+    "histogram": "0:24  1:172  2:130  3:154  4:90  5:37  6:23  7+:11",
+    "averageCost": 2.58,
+    "zeroCost": 24,
+    "zeroPct": 3.74
+  },
+  "raw": {
+    "deadHandPct": 2.02,
+    "t1PlayablePct": 97.98
+  },
+  "shaped": {
+    "deadHandPct": 0,
+    "t1PlayablePct": 100
+  }
+}
