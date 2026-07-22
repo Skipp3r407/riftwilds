@@ -51,7 +51,7 @@ export function auditZeroCostCard(card: TcgCard): ZeroCostAudit {
 
   const atk = card.attack ?? 0;
   const hp = card.health ?? 0;
-  if (cat === "companion" || cat === "creature") {
+  if (cat === "companion") {
     if (atk > 1) reasons.push("0-cost companion attack must be ≤ 1");
     if (hp > 2) reasons.push("0-cost companion health must be ≤ 2");
   }

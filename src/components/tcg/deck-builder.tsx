@@ -181,11 +181,15 @@ type Payload = {
     constructedTargetMax: number;
     deckSize?: number;
     requireCommander?: boolean;
+    /** Turn-1 energy cap (Rules v2.1); mirrored from TCG_DEFAULTS / STANDARD_BATTLE_RULES. */
+    riftEnergyStartMax?: number;
   };
   constructedRules?: {
     deckSize: number;
     f2pCompetitive: string;
     copyLimits: Record<string, number>;
+    /** Soft cap on 0-cost combat cards (Rules v2.1). */
+    maxZeroCostPerDeck: number;
   };
   facets?: {
     elements: string[];

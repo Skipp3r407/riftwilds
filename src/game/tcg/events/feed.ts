@@ -164,9 +164,7 @@ export function buildBattleFeed(
             sourceTypes: combatBuffer.flatMap((c) => c.sourceTypes ?? []),
             yours: first.yours,
             children: combatBuffer,
-            flash: combatBuffer.some((c) => c.flash === "death")
-              ? "damage"
-              : "damage",
+            flash: "damage",
           },
           `combat-${first.id}`,
         ),
@@ -208,7 +206,7 @@ export function buildBattleFeed(
     }
 
     const meta = getEventMeta(e.type);
-    const turn = num(payload.turn) ?? lastTurn ?? 1;
+    const turn: number = num(payload.turn) ?? lastTurn ?? 1;
     const { label: who, yours } = actorLabel(e.actorId, opts.yourSideId, names);
     const seq = num(payload.seq) ?? i;
     const id = `ev-${seq}-${e.type}`;

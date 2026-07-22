@@ -44,7 +44,7 @@ export function getIssue001Transcript(pageNumber: number): string[] {
   return ISSUE_001_TRANSCRIPTS[pageNumber] ?? [];
 }
 
-export const ISSUE_001_COMIC: ComicIssue = {
+export const ISSUE_001_COMIC = {
   "slug": "the-first-rift",
   "issueNumber": 1,
   "title": "The First Rift",
@@ -1024,4 +1024,4 @@ export const ISSUE_001_COMIC: ComicIssue = {
       "developerNote": "story · baked lettering"
     }
   ]
-} as ComicIssue;
+} as unknown as ComicIssue;

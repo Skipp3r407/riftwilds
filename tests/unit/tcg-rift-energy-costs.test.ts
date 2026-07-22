@@ -252,8 +252,7 @@ describe("tcg rift energy play costs", () => {
 
   it("logs rejected plays in developer mode", () => {
     const spy = vi.spyOn(console, "info").mockImplementation(() => {});
-    const prev = process.env.NODE_ENV;
-    process.env.NODE_ENV = "development";
+    vi.stubEnv("NODE_ENV", "development");
     try {
       const state = practiceMatch("energy_log", 11);
       const side = state.players[0]!;
@@ -281,7 +280,7 @@ describe("tcg rift energy play costs", () => {
       );
       expect(logged).toBe(true);
     } finally {
-      process.env.NODE_ENV = prev;
+      vi.unstubAllEnvs();
       spy.mockRestore();
     }
   });
