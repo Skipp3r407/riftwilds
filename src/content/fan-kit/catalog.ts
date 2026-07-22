@@ -304,7 +304,7 @@ export const SHARE_MOMENTS: ShareMoment[] = [
     title: "Legends of the Rift",
     caption: "Read the official comic series — original lore, cozy pages.",
     sharePath: "/comics",
-    imageSrc: "/assets/fan-kit/share/og/moment-comics.svg",
+    imageSrc: "/assets/ui/comics/share-comics.png",
     hook: "Read comics",
   },
   {

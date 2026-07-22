@@ -74,6 +74,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Festival lanterns fall through smoke as Keepers fight through a burning market breach.",
     pngSrc: "/assets/wallpapers/festival-lanterns.png",
+    thumbSrc: "/assets/ui/comics/desktop-market.png",
     tags: ["festival", "market", "battle"],
   },
   {
@@ -84,6 +85,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Night cobblestones split with cyan rift wounds; Keepers clash amid shattered shop stalls.",
     pngSrc: "/assets/wallpapers/lantern-street.png",
+    thumbSrc: "/assets/ui/comics/desktop-street.png",
     tags: ["street", "night", "battle"],
   },
   {
@@ -94,6 +96,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "A living sky-rift tears the firmament while Keepers face storm-born beasts on the ridge.",
     pngSrc: "/assets/wallpapers/rift-sky.png",
+    thumbSrc: "/assets/ui/comics/desktop-rift-storm.png",
     tags: ["rift", "storm", "sky"],
   },
   {
@@ -104,6 +107,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "A rift-tide kraken rises against Moonwater docks as Keepers brace shattered piers.",
     pngSrc: "/assets/wallpapers/moonwater-harbor.png",
+    thumbSrc: "/assets/ui/comics/desktop-harbor.png",
     tags: ["harbor", "kraken", "boss"],
   },
   {
@@ -114,6 +118,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "An Elderwood bridge shears apart mid-fight — Keepers leap as corrupted roots strike.",
     pngSrc: "/assets/wallpapers/elderwood-forest.png",
+    thumbSrc: "/assets/ui/comics/desktop-elderwood.png",
     tags: ["forest", "collapse", "battle"],
   },
   {
@@ -124,6 +129,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "World-boss siege at the glowing citadel gates — siege light, broken walls, last stand.",
     pngSrc: "/assets/wallpapers/radiant-castle.png",
+    thumbSrc: "/assets/ui/comics/desktop-citadel.png",
     tags: ["castle", "boss", "siege"],
   },
   {
@@ -134,6 +140,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "A Keeper homestead burns at dusk while Rifters hold the porch against riftspawn.",
     pngSrc: "/assets/wallpapers/homestead-dusk.png",
+    thumbSrc: "/assets/ui/comics/desktop-homestead.png",
     tags: ["homestead", "defense", "dusk"],
   },
   {
@@ -144,6 +151,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Lightning-kissed peaks become a warfront as Keepers duel a storm-forged rift titan.",
     pngSrc: "/assets/wallpapers/stormspire.png",
+    thumbSrc: "/assets/ui/comics/desktop-stormspire.png",
     tags: ["storm", "peaks", "boss"],
   },
   {
@@ -154,6 +162,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Cadets and mentors seal the Academy halls as rift energy floods cracked lecture stone.",
     pngSrc: "/assets/wallpapers/keeper-academy.png",
+    thumbSrc: "/assets/ui/comics/desktop-academy.png",
     tags: ["academy", "defense", "keepers"],
   },
   {
@@ -164,6 +173,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "The Commons fountain ruptures — cyan spray and amber sparks as Rifters push the breach.",
     pngSrc: "/assets/wallpapers/fountain-square.png",
+    thumbSrc: "/assets/ui/comics/desktop-fountain.png",
     tags: ["fountain", "breach", "commons"],
   },
   {
@@ -174,6 +184,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Cosmic cyan–amber aurora ribbons frame an epic sky battle above a shattered ridge.",
     pngSrc: "/assets/wallpapers/cosmic-aurora.png",
+    thumbSrc: "/assets/ui/comics/desktop-aurora.png",
     tags: ["cosmic", "aurora", "warfront"],
   },
   {
@@ -184,6 +195,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Spark the Glowpup stands on lantern-lit Commons cobbles as dusk riftlight softens the plaza.",
     pngSrc: "/assets/wallpapers/creature-spark-commons.png",
+    thumbSrc: "/assets/wallpapers/creature-spark-commons.png",
     tags: ["spark", "glowpup", "commons", "creature"],
   },
   {
@@ -194,6 +206,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Emberfox perches on a glowing Ember Crater ledge — ash hide, ember eyes, molten rivers below.",
     pngSrc: "/assets/wallpapers/creature-emberfox-crater.png",
+    thumbSrc: "/assets/wallpapers/creature-emberfox-crater.png",
     tags: ["emberfox", "ember", "crater", "creature"],
   },
   {
@@ -204,6 +217,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Bramblefox leaps Elderwood roots through mist and saplight — thorn-trail mischief in the grove.",
     pngSrc: "/assets/wallpapers/creature-bramblefox-elderwood.png",
+    thumbSrc: "/assets/wallpapers/creature-bramblefox-elderwood.png",
     tags: ["bramblefox", "elderwood", "grove", "creature"],
   },
   {
@@ -214,6 +228,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Gentle Mossprig nestled among mushrooms and moss stones in a quiet Elderwood glade.",
     pngSrc: "/assets/wallpapers/creature-mossprig-grove.png",
+    thumbSrc: "/assets/wallpapers/creature-mossprig-grove.png",
     tags: ["mossprig", "grove", "elderwood", "creature"],
   },
   {
@@ -224,6 +239,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Ashwing soars above Ember Crater smoke plumes — ember feathers cutting a warm sunset sky.",
     pngSrc: "/assets/wallpapers/creature-ashwing-ember.png",
+    thumbSrc: "/assets/wallpapers/creature-ashwing-ember.png",
     tags: ["ashwing", "ember", "sky", "creature"],
   },
   {
@@ -234,6 +250,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Auralynx on Radiant Citadel marble steps — pale light fur under golden dawn and cyan aurora.",
     pngSrc: "/assets/wallpapers/creature-auralynx-citadel.png",
+    thumbSrc: "/assets/wallpapers/creature-auralynx-citadel.png",
     tags: ["auralynx", "citadel", "light", "creature"],
   },
   {
@@ -244,6 +261,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Basaltpup watches Stoneheart Canyon from a rocky ledge — basalt plates catching dusty sun.",
     pngSrc: "/assets/wallpapers/creature-basaltpup-canyon.png",
+    thumbSrc: "/assets/wallpapers/creature-basaltpup-canyon.png",
     tags: ["basaltpup", "canyon", "earth", "creature"],
   },
   {
@@ -254,6 +272,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Tideotter plays near Moonwater Harbor docks — pearl-blue coat under lantern twilight.",
     pngSrc: "/assets/wallpapers/creature-tideotter-harbor.png",
+    thumbSrc: "/assets/wallpapers/creature-tideotter-harbor.png",
     tags: ["tideotter", "harbor", "tide", "creature"],
   },
   {
@@ -264,6 +283,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Sparkmoth hovers Stormspire cliffs in a lightning storm — kite-silk wings edged in cyan.",
     pngSrc: "/assets/wallpapers/creature-sparkmoth-stormspire.png",
+    thumbSrc: "/assets/wallpapers/creature-sparkmoth-stormspire.png",
     tags: ["sparkmoth", "stormspire", "storm", "creature"],
   },
   {
@@ -274,6 +294,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Cindercub warms by the Ember Forge hearth — smoldering fur and soft belly embers.",
     pngSrc: "/assets/wallpapers/creature-cindercub-forge.png",
+    thumbSrc: "/assets/wallpapers/creature-cindercub-forge.png",
     tags: ["cindercub", "forge", "ember", "creature"],
   },
   {
@@ -284,6 +305,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Frostnip curls on a snowy Stormspire ledge under soft cyan–gold aurora.",
     pngSrc: "/assets/wallpapers/creature-frostnip-peaks.png",
+    thumbSrc: "/assets/wallpapers/creature-frostnip-peaks.png",
     tags: ["frostnip", "peaks", "ice", "creature"],
   },
   {
@@ -294,6 +316,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Wirefox prowls a night gearworks bay — copper wire accents and cyan circuit veins.",
     pngSrc: "/assets/wallpapers/creature-wirefox-gearworks.png",
+    thumbSrc: "/assets/wallpapers/creature-wirefox-gearworks.png",
     tags: ["wirefox", "gearworks", "forge", "creature"],
   },
   {
@@ -304,6 +327,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Groveowl perched high in Elderwood canopy at golden hour — moss-green plumage watching the forest.",
     pngSrc: "/assets/wallpapers/creature-groveowl-canopy.png",
+    thumbSrc: "/assets/wallpapers/creature-groveowl-canopy.png",
     tags: ["groveowl", "elderwood", "grove", "creature"],
   },
   {
@@ -314,6 +338,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Fernfox trots a sunlit wildflower meadow — frond-tipped ears and gentle rift shimmer afar.",
     pngSrc: "/assets/wallpapers/creature-fernfox-meadow.png",
+    thumbSrc: "/assets/wallpapers/creature-fernfox-meadow.png",
     tags: ["fernfox", "meadow", "grove", "creature"],
   },
   {
@@ -324,6 +349,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Stormmoth cuts through a living sky-rift storm — indigo wings veined with electric cyan.",
     pngSrc: "/assets/wallpapers/creature-stormmoth-rift-sky.png",
+    thumbSrc: "/assets/wallpapers/creature-stormmoth-rift-sky.png",
     tags: ["stormmoth", "rift", "storm", "creature"],
   },
   {
@@ -334,6 +360,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Cogpup among Hatchery egg cradles — soft fur, copper gears, and warm incubator glow.",
     pngSrc: "/assets/wallpapers/creature-cogpup-hatchery.png",
+    thumbSrc: "/assets/wallpapers/creature-cogpup-hatchery.png",
     tags: ["cogpup", "hatchery", "creature"],
   },
   {
@@ -344,6 +371,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Radiantkit explores Keeper Academy halls — luminous fur beside crystal alcoves and tall windows.",
     pngSrc: "/assets/wallpapers/creature-radiantkit-academy.png",
+    thumbSrc: "/assets/wallpapers/creature-radiantkit-academy.png",
     tags: ["radiantkit", "academy", "light", "creature"],
   },
   {
@@ -354,6 +382,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Pearlurk half-emerged from moonlit Moonwater tide pools — pearlescent plates and cyan biolights.",
     pngSrc: "/assets/wallpapers/creature-pearlurk-tidepools.png",
+    thumbSrc: "/assets/wallpapers/creature-pearlurk-tidepools.png",
     tags: ["pearlurk", "tide", "harbor", "creature"],
   },
   {
@@ -364,6 +393,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Wispdeer stands under cyan–amber aurora — translucent light antlers in a highland meadow.",
     pngSrc: "/assets/wallpapers/creature-wispdeer-aurora.png",
+    thumbSrc: "/assets/wallpapers/creature-wispdeer-aurora.png",
     tags: ["wispdeer", "aurora", "creature"],
   },
   {
@@ -374,6 +404,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Voidling nestled in a crystalline rift cavern — star-flecked hide beside cyan cracks and amber crystal.",
     pngSrc: "/assets/wallpapers/creature-voidling-rift-cavern.png",
+    thumbSrc: "/assets/wallpapers/creature-voidling-rift-cavern.png",
     tags: ["voidling", "rift", "cavern", "creature"],
   },
   {
@@ -384,6 +415,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Spark the Glowpup greets Riftwild Commons from the fountain rim as dawn lanterns warm the stalls.",
     pngSrc: "/assets/wallpapers/spark-plaza-dawn.png",
+    thumbSrc: "/assets/wallpapers/spark-plaza-dawn.png",
     tags: ["spark", "commons", "glowpup", "creature"],
   },
   {
@@ -394,6 +426,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Emberfox watches Ember Crater’s living coal pools — ashen plates, flame tail, amber corelight.",
     pngSrc: "/assets/wallpapers/emberfox-crater-glow.png",
+    thumbSrc: "/assets/wallpapers/emberfox-crater-glow.png",
     tags: ["emberfox", "crater", "ember", "creature"],
   },
   {
@@ -404,6 +437,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Galekit races Stormspire ridgelines through kite-silk wind and cyan ozone crackle.",
     pngSrc: "/assets/wallpapers/galekit-peak-winds.png",
+    thumbSrc: "/assets/wallpapers/galekit-peak-winds.png",
     tags: ["galekit", "stormspire", "storm", "creature"],
   },
   {
@@ -414,6 +448,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Bramblefox pads a sun-dappled Elderwood trail — vine-thorn tail and saplight motes.",
     pngSrc: "/assets/wallpapers/bramblefox-elderwood-path.png",
+    thumbSrc: "/assets/wallpapers/bramblefox-elderwood-path.png",
     tags: ["bramblefox", "elderwood", "grove", "creature"],
   },
   {
@@ -424,6 +459,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Mossprig rests in a luminous moss grove where mushrooms glow soft gold and green.",
     pngSrc: "/assets/wallpapers/mossprig-saplight-grove.png",
+    thumbSrc: "/assets/wallpapers/mossprig-saplight-grove.png",
     tags: ["mossprig", "grove", "meadow", "creature"],
   },
   {
@@ -434,6 +470,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Thornling stands watch among Elderwood Rootlanes as twilight saplight veins the trunks.",
     pngSrc: "/assets/wallpapers/thornling-rootlanes.png",
+    thumbSrc: "/assets/wallpapers/thornling-rootlanes.png",
     tags: ["thornling", "elderwood", "grove", "creature"],
   },
   {
@@ -444,6 +481,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Wisplet drifts above Spirit Marsh reeds — lantern-soft body, dream-pollen haze, dusk boardwalks.",
     pngSrc: "/assets/wallpapers/wisplet-spirit-marsh.png",
+    thumbSrc: "/assets/wallpapers/wisplet-spirit-marsh.png",
     tags: ["wisplet", "marsh", "spirit", "creature"],
   },
   {
@@ -454,6 +492,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Soulmoth threads a lantern festival street — cyan-gold wings among hanging amber lamps.",
     pngSrc: "/assets/wallpapers/soulmoth-lantern-night.png",
+    thumbSrc: "/assets/wallpapers/soulmoth-lantern-night.png",
     tags: ["soulmoth", "festival", "spirit", "creature"],
   },
   {
@@ -464,6 +503,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Iciclepup bounds Frostveil Basin snow under cyan–amber aurora and crystal frost.",
     pngSrc: "/assets/wallpapers/iciclepup-frostveil.png",
+    thumbSrc: "/assets/wallpapers/iciclepup-frostveil.png",
     tags: ["iciclepup", "frostveil", "frost", "creature"],
   },
   {
@@ -474,6 +514,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Prime companion Nova faces an ancient Star Gate — twin cyan–amber core under shattered stars.",
     pngSrc: "/assets/wallpapers/nova-star-gate.png",
+    thumbSrc: "/assets/wallpapers/nova-star-gate.png",
     tags: ["nova", "cosmos", "prime", "creature"],
   },
   {
@@ -484,6 +525,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Spark, Emberfox, and Mossprig share the Hatchery vault among glowing eggs and aurora windows.",
     pngSrc: "/assets/wallpapers/mira-companions-hatchery.png",
+    thumbSrc: "/assets/wallpapers/mira-companions-hatchery.png",
     tags: ["hatchery", "spark", "companions", "creature"],
   },
   {
@@ -494,6 +536,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Spark and Bramblefox share the Traveling Circus ring under lanternlight and tent silk.",
     pngSrc: "/assets/wallpapers/circus-riftling-ring.png",
+    thumbSrc: "/assets/wallpapers/circus-riftling-ring.png",
     tags: ["circus", "spark", "bramblefox", "creature"],
   },
   {
@@ -504,6 +547,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Riftpup and Galekit explore a cyan-crystal cavern — amber magma veins, underground wonder.",
     pngSrc: "/assets/wallpapers/rift-cavern-companions.png",
+    thumbSrc: "/assets/wallpapers/rift-cavern-companions.png",
     tags: ["cavern", "riftpup", "galekit", "creature"],
   },
   {
@@ -514,6 +558,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Commonspark and meadow friends play among festival ribbons at golden hour.",
     pngSrc: "/assets/wallpapers/festival-meadow-pack.png",
+    thumbSrc: "/assets/wallpapers/festival-meadow-pack.png",
     tags: ["festival", "meadow", "commonspark", "creature"],
   },
   {
@@ -524,6 +569,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Sparkmoth, Citadelmoth, and Soulmoth trail light across an aurora night sky.",
     pngSrc: "/assets/wallpapers/night-sky-moths.png",
+    thumbSrc: "/assets/wallpapers/night-sky-moths.png",
     tags: ["moths", "night", "sky", "creature"],
   },
   {
@@ -534,6 +580,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Auralynx overlooks Radiant Citadel towers from a sunlit balcony of pale gold stone.",
     pngSrc: "/assets/wallpapers/auralynx-radiant-citadel.png",
+    thumbSrc: "/assets/wallpapers/auralynx-radiant-citadel.png",
     tags: ["auralynx", "citadel", "light", "creature"],
   },
   {
@@ -544,6 +591,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Cindercub warms beside the Ember Forge hearth — living coal, copper racks, soft sparks.",
     pngSrc: "/assets/wallpapers/cindercub-ember-forge.png",
+    thumbSrc: "/assets/wallpapers/cindercub-ember-forge.png",
     tags: ["cindercub", "forge", "ember", "creature"],
   },
   {
@@ -554,6 +602,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Windrift and Galekit race a Stormspire ridge through lightning-kissed peak winds.",
     pngSrc: "/assets/wallpapers/windrift-storm-ridge.png",
+    thumbSrc: "/assets/wallpapers/windrift-storm-ridge.png",
     tags: ["windrift", "galekit", "storm", "creature"],
   },
   {
@@ -564,6 +613,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Dreamhare rests on Moonwater Harbor docks as moonrise lanterns mirror the tide.",
     pngSrc: "/assets/wallpapers/dreamhare-moonwater.png",
+    thumbSrc: "/assets/wallpapers/dreamhare-moonwater.png",
     tags: ["dreamhare", "harbor", "spirit", "creature"],
   },
   {
@@ -574,6 +624,7 @@ export const WALLPAPERS: Wallpaper[] = [
     description:
       "Riftpup faces a vertical cyan Fracture tear over a night meadow of amber wildflowers.",
     pngSrc: "/assets/wallpapers/riftpup-cyan-breach.png",
+    thumbSrc: "/assets/wallpapers/riftpup-cyan-breach.png",
     tags: ["riftpup", "rift", "breach", "creature"],
   },
 ];

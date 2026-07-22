@@ -82,6 +82,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/riftling-friends.png",
     svgSrc: "/assets/coloring/riftling-friends.svg",
     pdfSrc: "/assets/coloring/riftling-friends.pdf",
+    thumbSrc: "/assets/ui/comics/kids-friends.png",
     tags: ["riftling", "group"],
   },
   {
@@ -93,6 +94,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/elara-venn.png",
     svgSrc: "/assets/coloring/elara-venn.svg",
     pdfSrc: "/assets/coloring/elara-venn.pdf",
+    thumbSrc: "/assets/ui/comics/kids-elara.png",
     tags: ["people", "commons"],
   },
   {
@@ -104,6 +106,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/gateway-stones.png",
     svgSrc: "/assets/coloring/gateway-stones.svg",
     pdfSrc: "/assets/coloring/gateway-stones.pdf",
+    thumbSrc: "/assets/ui/comics/kids-gateways.png",
     tags: ["landmark", "history"],
   },
   {
@@ -115,6 +118,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/elderwood-path.png",
     svgSrc: "/assets/coloring/elderwood-path.svg",
     pdfSrc: "/assets/coloring/elderwood-path.pdf",
+    thumbSrc: "/assets/ui/comics/kids-elderwood.png",
     tags: ["region", "nature"],
   },
   {
@@ -126,6 +130,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/keeper-guide.png",
     svgSrc: "/assets/coloring/keeper-guide.svg",
     pdfSrc: "/assets/coloring/keeper-guide.pdf",
+    thumbSrc: "/assets/ui/comics/kids-keeper.png",
     tags: ["people", "riftling"],
   },
   {
@@ -137,6 +142,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/commons-arena.png",
     svgSrc: "/assets/coloring/commons-arena.svg",
     pdfSrc: "/assets/coloring/commons-arena.pdf",
+    thumbSrc: "/assets/ui/comics/kids-arena.png",
     tags: ["commons", "battle"],
   },
   {
@@ -148,6 +154,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/player-academy.png",
     svgSrc: "/assets/coloring/player-academy.svg",
     pdfSrc: "/assets/coloring/player-academy.pdf",
+    thumbSrc: "/assets/ui/comics/kids-academy.png",
     tags: ["landmark", "commons"],
   },
   {
@@ -159,6 +166,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/moonwater-harbor.png",
     svgSrc: "/assets/coloring/moonwater-harbor.svg",
     pdfSrc: "/assets/coloring/moonwater-harbor.pdf",
+    thumbSrc: "/assets/ui/comics/kids-harbor.png",
     tags: ["region", "harbor"],
   },
   {
@@ -170,6 +178,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/hatchery-care.png",
     svgSrc: "/assets/coloring/hatchery-care.svg",
     pdfSrc: "/assets/coloring/hatchery-care.pdf",
+    thumbSrc: "/assets/ui/comics/kids-nursery.png",
     tags: ["hatchery", "egg"],
   },
   {
@@ -181,6 +190,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/ember-forge.png",
     svgSrc: "/assets/coloring/ember-forge.svg",
     pdfSrc: "/assets/coloring/ember-forge.pdf",
+    thumbSrc: "/assets/ui/comics/kids-forge.png",
     tags: ["region", "ember"],
   },
   {
@@ -192,6 +202,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/riftling-species.png",
     svgSrc: "/assets/coloring/riftling-species.svg",
     pdfSrc: "/assets/coloring/riftling-species.pdf",
+    thumbSrc: "/assets/ui/comics/kids-species.png",
     tags: ["riftling", "group"],
   },
   {
@@ -203,6 +214,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/glowpup-den.png",
     svgSrc: "/assets/coloring/glowpup-den.svg",
     pdfSrc: "/assets/coloring/glowpup-den.pdf",
+    thumbSrc: "/assets/ui/comics/kids-den.png",
     tags: ["riftling", "spark"],
   },
   {
@@ -214,6 +226,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/emberkit-scout.png",
     svgSrc: "/assets/coloring/emberkit-scout.svg",
     pdfSrc: "/assets/coloring/emberkit-scout.pdf",
+    thumbSrc: "/assets/ui/comics/kids-emberkit.png",
     tags: ["riftling", "ember"],
   },
   {
@@ -225,6 +238,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/pouchling-market.png",
     svgSrc: "/assets/coloring/pouchling-market.svg",
     pdfSrc: "/assets/coloring/pouchling-market.pdf",
+    thumbSrc: "/assets/ui/comics/kids-pouchling.png",
     tags: ["riftling", "commons"],
   },
   {
@@ -236,6 +250,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/stone-guardian.png",
     svgSrc: "/assets/coloring/stone-guardian.svg",
     pdfSrc: "/assets/coloring/stone-guardian.pdf",
+    thumbSrc: "/assets/ui/comics/kids-guardian.png",
     tags: ["boss", "landmark"],
   },
   {
@@ -247,6 +262,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/rift-serpent.png",
     svgSrc: "/assets/coloring/rift-serpent.svg",
     pdfSrc: "/assets/coloring/rift-serpent.pdf",
+    thumbSrc: "/assets/ui/comics/kids-serpent.png",
     tags: ["boss", "riftling"],
   },
   {
@@ -258,6 +274,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/circus-acrobat.png",
     svgSrc: "/assets/coloring/circus-acrobat.svg",
     pdfSrc: "/assets/coloring/circus-acrobat.pdf",
+    thumbSrc: "/assets/ui/comics/kids-acrobat.png",
     tags: ["circus", "event"],
   },
   {
@@ -269,6 +286,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/gateway-awaken.png",
     svgSrc: "/assets/coloring/gateway-awaken.svg",
     pdfSrc: "/assets/coloring/gateway-awaken.pdf",
+    thumbSrc: "/assets/ui/comics/kids-awaken.png",
     tags: ["landmark", "history"],
   },
   {
@@ -280,6 +298,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/elderwood-camp.png",
     svgSrc: "/assets/coloring/elderwood-camp.svg",
     pdfSrc: "/assets/coloring/elderwood-camp.pdf",
+    thumbSrc: "/assets/ui/comics/kids-camp.png",
     tags: ["region", "nature"],
   },
   {
@@ -291,6 +310,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/market-day.png",
     svgSrc: "/assets/coloring/market-day.svg",
     pdfSrc: "/assets/coloring/market-day.pdf",
+    thumbSrc: "/assets/ui/comics/kids-market.png",
     tags: ["commons", "landmark"],
   },
   {
@@ -302,6 +322,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/homestead-garden.png",
     svgSrc: "/assets/coloring/homestead-garden.svg",
     pdfSrc: "/assets/coloring/homestead-garden.pdf",
+    thumbSrc: "/assets/ui/comics/kids-garden.png",
     tags: ["housing", "nature"],
   },
   {
@@ -313,6 +334,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/riftstone-plaza.png",
     svgSrc: "/assets/coloring/riftstone-plaza.svg",
     pdfSrc: "/assets/coloring/riftstone-plaza.pdf",
+    thumbSrc: "/assets/ui/comics/kids-riftstone.png",
     tags: ["landmark", "commons"],
   },
   {
@@ -324,6 +346,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/first-bond.png",
     svgSrc: "/assets/coloring/first-bond.svg",
     pdfSrc: "/assets/coloring/first-bond.pdf",
+    thumbSrc: "/assets/ui/comics/kids-bond.png",
     tags: ["hatchery", "people"],
   },
   {
@@ -335,6 +358,7 @@ export const COLORING_SHEETS: ColoringSheet[] = [
     pngSrc: "/assets/coloring/lantern-night.png",
     svgSrc: "/assets/coloring/lantern-night.svg",
     pdfSrc: "/assets/coloring/lantern-night.pdf",
+    thumbSrc: "/assets/ui/comics/kids-lanterns.png",
     tags: ["commons", "night"],
   },
 ];

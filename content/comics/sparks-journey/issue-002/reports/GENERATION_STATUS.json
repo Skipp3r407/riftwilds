@@ -1,56 +1,36 @@
 {
-  "updatedAt": "2026-07-22T14:00:21.291Z",
+  "updatedAt": "2026-07-22T14:18:32.348Z",
   "issue": 2,
   "slug": "sparks-journey",
   "grokConfigured": false,
   "seedSlug": "sparks-journey",
-  "seedIllustratedCount": 36,
+  "seedIllustratedCount": 38,
   "pages": {
-    "25": {
-      "pageNumber": 25,
-      "role": "story",
+    "37": {
+      "pageNumber": 37,
+      "role": "inside-cover",
       "artSource": "cached-raw",
       "artStatus": "cached",
       "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-025.webp",
+      "bubbleCount": 1,
+      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-037.webp",
       "error": null
     },
-    "26": {
-      "pageNumber": 26,
-      "role": "story",
+    "38": {
+      "pageNumber": 38,
+      "role": "back-cover",
       "artSource": "cached-raw",
       "artStatus": "cached",
       "letteringStatus": "ok",
-      "bubbleCount": 3,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-026.webp",
-      "error": null
-    },
-    "27": {
-      "pageNumber": 27,
-      "role": "story",
-      "artSource": "cached-raw",
-      "artStatus": "cached",
-      "letteringStatus": "ok",
-      "bubbleCount": 5,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-027.webp",
-      "error": null
-    },
-    "28": {
-      "pageNumber": 28,
-      "role": "story",
-      "artSource": "cached-raw",
-      "artStatus": "cached",
-      "letteringStatus": "ok",
-      "bubbleCount": 4,
-      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-028.webp",
+      "bubbleCount": 2,
+      "publicPath": "public/assets/comics/sparks-journey/issue-002/pages/page-038.webp",
       "error": null
     }
   },
   "summary": {
     "seeded": 0,
-    "lettered": 4,
-    "storyLettered": 4,
+    "lettered": 2,
+    "storyLettered": 0,
     "grokOk": 0,
     "errors": 0,
     "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=2 --force",

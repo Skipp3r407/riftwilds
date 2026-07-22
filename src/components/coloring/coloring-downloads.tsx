@@ -174,12 +174,22 @@ export function ColoringDownloads({
         {resolvedSheets.map((sheet) => (
           <li key={sheet.id}>
             <article className="panel overflow-hidden p-3">
-              <div className="relative aspect-[850/1100] overflow-hidden rounded-lg bg-white ring-1 ring-[rgba(196,168,130,0.25)]">
+              <div
+                className={cn(
+                  "relative overflow-hidden rounded-lg ring-1 ring-[rgba(196,168,130,0.25)]",
+                  sheet.thumbSrc
+                    ? "aspect-video bg-[rgba(0,0,0,0.35)]"
+                    : "aspect-[850/1100] bg-white",
+                )}
+              >
                 <Image
-                  src={sheet.pngSrc}
+                  src={previewSrc(sheet)}
                   alt={`${sheet.title} preview`}
                   fill
-                  className="object-cover object-top"
+                  className={cn(
+                    "object-cover",
+                    sheet.thumbSrc ? "object-center" : "object-top",
+                  )}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   unoptimized
                 />

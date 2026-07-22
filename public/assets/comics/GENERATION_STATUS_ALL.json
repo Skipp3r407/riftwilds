@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-22T14:00:21.279Z",
+  "updatedAt": "2026-07-22T14:18:32.340Z",
   "issues": {
     "2": {
       "seeded": 0,
-      "lettered": 4,
-      "storyLettered": 4,
+      "lettered": 2,
+      "storyLettered": 0,
       "grokOk": 0,
       "errors": 0,
       "resume": "node scripts/comics/seed-illustrated-and-letter-all.mjs --issues=2 --force",
